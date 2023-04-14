@@ -14,6 +14,9 @@ with open("environment.json") as f:
 with open("projects.json") as f:
     projects = json.load(f)
 
+with open("toolchains.json") as f:
+    toolchains = json.load(f)
+
 resharper_build = env["build directory"]
 inspect_code_exe = "inspectcode.x86.exe"
 inspect_code_path = path.join(resharper_build, inspect_code_exe)
@@ -85,11 +88,10 @@ def invoke_cmake(build_dir, cmake_generator, cmake_options, required_dependencie
         cmd_line_args.append("-A")
         cmd_line_args.append(architecture)
     if required_dependencies:
-        vcpkg = env.get("vcpkg")
-        if vcpkg:
-            vcpkg_dir = vcpkg["path"]
+        vcpkg_dir = env.get("vcpkg dir")
+        if vcpkg_dir:
             chdir(vcpkg_dir)
-            subprocess.run(["vcpkg", "install"] + required_dependencies + ["--triplet", vcpkg["triplet"]], check=True, stdout=PIPE)
+            subprocess.run(["vcpkg", "install"] + required_dependencies + ["--triplet", toolchains["vcpkg"]["triplet"]], check=True, stdout=PIPE)
             cmd_line_args.append("-DCMAKE_TOOLCHAIN_FILE={0}/scripts/buildsystems/vcpkg.cmake".format(vcpkg_dir))
         else:
             raise Exception("project has required dependencies {0}, but environment doesn't containt path to vcpkg".format(required_dependencies))

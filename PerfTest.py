@@ -107,7 +107,7 @@ def process_project(project_name, project):
         process_project_with_cmake_generator(project_name, project, None)
         return
 
-    supported_generators = common.env["VS CMake Generators"]
+    supported_generators = common.toolchains["VS CMake Generators"]
     project_generators = project.get("cmake generators")
 
     if project_generators:

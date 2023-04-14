@@ -90,7 +90,7 @@ def process_project(project_name, project):
         project_dir, sln_file = common.prepare_project(project_name, project, None)
         return check_project(project, project_dir, sln_file)
 
-    supported_generators = common.env["VS CMake Generators"]
+    supported_generators = common.toolchains["VS CMake Generators"]
     project_generators = project.get("cmake generators")
 
     if project_generators:
