@@ -25,6 +25,7 @@ class Environment:
             self._env = None
 
         self._build_directory = args.build_directory or self._get_env("build directory")
+        self._projects_cache_directory = args.projects_cache_directory or self._get_env("projects cache dir")
         self._vcpkg_directory = args.vcpkg_directory or self._get_env("vcpkg dir")
         self._cli_test_dir = os.path.dirname(os.path.abspath(__file__))
 
@@ -66,7 +67,7 @@ class Environment:
 
     @property
     def projects_dir(self) -> str:
-        return path.join(self.cli_test_dir, "projects")
+        return self._projects_cache_directory or path.join(self.cli_test_dir, "projects")
 
     @property
     def inspect_code_path(self) -> str:
@@ -278,3 +279,4 @@ argparser.add_argument("-p", "--project", dest="project")
 argparser.add_argument("-e", "--env", dest='env_path')
 argparser.add_argument('--build-dir', dest='build_directory')
 argparser.add_argument('--vcpkg-dir', dest='vcpkg_directory')
+argparser.add_argument('--projects-cache', dest='projects_cache_directory')
