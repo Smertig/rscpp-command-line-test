@@ -36,7 +36,7 @@ def process_project(project_name, project):
                      "--disable-tpl", "--overwrite", "--save-to=" + snapshot_path,
                      env.inspect_code_path, "--"] + inspect_code_args
     #print(subprocess.list2cmdline(profiler_args))
-    process = subprocess.Popen(profiler_args, stdout=PIPE, text=True)
+    process = subprocess.Popen(profiler_args, stdout=PIPE, text=True, encoding='cp1251')
     out, err = process.communicate()
     exit_code = process.wait()
     if exit_code != 0:

@@ -47,7 +47,7 @@ def run_inspect_code(project_dir, sln_file, project_to_check, msbuild_props):
     args, report_file = common.inspect_code_run_arguments(project_dir, sln_file, project_to_check, msbuild_props)
     args.insert(0, env.inspect_code_path)
     print(subprocess.list2cmdline(args))
-    process = Popen(args, stdout=PIPE, text=True)
+    process = Popen(args, stdout=PIPE, text=True, encoding='cp1251')
     start = time.time()
     out, err = process.communicate()
     exit_code = process.wait()

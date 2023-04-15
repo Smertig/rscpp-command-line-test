@@ -11,7 +11,7 @@ import uuid
 import shutil
 
 def invoke(args):
-    process = Popen(args, stdout=PIPE, text=True)
+    process = Popen(args, stdout=PIPE, text=True, encoding='cp1251')
     out, err = process.communicate()
     exit_code = process.wait()
     if err:
