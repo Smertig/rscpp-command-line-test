@@ -8,14 +8,14 @@ import time
 
 import common
 
-profiler_dir = common.env.get("profiler directory")
-if not profiler_dir:
-    profiler_dir = common.resharper_build
+args = common.argparser.parse_args()
+env = common.load_env(args)
 
+profiler_dir     = env.profiler_dir
 console_profiler = path.join(profiler_dir, "ConsoleProfiler.exe")
 snapshot_dumper  = path.join(profiler_dir, "JetBrains.Timeline.Tools.Snapshot.Dumper.exe")
 
-snapshots_home = path.join(common.cli_test_dir, "snapshots-home")
+snapshots_home = path.join(env.cli_test_dir, "snapshots-home")
 makedirs(snapshots_home, exist_ok=True)
 
 def process_project(project_name, project):
@@ -34,7 +34,7 @@ def process_project(project_name, project):
     snapshot_path = path.join(snapshot_dir, "snapshot.dtt")
     profiler_args = [console_profiler, "start", "--profiling-type=Timeline",
                      "--disable-tpl", "--overwrite", "--save-to=" + snapshot_path,
-                     common.inspect_code_path, "--"] + inspect_code_args 
+                     env.inspect_code_path, "--"] + inspect_code_args
     #print(subprocess.list2cmdline(profiler_args))
     process = subprocess.Popen(profiler_args, stdout=PIPE, text=True)
     out, err = process.communicate()
@@ -70,7 +70,6 @@ def process_project(project_name, project):
     print("elapsed time: {0}".format(elapsed_time), flush=True)
 
 
-args = common.argparser.parse_args()
 if args.project:
     process_project(args.project, common.projects[args.project])
 else:

@@ -45,7 +45,7 @@ def check_report(report_file, known_errors):
 
 def run_inspect_code(project_dir, sln_file, project_to_check, msbuild_props):
     args, report_file = common.inspect_code_run_arguments(project_dir, sln_file, project_to_check, msbuild_props)
-    args.insert(0, common.inspect_code_path)
+    args.insert(0, env.inspect_code_path)
     print(subprocess.list2cmdline(args))
     process = Popen(args, stdout=PIPE, text=True)
     start = time.time()
@@ -105,6 +105,7 @@ def process_project(project_name, project):
                 return result
 
 args = common.argparser.parse_args()
+env = common.load_env(args)
 if args.project:
     process_project(args.project, common.projects[args.project])
 else:

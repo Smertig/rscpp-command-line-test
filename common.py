@@ -1,3 +1,4 @@
+import os
 from os import path, chdir, makedirs
 from subprocess import Popen, PIPE
 import subprocess
@@ -7,25 +8,77 @@ import requests
 import io
 from argparse import ArgumentParser
 from zipfile import ZipFile
+from typing import Optional
 
-with open("environment.json") as f:
-    env = json.load(f)
+
+assert 'VsInstallRoot' in os.environ, 'Missing VsInstallRoot environment variable'
+assert 'VCTargetsPath' in os.environ, 'Missing VCTargetsPath environment variable'
+
+
+class Environment:
+    def __init__(self, args):
+        self._args = args
+        assert args.env_path, 'missing required arg: env_path'
+        with open(args.env_path) as f:
+            self._env = json.load(f)
+
+        self._build_directory = self._env["build directory"]
+        self._cli_test_dir = self._env["test directory"]
+
+    @property
+    def resharper_build(self) -> str:
+        return self._build_directory
+
+    @property
+    def vcpkg_dir(self) -> Optional[str]:
+        return self._env.get("vcpkg dir")
+
+    @property
+    def profiler_dir(self) -> str:
+        profiler_dir = self._env.get("profiler directory")
+        return profiler_dir or self.resharper_build
+
+    # TODO: remove from config, use current file path
+    @property
+    def cli_test_dir(self) -> str:
+        return self._cli_test_dir
+
+    @property
+    def resharper_version(self) -> Optional[str]:
+        return self._env.get("resharper version")
+
+    @property
+    def computer_name(self) -> Optional[str]:
+        return self._env.get("computer name")
+
+    @property
+    def caches_home(self) -> str:
+        return self._env.get("caches home") or path.join(self.cli_test_dir, "caches-home")
+
+    @property
+    def projects_dir(self) -> str:
+        return path.join(self.cli_test_dir, "projects")
+
+    @property
+    def inspect_code_path(self) -> str:
+        return path.join(self.resharper_build, "inspectcode.x86.exe")
+
+
+# TODO: remove global vars completely
+_env: Environment = None
+
+
+def load_env(args):
+    global _env
+    _env = Environment(args)
+    return _env
+
 
 with open("projects.json") as f:
     projects = json.load(f)
 
 with open("toolchains.json") as f:
     toolchains = json.load(f)
-
-resharper_build = env["build directory"]
-inspect_code_exe = "inspectcode.x86.exe"
-inspect_code_path = path.join(resharper_build, inspect_code_exe)
-
-cli_test_dir = env["test directory"]
-projects_dir = path.join(cli_test_dir, "projects")
-caches_home = env.get("caches home")
-if not caches_home:
-    caches_home = path.join(cli_test_dir, "caches-home")
 
 
 def git_clone_if_needed(target_dir, url):
@@ -88,7 +141,7 @@ def invoke_cmake(build_dir, cmake_generator, cmake_options, required_dependencie
         cmd_line_args.append("-A")
         cmd_line_args.append(architecture)
     if required_dependencies:
-        vcpkg_dir = env.get("vcpkg dir")
+        vcpkg_dir = _env.vcpkg_dir
         if vcpkg_dir:
             chdir(vcpkg_dir)
             subprocess.run(["vcpkg", "install"] + required_dependencies + ["--triplet", toolchains["vcpkg"]["triplet"]], check=True, stdout=PIPE)
@@ -178,7 +231,7 @@ def generate_settings(files_to_skip):
 
 
 def prepare_project(project_name, project, cmake_generator):
-    target_dir = path.join(projects_dir, project_name)
+    target_dir = path.join(_env.projects_dir, project_name)
     project_dir = get_sources(project["sources"], target_dir)
     custom_build_tool = project.get("custom build tool")
     if custom_build_tool:
@@ -213,3 +266,4 @@ def duration(start, end):
 
 argparser = ArgumentParser()
 argparser.add_argument("-p", "--project", dest="project")
+argparser.add_argument("-e", "--env", dest='env_path')

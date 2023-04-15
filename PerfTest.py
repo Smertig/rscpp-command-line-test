@@ -23,7 +23,7 @@ def invoke(args):
 
 def run_inspect_code(project_dir, sln_file, project_to_check, msbuild_props, indexing):
     args, report_file = common.inspect_code_run_arguments(project_dir, sln_file, project_to_check, msbuild_props)
-    args.insert(0, common.inspect_code_path)
+    args.insert(0, env.inspect_code_path)
     if indexing:
         args.append('--exclude="**"')
     #print(subprocess.list2cmdline(args))
@@ -39,7 +39,7 @@ def run_inspect_code(project_dir, sln_file, project_to_check, msbuild_props, ind
         end = time.time()
         print("Elapsed time: " + common.duration(start, end))
         result.append(end - start)
-    
+
     return result
 
 
@@ -50,14 +50,11 @@ def measure_project(project_name, project, indexing, cmake_generator):
     msbuild_props = project.get("msbuild properties")
     return run_inspect_code(project_dir, sln_file, project_to_check, msbuild_props, indexing)
 
-    
 def get_environment():
-    result = {}
-    result["inspect code version"] = common.env["resharper version"]
-    computer_name = common.env["computer name"]
-    if not computer_name:
-        computer_name = platform.node()
-    result["computer name"] = computer_name
+    result = {
+        "inspect code version": env.resharper_version,
+        "computer name": env.computer_name or platform.node()
+    }
     return result
 
 
@@ -67,6 +64,7 @@ common.argparser.add_argument("--indexing", dest="indexing", action='store_true'
 common.argparser.set_defaults(human_readable=False)
 common.argparser.set_defaults(indexing=False)
 args = common.argparser.parse_args()
+env = common.load_env(args)
 
 
 def is_suitable_for_perf_test(project):
@@ -139,4 +137,4 @@ else:
         print('-------------------------------------------------------', flush=True)
 
     print("Total time: " + common.duration(start_time, time.time()))
-    
+
