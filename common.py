@@ -18,12 +18,21 @@ assert 'VCTargetsPath' in os.environ, 'Missing VCTargetsPath environment variabl
 class Environment:
     def __init__(self, args):
         self._args = args
-        assert args.env_path, 'missing required arg: env_path'
-        with open(args.env_path) as f:
-            self._env = json.load(f)
+        if args.env_path:
+            with open(args.env_path) as f:
+                self._env = json.load(f)
+        else:
+            self._env = None
 
-        self._build_directory = self._env["build directory"]
+        self._build_directory = args.build_directory or self._get_env("build directory")
         self._cli_test_dir = os.path.dirname(os.path.abspath(__file__))
+
+        assert self._build_directory, 'Missing build directory'
+
+    def _get_env(self, key: str) -> Optional[str]:
+        if self._env is None:
+            return None
+        return self._env.get(key)
 
     @property
     def resharper_build(self) -> str:
@@ -31,11 +40,11 @@ class Environment:
 
     @property
     def vcpkg_dir(self) -> Optional[str]:
-        return self._env.get("vcpkg dir")
+        return self._get_env("vcpkg dir")
 
     @property
     def profiler_dir(self) -> str:
-        profiler_dir = self._env.get("profiler directory")
+        profiler_dir = self._get_env("profiler directory")
         return profiler_dir or self.resharper_build
 
     @property
@@ -44,15 +53,15 @@ class Environment:
 
     @property
     def resharper_version(self) -> Optional[str]:
-        return self._env.get("resharper version")
+        return self._get_env("resharper version")
 
     @property
     def computer_name(self) -> Optional[str]:
-        return self._env.get("computer name")
+        return self._get_env("computer name")
 
     @property
     def caches_home(self) -> str:
-        return self._env.get("caches home") or path.join(self.cli_test_dir, "caches-home")
+        return self._get_env("caches home") or path.join(self.cli_test_dir, "caches-home")
 
     @property
     def projects_dir(self) -> str:
@@ -266,3 +275,4 @@ def duration(start, end):
 argparser = ArgumentParser()
 argparser.add_argument("-p", "--project", dest="project")
 argparser.add_argument("-e", "--env", dest='env_path')
+argparser.add_argument('--build-dir', dest='build_directory')
