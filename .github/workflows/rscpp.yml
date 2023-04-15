@@ -1,0 +1,35 @@
+name: R++ runner
+
+on: [push, pull_request]
+
+env:
+  RSCPP_VERSION: 2022.3.2
+
+jobs:
+  run_rscpp:
+    runs-on: windows-2019
+    name: Run R++
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install R++
+        run: dotnet tool update --global JetBrains.ReSharper.GlobalTools --version ${{ env.RSCPP_VERSION }}
+
+      - name: Install python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install python dependencies
+        run: pip install -r requirements.txt
+
+      - name: Remove unsupported toolchains (hack)
+        run: python -c "import json; path = 'toolchains.json'; f = open(path, 'r'); j = json.load(f); f.close(); del j['VS CMake Generators']['2017-x64']; f = open(path, 'w'); json.dump(j, f); f.close()"
+
+      - name: Run test correctness test for 'args' project
+        shell: cmd
+        run: |
+          set VsInstallRoot=C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise
+          set VCTargetsPath=C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\
+          python CorrectnessTest.py --project args --build-dir %USERPROFILE%\.dotnet\tools\.store\jetbrains.resharper.globaltools\${{ env.RSCPP_VERSION }}\jetbrains.resharper.globaltools\${{ env.RSCPP_VERSION }}\tools\netcoreapp3.1\any
