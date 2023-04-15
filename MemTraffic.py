@@ -70,14 +70,12 @@ def process_project(project_name, project):
     print("elapsed time: {0}".format(elapsed_time), flush=True)
 
 
-if args.project:
-    process_project(args.project, common.projects[args.project])
-else:
-    start_time = time.time()
+start_time = time.time()
 
-    for project_name, project in common.projects.items():
-        print("processing project {0}...".format(project_name), flush=True)
-        process_project(project_name, project)
-        print('-------------------------------------------------------', flush=True)
+project_names = args.project.split(',') if args.project else common.projects.keys()
+for project_name in project_names:
+    print("processing project {0}...".format(project_name), flush=True)
+    process_project(project_name, common.projects[project_name])
+    print('-------------------------------------------------------', flush=True)
 
-    print("Total time: " + common.duration(start_time, time.time()))
+print("Total time: " + common.duration(start_time, time.time()))

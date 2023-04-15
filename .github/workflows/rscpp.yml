@@ -8,7 +8,41 @@ env:
 jobs:
   run_rscpp:
     runs-on: windows-2019
-    name: Run R++
+    name: Run R++ on ${{matrix.projects}}
+
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          # Not so big projects
+          - { projects: "cds,args,replxx,fmtlib,argh,Eigen3,X265,DependencyChecker,ZSTD,Catch2" }
+          - { projects: "Google-Brotli,Google-RE2,Snappy,dlib,imgui,wil,draco,GLM,SEAL,UnitTestCpp" }
+          - { projects: "mwt-ds-explore,Plist,eEVM,xgboost,json-rpc-cxx,RapidJSON,spdlog,HinnantDate,ninja,benchmark" }
+
+          # Big projects
+          - { projects: "glslang" }
+          - { projects: "LLVM" }
+          - { projects: "VTK" }
+          - { projects: "ITK" }
+          - { projects: "rocksdb" }
+          - { projects: "OpenSceneGraph" }
+          - { projects: "OpenCV" }
+          - { projects: "RxCpp" }
+          - { projects: "SQLiteCpp" }
+          - { projects: "Protobuf" }
+          - { projects: "Chakra.Core" }
+          - { projects: "CoreCLR" }
+          - { projects: "shaderc" }
+          - { projects: "ONNXRuntime" }
+          - { projects: "Sprout" }
+          - { projects: "CLI11" }
+          - { projects: "RigelEngine" }
+          - { projects: "CGAL" }
+          - { projects: "Diablo" }
+          - { projects: "RecastNavigation" }
+          - { projects: "cryptopp" }
+          - { projects: "boost-di" }
+          - { projects: "PhysX-3.4" }
 
     steps:
       - uses: actions/checkout@v3
@@ -32,4 +66,4 @@ jobs:
         run: |
           set VsInstallRoot=C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise
           set VCTargetsPath=C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\
-          python CorrectnessTest.py --project CGAL --vcpkg-dir %VCPKG_INSTALLATION_ROOT% --build-dir %USERPROFILE%\.dotnet\tools\.store\jetbrains.resharper.globaltools\${{ env.RSCPP_VERSION }}\jetbrains.resharper.globaltools\${{ env.RSCPP_VERSION }}\tools\netcoreapp3.1\any
+          python CorrectnessTest.py --project ${{matrix.projects}} --vcpkg-dir %VCPKG_INSTALLATION_ROOT% --build-dir %USERPROFILE%\.dotnet\tools\.store\jetbrains.resharper.globaltools\${{ env.RSCPP_VERSION }}\jetbrains.resharper.globaltools\${{ env.RSCPP_VERSION }}\tools\netcoreapp3.1\any

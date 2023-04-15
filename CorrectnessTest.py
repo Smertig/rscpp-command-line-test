@@ -106,23 +106,22 @@ def process_project(project_name, project):
 
 args = common.argparser.parse_args()
 env = common.load_env(args)
-if args.project:
-    process_project(args.project, common.projects[args.project])
+
+summary = []
+start_time = time.time()
+
+project_names = args.project.split(',') if args.project else common.projects.keys()
+for project_name in project_names:
+    print("processing project {0}...".format(project_name), flush=True)
+    result = process_project(project_name, common.projects[project_name])
+    if result:
+        summary.append(project_name + ": " + result)
+    print('-------------------------------------------------------', flush=True)
+
+print("Total time: " + common.duration(start_time, time.time()))
+if len(summary) == 0:
+    print("Summary: OK")
 else:
-    summary = []
-    start_time = time.time()
-
-    for project_name, project in common.projects.items():
-        print("processing project {0}...".format(project_name), flush=True)
-        result = process_project(project_name, project)
-        if result:
-            summary.append(project_name + ": " + result)
-        print('-------------------------------------------------------', flush=True)
-
-    print("Total time: " + common.duration(start_time, time.time()))
-    if len(summary) == 0:
-        print("Summary: OK")
-    else:
-        print("Summary: Fail")
-        for s in summary:
-            print("    " + s)
+    print("Summary: Fail")
+    for s in summary:
+        print("    " + s)
