@@ -25,6 +25,7 @@ class Environment:
             self._env = None
 
         self._build_directory = args.build_directory or self._get_env("build directory")
+        self._vcpkg_directory = args.vcpkg_directory or self._get_env("vcpkg dir")
         self._cli_test_dir = os.path.dirname(os.path.abspath(__file__))
 
         assert self._build_directory, 'Missing build directory'
@@ -40,7 +41,7 @@ class Environment:
 
     @property
     def vcpkg_dir(self) -> Optional[str]:
-        return self._get_env("vcpkg dir")
+        return self._vcpkg_directory
 
     @property
     def profiler_dir(self) -> str:
@@ -276,3 +277,4 @@ argparser = ArgumentParser()
 argparser.add_argument("-p", "--project", dest="project")
 argparser.add_argument("-e", "--env", dest='env_path')
 argparser.add_argument('--build-dir', dest='build_directory')
+argparser.add_argument('--vcpkg-dir', dest='vcpkg_directory')

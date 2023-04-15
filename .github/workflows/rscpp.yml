@@ -32,4 +32,4 @@ jobs:
         run: |
           set VsInstallRoot=C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise
           set VCTargetsPath=C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\
-          python CorrectnessTest.py --project args --build-dir %USERPROFILE%\.dotnet\tools\.store\jetbrains.resharper.globaltools\${{ env.RSCPP_VERSION }}\jetbrains.resharper.globaltools\${{ env.RSCPP_VERSION }}\tools\netcoreapp3.1\any
+          python CorrectnessTest.py --project CGAL --vcpkg-dir %VCPKG_INSTALLATION_ROOT% --build-dir %USERPROFILE%\.dotnet\tools\.store\jetbrains.resharper.globaltools\${{ env.RSCPP_VERSION }}\jetbrains.resharper.globaltools\${{ env.RSCPP_VERSION }}\tools\netcoreapp3.1\any
