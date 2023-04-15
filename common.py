@@ -23,7 +23,7 @@ class Environment:
             self._env = json.load(f)
 
         self._build_directory = self._env["build directory"]
-        self._cli_test_dir = self._env["test directory"]
+        self._cli_test_dir = os.path.dirname(os.path.abspath(__file__))
 
     @property
     def resharper_build(self) -> str:
@@ -38,7 +38,6 @@ class Environment:
         profiler_dir = self._env.get("profiler directory")
         return profiler_dir or self.resharper_build
 
-    # TODO: remove from config, use current file path
     @property
     def cli_test_dir(self) -> str:
         return self._cli_test_dir
