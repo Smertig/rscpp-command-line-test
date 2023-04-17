@@ -27,6 +27,7 @@ class Environment:
         self._build_directory = args.build_directory or self._get_env("build directory")
         self._projects_cache_directory = args.projects_cache_directory or self._get_env("projects cache dir")
         self._vcpkg_directory = args.vcpkg_directory or self._get_env("vcpkg dir")
+        self._verbose = args.verbose
         self._cli_test_dir = os.path.dirname(os.path.abspath(__file__))
 
         assert self._build_directory, 'Missing build directory'
@@ -72,6 +73,14 @@ class Environment:
     @property
     def inspect_code_path(self) -> str:
         return path.join(self.resharper_build, "inspectcode.x86.exe")
+
+    @property
+    def verbose(self) -> bool:
+        return self._verbose
+
+    @property
+    def verbose_handle(self) -> Optional[int]:
+        return None if self.verbose else PIPE
 
 
 # TODO: remove global vars completely
@@ -154,7 +163,7 @@ def invoke_cmake(build_dir, cmake_generator, cmake_options, required_dependencie
         vcpkg_dir = _env.vcpkg_dir
         if vcpkg_dir:
             chdir(vcpkg_dir)
-            subprocess.run(["vcpkg", "install"] + required_dependencies + ["--triplet", toolchains["vcpkg"]["triplet"]], check=True, stdout=PIPE)
+            subprocess.run(["vcpkg", "install"] + required_dependencies + ["--triplet", toolchains["vcpkg"]["triplet"]], check=True, stdout=_env.verbose_handle)
             cmd_line_args.append("-DCMAKE_TOOLCHAIN_FILE={0}/scripts/buildsystems/vcpkg.cmake".format(vcpkg_dir))
         else:
             raise Exception("project has required dependencies {0}, but environment doesn't containt path to vcpkg".format(required_dependencies))
@@ -162,7 +171,7 @@ def invoke_cmake(build_dir, cmake_generator, cmake_options, required_dependencie
         cmd_line_args.extend(cmake_options)
     makedirs(build_dir, exist_ok=True)
     chdir(build_dir)
-    subprocess.run(cmd_line_args, check=True, stdout=PIPE)
+    subprocess.run(cmd_line_args, check=True, stdout=_env.verbose_handle)
     with open(path.join(build_dir, "CMakeCache.txt")) as cmake_cache:
         for line in cmake_cache.readlines():
             if line.startswith("CMAKE_PROJECT_NAME"):
@@ -248,11 +257,11 @@ def prepare_project(project_name, project, cmake_generator):
         prepare_sln_script = custom_build_tool.get("script")
         if prepare_sln_script:
             chdir(project_dir)
-            subprocess.run(prepare_sln_script, check=True, stdout=PIPE)
+            subprocess.run(prepare_sln_script, check=True, stdout=_env.verbose_handle)
         build_step = custom_build_tool.get("build step")
         if build_step:
             for step in build_step:
-                subprocess.run(step.split(), check=True, stdout=PIPE)
+                subprocess.run(step.split(), check=True, stdout=_env.verbose_handle)
         sln_file = path.join(project_dir, custom_build_tool["path to .sln"])
         assert(path.exists(sln_file))
     else:
@@ -263,7 +272,7 @@ def prepare_project(project_name, project, cmake_generator):
         build_step = project.get("build step")
         if build_step:
             chdir(build_dir)
-            subprocess.run(build_step.split(), check=True, stdout=PIPE)
+            subprocess.run(build_step.split(), check=True, stdout=_env.verbose_handle)
 
     generate_settings(project.get("to skip")).write(sln_file + ".DotSettings")
     return project_dir, sln_file
@@ -280,3 +289,4 @@ argparser.add_argument("-e", "--env", dest='env_path')
 argparser.add_argument('--build-dir', dest='build_directory')
 argparser.add_argument('--vcpkg-dir', dest='vcpkg_directory')
 argparser.add_argument('--projects-cache', dest='projects_cache_directory')
+argparser.add_argument('--verbose', action='store_true', dest='verbose')

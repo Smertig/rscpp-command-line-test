@@ -70,4 +70,5 @@ jobs:
             --project ${{matrix.projects}} ^
             --vcpkg-dir %VCPKG_INSTALLATION_ROOT% ^
             --build-dir %USERPROFILE%\.dotnet\tools\.store\jetbrains.resharper.globaltools\${{ env.RSCPP_VERSION }}\jetbrains.resharper.globaltools\${{ env.RSCPP_VERSION }}\tools\netcoreapp3.1\any ^
-            --projects-cache %RUNNER_TEMP%/projects
+            --projects-cache %RUNNER_TEMP%/projects ^
+            --verbose
