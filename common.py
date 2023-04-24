@@ -11,8 +11,8 @@ from zipfile import ZipFile
 from typing import Optional
 
 
-assert 'VsInstallRoot' in os.environ, 'Missing VsInstallRoot environment variable'
-assert 'VCTargetsPath' in os.environ, 'Missing VCTargetsPath environment variable'
+#assert 'VsInstallRoot' in os.environ, 'Missing VsInstallRoot environment variable'
+#assert 'VCTargetsPath' in os.environ, 'Missing VCTargetsPath environment variable'
 
 
 class Environment:
