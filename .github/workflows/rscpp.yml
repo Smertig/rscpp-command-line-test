@@ -43,8 +43,8 @@ jobs:
       - name: Run correctness test
         shell: cmd
         run: |
-          set VsInstallRoot=${{matrix.VsInstallRoot}}
-          set VCTargetsPath=${{matrix.VCTargetsPath}}
+          IF NOT "${{matrix.VsInstallRoot}}" == "" set VsInstallRoot=${{matrix.VsInstallRoot}}
+          IF NOT "${{matrix.VCTargetsPath}}" == "" set VCTargetsPath=${{matrix.VCTargetsPath}}
           python CorrectnessTest.py ^
             --project ${{matrix.projects}} ^
             --vcpkg-dir %VCPKG_INSTALLATION_ROOT% ^

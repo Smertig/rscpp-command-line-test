@@ -12,8 +12,8 @@ GENERATOR_TO_CONFIG = {
     },
     "2022-x64": {
         "os": "windows-2022",
-        "VsInstallRoot": r"C:\Program Files (x86)\Microsoft Visual Studio\2022\Enterprise",
-        "VCTargetsPath": r"C:\Program Files (x86)\Microsoft Visual Studio\2022\Enterprise\MSBuild\Microsoft\VC\v170\\",
+        #"VsInstallRoot": r"C:\Program Files (x86)\Microsoft Visual Studio\2022\Enterprise",
+        #"VCTargetsPath": r"C:\Program Files (x86)\Microsoft Visual Studio\2022\Enterprise\MSBuild\Microsoft\VC\v170\\",
     }
 }
 

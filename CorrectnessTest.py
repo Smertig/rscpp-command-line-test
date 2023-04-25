@@ -116,7 +116,7 @@ def main():
             result = process_project(project_name, common.projects[project_name])
         except Exception as e:
             print(traceback.format_exc())
-            result = f"({project_name}) exception: {e}"
+            result = f"exception: {e}"
 
         if result:
             summary.append(project_name + ": " + result)
