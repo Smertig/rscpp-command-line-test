@@ -8,11 +8,11 @@ import requests
 import io
 from argparse import ArgumentParser
 from zipfile import ZipFile
-from typing import Optional
+from typing import Optional, List
 
 
-#assert 'VsInstallRoot' in os.environ, 'Missing VsInstallRoot environment variable'
-#assert 'VCTargetsPath' in os.environ, 'Missing VCTargetsPath environment variable'
+assert 'VsInstallRoot' in os.environ, 'Missing VsInstallRoot environment variable'
+assert 'VCTargetsPath' in os.environ, 'Missing VCTargetsPath environment variable'
 
 
 class Environment:
@@ -26,6 +26,7 @@ class Environment:
 
         self._build_directory = args.build_directory or self._get_env("build directory")
         self._projects_cache_directory = args.projects_cache_directory or self._get_env("projects cache dir")
+        self._supported_generators = args.supported_generators or self._get_env("supported generators") or []
         self._vcpkg_directory = args.vcpkg_directory or self._get_env("vcpkg dir")
         self._verbose = args.verbose
         self._cli_test_dir = os.path.dirname(os.path.abspath(__file__))
@@ -40,6 +41,10 @@ class Environment:
     @property
     def resharper_build(self) -> str:
         return self._build_directory
+
+    @property
+    def supported_generators(self) -> List[str]:
+        return self._supported_generators
 
     @property
     def vcpkg_dir(self) -> Optional[str]:
@@ -97,7 +102,7 @@ with open("projects.json") as f:
     projects = json.load(f)
 
 with open("toolchains.json") as f:
-    toolchains = json.load(f)
+    toolchains_info = json.load(f)
 
 
 def git_clone_if_needed(target_dir, url):
@@ -163,7 +168,7 @@ def invoke_cmake(build_dir, cmake_generator, cmake_options, required_dependencie
         vcpkg_dir = _env.vcpkg_dir
         if vcpkg_dir:
             chdir(vcpkg_dir)
-            subprocess.run(["vcpkg", "install"] + required_dependencies + ["--triplet", toolchains["vcpkg"]["triplet"]], check=True, stdout=_env.verbose_handle)
+            subprocess.run(["vcpkg", "install"] + required_dependencies + ["--triplet", toolchains_info["vcpkg"]["triplet"]], check=True, stdout=_env.verbose_handle)
             cmd_line_args.append("-DCMAKE_TOOLCHAIN_FILE={0}/scripts/buildsystems/vcpkg.cmake".format(vcpkg_dir))
         else:
             raise Exception("project has required dependencies {0}, but environment doesn't containt path to vcpkg".format(required_dependencies))
@@ -249,7 +254,17 @@ def generate_settings(files_to_skip):
     return ET.ElementTree(root)
 
 
-def prepare_project(project_name, project, cmake_generator):
+def get_compatible_generators(project: dict) -> List[str]:
+    project_generators = project.get("cmake generators")
+    supported_generators = _env.supported_generators
+
+    if not project_generators:
+        return supported_generators
+
+    return sorted(set(project_generators) & set(supported_generators))
+
+
+def prepare_project(project_name, project, cmake_generator: Optional[str]):
     target_dir = path.join(_env.projects_dir, project_name)
     project_dir = get_sources(project["sources"], target_dir)
     custom_build_tool = project.get("custom build tool")
@@ -265,8 +280,8 @@ def prepare_project(project_name, project, cmake_generator):
         sln_file = path.join(project_dir, custom_build_tool["path to .sln"])
         assert(path.exists(sln_file))
     else:
-        gen_name, gen_description = cmake_generator
-        build_dir = path.join(project_dir, project.get("build dir", "build") + "-" + gen_name)
+        gen_description = toolchains_info["VS CMake Generators"][cmake_generator]
+        build_dir = path.join(project_dir, project.get("build dir", "build") + "-" + cmake_generator)
         project_dir = build_dir
         sln_file = invoke_cmake(build_dir, gen_description, project.get("cmake options"), project.get("required dependencies"))
         build_step = project.get("build step")
@@ -289,4 +304,5 @@ argparser.add_argument("-e", "--env", dest='env_path')
 argparser.add_argument('--build-dir', dest='build_directory')
 argparser.add_argument('--vcpkg-dir', dest='vcpkg_directory')
 argparser.add_argument('--projects-cache', dest='projects_cache_directory')
+argparser.add_argument('--supported-generators', dest='supported_generators', nargs='*', type=str)
 argparser.add_argument('--verbose', action='store_true', dest='verbose')

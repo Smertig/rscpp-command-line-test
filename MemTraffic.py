@@ -18,11 +18,12 @@ snapshot_dumper  = path.join(profiler_dir, "JetBrains.Timeline.Tools.Snapshot.Du
 snapshots_home = path.join(env.cli_test_dir, "snapshots-home")
 makedirs(snapshots_home, exist_ok=True)
 
+
 def process_project(project_name, project):
     start_time = time.time()
 
     project = common.read_conf_if_needed(project)
-    project_dir, sln_file = common.prepare_project(project_name, project)
+    project_dir, sln_file = common.prepare_project(project_name, project, None)
 
     project_to_check = project.get("project to check")
     msbuild_props = project.get("msbuild properties")

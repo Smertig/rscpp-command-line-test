@@ -1,9 +1,10 @@
-from subprocess import Popen, PIPE
-import subprocess
-from os import path
-import xml.etree.ElementTree as ET
 import json
+import subprocess
+import sys
 import time
+import traceback
+import xml.etree.ElementTree as ET
+from subprocess import Popen, PIPE
 
 import common
 
@@ -75,12 +76,11 @@ def check_project(project, project_dir, sln_file):
     return check_report(report_file, project.get("known errors"))
 
 
-def process_project_with_cmake_generator(project, project_name, cmake_generator):
+def process_project_with_cmake_generator(project, project_name, cmake_generator: str):
     project_dir, sln_file = common.prepare_project(project_name, project, cmake_generator)
     result = check_project(project, project_dir, sln_file)
     if result:
-        name, _ = cmake_generator
-        return "(" + name + ") " + result
+        return "(" + cmake_generator + ") " + result
 
 
 def process_project(project_name, project):
@@ -90,38 +90,50 @@ def process_project(project_name, project):
         project_dir, sln_file = common.prepare_project(project_name, project, None)
         return check_project(project, project_dir, sln_file)
 
-    supported_generators = common.toolchains["VS CMake Generators"]
-    project_generators = project.get("cmake generators")
+    available_generators = common.get_compatible_generators(project)
+    if not available_generators:
+        return f'({project_name}) no available generators found'
 
-    if project_generators:
-        for generator in project_generators:
-            result = process_project_with_cmake_generator(project, project_name, (generator, supported_generators[generator]))
-            if result:
-                return result
-    else:
-        for cmake_generator in supported_generators.items():
-            result = process_project_with_cmake_generator(project, project_name, cmake_generator)
-            if result:
-                return result
+    for generator in available_generators:
+        result = process_project_with_cmake_generator(project, project_name, generator)
+        if result:
+            return result
+
 
 args = common.argparser.parse_args()
 env = common.load_env(args)
 
-summary = []
-start_time = time.time()
 
-project_names = args.project.split(',') if args.project else common.projects.keys()
-for project_name in project_names:
-    print("processing project {0}...".format(project_name), flush=True)
-    result = process_project(project_name, common.projects[project_name])
-    if result:
-        summary.append(project_name + ": " + result)
-    print('-------------------------------------------------------', flush=True)
+def main():
+    summary = []
+    start_time = time.time()
 
-print("Total time: " + common.duration(start_time, time.time()))
-if len(summary) == 0:
-    print("Summary: OK")
-else:
-    print("Summary: Fail")
-    for s in summary:
-        print("    " + s)
+    project_names = args.project.split(',') if args.project else common.projects.keys()
+    for project_name in project_names:
+        print(f"processing project {project_name}...", flush=True)
+
+        try:
+            result = process_project(project_name, common.projects[project_name])
+        except Exception as e:
+            print(traceback.format_exc())
+            result = f"({project_name}) exception: {e}"
+
+        if result:
+            summary.append(project_name + ": " + result)
+
+        print('-------------------------------------------------------', flush=True)
+
+    print("Total time: " + common.duration(start_time, time.time()))
+    if len(summary) == 0:
+        print("Summary: OK")
+        return 0
+    else:
+        print("Summary: Fail")
+        for s in summary:
+            print("    " + s)
+        return 1
+
+
+if __name__ == '__main__':
+    ret = main()
+    sys.exit(ret)

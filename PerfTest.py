@@ -43,12 +43,13 @@ def run_inspect_code(project_dir, sln_file, project_to_check, msbuild_props, ind
     return result
 
 
-def measure_project(project_name, project, indexing, cmake_generator):
+def measure_project(project_name, project, indexing, cmake_generator: str):
     project_dir, sln_file = common.prepare_project(project_name, project, cmake_generator)
 
     project_to_check = project.get("project to check")
     msbuild_props = project.get("msbuild properties")
     return run_inspect_code(project_dir, sln_file, project_to_check, msbuild_props, indexing)
+
 
 def get_environment():
     result = {
@@ -86,8 +87,7 @@ def process_project_with_cmake_generator(project_name, project, cmake_generator)
         to_store["project sources"] = project_sources
 
         if cmake_generator:
-            gen_name, gen_value = cmake_generator
-            to_store["cmake generator"] = gen_name
+            to_store["cmake generator"] = cmake_generator
 
         output_dir = args.out_dir
         if not path.isabs(output_dir):
@@ -105,15 +105,12 @@ def process_project(project_name, project):
         process_project_with_cmake_generator(project_name, project, None)
         return
 
-    supported_generators = common.toolchains["VS CMake Generators"]
-    project_generators = project.get("cmake generators")
+    available_generators = common.get_compatible_generators(project)
+    if not available_generators:
+        return f'({project_name}) no available generators found'
 
-    if project_generators:
-        for generator in project_generators:
-            process_project_with_cmake_generator(project_name, project, (generator, supported_generators[generator]))
-    else:
-        for cmake_generator in supported_generators.items():
-            process_project_with_cmake_generator(project_name, project, cmake_generator)
+    for generator in available_generators:
+        process_project_with_cmake_generator(project_name, project, generator)
 
 
 project_name = args.project
