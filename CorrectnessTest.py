@@ -86,15 +86,15 @@ def process_project_with_cmake_generator(project, project_name, cmake_generator:
 def process_project(project_name, project):
     project = common.read_conf_if_needed(project)
 
+    available_toolchains = common.get_compatible_toolchains(project)
+    if not available_toolchains:
+        return f'({project_name}) no available toolchains found'
+
     if "custom build tool" in project:
         project_dir, sln_file = common.prepare_project(project_name, project, None)
         return check_project(project, project_dir, sln_file)
 
-    available_generators = common.get_compatible_generators(project)
-    if not available_generators:
-        return f'({project_name}) no available generators found'
-
-    for generator in available_generators:
+    for generator in available_toolchains:
         result = process_project_with_cmake_generator(project, project_name, generator)
         if result:
             return result

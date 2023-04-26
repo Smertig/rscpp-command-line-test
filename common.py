@@ -254,8 +254,8 @@ def generate_settings(files_to_skip):
     return ET.ElementTree(root)
 
 
-def get_compatible_generators(project: dict) -> List[str]:
-    project_generators = project.get("cmake generators")
+def get_compatible_toolchains(project: dict) -> List[str]:
+    project_generators = project.get("required toolchain")
     supported_generators = _env.supported_generators
 
     if not project_generators:

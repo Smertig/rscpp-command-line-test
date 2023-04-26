@@ -1,7 +1,7 @@
 {
     "sources": {
         "repo": "https://github.com/dotnet/runtime.git",
-        "commit": "722b8a660e7e0c59419196be102784244883ff08",
+        "commit": "ac2b3535695fada0e0a2b5426a3dcaca0bc305e3",
         "root": "src\\coreclr"
     },
     "custom build tool": {
@@ -11,6 +11,7 @@
         ],
         "path to .sln": "../../artifacts/obj/coreclr/Windows_NT.x64.Debug/CoreCLR.sln"
     },
+    "required toolchain": ["2022-x64"],
     "project to check": [
         "clrgc",
         "cordbdi"

@@ -12,8 +12,6 @@ GENERATOR_TO_CONFIG = {
     },
     "2022-x64": {
         "os": "windows-2022",
-        #"VsInstallRoot": r"C:\Program Files (x86)\Microsoft Visual Studio\2022\Enterprise",
-        #"VCTargetsPath": r"C:\Program Files (x86)\Microsoft Visual Studio\2022\Enterprise\MSBuild\Microsoft\VC\v170\\",
     }
 }
 
@@ -31,7 +29,7 @@ for project_name, project_config in projects.items():
         with open(os.path.join(projects_dir, project_config)) as f:
             project_config = json.load(f)
 
-    cmake_gens = project_config.get("cmake generators", [DEFAULT_GENERATOR])
+    cmake_gens = project_config.get("required toolchain", [DEFAULT_GENERATOR])
     for cmake_gen in cmake_gens:
         conf = {
             "projects": project_name,
