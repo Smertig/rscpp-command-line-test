@@ -1,4 +1,4 @@
-name: R++ runner
+name: Correctness test for fixed repository versions
 
 on: [push, pull_request]
 
@@ -17,10 +17,10 @@ jobs:
       - id: set-matrix
         run: python .github/build_projects_matrix.py ./projects.json ./proj-config >> $GITHUB_OUTPUT
 
-  run_rscpp:
+  run_correctness_test:
     needs: generate_matrix
     runs-on: ${{matrix.os}}
-    name: Run R++ on ${{matrix.projects}} (${{matrix.cmake_gen}})
+    name: Run test on ${{matrix.projects}} (${{matrix.cmake_gen}})
 
     strategy:
       fail-fast: false
