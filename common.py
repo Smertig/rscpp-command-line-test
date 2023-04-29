@@ -215,6 +215,10 @@ def inspect_code_run_arguments(project_dir, sln_file, project_to_check, msbuild_
         props = ["{0}={1}".format(key, value) for key, value in msbuild_props.items()]
         args.append("--properties:" + ";".join(props))
 
+    log_file = path.join(project_dir, "resharper-logs.txt")
+    args.append("--LogLevel=INFO")
+    args.append("--LogFile=" + log_file)
+
     args.append(sln_file)
     return args, report_file
 

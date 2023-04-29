@@ -406,5 +406,75 @@
                 "inspected files count": 85
             }
         }
+    },
+    "fheroes2": {
+        "sources": {
+            "repo": "https://github.com/ihhub/fheroes2",
+            "commit": "529f226f464bfd097fdfdf5c869051374f3ac795"
+        },
+        "required dependencies": [
+            "sdl2",
+            "sdl2-mixer",
+            "sdl2-image",
+            "zlib"
+        ],
+        "known errors": [
+            {
+                "file": "..\\src\\fheroes2\\army\\army.cpp",
+                "line": "1813",
+                "message": "Member is inaccessible",
+                "reason": "RSCPP-34235 Incorrect 'Member is inaccessible'"
+            },
+            {
+                "file": "..\\src\\fheroes2\\army\\army.cpp",
+                "line": "1793",
+                "message": "Member is inaccessible",
+                "reason": "RSCPP-34235 Incorrect 'Member is inaccessible'"
+            },
+            {
+                "file": "..\\src\\fheroes2\\army\\army.cpp",
+                "line": "1807",
+                "message": "Member is inaccessible",
+                "reason": "RSCPP-34235 Incorrect 'Member is inaccessible'"
+            },
+            {
+                "file": "..\\src\\fheroes2\\army\\army.cpp",
+                "line": "1796",
+                "message": "Member is inaccessible",
+                "reason": "RSCPP-34235 Incorrect 'Member is inaccessible'"
+            }
+        ],
+        "inspected files count": 221,
+        "latest": {
+            "master": {
+                "inspected files count": 221,
+                "known errors": [
+                    {
+                        "file": "..\\src\\fheroes2\\army\\army.cpp",
+                        "line": "1813",
+                        "message": "Member is inaccessible",
+                        "reason": "RSCPP-34235 Incorrect 'Member is inaccessible'"
+                    },
+                    {
+                        "file": "..\\src\\fheroes2\\army\\army.cpp",
+                        "line": "1793",
+                        "message": "Member is inaccessible",
+                        "reason": "RSCPP-34235 Incorrect 'Member is inaccessible'"
+                    },
+                    {
+                        "file": "..\\src\\fheroes2\\army\\army.cpp",
+                        "line": "1807",
+                        "message": "Member is inaccessible",
+                        "reason": "RSCPP-34235 Incorrect 'Member is inaccessible'"
+                    },
+                    {
+                        "file": "..\\src\\fheroes2\\army\\army.cpp",
+                        "line": "1796",
+                        "message": "Member is inaccessible",
+                        "reason": "RSCPP-34235 Incorrect 'Member is inaccessible'"
+                    }
+                ]
+            }
+        }
     }
 }
