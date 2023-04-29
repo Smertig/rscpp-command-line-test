@@ -491,5 +491,38 @@
                 "inspected files count": 1809
             }
         }
+    },
+    "pybind11": {
+        "sources": {
+            "repo": "https://github.com/pybind/pybind11",
+            "commit": "956390a87f6e2ee6ea20438f3faa05222415018f"
+        },
+        "cmake options": [
+            "-DPYBIND11_TEST=ON",
+            "-DDOWNLOAD_EIGEN=ON",
+            "-DDOWNLOAD_CATCH=ON"
+        ],
+        "inspected files count": 197,
+        "known errors": [
+            {
+                "file": "..\\tests\\test_enum.cpp",
+                "line": "100",
+                "message": "static_assert failed: 'char32_t, char16_t (and char8_t)'s size, signedness, and alignment is determined'",
+                "reason": "Bad char16_t signedness in R++ 2023.1, fixed in 2023.2"
+            }
+        ],
+        "latest": {
+            "master": {
+                "inspected files count": 197,
+                "known errors": [
+                    {
+                        "file": "..\\tests\\test_enum.cpp",
+                        "line": "100",
+                        "message": "static_assert failed: 'char32_t, char16_t (and char8_t)'s size, signedness, and alignment is determined'",
+                        "reason": "Bad char16_t signedness in R++ 2023.1, fixed in 2023.2"
+                    }
+                ]
+            }
+        }
     }
 }
