@@ -73,8 +73,7 @@ def process_project(project_name, project):
 
 start_time = time.time()
 
-project_names = args.project.split(',') if args.project else common.projects.keys()
-for project_name in project_names:
+for project_name, _ in common.parse_projects(args.project):
     print("processing project {0}...".format(project_name), flush=True)
     process_project(project_name, common.projects[project_name])
     print('-------------------------------------------------------', flush=True)

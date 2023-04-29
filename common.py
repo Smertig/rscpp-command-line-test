@@ -312,12 +312,12 @@ def cwd(path):
         os.chdir(old_path)
 
 
-def parse_projects(s: str):
-    if not s:
+def parse_projects(specified_projects: List[str]):
+    if not specified_projects:
         for project_name in projects.keys():
             yield project_name, None
     else:
-        for project in s.split(','):
+        for project in specified_projects:
             if ':' in project:
                 yield project.split(':', 1)
             else:
@@ -325,7 +325,7 @@ def parse_projects(s: str):
 
 
 argparser = ArgumentParser()
-argparser.add_argument("-p", "--project", dest="project")
+argparser.add_argument("-p", "--project", dest="project", nargs='+', type=str)
 argparser.add_argument("-e", "--env", dest='env_path')
 argparser.add_argument('--build-dir', dest='build_directory')
 argparser.add_argument('--vcpkg-dir', dest='vcpkg_directory')

@@ -113,6 +113,7 @@ def process_project(project_name, project):
         process_project_with_cmake_generator(project_name, project, generator)
 
 
+assert False, "fix me, args.project is list"
 project_name = args.project
 if project_name:
     project = common.projects[project_name]
