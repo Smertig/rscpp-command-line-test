@@ -73,9 +73,9 @@ def check_project(project, project_dir, sln_file, branch: Optional[str]):
     actual_files_count = common.inspected_files_count(output)
     if expected_files_count:
         if expected_files_count != actual_files_count:
-            print("expected count of inspected files is {0}, but actual is {1}".format(expected_files_count, actual_files_count))
+            print(f"expected count of inspected files is {expected_files_count}, but actual is {actual_files_count}")
     else:
-        print("count of inspected files is ", actual_files_count)
+        print(f"count of inspected files is {actual_files_count}")
 
     return check_report(report_file, local_config.get("known errors"))
 
@@ -84,7 +84,7 @@ def process_project_with_cmake_generator(project, project_name, cmake_generator:
     project_dir, sln_file = common.prepare_project(project_name, project, cmake_generator, branch)
     result = check_project(project, project_dir, sln_file, branch)
     if result:
-        return "(" + cmake_generator + ") " + result
+        return f"({cmake_generator}) {result}"
 
 
 def process_project(project_name, project, branch: Optional[str]):

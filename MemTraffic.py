@@ -50,7 +50,7 @@ def process_project(project_name, project):
     actual_files_count = common.inspected_files_count(out)
     if expected_files_count != actual_files_count:
         print(out)
-        print("expected count of inspected files is {0}, but actual is {1}".format(expected_files_count, actual_files_count))
+        print(f"expected count of inspected files is {expected_files_count}, but actual is {actual_files_count}")
         return None
 
     subprocess.run([snapshot_dumper, "-i", snapshot_path, "-A"], check=True, stdout=PIPE)
