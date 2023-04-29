@@ -24,7 +24,7 @@ jobs:
   run_correctness_test:
     needs: generate_matrix
     runs-on: ${{matrix.os}}
-    name: Run test on ${{matrix.project}} on ${{matrix.branch}} (${{matrix.cmake_gen}})
+    name: Run test on ${{matrix.project}} (${{matrix.cmake_gen}})
 
     strategy:
       fail-fast: false
@@ -50,7 +50,7 @@ jobs:
           IF NOT "${{matrix.VsInstallRoot}}" == "" set VsInstallRoot=${{matrix.VsInstallRoot}}
           IF NOT "${{matrix.VCTargetsPath}}" == "" set VCTargetsPath=${{matrix.VCTargetsPath}}
           python CorrectnessTest.py ^
-            --project ${{matrix.project}}:${{matrix.branch}} ^
+            --project ${{matrix.project}} ^
             --vcpkg-dir %VCPKG_INSTALLATION_ROOT% ^
             --build-dir %USERPROFILE%\.dotnet\tools\.store\jetbrains.resharper.globaltools\${{ env.RSCPP_VERSION }}\jetbrains.resharper.globaltools\${{ env.RSCPP_VERSION }}\tools\netcoreapp3.1\any ^
             --projects-cache %RUNNER_TEMP%/projects ^
