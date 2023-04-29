@@ -10,7 +10,6 @@
         ],
         "build step": [
             "cmake --build build/Windows/Debug --target onnxruntime_framework",
-            "cmake --build build/Windows/Debug --target eigen",
             "cmake --build build/Windows/Debug --target onnx_test_data_proto"
         ],
         "path to .sln": "Build/Windows/Debug/onnxruntime.sln"

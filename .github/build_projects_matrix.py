@@ -5,6 +5,8 @@ import sys
 DEFAULT_GENERATOR = "2019-x64"
 
 GENERATOR_TO_CONFIG = {
+    "2013-x64": None,
+    "2017-x64": None,
     "2019-x64": {
         "os": "windows-2019",
         "VsInstallRoot": r"C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise",
@@ -29,6 +31,9 @@ for project_name, project_config in projects.items():
         with open(os.path.join(projects_dir, project_config)) as f:
             project_config = json.load(f)
 
+    if project_config.get("disabled", False):
+        continue
+
     cmake_gens = project_config.get("required toolchain", [DEFAULT_GENERATOR])
     for cmake_gen in cmake_gens:
         conf = {
@@ -36,11 +41,10 @@ for project_name, project_config in projects.items():
             "cmake_gen": cmake_gen
         }
 
-        if cmake_gen == "2017-x64":
-            # TODO: support or upgrade?
+        gen_conf = GENERATOR_TO_CONFIG.get(cmake_gen)
+        if gen_conf is None:
             continue
 
-        gen_conf = GENERATOR_TO_CONFIG.get(cmake_gen)
         assert gen_conf, f"unknown cmake_generator: {cmake_gen}"
         conf.update(gen_conf)
 

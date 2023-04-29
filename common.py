@@ -1,6 +1,6 @@
 import os
-from os import path, chdir, makedirs
-from subprocess import Popen, PIPE
+from os import path, makedirs
+from subprocess import PIPE
 import subprocess
 import xml.etree.ElementTree as ET
 import json
@@ -9,6 +9,7 @@ import io
 from argparse import ArgumentParser
 from zipfile import ZipFile
 from typing import Optional, List
+from contextlib import contextmanager
 
 
 # assert 'VsInstallRoot' in os.environ, 'Missing VsInstallRoot environment variable'
@@ -118,27 +119,27 @@ def git_checkout_commit_and_overwrite_local_changes(commit):
 def get_sources_from_git(project_input, target_dir):
     git_clone_if_needed(target_dir, project_input["repo"])
 
-    chdir(target_dir)
-    subrepo = project_input.get("subrepo")
-    if subrepo:
-        subrepo_dir = subrepo["path"]
-        git_clone_if_needed(subrepo_dir, subrepo["url"])
-        chdir(subrepo_dir)
-        git_checkout_commit_and_overwrite_local_changes(subrepo["commit"])
-        chdir(target_dir)
+    with cwd(target_dir):
+        subrepo = project_input.get("subrepo")
+        if subrepo:
+            subrepo_dir = subrepo["path"]
+            git_clone_if_needed(subrepo_dir, subrepo["url"])
+            with cwd(subrepo_dir):
+                git_checkout_commit_and_overwrite_local_changes(subrepo["commit"])
 
-    git_checkout_commit_and_overwrite_local_changes(project_input["commit"])
+        git_checkout_commit_and_overwrite_local_changes(project_input["commit"])
 
-    custom_update_source_script = project_input.get("custom update source script")
-    if custom_update_source_script:
-        subprocess.run(custom_update_source_script, check=True, stdout=PIPE, stderr=PIPE)
+        custom_update_source_script = project_input.get("custom update source script")
+        if custom_update_source_script:
+            subprocess.run(custom_update_source_script, check=True, stdout=PIPE, stderr=PIPE)
 
-    subprocess.run(["git", "submodule", "update", "--init"], check=True, stdout=PIPE, stderr=PIPE)
-    root_dir = project_input.get("root")
-    if root_dir:
-        return path.join(target_dir, root_dir)
-    else:
-        return target_dir
+        subprocess.run(["git", "submodule", "update", "--init"], check=True, stdout=PIPE, stderr=PIPE)
+        root_dir = project_input.get("root")
+        if root_dir:
+            return path.join(target_dir, root_dir)
+        else:
+            return target_dir
+
 
 def get_sources_from_zip(project_input, target_dir):
     root_dir = path.join(target_dir, project_input["root"])
@@ -147,6 +148,7 @@ def get_sources_from_zip(project_input, target_dir):
         with ZipFile(io.BytesIO(response.content)) as zipfile:
             zipfile.extractall(path=target_dir)
     return root_dir
+
 
 def get_sources(project_input, target_dir):
     kind = project_input.get("kind")
@@ -167,16 +169,16 @@ def invoke_cmake(build_dir, cmake_generator, cmake_options, required_dependencie
     if required_dependencies:
         vcpkg_dir = _env.vcpkg_dir
         if vcpkg_dir:
-            chdir(vcpkg_dir)
-            subprocess.run(["vcpkg", "install"] + required_dependencies + ["--triplet", toolchains_info["vcpkg"]["triplet"]], check=True, stdout=_env.verbose_handle)
-            cmd_line_args.append("-DCMAKE_TOOLCHAIN_FILE={0}/scripts/buildsystems/vcpkg.cmake".format(vcpkg_dir))
+            with cwd(vcpkg_dir):
+                subprocess.run(["vcpkg", "install"] + required_dependencies + ["--triplet", toolchains_info["vcpkg"]["triplet"]], check=True, stdout=_env.verbose_handle)
+                cmd_line_args.append("-DCMAKE_TOOLCHAIN_FILE={0}/scripts/buildsystems/vcpkg.cmake".format(vcpkg_dir))
         else:
             raise Exception("project has required dependencies {0}, but environment doesn't containt path to vcpkg".format(required_dependencies))
     if cmake_options:
         cmd_line_args.extend(cmake_options)
     makedirs(build_dir, exist_ok=True)
-    chdir(build_dir)
-    subprocess.run(cmd_line_args, check=True, stdout=_env.verbose_handle)
+    with cwd(build_dir):
+        subprocess.run(cmd_line_args, check=True, stdout=_env.verbose_handle)
     with open(path.join(build_dir, "CMakeCache.txt")) as cmake_cache:
         for line in cmake_cache.readlines():
             if line.startswith("CMAKE_PROJECT_NAME"):
@@ -269,14 +271,14 @@ def prepare_project(project_name, project, cmake_generator: Optional[str]):
     project_dir = get_sources(project["sources"], target_dir)
     custom_build_tool = project.get("custom build tool")
     if custom_build_tool:
-        prepare_sln_script = custom_build_tool.get("script")
-        if prepare_sln_script:
-            chdir(project_dir)
-            subprocess.run(prepare_sln_script, check=True, stdout=_env.verbose_handle)
-        build_step = custom_build_tool.get("build step")
-        if build_step:
-            for step in build_step:
-                subprocess.run(step.split(), check=True, stdout=_env.verbose_handle)
+        with cwd(project_dir):
+            prepare_sln_script = custom_build_tool.get("script")
+            if prepare_sln_script:
+                subprocess.run(prepare_sln_script, check=True, stdout=_env.verbose_handle)
+            build_step = custom_build_tool.get("build step")
+            if build_step:
+                for step in build_step:
+                    subprocess.run(step.split(), check=True, stdout=_env.verbose_handle)
         sln_file = path.join(project_dir, custom_build_tool["path to .sln"])
         assert(path.exists(sln_file))
     else:
@@ -286,8 +288,8 @@ def prepare_project(project_name, project, cmake_generator: Optional[str]):
         sln_file = invoke_cmake(build_dir, gen_description, project.get("cmake options"), project.get("required dependencies"))
         build_step = project.get("build step")
         if build_step:
-            chdir(build_dir)
-            subprocess.run(build_step.split(), check=True, stdout=_env.verbose_handle)
+            with cwd(build_dir):
+                subprocess.run(build_step.split(), check=True, stdout=_env.verbose_handle)
 
     generate_settings(project.get("to skip")).write(sln_file + ".DotSettings")
     return project_dir, sln_file
@@ -296,6 +298,16 @@ def prepare_project(project_name, project, cmake_generator: Optional[str]):
 def duration(start, end):
     minutes, seconds = divmod(end - start, 60)
     return "{:02}:{:02}".format(int(minutes), int(seconds))
+
+
+@contextmanager
+def cwd(path):
+    old_path = os.getcwd()
+    os.chdir(path)
+    try:
+        yield
+    finally:
+        os.chdir(old_path)
 
 
 argparser = ArgumentParser()
