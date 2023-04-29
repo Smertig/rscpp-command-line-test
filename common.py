@@ -116,18 +116,19 @@ def git_checkout_commit_and_overwrite_local_changes(commit):
     subprocess.run(["git", "reset", "--hard"],  check=True, stdout=PIPE, stderr=PIPE)
 
 
-def get_sources_from_git(project_input, target_dir):
+def get_sources_from_git(project_input, target_dir, branch: Optional[str]):
     git_clone_if_needed(target_dir, project_input["repo"])
 
     with cwd(target_dir):
         subrepo = project_input.get("subrepo")
         if subrepo:
+            assert branch is None
             subrepo_dir = subrepo["path"]
             git_clone_if_needed(subrepo_dir, subrepo["url"])
             with cwd(subrepo_dir):
                 git_checkout_commit_and_overwrite_local_changes(subrepo["commit"])
 
-        git_checkout_commit_and_overwrite_local_changes(project_input["commit"])
+        git_checkout_commit_and_overwrite_local_changes(branch or project_input["commit"])
 
         custom_update_source_script = project_input.get("custom update source script")
         if custom_update_source_script:
@@ -150,11 +151,12 @@ def get_sources_from_zip(project_input, target_dir):
     return root_dir
 
 
-def get_sources(project_input, target_dir):
+def get_sources(project_input, target_dir, branch: Optional[str]):
     kind = project_input.get("kind")
     if not kind:
-        return get_sources_from_git(project_input, target_dir)
+        return get_sources_from_git(project_input, target_dir, branch)
     elif kind == "zip":
+        assert branch is None, "specifying branch is not supported for ZIP projects"
         return get_sources_from_zip(project_input, target_dir)
     else:
         raise ValueError("Unknown source kind: {0}".format(kind))
@@ -266,9 +268,9 @@ def get_compatible_toolchains(project: dict) -> List[str]:
     return sorted(set(project_generators) & set(supported_generators))
 
 
-def prepare_project(project_name, project, cmake_generator: Optional[str]):
+def prepare_project(project_name, project, cmake_generator: Optional[str], branch: Optional[str] = None):
     target_dir = path.join(_env.projects_dir, project_name)
-    project_dir = get_sources(project["sources"], target_dir)
+    project_dir = get_sources(project["sources"], target_dir, branch)
     custom_build_tool = project.get("custom build tool")
     if custom_build_tool:
         with cwd(project_dir):
@@ -308,6 +310,18 @@ def cwd(path):
         yield
     finally:
         os.chdir(old_path)
+
+
+def parse_projects(s: str):
+    if not s:
+        for project_name in projects.keys():
+            yield project_name, None
+    else:
+        for project in s.split(','):
+            if ':' in project:
+                yield project.split(':', 1)
+            else:
+                yield project, None
 
 
 argparser = ArgumentParser()

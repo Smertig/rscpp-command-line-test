@@ -17,9 +17,13 @@ GENERATOR_TO_CONFIG = {
     }
 }
 
-assert len(sys.argv) == 3, f"{sys.argv[0]} projects.json proj-config-dir"
+assert len(sys.argv) == 4, f"{sys.argv[0]} projects.json proj-config-dir mode"
 
-_, projects_path, projects_dir = sys.argv
+_, projects_path, projects_dir, mode = sys.argv
+
+assert mode in ('correctness-fixed', 'correctness-latest'), f"unknown mode: {mode}"
+IS_CORRECTNESS_FIXED = mode == 'correctness-fixed'
+IS_CORRECTNESS_LATEST = mode == 'correctness-latest'
 
 with open(projects_path) as f:
     projects = json.load(f)
@@ -37,7 +41,7 @@ for project_name, project_config in projects.items():
     cmake_gens = project_config.get("required toolchain", [DEFAULT_GENERATOR])
     for cmake_gen in cmake_gens:
         conf = {
-            "projects": project_name,
+            "project": project_name,
             "cmake_gen": cmake_gen
         }
 
@@ -48,7 +52,16 @@ for project_name, project_config in projects.items():
         assert gen_conf, f"unknown cmake_generator: {cmake_gen}"
         conf.update(gen_conf)
 
-        matrix["include"].append(conf)
+        if IS_CORRECTNESS_LATEST:
+            latest_branches = project_config.get("latest")
+            if not latest_branches:
+                continue
+
+            for latest_branch in latest_branches.keys():
+                conf["project"] = f"{project_name}:{latest_branch}"
+                matrix["include"].append(conf)
+        else:
+            matrix["include"].append(conf)
 
 escaped_matrix = json.dumps(matrix)
 print(f"matrix<<EOF\n{escaped_matrix}\nEOF")

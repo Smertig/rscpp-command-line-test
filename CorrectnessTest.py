@@ -5,6 +5,7 @@ import time
 import traceback
 import xml.etree.ElementTree as ET
 from subprocess import Popen, PIPE
+from typing import Optional
 
 import common
 
@@ -62,28 +63,31 @@ def run_inspect_code(project_dir, sln_file, project_to_check, msbuild_props):
     return report_file, out
 
 
-def check_project(project, project_dir, sln_file):
+def check_project(project, project_dir, sln_file, branch: Optional[str]):
     project_to_check = project.get("project to check")
     msbuild_props = project.get("msbuild properties")
     report_file, output = run_inspect_code(project_dir, sln_file, project_to_check, msbuild_props)
-    expected_files_count = project.get("inspected files count")
+
+    local_config = project["latest"][branch] if branch else project
+    expected_files_count = local_config.get("inspected files count")
     actual_files_count = common.inspected_files_count(output)
     if expected_files_count:
         if expected_files_count != actual_files_count:
             print("expected count of inspected files is {0}, but actual is {1}".format(expected_files_count, actual_files_count))
     else:
         print("count of inspected files is ", actual_files_count)
-    return check_report(report_file, project.get("known errors"))
+
+    return check_report(report_file, local_config.get("known errors"))
 
 
-def process_project_with_cmake_generator(project, project_name, cmake_generator: str):
-    project_dir, sln_file = common.prepare_project(project_name, project, cmake_generator)
-    result = check_project(project, project_dir, sln_file)
+def process_project_with_cmake_generator(project, project_name, cmake_generator: str, branch: Optional[str]):
+    project_dir, sln_file = common.prepare_project(project_name, project, cmake_generator, branch)
+    result = check_project(project, project_dir, sln_file, branch)
     if result:
         return "(" + cmake_generator + ") " + result
 
 
-def process_project(project_name, project):
+def process_project(project_name, project, branch: Optional[str]):
     project = common.read_conf_if_needed(project)
 
     available_toolchains = common.get_compatible_toolchains(project)
@@ -91,11 +95,11 @@ def process_project(project_name, project):
         return f'({project_name}) no available toolchains found'
 
     if "custom build tool" in project:
-        project_dir, sln_file = common.prepare_project(project_name, project, None)
-        return check_project(project, project_dir, sln_file)
+        project_dir, sln_file = common.prepare_project(project_name, project, None, branch)
+        return check_project(project, project_dir, sln_file, branch)
 
     for generator in available_toolchains:
-        result = process_project_with_cmake_generator(project, project_name, generator)
+        result = process_project_with_cmake_generator(project, project_name, generator, branch)
         if result:
             return result
 
@@ -108,12 +112,11 @@ def main():
     summary = []
     start_time = time.time()
 
-    project_names = args.project.split(',') if args.project else common.projects.keys()
-    for project_name in project_names:
-        print(f"processing project {project_name}...", flush=True)
+    for project_name, project_branch in common.parse_projects(args.project):
+        print(f"processing project {project_name} (branch: {project_branch})...", flush=True)
 
         try:
-            result = process_project(project_name, common.projects[project_name])
+            result = process_project(project_name, common.projects[project_name], project_branch)
         except Exception as e:
             print(traceback.format_exc())
             result = f"exception: {e}"

@@ -1,6 +1,10 @@
-name: Correctness test for fixed repository versions
+name: Correctness test for fresh repository versions
 
-on: [push, pull_request]
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "* */4 * * *"
 
 env:
   RSCPP_VERSION: 2023.1.0
@@ -15,12 +19,12 @@ jobs:
       - uses: actions/checkout@v3
 
       - id: set-matrix
-        run: python .github/build_projects_matrix.py ./projects.json ./proj-config correctness-fixed >> $GITHUB_OUTPUT
+        run: python .github/build_projects_matrix.py ./projects.json ./proj-config correctness-latest >> $GITHUB_OUTPUT
 
   run_correctness_test:
     needs: generate_matrix
     runs-on: ${{matrix.os}}
-    name: Run test on ${{matrix.project}} (${{matrix.cmake_gen}})
+    name: Run test on ${{matrix.project}} on ${{matrix.branch}} (${{matrix.cmake_gen}})
 
     strategy:
       fail-fast: false
@@ -46,7 +50,7 @@ jobs:
           IF NOT "${{matrix.VsInstallRoot}}" == "" set VsInstallRoot=${{matrix.VsInstallRoot}}
           IF NOT "${{matrix.VCTargetsPath}}" == "" set VCTargetsPath=${{matrix.VCTargetsPath}}
           python CorrectnessTest.py ^
-            --project ${{matrix.project}} ^
+            --project ${{matrix.project}}:${{matrix.branch}} ^
             --vcpkg-dir %VCPKG_INSTALLATION_ROOT% ^
             --build-dir %USERPROFILE%\.dotnet\tools\.store\jetbrains.resharper.globaltools\${{ env.RSCPP_VERSION }}\jetbrains.resharper.globaltools\${{ env.RSCPP_VERSION }}\tools\netcoreapp3.1\any ^
             --projects-cache %RUNNER_TEMP%/projects ^
