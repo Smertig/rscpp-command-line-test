@@ -13,7 +13,8 @@
                 {
                     "file": "..\\test\\core-test.cc",
                     "line": "139",
-                    "message": "static_assert failed: 'buffer's destructor is protected'"
+                    "message": "static_assert failed: 'buffer's destructor is protected'",
+                    "reason": "RSCPP-34233 Incorrect `__is_destructible` evaluation for substituted class"
                 }
             ]
         }
