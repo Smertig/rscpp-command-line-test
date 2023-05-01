@@ -22,8 +22,8 @@ def check_report(report_file, known_errors):
     if len(issue_nodes) == 0:
         print("No compilation errors found")
         if known_errors:
-            print("But {0} errors were expected".format(len(known_errors)))
-            return "no compilation errors found, but {0} errors were expected".format(len(known_errors))
+            print(f"But {len(known_errors)} errors were expected")
+            return f"no compilation errors found, but {len(known_errors)} errors were expected"
         else:
             return None
     else:
@@ -36,13 +36,13 @@ def check_report(report_file, known_errors):
             print_errors("Missing", missing_errors)
             if not unexpected_errors and not missing_errors:
                 assert(len(expected_errors) == len(errors))
-                print("{0} errors found as expected".format(len(errors)))
+                print(f"{len(errors)} errors found as expected")
                 return None
             else:
                 return "expected and actual set of errors differ"
         else:
             print_errors("Unexpected", errors)
-            return "unexpected {0} errors found".format(len(errors))
+            return f"unexpected {len(errors)} errors found"
 
 
 def run_inspect_code(project_dir, sln_file, project_to_check, msbuild_props):
