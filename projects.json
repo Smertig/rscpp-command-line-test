@@ -400,6 +400,17 @@
             "repo": "https://github.com/nlohmann/json",
             "commit": "bc889afb4c5bf1c0d8ee29ef35eaaf4c8bef8a5d"
         },
+        "to skip": [
+            "unit-class_iterator.cpp",
+            "unit-class_const_iterator.cpp",
+            "unit-conversions.cpp",
+            "unit-constructor1.cpp",
+            "unit-bjdata.cpp",
+            "unit-iterators1.cpp",
+            "unit-convenience.cpp",
+            "unit-json_pointer.cpp"
+        ],
+        "__to skip reason": "RSCPP-34238 Red code due to incorrect macro expansion",
         "inspected files count": 83,
         "latest": {
             "develop": {
