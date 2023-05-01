@@ -244,6 +244,21 @@ def add_entry(node, key, value):
     entry.set("x:Key", key)
 
 
+def escape_dot_settings(s: str):
+    def remap(c: str):
+        assert len(c) == 1
+        if c.isalnum():
+            return c
+        else:
+            return f"_{ord(c):04X}"
+
+    return "".join(map(remap, s))
+
+
+assert escape_dot_settings("hello/world") == "hello_002Fworld"
+assert escape_dot_settings("mesh_*_helpers.h") == "mesh_005F_002A_005Fhelpers_002Eh"
+
+
 def generate_settings(files_to_skip):
     root = ET.Element("wpf:ResourceDictionary")
     root.set("xml:space", "preserve")
@@ -257,7 +272,7 @@ def generate_settings(files_to_skip):
     if files_to_skip:
         for f in files_to_skip:
             section = "CodeInspection" if f.endswith('proto') else "Environment"
-            add_entry(root, "/Default/{1}/ExcludedFiles/FileMasksToSkip/={0}/@EntryIndexedValue".format(f, section), True)
+            add_entry(root, f"/Default/{section}/ExcludedFiles/FileMasksToSkip/={escape_dot_settings(f)}/@EntryIndexedValue", True)
 
     return ET.ElementTree(root)
 

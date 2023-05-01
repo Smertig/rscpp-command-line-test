@@ -15,9 +15,9 @@
         "path to .sln": "Build/Windows/Debug/onnxruntime.sln"
     },
     "to skip": [
-        "function_005Finliner_002Eh",
-        "gzip_005Fstream_002Eh",
-        "tml_002Eproto"
+        "function_inliner.h",
+        "gzip_stream.h",
+        "tml.proto"
     ],
     "required dependencies": [
         "zlib"
