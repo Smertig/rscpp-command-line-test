@@ -1,6 +1,9 @@
 name: Correctness test for fixed repository versions
 
-on: [push, pull_request]
+on:
+  push:
+  schedule:
+    - cron: "0 3 * * *"  # every day at 3am
 
 env:
   RSCPP_VERSION: 2023.1.0
@@ -8,6 +11,8 @@ env:
 jobs:
   generate_matrix:
     name: Generate build matrix
+    if: "contains(github.event.head_commit.message, '[ci-fixed]') || github.event_name == 'schedule'"
+
     runs-on: ubuntu-22.04
     outputs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}

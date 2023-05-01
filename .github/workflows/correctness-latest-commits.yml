@@ -2,7 +2,6 @@ name: Correctness test for fresh repository versions
 
 on:
   push:
-  pull_request:
   schedule:
     - cron: "* */4 * * *"
 
