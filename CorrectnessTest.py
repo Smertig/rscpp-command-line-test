@@ -12,10 +12,10 @@ import common
 
 def print_errors(title, errors):
     if errors:
-        print(title + " errors:")
-        for f, l, m in errors:
-            print(json.dumps({"file" : f, "line" : l, "message" : m}))
-                
+        json_errors = (json.dumps({"file": f, "line": l, "message": m}) for f, l, m in sorted(errors))
+        print(f"{title} errors:")
+        print(",\n".join(json_errors))
+
 
 def check_report(report_file, known_errors):
     issue_nodes = ET.parse(report_file).getroot().findall("Issues")[0]
