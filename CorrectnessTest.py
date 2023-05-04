@@ -12,7 +12,7 @@ import common
 
 def print_errors(title, errors):
     if errors:
-        json_errors = (json.dumps({"file": f, "line": l, "message": m}) for f, l, m in sorted(errors))
+        json_errors = ("  " + json.dumps({"file": f, "line": l, "message": m}) for f, l, m in sorted(errors))
         print(f"{title} errors:")
         print(",\n".join(json_errors))
 
@@ -22,7 +22,7 @@ def check_report(report_file, known_errors):
     if len(issue_nodes) == 0:
         print("No compilation errors found")
         if known_errors:
-            print(f"But {len(known_errors)} errors were expected")
+            print_errors("Expected", known_errors)
             return f"no compilation errors found, but {len(known_errors)} errors were expected"
         else:
             return None
