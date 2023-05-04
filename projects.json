@@ -562,5 +562,53 @@
             "commit": "689f9a75a7809e21c160b97283db72180feba524"
         },
         "required toolchain" : [ "2022-x64" ]
+    },
+    "ranges-v3": {
+        "sources": {
+            "repo": "https://github.com/ericniebler/range-v3",
+            "commit": "a81477931a8aa2ad025c6bda0609f38e09e4d7ec"
+        },
+        "fixup sources": "proj-config/scripts/fix-ranges-v3.py",
+        "cmake options": [
+            "-DRANGE_V3_TESTS=ON",
+            "-DRANGE_V3_EXAMPLES=ON"
+        ],
+        "to skip": [
+            "generator.hpp"
+        ],
+        "known errors": [
+            {
+                "file": "..\\include\\range\\v3\\iterator\\common_iterator.hpp",
+                "line": "76",
+                "message": "Specialized template is not found",
+                "reason": "RSCPP-26427 Wrong error \"Specialized template not found\" for friend function"
+            },
+            {
+                "file": "..\\include\\range\\v3\\iterator\\common_iterator.hpp",
+                "line": "77",
+                "message": "Specialized template is not found",
+                "reason": "RSCPP-26427 Wrong error \"Specialized template not found\" for friend function"
+            }
+        ],
+        "inspected files count": 210,
+        "latest": {
+            "master": {
+                "inspected files count": 210,
+                "known errors": [
+                    {
+                        "file": "..\\include\\range\\v3\\iterator\\common_iterator.hpp",
+                        "line": "76",
+                        "message": "Specialized template is not found",
+                        "reason": "RSCPP-26427 Wrong error \"Specialized template not found\" for friend function"
+                    },
+                    {
+                        "file": "..\\include\\range\\v3\\iterator\\common_iterator.hpp",
+                        "line": "77",
+                        "message": "Specialized template is not found",
+                        "reason": "RSCPP-26427 Wrong error \"Specialized template not found\" for friend function"
+                    }
+                ]
+            }
+        }
     }
 }
