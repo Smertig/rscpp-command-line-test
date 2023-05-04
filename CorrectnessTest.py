@@ -17,32 +17,40 @@ def print_errors(title, errors):
         print(",\n".join(json_errors))
 
 
+def is_flaky(error: dict) -> bool:
+    return error.get("flaky", False)
+
+
 def check_report(report_file, known_errors):
     issue_nodes = ET.parse(report_file).getroot().findall("Issues")[0]
     if len(issue_nodes) == 0:
         print("No compilation errors found")
-        if known_errors:
-            print_errors("Expected", known_errors)
-            return f"no compilation errors found, but {len(known_errors)} errors were expected"
+        known_stable_errors = [error for error in known_errors if is_flaky(error)]
+        if known_stable_errors:
+            print_errors("Expected", known_stable_errors)
+            return f"no compilation errors found, but {len(known_stable_errors)} errors were expected"
         else:
             return None
     else:
-        errors = set([(issue.get("File"), issue.get("Line"), issue.get("Message")) for issue in issue_nodes.iter("Issue")])
+        actual_errors = set((issue.get("File"), issue.get("Line"), issue.get("Message")) for issue in issue_nodes.iter("Issue"))
         if known_errors:
-            expected_errors = set([(issue["file"], issue["line"], issue["message"]) for issue in known_errors])
-            unexpected_errors = errors.difference(expected_errors)
-            missing_errors = expected_errors.difference(errors)
+            def get_id(error):
+                return error["file"], error["line"], error["message"]
+
+            unexpected_errors = actual_errors - set(get_id(error) for error in known_errors)
             print_errors("Unexpected", unexpected_errors)
+
+            missing_errors = set(get_id(error) for error in known_errors if not is_flaky(error)) - actual_errors
             print_errors("Missing", missing_errors)
+
             if not unexpected_errors and not missing_errors:
-                assert(len(expected_errors) == len(errors))
-                print(f"{len(errors)} errors found as expected")
+                print(f"{len(actual_errors)} errors found as expected")
                 return None
             else:
                 return "expected and actual set of errors differ"
         else:
-            print_errors("Unexpected", errors)
-            return f"unexpected {len(errors)} errors found"
+            print_errors("Unexpected", actual_errors)
+            return f"unexpected {len(actual_errors)} errors found"
 
 
 def run_inspect_code(project_dir, sln_file, project_to_check, msbuild_props):
@@ -77,7 +85,7 @@ def check_project(project, project_dir, sln_file, branch: Optional[str]):
     else:
         print(f"count of inspected files is {actual_files_count}")
 
-    return check_report(report_file, local_config.get("known errors"))
+    return check_report(report_file, local_config.get("known errors", []))
 
 
 def process_project_with_cmake_generator(project, project_name, cmake_generator: str, branch: Optional[str]):
