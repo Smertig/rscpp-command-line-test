@@ -290,6 +290,18 @@ def get_compatible_toolchains(project: dict) -> List[str]:
 def prepare_project(project_name, project, cmake_generator: Optional[str], branch: Optional[str] = None):
     target_dir = path.join(_env.projects_dir, project_name)
     project_dir = get_sources(project["sources"], target_dir, branch)
+
+    fixup_sources = project.get("fixup sources")
+    if isinstance(fixup_sources, list):
+        with cwd(target_dir):
+            exec("\n".join(fixup_sources), {}, {})
+    elif isinstance(fixup_sources, str) and fixup_sources.endswith(".py"):
+        full_path = os.path.realpath(fixup_sources)
+        with cwd(target_dir):
+            subprocess.run(["python", full_path], check=True, stdout=_env.verbose_handle)
+    else:
+        assert fixup_sources is None, "unknown fixup sources format, should be list[str] or path to python script"
+
     custom_build_tool = project.get("custom build tool")
     if custom_build_tool:
         with cwd(project_dir):
