@@ -35,7 +35,7 @@ def process_project(project_name, project):
     snapshot_path = path.join(snapshot_dir, "snapshot.dtt")
     profiler_args = [console_profiler, "start", "--profiling-type=Timeline",
                      "--disable-tpl", "--overwrite", "--save-to=" + snapshot_path,
-                     env.inspect_code_path, "--"] + inspect_code_args
+                     env.inspect_code_path_x86, "--"] + inspect_code_args
     #print(subprocess.list2cmdline(profiler_args))
     process = subprocess.Popen(profiler_args, stdout=PIPE, text=True, encoding='cp1251')
     out, err = process.communicate()

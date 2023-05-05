@@ -77,8 +77,12 @@ class Environment:
         return self._projects_cache_directory or path.join(self.cli_test_dir, "projects")
 
     @property
-    def inspect_code_path(self) -> str:
+    def inspect_code_path_x86(self) -> str:
         return path.join(self.resharper_build, "inspectcode.x86.exe")
+
+    @property
+    def inspect_code_path_x64(self) -> str:
+        return path.join(self.resharper_build, "inspectcode.exe")
 
     @property
     def verbose(self) -> bool:

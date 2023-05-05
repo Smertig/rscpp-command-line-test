@@ -53,9 +53,9 @@ def check_report(report_file, known_errors):
             return f"unexpected {len(actual_errors)} errors found"
 
 
-def run_inspect_code(project_dir, sln_file, project_to_check, msbuild_props):
+def run_inspect_code(project_dir, sln_file, project_to_check, msbuild_props, use_x64: bool):
     args, report_file = common.inspect_code_run_arguments(project_dir, sln_file, project_to_check, msbuild_props)
-    args.insert(0, env.inspect_code_path)
+    args.insert(0, env.inspect_code_path_x64 if use_x64 else env.inspect_code_path_x86)
     print(subprocess.list2cmdline(args))
     process = Popen(args, stdout=PIPE, text=True, encoding='cp1251')
     start = time.time()
@@ -74,7 +74,8 @@ def run_inspect_code(project_dir, sln_file, project_to_check, msbuild_props):
 def check_project(project, project_dir, sln_file, branch: Optional[str]):
     project_to_check = project.get("project to check")
     msbuild_props = project.get("msbuild properties")
-    report_file, output = run_inspect_code(project_dir, sln_file, project_to_check, msbuild_props)
+    use_x64 = project.get("use x64", False)
+    report_file, output = run_inspect_code(project_dir, sln_file, project_to_check, msbuild_props, use_x64)
 
     local_config = project["latest"][branch] if branch else project
     expected_files_count = local_config.get("inspected files count")
