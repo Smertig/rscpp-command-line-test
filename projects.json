@@ -560,9 +560,29 @@
     "yuzu": {
         "sources": {
             "repo": "https://github.com/yuzu-emu/yuzu",
-            "commit": "689f9a75a7809e21c160b97283db72180feba524"
+            "commit": "689f9a75a7809e21c160b97283db72180feba524",
+            "recursive": true,
+            "subrepo": {
+                "path": "tools/glslang",
+                "url": "https://github.com/KhronosGroup/glslang",
+                "commit": "bc6b2bc17adef055e540ac607aa2ce10916449d1"
+            }
         },
-        "required toolchain" : [ "2022-x64" ]
+        "use x64": true,
+        "fixup sources": "proj-config/scripts/fix-yuzu.py",
+        "build step": [
+            "cmake --build . --target host_shaders"
+        ],
+        "cmake options": [
+            "-DENABLE_QT=OFF"
+        ],
+        "required toolchain" : [ "2022-x64" ],
+        "inspected files count": 0,
+        "latest": {
+            "master": {
+                "inspected files count": 0
+            }
+        }
     },
     "ranges-v3": {
         "sources": {

@@ -127,7 +127,6 @@ def get_sources_from_git(project_input, target_dir, branch: Optional[str]):
     with cwd(target_dir):
         subrepo = project_input.get("subrepo")
         if subrepo:
-            assert branch is None
             subrepo_dir = subrepo["path"]
             git_clone_if_needed(subrepo_dir, subrepo["url"])
             with cwd(subrepo_dir):
