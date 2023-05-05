@@ -138,7 +138,11 @@ def get_sources_from_git(project_input, target_dir, branch: Optional[str]):
         if custom_update_source_script:
             subprocess.run(custom_update_source_script, check=True, stdout=PIPE, stderr=PIPE)
 
-        subprocess.run(["git", "submodule", "update", "--init"], check=True, stdout=PIPE, stderr=PIPE)
+        update_submodules_args = ["git", "submodule", "update", "--init"]
+        if project_input.get("recursive", False):
+            update_submodules_args.append("--recursive")
+        subprocess.run(update_submodules_args, check=True, stdout=PIPE, stderr=PIPE)
+
         root_dir = project_input.get("root")
         if root_dir:
             return path.join(target_dir, root_dir)
