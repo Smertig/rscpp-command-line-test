@@ -1,4 +1,5 @@
 import os
+import shutil
 from os import path, makedirs
 from subprocess import PIPE
 import subprocess
@@ -224,6 +225,9 @@ def inspect_code_run_arguments(project_dir, sln_file, project_to_check, msbuild_
         args.append("--properties:" + ";".join(props))
 
     log_file = path.join(project_dir, "resharper-logs.txt")
+    err_file = path.join(project_dir, "resharper-logs.err.txt")
+    shutil.rmtree(log_file, ignore_errors=True)
+    shutil.rmtree(err_file, ignore_errors=True)
     args.append("--LogLevel=INFO")
     args.append("--LogFile=" + log_file)
 
