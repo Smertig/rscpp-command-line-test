@@ -631,5 +631,22 @@
                 ]
             }
         }
+    },
+    "magic_enum": {
+        "sources": {
+            "repo": "https://github.com/Neargye/magic_enum",
+            "commit": "48054f64abcfc83f58d9aa2efbbd21604f93aca4"
+        },
+        "to skip": [
+            "test_containers.cpp",
+            "example_containers_array.cpp"
+        ],
+        "__to skip reason": "RSCPP-34229 Broken constexpr evaluation of `std::optional`",
+        "inspected files count": 19,
+        "latest": {
+            "master": {
+                "inspected files count": 19
+            }
+        }
     }
 }
