@@ -32,10 +32,10 @@ def check_report(report_file, known_errors):
         else:
             return None
     else:
-        actual_errors = set((issue.get("File"), issue.get("Line"), issue.get("Message")) for issue in issue_nodes.iter("Issue"))
+        actual_errors = set((issue.get("File"), int(issue.get("Line")), issue.get("Message")) for issue in issue_nodes.iter("Issue"))
         if known_errors:
             def get_id(error):
-                return error["file"], error["line"], error["message"]
+                return error["file"], int(error["line"]), error["message"]
 
             unexpected_errors = actual_errors - set(get_id(error) for error in known_errors)
             print_errors("Unexpected", unexpected_errors)
