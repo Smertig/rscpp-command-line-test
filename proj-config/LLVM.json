@@ -13,7 +13,9 @@
         "-Thost=x64",
         "-Wno-dev"
     ],
-    "build step": "cmake --build . --target tools/clang/lib/Sema/clangSema",
+    "build step": [
+        "cmake --build . --target tools/clang/lib/Sema/clangSema"
+    ],
     "project to check": [
         "ADTTests",
         "SupportTests",

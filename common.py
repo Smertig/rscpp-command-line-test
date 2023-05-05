@@ -322,7 +322,8 @@ def prepare_project(project_name, project, cmake_generator: Optional[str], branc
         build_step = project.get("build step")
         if build_step:
             with cwd(build_dir):
-                subprocess.run(build_step.split(), check=True, stdout=_env.verbose_handle)
+                for step in build_step:
+                    subprocess.run(step.split(), check=True, stdout=_env.verbose_handle)
 
     generate_settings(project.get("to skip")).write(sln_file + ".DotSettings")
     return project_dir, sln_file
