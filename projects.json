@@ -576,11 +576,153 @@
         "cmake options": [
             "-DENABLE_QT=OFF"
         ],
+        "to skip": [
+            "robin_hash.h"
+        ],
+        "__to skip reasons": [
+            "robin_hash.h => RSCPP-34257 False-positive \"ambigious function call\""
+        ],
         "required toolchain" : [ "2022-x64" ],
-        "inspected files count": 0,
+        "inspected files count": 2521,
+        "known errors": [
+            {
+                "file": "..\\externals\\mbedtls\\library\\blowfish.c",
+                "line": 106,
+                "message": "Object of const type 'const uint32_t[4][256]' must be initialized",
+                "reason": "RSCPP-34258 Invalid \"Object of const type must be initialized\""
+            },
+            {
+                "file": "..\\src\\common\\settings.h",
+                "line": 331,
+                "message": "Conversion 'Settings::SwitchableSetting<Type, ranged>::operator const Type&() const' has the 'override' specifier but does not override a base class member",
+                "reason": "RSCPP-34260 Incorrect \"invalid override\" error"
+            },
+            {
+                "file": "..\\src\\core\\hle\\kernel\\kernel.cpp",
+                "line": 864,
+                "message": "Type 'SlabHeapContainer' is incomplete",
+                "reason": "Bug? Should not compile"
+            },
+            {
+                "file": "..\\src\\core\\hle\\service\\nfp\\nfp_device.cpp",
+                "line": 1121,
+                "message": "static_assert failed: 'CrcData is an invalid size'\r\n    Expression '128 == 126' evaluates to false",
+                "reason": "RSCPP-34261 `#pragma pack` doesn't work for local types"
+            },
+            {
+                "file": "..\\src\\video_core\\renderer_opengl\\gl_texture_cache.cpp",
+                "line": 1128,
+                "message": "Cannot substitute arguments for class 'VideoCommon::SlotVector<T>' because of violated constraint 'std::is_nothrow_move_assignable_v<Image> && std::is_nothrow_move_constructible_v<Image>'",
+                "reason": "RSCPP-14556 Implement __is_nothrow_assignable trait"
+            },
+            {
+                "file": "..\\src\\video_core\\renderer_opengl\\gl_texture_cache.h",
+                "line": 264,
+                "message": "Cannot substitute arguments for class 'VideoCommon::SlotVector<T>' because of violated constraint 'std::is_nothrow_move_assignable_v<Image> && std::is_nothrow_move_constructible_v<Image>'",
+                "reason": "RSCPP-14556 Implement __is_nothrow_assignable trait"
+            },
+            {
+                "file": "..\\src\\video_core\\renderer_vulkan\\vk_texture_cache.cpp",
+                "line": 1668,
+                "message": "Cannot substitute arguments for class 'VideoCommon::SlotVector<T>' because of violated constraint 'std::is_nothrow_move_assignable_v<Image> && std::is_nothrow_move_constructible_v<Image>'",
+                "reason": "RSCPP-14556 Implement __is_nothrow_assignable trait"
+            },
+            {
+                "file": "..\\src\\video_core\\renderer_vulkan\\vk_texture_cache.h",
+                "line": 201,
+                "message": "Cannot substitute arguments for class 'VideoCommon::SlotVector<T>' because of violated constraint 'std::is_nothrow_move_assignable_v<Image> && std::is_nothrow_move_constructible_v<Image>'",
+                "reason": "RSCPP-14556 Implement __is_nothrow_assignable trait"
+            },
+            {
+                "file": "..\\src\\video_core\\renderer_vulkan\\vk_texture_cache.h",
+                "line": 258,
+                "message": "Cannot substitute arguments for class 'VideoCommon::SlotVector<T>' because of violated constraint 'std::is_nothrow_move_assignable_v<Image> && std::is_nothrow_move_constructible_v<Image>'",
+                "reason": "RSCPP-14556 Implement __is_nothrow_assignable trait"
+            },
+            {
+                "file": "..\\src\\video_core\\shader_cache.cpp",
+                "line": 195,
+                "message": "Substitution failed due to constraints: std::indirect_binary_predicate<std::ranges::equal_to, std::projected<std::vector<Entry*>::iterator, std::identity>, const Entry* const*> is false,\r\n  because std::predicate<std::ranges::equal_to&, Entry*&, const Entry*&> is false,\r\n  because std::regular_invocable<std::ranges::equal_to&, Entry*&, const Entry*&> is false,\r\n  because 'std::ranges::equal_to&' does not satisfy concept std::invocable<Entry*&, const Entry*&>",
+                "reason": "RSCPP-34262 Incorrect calculation of ternary operator type"
+            },
+            {
+                "file": "..\\src\\video_core\\texture_cache\\texture_cache_base.h",
+                "line": 439,
+                "message": "Cannot substitute arguments for class 'VideoCommon::SlotVector<T>' because of violated constraint 'std::is_nothrow_move_assignable_v<ImageMapView> && std::is_nothrow_move_constructible_v<ImageMapView>'",
+                "reason": "RSCPP-14556 Implement __is_nothrow_assignable trait"
+            }
+        ],
         "latest": {
             "master": {
-                "inspected files count": 0
+                "inspected files count": 2521,
+                "known errors": [
+                    {
+                        "file": "..\\externals\\mbedtls\\library\\blowfish.c",
+                        "line": 106,
+                        "message": "Object of const type 'const uint32_t[4][256]' must be initialized",
+                        "reason": "RSCPP-34258 Invalid \"Object of const type must be initialized\""
+                    },
+                    {
+                        "file": "..\\src\\common\\settings.h",
+                        "line": 331,
+                        "message": "Conversion 'Settings::SwitchableSetting<Type, ranged>::operator const Type&() const' has the 'override' specifier but does not override a base class member",
+                        "reason": "RSCPP-34260 Incorrect \"invalid override\" error"
+                    },
+                    {
+                        "file": "..\\src\\core\\hle\\kernel\\kernel.cpp",
+                        "line": 864,
+                        "message": "Type 'SlabHeapContainer' is incomplete",
+                        "reason": "Bug? Should not compile"
+                    },
+                    {
+                        "file": "..\\src\\core\\hle\\service\\nfp\\nfp_device.cpp",
+                        "line": 1121,
+                        "message": "static_assert failed: 'CrcData is an invalid size'\r\n    Expression '128 == 126' evaluates to false",
+                        "reason": "RSCPP-34261 `#pragma pack` doesn't work for local types"
+                    },
+                    {
+                        "file": "..\\src\\video_core\\renderer_opengl\\gl_texture_cache.cpp",
+                        "line": 1128,
+                        "message": "Cannot substitute arguments for class 'VideoCommon::SlotVector<T>' because of violated constraint 'std::is_nothrow_move_assignable_v<Image> && std::is_nothrow_move_constructible_v<Image>'",
+                        "reason": "RSCPP-14556 Implement __is_nothrow_assignable trait"
+                    },
+                    {
+                        "file": "..\\src\\video_core\\renderer_opengl\\gl_texture_cache.h",
+                        "line": 264,
+                        "message": "Cannot substitute arguments for class 'VideoCommon::SlotVector<T>' because of violated constraint 'std::is_nothrow_move_assignable_v<Image> && std::is_nothrow_move_constructible_v<Image>'",
+                        "reason": "RSCPP-14556 Implement __is_nothrow_assignable trait"
+                    },
+                    {
+                        "file": "..\\src\\video_core\\renderer_vulkan\\vk_texture_cache.cpp",
+                        "line": 1668,
+                        "message": "Cannot substitute arguments for class 'VideoCommon::SlotVector<T>' because of violated constraint 'std::is_nothrow_move_assignable_v<Image> && std::is_nothrow_move_constructible_v<Image>'",
+                        "reason": "RSCPP-14556 Implement __is_nothrow_assignable trait"
+                    },
+                    {
+                        "file": "..\\src\\video_core\\renderer_vulkan\\vk_texture_cache.h",
+                        "line": 201,
+                        "message": "Cannot substitute arguments for class 'VideoCommon::SlotVector<T>' because of violated constraint 'std::is_nothrow_move_assignable_v<Image> && std::is_nothrow_move_constructible_v<Image>'",
+                        "reason": "RSCPP-14556 Implement __is_nothrow_assignable trait"
+                    },
+                    {
+                        "file": "..\\src\\video_core\\renderer_vulkan\\vk_texture_cache.h",
+                        "line": 258,
+                        "message": "Cannot substitute arguments for class 'VideoCommon::SlotVector<T>' because of violated constraint 'std::is_nothrow_move_assignable_v<Image> && std::is_nothrow_move_constructible_v<Image>'",
+                        "reason": "RSCPP-14556 Implement __is_nothrow_assignable trait"
+                    },
+                    {
+                        "file": "..\\src\\video_core\\shader_cache.cpp",
+                        "line": 195,
+                        "message": "Substitution failed due to constraints: std::indirect_binary_predicate<std::ranges::equal_to, std::projected<std::vector<Entry*>::iterator, std::identity>, const Entry* const*> is false,\r\n  because std::predicate<std::ranges::equal_to&, Entry*&, const Entry*&> is false,\r\n  because std::regular_invocable<std::ranges::equal_to&, Entry*&, const Entry*&> is false,\r\n  because 'std::ranges::equal_to&' does not satisfy concept std::invocable<Entry*&, const Entry*&>",
+                        "reason": "RSCPP-34262 Incorrect calculation of ternary operator type"
+                    },
+                    {
+                        "file": "..\\src\\video_core\\texture_cache\\texture_cache_base.h",
+                        "line": 439,
+                        "message": "Cannot substitute arguments for class 'VideoCommon::SlotVector<T>' because of violated constraint 'std::is_nothrow_move_assignable_v<ImageMapView> && std::is_nothrow_move_constructible_v<ImageMapView>'",
+                        "reason": "RSCPP-14556 Implement __is_nothrow_assignable trait"
+                    }
+                ]
             }
         }
     },
