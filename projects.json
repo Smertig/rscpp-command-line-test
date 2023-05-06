@@ -599,7 +599,7 @@
             },
             {
                 "file": "..\\src\\core\\hle\\kernel\\kernel.cpp",
-                "line": 864,
+                "line": 851,
                 "message": "Type 'SlabHeapContainer' is incomplete",
                 "reason": "Bug? Should not compile"
             },
@@ -611,7 +611,7 @@
             },
             {
                 "file": "..\\src\\video_core\\renderer_opengl\\gl_texture_cache.cpp",
-                "line": 1128,
+                "line": 1125,
                 "message": "Cannot substitute arguments for class 'VideoCommon::SlotVector<T>' because of violated constraint 'std::is_nothrow_move_assignable_v<Image> && std::is_nothrow_move_constructible_v<Image>'",
                 "reason": "RSCPP-14556 Implement __is_nothrow_assignable trait"
             },
