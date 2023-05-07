@@ -17,13 +17,20 @@ GENERATOR_TO_CONFIG = {
     }
 }
 
-assert len(sys.argv) == 4, f"{sys.argv[0]} projects.json proj-config-dir mode"
 
-_, projects_path, projects_dir, mode = sys.argv
+def is_slow_project(project_name: str):
+    # TODO: extract average build time from stats
+    return project_name in ('ITK', 'rocksdb', 'OpenCV', 'yuzu')
+
+
+assert len(sys.argv) == 5, f"{sys.argv[0]} projects.json proj-config-dir mode github_event"
+
+_, projects_path, projects_dir, mode, github_event = sys.argv
 
 assert mode in ('correctness-fixed', 'correctness-latest'), f"unknown mode: {mode}"
 IS_CORRECTNESS_FIXED = mode == 'correctness-fixed'
 IS_CORRECTNESS_LATEST = mode == 'correctness-latest'
+IS_SCHEDULED = github_event == 'schedule'
 
 with open(projects_path) as f:
     projects = json.load(f)
@@ -36,6 +43,10 @@ for project_name, project_config in projects.items():
             project_config = json.load(f)
 
     if project_config.get("disabled", False):
+        continue
+
+    # Run slow projects only on schedule
+    if not IS_SCHEDULED and is_slow_project(project_name):
         continue
 
     cmake_gens = project_config.get("required toolchain", [DEFAULT_GENERATOR])
