@@ -55,6 +55,7 @@ jobs:
             --build-dir $USERPROFILE/.dotnet/tools/.store/jetbrains.resharper.globaltools/${{ env.RSCPP_VERSION }}/jetbrains.resharper.globaltools/${{ env.RSCPP_VERSION }}/tools/netcoreapp3.1/any \
             --projects-cache $RUNNER_TEMP/projects \
             --supported-generators ${{matrix.cmake_gen}} \
+            --report-path $RUNNER_TEMP/report.json \
             --verbose
           echo "BUILD_DIR=$RUNNER_TEMP/projects/${{matrix.project}}/build-${{matrix.cmake_gen}}" >> $GITHUB_OUTPUT
 
@@ -63,3 +64,19 @@ jobs:
         with:
           name: ${{matrix.project}}-${{matrix.branch}}-logs
           path: "${{ steps.inspect-code.outputs.BUILD_DIR }}/resharper-*"
+
+      - name: Clone report branch
+        uses: actions/checkout@v3
+        with:
+          ref: "gh-pages"
+          path: gh-pages
+
+      - name: Update report
+        shell: bash
+        run: python .github/save_stats.py $RUNNER_TEMP/report.json $GITHUB_WORKSPACE/gh-pages
+
+      - name: Commit report
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: gh-pages
