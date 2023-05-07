@@ -32,7 +32,7 @@ def check_report(report_file, known_errors):
         else:
             return None
     else:
-        actual_errors = set((issue.get("File"), int(issue.get("Line")), issue.get("Message")) for issue in issue_nodes.iter("Issue"))
+        actual_errors = set((issue.get("File"), int(issue.get("Line", "0")), issue.get("Message")) for issue in issue_nodes.iter("Issue"))
         if known_errors:
             def get_id(error):
                 return error["file"], int(error["line"]), error["message"]
