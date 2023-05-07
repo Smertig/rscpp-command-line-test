@@ -58,6 +58,7 @@ jobs:
             --report-path $RUNNER_TEMP/report.json \
             --verbose
           echo "BUILD_DIR=$RUNNER_TEMP/projects/${{matrix.project}}/build-${{matrix.cmake_gen}}" >> $GITHUB_OUTPUT
+          echo "REPORT_PATH=$RUNNER_TEMP/report.json" >> $GITHUB_OUTPUT
 
       - name: Save logs
         uses: actions/upload-artifact@v3
@@ -65,18 +66,43 @@ jobs:
           name: ${{matrix.project}}-${{matrix.branch}}-logs
           path: "${{ steps.inspect-code.outputs.BUILD_DIR }}/resharper-*"
 
-      - name: Clone report branch
-        uses: actions/checkout@v3
+      - name: Upload reports'
+        uses: actions/upload-artifact@v3
         with:
-          ref: "gh-pages"
-          path: gh-pages
+          name: ${{matrix.project}}-${{matrix.branch}}-report
+          path: "${{ steps.inspect-code.outputs.REPORT_PATH }}"
+          retention-days: 1
 
-      - name: Update report
-        shell: bash
-        run: python .github/save_stats.py $RUNNER_TEMP/report.json $GITHUB_WORKSPACE/gh-pages
+  collect_reports:
+    needs: run_correctness_test
+    if: success() || failure()
+    runs-on: ubuntu-22.04
+    name: Collect reports
 
-      - name: Commit report
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: gh-pages
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Clone report branch
+      uses: actions/checkout@v3
+      with:
+        ref: "gh-pages"
+        path: gh-pages
+
+    - name: Download reports' artifacts
+      uses: actions/download-artifact@v3
+      with:
+        path: downloaded_artifacts
+
+    - name: (TEMP) Display structure of downloaded files
+      run: ls -R
+      working-directory: downloaded_artifacts
+
+    - name: Update report
+      shell: bash
+      run: python .github/save_stats.py ./downloaded_artifacts $GITHUB_WORKSPACE/gh-pages
+
+    - name: Commit report
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: gh-pages
