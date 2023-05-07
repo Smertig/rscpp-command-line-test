@@ -58,8 +58,7 @@ for project_name, project_config in projects.items():
                 continue
 
             for latest_branch in latest_branches.keys():
-                conf["project"] = f"{project_name}:{latest_branch}"
-                matrix["include"].append(conf)
+                matrix["include"].append(conf | {"project": f"{project_name}:{latest_branch}"})
         else:
             matrix["include"].append(conf)
 
