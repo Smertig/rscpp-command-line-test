@@ -1,3 +1,4 @@
+import datetime
 import json
 import subprocess
 import sys
@@ -5,7 +6,7 @@ import time
 import traceback
 import xml.etree.ElementTree as ET
 from subprocess import Popen, PIPE
-from typing import Optional
+from typing import Optional, Tuple
 
 import common
 
@@ -21,16 +22,19 @@ def is_flaky(error: dict) -> bool:
     return error.get("flaky", False)
 
 
-def check_report(report_file, known_errors):
-    issue_nodes = ET.parse(report_file).getroot().findall("Issues")[0]
+def check_report(report_file, known_errors) -> Tuple[Optional[str], dict]:
+    result: Optional[str] = None
+    error_mismatch = False
+
+    xml_doc = ET.parse(report_file)
+    issue_nodes = xml_doc.getroot().findall("Issues")[0]
     if len(issue_nodes) == 0:
         print("No compilation errors found")
         known_stable_errors = [error for error in known_errors if is_flaky(error)]
         if known_stable_errors:
             print_errors("Expected", known_stable_errors)
-            return f"no compilation errors found, but {len(known_stable_errors)} errors were expected"
-        else:
-            return None
+            result = f"no compilation errors found, but {len(known_stable_errors)} errors were expected"
+            error_mismatch = True
     else:
         actual_errors = set((issue.get("File"), int(issue.get("Line", "0")), issue.get("Message")) for issue in issue_nodes.iter("Issue"))
         if known_errors:
@@ -45,12 +49,18 @@ def check_report(report_file, known_errors):
 
             if not unexpected_errors and not missing_errors:
                 print(f"{len(actual_errors)} errors found as expected")
-                return None
             else:
-                return "expected and actual set of errors differ"
+                result = "expected and actual set of errors differ"
+                error_mismatch = True
         else:
             print_errors("Unexpected", actual_errors)
-            return f"unexpected {len(actual_errors)} errors found"
+            result = f"unexpected {len(actual_errors)} errors found"
+            error_mismatch = True
+
+    return result, {
+        'tool_version': xml_doc.getroot().attrib['ToolsVersion'],
+        'error_mismatch': error_mismatch
+    }
 
 
 def run_inspect_code(project_dir, sln_file, project_to_check, msbuild_props, use_x64: bool):
@@ -71,11 +81,14 @@ def run_inspect_code(project_dir, sln_file, project_to_check, msbuild_props, use
     return report_file, out
 
 
-def check_project(project, project_dir, sln_file, branch: Optional[str]):
+def check_project(project, project_dir, sln_file, branch: Optional[str]) -> Tuple[Optional[str], dict]:
     project_to_check = project.get("project to check")
     msbuild_props = project.get("msbuild properties")
     use_x64 = project.get("use x64", False)
+
+    start_time = time.time()
     report_file, output = run_inspect_code(project_dir, sln_file, project_to_check, msbuild_props, use_x64)
+    end_time = time.time()
 
     local_config = project["latest"][branch] if branch else project["stable"]
     expected_files_count = local_config.get("inspected files count")
@@ -86,33 +99,50 @@ def check_project(project, project_dir, sln_file, branch: Optional[str]):
     else:
         print(f"count of inspected files is {actual_files_count}")
 
-    return check_report(report_file, local_config.get("known errors", []))
+    result, report = check_report(report_file, local_config.get("known errors", []))
+    report |= {
+        'project': project_to_check,
+        'timestamp': datetime.datetime.utcnow().timestamp(),
+        'elapsed_time': end_time - start_time,
+        'x64': use_x64,
+        'actual_files_count': actual_files_count,
+        'expected_files_count': expected_files_count,
+    }
+    return result, report
 
 
-def process_project_with_cmake_generator(project, project_name, cmake_generator: str, branch: Optional[str]):
+def process_project_with_cmake_generator(project, project_name, cmake_generator: str, branch: Optional[str]) -> Tuple[Optional[str], dict]:
     project_dir, sln_file = common.prepare_project(project_name, project, cmake_generator, branch)
-    result = check_project(project, project_dir, sln_file, branch)
+    result, report = check_project(project, project_dir, sln_file, branch)
     if result:
-        return f"({cmake_generator}) {result}"
+        result = f"({cmake_generator}) {result}"
+    return result, report
 
 
-def process_project(project_name, project, branch: Optional[str]):
+def process_project(project_name, project, branch: Optional[str]) -> Tuple[Optional[str], dict]:
     project = common.read_conf_if_needed(project)
 
     available_toolchains = common.get_compatible_toolchains(project)
     if not available_toolchains:
-        return f'({project_name}) no available toolchains found'
+        return f'({project_name}) no available toolchains found', {}
 
     if "custom build tool" in project:
         project_dir, sln_file = common.prepare_project(project_name, project, None, branch)
         return check_project(project, project_dir, sln_file, branch)
 
+    result = None
+    report = {}
     for generator in available_toolchains:
-        result = process_project_with_cmake_generator(project, project_name, generator, branch)
-        if result:
-            return result
+        local_result, local_report = process_project_with_cmake_generator(project, project_name, generator, branch)
+        report[generator] = local_report
+        if local_result:
+            result = local_result
+            break
+
+    return result, report
 
 
+common.argparser.add_argument("--report-path", dest="report_path")
 args = common.argparser.parse_args()
 env = common.load_env(args)
 
@@ -121,19 +151,36 @@ def main():
     summary = []
     start_time = time.time()
 
+    full_report = {}
     for project_name, project_branch in common.parse_projects(args.project):
         print(f"processing project {project_name} (branch: {project_branch})...", flush=True)
 
         try:
-            result = process_project(project_name, common.projects[project_name], project_branch)
+            result, report = process_project(project_name, common.projects[project_name], project_branch)
         except Exception as e:
-            print(traceback.format_exc())
+            error_info = traceback.format_exc()
+            print(error_info)
+
             result = f"exception: {e}"
+            report = {
+                'exception': str(e),
+                'error_info': error_info
+            }
+
+        report_key = f"{project_name}:{project_branch}" if project_branch else project_name
+        full_report[report_key] = report
 
         if result:
             summary.append(project_name + ": " + result)
 
         print('-------------------------------------------------------', flush=True)
+
+    # Dump report if needed
+    report_path = args.report_path
+    if report_path:
+        common.create_parents(report_path)
+        with open(report_path, 'w') as f_report:
+            json.dump(full_report, f_report, indent=4)
 
     print("Total time: " + common.duration(start_time, time.time()))
     if len(summary) == 0:

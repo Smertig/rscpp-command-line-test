@@ -366,6 +366,11 @@ def parse_projects(specified_projects: List[str]):
                 yield project, None
 
 
+def create_parents(path: str):
+    dir_name = os.path.dirname(os.path.realpath(path))
+    os.makedirs(dir_name, exist_ok=True)
+
+
 argparser = ArgumentParser()
 argparser.add_argument("-p", "--project", dest="project", nargs='+', type=str)
 argparser.add_argument("-e", "--env", dest='env_path')
