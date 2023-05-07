@@ -3,7 +3,7 @@
         "repo": "https://github.com/lethal-guitar/RigelEngine.git",
         "commit": "67f1ff7faecb565a93b72d1f803c4424c9428e63"
     },
-    "required toolchain" : [ "2017-x64" ],
+    "required toolchain": ["2017-x64"],
     "required dependencies": [
         "boost-program-options",
         "boost-algorithm",
@@ -13,6 +13,10 @@
     "to skip": [
         "resample_neon.h"
     ],
+    "stable": {
+        "inspected files count": 277,
+        "mem traffic": 4870
+    },
     "known errors": [
         {
             "file": "..\\3rd_party\\speex_resampler\\speex\\resample_sse.h",
@@ -20,7 +24,5 @@
             "message": "Cannot resolve symbol 'spx_uint32_t'",
             "reason": "wrong order of #include's"
         }
-    ],
-    "inspected files count": 277,
-    "mem traffic": 4870
+    ]
 }

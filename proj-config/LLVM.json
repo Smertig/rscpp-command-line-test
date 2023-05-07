@@ -8,7 +8,7 @@
             "commit": "a7ee181aaa8a79b1fece474c733c4f571f0d4ef2"
         }
     },
-    "required toolchain" : [ "2017-x64" ],
+    "required toolchain": ["2017-x64"],
     "cmake options": [
         "-Thost=x64",
         "-Wno-dev"
@@ -22,13 +22,15 @@
         "clangSema",
         "clangFormat"
     ],
+    "stable": {
+        "inspected files count": 251,
+        "mem traffic": 18800
+    },
     "known errors": [
         {
             "file": "..\\tools\\clang\\lib\\Sema\\TreeTransform.h",
             "line": "3975",
             "message": "Member 'Self' is not initialized in this constructor"
         }
-    ],
-    "inspected files count": 251,
-    "mem traffic": 18800
+    ]
 }

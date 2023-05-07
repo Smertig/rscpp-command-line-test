@@ -59,7 +59,11 @@ for project_name, project_config in projects.items():
 
             for latest_branch in latest_branches.keys():
                 matrix["include"].append(conf | {"project": f"{project_name}:{latest_branch}"})
-        else:
+        elif IS_CORRECTNESS_FIXED:
+            stable_branch = project_config.get("stable")
+            if not stable_branch:
+                continue
+
             matrix["include"].append(conf)
 
 escaped_matrix = json.dumps(matrix)

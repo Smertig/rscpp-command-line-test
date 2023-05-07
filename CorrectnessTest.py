@@ -77,7 +77,7 @@ def check_project(project, project_dir, sln_file, branch: Optional[str]):
     use_x64 = project.get("use x64", False)
     report_file, output = run_inspect_code(project_dir, sln_file, project_to_check, msbuild_props, use_x64)
 
-    local_config = project["latest"][branch] if branch else project
+    local_config = project["latest"][branch] if branch else project["stable"]
     expected_files_count = local_config.get("inspected files count")
     actual_files_count = common.inspected_files_count(output)
     if expected_files_count:

@@ -46,7 +46,8 @@ def process_project(project_name, project):
         print("Error:")
         print(err)
 
-    expected_files_count = project["inspected files count"]
+    local_config = project['stable']
+    expected_files_count = local_config["inspected files count"]
     actual_files_count = common.inspected_files_count(out)
     if expected_files_count != actual_files_count:
         print(out)
@@ -57,7 +58,7 @@ def process_project(project_name, project):
     with open(path.join(snapshot_dir, "snapshot.dtt.alloc.stats.txt")) as f:
         actual_traffic = int(f.read()) // (1 << 20)
 
-    expected_traffic = project.get("mem traffic")
+    expected_traffic = local_config.get("mem traffic")
     if expected_traffic:
         relative_delta = (actual_traffic - expected_traffic) / expected_traffic * 100
         if abs(relative_delta) < (3.0 if expected_traffic < 1000 else 0.5):

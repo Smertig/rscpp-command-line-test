@@ -4,24 +4,30 @@
             "repo": "https://github.com/KhronosGroup/glslang.git",
             "commit": "1c1c2d643a6b0acaad428e82594ddde9af51c19c"
         },
-        "inspected files count": 112,
-        "mem traffic": 2570
+        "stable": {
+            "inspected files count": 112,
+            "mem traffic": 2570
+        }
     },
     "cds": {
         "sources": {
             "repo": "https://github.com/khizmax/libcds",
             "commit": "e808976c63e4a58b035bafa473201cf77c9a2c46"
         },
-        "inspected files count": 20,
-        "mem traffic": 542
+        "stable": {
+            "inspected files count": 20,
+            "mem traffic": 542
+        }
     },
     "args": {
         "sources": {
             "repo": "https://github.com/taywee/args",
             "commit": "a82a9d6c94d7c58d8b96c65bdc1aba09a4f3e5db"
         },
-        "inspected files count": 6,
-        "mem traffic": 485,
+        "stable": {
+            "inspected files count": 6,
+            "mem traffic": 485
+        },
         "latest": {
             "master": {}
         }
@@ -31,8 +37,10 @@
             "repo": "https://github.com/AmokHuginnsson/replxx",
             "commit": "f719de5ee3c89d9dd955f43a8b95eecebdf9ccd6"
         },
-        "inspected files count": 13,
-        "mem traffic": 444
+        "stable": {
+            "inspected files count": 13,
+            "mem traffic": 444
+        }
     },
     "LLVM": "LLVM.json",
     "fmtlib": "FMT.json",
@@ -42,8 +50,10 @@
             "commit": "1b8edea9261a9a06b4de164f462b44925cce429e"
         },
         "project to check": "vtkCommonCoreCxxTests",
-        "inspected files count": 56,
-        "mem traffic": 5150
+        "stable": {
+            "inspected files count": 56,
+            "mem traffic": 5150
+        }
     },
     "ITK": {
         "sources": {
@@ -51,8 +61,10 @@
             "commit": "b95b4c41af6ba76bdb26a59967c85fdcc23f1464"
         },
         "project to check": "ITKCommon",
-        "inspected files count": 90,
-        "mem traffic": 9350,
+        "stable": {
+            "inspected files count": 90,
+            "mem traffic": 9350
+        },
         "latest": {
             "master": {}
         }
@@ -62,8 +74,10 @@
             "repo": "https://github.com/facebook/rocksdb.git",
             "commit": "de651035535b6d66276edc97c121cb507e9138cb"
         },
-        "inspected files count": 624,
-        "mem traffic": 21200,
+        "stable": {
+            "inspected files count": 624,
+            "mem traffic": 21200
+        },
         "latest": {
             "master": {}
         }
@@ -82,8 +96,10 @@
                 "reason": "TODO"
             }
         ],
-        "inspected files count": 1770,
-        "mem traffic": 23460
+        "stable": {
+            "inspected files count": 1770,
+            "mem traffic": 23460
+        }
     },
     "OpenCV": {
         "sources": {
@@ -95,8 +111,10 @@
             "*.inl.hpp",
             "gapi_streaming_utils_test.cpp"
         ],
-        "inspected files count": 309,
-        "mem traffic": 11750,
+        "stable": {
+            "inspected files count": 309,
+            "mem traffic": 11750
+        },
         "latest": {
             "4.x": {
                 "inspected files count": 459
@@ -128,25 +146,31 @@
                 "message": "Type 'action_type' is incomplete"
             }
         ],
-        "inspected files count": 246,
-        "mem traffic": 6990
+        "stable": {
+            "inspected files count": 246,
+            "mem traffic": 6990
+        }
     },
     "SQLiteCpp": {
         "sources": {
             "repo": "https://github.com/SRombauts/SQLiteCpp",
             "commit": "b454170da118d64eed77ee082f0d9aae8c97543d"
         },
-        "inspected files count": 18,
-        "mem traffic": 1494
+        "stable": {
+            "inspected files count": 18,
+            "mem traffic": 1494
+        }
     },
     "argh": {
         "sources": {
             "repo": "https://github.com/adishavit/argh",
             "commit": "0775441d436749263279626a1c820267940188f7"
         },
-        "required toolchain" : [ "2019-x64", "2022-x64" ],
-        "inspected files count": 2,
-        "mem traffic": 355
+        "required toolchain": ["2019-x64", "2022-x64"],
+        "stable": {
+            "inspected files count": 2,
+            "mem traffic": 355
+        }
     },
     "Eigen3": {
         "sources": {
@@ -158,7 +182,9 @@
             "-Wno-dev",
             "-DEIGEN_TEST_CXX11=ON"
         ],
-        "inspected files count": 82,
+        "stable": {
+            "inspected files count": 82
+        },
         "latest": {
             "master": {}
         }
@@ -173,16 +199,20 @@
             "common",
             "encoder"
         ],
-        "inspected files count": 96,
-        "mem traffic" : 1950
+        "stable": {
+            "inspected files count": 96,
+            "mem traffic": 1950
+        }
     },
     "DependencyChecker": {
         "sources": {
             "repo": "https://github.com/tomtom-international/cpp-dependencies.git",
             "commit": "e41dc70c62b2d6e3fea014b3a0e62dc64fed6d5f"
         },
-        "inspected files count": 20,
-        "mem traffic" : 530
+        "stable": {
+            "inspected files count": 20,
+            "mem traffic": 530
+        }
     },
     "ZSTD": {
         "sources": {
@@ -193,8 +223,10 @@
         "cmake options": [
             "-DZSTD_BUILD_TESTS=ON"
         ],
-        "inspected files count": 123,
-        "mem traffic" : 1740,
+        "stable": {
+            "inspected files count": 123,
+            "mem traffic": 1740
+        },
         "latest": {
             "dev": {}
         }
@@ -210,8 +242,10 @@
         "to skip": [
             "catch_objc*"
         ],
-        "inspected files count": 203,
-        "mem traffic": 1857,
+        "stable": {
+            "inspected files count": 203,
+            "mem traffic": 1857
+        },
         "latest": {
             "devel": {
                 "inspected files count": 272
@@ -224,8 +258,10 @@
             "commit": "5805f99a533a8f8118699c0100d8c102f3605f65"
         },
         "build dir": "out",
-        "inspected files count": 49,
-        "mem traffic": 800
+        "stable": {
+            "inspected files count": 49,
+            "mem traffic": 800
+        }
     },
     "Google-RE2": {
         "sources": {
@@ -233,8 +269,10 @@
             "commit": "e860767c86e577b87deadf24cc4567ea83c4f162"
         },
         "build dir": "out",
-        "inspected files count": 72,
-        "mem traffic": 1150,
+        "stable": {
+            "inspected files count": 72,
+            "mem traffic": 1150
+        },
         "latest": {
             "main": {}
         }
@@ -244,16 +282,20 @@
             "repo": "https://github.com/google/snappy.git",
             "commit": "ea660b57d65d68d521287c903459b6dd3b2804d0"
         },
-        "inspected files count": 13,
-        "mem traffic": 371
+        "stable": {
+            "inspected files count": 13,
+            "mem traffic": 371
+        }
     },
     "dlib": {
         "sources": {
             "repo": "https://github.com/davisking/dlib.git",
             "commit": "99af7b9d54f47fc0609490fde09b6c20fde6ae62"
         },
-        "inspected files count": 134,
-        "mem traffic": 2870,
+        "stable": {
+            "inspected files count": 134,
+            "mem traffic": 2870
+        },
         "latest": {
             "master": {}
         }
@@ -266,8 +308,10 @@
         "custom build tool": {
             "path to .sln": "examples/imgui_examples.sln"
         },
-        "inspected files count": 63,
-        "mem traffic": 3221,
+        "stable": {
+            "inspected files count": 63,
+            "mem traffic": 3221
+        },
         "latest": {
             "master": {}
         }
@@ -279,7 +323,9 @@
             "repo": "https://github.com/microsoft/wil.git",
             "commit": "ade910fb44f0b23c03111a2838c2148d326f5622"
         },
-        "inspected files count": 18
+        "stable": {
+            "inspected files count": 18
+        }
     },
     "draco": {
         "sources": {
@@ -289,8 +335,10 @@
         "to skip": [
             "mesh_*_helpers.h"
         ],
-        "inspected files count": 303,
-        "mem traffic": 2221
+        "stable": {
+            "inspected files count": 303,
+            "mem traffic": 2221
+        }
     },
     "GLM": {
         "sources": {
@@ -298,8 +346,10 @@
             "commit": "fce2abd01ce21063bd25ba67c9318be83bf48813"
         },
         "project to check": "test-*",
-        "inspected files count": 153,
-        "mem traffic": 2171
+        "stable": {
+            "inspected files count": 153,
+            "mem traffic": 2171
+        }
     },
     "ONNXRuntime": "ONNXRuntime.json",
     "SEAL": {
@@ -311,41 +361,49 @@
         "cmake options": [
             "-DALLOW_COMMAND_LINE_BUILD=1"
         ],
-        "inspected files count": 32,
-        "mem traffic": 652
+        "stable": {
+            "inspected files count": 32,
+            "mem traffic": 652
+        }
     },
     "UnitTestCpp": {
         "sources": {
             "repo": "https://github.com/unittest-cpp/unittest-cpp.git",
             "commit": "bc5d87f484cac2959b0a0eafbde228e69e828d74"
         },
-        "inspected files count": 78,
-        "mem traffic": 903
+        "stable": {
+            "inspected files count": 78,
+            "mem traffic": 903
+        }
     },
     "mwt-ds-explore": {
         "sources": {
             "repo": "https://github.com/microsoft/mwt-ds-explore-cpp.git",
             "commit": "bf384b92c626c352f085539ea3e446a711dcca3f"
         },
-        "required toolchain" : [ "2013-x64" ],
+        "required toolchain": ["2013-x64"],
         "custom build tool": {
             "path to .sln": "explore.sln"
         },
-        "inspected files count": 7,
-        "mem traffic": 430
+        "stable": {
+            "inspected files count": 7,
+            "mem traffic": 430
+        }
     },
     "Plist": {
         "sources": {
             "repo": "https://github.com/microsoft/PlistCpp.git",
             "commit": "cdeabc4c68a50897dd26fe7f4f409b58b23775d6"
         },
-        "required toolchain" : [ "2017-x64" ],
+        "required toolchain": ["2017-x64"],
         "project to check": [
             "PlistCpp",
             "NSPlist"
         ],
-        "inspected files count": 5,
-        "mem traffic": 282
+        "stable": {
+            "inspected files count": 5,
+            "mem traffic": 282
+        }
     },
     "Sprout": "Sprout.json",
     "eEVM": {
@@ -356,8 +414,10 @@
         "required dependencies": [
             "boost-multiprecision"
         ],
-        "inspected files count": 18,
-        "mem traffic": 1072
+        "stable": {
+            "inspected files count": 18,
+            "mem traffic": 1072
+        }
     },
     "xgboost": {
         "sources": {
@@ -368,24 +428,30 @@
             "input_split_shuffle.h",
             "lua.h"
         ],
-        "inspected files count": 88,
-        "mem traffic": 1821
+        "stable": {
+            "inspected files count": 88,
+            "mem traffic": 1821
+        }
     },
     "json-rpc-cxx": {
         "sources": {
             "repo": "https://github.com/jsonrpcx/json-rpc-cxx.git",
             "commit": "6cb2db06e048ed000ccb66422ec52f3725be41e6"
         },
-        "inspected files count": 13,
-        "mem traffic": 860
+        "stable": {
+            "inspected files count": 13,
+            "mem traffic": 860
+        }
     },
     "RapidJSON": {
         "sources": {
             "repo": "https://github.com/Tencent/rapidjson.git",
             "commit": "4b3d7c2f42142f10b888e580c515f60ca98e2ee9"
         },
-        "inspected files count": 54,
-        "mem traffic": 2120
+        "stable": {
+            "inspected files count": 54,
+            "mem traffic": 2120
+        }
     },
     "spdlog": {
         "sources": {
@@ -396,8 +462,10 @@
             "syslog_sink.h",
             "systemd_sink.h"
         ],
-        "inspected files count": 101,
-        "mem traffic": 1670,
+        "stable": {
+            "inspected files count": 101,
+            "mem traffic": 1670
+        },
         "latest": {
             "v1.x": {
                 "inspected files count": 107
@@ -412,20 +480,24 @@
         "required dependencies": [
             "curl"
         ],
-        "inspected files count": 75,
-        "mem traffic": 2040
+        "stable": {
+            "inspected files count": 75,
+            "mem traffic": 2040
+        }
     },
     "CLI11": {
         "sources": {
             "repo": "https://github.com/CLIUtils/CLI11.git",
             "commit": "ba68040e9260f2841213849f2f4a11b4246d56f8"
         },
-        "inspected files count": 649,
-        "mem traffic": 14472
+        "stable": {
+            "inspected files count": 649,
+            "mem traffic": 14472
+        }
     },
     "RigelEngine": "RigelEngine.json",
-    "CGAL" : "CGAL.json",
-    "Diablo" : "Diablo.json",
+    "CGAL": "CGAL.json",
+    "Diablo": "Diablo.json",
     "RecastNavigation": "RecastNavigation.json",
     "cryptopp": "Cryptopp.json",
     "ninja": {
@@ -433,7 +505,9 @@
             "repo": "https://github.com/ninja-build/ninja.git",
             "commit": "c8f8f2a9e3016ab7a9ecb2e8b084cf441f3ae88e"
         },
-        "inspected files count": 59
+        "stable": {
+            "inspected files count": 59
+        }
     },
     "boost-di": "BoostDI.json",
     "PhysX-3.4": "PhysX.json",
@@ -453,7 +527,9 @@
             "unit-json_pointer.cpp"
         ],
         "__to skip reason": "RSCPP-34238 Red code due to incorrect macro expansion",
-        "inspected files count": 83,
+        "stable": {
+            "inspected files count": 83
+        },
         "latest": {
             "develop": {
                 "inspected files count": 85
@@ -497,7 +573,9 @@
                 "reason": "RSCPP-34235 Incorrect 'Member is inaccessible'"
             }
         ],
-        "inspected files count": 221,
+        "stable": {
+            "inspected files count": 221
+        },
         "latest": {
             "master": {
                 "inspected files count": 221,
@@ -538,7 +616,9 @@
         "cmake options": [
             "-DYACLIB_TEST=ON"
         ],
-        "inspected files count": 1809,
+        "stable": {
+            "inspected files count": 1809
+        },
         "latest": {
             "main": {
                 "inspected files count": 1809
@@ -555,7 +635,9 @@
             "-DDOWNLOAD_EIGEN=ON",
             "-DDOWNLOAD_CATCH=ON"
         ],
-        "inspected files count": 197,
+        "stable": {
+            "inspected files count": 197
+        },
         "known errors": [
             {
                 "file": "..\\tests\\test_enum.cpp",
@@ -586,7 +668,9 @@
         "cmake options": [
             "-DHTTPLIB_TEST=ON"
         ],
-        "inspected files count": 3,
+        "stable": {
+            "inspected files count": 3
+        },
         "latest": {
             "master": {
                 "inspected files count": 3
@@ -618,8 +702,10 @@
         "__to skip reasons": [
             "robin_hash.h => RSCPP-34257 False-positive \"ambigious function call\""
         ],
-        "required toolchain" : [ "2022-x64" ],
-        "inspected files count": 2521,
+        "required toolchain": ["2022-x64"],
+        "stable": {
+            "inspected files count": 2521
+        },
         "known errors": [
             {
                 "file": "..\\externals\\mbedtls\\library\\blowfish.c",
@@ -789,7 +875,9 @@
                 "reason": "RSCPP-26427 Wrong error \"Specialized template not found\" for friend function"
             }
         ],
-        "inspected files count": 210,
+        "stable": {
+            "inspected files count": 210
+        },
         "latest": {
             "master": {
                 "inspected files count": 210,
@@ -820,7 +908,9 @@
             "example_containers_array.cpp"
         ],
         "__to skip reason": "RSCPP-34229 Broken constexpr evaluation of `std::optional`",
-        "inspected files count": 19,
+        "stable": {
+            "inspected files count": 19
+        },
         "latest": {
             "master": {
                 "inspected files count": 19
