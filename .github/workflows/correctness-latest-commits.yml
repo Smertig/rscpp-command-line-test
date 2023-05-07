@@ -93,10 +93,6 @@ jobs:
       with:
         path: downloaded_artifacts
 
-    - name: (TEMP) Display structure of downloaded files
-      run: ls -R
-      working-directory: downloaded_artifacts
-
     - name: Update report
       shell: bash
       run: python .github/save_stats.py ./downloaded_artifacts $GITHUB_WORKSPACE/gh-pages
