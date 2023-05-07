@@ -46,14 +46,22 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run correctness test
-        shell: cmd
+        id: inspect-code
+        shell: bash
         run: |
-          IF NOT "${{matrix.VsInstallRoot}}" == "" set VsInstallRoot=${{matrix.VsInstallRoot}}
-          IF NOT "${{matrix.VCTargetsPath}}" == "" set VCTargetsPath=${{matrix.VCTargetsPath}}
-          python CorrectnessTest.py ^
-            --project ${{matrix.project}} ^
-            --vcpkg-dir %VCPKG_INSTALLATION_ROOT% ^
-            --build-dir %USERPROFILE%\.dotnet\tools\.store\jetbrains.resharper.globaltools\${{ env.RSCPP_VERSION }}\jetbrains.resharper.globaltools\${{ env.RSCPP_VERSION }}\tools\netcoreapp3.1\any ^
-            --projects-cache %RUNNER_TEMP%/projects ^
-            --supported-generators ${{matrix.cmake_gen}} ^
+          [[ "${{matrix.VsInstallRoot}}" ]] && export VsInstallRoot="${{matrix.VsInstallRoot}}"
+          [[ "${{matrix.VCTargetsPath}}" ]] && export VCTargetsPath="${{matrix.VCTargetsPath}}"
+          python CorrectnessTest.py \
+            --project ${{matrix.project}} \
+            --vcpkg-dir $VCPKG_INSTALLATION_ROOT \
+            --build-dir $USERPROFILE/.dotnet/tools/.store/jetbrains.resharper.globaltools/${{ env.RSCPP_VERSION }}/jetbrains.resharper.globaltools/${{ env.RSCPP_VERSION }}/tools/netcoreapp3.1/any \
+            --projects-cache $RUNNER_TEMP/projects \
+            --supported-generators ${{matrix.cmake_gen}} \
             --verbose
+          echo "BUILD_DIR=$RUNNER_TEMP/projects/${{matrix.project}}/build-${{matrix.cmake_gen}}" >> $GITHUB_OUTPUT
+
+      - name: Save logs
+        uses: actions/upload-artifact@v3
+        with:
+          name: ${{matrix.project}}-logs
+          path: "${{ steps.inspect-code.outputs.BUILD_DIR }}/resharper-*"
