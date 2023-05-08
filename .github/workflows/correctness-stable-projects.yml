@@ -1,4 +1,4 @@
-name: Correctness test for fixed repository versions
+name: Correctness test for stable repository versions
 
 on:
   push:
@@ -11,7 +11,7 @@ env:
 jobs:
   generate_matrix:
     name: Generate build matrix
-    if: "contains(github.event.head_commit.message, '[ci-fixed]') || github.event_name == 'schedule'"
+    if: "contains(github.event.head_commit.message, '[ci-stable]') || github.event_name == 'schedule'"
 
     runs-on: ubuntu-22.04
     outputs:
