@@ -795,7 +795,7 @@
                     },
                     {
                         "file": "..\\src\\core\\hle\\service\\nfp\\nfp_device.cpp",
-                        "line": 1121,
+                        "line": 1219,
                         "message": "static_assert failed: 'CrcData is an invalid size'\r\n    Expression '128 == 126' evaluates to false",
                         "reason": "RSCPP-34261 `#pragma pack` doesn't work for local types"
                     },
@@ -813,7 +813,7 @@
                     },
                     {
                         "file": "..\\src\\video_core\\renderer_vulkan\\vk_texture_cache.cpp",
-                        "line": 1668,
+                        "line": 1669,
                         "message": "Cannot substitute arguments for class 'VideoCommon::SlotVector<T>' because of violated constraint 'std::is_nothrow_move_assignable_v<Image> && std::is_nothrow_move_constructible_v<Image>'",
                         "reason": "RSCPP-14556 Implement __is_nothrow_assignable trait"
                     },
@@ -837,7 +837,7 @@
                     },
                     {
                         "file": "..\\src\\video_core\\texture_cache\\texture_cache_base.h",
-                        "line": 439,
+                        "line": 441,
                         "message": "Cannot substitute arguments for class 'VideoCommon::SlotVector<T>' because of violated constraint 'std::is_nothrow_move_assignable_v<ImageMapView> && std::is_nothrow_move_constructible_v<ImageMapView>'",
                         "reason": "RSCPP-14556 Implement __is_nothrow_assignable trait"
                     }
