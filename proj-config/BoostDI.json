@@ -4,20 +4,20 @@
         "commit": "88d0ab78de546ef16f5a810f1f59b48ee0dde109"
     },
     "stable": {
+        "known errors": [
+            {
+                "file": "..\\test\\ut\\aux_\\type_traits.cpp",
+                "line": "300",
+                "message": "static_assert failed: 'fail'",
+                "reason": "wrong sizeof calculation for lambda with captures"
+            },
+            {
+                "file": "..\\test\\ut\\aux_\\type_traits.cpp",
+                "line": "301",
+                "message": "static_assert failed: 'fail'",
+                "reason": "wrong sizeof calculation for lambda with captures"
+            }
+        ],
         "inspected files count": 157
-    },
-    "known errors": [
-        {
-            "file": "..\\test\\ut\\aux_\\type_traits.cpp",
-            "line": "300",
-            "message": "static_assert failed: 'fail'",
-            "reason": "wrong sizeof calculation for lambda with captures"
-        },
-        {
-            "file": "..\\test\\ut\\aux_\\type_traits.cpp",
-            "line": "301",
-            "message": "static_assert failed: 'fail'",
-            "reason": "wrong sizeof calculation for lambda with captures"
-        }
-    ]
+    }
 }

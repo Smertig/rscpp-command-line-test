@@ -23,14 +23,14 @@
         "clangFormat"
     ],
     "stable": {
+        "known errors": [
+            {
+                "file": "..\\tools\\clang\\lib\\Sema\\TreeTransform.h",
+                "line": "3975",
+                "message": "Member 'Self' is not initialized in this constructor"
+            }
+        ],
         "inspected files count": 251,
         "mem traffic": 18800
-    },
-    "known errors": [
-        {
-            "file": "..\\tools\\clang\\lib\\Sema\\TreeTransform.h",
-            "line": "3975",
-            "message": "Member 'Self' is not initialized in this constructor"
-        }
-    ]
+    }
 }

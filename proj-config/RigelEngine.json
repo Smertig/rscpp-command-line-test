@@ -14,15 +14,15 @@
         "resample_neon.h"
     ],
     "stable": {
+        "known errors": [
+            {
+                "file": "..\\3rd_party\\speex_resampler\\speex\\resample_sse.h",
+                "line": "57",
+                "message": "Cannot resolve symbol 'spx_uint32_t'",
+                "reason": "wrong order of #include's"
+            }
+        ],
         "inspected files count": 277,
         "mem traffic": 4870
-    },
-    "known errors": [
-        {
-            "file": "..\\3rd_party\\speex_resampler\\speex\\resample_sse.h",
-            "line": "57",
-            "message": "Cannot resolve symbol 'spx_uint32_t'",
-            "reason": "wrong order of #include's"
-        }
-    ]
+    }
 }

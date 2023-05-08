@@ -87,16 +87,16 @@
             "repo": "https://github.com/openscenegraph/OpenSceneGraph.git",
             "commit": "85504b45f6229c2695bc109d771045fcb10fc1e0"
         },
-        "known errors": [
-            {
-                "file": "..\\src\\osgPlugins\\cfg\\ConfigParser.cpp",
-                "line": "251",
-                "message": "Cannot resolve symbol 'ConfigParser_lex'",
-                "flaky": true,
-                "reason": "TODO"
-            }
-        ],
         "stable": {
+            "known errors": [
+                {
+                    "file": "..\\src\\osgPlugins\\cfg\\ConfigParser.cpp",
+                    "line": "251",
+                    "message": "Cannot resolve symbol 'ConfigParser_lex'",
+                    "flaky": true,
+                    "reason": "TODO"
+                }
+            ],
             "inspected files count": 1770,
             "mem traffic": 23460
         }
@@ -129,24 +129,24 @@
             "repo": "https://github.com/ReactiveX/RxCpp",
             "commit": "7930ccc3f5eca55c5866fc7b1d2476f46b8cec17"
         },
-        "known errors": [
-            {
-                "file": "..\\Rx\\v2\\test\\subscriptions\\coroutine.cpp",
-                "line": "28",
-                "message": "Cannot resolve the awaiter type"
-            },
-            {
-                "file": "..\\Rx\\v2\\test\\subscriptions\\coroutine.cpp",
-                "line": "89",
-                "message": "Cannot resolve the awaiter type"
-            },
-            {
-                "file": "..\\Rx\\v2\\src\\rxcpp\\rx-scheduler.hpp",
-                "line": "32",
-                "message": "Type 'action_type' is incomplete"
-            }
-        ],
         "stable": {
+            "known errors": [
+                {
+                    "file": "..\\Rx\\v2\\test\\subscriptions\\coroutine.cpp",
+                    "line": "28",
+                    "message": "Cannot resolve the awaiter type"
+                },
+                {
+                    "file": "..\\Rx\\v2\\test\\subscriptions\\coroutine.cpp",
+                    "line": "89",
+                    "message": "Cannot resolve the awaiter type"
+                },
+                {
+                    "file": "..\\Rx\\v2\\src\\rxcpp\\rx-scheduler.hpp",
+                    "line": "32",
+                    "message": "Type 'action_type' is incomplete"
+                }
+            ],
             "inspected files count": 246,
             "mem traffic": 6990
         }
@@ -544,33 +544,33 @@
             "sdl2-image",
             "zlib"
         ],
-        "known errors": [
-            {
-                "file": "..\\src\\fheroes2\\army\\army.cpp",
-                "line": "1813",
-                "message": "Member is inaccessible",
-                "reason": "RSCPP-34235 Incorrect 'Member is inaccessible'"
-            },
-            {
-                "file": "..\\src\\fheroes2\\army\\army.cpp",
-                "line": "1793",
-                "message": "Member is inaccessible",
-                "reason": "RSCPP-34235 Incorrect 'Member is inaccessible'"
-            },
-            {
-                "file": "..\\src\\fheroes2\\army\\army.cpp",
-                "line": "1807",
-                "message": "Member is inaccessible",
-                "reason": "RSCPP-34235 Incorrect 'Member is inaccessible'"
-            },
-            {
-                "file": "..\\src\\fheroes2\\army\\army.cpp",
-                "line": "1796",
-                "message": "Member is inaccessible",
-                "reason": "RSCPP-34235 Incorrect 'Member is inaccessible'"
-            }
-        ],
         "stable": {
+            "known errors": [
+                {
+                    "file": "..\\src\\fheroes2\\army\\army.cpp",
+                    "line": "1813",
+                    "message": "Member is inaccessible",
+                    "reason": "RSCPP-34235 Incorrect 'Member is inaccessible'"
+                },
+                {
+                    "file": "..\\src\\fheroes2\\army\\army.cpp",
+                    "line": "1793",
+                    "message": "Member is inaccessible",
+                    "reason": "RSCPP-34235 Incorrect 'Member is inaccessible'"
+                },
+                {
+                    "file": "..\\src\\fheroes2\\army\\army.cpp",
+                    "line": "1807",
+                    "message": "Member is inaccessible",
+                    "reason": "RSCPP-34235 Incorrect 'Member is inaccessible'"
+                },
+                {
+                    "file": "..\\src\\fheroes2\\army\\army.cpp",
+                    "line": "1796",
+                    "message": "Member is inaccessible",
+                    "reason": "RSCPP-34235 Incorrect 'Member is inaccessible'"
+                }
+            ],
             "inspected files count": 221
         },
         "latest": {
@@ -633,16 +633,16 @@
             "-DDOWNLOAD_CATCH=ON"
         ],
         "stable": {
+            "known errors": [
+                {
+                    "file": "..\\tests\\test_enum.cpp",
+                    "line": "100",
+                    "message": "static_assert failed: 'char32_t, char16_t (and char8_t)'s size, signedness, and alignment is determined'",
+                    "reason": "Bad char16_t signedness in R++ 2023.1, fixed in 2023.2"
+                }
+            ],
             "inspected files count": 197
         },
-        "known errors": [
-            {
-                "file": "..\\tests\\test_enum.cpp",
-                "line": "100",
-                "message": "static_assert failed: 'char32_t, char16_t (and char8_t)'s size, signedness, and alignment is determined'",
-                "reason": "Bad char16_t signedness in R++ 2023.1, fixed in 2023.2"
-            }
-        ],
         "latest": {
             "master": {
                 "inspected files count": 197,
@@ -701,76 +701,76 @@
         ],
         "required toolchain": ["2022-x64"],
         "stable": {
+            "known errors": [
+                {
+                    "file": "..\\externals\\mbedtls\\library\\blowfish.c",
+                    "line": 106,
+                    "message": "Object of const type 'const uint32_t[4][256]' must be initialized",
+                    "reason": "RSCPP-34258 Invalid \"Object of const type must be initialized\""
+                },
+                {
+                    "file": "..\\src\\common\\settings.h",
+                    "line": 331,
+                    "message": "Conversion 'Settings::SwitchableSetting<Type, ranged>::operator const Type&() const' has the 'override' specifier but does not override a base class member",
+                    "reason": "RSCPP-34260 Incorrect \"invalid override\" error"
+                },
+                {
+                    "file": "..\\src\\core\\hle\\kernel\\kernel.cpp",
+                    "line": 851,
+                    "message": "Type 'SlabHeapContainer' is incomplete",
+                    "reason": "Bug? Should not compile"
+                },
+                {
+                    "file": "..\\src\\core\\hle\\service\\nfp\\nfp_device.cpp",
+                    "line": 1121,
+                    "message": "static_assert failed: 'CrcData is an invalid size'\r\n    Expression '128 == 126' evaluates to false",
+                    "reason": "RSCPP-34261 `#pragma pack` doesn't work for local types"
+                },
+                {
+                    "file": "..\\src\\video_core\\renderer_opengl\\gl_texture_cache.cpp",
+                    "line": 1125,
+                    "message": "Cannot substitute arguments for class 'VideoCommon::SlotVector<T>' because of violated constraint 'std::is_nothrow_move_assignable_v<Image> && std::is_nothrow_move_constructible_v<Image>'",
+                    "reason": "RSCPP-14556 Implement __is_nothrow_assignable trait"
+                },
+                {
+                    "file": "..\\src\\video_core\\renderer_opengl\\gl_texture_cache.h",
+                    "line": 264,
+                    "message": "Cannot substitute arguments for class 'VideoCommon::SlotVector<T>' because of violated constraint 'std::is_nothrow_move_assignable_v<Image> && std::is_nothrow_move_constructible_v<Image>'",
+                    "reason": "RSCPP-14556 Implement __is_nothrow_assignable trait"
+                },
+                {
+                    "file": "..\\src\\video_core\\renderer_vulkan\\vk_texture_cache.cpp",
+                    "line": 1668,
+                    "message": "Cannot substitute arguments for class 'VideoCommon::SlotVector<T>' because of violated constraint 'std::is_nothrow_move_assignable_v<Image> && std::is_nothrow_move_constructible_v<Image>'",
+                    "reason": "RSCPP-14556 Implement __is_nothrow_assignable trait"
+                },
+                {
+                    "file": "..\\src\\video_core\\renderer_vulkan\\vk_texture_cache.h",
+                    "line": 201,
+                    "message": "Cannot substitute arguments for class 'VideoCommon::SlotVector<T>' because of violated constraint 'std::is_nothrow_move_assignable_v<Image> && std::is_nothrow_move_constructible_v<Image>'",
+                    "reason": "RSCPP-14556 Implement __is_nothrow_assignable trait"
+                },
+                {
+                    "file": "..\\src\\video_core\\renderer_vulkan\\vk_texture_cache.h",
+                    "line": 258,
+                    "message": "Cannot substitute arguments for class 'VideoCommon::SlotVector<T>' because of violated constraint 'std::is_nothrow_move_assignable_v<Image> && std::is_nothrow_move_constructible_v<Image>'",
+                    "reason": "RSCPP-14556 Implement __is_nothrow_assignable trait"
+                },
+                {
+                    "file": "..\\src\\video_core\\shader_cache.cpp",
+                    "line": 195,
+                    "message": "Substitution failed due to constraints: std::indirect_binary_predicate<std::ranges::equal_to, std::projected<std::vector<Entry*>::iterator, std::identity>, const Entry* const*> is false,\r\n  because std::predicate<std::ranges::equal_to&, Entry*&, const Entry*&> is false,\r\n  because std::regular_invocable<std::ranges::equal_to&, Entry*&, const Entry*&> is false,\r\n  because 'std::ranges::equal_to&' does not satisfy concept std::invocable<Entry*&, const Entry*&>",
+                    "reason": "RSCPP-34262 Incorrect calculation of ternary operator type"
+                },
+                {
+                    "file": "..\\src\\video_core\\texture_cache\\texture_cache_base.h",
+                    "line": 439,
+                    "message": "Cannot substitute arguments for class 'VideoCommon::SlotVector<T>' because of violated constraint 'std::is_nothrow_move_assignable_v<ImageMapView> && std::is_nothrow_move_constructible_v<ImageMapView>'",
+                    "reason": "RSCPP-14556 Implement __is_nothrow_assignable trait"
+                }
+            ],
             "inspected files count": 2521
         },
-        "known errors": [
-            {
-                "file": "..\\externals\\mbedtls\\library\\blowfish.c",
-                "line": 106,
-                "message": "Object of const type 'const uint32_t[4][256]' must be initialized",
-                "reason": "RSCPP-34258 Invalid \"Object of const type must be initialized\""
-            },
-            {
-                "file": "..\\src\\common\\settings.h",
-                "line": 331,
-                "message": "Conversion 'Settings::SwitchableSetting<Type, ranged>::operator const Type&() const' has the 'override' specifier but does not override a base class member",
-                "reason": "RSCPP-34260 Incorrect \"invalid override\" error"
-            },
-            {
-                "file": "..\\src\\core\\hle\\kernel\\kernel.cpp",
-                "line": 851,
-                "message": "Type 'SlabHeapContainer' is incomplete",
-                "reason": "Bug? Should not compile"
-            },
-            {
-                "file": "..\\src\\core\\hle\\service\\nfp\\nfp_device.cpp",
-                "line": 1121,
-                "message": "static_assert failed: 'CrcData is an invalid size'\r\n    Expression '128 == 126' evaluates to false",
-                "reason": "RSCPP-34261 `#pragma pack` doesn't work for local types"
-            },
-            {
-                "file": "..\\src\\video_core\\renderer_opengl\\gl_texture_cache.cpp",
-                "line": 1125,
-                "message": "Cannot substitute arguments for class 'VideoCommon::SlotVector<T>' because of violated constraint 'std::is_nothrow_move_assignable_v<Image> && std::is_nothrow_move_constructible_v<Image>'",
-                "reason": "RSCPP-14556 Implement __is_nothrow_assignable trait"
-            },
-            {
-                "file": "..\\src\\video_core\\renderer_opengl\\gl_texture_cache.h",
-                "line": 264,
-                "message": "Cannot substitute arguments for class 'VideoCommon::SlotVector<T>' because of violated constraint 'std::is_nothrow_move_assignable_v<Image> && std::is_nothrow_move_constructible_v<Image>'",
-                "reason": "RSCPP-14556 Implement __is_nothrow_assignable trait"
-            },
-            {
-                "file": "..\\src\\video_core\\renderer_vulkan\\vk_texture_cache.cpp",
-                "line": 1668,
-                "message": "Cannot substitute arguments for class 'VideoCommon::SlotVector<T>' because of violated constraint 'std::is_nothrow_move_assignable_v<Image> && std::is_nothrow_move_constructible_v<Image>'",
-                "reason": "RSCPP-14556 Implement __is_nothrow_assignable trait"
-            },
-            {
-                "file": "..\\src\\video_core\\renderer_vulkan\\vk_texture_cache.h",
-                "line": 201,
-                "message": "Cannot substitute arguments for class 'VideoCommon::SlotVector<T>' because of violated constraint 'std::is_nothrow_move_assignable_v<Image> && std::is_nothrow_move_constructible_v<Image>'",
-                "reason": "RSCPP-14556 Implement __is_nothrow_assignable trait"
-            },
-            {
-                "file": "..\\src\\video_core\\renderer_vulkan\\vk_texture_cache.h",
-                "line": 258,
-                "message": "Cannot substitute arguments for class 'VideoCommon::SlotVector<T>' because of violated constraint 'std::is_nothrow_move_assignable_v<Image> && std::is_nothrow_move_constructible_v<Image>'",
-                "reason": "RSCPP-14556 Implement __is_nothrow_assignable trait"
-            },
-            {
-                "file": "..\\src\\video_core\\shader_cache.cpp",
-                "line": 195,
-                "message": "Substitution failed due to constraints: std::indirect_binary_predicate<std::ranges::equal_to, std::projected<std::vector<Entry*>::iterator, std::identity>, const Entry* const*> is false,\r\n  because std::predicate<std::ranges::equal_to&, Entry*&, const Entry*&> is false,\r\n  because std::regular_invocable<std::ranges::equal_to&, Entry*&, const Entry*&> is false,\r\n  because 'std::ranges::equal_to&' does not satisfy concept std::invocable<Entry*&, const Entry*&>",
-                "reason": "RSCPP-34262 Incorrect calculation of ternary operator type"
-            },
-            {
-                "file": "..\\src\\video_core\\texture_cache\\texture_cache_base.h",
-                "line": 439,
-                "message": "Cannot substitute arguments for class 'VideoCommon::SlotVector<T>' because of violated constraint 'std::is_nothrow_move_assignable_v<ImageMapView> && std::is_nothrow_move_constructible_v<ImageMapView>'",
-                "reason": "RSCPP-14556 Implement __is_nothrow_assignable trait"
-            }
-        ],
         "latest": {
             "master": {
                 "inspected files count": 2521,
@@ -858,21 +858,21 @@
         "to skip": [
             "generator.hpp"
         ],
-        "known errors": [
-            {
-                "file": "..\\include\\range\\v3\\iterator\\common_iterator.hpp",
-                "line": "76",
-                "message": "Specialized template is not found",
-                "reason": "RSCPP-26427 Wrong error \"Specialized template not found\" for friend function"
-            },
-            {
-                "file": "..\\include\\range\\v3\\iterator\\common_iterator.hpp",
-                "line": "77",
-                "message": "Specialized template is not found",
-                "reason": "RSCPP-26427 Wrong error \"Specialized template not found\" for friend function"
-            }
-        ],
         "stable": {
+            "known errors": [
+                {
+                    "file": "..\\include\\range\\v3\\iterator\\common_iterator.hpp",
+                    "line": "76",
+                    "message": "Specialized template is not found",
+                    "reason": "RSCPP-26427 Wrong error \"Specialized template not found\" for friend function"
+                },
+                {
+                    "file": "..\\include\\range\\v3\\iterator\\common_iterator.hpp",
+                    "line": "77",
+                    "message": "Specialized template is not found",
+                    "reason": "RSCPP-26427 Wrong error \"Specialized template not found\" for friend function"
+                }
+            ],
             "inspected files count": 210
         },
         "latest": {

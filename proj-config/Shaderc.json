@@ -14,15 +14,15 @@
         "text_word_get_test.cpp"
     ],
     "stable": {
+        "known errors": [
+            {
+                "file": "..\\glslc\\src\\main.cc",
+                "line": "202",
+                "message": "Expected expression",
+                "reason": "RSCPP-20730"
+            }
+        ],
         "inspected files count": 1028,
         "mem traffic": 23545
-    },
-    "known errors": [
-        {
-            "file": "..\\glslc\\src\\main.cc",
-            "line": "202",
-            "message": "Expected expression",
-            "reason": "RSCPP-20730"
-        }
-    ]
+    }
 }
