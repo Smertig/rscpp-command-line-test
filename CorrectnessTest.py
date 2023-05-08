@@ -128,7 +128,8 @@ def process_project(project_name, project, branch: Optional[str]) -> Tuple[Optio
 
     if "custom build tool" in project:
         project_dir, sln_file = common.prepare_project(project_name, project, None, branch)
-        return check_project(project, project_dir, sln_file, branch)
+        local_result, local_report = check_project(project, project_dir, sln_file, branch)
+        return local_result, {'default': local_report}
 
     result = None
     report = {}
