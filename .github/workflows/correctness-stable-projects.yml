@@ -57,6 +57,7 @@ jobs:
             --build-dir $USERPROFILE/.dotnet/tools/.store/jetbrains.resharper.globaltools/${{ env.RSCPP_VERSION }}/jetbrains.resharper.globaltools/${{ env.RSCPP_VERSION }}/tools/netcoreapp3.1/any \
             --projects-cache $RUNNER_TEMP/projects \
             --supported-generators ${{matrix.cmake_gen}} \
+            --report-path $RUNNER_TEMP/report.json \
             --verbose
           echo "BUILD_DIR=$RUNNER_TEMP/projects/${{matrix.project}}/build-${{matrix.cmake_gen}}" >> $GITHUB_OUTPUT
           echo "REPORT_PATH=$RUNNER_TEMP/report.json" >> $GITHUB_OUTPUT
