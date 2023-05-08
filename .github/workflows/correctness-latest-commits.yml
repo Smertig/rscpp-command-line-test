@@ -61,12 +61,14 @@ jobs:
           echo "REPORT_PATH=$RUNNER_TEMP/report.json" >> $GITHUB_OUTPUT
 
       - name: Save logs
+        if: success() || failure()
         uses: actions/upload-artifact@v3
         with:
           name: ${{matrix.project}}-${{matrix.branch}}-logs
           path: "${{ steps.inspect-code.outputs.BUILD_DIR }}/resharper-*"
 
       - name: Upload reports'
+        if: success() || failure()
         uses: actions/upload-artifact@v3
         with:
           name: ${{matrix.project}}-${{matrix.branch}}-report
