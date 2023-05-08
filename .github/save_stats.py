@@ -17,7 +17,7 @@ def main() -> int:
                     project_name, branch = project_name.split(':', 1)
 
                 for toolchain_name, project_report in toolchains.items():
-                    cache_path = f'{repo_path}/{project_name}/{branch or "stable"}_{toolchain_name}.json'
+                    cache_path = f'{repo_path}/reports/{project_name}/{branch or "stable"}_{toolchain_name}.json'
                     os.makedirs(os.path.dirname(cache_path), exist_ok=True)
 
                     # load existing cache
