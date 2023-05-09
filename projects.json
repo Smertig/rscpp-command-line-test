@@ -773,7 +773,7 @@
         },
         "latest": {
             "master": {
-                "inspected files count": 2521,
+                "inspected files count": 2522,
                 "known errors": [
                     {
                         "file": "..\\externals\\mbedtls\\library\\blowfish.c",
@@ -794,7 +794,7 @@
                         "reason": "Bug? Should not compile"
                     },
                     {
-                        "file": "..\\src\\core\\hle\\service\\nfp\\nfp_device.cpp",
+                        "file": "..\\src\\core\\hle\\service\\nfc\\common\\device.cpp",
                         "line": 1219,
                         "message": "static_assert failed: 'CrcData is an invalid size'\r\n    Expression '128 == 126' evaluates to false",
                         "reason": "RSCPP-34261 `#pragma pack` doesn't work for local types"
