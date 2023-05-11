@@ -1,8 +1,7 @@
 {
     "sources": {
         "repo": "https://github.com/protocolbuffers/protobuf.git",
-        "commit": "9313cdc442c22bc62694742597ce7c543d195a73",
-        "root": "cmake"
+        "commit": "a2abe0f6d3f17ab4f9ab26fe1096eda66d63c9ea"
     },
     "cmake options": [
         "-Dprotobuf_BUILD_TESTS=OFF",
@@ -11,8 +10,38 @@
     "required dependencies": [
         "zlib"
     ],
+    "fixup sources": "proj-config/scripts/fix-protobuf.py",
+    "to skip": [
+        "stacktrace_*-inl.inc",
+        "symbolize_*.inc"
+    ],
     "stable": {
-        "inspected files count": 330,
-        "mem traffic": 6130
+        "inspected files count": 818,
+        "mem traffic": 0
+    },
+    "latest": {
+        "main": {
+            "inspected files count": 818,
+            "known errors": [
+                {
+                    "file": "..\\third_party\\abseil-cpp\\absl\\strings\\internal\\cord_internal.h",
+                    "line": 740,
+                    "message": "Unknown declspec 'no_sanitize_address'",
+                    "reason": "RSCPP-34293 Support `__declspec(sanitize_address)`"
+                },
+                {
+                    "file": "..\\third_party\\abseil-cpp\\absl\\strings\\string_view.h",
+                    "line": 411,
+                    "message": "Cannot resolve symbol '__builtin_memcmp'",
+                    "reason": "RSCPP-34294 MSVC 16.8+ supports string builtins since C++14"
+                },
+                {
+                    "file": "..\\third_party\\abseil-cpp\\absl\\strings\\string_view.h",
+                    "line": 646,
+                    "message": "Cannot resolve symbol '__builtin_memcmp'",
+                    "reason": "RSCPP-34294 MSVC 16.8+ supports string builtins since C++14"
+                }
+            ]
+        }
     }
 }

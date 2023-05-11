@@ -1,13 +1,6 @@
 import os.path
 import subprocess
-
-
-def update_file(path, callback):
-    with open(path, 'rb') as f:
-        content = f.read()
-    content = callback(content)
-    with open(path, 'wb') as f:
-        f.write(content)
+import utils
 
 
 # Build required tool
@@ -25,4 +18,4 @@ def fix_gls_validator_path(content: bytes) -> bytes:
         .replace(b'find_program(GLSLANGVALIDATOR "glslangValidator")', f'set(GLSLANGVALIDATOR "{gls_validator_path}")'.encode('utf8'))
 
 
-update_file("src/video_core/host_shaders/CMakeLists.txt", fix_gls_validator_path)
+utils.update_file("src/video_core/host_shaders/CMakeLists.txt", fix_gls_validator_path)
