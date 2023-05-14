@@ -17,7 +17,27 @@
     ],
     "stable": {
         "inspected files count": 818,
-        "mem traffic": 0
+        "mem traffic": 0,
+        "known errors": [
+            {
+                "file": "..\\third_party\\abseil-cpp\\absl\\strings\\internal\\cord_internal.h",
+                "line": 740,
+                "message": "Unknown declspec 'no_sanitize_address'",
+                "reason": "RSCPP-34293 Support `__declspec(sanitize_address)`"
+            },
+            {
+                "file": "..\\third_party\\abseil-cpp\\absl\\strings\\string_view.h",
+                "line": 411,
+                "message": "Cannot resolve symbol '__builtin_memcmp'",
+                "reason": "RSCPP-34294 MSVC 16.8+ supports string builtins since C++14"
+            },
+            {
+                "file": "..\\third_party\\abseil-cpp\\absl\\strings\\string_view.h",
+                "line": 646,
+                "message": "Cannot resolve symbol '__builtin_memcmp'",
+                "reason": "RSCPP-34294 MSVC 16.8+ supports string builtins since C++14"
+            }
+        ]
     },
     "latest": {
         "main": {
