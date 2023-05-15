@@ -116,8 +116,8 @@ def git_clone_if_needed(target_dir, url):
 
 
 def git_checkout_commit_and_overwrite_local_changes(commit):
-    subprocess.run(["git", "checkout", commit], check=True, stdout=PIPE, stderr=PIPE)
-    subprocess.run(["git", "reset", "--hard"],  check=True, stdout=PIPE, stderr=PIPE)
+    subprocess.run(["git", "checkout", commit], check=True, stdout=PIPE, stderr=_env.verbose_handle)
+    subprocess.run(["git", "reset", "--hard"],  check=True, stdout=PIPE, stderr=_env.verbose_handle)
 
 
 def get_sources_from_git(project_input, target_dir, branch: Optional[str]):
@@ -135,12 +135,12 @@ def get_sources_from_git(project_input, target_dir, branch: Optional[str]):
 
         custom_update_source_script = project_input.get("custom update source script")
         if custom_update_source_script:
-            subprocess.run(custom_update_source_script, check=True, stdout=PIPE, stderr=PIPE)
+            subprocess.run(custom_update_source_script, check=True, stdout=PIPE)
 
         update_submodules_args = ["git", "submodule", "update", "--init"]
         if project_input.get("recursive", False):
             update_submodules_args.append("--recursive")
-        subprocess.run(update_submodules_args, check=True, stdout=PIPE, stderr=PIPE)
+        subprocess.run(update_submodules_args, check=True, stdout=PIPE)
 
         root_dir = project_input.get("root")
         if root_dir:

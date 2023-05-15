@@ -963,5 +963,40 @@
                 ]
             }
         }
+    },
+    "minetest": {
+        "sources": {
+            "repo": "https://github.com/minetest/minetest",
+            "commit": "15fb4cab15c8d57028a2f616e1b443e8dc02e4f9",
+            "subrepo": {
+                "path": "lib/irrlichtmt",
+                "url": "https://github.com/minetest/irrlicht",
+                "commit": "510976f13056422ff0f90a6870772f57f03b26a9"
+            }
+        },
+        "required dependencies": [
+            "zlib",
+            "zstd",
+            "curl[winssl]",
+            "openal-soft",
+            "libvorbis",
+            "libogg",
+            "libjpeg-turbo",
+            "sqlite3",
+            "freetype",
+            "opengl-registry"
+        ],
+        "fixup sources": "proj-config/scripts/fix-minetest.py",
+        "build step": [
+            "cmake --build . --target GenerateVersion"
+        ],
+        "stable": {
+            "inspected files count": 105
+        },
+        "latest": {
+            "master": {
+                "inspected files count": 105
+            }
+        }
     }
 }
