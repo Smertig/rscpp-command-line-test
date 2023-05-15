@@ -998,5 +998,50 @@
                 "inspected files count": 105
             }
         }
+    },
+    "Cemu": {
+        "sources": {
+            "repo": "https://github.com/cemu-project/Cemu",
+            "commit": "eda4cf4b241d56c5c16f6aa4d135b8a269676a76",
+            "recursive": true
+        },
+        "use x64": true,
+        "fixup sources": "proj-config/scripts/fix-cemu.py",
+        "stable": {
+            "inspected files count": 1013,
+            "known errors": [
+                {
+                    "file": "..\\src\\Cafe\\HW\\Espresso\\PPCCallback.h",
+                    "line": 39,
+                    "message": "Missing template arguments, all candidates have non-deducible template parameters:\r\n  constexpr _Ty&& forward<_Ty>(std::remove_reference_t<_Ty>& _Arg) noexcept (in namespace std)\r\n    cannot infer substitution for _Ty\r\n  constexpr _Ty&& forward<_Ty>(std::remove_reference_t<_Ty>&& _Arg) noexcept (in namespace std)\r\n    cannot infer substitution for _Ty",
+                    "reason": "https://github.com/cemu-project/Cemu/pull/819"
+                },
+                {
+                    "file": "..\\src\\input\\api\\DirectInput\\DirectInputControllerProvider.cpp",
+                    "line": 50,
+                    "message": "Cannot convert 'this' argument from type 'const std::vector<std::shared_ptr<ControllerBase>>' to type 'std::vector<std::shared_ptr<ControllerBase>>': function is missing 'const' qualifier",
+                    "reason": "RSCPP-34303 Incorrect decltype calculation of non-captured variable in lambda scope"
+                }
+            ]
+        },
+        "latest": {
+            "main": {
+                "inspected files count": 1013,
+                "known errors": [
+                    {
+                        "file": "..\\src\\Cafe\\HW\\Espresso\\PPCCallback.h",
+                        "line": 39,
+                        "message": "Missing template arguments, all candidates have non-deducible template parameters:\r\n  constexpr _Ty&& forward<_Ty>(std::remove_reference_t<_Ty>& _Arg) noexcept (in namespace std)\r\n    cannot infer substitution for _Ty\r\n  constexpr _Ty&& forward<_Ty>(std::remove_reference_t<_Ty>&& _Arg) noexcept (in namespace std)\r\n    cannot infer substitution for _Ty",
+                        "reason": "https://github.com/cemu-project/Cemu/pull/819"
+                    },
+                    {
+                        "file": "..\\src\\input\\api\\DirectInput\\DirectInputControllerProvider.cpp",
+                        "line": 50,
+                        "message": "Cannot convert 'this' argument from type 'const std::vector<std::shared_ptr<ControllerBase>>' to type 'std::vector<std::shared_ptr<ControllerBase>>': function is missing 'const' qualifier",
+                        "reason": "RSCPP-34303 Incorrect decltype calculation of non-captured variable in lambda scope"
+                    }
+                ]
+            }
+        }
     }
 }
