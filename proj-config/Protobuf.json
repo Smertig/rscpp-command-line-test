@@ -36,6 +36,18 @@
                 "line": 646,
                 "message": "Cannot resolve symbol '__builtin_memcmp'",
                 "reason": "RSCPP-34294 MSVC 16.8+ supports string builtins since C++14"
+            },
+            {
+                "file": "..\\third_party\\abseil-cpp\\absl\\time\\internal\\get_current_time_chrono.inc",
+                "line": 19,
+                "message": "Expected declarator name",
+                "reason": "RSCPP-34314 InspectCode is trying to analyze headers in incorrect context"
+            },
+            {
+                "file": "..\\third_party\\abseil-cpp\\absl\\time\\internal\\get_current_time_chrono.inc",
+                "line": 30,
+                "message": "Expected declarator name",
+                "reason": "RSCPP-34314 InspectCode is trying to analyze headers in incorrect context"
             }
         ]
     },
@@ -60,6 +72,18 @@
                     "line": 646,
                     "message": "Cannot resolve symbol '__builtin_memcmp'",
                     "reason": "RSCPP-34294 MSVC 16.8+ supports string builtins since C++14"
+                },
+                {
+                    "file": "..\\third_party\\abseil-cpp\\absl\\time\\internal\\get_current_time_chrono.inc",
+                    "line": 19,
+                    "message": "Expected declarator name",
+                    "reason": "RSCPP-34314 InspectCode is trying to analyze headers in incorrect context"
+                },
+                {
+                    "file": "..\\third_party\\abseil-cpp\\absl\\time\\internal\\get_current_time_chrono.inc",
+                    "line": 30,
+                    "message": "Expected declarator name",
+                    "reason": "RSCPP-34314 InspectCode is trying to analyze headers in incorrect context"
                 }
             ]
         }
