@@ -33,6 +33,17 @@ def main() -> int:
                     with open(cache_path, 'w') as f_cache:
                         json.dump(cache, f_cache, indent=4)
 
+    all_reports = {}
+    all_reports_dir = pathlib.Path(repo_path) / 'reports'
+    for project_dir in all_reports_dir.iterdir():
+        if not project_dir.is_dir():
+            continue
+
+        all_reports[project_dir.name] = list(path.name for path in project_dir.glob('*.json'))
+
+    with open(all_reports_dir / 'all.json', 'w') as f:
+        json.dump(all_reports, f, indent=4)
+
     return 0
 
 
