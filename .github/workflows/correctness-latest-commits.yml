@@ -58,6 +58,7 @@ jobs:
             --projects-cache $RUNNER_TEMP/projects \
             --supported-generators ${{matrix.cmake_gen}} \
             --report-path $RUNNER_TEMP/report.json \
+            --ci \
             --verbose
 
       - name: Save logs

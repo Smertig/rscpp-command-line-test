@@ -31,6 +31,7 @@ class Environment:
         self._vcpkg_directory = args.vcpkg_directory or self._get_env("vcpkg dir")
         self._verbose = args.verbose
         self._cli_test_dir = os.path.dirname(os.path.abspath(__file__))
+        self._is_ci = args.is_ci
 
         assert self._build_directory, 'Missing build directory'
 
@@ -92,6 +93,10 @@ class Environment:
     def verbose_handle(self) -> Optional[int]:
         return None if self.verbose else PIPE
 
+    @property
+    def is_ci(self) -> bool:
+        return self._is_ci
+
 
 # TODO: remove global vars completely
 _env: Environment = None
@@ -110,12 +115,21 @@ with open("toolchains.json") as f:
     toolchains_info = json.load(f)
 
 
-def git_clone_and_force_checkout_if_needed(target_dir, url, commit):
+def git_clone_and_force_checkout_if_needed(target_dir, url, ref_name):
+    if _env.is_ci:
+        # We can do shallow clone when using CI
+        if len(ref_name) != 40:
+            subprocess.run(["git", "clone", "--depth", "1", "--branch", ref_name, url, target_dir], check=True, stdout=PIPE, stderr=_env.verbose_handle)
+            return
+
+        # TODO: implement shallow clone of a single commit..
+        pass
+
     if not path.exists(path.join(target_dir, ".git")):
         subprocess.run(["git", "clone", url, target_dir], check=True)
 
     with cwd(target_dir):
-        subprocess.run(["git", "checkout", commit], check=True, stdout=PIPE, stderr=_env.verbose_handle)
+        subprocess.run(["git", "checkout", ref_name], check=True, stdout=PIPE, stderr=_env.verbose_handle)
         subprocess.run(["git", "reset", "--hard"], check=True, stdout=PIPE, stderr=_env.verbose_handle)
 
 
@@ -373,4 +387,5 @@ argparser.add_argument('--build-dir', dest='build_directory')
 argparser.add_argument('--vcpkg-dir', dest='vcpkg_directory')
 argparser.add_argument('--projects-cache', dest='projects_cache_directory')
 argparser.add_argument('--supported-generators', dest='supported_generators', nargs='*', type=str)
+argparser.add_argument('--ci', action='store_true', dest='is_ci')
 argparser.add_argument('--verbose', action='store_true', dest='verbose')
