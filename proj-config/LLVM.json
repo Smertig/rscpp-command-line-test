@@ -1,36 +1,78 @@
 {
     "sources": {
-        "repo": "https://github.com/llvm-mirror/llvm.git",
-        "commit": "2e5edf4b8d6d685aa79498ce553b1dfc5d79c87c",
-        "subrepo": {
-            "path": "tools/clang",
-            "url": "https://github.com/llvm-mirror/clang.git",
-            "commit": "a7ee181aaa8a79b1fece474c733c4f571f0d4ef2"
-        }
+        "repo": "https://github.com/llvm/llvm-project",
+        "commit": "1b0ba1c12fcc86dcf4097b3b8941260e8c6361fa"
     },
-    "required toolchain": ["2017-x64"],
+    "use x64": true,
+    "required toolchain": ["2022-x64"],
     "cmake options": [
         "-Thost=x64",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DLLVM_ENABLE_PROJECTS=clang",
         "-Wno-dev"
     ],
-    "build step": [
-        "cmake --build . --target tools/clang/lib/Sema/clangSema"
-    ],
+    "cmake dir": "../llvm",
+    "fixup sources": "proj-config/scripts/fix-llvm.py",
+    "build step": "proj-config/scripts/build-llvm.py",
     "project to check": [
-        "ADTTests",
-        "SupportTests",
-        "clangSema",
-        "clangFormat"
+        "clang*"
+    ],
+    "to skip": [
+        "Version.cpp",
+        "HTMLLogger.cpp",
+        "NodeIntrospection.cpp"
+    ],
+    "__to skip reason": [
+        "Version.cpp => missing include, requires codegen",
+        "HTMLLogger.cpp => missing include, requires codegen",
+        "NodeIntrospection.cpp => missing include, requires codegen"
     ],
     "stable": {
         "known errors": [
             {
-                "file": "..\\tools\\clang\\lib\\Sema\\TreeTransform.h",
-                "line": "3975",
-                "message": "Member 'Self' is not initialized in this constructor"
+                "file": "..\\clang\\lib\\Sema\\TreeTransform.h",
+                "line": "4649",
+                "message": "Member 'Self' is not initialized in this constructor",
+                "reason": "Bug in code?"
+            },
+            {
+                "file": "..\\clang\\lib\\Driver\\DriverOptions.cpp",
+                "line": 30,
+                "message": "Expected expression",
+                "reason": "TODO"
+            },
+            {
+                "file": "..\\clang\\lib\\Driver\\DriverOptions.cpp",
+                "line": 36,
+                "message": "Failed to match type 'const _Ty(&)[_Size]' against 'const llvm::StringLiteral[]'",
+                "reason": "TODO"
             }
         ],
-        "inspected files count": 251,
-        "mem traffic": 18800
+        "inspected files count": 1661
+    },
+    "latest": {
+        "main": {
+            "known errors": [
+                {
+                    "file": "..\\clang\\lib\\Sema\\TreeTransform.h",
+                    "line": "4649",
+                    "message": "Member 'Self' is not initialized in this constructor",
+                    "reason": "Bug in code?"
+                },
+                {
+                    "file": "..\\clang\\lib\\Driver\\DriverOptions.cpp",
+                    "line": 30,
+                    "message": "Expected expression",
+                    "reason": "TODO"
+                },
+                {
+                    "file": "..\\clang\\lib\\Driver\\DriverOptions.cpp",
+                    "line": 36,
+                    "message": "Failed to match type 'const _Ty(&)[_Size]' against 'const llvm::StringLiteral[]'",
+                    "reason": "TODO"
+                }
+            ],
+            "inspected files count": 1661
+        }
     }
 }

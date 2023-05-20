@@ -178,8 +178,8 @@ def get_sources(project_input, target_dir, branch: Optional[str]):
         raise ValueError("Unknown source kind: {0}".format(kind))
 
 
-def invoke_cmake(build_dir, cmake_generator, cmake_options, required_dependencies):
-    cmd_line_args = ["cmake", "..", "-G", cmake_generator["name"]]
+def invoke_cmake(build_dir, cmake_generator, cmake_options, cmake_dir, required_dependencies):
+    cmd_line_args = ["cmake", cmake_dir, "-G", cmake_generator["name"]]
     architecture = cmake_generator.get("architecture")
     if architecture:
         cmd_line_args.append("-A")
@@ -337,12 +337,19 @@ def prepare_project(project_name, project, cmake_generator: Optional[str], branc
         gen_description = toolchains_info["VS CMake Generators"][cmake_generator]
         build_dir = path.join(project_dir, project.get("build dir", "build") + "-" + cmake_generator)
         project_dir = build_dir
-        sln_file = invoke_cmake(build_dir, gen_description, project.get("cmake options"), project.get("required dependencies"))
+        sln_file = invoke_cmake(build_dir, gen_description, project.get("cmake options"), project.get("cmake dir", ".."), project.get("required dependencies"))
         build_step = project.get("build step")
         if build_step:
-            with cwd(build_dir):
-                for step in build_step:
-                    subprocess.run(step.split(), check=True, stdout=_env.verbose_handle)
+            if isinstance(build_step, list):
+                with cwd(build_dir):
+                    for step in build_step:
+                        subprocess.run(step.split(), check=True, stdout=_env.verbose_handle)
+            elif isinstance(build_step, str) and build_step.endswith(".py"):
+                build_step_full_path = os.path.realpath(build_step)
+                with cwd(build_dir):
+                    subprocess.run(["python", build_step_full_path], check=True, stdout=_env.verbose_handle)
+            else:
+                raise Exception("unknown build step format, should be list[str] or path to python script")
 
     generate_settings(project.get("to skip")).write(sln_file + ".DotSettings")
     return project_dir, sln_file
