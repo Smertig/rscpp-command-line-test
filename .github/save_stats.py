@@ -1,7 +1,9 @@
 import json
 import os
+import subprocess
 import sys
 import pathlib
+import time
 
 
 def main() -> int:
@@ -45,8 +47,15 @@ def main() -> int:
 
         all_reports[project_dir.name] = list(path.name for path in project_dir.glob('*.json'))
 
+    repo_url = subprocess.run(['git', 'config', '--get', 'remote.origin.url'], text=True, stdout=subprocess.PIPE, cwd=repo_path).stdout.strip()
+    last_update = time.time()
+
     with open(all_reports_dir / 'all.json', 'w') as f:
-        json.dump(all_reports, f, indent=4)
+        json.dump({
+            'last_update': last_update,
+            'repo_url': repo_url,
+            'reports': all_reports
+        }, f, indent=4)
 
     return 0
 
