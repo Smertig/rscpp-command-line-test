@@ -110,28 +110,23 @@ with open("toolchains.json") as f:
     toolchains_info = json.load(f)
 
 
-def git_clone_if_needed(target_dir, url):
+def git_clone_and_force_checkout_if_needed(target_dir, url, commit):
     if not path.exists(path.join(target_dir, ".git")):
         subprocess.run(["git", "clone", url, target_dir], check=True)
 
-
-def git_checkout_commit_and_overwrite_local_changes(commit):
-    subprocess.run(["git", "checkout", commit], check=True, stdout=PIPE, stderr=_env.verbose_handle)
-    subprocess.run(["git", "reset", "--hard"],  check=True, stdout=PIPE, stderr=_env.verbose_handle)
+    with cwd(target_dir):
+        subprocess.run(["git", "checkout", commit], check=True, stdout=PIPE, stderr=_env.verbose_handle)
+        subprocess.run(["git", "reset", "--hard"], check=True, stdout=PIPE, stderr=_env.verbose_handle)
 
 
 def get_sources_from_git(project_input, target_dir, branch: Optional[str]):
-    git_clone_if_needed(target_dir, project_input["repo"])
+    git_clone_and_force_checkout_if_needed(target_dir, project_input["repo"], branch or project_input["commit"])
 
     with cwd(target_dir):
         subrepo = project_input.get("subrepo")
         if subrepo:
             subrepo_dir = subrepo["path"]
-            git_clone_if_needed(subrepo_dir, subrepo["url"])
-            with cwd(subrepo_dir):
-                git_checkout_commit_and_overwrite_local_changes(subrepo["commit"])
-
-        git_checkout_commit_and_overwrite_local_changes(branch or project_input["commit"])
+            git_clone_and_force_checkout_if_needed(subrepo_dir, subrepo["url"], subrepo["commit"])
 
         custom_update_source_script = project_input.get("custom update source script")
         if custom_update_source_script:
