@@ -164,8 +164,10 @@ def main():
 
             result = f"exception: {e}"
             report = {
-                'exception': str(e),
-                'error_info': error_info
+                'ERROR': {
+                    'exception': str(e),
+                    'error_info': error_info
+                }
             }
 
         report_key = f"{project_name}:{project_branch}" if project_branch else project_name
