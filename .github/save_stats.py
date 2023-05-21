@@ -13,16 +13,14 @@ def main() -> int:
     for report_path in pathlib.Path(reports_dir).glob('*-report/report.json'):
         with open(report_path) as f_report:
             report = json.load(f_report)
-            for project_name, toolchains in report.items():
+            for project_name, project_report in report.items():
                 branch = None
                 if ':' in project_name:
                     project_name, branch = project_name.split(':', 1)
 
-                for toolchain_name, project_report in toolchains.items():
-                    # FIXME: improve me
-                    if toolchain_name == 'ERROR':
-                        continue
+                repo_info = project_report.get('repo')
 
+                for toolchain_name, toolchain_report in project_report.get('toolchains', {}).items():
                     cache_path = f'{repo_path}/reports/{project_name}/{branch or "stable"}_{toolchain_name}.json'
                     os.makedirs(os.path.dirname(cache_path), exist_ok=True)
 
@@ -32,8 +30,14 @@ def main() -> int:
                         with open(cache_path) as f_cache:
                             cache = json.load(f_cache)
 
+                    if repo_info:
+                        toolchain_report['repo_url'] = repo_info['url']
+                        toolchain_report['commit_ref'] = repo_info['ref']
+                        toolchain_report['commit_message'] = repo_info['message']
+                        toolchain_report['commit_timestamp'] = repo_info['timestamp']
+
                     # update
-                    cache['v1'].append(project_report)
+                    cache['v1'].append(toolchain_report)
 
                     # dump cache
                     with open(cache_path, 'w') as f_cache:

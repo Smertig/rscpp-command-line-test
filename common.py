@@ -73,9 +73,9 @@ class Environment:
     def caches_home(self) -> str:
         return self._get_env("caches home") or path.join(self.cli_test_dir, "caches-home")
 
-    @property
-    def projects_dir(self) -> str:
-        return self._projects_cache_directory or path.join(self.cli_test_dir, "projects")
+    def get_project_dir(self, project_name) -> str:
+        projects_dir = self._projects_cache_directory or path.join(self.cli_test_dir, "projects")
+        return path.join(projects_dir, project_name)
 
     @property
     def inspect_code_path_x86(self) -> str:
@@ -307,7 +307,7 @@ def get_compatible_toolchains(project: dict) -> List[str]:
 
 
 def prepare_project(project_name, project, cmake_generator: Optional[str], branch: Optional[str] = None):
-    target_dir = path.join(_env.projects_dir, project_name)
+    target_dir = _env.get_project_dir(project_name)
     project_dir = get_sources(project["sources"], target_dir, branch)
 
     fixup_sources = project.get("fixup sources")

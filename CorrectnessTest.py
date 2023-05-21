@@ -5,6 +5,7 @@ import sys
 import time
 import traceback
 import xml.etree.ElementTree as ET
+import git
 from subprocess import Popen, PIPE
 from typing import Optional, Tuple
 
@@ -128,17 +129,30 @@ def process_project(project_name, project, branch: Optional[str]) -> Tuple[Optio
 
     if "custom build tool" in project:
         project_dir, sln_file = common.prepare_project(project_name, project, None, branch)
-        local_result, local_report = check_project(project, project_dir, sln_file, branch)
-        return local_result, {'default': local_report}
+        result, toolchain_reports = check_project(project, project_dir, sln_file, branch)
+    else:
+        result = None
+        toolchain_reports = {}
+        for generator in available_toolchains:
+            local_result, local_report = process_project_with_cmake_generator(project, project_name, generator, branch)
+            toolchain_reports[generator] = local_report
+            if local_result:
+                result = local_result
+                break
 
-    result = None
-    report = {}
-    for generator in available_toolchains:
-        local_result, local_report = process_project_with_cmake_generator(project, project_name, generator, branch)
-        report[generator] = local_report
-        if local_result:
-            result = local_result
-            break
+    report = {'toolchains': toolchain_reports}
+
+    try:
+        with git.Repo(env.get_project_dir(project_name)) as repo:
+            last_commit = repo.commit()
+            report['repo'] = {
+                'url': repo.remote().url,
+                'ref': last_commit.hexsha,
+                'message': last_commit.message,
+                'timestamp': last_commit.committed_datetime.timestamp()
+            }
+    except:
+        pass
 
     return result, report
 
@@ -164,7 +178,7 @@ def main():
 
             result = f"exception: {e}"
             report = {
-                'ERROR': {
+                'error': {
                     'exception': str(e),
                     'error_info': error_info
                 }
