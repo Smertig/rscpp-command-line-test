@@ -1148,5 +1148,35 @@
                 ]
             }
         }
+    },
+    "luau": {
+        "sources": {
+            "repo": "https://github.com/Roblox/luau",
+            "commit": "721f6e10fbdb25909e020351dc7130393201da8d"
+        },
+        "stable": {
+            "inspected files count": 379,
+            "known errors": [
+                {
+                    "file": "..\\tests\\NotNull.test.cpp",
+                    "line": 12,
+                    "message": "static_assert failed: 'NotNull<T> ought not to be convertible into bool'",
+                    "reason": "RSCPP-34326 `is_convertible` handles deleted conversion operator incorrectly"
+                }
+            ]
+        },
+        "latest": {
+            "master": {
+                "inspected files count": 379,
+                "known errors": [
+                    {
+                        "file": "..\\tests\\NotNull.test.cpp",
+                        "line": 12,
+                        "message": "static_assert failed: 'NotNull<T> ought not to be convertible into bool'",
+                        "reason": "RSCPP-34326 `is_convertible` handles deleted conversion operator incorrectly"
+                    }
+                ]
+            }
+        }
     }
 }
