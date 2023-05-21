@@ -107,6 +107,22 @@
             "commit_ref": "3b272039a88cc9952e5bad71b6b02a62b2c22098",
             "commit_message": "[ubsan][test] Unsupport function.cpp in Android non-x86 on sanitizer-x86_64-linux-android after D148573\n\nThe qemu environment cannot run an executable with a link-time shared\nobject built during the test?\n```\nInput was:\n<<<<<<\n            1: CANNOT LINK EXECUTABLE \"/data/local/tmp/Output/var/lib/buildbot/sanitizer-buildbot6/sanitizer-x86_64-linux-android/build/compiler_rt_build_android_aarch64/test/ubsan/Standalone-aarch64/TestCases/TypeCheck/Function/Output/function.cpp.tmp\": library \"/var/lib/buildbot/sanitizer-buildbot6/sanitizer-x86_64-linux-android/build/compiler_rt_build_android_aarch64/test/ubsan/Standalone-aarch64/TestCases/TypeCheck/Function/Output/function.cpp.tmp-so.so\" not found: needed by main executable\n```\n",
             "commit_timestamp": 1684684234.0
+        },
+        {
+            "tool_version": "232.0.20230509.135236-eap01",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1684704257.900953,
+            "elapsed_time": 3932.433120250702,
+            "x64": true,
+            "actual_files_count": 1661,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "4aa1cadf3c67c61b394051630896f06f35b562ca",
+            "commit_message": "[Driver] Disable -fsanitize=function for ppc64be after D148573\n\nELFObjectWriter.cpp may report\n```\nerror: Cannot represent a difference across sections\n```\non some ppc64be configurations, likely related to some interaction\nbetween the obsoleted ELFv1 and MC.\nUnfortunately I cannot reproduce this locally with --target=powerpc64-linux-gnu.\n",
+            "commit_timestamp": 1684685680.0
         }
     ]
 }
