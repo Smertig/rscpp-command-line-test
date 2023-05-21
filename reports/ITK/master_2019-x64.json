@@ -803,6 +803,20 @@
             "commit_ref": "4077d66b5de839deb471110f5105b537d252dd9f",
             "commit_message": "Merge pull request #4049 from blowekamp/QualifiedIteratorDefaultCopyConstructor\n\nCOMP: Add explicit default copy constructor",
             "commit_timestamp": 1684494639.0
+        },
+        {
+            "tool_version": "232.0.20230509.135236-eap01",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1684671153.586421,
+            "elapsed_time": 112.66386437416077,
+            "x64": false,
+            "actual_files_count": 100,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "cce48b3cfa5c8f41be0bf7393183132ab34f1a06",
+            "commit_message": "COMP: Disable KWStyle check \"error: namespace is wrong\" on *.cxx files\n\n*.cxx files may have an unnamed namespace, instead of `namespace itk`, as their\nfirst namespace. For example Wrapping/Generators/Python/PyUtils/itkPyCommand.cxx\nThis would cause undeserved failures of the `Namespace` check of KWStyle.\n",
+            "commit_timestamp": 1684669949.0
         }
     ]
 }
