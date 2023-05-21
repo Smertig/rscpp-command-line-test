@@ -20,7 +20,7 @@ GENERATOR_TO_CONFIG = {
 
 def is_slow_project(project_name: str):
     # TODO: extract average build time from stats
-    return project_name in ('ITK', 'rocksdb', 'OpenCV', 'yuzu', 'minetest', 'Cemu', 'LLVM')
+    return project_name in ('ITK', 'rocksdb', 'OpenCV', 'yuzu', 'minetest', 'Cemu', 'LLVM', 'tdlib')
 
 
 assert len(sys.argv) == 5, f"{sys.argv[0]} projects.json proj-config-dir mode github_event"

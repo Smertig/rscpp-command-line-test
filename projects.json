@@ -1178,5 +1178,28 @@
                 ]
             }
         }
+    },
+    "tdlib": {
+        "sources": {
+            "repo": "https://github.com/tdlib/td",
+            "commit": "3861b927baf19e275b15b3ce0bfe75237752918d"
+        },
+        "required dependencies": [
+            "zlib",
+            "openssl",
+            "gperf"
+        ],
+        "use x64": true,
+        "build step": [
+            "cmake --build . --target tl_generate_common tl_generate_json tl_generate_c"
+        ],
+        "stable": {
+            "inspected files count": 1103
+        },
+        "latest": {
+            "master": {
+                "inspected files count": 1103
+            }
+        }
     }
 }
