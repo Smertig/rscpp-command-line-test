@@ -187,6 +187,22 @@
             "commit_ref": "c7e06ce4b74789818155e0cc932f8dad4a899312",
             "commit_message": "[MLIR][LLVM] Allow inlining llvm.intr.assume.\n\nThis operation is not marked pure because it needs to survive DCE, but\nis otherwise safe to inline.\n\nReviewed By: Dinistro\n\nDifferential Revision: https://reviews.llvm.org/D151070\n",
             "commit_timestamp": 1684756831.0
+        },
+        {
+            "tool_version": "232.0.20230509.135236-eap01",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1684776568.040729,
+            "elapsed_time": 4424.899654865265,
+            "x64": true,
+            "actual_files_count": 1661,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "986cbd80d1dc838c61abff24b8d7ac28dcf4ac2a",
+            "commit_message": "[clang][AST] TextNodeDumper should not evaluate the initializer of constexpr variable declaration when it has a dependent type\n\n`TextNodeDumper` enabed through `-ast-dump` flag should not evlauate the initializer when it visits a constexpr `VarDecl` node if it has a dependent type.\n\nI found a crashing case fixed by this change and added it as a test case.\n`template <typename T> constexpr T call_init(0);`\nLink: https://godbolt.org/z/3bG9Pjj5E\n\nThis is a fix for the regression caused by D146358\n\nDifferential Revision: https://reviews.llvm.org/D151033\n",
+            "commit_timestamp": 1684771058.0
         }
     ]
 }
