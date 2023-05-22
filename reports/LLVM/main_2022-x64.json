@@ -139,6 +139,22 @@
             "commit_ref": "f81ccb520927247b02708873567428d6988e2a07",
             "commit_message": "[ExecutionEngine] Re-enable JIT tests on PowerPC.\n\nThese were previously re-enabled in d771f54107c, but had to be disabled again\nin 2060a72b4d7 due to test failures.\n\nThis is a next step to landing https://reviews.llvm.org/D148192, which adds\na skeleton JITLink backend for PowerPC.\n\nThe fixes for those failures were (1) to explicitly specify IsLittleEndian =\ntrue for the MachO YAML testcases, (2) disable some example tests for examples\nthat aren't supported on PowerPC yet, and (3) fixing the endianness of a\nrelocation read/write (for ELF R_AARCH64_TSTBR14) in RuntimeDyldELF.\n",
             "commit_timestamp": 1684710726.0
+        },
+        {
+            "tool_version": "232.0.20230509.135236-eap01",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1684733689.769472,
+            "elapsed_time": 4721.939621925354,
+            "x64": true,
+            "actual_files_count": 1661,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "f6fb639c76ce255e2f5b3e2c8550270243e7e7ab",
+            "commit_message": "Fix memoery leak in MLIR use-def list ordering test\n",
+            "commit_timestamp": 1684725090.0
         }
     ]
 }
