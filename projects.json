@@ -1194,11 +1194,123 @@
             "cmake --build . --target tl_generate_common tl_generate_json tl_generate_c"
         ],
         "stable": {
-            "inspected files count": 1103
+            "inspected files count": 1103,
+            "known errors": [
+                {
+                    "file": "..\\td\\generate\\tl-parser\\tlc.c",
+                    "line": 115,
+                    "message": "Function has 0 parameters, but is called with 3 arguments",
+                    "reason": "C-style `void f()` with unknown number of parameters"
+                },
+                {
+                    "file": "..\\td\\generate\\tl-parser\\wgetopt.c",
+                    "line": 401,
+                    "message": "Function has 0 parameters, but is called with 1 argument",
+                    "reason": "C-style `void f()` with unknown number of parameters"
+                },
+                {
+                    "file": "..\\td\\telegram\\MessagesManager.h",
+                    "line": 1510,
+                    "message": "Cannot resolve symbol 'MAX_ORDINARY_DIALOG_ORDER'",
+                    "reason": "RSCPP-33487 Incorrect \"Cannot resolve symbol\""
+                },
+                {
+                    "file": "..\\td\\telegram\\MessagesManager.h",
+                    "line": 1515,
+                    "message": "Cannot resolve symbol 'MAX_ORDINARY_DIALOG_ORDER'",
+                    "reason": "RSCPP-33487 Incorrect \"Cannot resolve symbol\""
+                },
+                {
+                    "file": "..\\td\\telegram\\MessagesManager.h",
+                    "line": 1516,
+                    "message": "Cannot resolve symbol 'MAX_ORDINARY_DIALOG_ORDER'",
+                    "reason": "RSCPP-33487 Incorrect \"Cannot resolve symbol\""
+                },
+                {
+                    "file": "..\\td\\telegram\\MessagesManager.h",
+                    "line": 1517,
+                    "message": "Cannot resolve symbol 'MAX_ORDINARY_DIALOG_ORDER'",
+                    "reason": "RSCPP-33487 Incorrect \"Cannot resolve symbol\""
+                },
+                {
+                    "file": "..\\tdutils\\td\\utils\\AsyncFileLog.cpp",
+                    "line": 43,
+                    "message": "Cannot convert 'this' argument from type 'const std::remove_reference_t<FileFd &>' to type 'FileFd': function is missing 'const' qualifier",
+                    "reason": "RSCPP-34329 False-positive \"cannot assign to\" error for captured variable"
+                },
+                {
+                    "file": "..\\tdutils\\td\\utils\\AsyncFileLog.cpp",
+                    "line": 48,
+                    "message": "Cannot convert lvalue of type 'const std::remove_reference_t<FileFd &>' to implicit 'this' parameter type 'FileFd' of assignment operator: function is missing 'const' qualifier",
+                    "reason": "RSCPP-34329 False-positive \"cannot assign to\" error for captured variable"
+                },
+                {
+                    "file": "..\\tdutils\\td\\utils\\AsyncFileLog.cpp",
+                    "line": 73,
+                    "message": "Cannot convert 'this' argument from type 'const std::remove_reference_t<FileFd &>' to type 'FileFd': function is missing 'const' qualifier",
+                    "reason": "RSCPP-34329 False-positive \"cannot assign to\" error for captured variable"
+                }
+            ]
         },
         "latest": {
             "master": {
-                "inspected files count": 1103
+                "inspected files count": 1103,
+                "known errors": [
+                    {
+                        "file": "..\\td\\generate\\tl-parser\\tlc.c",
+                        "line": 115,
+                        "message": "Function has 0 parameters, but is called with 3 arguments",
+                        "reason": "C-style `void f()` with unknown number of parameters"
+                    },
+                    {
+                        "file": "..\\td\\generate\\tl-parser\\wgetopt.c",
+                        "line": 401,
+                        "message": "Function has 0 parameters, but is called with 1 argument",
+                        "reason": "C-style `void f()` with unknown number of parameters"
+                    },
+                    {
+                        "file": "..\\td\\telegram\\MessagesManager.h",
+                        "line": 1510,
+                        "message": "Cannot resolve symbol 'MAX_ORDINARY_DIALOG_ORDER'",
+                        "reason": "RSCPP-33487 Incorrect \"Cannot resolve symbol\""
+                    },
+                    {
+                        "file": "..\\td\\telegram\\MessagesManager.h",
+                        "line": 1515,
+                        "message": "Cannot resolve symbol 'MAX_ORDINARY_DIALOG_ORDER'",
+                        "reason": "RSCPP-33487 Incorrect \"Cannot resolve symbol\""
+                    },
+                    {
+                        "file": "..\\td\\telegram\\MessagesManager.h",
+                        "line": 1516,
+                        "message": "Cannot resolve symbol 'MAX_ORDINARY_DIALOG_ORDER'",
+                        "reason": "RSCPP-33487 Incorrect \"Cannot resolve symbol\""
+                    },
+                    {
+                        "file": "..\\td\\telegram\\MessagesManager.h",
+                        "line": 1517,
+                        "message": "Cannot resolve symbol 'MAX_ORDINARY_DIALOG_ORDER'",
+                        "reason": "RSCPP-33487 Incorrect \"Cannot resolve symbol\""
+                    },
+                    {
+                        "file": "..\\tdutils\\td\\utils\\AsyncFileLog.cpp",
+                        "line": 43,
+                        "message": "Cannot convert 'this' argument from type 'const std::remove_reference_t<FileFd &>' to type 'FileFd': function is missing 'const' qualifier",
+                        "reason": "RSCPP-34329 False-positive \"cannot assign to\" error for captured variable"
+                    },
+                    {
+                        "file": "..\\tdutils\\td\\utils\\AsyncFileLog.cpp",
+                        "line": 48,
+                        "message": "Cannot convert lvalue of type 'const std::remove_reference_t<FileFd &>' to implicit 'this' parameter type 'FileFd' of assignment operator: function is missing 'const' qualifier",
+                        "reason": "RSCPP-34329 False-positive \"cannot assign to\" error for captured variable"
+                    },
+                    {
+                        "file": "..\\tdutils\\td\\utils\\AsyncFileLog.cpp",
+                        "line": 73,
+                        "message": "Cannot convert 'this' argument from type 'const std::remove_reference_t<FileFd &>' to type 'FileFd': function is missing 'const' qualifier",
+                        "reason": "RSCPP-34329 False-positive \"cannot assign to\" error for captured variable"
+                    }
+                ]
             }
         }
     }
