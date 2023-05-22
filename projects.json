@@ -1313,5 +1313,22 @@
                 ]
             }
         }
+    },
+    "function2": {
+        "sources": {
+            "repo": "https://github.com/Naios/function2",
+            "commit": "2d3a878ef19dd5d2fb188898513610fac0a48621"
+        },
+        "stable": {
+            "inspected files count": 18,
+            "known errors": [
+                {
+                    "file": "..\\test\\regressions.cpp",
+                    "line": 160,
+                    "message": "static_assert failed",
+                    "reason": "RSCPP-19882 Implement __is_nothrow_constructible trait"
+                }
+            ]
+        }
     }
 }
