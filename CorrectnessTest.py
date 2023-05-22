@@ -129,7 +129,10 @@ def process_project(project_name, project, branch: Optional[str]) -> Tuple[Optio
 
     if "custom build tool" in project:
         project_dir, sln_file = common.prepare_project(project_name, project, None, branch)
-        result, toolchain_reports = check_project(project, project_dir, sln_file, branch)
+        result, default_report = check_project(project, project_dir, sln_file, branch)
+        toolchain_reports = {
+            'default': default_report
+        }
     else:
         result = None
         toolchain_reports = {}
