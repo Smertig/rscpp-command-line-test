@@ -144,7 +144,7 @@ def get_sources_from_git(project_input, target_dir, branch: Optional[str]):
 
         custom_update_source_script = project_input.get("custom update source script")
         if custom_update_source_script:
-            subprocess.run(custom_update_source_script, check=True, stdout=PIPE)
+            subprocess.run(custom_update_source_script, check=True, stdout=_env.verbose_handle)
 
         update_submodules_args = ["git", "submodule", "update", "--init"]
         if project_input.get("recursive", False):
@@ -186,12 +186,14 @@ def invoke_cmake(build_dir, cmake_generator, cmake_options, cmake_dir, required_
         cmd_line_args.append(architecture)
     if required_dependencies:
         vcpkg_dir = _env.vcpkg_dir
-        if vcpkg_dir:
-            with cwd(vcpkg_dir):
-                subprocess.run(["vcpkg", "install"] + required_dependencies + ["--triplet", toolchains_info["vcpkg"]["triplet"]], check=True, stdout=_env.verbose_handle)
-                cmd_line_args.append("-DCMAKE_TOOLCHAIN_FILE={0}/scripts/buildsystems/vcpkg.cmake".format(vcpkg_dir))
-        else:
-            raise Exception("project has required dependencies {0}, but environment doesn't containt path to vcpkg".format(required_dependencies))
+        if not vcpkg_dir:
+            raise Exception(f"project has required dependencies {required_dependencies}, but environment doesn't contain path to vcpkg")
+
+        with cwd(vcpkg_dir):
+            subprocess.run(["vcpkg", "install"] + required_dependencies + ["--triplet", toolchains_info["vcpkg"]["triplet"]], check=True, stdout=_env.verbose_handle)
+
+        cmd_line_args.append("-DCMAKE_TOOLCHAIN_FILE={0}/scripts/buildsystems/vcpkg.cmake".format(vcpkg_dir))
+
     if cmake_options:
         cmd_line_args.extend(cmake_options)
     makedirs(build_dir, exist_ok=True)
