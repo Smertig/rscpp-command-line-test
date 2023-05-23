@@ -1,11 +1,6 @@
-import utils
 import glob
 import re
 import os
-
-# fixup until https://github.com/ericniebler/range-v3/pull/1777 merge
-utils.update_file('include/range/v3/utility.hpp',
-                  lambda content: content.replace(b'RANGES_V3_ITERATOR_HPP', b'RANGES_V3_UTILITY_HPP'))
 
 
 def is_deprecated(path: str) -> bool:
