@@ -251,6 +251,22 @@
             "commit_ref": "61bc3ada1f9088a852126d5556f837f24683160b",
             "commit_message": "[test] precommit tests for D141188\n",
             "commit_timestamp": 1684812626.0
+        },
+        {
+            "tool_version": "232.0.20230509.135236-eap01",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1684834595.853444,
+            "elapsed_time": 4869.501857280731,
+            "x64": true,
+            "actual_files_count": 1661,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "f5af7d2d987b0b16d7a641b7aa9086a75d533944",
+            "commit_message": "Revert \"[clang][ExprConstant] fix __builtin_object_size for flexible array members\"\n\nThis reverts commit 57c5c1ab2a188b7962c9de5ac0f95e3c7441940a.\n\nCauses an assertion failure: https://reviews.llvm.org/D150892#4363080\n",
+            "commit_timestamp": 1684828778.0
         }
     ]
 }
