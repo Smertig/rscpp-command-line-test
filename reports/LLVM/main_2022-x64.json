@@ -347,6 +347,22 @@
             "commit_ref": "597dd1f91d9f3823e4184f1fe73d8125fa16c026",
             "commit_message": "[NFC] Fix the warning for dangling pointer for c0d6f85e3ae8bc\n\nThe bot notes a warning-converted-error for the dangling pointer. And\nthe patch fixes that.\n",
             "commit_timestamp": 1684899775.0
+        },
+        {
+            "tool_version": "232.0.20230509.135236-eap01",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1684920716.360784,
+            "elapsed_time": 4597.1598863601685,
+            "x64": true,
+            "actual_files_count": 1665,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "82082b7da075b9f3571ab5b26248578e6d98ee52",
+            "commit_message": "[LVI] Don't compute range on not guaranteed not to be undef condition in SelectInst\n\nFixes:https://github.com/llvm/llvm-project/issues/62901\n\nReviewed By: nikic\n\nDifferential Revision: https://reviews.llvm.org/D151295\n",
+            "commit_timestamp": 1684915333.0
         }
     ]
 }
