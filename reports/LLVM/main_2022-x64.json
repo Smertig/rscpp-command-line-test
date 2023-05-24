@@ -331,6 +331,22 @@
             "commit_ref": "f6c4808d95221a5838e14474d95c6fe85bb1488a",
             "commit_message": "[compiler-rt] Allow 64-bit sanitizer allocator to be used if using RISCV64 and Fuchsia\n\nThis way, Fuchsia can use the 64-bit allocator settings in D151157 without changing the default behavior for others.\n\nDifferential Revision: https://reviews.llvm.org/D151159\n",
             "commit_timestamp": 1684885109.0
+        },
+        {
+            "tool_version": "232.0.20230509.135236-eap01",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1684906443.506249,
+            "elapsed_time": 4633.001081466675,
+            "x64": true,
+            "actual_files_count": 1665,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "597dd1f91d9f3823e4184f1fe73d8125fa16c026",
+            "commit_message": "[NFC] Fix the warning for dangling pointer for c0d6f85e3ae8bc\n\nThe bot notes a warning-converted-error for the dangling pointer. And\nthe patch fixes that.\n",
+            "commit_timestamp": 1684899775.0
         }
     ]
 }
