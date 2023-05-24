@@ -379,6 +379,22 @@
             "commit_ref": "44bb442fd5be3860e7819cb216621b5ea59970c3",
             "commit_message": "[lldb][DataFormatter] Add dereference support to libstdcpp std::shared_ptr formatter\n\nThis mimicks the implementation of the libstdcpp std::unique_ptr\nformatter.\n\nThis has been attempted several years ago in\n`0789722d85cf1f1fdbe2ffb2245ea0ba034a9f94` but was reverted in\n`e7dd3972094c2f2fb42dc9d4d5344e54a431e2ce`.\n\nThe difference to the original patch is that we now maintain\na `$$dereference$$` member and we only store weak pointers\nto the other children inside the synthetic frontend. This is\nwhat the libc++ formatters do to prevent the recursion mentioned\nin the revert commit.\n",
             "commit_timestamp": 1684929671.0
+        },
+        {
+            "tool_version": "232.0.20230517.90859-eap02",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1684950882.910849,
+            "elapsed_time": 5546.6628677845,
+            "x64": true,
+            "actual_files_count": 1665,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "f74bb326949aec0cac8e54ff00fc081f746ff35d",
+            "commit_message": "AMDGPU: Add some new tests for class undef/poison handling\n",
+            "commit_timestamp": 1684943679.0
         }
     ]
 }
