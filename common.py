@@ -178,12 +178,17 @@ def get_sources(project_input, target_dir, branch: Optional[str]):
         raise ValueError("Unknown source kind: {0}".format(kind))
 
 
-def invoke_cmake(build_dir, cmake_generator, cmake_options, cmake_dir, required_dependencies):
+def invoke_cmake(build_dir, cmake_generator, cmake_options, cmake_new_env, cmake_dir, required_dependencies):
+    def apply_substitutions(s: str) -> str:
+        return s.replace('${BUILD_DIR}', path.realpath(build_dir))
+
     cmd_line_args = ["cmake", cmake_dir, "-G", cmake_generator["name"]]
+
     architecture = cmake_generator.get("architecture")
     if architecture:
         cmd_line_args.append("-A")
         cmd_line_args.append(architecture)
+
     if required_dependencies:
         vcpkg_dir = _env.vcpkg_dir
         if not vcpkg_dir:
@@ -194,11 +199,21 @@ def invoke_cmake(build_dir, cmake_generator, cmake_options, cmake_dir, required_
 
         cmd_line_args.append("-DCMAKE_TOOLCHAIN_FILE={0}/scripts/buildsystems/vcpkg.cmake".format(vcpkg_dir))
 
+    cmake_env = os.environ.copy()
+    if cmake_new_env:
+        for env_key, env_value in cmake_new_env.items():
+            cmake_env[env_key] = cmake_env.get(env_key, '') + apply_substitutions(env_value)
+
     if cmake_options:
         cmd_line_args.extend(cmake_options)
     makedirs(build_dir, exist_ok=True)
+
     with cwd(build_dir):
-        subprocess.run(cmd_line_args, check=True, stdout=_env.verbose_handle)
+        if _env.verbose and cmake_new_env:
+            print(f'Running cmake with modified env: {cmake_env}')
+
+        subprocess.run(cmd_line_args, check=True, stdout=_env.verbose_handle, env=cmake_env)
+
     with open(path.join(build_dir, "CMakeCache.txt")) as cmake_cache:
         for line in cmake_cache.readlines():
             if line.startswith("CMAKE_PROJECT_NAME"):
@@ -311,6 +326,8 @@ def get_compatible_toolchains(project: dict) -> List[str]:
 def prepare_project(project_name, project, cmake_generator: Optional[str], branch: Optional[str] = None):
     target_dir = _env.get_project_dir(project_name)
     project_dir = get_sources(project["sources"], target_dir, branch)
+    build_dir = path.join(project_dir, f'{project.get("build dir", "build")}-{cmake_generator}')
+    abs_build_dir = path.realpath(build_dir)
 
     fixup_sources = project.get("fixup sources")
     if isinstance(fixup_sources, list):
@@ -319,7 +336,9 @@ def prepare_project(project_name, project, cmake_generator: Optional[str], branc
     elif isinstance(fixup_sources, str) and fixup_sources.endswith(".py"):
         full_path = os.path.realpath(fixup_sources)
         with cwd(target_dir):
-            subprocess.run(["python", full_path], check=True, stdout=_env.verbose_handle)
+            env_copy = os.environ.copy()
+            env_copy['BUILD_DIR'] = abs_build_dir
+            subprocess.run(["python", full_path], check=True, stdout=_env.verbose_handle, env=env_copy)
     else:
         assert fixup_sources is None, "unknown fixup sources format, should be list[str] or path to python script"
 
@@ -337,9 +356,8 @@ def prepare_project(project_name, project, cmake_generator: Optional[str], branc
         assert(path.exists(sln_file))
     else:
         gen_description = toolchains_info["VS CMake Generators"][cmake_generator]
-        build_dir = path.join(project_dir, project.get("build dir", "build") + "-" + cmake_generator)
         project_dir = build_dir
-        sln_file = invoke_cmake(build_dir, gen_description, project.get("cmake options"), project.get("cmake dir", ".."), project.get("required dependencies"))
+        sln_file = invoke_cmake(build_dir, gen_description, project.get("cmake options"), project.get("cmake env"), project.get("cmake dir", ".."), project.get("required dependencies"))
         build_step = project.get("build step")
         if build_step:
             if isinstance(build_step, list):

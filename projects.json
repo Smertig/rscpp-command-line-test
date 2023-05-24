@@ -1360,5 +1360,59 @@
                 "inspected files count": 454
             }
         }
+    },
+    "reactos": {
+        "sources": {
+            "repo": "https://github.com/reactos/reactos",
+            "commit": "0fa4edebd9125b9ca7a4256edbea7675e2152c7e"
+        },
+        "fixup sources": "proj-config/scripts/fix-reactos.py",
+        "cmake options": [
+            "-DARCH=amd64"
+        ],
+        "cmake env": {
+            "PATH": ";${BUILD_DIR}/bin",
+            "BISON_PKGDATADIR": "${BUILD_DIR}/bin",
+            "M4": "${BUILD_DIR}/bin/m4.exe"
+        },
+        "use x64": true,
+        "stable": {
+            "known errors": [
+                {"file": "..\\dll\\win32\\dbghelp\\module.c", "line": 247, "message": "Cannot resolve symbol 'type'", "reason": "RSCPP-34333 Incorrect parsing of bitfield with elaborated type specifier"},
+                {"file": "..\\dll\\win32\\dbghelp\\module.c", "line": 388, "message": "Cannot resolve symbol 'type'", "reason": "RSCPP-34333 Incorrect parsing of bitfield with elaborated type specifier"},
+                {"file": "..\\dll\\win32\\dbghelp\\module.c", "line": 436, "message": "Cannot resolve symbol 'type'", "reason": "RSCPP-34333 Incorrect parsing of bitfield with elaborated type specifier"},
+                {"file": "..\\dll\\win32\\dbghelp\\module.c", "line": 464, "message": "Cannot resolve symbol 'type'", "reason": "RSCPP-34333 Incorrect parsing of bitfield with elaborated type specifier"},
+                {"file": "..\\dll\\win32\\dbghelp\\module.c", "line": 1035, "message": "Cannot resolve symbol 'type'", "reason": "RSCPP-34333 Incorrect parsing of bitfield with elaborated type specifier"},
+                {"file": "..\\dll\\win32\\dbghelp\\pe_module.c", "line": 336, "message": "Cannot resolve symbol 'type'", "reason": "RSCPP-34333 Incorrect parsing of bitfield with elaborated type specifier"},
+                {"file": "..\\dll\\win32\\dbghelp\\stabs.c", "line": 1182, "message": "Cannot resolve symbol 'type'", "reason": "RSCPP-34333 Incorrect parsing of bitfield with elaborated type specifier"},
+                {"file": "..\\dll\\win32\\dbghelp\\stabs.c", "line": 1314, "message": "Cannot resolve symbol 'type'", "reason": "RSCPP-34333 Incorrect parsing of bitfield with elaborated type specifier"},
+                {"file": "..\\dll\\win32\\dbghelp\\stabs.c", "line": 1485, "message": "Cannot resolve symbol 'type'", "reason": "RSCPP-34333 Incorrect parsing of bitfield with elaborated type specifier"},
+                {"file": "..\\dll\\win32\\dbghelp\\symbol.c", "line": 1078, "message": "Cannot resolve symbol 'type'", "reason": "RSCPP-34333 Incorrect parsing of bitfield with elaborated type specifier"},
+                {"file": "..\\dll\\win32\\dbghelp\\symbol.c", "line": 1091, "message": "Cannot resolve symbol 'type'", "reason": "RSCPP-34333 Incorrect parsing of bitfield with elaborated type specifier"},
+                {"file": "..\\dll\\win32\\dbghelp\\symbol.c", "line": 1413, "message": "Cannot resolve symbol 'type'", "reason": "RSCPP-34333 Incorrect parsing of bitfield with elaborated type specifier"},
+                {"file": "..\\dll\\win32\\dbghelp\\symbol.c", "line": 1422, "message": "Cannot resolve symbol 'type'", "reason": "RSCPP-34333 Incorrect parsing of bitfield with elaborated type specifier"}
+            ],
+            "inspected files count": 266
+        },
+        "latest": {
+            "master": {
+                "known errors": [
+                    {"file": "..\\dll\\win32\\dbghelp\\module.c", "line": 247, "message": "Cannot resolve symbol 'type'", "reason": "RSCPP-34333 Incorrect parsing of bitfield with elaborated type specifier"},
+                    {"file": "..\\dll\\win32\\dbghelp\\module.c", "line": 388, "message": "Cannot resolve symbol 'type'", "reason": "RSCPP-34333 Incorrect parsing of bitfield with elaborated type specifier"},
+                    {"file": "..\\dll\\win32\\dbghelp\\module.c", "line": 436, "message": "Cannot resolve symbol 'type'", "reason": "RSCPP-34333 Incorrect parsing of bitfield with elaborated type specifier"},
+                    {"file": "..\\dll\\win32\\dbghelp\\module.c", "line": 464, "message": "Cannot resolve symbol 'type'", "reason": "RSCPP-34333 Incorrect parsing of bitfield with elaborated type specifier"},
+                    {"file": "..\\dll\\win32\\dbghelp\\module.c", "line": 1035, "message": "Cannot resolve symbol 'type'", "reason": "RSCPP-34333 Incorrect parsing of bitfield with elaborated type specifier"},
+                    {"file": "..\\dll\\win32\\dbghelp\\pe_module.c", "line": 336, "message": "Cannot resolve symbol 'type'", "reason": "RSCPP-34333 Incorrect parsing of bitfield with elaborated type specifier"},
+                    {"file": "..\\dll\\win32\\dbghelp\\stabs.c", "line": 1182, "message": "Cannot resolve symbol 'type'", "reason": "RSCPP-34333 Incorrect parsing of bitfield with elaborated type specifier"},
+                    {"file": "..\\dll\\win32\\dbghelp\\stabs.c", "line": 1314, "message": "Cannot resolve symbol 'type'", "reason": "RSCPP-34333 Incorrect parsing of bitfield with elaborated type specifier"},
+                    {"file": "..\\dll\\win32\\dbghelp\\stabs.c", "line": 1485, "message": "Cannot resolve symbol 'type'", "reason": "RSCPP-34333 Incorrect parsing of bitfield with elaborated type specifier"},
+                    {"file": "..\\dll\\win32\\dbghelp\\symbol.c", "line": 1078, "message": "Cannot resolve symbol 'type'", "reason": "RSCPP-34333 Incorrect parsing of bitfield with elaborated type specifier"},
+                    {"file": "..\\dll\\win32\\dbghelp\\symbol.c", "line": 1091, "message": "Cannot resolve symbol 'type'", "reason": "RSCPP-34333 Incorrect parsing of bitfield with elaborated type specifier"},
+                    {"file": "..\\dll\\win32\\dbghelp\\symbol.c", "line": 1413, "message": "Cannot resolve symbol 'type'", "reason": "RSCPP-34333 Incorrect parsing of bitfield with elaborated type specifier"},
+                    {"file": "..\\dll\\win32\\dbghelp\\symbol.c", "line": 1422, "message": "Cannot resolve symbol 'type'", "reason": "RSCPP-34333 Incorrect parsing of bitfield with elaborated type specifier"}
+                ],
+                "inspected files count": 266
+            }
+        }
     }
 }
