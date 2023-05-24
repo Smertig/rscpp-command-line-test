@@ -863,7 +863,7 @@
                     },
                     {
                         "file": "..\\src\\common\\settings.h",
-                        "line": 338,
+                        "line": 344,
                         "message": "Conversion 'Settings::SwitchableSetting<Type, ranged>::operator const Type&() const' has the 'override' specifier but does not override a base class member",
                         "reason": "RSCPP-34260 Incorrect \"invalid override\" error"
                     },
@@ -881,31 +881,31 @@
                     },
                     {
                         "file": "..\\src\\video_core\\renderer_opengl\\gl_texture_cache.cpp",
-                        "line": 1128,
+                        "line": 1150,
                         "message": "Cannot substitute arguments for class 'VideoCommon::SlotVector<T>' because of violated constraint 'std::is_nothrow_move_assignable_v<Image> && std::is_nothrow_move_constructible_v<Image>'",
                         "reason": "RSCPP-14556 Implement __is_nothrow_assignable trait"
                     },
                     {
                         "file": "..\\src\\video_core\\renderer_opengl\\gl_texture_cache.h",
-                        "line": 264,
+                        "line": 268,
                         "message": "Cannot substitute arguments for class 'VideoCommon::SlotVector<T>' because of violated constraint 'std::is_nothrow_move_assignable_v<Image> && std::is_nothrow_move_constructible_v<Image>'",
                         "reason": "RSCPP-14556 Implement __is_nothrow_assignable trait"
                     },
                     {
                         "file": "..\\src\\video_core\\renderer_vulkan\\vk_texture_cache.cpp",
-                        "line": 1669,
+                        "line": 1677,
                         "message": "Cannot substitute arguments for class 'VideoCommon::SlotVector<T>' because of violated constraint 'std::is_nothrow_move_assignable_v<Image> && std::is_nothrow_move_constructible_v<Image>'",
                         "reason": "RSCPP-14556 Implement __is_nothrow_assignable trait"
                     },
                     {
                         "file": "..\\src\\video_core\\renderer_vulkan\\vk_texture_cache.h",
-                        "line": 200,
+                        "line": 202,
                         "message": "Cannot substitute arguments for class 'VideoCommon::SlotVector<T>' because of violated constraint 'std::is_nothrow_move_assignable_v<Image> && std::is_nothrow_move_constructible_v<Image>'",
                         "reason": "RSCPP-14556 Implement __is_nothrow_assignable trait"
                     },
                     {
                         "file": "..\\src\\video_core\\renderer_vulkan\\vk_texture_cache.h",
-                        "line": 257,
+                        "line": 259,
                         "message": "Cannot substitute arguments for class 'VideoCommon::SlotVector<T>' because of violated constraint 'std::is_nothrow_move_assignable_v<Image> && std::is_nothrow_move_constructible_v<Image>'",
                         "reason": "RSCPP-14556 Implement __is_nothrow_assignable trait"
                     },
@@ -917,7 +917,7 @@
                     },
                     {
                         "file": "..\\src\\video_core\\texture_cache\\texture_cache_base.h",
-                        "line": 441,
+                        "line": 444,
                         "message": "Cannot substitute arguments for class 'VideoCommon::SlotVector<T>' because of violated constraint 'std::is_nothrow_move_assignable_v<ImageMapView> && std::is_nothrow_move_constructible_v<ImageMapView>'",
                         "reason": "RSCPP-14556 Implement __is_nothrow_assignable trait"
                     }
