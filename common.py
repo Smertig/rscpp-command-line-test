@@ -326,7 +326,7 @@ def get_compatible_toolchains(project: dict) -> List[str]:
 def prepare_project(project_name, project, cmake_generator: Optional[str], branch: Optional[str] = None):
     target_dir = _env.get_project_dir(project_name)
     project_dir = get_sources(project["sources"], target_dir, branch)
-    build_dir = path.join(project_dir, f'{project.get("build dir", "build")}-{cmake_generator}')
+    build_dir = path.join(project_dir, f'build-{cmake_generator}')
     abs_build_dir = path.realpath(build_dir)
 
     fixup_sources = project.get("fixup sources")
