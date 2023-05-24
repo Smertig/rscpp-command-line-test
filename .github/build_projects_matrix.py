@@ -62,6 +62,14 @@ for project_name, project_config in projects.items():
 
         conf.update(gen_conf)
 
+        cmake_root = project_config['sources'].get('root')
+        if cmake_root:
+            conf['rscpp_work_dir'] = f'{cmake_root}/build-{cmake_gen}'
+        elif 'path to .sln' in project_config.get('custom build tool', {}):
+            conf['rscpp_work_dir'] = ''
+        else:
+            conf['rscpp_work_dir'] = f'build-{cmake_gen}'
+
         if IS_CORRECTNESS_LATEST:
             latest_branches = project_config.get("latest")
             if not latest_branches:

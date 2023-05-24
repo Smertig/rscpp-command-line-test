@@ -51,7 +51,7 @@ jobs:
         run: |
           [[ "${{matrix.VsInstallRoot}}" ]] && export VsInstallRoot="${{matrix.VsInstallRoot}}"
           [[ "${{matrix.VCTargetsPath}}" ]] && export VCTargetsPath="${{matrix.VCTargetsPath}}"
-          echo "BUILD_DIR=$RUNNER_TEMP/projects/${{matrix.project}}/build-${{matrix.cmake_gen}}" >> $GITHUB_OUTPUT
+          echo "RSCPP_WORK_DIR=$RUNNER_TEMP/projects/${{matrix.project}}/${{matrix.rscpp_work_dir}}" >> $GITHUB_OUTPUT
           echo "REPORT_PATH=$RUNNER_TEMP/report.json" >> $GITHUB_OUTPUT
           python CorrectnessTest.py \
             --project ${{matrix.project}} \
@@ -68,7 +68,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: ${{matrix.project}}-logs
-          path: "${{ steps.inspect-code.outputs.BUILD_DIR }}/resharper-*"
+          path: "${{ steps.inspect-code.outputs.RSCPP_WORK_DIR }}/resharper-*"
 
       - name: Upload reports'
         if: success() || failure()
