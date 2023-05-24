@@ -60,7 +60,6 @@ for project_name, project_config in projects.items():
         if gen_conf is None:
             continue
 
-        assert gen_conf, f"unknown cmake_generator: {cmake_gen}"
         conf.update(gen_conf)
 
         if IS_CORRECTNESS_LATEST:
