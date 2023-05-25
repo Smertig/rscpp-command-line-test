@@ -1291,6 +1291,20 @@
             "commit_ref": "12367320ef16b6765427a3035771238457373485",
             "commit_message": "Auto-generate files after cl/535091995\n",
             "commit_timestamp": 1684988723.0
+        },
+        {
+            "tool_version": "232.0.20230517.90859-eap02",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1685045434.204618,
+            "elapsed_time": 336.55690002441406,
+            "x64": false,
+            "actual_files_count": 819,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "eb5e9e01d9831e9fae48bc6f688114f53cccabc5",
+            "commit_message": "Strengthen assertions on reflection methods.\n\nThis will ensure that the message is using the correct reflection object, rather than just the correct descriptor.  This distinction only matters with dynamic messages, where multiple reflection objects can exist for the same descriptor.\nFailing to pass this check can lead to UB and crashes.\n\nPiperOrigin-RevId: 535351694\n",
+            "commit_timestamp": 1685044688.0
         }
     ]
 }
