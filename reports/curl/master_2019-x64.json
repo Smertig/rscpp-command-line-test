@@ -237,6 +237,20 @@
             "commit_ref": "6375a654339550e04288a56d4d216adeac00e566",
             "commit_message": "urlapi: remove superfluous host name check\n\n... as it is checked later more proper.\n\nCloses #11195\n",
             "commit_timestamp": 1684996220.0
+        },
+        {
+            "tool_version": "232.0.20230517.90859-eap02",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1685007426.137513,
+            "elapsed_time": 302.1022560596466,
+            "x64": false,
+            "actual_files_count": 2323,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "be17dc9d31e805c03372b690dde67838b3bfc12d",
+            "commit_message": "libssh: when keyboard-interactive auth fails, try password\n\nThe state machine had a mistake in that it would not carry on to that\nnext step.\n\nThis also adds a verbose output what methods that are available from the\nserver and renames the macros that change to the next auth methods to\ntry.\n\nReported-by: \u5de6\u6f47\u5cf0\nFixes #11196\nCloses #11197\n",
+            "commit_timestamp": 1685005769.0
         }
     ]
 }
