@@ -443,6 +443,22 @@
             "commit_ref": "4374026d6da23dbb6b9c2e4fca65cdf198ee1e0f",
             "commit_message": "[MIPS] Check if register is non-null before calling isSuperOrSubRegisterEq (NFCI)\n\nD151036 adds an assertions that prohibits iterating over sub- and\nsuper-registers of a null register. This is already the case when\niterating over register units of a null register, and worked by\naccident for sub- and super-registers.\n\nReviewed By: MaskRay\n\nDifferential Revision: https://reviews.llvm.org/D151288\n",
             "commit_timestamp": 1684985621.0
+        },
+        {
+            "tool_version": "232.0.20230517.90859-eap02",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1685007345.8991,
+            "elapsed_time": 4728.322458267212,
+            "x64": true,
+            "actual_files_count": 1665,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "0c23dc20bcfbe77b42fc3515c41432e4a2f5ce3f",
+            "commit_message": "Reapply [SCEV] Replace IsAvailableOnEntry with block disposition\n\nThis exposed an issue in SCEVExpander/LCSSA, which has been fixed\nin D150681.\n\n-----\n\nAs far as I understand, the IsAvailableOnEntry() function basically\nimplements the same functionality as the properlyDominates() block\ndisposition. The primary difference (apart from a weaker\nimplementation) seems to be in this comment at the top:\n\n    // Checks if the SCEV S is available at BB.  S is considered available at BB\n    // if S can be materialized at BB without introducing a fault.\n\nHowever, I don't really understand why there would be such a\nrequirement. It's my understanding that SCEV explicitly does not\ncare about trapping udiv instructions itself, and it's the job of\nSCEVExpander's isSafeToExpand() to make sure these don't get\nexpanded if they may trap.\n\nDifferential Revision: https://reviews.llvm.org/D149344\n",
+            "commit_timestamp": 1685001738.0
         }
     ]
 }
