@@ -770,22 +770,14 @@
             "-DENABLE_QT=OFF"
         ],
         "to skip": [
-            "robin_hash.h",
             "*.inc"
         ],
-        "__to skip reasons": [
-            "robin_hash.h => RSCPP-34257 False-positive \"ambigious function call\"",
+        "__to skip reason": [
             "*.inc => RSCPP-34314 InspectCode is trying to analyze headers in incorrect context"
         ],
         "required toolchain": ["2022-x64"],
         "stable": {
             "known errors": [
-                {
-                    "file": "..\\externals\\mbedtls\\library\\blowfish.c",
-                    "line": 106,
-                    "message": "Object of const type 'const uint32_t[4][256]' must be initialized",
-                    "reason": "RSCPP-34258 Invalid \"Object of const type must be initialized\""
-                },
                 {
                     "file": "..\\src\\common\\settings.h",
                     "line": 331,
@@ -853,12 +845,6 @@
             "master": {
                 "inspected files count": 2522,
                 "known errors": [
-                    {
-                        "file": "..\\externals\\mbedtls\\library\\blowfish.c",
-                        "line": 106,
-                        "message": "Object of const type 'const uint32_t[4][256]' must be initialized",
-                        "reason": "RSCPP-34258 Invalid \"Object of const type must be initialized\""
-                    },
                     {
                         "file": "..\\src\\common\\settings.h",
                         "line": 344,
