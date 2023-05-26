@@ -31,7 +31,7 @@ def check_report(report_file, known_errors) -> Tuple[Optional[str], dict]:
     issue_nodes = xml_doc.getroot().findall("Issues")[0]
     if len(issue_nodes) == 0:
         print("No compilation errors found")
-        known_stable_errors = [error for error in known_errors if is_flaky(error)]
+        known_stable_errors = [error for error in known_errors if not is_flaky(error)]
         if known_stable_errors:
             print_errors("Expected", known_stable_errors)
             result = f"no compilation errors found, but {len(known_stable_errors)} errors were expected"
