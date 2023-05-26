@@ -1398,5 +1398,84 @@
                 "inspected files count": 266
             }
         }
+    },
+    "Osiris": {
+        "sources": {
+            "repo": "https://github.com/danielkrupinski/Osiris",
+            "commit": "e4dbe1dcf5c56109316dcde6351ef41cf9b67a77"
+        },
+        "custom build tool": {
+            "path to .sln": "Osiris.sln"
+        },
+        "to skip": [
+            "WindowsClientPatternFinder.h",
+            "WindowsEnginePatternFinder.h",
+            "ClientMode.h"
+        ],
+        "__to skip reason": [
+            "WindowsClientPatternFinder.h => RSCPP-31561 constexpr aggregate array initialization",
+            "WindowsEnginePatternFinder.h => RSCPP-31561 constexpr aggregate array initialization",
+            "ClientMode.h => RSCPP-34314 InspectCode is trying to analyze headers in incorrect context"
+        ],
+        "stable": {
+            "inspected files count": 362,
+            "known errors": [
+                {
+                    "file": "Source\\InventoryChanger\\InventoryConfig.cpp",
+                    "line": 50,
+                    "message": "No viable 'operator=' matches arguments of type 'nlohmann::basic_json<std::map, std::vector, std::string, bool, long long, unsigned long long, float>::value_type' (aka 'nlohmann::basic_json<std::map, std::vector, std::string, bool, long long, unsigned long long, float>') and 'const csgo::TournamentStage'.\r\nCandidates considered:\r\n  nlohmann::basic_json<std::map, std::vector, std::string, bool, long long, unsigned long long, float>& operator=(nlohmann::basic_json<std::map, std::vector, std::string, bool, long long, unsigned long long, float> other) noexcept(\u2026) (in class basic_json<std::map, std::vector, std::string, bool, long long, unsigned long long, float, std::allocator, nlohmann::adl_serializer, std::vector<unsigned char>>)\r\n    conversion of 1st argument 'skin.tournamentStage' is ill-formed: cannot convert lvalue of type 'const csgo::TournamentStage' to parameter type 'nlohmann::basic_json<std::map, std::vector, std::string, bool, long long, unsigned long long, float>'",
+                    "reason": "RSCPP-34341 Incorrect completeness checking for forward declared enum in substitutions"
+                },
+                {
+                    "file": "Source\\InventoryChanger\\InventoryConfig.cpp",
+                    "line": 335,
+                    "message": "No viable 'operator=' matches arguments of type 'nlohmann::basic_json<std::map, std::vector, std::string, bool, long long, unsigned long long, float>::value_type' (aka 'nlohmann::basic_json<std::map, std::vector, std::string, bool, long long, unsigned long long, float>') and 'const csgo::TournamentStage'.\r\nCandidates considered:\r\n  nlohmann::basic_json<std::map, std::vector, std::string, bool, long long, unsigned long long, float>& operator=(nlohmann::basic_json<std::map, std::vector, std::string, bool, long long, unsigned long long, float> other) noexcept(\u2026) (in class basic_json<std::map, std::vector, std::string, bool, long long, unsigned long long, float, std::allocator, nlohmann::adl_serializer, std::vector<unsigned char>>)\r\n    conversion of 1st argument 'souvenirPackage->tournamentStage' is ill-formed: cannot convert lvalue of type 'const csgo::TournamentStage' to parameter type 'nlohmann::basic_json<std::map, std::vector, std::string, bool, long long, unsigned long long, float>'",
+                    "reason": "RSCPP-34341 Incorrect completeness checking for forward declared enum in substitutions"
+                },
+                {
+                    "file": "Source\\RetSpoof\\RetSpoofGadgets.cpp",
+                    "line": 7,
+                    "message": "Cannot convert rvalue of type 'BytePatternStorage<\"1B FF 23 F8 F6 87\".size>' to parameter type 'BytePattern'",
+                    "reason": "RSCPP-31561 constexpr aggregate array initialization"
+                },
+                {
+                    "file": "Source\\RetSpoof\\RetSpoofGadgets.cpp",
+                    "line": 8,
+                    "message": "Cannot convert rvalue of type 'BytePatternStorage<\"FF 23\".size>' to parameter type 'BytePattern'",
+                    "reason": "RSCPP-31561 constexpr aggregate array initialization"
+                }
+            ]
+        },
+        "latest": {
+            "master": {
+                "inspected files count": 362,
+                "known errors": [
+                    {
+                        "file": "Source\\InventoryChanger\\InventoryConfig.cpp",
+                        "line": 50,
+                        "message": "No viable 'operator=' matches arguments of type 'nlohmann::basic_json<std::map, std::vector, std::string, bool, long long, unsigned long long, float>::value_type' (aka 'nlohmann::basic_json<std::map, std::vector, std::string, bool, long long, unsigned long long, float>') and 'const csgo::TournamentStage'.\r\nCandidates considered:\r\n  nlohmann::basic_json<std::map, std::vector, std::string, bool, long long, unsigned long long, float>& operator=(nlohmann::basic_json<std::map, std::vector, std::string, bool, long long, unsigned long long, float> other) noexcept(\u2026) (in class basic_json<std::map, std::vector, std::string, bool, long long, unsigned long long, float, std::allocator, nlohmann::adl_serializer, std::vector<unsigned char>>)\r\n    conversion of 1st argument 'skin.tournamentStage' is ill-formed: cannot convert lvalue of type 'const csgo::TournamentStage' to parameter type 'nlohmann::basic_json<std::map, std::vector, std::string, bool, long long, unsigned long long, float>'",
+                        "reason": "RSCPP-34341 Incorrect completeness checking for forward declared enum in substitutions"
+                    },
+                    {
+                        "file": "Source\\InventoryChanger\\InventoryConfig.cpp",
+                        "line": 335,
+                        "message": "No viable 'operator=' matches arguments of type 'nlohmann::basic_json<std::map, std::vector, std::string, bool, long long, unsigned long long, float>::value_type' (aka 'nlohmann::basic_json<std::map, std::vector, std::string, bool, long long, unsigned long long, float>') and 'const csgo::TournamentStage'.\r\nCandidates considered:\r\n  nlohmann::basic_json<std::map, std::vector, std::string, bool, long long, unsigned long long, float>& operator=(nlohmann::basic_json<std::map, std::vector, std::string, bool, long long, unsigned long long, float> other) noexcept(\u2026) (in class basic_json<std::map, std::vector, std::string, bool, long long, unsigned long long, float, std::allocator, nlohmann::adl_serializer, std::vector<unsigned char>>)\r\n    conversion of 1st argument 'souvenirPackage->tournamentStage' is ill-formed: cannot convert lvalue of type 'const csgo::TournamentStage' to parameter type 'nlohmann::basic_json<std::map, std::vector, std::string, bool, long long, unsigned long long, float>'",
+                        "reason": "RSCPP-34341 Incorrect completeness checking for forward declared enum in substitutions"
+                    },
+                    {
+                        "file": "Source\\RetSpoof\\RetSpoofGadgets.cpp",
+                        "line": 7,
+                        "message": "Cannot convert rvalue of type 'BytePatternStorage<\"1B FF 23 F8 F6 87\".size>' to parameter type 'BytePattern'",
+                        "reason": "RSCPP-31561 constexpr aggregate array initialization"
+                    },
+                    {
+                        "file": "Source\\RetSpoof\\RetSpoofGadgets.cpp",
+                        "line": 8,
+                        "message": "Cannot convert rvalue of type 'BytePatternStorage<\"FF 23\".size>' to parameter type 'BytePattern'",
+                        "reason": "RSCPP-31561 constexpr aggregate array initialization"
+                    }
+                ]
+            }
+        }
     }
 }
