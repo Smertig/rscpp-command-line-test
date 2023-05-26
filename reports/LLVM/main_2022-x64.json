@@ -507,6 +507,22 @@
             "commit_ref": "91689744477843a588f701fdc598ccff3cbbc8fb",
             "commit_message": "Reapply: [clang][diagnostics] Adding -Wpacked-non-pod to -Wall\n\nUsers will be informed when non-POD is not packed using -Wall. This\nis also consistent with GCC.\n\nFixes PR#60832.\n\nDifferential Revision: https://reviews.llvm.org/D151162\n",
             "commit_timestamp": 1685044920.0
+        },
+        {
+            "tool_version": "232.0.20230517.90859-eap02",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1685064809.232041,
+            "elapsed_time": 4616.838412761688,
+            "x64": true,
+            "actual_files_count": 1665,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "e86defd588e79de60d19a101a43b0c8c86dff37b",
+            "commit_message": "[mlir][tosa] Add type checking traits to the appropriate ops\n\nAdd the trait `SameOperandsAndResultElementType` and\n`SameOperandsElementType` to verify ops that are known\nto have the same input and output type rather than generate\nan invalid tosa IR with mixed data types like:\n\n  \"tosa.add\"(%0, %1) : (tensor<nxbf16>, tensor<nxf32>) -> tensor<nxf32>\n\nThus apply tosa.cast prior if needed.\n\nChange-Id: Ie866b84e371e3b571ec04f7abb090c216dd39c33\n\nReviewed By: jpienaar\n\nDifferential Revision: https://reviews.llvm.org/D150472\n",
+            "commit_timestamp": 1685058690.0
         }
     ]
 }
