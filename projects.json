@@ -914,11 +914,6 @@
             "repo": "https://github.com/Neargye/magic_enum",
             "commit": "48054f64abcfc83f58d9aa2efbbd21604f93aca4"
         },
-        "to skip": [
-            "test_containers.cpp",
-            "example_containers_array.cpp"
-        ],
-        "__to skip reason": "RSCPP-34229 Broken constexpr evaluation of `std::optional`",
         "stable": {
             "inspected files count": 19
         },
@@ -1036,14 +1031,14 @@
         },
         "use x64": true,
         "fixup sources": "proj-config/scripts/fix-cemu.py",
-        "to skip": [
-            "LatteDecompilerEmitGLSLHeader.hpp"
-        ],
-        "__to skip reason": [
-            "LatteDecompilerEmitGLSLHeader.hpp => RSCPP-34314 InspectCode is trying to analyze headers in incorrect context"
-        ],
         "stable": {
             "inspected files count": 1013,
+            "known file errors": [
+                {
+                    "file": "..\\src\\Cafe\\HW\\Latte\\LegacyShaderDecompiler\\LatteDecompilerEmitGLSLHeader.hpp",
+                    "reason": "RSCPP-34314 InspectCode is trying to analyze headers in incorrect context"
+                }
+            ],
             "known errors": [
                 {
                     "file": "..\\src\\Cafe\\HW\\Espresso\\PPCCallback.h",
@@ -1062,6 +1057,12 @@
         "latest": {
             "main": {
                 "inspected files count": 1013,
+                "known file errors": [
+                    {
+                        "file": "..\\src\\Cafe\\HW\\Latte\\LegacyShaderDecompiler\\LatteDecompilerEmitGLSLHeader.hpp",
+                        "reason": "RSCPP-34314 InspectCode is trying to analyze headers in incorrect context"
+                    }
+                ],
                 "known errors": [
                     {
                         "file": "..\\src\\input\\api\\DirectInput\\DirectInputControllerProvider.cpp",
