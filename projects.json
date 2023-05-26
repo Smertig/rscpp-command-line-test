@@ -1407,18 +1407,22 @@
         "custom build tool": {
             "path to .sln": "Osiris.sln"
         },
-        "to skip": [
-            "WindowsClientPatternFinder.h",
-            "WindowsEnginePatternFinder.h",
-            "ClientMode.h"
-        ],
-        "__to skip reason": [
-            "WindowsClientPatternFinder.h => RSCPP-31561 constexpr aggregate array initialization",
-            "WindowsEnginePatternFinder.h => RSCPP-31561 constexpr aggregate array initialization",
-            "ClientMode.h => RSCPP-34314 InspectCode is trying to analyze headers in incorrect context"
-        ],
         "stable": {
             "inspected files count": 362,
+            "known file errors": [
+                {
+                    "file": "Source\\BytePatterns\\WindowsClientPatternFinder.h",
+                    "reason": "RSCPP-31561 constexpr aggregate array initialization"
+                },
+                {
+                    "file": "Source\\BytePatterns\\WindowsEnginePatternFinder.h",
+                    "reason": "RSCPP-31561 constexpr aggregate array initialization"
+                },
+                {
+                    "file": "Source\\CSGO\\ClientMode.h",
+                    "reason": "RSCPP-34314 InspectCode is trying to analyze headers in incorrect context"
+                }
+            ],
             "known errors": [
                 {
                     "file": "Source\\InventoryChanger\\InventoryConfig.cpp",
@@ -1449,6 +1453,20 @@
         "latest": {
             "master": {
                 "inspected files count": 362,
+                "known file errors": [
+                    {
+                        "file": "Source\\BytePatterns\\WindowsClientPatternFinder.h",
+                        "reason": "RSCPP-31561 constexpr aggregate array initialization"
+                    },
+                    {
+                        "file": "Source\\BytePatterns\\WindowsEnginePatternFinder.h",
+                        "reason": "RSCPP-31561 constexpr aggregate array initialization"
+                    },
+                    {
+                        "file": "Source\\CSGO\\ClientMode.h",
+                        "reason": "RSCPP-34314 InspectCode is trying to analyze headers in incorrect context"
+                    }
+                ],
                 "known errors": [
                     {
                         "file": "Source\\InventoryChanger\\InventoryConfig.cpp",

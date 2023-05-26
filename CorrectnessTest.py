@@ -7,58 +7,94 @@ import traceback
 import xml.etree.ElementTree as ET
 import git
 from subprocess import Popen, PIPE
-from typing import Optional, Tuple
+from typing import Optional, Tuple, List
 
 import common
 
 
 def print_errors(title, errors):
-    if errors:
-        json_errors = ("  " + json.dumps({"file": f, "line": l, "message": m}) for f, l, m in sorted(errors))
-        print(f"{title} errors:")
-        print(",\n".join(json_errors))
+    assert errors, errors
+    json_errors = ("  " + json.dumps({"file": f, "line": l, "message": m}) for f, l, m in sorted(errors))
+    print(f"{title} errors:")
+    print(",\n".join(json_errors))
+
+
+def print_file_wide_errors(title, errors):
+    assert errors, errors
+    json_errors = ("  " + json.dumps(error) for error in errors)
+    print(f"{title} file-wide errors:")
+    print(",\n".join(json_errors))
 
 
 def is_flaky(error: dict) -> bool:
     return error.get("flaky", False)
 
 
-def check_report(report_file, known_errors) -> Tuple[Optional[str], dict]:
-    result: Optional[str] = None
+def check_report(report_file, known_errors, known_file_errors) -> Tuple[Optional[str], dict]:
+    results: List[str] = []
     error_mismatch = False
 
     xml_doc = ET.parse(report_file)
     issue_nodes = xml_doc.getroot().findall("Issues")[0]
     if len(issue_nodes) == 0:
         print("No compilation errors found")
+
         known_stable_errors = [error for error in known_errors if not is_flaky(error)]
         if known_stable_errors:
             print_errors("Expected", known_stable_errors)
-            result = f"no compilation errors found, but {len(known_stable_errors)} errors were expected"
+            results.append(f"no compilation errors found, but {len(known_stable_errors)} errors were expected")
+            error_mismatch = True
+
+        known_stable_file_errors = [error for error in known_file_errors if not is_flaky(error)]
+        if known_stable_file_errors:
+            print_file_wide_errors("Expected", known_stable_file_errors)
+            results.append(f"no compilation errors found, but {len(known_stable_errors)} file errors were expected")
             error_mismatch = True
     else:
         actual_errors = set((issue.get("File"), int(issue.get("Line", "0")), issue.get("Message")) for issue in issue_nodes.iter("Issue"))
+        if known_file_errors:
+            known_error_files = set(error["file"] for error in known_file_errors)
+            actual_error_files = set(error[0] for error in actual_errors)
+
+            # Make sure that at least one error belongs to every known file with errors
+            missing_file_errors = list(known_file_error for known_file_error in known_file_errors if known_file_error["file"] not in actual_error_files)
+            if missing_file_errors:
+                print_file_wide_errors("Missing", missing_file_errors)
+                error_mismatch = True
+
+            # Filter out known file-wide errors
+            excluded_actual_errors = set(error for error in actual_errors if error[0] in known_error_files)
+            actual_errors = set(error for error in actual_errors if error[0] not in known_error_files)
+
+            if error_mismatch:
+                results.append(f"{len(missing_file_errors)} files without expected errors")
+            else:
+                print(f"{len(excluded_actual_errors)} errors in {len(known_error_files)} files found as expected")
+
         if known_errors:
             def get_id(error):
                 return error["file"], int(error["line"]), error["message"]
 
             unexpected_errors = actual_errors - set(get_id(error) for error in known_errors)
-            print_errors("Unexpected", unexpected_errors)
+            if unexpected_errors:
+                print_errors("Unexpected", unexpected_errors)
+                error_mismatch = True
 
             missing_errors = set(get_id(error) for error in known_errors if not is_flaky(error)) - actual_errors
-            print_errors("Missing", missing_errors)
-
-            if not unexpected_errors and not missing_errors:
-                print(f"{len(actual_errors)} errors found as expected")
-            else:
-                result = "expected and actual set of errors differ"
+            if missing_errors:
+                print_errors("Missing", missing_errors)
                 error_mismatch = True
+
+            if error_mismatch:
+                results.append("expected and actual set of errors differ")
+            else:
+                print(f"{len(actual_errors)} standalone errors found as expected")
         else:
             print_errors("Unexpected", actual_errors)
-            result = f"unexpected {len(actual_errors)} errors found"
+            results.append(f"unexpected {len(actual_errors)} errors found")
             error_mismatch = True
 
-    return result, {
+    return "\n".join(results), {
         'tool_version': xml_doc.getroot().attrib['ToolsVersion'],
         'error_mismatch': error_mismatch
     }
@@ -100,7 +136,7 @@ def check_project(project, project_dir, sln_file, branch: Optional[str]) -> Tupl
     else:
         print(f"count of inspected files is {actual_files_count}")
 
-    result, report = check_report(report_file, local_config.get("known errors", []))
+    result, report = check_report(report_file, local_config.get("known errors", []), local_config.get("known file errors", []))
     report |= {
         'project': project_to_check,
         'timestamp': datetime.datetime.utcnow().timestamp(),
