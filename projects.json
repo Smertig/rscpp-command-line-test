@@ -621,63 +621,11 @@
             "zlib"
         ],
         "stable": {
-            "known errors": [
-                {
-                    "file": "..\\src\\fheroes2\\army\\army.cpp",
-                    "line": "1813",
-                    "message": "Member is inaccessible",
-                    "reason": "RSCPP-34235 Incorrect 'Member is inaccessible'"
-                },
-                {
-                    "file": "..\\src\\fheroes2\\army\\army.cpp",
-                    "line": "1793",
-                    "message": "Member is inaccessible",
-                    "reason": "RSCPP-34235 Incorrect 'Member is inaccessible'"
-                },
-                {
-                    "file": "..\\src\\fheroes2\\army\\army.cpp",
-                    "line": "1807",
-                    "message": "Member is inaccessible",
-                    "reason": "RSCPP-34235 Incorrect 'Member is inaccessible'"
-                },
-                {
-                    "file": "..\\src\\fheroes2\\army\\army.cpp",
-                    "line": "1796",
-                    "message": "Member is inaccessible",
-                    "reason": "RSCPP-34235 Incorrect 'Member is inaccessible'"
-                }
-            ],
             "inspected files count": 221
         },
         "latest": {
             "master": {
-                "inspected files count": 221,
-                "known errors": [
-                    {
-                        "file": "..\\src\\fheroes2\\army\\army.cpp",
-                        "line": "1797",
-                        "message": "Member is inaccessible",
-                        "reason": "RSCPP-34235 Incorrect 'Member is inaccessible'"
-                    },
-                    {
-                        "file": "..\\src\\fheroes2\\army\\army.cpp",
-                        "line": "1800",
-                        "message": "Member is inaccessible",
-                        "reason": "RSCPP-34235 Incorrect 'Member is inaccessible'"
-                    },
-                    {
-                        "file": "..\\src\\fheroes2\\army\\army.cpp",
-                        "line": "1811",
-                        "message": "Member is inaccessible",
-                        "reason": "RSCPP-34235 Incorrect 'Member is inaccessible'"
-                    },
-                    {
-                        "file": "..\\src\\fheroes2\\army\\army.cpp",
-                        "line": "1817",
-                        "message": "Member is inaccessible",
-                        "reason": "RSCPP-34235 Incorrect 'Member is inaccessible'"
-                    }
-                ]
+                "inspected files count": 221
             }
         }
     },
@@ -709,27 +657,11 @@
             "-DDOWNLOAD_CATCH=ON"
         ],
         "stable": {
-            "known errors": [
-                {
-                    "file": "..\\tests\\test_enum.cpp",
-                    "line": "100",
-                    "message": "static_assert failed: 'char32_t, char16_t (and char8_t)'s size, signedness, and alignment is determined'",
-                    "reason": "Bad char16_t signedness in R++ 2023.1, fixed in 2023.2"
-                }
-            ],
             "inspected files count": 197
         },
         "latest": {
             "master": {
-                "inspected files count": 197,
-                "known errors": [
-                    {
-                        "file": "..\\tests\\test_enum.cpp",
-                        "line": "100",
-                        "message": "static_assert failed: 'char32_t, char16_t (and char8_t)'s size, signedness, and alignment is determined'",
-                        "reason": "Bad char16_t signedness in R++ 2023.1, fixed in 2023.2"
-                    }
-                ]
+                "inspected files count": 197
             }
         }
     },

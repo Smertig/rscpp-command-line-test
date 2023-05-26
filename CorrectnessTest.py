@@ -31,6 +31,9 @@ def is_flaky(error: dict) -> bool:
 
 
 def check_report(report_file, known_errors, known_file_errors) -> Tuple[Optional[str], dict]:
+    def get_error_id(error):
+        return error["file"], int(error["line"]), error["message"]
+
     results: List[str] = []
     error_mismatch = False
 
@@ -39,7 +42,7 @@ def check_report(report_file, known_errors, known_file_errors) -> Tuple[Optional
     if len(issue_nodes) == 0:
         print("No compilation errors found")
 
-        known_stable_errors = [error for error in known_errors if not is_flaky(error)]
+        known_stable_errors = [get_error_id(error) for error in known_errors if not is_flaky(error)]
         if known_stable_errors:
             print_errors("Expected", known_stable_errors)
             results.append(f"no compilation errors found, but {len(known_stable_errors)} errors were expected")
@@ -72,15 +75,12 @@ def check_report(report_file, known_errors, known_file_errors) -> Tuple[Optional
                 print(f"{len(excluded_actual_errors)} errors in {len(known_error_files)} files found as expected")
 
         if known_errors:
-            def get_id(error):
-                return error["file"], int(error["line"]), error["message"]
-
-            unexpected_errors = actual_errors - set(get_id(error) for error in known_errors)
+            unexpected_errors = actual_errors - set(get_error_id(error) for error in known_errors)
             if unexpected_errors:
                 print_errors("Unexpected", unexpected_errors)
                 error_mismatch = True
 
-            missing_errors = set(get_id(error) for error in known_errors if not is_flaky(error)) - actual_errors
+            missing_errors = set(get_error_id(error) for error in known_errors if not is_flaky(error)) - actual_errors
             if missing_errors:
                 print_errors("Missing", missing_errors)
                 error_mismatch = True
