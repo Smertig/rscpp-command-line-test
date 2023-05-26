@@ -539,6 +539,22 @@
             "commit_ref": "bb9a0c736b57f405c6fee598ce8043d0d35a5790",
             "commit_message": "Revert \"[MLIR] Add native Bytecode support for properties\"\n\nThis reverts commit ca5a12fd69d4acf70c08f797cbffd714dd548348\nand follow-up fixes:\n\ndf34c288c428eb4b867c8075def48b3d1727d60b\n07dc906883af660780cf6d0cc1044f7e74dab83e\nab80ad0095083fda062c23ac90df84c40b4332c8\n837d1ce0dc8eec5b17255291b3462e6296cb369b\n\nThe first commit was incomplete and broken, I'll prepare a new version\nlater, in the meantime pull this work out of tree.\n",
             "commit_timestamp": 1685073751.0
+        },
+        {
+            "tool_version": "232.0.20230517.90859-eap02",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1685093595.283524,
+            "elapsed_time": 4603.9289290905,
+            "x64": true,
+            "actual_files_count": 1665,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "c80fe251d869d5304448cfa3bb855c653285de7f",
+            "commit_message": "[ASAN] Support memory checks on vp.gather/scatter.\n\nThe patch supports vp.gather/scatter by allowing addresses being pointer vectors.\nAnd then we just need to check each active pointer element of those pointer vectors.\n\nReviewed By: reames\n\nDifferential Revision: https://reviews.llvm.org/D149245\n",
+            "commit_timestamp": 1685086120.0
         }
     ]
 }
