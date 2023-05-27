@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes" />
+    <style>
+      html {
+        font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+        -webkit-font-smoothing: antialiased;
+        background-color: #fff;
+        font-size: 16px;
+      }
+      body {
+        color: #4a4a4a;
+        margin: 8px;
+        font-size: 1em;
+        font-weight: 400;
+      }
+      header {
+        margin-bottom: 8px;
+        display: flex;
+        flex-direction: column;
+      }
+      main {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+      a {
+        color: #3273dc;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      a:hover {
+        color: #000;
+      }
+      button {
+        color: #fff;
+        background-color: #3298dc;
+        border-color: transparent;
+        cursor: pointer;
+        text-align: center;
+      }
+      button:hover {
+        background-color: #2793da;
+        flex: none;
+      }
+      .spacer {
+        flex: auto;
+      }
+      .small {
+        font-size: 0.75rem;
+      }
+      footer {
+        margin-top: 16px;
+        display: flex;
+        align-items: center;
+      }
+      .header-label {
+        margin-right: 4px;
+      }
+      .report-set {
+        margin: 8px 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+      .report-title {
+        font-size: 3rem;
+        font-weight: 600;
+        word-break: break-word;
+        text-align: center;
+      }
+      .report-graphs {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+      }
+      .report-chart {
+        max-width: 1000px;
+      }
+    </style>
+    <title>Reports</title>
+  </head>
+
+  <body>
+    <header id="header">
+      <div class="header-item">
+        <strong class="header-label">Last Update:</strong>
+        <span id="last-update"></span>
+      </div>
+      <div class="header-item">
+        <strong class="header-label">Repository:</strong>
+        <a id="repository-link" rel="noopener"></a>
+      </div>
+    </header>
+    <main id="main"></main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.2/dist/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@^2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-moment@1.0.1/dist/chartjs-adapter-moment.min.js"></script>
+    <script src="https://colorjs.io/dist/color.global.js"></script>
+    <script id="main-script">
+      'use strict';
+      (async function () {
+        async function init() {
+          function getStats(entries) {
+            const result = entries['v1']
+            result.sort((lhs, rhs) => lhs.timestamp - rhs.timestamp)
+            return result
+          }
+
+          const all_reports = await fetch('reports/all.json').then(resp => resp.json())
+
+          // Render header
+          document.getElementById('last-update').textContent = new Date(all_reports.last_update * 1000).toString();
+          const repoLink = document.getElementById('repository-link');
+          repoLink.href = all_reports.repo_url;
+          repoLink.textContent = all_reports.repo_url;
+
+          let result = []
+
+          for (const [project_name, report_names] of Object.entries(all_reports.reports)) {
+            const project_reports = {};
+            for (const report_name of report_names) {
+              const project_report = await fetch(`reports/${project_name}/${report_name}`).then(resp => resp.json())
+              project_reports[report_name] = getStats(project_report)
+            }
+
+            result.push({
+              name: project_name,
+              dataSet: project_reports
+            })
+          }
+
+          return result
+        }
+
+        function renderAllCharts(dataSets) {
+          function renderGraph(parent, reportSet) {
+            let hashColor = function(s) {
+              const color = s.split("").reduce(function(a, b) {
+                a = ((a << 5) - a) + b.charCodeAt(0);
+                return a & a;
+              }, 0);
+
+              const clamp = num => (num & 0xFF) / 255.0;
+
+              return new Color("srgb", [clamp(color >> 16), clamp(color >> 8), clamp(color)], 1.0);
+            }
+
+            let formatDuration = function(duration) {
+              return new Date(duration * 1000).toISOString().substring(11, 19)
+            }
+
+            const canvas = document.createElement('canvas');
+            canvas.className = 'report-chart';
+            parent.appendChild(canvas);
+
+            const datasets = [];
+            for (const [reportName, reports] of Object.entries(reportSet))
+            {
+              const color = hashColor(reportName).to('hwb')
+              color.hwb.w = 30
+
+              const backColor = new Color(color)
+              backColor.alpha = 0.375
+
+              datasets.push({
+                label: reportName,
+                data: reports.map(d => ({
+                  x: new Date(d.timestamp * 1000),
+                  y: d.elapsed_time
+                })),
+                borderColor: color.toString(),
+                backgroundColor: backColor.toString(),
+              })
+            }
+
+            const data = {
+              datasets: datasets
+            };
+            const options = {
+              scales: {
+                xAxes: [
+                  {
+                    type: 'time',
+                    time: {
+                      unit: 'day'
+                    }
+                  }
+                ],
+                yAxes: [
+                  {
+                    scaleLabel: {
+                      display: true,
+                      labelString: 'Elapsed time',
+                    },
+                    ticks: {
+                      beginAtZero: true,
+                      callback: formatDuration
+                    }
+                  }
+                ],
+              },
+              tooltips: {
+                callbacks: {
+                  afterTitle: items => {
+                    return items.map(item => {
+                      const {index, datasetIndex} = item;
+                      const {label} = datasets[datasetIndex];
+                      const data = reportSet[label][index];
+                      let text = `inspectcode${data.x64 ? 'x64' : ''}.exe: v${data.tool_version}`
+                      text += `\nFile count: ${data.actual_files_count}`
+                      if (data.expected_files_count != null && data.expected_files_count != data.actual_files_count)
+                        text += ` (expected: ${data.expected_files_count})`
+
+                      return text
+                    }).join('\n\n')
+                  },
+                  label: item => formatDuration(item.value)
+                }
+              }
+            };
+
+            new Chart(canvas, {
+              type: 'line',
+              data,
+              options,
+            });
+          }
+
+          function renderReportSet(name, reportSet, main) {
+            const setElem = document.createElement('div');
+            setElem.className = 'report-set';
+            main.appendChild(setElem);
+
+            const nameElem = document.createElement('h1');
+            nameElem.className = 'report-title';
+            nameElem.textContent = name;
+            setElem.appendChild(nameElem);
+
+            const graphsElem = document.createElement('div');
+            graphsElem.className = 'report-graphs';
+            setElem.appendChild(graphsElem);
+
+            renderGraph(graphsElem, reportSet)
+          }
+
+          const main = document.getElementById('main');
+          for (const {name, dataSet} of dataSets) {
+            renderReportSet(name, dataSet, main);
+          }
+        }
+
+        renderAllCharts(await init());
+      })();
+    </script>
+  </body>
+</html>
