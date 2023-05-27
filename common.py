@@ -16,6 +16,24 @@ from contextlib import contextmanager
 # assert 'VCTargetsPath' in os.environ, 'Missing VCTargetsPath environment variable'
 
 
+VS_CMAKE_GENERATORS = {
+    "2017-x64": {
+        "name": "Visual Studio 15 2017 Win64",
+        "vcpkg_triplet": "x64-windows"
+    },
+    "2019-x64": {
+        "name": "Visual Studio 16 2019",
+        "architecture": "x64",
+        "vcpkg_triplet": "x64-windows"
+    },
+    "2022-x64": {
+        "name": "Visual Studio 17 2022",
+        "architecture": "x64",
+        "vcpkg_triplet": "x64-windows"
+    }
+}
+
+
 class Environment:
     def __init__(self, args):
         self._args = args
@@ -111,9 +129,6 @@ def load_env(args):
 with open("projects.json") as f:
     projects = json.load(f)
 
-with open("toolchains.json") as f:
-    toolchains_info = json.load(f)
-
 
 def git_clone_and_force_checkout_if_needed(target_dir, url, ref_name):
     if _env.is_ci:
@@ -195,7 +210,7 @@ def invoke_cmake(build_dir, cmake_generator, cmake_options, cmake_new_env, cmake
             raise Exception(f"project has required dependencies {required_dependencies}, but environment doesn't contain path to vcpkg")
 
         with cwd(vcpkg_dir):
-            subprocess.run(["vcpkg", "install"] + required_dependencies + ["--triplet", toolchains_info["vcpkg"]["triplet"]], check=True, stdout=_env.verbose_handle)
+            subprocess.run(["vcpkg", "install"] + required_dependencies + ["--triplet", cmake_generator["vcpkg_triplet"]], check=True, stdout=_env.verbose_handle)
 
         cmd_line_args.append("-DCMAKE_TOOLCHAIN_FILE={0}/scripts/buildsystems/vcpkg.cmake".format(vcpkg_dir))
 
@@ -355,7 +370,8 @@ def prepare_project(project_name, project, cmake_generator: Optional[str], branc
         sln_file = path.join(project_dir, custom_build_tool["path to .sln"])
         assert(path.exists(sln_file))
     else:
-        gen_description = toolchains_info["VS CMake Generators"][cmake_generator]
+        assert cmake_generator in VS_CMAKE_GENERATORS, f"unknown cmake generator '{cmake_generator}'"
+        gen_description = VS_CMAKE_GENERATORS[cmake_generator]
         project_dir = build_dir
         sln_file = invoke_cmake(build_dir, gen_description, project.get("cmake options"), project.get("cmake env"), project.get("cmake dir", ".."), project.get("required dependencies"))
         build_step = project.get("build step")
