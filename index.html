@@ -215,15 +215,43 @@
                       const data = reportSet[label][index];
                       let text = `inspectcode${data.x64 ? 'x64' : ''}.exe: v${data.tool_version}`
                       text += `\nFile count: ${data.actual_files_count}`
-                      if (data.expected_files_count != null && data.expected_files_count != data.actual_files_count)
+                      if (data.expected_files_count != null && data.expected_files_count != data.actual_files_count) {
                         text += ` (expected: ${data.expected_files_count})`
+                      }
+
+                      if (data.commit_message != null && !label.startsWith("stable_")) {
+                        text += "\n\nCommit: " + data.commit_message.trim();
+                        text += "\n\nCommitted at " + new Date(data.commit_timestamp * 1000);
+                      }
 
                       return text
                     }).join('\n\n')
                   },
                   label: item => formatDuration(item.value)
                 }
-              }
+              },
+              onClick: (_mouseEvent, activeElems) => {
+                if (activeElems.length === 0) {
+                  return;
+                }
+
+                const {_index, _datasetIndex} = activeElems[0];
+                const {label} = datasets[_datasetIndex];
+                const data = reportSet[label][_index];
+                let repo_url = data.repo_url;
+                if (repo_url) {
+                  if (repo_url.endsWith(".git"))
+                    repo_url = repo_url.slice(0, -4)
+
+                  let commit_url;
+                  if (repo_url.startsWith("https://gitlab.kitware.com"))
+                    commit_url = `${repo_url}/-/commit/${data.commit_ref}`;
+                  else
+                    commit_url = `${repo_url}/commit/${data.commit_ref}`;
+
+                  window.open(commit_url, '_blank');
+                }
+              },
             };
 
             new Chart(canvas, {
