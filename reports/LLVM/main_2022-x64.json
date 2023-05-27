@@ -651,6 +651,22 @@
             "commit_ref": "48985f58b41a74d012bc08ba3e2c14a3eb171314",
             "commit_message": "[libc++][format][test] Adds Windows support.\n\nThese tests pass on Windows without additional changes. This has been\ntested in D150593.\n",
             "commit_timestamp": 1685188646.0
+        },
+        {
+            "tool_version": "232.0.20230517.90859-eap02",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1685209002.740974,
+            "elapsed_time": 4748.9169590473175,
+            "x64": true,
+            "actual_files_count": 1667,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "1845d9de187b726dfe074218377c3d77ce43277a",
+            "commit_message": "[CGP] Disable default copy ctor and copy assignment operator for InstructionRemover\n\nclass InstructionRemover manages resources such as dynamically allocated memory, it's generally a good practice to either implement a custom copy constructor or disable the default one.\n\nReviewed By: pengfei\n\nDifferential Revision: https://reviews.llvm.org/D151543\n",
+            "commit_timestamp": 1685200833.0
         }
     ]
 }
