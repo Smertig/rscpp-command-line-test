@@ -709,6 +709,7 @@
         ],
         "required toolchain": ["2022-x64"],
         "stable": {
+            "inspected files count": 2521,
             "known errors": [
                 {
                     "file": "..\\src\\common\\settings.h",
@@ -770,12 +771,11 @@
                     "message": "Cannot substitute arguments for class 'VideoCommon::SlotVector<T>' because of violated constraint 'std::is_nothrow_move_assignable_v<ImageMapView> && std::is_nothrow_move_constructible_v<ImageMapView>'",
                     "reason": "RSCPP-14556 Implement __is_nothrow_assignable trait"
                 }
-            ],
-            "inspected files count": 2521
+            ]
         },
         "latest": {
             "master": {
-                "inspected files count": 2522,
+                "inspected files count": 2527,
                 "known errors": [
                     {
                         "file": "..\\src\\common\\settings.h",
@@ -833,7 +833,7 @@
                     },
                     {
                         "file": "..\\src\\video_core\\texture_cache\\texture_cache_base.h",
-                        "line": 443,
+                        "line": 445,
                         "message": "Cannot substitute arguments for class 'VideoCommon::SlotVector<T>' because of violated constraint 'std::is_nothrow_move_assignable_v<ImageMapView> && std::is_nothrow_move_constructible_v<ImageMapView>'",
                         "reason": "RSCPP-14556 Implement __is_nothrow_assignable trait"
                     }
