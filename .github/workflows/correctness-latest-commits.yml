@@ -72,7 +72,7 @@ jobs:
         if: success() || failure()
         uses: actions/upload-artifact@v3
         with:
-          name: ${{matrix.project}}-${{matrix.branch}}-report
+          name: ${{matrix.project}}-${{matrix.branch}}-${{matrix.cmake_gen}}-report
           path: "${{ steps.inspect-code.outputs.REPORT_PATH }}"
           retention-days: 1
 
