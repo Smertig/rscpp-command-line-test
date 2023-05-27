@@ -1435,5 +1435,20 @@
                 ]
             }
         }
+    },
+    "dolphin": {
+        "sources": {
+            "repo": "https://github.com/dolphin-emu/dolphin",
+            "commit": "34527cadcce49a9a78f05949973b0930ac4dd999",
+            "recursive": true
+        },
+        "custom build tool": {
+            "path to .sln": "Source/dolphin-emu.sln"
+        },
+        "required toolchain": ["2022-x64"],
+        "stable": {},
+        "latest": {
+            "master": {}
+        }
     }
 }
