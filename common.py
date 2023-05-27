@@ -18,17 +18,23 @@ from contextlib import contextmanager
 
 VS_CMAKE_GENERATORS = {
     "2017-x64": {
-        "name": "Visual Studio 15 2017 Win64",
+        "cmake options": [
+            "-G", "Visual Studio 15 2017 Win64"
+        ],
         "vcpkg_triplet": "x64-windows"
     },
     "2019-x64": {
-        "name": "Visual Studio 16 2019",
-        "architecture": "x64",
+        "cmake options": [
+            "-G", "Visual Studio 16 2019",
+            "-A", "x64"
+        ],
         "vcpkg_triplet": "x64-windows"
     },
     "2022-x64": {
-        "name": "Visual Studio 17 2022",
-        "architecture": "x64",
+        "cmake options": [
+            "-G", "Visual Studio 17 2022",
+            "-A", "x64"
+        ],
         "vcpkg_triplet": "x64-windows"
     }
 }
@@ -197,12 +203,8 @@ def invoke_cmake(build_dir, cmake_generator, cmake_options, cmake_new_env, cmake
     def apply_substitutions(s: str) -> str:
         return s.replace('${BUILD_DIR}', path.realpath(build_dir))
 
-    cmd_line_args = ["cmake", cmake_dir, "-G", cmake_generator["name"]]
-
-    architecture = cmake_generator.get("architecture")
-    if architecture:
-        cmd_line_args.append("-A")
-        cmd_line_args.append(architecture)
+    cmd_line_args = ["cmake", cmake_dir]
+    cmd_line_args += cmake_generator["cmake options"]
 
     if required_dependencies:
         vcpkg_dir = _env.vcpkg_dir
