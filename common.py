@@ -229,6 +229,7 @@ def invoke_cmake(build_dir, cmake_generator, cmake_options, cmake_new_env, cmake
         if _env.verbose and cmake_new_env:
             print(f'Running cmake with modified env: {cmake_env}')
 
+        print(subprocess.list2cmdline(cmd_line_args))
         subprocess.run(cmd_line_args, check=True, stdout=_env.verbose_handle, env=cmake_env)
 
     with open(path.join(build_dir, "CMakeCache.txt")) as cmake_cache:

@@ -123,6 +123,7 @@ def check_project(project, project_dir, sln_file, branch: Optional[str]) -> Tupl
     msbuild_props = project.get("msbuild properties")
     use_x64 = project.get("use x64", False)
 
+    start_date = datetime.datetime.utcnow()
     start_time = time.time()
     report_file, output = run_inspect_code(project_dir, sln_file, project_to_check, msbuild_props, use_x64)
     end_time = time.time()
@@ -139,7 +140,7 @@ def check_project(project, project_dir, sln_file, branch: Optional[str]) -> Tupl
     result, report = check_report(report_file, local_config.get("known errors", []), local_config.get("known file errors", []))
     report |= {
         'project': project_to_check,
-        'timestamp': datetime.datetime.utcnow().timestamp(),
+        'timestamp': start_date.timestamp(),
         'elapsed_time': end_time - start_time,
         'x64': use_x64,
         'actual_files_count': actual_files_count,
