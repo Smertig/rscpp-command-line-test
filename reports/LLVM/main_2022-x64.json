@@ -603,6 +603,22 @@
             "commit_ref": "0508ac32cfcc1a9fc5a81d16de8d418dc5a0666b",
             "commit_message": "[Vectorize] Fix a warning\n\nThis patch fixes:\n\n  llvm/lib/Transforms/Vectorize/LoadStoreVectorizer.cpp:1429:23:\n  error: comparison of integers of different signs: 'int' and 'const\n  size_t' (aka 'const unsigned long') [-Werror,-Wsign-compare]\n",
             "commit_timestamp": 1685145754.0
+        },
+        {
+            "tool_version": "232.0.20230517.90859-eap02",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1685165958.637722,
+            "elapsed_time": 4927.626342058182,
+            "x64": true,
+            "actual_files_count": 1665,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "273303ad66a32e5e599bef5ee18c3a9f589e530d",
+            "commit_message": "[Sema] Remove unused declaration startLambdaDefinition\n\nThe corresponding function definition was removed by:\n\n  commit 93d7002dc4644b0a6f15a998dff0d55c72012e87\n  Author: Corentin Jabot <corentinjabot@gmail.com>\n  Date:   Sun Feb 6 22:58:43 2022 +0100\n",
+            "commit_timestamp": 1685157563.0
         }
     ]
 }
