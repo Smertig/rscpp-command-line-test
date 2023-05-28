@@ -559,6 +559,20 @@
             "commit_ref": "c4bd61ddff150d77af302931a12ae00d6c279e4e",
             "commit_message": "http3: send EOF indicator early as possible\n\n- ngtcp2 and quiche implementations relied on the DONE_SEND event\n  to forward the EOF for uploads to the libraries. This often\n  result in a last 0 length EOF data. Tracking the amount of\n  data left to upload allows EOF indication earlier.\n- refs #11205 where CloudFlare DoH servers did not like to\n  receive the initial upload DATA without EOF and returned\n  a 400 Bad Request\n\nReported-by: Sergey Fionov\nFixes #11205\nCloses #11207\n",
             "commit_timestamp": 1685083078.0
+        },
+        {
+            "tool_version": "232.0.20230517.90859-eap02",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1685232441.498681,
+            "elapsed_time": 263.0057144165039,
+            "x64": false,
+            "actual_files_count": 2323,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "c4bd61ddff150d77af302931a12ae00d6c279e4e",
+            "commit_message": "http3: send EOF indicator early as possible\n\n- ngtcp2 and quiche implementations relied on the DONE_SEND event\n  to forward the EOF for uploads to the libraries. This often\n  result in a last 0 length EOF data. Tracking the amount of\n  data left to upload allows EOF indication earlier.\n- refs #11205 where CloudFlare DoH servers did not like to\n  receive the initial upload DATA without EOF and returned\n  a 400 Bad Request\n\nReported-by: Sergey Fionov\nFixes #11205\nCloses #11207\n",
+            "commit_timestamp": 1685083078.0
         }
     ]
 }
