@@ -747,6 +747,22 @@
             "commit_ref": "f8536fb11e3d71d009c9002b5aa2ef32983ac7dc",
             "commit_message": "[clang][HeaderSearch] Fix implicit module when using header maps\n\nPreviously, if a header was found via in a header map, and not just remapped.\nwe wouldn't also find the module it maps to when using implicit modules (for\nmodule maps that were explicitly loaded).\n\nThis diff just updates these code paths to also locate the owning module via\n`findUsableModuleForHeader`.\n\nReviewed By: benlangmuir\n\nDifferential Revision: https://reviews.llvm.org/D103930\n",
             "commit_timestamp": 1685270991.0
+        },
+        {
+            "tool_version": "232.0.20230517.90859-eap02",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1685290656.244879,
+            "elapsed_time": 4763.871718883514,
+            "x64": true,
+            "actual_files_count": 1667,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "8a4e3675d88ecd0413d89dea1e3578a4696b05da",
+            "commit_message": "[Hexagon] Explicitly make vector subregs have unknown size and offset\n\nVector length depends on the HVX mode, so make the size and offset unknown\ninstead using values for some specific mode.\n",
+            "commit_timestamp": 1685287963.0
         }
     ]
 }
