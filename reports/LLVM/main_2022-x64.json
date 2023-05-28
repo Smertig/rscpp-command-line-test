@@ -731,6 +731,22 @@
             "commit_ref": "65f40cb455f8eaf83c163793d19640b56393c1e5",
             "commit_message": "[ModuleInliner] Remove an inapplicable comment\n\nThe module inliner has its own logic in deciding the order in which\ncall sites are inlined, so the comment is inapplicable.\n",
             "commit_timestamp": 1685251597.0
+        },
+        {
+            "tool_version": "232.0.20230517.90859-eap02",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1685276390.855926,
+            "elapsed_time": 5417.11806845665,
+            "x64": true,
+            "actual_files_count": 1667,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "f8536fb11e3d71d009c9002b5aa2ef32983ac7dc",
+            "commit_message": "[clang][HeaderSearch] Fix implicit module when using header maps\n\nPreviously, if a header was found via in a header map, and not just remapped.\nwe wouldn't also find the module it maps to when using implicit modules (for\nmodule maps that were explicitly loaded).\n\nThis diff just updates these code paths to also locate the owning module via\n`findUsableModuleForHeader`.\n\nReviewed By: benlangmuir\n\nDifferential Revision: https://reviews.llvm.org/D103930\n",
+            "commit_timestamp": 1685270991.0
         }
     ]
 }
