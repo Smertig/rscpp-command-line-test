@@ -859,6 +859,22 @@
             "commit_ref": "a3a8cbffcf00bdbf19a15a070313b60c0a9ce342",
             "commit_message": "[AMDGPU][AsmParser][NFC] Refine parsing of NamedOperandU32 operands.\n\nEliminates the need for the custom code in parseCustomOperand().\n\nPart of <https://github.com/llvm/llvm-project/issues/62629>.\n\nReviewed By: dp\n\nDifferential Revision: https://reviews.llvm.org/D150980\n",
             "commit_timestamp": 1685376104.0
+        },
+        {
+            "tool_version": "232.0.20230517.90859-eap02",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1685391438.488309,
+            "elapsed_time": 4556.994585752487,
+            "x64": true,
+            "actual_files_count": 1667,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "40af06ccc7bf9989b8deb410ed78a4795c22aa73",
+            "commit_message": "[clang-tidy] Update UnusedReturnValueCheck types\n\nUpdate the types for UnusedReturnValueCheck after D151383.\n\n1. Add std::errc, std:error_condition\n2. Remove `absl::Status` - it's marked as `[[nodiscard]]` anyway so it's redundant (and might create double warnings) to check it.\n\nReviewed By: PiotrZSL\n\nDifferential Revision: https://reviews.llvm.org/D151650\n",
+            "commit_timestamp": 1685390552.0
         }
     ]
 }
