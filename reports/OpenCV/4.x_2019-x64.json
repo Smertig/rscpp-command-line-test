@@ -1461,6 +1461,20 @@
             "commit_ref": "b5e9eb742c521870632e634a12dd385c4ef54777",
             "commit_message": "Merge pull request #23698 from cpoerschke:4.x-pr-21959-perf\n\nimgproc: add basic IntelligentScissorsMB performance test #23698\r\n\r\nAdding basic performance test that can be used before and after the #21959 changes etc. as per @asmorkalov's https://github.com/opencv/opencv/pull/21959#issuecomment-1565240926 comment.\r\n\r\n### Pull Request Readiness Checklist\r\n\r\nSee details at https://github.com/opencv/opencv/wiki/How_to_contribute#making-a-good-pull-request\r\n\r\n- [X] I agree to contribute to the project under Apache 2 License.\r\n- [X] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\r\n- [X] The PR is proposed to the proper branch\r\n- [ ] There is a reference to the original bug report and related work\r\n- [X] There is accuracy test, performance test and test data in opencv_extra repository, if applicable\r\n      Patch to opencv_extra has the same branch name.\r\n- [ ] The feature is well documented and sample code can be built with the project CMake",
             "commit_timestamp": 1685347379.0
+        },
+        {
+            "tool_version": "232.0.20230517.90859-eap02",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1685362283.211646,
+            "elapsed_time": 467.79846477508545,
+            "x64": false,
+            "actual_files_count": 459,
+            "expected_files_count": 459,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "02397ef85145e91171367ca87c70fba5db14583d",
+            "commit_message": "Merge pull request #23567 from seanm:UBSan-overflow\n\nReformulated some pointer arithmetic to avoid (unsigned) overflow",
+            "commit_timestamp": 1685351974.0
         }
     ]
 }

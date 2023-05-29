@@ -827,6 +827,22 @@
             "commit_ref": "e20931b2ccd10de2fd25d9a6fbe9c166e7430f23",
             "commit_message": "[clang] Restrict Inline Builtin to non-static, non-odr linkage\n\nInline builtins have a very special behavior compared to other\nfunctions, it's better if we keep them restricted to a minimal set of\nfunctions.\n\nAdd a linkage check which prevents considering ODR definitions as inline\nbuiltins.\n\nFix #62958\n\nDifferential Revision: https://reviews.llvm.org/D148723\n",
             "commit_timestamp": 1685347338.0
+        },
+        {
+            "tool_version": "232.0.20230517.90859-eap02",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1685362571.909074,
+            "elapsed_time": 4745.620724439621,
+            "x64": true,
+            "actual_files_count": 1667,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "061e368fe213bd0701261a3e59f796c7439484fc",
+            "commit_message": "[SelectionDAG] Implement soft FP legalisation for bf16 FP_EXTEND and BF16_TO_FP\n\nAs discussed in D151436, it's safe to do this as a simple shift (as is\ndone in LegalizeDAG.cpp) rather than needing a libcall. The added test\ncases for RISC-V previously just triggered an assertion.\n\nCodegen for bfloat_to_double will be slightly improved by D151434.\n\nDifferential Revision: https://reviews.llvm.org/D151563\n",
+            "commit_timestamp": 1685352748.0
         }
     ]
 }
