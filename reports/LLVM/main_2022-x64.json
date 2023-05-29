@@ -843,6 +843,22 @@
             "commit_ref": "061e368fe213bd0701261a3e59f796c7439484fc",
             "commit_message": "[SelectionDAG] Implement soft FP legalisation for bf16 FP_EXTEND and BF16_TO_FP\n\nAs discussed in D151436, it's safe to do this as a simple shift (as is\ndone in LegalizeDAG.cpp) rather than needing a libcall. The added test\ncases for RISC-V previously just triggered an assertion.\n\nCodegen for bfloat_to_double will be slightly improved by D151434.\n\nDifferential Revision: https://reviews.llvm.org/D151563\n",
             "commit_timestamp": 1685352748.0
+        },
+        {
+            "tool_version": "232.0.20230517.90859-eap02",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1685376737.502253,
+            "elapsed_time": 3328.4386444091797,
+            "x64": true,
+            "actual_files_count": 1667,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "a3a8cbffcf00bdbf19a15a070313b60c0a9ce342",
+            "commit_message": "[AMDGPU][AsmParser][NFC] Refine parsing of NamedOperandU32 operands.\n\nEliminates the need for the custom code in parseCustomOperand().\n\nPart of <https://github.com/llvm/llvm-project/issues/62629>.\n\nReviewed By: dp\n\nDifferential Revision: https://reviews.llvm.org/D150980\n",
+            "commit_timestamp": 1685376104.0
         }
     ]
 }
