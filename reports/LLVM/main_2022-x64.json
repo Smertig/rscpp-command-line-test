@@ -875,6 +875,22 @@
             "commit_ref": "40af06ccc7bf9989b8deb410ed78a4795c22aa73",
             "commit_message": "[clang-tidy] Update UnusedReturnValueCheck types\n\nUpdate the types for UnusedReturnValueCheck after D151383.\n\n1. Add std::errc, std:error_condition\n2. Remove `absl::Status` - it's marked as `[[nodiscard]]` anyway so it's redundant (and might create double warnings) to check it.\n\nReviewed By: PiotrZSL\n\nDifferential Revision: https://reviews.llvm.org/D151650\n",
             "commit_timestamp": 1685390552.0
+        },
+        {
+            "tool_version": "232.0.20230517.90859-eap02",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1685406021.953417,
+            "elapsed_time": 5735.7667191028595,
+            "x64": true,
+            "actual_files_count": 1667,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "b936816fb305cc16d2d1cd6d424c08c39a681a32",
+            "commit_message": "MLIR/Cuda: Add the appropriate \"HINTS\" on CMake find_library and mark these REQUIRED\n\nThe cmake logic to find cuda paths exposes some paths to search for the cuda\nlibrary, we need to propagate this through the call for find_library.\nThis was already done for cuSparse but not for cuda.\n\nDifferential Revision: https://reviews.llvm.org/D151645\n",
+            "commit_timestamp": 1685395944.0
         }
     ]
 }
