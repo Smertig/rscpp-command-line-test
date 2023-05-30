@@ -923,6 +923,22 @@
             "commit_ref": "c7592c7714c2796715e6460fc5fd19e5a930c427",
             "commit_message": "[mlir][scf] NFC - Add debug information to scf pipelining\n",
             "commit_timestamp": 1685433771.0
+        },
+        {
+            "tool_version": "232.0.20230517.90859-eap02",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1685449104.706987,
+            "elapsed_time": 4691.464245080948,
+            "x64": true,
+            "actual_files_count": 1667,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "48339d0fbbdb2ba4610173ad1e792e9c2272c887",
+            "commit_message": "[CodeGen] Add pre-commit tests for D148558\n\nThis patch adds four new tests for upcoming functionality in LLVM:\n* complex-deinterleaving-add-mull-fixed-contract.ll\n* complex-deinterleaving-add-mull-scalable-contract.ll\n* complex-deinterleaving-add-mull-fixed-fast.ll\n* complex-deinterleaving-add-mull-scalable-fast.ll.\n\nThese tests were generated from the IR of vectorizable loops, which were\ncompiled from C++ code using different optimization flags in Clang. Each pair\nof tests corresponds to Neon and SVE architectures, respectively, and\neach pair contains tests compiled with -Ofast and -O3 -ffp-contract=fast\n-ffinite-math-only optimization flags.\nThe tests were stripped of nnan and ninf flags as they have no impact on the\noutput.\nThe primary objective of these tests is to show the various sequences of\ncomplex computations that may be encountered and to demonstrate the ability\nof ComplexDeinterleaving to support any ordering.\n\nDepends on D147451\n\nDifferential Revision: https://reviews.llvm.org/D148550\n",
+            "commit_timestamp": 1685447399.0
         }
     ]
 }
