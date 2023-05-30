@@ -106,7 +106,7 @@
     <script id="main-script">
       'use strict';
       (async function () {
-        async function init() {
+        async function* init() {
           function getStats(entries) {
             const result = entries['v1']
             result.sort((lhs, rhs) => lhs.timestamp - rhs.timestamp)
@@ -121,8 +121,6 @@
           repoLink.href = all_reports.repo_url;
           repoLink.textContent = all_reports.repo_url;
 
-          let result = []
-
           for (const [project_name, report_names] of Object.entries(all_reports.reports)) {
             const project_reports = {};
             for (const report_name of report_names) {
@@ -130,16 +128,14 @@
               project_reports[report_name] = getStats(project_report)
             }
 
-            result.push({
+            yield {
               name: project_name,
               dataSet: project_reports
-            })
+            }
           }
-
-          return result
         }
 
-        function renderAllCharts(dataSets) {
+        async function renderAllCharts(dataSets) {
           function renderGraph(parent, reportSet) {
             let hashColor = function(s) {
               const color = s.split("").reduce(function(a, b) {
@@ -279,12 +275,12 @@
           }
 
           const main = document.getElementById('main');
-          for (const {name, dataSet} of dataSets) {
+          for await (const {name, dataSet} of dataSets) {
             renderReportSet(name, dataSet, main);
           }
         }
 
-        renderAllCharts(await init());
+        await renderAllCharts(await init());
       })();
     </script>
   </body>
