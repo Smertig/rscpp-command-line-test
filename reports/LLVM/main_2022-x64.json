@@ -1003,6 +1003,22 @@
             "commit_ref": "0442d08fdb173d89b0779d32eb929957a344f5e6",
             "commit_message": "[clang][Sema] Improve diagnostics for auto return type\n\nCurrently when clang fails to deduce auto return type of a function,\nit does not emit any notes about why it fails. This causes difficulty\nfor users to fix such errors.\n\nActually, clang already generates the information for emitting notes\nabout the failed deduction. There is a TODO for actually emitting\nthem.\n\nThis patch tries to implement the TODO. Basically it passes the\nfailed template specialization candidate set from the point of\nspecialization failure back to the point where the deduction starts.\n\nIt is not comprehensive but would be a start for further improvement.\n\nReviewed by: Richard Smith, Matheus Izvekov\n\nDifferential Revision: https://reviews.llvm.org/D150212\n\nFixes: SWDEV-354278\n",
             "commit_timestamp": 1685504159.0
+        },
+        {
+            "tool_version": "232.0.20230517.90859-eap02",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1685520866.22536,
+            "elapsed_time": 4699.46359205246,
+            "x64": true,
+            "actual_files_count": 1666,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "bb6c036ef378de321d5b7fc0ada317f91c88570d",
+            "commit_message": "[clang][Diagnostics][NFC] Use getFileID() directly\n\nInstead of calling getDecomposedLoc() and then only using the FileID.\n",
+            "commit_timestamp": 1685519836.0
         }
     ]
 }
