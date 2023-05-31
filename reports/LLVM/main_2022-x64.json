@@ -971,6 +971,22 @@
             "commit_ref": "d81ce04587c006b6731198956c522c93d0df1050",
             "commit_message": "[Driver] Report error for unsupported -mlarge-endian/-mlittle-endian\n",
             "commit_timestamp": 1685475921.0
+        },
+        {
+            "tool_version": "232.0.20230517.90859-eap02",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1685492346.018709,
+            "elapsed_time": 4682.1873297691345,
+            "x64": true,
+            "actual_files_count": 1666,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "aaa33b6a98de2be7cdc827b13e60c103206d6461",
+            "commit_message": "Fix assert \"DeclRefExpr for Decl not entered in LocalDeclMap?\"\n\nCurrently compiler assert when passing variable \"memspace\" in\nomp_init_allocator.\n\nomp_allocator_handle_t alloc=omp_init_allocator(memspace,1,traits)\n\nThe problem is memspace is not mapping to the target region.  During\nthe call to emitAllocatorInit, calls to EmitVarDecl for \"alloc\", then\nemit initialization of \"alloc\" that cause to assert.\n\nIf I understant correct, it is not necessary to emit variable\ninitialization, since \"allocator\" is private to target region.\n\nTo fix this call CGF.EmitAutoVarAlloca(allocator) instead\nCGF.EmitVarDecl(allocator).\n\nDifferential Revision: https://reviews.llvm.org/D151743\n",
+            "commit_timestamp": 1685490006.0
         }
     ]
 }

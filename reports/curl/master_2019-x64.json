@@ -811,6 +811,20 @@
             "commit_ref": "7ab9d43720bc34d9aa351c7ca683c1668ebf8335",
             "commit_message": "RELEASE-NOTES: synced\n\n8.1.2 release\n",
             "commit_timestamp": 1685427256.0
+        },
+        {
+            "tool_version": "232.0.20230517.90859-eap02",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1685491594.766274,
+            "elapsed_time": 295.85348677635193,
+            "x64": false,
+            "actual_files_count": 2323,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "a1730b610660bcd076b25e24269cc8e7f2c19f2b",
+            "commit_message": "scripts: Fix GHA matrix job detection in cijobs.pl\n\nThe parsing is pretty brittle and it broke detecting some jobs at some\npoint. Also, detect if Windows is used in GHA.\n",
+            "commit_timestamp": 1685490853.0
         }
     ]
 }
