@@ -1035,6 +1035,22 @@
             "commit_ref": "981766a3d6cf043b0fa7efc69d227287f7a909aa",
             "commit_message": "[mlir][bazel] Disable Transform/test-repro-dump.mlir test in bazel build.\n",
             "commit_timestamp": 1685533848.0
+        },
+        {
+            "tool_version": "232.0.20230517.90859-eap02",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1685549847.773432,
+            "elapsed_time": 4712.781037330627,
+            "x64": true,
+            "actual_files_count": 1666,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "a88f496f8f3baa6c3b15532e37e3bdbb1c4ea0d0",
+            "commit_message": "[Sema] Remove unused function getFloat128Identifier\n\nThe last use was removed by:\n\n  commit bb1ea2d6139a72340b426e114510c46d938645a6\n  Author: Nemanja Ivanovic <nemanja.i.ibm@gmail.com>\n  Date:   Mon May 9 08:52:33 2016 +0000\n\nDifferential Revision: https://reviews.llvm.org/D151608\n",
+            "commit_timestamp": 1685548775.0
         }
     ]
 }
