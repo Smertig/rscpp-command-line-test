@@ -937,6 +937,20 @@
             "commit_ref": "4efa0b5749bb7c366e1c3bda90650ef864d3978e",
             "commit_message": "tests/servers.pm: pick unused port number with a server socket\n\nThis change replaces the previous method of picking a port number at\nrandom to try to start servers on, then retrying up to ten times with\nnew random numbers each time, with a function that creates a server\nsocket on port zero, thereby getting a suitable random port set by the\nkernel. That server socket is then closed and that port number is used\nto setup the actual test server on.\n\nThere is a risk that *another* server can be started on the machine in\nthe time gap, but the server verification feature will detect that.\n\nCloses #11220\n",
             "commit_timestamp": 1685534447.0
+        },
+        {
+            "tool_version": "232.0.20230517.90859-eap02",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1685592349.974563,
+            "elapsed_time": 254.70527601242065,
+            "x64": false,
+            "actual_files_count": 2323,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "4efa0b5749bb7c366e1c3bda90650ef864d3978e",
+            "commit_message": "tests/servers.pm: pick unused port number with a server socket\n\nThis change replaces the previous method of picking a port number at\nrandom to try to start servers on, then retrying up to ten times with\nnew random numbers each time, with a function that creates a server\nsocket on port zero, thereby getting a suitable random port set by the\nkernel. That server socket is then closed and that port number is used\nto setup the actual test server on.\n\nThere is a risk that *another* server can be started on the machine in\nthe time gap, but the server verification feature will detect that.\n\nCloses #11220\n",
+            "commit_timestamp": 1685534447.0
         }
     ]
 }
