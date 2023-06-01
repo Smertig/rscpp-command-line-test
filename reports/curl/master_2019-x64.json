@@ -979,6 +979,20 @@
             "commit_ref": "bfa7006424c196d45da7c7224f539ff56f9e5033",
             "commit_message": "test447: test PUTting a file that grows\n\n... and have curl trim the end when it reaches the expected total amount\nof bytes instead of over-sending.\n\nReported-by: JustAnotherArchivist on github\nCloses #11223\n",
             "commit_timestamp": 1685619811.0
+        },
+        {
+            "tool_version": "232.0.20230517.90859-eap02",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1685635604.22306,
+            "elapsed_time": 305.3002917766571,
+            "x64": false,
+            "actual_files_count": 2323,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "10d840430160f1a1c49c3c8abcfabc8e8017bc7f",
+            "commit_message": "libssh2: use custom memory functions\n\nBecause of how libssh2_userauth_keyboard_interactive_ex() works: the\nlibcurl callback allocates memory that is later free()d by libssh2, we\nmust set the custom memory functions.\n\nReverts 8b5f100db388ee60118c08aa28\n\nRef: https://github.com/libssh2/libssh2/issues/1078\nCloses #11235\n",
+            "commit_timestamp": 1685628399.0
         }
     ]
 }
