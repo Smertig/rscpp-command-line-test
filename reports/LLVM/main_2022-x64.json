@@ -1099,6 +1099,22 @@
             "commit_ref": "4f0436dd1532d7534d77e6fc211a7a50bbdd0c49",
             "commit_message": "[clang][analyzer] Merge apiModeling.StdCLibraryFunctions and StdCLibraryFunctionArgs checkers into one.\n\nMain reason for this change is that these checkers were implemented in the same class\nbut had different dependency ordering. (NonNullParamChecker should run before StdCLibraryFunctionArgs\nto get more special warning about null arguments, but the apiModeling.StdCLibraryFunctions was a modeling\nchecker that should run before other non-modeling checkers. The modeling checker changes state in a way\nthat makes it impossible to detect a null argument by NonNullParamChecker.)\nTo make it more simple, the modeling part is removed as separate checker and can be only used if\nchecker StdCLibraryFunctions is turned on, that produces the warnings too. Modeling the functions\nwithout bug detection (for invalid argument) is not possible. The modeling of standard functions\ndoes not happen by default from this change on.\n\nReviewed By: Szelethus\n\nDifferential Revision: https://reviews.llvm.org/D151225\n",
             "commit_timestamp": 1685606075.0
+        },
+        {
+            "tool_version": "232.0.20230517.90859-eap02",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1685621858.931423,
+            "elapsed_time": 4910.697793722153,
+            "x64": true,
+            "actual_files_count": 1666,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "a26bd95325f120d9737a0b03c80eabddb56f46db",
+            "commit_message": "[LinkerWrapper] Fix static library symbol resolution\n\nThe linker wrapper performs its own very basic symbol resolution for the\npurpose of supporting standard static library semantics. We do this here\nbecause the Nvidia `nvlink` wrapper does not support static linking and\nwe have some offloading specific extensions.\n\nCurrently, we always place symbols in the \"table\" even if they aren't\nextracted. This caused the logic to fail when many files were used that\nreferenced the same undefined variable. This patch changes the pass to\nonly add the symbols to the global \"table\" if the file is actually\nextracted.\n\nReviewed By: tra\n\nDifferential Revision: https://reviews.llvm.org/D151839\n",
+            "commit_timestamp": 1685620311.0
         }
     ]
 }

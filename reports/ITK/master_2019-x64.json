@@ -1713,6 +1713,20 @@
             "commit_ref": "19079c8bc71179ed7bed02714713e030a54cfca5",
             "commit_message": "COMP: Rule of Zero, SFINAE ImageBufferRange, ImageRegionRange iterators\n\nUsed SFINAE (`enable_if`) to implement non-const to const conversion for the\niterator types of `ImageBufferRange` and `ImageRegionRange`. Followed the Rule\nof Zero for those types.\n\nPrevents potential clang warnings, as reported before by Bradley Lowekamp:\n\n> definition of implicit copy constructor for 'QualifiedIterator<true>'\n> is deprecated because it has a user-declared copy assignment operator\n\nFollow-up to pull request https://github.com/InsightSoftwareConsortium/ITK/pull/4049\ncommit df6aa66e40c6e4ce91c05df95f5364f3558ab43a \"COMP: QualifiedIterator follow\nrule of zero\", merged on 19 May, 2023\n",
             "commit_timestamp": 1685452317.0
+        },
+        {
+            "tool_version": "232.0.20230517.90859-eap02",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1685621410.152673,
+            "elapsed_time": 107.74353575706482,
+            "x64": false,
+            "actual_files_count": 100,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "19079c8bc71179ed7bed02714713e030a54cfca5",
+            "commit_message": "COMP: Rule of Zero, SFINAE ImageBufferRange, ImageRegionRange iterators\n\nUsed SFINAE (`enable_if`) to implement non-const to const conversion for the\niterator types of `ImageBufferRange` and `ImageRegionRange`. Followed the Rule\nof Zero for those types.\n\nPrevents potential clang warnings, as reported before by Bradley Lowekamp:\n\n> definition of implicit copy constructor for 'QualifiedIterator<true>'\n> is deprecated because it has a user-declared copy assignment operator\n\nFollow-up to pull request https://github.com/InsightSoftwareConsortium/ITK/pull/4049\ncommit df6aa66e40c6e4ce91c05df95f5364f3558ab43a \"COMP: QualifiedIterator follow\nrule of zero\", merged on 19 May, 2023\n",
+            "commit_timestamp": 1685452317.0
         }
     ]
 }
