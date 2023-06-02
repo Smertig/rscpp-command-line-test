@@ -1007,6 +1007,20 @@
             "commit_ref": "10d840430160f1a1c49c3c8abcfabc8e8017bc7f",
             "commit_message": "libssh2: use custom memory functions\n\nBecause of how libssh2_userauth_keyboard_interactive_ex() works: the\nlibcurl callback allocates memory that is later free()d by libssh2, we\nmust set the custom memory functions.\n\nReverts 8b5f100db388ee60118c08aa28\n\nRef: https://github.com/libssh2/libssh2/issues/1078\nCloses #11235\n",
             "commit_timestamp": 1685628399.0
+        },
+        {
+            "tool_version": "232.0.20230517.90859-eap02",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1685664546.406378,
+            "elapsed_time": 305.52520084381104,
+            "x64": false,
+            "actual_files_count": 2323,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "10d840430160f1a1c49c3c8abcfabc8e8017bc7f",
+            "commit_message": "libssh2: use custom memory functions\n\nBecause of how libssh2_userauth_keyboard_interactive_ex() works: the\nlibcurl callback allocates memory that is later free()d by libssh2, we\nmust set the custom memory functions.\n\nReverts 8b5f100db388ee60118c08aa28\n\nRef: https://github.com/libssh2/libssh2/issues/1078\nCloses #11235\n",
+            "commit_timestamp": 1685628399.0
         }
     ]
 }
