@@ -2367,6 +2367,20 @@
             "commit_ref": "27c0e1186c28f4f6a6864e0f8e14a2898a33a794",
             "commit_message": "Release v12.0.5\n",
             "commit_timestamp": 1685430582.0
+        },
+        {
+            "tool_version": "232.0.20230517.90859-eap02",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1685693087.027854,
+            "elapsed_time": 97.9946403503418,
+            "x64": false,
+            "actual_files_count": 3,
+            "expected_files_count": 3,
+            "repo_url": "https://github.com/yhirose/cpp-httplib",
+            "commit_ref": "698a1e51ecc6450b19757169736b173730c1d440",
+            "commit_message": "Move, not copy, Logger and Handler functors (#1576)\n\n* Explicitly #include <utility> for use of std::move\r\n\r\n* Move not copy Logger arg from Client to ClientImpl\r\n\r\n* Move not copy, set_error_handler Handler to lambda\r\n\r\n* Remove null statement in non-empty if/else block\r\n\r\nI guess it was a relic from a time before the other statement was added.\r\n\r\n---------\r\n\r\nCo-authored-by: Daniel Boles <daniel.boles@voltalis.com>",
+            "commit_timestamp": 1685688000.0
         }
     ]
 }
