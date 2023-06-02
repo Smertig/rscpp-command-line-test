@@ -1147,6 +1147,22 @@
             "commit_ref": "5c2072e74b42d55e8bf7a9c8fee8800bad591f12",
             "commit_message": "[clang-tidy] Fix docs.\n",
             "commit_timestamp": 1685719915.0
+        },
+        {
+            "tool_version": "232.0.20230517.90859-eap02",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1685737190.8817,
+            "elapsed_time": 4808.725058555603,
+            "x64": true,
+            "actual_files_count": 1666,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "18ccca4da8dec5fbfd1072a1c1544ce25f528627",
+            "commit_message": "[UBSan] Consider zero input to __builtin_clz/ctz to be undefined independent of the target.\n\nPreviously we checked isCLZForZeroUndef and only added UBSan checks\nif it returned true.\n\nThe builtin should be considered undefined for 0 regardless of\nthe target so that code using it is portable. The isCLZForZeroUndef\nwas only intended to disable optimizations in the middle end and\nbackend.\n\nSee https://discourse.llvm.org/t/should-ubsan-detect-0-input-to-builtin-clz-ctz-regardless-of-target/71060\n\nReviewed By: nikic\n\nDifferential Revision: https://reviews.llvm.org/D152023\n",
+            "commit_timestamp": 1685736065.0
         }
     ]
 }
