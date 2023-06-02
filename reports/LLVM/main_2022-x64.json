@@ -1131,6 +1131,22 @@
             "commit_ref": "c20a9bb001855da5d14721ce2894e3be77a999fe",
             "commit_message": "Allow configuring InlinerThreshold in C bindings for the new pass manager\n\nC bindings for the new pass manager seem to allow to set any option from LLVMPassBuilderOptions, except InlinerThreshold. Allow to configure it as well.\n\nReviewed By: aeubanks\n\nDifferential Revision: https://reviews.llvm.org/D151832\n",
             "commit_timestamp": 1685649635.0
+        },
+        {
+            "tool_version": "232.0.20230517.90859-eap02",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1685722484.998794,
+            "elapsed_time": 4693.178010225296,
+            "x64": true,
+            "actual_files_count": 1666,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "5c2072e74b42d55e8bf7a9c8fee8800bad591f12",
+            "commit_message": "[clang-tidy] Fix docs.\n",
+            "commit_timestamp": 1685719915.0
         }
     ]
 }
