@@ -1211,6 +1211,22 @@
             "commit_ref": "0beffb854209a41f31beb18f9631258349a99299",
             "commit_message": "[CMake] Ensure `CLANG_RESOURCE_DIR` is respected.\n\nre-commit of 39aa0f5c434b463520ac39a8dbe933ee8c4c5ea7 with missing file:\ncmake/Modules/GetClangResourceDir.cmake.\n",
             "commit_timestamp": 1685791295.0
+        },
+        {
+            "tool_version": "232.0.20230517.90859-eap02",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1685809033.393142,
+            "elapsed_time": 5792.0157170295715,
+            "x64": true,
+            "actual_files_count": 1666,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "684f3c968d6bbf124014128b9f5e4f03a50f28c5",
+            "commit_message": "[Clang] Fix status of P0960\n\nP0960R3 and P1975R0 were marked not implemented because\nof #61145,\n\nThis issue has been fixed and backported to LLVM 16,\nthe status page should reflect that.\n\nReviewed By: #clang-language-wg, ayzhao, erichkeane\n\nDifferential Revision: https://reviews.llvm.org/D150122\n",
+            "commit_timestamp": 1685804622.0
         }
     ]
 }
