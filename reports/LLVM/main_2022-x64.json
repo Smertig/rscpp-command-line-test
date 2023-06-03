@@ -1163,6 +1163,22 @@
             "commit_ref": "18ccca4da8dec5fbfd1072a1c1544ce25f528627",
             "commit_message": "[UBSan] Consider zero input to __builtin_clz/ctz to be undefined independent of the target.\n\nPreviously we checked isCLZForZeroUndef and only added UBSan checks\nif it returned true.\n\nThe builtin should be considered undefined for 0 regardless of\nthe target so that code using it is portable. The isCLZForZeroUndef\nwas only intended to disable optimizations in the middle end and\nbackend.\n\nSee https://discourse.llvm.org/t/should-ubsan-detect-0-input-to-builtin-clz-ctz-regardless-of-target/71060\n\nReviewed By: nikic\n\nDifferential Revision: https://reviews.llvm.org/D152023\n",
             "commit_timestamp": 1685736065.0
+        },
+        {
+            "tool_version": "232.0.20230517.90859-eap02",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1685751496.408202,
+            "elapsed_time": 4718.239347219467,
+            "x64": true,
+            "actual_files_count": 1666,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "0a168131b4f420d9f561926c643c143c84c97535",
+            "commit_message": "[scudo] Add 'inline' to static secondary.h function\n\nThis patches an error flaged by Fuchsia builds e.g.\nhttps://ci.chromium.org/ui/p/turquoise/builders/global.try/core.x64-asan/b8779376650819379137/overview)\n\n```\nbuild failed:\n\n[87176/332302](525) CXX user.libc_x64-asan-ubsan/obj/zircon/system/ulib/c/scudo/gwp-asan-info.gwp_asan_info.cc.o\nFAILED: user.libc_x64-asan-ubsan/obj/zircon/system/ulib/c/scudo/gwp-asan-info.gwp_asan_info.cc.o\n../../prebuilt/third_party/python3/linux-x64/bin/python3.8 -S ../../build/rbe/cxx_remote_wrapper.py --exec_strategy=remote_local_fallback --  ../../prebuilt/third_party/clang/linux-x64/bin/clang++ -MD -MF user.libc_x64-asan-ubsan/obj/zircon/system/ulib/c/scudo/gwp-asan-info.gwp_asan_info.cc.o.d -o user.libc_x64-asan-ubsan/obj/zircon/system/ulib/c/scudo/gwp-asan-info.gwp_asan_info.cc.o -D_LIBCPP...\nIn file included from ../../zircon/system/ulib/c/scudo/gwp_asan_info.cc:7:\nIn file included from ../../third_party/scudo/src/allocator_config.h:12:\nIn file included from ../../third_party/scudo/src/combined.h:22:\n../../third_party/scudo/src/secondary.h:67:13: error: 'static' function 'unmap' declared in header file should be declared 'static inline' [-Werror,-Wunneeded-internal-declaration]\nstatic void unmap(LargeBlock::Header *H) {\n            ^\n1 error generated.\n```\n\nDifferential Revision: https://reviews.llvm.org/D152038\n",
+            "commit_timestamp": 1685749647.0
         }
     ]
 }
