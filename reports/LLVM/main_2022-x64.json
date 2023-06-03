@@ -1227,6 +1227,22 @@
             "commit_ref": "684f3c968d6bbf124014128b9f5e4f03a50f28c5",
             "commit_message": "[Clang] Fix status of P0960\n\nP0960R3 and P1975R0 were marked not implemented because\nof #61145,\n\nThis issue has been fixed and backported to LLVM 16,\nthe status page should reflect that.\n\nReviewed By: #clang-language-wg, ayzhao, erichkeane\n\nDifferential Revision: https://reviews.llvm.org/D150122\n",
             "commit_timestamp": 1685804622.0
+        },
+        {
+            "tool_version": "232.0.20230517.90859-eap02",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1685823303.569216,
+            "elapsed_time": 4907.474210262299,
+            "x64": true,
+            "actual_files_count": 1666,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "4b9764959dc4b8783e18747c1742ab164e4bc4ee",
+            "commit_message": "[clang-format] Fix overlapping replacements before PPDirectives\n\nIf the first token of an annotated line is finalized, reuse its\nNewlinesBefore value to avoid potential overlapping whitespace\nreplacements before preprocessor branching directives.\n\nFixes #62892.\n\nDifferential Revision: https://reviews.llvm.org/D151954\n",
+            "commit_timestamp": 1685820783.0
         }
     ]
 }
