@@ -1119,6 +1119,20 @@
             "commit_ref": "51279c3e44459f120dc4db650264d1d0b69821a3",
             "commit_message": "[NTOS:SE] Refactor NtOpenThreadTokenEx\n\n- Wrap most of the code into a new private routine, SepOpenThreadToken.\nAnd properly fail gracefully if we fail to open a thread's token instead of just keeping going.\n\n- Do not use the same thread object that we have referenced in NtOpenThreadTokenEx\nto do a copy of the access token in case we can't open it directly.\nInstead we must reference a new object with full access, solely used for\nthe purpose to do our required operations.\n\n- Add debug prints\n\nCORE-18986\n",
             "commit_timestamp": 1685869774.0
+        },
+        {
+            "tool_version": "232.0.20230517.90859-eap02",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1685894612.944305,
+            "elapsed_time": 113.73610281944275,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "13b1eadebb561b008ca7e3d748bb30c45e26cf39",
+            "commit_message": "[KERNEL32] LCMapString: Convert Chinese characters (#5316)\n\n* [KERNEL32] LCMAP_SIMPLIFIED_CHINESE and LCMAP_TRADITIONAL_CHINESE\r\n\r\n* fix\r\n\r\n* improve\r\n\r\n* reduce data\r\n\r\n* improve",
+            "commit_timestamp": 1685882761.0
         }
     ]
 }
