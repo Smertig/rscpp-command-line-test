@@ -1275,6 +1275,22 @@
             "commit_ref": "ff75a2be34fd76350216c36b7ea4c3f338df6215",
             "commit_message": "[AVR] Fix incorrect operands of pseudo instruction 'ROLBRd'\n\nFixes https://github.com/llvm/llvm-project/issues/63098\n\nReviewed by: benshi001\n\nDifferential Revision: https://reviews.llvm.org/D152063\n",
             "commit_timestamp": 1685848137.0
+        },
+        {
+            "tool_version": "232.0.20230517.90859-eap02",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1685866573.351386,
+            "elapsed_time": 4750.886167049408,
+            "x64": true,
+            "actual_files_count": 1666,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "fbdcd54442ef9435d753ae974d33992f99d85ad8",
+            "commit_message": "[GlobalISel] Fix DIVREM combine from inserting a divrem before its operands' defs.\n\nIn some rare corner cases where in between the div/rem pair there's a def of\nthe second instruction's source (but a different vreg due to the combine's\neqivalence checks), it will place the DIVREM at the first instruction's point,\ncausing a use-before-def. There wasn't an obvious fix that stood out to me\nwithout doing more involved analysis than a combine should really be doing.\n\nFixes issue #60516\n\nI'm open to new suggestions on how to approach this, as I'm not too happy\nat bailing out here. It's not the first time we run into issues with value liveness\nthat the DAG world isn't affected by.\n\nDifferential Revision: https://reviews.llvm.org/D144336\n",
+            "commit_timestamp": 1685863478.0
         }
     ]
 }
