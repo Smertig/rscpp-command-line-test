@@ -1259,6 +1259,22 @@
             "commit_ref": "ea8f4b98419750c8cc7c60ea43b570adf47b3f78",
             "commit_message": "[libc][CMake] Place archives in build/lib/<target-triple>\n\nThis patch moves the location of libllvmlibc.a within the build tree to\nwithin ./lib/<target triple>. This more closely matches the behavior of\nother runtime builds and allows for clang in the same build tree to\nautomatically be able to link against llvmlibc since this path is by\ndefault included by the driver.\n\nAlso removes the LIBC_BINARY_DIR CMake flag since it isn't used anywhere\nin the tree (based on a quick grep).\n\nReviewed By: phosek\n\nDifferential Revision: https://reviews.llvm.org/D151624\n",
             "commit_timestamp": 1685832003.0
+        },
+        {
+            "tool_version": "232.0.20230517.90859-eap02",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1685852112.979246,
+            "elapsed_time": 4631.908277273178,
+            "x64": true,
+            "actual_files_count": 1666,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "ff75a2be34fd76350216c36b7ea4c3f338df6215",
+            "commit_message": "[AVR] Fix incorrect operands of pseudo instruction 'ROLBRd'\n\nFixes https://github.com/llvm/llvm-project/issues/63098\n\nReviewed by: benshi001\n\nDifferential Revision: https://reviews.llvm.org/D152063\n",
+            "commit_timestamp": 1685848137.0
         }
     ]
 }
