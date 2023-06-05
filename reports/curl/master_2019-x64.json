@@ -1343,6 +1343,20 @@
             "commit_ref": "ba669d072dfd4096a0aef85a7ea4b8f075016297",
             "commit_message": "urlapi: scheme starts with alpha\n\nAdd multiple tests to lib1560 to verify\n\nFixes #11249\nReported-by: ad0p on github\nCloses #11250\n",
             "commit_timestamp": 1685975307.0
+        },
+        {
+            "tool_version": "232.0.20230517.90859-eap02",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1685995564.309936,
+            "elapsed_time": 265.210734128952,
+            "x64": false,
+            "actual_files_count": 2323,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "f24b4b980d8fd6d04d0e9744a509c2f57528110e",
+            "commit_message": "runtests: create multiple test runners when requested\n\nParallel testing is enabled by using a nonzero value for the -j option\nto runtests.pl. Performant values seem to be about 7*num CPU cores, or\n1.3*num CPU cores if Valgrind is in use.\n\nFlaky tests due to improper log locking (bug #11231) are exacerbated\nwhile parallel testing, so it is not enabled by default yet.\n\nFixes #10818\nCloses #11246\n",
+            "commit_timestamp": 1685988966.0
         }
     ]
 }

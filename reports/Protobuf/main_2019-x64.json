@@ -2355,6 +2355,20 @@
             "commit_ref": "242771ad159927cf731f30c1379aaef1913d7b1e",
             "commit_message": "Internal change\n\nPiperOrigin-RevId: 537790620\n",
             "commit_timestamp": 1685961941.0
+        },
+        {
+            "tool_version": "232.0.20230517.90859-eap02",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1685995475.816114,
+            "elapsed_time": 452.8483850955963,
+            "x64": false,
+            "actual_files_count": 819,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "0b9b5da7a7cbc4ef62cec05e277ab9e7b395d0c2",
+            "commit_message": "Cleanup scheduled staleness tests.\n\n- Do some minimal sanity testing on every PR\n- Only run the staleness tests on a daily schedule or explicit runs.\n- Add 23.x to the checks\n\nPiperOrigin-RevId: 537952151\n",
+            "commit_timestamp": 1685994166.0
         }
     ]
 }
