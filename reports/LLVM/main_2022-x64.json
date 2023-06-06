@@ -1483,6 +1483,22 @@
             "commit_ref": "10e7899818803029d2f91a20c67f5a1d75781b8a",
             "commit_message": "[FPEnv] Get rid of extra moves in fpenv calls\n\nIf intrinsic `get_fpenv` or `set_fpenv` is lowered to the form where FP\nenvironment is represented as a region in memory, extra moves can\nappear. For example the code:\n\n  define void @func_01(ptr %ptr) {\n    %env = call i256 @llvm.get.fpenv.i256()\n    store i256 %env, ptr %ptr\n    ret void\n  }\n\nproduces DAG:\n\n  ch = get_fpenv_mem ch, memory_region\n  val: i256, ch = load ch, memory_region\n  ch = store ch, ptr, val\n\nIn this case the extra moves can be avoided if `get_fpenv_mem` got\npointer to the memory where the FP environment should be finally placed.\n\nThis change implement such optimization for this use case.\n\nDifferential Revision: https://reviews.llvm.org/D150437\n",
             "commit_timestamp": 1686038092.0
+        },
+        {
+            "tool_version": "232.0.20230531.134455-eap03",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1686054047.199489,
+            "elapsed_time": 6666.311804771423,
+            "x64": true,
+            "actual_files_count": 1666,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "6d5a653dda628250b373ec89e0e11cdd27603c24",
+            "commit_message": "[AMDGPU] New PAL metadata updates to ps_extra_lds_size and float_mode\n\nNew metadata format contains full calculation of field contents for\nps_extra_lds_size (vs old format where the value in RSRC register is used by PAL\nto calculate the value required).\n\nAlso stop updating float_mode and rely on front end settings for this field.\n\nDifferential Revision: https://reviews.llvm.org/D152247\n",
+            "commit_timestamp": 1686050301.0
         }
     ]
 }
