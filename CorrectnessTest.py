@@ -122,13 +122,13 @@ def check_project(project, project_dir, sln_file, branch: Optional[str]) -> Tupl
     project_to_check = project.get("project to check")
     msbuild_props = project.get("msbuild properties")
     use_x64 = project.get("use x64", False)
+    local_config = project["latest"][branch] if branch else project["stable"]
 
     start_date = datetime.datetime.utcnow()
     start_time = time.time()
     report_file, output = run_inspect_code(project_dir, sln_file, project_to_check, msbuild_props, use_x64)
     end_time = time.time()
 
-    local_config = project["latest"][branch] if branch else project["stable"]
     expected_files_count = local_config.get("inspected files count")
     actual_files_count = common.inspected_files_count(output)
     if expected_files_count:
