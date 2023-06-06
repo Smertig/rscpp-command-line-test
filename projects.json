@@ -103,30 +103,6 @@
                     "message": "Cannot resolve symbol 'ConfigParser_lex'",
                     "flaky": true,
                     "reason": "TODO"
-                },
-                {
-                    "file": "..\\src\\osg\\glu\\libtess\\tessmono.cpp",
-                    "line": 72,
-                    "message": "Function 'int __gl_meshTessellateMonoRegion(GLUface* face)' has already been declared as a global variable",
-                    "reason": "RSCPP-34314 InspectCode is trying to analyze headers in incorrect context"
-                },
-                {
-                    "file": "..\\src\\osg\\glu\\libtess\\tessmono.cpp",
-                    "line": 133,
-                    "message": "Function 'int __gl_meshTessellateInterior(GLUmesh* mesh)' has already been declared as a global variable",
-                    "reason": "RSCPP-34314 InspectCode is trying to analyze headers in incorrect context"
-                },
-                {
-                    "file": "..\\src\\osg\\glu\\libtess\\tessmono.cpp",
-                    "line": 142,
-                    "message": "Ambiguous symbol '__gl_meshTessellateMonoRegion'",
-                    "reason": "RSCPP-34314 InspectCode is trying to analyze headers in incorrect context"
-                },
-                {
-                    "file": "..\\src\\osg\\glu\\libtess\\tessmono.cpp",
-                    "line": 155,
-                    "message": "Function 'void __gl_meshDiscardExterior(GLUmesh* mesh)' has already been declared as a global variable",
-                    "reason": "RSCPP-34314 InspectCode is trying to analyze headers in incorrect context"
                 }
             ],
             "inspected files count": 1770,
@@ -233,39 +209,7 @@
         ],
         "stable": {
             "inspected files count": 96,
-            "mem traffic": 1950,
-            "known errors": [
-                {
-                    "file": "..\\common\\param.cpp",
-                    "line": 1527,
-                    "message": "Function 'int x265::x265_check_params(x265_param* param)' has already been declared as a global variable",
-                    "reason": "RSCPP-34314 InspectCode is trying to analyze headers in incorrect context"
-                },
-                {
-                    "file": "..\\common\\param.cpp",
-                    "line": 1842,
-                    "message": "Function 'void x265::x265_param_apply_fastfirstpass(x265_param* param)' has already been declared as a global variable",
-                    "reason": "RSCPP-34314 InspectCode is trying to analyze headers in incorrect context"
-                },
-                {
-                    "file": "..\\common\\param.cpp",
-                    "line": 1875,
-                    "message": "Function 'void x265::x265_print_params(x265_param* param)' has already been declared as a global variable",
-                    "reason": "RSCPP-34314 InspectCode is trying to analyze headers in incorrect context"
-                },
-                {
-                    "file": "..\\common\\param.cpp",
-                    "line": 2265,
-                    "message": "Function 'bool x265::parseLambdaFile(x265_param* param)' has already been declared as a global variable",
-                    "reason": "RSCPP-34314 InspectCode is trying to analyze headers in incorrect context"
-                },
-                {
-                    "file": "..\\common\\param.cpp",
-                    "line": 2335,
-                    "message": "Function 'void x265::x265_copy_params(x265_param* dst, x265_param* src)' has already been declared as a global variable",
-                    "reason": "RSCPP-34314 InspectCode is trying to analyze headers in incorrect context"
-                }
-            ]
+            "mem traffic": 1950
         }
     },
     "DependencyChecker": {
@@ -375,21 +319,7 @@
         },
         "stable": {
             "inspected files count": 63,
-            "mem traffic": 3221,
-            "known errors": [
-                {
-                    "file": "imgui_impl_dx10.cpp",
-                    "line": 60,
-                    "message": "Function 'void ImGui_ImplDX10_RenderDrawData(ImDrawData* draw_data)' has already been declared as a global variable",
-                    "reason": "RSCPP-34314 InspectCode is trying to analyze headers in incorrect context"
-                },
-                {
-                    "file": "imgui_impl_dx11.cpp",
-                    "line": 60,
-                    "message": "Function 'void ImGui_ImplDX11_RenderDrawData(ImDrawData* draw_data)' has already been declared as a global variable",
-                    "reason": "RSCPP-34314 InspectCode is trying to analyze headers in incorrect context"
-                }
-            ]
+            "mem traffic": 3221
         }
     },
     "shaderc": "Shaderc.json",
@@ -709,12 +639,6 @@
         "cmake options": [
             "-DENABLE_QT=OFF"
         ],
-        "to skip": [
-            "*.inc"
-        ],
-        "__to skip reason": [
-            "*.inc => RSCPP-34314 InspectCode is trying to analyze headers in incorrect context"
-        ],
         "required toolchain": ["2022-x64"],
         "stable": {
             "inspected files count": 2521,
@@ -860,15 +784,7 @@
             "-DRANGE_V3_EXAMPLES=ON"
         ],
         "to skip": [
-            "generator.hpp",
-            "remove.hpp",
-            "shared.hpp",
-            "contains_subrange.hpp"
-        ],
-        "__to skip reason": [
-            "remove.hpp => RSCPP-34314 InspectCode is trying to analyze headers in incorrect context",
-            "shared.hpp => RSCPP-34314 InspectCode is trying to analyze headers in incorrect context",
-            "contains_subrange.hpp => RSCPP-34314 InspectCode is trying to analyze headers in incorrect context"
+            "generator.hpp"
         ],
         "stable": {
             "known errors": [
@@ -908,8 +824,6 @@
         }
     },
     "magic_enum": {
-        "disabled": true,
-        "__disabled reason": "RSCPP-34322 Code analysis works slowly for `magic_enum` project",
         "sources": {
             "repo": "https://github.com/Neargye/magic_enum",
             "commit": "48054f64abcfc83f58d9aa2efbbd21604f93aca4"
@@ -944,47 +858,11 @@
         },
         "fixup sources": "proj-config/scripts/fix-doctest.py",
         "stable": {
-            "inspected files count": 105,
-            "known errors": [
-                {
-                    "file": "..\\examples\\all_features\\coverage_maxout.cpp",
-                    "line": 68,
-                    "message": "No viable 'operator<<' matches arguments of type 'std::ostringstream' (aka 'std::ostringstream') and 'String'.\r\nCandidates considered:\r\n  template<traits> std::basic_ostream<char, traits>& operator<<(std::basic_ostream<char, traits>&, const char*) (in namespace std)\r\n    couldn't match type 'std::basic_ostream<char, traits>&' against 'std::ostringstream'\r\n  template<_IntType, std::enable_if_t<std::is_integral_v<_IntType>, int>> constexpr std::byte operator<<(const std::byte _Arg, const _IntType _Shift) noexcept (in namespace std)\r\n    substitution failed: requirement 'std::is_integral_v<String>' is not satisfied\r\n  template<_Elem, _Traits> std::basic_ostream<_Elem, _Traits>& operator<<(std::basic_ostream<_Elem, _Traits>& _Ostr, const std::basic_string_view<_Elem, _Traits> _Str) (in namespace std)\r\n    couldn't match type 'std::basic_ostream<_Elem, _Traits>&' against 'std::ostringstream'\r\n  template<_Elem, _Traits, _Alloc> std::basic_ostream<_Elem, _Traits>& operator<<(std::basic_ostream<_Elem, _Traits>& _Ostr, const std::basic_string<_Elem, _Traits, _Alloc>& _Str) (in namespace std)\r\n    couldn't match type 'std::basic_ostream<_Elem, _Traits>&' against 'std::ostringstream'\r\n  template<_Elem, _Traits, _Ty> std::basic_ostream<_Elem, _Traits>& operator<<(std::basic_ostream<_Elem, _Traits>& _Out, const std::shared_ptr<_Ty>& _Px) (in namespace std)\r\n    couldn't match type 'std::basic_ostream<_Elem, _Traits>&' against 'std::ostringstream'\r\n  template<_Elem, _Traits, _Yty, _Dx, std::enable_if_t<std::_Can_stream_unique_ptr<std::basic_ostream<_Elem, _Traits>&, const std::unique_ptr<_Yty, _Dx>&>::value, int>> std::basic_ostream<_Elem, _Traits>& operator<<(std::basic_ostream<_Elem, _Traits>& _Out, const std::unique_ptr<_Yty, _Dx>& _Px) (in namespace std)\r\n    couldn't match type 'std::basic_ostream<_Elem, _Traits>&' against 'std::ostringstream'\r\n  template<_Elem, _Traits> std::basic_ostream<_Elem, _Traits>& operator<<(std::basic_ostream<_Elem, _Traits>& _Ostr, const char* _Val) (in namespace std)\r\n    couldn't match type 'std::basic_ostream<_Elem, _Traits>&' against 'std::ostringstream'\r\n  template<_Elem, _Traits> std::basic_ostream<_Elem, _Traits>& operator<<(std::basic_ostream<_Elem, _Traits>& _Ostr, char _Ch) (in namespace std)\r\n    couldn't match type 'std::basic_ostream<_Elem, _Traits>&' against 'std::ostringstream'\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>& _Ostr, char _Ch) (in namespace std)\r\n    couldn't match type 'std::basic_ostream<char, _Traits>&' against 'std::ostringstream'\r\n  template<_Elem, _Traits> std::basic_ostream<_Elem, _Traits>& operator<<(std::basic_ostream<_Elem, _Traits>& _Ostr, const _Elem* _Val) (in namespace std)\r\n    couldn't match type 'std::basic_ostream<_Elem, _Traits>&' against 'std::ostringstream'\r\n  template<_Elem, _Traits> std::basic_ostream<_Elem, _Traits>& operator<<(std::basic_ostream<_Elem, _Traits>& _Ostr, _Elem _Ch) (in namespace std)\r\n    couldn't match type 'std::basic_ostream<_Elem, _Traits>&' against 'std::ostringstream'\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>& _Ostr, const signed char* _Val) (in namespace std)\r\n    couldn't match type 'std::basic_ostream<char, _Traits>&' against 'std::ostringstream'\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>& _Ostr, signed char _Ch) (in namespace std)\r\n    couldn't match type 'std::basic_ostream<char, _Traits>&' against 'std::ostringstream'\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>& _Ostr, const unsigned char* _Val) (in namespace std)\r\n    couldn't match type 'std::basic_ostream<char, _Traits>&' against 'std::ostringstream'\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>& _Ostr, unsigned char _Ch) (in namespace std)\r\n    couldn't match type 'std::basic_ostream<char, _Traits>&' against 'std::ostringstream'\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>&, const char8_t*) = delete (in namespace std)\r\n    couldn't match type 'std::basic_ostream<char, _Traits>&' against 'std::ostringstream'\r\n  template<_Traits> std::basic_ostream<wchar_t, _Traits>& operator<<(std::basic_ostream<wchar_t, _Traits>&, const char8_t*) = delete (in namespace std)\r\n    couldn't match type 'std::basic_ostream<wchar_t, _Traits>&' against 'std::ostringstream'\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>&, char8_t) = delete (in namespace std)\r\n    couldn't match type 'std::basic_ostream<char, _Traits>&' against 'std::ostringstream'\r\n  template<_Traits> std::basic_ostream<wchar_t, _Traits>& operator<<(std::basic_ostream<wchar_t, _Traits>&, char8_t) = delete (in namespace std)\r\n    couldn't match type 'std::basic_ostream<wchar_t, _Traits>&' against 'std::ostringstream'\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>&, wchar_t) = delete (in namespace std)\r\n    couldn't match type 'std::basic_ostream<char, _Traits>&' against 'std::ostringstream'\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>&, const wchar_t*) = delete (in namespace std)\r\n    couldn't match type 'std::basic_ostream<char, _Traits>&' against 'std::ostringstream'\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>&, char16_t) = delete (in namespace std)\r\n    couldn't match type 'std::basic_ostream<char, _Traits>&' against 'std::ostringstream'\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>&, char32_t) = delete (in namespace std)\r\n    couldn't match type 'std::basic_ostream<char, _Traits>&' against 'std::ostringstream'\r\n  template<_Traits> std::basic_ostream<wchar_t, _Traits>& operator<<(std::basic_ostream<wchar_t, _Traits>&, char16_t) = delete (in namespace std)\r\n    couldn't match type 'std::basic_ostream<wchar_t, _Traits>&' against 'std::ostringstream'\r\n  template<_Traits> std::basic_ostream<wchar_t, _Traits>& operator<<(std::basic_ostream<wchar_t, _Traits>&, char32_t) = delete (in namespace std)\r\n    couldn't match type 'std::basic_ostream<wchar_t, _Traits>&' against 'std::ostringstream'\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>&, const char16_t*) = delete (in namespace std)\r\n    couldn't match type 'std::basic_ostream<char, _Traits>&' against 'std::ostringstream'\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>&, const char32_t*) = delete (in namespace std)\r\n    couldn't match type 'std::basic_ostream<char, _Traits>&' against 'std::ostringstream'\r\n  template<_Traits> std::basic_ostream<wchar_t, _Traits>& operator<<(std::basic_ostream<wchar_t, _Traits>&, const char16_t*) = delete (in namespace std)\r\n    couldn't match type 'std::basic_ostream<wchar_t, _Traits>&' against 'std::ostringstream'\r\n  template<_Traits> std::basic_ostream<wchar_t, _Traits>& operator<<(std::basic_ostream<wchar_t, _Traits>&, const char32_t*) = delete (in namespace std)\r\n    couldn't match type 'std::basic_ostream<wchar_t, _Traits>&' against 'std::ostringstream'\r\n  template<_Ostr, _Ty, std::enable_if_t<std::conjunction_v<std::is_convertible<_Ostr*, std::ios_base*>, std::_Can_stream_out<_Ostr, _Ty>>, int>> _Ostr&& operator<<(_Ostr&& _Os, const _Ty& _Val) (in namespace std)\r\n    substitution failed: requirement 'std::conjunction_v<std::is_convertible<std::ostringstream&*, std::ios_base*>, std::_Can_stream_out<std::ostringstream&, String>>' is not satisfied\r\n  template<_Elem, _Traits> std::basic_ostream<_Elem, _Traits>& operator<<(std::basic_ostream<_Elem, _Traits>& _Ostr, const std::error_code& _Errcode) (in namespace std)\r\n    couldn't match type 'std::basic_ostream<_Elem, _Traits>&' against 'std::ostringstream'\r\n  friend std::ostream& operator<<(std::ostream& s, const String& in) (in namespace doctest)\r\n    conversion of 1st argument 'oss' is ill-formed: non-const lvalue reference to type 'std::ostream' cannot bind to lvalue of type 'std::ostringstream'",
-                    "reason": "RSCPP-34285 Flaky red-code in `doctest` examples"
-                },
-                {
-                    "file": "..\\examples\\all_features\\asserts_used_outside_of_tests.cpp",
-                    "line": 40,
-                    "message": "Ambiguous operator call.\r\nArgument types: 'std::ostream', 'const int'.\r\nViable candidates:\r\n  template<_Elem, _Traits> std::basic_ostream<_Elem, _Traits>& operator<<(std::basic_ostream<_Elem, _Traits>& _Ostr, char _Ch) (in namespace std)\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>& _Ostr, char _Ch) (in namespace std)\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>& _Ostr, signed char _Ch) (in namespace std)\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>& _Ostr, unsigned char _Ch) (in namespace std)\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>&, char8_t) = delete (in namespace std)\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>&, wchar_t) = delete (in namespace std)\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>&, char16_t) = delete (in namespace std)\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>&, char32_t) = delete (in namespace std)"
-                },
-                {
-                    "file": "..\\examples\\all_features\\asserts_used_outside_of_tests.cpp",
-                    "line": 55,
-                    "message": "No viable 'operator<<' matches arguments of type 'std::ostream' (aka 'std::ostream') and '__resharper_unknown_type'.\r\nCandidates considered:\r\n  template<traits> std::basic_ostream<char, traits>& operator<<(std::basic_ostream<char, traits>&, const char*) (in namespace std)\r\n    conversion of 2nd argument 'std::endl' is ill-formed: cannot convert '__resharper_unknown_type' to parameter type 'const char*'\r\n  template<_IntType, std::enable_if_t<std::is_integral_v<_IntType>, int>> constexpr std::byte operator<<(const std::byte _Arg, const _IntType _Shift) noexcept (in namespace std)\r\n    cannot infer substitution for _IntType, <anonymous>\r\n  template<_Elem, _Traits> std::basic_ostream<_Elem, _Traits>& operator<<(std::basic_ostream<_Elem, _Traits>& _Ostr, const std::basic_string_view<_Elem, _Traits> _Str) (in namespace std)\r\n    conversion of 2nd argument 'std::endl' is ill-formed: cannot convert '__resharper_unknown_type' to parameter type 'std::string_view'\r\n  template<_Elem, _Traits, _Alloc> std::basic_ostream<_Elem, _Traits>& operator<<(std::basic_ostream<_Elem, _Traits>& _Ostr, const std::basic_string<_Elem, _Traits, _Alloc>& _Str) (in namespace std)\r\n    cannot infer substitution for _Alloc\r\n  template<_Elem, _Traits, _Ty> std::basic_ostream<_Elem, _Traits>& operator<<(std::basic_ostream<_Elem, _Traits>& _Out, const std::shared_ptr<_Ty>& _Px) (in namespace std)\r\n    cannot infer substitution for _Ty\r\n  template<_Elem, _Traits, _Yty, _Dx, std::enable_if_t<std::_Can_stream_unique_ptr<std::basic_ostream<_Elem, _Traits>&, const std::unique_ptr<_Yty, _Dx>&>::value, int>> std::basic_ostream<_Elem, _Traits>& operator<<(std::basic_ostream<_Elem, _Traits>& _Out, const std::unique_ptr<_Yty, _Dx>& _Px) (in namespace std)\r\n    cannot infer substitution for _Yty, _Dx, <anonymous>\r\n  template<_Elem, _Traits> std::basic_ostream<_Elem, _Traits>& operator<<(std::basic_ostream<_Elem, _Traits>& _Ostr, const char* _Val) (in namespace std)\r\n    conversion of 2nd argument 'std::endl' is ill-formed: cannot convert '__resharper_unknown_type' to parameter type 'const char*'\r\n  template<_Elem, _Traits> std::basic_ostream<_Elem, _Traits>& operator<<(std::basic_ostream<_Elem, _Traits>& _Ostr, char _Ch) (in namespace std)\r\n    conversion of 2nd argument 'std::endl' is ill-formed: cannot convert '__resharper_unknown_type' to parameter type 'char'\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>& _Ostr, char _Ch) (in namespace std)\r\n    conversion of 2nd argument 'std::endl' is ill-formed: cannot convert '__resharper_unknown_type' to parameter type 'char'\r\n  template<_Elem, _Traits> std::basic_ostream<_Elem, _Traits>& operator<<(std::basic_ostream<_Elem, _Traits>& _Ostr, const _Elem* _Val) (in namespace std)\r\n    conversion of 2nd argument 'std::endl' is ill-formed: cannot convert '__resharper_unknown_type' to parameter type 'const char*'\r\n  template<_Elem, _Traits> std::basic_ostream<_Elem, _Traits>& operator<<(std::basic_ostream<_Elem, _Traits>& _Ostr, _Elem _Ch) (in namespace std)\r\n    conversion of 2nd argument 'std::endl' is ill-formed: cannot convert '__resharper_unknown_type' to parameter type 'char'\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>& _Ostr, const signed char* _Val) (in namespace std)\r\n    conversion of 2nd argument 'std::endl' is ill-formed: cannot convert '__resharper_unknown_type' to parameter type 'const signed char*'\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>& _Ostr, signed char _Ch) (in namespace std)\r\n    conversion of 2nd argument 'std::endl' is ill-formed: cannot convert '__resharper_unknown_type' to parameter type 'signed char'\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>& _Ostr, const unsigned char* _Val) (in namespace std)\r\n    conversion of 2nd argument 'std::endl' is ill-formed: cannot convert '__resharper_unknown_type' to parameter type 'const unsigned char*'\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>& _Ostr, unsigned char _Ch) (in namespace std)\r\n    conversion of 2nd argument 'std::endl' is ill-formed: cannot convert '__resharper_unknown_type' to parameter type 'unsigned char'\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>&, const char8_t*) = delete (in namespace std)\r\n    conversion of 2nd argument 'std::endl' is ill-formed: cannot convert '__resharper_unknown_type' to parameter type 'const char8_t*'\r\n  template<_Traits> std::basic_ostream<wchar_t, _Traits>& operator<<(std::basic_ostream<wchar_t, _Traits>&, const char8_t*) = delete (in namespace std)\r\n    couldn't match type 'std::basic_ostream<wchar_t, _Traits>&' against 'std::ostream'\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>&, char8_t) = delete (in namespace std)\r\n    conversion of 2nd argument 'std::endl' is ill-formed: cannot convert '__resharper_unknown_type' to parameter type 'char8_t'\r\n  template<_Traits> std::basic_ostream<wchar_t, _Traits>& operator<<(std::basic_ostream<wchar_t, _Traits>&, char8_t) = delete (in namespace std)\r\n    couldn't match type 'std::basic_ostream<wchar_t, _Traits>&' against 'std::ostream'\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>&, wchar_t) = delete (in namespace std)\r\n    conversion of 2nd argument 'std::endl' is ill-formed: cannot convert '__resharper_unknown_type' to parameter type 'wchar_t'\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>&, const wchar_t*) = delete (in namespace std)\r\n    conversion of 2nd argument 'std::endl' is ill-formed: cannot convert '__resharper_unknown_type' to parameter type 'const wchar_t*'\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>&, char16_t) = delete (in namespace std)\r\n    conversion of 2nd argument 'std::endl' is ill-formed: cannot convert '__resharper_unknown_type' to parameter type 'char16_t'\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>&, char32_t) = delete (in namespace std)\r\n    conversion of 2nd argument 'std::endl' is ill-formed: cannot convert '__resharper_unknown_type' to parameter type 'char32_t'\r\n  template<_Traits> std::basic_ostream<wchar_t, _Traits>& operator<<(std::basic_ostream<wchar_t, _Traits>&, char16_t) = delete (in namespace std)\r\n    couldn't match type 'std::basic_ostream<wchar_t, _Traits>&' against 'std::ostream'\r\n  template<_Traits> std::basic_ostream<wchar_t, _Traits>& operator<<(std::basic_ostream<wchar_t, _Traits>&, char32_t) = delete (in namespace std)\r\n    couldn't match type 'std::basic_ostream<wchar_t, _Traits>&' against 'std::ostream'\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>&, const char16_t*) = delete (in namespace std)\r\n    conversion of 2nd argument 'std::endl' is ill-formed: cannot convert '__resharper_unknown_type' to parameter type 'const char16_t*'\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>&, const char32_t*) = delete (in namespace std)\r\n    conversion of 2nd argument 'std::endl' is ill-formed: cannot convert '__resharper_unknown_type' to parameter type 'const char32_t*'\r\n  template<_Traits> std::basic_ostream<wchar_t, _Traits>& operator<<(std::basic_ostream<wchar_t, _Traits>&, const char16_t*) = delete (in namespace std)\r\n    couldn't match type 'std::basic_ostream<wchar_t, _Traits>&' against 'std::ostream'\r\n  template<_Traits> std::basic_ostream<wchar_t, _Traits>& operator<<(std::basic_ostream<wchar_t, _Traits>&, const char32_t*) = delete (in namespace std)\r\n    couldn't match type 'std::basic_ostream<wchar_t, _Traits>&' against 'std::ostream'\r\n  template<_Ostr, _Ty, std::enable_if_t<std::conjunction_v<std::is_convertible<_Ostr*, std::ios_base*>, std::_Can_stream_out<_Ostr, _Ty>>, int>> _Ostr&& operator<<(_Ostr&& _Os, const _Ty& _Val) (in namespace std)\r\n    substitution failed: requirement 'std::conjunction_v<std::is_convertible<std::ostream&*, std::ios_base*>, std::_Can_stream_out<std::ostream&, _Ty>>' is not satisfied\r\n  template<_Elem, _Traits> std::basic_ostream<_Elem, _Traits>& operator<<(std::basic_ostream<_Elem, _Traits>& _Ostr, const std::error_code& _Errcode) (in namespace std)\r\n    conversion of 2nd argument 'std::endl' is ill-formed: cannot convert '__resharper_unknown_type' to parameter type 'std::error_code'"
-                }
-            ]
+            "inspected files count": 105
         },
         "latest": {
             "master": {
-                "inspected files count": 105,
-                "known errors": [
-                    {
-                        "file": "..\\examples\\all_features\\coverage_maxout.cpp",
-                        "line": 68,
-                        "message": "No viable 'operator<<' matches arguments of type 'std::ostringstream' (aka 'std::ostringstream') and 'String'.\r\nCandidates considered:\r\n  template<traits> std::basic_ostream<char, traits>& operator<<(std::basic_ostream<char, traits>&, const char*) (in namespace std)\r\n    couldn't match type 'std::basic_ostream<char, traits>&' against 'std::ostringstream'\r\n  template<_IntType, std::enable_if_t<std::is_integral_v<_IntType>, int>> constexpr std::byte operator<<(const std::byte _Arg, const _IntType _Shift) noexcept (in namespace std)\r\n    substitution failed: requirement 'std::is_integral_v<String>' is not satisfied\r\n  template<_Elem, _Traits> std::basic_ostream<_Elem, _Traits>& operator<<(std::basic_ostream<_Elem, _Traits>& _Ostr, const std::basic_string_view<_Elem, _Traits> _Str) (in namespace std)\r\n    couldn't match type 'std::basic_ostream<_Elem, _Traits>&' against 'std::ostringstream'\r\n  template<_Elem, _Traits, _Alloc> std::basic_ostream<_Elem, _Traits>& operator<<(std::basic_ostream<_Elem, _Traits>& _Ostr, const std::basic_string<_Elem, _Traits, _Alloc>& _Str) (in namespace std)\r\n    couldn't match type 'std::basic_ostream<_Elem, _Traits>&' against 'std::ostringstream'\r\n  template<_Elem, _Traits, _Ty> std::basic_ostream<_Elem, _Traits>& operator<<(std::basic_ostream<_Elem, _Traits>& _Out, const std::shared_ptr<_Ty>& _Px) (in namespace std)\r\n    couldn't match type 'std::basic_ostream<_Elem, _Traits>&' against 'std::ostringstream'\r\n  template<_Elem, _Traits, _Yty, _Dx, std::enable_if_t<std::_Can_stream_unique_ptr<std::basic_ostream<_Elem, _Traits>&, const std::unique_ptr<_Yty, _Dx>&>::value, int>> std::basic_ostream<_Elem, _Traits>& operator<<(std::basic_ostream<_Elem, _Traits>& _Out, const std::unique_ptr<_Yty, _Dx>& _Px) (in namespace std)\r\n    couldn't match type 'std::basic_ostream<_Elem, _Traits>&' against 'std::ostringstream'\r\n  template<_Elem, _Traits> std::basic_ostream<_Elem, _Traits>& operator<<(std::basic_ostream<_Elem, _Traits>& _Ostr, const char* _Val) (in namespace std)\r\n    couldn't match type 'std::basic_ostream<_Elem, _Traits>&' against 'std::ostringstream'\r\n  template<_Elem, _Traits> std::basic_ostream<_Elem, _Traits>& operator<<(std::basic_ostream<_Elem, _Traits>& _Ostr, char _Ch) (in namespace std)\r\n    couldn't match type 'std::basic_ostream<_Elem, _Traits>&' against 'std::ostringstream'\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>& _Ostr, char _Ch) (in namespace std)\r\n    couldn't match type 'std::basic_ostream<char, _Traits>&' against 'std::ostringstream'\r\n  template<_Elem, _Traits> std::basic_ostream<_Elem, _Traits>& operator<<(std::basic_ostream<_Elem, _Traits>& _Ostr, const _Elem* _Val) (in namespace std)\r\n    couldn't match type 'std::basic_ostream<_Elem, _Traits>&' against 'std::ostringstream'\r\n  template<_Elem, _Traits> std::basic_ostream<_Elem, _Traits>& operator<<(std::basic_ostream<_Elem, _Traits>& _Ostr, _Elem _Ch) (in namespace std)\r\n    couldn't match type 'std::basic_ostream<_Elem, _Traits>&' against 'std::ostringstream'\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>& _Ostr, const signed char* _Val) (in namespace std)\r\n    couldn't match type 'std::basic_ostream<char, _Traits>&' against 'std::ostringstream'\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>& _Ostr, signed char _Ch) (in namespace std)\r\n    couldn't match type 'std::basic_ostream<char, _Traits>&' against 'std::ostringstream'\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>& _Ostr, const unsigned char* _Val) (in namespace std)\r\n    couldn't match type 'std::basic_ostream<char, _Traits>&' against 'std::ostringstream'\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>& _Ostr, unsigned char _Ch) (in namespace std)\r\n    couldn't match type 'std::basic_ostream<char, _Traits>&' against 'std::ostringstream'\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>&, const char8_t*) = delete (in namespace std)\r\n    couldn't match type 'std::basic_ostream<char, _Traits>&' against 'std::ostringstream'\r\n  template<_Traits> std::basic_ostream<wchar_t, _Traits>& operator<<(std::basic_ostream<wchar_t, _Traits>&, const char8_t*) = delete (in namespace std)\r\n    couldn't match type 'std::basic_ostream<wchar_t, _Traits>&' against 'std::ostringstream'\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>&, char8_t) = delete (in namespace std)\r\n    couldn't match type 'std::basic_ostream<char, _Traits>&' against 'std::ostringstream'\r\n  template<_Traits> std::basic_ostream<wchar_t, _Traits>& operator<<(std::basic_ostream<wchar_t, _Traits>&, char8_t) = delete (in namespace std)\r\n    couldn't match type 'std::basic_ostream<wchar_t, _Traits>&' against 'std::ostringstream'\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>&, wchar_t) = delete (in namespace std)\r\n    couldn't match type 'std::basic_ostream<char, _Traits>&' against 'std::ostringstream'\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>&, const wchar_t*) = delete (in namespace std)\r\n    couldn't match type 'std::basic_ostream<char, _Traits>&' against 'std::ostringstream'\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>&, char16_t) = delete (in namespace std)\r\n    couldn't match type 'std::basic_ostream<char, _Traits>&' against 'std::ostringstream'\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>&, char32_t) = delete (in namespace std)\r\n    couldn't match type 'std::basic_ostream<char, _Traits>&' against 'std::ostringstream'\r\n  template<_Traits> std::basic_ostream<wchar_t, _Traits>& operator<<(std::basic_ostream<wchar_t, _Traits>&, char16_t) = delete (in namespace std)\r\n    couldn't match type 'std::basic_ostream<wchar_t, _Traits>&' against 'std::ostringstream'\r\n  template<_Traits> std::basic_ostream<wchar_t, _Traits>& operator<<(std::basic_ostream<wchar_t, _Traits>&, char32_t) = delete (in namespace std)\r\n    couldn't match type 'std::basic_ostream<wchar_t, _Traits>&' against 'std::ostringstream'\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>&, const char16_t*) = delete (in namespace std)\r\n    couldn't match type 'std::basic_ostream<char, _Traits>&' against 'std::ostringstream'\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>&, const char32_t*) = delete (in namespace std)\r\n    couldn't match type 'std::basic_ostream<char, _Traits>&' against 'std::ostringstream'\r\n  template<_Traits> std::basic_ostream<wchar_t, _Traits>& operator<<(std::basic_ostream<wchar_t, _Traits>&, const char16_t*) = delete (in namespace std)\r\n    couldn't match type 'std::basic_ostream<wchar_t, _Traits>&' against 'std::ostringstream'\r\n  template<_Traits> std::basic_ostream<wchar_t, _Traits>& operator<<(std::basic_ostream<wchar_t, _Traits>&, const char32_t*) = delete (in namespace std)\r\n    couldn't match type 'std::basic_ostream<wchar_t, _Traits>&' against 'std::ostringstream'\r\n  template<_Ostr, _Ty, std::enable_if_t<std::conjunction_v<std::is_convertible<_Ostr*, std::ios_base*>, std::_Can_stream_out<_Ostr, _Ty>>, int>> _Ostr&& operator<<(_Ostr&& _Os, const _Ty& _Val) (in namespace std)\r\n    substitution failed: requirement 'std::conjunction_v<std::is_convertible<std::ostringstream&*, std::ios_base*>, std::_Can_stream_out<std::ostringstream&, String>>' is not satisfied\r\n  template<_Elem, _Traits> std::basic_ostream<_Elem, _Traits>& operator<<(std::basic_ostream<_Elem, _Traits>& _Ostr, const std::error_code& _Errcode) (in namespace std)\r\n    couldn't match type 'std::basic_ostream<_Elem, _Traits>&' against 'std::ostringstream'\r\n  friend std::ostream& operator<<(std::ostream& s, const String& in) (in namespace doctest)\r\n    conversion of 1st argument 'oss' is ill-formed: non-const lvalue reference to type 'std::ostream' cannot bind to lvalue of type 'std::ostringstream'",
-                        "reason": "RSCPP-34285 Flaky red-code in `doctest` examples"
-                    },
-                    {
-                        "file": "..\\examples\\all_features\\asserts_used_outside_of_tests.cpp",
-                        "line": 40,
-                        "message": "Ambiguous operator call.\r\nArgument types: 'std::ostream', 'const int'.\r\nViable candidates:\r\n  template<_Elem, _Traits> std::basic_ostream<_Elem, _Traits>& operator<<(std::basic_ostream<_Elem, _Traits>& _Ostr, char _Ch) (in namespace std)\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>& _Ostr, char _Ch) (in namespace std)\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>& _Ostr, signed char _Ch) (in namespace std)\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>& _Ostr, unsigned char _Ch) (in namespace std)\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>&, char8_t) = delete (in namespace std)\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>&, wchar_t) = delete (in namespace std)\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>&, char16_t) = delete (in namespace std)\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>&, char32_t) = delete (in namespace std)"
-                    },
-                    {
-                        "file": "..\\examples\\all_features\\asserts_used_outside_of_tests.cpp",
-                        "line": 55,
-                        "message": "No viable 'operator<<' matches arguments of type 'std::ostream' (aka 'std::ostream') and '__resharper_unknown_type'.\r\nCandidates considered:\r\n  template<traits> std::basic_ostream<char, traits>& operator<<(std::basic_ostream<char, traits>&, const char*) (in namespace std)\r\n    conversion of 2nd argument 'std::endl' is ill-formed: cannot convert '__resharper_unknown_type' to parameter type 'const char*'\r\n  template<_IntType, std::enable_if_t<std::is_integral_v<_IntType>, int>> constexpr std::byte operator<<(const std::byte _Arg, const _IntType _Shift) noexcept (in namespace std)\r\n    cannot infer substitution for _IntType, <anonymous>\r\n  template<_Elem, _Traits> std::basic_ostream<_Elem, _Traits>& operator<<(std::basic_ostream<_Elem, _Traits>& _Ostr, const std::basic_string_view<_Elem, _Traits> _Str) (in namespace std)\r\n    conversion of 2nd argument 'std::endl' is ill-formed: cannot convert '__resharper_unknown_type' to parameter type 'std::string_view'\r\n  template<_Elem, _Traits, _Alloc> std::basic_ostream<_Elem, _Traits>& operator<<(std::basic_ostream<_Elem, _Traits>& _Ostr, const std::basic_string<_Elem, _Traits, _Alloc>& _Str) (in namespace std)\r\n    cannot infer substitution for _Alloc\r\n  template<_Elem, _Traits, _Ty> std::basic_ostream<_Elem, _Traits>& operator<<(std::basic_ostream<_Elem, _Traits>& _Out, const std::shared_ptr<_Ty>& _Px) (in namespace std)\r\n    cannot infer substitution for _Ty\r\n  template<_Elem, _Traits, _Yty, _Dx, std::enable_if_t<std::_Can_stream_unique_ptr<std::basic_ostream<_Elem, _Traits>&, const std::unique_ptr<_Yty, _Dx>&>::value, int>> std::basic_ostream<_Elem, _Traits>& operator<<(std::basic_ostream<_Elem, _Traits>& _Out, const std::unique_ptr<_Yty, _Dx>& _Px) (in namespace std)\r\n    cannot infer substitution for _Yty, _Dx, <anonymous>\r\n  template<_Elem, _Traits> std::basic_ostream<_Elem, _Traits>& operator<<(std::basic_ostream<_Elem, _Traits>& _Ostr, const char* _Val) (in namespace std)\r\n    conversion of 2nd argument 'std::endl' is ill-formed: cannot convert '__resharper_unknown_type' to parameter type 'const char*'\r\n  template<_Elem, _Traits> std::basic_ostream<_Elem, _Traits>& operator<<(std::basic_ostream<_Elem, _Traits>& _Ostr, char _Ch) (in namespace std)\r\n    conversion of 2nd argument 'std::endl' is ill-formed: cannot convert '__resharper_unknown_type' to parameter type 'char'\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>& _Ostr, char _Ch) (in namespace std)\r\n    conversion of 2nd argument 'std::endl' is ill-formed: cannot convert '__resharper_unknown_type' to parameter type 'char'\r\n  template<_Elem, _Traits> std::basic_ostream<_Elem, _Traits>& operator<<(std::basic_ostream<_Elem, _Traits>& _Ostr, const _Elem* _Val) (in namespace std)\r\n    conversion of 2nd argument 'std::endl' is ill-formed: cannot convert '__resharper_unknown_type' to parameter type 'const char*'\r\n  template<_Elem, _Traits> std::basic_ostream<_Elem, _Traits>& operator<<(std::basic_ostream<_Elem, _Traits>& _Ostr, _Elem _Ch) (in namespace std)\r\n    conversion of 2nd argument 'std::endl' is ill-formed: cannot convert '__resharper_unknown_type' to parameter type 'char'\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>& _Ostr, const signed char* _Val) (in namespace std)\r\n    conversion of 2nd argument 'std::endl' is ill-formed: cannot convert '__resharper_unknown_type' to parameter type 'const signed char*'\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>& _Ostr, signed char _Ch) (in namespace std)\r\n    conversion of 2nd argument 'std::endl' is ill-formed: cannot convert '__resharper_unknown_type' to parameter type 'signed char'\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>& _Ostr, const unsigned char* _Val) (in namespace std)\r\n    conversion of 2nd argument 'std::endl' is ill-formed: cannot convert '__resharper_unknown_type' to parameter type 'const unsigned char*'\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>& _Ostr, unsigned char _Ch) (in namespace std)\r\n    conversion of 2nd argument 'std::endl' is ill-formed: cannot convert '__resharper_unknown_type' to parameter type 'unsigned char'\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>&, const char8_t*) = delete (in namespace std)\r\n    conversion of 2nd argument 'std::endl' is ill-formed: cannot convert '__resharper_unknown_type' to parameter type 'const char8_t*'\r\n  template<_Traits> std::basic_ostream<wchar_t, _Traits>& operator<<(std::basic_ostream<wchar_t, _Traits>&, const char8_t*) = delete (in namespace std)\r\n    couldn't match type 'std::basic_ostream<wchar_t, _Traits>&' against 'std::ostream'\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>&, char8_t) = delete (in namespace std)\r\n    conversion of 2nd argument 'std::endl' is ill-formed: cannot convert '__resharper_unknown_type' to parameter type 'char8_t'\r\n  template<_Traits> std::basic_ostream<wchar_t, _Traits>& operator<<(std::basic_ostream<wchar_t, _Traits>&, char8_t) = delete (in namespace std)\r\n    couldn't match type 'std::basic_ostream<wchar_t, _Traits>&' against 'std::ostream'\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>&, wchar_t) = delete (in namespace std)\r\n    conversion of 2nd argument 'std::endl' is ill-formed: cannot convert '__resharper_unknown_type' to parameter type 'wchar_t'\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>&, const wchar_t*) = delete (in namespace std)\r\n    conversion of 2nd argument 'std::endl' is ill-formed: cannot convert '__resharper_unknown_type' to parameter type 'const wchar_t*'\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>&, char16_t) = delete (in namespace std)\r\n    conversion of 2nd argument 'std::endl' is ill-formed: cannot convert '__resharper_unknown_type' to parameter type 'char16_t'\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>&, char32_t) = delete (in namespace std)\r\n    conversion of 2nd argument 'std::endl' is ill-formed: cannot convert '__resharper_unknown_type' to parameter type 'char32_t'\r\n  template<_Traits> std::basic_ostream<wchar_t, _Traits>& operator<<(std::basic_ostream<wchar_t, _Traits>&, char16_t) = delete (in namespace std)\r\n    couldn't match type 'std::basic_ostream<wchar_t, _Traits>&' against 'std::ostream'\r\n  template<_Traits> std::basic_ostream<wchar_t, _Traits>& operator<<(std::basic_ostream<wchar_t, _Traits>&, char32_t) = delete (in namespace std)\r\n    couldn't match type 'std::basic_ostream<wchar_t, _Traits>&' against 'std::ostream'\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>&, const char16_t*) = delete (in namespace std)\r\n    conversion of 2nd argument 'std::endl' is ill-formed: cannot convert '__resharper_unknown_type' to parameter type 'const char16_t*'\r\n  template<_Traits> std::basic_ostream<char, _Traits>& operator<<(std::basic_ostream<char, _Traits>&, const char32_t*) = delete (in namespace std)\r\n    conversion of 2nd argument 'std::endl' is ill-formed: cannot convert '__resharper_unknown_type' to parameter type 'const char32_t*'\r\n  template<_Traits> std::basic_ostream<wchar_t, _Traits>& operator<<(std::basic_ostream<wchar_t, _Traits>&, const char16_t*) = delete (in namespace std)\r\n    couldn't match type 'std::basic_ostream<wchar_t, _Traits>&' against 'std::ostream'\r\n  template<_Traits> std::basic_ostream<wchar_t, _Traits>& operator<<(std::basic_ostream<wchar_t, _Traits>&, const char32_t*) = delete (in namespace std)\r\n    couldn't match type 'std::basic_ostream<wchar_t, _Traits>&' against 'std::ostream'\r\n  template<_Ostr, _Ty, std::enable_if_t<std::conjunction_v<std::is_convertible<_Ostr*, std::ios_base*>, std::_Can_stream_out<_Ostr, _Ty>>, int>> _Ostr&& operator<<(_Ostr&& _Os, const _Ty& _Val) (in namespace std)\r\n    substitution failed: requirement 'std::conjunction_v<std::is_convertible<std::ostream&*, std::ios_base*>, std::_Can_stream_out<std::ostream&, _Ty>>' is not satisfied\r\n  template<_Elem, _Traits> std::basic_ostream<_Elem, _Traits>& operator<<(std::basic_ostream<_Elem, _Traits>& _Ostr, const std::error_code& _Errcode) (in namespace std)\r\n    conversion of 2nd argument 'std::endl' is ill-formed: cannot convert '__resharper_unknown_type' to parameter type 'std::error_code'"
-                    }
-                ]
+                "inspected files count": 105
             }
         }
     },
@@ -1033,12 +911,6 @@
         "fixup sources": "proj-config/scripts/fix-cemu.py",
         "stable": {
             "inspected files count": 1013,
-            "known file errors": [
-                {
-                    "file": "..\\src\\Cafe\\HW\\Latte\\LegacyShaderDecompiler\\LatteDecompilerEmitGLSLHeader.hpp",
-                    "reason": "RSCPP-34314 InspectCode is trying to analyze headers in incorrect context"
-                }
-            ],
             "known errors": [
                 {
                     "file": "..\\src\\Cafe\\HW\\Espresso\\PPCCallback.h",
@@ -1057,12 +929,6 @@
         "latest": {
             "main": {
                 "inspected files count": 1013,
-                "known file errors": [
-                    {
-                        "file": "..\\src\\Cafe\\HW\\Latte\\LegacyShaderDecompiler\\LatteDecompilerEmitGLSLHeader.hpp",
-                        "reason": "RSCPP-34314 InspectCode is trying to analyze headers in incorrect context"
-                    }
-                ],
                 "known errors": [
                     {
                         "file": "..\\src\\input\\api\\DirectInput\\DirectInputControllerProvider.cpp",
@@ -1134,30 +1000,6 @@
                     "reason": "C-style `void f()` with unknown number of parameters"
                 },
                 {
-                    "file": "..\\td\\telegram\\MessagesManager.h",
-                    "line": 1510,
-                    "message": "Cannot resolve symbol 'MAX_ORDINARY_DIALOG_ORDER'",
-                    "reason": "RSCPP-33487 Incorrect \"Cannot resolve symbol\""
-                },
-                {
-                    "file": "..\\td\\telegram\\MessagesManager.h",
-                    "line": 1515,
-                    "message": "Cannot resolve symbol 'MAX_ORDINARY_DIALOG_ORDER'",
-                    "reason": "RSCPP-33487 Incorrect \"Cannot resolve symbol\""
-                },
-                {
-                    "file": "..\\td\\telegram\\MessagesManager.h",
-                    "line": 1516,
-                    "message": "Cannot resolve symbol 'MAX_ORDINARY_DIALOG_ORDER'",
-                    "reason": "RSCPP-33487 Incorrect \"Cannot resolve symbol\""
-                },
-                {
-                    "file": "..\\td\\telegram\\MessagesManager.h",
-                    "line": 1517,
-                    "message": "Cannot resolve symbol 'MAX_ORDINARY_DIALOG_ORDER'",
-                    "reason": "RSCPP-33487 Incorrect \"Cannot resolve symbol\""
-                },
-                {
                     "file": "..\\tdutils\\td\\utils\\AsyncFileLog.cpp",
                     "line": 43,
                     "message": "Cannot convert 'this' argument from type 'const std::remove_reference_t<FileFd &>' to type 'FileFd': function is missing 'const' qualifier",
@@ -1192,30 +1034,6 @@
                         "line": 401,
                         "message": "Function has 0 parameters, but is called with 1 argument",
                         "reason": "C-style `void f()` with unknown number of parameters"
-                    },
-                    {
-                        "file": "..\\td\\telegram\\MessagesManager.h",
-                        "line": 1514,
-                        "message": "Cannot resolve symbol 'MAX_ORDINARY_DIALOG_ORDER'",
-                        "reason": "RSCPP-33487 Incorrect \"Cannot resolve symbol\""
-                    },
-                    {
-                        "file": "..\\td\\telegram\\MessagesManager.h",
-                        "line": 1519,
-                        "message": "Cannot resolve symbol 'MAX_ORDINARY_DIALOG_ORDER'",
-                        "reason": "RSCPP-33487 Incorrect \"Cannot resolve symbol\""
-                    },
-                    {
-                        "file": "..\\td\\telegram\\MessagesManager.h",
-                        "line": 1520,
-                        "message": "Cannot resolve symbol 'MAX_ORDINARY_DIALOG_ORDER'",
-                        "reason": "RSCPP-33487 Incorrect \"Cannot resolve symbol\""
-                    },
-                    {
-                        "file": "..\\td\\telegram\\MessagesManager.h",
-                        "line": 1521,
-                        "message": "Cannot resolve symbol 'MAX_ORDINARY_DIALOG_ORDER'",
-                        "reason": "RSCPP-33487 Incorrect \"Cannot resolve symbol\""
                     },
                     {
                         "file": "..\\tdutils\\td\\utils\\AsyncFileLog.cpp",
@@ -1360,27 +1178,11 @@
                     "reason": "RSCPP-31561 constexpr aggregate array initialization"
                 },
                 {
-                    "file": "Source\\CSGO\\ClientMode.h",
-                    "reason": "RSCPP-34314 InspectCode is trying to analyze headers in incorrect context"
-                },
-                {
                     "file": "Dependencies\\imgui\\imgui_impl_dx9.cpp",
                     "reason": "Generated file"
                 }
             ],
             "known errors": [
-                {
-                    "file": "Source\\InventoryChanger\\InventoryConfig.cpp",
-                    "line": 50,
-                    "message": "No viable 'operator=' matches arguments of type 'nlohmann::basic_json<std::map, std::vector, std::string, bool, long long, unsigned long long, float>::value_type' (aka 'nlohmann::basic_json<std::map, std::vector, std::string, bool, long long, unsigned long long, float>') and 'const csgo::TournamentStage'.\r\nCandidates considered:\r\n  nlohmann::basic_json<std::map, std::vector, std::string, bool, long long, unsigned long long, float>& operator=(nlohmann::basic_json<std::map, std::vector, std::string, bool, long long, unsigned long long, float> other) noexcept(\u2026) (in class basic_json<std::map, std::vector, std::string, bool, long long, unsigned long long, float, std::allocator, nlohmann::adl_serializer, std::vector<unsigned char>>)\r\n    conversion of 1st argument 'skin.tournamentStage' is ill-formed: cannot convert lvalue of type 'const csgo::TournamentStage' to parameter type 'nlohmann::basic_json<std::map, std::vector, std::string, bool, long long, unsigned long long, float>'",
-                    "reason": "RSCPP-34341 Incorrect completeness checking for forward declared enum in substitutions"
-                },
-                {
-                    "file": "Source\\InventoryChanger\\InventoryConfig.cpp",
-                    "line": 335,
-                    "message": "No viable 'operator=' matches arguments of type 'nlohmann::basic_json<std::map, std::vector, std::string, bool, long long, unsigned long long, float>::value_type' (aka 'nlohmann::basic_json<std::map, std::vector, std::string, bool, long long, unsigned long long, float>') and 'const csgo::TournamentStage'.\r\nCandidates considered:\r\n  nlohmann::basic_json<std::map, std::vector, std::string, bool, long long, unsigned long long, float>& operator=(nlohmann::basic_json<std::map, std::vector, std::string, bool, long long, unsigned long long, float> other) noexcept(\u2026) (in class basic_json<std::map, std::vector, std::string, bool, long long, unsigned long long, float, std::allocator, nlohmann::adl_serializer, std::vector<unsigned char>>)\r\n    conversion of 1st argument 'souvenirPackage->tournamentStage' is ill-formed: cannot convert lvalue of type 'const csgo::TournamentStage' to parameter type 'nlohmann::basic_json<std::map, std::vector, std::string, bool, long long, unsigned long long, float>'",
-                    "reason": "RSCPP-34341 Incorrect completeness checking for forward declared enum in substitutions"
-                },
                 {
                     "file": "Source\\RetSpoof\\RetSpoofGadgets.cpp",
                     "line": 7,
@@ -1408,27 +1210,11 @@
                         "reason": "RSCPP-31561 constexpr aggregate array initialization"
                     },
                     {
-                        "file": "Source\\CSGO\\ClientMode.h",
-                        "reason": "RSCPP-34314 InspectCode is trying to analyze headers in incorrect context"
-                    },
-                    {
                         "file": "Dependencies\\imgui\\imgui_impl_dx9.cpp",
-                        "reason": "Generated file"
+                        "reason": "Missing generated file"
                     }
                 ],
                 "known errors": [
-                    {
-                        "file": "Source\\InventoryChanger\\InventoryConfig.cpp",
-                        "line": 50,
-                        "message": "No viable 'operator=' matches arguments of type 'nlohmann::basic_json<std::map, std::vector, std::string, bool, long long, unsigned long long, float>::value_type' (aka 'nlohmann::basic_json<std::map, std::vector, std::string, bool, long long, unsigned long long, float>') and 'const csgo::TournamentStage'.\r\nCandidates considered:\r\n  nlohmann::basic_json<std::map, std::vector, std::string, bool, long long, unsigned long long, float>& operator=(nlohmann::basic_json<std::map, std::vector, std::string, bool, long long, unsigned long long, float> other) noexcept(\u2026) (in class basic_json<std::map, std::vector, std::string, bool, long long, unsigned long long, float, std::allocator, nlohmann::adl_serializer, std::vector<unsigned char>>)\r\n    conversion of 1st argument 'skin.tournamentStage' is ill-formed: cannot convert lvalue of type 'const csgo::TournamentStage' to parameter type 'nlohmann::basic_json<std::map, std::vector, std::string, bool, long long, unsigned long long, float>'",
-                        "reason": "RSCPP-34341 Incorrect completeness checking for forward declared enum in substitutions"
-                    },
-                    {
-                        "file": "Source\\InventoryChanger\\InventoryConfig.cpp",
-                        "line": 335,
-                        "message": "No viable 'operator=' matches arguments of type 'nlohmann::basic_json<std::map, std::vector, std::string, bool, long long, unsigned long long, float>::value_type' (aka 'nlohmann::basic_json<std::map, std::vector, std::string, bool, long long, unsigned long long, float>') and 'const csgo::TournamentStage'.\r\nCandidates considered:\r\n  nlohmann::basic_json<std::map, std::vector, std::string, bool, long long, unsigned long long, float>& operator=(nlohmann::basic_json<std::map, std::vector, std::string, bool, long long, unsigned long long, float> other) noexcept(\u2026) (in class basic_json<std::map, std::vector, std::string, bool, long long, unsigned long long, float, std::allocator, nlohmann::adl_serializer, std::vector<unsigned char>>)\r\n    conversion of 1st argument 'souvenirPackage->tournamentStage' is ill-formed: cannot convert lvalue of type 'const csgo::TournamentStage' to parameter type 'nlohmann::basic_json<std::map, std::vector, std::string, bool, long long, unsigned long long, float>'",
-                        "reason": "RSCPP-34341 Incorrect completeness checking for forward declared enum in substitutions"
-                    },
                     {
                         "file": "Source\\RetSpoof\\RetSpoofGadgets.cpp",
                         "line": 7,
