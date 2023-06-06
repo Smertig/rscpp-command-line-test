@@ -1693,6 +1693,20 @@
             "commit_ref": "4f82a7739648af3dcd9b8c8067f0c4c97c063727",
             "commit_message": "Update lint.md to specify language on fenced code blocks which have none (#946)\n\nSpecified language on the last two fenced code blocks in the page as\r\nthey were inconsistent with the others on the same page.",
             "commit_timestamp": 1686067056.0
+        },
+        {
+            "tool_version": "232.0.20230531.134455-eap03",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1686081832.599634,
+            "elapsed_time": 338.84315609931946,
+            "x64": false,
+            "actual_files_count": 379,
+            "expected_files_count": 379,
+            "repo_url": "https://github.com/Roblox/luau",
+            "commit_ref": "e78897229a24328aba343694d1004b1cc5c607dc",
+            "commit_message": "Fix website demo's string highlighting behaviour (#942)\n\nFixes #935:\r\n* String literals that include `\\z` escape sequence followed by newline\r\ncharacters are now correctly highlighted.\r\n* Unescaped backslash (`\\`) character at the end of the line no longer\r\nacts like the `\\z` escape sequence inside string literals when\r\nhighlighting.",
+            "commit_timestamp": 1686075751.0
         }
     ]
 }

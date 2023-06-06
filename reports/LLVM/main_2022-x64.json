@@ -1515,6 +1515,22 @@
             "commit_ref": "540294845babbb2be909ea456323d7bc8a1763df",
             "commit_message": "[Clang] Reject increment of bool value in unevaluated contexts after C++17\n\nClang now incorrectly allowed increment of bool in unevaluated contexts, we set `diagnostic::ext_increment_bool` to be SFINAEFailure to fix this issue.\n\n```\ntemplate<class T> auto f(T t) -> decltype(++t);\nauto f(...) -> void;\nvoid g() {\n  f(true);  // Clang wrongly makes this a hard error\n}\n```\n\n```\ntemplate <class T>\nconcept can_increment = requires(T t) { ++t; };\n\ntemplate <class T> void f() {\n  static_assert(requires(T t) { ++t; }); // Incorrectly allowed\n}\n\nint main() {\n  f<bool>();\n\n  static_assert(!can_increment<bool>); // Incorrectly fails\n\n  bool b = false;\n  ++b; // Correctly rejected\n}\n```\nFix issue: https://github.com/llvm/llvm-project/issues/47517\n\nReviewed By: erichkeane\n\nDifferential Revision: https://reviews.llvm.org/D152259\n",
             "commit_timestamp": 1686067117.0
+        },
+        {
+            "tool_version": "232.0.20230531.134455-eap03",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1686082603.071847,
+            "elapsed_time": 5444.456151008606,
+            "x64": true,
+            "actual_files_count": 1666,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "7cd1d4231a7c83e719b83c6abbe2d479baa03808",
+            "commit_message": "[lldb] Remove __FUNCTION__ from log messages in lldbHost (NFC)\n\nLLDB's logging infrastructure supports prepending log messages with the\nname of the file and function that generates the log (see help log\nenable). Therefore it's unnecessary to include the current __FUNCTION__\nin the log message itself. This patch removes __FUNCTION__ from log\nmessages in the Host library.\n\nDifferential revision: https://reviews.llvm.org/D151762\n",
+            "commit_timestamp": 1686081763.0
         }
     ]
 }
