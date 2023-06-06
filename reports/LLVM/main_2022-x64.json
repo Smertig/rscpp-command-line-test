@@ -1467,6 +1467,22 @@
             "commit_ref": "116670d192c619e2233e092e210c920d004dbe33",
             "commit_message": "[InstCombine] add overflow checking on Add ~X + C --> (C-1) - X\nDifferential Revision: https://reviews.llvm.org/D152088\n",
             "commit_timestamp": 1686021885.0
+        },
+        {
+            "tool_version": "232.0.20230517.90859-eap02",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1686039343.967205,
+            "elapsed_time": 5021.1848974227905,
+            "x64": true,
+            "actual_files_count": 1666,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "10e7899818803029d2f91a20c67f5a1d75781b8a",
+            "commit_message": "[FPEnv] Get rid of extra moves in fpenv calls\n\nIf intrinsic `get_fpenv` or `set_fpenv` is lowered to the form where FP\nenvironment is represented as a region in memory, extra moves can\nappear. For example the code:\n\n  define void @func_01(ptr %ptr) {\n    %env = call i256 @llvm.get.fpenv.i256()\n    store i256 %env, ptr %ptr\n    ret void\n  }\n\nproduces DAG:\n\n  ch = get_fpenv_mem ch, memory_region\n  val: i256, ch = load ch, memory_region\n  ch = store ch, ptr, val\n\nIn this case the extra moves can be avoided if `get_fpenv_mem` got\npointer to the memory where the FP environment should be finally placed.\n\nThis change implement such optimization for this use case.\n\nDifferential Revision: https://reviews.llvm.org/D150437\n",
+            "commit_timestamp": 1686038092.0
         }
     ]
 }

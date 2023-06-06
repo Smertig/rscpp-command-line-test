@@ -2411,6 +2411,20 @@
             "commit_ref": "87b3bc7c55620599a40e3ee24268a7a1267d0455",
             "commit_message": "CMake: Fix abseil_dll target name when using find_package(absl) (#12978)\n\nThis additional if  is necessary as of abseil 20230125.3 when abseil is consumed via add_subdirectory,\nthe abseil_dll target  is named abseil_dll, while if abseil is consumed via find_package, the target is called `absl::abseil_dll` .\n\nOnce https://github.com/abseil/abseil-cpp/pull/1466 is merged and released in the minimum version of  abseil required by protobuf, it is possible to always link `absl::abseil_dll` and `absl::abseil_test_dll` and remove the if.\n\nYou may wonder how linking worked at all before when `protobuf_ABSL_PROVIDER STREQUAL \"package\"`, as `abseil_dll` was not an imported target defined by `find_package(absl)`. The reason behind this is that if a name that is not an imported target is passed to `target_link_libraries`, it is just regarded as a C++ library name. So, in the end the `abseil_dll` library was correctly linked, simply all the transitive usage requirements defined by the `absl::abseil_dll` target were not propagated, that could lead to compilation errors if abseil was compiled with the `ABSL_PROPAGATE_CXX_STD` CMake option enabled.\n\nCloses #12978\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/12978 from traversaro:patch-1 39dd074281161fa0c4be69035d33b41a50e048c2\nPiperOrigin-RevId: 537990391\n",
             "commit_timestamp": 1686002935.0
+        },
+        {
+            "tool_version": "232.0.20230517.90859-eap02",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1686038647.505619,
+            "elapsed_time": 349.24776005744934,
+            "x64": false,
+            "actual_files_count": 819,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "87b3bc7c55620599a40e3ee24268a7a1267d0455",
+            "commit_message": "CMake: Fix abseil_dll target name when using find_package(absl) (#12978)\n\nThis additional if  is necessary as of abseil 20230125.3 when abseil is consumed via add_subdirectory,\nthe abseil_dll target  is named abseil_dll, while if abseil is consumed via find_package, the target is called `absl::abseil_dll` .\n\nOnce https://github.com/abseil/abseil-cpp/pull/1466 is merged and released in the minimum version of  abseil required by protobuf, it is possible to always link `absl::abseil_dll` and `absl::abseil_test_dll` and remove the if.\n\nYou may wonder how linking worked at all before when `protobuf_ABSL_PROVIDER STREQUAL \"package\"`, as `abseil_dll` was not an imported target defined by `find_package(absl)`. The reason behind this is that if a name that is not an imported target is passed to `target_link_libraries`, it is just regarded as a C++ library name. So, in the end the `abseil_dll` library was correctly linked, simply all the transitive usage requirements defined by the `absl::abseil_dll` target were not propagated, that could lead to compilation errors if abseil was compiled with the `ABSL_PROPAGATE_CXX_STD` CMake option enabled.\n\nCloses #12978\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/12978 from traversaro:patch-1 39dd074281161fa0c4be69035d33b41a50e048c2\nPiperOrigin-RevId: 537990391\n",
+            "commit_timestamp": 1686002935.0
         }
     ]
 }
