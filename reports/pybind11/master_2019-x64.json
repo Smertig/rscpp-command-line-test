@@ -2901,6 +2901,20 @@
             "commit_ref": "d0232b119f5f0cf2bf6cecacaf099c301c811ca8",
             "commit_message": "Use annotated for array (#4679)\n\n* use Annotated for std::array docstring\r\n\r\n* add tests\r\n\r\n* fix test\r\n\r\n* style: pre-commit fixes\r\n\r\n* fix valarray annotation\r\n\r\n* style: pre-commit fixes\r\n\r\n* refix test\r\n\r\n* add FixedSize\r\n\r\n* style: pre-commit fixes\r\n\r\n* Update test_stl.py\r\n\r\n* style: pre-commit fixes\r\n\r\n---------\r\n\r\nCo-authored-by: Taiju Yamada <taiju.yamada@mujin.co.jp>\r\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>",
             "commit_timestamp": 1684989576.0
+        },
+        {
+            "tool_version": "232.0.20230531.134455-eap03",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1686168257.110846,
+            "elapsed_time": 172.0591607093811,
+            "x64": false,
+            "actual_files_count": 208,
+            "expected_files_count": 197,
+            "repo_url": "https://github.com/pybind/pybind11",
+            "commit_ref": "3617f3554aa5096e2148281c14be99afe9c138e6",
+            "commit_message": "chore(deps): update pre-commit hooks (#4689)\n\n* chore(deps): update pre-commit hooks\r\n\r\nupdates:\r\n- [github.com/charliermarsh/ruff-pre-commit: v0.0.263 \u2192 v0.0.270](https://github.com/charliermarsh/ruff-pre-commit/compare/v0.0.263...v0.0.270)\r\n- [github.com/pre-commit/mirrors-mypy: v1.2.0 \u2192 v1.3.0](https://github.com/pre-commit/mirrors-mypy/compare/v1.2.0...v1.3.0)\r\n- [github.com/shellcheck-py/shellcheck-py: v0.9.0.2 \u2192 v0.9.0.5](https://github.com/shellcheck-py/shellcheck-py/compare/v0.9.0.2...v0.9.0.5)\r\n- [github.com/pre-commit/mirrors-clang-format: v16.0.2 \u2192 v16.0.4](https://github.com/pre-commit/mirrors-clang-format/compare/v16.0.2...v16.0.4)\r\n\r\n* Resolve new ruff error:\r\n\r\n```\r\ntests/test_pytypes.py:478:20: PLW0130 Duplicate value `3` in set\r\n```\r\n\r\nThe reduction from `{3, 3}` to `{3}` never happened in pybind11 code, therefore this change is essentially a no-op for the purpose of unit-testing pybind11.\r\n\r\n---------\r\n\r\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>\r\nCo-authored-by: Ralf W. Grosse-Kunstleve <rwgk@google.com>",
+            "commit_timestamp": 1686167858.0
         }
     ]
 }
