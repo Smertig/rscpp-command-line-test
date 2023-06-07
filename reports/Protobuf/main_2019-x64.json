@@ -2495,6 +2495,20 @@
             "commit_ref": "4329fde9cf3fab7d1b3a9abe0fbeee1ad8a8b111",
             "commit_message": "Use the same ABI for static and shared libraries on non-Windows platforms (#12983)\n\nHi,\n\nIt seems that until last year, the logic behind `PROTOBUF_USE_DLLS` was for Windows (MSCV) only. It was changed to all platforms here in https://github.com/protocolbuffers/protobuf/commit/5a0887fc6529596eff5c0f72febc602a9d494cc2\n\nLast month, the generated pkg config files were updated to reflect the protobuf build-time value of `PROTOBUF_USE_DLLS` as it was indeed noted that it changes the ABI. This was done in https://github.com/protocolbuffers/protobuf/pull/12700 In the commit message it is mentionned that most likely we shall rather have a stable ABI.\n\nFinally in https://github.com/protocolbuffers/protobuf/issues/12746 which at some point mentions https://issuetracker.google.com/issues/283987730#comment7 where a Google employee hits the linker issue:\n```\nundefined reference to `google::protobuf::internal::ThreadSafeArena::thread_cache_'\n```\nwhich denotes a mix of some .o or libs built `PROTOBUF_USE_DLLS` defined and some others build with `PROTOBUF_USE_DLLS` undefined, resulting in ABI incompatibilities.\n\nI also hit this issue while trying to include protobuf in a corporate environment using it's own proprietary build system in which it is expected that .a and .so use a compatible ABI.\n\nFrom my own understanding, ideally we should always use `thread_local` variables, but experience has shown that:\n - old iOS (iOS < 9) didn't seem to accept `thread_local`, leading to the `GOOGLE_PROTOBUF_NO_THREADLOCAL` macro later renamed `PROTOBUF_NO_THREADLOCAL` which allowed to disable this, but it is not set anywhere in the protobuf code base. Also I doubt you still want to support such old iOS now, so maybe you should consider removing all `PROTOBUF_NO_THREADLOCAL` related code paths (this pull request doesn't do this).\n  - MSVC's DLL interface doesn't seem to accept exporting thread local variables (at least from what I understood, I know absolutely nothing about the Windows ecosystem), yet we can \"hide\" a thread local variable in a static function using a thread local variable. However in that case the access to TLS variable is not inlined, leading to worse performances, this hack shall be done only for Windows (actually when using MSVC) *AND* we build a shared library.\n  - In all other cases, a classical `thread_local` shall be used, no matter if we build a static or a shared library. In particular on Linux which I guess is the target Google cares the more about for its own production. This pull request achieves this.\n\nAm I right in my conclusion ?\n\nCloses #12983\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/12983 from Romain-Geissler-1A:stable-abi-use-dll-non-windows dc23ff50f67cf0c8e45900a78700d1fc3e8bec39\nPiperOrigin-RevId: 538230923\n",
             "commit_timestamp": 1686074126.0
+        },
+        {
+            "tool_version": "232.0.20230531.134455-eap03",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1686096342.723552,
+            "elapsed_time": 345.6739110946655,
+            "x64": false,
+            "actual_files_count": 815,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "947d4c37cfa923be629b8693b610403092edfc49",
+            "commit_message": "Auto-generate files after cl/538323872\n",
+            "commit_timestamp": 1686095418.0
         }
     ]
 }
