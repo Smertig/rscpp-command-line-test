@@ -4,8 +4,12 @@ import os
 
 
 def is_deprecated(path: str) -> bool:
-    if os.path.basename(path) in ('tagged_tuple.hpp', "any.hpp"):
+    base_name = os.path.basename(path)
+    if base_name in ('tagged_tuple.hpp', 'tagged_pair.hpp'):
         return True
+
+    if base_name in ('iterator_range.hpp',):
+        return False
 
     with open(path) as f:
         text = f.read()
