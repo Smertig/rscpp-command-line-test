@@ -1563,6 +1563,22 @@
             "commit_ref": "c6a69446e152975c66594061ee542ca8e4e98b6f",
             "commit_message": "[M68k,MSP430,VE,Xtensa] Migrate to new encodeInstruction that uses SmallVectorImpl<char>. NFC\n",
             "commit_timestamp": 1686110572.0
+        },
+        {
+            "tool_version": "232.0.20230531.134455-eap03",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1686125906.788304,
+            "elapsed_time": 5676.438613176346,
+            "x64": true,
+            "actual_files_count": 1666,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "d19a3834dce5f9e8c84835ea14e8b434e8aa5fa7",
+            "commit_message": "[NFC][RFC][TableGen] Split GlobalISelEmitter.cpp\n\nThis patch splits the GlobalISelEmitter.cpp file, which imports DAG ISel patterns for GISel, into separate \"GISelMatchTable.h/cpp\" files.\n\nThe main motive is readability & maintainability. GlobalISelEmitter.cpp was about 6400 lines of mixed code, some bits implementing the match table codegen, some others dedicated to importing DAG patterns.\n\nNow it's down to  2700 + a 2150 header + 2000 impl.\nIt's a tiny bit more lines overall but that's to be expected - moving\ninline definitions to out-of-line, adding comments in the .cpp, etc. all of that takes additional space, but I think the tradeoff is worth it.\n\nI did as little unrelated code changes as possible, I would say the biggest change is the introduction of the `gi` namespace used to prevent name conflicts/ODR violations with type common names such as `Matcher`.\nIt was previously not an issue because all of the code was in an anonymous namespace.\n\nThis moves all of the \"match table\" code out of the file, so predicates,\nrules, and actions are all separated now. I believe this helps separating concerns, now `GlobalISelEmitter.cpp` is more focused on importing DAG patterns into GI, instead of also containing the whole match table internals as well.\n\nNote: the new files have a \"GISel\" prefix to make them distinct from the other \"GI\" files in the same folder, which are for the combiner.\n\nReviewed By: aemerson\n\nDifferential Revision: https://reviews.llvm.org/D151432\n",
+            "commit_timestamp": 1686123297.0
         }
     ]
 }
