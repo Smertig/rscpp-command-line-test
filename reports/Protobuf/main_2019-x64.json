@@ -2565,6 +2565,20 @@
             "commit_ref": "41c022b1c5b1363c1d8c2d72819a31990cb043c0",
             "commit_message": "Don't use macros to specify 64-bit literals in WireFormatTest.\n\nThe previous way of defining them is not compatible with unsigned integer overflow sanitizer, which complains about the conversion from uint64_t to int64_t in the macro LL().\n\nPiperOrigin-RevId: 538418425\n",
             "commit_timestamp": 1686127424.0
+        },
+        {
+            "tool_version": "232.0.20230531.134455-eap03",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1686153867.833481,
+            "elapsed_time": 335.5770676136017,
+            "x64": false,
+            "actual_files_count": 815,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "87a601ebcd7058b27ed224443bc577e170149ba4",
+            "commit_message": "    Internal change\n\nPiperOrigin-RevId: 538495469\n",
+            "commit_timestamp": 1686151795.0
         }
     ]
 }
