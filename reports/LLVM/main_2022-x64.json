@@ -1627,6 +1627,22 @@
             "commit_ref": "5aea839ab3edeb58bb0eea833ad9427d0ae7ef67",
             "commit_message": "[AMDGPU] Switch to backwards scavenging in eliminateFrameIndex\n\nFrame index elimination runs backwards so we must use backwards\nscavenging. Otherwise, when a scavenged register is spilled, the\nscavenger will remember that the register is in use until the restore\npoint, but it will never reach that restore point. The result is that in\nsome cases it will keep scavenging different registers instead of\nreusing the same one.\n\nDifferential Revision: https://reviews.llvm.org/D152394\n",
             "commit_timestamp": 1686167945.0
+        },
+        {
+            "tool_version": "232.0.20230531.134455-eap03",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1686183462.369621,
+            "elapsed_time": 5397.227828025818,
+            "x64": true,
+            "actual_files_count": 1666,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "b7f5f48973898d997e18b06974aec88acddc4ba7",
+            "commit_message": "[RISCV] Use Selection::getElementCount to simplify code. NFC\n",
+            "commit_timestamp": 1686182521.0
         }
     ]
 }
