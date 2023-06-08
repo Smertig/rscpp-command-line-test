@@ -1707,6 +1707,22 @@
             "commit_ref": "cd18efb61d759405956dbd30e4b5f2720d8e1783",
             "commit_message": "[Driver] Make -G TargetSpecific\n\nso that we report `unsupported option '-G' for target ...` on\nunsupported targets (most targets).\nThis error is tested by one target in aix-err-options.c.\n\nFollow-up to D89897 and D90063.\n",
             "commit_timestamp": 1686240132.0
+        },
+        {
+            "tool_version": "232.0.20230531.134455-eap03",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1686255219.27266,
+            "elapsed_time": 4047.9484889507294,
+            "x64": true,
+            "actual_files_count": 1666,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "7a52f79126a59717012d8039ef875f68e3c637fd",
+            "commit_message": "[mlir][transform] Add support for expressing scalable vector sizes\n\nThis patch enables specifying scalable vector sizes when using the\nTransform dialect to drive vectorisation, e.g.:\n```\ntransform.structured.masked_vectorize %0 vector_sizes [8, 16, [4]]\n```\nThis is implemented by extending the MaskedVectorizeOp with a dedicated\nattribute for \"scalability\" and by overloading `parseDynamicIndexList`\nso that MaskedVectorizeOp can continue using the auto-generated parser\nand printer.\n\nAt the moment, only the trailing vec size can be scalable. The following\nis not yet supported:\n```\ntransform.structured.masked_vectorize %0 vector_sizes [8, [16], [4]]\n```\n\nAs the vectoriser does not support scalable vectorisation just yet, a\nwarning is issues when scalable vector sizes are used. You can also use\nthe debug output, `--debug-only=linalg-vectorization`, to check whether\nscalable vectorisation has been switched on.\n\nThis change is a part of a larger effort to enable scalable\nvectorisation in Linalg. See this RFC for more context:\n  * https://discourse.llvm.org/t/rfc-scalable-vectorisation-in-linalg/\nSimilar patch for tiling: https://reviews.llvm.org/D150944\n\nDifferential Revision: https://reviews.llvm.org/D151892\n",
+            "commit_timestamp": 1686254057.0
         }
     ]
 }
