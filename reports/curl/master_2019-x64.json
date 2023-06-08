@@ -1623,6 +1623,20 @@
             "commit_ref": "7d62f0d9b8ac9f2b58682891ecd6e2daab2114aa",
             "commit_message": "runtests; give each server a unique log lock file\n\nLogs are written by several servers and all of them must be finished\nwriting before the test results can be determined. This means each\nserver must have its own lock file rather than sharing a single one,\nwhich is how it was done up to now. Previously, the first server to\ncomplete a test would clear the lock before the other server was done,\nwhich caused flaky tests.\n\nLock files are now all found in their own directory, so counting locks\nequals counting the files in that directory.  The result is that the\nproxy logs are now reliably written which actually changes the expected\noutput for two tests.\n\nFixes #11231\nCloses #11259\n",
             "commit_timestamp": 1686178978.0
+        },
+        {
+            "tool_version": "232.0.20230531.134455-eap03",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1686225906.877781,
+            "elapsed_time": 430.4160165786743,
+            "x64": false,
+            "actual_files_count": 2324,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "7d62f0d9b8ac9f2b58682891ecd6e2daab2114aa",
+            "commit_message": "runtests; give each server a unique log lock file\n\nLogs are written by several servers and all of them must be finished\nwriting before the test results can be determined. This means each\nserver must have its own lock file rather than sharing a single one,\nwhich is how it was done up to now. Previously, the first server to\ncomplete a test would clear the lock before the other server was done,\nwhich caused flaky tests.\n\nLock files are now all found in their own directory, so counting locks\nequals counting the files in that directory.  The result is that the\nproxy logs are now reliably written which actually changes the expected\noutput for two tests.\n\nFixes #11231\nCloses #11259\n",
+            "commit_timestamp": 1686178978.0
         }
     ]
 }
