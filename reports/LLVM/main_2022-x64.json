@@ -1659,6 +1659,22 @@
             "commit_ref": "46aba711ab8311b427cac8ad8235642d86c7f7d6",
             "commit_message": "[InstCombine] (icmp eq A, -1) & (icmp eq B, -1) --> (icmp eq (A&B), -1)\n\nThis patch add another icmp fold for -1 case.\n\nThis fixes https://github.com/llvm/llvm-project/issues/62311,\nwhere we want instcombine to merge all compare intructions together so\nlater passes like simplifycfg and slpvectorize can better optimize this\nchained comparison.\n\nReviewed By: goldstein.w.n\n\nDifferential Revision: https://reviews.llvm.org/D151660\n",
             "commit_timestamp": 1686195005.0
+        },
+        {
+            "tool_version": "232.0.20230531.134455-eap03",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1686212301.71875,
+            "elapsed_time": 5296.143295049667,
+            "x64": true,
+            "actual_files_count": 1666,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "d3d5cdbfa8a9f2838531466d321feb82f3c08b9d",
+            "commit_message": "[Clang] Convert some tests to opaque pointers (NFC)\n",
+            "commit_timestamp": 1686211288.0
         }
     ]
 }

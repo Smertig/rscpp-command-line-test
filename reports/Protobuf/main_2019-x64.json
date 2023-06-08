@@ -2621,6 +2621,20 @@
             "commit_ref": "cd615a8c6596de1fc35874561b53d26597c0b65a",
             "commit_message": "deps: Update Guava to 32.0.0 (#12953)\n\nUpdates Guava to [32.0.0](https://github.com/google/guava/releases/tag/v32.0.0) to include fixes for CVE-2020-8908 and CVE-2023-2976 (https://github.com/google/guava/issues/2575) which affects certain builds with shaded usage, e.g ruby via jruby/java platform such as https://rubygems.org/gems/google-protobuf/versions/3.23.2-java\n\n- Protobuf does not appear to (directly) use the affected `Files.createTempDir` or `FileBackedOutputStream` code which might behave differently on Windows.\n- Referred to #9707 and #9757 for reference\n- Updated transitive dependency versions match https://mvnrepository.com/artifact/com.google.guava/guava/32.0.0-jre (note major version change for `j2objc-annotations` from `1.3` --> `2.8`)\n\nMay need backporting to `23.x` branch if sufficiently compatible.\n\nCloses #12953\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/12953 from chadlwilson:update-guava-32 9c396b6759b04b9003897c07ea04e858732ddff3\nPiperOrigin-RevId: 538666552\n",
             "commit_timestamp": 1686195151.0
+        },
+        {
+            "tool_version": "232.0.20230531.134455-eap03",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1686211402.081523,
+            "elapsed_time": 426.6956880092621,
+            "x64": false,
+            "actual_files_count": 815,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "cd615a8c6596de1fc35874561b53d26597c0b65a",
+            "commit_message": "deps: Update Guava to 32.0.0 (#12953)\n\nUpdates Guava to [32.0.0](https://github.com/google/guava/releases/tag/v32.0.0) to include fixes for CVE-2020-8908 and CVE-2023-2976 (https://github.com/google/guava/issues/2575) which affects certain builds with shaded usage, e.g ruby via jruby/java platform such as https://rubygems.org/gems/google-protobuf/versions/3.23.2-java\n\n- Protobuf does not appear to (directly) use the affected `Files.createTempDir` or `FileBackedOutputStream` code which might behave differently on Windows.\n- Referred to #9707 and #9757 for reference\n- Updated transitive dependency versions match https://mvnrepository.com/artifact/com.google.guava/guava/32.0.0-jre (note major version change for `j2objc-annotations` from `1.3` --> `2.8`)\n\nMay need backporting to `23.x` branch if sufficiently compatible.\n\nCloses #12953\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/12953 from chadlwilson:update-guava-32 9c396b6759b04b9003897c07ea04e858732ddff3\nPiperOrigin-RevId: 538666552\n",
+            "commit_timestamp": 1686195151.0
         }
     ]
 }
