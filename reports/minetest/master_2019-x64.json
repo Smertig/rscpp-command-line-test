@@ -1907,6 +1907,20 @@
             "commit_ref": "553dc02deb8c16795874469d14643f89e1cba559",
             "commit_message": "Fix some memleaks from GUIButtonImage (#13564)\n\n* `m_foreground_image` was grabbed, but not dropped in the destructor.\r\n* `m_image` was created with new. It is grabbed by itself and by the env (not only by the env!, so it's an owning ptr). This owning ptr also was never dropped.",
             "commit_timestamp": 1686070892.0
+        },
+        {
+            "tool_version": "232.0.20230531.134455-eap03",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1686312746.484057,
+            "elapsed_time": 278.38594341278076,
+            "x64": false,
+            "actual_files_count": 396,
+            "expected_files_count": 105,
+            "repo_url": "https://github.com/minetest/minetest",
+            "commit_ref": "553dc02deb8c16795874469d14643f89e1cba559",
+            "commit_message": "Fix some memleaks from GUIButtonImage (#13564)\n\n* `m_foreground_image` was grabbed, but not dropped in the destructor.\r\n* `m_image` was created with new. It is grabbed by itself and by the env (not only by the env!, so it's an owning ptr). This owning ptr also was never dropped.",
+            "commit_timestamp": 1686070892.0
         }
     ]
 }

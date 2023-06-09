@@ -1755,6 +1755,22 @@
             "commit_ref": "96962d5512fbc6af0ada0f13e6be332c026529cb",
             "commit_message": "[clang] set python3 as required build dependency\n\nThe required HTMLLogger include file needs python3 to run\nresource_bundle.py to bundle all the html/css/js resources. However, if\nuser sets -DLLVM_INCLUDE_TESTS=OFF, CMake will not find python3 and the\nresource bundler will never be executed. This patch set the python3 as a\nrequired build dependency to fix this problem.\n\nPatch By: Avimitin\n\nDifferential Revision: https://reviews.llvm.org/D152418\n",
             "commit_timestamp": 1686297168.0
+        },
+        {
+            "tool_version": "232.0.20230531.134455-eap03",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1686313118.785582,
+            "elapsed_time": 6418.979030847549,
+            "x64": true,
+            "actual_files_count": 1666,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "90431ca2e01489eeff22e141714bb294315d6a3c",
+            "commit_message": "Reland [AMDGPU] New PAL metadata updates to ps_extra_lds_size and float_mode\n\nNew metadata format contains full calculation of field contents for\nps_extra_lds_size (vs old format where the value in RSRC register is used by PAL\nto calculate the value required).\n\nAlso stop updating float_mode and rely on front end settings for this field.\n\nDifferential Revision: https://reviews.llvm.org/D152247\n",
+            "commit_timestamp": 1686310440.0
         }
     ]
 }
