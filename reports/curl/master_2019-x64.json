@@ -1721,6 +1721,20 @@
             "commit_ref": "ad8a8e048ed2deed10a924e92a054a295c077f2e",
             "commit_message": "example/http2-download: set CURLOPT_BUFFERSIZE\n\nPrimarily because no other example sets it, and remove the disabling of\nthe certificate check because we should not recommend that.\n\nCloses #11284\n",
             "commit_timestamp": 1686322100.0
+        },
+        {
+            "tool_version": "232.0.20230531.134455-eap03",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1686341128.354362,
+            "elapsed_time": 272.9656717777252,
+            "x64": false,
+            "actual_files_count": 2324,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "3f784980cbbea61881a30e61c86f7c32caac361a",
+            "commit_message": "ngtcp2: use ever increasing timestamp in io\n\n- ngtcp2 v0.16.0 asserts that timestamps passed to its function\n  will only ever increase.\n- Use a context shared between ingress/egress operations that\n  uses a shared timestamp, regularly updated during calls.\n\nCloses #11288\n",
+            "commit_timestamp": 1686336631.0
         }
     ]
 }
