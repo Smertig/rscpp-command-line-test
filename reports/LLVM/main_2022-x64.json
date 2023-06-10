@@ -1835,6 +1835,22 @@
             "commit_ref": "83f7b91ab8c6cbb261fb12bf720235b14283f46a",
             "commit_message": "[SelectionDAG] Update test case according to post review comments, NFC\n\nDifferential Revision: https://reviews.llvm.org/D152492\n",
             "commit_timestamp": 1686369747.0
+        },
+        {
+            "tool_version": "232.0.20230531.134455-eap03",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1686385095.028035,
+            "elapsed_time": 5313.795140504837,
+            "x64": true,
+            "actual_files_count": 1666,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "25d9fde22e609f8637f720220810429745707b76",
+            "commit_message": "[SCCP] Skip computing intrinsics if one of its args is unknownOrUndef\n\nFor constant range supported intrinsics, we got consantrange from args\nno matter if they are unknown or undef. And the constant range computed\nfrom unknown or undef value state is full range.\n\nI think compute with full constant range is harmful since although we\ncan do mergeIn after these args value state are changed, the merge\noperation of two constant ranges is union.\n\nReviewed By: nikic\n\nDifferential Revision: https://reviews.llvm.org/D152499\n",
+            "commit_timestamp": 1686383326.0
         }
     ]
 }

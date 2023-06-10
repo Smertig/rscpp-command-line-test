@@ -1987,6 +1987,20 @@
             "commit_ref": "3ecd3a82abe6682988112cd6eb7326a67ebbc47f",
             "commit_message": "Sync to upstream/release/580 (#951)\n\n* Added luau-compile executable target to build/test compilation without\r\nhaving full REPL included.\r\n\r\nIn our new typechecker:\r\n* Fixed the order in which constraints are checked to get more\r\ndeterministic errors in different environments\r\n* Fixed `isNumber`/`isString` checks to fix false positive errors in\r\nbinary comparisons\r\n* CannotCallNonFunction error is reported when calling an intersection\r\ntype of non-functions\r\n \r\nIn our native code generation (jit):\r\n* Outlined X64 return instruction code to improve code size\r\n* Improved performance of return instruction on A64\r\n* Added construction of a dominator tree for future optimizations\r\n",
             "commit_timestamp": 1686330480.0
+        },
+        {
+            "tool_version": "232.0.20230531.134455-eap03",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1686384221.060935,
+            "elapsed_time": 322.87150168418884,
+            "x64": false,
+            "actual_files_count": 386,
+            "expected_files_count": 379,
+            "repo_url": "https://github.com/Roblox/luau",
+            "commit_ref": "3ecd3a82abe6682988112cd6eb7326a67ebbc47f",
+            "commit_message": "Sync to upstream/release/580 (#951)\n\n* Added luau-compile executable target to build/test compilation without\r\nhaving full REPL included.\r\n\r\nIn our new typechecker:\r\n* Fixed the order in which constraints are checked to get more\r\ndeterministic errors in different environments\r\n* Fixed `isNumber`/`isString` checks to fix false positive errors in\r\nbinary comparisons\r\n* CannotCallNonFunction error is reported when calling an intersection\r\ntype of non-functions\r\n \r\nIn our native code generation (jit):\r\n* Outlined X64 return instruction code to improve code size\r\n* Improved performance of return instruction on A64\r\n* Added construction of a dominator tree for future optimizations\r\n",
+            "commit_timestamp": 1686330480.0
         }
     ]
 }
