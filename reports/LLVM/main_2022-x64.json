@@ -1803,6 +1803,22 @@
             "commit_ref": "c0ad1b459742117990d38186deaeb49e75bb26f3",
             "commit_message": "[NewGVN] Fold equivalent freeze instructions\n\nDifferential Revision: https://reviews.llvm.org/D152529\n",
             "commit_timestamp": 1686340656.0
+        },
+        {
+            "tool_version": "232.0.20230531.134455-eap03",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1686356180.631366,
+            "elapsed_time": 5416.987868309021,
+            "x64": true,
+            "actual_files_count": 1666,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "10e83005367c595821749896e5938ff4f374601b",
+            "commit_message": "[-Wunsafe-buffer-usage] Remove the unnecessary `const` qualifier in safe buffer analysis\n\nCasting away the qualifier raises a warning in 1e270be0886c3a770e7a967679552a02dfc1dca9\n",
+            "commit_timestamp": 1686354109.0
         }
     ]
 }
