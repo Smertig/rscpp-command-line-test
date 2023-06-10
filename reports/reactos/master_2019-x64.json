@@ -1665,6 +1665,20 @@
             "commit_ref": "59e74584ac5c48e9edb2bf494c2224bd5ca6fa90",
             "commit_message": "[NTOS:SE] Refactor SeTokenCanImpersonate\n\n- Refactor most of the code, since there's quite some stuff that don't make much sense.\nFor instance ImpersonationLevel is basically the requested impersonation level a\nserver asks for. PsImpersonateClient doesn't explicitly say that SecurityAnonymous\nand SecurityIdentification are not allowed. If the server was to give such levels\nit simply means it doesn't want to impersonate the client.\n\nAnother thing that doesn't make much sense is that we check if the client is\nassociated with an anonymous token, then avoid impersonating regular anonymous\ntokens that weren't created by the system. Only system can create such tokens\nand an anonymous token basically means a token with hidden security info.\n\n- Check that the server is within the same client logon session.\n\n- If the server is granted the SeImpersonatePrivilege privilege, allow impersonation\nregardless of the conditions we want to check for.\n\n- Update the documentation and code comments.\n",
             "commit_timestamp": 1686304436.0
+        },
+        {
+            "tool_version": "232.0.20230531.134455-eap03",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1686413049.306198,
+            "elapsed_time": 147.92672276496887,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "c3db5e9c8e1847562d94eb5bf8adaaac736597ee",
+            "commit_message": "[ADVAPI32][SECLOGON] CreateProcessWithLogonW: Pass the environment to the callee\n",
+            "commit_timestamp": 1686399014.0
         }
     ]
 }
