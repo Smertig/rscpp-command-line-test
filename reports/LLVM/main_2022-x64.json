@@ -1851,6 +1851,22 @@
             "commit_ref": "25d9fde22e609f8637f720220810429745707b76",
             "commit_message": "[SCCP] Skip computing intrinsics if one of its args is unknownOrUndef\n\nFor constant range supported intrinsics, we got consantrange from args\nno matter if they are unknown or undef. And the constant range computed\nfrom unknown or undef value state is full range.\n\nI think compute with full constant range is harmful since although we\ncan do mergeIn after these args value state are changed, the merge\noperation of two constant ranges is union.\n\nReviewed By: nikic\n\nDifferential Revision: https://reviews.llvm.org/D152499\n",
             "commit_timestamp": 1686383326.0
+        },
+        {
+            "tool_version": "232.0.20230531.134455-eap03",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1686399796.138566,
+            "elapsed_time": 7312.029540777206,
+            "x64": true,
+            "actual_files_count": 1666,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "5b657f50b8e8dc5836fb80e566ca7569fd04c26f",
+            "commit_message": "AMDGPU: Move LICM after AMDGPUCodeGenPrepare\n\nThe commit that added the run says it's to hoist uniform parts of\ninteger division expansion. That expansion is performed later, so this\ndidn't do anything in that case. Move this later so the original test\nshows the improvement.\n\nThis also saves a run of \"Canonicalize natural loops\". Not sure why\nthis appears to be still getting a separate loop PM run. Also feels a\nbit heavy to run this just for divide. Is there a way to specifically\nhoist the divide sequence when it expands?\n",
+            "commit_timestamp": 1686397052.0
         }
     ]
 }
