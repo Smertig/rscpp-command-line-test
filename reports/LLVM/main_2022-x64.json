@@ -1883,6 +1883,22 @@
             "commit_ref": "c0f9d7b0e6199ca3bde5a6d0036a8ada0bb6253b",
             "commit_message": "[MCParser] Modernize CppHashInfoTy (NFC)\n",
             "commit_timestamp": 1686412946.0
+        },
+        {
+            "tool_version": "232.0.20230531.134455-eap03",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1686428197.802243,
+            "elapsed_time": 5404.32940530777,
+            "x64": true,
+            "actual_files_count": 1666,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "b6808ba291fcb5ff2e0d651e9e710f3d75631bc4",
+            "commit_message": "[X86] Make constant `mul` -> `shl` + `add`/`sub` work for vector types\n\nSomething like:\n    `%r = mul %x, <33, 33, 33, ...>`\n\nIs best lowered as:\n    `%tmp = %shl x, <5, 5, 5>; %r = add %tmp, %x`\n\nAs well, since vectors have non-destructive shifts, we can also do\ncases where the multiply constant is `Pow2A +/- Pow2B` for arbitrary A\nand B, unlike in the scalar case where the extra `mov` instructions\nmake it not worth it.\n\nReviewed By: pengfei\n\nDifferential Revision: https://reviews.llvm.org/D150324\n",
+            "commit_timestamp": 1686425926.0
         }
     ]
 }
