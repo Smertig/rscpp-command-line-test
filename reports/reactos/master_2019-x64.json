@@ -1749,6 +1749,20 @@
             "commit_ref": "114bc2b96e48e991e5cff01bee9c12f2f31f2dd5",
             "commit_message": "[NTGDI][NTUSER] Load DirectX graphics driver at system startup (#4551)\n\nCORE-18221\n\nLoad the DirectX graphics kernel driver (dxg.sys) by win32k at WINSRV\ninitialization time, in NtUserInitialize(). Keep it always loaded in\nmemory, as on Windows, instead of loading it only by DirectX dlls.\n\nThis fixes the problem of acessing this driver: we need only to call\nDxDdEnableDirectDraw() and do other stuff when DirectDraw/Direct3D is\nrequired by anything. In other cases, it is called from win32k PDEV\nfunctions when changing display mode (as in Windows). Since it's used\nby other things too, it needs to be always loaded.\n\nOtherwise, if it's not loaded, its APIs are not accessible when needed,\nand execution fails.\n\nFor example, it fixes display mode change problem in VMWare, when a\nnew mode fails to be applied. Indeed, when it manages DirectDraw stuff,\nit calls DXG routines, and therefore fails if dxg.sys isn't loaded\nin memory at this moment.\n\n- Implement InitializeGreCSRSS() initialization routine, that initializes\n  supplemental NTGDI/GRE data once CSRSS and WINSRV are loaded:\n  * Call DxDdStartupDxGraphics() inside it, which loads dxg.sys.\n  * Additionally, move fonts and language ID initialization there, from\n   win32k!DriverEntry. Confirmed by analysis on Windows.\n\n- Call InitializeGreCSRSS() in NtUserInitialize() main initialization routine\n  (called by WINSRV initialization).\n\nMoved to NTGDI from previously NTUSER place:\n\nCo-authored-by: Herm\u00e8s B\u00e9lusca-Ma\u00efto <hermes.belusca-maito@reactos.org>\n",
             "commit_timestamp": 1686483896.0
+        },
+        {
+            "tool_version": "232.0.20230531.134455-eap03",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1686499422.274057,
+            "elapsed_time": 121.46310043334961,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "7d5e1591313df39d0b2a81c20ab2af9e8d76252a",
+            "commit_message": "[NTOS:PNP] Assign correct PnP IDs to the devices detected by bootloader\n\nBased on a commit by Vadim Galyant:\nhttps://github.com/vgalnt/reactos/commit/5ef5c11e7fcca44ab31606ab762e3700f1ae24f4\n\nAlso fix a minor type conversion warning. CORE-18963 CORE-17977\n\nCo-authored-by: Vadim Galyant <vgal@rambler.ru>\n",
+            "commit_timestamp": 1686489542.0
         }
     ]
 }

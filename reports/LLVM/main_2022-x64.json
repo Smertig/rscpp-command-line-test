@@ -1963,6 +1963,22 @@
             "commit_ref": "2802739dfd844ee6a5148c25c74a58e3f9f27448",
             "commit_message": "[NFC] Replace ;; with ;\n",
             "commit_timestamp": 1686475524.0
+        },
+        {
+            "tool_version": "232.0.20230531.134455-eap03",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1686500192.511348,
+            "elapsed_time": 5346.529239177704,
+            "x64": true,
+            "actual_files_count": 1666,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "c8c28ac5caf875771f9a424e46255948004cbeab",
+            "commit_message": "[Driver] Place -mharden-sls= in m_Group\n\nFix https://github.com/llvm/llvm-project/issues/63237\n\nWith only a link action, we claim all CompileOnly_Group options (including -f*,\n-m*, -i*, etc). -mharden-sls= is not in a Group and therefore not claimed,\nleading to a spurious -Wunused-command-line-argument warning, and after\n5548843d692a92a7840f14002debc3cebcb3cdc3, an error.\n",
+            "commit_timestamp": 1686499182.0
         }
     ]
 }
