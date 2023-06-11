@@ -1763,6 +1763,20 @@
             "commit_ref": "7d5e1591313df39d0b2a81c20ab2af9e8d76252a",
             "commit_message": "[NTOS:PNP] Assign correct PnP IDs to the devices detected by bootloader\n\nBased on a commit by Vadim Galyant:\nhttps://github.com/vgalnt/reactos/commit/5ef5c11e7fcca44ab31606ab762e3700f1ae24f4\n\nAlso fix a minor type conversion warning. CORE-18963 CORE-17977\n\nCo-authored-by: Vadim Galyant <vgal@rambler.ru>\n",
             "commit_timestamp": 1686489542.0
+        },
+        {
+            "tool_version": "232.0.20230531.134455-eap03",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1686513763.753365,
+            "elapsed_time": 108.34314942359924,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "d3164a0f557bdc2cc9dfd86612131f6cf180d462",
+            "commit_message": "[SHELL32] Strip leftover in CDefView::FillFileMenu() (#5330)\n\nIn 0.4.14-dev-955-g 1cf564c25f532c32f9fae891f17a70e62d5c1c14\r\nKatayama experimented with populating explorers file-menu when no object is selected.\r\n\r\nLater we found out, that none of the new entries introduced by that commit really\r\nmade sense and even created duplicates. So the commit was reverted by\r\n0.4.15-dev-6039-g 0fa4edebd9125b9ca7a4256edbea7675e2152c7e 'Revert CDefView::FillFileMenu (#5278)' CORE-18429\r\n\r\nBut it seems that not all parts were properly reverted back then,\r\nmaybe because 6 lines of new code were written between the two lines in the meantime.",
+            "commit_timestamp": 1686509605.0
         }
     ]
 }
