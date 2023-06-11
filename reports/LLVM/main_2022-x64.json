@@ -1899,6 +1899,22 @@
             "commit_ref": "b6808ba291fcb5ff2e0d651e9e710f3d75631bc4",
             "commit_message": "[X86] Make constant `mul` -> `shl` + `add`/`sub` work for vector types\n\nSomething like:\n    `%r = mul %x, <33, 33, 33, ...>`\n\nIs best lowered as:\n    `%tmp = %shl x, <5, 5, 5>; %r = add %tmp, %x`\n\nAs well, since vectors have non-destructive shifts, we can also do\ncases where the multiply constant is `Pow2A +/- Pow2B` for arbitrary A\nand B, unlike in the scalar case where the extra `mov` instructions\nmake it not worth it.\n\nReviewed By: pengfei\n\nDifferential Revision: https://reviews.llvm.org/D150324\n",
             "commit_timestamp": 1686425926.0
+        },
+        {
+            "tool_version": "232.0.20230531.134455-eap03",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1686442656.962456,
+            "elapsed_time": 5387.891252279282,
+            "x64": true,
+            "actual_files_count": 1666,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "2509c93edd36a20a0aeb5e6d612dae5b770bc987",
+            "commit_message": "[Transforms] Remove AddDiscriminatorsLegacyPass\n\nThe last use was removed by:\n\n  commit ae0987d242e266847f21f5fa1bffa97ce3eff586\n  Author: Kazu Hirata <kazu@google.com>\n  Date:   Sat Jun 10 13:51:35 2023 -0700\n\nDifferential Revision: https://reviews.llvm.org/D152636\n",
+            "commit_timestamp": 1686436367.0
         }
     ]
 }
