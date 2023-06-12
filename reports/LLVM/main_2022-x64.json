@@ -2043,6 +2043,22 @@
             "commit_ref": "bd4f978754758d5ef29d1f10370f45362da3de37",
             "commit_message": "[libc] Improve memcmp latency and codegen\n\nThis is based on ideas from @nafi to:\n - use a branchless version of 'cmp' for 'uint32_t',\n - completely resolve the lexicographic comparison through vector\n   operations when wide types are available. We also get rid of byte\n   reloads and serializing '__builtin_ctzll'.\n\nI did not include the suggestion to replace comparisons of 'uint16_t'\nwith two 'uint8_t' as it did not seem to help the codegen. This can\nbe revisited in sub-sequent patches.\n\nThe code been rewritten to reduce nested function calls, making the\njob of the inliner easier and preventing harmful code duplication.\n\nReviewed By: nafi3000\n\nDifferential Revision: https://reviews.llvm.org/D148717\n",
             "commit_timestamp": 1686556583.0
+        },
+        {
+            "tool_version": "232.0.20230531.134455-eap03",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1686572215.473447,
+            "elapsed_time": 5579.12425661087,
+            "x64": true,
+            "actual_files_count": 1666,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "a8ad413f0d18c07a4adaa0d547e0096874d809c5",
+            "commit_message": "[RFC][clangd] Move preamble index out of document open critical path\n\nWe would like to move the preamble index out of the critical path.\nThis patch is an RFC to get feedback on the correct implementation and potential pitfalls to keep into consideration.\n\nI am not entirely sure if the lazy AST initialisation would create using Preamble AST in parallel. I tried with tsan enabled clangd but it seems to work OK (at least for the cases I tried)\n\nReviewed By: kadircet\n\nDifferential Revision: https://reviews.llvm.org/D148088\n",
+            "commit_timestamp": 1686571001.0
         }
     ]
 }
