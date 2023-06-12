@@ -1931,6 +1931,20 @@
             "commit_ref": "555bacd6d522bcca497573765056354f4d5d7b33",
             "commit_message": "examples/https.c: use CURLOPT_CA_CACHE_TIMEOUT\n\nfor demonstration purposes\n\nCloses #11290\n",
             "commit_timestamp": 1686435461.0
+        },
+        {
+            "tool_version": "232.0.20230531.134455-eap03",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1686557110.991826,
+            "elapsed_time": 335.9685776233673,
+            "x64": false,
+            "actual_files_count": 2324,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "aaba783d3380c5383f9d0eef8cd6e3ddbcff1778",
+            "commit_message": "docs: update CURLOPT_UPLOAD.3\n\nThe behavior of CURLOPT_UPLOAD differs from what is described in the\ndocumentation. The option automatically adds the 'Transfer-Encoding:\nchunked' header if the upload size is unknown.\n\nCloses #11300\n",
+            "commit_timestamp": 1686554801.0
         }
     ]
 }

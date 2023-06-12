@@ -2027,6 +2027,22 @@
             "commit_ref": "cf79773a9006a7e22f3919268b7db381ddcb3abc",
             "commit_message": "[SCCP] Replace new value's value state with removed value's\n\nIn replaceSignedInst, if a signed instruction can be repalced with\nunsigned instruction, we created a new instruction and removed the old\ninstruction's value state. If the following instructions has this new\ninstruction as a use operand, transformations like replaceSignedInst and\nrefineInstruction would be blocked. The reason is there is no value\nstate for the new instrution.\n\nThis patch set the new instruction's value state with the removed\ninstruction's value state. I believe it is correct bacause when we\nrepalce a signed instruction with unsigned instruction, the value state\nis not changed.\n\nReviewed By: nikic\n\nDifferential Revision: https://reviews.llvm.org/D152337\n",
             "commit_timestamp": 1686541247.0
+        },
+        {
+            "tool_version": "232.0.20230531.134455-eap03",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1686557843.188131,
+            "elapsed_time": 6097.543085813522,
+            "x64": true,
+            "actual_files_count": 1666,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "bd4f978754758d5ef29d1f10370f45362da3de37",
+            "commit_message": "[libc] Improve memcmp latency and codegen\n\nThis is based on ideas from @nafi to:\n - use a branchless version of 'cmp' for 'uint32_t',\n - completely resolve the lexicographic comparison through vector\n   operations when wide types are available. We also get rid of byte\n   reloads and serializing '__builtin_ctzll'.\n\nI did not include the suggestion to replace comparisons of 'uint16_t'\nwith two 'uint8_t' as it did not seem to help the codegen. This can\nbe revisited in sub-sequent patches.\n\nThe code been rewritten to reduce nested function calls, making the\njob of the inliner easier and preventing harmful code duplication.\n\nReviewed By: nafi3000\n\nDifferential Revision: https://reviews.llvm.org/D148717\n",
+            "commit_timestamp": 1686556583.0
         }
     ]
 }
