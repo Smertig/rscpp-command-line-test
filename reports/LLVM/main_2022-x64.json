@@ -1995,6 +1995,22 @@
             "commit_ref": "c72dea88b635bfd7856fa22bcaf388fa72c9fe86",
             "commit_message": "[AArch64][ARM][X86] Split XRay tests for Linux/macOS\n\nXRay instrumentation works for macOS running on Apple Silicon, but\ncodegen is untested there. I'm going to make changes affecting this\ntarget, get the XRay tests running on AArch64.\n\nData sections are going to become slightly different on x86_64 soon.\nI do want the tests to be specific about symbol names, so instead of\nhaving test check the common step, bifurcate tests a bit and check\nthe full symbol names.\n\nAs for ARM, XRay is not really supported on iOS at the moment, though\nARM is also really used there with modern phones. Nevertheless, codegen\ntests exist and the output is going to change a little, make it easier\nto write the special case for iOS.\n\nReviewed By: MaskRay\n\nDifferential Revision: https://reviews.llvm.org/D145291\n",
             "commit_timestamp": 1686513209.0
+        },
+        {
+            "tool_version": "232.0.20230531.134455-eap03",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1686528968.283214,
+            "elapsed_time": 5482.334884643555,
+            "x64": true,
+            "actual_files_count": 1666,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "63bd6d9e644335c8138a59281aafbf65a82fc47a",
+            "commit_message": "[Driver] Default to -fxray-function-index\n\nAs explained by commit 849f1dd15e92fda2b83dbb6144e6b28b2cb946e0,\n-fxray-function-index was the original default but was accidentally flipped by\ncommit d8a8e5d6240a1db809cd95106910358e69bbf299. Restore the previous behavior.\n\nOriginally reported by Oleksii Lozovskyi in D145848.\n",
+            "commit_timestamp": 1686523093.0
         }
     ]
 }
