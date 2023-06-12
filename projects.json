@@ -723,19 +723,19 @@
                     },
                     {
                         "file": "..\\src\\core\\hle\\service\\nfc\\common\\device.cpp",
-                        "line": 1245,
+                        "line": 1364,
                         "message": "static_assert failed: 'CrcData is an invalid size'\r\n    Expression '128 == 126' evaluates to false",
                         "reason": "RSCPP-34261 `#pragma pack` doesn't work for local types"
                     },
                     {
                         "file": "..\\src\\video_core\\renderer_opengl\\gl_texture_cache.cpp",
-                        "line": 1155,
+                        "line": 1092,
                         "message": "Cannot substitute arguments for class 'VideoCommon::SlotVector<T>' because of violated constraint 'std::is_nothrow_move_assignable_v<Image> && std::is_nothrow_move_constructible_v<Image>'",
                         "reason": "RSCPP-14556 Implement __is_nothrow_assignable trait"
                     },
                     {
                         "file": "..\\src\\video_core\\renderer_opengl\\gl_texture_cache.h",
-                        "line": 268,
+                        "line": 243,
                         "message": "Cannot substitute arguments for class 'VideoCommon::SlotVector<T>' because of violated constraint 'std::is_nothrow_move_assignable_v<Image> && std::is_nothrow_move_constructible_v<Image>'",
                         "reason": "RSCPP-14556 Implement __is_nothrow_assignable trait"
                     },
@@ -787,6 +787,16 @@
             "generator.hpp"
         ],
         "stable": {
+            "known file errors": [
+                {
+                    "file": "..\\include\\range\\v3\\utility\\any.hpp",
+                    "message": "Member is inaccessible"
+                },
+                {
+                    "file": "..\\test\\view\\any_view.cpp",
+                    "message": "static_assert failed: 'Concept assertion failed : can_convert_to<B *, void *>()'"
+                }
+            ],
             "known errors": [
                 {
                     "file": "..\\include\\range\\v3\\iterator\\common_iterator.hpp",
@@ -799,6 +809,30 @@
                     "line": "77",
                     "message": "Specialized template is not found",
                     "reason": "RSCPP-26427 Wrong error \"Specialized template not found\" for friend function"
+                },
+                {
+                    "file": "..\\test\\utility\\concepts.cpp",
+                    "line": 112,
+                    "message": "static_assert failed",
+                    "reason": "RSCPP-34399 Incorrect evaluation of `__is_nothrow_destructible<T[]>`"
+                },
+                {
+                    "file": "..\\test\\utility\\concepts.cpp",
+                    "line": 118,
+                    "message": "static_assert failed",
+                    "reason": "RSCPP-34400 Incorrect evaluation of `__is_nothrow_destructible` for class with deleted dtor"
+                },
+                {
+                    "file": "..\\test\\utility\\concepts.cpp",
+                    "line": 126,
+                    "message": "static_assert failed",
+                    "reason": "RSCPP-34399 Incorrect evaluation of `__is_nothrow_destructible<T[]>`"
+                },
+                {
+                    "file": "..\\test\\utility\\concepts.cpp",
+                    "line": 185,
+                    "message": "static_assert failed",
+                    "reason": "RSCPP-34399 Incorrect evaluation of `__is_nothrow_destructible<T[]>`"
                 }
             ],
             "inspected files count": 210
@@ -806,6 +840,16 @@
         "latest": {
             "master": {
                 "inspected files count": 210,
+                "known file errors": [
+                    {
+                        "file": "..\\include\\range\\v3\\utility\\any.hpp",
+                        "message": "Member is inaccessible"
+                    },
+                    {
+                        "file": "..\\test\\view\\any_view.cpp",
+                        "message": "static_assert failed: 'Concept assertion failed : can_convert_to<B *, void *>()'"
+                    }
+                ],
                 "known errors": [
                     {
                         "file": "..\\include\\range\\v3\\iterator\\common_iterator.hpp",
@@ -818,6 +862,30 @@
                         "line": "77",
                         "message": "Specialized template is not found",
                         "reason": "RSCPP-26427 Wrong error \"Specialized template not found\" for friend function"
+                    },
+                    {
+                        "file": "..\\test\\utility\\concepts.cpp",
+                        "line": 112,
+                        "message": "static_assert failed",
+                        "reason": "RSCPP-34399 Incorrect evaluation of `__is_nothrow_destructible<T[]>`"
+                    },
+                    {
+                        "file": "..\\test\\utility\\concepts.cpp",
+                        "line": 118,
+                        "message": "static_assert failed",
+                        "reason": "RSCPP-34400 Incorrect evaluation of `__is_nothrow_destructible` for class with deleted dtor"
+                    },
+                    {
+                        "file": "..\\test\\utility\\concepts.cpp",
+                        "line": 126,
+                        "message": "static_assert failed",
+                        "reason": "RSCPP-34399 Incorrect evaluation of `__is_nothrow_destructible<T[]>`"
+                    },
+                    {
+                        "file": "..\\test\\utility\\concepts.cpp",
+                        "line": 185,
+                        "message": "static_assert failed",
+                        "reason": "RSCPP-34399 Incorrect evaluation of `__is_nothrow_destructible<T[]>`"
                     }
                 ]
             }
