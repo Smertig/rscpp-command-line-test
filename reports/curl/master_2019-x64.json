@@ -1973,6 +1973,20 @@
             "commit_ref": "aaba783d3380c5383f9d0eef8cd6e3ddbcff1778",
             "commit_message": "docs: update CURLOPT_UPLOAD.3\n\nThe behavior of CURLOPT_UPLOAD differs from what is described in the\ndocumentation. The option automatically adds the 'Transfer-Encoding:\nchunked' header if the upload size is unknown.\n\nCloses #11300\n",
             "commit_timestamp": 1686554801.0
+        },
+        {
+            "tool_version": "232.0.20230608.100247-eap04",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1686581229.421185,
+            "elapsed_time": 318.2240297794342,
+            "x64": false,
+            "actual_files_count": 2324,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "4397e41be0e970773ce3f597c69c884bb7318f35",
+            "commit_message": "CI: openssl-3.0.9+quic\n\nCloses #11296\n",
+            "commit_timestamp": 1686579892.0
         }
     ]
 }
