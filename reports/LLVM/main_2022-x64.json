@@ -2155,6 +2155,22 @@
             "commit_ref": "666a56f1f1683535967d1a3b7587bf85044ea005",
             "commit_message": "[MLIR][Tests] Update tests so they require assertions\n\nThese tests check statistics results which require assertions enabled.\n\nDifferential Revision: https://reviews.llvm.org/D152780\n",
             "commit_timestamp": 1686672044.0
+        },
+        {
+            "tool_version": "232.0.20230608.100247-eap04",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1686687777.482228,
+            "elapsed_time": 7855.154078960419,
+            "x64": true,
+            "actual_files_count": 1666,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "651e5ae62d29fdb07eb85f75ab7e686b98479f3a",
+            "commit_message": "[MS] Fix passing aligned records by value in some cases\n\nIt's not exactly clear what the meaning of TypeInfo::AlignRequirement\nis, so go directly to the ASTRecordLayout for records and check the\nrequired alignment there. Compare that number with the stack alignment\nvalue of 4.\n\nThis fixes cases when the alignment attribute does not appear directly\non the record [1], or when the attribute on the record is underaligned\n[2].\n\n[1]: `struct Foo { int __declspec(align(16)) x; };`\n[2]: `struct __declspec(align(1)) Bar { int x; };`\n\nFixes https://llvm.org/pr63257\n\nDifferential Revision: https://reviews.llvm.org/D152752\n",
+            "commit_timestamp": 1686686063.0
         }
     ]
 }

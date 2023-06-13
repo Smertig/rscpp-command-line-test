@@ -3097,6 +3097,20 @@
             "commit_ref": "cc83427ee3cf14de4c0308e46ff54381aa6f647a",
             "commit_message": "Do not pass nullptr to slice::from_raw_parts\n\nPass dangling, but well-aligned pointer instead as per\nhttps://doc.rust-lang.org/std/slice/fn.from_raw_parts.html#safety.\n\nPiperOrigin-RevId: 539924021\n",
             "commit_timestamp": 1686656598.0
+        },
+        {
+            "tool_version": "232.0.20230608.100247-eap04",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1686686744.432515,
+            "elapsed_time": 376.3695547580719,
+            "x64": false,
+            "actual_files_count": 815,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "381b31e9c93614270491c3fb007e76a308699d35",
+            "commit_message": "Make ViewFor/MutFor use assoc. type instead of generic, rename to match\n\nThis implements the associated type change suggested by dmitrig@.\n\nI don't foresee use cases that would make `ViewFor` allowing multiple `T` to be\nuseful, rather than confusing.\n\nThis also implements some suggested wording changes that I agree with.\n\nPiperOrigin-RevId: 540024883\n",
+            "commit_timestamp": 1686681538.0
         }
     ]
 }
