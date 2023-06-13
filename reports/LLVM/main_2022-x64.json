@@ -2091,6 +2091,22 @@
             "commit_ref": "1d6c3e29f6aa45914faa7be00a939b8f550f38e9",
             "commit_message": "[Driver] Mark m_x86_Features_Group options as TargetSpecific\n\nso that they get an error on non-x86 targets.\nFollow-up to D151590.\n\nAs a workaround for https://github.com/llvm/llvm-project/issues/63270, we don't\nreport an error for -msse4.2.\n",
             "commit_timestamp": 1686599253.0
+        },
+        {
+            "tool_version": "232.0.20230608.100247-eap04",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1686629747.01761,
+            "elapsed_time": 6032.665798425674,
+            "x64": true,
+            "actual_files_count": 1666,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "0118a3f6c3c9bde9042f21b20a7a7131b942761c",
+            "commit_message": "[mlir][docgen] Enable custom prefix strip for op name.\n\nThe fully qualified name gets long in the TOC (especially on mobile),\nenable specifying a prefix to be stripped.\n\nDifferential Revision: https://reviews.llvm.org/D152404\n",
+            "commit_timestamp": 1686628701.0
         }
     ]
 }

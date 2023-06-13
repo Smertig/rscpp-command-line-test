@@ -1903,6 +1903,20 @@
             "commit_ref": "3da25b73c2ac2ec15e498ebb55862401ef67f163",
             "commit_message": "[MMSYS] Use PWSTR instead of PWCHAR for string (#5333)\n\n\r\nUse PWSTR instead of PWCHAR for string\r\nConstify some function arguments",
             "commit_timestamp": 1686599576.0
+        },
+        {
+            "tool_version": "232.0.20230608.100247-eap04",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1686629046.806867,
+            "elapsed_time": 130.6362121105194,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "9ff9580fb0c873bddca8c29551aad879090dc2d4",
+            "commit_message": "[MSPAINT] Fix the type of cursor displayed when overlaying scrollbars (#5332)\n\nWhen the window size is smaller than the image size in both directions, the wrong cursor is displayed when hovering the mouse over the scrollbars.\r\n\r\nReadjust position for file date and file size objects, to fit all text.\r\n\r\nCORE-18867",
+            "commit_timestamp": 1686628899.0
         }
     ]
 }
