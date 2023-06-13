@@ -2139,6 +2139,22 @@
             "commit_ref": "8d1edae998fb40bbb22c5b5146eb333cf6148b35",
             "commit_message": "Use SelectionDAGBuiler::getRoot instead of SelectionDAG::getRoot\n",
             "commit_timestamp": 1686657579.0
+        },
+        {
+            "tool_version": "232.0.20230608.100247-eap04",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1686673224.484355,
+            "elapsed_time": 7368.945910215378,
+            "x64": true,
+            "actual_files_count": 1666,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "666a56f1f1683535967d1a3b7587bf85044ea005",
+            "commit_message": "[MLIR][Tests] Update tests so they require assertions\n\nThese tests check statistics results which require assertions enabled.\n\nDifferential Revision: https://reviews.llvm.org/D152780\n",
+            "commit_timestamp": 1686672044.0
         }
     ]
 }
