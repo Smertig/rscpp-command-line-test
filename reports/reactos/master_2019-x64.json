@@ -1917,6 +1917,20 @@
             "commit_ref": "9ff9580fb0c873bddca8c29551aad879090dc2d4",
             "commit_message": "[MSPAINT] Fix the type of cursor displayed when overlaying scrollbars (#5332)\n\nWhen the window size is smaller than the image size in both directions, the wrong cursor is displayed when hovering the mouse over the scrollbars.\r\n\r\nReadjust position for file date and file size objects, to fit all text.\r\n\r\nCORE-18867",
             "commit_timestamp": 1686628899.0
+        },
+        {
+            "tool_version": "232.0.20230608.100247-eap04",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1686643450.338378,
+            "elapsed_time": 145.44897627830505,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "1a886073876781c410fb2e815a3528a1430b852b",
+            "commit_message": "[MSPAINT] Move selection by arrow keys (#5334)\n\nImprove keyboard usability.\r\n- Add CCanvasWindow::MoveSelection.\r\n- Modify CMainWindow::OnKeyDown.\r\n- If Esc key is pressed, then the selection will land to canvas.\r\n- If any arrow key is pressed, then the selection will move a bit.\r\nCORE-18867",
+            "commit_timestamp": 1686641478.0
         }
     ]
 }
