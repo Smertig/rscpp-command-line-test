@@ -2141,6 +2141,20 @@
             "commit_ref": "06dc599405fd8a87147eddcdb89dab62ce200d9b",
             "commit_message": "fopen: fix conversion warning on 32-bit Android\n\nWhen building for 32-bit ARM or x86 Android, `st_mode` is defined as\n`unsigned int` instead of `mode_t`, resulting in a\n-Wimplicit-int-conversion clang warning because `mode_t` is\n`unsigned short`. Add a cast to silence the warning.\n\nRef: https://android.googlesource.com/platform/bionic/+/refs/tags/ndk-r25c/libc/include/sys/stat.h#86\nCloses https://github.com/curl/curl/pull/11313\n",
             "commit_timestamp": 1686727907.0
+        },
+        {
+            "tool_version": "232.0.20230608.100247-eap04",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1686744389.800682,
+            "elapsed_time": 276.4993953704834,
+            "x64": false,
+            "actual_files_count": 2324,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "f15ded73c8a9b85be3160f9a0498a0667ba14e7d",
+            "commit_message": "docs/libcurl/libcurl-ws.3: see also CURLOPT_WS_OPTIONS\n",
+            "commit_timestamp": 1686742598.0
         }
     ]
 }
