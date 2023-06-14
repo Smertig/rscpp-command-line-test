@@ -3111,6 +3111,20 @@
             "commit_ref": "381b31e9c93614270491c3fb007e76a308699d35",
             "commit_message": "Make ViewFor/MutFor use assoc. type instead of generic, rename to match\n\nThis implements the associated type change suggested by dmitrig@.\n\nI don't foresee use cases that would make `ViewFor` allowing multiple `T` to be\nuseful, rather than confusing.\n\nThis also implements some suggested wording changes that I agree with.\n\nPiperOrigin-RevId: 540024883\n",
             "commit_timestamp": 1686681538.0
+        },
+        {
+            "tool_version": "232.0.20230608.100247-eap04",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1686701112.088254,
+            "elapsed_time": 337.38435220718384,
+            "x64": false,
+            "actual_files_count": 815,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "b1df92704b5c49464b9c060dd9ef9997c569d755",
+            "commit_message": "Clean up staleness tests.\n\nOur automation can't currently update release branches, so we need to enable staleness tests as presubmits to force manual regeneration.\n\nPiperOrigin-RevId: 540094169\n",
+            "commit_timestamp": 1686696066.0
         }
     ]
 }
