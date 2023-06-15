@@ -2251,6 +2251,22 @@
             "commit_ref": "211f27f37c86316c5be2358ecc200f370bd76639",
             "commit_message": "[CodeGen] Add pre-commit tests for D152022 and D152558\n\nDifferential Revision: https://reviews.llvm.org/D152025\n",
             "commit_timestamp": 1686758027.0
+        },
+        {
+            "tool_version": "232.0.20230608.100247-eap04",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1686773736.511315,
+            "elapsed_time": 13539.755667209625,
+            "x64": true,
+            "actual_files_count": 1666,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "fd68d36109c6fcebb6d758046b88b0664acccf51",
+            "commit_message": "[mlir][sparse] unifying enterLoopOverTensorAtLvl and enterCoIterationOverTensorsAtLvls\n\nThe tensor levels are now explicitly categorized into different `LoopCondKind` to instruct LoopEmitter generate different code for different kinds of condition (e.g., `SparseCond`, `SparseSliceCond`, `SparseAffineIdxCond`, etc)\n\nThe process of generating a while loop is now dissembled into three steps and they are dispatched to different LoopCondKind handler.\n1. Generate LoopCondition (e.g., `pos <= posHi` for `SparseCond`, `slice.isNonEmpty` for `SparseAffineIdxCond`)\n2. Generate LoopBody (e.g., compute the coordinates)\n3. Generate ExtraChecks (e.g., `if (onSlice(crd))` for `SparseSliceCond`)\n\nReviewed By: aartbik\n\nDifferential Revision: https://reviews.llvm.org/D152464\n",
+            "commit_timestamp": 1686772990.0
         }
     ]
 }
