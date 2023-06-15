@@ -2847,6 +2847,20 @@
             "commit_ref": "4fc92814dc41a979842fe27a1571ee8ae4d5d327",
             "commit_message": "COMP: Remove clang unsupported compiler flag from default\n\nThis reverts commit b50647bf5e73517fd9645803d756bd1dd045629a.\n\nOriginally this flag was added to sppress inline warnings on\ngcc compilers from 2011 (which are no longer supported).\n\nThe -funit-at-a-time flag is a default flag for all optimization\nlevels -O1 and above on gcc compilers that support it.\n\nNew versions of clang compiler do not support this flag:\n\"clang: warning: optimization flag '-funit-at-a-time' is not supported\"\n\nThe removal of this flag returns all the default compiler flags to\nflags related to warnings only.\n",
             "commit_timestamp": 1686793203.0
+        },
+        {
+            "tool_version": "232.0.20230608.100247-eap04",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1686816733.768352,
+            "elapsed_time": 543.0074770450592,
+            "x64": false,
+            "actual_files_count": 100,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "4fc92814dc41a979842fe27a1571ee8ae4d5d327",
+            "commit_message": "COMP: Remove clang unsupported compiler flag from default\n\nThis reverts commit b50647bf5e73517fd9645803d756bd1dd045629a.\n\nOriginally this flag was added to sppress inline warnings on\ngcc compilers from 2011 (which are no longer supported).\n\nThe -funit-at-a-time flag is a default flag for all optimization\nlevels -O1 and above on gcc compilers that support it.\n\nNew versions of clang compiler do not support this flag:\n\"clang: warning: optimization flag '-funit-at-a-time' is not supported\"\n\nThe removal of this flag returns all the default compiler flags to\nflags related to warnings only.\n",
+            "commit_timestamp": 1686793203.0
         }
     ]
 }
