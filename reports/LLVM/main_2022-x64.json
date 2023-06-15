@@ -2331,6 +2331,22 @@
             "commit_ref": "4e4bd29061de5e7790e47e78ec90e41e2ee7ee30",
             "commit_message": "[GlobalIsel][X86] Add handling for G_FRAME_INDEX/G_GLOBAL_VALUE\n\nReplace the legacy legalizer versions\n",
             "commit_timestamp": 1686830263.0
+        },
+        {
+            "tool_version": "232.0.20230608.100247-eap04",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1686845789.601773,
+            "elapsed_time": 13908.613616228104,
+            "x64": true,
+            "actual_files_count": 1667,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "dcdfc963d7934a1313094b6fe9ce7aa04debe495",
+            "commit_message": "[libc] Export GPU extensions to `libc` for external use\n\nThe GPU port of the LLVM C library needs to export a few extensions to\nthe interface such that users can interface with it. This patch adds the\nnecessary logic to define a GPU extension. Currently, this only exports\na `rpc_reset_client` function. This allows us to use the server in\nD147054 to set up the RPC interface outside of `libc`.\n\nDepends on https://reviews.llvm.org/D147054\n\nReviewed By: sivachandra\n\nDifferential Revision: https://reviews.llvm.org/D152283\n",
+            "commit_timestamp": 1686844944.0
         }
     ]
 }
