@@ -2283,6 +2283,22 @@
             "commit_ref": "e63e536044178cdd23ed8a82f35c42d394bb1dfa",
             "commit_message": "[TextAPI] add osx to possible string to platform input\n",
             "commit_timestamp": 1686785486.0
+        },
+        {
+            "tool_version": "232.0.20230608.100247-eap04",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1686802703.663016,
+            "elapsed_time": 17240.52918291092,
+            "x64": true,
+            "actual_files_count": 1666,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "0e08374abb2c61a3ae5c24d5f60be3b548da9778",
+            "commit_message": "[clang][NFC] Add a notice to desugarForDiagnostic\n\n`desugarForDiagnostic` only sets ShouldAKA to true if desugaring\nhappens, otherwise ShouldAKA is left intact and might be uninitialized.\n\nVictims (including me):\n\nhttps://github.com/llvm/llvm-project/commit/25bf8cb3c0e3c41231289a6ff0a37b6d49b24011\n\nhttps://github.com/llvm/llvm-project/commit/0e8384a0fe4f03d60cd92aba1cae074512481ca2\n\nReviewed By: aaron.ballman\n\nDifferential Revision: https://reviews.llvm.org/D152880\n",
+            "commit_timestamp": 1686801306.0
         }
     ]
 }
