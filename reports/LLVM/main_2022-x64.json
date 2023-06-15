@@ -2315,6 +2315,22 @@
             "commit_ref": "f031df21aaadf0ec7a5b697bb75e44656aba4abf",
             "commit_message": "[AArch64] Don't look at type size for scalable types in isExtFreeImpl\n\nThis fixes one of those 'Request for a fixed element count on a scalable\nobject' errors in the AArch64 isExtFreeImpl method, where the uses of a sext\nare checked to see if the instruction can be considered free.\nhttps://godbolt.org/z/debYP9c4G\n\nDifferential Revision: https://reviews.llvm.org/D152930\n",
             "commit_timestamp": 1686815230.0
+        },
+        {
+            "tool_version": "232.0.20230608.100247-eap04",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1686831517.983079,
+            "elapsed_time": 14053.281967401505,
+            "x64": true,
+            "actual_files_count": 1667,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "4e4bd29061de5e7790e47e78ec90e41e2ee7ee30",
+            "commit_message": "[GlobalIsel][X86] Add handling for G_FRAME_INDEX/G_GLOBAL_VALUE\n\nReplace the legacy legalizer versions\n",
+            "commit_timestamp": 1686830263.0
         }
     ]
 }
