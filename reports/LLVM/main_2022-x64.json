@@ -2427,6 +2427,22 @@
             "commit_ref": "d0233ccbf8807f86edef3aa1fb90b3786a9ce017",
             "commit_message": "[mlir][nvvm] Introduce `mbarrier.arrive`\n\nIt introduces `mbarrier.arrive` that are in ptx78.\n\nReviewed By: qcolombet\n\nDifferential Revision: https://reviews.llvm.org/D153021\n",
             "commit_timestamp": 1686916383.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1686932215.451888,
+            "elapsed_time": 6339.482229232788,
+            "x64": true,
+            "actual_files_count": 1667,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "ed34cb2cd78143a3ec99a91fe2db79bdb1ddfd85",
+            "commit_message": "[libc] Add a test for `fputs` to check using `stdout` and `stderr`\n\nThis patch adds a test directly for the `fputs` function similar to the\nexisting `puts` test. This lets us know that the default file pointers\nare function and the `fputs` interface works.\n\nReviewed By: lntue\n\nDifferential Revision: https://reviews.llvm.org/D152288\n",
+            "commit_timestamp": 1686931315.0
         }
     ]
 }
