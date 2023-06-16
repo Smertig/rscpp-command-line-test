@@ -2973,6 +2973,20 @@
             "commit_ref": "ec95efca104f815c65df9257382f9b1cfb2c9728",
             "commit_message": "Merge pull request #23754 from dkurt:remap_linear_transparent\n\nKeep inliers for linear remap with BORDER_TRANSPARENT #23754\r\n\r\nAddress https://github.com/opencv/opencv/issues/23562\r\n\r\n### Pull Request Readiness Checklist\r\n\r\nresolves https://github.com/opencv/opencv/issues/23562\r\n\r\nI do think that this is a bug because with `INTER_CUBIC + BORDER_TRANSPARENT` the last column and row are preserved. So same should be done for `INTER_LINEAR`\r\n\r\nSee details at https://github.com/opencv/opencv/wiki/How_to_contribute#making-a-good-pull-request\r\n\r\n- [x] I agree to contribute to the project under Apache 2 License.\r\n- [x] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\r\n- [x] The PR is proposed to the proper branch\r\n- [x] There is a reference to the original bug report and related work\r\n- [x] There is accuracy test, performance test and test data in opencv_extra repository, if applicable\r\n      Patch to opencv_extra has the same branch name.\r\n- [x] The feature is well documented and sample code can be built with the project CMake",
             "commit_timestamp": 1686929421.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1686945931.282961,
+            "elapsed_time": 516.0580856800079,
+            "x64": false,
+            "actual_files_count": 464,
+            "expected_files_count": 459,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "f2f00259dae07c9b6969d70e2e1a3024e3f2a09c",
+            "commit_message": "Merge pull request #23821 from asmorkalov:as/python_types_extra_imports\n\nForce mat_wrapper import to satisfy dependencies for MatLike alias",
+            "commit_timestamp": 1686943667.0
         }
     ]
 }

@@ -2443,6 +2443,22 @@
             "commit_ref": "ed34cb2cd78143a3ec99a91fe2db79bdb1ddfd85",
             "commit_message": "[libc] Add a test for `fputs` to check using `stdout` and `stderr`\n\nThis patch adds a test directly for the `fputs` function similar to the\nexisting `puts` test. This lets us know that the default file pointers\nare function and the `fputs` interface works.\n\nReviewed By: lntue\n\nDifferential Revision: https://reviews.llvm.org/D152288\n",
             "commit_timestamp": 1686931315.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1686946583.272227,
+            "elapsed_time": 5908.212112426758,
+            "x64": true,
+            "actual_files_count": 1667,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "7a709689bc1755a569864a97d93b96d22f988eb4",
+            "commit_message": "[clangd] Handle DependentNameType in HeuristicResolver::resolveTypeToRecordDecl()\n\nFixes https://github.com/clangd/clangd/issues/1671\n\nDifferential Revision: https://reviews.llvm.org/D152645\n",
+            "commit_timestamp": 1686943190.0
         }
     ]
 }
