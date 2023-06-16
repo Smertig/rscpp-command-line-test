@@ -3307,6 +3307,20 @@
             "commit_ref": "46e0b15e7c7b4b73d2860744dec78ff7a97649a4",
             "commit_message": "Add method to create a new ProtobufList for the given element type.\nAdd method to make a mutable copy with a capacity hint.\n\nPiperOrigin-RevId: 540737857\n",
             "commit_timestamp": 1686876471.0
+        },
+        {
+            "tool_version": "232.0.20230608.100247-eap04",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1686917129.672785,
+            "elapsed_time": 372.9297504425049,
+            "x64": false,
+            "actual_files_count": 817,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "f450ce286884f83f7948b027f824e191079f6775",
+            "commit_message": "Do not pass dangling pointers to C++\n\nThis is the reverse direction of cl/539924021.\n\nPiperOrigin-RevId: 540812123\n",
+            "commit_timestamp": 1686904703.0
         }
     ]
 }

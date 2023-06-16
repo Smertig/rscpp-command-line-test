@@ -2411,6 +2411,22 @@
             "commit_ref": "27f37db76a79e746561ad2545ff6ccf0d50cc38c",
             "commit_message": "[llvm-exegesis] Use MCJIT only for execution\n\nInitially, llvm-exegesis was generating the benchmark code for the\nhost CPU to execute it inside its own process. Thus, MCJIT was reused\nfor fetching function's bytes to fill the assembled_snippet field in\nthe benchmark report.\n\nLater, the --mtriple and --benchmark-phase command line options were\nintroduced that are handy for testing snippet generation even if\nsnippet execution is not possible. In that setup, MCJIT is asked to\nparse an object file for a foreign CPU or operating system that is\nprobably not guaranteed to succeed and was actually observed to fail\nin https://reviews.llvm.org/D145763.\n\nThis commit implements a much simplified function's code fetching,\nassuming the benchmark function is the only function in the object file\nand it spans across the entire text section (note that MCJIT-based code\nhas more or less the same assumption - see TrackingSectionMemoryManager\nclass).\n\n~~~\n\nHuawei RRI, OS Lab\n\nReviewed By: courbet\n\nDifferential Revision: https://reviews.llvm.org/D148921\n",
             "commit_timestamp": 1686901132.0
+        },
+        {
+            "tool_version": "232.0.20230608.100247-eap04",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1686917802.612113,
+            "elapsed_time": 6251.843702077866,
+            "x64": true,
+            "actual_files_count": 1667,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "d0233ccbf8807f86edef3aa1fb90b3786a9ce017",
+            "commit_message": "[mlir][nvvm] Introduce `mbarrier.arrive`\n\nIt introduces `mbarrier.arrive` that are in ptx78.\n\nReviewed By: qcolombet\n\nDifferential Revision: https://reviews.llvm.org/D153021\n",
+            "commit_timestamp": 1686916383.0
         }
     ]
 }
