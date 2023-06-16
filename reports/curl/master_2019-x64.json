@@ -2295,6 +2295,20 @@
             "commit_ref": "2b6222a64c0ada177fc51db8a0484dffbcaef7b9",
             "commit_message": "RELEASE-NOTES: synced\n",
             "commit_timestamp": 1686837546.0
+        },
+        {
+            "tool_version": "232.0.20230608.100247-eap04",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1686902751.785939,
+            "elapsed_time": 325.29755544662476,
+            "x64": false,
+            "actual_files_count": 2324,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "64aefea3d9aca43ea84a7ad8a606f4ee49cb1eab",
+            "commit_message": "imap: Provide method to disable SASL if it is advertised\n\n- Implement AUTH=+LOGIN for CURLOPT_LOGIN_OPTIONS to prefer plaintext\n  LOGIN over SASL auth.\n\nPrior to this change there was no method to be able to fall back to\nLOGIN if an IMAP server advertises SASL capabilities. However, this may\nbe desirable for e.g. a misconfigured server.\n\nPer: https://www.ietf.org/rfc/rfc5092.html#section-3.2\n\n\";AUTH=<enc-auth-type>\" looks to be the correct way to specify what\nauthenication method to use, regardless of SASL or not.\n\nCloses https://github.com/curl/curl/pull/10041\n",
+            "commit_timestamp": 1686879062.0
         }
     ]
 }
