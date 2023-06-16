@@ -2363,6 +2363,22 @@
             "commit_ref": "ae7e6df15f5640cb26df4671d6609b6a405bb338",
             "commit_message": "[Bazel][mlir][tosa] Fix for 86c4972f5f6759b0ba85c568d934f9b8db8875a2\n",
             "commit_timestamp": 1686858619.0
+        },
+        {
+            "tool_version": "232.0.20230608.100247-eap04",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1686874659.937518,
+            "elapsed_time": 6017.420338392258,
+            "x64": true,
+            "actual_files_count": 1667,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "43687da7a0d6ba13b1428037e8587568cc40b449",
+            "commit_message": "[mlir][doc] Fix the layout of the table for the tosa.cast permissible operations\n\nWe can make the table for the `tosa.cast` permissible operations readable by utilizing the markdown table format.\n\n{F27924602}\n\nReviewed By: jpienaar\n\nDifferential Revision: https://reviews.llvm.org/D152992\n",
+            "commit_timestamp": 1686873580.0
         }
     ]
 }
