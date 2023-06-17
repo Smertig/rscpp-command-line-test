@@ -2459,6 +2459,22 @@
             "commit_ref": "7a709689bc1755a569864a97d93b96d22f988eb4",
             "commit_message": "[clangd] Handle DependentNameType in HeuristicResolver::resolveTypeToRecordDecl()\n\nFixes https://github.com/clangd/clangd/issues/1671\n\nDifferential Revision: https://reviews.llvm.org/D152645\n",
             "commit_timestamp": 1686943190.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1686961212.682653,
+            "elapsed_time": 7546.750667095184,
+            "x64": true,
+            "actual_files_count": 1667,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "441108ccba948d76e7002c61236e3bcbca0203ce",
+            "commit_message": "Reland [clang-format] Fix overlapping whitespace replacements before PPDirective\n\nIf the first token of an annotated line already has a computed Newlines,\nreuse it to avoid potential overlapping whitespace replacements before\npreprocessor branching directives.\n\nFixes #62892.\n\nDifferential Revision: https://reviews.llvm.org/D151954\n",
+            "commit_timestamp": 1686960012.0
         }
     ]
 }
