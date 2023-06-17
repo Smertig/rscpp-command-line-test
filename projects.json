@@ -1220,5 +1220,34 @@
                 ]
             }
         }
+    },
+    "mold": {
+        "sources": {
+            "repo": "https://github.com/rui314/mold",
+            "commit": "dce8ebe5265b615f35999272d3dc666b1c246ff4"
+        },
+        "required toolchain": ["clang-cl-2019-x64"],
+        "stable": {
+            "known errors": [
+                {
+                    "file": "..\\third-party\\zlib\\gzlib.c",
+                    "line": 310,
+                    "message": "Ambiguous symbol 'wchar_t'",
+                    "reason": "TODO"
+                }
+            ]
+        },
+        "latest": {
+            "main": {
+                "known errors": [
+                    {
+                        "file": "..\\third-party\\zlib\\gzlib.c",
+                        "line": 310,
+                        "message": "Ambiguous symbol 'wchar_t'",
+                        "reason": "TODO"
+                    }
+                ]
+            }
+        }
     }
 }
