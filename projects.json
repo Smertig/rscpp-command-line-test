@@ -1249,5 +1249,52 @@
                 ]
             }
         }
+    },
+    "CPython": {
+        "sources": {
+            "repo": "https://github.com/python/cpython",
+            "commit": "e6373c0d8b59512aa7f0dea7f3fb162b6ed10fa4"
+        },
+        "custom build tool": {
+            "build step": [
+                "PCbuild\\build.bat"
+            ],
+            "path to .sln": "PCBuild/pcbuild.sln"
+        },
+        "use x64": true,
+        "stable": {
+            "known file errors": [
+                {
+                    "file": "..\\Include\\py_curses.h",
+                    "reason": "Not included on Windows"
+                }
+            ],
+            "known errors": [
+                {
+                    "file": "..\\PC\\launcher.c",
+                    "line": 1682,
+                    "message": "Cannot resolve symbol 'MAXINT'",
+                    "reason": "Can't find this macro anywhere ¯\\_(ツ)_/¯"
+                }
+            ]
+        },
+        "latest": {
+            "main": {
+                "known file errors": [
+                    {
+                        "file": "..\\Include\\py_curses.h",
+                        "reason": "Not included on Windows"
+                    }
+                ],
+                "known errors": [
+                    {
+                        "file": "..\\PC\\launcher.c",
+                        "line": 1682,
+                        "message": "Cannot resolve symbol 'MAXINT'",
+                        "reason": "Can't find this macro anywhere ¯\\_(ツ)_/¯"
+                    }
+                ]
+            }
+        }
     }
 }
