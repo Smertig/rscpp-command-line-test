@@ -17,6 +17,8 @@ GENERATOR_TO_CONFIG = {
     }
 }
 
+GENERATOR_TO_CONFIG["clang-cl-2019-x64"] = GENERATOR_TO_CONFIG["2019-x64"]
+
 
 def is_slow_project(project_name: str):
     # TODO: extract average build time from stats

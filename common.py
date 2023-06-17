@@ -36,7 +36,23 @@ VS_CMAKE_GENERATORS = {
             "-A", "x64"
         ],
         "vcpkg_triplet": "x64-windows"
-    }
+    },
+    "clang-cl-2019-x86": {
+        "cmake options": [
+            "-G", "Visual Studio 16 2019",
+            "-A", "Win32",
+            "-T", "ClangCL"
+        ],
+        "vcpkg_triplet": "x86-windows-clang"
+    },
+    "clang-cl-2019-x64": {
+        "cmake options": [
+            "-G", "Visual Studio 16 2019",
+            "-A", "x64",
+            "-T", "ClangCL"
+        ],
+        "vcpkg_triplet": "x64-windows-clang"
+    },
 }
 
 
