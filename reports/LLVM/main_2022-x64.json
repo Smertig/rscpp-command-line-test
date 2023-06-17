@@ -2475,6 +2475,22 @@
             "commit_ref": "441108ccba948d76e7002c61236e3bcbca0203ce",
             "commit_message": "Reland [clang-format] Fix overlapping whitespace replacements before PPDirective\n\nIf the first token of an annotated line already has a computed Newlines,\nreuse it to avoid potential overlapping whitespace replacements before\npreprocessor branching directives.\n\nFixes #62892.\n\nDifferential Revision: https://reviews.llvm.org/D151954\n",
             "commit_timestamp": 1686960012.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1686975265.51241,
+            "elapsed_time": 5708.259219408035,
+            "x64": true,
+            "actual_files_count": 1667,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "c2888cddd5d98081fc82c51cb92be241144c6ffa",
+            "commit_message": "[NFC] Fix potential dereferencing of null return value.\n\nReplace getAs with castAs and add assert if needed.\nDifferential Revision: https://reviews.llvm.org/D152977\n",
+            "commit_timestamp": 1686972668.0
         }
     ]
 }
