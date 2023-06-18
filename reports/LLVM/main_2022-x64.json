@@ -2635,6 +2635,22 @@
             "commit_ref": "7dd387d2971d7759cadfffeb2082439f6c7ddd49",
             "commit_message": "[clang] Add __builtin_isfpclass\n\nA new builtin function __builtin_isfpclass is added. It is called as:\n\n    __builtin_isfpclass(<floating point value>, <test>)\n\nand returns an integer value, which is non-zero if the floating point\nargument falls into one of the classes specified by the second argument,\nand zero otherwise. The set of classes is an integer value, where each\nvalue class is represented by a bit. There are ten data classes, as\ndefined by the IEEE-754 standard, they are represented by bits:\n\n    0x0001 (__FPCLASS_SNAN)         - Signaling NaN\n    0x0002 (__FPCLASS_QNAN)         - Quiet NaN\n    0x0004 (__FPCLASS_NEGINF)       - Negative infinity\n    0x0008 (__FPCLASS_NEGNORMAL)    - Negative normal\n    0x0010 (__FPCLASS_NEGSUBNORMAL) - Negative subnormal\n    0x0020 (__FPCLASS_NEGZERO)      - Negative zero\n    0x0040 (__FPCLASS_POSZERO)      - Positive zero\n    0x0080 (__FPCLASS_POSSUBNORMAL) - Positive subnormal\n    0x0100 (__FPCLASS_POSNORMAL)    - Positive normal\n    0x0200 (__FPCLASS_POSINF)       - Positive infinity\n\nThey have corresponding builtin macros to facilitate using the builtin\nfunction:\n\n    if (__builtin_isfpclass(x, __FPCLASS_NEGZERO | __FPCLASS_POSZERO) {\n      // x is any zero.\n    }\n\nThe data class encoding is identical to that used in llvm.is.fpclass\nfunction.\n\nDifferential Revision: https://reviews.llvm.org/D152351\n",
             "commit_timestamp": 1687103612.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1687119402.433863,
+            "elapsed_time": 6046.918904304504,
+            "x64": true,
+            "actual_files_count": 1695,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "59723e401bcad2650bcbfc39e7fe8479dfc7f62b",
+            "commit_message": "[Target] Use llvm::is_contained (NFC)\n",
+            "commit_timestamp": 1687117440.0
         }
     ]
 }

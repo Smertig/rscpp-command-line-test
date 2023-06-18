@@ -2463,6 +2463,20 @@
             "commit_ref": "89ecf32e0b0101e469e9084519841a98f739897d",
             "commit_message": "[MSPAINT] Improve wording of IDS_CANTPASTE message\n\nFollow-up of #5349 (9f56e67). CORE-18867\n",
             "commit_timestamp": 1687104977.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1687118652.430192,
+            "elapsed_time": 125.45969820022583,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "0972f71d9abb1a7e88660cbfbe8e2d564bb1e102",
+            "commit_message": "[NTOS:PNP] Assert the presence of a device extension when handling PnP root power IRPs\n\nHandling PnP root driver power IRPs requires that a device object must come up\nwith a device extension to determine whether it is a function driver and if so,\nhandle the IRP accordingly.\n\nCORE-18989\n",
+            "commit_timestamp": 1687113853.0
         }
     ]
 }
