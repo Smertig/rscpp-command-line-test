@@ -2571,6 +2571,22 @@
             "commit_ref": "833438eef0663d16d4224e25602749f50b661a17",
             "commit_message": "[Hexagon] Handle all compares of i1 and vNi1\n\nFixes https://github.com/llvm/llvm-project/issues/63363\n",
             "commit_timestamp": 1687044681.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1687061815.584372,
+            "elapsed_time": 6411.369520664215,
+            "x64": true,
+            "actual_files_count": 1695,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "44e63ffe2bf7e5c026b828054d67088239939e81",
+            "commit_message": "[clang] Replace uses of CGBuilderTy::CreateElementBitCast (NFC)\n\n* Add `Address::withElementType()` as a replacement for\n  `CGBuilderTy::CreateElementBitCast`.\n\n* Partial progress towards replacing `CreateElementBitCast`, as it no\n  longer does what its name suggests. Either replace its uses with\n  `Address::withElementType()`, or remove them if no longer needed.\n\n* Remove unused parameter 'Name' of `CreateElementBitCast`\n\nReviewed By: barannikov88, nikic\n\nDifferential Revision: https://reviews.llvm.org/D153196\n",
+            "commit_timestamp": 1687050795.0
         }
     ]
 }
