@@ -692,12 +692,6 @@
                     "reason": "RSCPP-14556 Implement __is_nothrow_assignable trait"
                 },
                 {
-                    "file": "..\\src\\video_core\\shader_cache.cpp",
-                    "line": 195,
-                    "message": "Substitution failed due to constraints: std::indirect_binary_predicate<std::ranges::equal_to, std::projected<std::vector<Entry*>::iterator, std::identity>, const Entry* const*> is false,\r\n  because std::predicate<std::ranges::equal_to&, Entry*&, const Entry*&> is false,\r\n  because std::regular_invocable<std::ranges::equal_to&, Entry*&, const Entry*&> is false,\r\n  because 'std::ranges::equal_to&' does not satisfy concept std::invocable<Entry*&, const Entry*&>",
-                    "reason": "RSCPP-34262 Incorrect calculation of ternary operator type"
-                },
-                {
                     "file": "..\\src\\video_core\\texture_cache\\texture_cache_base.h",
                     "line": 439,
                     "message": "Cannot substitute arguments for class 'VideoCommon::SlotVector<T>' because of violated constraint 'std::is_nothrow_move_assignable_v<ImageMapView> && std::is_nothrow_move_constructible_v<ImageMapView>'",
@@ -708,6 +702,13 @@
         "latest": {
             "master": {
                 "inspected files count": 2527,
+                "known file errors": [
+                    {
+                        "file": "..\\src\\core\\file_sys\\system_archive\\time_zone_binary.cpp",
+                        "message": "Cannot resolve symbol 'NxTzdb'",
+                        "reason": "TODO"
+                    }
+                ],
                 "known errors": [
                     {
                         "file": "..\\src\\common\\settings.h",
@@ -756,12 +757,6 @@
                         "line": 259,
                         "message": "Cannot substitute arguments for class 'VideoCommon::SlotVector<T>' because of violated constraint 'std::is_nothrow_move_assignable_v<Image> && std::is_nothrow_move_constructible_v<Image>'",
                         "reason": "RSCPP-14556 Implement __is_nothrow_assignable trait"
-                    },
-                    {
-                        "file": "..\\src\\video_core\\shader_cache.cpp",
-                        "line": 195,
-                        "message": "Substitution failed due to constraints: std::indirect_binary_predicate<std::ranges::equal_to, std::projected<std::vector<Entry*>::iterator, std::identity>, const Entry* const*> is false,\r\n  because std::predicate<std::ranges::equal_to&, Entry*&, const Entry*&> is false,\r\n  because std::regular_invocable<std::ranges::equal_to&, Entry*&, const Entry*&> is false,\r\n  because 'std::ranges::equal_to&' does not satisfy concept std::invocable<Entry*&, const Entry*&>",
-                        "reason": "RSCPP-34262 Incorrect calculation of ternary operator type"
                     },
                     {
                         "file": "..\\src\\video_core\\texture_cache\\texture_cache_base.h",
@@ -1228,6 +1223,16 @@
         },
         "required toolchain": ["clang-cl-2019-x64"],
         "stable": {
+            "known file errors": [
+                {"file": "..\\third-party\\zstd\\lib\\common\\zstd_internal.h", "reason": "missing __x86_64__ macro"},
+                {"file": "..\\third-party\\zstd\\lib\\compress\\zstd_compress_internal.h"},
+                {"file": "..\\third-party\\zstd\\lib\\compress\\zstd_double_fast.c"},
+                {"file": "..\\third-party\\zstd\\lib\\compress\\zstd_fast.c"},
+                {"file": "..\\third-party\\zstd\\lib\\compress\\zstd_lazy.c"},
+                {"file": "..\\third-party\\zstd\\lib\\compress\\zstd_ldm.c"},
+                {"file": "..\\third-party\\zstd\\lib\\decompress\\zstd_decompress_block.c"},
+                {"file": "..\\third-party\\zstd\\lib\\dictBuilder\\zdict.c"}
+            ],
             "known errors": [
                 {
                     "file": "..\\third-party\\zlib\\gzlib.c",
@@ -1239,6 +1244,16 @@
         },
         "latest": {
             "main": {
+                "known file errors": [
+                    {"file": "..\\third-party\\zstd\\lib\\common\\zstd_internal.h", "reason": "missing __x86_64__ macro"},
+                    {"file": "..\\third-party\\zstd\\lib\\compress\\zstd_compress_internal.h"},
+                    {"file": "..\\third-party\\zstd\\lib\\compress\\zstd_double_fast.c"},
+                    {"file": "..\\third-party\\zstd\\lib\\compress\\zstd_fast.c"},
+                    {"file": "..\\third-party\\zstd\\lib\\compress\\zstd_lazy.c"},
+                    {"file": "..\\third-party\\zstd\\lib\\compress\\zstd_ldm.c"},
+                    {"file": "..\\third-party\\zstd\\lib\\decompress\\zstd_decompress_block.c"},
+                    {"file": "..\\third-party\\zstd\\lib\\dictBuilder\\zdict.c"}
+                ],
                 "known errors": [
                     {
                         "file": "..\\third-party\\zlib\\gzlib.c",
