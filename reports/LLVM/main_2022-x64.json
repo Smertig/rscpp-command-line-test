@@ -2603,6 +2603,22 @@
             "commit_ref": "ed0620fd24a174d420c889454544697f57248b88",
             "commit_message": "[gn build] Port 845618cf69e8\n",
             "commit_timestamp": 1687073450.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1687090507.270134,
+            "elapsed_time": 6220.2735295295715,
+            "x64": true,
+            "actual_files_count": 1695,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "82d4dc20efbd72e20b430913e985e38997c7a3e8",
+            "commit_message": "[clang-tidy] Improve `performance-move-const-arg` message when no move constructor is available\n\nWe now display a simple note if the reason is that the used class does not\nsupport move semantics.\n\nThis fixes llvm#62550\n\nReviewed By: PiotrZSL\n\nDifferential Revision: https://reviews.llvm.org/D153220\n",
+            "commit_timestamp": 1687088447.0
         }
     ]
 }
