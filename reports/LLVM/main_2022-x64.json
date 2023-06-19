@@ -2699,6 +2699,22 @@
             "commit_ref": "0eb0fecbc544a0416b70f4450a38dfb27c9b5b9a",
             "commit_message": "[mlir][ExecutionEngine] Only load JITDyLibs without init/destroy funcs.\n\nIn https://reviews.llvm.org/D153029, I moved the loading/unloading\nmechanisms of shared libraries from the JIT runner to the execution\nengine in order to make that mechanism available in the latter\n(including its Python bindings). However, I realized that I introduced a\nsmall change in semantic: previously, the JIT runner checked for the\npresence of init/destroy functions and only loaded the library as\nJITDyLib if they were not present. After I moved the code, all libraries\nwere loaded as JITDyLib, even if they registered their symbols\nexplicitly in their init function. I am not sure if this is really a\nproblem but (1) the previous behavior was different and (2) I guess it\ncould cause a problem if some symbols are exported through the init\nfunction *and*  have public visibility. This patch reestablishes the\noriginal behaviour in the new place of the code.\n\nReviewed By: mehdi_amini\n\nDifferential Revision: https://reviews.llvm.org/D153249\n",
             "commit_timestamp": 1687160331.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1687177235.249251,
+            "elapsed_time": 7564.498025178909,
+            "x64": true,
+            "actual_files_count": 1695,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "7e229217f4215b519b886e7881bae4da3742a7d2",
+            "commit_message": "[lldb][AArch64] Add thread local storage tpidr register\n\nThis register is used as the pointer to the current thread\nlocal storage block and is read from NT_ARM_TLS on Linux.\n\nThough tpidr will be present on all AArch64 Linux, I am soon\ngoing to add a second register tpidr2 to this set.\n\ntpidr is only present when SME is implemented, therefore the\nNT_ARM_TLS set will change size. This is why I've added this\nas a dynamic register set to save changes later.\n\nReviewed By: omjavaid\n\nDifferential Revision: https://reviews.llvm.org/D152516\n",
+            "commit_timestamp": 1687175518.0
         }
     ]
 }
