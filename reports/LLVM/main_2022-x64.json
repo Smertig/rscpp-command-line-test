@@ -2651,6 +2651,22 @@
             "commit_ref": "59723e401bcad2650bcbfc39e7fe8479dfc7f62b",
             "commit_message": "[Target] Use llvm::is_contained (NFC)\n",
             "commit_timestamp": 1687117440.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1687134031.462452,
+            "elapsed_time": 6264.057017087936,
+            "x64": true,
+            "actual_files_count": 1695,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "ada137a4c2a292c34927f0f22bd4c6fba4d3df87",
+            "commit_message": "[MC] Remove unneeded MCDataFragment check from AttemptToFoldSymbolOffsetDifference\n\nIf FA == FB, we can use SA.getOffset() - SB.getOffset() even if FA is\nnot a MCDataFragment, as the only case this can be problematic\n(different offsets for a variable-size fragment) is invalid/unreachable.\nIf FA != FB, the `if (FI->getKind() != MCFragment::FT_Data)` check below\ncan bail out correctly.\n\nThis change will help Mach-O fold more expressions. For ELF this is NFC,\nunless evaluateFixup has a bug that would evaluate an expression\ndifferently.\n",
+            "commit_timestamp": 1687129218.0
         }
     ]
 }
