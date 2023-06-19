@@ -2683,6 +2683,22 @@
             "commit_ref": "2d8044ee8b19f23e0a7fe5cd35876515d0d1d72e",
             "commit_message": "Recommit [ABI] [C++20] [Modules] Don't generate vtable if the class is defined in other module unit\n\nClose https://github.com/llvm/llvm-project/issues/61940.\n\nThe root cause is that clang will generate vtable as strong symbol now\neven if the corresponding class is defined in other module units. After\nI check the wording in Itanium ABI, I find this is not inconsistent.\nItanium ABI 5.2.3\n(https://itanium-cxx-abi.github.io/cxx-abi/abi.html#vague-vtable) says:\n\n> The virtual table for a class is emitted in the same object containing\n> the definition of its key function, i.e. the first non-pure virtual\n> function that is not inline at the point of class definition.\n\nSo the current behavior is incorrect. This patch tries to address this.\nAlso I think we need to do a similar change for MSVC ABI. But I don't\nfind the formal wording. So I don't address this in this patch.\n\nReviewed By: rjmccall, iains, dblaikie\n\nDifferential Revision: https://reviews.llvm.org/D150023\n",
             "commit_timestamp": 1687142472.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1687162685.072786,
+            "elapsed_time": 6297.086789369583,
+            "x64": true,
+            "actual_files_count": 1695,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "0eb0fecbc544a0416b70f4450a38dfb27c9b5b9a",
+            "commit_message": "[mlir][ExecutionEngine] Only load JITDyLibs without init/destroy funcs.\n\nIn https://reviews.llvm.org/D153029, I moved the loading/unloading\nmechanisms of shared libraries from the JIT runner to the execution\nengine in order to make that mechanism available in the latter\n(including its Python bindings). However, I realized that I introduced a\nsmall change in semantic: previously, the JIT runner checked for the\npresence of init/destroy functions and only loaded the library as\nJITDyLib if they were not present. After I moved the code, all libraries\nwere loaded as JITDyLib, even if they registered their symbols\nexplicitly in their init function. I am not sure if this is really a\nproblem but (1) the previous behavior was different and (2) I guess it\ncould cause a problem if some symbols are exported through the init\nfunction *and*  have public visibility. This patch reestablishes the\noriginal behaviour in the new place of the code.\n\nReviewed By: mehdi_amini\n\nDifferential Revision: https://reviews.llvm.org/D153249\n",
+            "commit_timestamp": 1687160331.0
         }
     ]
 }
