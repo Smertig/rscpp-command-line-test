@@ -2631,20 +2631,6 @@
             "commit_ref": "f203ad5cf4f650b77e5ae32ed977d3606c32bb2a",
             "commit_message": "[BROWSEUI] Add locked toolbar state persistence (#5350)\n\nStore the state of the explorer toolbar, locked or unlocked, in the proper\r\nregistry location and set the proper toolbar state when initialized.\r\n\r\nCORE-9094\r\n\r\n- Set `HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Toolbar\\Locked`\r\n  to 1 when the explorer toolbar is locked, 0 when the toolbar is unlocked.\r\n- Query `HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Toolbar\\Locked`\r\n  when the toolbar is initialized to set the correct locked state.\r\n- Set the default state of the toolbar to locked if the registry key does not\r\n  exist, matching the behavior of Windows Server 2003.\r\n",
             "commit_timestamp": 1687252583.0
-        },
-        {
-            "tool_version": "232.0.20230613.111753-eap05",
-            "error_mismatch": false,
-            "project": null,
-            "timestamp": 1687277054.500658,
-            "elapsed_time": 106.26351165771484,
-            "x64": true,
-            "actual_files_count": 266,
-            "expected_files_count": 266,
-            "repo_url": "https://github.com/reactos/reactos",
-            "commit_ref": "f203ad5cf4f650b77e5ae32ed977d3606c32bb2a",
-            "commit_message": "[BROWSEUI] Add locked toolbar state persistence (#5350)\n\nStore the state of the explorer toolbar, locked or unlocked, in the proper\r\nregistry location and set the proper toolbar state when initialized.\r\n\r\nCORE-9094\r\n\r\n- Set `HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Toolbar\\Locked`\r\n  to 1 when the explorer toolbar is locked, 0 when the toolbar is unlocked.\r\n- Query `HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Toolbar\\Locked`\r\n  when the toolbar is initialized to set the correct locked state.\r\n- Set the default state of the toolbar to locked if the registry key does not\r\n  exist, matching the behavior of Windows Server 2003.\r\n",
-            "commit_timestamp": 1687252583.0
         }
     ]
 }
