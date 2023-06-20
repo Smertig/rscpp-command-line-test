@@ -2795,6 +2795,22 @@
             "commit_ref": "99610fa77df46fbc38d80e0b7ee02acfddbd032d",
             "commit_message": "Revert \"[AMDGPU] Start documenting calling conventions. NFC\"\n\nThis reverts commit aa7b127cb7314e326457d7f790d36db1cb74f63c.\n\n...because I really ought to install sphinx.\n",
             "commit_timestamp": 1687247752.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1687263595.756006,
+            "elapsed_time": 7666.275839567184,
+            "x64": true,
+            "actual_files_count": 1695,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "6bea8331f9e09ba94a225c65becd4224a1a473af",
+            "commit_message": "Revert \"Reland \"[DebugMetadata][DwarfDebug] Support function-local types in lexical block scopes (4/7)\" (2)\"\n\nThis reverts commit cb9ac7051589ea0d05507f9370d0716bef86b4ae.\nIt causes an assert in clang:\nvirtual void llvm::DwarfDebug::endFunctionImpl(const llvm::MachineFunction*): Assertion `LScopes.getAbstractScopesList().size() == NumAbstractSubprograms && \"getOrCreateAbstractScope() inserted an abstract subprogram scope\"' failed.\nhttps://bugs.chromium.org/p/chromium/issues/detail?id=1456288#c2\n",
+            "commit_timestamp": 1687259327.0
         }
     ]
 }
