@@ -2763,6 +2763,22 @@
             "commit_ref": "fec7c6457ced7e87d4e0837402b0b8a644cf6242",
             "commit_message": "Revert \"Reland \"[DebugMetadata][DwarfDebug] Support function-local types in lexical block scopes (4/7)\"\"\n\nThis reverts commit 2da45172c4bcd42f704c57c656926f56f32fc5ce.\nTest local-type-as-template-parameter.ll fails on ppc64-aix.\n",
             "commit_timestamp": 1687218888.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1687234437.275844,
+            "elapsed_time": 5571.0322959423065,
+            "x64": true,
+            "actual_files_count": 1695,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "516e32678d87fea013aa972444b987d95eaef8aa",
+            "commit_message": "[X86][AMX] set Stride to Tile's Col when doing combine amxcast and store into tilestore\n\n%tile = call x86_amx @llvm.x86.tileloadd64.internal(i16 8, i16 32, i8* %src_ptr, i64 64)\n%vec = call <256 x i8> @llvm.x86.cast.tile.to.vector.v256i8(x86_amx...%tile)\nstore <256 x i8> %vec, <256 x i8>* %dst_ptr, align 256\n=>\n%tile = call x86_amx @llvm.x86.tileloadd64.internal(i16 8, i16 32, i8* %src_ptr, i64 64)\n%stride = sext i16 32 to i64\ncall void @llvm.x86.tilestored64.internal(i16 8, i16 32, i8* %dst_ptr, i64 32, x86_amx %tile)\n\nReviewed By: LuoYuanke\n\nDifferential Revision: https://reviews.llvm.org/D153002\n",
+            "commit_timestamp": 1687233325.0
         }
     ]
 }

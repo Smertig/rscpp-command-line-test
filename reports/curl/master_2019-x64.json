@@ -2715,6 +2715,20 @@
             "commit_ref": "355f4144df9d31e3a6851cf68c9226409515808e",
             "commit_message": "cf-socket: skip getpeername()/getsockname for TFTP\n\nSince the socket is not connected then the call fails. When the call\nfails, failf() is called to write an error message that is then\nsurviving and is returned when the *real* error occurs later. The\nearlier, incorrect, error therefore hides the actual error message.\n\nThis could be seen in stderr for test 1007\n\nTest 1007 has now been extended to verify the stderr message.\n\nCloses #11332\n",
             "commit_timestamp": 1687160389.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1687233926.932385,
+            "elapsed_time": 260.52456498146057,
+            "x64": false,
+            "actual_files_count": 2324,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "2c5c7abb15c8a1d6f68e6e795efa878ad4c92ff5",
+            "commit_message": "libtest: display the times after a test timeout error\n\nThis is to help with test failure debugging.\n\nRef: #11328\nCloses #11329\n",
+            "commit_timestamp": 1687220067.0
         }
     ]
 }
