@@ -251,6 +251,20 @@
             "commit_ref": "1858db7cbdbf41aa600c954c15224307bf81a258",
             "commit_message": "GH-105808: Fix a regression introduced in GH-101251 (#105910)\n\nFix a regression introduced in pythonGH-101251, causing GzipFile.flush() to\r\nnot flush the compressor (nor pass along the zip_mode argument).",
             "commit_timestamp": 1687194544.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1687219735.981596,
+            "elapsed_time": 1285.7798988819122,
+            "x64": true,
+            "actual_files_count": 892,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "7f97c8e367869e2aebe9f28bc5f8d4ce36448878",
+            "commit_message": "gh-105927: Refactor weakrefobject.c (#105928)\n\n* Rename proxy_checkref() to proxy_check_ref().\r\n* proxy_check_ref() now checks the object, not the proxy.\r\n* Most functions take PyObject* instead of PyWeakReference*.\r\n* Remove redundant calls to PyWeakref_GET_OBJECT().",
+            "commit_timestamp": 1687217477.0
         }
     ]
 }
