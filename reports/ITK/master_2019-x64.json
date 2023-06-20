@@ -3295,6 +3295,20 @@
             "commit_ref": "14816adf53e2dddc963cf3947e72b0d2b6a22365",
             "commit_message": "Merge pull request #4077 from jhlegarreta/ImproveRegistrationParameterScalesEstimatorCoverage\n\nENH: Increase `RegistrationParameterScalesFromPhysicalShift` coverage",
             "commit_timestamp": 1687224731.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1687291858.162812,
+            "elapsed_time": 485.3629364967346,
+            "x64": false,
+            "actual_files_count": 100,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "e5011aeb765d9dcdf6778a3c8eb910576c03eb46",
+            "commit_message": "PERF: Use `std::move` inside `itkSetMacro`, declare parameter non-const\n\nAvoids an unnecessary copy (possibly involving memory allocation) of the\nargument of a Set member function.\n\nNote that `itkSetMacro` calls that define a Set member function which passes the\nargument by const-reference must explicitly specify the `const` keyword now.\n",
+            "commit_timestamp": 1687291000.0
         }
     ]
 }

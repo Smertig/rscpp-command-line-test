@@ -3741,6 +3741,20 @@
             "commit_ref": "45676832b458886eb126104152e5fc36193f6781",
             "commit_message": "Do not emit gencode for map fields\n\nThey are currently unsupported. Up until now we've been generating gencode\nassuming that map fields are standard message fields, and the gencode was\nexpecting thunks such as _serialize to exist, but they don't.\n\nIn some toolchains this becomes a linking problem.\n\nPiperOrigin-RevId: 541572265\n",
             "commit_timestamp": 1687167695.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1687291485.452951,
+            "elapsed_time": 374.0842306613922,
+            "x64": false,
+            "actual_files_count": 817,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "c95ebb7bd8b460956a80bdcb416624c1d5f7eca0",
+            "commit_message": "deps: Update Guava to 32.0.1 (#13099)\n\nFollow-up from #12953 to update to `32.0.1` to fix an issue on windows:\n\nhttps://github.com/google/guava/releases/tag/v32.0.1\n\nThe underlying issue likely does not affect protobuf as it does not appear to (directly) use the affected `Files.createTempDir` or `FileBackedOutputStream` code which was apparently broken on Windows in `32.0.0`.\n\nSeems best to update anyway.\n\nCloses #13099\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/13099 from chadlwilson:bump-guava-3201 30bd3f75630aeddb5553810e63dc3ecd38db4333\nPiperOrigin-RevId: 541960623\n",
+            "commit_timestamp": 1687280380.0
         }
     ]
 }

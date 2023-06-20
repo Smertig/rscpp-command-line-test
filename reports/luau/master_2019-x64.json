@@ -2981,6 +2981,20 @@
             "commit_ref": "d458d240cdc07765cfe6bd81417faa3f642d0d75",
             "commit_message": "Sync to upstream/release/581 (#958)\n\n* Definition files can now ascribe indexers to class types.\r\n(https://github.com/Roblox/luau/pull/949)\r\n* Remove --compile support from the REPL. You can just use luau-compile\r\ninstead.\r\n* When an exception is thrown during parallel typechecking (usually an\r\nICE), we now gracefully stop typechecking and drain active workers\r\nbefore rethrowing the exception.\r\n\r\nNew solver\r\n\r\n* Include more source location information when we hit an internal\r\ncompiler error\r\n* Improve the logic that simplifies intersections of tables\r\n\r\nJIT\r\n\r\n* Save testable type annotations to bytecode\r\n* Improve block placement for linearized blocks\r\n* Add support for lea reg, [rip+offset] for labels\r\n* Unify X64 and A64 codegen for RETURN\r\n* Outline interrupt handlers for X64\r\n* Remove global rArgN in favor of build.abi\r\n* Change A64 INTERRUPT lowering to match X64\r\n\r\n---------\r\n\r\nCo-authored-by: Arseny Kapoulkine <arseny.kapoulkine@gmail.com>\r\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>",
             "commit_timestamp": 1686936918.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1687291534.389418,
+            "elapsed_time": 430.72086000442505,
+            "x64": false,
+            "actual_files_count": 388,
+            "expected_files_count": 379,
+            "repo_url": "https://github.com/Roblox/luau",
+            "commit_ref": "d458d240cdc07765cfe6bd81417faa3f642d0d75",
+            "commit_message": "Sync to upstream/release/581 (#958)\n\n* Definition files can now ascribe indexers to class types.\r\n(https://github.com/Roblox/luau/pull/949)\r\n* Remove --compile support from the REPL. You can just use luau-compile\r\ninstead.\r\n* When an exception is thrown during parallel typechecking (usually an\r\nICE), we now gracefully stop typechecking and drain active workers\r\nbefore rethrowing the exception.\r\n\r\nNew solver\r\n\r\n* Include more source location information when we hit an internal\r\ncompiler error\r\n* Improve the logic that simplifies intersections of tables\r\n\r\nJIT\r\n\r\n* Save testable type annotations to bytecode\r\n* Improve block placement for linearized blocks\r\n* Add support for lea reg, [rip+offset] for labels\r\n* Unify X64 and A64 codegen for RETURN\r\n* Outline interrupt handlers for X64\r\n* Remove global rArgN in favor of build.abi\r\n* Change A64 INTERRUPT lowering to match X64\r\n\r\n---------\r\n\r\nCo-authored-by: Arseny Kapoulkine <arseny.kapoulkine@gmail.com>\r\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>",
+            "commit_timestamp": 1686936918.0
         }
     ]
 }
