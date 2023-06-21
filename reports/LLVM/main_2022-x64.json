@@ -2843,6 +2843,22 @@
             "commit_ref": "fabd16c7460e6cfae3106155ec79142bfa54db2e",
             "commit_message": "[lldb][Android] Add platform.plugin.remote-android.package-name\n\nWhen LLDB fails to pull file from a package directory due to security\nconstraint, user needs to set the package name to\n'platform.plugin.remote-android.package-name' property to run shell commands\nas the package user. (e.g. to get file with 'cat' and 'dd').\n\nhttps://cs.android.com/android/platform/superproject/+/master:\nsystem/core/run-as/run-as.cpp;l=39-61;\ndrc=4a77a84a55522a3b122f9c63ef0d0b8a6a131627\n\nDifferential Revision: https://reviews.llvm.org/D152933\n",
             "commit_timestamp": 1687303041.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1687320912.535022,
+            "elapsed_time": 6274.461288928986,
+            "x64": true,
+            "actual_files_count": 1695,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "b1cab310739cd9f14e094b73dfe8301b8bb83b70",
+            "commit_message": "[docs][TableGen][Target] Improve the documentation of the attribute value for SubtargetFeature.\n\nThe value \"true\" and \"false\" are treated specially and other values are treated as integers.\n\nReviewed By: arsenm\n\nDifferential Revision: https://reviews.llvm.org/D153180\n",
+            "commit_timestamp": 1687319856.0
         }
     ]
 }
