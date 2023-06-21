@@ -754,7 +754,7 @@
                     },
                     {
                         "file": "..\\src\\video_core\\texture_cache\\texture_cache_base.h",
-                        "line": 457,
+                        "line": 455,
                         "message": "Cannot substitute arguments for class 'VideoCommon::SlotVector<T>' because of violated constraint 'std::is_nothrow_move_assignable_v<ImageMapView> && std::is_nothrow_move_constructible_v<ImageMapView>'",
                         "reason": "RSCPP-14556 Implement __is_nothrow_assignable trait"
                     }
@@ -1233,6 +1233,13 @@
                     "line": 310,
                     "message": "Ambiguous symbol 'wchar_t'",
                     "reason": "TODO"
+                },
+                {
+                    "file": "..\\third-party\\zlib\\zlib.h",
+                    "line": 1920,
+                    "message": "Ambiguous symbol 'wchar_t'",
+                    "flaky": true,
+                    "reason": "TODO"
                 }
             ]
         },
@@ -1253,6 +1260,13 @@
                         "file": "..\\third-party\\zlib\\gzlib.c",
                         "line": 310,
                         "message": "Ambiguous symbol 'wchar_t'",
+                        "reason": "TODO"
+                    },
+                    {
+                        "file": "..\\third-party\\zlib\\zlib.h",
+                        "line": 1920,
+                        "message": "Ambiguous symbol 'wchar_t'",
+                        "flaky": true,
                         "reason": "TODO"
                     }
                 ]
