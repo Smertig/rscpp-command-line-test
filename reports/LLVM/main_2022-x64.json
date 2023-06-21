@@ -2891,6 +2891,22 @@
             "commit_ref": "10e3ed9919ffb68d5938ccd83414b766279ace03",
             "commit_message": "[Flang][Debug] NFC: Correct the REQUIRES line to use system-linux\n\nReviewed By: kkwli0\n\nDifferential Revision: https://reviews.llvm.org/D153126\n",
             "commit_timestamp": 1687345863.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1687364111.799971,
+            "elapsed_time": 6143.181931257248,
+            "x64": true,
+            "actual_files_count": 1695,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "aae155c50b07cf2358d72055457c133f4a71e1eb",
+            "commit_message": "[RISCV] Use a build_vector instead of a chain insert_vector_elts for vXi1 build_vector lowreing.\n\nA build_vector is the canonical representation rather than multiple\ninsert_vector_elts.\n\nUnfortunately, this regresses quite a few tests now primarily due to not\nhaving a vmv.s.x special case, but I hope we can improve this with future\npatches.\n\nStress testing in our downstream found an infinite loop in DAG combine.\nThis patch breaks the infinite loop.\n\nThe insert_vector_element chain starts with a fixed vector undef.\nFixed vector undef is currently expanded to a build_vector of 0s\nwhich gets lowered to a vmv.v.i. The insert chain overwrites all\nelements so SimplifyDemandedVectorElts turns the vmv.v.i back into\nundef and the cycle repeats.\n\nWe probably should custom lower fixed vector undef to scalable\nvector undef. I think that would also fix the infinite loop, but\nI didn't test that.\n\nReviewed By: luke\n\nDifferential Revision: https://reviews.llvm.org/D153399\n",
+            "commit_timestamp": 1687363066.0
         }
     ]
 }

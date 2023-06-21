@@ -377,6 +377,20 @@
             "commit_ref": "eaa670228066220f08c8d73f80365c50058d40b8",
             "commit_message": "Use CSV-separated outputs @ get-changed-files @ CI (#105151)\n\nCo-authored-by: Hugo van Kemenade <hugovk@users.noreply.github.com>\r\n",
             "commit_timestamp": 1687344179.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1687363651.076915,
+            "elapsed_time": 1312.6914100646973,
+            "x64": true,
+            "actual_files_count": 893,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "fc32522b081c895f3798e4a16788b800cff08166",
+            "commit_message": "gh-105927: type_from_ref() uses _PyWeakref_GET_REF() (#105963)\n\ntype_from_ref() now returns a strong reference to the type, instead\r\nof a borrowed reference: replace PyWeakref_GET_OBJECT() with\r\n_PyWeakref_GET_REF().",
+            "commit_timestamp": 1687358158.0
         }
     ]
 }
