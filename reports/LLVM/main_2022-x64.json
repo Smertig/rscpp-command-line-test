@@ -2907,6 +2907,22 @@
             "commit_ref": "aae155c50b07cf2358d72055457c133f4a71e1eb",
             "commit_message": "[RISCV] Use a build_vector instead of a chain insert_vector_elts for vXi1 build_vector lowreing.\n\nA build_vector is the canonical representation rather than multiple\ninsert_vector_elts.\n\nUnfortunately, this regresses quite a few tests now primarily due to not\nhaving a vmv.s.x special case, but I hope we can improve this with future\npatches.\n\nStress testing in our downstream found an infinite loop in DAG combine.\nThis patch breaks the infinite loop.\n\nThe insert_vector_element chain starts with a fixed vector undef.\nFixed vector undef is currently expanded to a build_vector of 0s\nwhich gets lowered to a vmv.v.i. The insert chain overwrites all\nelements so SimplifyDemandedVectorElts turns the vmv.v.i back into\nundef and the cycle repeats.\n\nWe probably should custom lower fixed vector undef to scalable\nvector undef. I think that would also fix the infinite loop, but\nI didn't test that.\n\nReviewed By: luke\n\nDifferential Revision: https://reviews.llvm.org/D153399\n",
             "commit_timestamp": 1687363066.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1687378516.083321,
+            "elapsed_time": 6189.700397729874,
+            "x64": true,
+            "actual_files_count": 1695,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "e734a12b608f8c4a2b03fb2f3194de1cc3b43344",
+            "commit_message": "Emit DW_LLE_base_address + DW_LLE_offset_pair for DWARF v5\n\nThis patch tries to reduce the size of the debug_loclist section by\nreplacing the DW_LLE_start_length opcodes currently emitted by dsymutil\nin favor of using DW_LLE_base_address + DW_LLE_offset_pair instead.\n\nThe DW_LLE_start_length is one AddressSize followed by a ULEB per entry,\nwhereas, the DW_LLE_base_address + DW_LLE_offset_pair will use one\nAddressSize for the base address, and then the DW_LLE_offset_pair is a\npair of ULEBs. This will be more efficient where a loclist fragment has\nmany entries.\n\nDifferential Revision: https://reviews.llvm.org/D153080\n",
+            "commit_timestamp": 1687376609.0
         }
     ]
 }
