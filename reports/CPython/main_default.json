@@ -475,6 +475,20 @@
             "commit_ref": "13237a2da846efef9ce9b93fd4bcfebd49933568",
             "commit_message": "gh-98931: Add custom error messages to invalid import/from with multiple targets (#105985)\n\nCo-authored-by: Alex Waygood <Alex.Waygood@Gmail.com>\r\n",
             "commit_timestamp": 1687449400.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1687464440.087756,
+            "elapsed_time": 1363.113374710083,
+            "x64": true,
+            "actual_files_count": 893,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "c38da1e3e19a7bf1053c6d52e730e970efeceff6",
+            "commit_message": "gh-105927: Add _PyWeakref_IS_DEAD() function (#105992)\n\n* Add _PyWeakref_IS_DEAD() internal function.\r\n* Modify is_dead_weakref() of Modules/_weakref.c and\r\n  _pysqlite_drop_unused_cursor_references() to replace\r\n  PyWeakref_GET_OBJECT() with _PyWeakref_IS_DEAD().\r\n* Replace \"int i\" with \"Py_ssize_t i\" to iterate on cursors\r\n  in _pysqlite_drop_unused_cursor_references().",
+            "commit_timestamp": 1687463804.0
         }
     ]
 }

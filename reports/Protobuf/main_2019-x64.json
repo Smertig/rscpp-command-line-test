@@ -3923,6 +3923,20 @@
             "commit_ref": "f71a9263f9380836c4fc356b67710203e691bc95",
             "commit_message": "Refine proxied traits instead of using bounds\n\nPiperOrigin-RevId: 542492859\n",
             "commit_timestamp": 1687424764.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1687464234.751444,
+            "elapsed_time": 334.3811786174774,
+            "x64": false,
+            "actual_files_count": 817,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "6d79d13e478d677e7bdc1587d3442a070d5205cd",
+            "commit_message": "Enable TSan validation to detect when a mutable accessor of a message is called concurrently with another accessor on the same message, which is a data race.\n\nThis is the first phase, in which we enable validation for repeated/map fields.\n\nPiperOrigin-RevId: 542623187\n",
+            "commit_timestamp": 1687459708.0
         }
     ]
 }
