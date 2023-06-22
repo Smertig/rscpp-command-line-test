@@ -2883,6 +2883,20 @@
             "commit_ref": "47c04d7136a2d94a61807a8c07eb09d6e2b8f673",
             "commit_message": "test2600: fix the description\n\nIt looks like it was cut-and-pasted.\n\nCloses #11354\n",
             "commit_timestamp": 1687373161.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1687406739.995906,
+            "elapsed_time": 314.1917173862457,
+            "x64": false,
+            "actual_files_count": 2324,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "3cfd9f237844c32cb0dbad4f5fc294367749e1be",
+            "commit_message": "runtests: include missing valgrind package\n\nuse valgrind was missing which caused torture tests with valgrind\nenabled to fail.\n\nReported-by: Daniel Stenberg\nFixes #11364\nCloses #11365\n",
+            "commit_timestamp": 1687386781.0
         }
     ]
 }
