@@ -3895,6 +3895,20 @@
             "commit_ref": "ef17a17f56f32bcfab40726e1052375679398c9a",
             "commit_message": "Fix msan error in generated_message_reflection_unittest.cc\n\nThis test was failing in opt mode, because without the debug checks we were\nrunning into undefined behavior. This CL fixes the problem by making sure we\nonly exercise this error case in non-opt builds.\n\nPiperOrigin-RevId: 542382472\n",
             "commit_timestamp": 1687387601.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1687435576.060485,
+            "elapsed_time": 425.5676038265228,
+            "x64": false,
+            "actual_files_count": 817,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "f71a9263f9380836c4fc356b67710203e691bc95",
+            "commit_message": "Refine proxied traits instead of using bounds\n\nPiperOrigin-RevId: 542492859\n",
+            "commit_timestamp": 1687424764.0
         }
     ]
 }

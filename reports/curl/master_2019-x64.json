@@ -2911,6 +2911,20 @@
             "commit_ref": "0526525c33ca4ad17eebd56ca0309922eb9fb15e",
             "commit_message": "runtests: work around a perl without SIGUSR1\n\nAt least msys2 perl v5.32.1 doesn't seem to define this signal. Since\nthis signal is only used for debugging, just ignore if setting it fails.\n\nReported-by: Marcel Raad\nFixes #11350\nCloses #11366\n",
             "commit_timestamp": 1687414927.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1687435534.882857,
+            "elapsed_time": 280.13427782058716,
+            "x64": false,
+            "actual_files_count": 2324,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "7f669aa0f1d40ef5d64543981f22bdc5af1272f5",
+            "commit_message": "checksrc: modernise perl file open\n\nUse regular variables and separate file open modes from filenames.\n\nSuggested by perlcritic\n\nCopied from https://github.com/curl/trurl/commit/f2784a9240f47ee28a845\n\nCloses #11358\n",
+            "commit_timestamp": 1687424582.0
         }
     ]
 }

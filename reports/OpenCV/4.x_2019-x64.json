@@ -3435,6 +3435,20 @@
             "commit_ref": "eba845099500ce62b19922c233106a10b1705c8c",
             "commit_message": "Merge pull request #23842 from opencv-pushbot:gitee/alalek/fix_static_build_with_gapi_openvino\n\nG-API: fix static build with OpenVINO",
             "commit_timestamp": 1687376548.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1687435547.655585,
+            "elapsed_time": 686.8634171485901,
+            "x64": false,
+            "actual_files_count": 464,
+            "expected_files_count": 459,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "60848519b5352cf06f2fdef1f140af1179cfc903",
+            "commit_message": "Merge pull request #23843 from TolyaTalamanov:at/fix-missing-opaque-kind-for-kernel\n\nG-API: Fix incorrect OpaqueKind for Kernel outputs #23843\r\n\r\n### Pull Request Readiness Checklist\r\n\r\n#### Overview\r\nThe PR is going to fix several problems:\r\n1. Major: `GKernel` doesn't hold `kind` for its outputs. Since `GModelBuilder` traverse graph from outputs to inputs once it reaches any output of the operation it will use its `kind` to create  `Data` meta for all operation outputs. Since it essential for `python` to know `GTypeInfo` (which is `shape` and `kind`) it will be confused.\r\n\r\nConsider this operation:\r\n```\r\n @cv.gapi.op('custom.square_mean', in_types=[cv.GArray.Int], out_types=[cv.GOpaque.Float, cv.GArray.Int])\r\n    class GSquareMean:\r\n        @staticmethod\r\n        def outMeta(desc):\r\n            return cv.empty_gopaque_desc(), cv.empty_array_desc()\r\n```\r\nEven though `GOpaque` is `Float`, corresponding metadata might have `Int` kind because it might be taken from `cv.GArray.Int`\r\nso it will be a problem if one of the outputs of these operation is graph output because python will cast it to the wrong type based on `Data` meta.\r\n\r\n2. Minor: Some of the OpenVINO `IR`'s doesn't any layout information for input. It's usually true only for `IRv10` but since `OpenVINO 2.0` need this information to correctly configure resize we need to put default layout if there no such assigned in `ov::Model`. \r\n\r\nSee details at https://github.com/opencv/opencv/wiki/How_to_contribute#making-a-good-pull-request\r\n\r\n- [ ] I agree to contribute to the project under Apache 2 License.\r\n- [ ] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\r\n- [ ] The PR is proposed to the proper branch\r\n- [ ] There is a reference to the original bug report and related work\r\n- [ ] There is accuracy test, performance test and test data in opencv_extra repository, if applicable\r\n      Patch to opencv_extra has the same branch name.\r\n- [ ] The feature is well documented and sample code can be built with the project CMake",
+            "commit_timestamp": 1687427185.0
         }
     ]
 }
