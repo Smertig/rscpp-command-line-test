@@ -517,6 +517,20 @@
             "commit_ref": "6a80664ef1200008d5beb1584e03d779ef30cc58",
             "commit_message": "gh-105927: Remove _PyWeakref_GetWeakrefCount() (#106007)\n\nRemove _PyWeakref_GetWeakrefCount() and _PyWeakref_ClearRef() from\r\nthe public C API: move them to the internal C API.\r\n\r\nRefactor also _weakref_getweakrefs() code to make it more readable.",
             "commit_timestamp": 1687489256.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1687507733.465786,
+            "elapsed_time": 1554.6264791488647,
+            "x64": true,
+            "actual_files_count": 893,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "a72683ba8e0337650cc490dbe593a5e46aba60cb",
+            "commit_message": "Docs: Avoid a DeprecationWarning in `pyspecific.py` when running with Sphinx >=6.1 (#105886)\n\nCo-authored-by: Hugo van Kemenade <hugovk@users.noreply.github.com>",
+            "commit_timestamp": 1687507125.0
         }
     ]
 }
