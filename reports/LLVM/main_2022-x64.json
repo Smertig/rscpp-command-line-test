@@ -3099,6 +3099,22 @@
             "commit_ref": "5ddd561cb5e2d2c55f4d42912a96d1e0982697b1",
             "commit_message": "disable execute-only tests which are failing with expensive checks\n\nTemporarily disabling the execute-only tests. We recently added codegen for\narmv6-m, which is still in heavy development (D152795).\n\nDisabling the tests while we're figuring out what's going on is probably the\nleast disruptive option, as a patch dependent on it also already landed.\n",
             "commit_timestamp": 1687534524.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1687551626.97492,
+            "elapsed_time": 7767.715786218643,
+            "x64": true,
+            "actual_files_count": 1695,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "c52268a9afe96078fde9ee778577341645465c38",
+            "commit_message": "[ConstraintElim] Add tests to check negated OR simplifications.\n\nAdditional test coverage for D151799.\n",
+            "commit_timestamp": 1687550486.0
         }
     ]
 }
