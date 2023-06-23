@@ -3083,6 +3083,22 @@
             "commit_ref": "5183ca877982a6a5cbe84c9e73f99e1d289e50be",
             "commit_message": "[AMDGPU][AsmParser] Eliminate cvtMtbuf().\n\nNow that we have proper support for optional operands, the standard LLVM\nmachinery can take care of converting parsed instructions to MCInsts.\nThere are likely more cases where the conversion can be done\nautomatically, probably with some additional treatment. The plan is to\naddress them separately.\n\nPart of <https://github.com/llvm/llvm-project/issues/62629>.\n\nReviewed By: arsenm, foad\n\nDifferential Revision: https://reviews.llvm.org/D153565\n",
             "commit_timestamp": 1687520632.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1687537280.430674,
+            "elapsed_time": 7717.579576253891,
+            "x64": true,
+            "actual_files_count": 1695,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "5ddd561cb5e2d2c55f4d42912a96d1e0982697b1",
+            "commit_message": "disable execute-only tests which are failing with expensive checks\n\nTemporarily disabling the execute-only tests. We recently added codegen for\narmv6-m, which is still in heavy development (D152795).\n\nDisabling the tests while we're figuring out what's going on is probably the\nleast disruptive option, as a patch dependent on it also already landed.\n",
+            "commit_timestamp": 1687534524.0
         }
     ]
 }
