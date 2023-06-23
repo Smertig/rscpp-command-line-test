@@ -3035,6 +3035,22 @@
             "commit_ref": "28fb39f16af1003e53008b75c11127b3288742f8",
             "commit_message": "[lldb] Adjust for changes in objc runtime\n\nThe Objective-C runtime and the shared cache has changed slightly.\nGiven a class_ro_t, the baseMethods ivar is now a pointer union and may\neither be a method_list_t pointer or a pointer to a relative list of\nlists. The entries of this relative list of lists are indexes that refer\nto a specific image in the shared cache in addition to a pointer offset\nto find the accompanying method_list_t. We have to go over each of these\nentries, parse it, and then if the relevant image is loaded in the\nprocess, we add those methods to the relevant clang Decl.\n\nIn order to determine if an image is loaded, the Objective-C runtime\nexposes a symbol that lets us determine if a particular image is loaded.\nWe maintain a data structure SharedCacheImageHeaders to keep track of\nthat information.\n\nThere is a known issue where if an image is loaded after we create a\nDecl for a class, the Decl will not have the relevant methods from that\nimage (i.e. for Categories).\n\nrdar://107957209\n\nDifferential Revision: https://reviews.llvm.org/D153597\n",
             "commit_timestamp": 1687477342.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1687493720.369274,
+            "elapsed_time": 5919.502574682236,
+            "x64": true,
+            "actual_files_count": 1695,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "d4d8cd8446f66be8d182bcc6337e5b39b1203cc5",
+            "commit_message": "[libc] Factor specifics of packet type out of process\n\nNFC. Simplifies process slightly, gives more options for testing it.\n\nReviewed By: jhuber6\n\nDifferential Revision: https://reviews.llvm.org/D153604\n",
+            "commit_timestamp": 1687488323.0
         }
     ]
 }

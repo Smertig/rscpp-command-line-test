@@ -503,6 +503,20 @@
             "commit_ref": "ee52158f209835d6d4ca27f44218466f266f4afb",
             "commit_message": "gh-105927: PyImport_AddModule() uses _PyWeakref_GET_REF() (#106001)\n\nIt now raises an exception if sys.modules doesn't hold a strong\r\nreference to the module.\r\n\r\nElaborate the comment explaining why a weak reference is used to\r\ncreate a borrowed reference.",
             "commit_timestamp": 1687476188.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1687493282.982417,
+            "elapsed_time": 1510.053308725357,
+            "x64": true,
+            "actual_files_count": 893,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "6a80664ef1200008d5beb1584e03d779ef30cc58",
+            "commit_message": "gh-105927: Remove _PyWeakref_GetWeakrefCount() (#106007)\n\nRemove _PyWeakref_GetWeakrefCount() and _PyWeakref_ClearRef() from\r\nthe public C API: move them to the internal C API.\r\n\r\nRefactor also _weakref_getweakrefs() code to make it more readable.",
+            "commit_timestamp": 1687489256.0
         }
     ]
 }
