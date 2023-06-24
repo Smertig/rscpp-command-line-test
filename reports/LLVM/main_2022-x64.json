@@ -3147,6 +3147,22 @@
             "commit_ref": "68ed9d94720c50a48bc7d5d1321b37a5381a54fd",
             "commit_message": "[GlobalIsel][X86] G_STORE extension\n\nReviewed By: arsenm\n\nDifferential Revision: https://reviews.llvm.org/D153643\n",
             "commit_timestamp": 1687578690.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1687594485.60826,
+            "elapsed_time": 6157.780821084976,
+            "x64": true,
+            "actual_files_count": 1695,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "e5c7904fa0bfa5a24f192cfa7b9116560e1f5d43",
+            "commit_message": "[C++20][Modules] Implement P2615R1 revised export diagnostics.\n\nIt has been reported to that the current clang  errors for, specifically,\nstatic_assert in export contexts are a serious blocker to adoption of\nmodules in some cases.\n\nThere is also implementation divergence with GCC and MSVC allowing the\nconstructs mentioned below where clang currently rejects them with an\nerror.\n\nThe category of errors [for declarations in an exported context] is:\n(unnamed, static_assert, empty and asm decls). These are now permitted\nafter P2615R1 which was approved by WG21 as a DR (and thus should be\napplied to C++20 as well).\n\nThis patch removes these diagnostics and amends the testsuite accordingly.\n\nDifferential Revision: https://reviews.llvm.org/D152946\n",
+            "commit_timestamp": 1687593719.0
         }
     ]
 }

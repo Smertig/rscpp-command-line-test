@@ -3289,6 +3289,20 @@
             "commit_ref": "d458d240cdc07765cfe6bd81417faa3f642d0d75",
             "commit_message": "Sync to upstream/release/581 (#958)\n\n* Definition files can now ascribe indexers to class types.\r\n(https://github.com/Roblox/luau/pull/949)\r\n* Remove --compile support from the REPL. You can just use luau-compile\r\ninstead.\r\n* When an exception is thrown during parallel typechecking (usually an\r\nICE), we now gracefully stop typechecking and drain active workers\r\nbefore rethrowing the exception.\r\n\r\nNew solver\r\n\r\n* Include more source location information when we hit an internal\r\ncompiler error\r\n* Improve the logic that simplifies intersections of tables\r\n\r\nJIT\r\n\r\n* Save testable type annotations to bytecode\r\n* Improve block placement for linearized blocks\r\n* Add support for lea reg, [rip+offset] for labels\r\n* Unify X64 and A64 codegen for RETURN\r\n* Outline interrupt handlers for X64\r\n* Remove global rArgN in favor of build.abi\r\n* Change A64 INTERRUPT lowering to match X64\r\n\r\n---------\r\n\r\nCo-authored-by: Arseny Kapoulkine <arseny.kapoulkine@gmail.com>\r\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>",
             "commit_timestamp": 1686936918.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1687593812.679763,
+            "elapsed_time": 336.33571553230286,
+            "x64": false,
+            "actual_files_count": 390,
+            "expected_files_count": 379,
+            "repo_url": "https://github.com/Roblox/luau",
+            "commit_ref": "76bea81a7b798b3324f97a72a2a8faac29089eec",
+            "commit_message": "Sync to upstream/release/582 (#960)\n\n* Optimized operations like instantiation and module export for very\r\nlarge types\r\n\r\nIn our new typechecker:\r\n* Typechecking of function calls was rewritten to handle more cases\r\ncorrectly\r\n* Fixed a crash that can happen after self-referential type is exported\r\nfrom a module\r\n* Fixed a false positive error in string comparison\r\n* Added handling of `for...in` variable type annotations and fixed\r\nissues with the iterator call inside\r\n* Self-referential 'hasProp' and 'setProp' constraints are now handled\r\ncorrectly\r\n \r\nIn our native code generation (jit):\r\n* Added '--target' argument to luau-compile to test multiple\r\narchitectures different from host architecture\r\n* GC barrier tag check is skipped if type is already known to be\r\nGC-collectable\r\n* Added GET_TYPE/GET_TYPEOF instructions for type/typeof fast-calls\r\n* Improved code size of interrupt handlers on X64\r\n",
+            "commit_timestamp": 1687587579.0
         }
     ]
 }
