@@ -3163,6 +3163,22 @@
             "commit_ref": "e5c7904fa0bfa5a24f192cfa7b9116560e1f5d43",
             "commit_message": "[C++20][Modules] Implement P2615R1 revised export diagnostics.\n\nIt has been reported to that the current clang  errors for, specifically,\nstatic_assert in export contexts are a serious blocker to adoption of\nmodules in some cases.\n\nThere is also implementation divergence with GCC and MSVC allowing the\nconstructs mentioned below where clang currently rejects them with an\nerror.\n\nThe category of errors [for declarations in an exported context] is:\n(unnamed, static_assert, empty and asm decls). These are now permitted\nafter P2615R1 which was approved by WG21 as a DR (and thus should be\napplied to C++20 as well).\n\nThis patch removes these diagnostics and amends the testsuite accordingly.\n\nDifferential Revision: https://reviews.llvm.org/D152946\n",
             "commit_timestamp": 1687593719.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1687609138.874511,
+            "elapsed_time": 7750.430412769318,
+            "x64": true,
+            "actual_files_count": 1695,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "eaaacc3c651e5b2c23bfa9648b6b0d69aab64d00",
+            "commit_message": "[gn build] Port 7f6e0052a97f\n",
+            "commit_timestamp": 1687604516.0
         }
     ]
 }
