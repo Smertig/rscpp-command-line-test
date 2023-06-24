@@ -3195,6 +3195,22 @@
             "commit_ref": "e0e998f8d8ec83e69fb00062fb7a515451e42d8d",
             "commit_message": "[GlobalIsel][X86]] Legalize G_CONSTANT_FOLD_BARRIER\n\nReviewed By: RKSimon\n\nDifferential Revision: https://reviews.llvm.org/D153684\n",
             "commit_timestamp": 1687619991.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1687637708.117699,
+            "elapsed_time": 6464.326699972153,
+            "x64": true,
+            "actual_files_count": 1695,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "08be7791e195272dca8c9ecb075aa3d86569f9f8",
+            "commit_message": "[DWARF] Remove remnant .zdebug section recognition\n\nThere is a minor behavior difference that is not worth testing for the obsoleted\nformat. Previously, llvm-dwarfdump considers .zdebug_info as a debug section but\ndoes not decompress it, leading to a warning when the content cannot be parsed.\nNow llvm-dwarfdump just ignores the section without a warning.\n",
+            "commit_timestamp": 1687630032.0
         }
     ]
 }
