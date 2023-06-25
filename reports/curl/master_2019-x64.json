@@ -3149,6 +3149,20 @@
             "commit_ref": "238b7bdf09277e85bac392198ed85f683c117bbb",
             "commit_message": "configure: the --without forms of the options are also gone\n\n--without-darwin-ssl and --without-metalink\n\nCloses #11378\n",
             "commit_timestamp": 1687641534.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1687680336.238937,
+            "elapsed_time": 308.7153685092926,
+            "x64": false,
+            "actual_files_count": 2324,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "fb802b521af997230b65174a559f5c419520e142",
+            "commit_message": "CI: enable parallel make in more builds\n\nMost CI services provide at least two cores, so enable parallel make\njobs to take advantage of that for builds. Some dependencies aren't safe\nto build in parallel so leave those as-is.  Also, rename a few\nworkflows to eliminate duplicate names and provide a better idea what\nthey're about.\n",
+            "commit_timestamp": 1687642839.0
         }
     ]
 }

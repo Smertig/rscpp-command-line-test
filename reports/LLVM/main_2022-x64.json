@@ -3243,6 +3243,22 @@
             "commit_ref": "3eee5aa528abd67bb6d057e25ce1980d0d38c445",
             "commit_message": "[COFF] Support -gsplit-dwarf for COFF on Windows\n\nD152340 has split WinCOFFObjectWriter to WinCOFFWriter. This patch adds\nanother WinCOFFWriter as DwoWriter to write Dwo sections to dwo file.\nDriver options are also updated accordingly to support -gsplit-dwarf in\nCL mode.\n\ne.g. $ clang-cl  -c -gdwarf -gsplit-dwarf foo.c\n\nLike what -gsplit-dwarf did in ELF, using this option will create DWARF object\n(.dwo) file. DWARF debug info is split between COFF object and DWARF object\nfile. It can reduce the executable file size especially for large project.\n\nReviewed By: skan, MaskRay\n\nDifferential Revision: https://reviews.llvm.org/D152785\n",
             "commit_timestamp": 1687665279.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1687681026.283521,
+            "elapsed_time": 6948.637212276459,
+            "x64": true,
+            "actual_files_count": 1695,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "3cbd56dca11f2ec4d1131152e3b3ae43ded5432e",
+            "commit_message": "[RISCV] Add missing Read classes to some compressed instructions.\n\nReviewed By: wangpc\n\nDifferential Revision: https://reviews.llvm.org/D153669\n",
+            "commit_timestamp": 1687679306.0
         }
     ]
 }
