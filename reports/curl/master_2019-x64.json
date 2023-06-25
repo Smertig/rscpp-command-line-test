@@ -3121,6 +3121,20 @@
             "commit_ref": "0ac6108856b9d500bc376d1d7e0b648d15499837",
             "commit_message": "configure: add check for ldap_init_fd\n\n... as otherwise the configure script will say it is OpenLDAP in the\nsummary, but not set the USE_OPENLDAP define, therefor not using the\nintended OpenLDAP code paths.\n\nRegression since 4d7385446 (7.85.0)\nFixes #11372\nCloses #11374\nReported-by: vlkl-sap on github\n",
             "commit_timestamp": 1687509775.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1687651671.39717,
+            "elapsed_time": 274.9593894481659,
+            "x64": false,
+            "actual_files_count": 2324,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "238b7bdf09277e85bac392198ed85f683c117bbb",
+            "commit_message": "configure: the --without forms of the options are also gone\n\n--without-darwin-ssl and --without-metalink\n\nCloses #11378\n",
+            "commit_timestamp": 1687641534.0
         }
     ]
 }
