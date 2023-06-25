@@ -718,7 +718,7 @@
                     },
                     {
                         "file": "..\\src\\core\\hle\\service\\nfc\\common\\device.cpp",
-                        "line": 1438,
+                        "line": 1430,
                         "message": "static_assert failed: 'CrcData is an invalid size'\r\n    Expression '128 == 126' evaluates to false",
                         "reason": "RSCPP-34261 `#pragma pack` doesn't work for local types"
                     },
@@ -736,7 +736,7 @@
                     },
                     {
                         "file": "..\\src\\video_core\\renderer_vulkan\\vk_texture_cache.cpp",
-                        "line": 1677,
+                        "line": 1678,
                         "message": "Cannot substitute arguments for class 'VideoCommon::SlotVector<T>' because of violated constraint 'std::is_nothrow_move_assignable_v<Image> && std::is_nothrow_move_constructible_v<Image>'",
                         "reason": "RSCPP-14556 Implement __is_nothrow_assignable trait"
                     },
@@ -1307,14 +1307,6 @@
                     {
                         "file": "..\\Include\\py_curses.h",
                         "reason": "Not included on Windows"
-                    }
-                ],
-                "known errors": [
-                    {
-                        "file": "..\\PC\\launcher.c",
-                        "line": 1682,
-                        "message": "Cannot resolve symbol 'MAXINT'",
-                        "reason": "Can't find this macro anywhere ¯\\_(ツ)_/¯"
                     }
                 ]
             }
