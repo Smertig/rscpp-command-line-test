@@ -3339,6 +3339,22 @@
             "commit_ref": "d40dd6be00d881a13a881f02ffa10b48d1441615",
             "commit_message": "Revert \"[llvm-exegesis] Introduce SubprocessMemory Utility Class\"\n\nThis reverts commit 0b6b400b98b921279fc08c63a2a68ebfcb12a3e2.\n\nThe sporadic test failures were fixed during this land, but I forgot to\nfix the build failures on certain platforms (seems to mostly be\nAArch64/PPC) that result from them not being able to find the symbols\nfor shm_open and shm_unlink.\n",
             "commit_timestamp": 1687749343.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1687782088.075065,
+            "elapsed_time": 8632.520146846771,
+            "x64": true,
+            "actual_files_count": 1695,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "f686e4bbc20a837ff5230656431aec1abbd5f872",
+            "commit_message": "[Remarks] Make sure -fdiagnostics-hotness-threshold implies -fdiagnostics-show-hotness\n\nWhen asking for -fdiagnostics-hotness-threshold, we currently require\n-fdiagnostics-show-hotness otherwise we silently display nothing.\n\nI don't see a scenario where that makes sense, so have one option impy\nthe other.\n\nDifferential Revision: https://reviews.llvm.org/D153746\n",
+            "commit_timestamp": 1687780090.0
         }
     ]
 }
