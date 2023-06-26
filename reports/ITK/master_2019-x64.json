@@ -3743,6 +3743,20 @@
             "commit_ref": "e5011aeb765d9dcdf6778a3c8eb910576c03eb46",
             "commit_message": "PERF: Use `std::move` inside `itkSetMacro`, declare parameter non-const\n\nAvoids an unnecessary copy (possibly involving memory allocation) of the\nargument of a Set member function.\n\nNote that `itkSetMacro` calls that define a Set member function which passes the\nargument by const-reference must explicitly specify the `const` keyword now.\n",
             "commit_timestamp": 1687291000.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1687752606.138397,
+            "elapsed_time": 406.2793390750885,
+            "x64": false,
+            "actual_files_count": 100,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "e5011aeb765d9dcdf6778a3c8eb910576c03eb46",
+            "commit_message": "PERF: Use `std::move` inside `itkSetMacro`, declare parameter non-const\n\nAvoids an unnecessary copy (possibly involving memory allocation) of the\nargument of a Set member function.\n\nNote that `itkSetMacro` calls that define a Set member function which passes the\nargument by const-reference must explicitly specify the `const` keyword now.\n",
+            "commit_timestamp": 1687291000.0
         }
     ]
 }
