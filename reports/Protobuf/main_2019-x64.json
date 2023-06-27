@@ -4301,6 +4301,20 @@
             "commit_ref": "ff0dd3a14831b1c1e8487842c0f5818deeac6a12",
             "commit_message": "Fix objectivec test failure in Bazel 6+.\n\nThis fix works in Bazel 5 and 6, but the original `import pddm` only works in Bazel 5.  This is preventing our upgrade to Bazel 6 that will reduce our mac flakes in CI.\n\nPiperOrigin-RevId: 543565397\n",
             "commit_timestamp": 1687820388.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1687853064.130548,
+            "elapsed_time": 333.60318636894226,
+            "x64": false,
+            "actual_files_count": 821,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "3a95ea12cd42b4d23e794803db5cc71901797e18",
+            "commit_message": "Mark DynamicMessage as final\n\nThis is to lower the number of vtable accesses.\n\nPiperOrigin-RevId: 543634026\n",
+            "commit_timestamp": 1687842412.0
         }
     ]
 }
