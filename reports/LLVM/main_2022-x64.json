@@ -3387,6 +3387,22 @@
             "commit_ref": "aa2a4ce72b19e01c4322ef62d109af08a25f5e3e",
             "commit_message": "[gn] prepare for porting f8927838fa8558702794\n",
             "commit_timestamp": 1687809679.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1687825207.842878,
+            "elapsed_time": 6551.576022148132,
+            "x64": true,
+            "actual_files_count": 1698,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "6ee1aba8acc1255a6eb9e34788a2376c6357458b",
+            "commit_message": "[mlir][bytecode] Fix lazy loading of non-isolated regions\n\nThe bytecode reader currently assumes all regions can be lazy\nloaded, which breaks reading any non-isolated region. This patch\nfixes that by properly handling nested non-lazy regions, and only\nconsiders isolated regions as lazy.\n\nDifferential Revision: https://reviews.llvm.org/D153795",
+            "commit_timestamp": 1687822400.0
         }
     ]
 }
