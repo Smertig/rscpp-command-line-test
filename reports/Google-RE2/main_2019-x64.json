@@ -4615,6 +4615,20 @@
             "commit_ref": "7c5e396af825562ec8321fdbf2f1cf276b26e3ae",
             "commit_message": "`target_compile_definitions()` needs a scope keyword.\n\nFixes #429.\n\nChange-Id: I58ca8ecea8854dd899f711938c49fe75bfff640d\nReviewed-on: https://code-review.googlesource.com/c/re2/+/61393\nReviewed-by: Perry Lorier <perryl@google.com>\nReviewed-by: Paul Wankadia <junyer@google.com>\n",
             "commit_timestamp": 1685626902.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1687910917.737099,
+            "elapsed_time": 71.43912315368652,
+            "x64": false,
+            "actual_files_count": 22,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/google/re2.git",
+            "commit_ref": "9ea3effadfe6e73f7f40be40e3bbff2d82043a05",
+            "commit_message": "Move linker flags out of `$(MAKE_SHARED_LIBRARY)`.\n\n`$(RE2_LDFLAGS) $(LDFLAGS)` now appear after `$(SOFILES)`, which\nis needed by Debian and possibly others. Incidentally, this also\nmakes the shared library rule more consistent with nearby rules.\n\nFixes #432.\n\nChange-Id: I5509b03e007e5e5cd32f5aa211862fc6b8ece0da\nReviewed-on: https://code-review.googlesource.com/c/re2/+/61430\nReviewed-by: Alex Chernyakhovsky <achernya@google.com>\nReviewed-by: Paul Wankadia <junyer@google.com>\n",
+            "commit_timestamp": 1687896176.0
         }
     ]
 }
