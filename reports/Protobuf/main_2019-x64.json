@@ -4399,6 +4399,20 @@
             "commit_ref": "6035df4a22d001fbea66238651bf1dc9c21384a1",
             "commit_message": "Add some extra MUSTTAIL annotations.\n\nPiperOrigin-RevId: 543832302\n",
             "commit_timestamp": 1687897329.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1687953961.478932,
+            "elapsed_time": 466.3920431137085,
+            "x64": false,
+            "actual_files_count": 821,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "68b34feb5aa05f6ce9238236ab02722386e2c25a",
+            "commit_message": "Add support for int32 in V0.\n\nNeeded to lowercase fieldnames and add underscores when they use protected cpp names. Ended up using `cpp::FieldName` from the cpp impl to get this for free.\n\nAlso added escaping to Rust accessors, so that protected keywords will compile.\n\nPiperOrigin-RevId: 543995050\n",
+            "commit_timestamp": 1687945313.0
         }
     ]
 }
