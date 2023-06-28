@@ -3515,6 +3515,22 @@
             "commit_ref": "d39b4ce3ce8a3c256e01bdec2b140777a332a633",
             "commit_message": "[test] Replace aarch64-*-eabi with aarch64\n\nUsing \"eabi\" for aarch64 targets is a common mistake and warned by Clang Driver.\nWe want to avoid it elsewhere as well. Just use the common \"aarch64\" without\nother triple components.\n",
             "commit_timestamp": 1687921372.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1687940244.099363,
+            "elapsed_time": 6464.04749751091,
+            "x64": true,
+            "actual_files_count": 1700,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "b45a73f4d07424b37395f543974ef1ef6dec6332",
+            "commit_message": "[InstCombine] Fold binop of shifts with related amounts\n\nFold\n\n  binop(shift(ShiftedC1, ShAmt), shift(ShiftedC2, add(ShAmt, AddC)))\n    ->\n  shift(binop(ShiftedC1, shift(ShiftedC2, AddC)), ShAmt)\n\nwhere both shifts are the same and AddC is a valid shift amount.\n\nProofs: https://alive2.llvm.org/ce/z/PhVVeg\n\nDifferential Revision: https://reviews.llvm.org/D152927\n",
+            "commit_timestamp": 1687938876.0
         }
     ]
 }
