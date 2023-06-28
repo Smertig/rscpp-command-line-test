@@ -3499,6 +3499,22 @@
             "commit_ref": "1764924f3940a8a05b58f68cc6b7ce414f2a2f88",
             "commit_message": "[SCEV] Optimize FoldID\n\nImprove compile time\n\nhttps://llvm-compile-time-tracker.com/compare.php?from=773e5dfbc6bf4d4c5be568a039661e9baad80d15&to=7ba15f3a4b59181110e73dc397a9fe56165a2b73&stat=instructions:u\n\nReviewed By: MaskRay\n\nDifferential Revision: https://reviews.llvm.org/D144335\n",
             "commit_timestamp": 1687910374.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1687925742.378196,
+            "elapsed_time": 6260.137188911438,
+            "x64": true,
+            "actual_files_count": 1700,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "d39b4ce3ce8a3c256e01bdec2b140777a332a633",
+            "commit_message": "[test] Replace aarch64-*-eabi with aarch64\n\nUsing \"eabi\" for aarch64 targets is a common mistake and warned by Clang Driver.\nWe want to avoid it elsewhere as well. Just use the common \"aarch64\" without\nother triple components.\n",
+            "commit_timestamp": 1687921372.0
         }
     ]
 }
