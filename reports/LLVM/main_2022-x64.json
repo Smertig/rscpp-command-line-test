@@ -3659,6 +3659,22 @@
             "commit_ref": "6bf66d839f1386c06e19a3621c02c8fc6a14f94f",
             "commit_message": "[clang-format] Indent Verilog struct literal on new line\n\nBefore:\n```\nc = //\n'{default: 0};\n```\n\nAfter:\n```\nc = //\n    '{default: 0};\n```\n\nIf the line has to be broken, the continuation part should be\nindented.  Before this fix, it was not the case if the continuation\npart was a struct literal.  The rule that caused the problem was added\nin 783bac6b.  It was intended for aligning the field labels in\nProtoBuf.  The type `TT_DictLiteral` was only for colons back then, so\nthe program didn't have to check whether the token was a colon when it\nwas already type `TT_DictLiteral`.  Now the type applies to more\nthings including the braces enclosing a dictionary literal.  In\nVerilog, struct literals start with a quote.  The quote is regarded as\nan identifier by the program.  So the rule for aligning the fields in\nProtoBuf applied to this situation by mistake.\n\nReviewed By: HazardyKnusperkeks\n\nDifferential Revision: https://reviews.llvm.org/D152623\n",
             "commit_timestamp": 1688053124.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1688070098.048727,
+            "elapsed_time": 7331.522525310516,
+            "x64": true,
+            "actual_files_count": 1700,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "9979417d4db4c2af3e2a722f8d23a385cd1cac8e",
+            "commit_message": "Revert D145226 \"[mlir][Transforms][NFC] CSE: Add non-pass entry point\"\n\nThis reverts commit 189033e6bede96de0d74e61715fcd1b48d95e247.\n\nThis commit causes memory leak. See comments on D145226.\n",
+            "commit_timestamp": 1688068411.0
         }
     ]
 }

@@ -3387,6 +3387,20 @@
             "commit_ref": "209439a5aed328b59cd52c0c54901a7ca5033af8",
             "commit_message": "[BROWSEUI] Add status bar view state persistence (#5366)\n\n- Use `HKCU\\Software\\Microsoft\\Internet Explorer\\Main\\StatusBarOther` registry key for the setting persistence.\r\n- Set its value to 1 when the status bar is visible, and to 0 when the status bar is hidden.\r\n- Query it when the file browser is initialized to set the correct view state for the status bar.\r\n- Set the default state of the status bar to hidden if the registry key does not exist, matching the behavior of Windows Server 2003.\r\n\r\nCORE-19010",
             "commit_timestamp": 1688053843.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1688068945.177125,
+            "elapsed_time": 99.74096512794495,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "40233a364435882d9c361b9065c0ab2dc5380157",
+            "commit_message": "[ADVAPI32_APITEST] Add new RegCreateKeyEx tests (#5234)\n\n\r\n* [ADVAPI32_APITEST] Add new RegCreateKeyEx tests\r\n* Remove trailing spaces.\r\n* Initialize SECURITY_ATTRIBUTES sa with zeroes.\r\n\r\nAdd a set of tests for RegCreateKeyExW and -A.\r\nCreated to prove the correctness of the already merged PR (#5230)\r\n\r\nJIRA issue: CORE-15471",
+            "commit_timestamp": 1688067224.0
         }
     ]
 }
