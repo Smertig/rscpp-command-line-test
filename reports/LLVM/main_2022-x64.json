@@ -3627,6 +3627,22 @@
             "commit_ref": "f5f5c4726ca8319af8ffff02e5b36f51f9afb9a7",
             "commit_message": "[FunctionAttrs] Regenerate test checks (NFC)\n",
             "commit_timestamp": 1688025556.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1688041352.896593,
+            "elapsed_time": 8230.44091796875,
+            "x64": true,
+            "actual_files_count": 1700,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "6cda80b918dd06e7d16ce7adde5304cd33fd14d1",
+            "commit_message": "[CSKY][test][NFC] Add tests of ANDI/ORI\n\nThese tests will be optimized with BSETI32/BCLRI32\nin the future.\n\nReviewed By: zixuan-wu\n\nDifferential Revision: https://reviews.llvm.org/D153613\n",
+            "commit_timestamp": 1688038309.0
         }
     ]
 }
