@@ -4497,6 +4497,20 @@
             "commit_ref": "a95eb31ac45eed38a586a11cfb9c93faf765bafa",
             "commit_message": "Make sure lazily initialized descriptors are loaded before any reflection\n\nPiperOrigin-RevId: 544242293\n",
             "commit_timestamp": 1688012015.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1688054682.943842,
+            "elapsed_time": 340.9997742176056,
+            "x64": false,
+            "actual_files_count": 821,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "8ec0295ad7fc83d20609fcdf4830e3e3fddf2912",
+            "commit_message": "Unify DescriptorMessageInfoFactory.convert proto2 and proto3 codepaths\n\nThis handles conversion from descriptors to MessageInfo in a single generic codepath that handles the following differences across syntaxes:\n- Enum closedness (proto2)\n- Explicit (proto2) vs implicit (proto3) presence\n- Required field initialization (proto2)\n- UTF8 (proto2/3 specific options)\n\nThis also fixes proto3 non-optional messages to encode hasbit, which was updated in cl/542744002\n\nPiperOrigin-RevId: 544358617\n",
+            "commit_timestamp": 1688051441.0
         }
     ]
 }
