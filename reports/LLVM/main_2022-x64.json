@@ -3707,6 +3707,22 @@
             "commit_ref": "b4609b4106f3f12882434ac26d8c1c12f57d8dc7",
             "commit_message": "[RISCV] Mark zvkn* and zvks* extensions as enabled when all their subextensions are.\n\nThese extensions don't contain any instructions on their own, they\nare just aliases for a set of extensions. We should set the preprocessor\ndefine anytime all the sub-extensions are supported.\n\nReviewed By: kito-cheng, eopXD\n\nDifferential Revision: https://reviews.llvm.org/D154171\n",
             "commit_timestamp": 1688097535.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1688113075.047026,
+            "elapsed_time": 5983.555043458939,
+            "x64": true,
+            "actual_files_count": 1700,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "2feac34aeeaf67943492a5adfe45c3f4767bdfe4",
+            "commit_message": "[clangd] Replace writeFileAtomically with writeToOutput, NFC\n\nWe're going to deprecate the writeFileAtomically API, in favour of\nwriteToOutput.\n",
+            "commit_timestamp": 1688112162.0
         }
     ]
 }
