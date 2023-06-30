@@ -3443,6 +3443,20 @@
             "commit_ref": "40864bc15cb77ceb07e73f8625486c120192bb18",
             "commit_message": "[NETSTAT] Fix crash when parsing the protocol CORE-19005 (#5363)\n\n\r\nfixes symptom CORE-19005 [NETSTAT] crashes when called with -abnop\r\nand no further argument (protocol name missing).\r\n\r\nThe crash was a regression of\r\n0.4.11-dev-814-g 2b5507336017cdea726f146a225823a932df54c2\r\n\r\nalso meticulously try to match Windows exact screen output and ERRORLEVEL then\r\ninstead of e.g.: simply showing the usage help\r\nwhich means:\r\nERRORLEVEL 0 for 'netstat -abnop' and displaying Active-string + table header *but without any sane contents*\r\nERRORLEVEL 1 for 'netstat -abnop bullshit' and displaying usage help\r\nERRORLEVEL 0 for 'netstat -abnop tcp' and displaying Active-string + table header + contents\r\nERRORLEVEL 0 for 'netstat -abnop udp' and displaying Active-string + table header + contents\r\n\r\nwhile touching the file do also some unrelated whitespace tweaks.",
             "commit_timestamp": 1688070833.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1688126618.028533,
+            "elapsed_time": 117.95383667945862,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "40864bc15cb77ceb07e73f8625486c120192bb18",
+            "commit_message": "[NETSTAT] Fix crash when parsing the protocol CORE-19005 (#5363)\n\n\r\nfixes symptom CORE-19005 [NETSTAT] crashes when called with -abnop\r\nand no further argument (protocol name missing).\r\n\r\nThe crash was a regression of\r\n0.4.11-dev-814-g 2b5507336017cdea726f146a225823a932df54c2\r\n\r\nalso meticulously try to match Windows exact screen output and ERRORLEVEL then\r\ninstead of e.g.: simply showing the usage help\r\nwhich means:\r\nERRORLEVEL 0 for 'netstat -abnop' and displaying Active-string + table header *but without any sane contents*\r\nERRORLEVEL 1 for 'netstat -abnop bullshit' and displaying usage help\r\nERRORLEVEL 0 for 'netstat -abnop tcp' and displaying Active-string + table header + contents\r\nERRORLEVEL 0 for 'netstat -abnop udp' and displaying Active-string + table header + contents\r\n\r\nwhile touching the file do also some unrelated whitespace tweaks.",
+            "commit_timestamp": 1688070833.0
         }
     ]
 }
