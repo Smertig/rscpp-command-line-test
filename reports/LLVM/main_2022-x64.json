@@ -3787,6 +3787,22 @@
             "commit_ref": "b43375bb8195bd451850f42b7b99548aa1ba43fd",
             "commit_message": "[lldb] Add log indicating which kind of data formatter\n\nThe `formatter` logs include a function name, but these functions are mostly templates\nand the template type parameter is not printed, which is useful context.\n\nThis change adds a new log which is printed upon entry of `FormatManager::Get`, which\nshows the formatter context as either `format`, `summary`, or `synthetic`.\n\nDifferential Revision: https://reviews.llvm.org/D154128\n",
             "commit_timestamp": 1688169074.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1688185000.398716,
+            "elapsed_time": 6320.557685136795,
+            "x64": true,
+            "actual_files_count": 1700,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "afb2743778689b585ce5539ee352e65a918835e2",
+            "commit_message": "[AArch64] Remove duplicate code (NFC)\n",
+            "commit_timestamp": 1688179071.0
         }
     ]
 }
