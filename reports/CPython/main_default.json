@@ -1119,6 +1119,20 @@
             "commit_ref": "c2622a0d82078a7ab17597707b4dd42446a043ae",
             "commit_message": "GH-89812: Improve test for `pathlib.Path.stat()` (GH-106064)\n\nMake assertions about the `st_mode`, `st_ino` and `st_dev` attributes of\r\nthe stat results from two files and a directory, rather than checking if\r\n`chmod()` affects `st_mode` (which is already tested elsewhere).",
             "commit_timestamp": 1688214809.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1688242128.005666,
+            "elapsed_time": 1197.9852929115295,
+            "x64": true,
+            "actual_files_count": 895,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "822db860eada721742f878653d7ac9364ed8df59",
+            "commit_message": "Fix duplicate word typos in comments (#106225)\n\n",
+            "commit_timestamp": 1688240834.0
         }
     ]
 }
