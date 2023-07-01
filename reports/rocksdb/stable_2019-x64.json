@@ -1179,6 +1179,20 @@
             "commit_ref": "de651035535b6d66276edc97c121cb507e9138cb",
             "commit_message": "Improve result report of scan (#4648)\n\nSummary:\nWhen iterator becomes invalid, there are two possibilities.\nFirst, all data in the column family have been scanned and there is nothing\nmore to scan.\nSecond, an underlying error has occurred, causing `status()` to be !ok.\nTherefore, we need to check for both cases when `!iter->Valid()`.\nPull Request resolved: https://github.com/facebook/rocksdb/pull/4648\n\nDifferential Revision: D12959601\n\nPulled By: riversand963\n\nfbshipit-source-id: 49c9382c9ea9e78f2e2b6f3708f0670b822ca8dd\n",
             "commit_timestamp": 1542168239.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1688224263.728458,
+            "elapsed_time": 513.4503471851349,
+            "x64": false,
+            "actual_files_count": 625,
+            "expected_files_count": 624,
+            "repo_url": "https://github.com/facebook/rocksdb.git",
+            "commit_ref": "de651035535b6d66276edc97c121cb507e9138cb",
+            "commit_message": "Improve result report of scan (#4648)\n\nSummary:\nWhen iterator becomes invalid, there are two possibilities.\nFirst, all data in the column family have been scanned and there is nothing\nmore to scan.\nSecond, an underlying error has occurred, causing `status()` to be !ok.\nTherefore, we need to check for both cases when `!iter->Valid()`.\nPull Request resolved: https://github.com/facebook/rocksdb/pull/4648\n\nDifferential Revision: D12959601\n\nPulled By: riversand963\n\nfbshipit-source-id: 49c9382c9ea9e78f2e2b6f3708f0670b822ca8dd\n",
+            "commit_timestamp": 1542168239.0
         }
     ]
 }
