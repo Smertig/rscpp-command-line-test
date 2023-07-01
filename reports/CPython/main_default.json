@@ -1105,6 +1105,20 @@
             "commit_ref": "6e01055e15c252185b118956d545bfad03ae11ed",
             "commit_message": "GH-89812: Test that `pathlib.Path.is_junction()` returns false (GH-106062)\n\nSlightly expand the test coverage of `is_junction()`. The existing test\r\nonly checks that `os.path.isjunction()` is called under-the-hood.",
             "commit_timestamp": 1688212710.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1688227636.326225,
+            "elapsed_time": 1384.9578635692596,
+            "x64": true,
+            "actual_files_count": 895,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "c2622a0d82078a7ab17597707b4dd42446a043ae",
+            "commit_message": "GH-89812: Improve test for `pathlib.Path.stat()` (GH-106064)\n\nMake assertions about the `st_mode`, `st_ino` and `st_dev` attributes of\r\nthe stat results from two files and a directory, rather than checking if\r\n`chmod()` affects `st_mode` (which is already tested elsewhere).",
+            "commit_timestamp": 1688214809.0
         }
     ]
 }
