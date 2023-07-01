@@ -1091,6 +1091,20 @@
             "commit_ref": "04dfc6fa9018e92a5b51c29fc0ff45419c596bc3",
             "commit_message": "gh-106232: Make timeit doc command lines compatible with Windows. (#106296)\n\nCommand Prompt (CMD Shell) and older versions of PowerShell\r\nrequire double quotes and single quotes inside the string.\r\nThis form also works on linux and macOS.\r\n",
             "commit_timestamp": 1688178871.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1688213244.248291,
+            "elapsed_time": 1170.5787904262543,
+            "x64": true,
+            "actual_files_count": 895,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "6e01055e15c252185b118956d545bfad03ae11ed",
+            "commit_message": "GH-89812: Test that `pathlib.Path.is_junction()` returns false (GH-106062)\n\nSlightly expand the test coverage of `is_junction()`. The existing test\r\nonly checks that `os.path.isjunction()` is called under-the-hood.",
+            "commit_timestamp": 1688212710.0
         }
     ]
 }
