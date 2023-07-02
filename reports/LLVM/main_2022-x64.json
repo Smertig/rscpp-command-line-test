@@ -3867,6 +3867,22 @@
             "commit_ref": "d0b0dbeae17756f7ba99e0867cfb867fcb375066",
             "commit_message": "[msan] Intercept dladdr1, and refactor dladdr\n\nThis patch adds an msan interceptor for dladdr1 (with support\nfor RTLD_DL_LINKMAP and RTLD_DL_SYMENT) and an accompanying\ntest. It also adds a helper file, msan_dl.cpp, that contains\nUnpoisonDllAddrInfo (refactored out of the dladdr interceptor)\nand UnpoisonDllAddr1ExtraInfo.\n\nDifferential Revision: https://reviews.llvm.org/D154272\n",
             "commit_timestamp": 1688239107.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1688257031.240547,
+            "elapsed_time": 6191.982011318207,
+            "x64": true,
+            "actual_files_count": 1700,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "6e54fccede402c9ed0e8038aa258a99c5a2773e5",
+            "commit_message": "[AArch64] Emit fewer CFI instructions for synchronous unwind tables\n\nThe instruction-precise, or asynchronous, unwind tables usually take up\nmuch more space than the synchronous ones. If a user is concerned about\nthe load size of the program and does not need the features provided\nwith the asynchronous tables, the compiler should be able to generate\nthe more compact variant.\n\nThis patch changes the generation of CFI instructions for these cases so\nthat they all come in one chunk in the prolog; it emits only one\n`.cfi_def_cfa*` instruction followed by `.cfi_offset` ones after all\nstack adjustments and register spills, and avoids generating CFI\ninstructions in the epilog(s) as well as any other exceeding CFI\ninstructions like `.cfi_remember_state` and `.cfi_restore_state`.\nEffectively, it reverses the effects of D111411 and D114545 on functions\nwith the `uwtable(sync)` attribute. As a side effect, it also restores\nthe behavior on functions that have neither `uwtable` nor `nounwind`\nattributes.\n\nDifferential Revision: https://reviews.llvm.org/D153098\n",
+            "commit_timestamp": 1688254269.0
         }
     ]
 }
