@@ -3883,6 +3883,22 @@
             "commit_ref": "6e54fccede402c9ed0e8038aa258a99c5a2773e5",
             "commit_message": "[AArch64] Emit fewer CFI instructions for synchronous unwind tables\n\nThe instruction-precise, or asynchronous, unwind tables usually take up\nmuch more space than the synchronous ones. If a user is concerned about\nthe load size of the program and does not need the features provided\nwith the asynchronous tables, the compiler should be able to generate\nthe more compact variant.\n\nThis patch changes the generation of CFI instructions for these cases so\nthat they all come in one chunk in the prolog; it emits only one\n`.cfi_def_cfa*` instruction followed by `.cfi_offset` ones after all\nstack adjustments and register spills, and avoids generating CFI\ninstructions in the epilog(s) as well as any other exceeding CFI\ninstructions like `.cfi_remember_state` and `.cfi_restore_state`.\nEffectively, it reverses the effects of D111411 and D114545 on functions\nwith the `uwtable(sync)` attribute. As a side effect, it also restores\nthe behavior on functions that have neither `uwtable` nor `nounwind`\nattributes.\n\nDifferential Revision: https://reviews.llvm.org/D153098\n",
             "commit_timestamp": 1688254269.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1688271535.635651,
+            "elapsed_time": 7150.657102584839,
+            "x64": true,
+            "actual_files_count": 1700,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "289828b1c0a6bc6eed8a634376a5152adae2283b",
+            "commit_message": "[Driver][MSVC] Move lld specific flags before inputs\n\nCheck linker earlier so that lld specific flags can be append before\ninputs. Just like position of other flags. The intention is to make\nexpanded cmd more consistent and elegent so that user can easily\nlook for inputs when using -###.\n\nReviewed By: mstorsjo\n\nDifferential Revision: https://reviews.llvm.org/D154176\n",
+            "commit_timestamp": 1688261349.0
         }
     ]
 }
