@@ -3639,6 +3639,20 @@
             "commit_ref": "8e01dee25155b8edc256f7d2239f8fb22496a543",
             "commit_message": "[NTOS:EX] Fix swapped values in ExGetCurrentProcessorCounts() (#4565)\n\nThe function should return the kernel time for the idle thread in the\nfirst argument, and kernel time + user time for the current thread in\nthe second argument.\n\nAlso retrieve the processor number from the cached PRCB instead of\ncalling KeGetCurrentProcessorNumber() which retrieves the PRCB again\nsince the processor could switch in-between those calls.\n\nNdisGetCurrentProcessorCounts() function follows the same prototype\nwhich is the correct one.\n",
             "commit_timestamp": 1688303436.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1688328238.717876,
+            "elapsed_time": 135.27643251419067,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "5ae65ab7a70aa6e627c2462042584861258352b5",
+            "commit_message": "[NTOS:KE] Add x86 CPU features reporting to AMD64\n\nCORE-18023 CORE-14922\n",
+            "commit_timestamp": 1688320832.0
         }
     ]
 }

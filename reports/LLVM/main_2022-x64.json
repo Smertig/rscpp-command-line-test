@@ -3947,6 +3947,22 @@
             "commit_ref": "8bdcf57e60f508b11b519722ae9529a5301bb567",
             "commit_message": "Revert \"[MC] Allow conversion between ParseStatus and MatchOperandResultTy\"\n\nThis reverts commit 15ef9b26adeb8c9dd98228fc26757966d8355986.\n\nGoing to put it for review with larger set of differences.\n",
             "commit_timestamp": 1688312400.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1688329012.235614,
+            "elapsed_time": 6334.782678365707,
+            "x64": true,
+            "actual_files_count": 1700,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "7b69eabdc18799e4a6c61b7ffff9b52d330c6ada",
+            "commit_message": "[C11] Correct global atomic pointer initialization from an integer constant\n\nThis is a follow-up to 2e275e24355cb224981f9beb2b026a3169fc7232 and\n1395cde24b3641e284bb1daae7d56c189a2635e3 which corrects a missed case:\ninitializing an _Atomic(T *) from a null pointer constant in the form\nof the integer literal 0.\n\nFixes https://github.com/llvm/llvm-project/issues/63550\nDifferential Revision: https://reviews.llvm.org/D154284\n",
+            "commit_timestamp": 1688323281.0
         }
     ]
 }
