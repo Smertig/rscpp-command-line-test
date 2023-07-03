@@ -1231,6 +1231,20 @@
             "commit_ref": "987b712b4aeeece336eed24fcc87a950a756c3e2",
             "commit_message": "Replace the esoteric term 'datum' when describing dict comprehensions (#106119)\n\n",
             "commit_timestamp": 1688354560.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1688371733.579697,
+            "elapsed_time": 1538.148009300232,
+            "x64": true,
+            "actual_files_count": 894,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "d65b783b6966d233467a48ef633afb4aff9d5df8",
+            "commit_message": "gh-61215: New mock to wait for multi-threaded events to happen (#16094)\n\nmock: Add `ThreadingMock` class\r\n\r\nAdd a new class that allows to wait for a call to happen by using\r\n`Event` objects. This mock class can be used to test and validate\r\nexpectations of multithreading code.\r\n\r\nIt uses two attributes for events to distinguish calls with any argument\r\nand calls with specific arguments.\r\n\r\nThe calls with specific arguments need a lock to prevent two calls in\r\nparallel from creating the same event twice.\r\n\r\nThe timeout is configured at class and constructor level to allow users\r\nto set a timeout, we considered passing it as an argument to the\r\nfunction but it could collide with a function parameter. Alternatively\r\nwe also considered passing it as positional only but from an API\r\ncaller perspective it was unclear what the first number meant on the\r\nfunction call, think `mock.wait_until_called(1, \"arg1\", \"arg2\")`, where\r\n1 is the timeout.\r\n\r\nLastly we also considered adding the new attributes to magic mock\r\ndirectly rather than having a custom mock class for multi threading\r\nscenarios, but we preferred to have specialised class that can be\r\ncomposed if necessary. Additionally, having added it to `MagicMock`\r\ndirectly would have resulted in `AsyncMock` having this logic, which\r\nwould not work as expected, since when if user \"waits\" on a\r\ncoroutine does not have the same meaning as waiting on a standard\r\ncall.\r\n\r\nCo-authored-by: Karthikeyan Singaravelan <tir.karthi@gmail.com>",
+            "commit_timestamp": 1688367414.0
         }
     ]
 }
