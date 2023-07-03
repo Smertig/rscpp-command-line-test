@@ -3653,6 +3653,20 @@
             "commit_ref": "5ae65ab7a70aa6e627c2462042584861258352b5",
             "commit_message": "[NTOS:KE] Add x86 CPU features reporting to AMD64\n\nCORE-18023 CORE-14922\n",
             "commit_timestamp": 1688320832.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1688342754.603837,
+            "elapsed_time": 125.3850736618042,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "a5360f542f5b26616673a193c906f808160f29e9",
+            "commit_message": "[IPHLPAPI] Formatting only, no functional change\n\n- Strip inconsistent spaces from the spec file.\n- iphlpapi_main: Harmonize inconsistent and line-wasting function-comments and fix mixed space-tab-indentation.\n- ipstats_reactos.c: Compactify horizontally accordingly to the coding guidelines\n\nI am interested in that code for a backport, so I want it to be well-formatted.\nFtr: IPHLPAPI was *forked* more than a decade ago from Wine.\nTherefore no diff ever was guarded within those files whenever we implemented anything here.\n",
+            "commit_timestamp": 1688337521.0
         }
     ]
 }

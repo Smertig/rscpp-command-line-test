@@ -1203,6 +1203,20 @@
             "commit_ref": "dbefa88b27ee1f124f782363b139aee3f1ccf590",
             "commit_message": "gh-106078: Move DecimalException to _decimal state (#106301)\n\n",
             "commit_timestamp": 1688316640.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1688342999.341656,
+            "elapsed_time": 1660.5899937152863,
+            "x64": true,
+            "actual_files_count": 894,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "569887aa9da0da2eb2e2ad7d6a7496290f223ab0",
+            "commit_message": "gh-104050: Add more type hints to Argument Clinic DSLParser() (#106343)\n\nAnnotate the following method signatures:\r\n\r\n- state_dsl_start()\r\n- state_parameter_docstring_start()\r\n- state_parameters_start()\r\n\r\nInverting ignore_line() logic, add type hints (including type guard) to\r\nit, and rename to valid_line().",
+            "commit_timestamp": 1688341358.0
         }
     ]
 }
