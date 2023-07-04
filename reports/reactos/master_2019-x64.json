@@ -3751,6 +3751,20 @@
             "commit_ref": "5ee97b95370cc1ad05d944206b51ad597f111ac8",
             "commit_message": "[NETSTAT] -b flag implies -o flag on Windows XP/2003. CORE-19006 (#5377)\n\n\r\nWhen calling 'netstat -abn'\r\nWin 2k3sp2 and XPSP3 do show both: the processes name and the PID.\r\nContrary Win 7 and Win 8.1 would show only the process name then without the PID.\r\n\r\nThe newer Windows versions would require you to explicitly pass -o\r\nif you want to see the PID also.\r\n\r\nWe do follow 2k3sp2 because it is our target. The process name is not of much use\r\nwithout having the PID as well, especially if multiple processes with the\r\nsame name do run on a system, e.g.: multiple 'svchost.exe' processes.\r\n\r\nRos will automatically switch to the Win7-way when newer\r\nWindows versions will be targeted at build-time.",
             "commit_timestamp": 1688416234.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1688443385.04084,
+            "elapsed_time": 125.65531802177429,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "180bc8155efc7927465832e163fedde8281320ec",
+            "commit_message": "[SAMSRV] Improve Japanese (ja-JP) translation\n\nCORE-18706\n",
+            "commit_timestamp": 1688443103.0
         }
     ]
 }
