@@ -4235,6 +4235,22 @@
             "commit_ref": "20f99278dbb81e880c23c65688e9752ce7ad019a",
             "commit_message": "[lldb][NFCI] Deprecate SBValue::GetOpaqueType\n\nThis method, as far as I can ascertain, is non-trivial to actually use\nto work with (if not impossible). It doesn't make sense to use from\nPython and you do not have access to the accompanying TypeSystem, so it\ndoesn't really do anything useful.\n\nA possible follow-up is to gut the implementation and have it return `nullptr`.\n\nDifferential Revision: https://reviews.llvm.org/D153918\n",
             "commit_timestamp": 1688572352.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1688588427.61695,
+            "elapsed_time": 7474.421847581863,
+            "x64": true,
+            "actual_files_count": 1701,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "4b5ca175431c559a91ffd40333a0fae9e8ac424c",
+            "commit_message": "Remove unused test file\n\npth.h hasn't been used since we removed support for PTH in\n0a6b5b653ee47234674614fecc213c1d73bb1e28\n",
+            "commit_timestamp": 1688587162.0
         }
     ]
 }
