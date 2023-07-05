@@ -4187,6 +4187,22 @@
             "commit_ref": "b89b3cdb612f43e91c7330a13c3f60a1ad251e50",
             "commit_message": "[mlir][TestDialect] Fix invalid custom op printers\n\nThis fixes a few custom printers which were printing IR that couldn't be\nround-tripped.\n\nReviewed By: rriddle\n\nDifferential Revision: https://reviews.llvm.org/D150080\n",
             "commit_timestamp": 1688527780.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1688545061.58118,
+            "elapsed_time": 7039.4704349040985,
+            "x64": true,
+            "actual_files_count": 1701,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "dacbf4a7094a72e7651737ac1f137b03b5d5b2d8",
+            "commit_message": "[llvm][TableGen][Jupyter] Note an easily encountered error\n\nWhen using VSCode it'll default to the Python kernel the first\ntime you open the notebook. Mention this in the readme, as the fix\nis simple but only if you know what to look for.\n",
+            "commit_timestamp": 1688543998.0
         }
     ]
 }
