@@ -4203,6 +4203,22 @@
             "commit_ref": "dacbf4a7094a72e7651737ac1f137b03b5d5b2d8",
             "commit_message": "[llvm][TableGen][Jupyter] Note an easily encountered error\n\nWhen using VSCode it'll default to the Python kernel the first\ntime you open the notebook. Mention this in the readme, as the fix\nis simple but only if you know what to look for.\n",
             "commit_timestamp": 1688543998.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1688559482.576622,
+            "elapsed_time": 6872.875727415085,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "8a3fdf7b908978625e9a7e57fbb443e4e6f98976",
+            "commit_message": "[UTC] Add fallback support for specific metadata, and check their defs\n\nThis prevents update_cc_tests.py from emitting hard-coded identifiers\nfor metadata (global variable checkers still check hard-coded\nidentifiers). Instead it emits regex checkers that match even if the\nidentifiers change. Also adds a new mode for --check-globals: instead of\nsimply being on or off, it now has the options 'none', 'smart' and\n'all', with 'none' and 'all' corresponding to the previous modes.\n\nThe 'smart' mode only emits checks for global definitions referenced\nin the IR or other metadata that itself has a definition checker\nemitted, making the rule transitive. It does not emit checks for\nattribute sets, since that is better checked by --check-attributes. This\nmode is made the new default. To make the change in default mode\nbackwards compatible a version bump is introduced (to v3), and the\ndefault remains 'none' in v1 & v2.\n\nThis will result in metadata checks being emitted more often, so filters\nare added to not check absolute file paths and compiler version git\nhashes.\n\nrdar://105239218\n",
+            "commit_timestamp": 1688558690.0
         }
     ]
 }

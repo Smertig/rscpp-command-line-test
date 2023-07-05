@@ -1567,6 +1567,20 @@
             "commit_ref": "ab126ad1d974f73722aff82df571aee3e17b2dcb",
             "commit_message": "Make sure to import versioned symbols\n\nUndefined versioned symbols are handled specially; they are resolved\nat the very end of name resolution stage. When they are resolved, we\nneed to make sure that they are marked as imported symbols.\n\nFixes https://github.com/rui314/mold/issues/1057\n",
             "commit_timestamp": 1688524473.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1688558706.789742,
+            "elapsed_time": 171.2780101299286,
+            "x64": false,
+            "actual_files_count": 436,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/rui314/mold",
+            "commit_ref": "4b42f38257068f2a3f0dbb102904519d85c9dcb2",
+            "commit_message": "Handle embedded default version strings in LTO symbols\n\nFixes https://github.com/rui314/mold/issues/1056\n",
+            "commit_timestamp": 1688551672.0
         }
     ]
 }
