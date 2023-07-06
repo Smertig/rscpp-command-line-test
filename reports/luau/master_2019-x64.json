@@ -4283,6 +4283,20 @@
             "commit_ref": "a02eb78c96f695a4287e7dd1beaccab3642c35f3",
             "commit_message": "Fix indexing table intersections using `x[\"prop\"]` syntax (#971)\n\nRight now, you can index an intersection of tables fine when using\r\n`x.prop` syntax, but not when using `x[\"prop\"]` syntax.\r\nThis fixes it for the latter case\r\n\r\n```lua\r\ntype Foo = {\r\n\tBar: string,\r\n} & { Baz: number }\r\n\r\nlocal x: Foo = { Bar = \"1\", Baz = 2 }\r\nlocal y = x[\"Bar\"] -- TypeError: Expected type table, got '{| Bar: string |} & {| Baz: number |}' instead\r\n```\r\n\r\nPart of a fix to\r\nhttps://github.com/Roblox/luau/issues/533#issuecomment-1291779353",
             "commit_timestamp": 1688592771.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1688616202.341133,
+            "elapsed_time": 323.15740966796875,
+            "x64": false,
+            "actual_files_count": 390,
+            "expected_files_count": 379,
+            "repo_url": "https://github.com/Roblox/luau",
+            "commit_ref": "a02eb78c96f695a4287e7dd1beaccab3642c35f3",
+            "commit_message": "Fix indexing table intersections using `x[\"prop\"]` syntax (#971)\n\nRight now, you can index an intersection of tables fine when using\r\n`x.prop` syntax, but not when using `x[\"prop\"]` syntax.\r\nThis fixes it for the latter case\r\n\r\n```lua\r\ntype Foo = {\r\n\tBar: string,\r\n} & { Baz: number }\r\n\r\nlocal x: Foo = { Bar = \"1\", Baz = 2 }\r\nlocal y = x[\"Bar\"] -- TypeError: Expected type table, got '{| Bar: string |} & {| Baz: number |}' instead\r\n```\r\n\r\nPart of a fix to\r\nhttps://github.com/Roblox/luau/issues/533#issuecomment-1291779353",
+            "commit_timestamp": 1688592771.0
         }
     ]
 }

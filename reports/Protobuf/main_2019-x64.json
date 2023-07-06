@@ -5043,6 +5043,20 @@
             "commit_ref": "9609f42dd7600b89868d07b089ef6d98f03ef84e",
             "commit_message": "Internal change.\n\nPiperOrigin-RevId: 545770955\n",
             "commit_timestamp": 1688589133.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1688616298.78055,
+            "elapsed_time": 400.20190715789795,
+            "x64": false,
+            "actual_files_count": 826,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "7599210683886181b774f05271d59fc99627ecad",
+            "commit_message": "Editions test enhancements to cover utf8 handling.\n\nThis replaces the cc_utf8_verification and enforce_utf8 options with the corresponding feature values, consistent with C++ behavior.  Further runtimes will be supported by refactoring the string_field_validation feature in a later change.\n\nPiperOrigin-RevId: 545824813\n",
+            "commit_timestamp": 1688602253.0
         }
     ]
 }
