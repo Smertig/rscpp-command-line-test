@@ -4339,6 +4339,20 @@
             "commit_ref": "a02eb78c96f695a4287e7dd1beaccab3642c35f3",
             "commit_message": "Fix indexing table intersections using `x[\"prop\"]` syntax (#971)\n\nRight now, you can index an intersection of tables fine when using\r\n`x.prop` syntax, but not when using `x[\"prop\"]` syntax.\r\nThis fixes it for the latter case\r\n\r\n```lua\r\ntype Foo = {\r\n\tBar: string,\r\n} & { Baz: number }\r\n\r\nlocal x: Foo = { Bar = \"1\", Baz = 2 }\r\nlocal y = x[\"Bar\"] -- TypeError: Expected type table, got '{| Bar: string |} & {| Baz: number |}' instead\r\n```\r\n\r\nPart of a fix to\r\nhttps://github.com/Roblox/luau/issues/533#issuecomment-1291779353",
             "commit_timestamp": 1688592771.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1688673792.316849,
+            "elapsed_time": 326.90550780296326,
+            "x64": false,
+            "actual_files_count": 390,
+            "expected_files_count": 379,
+            "repo_url": "https://github.com/Roblox/luau",
+            "commit_ref": "c98a9d7051770b0bb10a52caf48e34194c8753ea",
+            "commit_message": "Add console output codepage for windows (#967)\n\nPreviously unicode codepoints would be incorrectly shown in windows\r\nterminals, such as with u2503(\u2503):\r\n```ps\r\n\u276f \"print('\\u{2503}')\" | luau.exe\r\n\u0393\u00f6\u00e2\r\n```\r\n\r\nThis change fixes the issue by setting the console's codepage on\r\nwindows, resulting in fixed behaviour:\r\n```ps\r\n\u276f \"print('\\u{2503}')\" | luau.exe\r\n\u2503\r\n```",
+            "commit_timestamp": 1688673634.0
         }
     ]
 }
