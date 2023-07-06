@@ -4251,6 +4251,22 @@
             "commit_ref": "4b5ca175431c559a91ffd40333a0fae9e8ac424c",
             "commit_message": "Remove unused test file\n\npth.h hasn't been used since we removed support for PTH in\n0a6b5b653ee47234674614fecc213c1d73bb1e28\n",
             "commit_timestamp": 1688587162.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1688602600.780591,
+            "elapsed_time": 5918.9885160923,
+            "x64": true,
+            "actual_files_count": 1701,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "3ff080b53b0a7f5bccfabd11254e255669892a67",
+            "commit_message": "[Sanitizers][Darwin][Test] Mark symbolize_pc test unsupported in Darwin/LSan context\n\nLSan is unsupported on Darwin anyway, and this test fals on public Darwin bots\n\nDifferential Revision: https://reviews.llvm.org/D154389\n",
+            "commit_timestamp": 1688601260.0
         }
     ]
 }
