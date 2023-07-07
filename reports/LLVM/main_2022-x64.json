@@ -4411,6 +4411,22 @@
             "commit_ref": "d679c904c2d79a939ead994242a282d95ae0bb58",
             "commit_message": "[OpenMP][OMPT] Rename callback master to masked in ompt-multiplex.h\n\nOpenMP 5.1 replaced callback ompt_callback_master_t by\nompt_callback_masked_t. In order to stick to the standard,\nthe implementation is updated accordingly.\n\nPatch prepared by Semih Burak\n\nDifferential Revision: https://reviews.llvm.org/D112798\n",
             "commit_timestamp": 1688731300.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1688746571.657813,
+            "elapsed_time": 5810.4728899002075,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "6f90808074c4241775e111d8aca61889b10d8d0a",
+            "commit_message": "[RISCV] Add a guard condition to orc_b/brev8 handling in ReplaceNodeResults.\n\nThe orc_b and brev8 intrinsics are type overloaded, but only\ni32 and XLen are supported types. The type legalization code in\nReplaceNodeResults only handles the i32 case on RV64. Add some\nchecks so we will fail type legalization for other types.\n",
+            "commit_timestamp": 1688745106.0
         }
     ]
 }
