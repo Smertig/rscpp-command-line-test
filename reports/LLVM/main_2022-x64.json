@@ -4427,6 +4427,22 @@
             "commit_ref": "6f90808074c4241775e111d8aca61889b10d8d0a",
             "commit_message": "[RISCV] Add a guard condition to orc_b/brev8 handling in ReplaceNodeResults.\n\nThe orc_b and brev8 intrinsics are type overloaded, but only\ni32 and XLen are supported types. The type legalization code in\nReplaceNodeResults only handles the i32 case on RV64. Add some\nchecks so we will fail type legalization for other types.\n",
             "commit_timestamp": 1688745106.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1688760676.567931,
+            "elapsed_time": 4384.7653465271,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "399eb5632f4ad201bfe4f0bbe1f8ce302c711726",
+            "commit_message": "[scudo] Explicit casting for u16 arithmetic operation\n\nThis fixes the werror from https://lab.llvm.org/buildbot/#/builders/165/builds/38829\n\nReviewed By: enh\n\nDifferential Revision: https://reviews.llvm.org/D154733\n",
+            "commit_timestamp": 1688759882.0
         }
     ]
 }
