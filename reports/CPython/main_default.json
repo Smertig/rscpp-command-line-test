@@ -1511,6 +1511,20 @@
             "commit_ref": "003ba71dcbe94f0d5cb1d0c56d7f1d5a6dae56f7",
             "commit_message": "gh-104584: Fix error handling from backedge optimization (#106484)\n\nWhen `_PyOptimizer_BackEdge` returns `NULL`, we should restore `next_instr` (and `stack_pointer`). To accomplish this we should jump to `resume_with_error` instead of just `error`.\r\n\r\nThe problem this causes is subtle -- the only repro I have is in PR gh-106393, at commit d7df54b139bcc47f5ea094bfaa9824f79bc45adc. But the fix is real (as shown later in that PR).\r\n\r\nWhile we're at it, also improve the debug output: the offsets at which traces are identified are now measured in bytes, and always show the start offset. This makes it easier to correlate executor calls with optimizer calls, and either with `dis` output.\r\n\r\n<!-- gh-issue-number: gh-104584 -->\r\n* Issue: gh-104584\r\n<!-- /gh-issue-number -->\r\n",
             "commit_timestamp": 1688668793.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1688688510.220628,
+            "elapsed_time": 1214.2400352954865,
+            "x64": true,
+            "actual_files_count": 895,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "e1d45b8ed43e1590862319fec33539f8adbc0849",
+            "commit_message": " gh-104584: Handle EXTENDED_ARG in superblock creation (#106489)\n\nWith test.",
+            "commit_timestamp": 1688687166.0
         }
     ]
 }
