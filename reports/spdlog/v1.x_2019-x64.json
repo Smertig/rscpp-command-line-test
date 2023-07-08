@@ -5559,6 +5559,20 @@
             "commit_ref": "01b3724c484eebb42d83fa21aa8d71a57b2b8fb6",
             "commit_message": "sinks: android: handle when message is not loggable (#2801)\n\nAndroid logger (since API 30) checks the per-tag property `log.tag.<tag>` to determine if a log message is loggable. See https://developer.android.com/ndk/reference/group/logging#__android_log_is_loggable . For example, `__android_log_buf_write` for a VERBOSE message will call `__android_log_is_loggable` and return `-EPERM` if the log message will not be printed because `log.tag.<tag>` is set to `INFO`.\r\n\r\nInstead of erroring with the following error message, the Android sink should handle `-EPERM`. It is not an error to disable a log via the run-time property.\r\n\r\n```\r\n[*** LOG ERROR #0001 ***] [2023-06-29 00:50:26] [logcat] logging to Android failed: Unknown error -1 [/path/to/file.cpp(123)]\r\n```",
             "commit_timestamp": 1688678646.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1688789034.790448,
+            "elapsed_time": 91.40578031539917,
+            "x64": false,
+            "actual_files_count": 107,
+            "expected_files_count": 107,
+            "repo_url": "https://github.com/gabime/spdlog.git",
+            "commit_ref": "01b3724c484eebb42d83fa21aa8d71a57b2b8fb6",
+            "commit_message": "sinks: android: handle when message is not loggable (#2801)\n\nAndroid logger (since API 30) checks the per-tag property `log.tag.<tag>` to determine if a log message is loggable. See https://developer.android.com/ndk/reference/group/logging#__android_log_is_loggable . For example, `__android_log_buf_write` for a VERBOSE message will call `__android_log_is_loggable` and return `-EPERM` if the log message will not be printed because `log.tag.<tag>` is set to `INFO`.\r\n\r\nInstead of erroring with the following error message, the Android sink should handle `-EPERM`. It is not an error to disable a log via the run-time property.\r\n\r\n```\r\n[*** LOG ERROR #0001 ***] [2023-06-29 00:50:26] [logcat] logging to Android failed: Unknown error -1 [/path/to/file.cpp(123)]\r\n```",
+            "commit_timestamp": 1688678646.0
         }
     ]
 }

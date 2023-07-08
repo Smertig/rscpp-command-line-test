@@ -5559,6 +5559,20 @@
             "commit_ref": "92b95506487f8a716ff7fa91154435b8179bac97",
             "commit_message": "Few improvements for WaitGroup and OneShotEvent: (#235)\n\nFew improvements for WaitGroup and OneShotEvent:\r\n1. Relax memory orders for OneShotEvent\r\n2. OneShotEvent::Await was incorrect named, in reality it was AwaitSticky\r\n3. Implement real OneShotEvent::Await\r\n4. Add OneShotEvent::Call, same as Set, but doesn't prevent adding new jobs.\r\nIt's useful for scenarios like:\r\none thread do some jobs some time, for an example Writer::Commit.\r\nother thread, for an example in Transaction::Commit, want to wait and when first Writer::Commit is called.\r\n",
             "commit_timestamp": 1684472673.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1688789033.900523,
+            "elapsed_time": 174.5654375553131,
+            "x64": false,
+            "actual_files_count": 1809,
+            "expected_files_count": 1809,
+            "repo_url": "https://github.com/YACLib/YACLib",
+            "commit_ref": "92b95506487f8a716ff7fa91154435b8179bac97",
+            "commit_message": "Few improvements for WaitGroup and OneShotEvent: (#235)\n\nFew improvements for WaitGroup and OneShotEvent:\r\n1. Relax memory orders for OneShotEvent\r\n2. OneShotEvent::Await was incorrect named, in reality it was AwaitSticky\r\n3. Implement real OneShotEvent::Await\r\n4. Add OneShotEvent::Call, same as Set, but doesn't prevent adding new jobs.\r\nIt's useful for scenarios like:\r\none thread do some jobs some time, for an example Writer::Commit.\r\nother thread, for an example in Transaction::Commit, want to wait and when first Writer::Commit is called.\r\n",
+            "commit_timestamp": 1684472673.0
         }
     ]
 }
