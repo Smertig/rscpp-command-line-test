@@ -4523,6 +4523,22 @@
             "commit_ref": "820be30ad96591de2d7e651b3ec9cc0253ca6344",
             "commit_message": "[OpenMP][OMPT] Introduce VERBOSE_INIT in ompt-multiplex.h\n\nOpenMP 5.1 added OMP_TOOL_VERBOSE_INIT. This env variable is\nextremely helpful to understand the issue when loading a tool fails\nunexpectedly (e.g., errors from dlopen, when the libc available at\nruntime is older than libc used at compile time of the tool -> missed\nto load the right gcc module).\n\nThis patch replicates the verbose init code from libomp watching\nout for a different env variable. Similar to\nCLIENT_TOOL_LIBRARIES_VAR, a tool can define the name of\nthe env var by defining CLIENT_TOOL_VERBOSE_INIT_VAR\nbefore including ompt-multiplex.h.\nAlternatively, a tool can define OMPT_MULTIPLEX_TOOL_NAME\nto specify the tool name which will be the prefix for both\n_TOOL_LIBRARIES and _VERBOSE_INIT var.\nFinally, if none of the two macros is defined, the header will\nprint a compiler warning and look at OMP_TOOL_VERBOSE_INIT.\n\nPatch prepared by Semih Burak\n\nDifferential Revision: https://reviews.llvm.org/D112809\n",
             "commit_timestamp": 1688828997.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1688847446.477086,
+            "elapsed_time": 6583.940421104431,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "3f370a2af59f83134cf1de405358506be9280251",
+            "commit_message": "[test] Add more instantiation cases to visibility.cpp\n",
+            "commit_timestamp": 1688844649.0
         }
     ]
 }
