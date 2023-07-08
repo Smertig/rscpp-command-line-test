@@ -4475,6 +4475,22 @@
             "commit_ref": "1e02158666e0be2b1b5facf07842f9c15bf347b1",
             "commit_message": "[libc++] Implement LWG3843 (std::expected<T,E>::value() & assumes E is copy constructible)\n\nImplement LWG3843 (std::expected<T,E>::value() & assumes E is copy constructible)\nhttps://wg21.link/LWG3843\n\nReviewed By: #libc, ldionne\n\nDifferential Revision: https://reviews.llvm.org/D154110\n",
             "commit_timestamp": 1688788620.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1688804106.142708,
+            "elapsed_time": 6693.783696889877,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "681cb54a54bb60dea9034b4b0b45ccc392875b9a",
+            "commit_message": "[Driver] Fix duplicate -L after D150013\n\nD150013 is to render -L for AMDGPU but updating tools::AddLinkerInputs is wrong\nand causes many non-isCrossCompiling targets to have duplicate -L options\nbecause they do `Args.AddAllArgs(CmdArgs, options::OPT_L);`.\n\nRevert the change and add a `Args.AddAllArgs(CmdArgs, options::OPT_L);` instead.\n",
+            "commit_timestamp": 1688799465.0
         }
     ]
 }
