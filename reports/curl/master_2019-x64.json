@@ -4367,6 +4367,20 @@
             "commit_ref": "def99e011e88d61a4157863537378ca9c59a79e0",
             "commit_message": "hyper: fix EOF handling on input\n\nWe ran out of disc space due to an infinite loop with debug logging\n\nFixes #11377\nCloses #11385\nReported-by: Dan Fandrich\n",
             "commit_timestamp": 1688850084.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1688933138.970162,
+            "elapsed_time": 381.8909001350403,
+            "x64": false,
+            "actual_files_count": 2335,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "c7308592fb8ba213fc2c1bb6ad39781df45bd84a",
+            "commit_message": "hostip.c: Move macOS-specific calls into global init call\n\nhttps://github.com/curl/curl/pull/7121 introduced a macOS system call\nto `SCDynamicStoreCopyProxies`, which is invoked every time an IP\naddress needs to be resolved.\n\nHowever, this system call is not thread-safe, and macOS will kill the\nprocess if the system call is run first in a fork. To make it possible\nfor the parent process to call this once and prevent the crash, only\ninvoke this system call in the global initialization routine.\n\nIn addition, this change is beneficial because it:\n\n1. Avoids extra macOS system calls for every IP lookup.\n2. Consolidates macOS-specific initialization in a separate file.\n\nFixes #11252\nCloses #11254\n",
+            "commit_timestamp": 1688923018.0
         }
     ]
 }
