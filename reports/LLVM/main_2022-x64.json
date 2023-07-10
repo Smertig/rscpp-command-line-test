@@ -4667,6 +4667,22 @@
             "commit_ref": "df38792efbdf8947bbf733ef81f183c0a11ffc97",
             "commit_message": "[Attributor][FIX] Add missing check lines for test\n",
             "commit_timestamp": 1688960544.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1688976927.143052,
+            "elapsed_time": 6322.35412979126,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "3a80bdb3169192361a6113397d9967a880de44bd",
+            "commit_message": "[GlobalISel] Remove an erroneous oneuse check in the G_ADD reassociation combine.\n\nThis check was unnecessary/incorrect, it was already being done by the target\nhook default implementation, and the one in the matcher was checking for a\ncompletely different thing. This change:\n 1) Removes the check and updates affected tests which now do some more reassociations.\n 2) Modifies the AMDGPU hooks which were stubbed with \"return true\" to also do the oneuse\n    check. Not sure why I didn't do this the first time.\n",
+            "commit_timestamp": 1688976192.0
         }
     ]
 }
