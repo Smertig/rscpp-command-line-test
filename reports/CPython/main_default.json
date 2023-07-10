@@ -1777,6 +1777,20 @@
             "commit_ref": "93846657a35726358ef6714c6631a9f862090b04",
             "commit_message": "gh-106078: Move static variables initialized once to decimal module global state (#106475)\n\n",
             "commit_timestamp": 1688990245.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1689005301.381238,
+            "elapsed_time": 1585.7107417583466,
+            "x64": true,
+            "actual_files_count": 895,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "3e23fa71f43fb225ca29a931644d1100e2f4d6b8",
+            "commit_message": "GH-61215: threadingmock: Remove unused branch for `timeout` (#106591)\n\nthreadingmock: Remove unused branch for `timeout`\r\n\r\nThis is no longer needed as the mock does not hold a \"timeout\"\r\nparameter, the timeout is stored in `_mock_wait_timeout`.",
+            "commit_timestamp": 1688996154.0
         }
     ]
 }

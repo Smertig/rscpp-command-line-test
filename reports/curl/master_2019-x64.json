@@ -4437,6 +4437,20 @@
             "commit_ref": "c7308592fb8ba213fc2c1bb6ad39781df45bd84a",
             "commit_message": "hostip.c: Move macOS-specific calls into global init call\n\nhttps://github.com/curl/curl/pull/7121 introduced a macOS system call\nto `SCDynamicStoreCopyProxies`, which is invoked every time an IP\naddress needs to be resolved.\n\nHowever, this system call is not thread-safe, and macOS will kill the\nprocess if the system call is run first in a fork. To make it possible\nfor the parent process to call this once and prevent the crash, only\ninvoke this system call in the global initialization routine.\n\nIn addition, this change is beneficial because it:\n\n1. Avoids extra macOS system calls for every IP lookup.\n2. Consolidates macOS-specific initialization in a separate file.\n\nFixes #11252\nCloses #11254\n",
             "commit_timestamp": 1688923018.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1689005099.443778,
+            "elapsed_time": 297.88115763664246,
+            "x64": false,
+            "actual_files_count": 2335,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "c7308592fb8ba213fc2c1bb6ad39781df45bd84a",
+            "commit_message": "hostip.c: Move macOS-specific calls into global init call\n\nhttps://github.com/curl/curl/pull/7121 introduced a macOS system call\nto `SCDynamicStoreCopyProxies`, which is invoked every time an IP\naddress needs to be resolved.\n\nHowever, this system call is not thread-safe, and macOS will kill the\nprocess if the system call is run first in a fork. To make it possible\nfor the parent process to call this once and prevent the crash, only\ninvoke this system call in the global initialization routine.\n\nIn addition, this change is beneficial because it:\n\n1. Avoids extra macOS system calls for every IP lookup.\n2. Consolidates macOS-specific initialization in a separate file.\n\nFixes #11252\nCloses #11254\n",
+            "commit_timestamp": 1688923018.0
         }
     ]
 }
