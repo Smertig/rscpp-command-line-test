@@ -4535,6 +4535,20 @@
             "commit_ref": "c73b2f8207b3f8670a3294c80f1791c4eb9bb586",
             "commit_message": "macOS: fix taget detection\n\n- TARGET_OS_OSX is not always defined on macOS\n- this leads to missing symbol Curl_macos_init()\n- TargetConditionals.h seems to define these only when\n  dynamic targets are enabled (somewhere?)\n- this PR fixes that on my macOS 13.4.1\n- I have no clue why CI builds worked without it\n\nFollow-up to c7308592fb8ba213fc2c1\nCloses #11417\n",
             "commit_timestamp": 1689027280.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1689105940.438445,
+            "elapsed_time": 237.5355417728424,
+            "x64": false,
+            "actual_files_count": 2335,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "97394caa2079ea193c3f5de50eca9651e21a94eb",
+            "commit_message": "example/maxconnects: set maxconnect example\n\nCloses #11343\n",
+            "commit_timestamp": 1689099205.0
         }
     ]
 }
