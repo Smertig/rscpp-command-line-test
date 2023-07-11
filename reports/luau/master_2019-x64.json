@@ -4717,6 +4717,20 @@
             "commit_ref": "e25de95445f2d635a125ab463426bb7fda017093",
             "commit_message": "Sync to upstream/release/583 (#974)\n\n* Fixed indexing table intersections using `x[\"prop\"]` syntax:\r\nhttps://github.com/Roblox/luau/pull/971\r\n* Add console output codepage for Windows:\r\nhttps://github.com/Roblox/luau/pull/967\r\n* Added `Frontend::parse` for a fast source graph preparation\r\n* luau_load should check GC\r\n* Work toward a type-diff system for nicer error messages\r\n\r\nNew Solver\r\n* Correctly suppress errors in more cases\r\n* Further improvements to typechecking of function calls and return\r\nstatements\r\n* Crash fixes\r\n* Propagate refinements drawn from the condition of a while loop into\r\nthe loop body\r\n\r\nJIT\r\n* Fix accidental bailout for math.frexp/modf/sign in A64\r\n* Work toward bringing type annotation info in\r\n* Do not propagate Luau IR constants of wrong type into load\r\ninstructions\r\n* CHECK_SAFEENV exits to VM on failure\r\n* Implement error handling in A64 reg allocator\r\n* Inline the string.len builtin\r\n* Do not enter native code of a function if arguments don\u2019t match\r\n\r\n---------\r\n\r\nCo-authored-by: Arseny Kapoulkine <arseny.kapoulkine@gmail.com>\r\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>",
             "commit_timestamp": 1688760648.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1689062637.32237,
+            "elapsed_time": 404.77305340766907,
+            "x64": false,
+            "actual_files_count": 393,
+            "expected_files_count": 379,
+            "repo_url": "https://github.com/Roblox/luau",
+            "commit_ref": "e25de95445f2d635a125ab463426bb7fda017093",
+            "commit_message": "Sync to upstream/release/583 (#974)\n\n* Fixed indexing table intersections using `x[\"prop\"]` syntax:\r\nhttps://github.com/Roblox/luau/pull/971\r\n* Add console output codepage for Windows:\r\nhttps://github.com/Roblox/luau/pull/967\r\n* Added `Frontend::parse` for a fast source graph preparation\r\n* luau_load should check GC\r\n* Work toward a type-diff system for nicer error messages\r\n\r\nNew Solver\r\n* Correctly suppress errors in more cases\r\n* Further improvements to typechecking of function calls and return\r\nstatements\r\n* Crash fixes\r\n* Propagate refinements drawn from the condition of a while loop into\r\nthe loop body\r\n\r\nJIT\r\n* Fix accidental bailout for math.frexp/modf/sign in A64\r\n* Work toward bringing type annotation info in\r\n* Do not propagate Luau IR constants of wrong type into load\r\ninstructions\r\n* CHECK_SAFEENV exits to VM on failure\r\n* Implement error handling in A64 reg allocator\r\n* Inline the string.len builtin\r\n* Do not enter native code of a function if arguments don\u2019t match\r\n\r\n---------\r\n\r\nCo-authored-by: Arseny Kapoulkine <arseny.kapoulkine@gmail.com>\r\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>",
+            "commit_timestamp": 1688760648.0
         }
     ]
 }
