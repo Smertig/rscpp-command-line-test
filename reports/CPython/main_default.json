@@ -1833,6 +1833,20 @@
             "commit_ref": "95b7426f45edb570869a5513c142f29ed9f851a1",
             "commit_message": "gh-105497: [Enum] Fix flag mask inversion when unnamed flags exist (#106468)\n\nFor example:\r\n\r\n    class Flag(enum.Flag):\r\n        A = 0x01\r\n        B = 0x02\r\n        MASK = 0xff\r\n\r\n    ~Flag.MASK is Flag(0)\r\n",
             "commit_timestamp": 1689075354.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1689091723.629027,
+            "elapsed_time": 1558.2464952468872,
+            "x64": true,
+            "actual_files_count": 895,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "945d3cbf2e8e756ed16c3ec51106e6157abb2698",
+            "commit_message": "gh-106403: Restore weakref support for TypeVar and friends (#106418)\n\n",
+            "commit_timestamp": 1689090204.0
         }
     ]
 }
