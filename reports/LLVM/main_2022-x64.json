@@ -4907,6 +4907,22 @@
             "commit_ref": "a70ce8cb0e4b45841726347c723147af591b054a",
             "commit_message": "[libc++][PSTL] Fix double-move in std::transform_reduce\n\nReviewed By: #libc, ldionne\n\nSpies: h-vetinari, libcxx-commits\n\nDifferential Revision: https://reviews.llvm.org/D154913\n",
             "commit_timestamp": 1689177370.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1689193102.742811,
+            "elapsed_time": 7987.130672454834,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "0e543747ab42b49bf7ca2e78a76639ac9bc1fda8",
+            "commit_message": "[flang][openacc] Support .eqv. reduction operator\n\nAdd support for the `.eqv.` reduction operator for\nFlang/OpenACC lowering.\n\nDepends on D154898\n\nReviewed By: razvanlupusoru\n\nDifferential Revision: https://reviews.llvm.org/D154900\n",
+            "commit_timestamp": 1689192010.0
         }
     ]
 }

@@ -1931,6 +1931,20 @@
             "commit_ref": "b03755a2347325a89a48b08fc158419000513bcb",
             "commit_message": "GH-104909: Break LOAD_GLOBAL specializations in micro-ops. (GH-106677)\n\n",
             "commit_timestamp": 1689168854.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1689192477.078719,
+            "elapsed_time": 1160.721675157547,
+            "x64": true,
+            "actual_files_count": 895,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "e4b88c1e4ac129b36f99a534387d64f7b8cda8ef",
+            "commit_message": "gh-106236: Replace `assert` with `raise RuntimeError` in `threading.py` (#106237)\n\nReplace `assert` with `raise ` in `threading.py` so that -OO does not alter _DummyThread behavior.",
+            "commit_timestamp": 1689185279.0
         }
     ]
 }
