@@ -1945,6 +1945,20 @@
             "commit_ref": "e4b88c1e4ac129b36f99a534387d64f7b8cda8ef",
             "commit_message": "gh-106236: Replace `assert` with `raise RuntimeError` in `threading.py` (#106237)\n\nReplace `assert` with `raise ` in `threading.py` so that -OO does not alter _DummyThread behavior.",
             "commit_timestamp": 1689185279.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1689206989.228104,
+            "elapsed_time": 1367.3357124328613,
+            "x64": true,
+            "actual_files_count": 895,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "2d43beec225a0495ffa0344f961b99717e5f1106",
+            "commit_message": "gh-104050: Argument Clinic: Annotate nested function parser_body() in the CLanguage class (#106699)\n\n",
+            "commit_timestamp": 1689202170.0
         }
     ]
 }
