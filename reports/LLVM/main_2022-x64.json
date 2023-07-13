@@ -4939,6 +4939,22 @@
             "commit_ref": "677a1da6fafddb13aebd4c170c8452029a05858d",
             "commit_message": "[clang] Fix crash caused by PseudoObjectExprBitfields::NumSubExprs overflow\n\nThis patch makes the bit-fields wider, and also implement a small optimization for `PseudoObjectExprBitfields`, when there is no result in `PseudoObjectExpr`, we use 32 bits to store the number of subexpressions, otherwise, we use 16 bits to store the number of subexpressions, and use 16 bits to store the result indexes.\n\nFixes https://github.com/llvm/llvm-project/issues/63169\n\nReviewed By: aaron.ballman\n\nDifferential Revision: https://reviews.llvm.org/D154784\n",
             "commit_timestamp": 1689206288.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1689221771.256459,
+            "elapsed_time": 6285.756520986557,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "020cdaff615acbdc9ef6a801075a484ef74d5070",
+            "commit_message": "[Asan][Darwin][GCD] Add interceptor for dispatch_mach_create_f\n\nWhen enabling DriverKit, Address Sanitizer was unable to\nintercept thread creation directly for dispatch workerthreads.\n\nBecause of this calls to GetStackTraceFromID failed and ASan was\nunable to capture a meaningful stack trace.\n\nThis patch adds an interceptor for a dispatch function as a proxy\nthat is \"close enough\" to thread creation so that ASan is able\nto meaningfully capture and register the dispatched thread.\n\nNote: I propose not adding a test for this change.\nBecause this change is only meaningful in such a narrow usecase on Darwin\nand is incredibly difficult to add a meaningful test.\n\nDifferential Revision: https://reviews.llvm.org/D154753\n",
+            "commit_timestamp": 1689220330.0
         }
     ]
 }
