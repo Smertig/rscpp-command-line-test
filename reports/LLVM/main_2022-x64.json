@@ -4955,6 +4955,22 @@
             "commit_ref": "020cdaff615acbdc9ef6a801075a484ef74d5070",
             "commit_message": "[Asan][Darwin][GCD] Add interceptor for dispatch_mach_create_f\n\nWhen enabling DriverKit, Address Sanitizer was unable to\nintercept thread creation directly for dispatch workerthreads.\n\nBecause of this calls to GetStackTraceFromID failed and ASan was\nunable to capture a meaningful stack trace.\n\nThis patch adds an interceptor for a dispatch function as a proxy\nthat is \"close enough\" to thread creation so that ASan is able\nto meaningfully capture and register the dispatched thread.\n\nNote: I propose not adding a test for this change.\nBecause this change is only meaningful in such a narrow usecase on Darwin\nand is incredibly difficult to add a meaningful test.\n\nDifferential Revision: https://reviews.llvm.org/D154753\n",
             "commit_timestamp": 1689220330.0
+        },
+        {
+            "tool_version": "232.0.20230613.111753-eap05",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1689236415.234798,
+            "elapsed_time": 7319.710772752762,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "8ecc6c9378399bf8b7a0cec72e73138ac686a1bb",
+            "commit_message": "[IR] Partially remove pointer element types from intrinsic signatures (NFC)\n\nAs typed pointers are no longer supported, we should no longer\nspecify element types in intrinsic signatures.\n\nThe only meaningful pointer types are now:\n\n    llvm_ptr_ty -> ptr\n    llvm_anyptr_ty -> ptr addrspace(any)\n    LLVMQualPointerType<N> -> ptr addrspace(N)\n\nThis is only \"partially\" because we also have a bunch of special\nIIT descriptors like LLVMPointerTo, LLVMPointerToElt and\nLLVMAnyPointerToElt, which I'll leave for a later revision.\n\nDifferential Revision: https://reviews.llvm.org/D155086\n",
+            "commit_timestamp": 1689235251.0
         }
     ]
 }
