@@ -6077,6 +6077,20 @@
             "commit_ref": "ee625232a413edb915797983cb32d8b95feff924",
             "commit_message": "Fix successful decompress reported as Error::Read (#1612)\n\n* Fix successful decompress reported as Error::Read\r\n\r\nStreams less than 4096 bytes are sometimes reported as failed reads because stream_.avail_in is not reduced to 0. The next iteration of the loop finds `prev_avail_in == strm_.avail_in` and return false. `ret = inflate(...)` returns Z_STREAM_END on the first iteration of the loop indicating that inflate is finished. This fix prevents the second iteration of the loop from failing.\r\n\r\n* Fix successful decompress reported as Error::Read\r\n\r\n- Add unit tests for raw deflate that illustrates the decompression failure when there are extra trailing bytes",
             "commit_timestamp": 1689114927.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1689500874.266365,
+            "elapsed_time": 78.05889749526978,
+            "x64": false,
+            "actual_files_count": 3,
+            "expected_files_count": 3,
+            "repo_url": "https://github.com/yhirose/cpp-httplib",
+            "commit_ref": "ee625232a413edb915797983cb32d8b95feff924",
+            "commit_message": "Fix successful decompress reported as Error::Read (#1612)\n\n* Fix successful decompress reported as Error::Read\r\n\r\nStreams less than 4096 bytes are sometimes reported as failed reads because stream_.avail_in is not reduced to 0. The next iteration of the loop finds `prev_avail_in == strm_.avail_in` and return false. `ret = inflate(...)` returns Z_STREAM_END on the first iteration of the loop indicating that inflate is finished. This fix prevents the second iteration of the loop from failing.\r\n\r\n* Fix successful decompress reported as Error::Read\r\n\r\n- Add unit tests for raw deflate that illustrates the decompression failure when there are extra trailing bytes",
+            "commit_timestamp": 1689114927.0
         }
     ]
 }
