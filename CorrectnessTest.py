@@ -89,7 +89,7 @@ def check_report(report_file, known_errors, known_file_errors) -> Tuple[Optional
                 results.append("expected and actual set of errors differ")
             else:
                 print(f"{len(actual_errors)} standalone errors found as expected")
-        else:
+        elif actual_errors:
             print_errors("Unexpected", actual_errors)
             results.append(f"unexpected {len(actual_errors)} errors found")
             error_mismatch = True
