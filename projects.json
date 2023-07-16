@@ -955,27 +955,11 @@
             "commit": "721f6e10fbdb25909e020351dc7130393201da8d"
         },
         "stable": {
-            "inspected files count": 379,
-            "known errors": [
-                {
-                    "file": "..\\tests\\NotNull.test.cpp",
-                    "line": 12,
-                    "message": "static_assert failed: 'NotNull<T> ought not to be convertible into bool'",
-                    "reason": "RSCPP-34326 `is_convertible` handles deleted conversion operator incorrectly"
-                }
-            ]
+            "inspected files count": 379
         },
         "latest": {
             "master": {
-                "inspected files count": 379,
-                "known errors": [
-                    {
-                        "file": "..\\tests\\NotNull.test.cpp",
-                        "line": 12,
-                        "message": "static_assert failed: 'NotNull<T> ought not to be convertible into bool'",
-                        "reason": "RSCPP-34326 `is_convertible` handles deleted conversion operator incorrectly"
-                    }
-                ]
+                "inspected files count": 379
             }
         }
     },
@@ -1149,30 +1133,8 @@
             "inspected files count": 362,
             "known file errors": [
                 {
-                    "file": "Source\\BytePatterns\\WindowsClientPatternFinder.h",
-                    "reason": "RSCPP-31561 constexpr aggregate array initialization"
-                },
-                {
-                    "file": "Source\\BytePatterns\\WindowsEnginePatternFinder.h",
-                    "reason": "RSCPP-31561 constexpr aggregate array initialization"
-                },
-                {
                     "file": "Dependencies\\imgui\\imgui_impl_dx9.cpp",
                     "reason": "Generated file"
-                }
-            ],
-            "known errors": [
-                {
-                    "file": "Source\\RetSpoof\\RetSpoofGadgets.cpp",
-                    "line": 7,
-                    "message": "Cannot convert rvalue of type 'BytePatternStorage<\"1B FF 23 F8 F6 87\".size>' to parameter type 'BytePattern'",
-                    "reason": "RSCPP-31561 constexpr aggregate array initialization"
-                },
-                {
-                    "file": "Source\\RetSpoof\\RetSpoofGadgets.cpp",
-                    "line": 8,
-                    "message": "Cannot convert rvalue of type 'BytePatternStorage<\"FF 23\".size>' to parameter type 'BytePattern'",
-                    "reason": "RSCPP-31561 constexpr aggregate array initialization"
                 }
             ]
         },
@@ -1181,30 +1143,8 @@
                 "inspected files count": 362,
                 "known file errors": [
                     {
-                        "file": "Source\\BytePatterns\\WindowsClientPatternFinder.h",
-                        "reason": "RSCPP-31561 constexpr aggregate array initialization"
-                    },
-                    {
-                        "file": "Source\\BytePatterns\\WindowsEnginePatternFinder.h",
-                        "reason": "RSCPP-31561 constexpr aggregate array initialization"
-                    },
-                    {
                         "file": "Dependencies\\imgui\\imgui_impl_dx9.cpp",
                         "reason": "Missing generated file"
-                    }
-                ],
-                "known errors": [
-                    {
-                        "file": "Source\\RetSpoof\\RetSpoofGadgets.cpp",
-                        "line": 7,
-                        "message": "Cannot convert rvalue of type 'BytePatternStorage<\"1B FF 23 F8 F6 87\".size>' to parameter type 'BytePattern'",
-                        "reason": "RSCPP-31561 constexpr aggregate array initialization"
-                    },
-                    {
-                        "file": "Source\\RetSpoof\\RetSpoofGadgets.cpp",
-                        "line": 8,
-                        "message": "Cannot convert rvalue of type 'BytePatternStorage<\"FF 23\".size>' to parameter type 'BytePattern'",
-                        "reason": "RSCPP-31561 constexpr aggregate array initialization"
                     }
                 ]
             }
@@ -1218,14 +1158,11 @@
         "required toolchain": ["clang-cl-2019-x64"],
         "stable": {
             "known file errors": [
-                {"file": "..\\third-party\\zstd\\lib\\common\\zstd_internal.h", "reason": "missing __x86_64__ macro"},
-                {"file": "..\\third-party\\zstd\\lib\\compress\\zstd_compress_internal.h"},
                 {"file": "..\\third-party\\zstd\\lib\\compress\\zstd_double_fast.c"},
                 {"file": "..\\third-party\\zstd\\lib\\compress\\zstd_fast.c"},
                 {"file": "..\\third-party\\zstd\\lib\\compress\\zstd_lazy.c"},
                 {"file": "..\\third-party\\zstd\\lib\\compress\\zstd_ldm.c"},
-                {"file": "..\\third-party\\zstd\\lib\\decompress\\zstd_decompress_block.c"},
-                {"file": "..\\third-party\\zstd\\lib\\dictBuilder\\zdict.c"}
+                {"file": "..\\third-party\\zstd\\lib\\decompress\\zstd_decompress_block.c"}
             ],
             "known errors": [
                 {
@@ -1246,14 +1183,11 @@
         "latest": {
             "main": {
                 "known file errors": [
-                    {"file": "..\\third-party\\zstd\\lib\\common\\zstd_internal.h", "reason": "missing __x86_64__ macro"},
-                    {"file": "..\\third-party\\zstd\\lib\\compress\\zstd_compress_internal.h"},
                     {"file": "..\\third-party\\zstd\\lib\\compress\\zstd_double_fast.c"},
                     {"file": "..\\third-party\\zstd\\lib\\compress\\zstd_fast.c"},
                     {"file": "..\\third-party\\zstd\\lib\\compress\\zstd_lazy.c"},
                     {"file": "..\\third-party\\zstd\\lib\\compress\\zstd_ldm.c"},
-                    {"file": "..\\third-party\\zstd\\lib\\decompress\\zstd_decompress_block.c"},
-                    {"file": "..\\third-party\\zstd\\lib\\dictBuilder\\zdict.c"}
+                    {"file": "..\\third-party\\zstd\\lib\\decompress\\zstd_decompress_block.c"}
                 ],
                 "known errors": [
                     {
@@ -1307,6 +1241,12 @@
                     {
                         "file": "..\\Include\\py_curses.h",
                         "reason": "Not included on Windows"
+                    },
+                    {
+                        "file": "..\\PC\\launcher.c",
+                        "line": 1683,
+                        "message": "Cannot resolve symbol 'MAXINT'",
+                        "reason": "Can't find this macro anywhere ¯\\_(ツ)_/¯"
                     }
                 ]
             }
