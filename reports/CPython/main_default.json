@@ -2183,6 +2183,20 @@
             "commit_ref": "ad95c7253a70e559e7d3f25d53f4772f28bb8b44",
             "commit_message": "gh-106687: _ssl: use uint64_t for SSL options (#106700)\n\nSSL_CTX_get_options() uses uint64_t for options:\r\nhttps://www.openssl.org/docs/man3.1/man3/SSL_CTX_get_options.html\r\n\r\nFix this compiler warning on Windows with MSC:\r\n\r\n    conversion from 'uint64_t' to 'long', possible loss of data",
             "commit_timestamp": 1689609330.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1689624833.655483,
+            "elapsed_time": 1319.651133775711,
+            "x64": true,
+            "actual_files_count": 895,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "ebf2c56b33553a448da8f60fcd89a622f071b5f4",
+            "commit_message": "gh-106831: Fix NULL check of d2i_SSL_SESSION() result in _ssl.c (#106832)\n\n",
+            "commit_timestamp": 1689623740.0
         }
     ]
 }
