@@ -5099,6 +5099,22 @@
             "commit_ref": "199034e8acd602d5a2475d537ae8265c4e3ee5a7",
             "commit_message": "[ORC] In defineMaterializing, error out early if tracker is defunct.\n\nAn in-flight materialization may try to claim responsibility for new symbols\n(via MaterializationResponsibility::defineMaterializing) after the tracker that\nis associated with the materialization is removed, leaving the tracker defunct.\n\nFailure to error out early here could leave the JITDylib in an invalid state,\nwith defineMaterializing associating new symbols with the already-defunct\ntracker. Erroring out early prevents this.\n",
             "commit_timestamp": 1689554276.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1689567806.520265,
+            "elapsed_time": 7144.922644853592,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "7ce4e933eab28d7a6b7a54ef96bee8853cc30bbc",
+            "commit_message": "[RISCV] Implement prefetch locality by NTLH\n\nWe add the MemOperand then backend will generate NTLH automatically.\n\n```\n__builtin_prefetch(ptr,  0 /* rw==read */, 0 /* locality */); => ntl.all + prefetch.r (ptr)\n__builtin_prefetch(ptr,  0 /* rw==read */, 1 /* locality */); => ntl.pall + prefetch.r (ptr)\n__builtin_prefetch(ptr,  0 /* rw==read */, 2 /* locality */); => ntl.p1 + prefetch.r (ptr)\n__builtin_prefetch(ptr,  0 /* rw==read */, 3 /* locality */); => prefetch.r (ptr)\n```\n\nReviewed By: craig.topper\n\nDifferential Revision: https://reviews.llvm.org/D154691\n",
+            "commit_timestamp": 1689564766.0
         }
     ]
 }
