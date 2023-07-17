@@ -5083,6 +5083,22 @@
             "commit_ref": "cc4f86562127f29560abb54d0c11f277b3373a2a",
             "commit_message": "[clang-tidy] Improve build-in type handling in bugprone-swapped-arguments\n\nImproved detection of argument swaps involving integral and floating-point\ntypes by enhancing handling of implicit conversions. Now implicit casts\nfrom float to double are also considered, same for integers.\nImproved documentation.\n\nFixes: #62926\n\nReviewed By: carlosgalvezp\n\nDifferential Revision: https://reviews.llvm.org/D151495\n",
             "commit_timestamp": 1689532169.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1689555442.324424,
+            "elapsed_time": 6515.170094490051,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "199034e8acd602d5a2475d537ae8265c4e3ee5a7",
+            "commit_message": "[ORC] In defineMaterializing, error out early if tracker is defunct.\n\nAn in-flight materialization may try to claim responsibility for new symbols\n(via MaterializationResponsibility::defineMaterializing) after the tracker that\nis associated with the materialization is removed, leaving the tracker defunct.\n\nFailure to error out early here could leave the JITDylib in an invalid state,\nwith defineMaterializing associating new symbols with the already-defunct\ntracker. Erroring out early prevents this.\n",
+            "commit_timestamp": 1689554276.0
         }
     ]
 }

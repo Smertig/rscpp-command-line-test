@@ -4689,6 +4689,20 @@
             "commit_ref": "18815558d12b45f3331f98183a4b08408581d194",
             "commit_message": "[HALX86] Update the PCI hardware IDs database.\n\nExtracted from the pci.ids database at https://pci-ids.ucw.cz/ from 2023-06-19 03:15:02.\nMaintained by Albert Pool, Martin Mares, and other volunteers from the PCI ID Project.\n",
             "commit_timestamp": 1689533527.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1689554763.128061,
+            "elapsed_time": 109.5865547657013,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "bfadb22da19bd50118ab4671b80dadd575cc9525",
+            "commit_message": "[BROWSEUI] Respect status bar display state in Folders/Search panes (#5445)\n\n- Use proper window styles when creating status bar window.\r\n- Specify WS_VISIBLE style only when status bar display is enabled.\r\n- Use ::CreateWindowExW() with a global namespace scope operator.\r\n- Fix some magic constants.\r\n\r\nCORE-19027",
+            "commit_timestamp": 1689545673.0
         }
     ]
 }
