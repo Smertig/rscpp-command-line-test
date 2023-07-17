@@ -6177,6 +6177,20 @@
             "commit_ref": "ec1b57c50c72a7c2ef4aa3b14d7723918da4235e",
             "commit_message": "Disable `PYBIND11_ASSERT_GIL_HELD_INCREF_DECREF` generally for PyPy (not just PyPy Windows). (#4751)\n\n",
             "commit_timestamp": 1689450900.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1689581505.413181,
+            "elapsed_time": 153.70772504806519,
+            "x64": false,
+            "actual_files_count": 208,
+            "expected_files_count": 197,
+            "repo_url": "https://github.com/pybind/pybind11",
+            "commit_ref": "99131a85b613aa95a7aa33d0fb1b131f0d1622e8",
+            "commit_message": "Provide `PYBIND11_NO_ASSERT_GIL_HELD_INCREF_DECREF` as an option (#4753)\n\n* Remove GIL checks\r\n\r\n* Update common.h\r\n\r\n* Add flag\r\n\r\n* style: pre-commit fixes\r\n\r\n* Update pytypes.h\r\n\r\n* style: pre-commit fixes\r\n\r\n* Update common.h\r\n\r\n* style: pre-commit fixes\r\n\r\n* Update pytypes.h\r\n\r\n* style: pre-commit fixes\r\n\r\n* Update common.h\r\n\r\n* style: pre-commit fixes\r\n\r\n---------\r\n\r\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>",
+            "commit_timestamp": 1689577552.0
         }
     ]
 }
