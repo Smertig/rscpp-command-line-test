@@ -4731,6 +4731,20 @@
             "commit_ref": "bfadb22da19bd50118ab4671b80dadd575cc9525",
             "commit_message": "[BROWSEUI] Respect status bar display state in Folders/Search panes (#5445)\n\n- Use proper window styles when creating status bar window.\r\n- Specify WS_VISIBLE style only when status bar display is enabled.\r\n- Use ::CreateWindowExW() with a global namespace scope operator.\r\n- Fix some magic constants.\r\n\r\nCORE-19027",
             "commit_timestamp": 1689545673.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1689596170.184472,
+            "elapsed_time": 117.88374972343445,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "bf2cec186cc7655e062ec0e53ccfac860bcae70d",
+            "commit_message": "[ZIPFLDR] Support UTF-8 Zip extraction (#5411)\n\n- Extend some Ansi strings to Wide strings.\r\n- Check the UTF-8 flag (1 << 11). If UTF-8, then use CP_UTF8.\r\n- s/LPCWSTR/PCWSTR/.\r\n- s/LPWSTR/PWSTR/.\r\nCORE-16668",
+            "commit_timestamp": 1689592365.0
         }
     ]
 }
