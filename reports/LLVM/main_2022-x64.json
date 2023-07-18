@@ -5243,6 +5243,22 @@
             "commit_ref": "eadbc4b004b6f5bcd67f17b1d79c9955bd410fb8",
             "commit_message": "[Constants] Use getGEPReturnType() (NFC)\n\nThis reimplements essentially the same logic.\n",
             "commit_timestamp": 1689682298.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1689697605.529338,
+            "elapsed_time": 8877.176429986954,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "fe22b9050c7296bc9d4d22d469f27b226153273d",
+            "commit_message": "[AArch64] Regenerate a couple of vector-shuffle tests. NFC\n    As a request in https://reviews.llvm.org/D152205\n",
+            "commit_timestamp": 1689696255.0
         }
     ]
 }
