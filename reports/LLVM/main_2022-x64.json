@@ -5211,6 +5211,22 @@
             "commit_ref": "31263211c6a4ef454216f2edbf9b2083a4c1474d",
             "commit_message": "[sanitizer][asan][win] Intercept _strdup on Windows instead of strdup\n\nIntercept `_strdup` on windows, instead of the nonexistent `strdup`.\n",
             "commit_timestamp": 1689653210.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1689668753.596433,
+            "elapsed_time": 9091.609967708588,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "447bb5bee402eab94987ebbd8f29d696f946ba9e",
+            "commit_message": "[mlir][ArmSME] Introduce new lowering layer (Vector -> ArmSME)\n\nAt the moment, the lowering from the Vector dialect to SME looks like\nthis:\n\n  * Vector --> SME LLVM IR intrinsics\n\nThis patch introduces a new lowering layer between the Vector dialect\nand the Arm SME extension:\n\n  * Vector --> ArmSME dialect (custom Ops) --> SME LLVM IR intrinsics.\n\nThis is motivated by 2 considerations:\n1. Storing `ZA` to memory (e.g. `vector.transfer_write`) requires an\n   `scf.for` loop over all rows of `ZA`. Similar logic will apply to\n   \"load to ZA from memory\". This is a rather complex transformation and\n   a custom Op seems justified.\n2. As discussed in [1], we need to prevent the LLVM type converter from\n   having to convert types unsupported in LLVM, e.g.\n   `vector<[16]x[16]xi8>`. A dedicated abstraction layer with custom Ops\n   opens a path to some fine tuning (e.g. custom type converters) that\n   will allow us to avoid this.\n\nTo facilitate this change, two new custom SME Op are introduced:\n\n  * `TileStoreOp`, and\n  * `ZeroOp`.\n\nNote that no new functionality is added - these Ops merely model what's\nalready supported. In particular, the following tile size is assumed\n(dimension and element size are fixed):\n\n  * `vector<[16]x[16]xi8>`\n\nThe new lowering layer is introduced via a conversion pass between the\nVector and the SME dialects. You can use the `-convert-vector-to-sme`\nflag to run it. The following function:\n```\nfunc.func @example(%arg0 : memref<?x?xi8>) {\n  // (...)\n  %cst = arith.constant dense<0> : vector<[16]x[16]xi8>\n  vector.transfer_write %cst, %arg0 : vector<[16]x[16]xi8>, memref<?x?xi8>\n  return\n}\n```\nwould be lowered to:\n```\n  func.func @example(%arg0: memref<?x?xi8>) {\n    // (...)\n    %0 = arm_sme.zero : vector<[16]x[16]xi8>\n    arm_sme.tile_store %arg0[%c0, %c0], %0 : memref<?x?xi8>, vector<[16]x[16]xi8>\n    return\n  }\n```\n\nLater, a mechanism will be introduced to guarantee that `arm_sme.zero`\nand `arm_sme.tile_store` operate on the same virtual tile. For `i8`\nelements this is not required as there is only one tile.\n\nIn order to lower the above output to LLVM, use\n  * `-convert-vector-to-llvm=\"enable-arm-sme\"`.\n\n[1] https://github.com/openxla/iree/issues/14294\n\nReviewed By: WanderAway\n\nDifferential Revision: https://reviews.llvm.org/D154867\n",
+            "commit_timestamp": 1689667499.0
         }
     ]
 }

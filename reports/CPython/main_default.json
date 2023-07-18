@@ -2225,6 +2225,20 @@
             "commit_ref": "ece3b9d12a2f47da8b144f185dfba9b2b725fc82",
             "commit_message": "gh-106843: fix memleak in _PyCompile_CleanDoc (#106846)\n\n",
             "commit_timestamp": 1689651856.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1689668128.583795,
+            "elapsed_time": 1093.0936851501465,
+            "x64": true,
+            "actual_files_count": 895,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "3e65baee72131b49f4ce8ca2da568a6f2001ce93",
+            "commit_message": "gh-86493: Fix possible leaks in some modules initialization (GH-106768)\n\nFix _ssl, _stat, _testinternalcapi, _threadmodule, cmath, math, posix, time.\r\n",
+            "commit_timestamp": 1689666647.0
         }
     ]
 }
