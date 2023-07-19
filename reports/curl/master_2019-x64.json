@@ -5053,6 +5053,20 @@
             "commit_ref": "3b4ecdd0a89a202592e9959321d6cc5ceaca238d",
             "commit_message": "quiche: fix lookup of transfer at multi\n\n- refs #11449 where weirdness in quiche multi connection tranfers was\n  observed\n- fixes lookup of transfer for a quiche event to take the connection\n  into account\n- formerly, a transfer with the same stream_id, but on another connection\n  could be found\n\nCloses #11462\n",
             "commit_timestamp": 1689751737.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1689783113.688984,
+            "elapsed_time": 272.76663541793823,
+            "x64": false,
+            "actual_files_count": 2335,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "f6c8a0e50d4868051afdfe4528d4f2980097d648",
+            "commit_message": "quiche: fix segfault and other things\n\n- refs #11449 where a segfault is reported when IP Eyeballing did\n  not immediately connect but made several attempts\n- The transfer initiating the eyeballing was initialized  too early,\n  leadding to references to the filter instance that was then\n  replaced in the subsequent eyeball attempts. That led to a use\n  after free in the buffer handling for the transfer\n- transfers are initiated now more lazy (like in the ngtcp2 filter),\n  when the stream is actually opened\n- suppress reporting on quiche event errors for \"other\" transfers\n  than the current one to not fail a transfer due to faults in\n  another one.\n- revert recent return value handling for quiche_h3_recv_body()\n  to not indicate an error but an EAGAIN situation. We wish quiche\n  would document what functions return.\n\nFixes #11449\nCloses #11469\nReported-by: \u30a6\u3055\u3093\n",
+            "commit_timestamp": 1689777485.0
         }
     ]
 }
