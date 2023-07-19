@@ -5067,6 +5067,20 @@
             "commit_ref": "f6c8a0e50d4868051afdfe4528d4f2980097d648",
             "commit_message": "quiche: fix segfault and other things\n\n- refs #11449 where a segfault is reported when IP Eyeballing did\n  not immediately connect but made several attempts\n- The transfer initiating the eyeballing was initialized  too early,\n  leadding to references to the filter instance that was then\n  replaced in the subsequent eyeball attempts. That led to a use\n  after free in the buffer handling for the transfer\n- transfers are initiated now more lazy (like in the ngtcp2 filter),\n  when the stream is actually opened\n- suppress reporting on quiche event errors for \"other\" transfers\n  than the current one to not fail a transfer due to faults in\n  another one.\n- revert recent return value handling for quiche_h3_recv_body()\n  to not indicate an error but an EAGAIN situation. We wish quiche\n  would document what functions return.\n\nFixes #11449\nCloses #11469\nReported-by: \u30a6\u3055\u3093\n",
             "commit_timestamp": 1689777485.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1689797304.50692,
+            "elapsed_time": 273.41648745536804,
+            "x64": false,
+            "actual_files_count": 2335,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "2900c29218d2d24ab519853589da84caa850e8c7",
+            "commit_message": "configure: check for nghttp2_session_get_stream_local_window_size\n\nThe http2 code uses it now. Introduced in nghttp2 1.15.0 (Sep 2016)\n\nFixes #11470\nReported-by: Paul Howarth\nCloses #11473\n",
+            "commit_timestamp": 1689793526.0
         }
     ]
 }
