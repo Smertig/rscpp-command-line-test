@@ -5371,6 +5371,22 @@
             "commit_ref": "7dfe62327db81cc5ee3e29a994818370d95dc9e3",
             "commit_message": "[RISCV] Add a DAG combine for (czero_eq X, (xor Y, 1)) -> (czero_ne X, Y) if Y is 0 or 1.\n\nThis is an alternative to D155288 that can handle other sources of\nxori like FP compares. Unfortunately, it misses the i64 setge case\non RV32 in condops.ll.\n\nReviewed By: asb\n\nDifferential Revision: https://reviews.llvm.org/D155328\n",
             "commit_timestamp": 1689795188.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1689814283.513951,
+            "elapsed_time": 7061.843919277191,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "359f170f5f712ee714193b46bad45a45656b2c59",
+            "commit_message": "[lld-macho] Use fixed chunk size for UUID\n\nChunk size decided by the thread count makes the UUID less deterministic\n(e.g. across machines with different core counts.)\nFollow ELF and just use a fixed chunksize.\n\nFixes: https://github.com/llvm/llvm-project/issues/63961\n\nReviewed By: #lld-macho, keith\n\nDifferential Revision: https://reviews.llvm.org/D155761\n",
+            "commit_timestamp": 1689812676.0
         }
     ]
 }

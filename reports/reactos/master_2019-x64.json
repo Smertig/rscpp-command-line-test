@@ -4941,6 +4941,20 @@
             "commit_ref": "d24c991aa7f980ef4dda2d50a54b96ffb356497f",
             "commit_message": "[SHELL32] Revert 'Update the status bar asynchronously #5420' (#5458)\n\nCORE-18663",
             "commit_timestamp": 1689784164.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1689813560.059905,
+            "elapsed_time": 113.93066644668579,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "ca62121b4dd9d7fb763d4634b89b1ed95ce02106",
+            "commit_message": "[APPWIZ] \"Create Shortcut\" wizard: Only filesystem items (#5455)\n\n- Add (BIF_RETURNONLYFSDIRS | BIF_NEWDIALOGSTYLE | BIF_SHAREABLE) flags.\r\n- Consider the failure of SHGetPathFromIDListW.\r\nCORE-5866",
+            "commit_timestamp": 1689810411.0
         }
     ]
 }
