@@ -4969,6 +4969,20 @@
             "commit_ref": "ca62121b4dd9d7fb763d4634b89b1ed95ce02106",
             "commit_message": "[APPWIZ] \"Create Shortcut\" wizard: Only filesystem items (#5455)\n\n- Add (BIF_RETURNONLYFSDIRS | BIF_NEWDIALOGSTYLE | BIF_SHAREABLE) flags.\r\n- Consider the failure of SHGetPathFromIDListW.\r\nCORE-5866",
             "commit_timestamp": 1689810411.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1689840645.217609,
+            "elapsed_time": 133.5943455696106,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "62eaad1811b47187a38490aca97f29d7fabbf773",
+            "commit_message": "[SHELL32] CD-ROM drive shouldn't be renamed (#5461)\n\n- Add _ILGetDriveType helper function.\r\n- Use _ILGetDrive and GetDriveType functions to determine the drive type.\r\n- If it was a CD-ROM drive, then remove SFGAO_CANRENAME flag.\r\nCORE-18272",
+            "commit_timestamp": 1689839584.0
         }
     ]
 }

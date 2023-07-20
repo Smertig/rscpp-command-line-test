@@ -5403,6 +5403,22 @@
             "commit_ref": "8da7abb1f847a30df808630dedaab9a2b5e63e63",
             "commit_message": "[dsymutil] Sort entries in YamlDMO to stabilize print order\n\nSimilar to the llvm::sort call in DebugMapObject::print.\n",
             "commit_timestamp": 1689825721.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1689841503.698507,
+            "elapsed_time": 7495.594383716583,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "8b61ae4e931842cf909c0365664eb79b65253598",
+            "commit_message": "[MLIR][Tensor] Avoid crash on negative dimensions\n\nIn https://reviews.llvm.org/D151611, a check was added to the tensor verifier to\nemit an error on negative tensor dimensions. This check allowed for dynamic\ndimensions, hence negative dimensions were still able to get through the verifier.\nThis is a problem in situations such as #60558, where the dynamic dimension is\nconverted to a static (and possibly negative) dimension by another pass in the\ncompiler. This patch fixes that by doing another check during the\n`StaticTensorGenerate` conversion, and return a failure if the dimension is\nnegative.\n\nAs a side-note, I have to admit that I do not know why returning a failure in\n`StaticTensorGenerate` gives a nice \"tensor dimensions must be non-negative\"\nerror. I suspect that the verifier runs again when `return failure()` is called,\nbut I am not sure.\n\nFixes #60558.\n\nReviewed By: mehdi_amini\n\nDifferential Revision: https://reviews.llvm.org/D155728\n",
+            "commit_timestamp": 1689840574.0
         }
     ]
 }
