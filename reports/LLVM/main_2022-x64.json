@@ -5451,6 +5451,22 @@
             "commit_ref": "9dc391e89c7984394e352ea1cbf948b4bbdcd8a8",
             "commit_message": "Revert \"[IR] Mark add constant expressions as undesirable\"\n\nThis reverts commit f8a36d8c3e264c4fccf8058e699201a452ea7bb7.\n\nI believe this is causing an assertion failure on the\nsanitizer-x86_64-linux buildbot:\n\nclang++: /b/sanitizer-x86_64-linux/build/llvm-project/llvm/include/llvm/Support/Casting.h:578: decltype(auto) llvm::cast(From *) [To = llvm::BinaryOperator, From = llvm::Value]: Assertion `isa<To>(Val) && \"cast<Ty>() argument of incompatible type!\"' failed.\n\n  #10 0x000055bdd7e82408 canonicalizeLogicFirst(llvm::BinaryOperator&, llvm::IRBuilder<llvm::TargetFolder, llvm::IRBuilderCallbackInserter>&) /b/sanitizer-x86_64-linux/build/llvm-project/llvm/lib/Transforms/InstCombine/InstCombineAndOrXor.cpp:2131:5\n  #11 0x000055bdd7e80183 llvm::InstCombinerImpl::visitAnd(llvm::BinaryOperator&) /b/sanitizer-x86_64-linux/build/llvm-project/llvm/lib/Transforms/InstCombine/InstCombineAndOrXor.cpp:2661:20\n\nLikely the code is encountering a constant expression in a case it\ndidn't before.\n",
             "commit_timestamp": 1689869357.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1689884397.300354,
+            "elapsed_time": 7095.797766685486,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "760c208f6ff9e97a9a11523c00874a1eec4f876b",
+            "commit_message": "[Sanitizers][Darwin][Test] XFAIL symbolize_pc test on Darwin/TSan+UBSan\n",
+            "commit_timestamp": 1689883110.0
         }
     ]
 }
