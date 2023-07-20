@@ -4983,6 +4983,20 @@
             "commit_ref": "62eaad1811b47187a38490aca97f29d7fabbf773",
             "commit_message": "[SHELL32] CD-ROM drive shouldn't be renamed (#5461)\n\n- Add _ILGetDriveType helper function.\r\n- Use _ILGetDrive and GetDriveType functions to determine the drive type.\r\n- If it was a CD-ROM drive, then remove SFGAO_CANRENAME flag.\r\nCORE-18272",
             "commit_timestamp": 1689839584.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1689855311.118756,
+            "elapsed_time": 133.62375020980835,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "08d42a7ec7dd4273904a56338782b94b7881cacf",
+            "commit_message": "[APPWIZ] Add title caption to 'Browse for Folder' #5460\n\n- Add IDS_BROWSE_FOR_TARGET resource string.\r\n- Use it in setting the title caption of \"Browse\r\nfor Folder\" dialog.\r\nCORE-5866",
+            "commit_timestamp": 1689851842.0
         }
     ]
 }
