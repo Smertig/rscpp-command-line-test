@@ -6079,6 +6079,20 @@
             "commit_ref": "eba2093517a8e904a0a691342a40eaf90946219e",
             "commit_message": "wire_format_unittest for optimize_for = CODE_SIZE\n\nPiperOrigin-RevId: 549424773\n",
             "commit_timestamp": 1689801790.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1689826164.209105,
+            "elapsed_time": 422.1022102832794,
+            "x64": false,
+            "actual_files_count": 828,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "4f67e28fcacb0bc8bad6c64fbd16d925e834e414",
+            "commit_message": "Add Arena enabled constructors to ArenaStringPtr\n\nThis optimizes non const and copy initialization of arena string values. String hardening is automatically performed on as needed by the ArenaStringPtr class, removing the need for extra clutter or set operations added by the protocol compiler in generated code.\n\nPiperOrigin-RevId: 549480061\n",
+            "commit_timestamp": 1689815549.0
         }
     ]
 }
