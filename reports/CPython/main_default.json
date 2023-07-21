@@ -2505,6 +2505,20 @@
             "commit_ref": "fd84ac0ee0a8d5e34e0a106eed7e50539b61c5f8",
             "commit_message": "gh-106847: Add -X warn_default_encoding in sys.flags Doc (#106854)\n\nCo-authored-by: Nikita Sobolev <mail@sobolevn.me>",
             "commit_timestamp": 1689934678.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1689956030.155194,
+            "elapsed_time": 1165.168781042099,
+            "x64": true,
+            "actual_files_count": 897,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "0ba07b2108d4763273f3fb85544dde34c5acd40a",
+            "commit_message": "gh-105699: Fix a Crasher Related to a Deprecated Global Variable (gh-106923)\n\nThere was a slight race in _Py_ClearFileSystemEncoding() (when called from _Py_SetFileSystemEncoding()), between freeing the value and setting the variable to NULL, which occasionally caused crashes when multiple isolated interpreters were used.  (Notably, I saw at least 10 different, seemingly unrelated spooky-action-at-a-distance, ways this crashed. Yay, free threading!)  We avoid the problem by only setting the global variables with the main interpreter (i.e. runtime init).",
+            "commit_timestamp": 1689950049.0
         }
     ]
 }
