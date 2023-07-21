@@ -5207,6 +5207,20 @@
             "commit_ref": "db1203781cd703ab7975bb37b1673214946dd3c9",
             "commit_message": "os400: correct EXPECTED_STRING_LASTZEROTERMINATED\n\nCorrect EXPECTED_STRING_LASTZEROTERMINATED to account for\nCURLOPT_HAPROXY_CLIENT_IP which requires EBCDIC to ASCII conversion when\npassed into curl_easy_setopt().\n\nCloses #11476\n",
             "commit_timestamp": 1689889408.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1689941741.450926,
+            "elapsed_time": 369.8400022983551,
+            "x64": false,
+            "actual_files_count": 2749,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "3b3c41f9337779723d0236c74c3fba14776dc702",
+            "commit_message": "bug_report: use issue forms instead of markdown template\n\nIssue forms allow you to define web-like input forms using YAML\nsyntax. It allows you to guide the reporter to get the required\ninformation.\n\nSigned-off-by: Jan Macku <jamacku@redhat.com>\nCloses #11474\n",
+            "commit_timestamp": 1689940750.0
         }
     ]
 }
