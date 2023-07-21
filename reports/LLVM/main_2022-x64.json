@@ -5467,6 +5467,22 @@
             "commit_ref": "760c208f6ff9e97a9a11523c00874a1eec4f876b",
             "commit_message": "[Sanitizers][Darwin][Test] XFAIL symbolize_pc test on Darwin/TSan+UBSan\n",
             "commit_timestamp": 1689883110.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1689900550.16224,
+            "elapsed_time": 7179.299919366837,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "25658879a022ca9a8d91ed214701bfd724d159a8",
+            "commit_message": "[clang][test] Remove unused variable 'SM' (NFC)\n\n/data/llvm-project/clang/unittests/AST/DeclTest.cpp:153:18: error: unused variable 'SM' [-Werror,-Wunused-variable]\n  SourceManager &SM = Ctx.getSourceManager();\n                 ^\n1 error generated.\n",
+            "commit_timestamp": 1689897570.0
         }
     ]
 }
