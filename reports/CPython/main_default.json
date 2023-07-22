@@ -2561,6 +2561,20 @@
             "commit_ref": "cdeb1a6caad5e3067f01d6058238803b8517f9de",
             "commit_message": "gh-96663: Add a better error message for __dict__-less classes setattr (#103232)\n\n",
             "commit_timestamp": 1689985466.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1690013585.730122,
+            "elapsed_time": 1098.0242748260498,
+            "x64": true,
+            "actual_files_count": 897,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "3372bcba9893030e4063a9264ec0b4d1b6166883",
+            "commit_message": "gh-106970: Fix Argument Clinic 'destination <name> clear' command (#106972)\n\nAdd test for the 'destination <name> clear' command,\nand the 'destination' directive in general.\n\nFix two bugs in 'destination <name> clear' command:\n\n1. The text attribute of the allocator is called 'text', not '_text'\n2. Return after processing the 'clear' command,\n   instead of proceeding directly to the fail().",
+            "commit_timestamp": 1690011793.0
         }
     ]
 }
