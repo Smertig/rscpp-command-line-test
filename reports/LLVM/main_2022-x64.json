@@ -5579,6 +5579,22 @@
             "commit_ref": "f09f0a6b10765f0993255e52a62268472f586830",
             "commit_message": "[lldb] Consider OP_addrx in DWARFExpression::Update_DW_OP_addr\n\nThis rewrites DW_OP_addrx inside DWARFExpression as an DW_OP_addr so\nthat we can update addresses that are originally located in the\ndebug_addr section.\n\nThe full discussion behind this can be found in\nhttps://discourse.llvm.org/t/dwarfexpression-and-dw-op-addrx/71627/12, but a\nsummary follows.\n\nWhen SymbolFileDWARF::ParseVariableDIE creates DWARFExpressions for\nvariables whose location is an OP_addr, it knows how to remap\naddresses appropriately in the DebugMap case. It then calls\nDWARFExpression::Update_DW_OP_addr, which updates the value associated\nwith OP_addr.\n\nHowever, when we have an OP_addrx, the update function does\nnothing. This makes sense, as the DWARFExpression does not have a\nmutable view of the debug_addr section. In non-DebugMap flows this is\nnot an issue, as the debug_addr contains the correct addresses of\nvariables. In DebugMap flows, this is problematic because the work\ndone by RelinkOSOAddress is lost. By updating the OP to OP_addr, we\ncan also update the address as required,\n\nWe also explored the alternative of relinking the debug_addr section\nwhen we are initializing OSOs (InitOSO). However, this creates an\ninconsistent story for users of\nDWARFExpression::GetLocation_DW_OP_addr. This function returns an\naddress without telling callers whether that address came from an\nOP_addr or an OP_addrx. If we preemptively relink OP_addrx results\nwithout doing the same for OP_addr results, then callers can\u2019t know\nwhether the address they got was an executable address or an object\nfile address. In other words, they can\u2019t know whether they need to\ncall LinkOSOFileAddress on those results or not.\n\nThis patch addresses the majority of test failures when enabling DWARF\n5 for MachO (over 200 test failures).\n\nDifferential Revision: https://reviews.llvm.org/D155198\n",
             "commit_timestamp": 1689982936.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1689999754.791161,
+            "elapsed_time": 7634.2703769207,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "2e7d711a106170185e9bbbf15115613d9a5854c5",
+            "commit_message": "[clang] Add serialization support for the DynamicAllocLValue variant of APValue::LValueBase::Ptr\n\nDifferential Revision: https://reviews.llvm.org/D154471\n",
+            "commit_timestamp": 1689995811.0
         }
     ]
 }
