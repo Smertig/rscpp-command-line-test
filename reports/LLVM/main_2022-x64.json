@@ -5611,6 +5611,22 @@
             "commit_ref": "c51c607dfc6388050ed1381a32089cd08a36ff9a",
             "commit_message": "[VirtualFileSystem] Use std::map::emplace\n",
             "commit_timestamp": 1690009257.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1690028672.086987,
+            "elapsed_time": 7503.932558298111,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "9b2dfff57a382b757c358b43ee1df7591cb480ee",
+            "commit_message": "Partially revert \"clang/HIP: Remove __llvm_amdgcn_* wrapper hacks\"\n\nRevert part of f407a7399575a6821940973c54754d42e72dd9ce.\n\nSome of the HIP headers were using the f16 rcp inline, such that it\nbreaks compiling code against non-top-of-tree headers. Need to wait\nfor a few HIP releases to expire to fully remove these.\n\nFixes #63981\n",
+            "commit_timestamp": 1690027670.0
         }
     ]
 }
