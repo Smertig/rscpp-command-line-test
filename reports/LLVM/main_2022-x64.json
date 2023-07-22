@@ -5643,6 +5643,22 @@
             "commit_ref": "1d0759e6c3c2eaa8cbacfd76d409ed80ffd9fe9d",
             "commit_message": "[clang-tidy][NFC] Fix list.rst generation when adding check\n\nadd_new_check.py does not work properly for checks that\ngenerate fixes in base class. Adding some comments to those\nchecks in order to fix list.rst generation.\n",
             "commit_timestamp": 1690041322.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1690057201.444851,
+            "elapsed_time": 7239.68176150322,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "0e325081192be951a9d54bb246ef030c37bffd21",
+            "commit_message": "[clang-tidy] Support concepts in `bugprone-forwarding-reference-overload`\n\nIgnore constrained perfect forwarding constructors.\n\nFixes: #58230\n\nReviewed By: PiotrZSL\n\nDifferential Revision: https://reviews.llvm.org/D135476\n",
+            "commit_timestamp": 1690055191.0
         }
     ]
 }
