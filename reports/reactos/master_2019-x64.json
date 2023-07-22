@@ -5165,6 +5165,20 @@
             "commit_ref": "52bc5f7c5df5eaf48b22f6089f7415bc8857543d",
             "commit_message": "[IEXPLORE][IEFRAME][SHELL32] Add Internet icon on Desktop (#5451)\n\n- Add Internet icon on Desktop. You can hide/show\r\n  the icon from Desktop's customization.\r\n- Modify \"HKCR\\CLSID\\%CLSID_Internet%\" registry key.\r\n- Add IDS_INTERNET and IDS_INTERNET_DESCRITION into ieframe.dll.\r\n- Modify folders/CDesktopFolder.cpp and folders/CRegFolder.cpp to add the icon.\r\nCORE-18625\r\n\r\nCo-authored-by: Stanislav Motylkov <x86corez@gmail.com>\r\nCo-authored-by: Joachim Henze <joachim.henze@reactos.org>",
             "commit_timestamp": 1690021717.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1690042154.068488,
+            "elapsed_time": 142.38064408302307,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "0e8cf6ffd58cc7a46db8bfe46cfb361aceb15153",
+            "commit_message": "[EXPLORER] Large taskbar icon support (#5465)\n\n- Use HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\\TaskbarSmallIcons\r\n  registry key to store the icon size setting for the taskbar.\r\n- If the registry value is missing, small icons will be used by default.\r\n- If the registry value is set to 1, it will also use small icons.\r\n- Only if the value exists and is set to 0 it will use large icons. This allows us\r\n  to use the same registry value as Windows 7 explorer, while also keeping\r\n  the taskbar icons small in most cases, especially running the shell\r\n  on unmodified Windows Server 2003.\r\n\r\nCORE-11698",
+            "commit_timestamp": 1690039468.0
         }
     ]
 }

@@ -5627,6 +5627,22 @@
             "commit_ref": "9b2dfff57a382b757c358b43ee1df7591cb480ee",
             "commit_message": "Partially revert \"clang/HIP: Remove __llvm_amdgcn_* wrapper hacks\"\n\nRevert part of f407a7399575a6821940973c54754d42e72dd9ce.\n\nSome of the HIP headers were using the f16 rcp inline, such that it\nbreaks compiling code against non-top-of-tree headers. Need to wait\nfor a few HIP releases to expire to fully remove these.\n\nFixes #63981\n",
             "commit_timestamp": 1690027670.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1690042883.324946,
+            "elapsed_time": 8710.820062875748,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "1d0759e6c3c2eaa8cbacfd76d409ed80ffd9fe9d",
+            "commit_message": "[clang-tidy][NFC] Fix list.rst generation when adding check\n\nadd_new_check.py does not work properly for checks that\ngenerate fixes in base class. Adding some comments to those\nchecks in order to fix list.rst generation.\n",
+            "commit_timestamp": 1690041322.0
         }
     ]
 }
