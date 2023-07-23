@@ -5739,6 +5739,22 @@
             "commit_ref": "6edc9a766213eed783e0b6dc5e2539ad925398f9",
             "commit_message": "[AArch64][GISel] Additional FPExt vector lowering\n\nSimilar to D155311, this adds lowering for more vector cases for FPExt\n\nDifferential Revision: https://reviews.llvm.org/D155601\n",
             "commit_timestamp": 1690127893.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1690143963.983193,
+            "elapsed_time": 10020.747985124588,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "1e512688376c83d96f097e9b0ddb19132247a646",
+            "commit_message": "[clang-tidy] performance-* checks: Also allow allow member expressions to be used in a const manner.\n\nUntil now when determining all the const uses of a VarDecl we only considered\nhow the variable itself was used. This change extends checking for const usages\nof the type's members as well.\n\nThis increases the number of true positives for various performance checks that\nshare the same const usage analysis.\n\nPath by Felix Berger\n\nReviewed By: njames93, PiotrZSL\n\nDifferential Revision: https://reviews.llvm.org/D97567\n",
+            "commit_timestamp": 1690137509.0
         }
     ]
 }
