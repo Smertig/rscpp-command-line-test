@@ -5835,6 +5835,22 @@
             "commit_ref": "9d9cde5a903ac9b20059b7bc815aa2381d02f6f4",
             "commit_message": "[RISCV] Remove combineCmpOp and associated code. NFCI\n\nThis code was originally added in D134277. This transform is now\navailable in target independent DAG combine after D153502.\n\nReviewed By: asb\n\nDifferential Revision: https://reviews.llvm.org/D156075\n",
             "commit_timestamp": 1690214744.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1690230330.013116,
+            "elapsed_time": 9713.82809472084,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "992fa7be3438bce61cfba7c0e0b07d9d1ddcc05b",
+            "commit_message": "[clang-tidy] Initialize DiagnosticEngine in ExpandModularHeaders\n\nFix issue preventing suppression of compiler warnings with\n-Wno-<warning> under C++20 and above. Add call to\nProcessWarningOptions and propagate DiagnosticOpts more properly.\n\nFixes: #56709, #61969\n\nReviewed By: carlosgalvezp\n\nDifferential Revision: https://reviews.llvm.org/D156056\n",
+            "commit_timestamp": 1690227827.0
         }
     ]
 }

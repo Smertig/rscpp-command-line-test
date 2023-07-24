@@ -6471,6 +6471,20 @@
             "commit_ref": "46ddd14efd744284f6c0c0179ceb6ccecc3e9bbe",
             "commit_message": "Treat kParseError logically kDirty.\n\nPiperOrigin-RevId: 550564661\n",
             "commit_timestamp": 1690212190.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1690229303.1274,
+            "elapsed_time": 384.1059398651123,
+            "x64": false,
+            "actual_files_count": 830,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "d4f2d48101b1aba771b3ac4c09b3a38c3591e0bd",
+            "commit_message": "Precompute the most common field properties in FieldGeneratorBase\n\nThis is a cleanup that is intended to reduce the noise in current and planned protocol compiler code, and improve readability of the code.\n\nPiperOrigin-RevId: 550631662\n",
+            "commit_timestamp": 1690225251.0
         }
     ]
 }
