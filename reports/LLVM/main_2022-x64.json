@@ -5819,6 +5819,22 @@
             "commit_ref": "c80976549a117464234bd2d36d829e1b86f85963",
             "commit_message": "[AArch64] NFC: Move fadda tests to separate file.\n\nWe want to test the fadda tests with 'streaming-compatible' flags,\nsuch that we can ensure no 'fadda' (not valid in streaming mode) is\ngenerated.\n",
             "commit_timestamp": 1690200134.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1690215668.292625,
+            "elapsed_time": 5481.5321393013,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "9d9cde5a903ac9b20059b7bc815aa2381d02f6f4",
+            "commit_message": "[RISCV] Remove combineCmpOp and associated code. NFCI\n\nThis code was originally added in D134277. This transform is now\navailable in target independent DAG combine after D153502.\n\nReviewed By: asb\n\nDifferential Revision: https://reviews.llvm.org/D156075\n",
+            "commit_timestamp": 1690214744.0
         }
     ]
 }
