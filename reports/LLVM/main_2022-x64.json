@@ -5787,6 +5787,22 @@
             "commit_ref": "49f3435286418c99dd4080fa427809ad72892127",
             "commit_message": "[RISCV] Adjust definition order in RISCVInstrInfoZvk.td to be the same with other td file\n\nThe definition order is operand/SDNode, instruction class template,\ninstruction, pseudo instruciton, codegen patterns, ....\n",
             "commit_timestamp": 1690169677.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1690187082.622028,
+            "elapsed_time": 7380.784732580185,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "8ac137acefc01caf636db5f95eb0977c97def1ba",
+            "commit_message": "[NFC] Add checks for self-assignment.\n\nDifferential Revision: https://reviews.llvm.org/D155776\n",
+            "commit_timestamp": 1690184288.0
         }
     ]
 }
