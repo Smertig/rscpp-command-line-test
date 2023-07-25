@@ -5867,6 +5867,22 @@
             "commit_ref": "5fa5c39871c8ea7df2173951be3a4a17b29fa42e",
             "commit_message": "[OpenMP] Add OMPT release note\n\nOMPT release note addition for LLVM 17\n\nDifferential Revision: https://reviews.llvm.org/D156191\n",
             "commit_timestamp": 1690245484.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1690259010.866179,
+            "elapsed_time": 7062.266646623611,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "998003eaf7b91b5620eeb0b77c81654b9f36efb7",
+            "commit_message": "[mlir] Fix for MSVC bool splat issue encountered.\n\nWhen building MLIR using bazel on windows with MSVC2019, bool splats\nwere being created incorrectly:\n\n```\ndense<[true,true,true,true]> : tensor<4xi1>\n-(parse with mlir-opt)-> dense<[true, false, false, false]> : tensor<4xi1>\n```\n\nAppears that a Windows bazel build produces a corrupt DenseIntOrFPElementsAttr.\nUnable to repro using MSVC and cmake.\n\nIssue first discovered here:\nhttps://github.com/google/jax/issues/16394\n\nAdded test point for reproduction:\n\n```\n$ bazel test @llvm-project//mlir/unittests:ir_tests --test_arg=--gtest_filter=DenseSplatTest.BoolSplatSmall\n```\n\nDifferential Revision: https://reviews.llvm.org/D155745\n",
+            "commit_timestamp": 1690256743.0
         }
     ]
 }

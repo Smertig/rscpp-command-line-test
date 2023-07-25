@@ -2799,6 +2799,20 @@
             "commit_ref": "4bbf071635504ee1c6d44f99c98e3fad191a3b13",
             "commit_message": "gh-104050: Argument Clinic: Annotate `CRenderData.__init__` (#107207)\n\nArgument Clinic: Annotate `CRenderData.__init__`",
             "commit_timestamp": 1690234730.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1690258460.166036,
+            "elapsed_time": 1639.989201784134,
+            "x64": true,
+            "actual_files_count": 897,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "3b309319cc2920587a8c74a6969fb47d69281126",
+            "commit_message": "gh-107211: No longer export internal variables (#107218)\n\nNo longer export these 5 internal C API variables:\r\n\r\n* _PyBufferWrapper_Type\r\n* _PyImport_FrozenBootstrap\r\n* _PyImport_FrozenStdlib\r\n* _PyImport_FrozenTest\r\n* _Py_SwappedOp\r\n\r\nFix the definition of these internal functions, replace PyAPI_DATA()\r\nwith PyAPI_FUNC():\r\n\r\n* _PyImport_ClearExtension()\r\n* _PyObject_IsFreed()\r\n* _PyThreadState_GetCurrent()",
+            "commit_timestamp": 1690256884.0
         }
     ]
 }
