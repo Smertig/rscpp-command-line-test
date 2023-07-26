@@ -5995,6 +5995,22 @@
             "commit_ref": "ae667f03d369cab8f32f28c3d765695ed4c1972b",
             "commit_message": "[clang][Interp][NFC] Take a const InterpFrame* in InterpBuiltin.cpp\n",
             "commit_timestamp": 1690358786.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1690374370.232455,
+            "elapsed_time": 6889.08186674118,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "f2d307c4ede0c55b28bd366511907bda29703994",
+            "commit_message": "[DebugInfo] Remove the `cross-cu-inlining-2.ll` test case.\n\nThis reverts the test case in commit 549773f9e98f9c5895f4cc461a7fb1dbdb216af8.\nAfter committing 2ee4d0386c783f58abe708298228de648239b435, We don't support subprogram definitions nested within `DICompositeType` when doing LTO builds.\nFor a detailed discussion, see https://reviews.llvm.org/D152095.\n",
+            "commit_timestamp": 1690372692.0
         }
     ]
 }
