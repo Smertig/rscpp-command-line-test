@@ -5947,6 +5947,22 @@
             "commit_ref": "a0b9f1f84b33b9546795697b1fbce2951acdc81a",
             "commit_message": "[scudo] set/check invalid cache entries\n\nmade checking for invalid cache entries and setting invalid cache\nentries more implicit and clear.\n\nReviewed By: cferris\n\nDifferential Revision: https://reviews.llvm.org/D155983\n",
             "commit_timestamp": 1690313192.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1690332812.762249,
+            "elapsed_time": 7082.160385608673,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "6cc9244baa63fcb7c6f35f46dab9fa17a421a6ce",
+            "commit_message": "Enable hwasan-use-after-scope by default\n\nThis has been in use for a long time without any issues.\n\nReviewed By: vitalybuka\n\nDifferential Revision: https://reviews.llvm.org/D156267\n",
+            "commit_timestamp": 1690331775.0
         }
     ]
 }

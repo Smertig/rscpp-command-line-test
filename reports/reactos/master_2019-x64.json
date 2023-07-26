@@ -5445,6 +5445,20 @@
             "commit_ref": "57ce30b85fadf28888fdf97b094fd2ab94940673",
             "commit_message": "[SHLWAPI][SHLWAPI_APITEST][SDK] Implement SHPropertyBag_WritePOINTL etc. (#5474)\n\n- Implement SHPropertyBag_Delete, SHPropertyBag_WritePOINTL, SHPropertyBag_WritePOINTS, and SHPropertyBag_WriteRECTL functions.\r\n- SHPropertyBag_WriteInt is an alias to SHPropertyBag_WriteLONG.\r\n- Modify shlwapi.spec.\r\n- Modify shlwapi_undoc.h.\r\n- Add SHPropertyBag testcase to shlwapi_apitest.exe.\r\nCORE-9283",
             "commit_timestamp": 1690276762.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1690332060.056507,
+            "elapsed_time": 140.85057950019836,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "fe440f7514a6eb59f63e368ee4776164ac797d68",
+            "commit_message": "[SHLWAPI][SHLWAPI_APITEST][SDK] Implement SHPropertyBag_ReadDWORD etc. (#5479)\n\n- Add VariantChangeTypeForRead helper function.\r\n- Implement SHPropertyBag_ReadType, SHPropertyBag_ReadBOOL, SHPropertyBag_ReadBOOLOld, SHPropertyBag_ReadSHORT, \r\nSHPropertyBag_ReadLONG, and SHPropertyBag_ReadDWORD functions.\r\n- SHPropertyBag_ReadInt is an alias to SHPropertyBag_ReadLONG.\r\nCORE-9283",
+            "commit_timestamp": 1690327307.0
         }
     ]
 }

@@ -6569,6 +6569,20 @@
             "commit_ref": "d4db41d395dcbb2c79b7fb1f109086fa04afd8aa",
             "commit_message": "Unpoison memory in destructor\n\nAsan is designed with assumption that by default, stack is unpoisoned.\nWhat ever is poisoned by instrumentation in the stack frame, will be unpoisoned on return.\n\nThis assumption applies to user poisoned regions. If it left unpoisoned\nit may cause false reports in unrelated stack frames.\n\nPiperOrigin-RevId: 550916830\n",
             "commit_timestamp": 1690304652.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1690332055.20999,
+            "elapsed_time": 338.60913014411926,
+            "x64": false,
+            "actual_files_count": 830,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "caf55184b2d0e8cbb99e5b487b453dc8721af4fe",
+            "commit_message": "Remove unnecessary branch.\n\nPiperOrigin-RevId: 551006963\n",
+            "commit_timestamp": 1690323367.0
         }
     ]
 }
