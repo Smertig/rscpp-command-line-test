@@ -5473,6 +5473,20 @@
             "commit_ref": "fe440f7514a6eb59f63e368ee4776164ac797d68",
             "commit_message": "[SHLWAPI][SHLWAPI_APITEST][SDK] Implement SHPropertyBag_ReadDWORD etc. (#5479)\n\n- Add VariantChangeTypeForRead helper function.\r\n- Implement SHPropertyBag_ReadType, SHPropertyBag_ReadBOOL, SHPropertyBag_ReadBOOLOld, SHPropertyBag_ReadSHORT, \r\nSHPropertyBag_ReadLONG, and SHPropertyBag_ReadDWORD functions.\r\n- SHPropertyBag_ReadInt is an alias to SHPropertyBag_ReadLONG.\r\nCORE-9283",
             "commit_timestamp": 1690327307.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1690359027.374153,
+            "elapsed_time": 109.39537715911865,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "5965c10f9657cfee0236f56438260de2d815a0a9",
+            "commit_message": "[APPWIZ] Implement InstallCallback_GetBindInfo (#5480)\n\n- Fix errors on 2nd stage setup epilogue.\r\n- Just return E_NOTIMPL in InstallCallback_GetBindInfo function. That's Okay.\r\nCORE-15786",
+            "commit_timestamp": 1690345979.0
         }
     ]
 }
