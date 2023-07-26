@@ -2925,6 +2925,20 @@
             "commit_ref": "14d074e1fb403e54edb345505cfd2c73601e21f3",
             "commit_message": "gh-104683: Argument Clinic: Make most arguments to `Class` and `Function` required (#107289)\n\n",
             "commit_timestamp": 1690368843.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1690388040.795735,
+            "elapsed_time": 1196.620697259903,
+            "x64": true,
+            "actual_files_count": 897,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "b1de3807b832b72dfeb66dd5646159d08d2cc74a",
+            "commit_message": "gh-106948: Update documentation nitpick_ignore for c:identifer domain (#107295)\n\nUpdate the nitpick_ignore of the documentation configuration to fix\r\nSphinx warnings about standard C types when declaring functions with\r\nthe \"c:function\" markups.\r\n\r\nCopy standard C types declared in the \"c:type\" domain to the\r\n\"c:identifier\" domain, since \"c:function\" markup looks for types in\r\nthe \"c:identifier\" domain.\r\n\r\nCo-authored-by: Serhiy Storchaka <storchaka@gmail.com>",
+            "commit_timestamp": 1690387486.0
         }
     ]
 }

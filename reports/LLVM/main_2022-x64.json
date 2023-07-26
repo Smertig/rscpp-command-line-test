@@ -6011,6 +6011,22 @@
             "commit_ref": "f2d307c4ede0c55b28bd366511907bda29703994",
             "commit_message": "[DebugInfo] Remove the `cross-cu-inlining-2.ll` test case.\n\nThis reverts the test case in commit 549773f9e98f9c5895f4cc461a7fb1dbdb216af8.\nAfter committing 2ee4d0386c783f58abe708298228de648239b435, We don't support subprogram definitions nested within `DICompositeType` when doing LTO builds.\nFor a detailed discussion, see https://reviews.llvm.org/D152095.\n",
             "commit_timestamp": 1690372692.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1690388841.651371,
+            "elapsed_time": 8652.087083816528,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "cb63fa00d1f723e3b4e2fb5e6645595eb0a6e84c",
+            "commit_message": "[NFC][clang] Fix static analyzer concerns\n\nTypeLocBuilder frees resources in the destructor but doesn't have\nuser-written copy c'tor or assignment operator, so copying it using\ndefault ones can cause double free.\n\nReviewed By: aaron.ballman\n\nDifferential Revision: https://reviews.llvm.org/D156222\n",
+            "commit_timestamp": 1690386040.0
         }
     ]
 }
