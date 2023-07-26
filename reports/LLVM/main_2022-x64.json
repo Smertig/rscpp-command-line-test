@@ -6027,6 +6027,22 @@
             "commit_ref": "cb63fa00d1f723e3b4e2fb5e6645595eb0a6e84c",
             "commit_message": "[NFC][clang] Fix static analyzer concerns\n\nTypeLocBuilder frees resources in the destructor but doesn't have\nuser-written copy c'tor or assignment operator, so copying it using\ndefault ones can cause double free.\n\nReviewed By: aaron.ballman\n\nDifferential Revision: https://reviews.llvm.org/D156222\n",
             "commit_timestamp": 1690386040.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1690403092.188143,
+            "elapsed_time": 8832.164922237396,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "e00e0b6fb004080214645b14cfe68c3c4eccd437",
+            "commit_message": "[asan] Block signals when starting threads\n\nAsync signals may crash the process if AsanThread is not fully\ninitialized. We do the same for other sanitizers already.\n\nCan't have good reproducer for test. We see this in internal test with prob 1e-6.\n\nReviewed By: kstoimenov\n\nDifferential Revision: https://reviews.llvm.org/D156299\n",
+            "commit_timestamp": 1690401820.0
         }
     ]
 }
