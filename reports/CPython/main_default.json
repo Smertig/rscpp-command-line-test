@@ -2981,6 +2981,20 @@
             "commit_ref": "8d61a71f9c81619e34d4a30b625922ebc83c561b",
             "commit_message": "gh-107298: Fix more Sphinx warnings in the C API doc (#107329)\n\nDeclare the following functions as macros, since they are actually\r\nmacros. It avoids a warning on \"TYPE\" or \"macro\" argument.\r\n\r\n* PyMem_New()\r\n* PyMem_Resize()\r\n* PyModule_AddIntMacro()\r\n* PyModule_AddStringMacro()\r\n* PyObject_GC_New()\r\n* PyObject_GC_NewVar()\r\n* PyObject_New()\r\n* PyObject_NewVar()\r\n\r\nAdd C standard C types to nitpick_ignore in Doc/conf.py:\r\n\r\n* int64_t\r\n* uint64_t\r\n* uintptr_t\r\n\r\nNo longer ignore non existing \"__int\" type in nitpick_ignore.\r\n\r\nUpdate Doc/tools/.nitignore",
             "commit_timestamp": 1690419160.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1690445698.923301,
+            "elapsed_time": 1400.6369833946228,
+            "x64": true,
+            "actual_files_count": 897,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "ccd4253752ae2d84a5448281db1a1298ca8d8610",
+            "commit_message": "gh-106996: Rewrite turtle explanation (#107244)\n\nCo-authored-by: Hugo van Kemenade <hugovk@users.noreply.github.com>\r\n",
+            "commit_timestamp": 1690444939.0
         }
     ]
 }

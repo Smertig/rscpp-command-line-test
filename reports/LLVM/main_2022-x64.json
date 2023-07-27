@@ -6075,6 +6075,22 @@
             "commit_ref": "1462053608041c34e871b7d0a565f4ca541e2fd1",
             "commit_message": "[AMDGPU] Propagate constants for llvm.amdgcn.wave.reduce.umin/umax\n\nReviewed By: arsenm, #amdgpu\n\nDifferential Revision: https://reviews.llvm.org/D156077\n",
             "commit_timestamp": 1690429561.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1690446078.512286,
+            "elapsed_time": 7114.862952947617,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "90d825be708cd09ab7bfbb6b7a10a98a9847c7c4",
+            "commit_message": "Reapply [ConstantFold] Avoid creation of undesirable binop\n\nThis was reverted together with another commit due to a test\nconflict. Reapply without functional changes.\n\n-----\n\nWhen commuting the operands, don't create a constant expression\nfor undesirable binops. Only invoke the constant folding function\nin that case.\n",
+            "commit_timestamp": 1690444134.0
         }
     ]
 }
