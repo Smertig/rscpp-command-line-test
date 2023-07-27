@@ -6179,6 +6179,20 @@
             "commit_ref": "ab6bffc6f89ae65b5691ebc7931030a8cea62cf2",
             "commit_message": "Merge pull request #23936 from SaltFish-T:4.x\n\nUpdate opencv dnn to support cann version >=6.3 #23936\r\n\r\n1.modify the search path of \"libopsproto.so\" in OpenCVFindCANN.cmake\r\n2.add the search path of \"libgraph_base.so\" in OpenCVFindCANN.cmake\r\n3.automatic check Ascend socVersion,and test on Ascend310/Ascend310B/Ascend910B well\r\n",
             "commit_timestamp": 1690456890.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1690474330.954123,
+            "elapsed_time": 631.4604196548462,
+            "x64": false,
+            "actual_files_count": 466,
+            "expected_files_count": 459,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "677a28fd2a63234c19d9a9f3e0a99b8645e99696",
+            "commit_message": "Merge pull request #24056 from dkurt:eltwise_prelu\n\nPReLU with element-wise scales #24056\r\n\r\n### Pull Request Readiness Checklist\r\n\r\nresolves https://github.com/opencv/opencv/issues/24051\r\n\r\nSee details at https://github.com/opencv/opencv/wiki/How_to_contribute#making-a-good-pull-request\r\n\r\n- [x] I agree to contribute to the project under Apache 2 License.\r\n- [x] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\r\n- [x] The PR is proposed to the proper branch\r\n- [x] There is a reference to the original bug report and related work\r\n- [x] There is accuracy test, performance test and test data in opencv_extra repository, if applicable\r\n      Patch to opencv_extra has the same branch name.\r\n- [x] The feature is well documented and sample code can be built with the project CMake",
+            "commit_timestamp": 1690465000.0
         }
     ]
 }

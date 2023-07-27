@@ -6107,6 +6107,22 @@
             "commit_ref": "cea72fe34194d58ac1ba9485ee9c9a63cf98a4e6",
             "commit_message": "[llvm][llvm-reduce] Disable uselistorder test everywhere\n\nThis also fails sometimes on x86:\nhttps://lab.llvm.org/buildbot/#/builders/58/builds/42534\n\nDisable it completely peding investigation.\n",
             "commit_timestamp": 1690458240.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1690475085.049704,
+            "elapsed_time": 8705.5720307827,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "aad360d671f068736ee6d532c939c99ecfbe7c63",
+            "commit_message": "[RISCV] Add EmitPriority=0 to Zcb load/store aliases with no immediate offset.\n\nWe only want to be able to parse a missing offset. We don't want\nto print with no offset.\n\nThis matches the non-compressed form of these aliases.\n",
+            "commit_timestamp": 1690473950.0
         }
     ]
 }
