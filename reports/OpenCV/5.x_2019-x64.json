@@ -6137,6 +6137,20 @@
             "commit_ref": "4d695cd2f4c8311698ef7961186b866f84371d29",
             "commit_message": "Merge pull request #23805 from starga2er777:5.x\n\nGSoC: Modified PLY reader to support color attribute read/write #23805\r\n\r\n* Modified PLY reader to support color attribute read/write\r\n* Fix bugs & Modified OBJ reader for color IO\r\n* Replace with correct test file\r\n* Fix I/O of property [w] in OBJ files\r\n\r\n### Pull Request Readiness Checklist\r\n\r\n**Merged with https://github.com/opencv/opencv_extra/pull/1075**\r\n\r\n[Issue for GSoC 2023](https://github.com/opencv/opencv/issues/23624)\r\nThe ply loader in 3D module doesn't support color attribute reading. I modified that to support color attribute reading & writing for the color attribute compression as described in proposal.\r\n\r\nSee details at https://github.com/opencv/opencv/wiki/How_to_contribute#making-a-good-pull-request\r\n\r\n- [x] I agree to contribute to the project under Apache 2 License.\r\n- [x] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\r\n- [x] The PR is proposed to the proper branch\r\n- [x] There is a reference to the original bug report and related work\r\n- [x] There is accuracy test, performance test and test data in opencv_extra repository, if applicable\r\n      Patch to opencv_extra has the same branch name.\r\n- [x] The feature is well documented and sample code can be built with the project CMake",
             "commit_timestamp": 1690290356.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1690431111.400563,
+            "elapsed_time": 654.8316752910614,
+            "x64": false,
+            "actual_files_count": 487,
+            "expected_files_count": 480,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "4d695cd2f4c8311698ef7961186b866f84371d29",
+            "commit_message": "Merge pull request #23805 from starga2er777:5.x\n\nGSoC: Modified PLY reader to support color attribute read/write #23805\r\n\r\n* Modified PLY reader to support color attribute read/write\r\n* Fix bugs & Modified OBJ reader for color IO\r\n* Replace with correct test file\r\n* Fix I/O of property [w] in OBJ files\r\n\r\n### Pull Request Readiness Checklist\r\n\r\n**Merged with https://github.com/opencv/opencv_extra/pull/1075**\r\n\r\n[Issue for GSoC 2023](https://github.com/opencv/opencv/issues/23624)\r\nThe ply loader in 3D module doesn't support color attribute reading. I modified that to support color attribute reading & writing for the color attribute compression as described in proposal.\r\n\r\nSee details at https://github.com/opencv/opencv/wiki/How_to_contribute#making-a-good-pull-request\r\n\r\n- [x] I agree to contribute to the project under Apache 2 License.\r\n- [x] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\r\n- [x] The PR is proposed to the proper branch\r\n- [x] There is a reference to the original bug report and related work\r\n- [x] There is accuracy test, performance test and test data in opencv_extra repository, if applicable\r\n      Patch to opencv_extra has the same branch name.\r\n- [x] The feature is well documented and sample code can be built with the project CMake",
+            "commit_timestamp": 1690290356.0
         }
     ]
 }

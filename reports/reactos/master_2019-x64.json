@@ -5543,6 +5543,20 @@
             "commit_ref": "dcaf5686cedc439f7a0e604ee99858b3b4a6bdc0",
             "commit_message": "[ADVAPI32] Don't treat a structure pointer as a string pointer (#5478)\n\nAdd a string pointer local variable, assign it and operate on it.\r\nThis should eliminate an exception and make LsapIsLocalComputer()\r\nfunction operate correctly.\r\n\r\nCORE-18996",
             "commit_timestamp": 1690412324.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1690430946.312503,
+            "elapsed_time": 114.03609895706177,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "02b65773a3b1a0d2518cf585f76f3205a6e6680f",
+            "commit_message": "[SHLWAPI][SHLWAPI_APITEST][SDK] Implement SHPropertyBag_ReadBSTR etc. (#5487)\n\n- Implement SHPropertyBag_ReadBSTR, SHPropertyBag_ReadStr, SHPropertyBag_ReadPOINTL,\r\nSHPropertyBag_ReadPOINTS, and SHPropertyBag_ReadRECTL functions.\r\n- Add link to oleaut32 in shlwapi_apitest.\r\nCORE-9283",
+            "commit_timestamp": 1690423609.0
         }
     ]
 }
