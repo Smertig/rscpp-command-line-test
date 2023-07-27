@@ -2953,6 +2953,20 @@
             "commit_ref": "e7e6e4b035f51ab4a962b45a957254859f264f4f",
             "commit_message": "gh-105002: [pathlib] Fix relative_to with walk_up=True using \"..\" (#107014)\n\nIt makes sense to raise an Error because \"..\" can not\r\nbe resolved and the current working directory is unknown.",
             "commit_timestamp": 1690400695.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1690418481.313905,
+            "elapsed_time": 1653.090955734253,
+            "x64": true,
+            "actual_files_count": 897,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "391e03fa05b80d17a14ac88d30c974fa2fa00adb",
+            "commit_message": "gh-107298: Fix Sphinx warnings in the C API doc (#107302)\n\n* Update Doc/tools/.nitignore\r\n* Fix BufferedIOBase.write() link in buffer.rst",
+            "commit_timestamp": 1690414875.0
         }
     ]
 }

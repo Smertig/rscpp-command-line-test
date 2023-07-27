@@ -5529,6 +5529,20 @@
             "commit_ref": "8f3a09722ecd98c16664527cca611d7cbeb25ee1",
             "commit_message": "[MSPAINT] Optimize images for help docs (#5486)\n\nLossless optimization of png images using `pngslim`.\r\n\r\nSaves some bytes. No code changes.",
             "commit_timestamp": 1690390709.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1690418137.804868,
+            "elapsed_time": 113.12333941459656,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "dcaf5686cedc439f7a0e604ee99858b3b4a6bdc0",
+            "commit_message": "[ADVAPI32] Don't treat a structure pointer as a string pointer (#5478)\n\nAdd a string pointer local variable, assign it and operate on it.\r\nThis should eliminate an exception and make LsapIsLocalComputer()\r\nfunction operate correctly.\r\n\r\nCORE-18996",
+            "commit_timestamp": 1690412324.0
         }
     ]
 }
