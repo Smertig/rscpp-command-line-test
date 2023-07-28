@@ -6187,6 +6187,22 @@
             "commit_ref": "cd029a4f5c35fb97cbee2404808d9030460244c1",
             "commit_message": "Revert \"[mlir][llvm] Improve error message when translating `llvm.call_intrinsic`\"\n\nThis reverts commit 5a51a44f82497b089337cfd6c3d86e3d7e3e0041.\n\nThe build is broken.\n",
             "commit_timestamp": 1690531660.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1690547428.231926,
+            "elapsed_time": 8328.584025859833,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "a4d65fe67f7ce1b2a0dcc89bf6aa4672797cb92c",
+            "commit_message": "[mlir][LLVMIR] Support switch without cases\n\nLLVM supports switch ops without case values, for which the optional\ncaseValues has no value (i.e., std::nullopt, no the empty array).\nHandle this case properly when translating MLIR-LLVM to LLVM-IR.\n\nReviewed By: Dinistro, Mogball\n\nDifferential Revision: https://reviews.llvm.org/D156431\n",
+            "commit_timestamp": 1690545714.0
         }
     ]
 }
