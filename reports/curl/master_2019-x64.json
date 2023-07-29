@@ -5851,6 +5851,20 @@
             "commit_ref": "40c63290e3d1aa4ee083b5f9ba1b9d2ced29be5f",
             "commit_message": "CI/awslc: add cache for build awslc library\n\nCloses #11535\n",
             "commit_timestamp": 1690578793.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1690603898.205385,
+            "elapsed_time": 307.84908843040466,
+            "x64": false,
+            "actual_files_count": 2756,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "1199308dbc902c52be67fc805c72dd2582520d30",
+            "commit_message": "cmake: support building static and shared libcurl in one go\n\nThis patch adds the ability to build a static and shared libcurl library\nin a single build session. It also adds an option to select which one to\nuse when building the curl executable.\n\nNew build options:\n- `BUILD_STATIC_LIBS`. Default: `OFF`.\n  Enabled automatically if `BUILD_SHARED_LIBS` is `OFF`.\n- `BUILD_STATIC_CURL`. Default: `OFF`.\n  Requires `BUILD_STATIC_LIBS` enabled.\n  Enabled automatically if building static libcurl only.\n- `STATIC_LIB_SUFFIX`. Default: empty.\n- `IMPORT_LIB_SUFFIX`. Default: `_imp` if implib filename would collide\n  with static lib name (typically with MSVC) in Windows builds.\n  Otherwise empty.\n\nAlso:\n\n- Stop setting the `CURL_STATICLIB` macro via `curl_config.h`, and pass\n  it directly to the compiler. This also allows to delete a condition\n  from `tests/server/CMakeLists.txt`.\n\n- Complete a TODO by following the logic used in autotools (also for\n  `LIBCURL_NO_SHARED`), and set `-DCURL_STATICLIB` in `Cflags:` of\n  `libcurl.pc` for _static-only_ curl builds.\n\n- Convert an existing CI test to build both shared and static libcurl.\n\nCloses #11505\n",
+            "commit_timestamp": 1690591201.0
         }
     ]
 }
