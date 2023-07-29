@@ -6267,6 +6267,22 @@
             "commit_ref": "e39bf32b3bc2f0cc21d783ba789bd82553493875",
             "commit_message": "[Driver] -###: exit with code 1 if hasErrorOccurred\n\nThe exit code for -### is inconsistent. Unrecognized options lead to\nexit code 1, as expected. However, most others errors (including invalid\noption value) lead to exit code 0, differing from GCC and most utilities.\n\nThis is a longstanding quirk of -###, and we didn't fix it because many\ndriver tests need adjustment.\n\nChange -### to be similar to -fdriver-only -v and exit with code 1.\n\nThis requires fixing many driver tests, but the end result gives us\nstronger tests.\n\n* Existing `RUN: %clang -### ...` tests usually don't use `CHECK-NOT: error:` or `--implicit-check-not=error:`.\n  If a change introduces an error, such a change usually cannot be detected.\n* Many folks contributing new tests don't know `-fdriver-only -v`.\n  To test no driver error/warning for new tests, they can use the familiar `-### -Werror`\n  instead of `-fdriver-only -v -Werror`.\n\nReviewed By: jhuber6, yaxunl, dblaikie\n\nDifferential Revision: https://reviews.llvm.org/D156363\n",
             "commit_timestamp": 1690601499.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1690618807.32893,
+            "elapsed_time": 7151.904597759247,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "fc395884decf5dc55964e68f4422ba43aca88020",
+            "commit_message": "[BOLT][RISCV] Recognize mapping symbols\n\nThe RISC-V psABI [1] defines them similarly to AArch64.\n\n[1] https://github.com/riscv-non-isa/riscv-elf-psabi-doc/blob/master/riscv-elf.adoc#mapping-symbol\n\nReviewed By: yota9, Amir\n\nDifferential Revision: https://reviews.llvm.org/D153277\n",
+            "commit_timestamp": 1690615116.0
         }
     ]
 }
