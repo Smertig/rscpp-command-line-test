@@ -5879,6 +5879,20 @@
             "commit_ref": "1199308dbc902c52be67fc805c72dd2582520d30",
             "commit_message": "cmake: support building static and shared libcurl in one go\n\nThis patch adds the ability to build a static and shared libcurl library\nin a single build session. It also adds an option to select which one to\nuse when building the curl executable.\n\nNew build options:\n- `BUILD_STATIC_LIBS`. Default: `OFF`.\n  Enabled automatically if `BUILD_SHARED_LIBS` is `OFF`.\n- `BUILD_STATIC_CURL`. Default: `OFF`.\n  Requires `BUILD_STATIC_LIBS` enabled.\n  Enabled automatically if building static libcurl only.\n- `STATIC_LIB_SUFFIX`. Default: empty.\n- `IMPORT_LIB_SUFFIX`. Default: `_imp` if implib filename would collide\n  with static lib name (typically with MSVC) in Windows builds.\n  Otherwise empty.\n\nAlso:\n\n- Stop setting the `CURL_STATICLIB` macro via `curl_config.h`, and pass\n  it directly to the compiler. This also allows to delete a condition\n  from `tests/server/CMakeLists.txt`.\n\n- Complete a TODO by following the logic used in autotools (also for\n  `LIBCURL_NO_SHARED`), and set `-DCURL_STATICLIB` in `Cflags:` of\n  `libcurl.pc` for _static-only_ curl builds.\n\n- Convert an existing CI test to build both shared and static libcurl.\n\nCloses #11505\n",
             "commit_timestamp": 1690591201.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1690632857.511619,
+            "elapsed_time": 359.7303650379181,
+            "x64": false,
+            "actual_files_count": 2756,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "756c6a02ba2db97955fe78f76c2d72ee52e33b64",
+            "commit_message": "configure: use the pkg-config --libs-only-l flag for libssh2\n\n... instead of --libs, as that one also returns -L flags.\n\nReported-by: Wilhelm von Thiele\nFixes #11538\nCloses #11539\n",
+            "commit_timestamp": 1690627944.0
         }
     ]
 }
