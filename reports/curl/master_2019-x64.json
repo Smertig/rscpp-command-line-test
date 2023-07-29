@@ -5907,6 +5907,20 @@
             "commit_ref": "756c6a02ba2db97955fe78f76c2d72ee52e33b64",
             "commit_message": "configure: use the pkg-config --libs-only-l flag for libssh2\n\n... instead of --libs, as that one also returns -L flags.\n\nReported-by: Wilhelm von Thiele\nFixes #11538\nCloses #11539\n",
             "commit_timestamp": 1690627944.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1690661298.488434,
+            "elapsed_time": 304.3642826080322,
+            "x64": false,
+            "actual_files_count": 2756,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "7bfb10c1803deb0e6dc1147bdd594129ea480a91",
+            "commit_message": "winbuild: improve check for static zlib\n\n- Check for zlib static library name zlibstatic.lib.\n\nzlib's static library has a different name depending on how it was\nbuilt. zlibstatic.lib is output by cmake. zlibstat.lib is output by\ntheir pre-generated Visual Studio project files (in the contrib\ndirectory) and defines ZLIB_WINAPI (ie it's meant to use stdcall\ninstead of cdecl if you end up exporting the zlib functions).\n\nPrior to this change the makefile only checked for the latter.\n\nCloses https://github.com/curl/curl/pull/11521\n",
+            "commit_timestamp": 1690657510.0
         }
     ]
 }
