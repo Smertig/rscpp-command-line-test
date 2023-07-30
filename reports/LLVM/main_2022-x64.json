@@ -6395,6 +6395,22 @@
             "commit_ref": "2992d084774f44e7626a7d640fe6c30163db450e",
             "commit_message": "[clang-tidy] Do not warn on macros starting with underscore and lowercase letter in bugprone-reserved-identifier\n\nFixes #64130\n\nDifferential Revision: https://reviews.llvm.org/D156608\n",
             "commit_timestamp": 1690719048.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1690734158.732408,
+            "elapsed_time": 7505.601037502289,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "7bd481d9afc83a99fbb5d0a92484ab9993942784",
+            "commit_message": "[ORC] Add ExecutionSession::removeJITDylibs (plural), use it in endSession.\n\nThe ExecutionSession::removeJITDylibs operation will remove all JITDylibs in\nthe given list (i.e. first clear them, then remove them from the session).\n\nExecutionSession::endSession is updated to remove JITDylibs rather than just\nclearing them. This prevents new code from being added to any JITDylib once\nendSession has been called.\n",
+            "commit_timestamp": 1690732302.0
         }
     ]
 }
