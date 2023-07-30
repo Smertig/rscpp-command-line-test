@@ -6363,6 +6363,22 @@
             "commit_ref": "0c2cd74ff85a43a346ee05a2bfb88f07d9e60647",
             "commit_message": "[Driver][test] Ensure fuzzer.c commands have --target=\n",
             "commit_timestamp": 1690689220.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1690705225.274691,
+            "elapsed_time": 6941.076591491699,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "12f3d97fc68b304e0efbe183665c0183d9a372b3",
+            "commit_message": "[lldb] Support recursive record types in CTF\n\nSupport recursive record types in CTF, for example a struct that\ncontains a pointer to itself:\n\n  struct S {\n    struct S *n;\n  };\n\nWe are now more lazy when creating LLDB types. When encountering a\nrecord type (struct or union) we create a forward declaration and only\ncomplete it when requested.\n\nDifferential revision: https://reviews.llvm.org/D156498\n",
+            "commit_timestamp": 1690695144.0
         }
     ]
 }
