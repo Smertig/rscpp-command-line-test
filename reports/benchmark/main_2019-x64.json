@@ -7073,6 +7073,20 @@
             "commit_ref": "8f7b8dd9a3211e6043e742a383ccb35eb810829f",
             "commit_message": "Re-enable windows-latest tests for newer Bazel (#1641)\n\nThe Windows toolchain detection fix made it into Bazel 6.3.0, so the CI\r\nshould work again with the re-enabled `windows-latest` marker.\r\n\r\nRequire Bazel 6.3.0 in the Linux container setup in `cibuildwheel`.",
             "commit_timestamp": 1690797097.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1690819452.050017,
+            "elapsed_time": 105.40406727790833,
+            "x64": false,
+            "actual_files_count": 91,
+            "expected_files_count": 86,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "71ad1856fd107877b3341d8f4db4588d0b3dea7d",
+            "commit_message": "Fix `-Werror,-Wold-style-cast` build failure on Windows. (#1637)\n\n* Fix `-Werror,-Wold-style-cast` build failure on Windows.\r\n\r\n* Fix parentheses.\r\n\r\n---------\r\n\r\nCo-authored-by: dominic <510002+dmah42@users.noreply.github.com>",
+            "commit_timestamp": 1690812874.0
         }
     ]
 }
