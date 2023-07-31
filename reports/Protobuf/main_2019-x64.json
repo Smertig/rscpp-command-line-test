@@ -7059,6 +7059,20 @@
             "commit_ref": "1bee4578b8a812faed90432798222670f6df2a9b",
             "commit_message": "bazel: Get rid of exec_tools. (#13401)\n\nBazel has removed this attribute in bazelbuild/bazel@c061e57a7004a88eeb2f84d094d9a88b56c146b6.\n\nCloses #13401\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/13401 from benjaminp:exec_tools 9e718ff0fd11ff1fe70ed3e2536373792504c9c5\nPiperOrigin-RevId: 552482730\n",
             "commit_timestamp": 1690816119.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1690833807.648205,
+            "elapsed_time": 385.1706805229187,
+            "x64": false,
+            "actual_files_count": 830,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "bca3bed137d013d4a654ffec52c0d44a3202aab2",
+            "commit_message": "Introduce recursion limit in Java text format parsing\n\nThis will make the text format parser reject inputs that have a nesting depth\ngreater than 150. We will soon lower this number down to 100 for consistency\nwith other implementations.\n\nFor use cases that rely on parsing deeply nested text protos, it is possible to\ncreate a Parser with a custom recursion limit like this:\n`TextFormat.Parser.newBuilder().setRecursionLimit(i).build()`.\n\nPiperOrigin-RevId: 552543574\n",
+            "commit_timestamp": 1690828583.0
         }
     ]
 }

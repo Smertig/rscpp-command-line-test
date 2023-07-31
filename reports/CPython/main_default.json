@@ -3359,6 +3359,20 @@
             "commit_ref": "5eb80a61f582802c3f1caa3bf4dc754847bf1e75",
             "commit_message": "GH-104909: Move unused cache entries from uops to macros (#107444)\n\nThere's no need to use a dummy uop to skip unused cache entries. The macro syntax lets you write `unused/1` instead.\r\n\r\nSimilarly, move `unused/5` from op `_LOAD_ATTR_INSTANCE_VALUE` to macro `LOAD_ATTR_INSTANCE_VALUE`.\r\n",
             "commit_timestamp": 1690818933.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1690834074.927871,
+            "elapsed_time": 1426.2159628868103,
+            "x64": true,
+            "actual_files_count": 899,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "de51dede5b48ef23d7d33d92f3616824e23fd205",
+            "commit_message": "gh-106762: Add news for `EnumMeta.__getattr__` removal (GH-107466)\n\n",
+            "commit_timestamp": 1690824284.0
         }
     ]
 }
