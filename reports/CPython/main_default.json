@@ -3429,6 +3429,20 @@
             "commit_ref": "557b05c7a5334de5da3dc94c108c0121f10b9191",
             "commit_message": "gh-106092: Fix use-after-free crash in frame_dealloc (#106875)\n\nIt was possible for the trashcan to delay the deallocation of a\r\nPyFrameObject until after its corresponding _PyInterpreterFrame has\r\nalready been freed.  So frame_dealloc needs to avoid dereferencing the\r\nf_frame pointer unless it first checks that the pointer still points\r\nto the interpreter frame within the frame object.\r\n\r\nSigned-off-by: Anders Kaseorg <andersk@mit.edu>",
             "commit_timestamp": 1690882338.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1690906106.318111,
+            "elapsed_time": 1221.5503544807434,
+            "x64": true,
+            "actual_files_count": 899,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "557b05c7a5334de5da3dc94c108c0121f10b9191",
+            "commit_message": "gh-106092: Fix use-after-free crash in frame_dealloc (#106875)\n\nIt was possible for the trashcan to delay the deallocation of a\r\nPyFrameObject until after its corresponding _PyInterpreterFrame has\r\nalready been freed.  So frame_dealloc needs to avoid dereferencing the\r\nf_frame pointer unless it first checks that the pointer still points\r\nto the interpreter frame within the frame object.\r\n\r\nSigned-off-by: Anders Kaseorg <andersk@mit.edu>",
+            "commit_timestamp": 1690882338.0
         }
     ]
 }

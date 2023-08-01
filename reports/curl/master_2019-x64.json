@@ -6145,6 +6145,20 @@
             "commit_ref": "d4618a3fc4d2753493555814c991dd048264e7e7",
             "commit_message": "http2: avoid too early connection re-use/multiplexing\n\nHTTP/1 connections that are upgraded to HTTP/2 should not be picked up\nfor reuse and multiplexing by other handles until the 101 switching\nprocess is completed.\n\nLots-of-debgging-by: Stefan Eissing\nReported-by: Richard W.M. Jones\nBug: https://curl.se/mail/lib-2023-07/0045.html\nCloses #11557\n",
             "commit_timestamp": 1690882207.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1690905959.887807,
+            "elapsed_time": 356.1364974975586,
+            "x64": false,
+            "actual_files_count": 2758,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "bb07240263f4fa8329a2b0fdac603b068120b826",
+            "commit_message": "tests: fix h3 server check and parallel instances\n\n- fix check for availability of nghttpx server\n- add `tcp` frontend config for same port as quic, as\n  without this, port 3000 is bound which clashes for parallel\n  testing\n\nCloses #11553\n",
+            "commit_timestamp": 1690899108.0
         }
     ]
 }

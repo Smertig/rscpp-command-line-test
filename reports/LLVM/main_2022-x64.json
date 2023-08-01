@@ -6587,6 +6587,22 @@
             "commit_ref": "cd921e0fd79cd9bd2ab2ee1820476810847f5516",
             "commit_message": "[MISched] Do not erase resource booking history for subunits.\n\nWhen dealing with the subunits of a resource group, we should reset\nthe subunits availability at the first avaiable cycle of the resource\nthat contains the subunits. Previously, the reset operation was\nreturning cycle 0, effectively erasing the booking history of the\nsubunits.\n\nWithout this change, when using intervals for models have make use of\nsubunits, the erasing of resource booking for subunits can raise the\nassertion \"A resource is being overwritten\" in\n`ResourceSegments::add`. The test added in the patch is one of such\ncases.\n\nReviewed By: andreadb\n\nDifferential Revision: https://reviews.llvm.org/D156530\n",
             "commit_timestamp": 1690891237.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1690906522.143572,
+            "elapsed_time": 7036.334915876389,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "bd077e98e463933e72bbd7bd03c6432d529e710c",
+            "commit_message": "Released restriction that prevented implicit dynamic-to-static dimension type cast in TOSA ops.\n\nReviewed By: jpienaar, gflegar\n\nDifferential Revision: https://reviews.llvm.org/D156714\n",
+            "commit_timestamp": 1690905428.0
         }
     ]
 }
