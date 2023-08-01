@@ -6539,6 +6539,22 @@
             "commit_ref": "42c9354a928d4d9459504527085fccc91b46aed3",
             "commit_message": "Revert \"Reland \"[LoongArch] Support -march=native and -mtune=\"\"\n\nThis reverts commit c56514f21b2cf08eaa7ac3a57ba4ce403a9c8956. This\ncommit adds global state that is shared between clang driver and clang\ncc1, which is not correct when clang is used with `-fno-integrated-cc1`\noption (no integrated cc1). The -march and -mtune option needs to be\nproperly passed through cc1 command-line and stored in TargetInfo.\n",
             "commit_timestamp": 1690847826.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1690863529.243105,
+            "elapsed_time": 8996.609743833542,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "3e386b227886e2fb77b0c1e9182026c4e049f346",
+            "commit_message": "[InstSimplify] Remove the remainder loop if we know the mask is always true\n\nWe check the loop trip count is known a power of 2 to determine\nwhether the tail loop can be eliminated in D146199.\nHowever, the remainder loop of mask scalable loop can also be removed\nIf we know the mask is always going to be true for every vector iteration.\nDepend on the assume of power-of-two vscale on D155350\n\nproofs\uff1a https://alive2.llvm.org/ce/z/FkTMoy\n\nFix https://github.com/llvm/llvm-project/issues/63616.\n\nReviewed By: goldstein.w.n, nikic, david-arm, paulwalker-arm\nDifferential Revision: https://reviews.llvm.org/D154953\n",
+            "commit_timestamp": 1690860020.0
         }
     ]
 }
