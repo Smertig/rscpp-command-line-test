@@ -6117,6 +6117,20 @@
             "commit_ref": "1032f56efae6bdab399d322fea2bd2da0d95365c",
             "commit_message": "curl: make %output{} in -w specify a file to write to\n\nIt can be used multiple times. Use %output{>>name} to append.\n\nAdd docs. Test 990 and 991 verify.\n\nIdea: #11400\nSuggested-by: ed0d2b2ce19451f2\nCloses #11416\n",
             "commit_timestamp": 1690837859.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1690877088.996645,
+            "elapsed_time": 318.9292776584625,
+            "x64": false,
+            "actual_files_count": 2758,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "11d46bcfb2c813809d6bd63532e81c990e65cf9e",
+            "commit_message": "openssl: Support async cert verify callback\n\n- Update the OpenSSL connect state machine to handle\n  SSL_ERROR_WANT_RETRY_VERIFY.\n\nThis allows libcurl users that are using custom certificate validation\nto suspend processing while waiting for external I/O during certificate\nvalidation.\n\nCloses https://github.com/curl/curl/pull/11499\n",
+            "commit_timestamp": 1690876147.0
         }
     ]
 }
