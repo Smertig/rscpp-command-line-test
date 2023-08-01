@@ -6131,6 +6131,20 @@
             "commit_ref": "11d46bcfb2c813809d6bd63532e81c990e65cf9e",
             "commit_message": "openssl: Support async cert verify callback\n\n- Update the OpenSSL connect state machine to handle\n  SSL_ERROR_WANT_RETRY_VERIFY.\n\nThis allows libcurl users that are using custom certificate validation\nto suspend processing while waiting for external I/O during certificate\nvalidation.\n\nCloses https://github.com/curl/curl/pull/11499\n",
             "commit_timestamp": 1690876147.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1690891497.60917,
+            "elapsed_time": 356.8947784900665,
+            "x64": false,
+            "actual_files_count": 2758,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "d4618a3fc4d2753493555814c991dd048264e7e7",
+            "commit_message": "http2: avoid too early connection re-use/multiplexing\n\nHTTP/1 connections that are upgraded to HTTP/2 should not be picked up\nfor reuse and multiplexing by other handles until the 101 switching\nprocess is completed.\n\nLots-of-debgging-by: Stefan Eissing\nReported-by: Richard W.M. Jones\nBug: https://curl.se/mail/lib-2023-07/0045.html\nCloses #11557\n",
+            "commit_timestamp": 1690882207.0
         }
     ]
 }
