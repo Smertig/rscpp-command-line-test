@@ -3527,6 +3527,20 @@
             "commit_ref": "b9c9a36c2f2edc11b9c27eb7c5810919d9da9767",
             "commit_message": "gh-106368: Increase test coverage for Argument Clinic (#107514)\n\nAs per this commit, we've got approx. ~91% test coverage for clinic.py.",
             "commit_timestamp": 1690983190.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1691006826.170002,
+            "elapsed_time": 1203.0417244434357,
+            "x64": true,
+            "actual_files_count": 899,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "bcdd3072316181b49d94567bb648825a07ca9ae1",
+            "commit_message": "gh-104683: Make Argument Clinic template strings class level members (#107556)\n\nThe motivation for this change is to clean up the output_templates()\r\nmethod a little bit, as it accounts for ~10% of the lines of code in\r\nclinic.py; removing some clutter helps readability.",
+            "commit_timestamp": 1691005056.0
         }
     ]
 }

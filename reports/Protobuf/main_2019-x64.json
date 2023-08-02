@@ -7227,6 +7227,20 @@
             "commit_ref": "7c2ed10beb0dccbbfb6a76e43d28647794d8d7e7",
             "commit_message": "Overload the void* in RepeatedPtrFieldBase to point directly to the first element if Capacity()==1, or to point to an allocated Rep if Capacity()>1.\nThis avoids allocating memory for 1 element containers, and avoids indirection costs like extra cache misses.\n\nPiperOrigin-RevId: 553157394\n",
             "commit_timestamp": 1690991295.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1691006627.51466,
+            "elapsed_time": 363.2212071418762,
+            "x64": false,
+            "actual_files_count": 831,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "22e845e279bd79ad013bff4b79660b8c8b72d935",
+            "commit_message": "Add a release flag to disambiguate between release and local config_settings.\n\nThis flag will be set in UPB which will be submitted separately due to version skew between repos.\n\nThis attempts to fix the following error from local and release settings both matching.\n```\nERROR: /workspace/_build/out/external/upb/python/dist/BUILD.bazel:251:9: Illegal ambiguous match on configurable attribute \"platform\" in @upb//python/dist:binary_wheel:\n@upb//python/dist:linux_x86_64_local\n@upb//python/dist:windows_x86_64\nMultiple matches are not allowed unless one is unambiguously more specialized or they resolve to the same value. See https://bazel.build/reference/be/functions#select.\n```\nPiperOrigin-RevId: 553184373\n",
+            "commit_timestamp": 1690997543.0
         }
     ]
 }
