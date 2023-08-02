@@ -6201,6 +6201,20 @@
             "commit_ref": "d3142b57299f3aeec546cc1179b9ff170f8d20ad",
             "commit_message": "resolve: use PF_INET6 family lookups when CURL_IPRESOLVE_V6 is set\n\nPreviously it would always do PF_UNSPEC if CURL_IPRESOLVE_V4 is not\nused, thus unnecessarily asking for addresses that will not be used.\n\nReported-by: Joseph Tharayil\nFixes #11564\nCloses #11565\n",
             "commit_timestamp": 1690930156.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1690963481.474377,
+            "elapsed_time": 301.92976450920105,
+            "x64": false,
+            "actual_files_count": 2758,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "b4f9ae5126d85f82f736610dc1ea24eca83a72f1",
+            "commit_message": "schannel: fix user-set legacy algorithms in Windows 10 & 11\n\n- If the user set a legacy algorithm list (CURLOPT_SSL_CIPHER_LIST) then\n  use the SCHANNEL_CRED legacy structure to pass the list to Schannel.\n\n- If the user set both a legacy algorithm list and a TLS 1.3 cipher list\n  then abort.\n\nAlthough MS doesn't document it, Schannel will not negotiate TLS 1.3\nwhen SCHANNEL_CRED is used. That means setting a legacy algorithm list\nlimits the user to earlier versions of TLS.\n\nPrior to this change, since 8beff435 (precedes 7.85.0), libcurl would\nignore legacy algorithms in Windows 10 1809 and later.\n\nReported-by: zhihaoy@users.noreply.github.com\n\nFixes https://github.com/curl/curl/pull/10741\nCloses https://github.com/curl/curl/pull/10746\n",
+            "commit_timestamp": 1690962193.0
         }
     ]
 }
