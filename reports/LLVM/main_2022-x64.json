@@ -6683,6 +6683,22 @@
             "commit_ref": "abb09a6788c142e4da728c23c29e2f36c06aea59",
             "commit_message": "Fix LLVM Sphinx build\n\nThis addresses issues found by:\nhttps://lab.llvm.org/buildbot/#/builders/30/builds/38316\n\nas well as issues found when building locally.\n",
             "commit_timestamp": 1690977201.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1690993188.882717,
+            "elapsed_time": 7539.337713479996,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "8ea274b46beb01756c2b26743fa165d3cbdeb355",
+            "commit_message": "[VPlan] Fix in-loop reduction chains using VPlan def-use chains (NFCI)\n\nUpdate adjustRecipesForReductions to directly use the VPlan def-use\nchains for in-loop reductions to collect the reduction operations that\nneed adjusting.\n\nThis allows the removal of\n * ReductionChainMap\n * recording of recipes for instruction in the reduction chain\n * removes late uses of getVPValue\n * removes to need for removeVPValueFor.\n\nReviewed By: Ayal\n\nDifferential Revision: https://reviews.llvm.org/D155845\n",
+            "commit_timestamp": 1690992269.0
         }
     ]
 }
