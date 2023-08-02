@@ -6215,6 +6215,20 @@
             "commit_ref": "b4f9ae5126d85f82f736610dc1ea24eca83a72f1",
             "commit_message": "schannel: fix user-set legacy algorithms in Windows 10 & 11\n\n- If the user set a legacy algorithm list (CURLOPT_SSL_CIPHER_LIST) then\n  use the SCHANNEL_CRED legacy structure to pass the list to Schannel.\n\n- If the user set both a legacy algorithm list and a TLS 1.3 cipher list\n  then abort.\n\nAlthough MS doesn't document it, Schannel will not negotiate TLS 1.3\nwhen SCHANNEL_CRED is used. That means setting a legacy algorithm list\nlimits the user to earlier versions of TLS.\n\nPrior to this change, since 8beff435 (precedes 7.85.0), libcurl would\nignore legacy algorithms in Windows 10 1809 and later.\n\nReported-by: zhihaoy@users.noreply.github.com\n\nFixes https://github.com/curl/curl/pull/10741\nCloses https://github.com/curl/curl/pull/10746\n",
             "commit_timestamp": 1690962193.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1690977922.685764,
+            "elapsed_time": 304.43710112571716,
+            "x64": false,
+            "actual_files_count": 2758,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "ddb179586f68c00c6c0d9ae69aae9dc2abee2bc9",
+            "commit_message": "gha: bump libressl and mbedtls versions\n\nCloses #11573\n",
+            "commit_timestamp": 1690972741.0
         }
     ]
 }
