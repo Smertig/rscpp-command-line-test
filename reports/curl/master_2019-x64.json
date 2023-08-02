@@ -6187,6 +6187,20 @@
             "commit_ref": "d3142b57299f3aeec546cc1179b9ff170f8d20ad",
             "commit_message": "resolve: use PF_INET6 family lookups when CURL_IPRESOLVE_V6 is set\n\nPreviously it would always do PF_UNSPEC if CURL_IPRESOLVE_V4 is not\nused, thus unnecessarily asking for addresses that will not be used.\n\nReported-by: Joseph Tharayil\nFixes #11564\nCloses #11565\n",
             "commit_timestamp": 1690930156.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1690949090.267781,
+            "elapsed_time": 309.73452258110046,
+            "x64": false,
+            "actual_files_count": 2758,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "d3142b57299f3aeec546cc1179b9ff170f8d20ad",
+            "commit_message": "resolve: use PF_INET6 family lookups when CURL_IPRESOLVE_V6 is set\n\nPreviously it would always do PF_UNSPEC if CURL_IPRESOLVE_V4 is not\nused, thus unnecessarily asking for addresses that will not be used.\n\nReported-by: Joseph Tharayil\nFixes #11564\nCloses #11565\n",
+            "commit_timestamp": 1690930156.0
         }
     ]
 }

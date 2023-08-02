@@ -6047,6 +6047,20 @@
             "commit_ref": "53b30e3f3bf454356dad537c782543cba35e0f1a",
             "commit_message": "[NTOSKRNL][NTGDI] Formatting addendum, no functional change\n\nI intend to port back the combined work of Thomas Faber and Serge Gautherie in context of CORE 14271.\nBoth developers fixed wrong retval evaluations for SeSinglePrivilegeCheck() and RtlCreateUnicodeString().\nBoth functions do return a BOOLEAN, and therefore using NTSTATUS() on them is wrong.\nThose bugs have been fixed at multiple places. That is long gone.\n\nBut Serge fixed his locations a bit more elegantly, without the need for additional variables.\nTherefore this addendum adapts a few of Thomas locations to the improved Serge-ified style.\n\nYes: I intentionally used a space instead of a minus after the mentioned CORE 14271,\nas I don't want that pure stylistic addendum to be linked with the initial ticket anymore.\nThat would be overkill.\n",
             "commit_timestamp": 1690921945.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1690949066.009,
+            "elapsed_time": 138.46076560020447,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "6299340c453afd140f6fc7d96795d90c0852458c",
+            "commit_message": "[SHLWAPI][SHLWAPI_APITEST][SDK] Implement SHPropertyBag_ReadGUID etc. (#5491)\n\n- Implement SHPropertyBag_ReadGUID and SHPropertyBag_ReadStream functions.\r\n- Modify shlwapi.spec and shlwapi_undoc.h.\r\n CORE-9283",
+            "commit_timestamp": 1690940125.0
         }
     ]
 }
