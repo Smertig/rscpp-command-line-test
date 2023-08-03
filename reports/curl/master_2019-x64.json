@@ -6313,6 +6313,20 @@
             "commit_ref": "db70846e2eb3d5a7ac218e8133eba962591aa2fc",
             "commit_message": "tests: ensure `libcurl.def` contains all exports\n\nAdd `test1279` to verify that `libcurl.def` lists all exported API\nfunctions found in libcurl headers.\n\nAlso:\n\n- extend test suite XML `stdout` tag with the `loadfile` attribute.\n\n- fix `tests/extern-scan.pl` and `test1135` to include websocket API.\n\n- use all headers (sorted) in `test1135` instead of a manual list.\n\n- add options `--sort`, `--heading=` to `tests/extern-scan.pl`.\n\n- add `libcurl.def` to the auto-labeler GHA task.\n\nFollow-up to 2ebc74c36a19a1700af394c16855ce144d9878e3\n\nCloses #11570\n",
             "commit_timestamp": 1691060867.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1691078730.836281,
+            "elapsed_time": 391.64214396476746,
+            "x64": false,
+            "actual_files_count": 2758,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "e12b39e133822c6a03cffd75e102dc9f34541230",
+            "commit_message": "trace: make tracing available in non-debug builds\n\nAdd --trace-config to curl\n\nAdd curl_global_trace() to libcurl\n\nCloses #11421\n",
+            "commit_timestamp": 1691076745.0
         }
     ]
 }
