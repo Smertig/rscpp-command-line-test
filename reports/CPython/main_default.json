@@ -3541,6 +3541,20 @@
             "commit_ref": "bcdd3072316181b49d94567bb648825a07ca9ae1",
             "commit_message": "gh-104683: Make Argument Clinic template strings class level members (#107556)\n\nThe motivation for this change is to clean up the output_templates()\r\nmethod a little bit, as it accounts for ~10% of the lines of code in\r\nclinic.py; removing some clutter helps readability.",
             "commit_timestamp": 1691005056.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1691021377.760653,
+            "elapsed_time": 1396.7167797088623,
+            "x64": true,
+            "actual_files_count": 899,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "1cd479c6d371605e9689c88ae1789dbcbceb2da0",
+            "commit_message": "gh-104683: Rework Argument Clinic error handling (#107551)\n\nIntroduce ClinicError, and use it in fail(). The CLI runs main(),\r\ncatches ClinicError, formats the error message, prints to stderr\r\nand exits with an error.\r\n\r\nAs a side effect, this refactor greatly improves the accuracy of\r\nreported line numbers in case of error.\r\n\r\nAlso, adapt the test suite to work with ClinicError.\r\n\r\nCo-authored-by: Alex Waygood <Alex.Waygood@Gmail.com>",
+            "commit_timestamp": 1691020806.0
         }
     ]
 }
