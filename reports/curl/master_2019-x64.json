@@ -6285,6 +6285,20 @@
             "commit_ref": "d135d040df5b276df5736688eba88d150b0d8a57",
             "commit_message": "url: change default value for CURLOPT_MAXREDIRS to 30\n\nIt was previously unlimited by default, but that's not a sensible\ndefault. While changing this has a remote risk of breaking an existing\nuse case, I figure it is more likely to actually save users from loops.\n\nCloses #11581\n",
             "commit_timestamp": 1691013599.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1691049859.480194,
+            "elapsed_time": 343.42468762397766,
+            "x64": false,
+            "actual_files_count": 2758,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "d135d040df5b276df5736688eba88d150b0d8a57",
+            "commit_message": "url: change default value for CURLOPT_MAXREDIRS to 30\n\nIt was previously unlimited by default, but that's not a sensible\ndefault. While changing this has a remote risk of breaking an existing\nuse case, I figure it is more likely to actually save users from loops.\n\nCloses #11581\n",
+            "commit_timestamp": 1691013599.0
         }
     ]
 }

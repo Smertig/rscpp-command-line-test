@@ -6747,6 +6747,22 @@
             "commit_ref": "e545392b1de304d3bf2776f671cb7327e335b90b",
             "commit_message": "[HLSL] Add reversebits library function\n\nThis change exposes the reversebits library function for HLSL, excluding floating point types.\nThe reversebits function is supported for all scalar, vector, and matrix types.\n\nThe full documentation of the HLSL reversebits function is available here:\nhttps://learn.microsoft.com/en-us/windows/win32/direct3dhlsl/reversebits\n\nReviewed By: python3kgae\n\nDifferential Revision: https://reviews.llvm.org/D156933\n",
             "commit_timestamp": 1691034640.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1691050519.590287,
+            "elapsed_time": 7260.669469118118,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "d0dc887d7ed285688004c75de3784cfe94febd34",
+            "commit_message": "[Driver] Remove references to Solaris 12\n\nSolaris 12 was re-christened as Solaris 11.4 while still in beta, so all\nreferences are long obsolete and can be removed.\n\nTested on `amd64-pc-solaris2.11`.\n\nDifferential Revision: https://reviews.llvm.org/D156861\n",
+            "commit_timestamp": 1691049265.0
         }
     ]
 }
