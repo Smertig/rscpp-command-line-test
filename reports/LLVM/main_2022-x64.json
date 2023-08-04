@@ -6843,6 +6843,22 @@
             "commit_ref": "8fd56ea11256f220502fe9819b496b15582f8d1e",
             "commit_message": "[clang][deps] NFC: Speed up canonical context hash computation\n\nThis patch makes use of the infrastructure established in D157046 to speed up computation of the canonical context hash in the dependency scanner. This is somewhat hot code, since it's ran for all modules in the dependency graph of every TU.\n\nI also tried an alternative approach that tried to avoid allocations as much as possible (essentially doing `HashBuilder.add(Arg.toStringRef(ArgVec))`), but that turned out to be slower than approach in this patch.\n\nNote that this is not problematic in the same way command-line hashing used to be prior D143027. The lambda is now being called even for constant strings.\n\nDepends on D157046.\n\nReviewed By: benlangmuir\n\nDifferential Revision: https://reviews.llvm.org/D157052\n",
             "commit_timestamp": 1691120194.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1691137091.501527,
+            "elapsed_time": 7395.961035013199,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "76cfdbe2546f6e278e5c37f5607b0fbc36086a76",
+            "commit_message": "[RegScavenger] Remove support for forwards register scavenging\n\nDifferential Revision: https://reviews.llvm.org/D156987\n",
+            "commit_timestamp": 1691135535.0
         }
     ]
 }
