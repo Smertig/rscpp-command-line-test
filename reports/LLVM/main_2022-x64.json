@@ -6891,6 +6891,22 @@
             "commit_ref": "df6b35e329ebecad6dc3bfb83183e482eb7a0020",
             "commit_message": "Fix Clang Sphinx bot\n\nAddresses the issue found in:\nhttps://lab.llvm.org/buildbot/#/builders/92/builds/48490\n",
             "commit_timestamp": 1691163815.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1691179904.559893,
+            "elapsed_time": 5162.042903423309,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "fe195781ad2f1aaecd5def14f361f3590a17c79e",
+            "commit_message": "[hwasan] Enable leak detection in hwasan for Fuchsia by default\n\nDifferential Revision: https://reviews.llvm.org/D157127\n",
+            "commit_timestamp": 1691177358.0
         }
     ]
 }
