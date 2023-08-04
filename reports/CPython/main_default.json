@@ -3625,6 +3625,20 @@
             "commit_ref": "58ef74186795c56e3ec86e8c8f351a1d7826638a",
             "commit_message": "gh-107080: Fix Py_TRACE_REFS Crashes Under Isolated Subinterpreters (gh-107567)\n\nThe linked list of objects was a global variable, which broke isolation between interpreters, causing crashes. To solve this, we've moved the linked list to each interpreter.",
             "commit_timestamp": 1691092268.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1691107810.849218,
+            "elapsed_time": 1435.1155812740326,
+            "x64": true,
+            "actual_files_count": 899,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "9e6590b0978876de14587f528a09632b8879c369",
+            "commit_message": "gh-106368: Argument clinic tests: improve error message when `expect_success()` fails (#107606)\n\n",
+            "commit_timestamp": 1691097974.0
         }
     ]
 }

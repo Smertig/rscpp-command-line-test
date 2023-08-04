@@ -6811,6 +6811,22 @@
             "commit_ref": "9a3f0cd717f68ccf9e348bce2d76a2372482f4f2",
             "commit_message": "Fix crash in lldb-vscode when missing function name\n\nSummary:\nIn cases where the PC has no function name, lldb-vscode crashes.\n\n`lldb::SBFrame::GetDisplayFunctionName()` returns a `nullptr`, and when we\nattempt to construct an `std::string`, it raises an exception.\n\nTest plan:\nThis can be observed with creating a test file (credit to @clayborg for\nthe example):\n```\nint main() {\n  typedef void (*FooCallback)();\n  FooCallback foo_callback = (FooCallback)0;\n  foo_callback(); // Crash at zero!\n  return 0;\n}\n```\nand attempting to debug the file through VSCode.\n\nI add a test case in D156732 which should cover this.\n\nDifferential Revision: https://reviews.llvm.org/D156970\n",
             "commit_timestamp": 1691092597.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1691107959.857569,
+            "elapsed_time": 5164.757710933685,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "08dc847d55fbdfa7ff6cb8034633139df0199562",
+            "commit_message": "[lldb][NFCI] Add SBTraceCursor.h to swig headers file\n\nDifferential Revision: https://reviews.llvm.org/D156934\n",
+            "commit_timestamp": 1691106077.0
         }
     ]
 }
