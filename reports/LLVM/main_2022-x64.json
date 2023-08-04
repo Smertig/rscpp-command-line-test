@@ -6875,6 +6875,22 @@
             "commit_ref": "2532b68f684c25d98d6b25be2814bef0fd164332",
             "commit_message": "[TableGen]  Do not compile CombineRuleBuilder::verify in release builds\n\nAvoids a warning about the function being unused.\n\nReviewed By: DavidSpickett\n\nDifferential Revision: https://reviews.llvm.org/D157085\n",
             "commit_timestamp": 1691150393.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1691165758.017563,
+            "elapsed_time": 7163.011624336243,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "df6b35e329ebecad6dc3bfb83183e482eb7a0020",
+            "commit_message": "Fix Clang Sphinx bot\n\nAddresses the issue found in:\nhttps://lab.llvm.org/buildbot/#/builders/92/builds/48490\n",
+            "commit_timestamp": 1691163815.0
         }
     ]
 }

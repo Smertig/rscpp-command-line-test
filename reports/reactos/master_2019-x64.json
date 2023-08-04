@@ -6257,6 +6257,20 @@
             "commit_ref": "5b40f6f353d47bd3414399a64bf47e40dd28a8e0",
             "commit_message": "[EXPLORER] Add support for Windows 7 style system tray icon spacing (#5489)\n\nWhen using large taskbar icon:\r\n- Increase the padding around system tray icons.\r\n- Push the clock text further to the right, increasing the left padding\r\n  between the clock and notification icons.\r\n  This matches Windows 7 shell behavior.\r\n- Correct the spacing for the clock area, in the case when bPreferDate is\r\n  enabled, only two lines are visible, and the day of the week is shorter\r\n  than the date.\r\n\r\nCORE-11698",
             "commit_timestamp": 1691148019.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1691165018.111076,
+            "elapsed_time": 106.6702811717987,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "21e30f3f67ece980ae488780cc3e80e9fc5692d4",
+            "commit_message": "[SHELL32_APITEST] Add test for Control Panel's GetDisplayNameOf (#5495)\n\nNew regression test for shell32!GetDisplayNameOf, showing that the return\r\nvalue of the function will be 'S_FALSE' when the first argument is NULL.\r\nAlso, the returned STRRET structure data is not modified by this call.\r\n\r\nCORE-18841",
+            "commit_timestamp": 1691157271.0
         }
     ]
 }
