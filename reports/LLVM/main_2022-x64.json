@@ -6955,6 +6955,22 @@
             "commit_ref": "69b19f284836f6059355167f904a2ab9f4b96992",
             "commit_message": "[RISCV] Use i64 instead of XLenVT in RV64 only patterns. NFC\n\nThis stops tablegen from generating unneeded entries in\nRISCVGenDAGISel.inc.\n",
             "commit_timestamp": 1691221766.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1691237718.303213,
+            "elapsed_time": 7493.970508098602,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "400fde92963588ae2b618626cb1ac73fd91c7d4d",
+            "commit_message": "[Attributor] Add lightweight version for attribute deduction only.\n\nThis patch adds a lightweight instance of Attributor that only deduces\nattributes.\n\nThis is just an initial version with the goal to have a version that\nonly focuses on attributes to replace the function-attrs pass.\n\nThe initial version has a few open issues pending until default\nenablement, the main one probably being compile time. The main\nadditional functionality this will provide in general is propagating\nattributes to call sites.\n\nOpen issues:\n\n* compile time\n  The current version increase O3 +2.67% and ThinLTO +6.18% when replacing FunctionAttr\n   https://llvm-compile-time-tracker.com/compare.php?from=c4bb3e073548cf436d5fa0406e3ae75e94684dec&to=d992630a69c79a2587d736e6a88f448850413bd1&stat=instructions%3Au\n   Both are with an additional change to preserve more analysis, like FunctionAttrs CGSCC run.\n\n* some missed attribute inference\n\nReviewed By: jdoerfert\n\nDifferential Revision: https://reviews.llvm.org/D152081\n",
+            "commit_timestamp": 1691232448.0
         }
     ]
 }
