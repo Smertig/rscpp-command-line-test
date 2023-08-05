@@ -6939,6 +6939,22 @@
             "commit_ref": "43b8e86bf76648bf0f34f34bc0a606e527decc43",
             "commit_message": "[llvm-exegesis] enable memory annotation and subprocess tests\n\nThese tests were causing issues on the clang-cmake-x86_64-avx512-linux\nbuilder due to transient failures. I'm unable to reproduce the issue\nlocally now, so we'll see what happens. There were a couple changes in\nbetween disabling them and now that might have an impact.\n",
             "commit_timestamp": 1691207800.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1691223349.822082,
+            "elapsed_time": 7472.774591207504,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "69b19f284836f6059355167f904a2ab9f4b96992",
+            "commit_message": "[RISCV] Use i64 instead of XLenVT in RV64 only patterns. NFC\n\nThis stops tablegen from generating unneeded entries in\nRISCVGenDAGISel.inc.\n",
+            "commit_timestamp": 1691221766.0
         }
     ]
 }
