@@ -6923,6 +6923,22 @@
             "commit_ref": "34fe58e0bc76eff973c9dd7daeddf13c38d184d9",
             "commit_message": "[lldb] Add a deduction guides for scoped_lock in OptionValue.cpp & ThreadList.cpp (NFC)\n\n/data/llvm-project/lldb/source/Interpreter/OptionValue.cpp:28:3: error: 'scoped_lock' may not intend to support class template argument deduction [-Werror,-Wctad-maybe-unsupported]\n  std::scoped_lock lock(m_mutex, other.m_mutex);\n  ^\n/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../../../include/c++/12/mutex:692:11: note: add a deduction guide to suppress this warning\n    class scoped_lock\n          ^\n1 error generated.\n\n/data/llvm-project/lldb/source/Target/ThreadList.cpp:739:5: error: 'scoped_lock' may not intend to support class template argument deduction [-Werror,-Wctad-maybe-unsupported]\n    std::scoped_lock guard(GetMutex(), rhs.GetMutex());\n    ^\n/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../../../include/c++/12/mutex:692:11: note: add a deduction guide to suppress this warning\n    class scoped_lock\n          ^\n1 error generated.\n",
             "commit_timestamp": 1691193398.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1691209046.730416,
+            "elapsed_time": 7131.342781305313,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "43b8e86bf76648bf0f34f34bc0a606e527decc43",
+            "commit_message": "[llvm-exegesis] enable memory annotation and subprocess tests\n\nThese tests were causing issues on the clang-cmake-x86_64-avx512-linux\nbuilder due to transient failures. I'm unable to reproduce the issue\nlocally now, so we'll see what happens. There were a couple changes in\nbetween disabling them and now that might have an impact.\n",
+            "commit_timestamp": 1691207800.0
         }
     ]
 }
