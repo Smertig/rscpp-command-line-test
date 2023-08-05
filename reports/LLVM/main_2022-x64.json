@@ -6907,6 +6907,22 @@
             "commit_ref": "fe195781ad2f1aaecd5def14f361f3590a17c79e",
             "commit_message": "[hwasan] Enable leak detection in hwasan for Fuchsia by default\n\nDifferential Revision: https://reviews.llvm.org/D157127\n",
             "commit_timestamp": 1691177358.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1691194402.758485,
+            "elapsed_time": 5645.637929677963,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "34fe58e0bc76eff973c9dd7daeddf13c38d184d9",
+            "commit_message": "[lldb] Add a deduction guides for scoped_lock in OptionValue.cpp & ThreadList.cpp (NFC)\n\n/data/llvm-project/lldb/source/Interpreter/OptionValue.cpp:28:3: error: 'scoped_lock' may not intend to support class template argument deduction [-Werror,-Wctad-maybe-unsupported]\n  std::scoped_lock lock(m_mutex, other.m_mutex);\n  ^\n/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../../../include/c++/12/mutex:692:11: note: add a deduction guide to suppress this warning\n    class scoped_lock\n          ^\n1 error generated.\n\n/data/llvm-project/lldb/source/Target/ThreadList.cpp:739:5: error: 'scoped_lock' may not intend to support class template argument deduction [-Werror,-Wctad-maybe-unsupported]\n    std::scoped_lock guard(GetMutex(), rhs.GetMutex());\n    ^\n/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../../../include/c++/12/mutex:692:11: note: add a deduction guide to suppress this warning\n    class scoped_lock\n          ^\n1 error generated.\n",
+            "commit_timestamp": 1691193398.0
         }
     ]
 }
