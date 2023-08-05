@@ -6987,6 +6987,22 @@
             "commit_ref": "ce2ec065165b9c675394e182717b5dec8f3b0535",
             "commit_message": "[X86] Only fold broadcast with extract_vector_elt/scalar_to_vector if the scalar type matches the vector element type\n\nAvoid handling implicit extension/truncation with scalar<->vector transfers\n\nFixes #64439\n",
             "commit_timestamp": 1691247682.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1691266800.10224,
+            "elapsed_time": 8781.115060806274,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "e1a9da3b49d481e5636028da96a633ac388100f3",
+            "commit_message": "[IR] Remove CreateExtractInteger\n\nThe last use was removed by:\n\n  commit 5a7c2f17009460251cc27d9bda183d3272a419ba\n  Author: Eric Christopher <echristo@gmail.com>\n  Date:   Thu Jun 22 22:58:12 2017 +0000\n",
+            "commit_timestamp": 1691264760.0
         }
     ]
 }
