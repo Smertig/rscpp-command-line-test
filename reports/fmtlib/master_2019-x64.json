@@ -7921,6 +7921,20 @@
             "commit_ref": "96d1fa22d4122537f78889cc6e56ae93c833dd88",
             "commit_message": "Update changelog\n",
             "commit_timestamp": 1691254827.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1691352153.1679,
+            "elapsed_time": 117.26331496238708,
+            "x64": false,
+            "actual_files_count": 67,
+            "expected_files_count": 66,
+            "repo_url": "https://github.com/fmtlib/fmt.git",
+            "commit_ref": "aeb6ad4dd0c055cbde42aca6e9a79cf894480ea3",
+            "commit_message": "Added formatter for bit_reference-like types (#3570)\n\n* Add test for std::vector<bool>::reference\r\n\r\nCo-authored-by: Felix <felix-antoine.constantin@polymtl.ca>\r\nSigned-off-by: Vladislav Shchapov <vladislav@shchapov.ru>\r\n\r\n* Add test for std::bitset<N>::reference\r\n\r\nSigned-off-by: Vladislav Shchapov <vladislav@shchapov.ru>\r\n\r\n* Add test for const std::bitset<N>::reference and const std::vector<bool>::reference\r\n\r\nSigned-off-by: Vladislav Shchapov <vladislav@shchapov.ru>\r\n\r\n* Add bit_reference-like formatter\r\n\r\nSigned-off-by: Vladislav Shchapov <vladislav@shchapov.ru>\r\n\r\n* Use std::addressof\r\n\r\nSigned-off-by: Vladislav Shchapov <vladislav@shchapov.ru>\r\n\r\n---------\r\n\r\nSigned-off-by: Vladislav Shchapov <vladislav@shchapov.ru>\r\nCo-authored-by: Felix <felix-antoine.constantin@polymtl.ca>",
+            "commit_timestamp": 1691346990.0
         }
     ]
 }
