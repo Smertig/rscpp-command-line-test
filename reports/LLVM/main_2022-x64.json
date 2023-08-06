@@ -7035,6 +7035,22 @@
             "commit_ref": "a3a7e76893b81934b9aaa4ecfe8f24496c48ddab",
             "commit_message": "[SelectionDAG] Add Opc_CheckPatternPredicate2 to support targets with more than 256 predicates.\n\nThis is an alternative to D156967 where I suggested the author\ncould use a VBR type.\n\nThis patch takes inspirations from Opc_EmitRegister2 that is used\nfor two byte registers.\n\nI'm assuming 1 or 2 byte predicates should be enough so we don't\nneed the fully generality of VBR.\n\nThis avoids impacting the table size on targets that have more than\n128 predicates already like X86.\n\nReviewed By: bogner\n\nDifferential Revision: https://reviews.llvm.org/D157196\n",
             "commit_timestamp": 1691279985.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1691309783.114344,
+            "elapsed_time": 7315.395832777023,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "bd0ed0abc31fa5a49e87eeca7aa872e7f6e4d1e7",
+            "commit_message": "[Clang][SemaCXX] Add unused warning for variables declared in condition expressions\n\nThis patch marks the declarations with initializations in condition expressions such as\nif (int var = init) as unreferenced so that -Wunused can warn on them.\n\nFixes https://github.com/llvm/llvm-project/issues/61681\n\nReviewed By: cor3ntin\nDifferential Revision: https://reviews.llvm.org/D152495\n",
+            "commit_timestamp": 1691306649.0
         }
     ]
 }
