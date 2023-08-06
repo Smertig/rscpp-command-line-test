@@ -7051,6 +7051,22 @@
             "commit_ref": "bd0ed0abc31fa5a49e87eeca7aa872e7f6e4d1e7",
             "commit_message": "[Clang][SemaCXX] Add unused warning for variables declared in condition expressions\n\nThis patch marks the declarations with initializations in condition expressions such as\nif (int var = init) as unreferenced so that -Wunused can warn on them.\n\nFixes https://github.com/llvm/llvm-project/issues/61681\n\nReviewed By: cor3ntin\nDifferential Revision: https://reviews.llvm.org/D152495\n",
             "commit_timestamp": 1691306649.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1691324247.060773,
+            "elapsed_time": 8897.708087444305,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "b8e297d1af5ae42e81b4c79e14a6d2427db0311b",
+            "commit_message": "[OpenMP][libomptarget] Improve kernel initialization in plugins\n\nThis patch modifies the plugins so that the initialization of KernelTy objects\nis done in the init method. Part of the initialization was done in the\nconstructKernelEntry method. Now this method is called constructKernel\nand only allocates and constructs a KernelTy object.\n\nThis patch prepares the kernel class for the new implementation of device\nreductions.\n\nDifferential Revision: https://reviews.llvm.org/D156917\n",
+            "commit_timestamp": 1691315638.0
         }
     ]
 }
