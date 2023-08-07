@@ -7075,6 +7075,20 @@
             "commit_ref": "518486ed3d39ff0d6fbe09f289fda2141a1fa4bd",
             "commit_message": "Added new data types to cv::Mat & UMat (#23865)\n\n* started working on adding 32u, 64u, 64s, bool and 16bf types to OpenCV\r\n\r\n* core & imgproc tests seem to pass\r\n\r\n* fixed a few compile errors and test failures on macOS x86\r\n\r\n* hopefully fixed some compile problems and test failures\r\n\r\n* fixed some more warnings and test failures\r\n\r\n* trying to fix small deviations in perf_core & perf_imgproc by revering randf_64f to exact version used before\r\n\r\n* trying to fix behavior of the new OpenCV with old plugins; there is (quite strong) assumption that video capture would give us frames with depth == CV_8U (0) or CV_16U (2). If depth is > 7 then it means that the plugin is built with the old OpenCV. It needs to be recompiled, of course and then this hack can be removed.\r\n\r\n* try to repair the case when target arch does not have FP64 SIMD\r\n\r\n* 1. fixed bug in itoa() found by alalek\r\n2. restored ==, !=, > and < univ. intrinsics on ARM32/ARM64.\r\n",
             "commit_timestamp": 1691135403.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1691395551.441261,
+            "elapsed_time": 530.5047740936279,
+            "x64": false,
+            "actual_files_count": 491,
+            "expected_files_count": 480,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "518486ed3d39ff0d6fbe09f289fda2141a1fa4bd",
+            "commit_message": "Added new data types to cv::Mat & UMat (#23865)\n\n* started working on adding 32u, 64u, 64s, bool and 16bf types to OpenCV\r\n\r\n* core & imgproc tests seem to pass\r\n\r\n* fixed a few compile errors and test failures on macOS x86\r\n\r\n* hopefully fixed some compile problems and test failures\r\n\r\n* fixed some more warnings and test failures\r\n\r\n* trying to fix small deviations in perf_core & perf_imgproc by revering randf_64f to exact version used before\r\n\r\n* trying to fix behavior of the new OpenCV with old plugins; there is (quite strong) assumption that video capture would give us frames with depth == CV_8U (0) or CV_16U (2). If depth is > 7 then it means that the plugin is built with the old OpenCV. It needs to be recompiled, of course and then this hack can be removed.\r\n\r\n* try to repair the case when target arch does not have FP64 SIMD\r\n\r\n* 1. fixed bug in itoa() found by alalek\r\n2. restored ==, !=, > and < univ. intrinsics on ARM32/ARM64.\r\n",
+            "commit_timestamp": 1691135403.0
         }
     ]
 }
