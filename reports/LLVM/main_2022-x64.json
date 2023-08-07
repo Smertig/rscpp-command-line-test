@@ -7115,6 +7115,22 @@
             "commit_ref": "ef888bc67c726deb8c74ea32e7c8c9ace756b667",
             "commit_message": "[HIP] Make test rocm-detect.hip more stable\n\nSome downstream clang is configured to add -rpath to HIP runtime for ld.\nAlso clang may use code object version by default.\n\nMake this test result not affected by those.\n\nReviewed by: Joseph Huber\n\nDifferential Revision: https://reviews.llvm.org/D157243\n",
             "commit_timestamp": 1691359689.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1691381734.511818,
+            "elapsed_time": 7384.248557329178,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "4225f54bf576daf1555de44f71670bbc7c7e5923",
+            "commit_message": "[InstCombine] Fold abs of known sign operand when source is sub\n\nabs(x-y) --> x-y where x >= y, done on D122013\nabs(x-y) --> y-x where x <= y\n\nproofs: https://alive2.llvm.org/ce/z/KkeEsd\n\nReviewed By: goldstein.w.n, nikic\nDifferential Revision: https://reviews.llvm.org/D156499\n",
+            "commit_timestamp": 1691380511.0
         }
     ]
 }
