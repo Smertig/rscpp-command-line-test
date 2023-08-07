@@ -6663,6 +6663,20 @@
             "commit_ref": "199fb4b94adaff99f3b608bab9c5a65a6eb8d1e7",
             "commit_message": "http3/ngtcp2: shorten handshake, trace cleanup\n\n- shorten handshake timing by delayed x509 store load (OpenSSL)\n  as we do for HTTP/2\n- cleanup of trace output, align with HTTP/2 output\n\nCloses #11609\n",
             "commit_timestamp": 1691421232.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1691438708.869782,
+            "elapsed_time": 320.6625428199768,
+            "x64": false,
+            "actual_files_count": 2754,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "78d6232f1f326b9ab4d6cdf9582d8fcc2207ffcb",
+            "commit_message": "gskit: remove\n\nWe remove support for building curl with gskit.\n\n - This is a niche TLS library, only running on some IBM systems\n - no regular curl contributors use this backend\n - no CI builds use or verify this backend\n - gskit, or the curl adaption for it, lacks many modern TLS features\n   making it an inferior solution\n - build breakages in this code take weeks or more to get detected\n - fixing gskit code is mostly done \"flying blind\"\n\nThis removal has been advertized in DEPRECATED in Jan 2, 2023 and it has\nbeen mentioned on the curl-library mailing list.\n\nIt could be brought back, this is not a ban. Given proper effort and\nwill, gskit support is welcome back into the curl TLS backend family.\n\nCloses #11460\n",
+            "commit_timestamp": 1691434668.0
         }
     ]
 }

@@ -7179,6 +7179,22 @@
             "commit_ref": "fab49721b4ef0b5079194bc09528df78f38c32a8",
             "commit_message": "Revert \"[Clang][OpenMP] Support for Code Generation of loop bind clause\"\n\nThis reverts commit 4097a24584121dba562d471fab97d3dfec1b5bff.\nBreaks tests on macOS, see https://reviews.llvm.org/rG4097a2458412#1235854\n",
             "commit_timestamp": 1691424114.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1691439749.906713,
+            "elapsed_time": 9717.836622953415,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "7cc615413fd7c93421052a193bc3e114465747c9",
+            "commit_message": "[RISCV] Add back handling of X > -1 to ISD::SETCC lowering.\n\nThere are cases where the -1 doesn't become visible until lowering\nso the folding doesn't have a chance to run.\n\nI think in these cases there is a missed DAGCombine for truncate (undef),\nwhich I may fix separately, but RISC-V backend should protect itself.\n\nFixes #64503.\n\nReviewed By: asb\n\nDifferential Revision: https://reviews.llvm.org/D157314\n",
+            "commit_timestamp": 1691438457.0
         }
     ]
 }
