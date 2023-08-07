@@ -6635,6 +6635,20 @@
             "commit_ref": "03c79448e04225acef0f66c97450161c7acb106a",
             "commit_message": "CURLOPT_SSL_VERIFYPEER.3: add two more see also options\n\nCURLINFO_CAINFO and CURLINFO_CAPATH\n\nCloses #11603\n",
             "commit_timestamp": 1691389546.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1691409939.809438,
+            "elapsed_time": 368.1631443500519,
+            "x64": false,
+            "actual_files_count": 2758,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "95ca3c53d3011b936320819c6f1b940dbf75284a",
+            "commit_message": "headers: accept leading whitespaces on first response header\n\nThis is a bad header fold but since the popular browsers accept this\nviolation, so does curl now. Unless built with hyper.\n\nAdd test 1473 to verify and adjust test 2306.\n\nReported-by: junsik on github\nFixes #11605\nCloses #11607\n",
+            "commit_timestamp": 1691405145.0
         }
     ]
 }
