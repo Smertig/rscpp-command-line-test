@@ -6817,6 +6817,20 @@
             "commit_ref": "0b2755f964d9fa6b322ad77660e6e3d50fe7101f",
             "commit_message": "Sync to upstream/release/589 (#1000)\n\n* Progress toward a diffing algorithm for types. We hope that this will\r\nbe useful for writing clearer error messages.\r\n* Add a missing recursion limiter in `Unifier::tryUnifyTables`. This was\r\ncausing a crash in certain situations.\r\n* Luau heap graph enumeration improvements:\r\n    * Weak references are not reported\r\n    * Added tag as a fallback name of non-string table links\r\n* Included top Luau function information in thread name to understand\r\nwhere thread might be suspended\r\n* Constant folding for `math.pi` and `math.huge` at -O2\r\n* Optimize `string.format` and `%*`\r\n* This change makes string interpolation 1.5x-2x faster depending on the\r\nnumber and type of formatted components, assuming a few are using\r\nprimitive types, and reduces associated GC pressure.\r\n\r\nNew type checker:\r\n\r\n* Initial work toward tracking the upper and lower bounds of types\r\naccurately.\r\n\r\nNative code generation (JIT):\r\n\r\n* Add IrCmd::CHECK_TRUTHY for improved assert fast-calls\r\n* Do not compute type map for modules without types\r\n* Capture metatable+readonly state for NEW_TABLE IR instructions\r\n* Replace JUMP_CMP_ANY with CMP_ANY and existing JUMP_EQ_INT\r\n* Add support for exits to VM with reentry lock in VmExit\r\n\r\n---------\r\n\r\nCo-authored-by: Arseny Kapoulkine <arseny.kapoulkine@gmail.com>\r\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>",
             "commit_timestamp": 1691176734.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1691366685.002796,
+            "elapsed_time": 334.013147354126,
+            "x64": false,
+            "actual_files_count": 398,
+            "expected_files_count": 379,
+            "repo_url": "https://github.com/Roblox/luau",
+            "commit_ref": "0b2755f964d9fa6b322ad77660e6e3d50fe7101f",
+            "commit_message": "Sync to upstream/release/589 (#1000)\n\n* Progress toward a diffing algorithm for types. We hope that this will\r\nbe useful for writing clearer error messages.\r\n* Add a missing recursion limiter in `Unifier::tryUnifyTables`. This was\r\ncausing a crash in certain situations.\r\n* Luau heap graph enumeration improvements:\r\n    * Weak references are not reported\r\n    * Added tag as a fallback name of non-string table links\r\n* Included top Luau function information in thread name to understand\r\nwhere thread might be suspended\r\n* Constant folding for `math.pi` and `math.huge` at -O2\r\n* Optimize `string.format` and `%*`\r\n* This change makes string interpolation 1.5x-2x faster depending on the\r\nnumber and type of formatted components, assuming a few are using\r\nprimitive types, and reduces associated GC pressure.\r\n\r\nNew type checker:\r\n\r\n* Initial work toward tracking the upper and lower bounds of types\r\naccurately.\r\n\r\nNative code generation (JIT):\r\n\r\n* Add IrCmd::CHECK_TRUTHY for improved assert fast-calls\r\n* Do not compute type map for modules without types\r\n* Capture metatable+readonly state for NEW_TABLE IR instructions\r\n* Replace JUMP_CMP_ANY with CMP_ANY and existing JUMP_EQ_INT\r\n* Add support for exits to VM with reentry lock in VmExit\r\n\r\n---------\r\n\r\nCo-authored-by: Arseny Kapoulkine <arseny.kapoulkine@gmail.com>\r\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>",
+            "commit_timestamp": 1691176734.0
         }
     ]
 }

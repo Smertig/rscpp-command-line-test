@@ -6453,6 +6453,20 @@
             "commit_ref": "e4c48945643460fca273217b75f3e7b72bb3ed7a",
             "commit_message": "[GDI32] CreateDIBSection: Remove erroneous assignation (#5502)\n\nbmBits is only used and assigned on output. It points (holds the address)\nto the array of DIB bit values. The \"Bits\" parameter is however a pointer\nto a variable that will receive the address of that array.\nSo it makes no sense to initially assign bmBits to the value of the Bits\nparameter...\n",
             "commit_timestamp": 1691336123.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1691366715.877095,
+            "elapsed_time": 112.29193615913391,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "e4c48945643460fca273217b75f3e7b72bb3ed7a",
+            "commit_message": "[GDI32] CreateDIBSection: Remove erroneous assignation (#5502)\n\nbmBits is only used and assigned on output. It points (holds the address)\nto the array of DIB bit values. The \"Bits\" parameter is however a pointer\nto a variable that will receive the address of that array.\nSo it makes no sense to initially assign bmBits to the value of the Bits\nparameter...\n",
+            "commit_timestamp": 1691336123.0
         }
     ]
 }

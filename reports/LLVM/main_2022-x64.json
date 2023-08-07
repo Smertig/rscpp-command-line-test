@@ -7099,6 +7099,22 @@
             "commit_ref": "aac8acb11551225b6a8083102e828154e3e76e47",
             "commit_message": "[VPlan] Model masked assumes as replicate recipes, drop them (NFCI).\n\nReplace ConditionalAssume set by treating conditional assumes like other\npredicated instructions (i.e. create a VPReplicateRecipe with a mask)\nand later remove any assume recipes with masks during VPlan cleanup.\n\nThis reduces coupling of VPlan construction and Legal by removing a\nshared set between the 2 and results in a cleaner code structure\noverall.\n\nReviewed By: Ayal\n\nDifferential Revision: https://reviews.llvm.org/D157034\n",
             "commit_timestamp": 1691351784.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1691367351.42487,
+            "elapsed_time": 6978.234280586243,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "ef888bc67c726deb8c74ea32e7c8c9ace756b667",
+            "commit_message": "[HIP] Make test rocm-detect.hip more stable\n\nSome downstream clang is configured to add -rpath to HIP runtime for ld.\nAlso clang may use code object version by default.\n\nMake this test result not affected by those.\n\nReviewed by: Joseph Huber\n\nDifferential Revision: https://reviews.llvm.org/D157243\n",
+            "commit_timestamp": 1691359689.0
         }
     ]
 }
