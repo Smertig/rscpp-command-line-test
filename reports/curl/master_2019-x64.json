@@ -6705,6 +6705,20 @@
             "commit_ref": "bec0c5bbf34369920598678161d2df8bea0e243b",
             "commit_message": "openssl: switch to modern init for LibreSSL 2.7.0+\n\nLibreSSL 2.7.0 (2018-03-21) introduced automatic initialization,\n`OPENSSL_init_ssl()` function and deprecated the old, manual init\nmethod, as seen in OpenSSL 1.1.0. Switch to the modern method when\navailable.\n\nRef: https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-2.7.0-relnotes.txt\n\nReviewed-by: Daniel Stenberg\nCloses #11611\n",
             "commit_timestamp": 1691452558.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1691481901.426099,
+            "elapsed_time": 416.27505373954773,
+            "x64": false,
+            "actual_files_count": 2754,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "bec0c5bbf34369920598678161d2df8bea0e243b",
+            "commit_message": "openssl: switch to modern init for LibreSSL 2.7.0+\n\nLibreSSL 2.7.0 (2018-03-21) introduced automatic initialization,\n`OPENSSL_init_ssl()` function and deprecated the old, manual init\nmethod, as seen in OpenSSL 1.1.0. Switch to the modern method when\navailable.\n\nRef: https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-2.7.0-relnotes.txt\n\nReviewed-by: Daniel Stenberg\nCloses #11611\n",
+            "commit_timestamp": 1691452558.0
         }
     ]
 }
