@@ -3961,6 +3961,20 @@
             "commit_ref": "bea5f93196d213d6fbf4ba8984caf4c3cd1da882",
             "commit_message": "gh-107735: Add C API tests for PySys_GetObject() and PySys_SetObject() (GH-107736)\n\n",
             "commit_timestamp": 1691436541.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1691453359.330415,
+            "elapsed_time": 1440.1646835803986,
+            "x64": true,
+            "actual_files_count": 901,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "707018cc75558d6695e9e199a3ed0c8a4ff7cbcc",
+            "commit_message": "gh-107630: Fix Remaining Subinterpreters Crashes on Py_TRACE_REFS Builds (gh-107750)\n\nThis is a follow-up to gh-107567 and gh-107733.\r\n\r\nWe skip test_basic_multiple_interpreters_deleted_no_reset on tracerefs builds.  The test breaks interpreter isolation a little, which doesn't work well with Py_TRACE_REFS builds, so I feel fine about skipping the test.",
+            "commit_timestamp": 1691449857.0
         }
     ]
 }

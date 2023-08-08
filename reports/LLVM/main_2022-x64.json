@@ -7195,6 +7195,22 @@
             "commit_ref": "7cc615413fd7c93421052a193bc3e114465747c9",
             "commit_message": "[RISCV] Add back handling of X > -1 to ISD::SETCC lowering.\n\nThere are cases where the -1 doesn't become visible until lowering\nso the folding doesn't have a chance to run.\n\nI think in these cases there is a missed DAGCombine for truncate (undef),\nwhich I may fix separately, but RISC-V backend should protect itself.\n\nFixes #64503.\n\nReviewed By: asb\n\nDifferential Revision: https://reviews.llvm.org/D157314\n",
             "commit_timestamp": 1691438457.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1691453999.30034,
+            "elapsed_time": 7479.134444952011,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "211692137af45fcf6d6b14582e004a746f9e5b2e",
+            "commit_message": "[InstCombine] Fold `select` of `srem` and conditional add\n\nSimplify a pattern that may show up when computing\nthe remainder of euclidean division. Particularly,\nwhen the divisor is a power of two and never negative,\nthe signed remainder can be folded with a bitwise and.\n\nFixes 64305.\n\nProofs: https://alive2.llvm.org/ce/z/9_KG6c\n\nDifferential Revision: https://reviews.llvm.org/D156811\n",
+            "commit_timestamp": 1691452936.0
         }
     ]
 }

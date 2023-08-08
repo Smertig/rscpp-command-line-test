@@ -6677,6 +6677,20 @@
             "commit_ref": "78d6232f1f326b9ab4d6cdf9582d8fcc2207ffcb",
             "commit_message": "gskit: remove\n\nWe remove support for building curl with gskit.\n\n - This is a niche TLS library, only running on some IBM systems\n - no regular curl contributors use this backend\n - no CI builds use or verify this backend\n - gskit, or the curl adaption for it, lacks many modern TLS features\n   making it an inferior solution\n - build breakages in this code take weeks or more to get detected\n - fixing gskit code is mostly done \"flying blind\"\n\nThis removal has been advertized in DEPRECATED in Jan 2, 2023 and it has\nbeen mentioned on the curl-library mailing list.\n\nIt could be brought back, this is not a ban. Given proper effort and\nwill, gskit support is welcome back into the curl TLS backend family.\n\nCloses #11460\n",
             "commit_timestamp": 1691434668.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1691453243.365512,
+            "elapsed_time": 433.64993691444397,
+            "x64": false,
+            "actual_files_count": 2754,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "bec0c5bbf34369920598678161d2df8bea0e243b",
+            "commit_message": "openssl: switch to modern init for LibreSSL 2.7.0+\n\nLibreSSL 2.7.0 (2018-03-21) introduced automatic initialization,\n`OPENSSL_init_ssl()` function and deprecated the old, manual init\nmethod, as seen in OpenSSL 1.1.0. Switch to the modern method when\navailable.\n\nRef: https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-2.7.0-relnotes.txt\n\nReviewed-by: Daniel Stenberg\nCloses #11611\n",
+            "commit_timestamp": 1691452558.0
         }
     ]
 }
