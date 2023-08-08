@@ -8051,6 +8051,20 @@
             "commit_ref": "cd60a0301cf8dd8da076166ad865f21325bc24fe",
             "commit_message": "Assert Info reset need to also reset result disposition to normal to handle uncaught exception correctly (#2723)\n\n* AssertionEnd does not reset the assertion info yet. That is done after populateReaction. And reset assertion info would also reset the result disposition to normal, so that any uncaught exception would be reported as failure\r\n\r\n* Approving test output changes due to added unit tests\r\n\r\n* Unit tests to throw std::runtime_error instead of std::exception\r\n\r\n* Add a unit test to test incomplete assertion handler\r\n\r\n---------\r\n\r\nCo-authored-by: Ross <ross.tang@gfo-x.com>",
             "commit_timestamp": 1691438851.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1691496258.075421,
+            "elapsed_time": 125.90345907211304,
+            "x64": false,
+            "actual_files_count": 273,
+            "expected_files_count": 272,
+            "repo_url": "https://github.com/catchorg/Catch2.git",
+            "commit_ref": "cd60a0301cf8dd8da076166ad865f21325bc24fe",
+            "commit_message": "Assert Info reset need to also reset result disposition to normal to handle uncaught exception correctly (#2723)\n\n* AssertionEnd does not reset the assertion info yet. That is done after populateReaction. And reset assertion info would also reset the result disposition to normal, so that any uncaught exception would be reported as failure\r\n\r\n* Approving test output changes due to added unit tests\r\n\r\n* Unit tests to throw std::runtime_error instead of std::exception\r\n\r\n* Add a unit test to test incomplete assertion handler\r\n\r\n---------\r\n\r\nCo-authored-by: Ross <ross.tang@gfo-x.com>",
+            "commit_timestamp": 1691438851.0
         }
     ]
 }
