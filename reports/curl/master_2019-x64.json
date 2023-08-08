@@ -6733,6 +6733,20 @@
             "commit_ref": "9bca45dba81d77de06757ce13fc9193e09e010b5",
             "commit_message": "ngtcp2: remove dead code\n\n'result' is always zero (CURLE_OK) at this point\n\nDetected by Coverity\n\nCloses #11622\n",
             "commit_timestamp": 1691490588.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1691510793.502108,
+            "elapsed_time": 378.9355318546295,
+            "x64": false,
+            "actual_files_count": 2754,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "a9c1e28160b8b42f17bd7cdd27808c4649410c5c",
+            "commit_message": "list-only.d: mention SFTP as supported protocol\n\nCloses #11628\n",
+            "commit_timestamp": 1691507429.0
         }
     ]
 }
