@@ -7339,6 +7339,22 @@
             "commit_ref": "c4769ef59c07bcb8c1ab0d9c0fe6e9ef319ffa6a",
             "commit_message": "[mlir][Conversion] Re-submit: Implement ConvertToLLVMPatternInterface (1)\n\nThis is a resubmit of the original D157391 change, which was reverted\nbecause it needed special handling for the async dialect. (I removed it\nfrom this change.)\n\nImplement ConvertToLLVMPatternInterface for more dialects: arith,\ncomplex, cf.\n\nDifferential Revision: https://reviews.llvm.org/D157391\n",
             "commit_timestamp": 1691567857.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1691583438.471746,
+            "elapsed_time": 7205.244945526123,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "2ef7e2085fd62615e32c3c71348c2ec0317d31c3",
+            "commit_message": "[MLIR] Enable converting dialect attributes on external functions\n\nThis patch modifies the MLIR-to-LLVMIR translation pass to enable dialect\nattributes attached to external functions being processed by the corresponding\ndialect's translation interface via `amendOperation()`.\n\nDifferential Revision: https://reviews.llvm.org/D156988\n",
+            "commit_timestamp": 1691581847.0
         }
     ]
 }
