@@ -6705,6 +6705,20 @@
             "commit_ref": "ba53f72a87f5abd3c1abfaf59ebaeb31d2ad7e49",
             "commit_message": "[MSPAINT] Send mail with image (retry) (#5404)\n\n- Add OpenMailer function.\r\n- Add IDS_CANTSENDMAIL.\r\n- Send a mail by using mapi32!MAPISendMail/W.\r\n- Extend SaveDIBToFile function by adding a\r\n  parameter.\r\nCORE-19094",
             "commit_timestamp": 1691593174.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1691625878.244113,
+            "elapsed_time": 132.58140087127686,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "893715b72267723cb2a40052f4cea8453e2d1eb0",
+            "commit_message": "[MSPAINT] Fix focus and radiobuttons of some dialogs (#5537)\n\n- Return TRUE on WM_INITDIALOG handling to set focus.\r\n- Check if the radiobutton is checked on the radiobutton action\r\n  (considering BN_SETFOCUS etc.).\r\nCORE-18011",
+            "commit_timestamp": 1691623255.0
         }
     ]
 }

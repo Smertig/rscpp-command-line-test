@@ -7387,6 +7387,22 @@
             "commit_ref": "f542497182851ea1d8f4689a402238c78c42b40a",
             "commit_message": "[test] Simplify MC/PowerPC/ppc32-R_PPC_DTPREL32-reloc.s after D156953\n\nApply a review comment from me that is unaddressed.\n",
             "commit_timestamp": 1691611174.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1691626560.256112,
+            "elapsed_time": 8898.263561487198,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "ec129c28af58d8200538184cab0ec659c437095d",
+            "commit_message": "[YAML][NFC] Use BumpPtrAllocator instead of unique_ptrs\n\nAvoid both memory leaks and expensive dynamic allocations by using\nSpecificBumpPtrAllocator for HNode types. It's expected they're not deallocated\nuntil the `Input` class is destroyed, so deallocating all at once works well in\nthis case.\n\nReduces YAML profile pre-processing time in BOLT from\n>   11.2067 (  3.2%)   1.6487 (  7.3%)  12.8554 (  3.5%)  12.8635 (  5.6%)  pre-process profile data\nto\n>   10.6613 (  3.1%)   1.6489 (  6.7%)  12.3102 (  3.3%)  12.3134 (  5.3%)  pre-process profile data\n\nReviewed By: dblaikie\n\nDifferential Revision: https://reviews.llvm.org/D155006\n",
+            "commit_timestamp": 1691624545.0
         }
     ]
 }
