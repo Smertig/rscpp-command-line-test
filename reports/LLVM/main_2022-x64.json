@@ -7435,6 +7435,22 @@
             "commit_ref": "513d47c65aa64fa25a1848de3a1cb0bdacc36a90",
             "commit_message": "[FunctionAttrs] Extract some code into separate functions (NFC)\n\nTo reduce diff in a future patch.\n",
             "commit_timestamp": 1691654563.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1691669838.051332,
+            "elapsed_time": 7964.8712837696075,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "7d259b36d2e8148d13087844e6494ad3a5c63edf",
+            "commit_message": "Revert \"[Sema] Fix handling of functions that hide classes\"\n\nThis reverts commit d031ff38779bd688c514136dbdcce3169ee82b6e.\nSee https://reviews.llvm.org/D154503#4576393 for a reproducer and\ndetails.\n",
+            "commit_timestamp": 1691669160.0
         }
     ]
 }

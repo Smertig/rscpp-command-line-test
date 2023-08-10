@@ -6747,6 +6747,20 @@
             "commit_ref": "893715b72267723cb2a40052f4cea8453e2d1eb0",
             "commit_message": "[MSPAINT] Fix focus and radiobuttons of some dialogs (#5537)\n\n- Return TRUE on WM_INITDIALOG handling to set focus.\r\n- Check if the radiobutton is checked on the radiobutton action\r\n  (considering BN_SETFOCUS etc.).\r\nCORE-18011",
             "commit_timestamp": 1691623255.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1691669072.214768,
+            "elapsed_time": 132.0062448978424,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "b9958c7be7e5df9a602fb9cbcd0338cf30c15012",
+            "commit_message": "[XDK] Fix definition of KeRaiseIrqlToSynchLevel for x64 UP\n",
+            "commit_timestamp": 1691667989.0
         }
     ]
 }
