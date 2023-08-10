@@ -7467,6 +7467,22 @@
             "commit_ref": "b1ada7a1d31ee28a7c0e57268c6c6fe24931f25d",
             "commit_message": "[DAG] Support store merging of vector constant stores (try 2)\n\nOriginal commit didn't handle the case where one of the stores was a\ntruncating store of the build_vector.  The existing codepath produced\nwrong code (which thankfully also failed asserts) instead of guarding\nagainst unexpected types.  Original commit message follows..\n\nRan across this when making a change to RISCV memset lowering. Seems\nvery odd that manually merging a store into a vector prevents it from\nbeing further merged.\n\nDifferential Revision: https://reviews.llvm.org/D156349\n",
             "commit_timestamp": 1691682845.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1691698378.2712,
+            "elapsed_time": 7773.513194322586,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "8a15bdb5e637f81041591d97bea0267b5f053f16",
+            "commit_message": "[NFC][xray] Fix enable_if usage in XRay.h\n\nThe original usage of enable_if does not actually lookup\nthe nested type called type, so the SFINAE does not kick in.\n\nDifferential Revision: https://reviews.llvm.org/D157240\n",
+            "commit_timestamp": 1691696220.0
         }
     ]
 }
