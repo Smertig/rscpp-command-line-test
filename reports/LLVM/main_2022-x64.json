@@ -7483,6 +7483,22 @@
             "commit_ref": "8a15bdb5e637f81041591d97bea0267b5f053f16",
             "commit_message": "[NFC][xray] Fix enable_if usage in XRay.h\n\nThe original usage of enable_if does not actually lookup\nthe nested type called type, so the SFINAE does not kick in.\n\nDifferential Revision: https://reviews.llvm.org/D157240\n",
             "commit_timestamp": 1691696220.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1691713003.153113,
+            "elapsed_time": 7217.748050689697,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "5a4171efdf5dcc640de3af5fdfdc8f022af31894",
+            "commit_message": "[flang] Fix -Wstring-conversion in PPCIntrinsicCall.cpp (NFC)\n\n/Users/jiefu/llvm-project/flang/lib/Optimizer/Builder/PPCIntrinsicCall.cpp:1785:16: error: implicit conversion turns string literal into bool: 'const char[21]' to 'bool' [-Werror,-Wstring-conversion]\n        assert(\"invalid element size\");\n        ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~\n",
+            "commit_timestamp": 1691711761.0
         }
     ]
 }

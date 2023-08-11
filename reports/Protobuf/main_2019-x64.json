@@ -7913,6 +7913,20 @@
             "commit_ref": "b359e5020a68ce84faec5952100ae482e9eb0b1c",
             "commit_message": "Lock down ctype=CORD in proto file.\n\nctype can not be used for none string/bytes fields. ctye=CORD can not be used for extensions. A new macro PROTOBUF_FUTURE_REMOVE_WRONG_CTYPE is added that will be flipped for our next breaking release.\n\nPiperOrigin-RevId: 555615362\n",
             "commit_timestamp": 1691697386.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1691712361.392391,
+            "elapsed_time": 523.7177765369415,
+            "x64": false,
+            "actual_files_count": 844,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "2eee41224e2eac1aa4e8e8f4a28ff11748e49a41",
+            "commit_message": "Remove editions test proto from setup.py.\n\nThis proto is only used in C++ tests, and doesn't need to be built in python.  Python doesn't support editions yet, so we should just remove it for now.  This also fixes some other issues with setup.py where tests fail.\n\nCloses #13501\n\nPiperOrigin-RevId: 555681295\n",
+            "commit_timestamp": 1691707452.0
         }
     ]
 }
