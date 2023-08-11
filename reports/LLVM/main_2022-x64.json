@@ -7547,6 +7547,22 @@
             "commit_ref": "6e0fc88836a8ecc4520f6be09d392c03e21d8b40",
             "commit_message": "Fix examples after C2x renaming\n\nThis amends 0ce056a814f8dbfd8d9b7720ce1df489c6ba5ddb and fixes an\nexample that was not built locally for me.\n",
             "commit_timestamp": 1691755277.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1691770404.993892,
+            "elapsed_time": 6743.925181150436,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "d0e54e377b5771f3cafc8a4772710f25dc0ac437",
+            "commit_message": "[AMDGPU] Extend CalculateByteProvider to capture vectors and signed\n\nDifferential Revision: https://reviews.llvm.org/D157133\n\nChange-Id: I9ba8727b4ac5a627de2f7d87d2169eb79e01f0ee\n",
+            "commit_timestamp": 1691768837.0
         }
     ]
 }

@@ -7425,6 +7425,20 @@
             "commit_ref": "3c9e84351152e383a36344e2d7b3125bd9dc30f0",
             "commit_message": "Merge pull request #4151 from jcfr/fix-multiComponentVTK-test\n\nENH: Ensure 3D multi-components conversion in image_from_vtk_image is tested",
             "commit_timestamp": 1691661042.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1691770317.16406,
+            "elapsed_time": 485.36874198913574,
+            "x64": false,
+            "actual_files_count": 100,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "89d3c3c0158806ab44a33d3c76b436537864398e",
+            "commit_message": "COMP: Adjust check that all arguments of MakePoint/Vector have same type\n\nThe original `assertSameType` lambda's appeared to trigger compile errors from\nMSVC, as reported by D\u017eenan Zuki\u0107 at https://github.com/InsightSoftwareConsortium/ITK/issues/4153\n\"ITK does not compile with VS2022 17.7.0\", like:\n\n> Modules\\Core\\Common\\include\\itkPoint.h(369,45): error C2187: syntax error: 'attribute specifier' was unexpected here\n> Modules\\Core\\Common\\test\\itkPointGTest.cxx(63,57): message : see reference to function template instantiation 'auto itk::MakePoint<int,>(const TValue)' being compiled\n> Modules\\Core\\Common\\include\\itkPoint.h(367,1): error C2938: 'itk::MakePoint::<lambda_706d090a84c31981802e12f4e9361bdf>::<lambda_typedef_cdecl>' : Failed to specialize alias template\n> Modules\\Core\\Common\\include\\itkPoint.h(367,1): message : see reference to alias template instantiation 'itk::MakePoint::<lambda_706d090a84c31981802e12f4e9361bdf>::<lambda_typedef_cdecl><_T1>' being compiled\n\nThis appears to be caused by a compiler bug from MSVC Compiler Version 19.37.32822.\n\nInstead of these `assertSameType` lambda, with this commit, both `MakePoint` and\n`MakeVector` make use of class template argument deduction (CTAD), as supported\nby `std::array`. The deduction guide of std::array ensures that all values have\nthe same type.\n",
+            "commit_timestamp": 1691762949.0
         }
     ]
 }

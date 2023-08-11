@@ -7997,6 +7997,20 @@
             "commit_ref": "1c64a36c5b8ee75d462b3fe7a9d020c66a2a1094",
             "commit_message": "[perf-counters] Fix pause/resume (#1643)\n\n* [perf-counters] Fix pause/resume\r\n\r\nUsing `state.PauseTiming() / state.ResumeTiming()` was broken.\r\n\r\nThanks [@virajbshah] for the the repro testcase.\r\n\r\n* ran clang-format over the whole perf_counters_test.cc\r\n\r\n* Remove check that perf counters are 0 on `Pause`, since `Pause`/`Resume`\r\nsequences would cause a non-0 counter value\r\n\r\n* both upper and lower bound for the with/without resume counters\r\n\r\n---------\r\n\r\nCo-authored-by: dominic <510002+dmah42@users.noreply.github.com>",
             "commit_timestamp": 1691754396.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1691769865.310706,
+            "elapsed_time": 99.30804538726807,
+            "x64": false,
+            "actual_files_count": 91,
+            "expected_files_count": 86,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "1c64a36c5b8ee75d462b3fe7a9d020c66a2a1094",
+            "commit_message": "[perf-counters] Fix pause/resume (#1643)\n\n* [perf-counters] Fix pause/resume\r\n\r\nUsing `state.PauseTiming() / state.ResumeTiming()` was broken.\r\n\r\nThanks [@virajbshah] for the the repro testcase.\r\n\r\n* ran clang-format over the whole perf_counters_test.cc\r\n\r\n* Remove check that perf counters are 0 on `Pause`, since `Pause`/`Resume`\r\nsequences would cause a non-0 counter value\r\n\r\n* both upper and lower bound for the with/without resume counters\r\n\r\n---------\r\n\r\nCo-authored-by: dominic <510002+dmah42@users.noreply.github.com>",
+            "commit_timestamp": 1691754396.0
         }
     ]
 }
