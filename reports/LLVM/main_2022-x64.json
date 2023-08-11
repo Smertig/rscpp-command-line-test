@@ -7563,6 +7563,22 @@
             "commit_ref": "d0e54e377b5771f3cafc8a4772710f25dc0ac437",
             "commit_message": "[AMDGPU] Extend CalculateByteProvider to capture vectors and signed\n\nDifferential Revision: https://reviews.llvm.org/D157133\n\nChange-Id: I9ba8727b4ac5a627de2f7d87d2169eb79e01f0ee\n",
             "commit_timestamp": 1691768837.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1691785055.225924,
+            "elapsed_time": 7363.049749135971,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "e789bcbb967f391d4f641bc8fa0403a45039a592",
+            "commit_message": "[clang][NFC] Robustify testcase\n\nProtect this testcase from 'cleanup' appearing in metadata due to a pathname.\n\nReviewed By: jroelofs, bruno\n\nDifferential Revision: https://reviews.llvm.org/D157661\n",
+            "commit_timestamp": 1691783992.0
         }
     ]
 }
