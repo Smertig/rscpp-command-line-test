@@ -6971,6 +6971,20 @@
             "commit_ref": "e1356f4c4595daef3af2fee339546f6b89465d77",
             "commit_message": "curl/urlapi.h: tiny typo\n",
             "commit_timestamp": 1691738231.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1691755502.439053,
+            "elapsed_time": 369.3078088760376,
+            "x64": false,
+            "actual_files_count": 2754,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "c7056759beb96bff06d0aea39d39b716acd2b587",
+            "commit_message": "curl_quiche: remove superfluous NULL check\n\n'stream' is always non-NULL at this point\n\nPointed out by Coverity\n\nCloses #11656\n",
+            "commit_timestamp": 1691746997.0
         }
     ]
 }
