@@ -7579,6 +7579,22 @@
             "commit_ref": "e789bcbb967f391d4f641bc8fa0403a45039a592",
             "commit_message": "[clang][NFC] Robustify testcase\n\nProtect this testcase from 'cleanup' appearing in metadata due to a pathname.\n\nReviewed By: jroelofs, bruno\n\nDifferential Revision: https://reviews.llvm.org/D157661\n",
             "commit_timestamp": 1691783992.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1691799379.615082,
+            "elapsed_time": 7431.550515413284,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "e86be1fd303ec3bed3b8ff8e7e871aa06e3d23fb",
+            "commit_message": "ValueTracking: frexp never introduces poison\n",
+            "commit_timestamp": 1691798098.0
         }
     ]
 }
