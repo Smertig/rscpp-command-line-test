@@ -7643,6 +7643,22 @@
             "commit_ref": "bd7c6e3c48e9281ceeaae3a93cc493b35a3c9f29",
             "commit_message": "[AMDGPU] Precommit lit test for wwm-reg AV spill pseudos D155646.\n",
             "commit_timestamp": 1691837298.0
+        },
+        {
+            "tool_version": "232.0.20230713.141352-eap09",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1691857004.697502,
+            "elapsed_time": 7660.445987462997,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "45500fa08acdf3849de9de470cdee5f4c8ee2f32",
+            "commit_message": "[libc++] Fix the signature of std::rotl and std::rotr\n\n- Changed parameters type in `std::rotr` and `std::rorl` functions from `unsigned int` to `int`.\n- Implemented behaviour for negative parameter values.\n\nFixes #64544\n\nReviewed By: #libc, philnik\n\nSpies: arichardson, philnik, libcxx-commits\n\nDifferential Revision: https://reviews.llvm.org/D157569\n",
+            "commit_timestamp": 1691855171.0
         }
     ]
 }
