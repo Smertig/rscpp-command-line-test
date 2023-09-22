@@ -7707,6 +7707,22 @@
             "commit_ref": "62a3d84f5cef96bd2d4d349807e1d55a8e077963",
             "commit_message": "[libc][NFC] Extend ErrnoSetterMatcher to test expected inequalities. (#67153)\n\nBefore this change, ErrnoSetterMatcher only allowed testing for equality\r\nof the expected return and errno values. This change extends it to allow\r\ntesting for expected inequalities of the return and errno values. The\r\ntest libc.test.src.stdio.fileop_test has been updated to use the\r\nErrnoSetterMatcher with tests for inequalities.",
             "commit_timestamp": 1695398350.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1695414069.687252,
+            "elapsed_time": 9803.569010019302,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "64d1ceaa3884608c97f8457de6ab64a038ea49d8",
+            "commit_message": "Add command line option --no-trap-after-noreturn (#67051)\n\nAdd the command line option --no-trap-after-noreturn, which exposes the\r\npre-existing TargetOption `NoTrapAfterNoreturn`.\r\n\r\nThis pull request was split off from this one:\r\nhttps://github.com/llvm/llvm-project/pull/65876",
+            "commit_timestamp": 1695413001.0
         }
     ]
 }
