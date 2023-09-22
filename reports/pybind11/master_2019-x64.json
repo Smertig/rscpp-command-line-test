@@ -8445,6 +8445,20 @@
             "commit_ref": "5891867ee4ad1d671e0f54c5fb30f62d1322d8d0",
             "commit_message": "fix(cmake): support DEBUG_POSTFIX correctly (#4761)\n\n* cmake: split extension\r\n\r\nInto suffix and debug postfix. Pybind11 is currently treating both as\r\nsuffix, which is problematic when something else defines the\r\nDEBUG_POSTFIX because they will be concatenated.\r\n\r\npybind11_extension sets SUFFIX to _d.something and if DEBUG_POSTFIX is\r\nset to _d.\r\n\r\n    _d + _d.something = _d_d.something\r\n\r\nThe issue has been reported at:\r\n\r\nhttps://github.com/pybind/pybind11/issues/4699\r\n\r\n* style: pre-commit fixes\r\n\r\n* fix(cmake): support postfix for old FindPythonInterp mode too\r\n\r\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\r\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>\r\nCo-authored-by: Henry Schreiner <henryschreineriii@gmail.com>",
             "commit_timestamp": 1694815543.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1695398637.998216,
+            "elapsed_time": 177.20654726028442,
+            "x64": false,
+            "actual_files_count": 213,
+            "expected_files_count": 197,
+            "repo_url": "https://github.com/pybind/pybind11",
+            "commit_ref": "5891867ee4ad1d671e0f54c5fb30f62d1322d8d0",
+            "commit_message": "fix(cmake): support DEBUG_POSTFIX correctly (#4761)\n\n* cmake: split extension\r\n\r\nInto suffix and debug postfix. Pybind11 is currently treating both as\r\nsuffix, which is problematic when something else defines the\r\nDEBUG_POSTFIX because they will be concatenated.\r\n\r\npybind11_extension sets SUFFIX to _d.something and if DEBUG_POSTFIX is\r\nset to _d.\r\n\r\n    _d + _d.something = _d_d.something\r\n\r\nThe issue has been reported at:\r\n\r\nhttps://github.com/pybind/pybind11/issues/4699\r\n\r\n* style: pre-commit fixes\r\n\r\n* fix(cmake): support postfix for old FindPythonInterp mode too\r\n\r\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\r\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>\r\nCo-authored-by: Henry Schreiner <henryschreineriii@gmail.com>",
+            "commit_timestamp": 1694815543.0
         }
     ]
 }
