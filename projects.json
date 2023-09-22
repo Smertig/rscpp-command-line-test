@@ -55,7 +55,8 @@
             "mem traffic": 5150
         },
         "cmake options": [
-            "-DVTK_BUILD_TESTING=ON"
+            "-DVTK_BUILD_TESTING=ON",
+            "-DVTK_USE_MPI=OFF"
         ],
         "latest": {
             "master": {
@@ -1144,7 +1145,7 @@
                 "known errors": [
                     {
                         "file": "..\\third-party\\zlib\\gzlib.c",
-                        "line": 310,
+                        "line": 288,
                         "message": "Ambiguous symbol 'wchar_t'",
                         "reason": "TODO"
                     },
@@ -1164,6 +1165,7 @@
             "repo": "https://github.com/python/cpython",
             "commit": "e6373c0d8b59512aa7f0dea7f3fb162b6ed10fa4"
         },
+        "required toolchain": ["2022-x64"],
         "custom build tool": {
             "build step": [
                 "PCbuild\\build.bat"
