@@ -7551,6 +7551,20 @@
             "commit_ref": "a6748df587a340ef3c2050cf551f8faf1fff3ae8",
             "commit_message": "Merge branch 4.x\n",
             "commit_timestamp": 1691505137.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1695384397.411666,
+            "elapsed_time": 593.3691456317902,
+            "x64": false,
+            "actual_files_count": 492,
+            "expected_files_count": 480,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "416bf3253d1386b61bb6c423d84ee54e729f085c",
+            "commit_message": "attempt to add 0d/1d mat support to OpenCV (#23473)\n\n* attempt to add 0d/1d mat support to OpenCV\r\n\r\n* revised the patch; now 1D mat is treated as 1xN 2D mat rather than Nx1.\r\n\r\n* a step towards 'green' tests\r\n\r\n* another little step towards 'green' tests\r\n\r\n* calib test failures seem to be fixed now\r\n\r\n* more fixes _core & _dnn\r\n\r\n* another step towards green ci; even 0D mat's (a.k.a. scalars) are now partly supported!\r\n\r\n* * fixed strange bug in aruco/charuco detector, not sure why it did not work\r\n* also fixed a few remaining failures (hopefully) in dnn & core\r\n\r\n* disabled failing GAPI tests - too complex to dig into this compiler pipeline\r\n\r\n* hopefully fixed java tests\r\n\r\n* trying to fix some more tests\r\n\r\n* quick followup fix\r\n\r\n* continue to fix test failures and warnings\r\n\r\n* quick followup fix\r\n\r\n* trying to fix some more tests\r\n\r\n* partly fixed support for 0D/scalar UMat's\r\n\r\n* use updated parseReduce() from upstream\r\n\r\n* trying to fix the remaining test failures\r\n\r\n* fixed [ch]aruco tests in Python\r\n\r\n* still trying to fix tests\r\n\r\n* revert \"fix\" in dnn's CUDA tensor\r\n\r\n* trying to fix dnn+CUDA test failures\r\n\r\n* fixed 1D umat creation\r\n\r\n* hopefully fixed remaining cuda test failures\r\n\r\n* removed training whitespaces",
+            "commit_timestamp": 1695309878.0
         }
     ]
 }

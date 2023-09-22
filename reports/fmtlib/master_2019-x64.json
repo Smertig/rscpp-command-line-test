@@ -8467,6 +8467,20 @@
             "commit_ref": "7529af8f991e138669f277c7b8ce2c3d9130aa22",
             "commit_message": "Workaround intel bug (#3652)\n\n* Workaround intel bug\r\n\r\nPotential workaround / restructure for the intel bug that is the cause of #3645.\r\n\r\nMake the variable in the external struct instead an embedded static constexpr variable in the only function that uses the variable.\r\n\r\n* Finish the proposed change -- remove struct accessor\r\n\r\n* Refactor proposed intel fix.\r\n\r\nMoved variable out of function to avoid specialization on Float.  Made it a separate function that is called from format_float.\r\n\r\n* Fix incorrect function name.\r\n\r\n* Add missing inline.",
             "commit_timestamp": 1695261475.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1695384206.251913,
+            "elapsed_time": 106.62770557403564,
+            "x64": false,
+            "actual_files_count": 66,
+            "expected_files_count": 66,
+            "repo_url": "https://github.com/fmtlib/fmt.git",
+            "commit_ref": "7529af8f991e138669f277c7b8ce2c3d9130aa22",
+            "commit_message": "Workaround intel bug (#3652)\n\n* Workaround intel bug\r\n\r\nPotential workaround / restructure for the intel bug that is the cause of #3645.\r\n\r\nMake the variable in the external struct instead an embedded static constexpr variable in the only function that uses the variable.\r\n\r\n* Finish the proposed change -- remove struct accessor\r\n\r\n* Refactor proposed intel fix.\r\n\r\nMoved variable out of function to avoid specialization on Float.  Made it a separate function that is called from format_float.\r\n\r\n* Fix incorrect function name.\r\n\r\n* Add missing inline.",
+            "commit_timestamp": 1695261475.0
         }
     ]
 }
