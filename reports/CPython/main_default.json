@@ -4479,6 +4479,20 @@
             "commit_ref": "612400d4463b86201da407ae65ea45f426b8a4cb",
             "commit_message": "Fix indentation in 3.13 What's New (#109769)\n\nThe previous layout made it look like the other three deprecations are part of the first one, when in fact they are independent.\r\n\r\nThe new layout is consistent with that used for sqlite3 in 3.12 (https://docs.python.org/3.13/whatsnew/3.12.html#deprecated).",
             "commit_timestamp": 1695440726.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1695456500.162905,
+            "elapsed_time": 1164.9065434932709,
+            "x64": true,
+            "actual_files_count": 922,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "e8be0c9c5a7c2327b3dd64009f45ee0682322dcb",
+            "commit_message": "gh-109653: `typing.py`: improve import time by creating soft-deprecated members on demand (#109651)\n\nCo-authored-by: Thomas Grainger <tagrain@gmail.com>",
+            "commit_timestamp": 1695455195.0
         }
     ]
 }
