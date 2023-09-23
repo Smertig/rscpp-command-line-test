@@ -7069,6 +7069,20 @@
             "commit_ref": "ed9973f876214895683144fa85a61d4695191b60",
             "commit_message": "[MSPAINT] Introduce Ctrl+Plus / Ctrl+Minus (#5717)\n\n- Add Ctrl+Plus and Ctrl+Minus accelerators.\r\n- Add IDM_CTRL_PLUS and IDM_CTRL_MINUS\r\n  commands.\r\n- Stretch the selection area on IDM_CTRL_PLUS\r\n  and IDM_CTRL_MINUS actions.\r\nCORE-19094",
             "commit_timestamp": 1695428771.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1695470603.026366,
+            "elapsed_time": 117.4939911365509,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "88808bad8a29213bc51ca54db265e9425a457981",
+            "commit_message": "[RPCRT4] Fix x64 assembly code\n\nmovaps is a 128 bit aligned move, we need a 64 bit unaligned move, so use movsd.\nFixes a crash in oleaut32_winetest tmarshal.\nAlso add a comment about the use of movd instead of movq.\n",
+            "commit_timestamp": 1695456384.0
         }
     ]
 }
