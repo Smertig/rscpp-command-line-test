@@ -4465,6 +4465,20 @@
             "commit_ref": "b03a791497ff4b3c42805e06c73d08ac34087402",
             "commit_message": "gh-109706: Fix multiprocessing test_nested_startmethod() (#109707)\n\nDon't check order, queue items can be written in any order.",
             "commit_timestamp": 1695419372.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1695442074.347957,
+            "elapsed_time": 1575.971328496933,
+            "x64": true,
+            "actual_files_count": 922,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "612400d4463b86201da407ae65ea45f426b8a4cb",
+            "commit_message": "Fix indentation in 3.13 What's New (#109769)\n\nThe previous layout made it look like the other three deprecations are part of the first one, when in fact they are independent.\r\n\r\nThe new layout is consistent with that used for sqlite3 in 3.12 (https://docs.python.org/3.13/whatsnew/3.12.html#deprecated).",
+            "commit_timestamp": 1695440726.0
         }
     ]
 }
