@@ -7787,6 +7787,22 @@
             "commit_ref": "e06fc2b2e0651b60e8d21b46f9708bc74d8e4f16",
             "commit_message": "Fix: Distinguish CFI Metadata Checks in MergeFunctions Pass (#65963)\n\nThis diff fixes an issue in the MergeFunctions pass where two different\r\nControl Flow Integrity (CFI) metadata checks were incorrectly considered\r\nidentical. These merges would lead to runtime violations down the line\r\nas two separate objects contained a single destructor which itself\r\ncontained checks for only one of the objects.\r\n\r\nHere I update the comparison logic to take into account the metadata at\r\nllvm.type.test checks. Now, only truly identical checks will be\r\nconsidered for merging, thus preserving the integrity of each check.\r\n\r\nPrevious discussion: https://reviews.llvm.org/D154119",
             "commit_timestamp": 1695464909.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1695485524.927707,
+            "elapsed_time": 5660.307045221329,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "a6e81df289ec21a535971469d117d2ebe6ccabf4",
+            "commit_message": "[Workflow] Roll back some settings since they caused more issues\n\nThis needs more investigation.",
+            "commit_timestamp": 1695484431.0
         }
     ]
 }
