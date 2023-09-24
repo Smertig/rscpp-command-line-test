@@ -7279,6 +7279,20 @@
             "commit_ref": "bb83f86a7401526013ffe9dc002e45c68aac78d1",
             "commit_message": "tool_listhelp: regenerated\n\nPolished the --ipfs-gateway description\n\nFixed the --trace-config description\n\nThe script also fixed some other small mistakes\n\nCloses #11923\n",
             "commit_timestamp": 1695506507.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1695542680.157687,
+            "elapsed_time": 302.6295964717865,
+            "x64": false,
+            "actual_files_count": 2770,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "ab18c04218ff316cd67b1e928c5cee579b2f66a0",
+            "commit_message": "url: fix netrc info message\n\n- Fix netrc info message to use the generic \".netrc\" filename if the\n  user did not specify a netrc location.\n\n- Update --netrc doc to add that recent versions of curl on Windows\n  prefer .netrc over _netrc.\n\nBefore:\n* Couldn't find host google.com in the (nil) file; using defaults\n\nAfter:\n* Couldn't find host google.com in the .netrc file; using defaults\n\nCloses https://github.com/curl/curl/pull/11904\n",
+            "commit_timestamp": 1695541033.0
         }
     ]
 }
