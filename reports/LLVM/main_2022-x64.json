@@ -7899,6 +7899,22 @@
             "commit_ref": "b05f1d93469fbd645118739798e51f21a9e410de",
             "commit_message": "[InstCombine] Add pre-commit tests for PR57328. NFC.\n",
             "commit_timestamp": 1695567650.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1695586628.157648,
+            "elapsed_time": 7380.612751722336,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "d2abe8dc662a94e6c9aca5b64af53c7f815b5701",
+            "commit_message": "[InstCombine] Fold `icmp eq/ne min|max(X, Y), Z` (#67087)\n\nThis patch further improves the simplification of pattern `icmp eq/ne\r\nmin|max(X, Y), Z` as discussed in\r\n[D156238](https://reviews.llvm.org/D156238).\r\nWhen `X < Z`:\r\n`min(X, Y) == Z -> false`\r\n`min(X, Y) != Z -> true`\r\n`max(X, Y) == Z -> Y == Z`\r\n`max(Y, Z) != Z -> Y != Z`\r\nWhen `X > Z`:\r\n`max(X, Y) == Z -> false`\r\n`max(X, Y) != Z -> true`\r\n`min(X, Y) == Z -> Y == Z`\r\n`min(Y, Z) != Z -> Y != Z`\r\n\r\nAlive2:  https://alive2.llvm.org/ce/z/evkmaq",
+            "commit_timestamp": 1695585589.0
         }
     ]
 }
