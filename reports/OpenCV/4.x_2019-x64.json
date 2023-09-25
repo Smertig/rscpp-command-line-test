@@ -7817,6 +7817,20 @@
             "commit_ref": "f2962e58755452cfe61b2ed3184b8db59f581df2",
             "commit_message": "Merge pull request #24305 from hanliutong:toolchain\n\ncmake: Fix riscv-gnu toolchain file. #24305\r\n\r\ncmake(3.22.1) failed without the keyword `PATHS` on my device when I manually set `TOOLCHAIN_COMPILER_LOCATION_HINT` in command. And this patch is going to fix this issue.\r\n\r\n[CMake Doc](https://cmake.org/cmake/help/latest/command/find_program.html):\r\n> find_program (\r\n>           <VAR>\r\n>           name | NAMES name1 [name2 ...] [NAMES_PER_DIR]\r\n>           [HINTS [path | ENV var]... ]\r\n>           [PATHS [path | ENV var]... ]\r\n\r\n### Pull Request Readiness Checklist\r\n\r\nSee details at https://github.com/opencv/opencv/wiki/How_to_contribute#making-a-good-pull-request\r\n\r\n- [ ] I agree to contribute to the project under Apache 2 License.\r\n- [ ] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\r\n- [ ] The PR is proposed to the proper branch\r\n- [ ] There is a reference to the original bug report and related work\r\n- [ ] There is accuracy test, performance test and test data in opencv_extra repository, if applicable\r\n      Patch to opencv_extra has the same branch name.\r\n- [ ] The feature is well documented and sample code can be built with the project CMake\r\n",
             "commit_timestamp": 1695636382.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1695657872.026012,
+            "elapsed_time": 575.3284568786621,
+            "x64": false,
+            "actual_files_count": 467,
+            "expected_files_count": 459,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "9942757bab881811816478c86d56924cf35c0d22",
+            "commit_message": "Merge pull request #24316 from alexlyulkov:al/fix-caffe-read-segfault\n\nFixed segfault when reading Caffe model",
+            "commit_timestamp": 1695653634.0
         }
     ]
 }

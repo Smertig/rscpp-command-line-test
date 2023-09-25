@@ -7615,6 +7615,20 @@
             "commit_ref": "16fbfe912c2583f47abc10fc8e183ac913d4817e",
             "commit_message": "Sync to upstream/release/596 (#1050)\n\n- Cleaned up `FFlag::FixFindBindingAtFunctionName`,\r\n`FFlag::LuauNormalizeBlockedTypes`, `FFlag::LuauPCallDebuggerFix`\r\n- Added support for break and continue into control flow analysis\r\n- The old type unification engine will now report a more fine-grained\r\nerror at times, indicating that type normalization in particular failed\r\n\r\n# New Type Solver\r\n\r\n- Refactor of Unifier2, the new unification implementation for Luau\r\n- Completed MVP of new unification implementation\r\n- Dramatically simplified overload selection logic\r\n- Type family reduction can now apply sooner to free types that have\r\nbeen solved\r\n- Subtyping now supports table indexers\r\n- Generalization now replaces bad generics with unknown\r\n\r\n# Native Code Generation\r\n\r\n- Reduce stack spills caused by FINDUPVAL and STORE_TAG\r\n- Improve Generate SHL/SHR/SAR/rotates with immediate operands in X64\r\n- Removed redundant case re-check in table lookup fallback\r\n\r\n---------\r\n\r\nCo-authored-by: Arseny Kapoulkine <arseny.kapoulkine@gmail.com>\r\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>\r\nCo-authored-by: Andy Friesen <afriesen@roblox.com>\r\nCo-authored-by: Lily Brown <lbrown@roblox.com>",
             "commit_timestamp": 1695409935.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1695657814.086212,
+            "elapsed_time": 410.39067912101746,
+            "x64": false,
+            "actual_files_count": 413,
+            "expected_files_count": 379,
+            "repo_url": "https://github.com/Roblox/luau",
+            "commit_ref": "16fbfe912c2583f47abc10fc8e183ac913d4817e",
+            "commit_message": "Sync to upstream/release/596 (#1050)\n\n- Cleaned up `FFlag::FixFindBindingAtFunctionName`,\r\n`FFlag::LuauNormalizeBlockedTypes`, `FFlag::LuauPCallDebuggerFix`\r\n- Added support for break and continue into control flow analysis\r\n- The old type unification engine will now report a more fine-grained\r\nerror at times, indicating that type normalization in particular failed\r\n\r\n# New Type Solver\r\n\r\n- Refactor of Unifier2, the new unification implementation for Luau\r\n- Completed MVP of new unification implementation\r\n- Dramatically simplified overload selection logic\r\n- Type family reduction can now apply sooner to free types that have\r\nbeen solved\r\n- Subtyping now supports table indexers\r\n- Generalization now replaces bad generics with unknown\r\n\r\n# Native Code Generation\r\n\r\n- Reduce stack spills caused by FINDUPVAL and STORE_TAG\r\n- Improve Generate SHL/SHR/SAR/rotates with immediate operands in X64\r\n- Removed redundant case re-check in table lookup fallback\r\n\r\n---------\r\n\r\nCo-authored-by: Arseny Kapoulkine <arseny.kapoulkine@gmail.com>\r\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>\r\nCo-authored-by: Andy Friesen <afriesen@roblox.com>\r\nCo-authored-by: Lily Brown <lbrown@roblox.com>",
+            "commit_timestamp": 1695409935.0
         }
     ]
 }

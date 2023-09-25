@@ -8723,6 +8723,20 @@
             "commit_ref": "95c226e9c92928e20ccdac0d060e7241859e282b",
             "commit_message": "format\n",
             "commit_timestamp": 1695607525.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1695657853.018843,
+            "elapsed_time": 84.80615210533142,
+            "x64": false,
+            "actual_files_count": 107,
+            "expected_files_count": 107,
+            "repo_url": "https://github.com/gabime/spdlog.git",
+            "commit_ref": "b6eeb7364cb2f6eeb1ce963d0fa6ddbc929861f4",
+            "commit_message": "Added a function to add callbacks that are called when a logger is registered (#2883)\n\n* Added a function to add callbacks that are called when a logger is registered\r\n\r\n* Fix non captured registration 2 not being properly tested for\r\n\r\n* Replace std::list by std::vector\r\n\r\n* Remove const refs to shared pointers\r\n\r\n* Fix missing header",
+            "commit_timestamp": 1695656944.0
         }
     ]
 }

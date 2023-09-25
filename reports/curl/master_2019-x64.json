@@ -7391,6 +7391,20 @@
             "commit_ref": "d850eea2d03cf11dbbc5e3918d67ee9960139474",
             "commit_message": "multi: remove Curl_multi_dump\n\nA debug-only function that is basically never used. Removed to ease the\nuse of the singleuse script to detect non-static functions not used\noutside the file where it is defined.\n\nCloses #11931\n",
             "commit_timestamp": 1695638140.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1695657940.271502,
+            "elapsed_time": 374.30291748046875,
+            "x64": false,
+            "actual_files_count": 2770,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "358f7e757781857c4b498a68634726609fa3884a",
+            "commit_message": "warnless: remove unused functions\n\nPreviously put there for use with the intel compiler\n\nCloses #11932\n",
+            "commit_timestamp": 1695654393.0
         }
     ]
 }
