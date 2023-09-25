@@ -7377,6 +7377,20 @@
             "commit_ref": "72f0607488a665bf0c68f513230e5e26bce0e79d",
             "commit_message": "tests: fix compiler warnings\n\nSeen with llvm 17 on Windows x64.\n\n```\n.../curl/tests/server/rtspd.c:136:13: warning: no previous extern declaration for non-static variable 'logdir' [-Wmissing-variable-declarations]\n  136 | const char *logdir = \"log\";\n      |             ^\n.../curl/tests/server/rtspd.c:136:7: note: declare 'static' if the variable is not intended to be used outside of this translation unit\n  136 | const char *logdir = \"log\";\n      |       ^\n.../curl/tests/server/rtspd.c:137:6: warning: no previous extern declaration for non-static variable 'loglockfile' [-Wmissing-variable-declarations]\n  137 | char loglockfile[256];\n      |      ^\n.../curl/tests/server/rtspd.c:137:1: note: declare 'static' if the variable is not intended to be used outside of this translation unit\n  137 | char loglockfile[256];\n      | ^\n.../curl/tests/server/fake_ntlm.c:43:13: warning: no previous extern declaration for non-static variable 'logdir' [-Wmissing-variable-declarations]\n   43 | const char *logdir = \"log\";\n      |             ^\n.../curl/tests/server/fake_ntlm.c:43:7: note: declare 'static' if the variable is not intended to be used outside of this translation unit\n   43 | const char *logdir = \"log\";\n      |       ^\n.../curl/src/tool_doswin.c:350:8: warning: possible misuse of comma operator here [-Wcomma]\n  350 |     ++d, ++s;\n      |        ^\n.../curl/src/tool_doswin.c:350:5: note: cast expression to void to silence warning\n  350 |     ++d, ++s;\n      |     ^~~\n      |     (void)( )\n```\n\n```\n.../curl/tests/libtest/lib540.c:146:27: warning: result of comparison 'long' > 2147483647 is always false [-Wtautological-type-limit-compare]\n  146 |         int itimeout = (L > (long)INT_MAX) ? INT_MAX : (int)L;\n      |                         ~ ^ ~~~~~~~~~~~~~\n1 warning generated.\n\n.../curl/tests/libtest/libntlmconnect.c:195:31: warning: result of comparison 'long' > 2147483647 is always false [-Wtautological-type-limit-compare]\n  195 |       int itimeout = (timeout > (long)INT_MAX) ? INT_MAX : (int)timeout;\n      |                       ~~~~~~~ ^ ~~~~~~~~~~~~~\n1 warning generated.\n\n.../curl/tests/libtest/lib591.c:117:31: warning: result of comparison 'long' > 2147483647 is always false [-Wtautological-type-limit-compare]\n  117 |       int itimeout = (timeout > (long)INT_MAX) ? INT_MAX : (int)timeout;\n      |                       ~~~~~~~ ^ ~~~~~~~~~~~~~\n1 warning generated.\n.../curl/tests/libtest/lib597.c:99:31: warning: result of comparison 'long' > 2147483647 is always false [-Wtautological-type-limit-compare]\n   99 |       int itimeout = (timeout > (long)INT_MAX) ? INT_MAX : (int)timeout;\n      |                       ~~~~~~~ ^ ~~~~~~~~~~~~~\n1 warning generated.\n```\n\nSeen on macOS Intel:\n```\n.../curl/tests/server/sws.c:440:64: warning: field precision should have type 'int', but argument has type 'size_t' (aka 'unsigned long') [-Wformat]\n          msnprintf(logbuf, sizeof(logbuf), \"Got request: %s %.*s HTTP/%d.%d\",\n                                                             ~~^~\n1 warning generated.\n```\n\nCloses #11925\n",
             "commit_timestamp": 1695592374.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1695643531.63639,
+            "elapsed_time": 298.8563618659973,
+            "x64": false,
+            "actual_files_count": 2770,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "d850eea2d03cf11dbbc5e3918d67ee9960139474",
+            "commit_message": "multi: remove Curl_multi_dump\n\nA debug-only function that is basically never used. Removed to ease the\nuse of the singleuse script to detect non-static functions not used\noutside the file where it is defined.\n\nCloses #11931\n",
+            "commit_timestamp": 1695638140.0
         }
     ]
 }

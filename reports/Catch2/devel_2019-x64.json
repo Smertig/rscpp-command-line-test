@@ -8709,6 +8709,20 @@
             "commit_ref": "9c541ca72e7857dec71d8a41b97e42c2f1c92602",
             "commit_message": "Add test for multiple streaming parts in UNSCOPED_INFO\n",
             "commit_timestamp": 1694940271.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1695643511.427487,
+            "elapsed_time": 94.25339961051941,
+            "x64": false,
+            "actual_files_count": 274,
+            "expected_files_count": 272,
+            "repo_url": "https://github.com/catchorg/Catch2.git",
+            "commit_ref": "0fb817e41ff24715f3436ede5a18de468c272902",
+            "commit_message": "fix some bugprone-macro-parentheses warnings\n\nWhen using the public headers of catch2 in another project\nthat uses clang-tidy with some checks enabled, then some\nwarnings in catch2's headers are also reported.\n\nThis fixes a bunch of bugprone-macro-parentheses warnings.\n\nSee: https://clang.llvm.org/extra/clang-tidy/checks/bugprone/macro-parentheses.html\n",
+            "commit_timestamp": 1695632205.0
         }
     ]
 }
