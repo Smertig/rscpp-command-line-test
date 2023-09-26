@@ -8075,6 +8075,22 @@
             "commit_ref": "a09e32e5fe13e3b64bef1defddf71a9e83022e76",
             "commit_message": "[InstSimplify] Respect UseInstrInfo in more folds\n\nSome folds using m_NUW, m_NSW style matchers were missed, make\nsure they respect UseInstrInfo.\n\nThis is part of #53218, but not a complete fix for the issue.\n",
             "commit_timestamp": 1695729243.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1695745123.568129,
+            "elapsed_time": 7999.958117008209,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "9555736ac6d02bdfa4f1d92ce764740cc6c5be24",
+            "commit_message": "[BOLT][RISCV] Implement LO/HI relocations (#67444)\n\nImplement the following relocations used by the medlow code model and\r\nnon-PIE binaries:\r\n- R_RISCV_HI20\r\n- R_RISCV_LO12_I\r\n- R_RISCV_LO12_S",
+            "commit_timestamp": 1695743651.0
         }
     ]
 }

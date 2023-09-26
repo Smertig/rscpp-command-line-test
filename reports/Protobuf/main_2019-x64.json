@@ -8459,6 +8459,20 @@
             "commit_ref": "96100bf1e49c5452f21e4446e43f5e7526f1351f",
             "commit_message": "add C# deterministic serialization (#13160)\n\nhttps://github.com/protocolbuffers/protobuf/issues/12881\n\n@jskeet  review please :-) as this is my first contrib to protobuf, any design / performance feedback is very sought after\n\nCloses #13160\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/13160 from fmg-lydonchandra:feature/12881_cs_serialization_deterministic ab7e01b8049ec98b78eb9fb6e04e8fe30ecd9a33\nPiperOrigin-RevId: 568448399\n",
             "commit_timestamp": 1695714153.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1695744255.223207,
+            "elapsed_time": 371.80789041519165,
+            "x64": false,
+            "actual_files_count": 847,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "65419eef0d99446070dcff1e10f951383ceb42fe",
+            "commit_message": "Flip the names of edition_enum and edition.\n\nWe will be using the enum edition from now on, and the string field will be removed ASAP.\n\nPiperOrigin-RevId: 568554147\n",
+            "commit_timestamp": 1695743900.0
         }
     ]
 }
