@@ -7419,6 +7419,20 @@
             "commit_ref": "3ed0e3432632d6aff0de606c6fdb74525cc7a826",
             "commit_message": "tests: fix log directory path in IPFS tests\n\nHard-coding the log directory name fails with parallel tests.\n\nFollow-up to 65b563a96\n\nRef: #8805\n",
             "commit_timestamp": 1695670758.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1695686824.212782,
+            "elapsed_time": 317.9779372215271,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "579f09343dd7f7531ef6ebc57e17fd9312eeeee4",
+            "commit_message": "multi: fix small timeouts\n\nSince Curl_timediff rounds down to the millisecond, timeouts which\nexpire in less than 1ms are considered as outdated and removed from the\nlist. We can use Curl_timediff_us instead, big timeouts could saturate\nbut this is not an issue.\n\nCloses #11937\n",
+            "commit_timestamp": 1695682727.0
         }
     ]
 }

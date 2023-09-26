@@ -8011,6 +8011,22 @@
             "commit_ref": "a677a173273f7735a3a5447a47851591b984e7aa",
             "commit_message": "[mlir][py] Enable AsmState overload for operation.\n",
             "commit_timestamp": 1695669908.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1695687427.695112,
+            "elapsed_time": 7763.380135536194,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "b7961f2cb97556bfc50f7828d5f869d96ab9352e",
+            "commit_message": "[lldb] [debugserver] Preserve signing bits on lr in debugserver (#67384)\n\nIn https://reviews.llvm.org/D136620 I changed debugserver to stop using\r\nthe kernel-provided functions\r\narm_thread_state64_get_{pc,lr,sp,fp} to postprocess those four registers\r\non aarch64 systems after we thread_get_state() them. The kernel stores\r\nthese four registers with signing internally, either from the inferior\r\nprocess' actual signing, or its own.\r\n\r\nWhen a program had crashed by doing an authenticated BL to an address\r\nwith improper signing, the inferior process would crash and that\r\nimproperly signed pc would be given to debugserver via thread_get_state.\r\ndebugserver would run that through arm_thread_state64_get_pc() and then\r\ndebugserver would crash when authenticating & stripping the value, on\r\nnewer Mac hardware.\r\n\r\nTo avoid debugserver crashing on a crashed inferior process, I switched\r\nfrom using these system functions to strip the values, to simply\r\nclearing the bits outright in debugserver.\r\n\r\nHowever, lr is a special case where the inferior may have signed this\r\nvalue (against the stack pointer value at the time). Or it may not yet\r\nhave any authentication bits, right after a BL. In the latter case, the\r\nkernel will add its own auth bits for while it is stored inside the\r\nkernel. In the case of a user lr value, we cannot authenticate it in\r\ndebugserver without knowing the sp value it was signed against (and the\r\nway it is signed is not specified by the ABI) so an \"improperly\" signed\r\nlr (whatever that means) won't cause debugserver to crash.\r\n\r\ndebugserver can thread_get_state the inferior's lr, run it through\r\narm_thread_state64_get_lr(), and get the actual signed 64-bit value that\r\nthe inferior process is using. And the specifics of how that lr is\r\nsigned may be important for debugging the process, instead of how I am\r\ncurrently clearing the auth bits outright.\r\n\r\nThis patch reverts that change for lr only, and also adds a new logging\r\nto debugserver specifically for the four sp/fp/lr/pc values that\r\nthread_get_state hands to us, before we process them at all.",
+            "commit_timestamp": 1695686545.0
         }
     ]
 }

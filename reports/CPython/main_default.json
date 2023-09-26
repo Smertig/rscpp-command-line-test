@@ -4703,6 +4703,20 @@
             "commit_ref": "d73c12b88c2275fd44e27c91c24f3ac85419d2b8",
             "commit_message": "gh-109823: Adjust labels in compiler when removing an empty basic block which is a jump target (#109839)\n\n",
             "commit_timestamp": 1695666305.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1695686980.111755,
+            "elapsed_time": 1098.170345544815,
+            "x64": true,
+            "actual_files_count": 922,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "e9791ba35175171170ff09094ea46b91fc18c654",
+            "commit_message": "gh-88233: zipfile: refactor _strip_extra (#102084)\n\n* Refactor zipfile._strip_extra to use higher level abstractions for extras instead of a heavy-state loop.\r\n\r\n* Add blurb\r\n\r\n* Remove _strip_extra and use _Extra.strip directly.\r\n\r\n* Use memoryview to avoid unnecessary copies while splitting Extras.",
+            "commit_timestamp": 1695685618.0
         }
     ]
 }

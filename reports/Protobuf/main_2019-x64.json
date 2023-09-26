@@ -8403,6 +8403,20 @@
             "commit_ref": "1210eac457de3b33730e570e042a773c4cf67c7d",
             "commit_message": "Don't check out submodules in tests that don't need them.\n\nThis will help prevent network flakes.\n\nPiperOrigin-RevId: 568287969\n",
             "commit_timestamp": 1695669166.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1695686674.680965,
+            "elapsed_time": 343.25667238235474,
+            "x64": false,
+            "actual_files_count": 847,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "34bbf3162d9c6db6b4aeac20ed644348ee9cc655",
+            "commit_message": "Upgrade Docker image in upb test run for building Python wheels\n\nThis should ensure that we have access to Bazel 6.\n\nPiperOrigin-RevId: 568354486\n",
+            "commit_timestamp": 1695684473.0
         }
     ]
 }
