@@ -5011,6 +5011,20 @@
             "commit_ref": "79b3fc4b6a99590df1a7a496e10ea1323b7495b8",
             "commit_message": "Bump mold version to 2.2.0\n",
             "commit_timestamp": 1695526099.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1695715576.121848,
+            "elapsed_time": 237.18265986442566,
+            "x64": false,
+            "actual_files_count": 525,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/rui314/mold",
+            "commit_ref": "ac3ee91cbddc84837f4fc4f9bfffe74a0fc76bef",
+            "commit_message": "[RISC-V] Support GP-relative relocations\n\nThese relocations are use for embedded programming and are probably\nnot useful for mold, but we want them for the sake of completeness.\n",
+            "commit_timestamp": 1695695402.0
         }
     ]
 }
