@@ -8091,6 +8091,22 @@
             "commit_ref": "9555736ac6d02bdfa4f1d92ce764740cc6c5be24",
             "commit_message": "[BOLT][RISCV] Implement LO/HI relocations (#67444)\n\nImplement the following relocations used by the medlow code model and\r\nnon-PIE binaries:\r\n- R_RISCV_HI20\r\n- R_RISCV_LO12_I\r\n- R_RISCV_LO12_S",
             "commit_timestamp": 1695743651.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1695759395.537811,
+            "elapsed_time": 7535.9831755161285,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "210e8984fe1568889779baf5144d610b3f099604",
+            "commit_message": "[lld/mac] Resolve defined symbols before undefined symbols in bitcode (#67445)\n\nPorts https://reviews.llvm.org/D106293 to bitcode, or\r\nhttps://github.com/llvm/llvm-project/commit/bd448f01a6 from ELF to\r\nMachO.\r\n\r\nSee also #59162 for some vaguely related discussion.",
+            "commit_timestamp": 1695756711.0
         }
     ]
 }

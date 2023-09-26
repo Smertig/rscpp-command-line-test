@@ -4773,6 +4773,20 @@
             "commit_ref": "859618c8cd5de86a975e68d7e5d20c04bc5db2e5",
             "commit_message": "gh-109566, regrtest: Add --fast-ci and --slow-ci options (#109570)\n\n* Add --fast-ci and --slow-ci options to libregrtest:\r\n\r\n  * --fast-ci uses a default timeout of 10 minutes and \"-u all,-cpu\"\r\n    (skip slowest tests).\r\n  * --slow-ci uses a default timeout of 20 minues and \"-u all\" (run\r\n    all tests).\r\n\r\n* regrtest header now lists test resources.\r\n* Makefile changes:\r\n\r\n  * \"make test\", \"make hostrunnertest\" and \"make coverage-report\" now\r\n    use --fast-ci option and TESTTIMEOUT variable.\r\n  * \"make buildbottest\" now uses \"--slow-ci\". Remove options which\r\n    became redundant with \"--slow-ci\".\r\n  * \"make testall\" and \"make testuniversal\" now use --slow-ci option\r\n    and TESTTIMEOUT variable.\r\n  * \"make testall\" now uses \"find -exec rm ...\" instead of\r\n    \"find ... -print|xargs rm ...\", same as \"make clean\".\r\n\r\n* GitHub Actions workflow:\r\n\r\n  * Ubuntu and Address Sanitizer jobs now use \"make test\". Remove\r\n    options which became redundant with \"--fast-ci\".\r\n  * Windows jobs now use --fast-ci option.\r\n  * Use -j0 to detect the number of CPUs.\r\n\r\n* Set Makefile TESTTIMEOUT default to an empty string, since\r\n  --slow-ci and --fast-ci use different default timeout. It's now\r\n  accepted to pass \"--timeout=\" to regrtest: treated as not timeout.\r\n* Tools/scripts/run_tests.py now uses --fast-ci option.\r\n* Tools/buildbot/test.bat now uses --slow-ci option. Remove\r\n  --timeout=1200 option, redundant with --slow-ci.",
             "commit_timestamp": 1695741770.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1695758845.093515,
+            "elapsed_time": 1281.8252801895142,
+            "x64": true,
+            "actual_files_count": 922,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "2ef2fffe3be953b91852585c75188d5475b09474",
+            "commit_message": "gh-109845: Make test_ftplib more stable under load (GH-109912)\n\nrecv() can return partial data cut in the middle of a multibyte\r\ncharacter. Test raw binary data instead of data incorrectly decoded by parts.",
+            "commit_timestamp": 1695758326.0
         }
     ]
 }

@@ -7489,6 +7489,20 @@
             "commit_ref": "8e74c0729d0cace00a202fc6c33c1b35703e220a",
             "commit_message": "cmake: assume `_fseeki64` and no `fseeko` on Windows\n\n`_fseeki64` is present in mingw-w64 1.0 (2011-09-26) headers, and\nat least Watcom C 1.9 (2010) headers and MSVS 2008 [1].\n\n`fseeko` is not present in any of these.\n\n(mingw-w64 1.0 also offers `fseeko64`.)\n\n[1] https://github.com/curl/curl/pull/11944#issuecomment-1734995004\n\nFollow-up to 9c7165e96a3a9a2d0b7059c87c699b5ca8cdae93 #11918\n\nCloses #11950\n",
             "commit_timestamp": 1695738373.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1695758723.47011,
+            "elapsed_time": 348.21862721443176,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "8e74c0729d0cace00a202fc6c33c1b35703e220a",
+            "commit_message": "cmake: assume `_fseeki64` and no `fseeko` on Windows\n\n`_fseeki64` is present in mingw-w64 1.0 (2011-09-26) headers, and\nat least Watcom C 1.9 (2010) headers and MSVS 2008 [1].\n\n`fseeko` is not present in any of these.\n\n(mingw-w64 1.0 also offers `fseeko64`.)\n\n[1] https://github.com/curl/curl/pull/11944#issuecomment-1734995004\n\nFollow-up to 9c7165e96a3a9a2d0b7059c87c699b5ca8cdae93 #11918\n\nCloses #11950\n",
+            "commit_timestamp": 1695738373.0
         }
     ]
 }
