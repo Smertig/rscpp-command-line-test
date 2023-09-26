@@ -8059,6 +8059,22 @@
             "commit_ref": "b797a6aede3dbdf7e2287e4fbde13f2550961d96",
             "commit_message": "[flang] Lower special bind(c) cases without binding labels (#65758)\n\n1. Deal with BIND(C,NAME=\"\")\r\n\r\nBIND(C,NAME=\"\") is different from BIND(C). The latter implies that there\r\nus a binding label which is the Fortran symbol name (no Fortran mangling\r\nmust be added like underscores). The former implies there is no binding\r\nlabel (the name in the object file must be the same as if it there was\r\nno BIND(C) attribute at all).\r\n\r\nThis is correctly implemented in the front-end, but lowering mistakenly\r\noverrode this in the code dealing with the case where BIND(C) is\r\ninherited from a procedure interface. Handling of  this last case is moved into name\r\nresolution.\r\n\r\n2. Deal with BIND(C) internal procedure\r\n\r\nAlso according to 18.10.2, BIND(C) does not give a p prevent name\r\nresolution from adding a label to them, otherwise,\r\nbindc_internal_proc.f90 was not going through semantics (bogus error\r\nabout conflicting global names). Nothing TODO in lowering other than\r\nremoving the TODO.",
             "commit_timestamp": 1695713377.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1695730799.398794,
+            "elapsed_time": 9885.583567142487,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "a09e32e5fe13e3b64bef1defddf71a9e83022e76",
+            "commit_message": "[InstSimplify] Respect UseInstrInfo in more folds\n\nSome folds using m_NUW, m_NSW style matchers were missed, make\nsure they respect UseInstrInfo.\n\nThis is part of #53218, but not a complete fix for the issue.\n",
+            "commit_timestamp": 1695729243.0
         }
     ]
 }

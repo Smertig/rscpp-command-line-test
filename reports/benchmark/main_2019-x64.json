@@ -8473,6 +8473,20 @@
             "commit_ref": "344117638c8ff7e239044fd0fa7085839fc03021",
             "commit_message": "bump version to 1.8.3\n",
             "commit_timestamp": 1693484210.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1695729819.511227,
+            "elapsed_time": 83.32428693771362,
+            "x64": false,
+            "actual_files_count": 86,
+            "expected_files_count": 86,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "c9106a79fa2aae95bc3c790f0b3aa1cf8a27b86f",
+            "commit_message": "Audit MSVC references in cmake files to consider clang++ (#1669)\n\nThere are three major compilers on Windows targeting the MSVC ABI (i.e.\r\nlinking with microsofts STL etc.):\r\n  - `MSVC`\r\n  - `clang-cl` aka clang with the MSVC compatible CLI\r\n  - `clang++` aka clang with gcc compatible CLI\r\n\r\nThe cmake variable `MSVC` is only set for the first two as it defined in\r\nterms of the CLI interface provided:\r\n\r\n> Set to true when the compiler is some version of Microsoft Visual\r\n> C++ or another compiler simulating the Visual C++ cl command-line syntax.\r\n\r\n(from cmake docs)\r\n\r\nFor many of the tests in the library its the ABI that matters not the\r\ncmdline, so check `CMAKE_CXX_SIMULATE_ID` too, if it is `MSVC` the\r\ncurrent compiler is targeting the MSVC ABI. This handles `clang++`",
+            "commit_timestamp": 1695727884.0
         }
     ]
 }
