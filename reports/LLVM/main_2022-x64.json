@@ -8123,6 +8123,22 @@
             "commit_ref": "368d74932efa2a8782c5e5d0c956bd45fd1d04fa",
             "commit_message": "[DFSan] Fix sscanf wrapper handling %*d (the star skips capturing). (#67392)\n\nBug introduced in https://reviews.llvm.org/D153775",
             "commit_timestamp": 1695771688.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1695788314.664435,
+            "elapsed_time": 9523.03372335434,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "134ae13adaffcb80693819f498a28b2b1bbde9cf",
+            "commit_message": "[compiler-rt] Fix instrprof-darwin-exports test (#67487)\n\n",
+            "commit_timestamp": 1695786160.0
         }
     ]
 }

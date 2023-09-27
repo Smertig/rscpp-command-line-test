@@ -7517,6 +7517,20 @@
             "commit_ref": "1411c5eb33794e16e3fa63df7d2bf17c639851ef",
             "commit_message": "cmake: add feature checks for `memrchr` and `getifaddrs`\n\n- `HAVE_MEMRCHR` for `memrchr`.\n- `HAVE_GETIFADDRS` for `getifaddrs`.\n  This was present in `lib/curl_config.h.cmake` but missed the detection\n  logic.\n\nTo match existing autotools feature checks.\n\nCloses #11954\n",
             "commit_timestamp": 1695766228.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1695787463.728024,
+            "elapsed_time": 312.4425630569458,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "f0f421b468a863a46d86cd3ad020f0a6e7695bb4",
+            "commit_message": "tool_setopt: remove unused function tool_setopt_flags\n\nThis function is identical to tool_setopt_bitmask except that it treats\nthe argument as unsigned.\n\nCloses #11943\n",
+            "commit_timestamp": 1695776111.0
         }
     ]
 }
