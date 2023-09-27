@@ -4829,6 +4829,20 @@
             "commit_ref": "0e28d0f7a1bc3776cc07e0f8b91bc43fcdbb4206",
             "commit_message": "GH-109190: Copyedit 3.12 What's New: Deprecations (``os`` fix)  (#109927)\n\nMerge the two ``os`` entries",
             "commit_timestamp": 1695790782.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1695816563.691648,
+            "elapsed_time": 1575.1503458023071,
+            "x64": true,
+            "actual_files_count": 922,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "b89ed9df39851348fbb1552294644f99f6b17d2c",
+            "commit_message": "gh-109615: Fix support test_copy_python_src_ignore() (#109958)\n\nFix the test when run on an installed Python: use \"abs_srcdir\" of\r\nsysconfig, and skip the test if the Python source code cannot be\r\nfound.\r\n\r\n* Tools/patchcheck/patchcheck.py, Tools/freeze/test/freeze.py and\r\n  Lib/test/libregrtest/utils.py now first try to get \"abs_srcdir\"\r\n  from sysconfig, before getting \"srcdir\" from sysconfig.\r\n* test.pythoninfo logs sysconfig \"abs_srcdir\".",
+            "commit_timestamp": 1695810732.0
         }
     ]
 }

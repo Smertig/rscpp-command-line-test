@@ -8155,6 +8155,22 @@
             "commit_ref": "913286baed9bf8dd5bc1763184228c2e5e3286ea",
             "commit_message": "[mlir][linalg] Add `SubsetInsertionOpInterface` to `linalg.copy` (#67524)\n\nThis commit enables empty tensor elimination on `linalg.copy` ops.",
             "commit_timestamp": 1695801877.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1695817212.805286,
+            "elapsed_time": 9761.512342453003,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "30fe8762446ca91a34174ab9c5dde34bde4d4394",
+            "commit_message": "[mlir][cfg-to-scf] Fix invalid transformation when value is used in a subregion (#67544)\n\nThe current loop-reduce-form transformation incorrectly assumes that any\r\nvalue that is used in a block that isn't in the set of loop blocks is a\r\nblock outside the loop. This is correct for a pure CFG but is incorrect\r\nif operations with subregions are present. In that case, a use may be in\r\na subregion of an operation part of the loop and incorrectly deemed\r\noutside the loop. This would later lead to transformations with code\r\nthat does not verify.\r\n\r\nThis PR fixes that issue by checking the transitive parent block that is\r\nin the same region as the loop rather than the immediate parent block.",
+            "commit_timestamp": 1695816174.0
         }
     ]
 }

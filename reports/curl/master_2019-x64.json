@@ -7545,6 +7545,20 @@
             "commit_ref": "afb4b15614047b97ad1de3850a710f527f90a53b",
             "commit_message": "http: remove wrong comment for http_should_fail\n\nReported-by: Christian Schmitz\nRef: #11936\nCloses #11941\n",
             "commit_timestamp": 1695798903.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1695816322.495482,
+            "elapsed_time": 313.7998535633087,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "1f92db87e044824284729fb73bc05b7b884b28b1",
+            "commit_message": "inet_ntop: add typecast to silence Coverity\n\nCID 1024653:  Integer handling issues  (SIGN_EXTENSION)\n\nSuspicious implicit sign extension: \"src[i]\" with type \"unsigned char\nconst\" (8 bits, unsigned) is promoted in \"src[i] << (1 - i % 2 << 3)\" to\ntype \"int\" (32 bits, signed), then sign-extended to type \"unsigned long\"\n(64 bits, unsigned).  If \"src[i] << (1 - i % 2 << 3)\" is greater than\n0x7FFFFFFF, the upper bits of the result will all be 1.\n\n111         words[i/2] |= (src[i] << ((1 - (i % 2)) << 3));\n\nThe value will not be greater than 0x7FFFFFFF so this still cannot\nhappen.\n\nAlso, switch to ints here instead of longs. The values stored are 16 bit\nso at least no need to use 64 bit variables. Also, longs are 32 bit on\nsome platforms so this logic still needs to work with 32 bits.\n\nCloses #11960\n",
+            "commit_timestamp": 1695813502.0
         }
     ]
 }
