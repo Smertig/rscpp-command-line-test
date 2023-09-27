@@ -7559,6 +7559,20 @@
             "commit_ref": "1f92db87e044824284729fb73bc05b7b884b28b1",
             "commit_message": "inet_ntop: add typecast to silence Coverity\n\nCID 1024653:  Integer handling issues  (SIGN_EXTENSION)\n\nSuspicious implicit sign extension: \"src[i]\" with type \"unsigned char\nconst\" (8 bits, unsigned) is promoted in \"src[i] << (1 - i % 2 << 3)\" to\ntype \"int\" (32 bits, signed), then sign-extended to type \"unsigned long\"\n(64 bits, unsigned).  If \"src[i] << (1 - i % 2 << 3)\" is greater than\n0x7FFFFFFF, the upper bits of the result will all be 1.\n\n111         words[i/2] |= (src[i] << ((1 - (i % 2)) << 3));\n\nThe value will not be greater than 0x7FFFFFFF so this still cannot\nhappen.\n\nAlso, switch to ints here instead of longs. The values stored are 16 bit\nso at least no need to use 64 bit variables. Also, longs are 32 bit on\nsome platforms so this logic still needs to work with 32 bits.\n\nCloses #11960\n",
             "commit_timestamp": 1695813502.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1695830647.397514,
+            "elapsed_time": 262.06479144096375,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "a7f8d04ee02ea3feda590810de97ecb164c5256a",
+            "commit_message": "curl-functions.m4: fixup recent bad edits\n\nFollow-up to 96c29900bcec32dd6bc8e9857c8871ff4b8b8ed9 #11940\n\nCloses #11966\n",
+            "commit_timestamp": 1695819529.0
         }
     ]
 }
