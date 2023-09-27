@@ -8187,6 +8187,22 @@
             "commit_ref": "339fc5e6b013dfdb185f1f1e9494076bd9d2a3cd",
             "commit_message": "[test] Mark test added in #67479 as XFAIL\n\nThis was merged after a different change caused the test to fail in the meantime.\n",
             "commit_timestamp": 1695829408.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1695845795.241005,
+            "elapsed_time": 7597.3596794605255,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "97bd6d60be8af4279efad1d2b064882574218028",
+            "commit_message": "MCPseudoProbe: don't copy std::list. NFC\n",
+            "commit_timestamp": 1695844843.0
         }
     ]
 }

@@ -8557,6 +8557,20 @@
             "commit_ref": "8fc05442285a08d91f05995123fb02374d8b925e",
             "commit_message": "Support non ascii commandline args (#14197)\n\nUsing none ASCII chars for protoc on Windows are not handled well.\nThis adresses argument file at a location where either directory, or filename contains Unicode chars.\n\nSpecifically because MsBuild tool saves argument file in with the UserName appended to the .rsp file.\nhttps://github.com/dotnet/msbuild/pull/9232\n\nBut in general we should really handle if none ascii chars are in the path.\n\nCloses #14197\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/14197 from hknielsen:support-non-ascii-commandline-args 673d5756652f67892f54cd0f1f23d5d54b132f36\nPiperOrigin-RevId: 568722987\n",
             "commit_timestamp": 1695784356.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1695844998.396226,
+            "elapsed_time": 412.71566891670227,
+            "x64": false,
+            "actual_files_count": 847,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "206583d39b68a376ee61d34a3c5520edb1efde76",
+            "commit_message": "Auto-generate files after cl/568927357\n",
+            "commit_timestamp": 1695843823.0
         }
     ]
 }
