@@ -8203,6 +8203,22 @@
             "commit_ref": "97bd6d60be8af4279efad1d2b064882574218028",
             "commit_message": "MCPseudoProbe: don't copy std::list. NFC\n",
             "commit_timestamp": 1695844843.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1695860330.704355,
+            "elapsed_time": 9662.543250799179,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "22433cc541ff706d9e845774ef1c8c959dc67799",
+            "commit_message": "[Driver][test] Fix hexagon-toolchain-elf.c\n\n\"ld\" may match a build direcory path, making the `-SAME:` pattern fail.\n",
+            "commit_timestamp": 1695858958.0
         }
     ]
 }

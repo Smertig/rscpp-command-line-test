@@ -8571,6 +8571,20 @@
             "commit_ref": "206583d39b68a376ee61d34a3c5520edb1efde76",
             "commit_message": "Auto-generate files after cl/568927357\n",
             "commit_timestamp": 1695843823.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1695859604.380732,
+            "elapsed_time": 402.98535108566284,
+            "x64": false,
+            "actual_files_count": 847,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "0d995193e551bd8ac5b0480b83db5f54c9cd2318",
+            "commit_message": "Remove `upb_deps()` helper function\n\nThis separate helper for upb dependencies no longer makes sense now that upb\nhas been merged into the protobuf repo. This change deletes that helper and\nmoves the upb-specific dependencies into the `protobuf_deps()` function.\n\nI noticed that the Python package deps need to be updated to reflect our\ncurrent support level, but I will fix that in a followup CL.\n\nPiperOrigin-RevId: 568997625\n",
+            "commit_timestamp": 1695858504.0
         }
     ]
 }
