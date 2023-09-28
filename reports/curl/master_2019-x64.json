@@ -7615,6 +7615,20 @@
             "commit_ref": "a7f8d04ee02ea3feda590810de97ecb164c5256a",
             "commit_message": "curl-functions.m4: fixup recent bad edits\n\nFollow-up to 96c29900bcec32dd6bc8e9857c8871ff4b8b8ed9 #11940\n\nCloses #11966\n",
             "commit_timestamp": 1695819529.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1695888288.428613,
+            "elapsed_time": 274.6104850769043,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "0bd9e137e3f0e53f03a7cd108be866bdf5963c32",
+            "commit_message": "lib: move handling of `data->req.writer_stack` into Curl_client_write()\n\n- move definitions from content_encoding.h to sendf.h\n- move create/cleanup/add code into sendf.c\n- installed content_encoding writers will always be called\n  on Curl_client_write(CLIENTWRITE_BODY)\n- Curl_client_cleanup() frees writers and tempbuffers from\n  paused transfers, irregardless of protocol\n\nCloses #11908\n",
+            "commit_timestamp": 1695888013.0
         }
     ]
 }
