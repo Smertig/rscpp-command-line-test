@@ -8283,6 +8283,22 @@
             "commit_ref": "d5ccbaff9892416d7fc2abebad01805acd111930",
             "commit_message": "Revert \"[Basic] Support 64-bit x86 target for UEFI\"\n\nThis reverts commit 315a407086b0ab302d0293b720d7f9b3e8f6ffa9.\nThe new test added fails to link the unit tests correctly and breaks\ncertain buildbots.\n",
             "commit_timestamp": 1695916890.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1695932094.422799,
+            "elapsed_time": 7449.815980195999,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "12866a2b87038abf2d69f2a6040a4ff4ce27b6cd",
+            "commit_message": "[clang][modules] Use `FileEntryRef` in `ModuleMap` (2/2)\n",
+            "commit_timestamp": 1695931166.0
         }
     ]
 }
