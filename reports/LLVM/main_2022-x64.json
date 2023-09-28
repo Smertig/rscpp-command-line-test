@@ -8251,6 +8251,22 @@
             "commit_ref": "cc627828f5176c6d75a25f1756d387d18539c1fb",
             "commit_message": "Pre-commit some PowerPC test cases\n",
             "commit_timestamp": 1695887474.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1695903541.151804,
+            "elapsed_time": 9703.689833641052,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "ec8df0c7e3a3d9e6352a3d8c5c4540a9d0352ca0",
+            "commit_message": "[LLDB] Skip TestTlsGlobals.py for Linux Arm/AArch64\n\nRecently added TLS linux support fails on Arm/AArch64. I am skiping test\nfor now and will investigate the issue later.\n",
+            "commit_timestamp": 1695899801.0
         }
     ]
 }
