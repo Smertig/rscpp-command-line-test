@@ -7643,6 +7643,20 @@
             "commit_ref": "781242ffa44a9f9b95b6da5ac5a1bf6372ec6257",
             "commit_message": "cmake: detect TLS-SRP in OpenSSL/wolfSSL/GnuTLS\n\nWith new option `CURL_DISABLE_SRP=ON` to force-disable it.\nTo match existing option and detection logic in autotools.\n\nAlso:\n- fix detecting GnuTLS.\n  We assume `nettle` as a GnuTLS dependency.\n- add CMake GnuTLS CI job.\n- bump AppVeyor CMake OpenSSL MSVC job to OpenSSL 1.1.1 (from 1.0.2)\n  TLS-SRP fails to detect with 1.0.2 due to an OpenSSL header bug.\n- fix compiler warning when building with GnuTLS and disabled TLS-SRP.\n- fix comment typos, whitespace.\n\nRef: #11964\n\nCloses #11967\n",
             "commit_timestamp": 1695898256.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1695917117.712397,
+            "elapsed_time": 302.55680894851685,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "a8c773845f4fdbfb09b08a6ec4b656c812568995",
+            "commit_message": "tidy-up: whitespace fixes\n\nCloses #11972\n",
+            "commit_timestamp": 1695902608.0
         }
     ]
 }
