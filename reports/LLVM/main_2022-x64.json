@@ -8331,6 +8331,22 @@
             "commit_ref": "ab472cd4ea12b916e53a9121cf72664cf2c9346a",
             "commit_message": "[flang] Split flang/test/Lower/math-lowering.f90. (#67600)\n\n",
             "commit_timestamp": 1695959032.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1695975595.482394,
+            "elapsed_time": 9562.498332977295,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "b4afade17564c61e9baf8024f8cf6921bdb3bde3",
+            "commit_message": "[InstCombine] Avoid use of ConstantExpr::getZExtOrBitcast() (NFC)\n\nUse the constant folding API instead. In the second case using\nIR builder should also work, but the way the instructions are\ncreated an inserted there is very unusual, so I've left it alone.\n",
+            "commit_timestamp": 1695973483.0
         }
     ]
 }
