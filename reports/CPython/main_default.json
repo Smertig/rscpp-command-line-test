@@ -4955,6 +4955,20 @@
             "commit_ref": "f580edcc6a4c528020afe46c753db713474acad6",
             "commit_message": "gh-109889: fix compiler's redundant NOP detection to look past NOPs with no lineno when looking for the next instruction's lineno (#109987)\n\n",
             "commit_timestamp": 1695929608.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1695946388.644589,
+            "elapsed_time": 1375.6192803382874,
+            "x64": true,
+            "actual_files_count": 922,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "5fdcea744024c8a19ddb57057bf5ec2889546c98",
+            "commit_message": "gh-109960: Remove test_pty timeout of 10 seconds (#110058)\n\nIn 2003, test_pty got a hardcoded timeout of 10 seconds to prevent\r\nhanging on AIX & HPUX \"if run after test_openpty\":\r\ncommit 7d8145268ee282f14d6adce9305dc3c1c7ffec14. Since 2003, test_pty\r\nwas no longer reported to hang on AIX. But today, the test can fail\r\nsimply because a CI is busy running other tests in parallel.\r\nThe timeout of 10 seconds is no longer needed, just remove it.\r\nMoreover, regrtest now has multiple built-in generic timeout\r\nmecanisms.",
+            "commit_timestamp": 1695945684.0
         }
     ]
 }
