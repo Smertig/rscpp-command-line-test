@@ -4997,6 +4997,20 @@
             "commit_ref": "05079d93e410fca1e41ed32e67c54d63cbd9b35b",
             "commit_message": "gh-109868: Skip deepcopy memo check for empty memo (GH-109869)\n\n",
             "commit_timestamp": 1695972481.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1695989466.955405,
+            "elapsed_time": 1424.388720035553,
+            "x64": true,
+            "actual_files_count": 922,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "db0a258e796703e12befea9d6dec04e349ca2f5b",
+            "commit_message": "gh-110088, gh-109878: Fix test_asyncio timeouts (#110092)\n\nFix test_asyncio timeouts: don't measure the maximum duration, a test\r\nshould not measure a CI performance. Only measure the minimum\r\nduration when a task has a timeout or delay. Add CLOCK_RES to\r\ntest_asyncio.utils.",
+            "commit_timestamp": 1695988170.0
         }
     ]
 }

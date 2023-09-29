@@ -8347,6 +8347,22 @@
             "commit_ref": "b4afade17564c61e9baf8024f8cf6921bdb3bde3",
             "commit_message": "[InstCombine] Avoid use of ConstantExpr::getZExtOrBitcast() (NFC)\n\nUse the constant folding API instead. In the second case using\nIR builder should also work, but the way the instructions are\ncreated an inserted there is very unusual, so I've left it alone.\n",
             "commit_timestamp": 1695973483.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1695989690.532786,
+            "elapsed_time": 6902.900442123413,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "6dd96d6e80e9b3679a6161c590c60e0e99549b89",
+            "commit_message": "[clang analysis][thread-safety] Handle return-by-reference... (#67776)\n\n...of guarded variables, when the function is not marked as requiring\r\nlocks:\r\n\r\n```\r\nclass Return {\r\n  Mutex mu;\r\n  Foo foo GUARDED_BY(mu);\r\n\r\n  Foo &returns_ref_locked() {\r\n    MutexLock lock(&mu);\r\n    return foo;  // BAD\r\n  }\r\n\r\n  Foo &returns_ref_locks_required() SHARED_LOCKS_REQUIRED(mu) {\r\n    return foo;  // OK\r\n  }\r\n};\r\n```\r\n\r\nReview on Phabricator: https://reviews.llvm.org/D153131",
+            "commit_timestamp": 1695985864.0
         }
     ]
 }
