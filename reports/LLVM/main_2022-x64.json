@@ -8395,6 +8395,22 @@
             "commit_ref": "b915f60678c3033c466611be1119a46ba4b0869c",
             "commit_message": "[CodeGen] Don't treat thread local globals as large data (#67764)\n\nOtherwise they may mistakenly get the large section flag.",
             "commit_timestamp": 1696017413.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1696033262.867868,
+            "elapsed_time": 7948.765444517136,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "f88f090a2ef1eae500db9c398059a0eb4907ab4e",
+            "commit_message": "[libc] Correct 'memrchr' definition and re-enable on GPU (#67850)\n\nSummary:\nThis was disabled on the GPU because it conflicted with the definition\nin `glibc`. According to information online and in the `glibc`\nimplementation, the first argument should be a `const void *`. Fixing\nthis resolves the problem when exporting this to offloading languages.",
+            "commit_timestamp": 1696029720.0
         }
     ]
 }
