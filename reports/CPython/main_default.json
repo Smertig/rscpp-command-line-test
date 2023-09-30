@@ -5109,6 +5109,20 @@
             "commit_ref": "89966a694b54f81510f06a35b1406d56a2f2c8c5",
             "commit_message": "GH-89812: Add `pathlib._PathBase` (#106337)\n\nAdd private `pathlib._PathBase` class. This will be used by an experimental PyPI package to incubate a `tarfile.TarPath` class.\r\n\r\nCo-authored-by: Adam Turner <9087854+AA-Turner@users.noreply.github.com>",
             "commit_timestamp": 1696085101.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1696104594.471309,
+            "elapsed_time": 1735.4445345401764,
+            "x64": true,
+            "actual_files_count": 922,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "0def8c712bb6f66f1081cab71deb3681566b846d",
+            "commit_message": "gh-109748: Fix again venv test_zippath_from_non_installed_posix() (#110149)\n\nCall also copy_python_src_ignore() on listdir() names.\r\n\r\nshutil.copytree(): replace set() with an empty tuple. An empty tuple\r\nbecomes a constant in the compiler and checking if an item is in an\r\nempty tuple is cheap.",
+            "commit_timestamp": 1696098206.0
         }
     ]
 }

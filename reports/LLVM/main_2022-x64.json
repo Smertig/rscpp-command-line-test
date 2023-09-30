@@ -8475,6 +8475,22 @@
             "commit_ref": "d222c5ec47a09a3e120000e4a1006f4da7741256",
             "commit_message": "[C API] Fix LLVMGetOrdering/LLVMIsAtomicSingleThread for fence/memory instrs (#65228)\n\nFixes https://github.com/llvm/llvm-project/issues/65227\r\n\r\nLLVMGetOrdering previously did not support Fence instructions, and\r\ncalling it on a fence would lead to a bad cast as it\r\nassumed a load/store, or an AtomicRMWInst. This would either read a\r\ngarbage memory order, or assertion\r\n\r\nLLVMIsAtomicSingleThread did not support either Fence instructions,\r\nloads, or stores, and would similarly lead to a bad cast.\r\nIt happened to work out since the relevant types all have their synch\r\nscope ID at the same offset, but it still should be fixed\r\n\r\nThese cases are now fixed for the C API, and tests for these\r\ninstructions are added. The echo test utility now also supports cloning\r\nFence instructions, which it did not previously\r\n\r\n-----\r\n\r\nFrom what I can tell, there's no unified API to pull\r\n`getOrdering`/`getSyncScopeID` from, and instead requires casting to\r\nindividual types: if there is a better way of handling this I can switch\r\nto that",
             "commit_timestamp": 1696085551.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1696104943.231449,
+            "elapsed_time": 8172.244656801224,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "a5686c2b5541c58c9a1dd760761c369124546f78",
+            "commit_message": "[InstSimplify] Avoid use of ConstantExpr::getICmp. NFC (#67873)\n\n",
+            "commit_timestamp": 1696104089.0
         }
     ]
 }
