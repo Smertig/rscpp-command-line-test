@@ -8411,6 +8411,22 @@
             "commit_ref": "f88f090a2ef1eae500db9c398059a0eb4907ab4e",
             "commit_message": "[libc] Correct 'memrchr' definition and re-enable on GPU (#67850)\n\nSummary:\nThis was disabled on the GPU because it conflicted with the definition\nin `glibc`. According to information online and in the `glibc`\nimplementation, the first argument should be a `const void *`. Fixing\nthis resolves the problem when exporting this to offloading languages.",
             "commit_timestamp": 1696029720.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1696047437.487968,
+            "elapsed_time": 7743.186006784439,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "4b13c86d980af81fb9badc1b6b88f77f4faf5e53",
+            "commit_message": "[ORC] Fix heap-use-after-free error in MachODebugObjectSynthesizer.cpp\n\nAt line 191, `addSymbol` takes the name by reference but does not make\nan internal copy to the string, meaning the local\n`optional<std::string>` would get freed and leave Orc with a dangling\npointer. Fix this by just using an `optional<StringRef>` instead.\n",
+            "commit_timestamp": 1696040234.0
         }
     ]
 }
