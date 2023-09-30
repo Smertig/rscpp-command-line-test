@@ -7455,6 +7455,20 @@
             "commit_ref": "ce34b95b82399923df88d12d7783c9318acc6320",
             "commit_message": "Fix game path not respecting utf8 encoding\n",
             "commit_timestamp": 1696036069.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1696063112.940936,
+            "elapsed_time": 997.674097776413,
+            "x64": true,
+            "actual_files_count": 1039,
+            "expected_files_count": 1013,
+            "repo_url": "https://github.com/cemu-project/Cemu",
+            "commit_ref": "43976ca7ebbc91fc4eb6cd4822ae240301095b53",
+            "commit_message": "Prioritize non-NUS format over NUS\n\nIf a title exists multiple times in the game folder in different formats, then prefer and use non-NUS format if one is available. This is so we match previous Cemu behavior where Cemu would pick non-NUS simply due the fact that NUS format wasn't supported yet.\n",
+            "commit_timestamp": 1696047674.0
         }
     ]
 }

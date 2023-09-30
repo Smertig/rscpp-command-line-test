@@ -8427,6 +8427,22 @@
             "commit_ref": "4b13c86d980af81fb9badc1b6b88f77f4faf5e53",
             "commit_message": "[ORC] Fix heap-use-after-free error in MachODebugObjectSynthesizer.cpp\n\nAt line 191, `addSymbol` takes the name by reference but does not make\nan internal copy to the string, meaning the local\n`optional<std::string>` would get freed and leave Orc with a dangling\npointer. Fix this by just using an `optional<StringRef>` instead.\n",
             "commit_timestamp": 1696040234.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1696061976.434859,
+            "elapsed_time": 10030.073004722595,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "fef1bec39642d7733eae22d6e79ac07c779bdef5",
+            "commit_message": "[X86]Remove X86-specific dead code in ScheduleDAGRRList.cpp (#67629)\n\nAfter patch https://github.com/llvm/llvm-project/pull/67288 landed,\r\nunfoldMemoryOperand would not return NewMIs whose size ==3. So the\r\nremoved line is useless.",
+            "commit_timestamp": 1696060177.0
         }
     ]
 }
