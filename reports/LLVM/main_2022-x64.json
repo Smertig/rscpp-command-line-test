@@ -8443,6 +8443,22 @@
             "commit_ref": "fef1bec39642d7733eae22d6e79ac07c779bdef5",
             "commit_message": "[X86]Remove X86-specific dead code in ScheduleDAGRRList.cpp (#67629)\n\nAfter patch https://github.com/llvm/llvm-project/pull/67288 landed,\r\nunfoldMemoryOperand would not return NewMIs whose size ==3. So the\r\nremoved line is useless.",
             "commit_timestamp": 1696060177.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1696076178.756821,
+            "elapsed_time": 7461.917389154434,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "4346aaf05b66a204a7c21fad8e7673860e0270eb",
+            "commit_message": "[llvm] Remove uses of Type::getPointerTo() (NFC)\n\n* Remove if its sole use is to support an unnecessary ptr-to-ptr bitcast\n  (remove the bitcast as well)\n* Replace with use of other APIs.\n\nNFC opaque pointer cleanup effort.\n",
+            "commit_timestamp": 1696071341.0
         }
     ]
 }
