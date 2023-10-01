@@ -8539,6 +8539,22 @@
             "commit_ref": "5b7a7ec5a2106772de90a59c52e9fac7481f7e8a",
             "commit_message": "[NVPTX] Fix code generation for `trap-unreachable`. (#67478)\n\nhttps://reviews.llvm.org/D152789 added an `exit` op before each\r\n`unreachable`. This means we never get to the `trap` instruction.\r\n\r\nThis change limits the insertion of `exit` instructions to the cases\r\nwhere `unreachable` is not lowered to `trap`. Trap itself is changed to\r\nbe emitted as `trap; exit;` to convey to `ptxas` that it exits the CFG.",
             "commit_timestamp": 1696139964.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1696162628.081901,
+            "elapsed_time": 7770.428970813751,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "0b0ed8f76a264c3677b8254d8d334de43600568f",
+            "commit_message": "[RISCV] Add missing hunk to #67889 to fix test failures\n\nWithout this, various CodeGen tests fail because a\nRISCV::FCVT_D_W[_IN32X] machine node is created without the rounding\nmode operand.\n\nThe relevant PR was committed as bf94ba39b65d1212ea84d5783b393280e1ce7478\n",
+            "commit_timestamp": 1696156497.0
         }
     ]
 }
