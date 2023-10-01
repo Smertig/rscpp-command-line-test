@@ -7895,6 +7895,20 @@
             "commit_ref": "6b9a591bf7d82031f463373706d7de1cba0adee6",
             "commit_message": "h2: testcase and fix for pausing h2 streams\n\n- refs #11982 where it was noted that paused transfers may\n  close successfully without delivering the complete data\n- made sample poc into tests/http/client/h2-pausing.c and\n  added test_02_27 to reproduce\n\nCloses #11989\nFixes #11982\nReported-by: Harry Sintonen\n",
             "commit_timestamp": 1696110813.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1696176303.450191,
+            "elapsed_time": 297.4030337333679,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "c39585d9b7ef3cbfc1380812dec60e7b275b6af3",
+            "commit_message": "gha: bump actions to latest versions\n\n- actions@checkout@v4 (from v3 and v2)\n\n- fsfe/reuse-action@v2 (from v1)\n\nCloses #12000\n",
+            "commit_timestamp": 1696162583.0
         }
     ]
 }
