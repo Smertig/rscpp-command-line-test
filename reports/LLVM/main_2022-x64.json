@@ -8571,6 +8571,22 @@
             "commit_ref": "632022e61c544280685763333685b4743f105f2e",
             "commit_message": "[AArch64] aarch64-saturating-arithmetic.ll - refresh test missed in #67890\n",
             "commit_timestamp": 1696171164.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1696191350.225502,
+            "elapsed_time": 8128.967188119888,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "95f4b2a70850b5e6ab83ec21af3fe5246cac0675",
+            "commit_message": "[GSYM] Fix the initialization of DataExtractor (#67904)\n\nWithout this patch, we pass Endian as one of the parameters to the\r\nconstructor of DataExtractor.  The problem is that Endian is of:\r\n\r\n  enum endianness {big, little, native};\r\n\r\nwhereas the constructor is expecting \"bool IsLittleEndian\".  That is,\r\nwe are relying on an implicit conversion to convert big and little to\r\nfalse and true, respectively.\r\n\r\nWhen we migrate llvm::support::endianness to std::endian in future, we\r\ncan no longer rely on an implicit conversion because std::endian is\r\ndeclared with \"enum class\".  Even if we could, the conversion would\r\nnot be guaranteed to work because, for example, libcxx defines:\r\n\r\n  enum class endian {\r\n    little = 0xDEAD,\r\n    big = 0xFACE,\r\n    :\r\n\r\nwhere big and little are not boolean values.\r\n\r\nThis patch fixes the problem by properly converting Endian to a\r\nboolean value.",
+            "commit_timestamp": 1696187470.0
         }
     ]
 }

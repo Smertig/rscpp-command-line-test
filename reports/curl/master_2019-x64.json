@@ -7909,6 +7909,20 @@
             "commit_ref": "c39585d9b7ef3cbfc1380812dec60e7b275b6af3",
             "commit_message": "gha: bump actions to latest versions\n\n- actions@checkout@v4 (from v3 and v2)\n\n- fsfe/reuse-action@v2 (from v1)\n\nCloses #12000\n",
             "commit_timestamp": 1696162583.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1696190682.001642,
+            "elapsed_time": 264.7309105396271,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "fa95f7ee876afe4b6b78a8998974f0886dee2ae4",
+            "commit_message": "cmake: pre-cache `HAVE_POLL_FINE` on Windows\n\nWindows doesn't support `poll()`, so we can safely skip checking for\nfine poll.\n\nCloses #12003\n",
+            "commit_timestamp": 1696183345.0
         }
     ]
 }
