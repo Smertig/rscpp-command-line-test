@@ -8491,6 +8491,22 @@
             "commit_ref": "a5686c2b5541c58c9a1dd760761c369124546f78",
             "commit_message": "[InstSimplify] Avoid use of ConstantExpr::getICmp. NFC (#67873)\n\n",
             "commit_timestamp": 1696104089.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1696119531.159912,
+            "elapsed_time": 7767.629121303558,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "dc1a2cb9718966e9050e32962dc86377088f2d7e",
+            "commit_message": "[lldb][windows] Cover more symbols in LLDB_EXPORT_ALL_SYMBOLS\n\nFollowup to #67628 that relaxes the symbol regex a bit to cover more\nlldb_private symbols.\n",
+            "commit_timestamp": 1696115179.0
         }
     ]
 }

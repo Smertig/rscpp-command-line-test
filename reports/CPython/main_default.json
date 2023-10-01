@@ -5123,6 +5123,20 @@
             "commit_ref": "0def8c712bb6f66f1081cab71deb3681566b846d",
             "commit_message": "gh-109748: Fix again venv test_zippath_from_non_installed_posix() (#110149)\n\nCall also copy_python_src_ignore() on listdir() names.\r\n\r\nshutil.copytree(): replace set() with an empty tuple. An empty tuple\r\nbecomes a constant in the compiler and checking if an item is in an\r\nempty tuple is cheap.",
             "commit_timestamp": 1696098206.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1696119160.546806,
+            "elapsed_time": 1539.3836557865143,
+            "x64": true,
+            "actual_files_count": 922,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "53eb9a676f8c59b206dfc536b7590f6563ad65e0",
+            "commit_message": "gh-110152: regrtest handles cross compilation and HOSTRUNNER (#110156)\n\n* _add_python_opts() now handles cross compilation and HOSTRUNNER.\r\n* display_header() now tells if Python is cross-compiled, display\r\n  HOSTRUNNER, and get the host platform.\r\n* Remove Tools/scripts/run_tests.py script.\r\n* Remove \"make hostrunnertest\": use \"make buildbottest\"\r\n  or \"make test\" instead.",
+            "commit_timestamp": 1696113443.0
         }
     ]
 }
