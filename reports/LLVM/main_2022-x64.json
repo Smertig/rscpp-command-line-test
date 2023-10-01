@@ -8507,6 +8507,22 @@
             "commit_ref": "dc1a2cb9718966e9050e32962dc86377088f2d7e",
             "commit_message": "[lldb][windows] Cover more symbols in LLDB_EXPORT_ALL_SYMBOLS\n\nFollowup to #67628 that relaxes the symbol regex a bit to cover more\nlldb_private symbols.\n",
             "commit_timestamp": 1696115179.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1696133826.915856,
+            "elapsed_time": 7591.8894209861755,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "e7247f1010b546ca4d98a6ee40414d2d1cae0381",
+            "commit_message": "[profiling] Move option declarations into headers\n\nThis will make it possible to add visibility attributes to these\nvariables.  This also fixes some type mismatches between the\ndeclaration and the definition.\n\nReviewed By: bogner, huangjd\n\nDifferential Revision: https://reviews.llvm.org/D156599\n",
+            "commit_timestamp": 1696125088.0
         }
     ]
 }
