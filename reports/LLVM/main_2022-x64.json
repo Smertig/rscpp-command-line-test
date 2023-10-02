@@ -8619,6 +8619,22 @@
             "commit_ref": "97829935844e7f35216e12c13231f35fbea640c3",
             "commit_message": "[mlir][affine] Check the input vector sizes to be greater than 0 (#65293)\n\nIn the process of vectorization of the affine loop, the 0 vector size\r\ncauses the crash with building the invalid AffineForOp. We can catch the\r\ncase beforehand propagating to the assertion.\r\n\r\nSee: https://github.com/llvm/llvm-project/issues/64262",
             "commit_timestamp": 1696207920.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1696234373.310162,
+            "elapsed_time": 5654.607284784317,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "8245ca994bc524ef7a047526c128dbe0cb14d104",
+            "commit_message": "[clang][Interp] Don't disable int128 tests everywhere.\n",
+            "commit_timestamp": 1696233335.0
         }
     ]
 }
