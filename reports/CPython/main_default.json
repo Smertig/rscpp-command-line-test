@@ -5263,6 +5263,20 @@
             "commit_ref": "6139bf5e0c755ed22bdfb027a5299493f0c71be9",
             "commit_message": "GH-109190: Announce final release in What's New in Python 3.12 (#110117)\n\nPrepare What's New in Python 3.12 for final release\r\n",
             "commit_timestamp": 1696245358.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1696262941.39892,
+            "elapsed_time": 1444.8236088752747,
+            "x64": true,
+            "actual_files_count": 922,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "732ad44cec971be5255b1accbac6555d3615c2bf",
+            "commit_message": "gh-110178: Use fewer weakrefs in test_typing.py (#110194)\n\nConfirmed that without the C changes from #108517, this test still segfaults with only 10 weakrefs.",
+            "commit_timestamp": 1696259033.0
         }
     ]
 }

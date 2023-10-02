@@ -8651,6 +8651,22 @@
             "commit_ref": "e9b33d085da05da6ce943dc563134f5ba91ca35b",
             "commit_message": "[ConstraintElim] Add extra tests with nested loops and iv decrements.\n\nAdd extra test coverage for induction logic to cover nested loops and\nloops with induction decrements. This adds coverage for upcoming\npatches.\n",
             "commit_timestamp": 1696247511.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1696263680.569832,
+            "elapsed_time": 10467.314404726028,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "c2fd3ebe83444de05482d5a5a332dc2cf0db1a92",
+            "commit_message": "[clang] Add test for CWG2267 (#67931)\n\nhttps://cplusplus.github.io/CWG/issues/2267.html\r\nRelated: #63416",
+            "commit_timestamp": 1696262441.0
         }
     ]
 }
