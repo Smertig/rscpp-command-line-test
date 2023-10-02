@@ -8603,6 +8603,22 @@
             "commit_ref": "2375d84f0656ea97d221a68bba5a6b125e2f0856",
             "commit_message": "Fix MLIR test for UBSAN: define enum values that are set in cl::opt (NFC)\n",
             "commit_timestamp": 1696201731.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1696220200.06675,
+            "elapsed_time": 7719.940675497055,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "97829935844e7f35216e12c13231f35fbea640c3",
+            "commit_message": "[mlir][affine] Check the input vector sizes to be greater than 0 (#65293)\n\nIn the process of vectorization of the affine loop, the 0 vector size\r\ncauses the crash with building the invalid AffineForOp. We can catch the\r\ncase beforehand propagating to the assertion.\r\n\r\nSee: https://github.com/llvm/llvm-project/issues/64262",
+            "commit_timestamp": 1696207920.0
         }
     ]
 }
