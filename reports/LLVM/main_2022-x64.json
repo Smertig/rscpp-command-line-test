@@ -8699,6 +8699,22 @@
             "commit_ref": "824b1677a44e25b7c9808c774ba2d894ff14df2b",
             "commit_message": "[libc][NFC] Fix missing field 'tm_isdst' initializer warning (#67837)\n\nThis patch fixes several warnings thrown by clang about an uninitialized\r\nmember of struct tm, tm_isdst.\r\n\r\nWeirdly, gcc doesn't complain about it, probably this member is never\r\nread in the tests.",
             "commit_timestamp": 1696289575.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1696306627.784821,
+            "elapsed_time": 7625.224354505539,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "0502d83470202de6412d4b310692c7b06f1791cb",
+            "commit_message": "Minor fixes on the MLIR ActionProfiler (NFC)\n\nEnsure the stream flushed to the string before acquiring the mutext.\nNo need to flush the output stream, the goal of the mutex is to sync\nahead before content is added to the stream.\n",
+            "commit_timestamp": 1696302678.0
         }
     ]
 }

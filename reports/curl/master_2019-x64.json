@@ -8021,6 +8021,20 @@
             "commit_ref": "d82b080f6374433ce7c98241329189ad2d3976f8",
             "commit_message": "cmake: disable unity mode with Windows Unicode + TrackMemory\n\n\"TrackMemory\" is `ENABLE_DEBUG=ON` (aka `ENABLE_CURLDEBUG=ON`,\naka `-DCURLDEBUG`).\n\nThere is an issue with memory tracking and Unicode when built in \"unity\"\nmode, which results in the curl tool crashing right on startup, even\nwithout any command-line option. Interestingly this doesn't happen under\nWINE (at least on the system I tested this on), but consistenly happens\non real Windows machines. Crash is 0xC0000374 heap corruption. Both\nshared and static curl executables are affected.\n\nThis limitation probably won't hit too many people, but it remains\na TODO to find and fix the root cause and drop this workaround.\n\nExample builds and runs:\nhttps://ci.appveyor.com/project/curlorg/curl/builds/48169111/job/17cptxhtpubd7iwj#L313 (static)\nhttps://ci.appveyor.com/project/curlorg/curl/builds/48169111/job/76e1ge758tbyqu9c#L317 (shared)\n\nFollow-up to 3f8fc25720900b14b7432f4bd93407ca15311719 #11095\n\nRef: #11928\nCloses #12005\n",
             "commit_timestamp": 1696289298.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1696305918.318167,
+            "elapsed_time": 312.08301162719727,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "d82b080f6374433ce7c98241329189ad2d3976f8",
+            "commit_message": "cmake: disable unity mode with Windows Unicode + TrackMemory\n\n\"TrackMemory\" is `ENABLE_DEBUG=ON` (aka `ENABLE_CURLDEBUG=ON`,\naka `-DCURLDEBUG`).\n\nThere is an issue with memory tracking and Unicode when built in \"unity\"\nmode, which results in the curl tool crashing right on startup, even\nwithout any command-line option. Interestingly this doesn't happen under\nWINE (at least on the system I tested this on), but consistenly happens\non real Windows machines. Crash is 0xC0000374 heap corruption. Both\nshared and static curl executables are affected.\n\nThis limitation probably won't hit too many people, but it remains\na TODO to find and fix the root cause and drop this workaround.\n\nExample builds and runs:\nhttps://ci.appveyor.com/project/curlorg/curl/builds/48169111/job/17cptxhtpubd7iwj#L313 (static)\nhttps://ci.appveyor.com/project/curlorg/curl/builds/48169111/job/76e1ge758tbyqu9c#L317 (shared)\n\nFollow-up to 3f8fc25720900b14b7432f4bd93407ca15311719 #11095\n\nRef: #11928\nCloses #12005\n",
+            "commit_timestamp": 1696289298.0
         }
     ]
 }
