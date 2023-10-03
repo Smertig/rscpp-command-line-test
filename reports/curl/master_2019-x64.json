@@ -8063,6 +8063,20 @@
             "commit_ref": "f42a279ee32d3db3ab529da8dfb833edb5a088ca",
             "commit_message": "cmake: fix unity with Windows Unicode + TrackMemory\n\nFound the root cause of the startup crash in unity builds with Unicode\nand TrackMemory enabled at the same time.\n\nWe must make sure that the `memdebug.h` header doesn't apply to\n`lib/curl_multibyte.c` (as even noted in a comment there.) In unity\nbuilds all headers apply to all sources, including `curl_multibyte.c`.\nThis probably resulted in an infinite loop on startup.\n\nExclude this source from unity compilation with TrackMemory enabled,\nin both libcurl and curl tool. Enable unity mode for a debug Unicode\nCI job to keep it tested. Also delete the earlier workaround that\nfully disabled unity for affected builds.\n\nFollow-up to d82b080f6374433ce7c98241329189ad2d3976f8 #12005\nFollow-up to 3f8fc25720900b14b7432f4bd93407ca15311719 #11095\n\nCloses #11928\n",
             "commit_timestamp": 1696326226.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1696349210.357329,
+            "elapsed_time": 365.36670327186584,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "83ec54e1b9dcf3482d8c98ee3b3c08d054bb694b",
+            "commit_message": "build: alpha-sort source files for lib and src\n\nCloses #12014\n",
+            "commit_timestamp": 1696337897.0
         }
     ]
 }

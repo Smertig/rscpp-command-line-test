@@ -9047,6 +9047,20 @@
             "commit_ref": "e912bc2e3a1d187148f1dbc078d1f41fc398cf0c",
             "commit_message": "Internal change\n\nPiperOrigin-RevId: 570208557\n",
             "commit_timestamp": 1696288262.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1696349104.337557,
+            "elapsed_time": 488.7072322368622,
+            "x64": false,
+            "actual_files_count": 847,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "95d57237b3059548a98da12cdf28807ffcacad5b",
+            "commit_message": "Move all virtual functions in MapFieldBase to be a manually written vtable.\nThis is preparation work to merge the vtable with the `ReflectionPayload`\nobject to reduce the size of MapField by 8 bytes.\n\nPiperOrigin-RevId: 570387900\n",
+            "commit_timestamp": 1696345165.0
         }
     ]
 }

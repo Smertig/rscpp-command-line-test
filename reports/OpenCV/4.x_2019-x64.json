@@ -8489,6 +8489,20 @@
             "commit_ref": "9bd14d54176ce599d7b55eef5825a86dc560458f",
             "commit_message": "Merge pull request #24353 from alexlyulkov:al/fixed-cumsum-layer\n\nFixed CumSum dnn layer #24353\r\n\r\nFixes #20110\r\n\r\nThe algorithm had several errors, so I rewrote it.\r\nAlso the layer didn't work with non constant axis tensor. Fixed it.\r\nEnabled CumSum layer tests from ONNX conformance.",
             "commit_timestamp": 1696330705.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1696349206.353501,
+            "elapsed_time": 781.293535232544,
+            "x64": false,
+            "actual_files_count": 466,
+            "expected_files_count": 459,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "6bcf3d431162fb45518a770a72b81c0387810f9a",
+            "commit_message": "Merge pull request #24354 from asmorkalov:as/charuco_ub\n\nRemoved invalid reference usage in charuco detector",
+            "commit_timestamp": 1696344342.0
         }
     ]
 }
