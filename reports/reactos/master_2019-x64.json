@@ -7867,6 +7867,20 @@
             "commit_ref": "4ba8af9cae6e19d122faff294622530e16b561d3",
             "commit_message": "[CALC] Use pragma once for calc.h (#5754)\n\nIt's simpler and only needs to be included once at the beginning of the\r\nheader file. It generates an unique identifier for the file automatically,\r\nso maintainers wouldn't need to choose unique names for the macros.\r\nIt will be helpful if any future refactoring takes place.\r\n\r\nSigned-off-by: Sarthak Roy <sarthakroy2002@gmail.com>",
             "commit_timestamp": 1696197512.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1696291510.59572,
+            "elapsed_time": 109.38626742362976,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "3e46a8673d7c82f42e3819f56de8a91e16354010",
+            "commit_message": "[EXPLORER][COMCTL32] Fix balloon tooltips and system pager alerts (#5559)\n\n- [EXPLORER] Set maximum balloon width for notification area\n- [COMCTL32] Fix balloon tooltip shape\n\n- Limit balloon tooltips from extending past the edges of the monitor, not the edges of the work area.\n- Instead of simply repositioning the main rectangle when the balloon is too far towards one edge of the screen,\n  try flipping the balloon the other way. This is the same behavior as Windows Server 2003.\n- Tweak some values used to draw the balloon tooltips to more closely follow the Windows balloon tooltip style.\n- Removing trailing whitespace.\n- While the new changes are guarded, consider cancelling our Wine sync for common controls.\n  Our common controls are responsible for many graphical issues and lack of features throughout ReactOS.\n\nCORE-19109\n",
+            "commit_timestamp": 1696284525.0
         }
     ]
 }
