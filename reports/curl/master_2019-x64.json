@@ -8147,6 +8147,20 @@
             "commit_ref": "1b9becb5d9c1ea8195279e92639bdc4ba863507d",
             "commit_message": "GHA: bump actions/checkout\n\nFollow-up to 2e0fa50fc16b9339f51e0a7bfff0352829323acb #11964\nFollow-up to c39585d9b7ef3cbfc1380812dec60e7b275b6af3 #12000\n\nCloses #12023\n",
             "commit_timestamp": 1696410706.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1696435460.187824,
+            "elapsed_time": 325.389075756073,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "fd328fcaf1bc9683dffd71574c478d10f014ccf2",
+            "commit_message": "cmake: fix unity builds for more build combinations\n\nBy using unique static function/variable names in source files\nimplementing these interfaces.\n\n- OpenLDAP combined with any SSH backend.\n\n- MultiSSL with mbedTLS, OpenSSL, wolfSSL, SecureTransport.\n\nCloses #12027\n",
+            "commit_timestamp": 1696433766.0
         }
     ]
 }
