@@ -8021,6 +8021,20 @@
             "commit_ref": "be5c889cdf73080228f6f41c8bbb2fdac4dfb31c",
             "commit_message": "[NTDLL:LDR] SAL improvements and fixes\n\n- Convert some notations to SAL2\n- \"Name\" parameter in LdrGetProcedureAddress/LdrpGetProcedureAddress should be optional\n- \"DllCharacteristics\" parameter in LdrGetDllHandle should be optional\n",
             "commit_timestamp": 1696411578.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1696449845.952752,
+            "elapsed_time": 116.63307476043701,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "d72025649b769061b5f9f38aa57742ef17ae7c9e",
+            "commit_message": "[NTOS:SE] Mute the access denied DPRINTs\n\nThey can be spammy. Also clarify these debug prints, because some people\nthink that \"failed to grant access rights\" means there's something wrong\nin the core access check functions.\n",
+            "commit_timestamp": 1696435470.0
         }
     ]
 }
