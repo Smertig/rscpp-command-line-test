@@ -8827,6 +8827,22 @@
             "commit_ref": "503bc5f66111f7e4fc79972bb9bfec8bb5606bab",
             "commit_message": "[LLD] [COFF] Fix handling of comdat .drectve sections (#68116)\n\nThis can happen when manually emitting strings into .drectve sections\r\nwith `__attribute__((section(\".drectve\")))`, which is a way to emulate\r\n`#pragma comment(linker, \"...\")` for mingw compilers, without requiring\r\nbuilding with -fms-extensions.\r\n\r\nNormally, this doesn't generate any comdat, but if compiled with\r\n-fsanitize=address, this section does get turned into a comdat section.\r\n\r\nThis fixes #67261. This issue can be seen as a regression; a change in\r\nthe \"lli\" tool in 17.x triggers this case, if compiled with ASAN\r\nenabled, triggering this unsupported corner case in LLD. With this\r\nchange, LLD can handle it.",
             "commit_timestamp": 1696406090.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1696422125.077551,
+            "elapsed_time": 9017.739095926285,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "452fa6b86da76809252c6a1d4514603f19838703",
+            "commit_message": "[libc] Change the GPU to use builtin memory functions (#68003)\n\nSummary:\nThe GPU build is special in the sense that we always know that\nup-to-date `clang` is always going to be the compiler. This allows us to\nrely directly on builtins, which allow us to push a lot of this\ncomplexity into the backend. Backend implementations are favored on\nthe GPU because it allows us to do a lot more target specific\noptimizations. This patch changes over the common memory functions to\nuse builtin versions when building for AMDGPU or NVPTX.",
+            "commit_timestamp": 1696420975.0
         }
     ]
 }
