@@ -8795,6 +8795,22 @@
             "commit_ref": "427f120f60becd23d6e037ccd14104adde8a3af9",
             "commit_message": "[mlir][sparse] minor edits in runtime lib Cpp files (#68165)\n\n",
             "commit_timestamp": 1696375734.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1696393080.776361,
+            "elapsed_time": 7762.822603225708,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "548d67a0393c7bd200e335ada0a3d684750c2697",
+            "commit_message": "[clang][Sema] Fix a bug when instantiating a lambda with requires clause (#65193)\n\nInstantiating a lambda at a scope different from where it is defined\r\nwill paralyze clang if the trailing require clause refers to local\r\nvariables. This patch fixes this by re-adding the local variables to\r\n`LocalInstantiationScope`.\r\n\r\nFixes #64462",
+            "commit_timestamp": 1696385975.0
         }
     ]
 }
