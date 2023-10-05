@@ -8875,6 +8875,22 @@
             "commit_ref": "9d6ec280fc537b55ef8641ea85d3522426bc5766",
             "commit_message": "[lld/ELF] Don't relax R_X86_64_(REX_)GOTPCRELX when offset is too far\n\nFor each R_X86_64_(REX_)GOTPCRELX relocation, check that the offset to the symbol is representable with 2^32 signed offset. If not, add a GOT entry for it and set its expr to R_GOT_PC so that we emit the GOT load instead of the relaxed lea. Do this in finalizeAddressDependentContent() where we iteratively attempt this (e.g. RISCV uses this for relaxation, ARM uses this to insert thunks).\n\nDecided not to do the opposite of inserting GOT entries initially and removing them when relaxable because removing GOT entries isn't simple.\n\nOne drawback of this approach is that if we see any GOTPCRELX relocation, we'll create an empty .got even if it's not required in the end.\n\nReviewed By: MaskRay\n\nDifferential Revision: https://reviews.llvm.org/D157020\n",
             "commit_timestamp": 1696449836.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1696465307.694384,
+            "elapsed_time": 9182.918283700943,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "6e9ee42a5161081dcada4c2d187eb8e1bbff633a",
+            "commit_message": "DWARFContext: use std::make_unique rather than reset+new\n",
+            "commit_timestamp": 1696460407.0
         }
     ]
 }

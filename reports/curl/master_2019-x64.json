@@ -8175,6 +8175,20 @@
             "commit_ref": "d1b0317f9b3e4535fd9006b1faab41cbfa912753",
             "commit_message": "github/labeler: improve labeler matches\n",
             "commit_timestamp": 1696447277.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1696464435.192038,
+            "elapsed_time": 318.48206186294556,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "3ef3eaa27e5ccdc9506886497667c73e822750c9",
+            "commit_message": "base64: also build for curl\n\nSince the tool itself now uses the base64 code using the curlx way, it\nneeds to build also when the tool needs it. Starting now, the tool build\ndefines BULDING_CURL to allow lib-side code to use it.\n\nFollow-up to 2e160c9c6525\n\nCloses #12010\n",
+            "commit_timestamp": 1696454536.0
         }
     ]
 }
