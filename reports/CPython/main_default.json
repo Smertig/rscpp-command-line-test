@@ -5487,6 +5487,20 @@
             "commit_ref": "cf6f23b0e3cdef33f23967cf954a2ca4d1fa6528",
             "commit_message": "gh-88402: Add new sysconfig variables on Windows (GH-110049)\n\nCo-authored-by: Filipe La\u00edns <filipe.lains@gmail.com>\r\n",
             "commit_timestamp": 1696459829.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1696493371.871338,
+            "elapsed_time": 1676.30166721344,
+            "x64": true,
+            "actual_files_count": 923,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "6592976061a6580fee2ade3564f6497eb685ab67",
+            "commit_message": "gh-110367: Enhance regrtest -jN --verbose3 (#110368)\n\nWhen using worker processes (-jN) with --verbose3 option, regrtest\r\ncan now display the worker output even if a worker process does\r\ncrash.  Previously, sys.stdout and sys.stderr were replaced and so\r\nthe worker output was lost on a crash.",
+            "commit_timestamp": 1696487083.0
         }
     ]
 }

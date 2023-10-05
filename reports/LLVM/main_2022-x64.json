@@ -8907,6 +8907,22 @@
             "commit_ref": "bbdbcd83e6702f314d147a680247058a899ba261",
             "commit_message": "[Support] Rename llvm::support::endianness to llvm::endianness (#68174)\n\nAs part of an effort to make our codebase ready for the migration from\r\nllvm::support::endianness to std::endian in C++20, this patch renames\r\nllvm::support::endianness to llvm::endianness.\r\n\r\nThe intent of this patch is to make fully qualified names less\r\npainful.  That is, with this patch, we can just say\r\nllvm::endianness::big rather than llvm::support::endianness::big.\r\n\r\nI'm not renaming llvm::support::endianness to llvm::endian because we\r\nhave a lot of places with \"using namespace support;\" where it would be\r\nambiguous whether \"endian\" refers to llvm::endian or\r\nllvm::support::endian.\r\n\r\nThis patch defines several helpers for gradual migration:\r\n\r\n  namespace llvm {\r\n  namespace support {\r\n  using endianness = llvm::endianness;\r\n  constexpr llvm::endianness big = llvm::endianness::big;\r\n  constexpr llvm::endianness little = llvm::endianness::little;\r\n  constexpr llvm::endianness native = llvm::endianness::native;\r\n\r\nWhile we are at it, this patch changes the enum to \"enum class\".  The\r\n\"enum class\" prevents implicit conversions from endianness to bool.\r\nI've fixed three such instances of implicit conversions:\r\n\r\n  95f4b2a70850b5e6ab83ec21af3fe5246cac0675\r\n  8de2ecc2e75d496fc7fc8a24c3acf71732a3bd0c\r\n  a7517e12caab0750d3dfd7c0c6faec9acc7e5a2b",
             "commit_timestamp": 1696476842.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1696493923.228528,
+            "elapsed_time": 7677.8329429626465,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "ba149f6e097242dd41aacf747bef35ba374ac467",
+            "commit_message": "[ValueTracking] Add SimplifyQuery ctor without TLI (NFC)\n\nWhile we pretty much always want to pass DT, AC and CxtI, most\nplaces don't care about TLI. Add an overload where this is not\none of the first parameters.\n",
+            "commit_timestamp": 1696492500.0
         }
     ]
 }
