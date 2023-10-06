@@ -9299,6 +9299,20 @@
             "commit_ref": "9a2e785d1da0847a29b91c2d5efc84451325d453",
             "commit_message": "Adding a DownCastToGenerated function, similar to DynamicCastToGenerated but without the runtime cost of dynamic_cast. The cast is checked in debug mode.\nAlso, add reference overloads of DynamicCastToGenerated which terminate on failure like dynamic_cast would do on an environment without exceptions.\n\nPiperOrigin-RevId: 571241355\n",
             "commit_timestamp": 1696574406.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1696608295.849474,
+            "elapsed_time": 469.9137930870056,
+            "x64": false,
+            "actual_files_count": 849,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "d41b9e7a4b2834572cc396c41809fd46ea5eb5d4",
+            "commit_message": "Internal change\n\nPiperOrigin-RevId: 571309279\n",
+            "commit_timestamp": 1696595254.0
         }
     ]
 }
