@@ -8287,6 +8287,20 @@
             "commit_ref": "911d37bb2f01450d102a9d1ac206b2943a38926c",
             "commit_message": "test1903: actually verify the cookies after the test\n\nThe test otherwise could do just about anything (except leak memory in\ndebug mode) and its bad behaviour wouldn't be detected. Now, check the\nresulting cookie file to ensure the cookies are still there.\n\nCloses #12041\n",
             "commit_timestamp": 1696536823.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1696579485.536132,
+            "elapsed_time": 286.0602605342865,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "6dd6654f7551799bc32a8a2f5a11cfd6cd7d3448",
+            "commit_message": "multi: set CURLM_CALL_MULTI_PERFORM after switch to DOING_MORE\n\nSince there is nothing to wait for there. Avoids the test 1233 hang\nreported in #12033.\n\nReported-by: Dan Fandrich\nCloses #12042\n",
+            "commit_timestamp": 1696574998.0
         }
     ]
 }

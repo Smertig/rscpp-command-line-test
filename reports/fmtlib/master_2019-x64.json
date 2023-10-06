@@ -9629,6 +9629,20 @@
             "commit_ref": "f76603f21ea75bcd8d0007d7599cac75862b13b9",
             "commit_message": "fix: make std::bitset formattable again (#3660)\n\n* fix: make std::bitset formattable again\r\n\r\nIt used to be formattable via operator<<(ostream&) implicitly. Make it\r\nformattable again, but this time via formatter specialization.\r\n\r\n* fix: make nested_formatter constexpr default constructible",
             "commit_timestamp": 1696352027.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1696579396.15996,
+            "elapsed_time": 116.66987776756287,
+            "x64": false,
+            "actual_files_count": 66,
+            "expected_files_count": 66,
+            "repo_url": "https://github.com/fmtlib/fmt.git",
+            "commit_ref": "f76603f21ea75bcd8d0007d7599cac75862b13b9",
+            "commit_message": "fix: make std::bitset formattable again (#3660)\n\n* fix: make std::bitset formattable again\r\n\r\nIt used to be formattable via operator<<(ostream&) implicitly. Make it\r\nformattable again, but this time via formatter specialization.\r\n\r\n* fix: make nested_formatter constexpr default constructible",
+            "commit_timestamp": 1696352027.0
         }
     ]
 }
