@@ -9243,6 +9243,20 @@
             "commit_ref": "89700726081e30dd59683410677b61dce8f50203",
             "commit_message": "Migrate away from distutils\n\nPython 3.12 has removed the `distutils` module, so we need to stop relying on\nit. Most of the parts we were using had a straightforward replacement in\n`setuptools` or elsewhere in the Python standard library. I couldn't find a\ngood replacement for `distutils.command.clean`, though. We were only using it\nto enable `python setup.py clean`, so I just removed that functionality since\ndirectly invoking setup.py is deprecated anyway.\n\nWhile I was looking at this I realized that our python/release.sh script is\nunused, so I also removed that.\n\nPiperOrigin-RevId: 571035275\n",
             "commit_timestamp": 1696522101.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1696550774.113746,
+            "elapsed_time": 472.5592975616455,
+            "x64": false,
+            "actual_files_count": 848,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "a385e04ac74f38b35fb182ab543c2af03c5ad643",
+            "commit_message": "Implement FeatureSet caching within descriptor pools.\n\nThis is meant to optimize our editions handling before rolling it out more widely to proto2 and proto3 under the hood.  As it's implemented today, every file descriptor would need to allocate its own duplicate FeatureSet for either proto2 or proto3 (plus additional ones per proto2 group).\n\nPiperOrigin-RevId: 571166907\n",
+            "commit_timestamp": 1696549751.0
         }
     ]
 }

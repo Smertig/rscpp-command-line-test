@@ -8971,6 +8971,22 @@
             "commit_ref": "dc129d6f715cf83a2072fc8de8b4e4c70bca6935",
             "commit_message": "[libc++] Add std::fpclassify overloads for floating-point. (#67913)\n\nStandard says that implementation of math functions that have\r\nfloating-point-type parameter should provide an \"overload for each\r\ncv-unqualified floating-point type\".",
             "commit_timestamp": 1696533482.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1696551569.595927,
+            "elapsed_time": 8905.995112657547,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "8f397e04e5ce87fb5ff99d6659ba959c22ea926c",
+            "commit_message": "[mlir][memref] Fix emulate narrow types for strided memref offset (#68181)\n\nThis patch fixes strided memref offset calculation for emulating narrow\r\ntypes.\r\n\r\nAs a side effect, this patch also adds support for a 1-D subviews with\r\nstatic sizes, static offsets and strides of 1 for testing. Emulate\r\nnarrow types pass was not tested for strided memrefs before this patch.",
+            "commit_timestamp": 1696548153.0
         }
     ]
 }
