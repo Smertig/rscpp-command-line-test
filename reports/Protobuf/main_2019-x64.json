@@ -9257,6 +9257,20 @@
             "commit_ref": "a385e04ac74f38b35fb182ab543c2af03c5ad643",
             "commit_message": "Implement FeatureSet caching within descriptor pools.\n\nThis is meant to optimize our editions handling before rolling it out more widely to proto2 and proto3 under the hood.  As it's implemented today, every file descriptor would need to allocate its own duplicate FeatureSet for either proto2 or proto3 (plus additional ones per proto2 group).\n\nPiperOrigin-RevId: 571166907\n",
             "commit_timestamp": 1696549751.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1696565138.109269,
+            "elapsed_time": 402.63916206359863,
+            "x64": false,
+            "actual_files_count": 849,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "20ba4c459709eefd13b48ed8a7c7c173977fe906",
+            "commit_message": "Auto-generate files after cl/571177924\n",
+            "commit_timestamp": 1696553122.0
         }
     ]
 }
