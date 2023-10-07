@@ -8441,6 +8441,20 @@
             "commit_ref": "500f28f41440d464a5dceac3fe523d0326e5aecf",
             "commit_message": "appveyor: bump mingw-w64 job to gcc 13 (was: 8)\n\nThis sets gcc 6, 7, 9, 13 in our test mix (was: 6, 7, 8, 9).\nAdding a modern gcc version to the tests.\n\n(The gcc 8 job used to take around 50 minutes. The new image with gcc 13\nfinished in 32, 35, 34 minutes in the 3 test runs so far.)\n\nIt also adds a modern CMake version and OS env to our mingw-w64 builds.\n\nCloses #12051\n",
             "commit_timestamp": 1696689997.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1696709091.47238,
+            "elapsed_time": 402.55508971214294,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "dff6b78fe7876ef556977b47b1febd7d752113f1",
+            "commit_message": "CI: bump OpenLDAP package version on FreeBSD\n\nThe old one is no longer available.\n",
+            "commit_timestamp": 1696708327.0
         }
     ]
 }

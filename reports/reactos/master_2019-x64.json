@@ -8301,6 +8301,20 @@
             "commit_ref": "e685b25e35c9d6dfbe2139ac71f7378b1f9e6d0f",
             "commit_message": "[NTOS:MM/x64] Temporarily release AddressCreationLock in MmCreateVirtualMappingUnsafeEx\n\nThis is a hack, because the kernel mode path can incur a recursive page fault with the AddressCreationLock acquired, which would lead to a recursive acquisition, once we do proper locking in MmAccessFault.\nTo properly fix this the PDE must be made valid, similar to the user mode path, but that is not that simple...\n",
             "commit_timestamp": 1696665510.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1696709041.701134,
+            "elapsed_time": 175.43356847763062,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "d0b43a399f47eeb21c44a353a96d402bc8332601",
+            "commit_message": "[NETID] Simplify IsUserAdmin() helper implementation (#5763)\n\nAddendum to commit 8c4b0c914.\n\nBase ourselves on pSetupIsUserAdmin() and other similar functions in our\ncodebase. Note that what we are actually interested here, is whether the\ncurrent thread runs with Administrator privileges.\n\n(As noticed by contributor 'whindsaks', \"Not only is this code simpler,\nit now will correctly handle deny-only SIDs in the token!\")\n",
+            "commit_timestamp": 1696708356.0
         }
     ]
 }

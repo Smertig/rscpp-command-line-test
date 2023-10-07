@@ -9147,6 +9147,22 @@
             "commit_ref": "635eb5f370859c6140c1315176c8579ba8bc861f",
             "commit_message": "[clang][NFC] Typo fix in PPC.cpp\n\ns/Definitoin/Definition/",
             "commit_timestamp": 1696691263.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1696709686.073671,
+            "elapsed_time": 7421.545933961868,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "45636ecf2c3a4a216f26bfe5a7d1495b9f7a8405",
+            "commit_message": "[RISCV] Add sink-and-fold support for RISC-V. (#67602)\n\nThis uses the recently introduced sink-and-fold support in MachineSink.\r\nhttps://reviews.llvm.org/D152828\r\n    \r\nThis enables folding ADDI into load/store addresses.\r\n    \r\nEnabling by default will be a separate PR.",
+            "commit_timestamp": 1696700315.0
         }
     ]
 }
