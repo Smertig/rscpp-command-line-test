@@ -8203,6 +8203,20 @@
             "commit_ref": "d96b3cd45c888d7e37c9207dbb44321fc47bfec9",
             "commit_message": "[KS] Fix bug in KsStreamIo (#4663)\n\nProperly set output buffer length in IO Stack Location of the current IRP, since it is passed to KsProbeStreamIrp when calling KsStreamIo, so it fails if the length isn't set properly.\r\n\r\nDon't set an input buffer length and the buffer itself, since it isn't passed anywhere, so setting it makes no sense. Moreover, MSDN says that for IOCTL_KS_READ/WRITE_STREAM, only output buffer (and its length) is needed to be set, but not an input one. So it indeed is more correct.\r\n\r\nIt fixes buffer overflow in KsProbeStreamIrp when attempting to perform the streaming via KsStreamIo. I discovered this bug during my audio refactoring from PR #4660.",
             "commit_timestamp": 1696588569.0
+        },
+        {
+            "tool_version": "232.0.20230818.141747",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1696637100.451001,
+            "elapsed_time": 108.48024272918701,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "d96b3cd45c888d7e37c9207dbb44321fc47bfec9",
+            "commit_message": "[KS] Fix bug in KsStreamIo (#4663)\n\nProperly set output buffer length in IO Stack Location of the current IRP, since it is passed to KsProbeStreamIrp when calling KsStreamIo, so it fails if the length isn't set properly.\r\n\r\nDon't set an input buffer length and the buffer itself, since it isn't passed anywhere, so setting it makes no sense. Moreover, MSDN says that for IOCTL_KS_READ/WRITE_STREAM, only output buffer (and its length) is needed to be set, but not an input one. So it indeed is more correct.\r\n\r\nIt fixes buffer overflow in KsProbeStreamIrp when attempting to perform the streaming via KsStreamIo. I discovered this bug during my audio refactoring from PR #4660.",
+            "commit_timestamp": 1696588569.0
         }
     ]
 }
