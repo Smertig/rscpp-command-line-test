@@ -8385,6 +8385,20 @@
             "commit_ref": "9eb774304e814cefb3eb6f44e1fb5469b994ab52",
             "commit_message": "openssl: use X509_ALGOR_get0 instead of reaching into X509_ALGOR\n\nWhile the struct is still public in OpenSSL, there is a (somewhat\ninconvenient) accessor. Use it to remain compatible if it becomes opaque\nin the future.\n\nCloses #12038\n",
             "commit_timestamp": 1696596680.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1696679401.363161,
+            "elapsed_time": 288.7326295375824,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "9eb774304e814cefb3eb6f44e1fb5469b994ab52",
+            "commit_message": "openssl: use X509_ALGOR_get0 instead of reaching into X509_ALGOR\n\nWhile the struct is still public in OpenSSL, there is a (somewhat\ninconvenient) accessor. Use it to remain compatible if it becomes opaque\nin the future.\n\nCloses #12038\n",
+            "commit_timestamp": 1696596680.0
         }
     ]
 }
