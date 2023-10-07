@@ -700,8 +700,26 @@
                 "inspected files count": 2555,
                 "known errors": [
                     {
-                        "file": "..\\src\\common\\settings.h",
-                        "line": 344,
+                        "file": "..\\src\\common\\settings_setting.h",
+                        "line": 176,
+                        "message": "'final' member function 'Settings::Setting<Type, ranged>::LoadStringW' is not virtual",
+                        "reason": "Something is wrong with #define LoadString LoadStringW"
+                    },
+                    {
+                        "file": "..\\src\\common\\settings_setting.h",
+                        "line": 176,
+                        "message": "Function 'void Settings::Setting<Type, ranged>::LoadStringW(const std::string& input)' has the 'override' specifier but does not override a base class member",
+                        "reason": "Something is wrong with #define LoadString LoadStringW"
+                    },
+                    {
+                        "file": "..\\src\\common\\settings_setting.h",
+                        "line": 407,
+                        "message": "'final' member function 'Settings::SwitchableSetting<Type, ranged>::operator const Type&' is not virtual",
+                        "reason": "RSCPP-34260 Incorrect \"invalid override\" error"
+                    },
+                    {
+                        "file": "..\\src\\common\\settings_setting.h",
+                        "line": 407,
                         "message": "Conversion 'Settings::SwitchableSetting<Type, ranged>::operator const Type&() const' has the 'override' specifier but does not override a base class member",
                         "reason": "RSCPP-34260 Incorrect \"invalid override\" error"
                     },
@@ -725,7 +743,7 @@
                     },
                     {
                         "file": "..\\src\\video_core\\renderer_vulkan\\vk_texture_cache.cpp",
-                        "line": 1712,
+                        "line": 1753,
                         "message": "Cannot substitute arguments for class 'VideoCommon::SlotVector<T>' because of violated constraint 'std::is_nothrow_move_assignable_v<Image> && std::is_nothrow_move_constructible_v<Image>'",
                         "reason": "RSCPP-14556 Implement __is_nothrow_assignable trait"
                     },
@@ -746,6 +764,16 @@
                         "line": 455,
                         "message": "Cannot substitute arguments for class 'VideoCommon::SlotVector<T>' because of violated constraint 'std::is_nothrow_move_assignable_v<ImageMapView> && std::is_nothrow_move_constructible_v<ImageMapView>'",
                         "reason": "RSCPP-14556 Implement __is_nothrow_assignable trait"
+                    },
+                    {
+                        "file": "..\\src\\common\\settings_setting.h",
+                        "line": 176,
+                        "message": "'final' member function 'Settings::Setting<Type, ranged>::LoadStringW' is not virtual"
+                    },
+                    {
+                        "file": "..\\src\\common\\settings_setting.h",
+                        "line": 176,
+                        "message": "Function 'void Settings::Setting<Type, ranged>::LoadStringW(const std::string& input)' has the 'override' specifier but does not override a base class member"
                     }
                 ]
             }
@@ -867,11 +895,11 @@
     "minetest": {
         "sources": {
             "repo": "https://github.com/minetest/minetest",
-            "commit": "15fb4cab15c8d57028a2f616e1b443e8dc02e4f9",
+            "commit": "01d26c0e0e87fbccb79229928ba67654e084a66c",
             "subrepo": {
                 "path": "lib/irrlichtmt",
                 "url": "https://github.com/minetest/irrlicht",
-                "commit": "510976f13056422ff0f90a6870772f57f03b26a9"
+                "commit": "c311d01c073fa4655fa5ada8feb9d4346b64669d"
             }
         },
         "required dependencies": [
@@ -1077,8 +1105,9 @@
     "Osiris": {
         "sources": {
             "repo": "https://github.com/danielkrupinski/Osiris",
-            "commit": "e4dbe1dcf5c56109316dcde6351ef41cf9b67a77"
+            "commit": "8c2d5bfde18892925dc9c364c803de32f7523e96"
         },
+        "required toolchain": ["2022-x64"],
         "custom build tool": {
             "path to .sln": "Osiris.sln"
         },
@@ -1086,8 +1115,8 @@
             "inspected files count": 362,
             "known file errors": [
                 {
-                    "file": "Dependencies\\imgui\\imgui_impl_dx9.cpp",
-                    "reason": "Generated file"
+                    "file": "Source\\Platform\\Linux\\LinuxDynamicLibrary.h",
+                    "reason": "Linux-only"
                 }
             ]
         },
@@ -1096,8 +1125,8 @@
                 "inspected files count": 362,
                 "known file errors": [
                     {
-                        "file": "Dependencies\\imgui\\imgui_impl_dx9.cpp",
-                        "reason": "Missing generated file"
+                        "file": "Source\\Platform\\Linux\\LinuxDynamicLibrary.h",
+                        "reason": "Linux-only"
                     }
                 ]
             }
@@ -1178,6 +1207,10 @@
                 {
                     "file": "..\\Include\\py_curses.h",
                     "reason": "Not included on Windows"
+                },
+                {
+                    "file": "..\\Include\\cpython\\pystats.h",
+                    "message": "Not directly included in build?"
                 }
             ],
             "known errors": [
@@ -1201,6 +1234,12 @@
                         "line": 1683,
                         "message": "Cannot resolve symbol 'MAXINT'",
                         "reason": "Can't find this macro anywhere ¯\\_(ツ)_/¯"
+                    },
+                    {
+                        "file": "..\\Include\\cpython\\pystats.h",
+                        "line": 133,
+                        "message": "Unexpected identifier",
+                        "reason": "TODO (unresolved macro `PyAPI_DATA`)"
                     }
                 ]
             }

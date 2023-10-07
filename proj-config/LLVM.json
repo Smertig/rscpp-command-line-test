@@ -51,7 +51,7 @@
             "known errors": [
                 {
                     "file": "..\\clang\\lib\\Sema\\TreeTransform.h",
-                    "line": 4666,
+                    "line": 4705,
                     "message": "Member 'Self' is not initialized in this constructor",
                     "reason": "Bug in code?"
                 },
@@ -66,6 +66,11 @@
                     "line": 36,
                     "message": "Failed to match type 'const _Ty(&)[_Size]' against 'const llvm::StringLiteral[]'",
                     "reason": "TODO"
+                },
+                {
+                    "file": "..\\clang\\lib\\StaticAnalyzer\\Checkers\\BasicObjCFoundationChecks.cpp",
+                    "line": 977,
+                    "message": "Local variable 'N' used without being initialized"
                 }
             ],
             "inspected files count": 1661
