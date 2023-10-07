@@ -1111,24 +1111,16 @@
         "custom build tool": {
             "path to .sln": "Osiris.sln"
         },
+        "to skip": [
+            "Linux*",
+            "UserHomeFolderPath.h"
+        ],
         "stable": {
-            "inspected files count": 362,
-            "known file errors": [
-                {
-                    "file": "Source\\Platform\\Linux\\LinuxDynamicLibrary.h",
-                    "reason": "Linux-only"
-                }
-            ]
+            "inspected files count": 362
         },
         "latest": {
             "master": {
-                "inspected files count": 362,
-                "known file errors": [
-                    {
-                        "file": "Source\\Platform\\Linux\\LinuxDynamicLibrary.h",
-                        "reason": "Linux-only"
-                    }
-                ]
+                "inspected files count": 362
             }
         }
     },
