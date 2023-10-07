@@ -148,8 +148,12 @@
               return new Color("srgb", [clamp(color >> 16), clamp(color >> 8), clamp(color)], 1.0);
             }
 
+            let toDate = function(duration) {
+              return new Date(duration * 1000)
+            }
+
             let formatDuration = function(duration) {
-              return new Date(duration * 1000).toISOString().substring(11, 19)
+              return toDate(duration).toISOString().substring(11, 19)
             }
 
             const canvas = document.createElement('canvas');
@@ -157,6 +161,8 @@
             parent.appendChild(canvas);
 
             const datasets = [];
+            const startDate = Date.now() - 90 * 24 * 60 * 60 * 1000 // Show only last 90 days
+
             for (const [reportName, reports] of Object.entries(reportSet))
             {
               const color = hashColor(reportName).to('hwb')
@@ -167,8 +173,8 @@
 
               datasets.push({
                 label: reportName,
-                data: reports.map(d => ({
-                  x: new Date(d.timestamp * 1000),
+                data: reports.filter(d => toDate(d.timestamp) > startDate).map(d => ({
+                  x: toDate(d.timestamp),
                   y: d.elapsed_time
                 })),
                 borderColor: color.toString(),
