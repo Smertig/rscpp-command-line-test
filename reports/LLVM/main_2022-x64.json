@@ -9179,6 +9179,22 @@
             "commit_ref": "dae91f5dbc5bee579eac7f4cbb71e86f2934817f",
             "commit_message": "[VPlan] Avoid VPTransformState::reset in fixReduction (NFCI).\n\nThere's no need to repeatedly query and reset the state for\nLoopExitInstDef. This removes one of the last uses of\nVPTransformState::reset, by use a vector to store and update the\nresults. No other code should try to retrieve the result from State\noutside the fixReductionCall.\n",
             "commit_timestamp": 1696717464.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1696738592.171758,
+            "elapsed_time": 8190.08003616333,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "76fc871552c28b37b81c67f411a90065077816a0",
+            "commit_message": "[RISCV] Support fptoi like ops for fp16 vectors input when only have Zvfhmin (#67532)\n\nThis patch supports FP_TO_SINT, FP_TO_UINT, VP_FP_TO_SINT and\r\nVP_FP_TO_UINT for fp16 vectors input when we only have Zvfhmin but no\r\nZvfh.",
+            "commit_timestamp": 1696733059.0
         }
     ]
 }
