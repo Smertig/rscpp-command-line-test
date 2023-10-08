@@ -8371,6 +8371,20 @@
             "commit_ref": "42c93e3cbb78773eac14ad4c33545ff7a09ef3b0",
             "commit_message": "[TASKMGR] *.rc: Fix accelerator collisions &Priority <-> &Properties (#5758)\n\n\r\nWe had collisions in many languages.\r\nFor most languages (which are derived from en-US) we should use\r\n&Priority\r\nP&roperties\r\n\r\nWe introduced the collisions during 0.4.15-dev'ing when\r\nMENUITEM ID_PROCESS_PAGE_PROPERTIES\r\nand\r\nMENUITEM ID_PROCESS_PAGE_OPENFILELOCATION\r\nwere added.\r\n\r\n\r\nWe verified Win7-en and Win2k3-en to behave as proposed in this PR (R for properties, P for priority).\r\nBut *french* Windows (I believe Hermes picture was from WinVista-fr or Win7-fr or Win10-fr maybe) does it differently.\r\n\r\nthe existing de-DE also has been double-checked to exactly match MS with the accelerators in that menu.",
             "commit_timestamp": 1696719827.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1696781021.461026,
+            "elapsed_time": 243.8645510673523,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "11b706429c9e817b03717fe09564a96f75c8702d",
+            "commit_message": "[WSHTCPIP] Remove unneeded headers + Fix bugs.\n\n- Mismatch NTSTATUS/DWORD for win32 errors;\n- Close handle returned from openTcpFile() with closeTcpFile().\n",
+            "commit_timestamp": 1696777886.0
         }
     ]
 }
