@@ -8483,6 +8483,20 @@
             "commit_ref": "cf577bca84f4118e0b884afb4b2b7915f74bed58",
             "commit_message": "url: fix typo\n",
             "commit_timestamp": 1696718594.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1696752332.327437,
+            "elapsed_time": 401.18998527526855,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "0dc40b2a0fef0287f8cc161290f9f113da84861a",
+            "commit_message": "CURLOPT_DEBUGFUNCTION.3: warn about internal handles\n\n- Warn that the user's debug callback may be called with the handle\n  parameter set to an internal handle.\n\nWithout this warning the user may assume that the only handles their\ndebug callback receives are the easy handles on which they set\nCURLOPT_DEBUGFUNCTION.\n\nThis is a follow-up to f8cee8cc which changed DoH handles to inherit\nthe debug callback function set in the user's easy handle. As a result\nthose handles are now passed to the user's debug callback function.\n\nCloses https://github.com/curl/curl/pull/12034\n",
+            "commit_timestamp": 1696738870.0
         }
     ]
 }
