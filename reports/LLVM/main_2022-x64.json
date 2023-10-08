@@ -9163,6 +9163,22 @@
             "commit_ref": "45636ecf2c3a4a216f26bfe5a7d1495b9f7a8405",
             "commit_message": "[RISCV] Add sink-and-fold support for RISC-V. (#67602)\n\nThis uses the recently introduced sink-and-fold support in MachineSink.\r\nhttps://reviews.llvm.org/D152828\r\n    \r\nThis enables folding ADDI into load/store addresses.\r\n    \r\nEnabling by default will be a separate PR.",
             "commit_timestamp": 1696700315.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1696724487.091283,
+            "elapsed_time": 10331.266002893448,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "dae91f5dbc5bee579eac7f4cbb71e86f2934817f",
+            "commit_message": "[VPlan] Avoid VPTransformState::reset in fixReduction (NFCI).\n\nThere's no need to repeatedly query and reset the state for\nLoopExitInstDef. This removes one of the last uses of\nVPTransformState::reset, by use a vector to store and update the\nresults. No other code should try to retrieve the result from State\noutside the fixReductionCall.\n",
+            "commit_timestamp": 1696717464.0
         }
     ]
 }
