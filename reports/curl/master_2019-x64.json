@@ -8511,6 +8511,20 @@
             "commit_ref": "43215842f259c6c2ae7de01cc8d4c2927f4e06a7",
             "commit_message": "url: fall back to http/https proxy env-variable if ws/wss not set\n\nReported-by: Craig Andrews\nFixes #12031\nCloses #12058\n",
             "commit_timestamp": 1696757350.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1696795448.477313,
+            "elapsed_time": 370.68520760536194,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "2e93c07c87d14417aa226d533391f8c797744367",
+            "commit_message": "CI: move distcheck job from Azure Pipelines to GitHub Actions\n\nThis will allow for more trigger excludes within Azure Pipelines.\n\nAlso fixes seemingly broken check with scripts/installcheck.sh.\nRef: 190374c74ec4e5247d9066544c86e8d095e1d7b5\n\nAssisted-by: Philip Heiduck\nCloses #9532\n",
+            "commit_timestamp": 1696786576.0
         }
     ]
 }
