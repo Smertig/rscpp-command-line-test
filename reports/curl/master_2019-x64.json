@@ -8497,6 +8497,20 @@
             "commit_ref": "0dc40b2a0fef0287f8cc161290f9f113da84861a",
             "commit_message": "CURLOPT_DEBUGFUNCTION.3: warn about internal handles\n\n- Warn that the user's debug callback may be called with the handle\n  parameter set to an internal handle.\n\nWithout this warning the user may assume that the only handles their\ndebug callback receives are the easy handles on which they set\nCURLOPT_DEBUGFUNCTION.\n\nThis is a follow-up to f8cee8cc which changed DoH handles to inherit\nthe debug callback function set in the user's easy handle. As a result\nthose handles are now passed to the user's debug callback function.\n\nCloses https://github.com/curl/curl/pull/12034\n",
             "commit_timestamp": 1696738870.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1696766742.353649,
+            "elapsed_time": 365.91022777557373,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "43215842f259c6c2ae7de01cc8d4c2927f4e06a7",
+            "commit_message": "url: fall back to http/https proxy env-variable if ws/wss not set\n\nReported-by: Craig Andrews\nFixes #12031\nCloses #12058\n",
+            "commit_timestamp": 1696757350.0
         }
     ]
 }
