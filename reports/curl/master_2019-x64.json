@@ -8567,6 +8567,20 @@
             "commit_ref": "dc4e885f35afed10f941cd7e3090f5d5904078cf",
             "commit_message": "curl_easy_pause: set \"in callback\" true on exit if true\n\nBecause it might have called another callback in the mean time that then\nset the bit FALSE on exit.\n\nReported-by: Jay Satiro\nFixes #12059\nCloses #12061\n",
             "commit_timestamp": 1696832511.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1696853147.940322,
+            "elapsed_time": 372.1556897163391,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "dc4e885f35afed10f941cd7e3090f5d5904078cf",
+            "commit_message": "curl_easy_pause: set \"in callback\" true on exit if true\n\nBecause it might have called another callback in the mean time that then\nset the bit FALSE on exit.\n\nReported-by: Jay Satiro\nFixes #12059\nCloses #12061\n",
+            "commit_timestamp": 1696832511.0
         }
     ]
 }
