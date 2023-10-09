@@ -8581,6 +8581,20 @@
             "commit_ref": "dc4e885f35afed10f941cd7e3090f5d5904078cf",
             "commit_message": "curl_easy_pause: set \"in callback\" true on exit if true\n\nBecause it might have called another callback in the mean time that then\nset the bit FALSE on exit.\n\nReported-by: Jay Satiro\nFixes #12059\nCloses #12061\n",
             "commit_timestamp": 1696832511.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1696867557.827337,
+            "elapsed_time": 340.08320021629333,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "5032f04ee9627f25ebe6bae10b5948c13340942c",
+            "commit_message": "quic: fix BoringSSL build\n\nAdd guard around `SSL_CTX_set_ciphersuites()` use.\n\nBug: https://github.com/curl/curl/pull/12065#issuecomment-1752171885\n\nFollow-up to aa9a6a177017e4b74d33cdf85a3594900f4a7f81\n\nCo-authored-by: Jay Satiro\nReviewed-by: Daniel Stenberg\nCloses #12067\n",
+            "commit_timestamp": 1696855436.0
         }
     ]
 }

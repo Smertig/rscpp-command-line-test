@@ -9565,6 +9565,20 @@
             "commit_ref": "d14a336a6bdcc05ba8933f0c42dd421175082039",
             "commit_message": "Auto-generate files after cl/571636273\n",
             "commit_timestamp": 1696722694.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1696867518.959474,
+            "elapsed_time": 399.37881660461426,
+            "x64": false,
+            "actual_files_count": 849,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "95d2b2ed5039c1b1606a5f8c9d9cb362a2a33c95",
+            "commit_message": "Reduce `Map::size_type` to 32-bits. Protobuf containers can't have more than\n2^32 elements anyway because they are not serializable.\nThis saves 16 bytes for each `map` field.\n\nPiperOrigin-RevId: 571943973\n",
+            "commit_timestamp": 1696865319.0
         }
     ]
 }
