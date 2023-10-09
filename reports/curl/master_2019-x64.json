@@ -8595,6 +8595,20 @@
             "commit_ref": "5032f04ee9627f25ebe6bae10b5948c13340942c",
             "commit_message": "quic: fix BoringSSL build\n\nAdd guard around `SSL_CTX_set_ciphersuites()` use.\n\nBug: https://github.com/curl/curl/pull/12065#issuecomment-1752171885\n\nFollow-up to aa9a6a177017e4b74d33cdf85a3594900f4a7f81\n\nCo-authored-by: Jay Satiro\nReviewed-by: Daniel Stenberg\nCloses #12067\n",
             "commit_timestamp": 1696855436.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1696881986.403611,
+            "elapsed_time": 359.19964623451233,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "b0f3d71c1fdb7aeb3872c1cf179cf69a457a4f07",
+            "commit_message": "MQTT: improve receive of ACKs\n\n- add `mq->recvbuf` to provide buffering of incomplete\n  ACK responses\n- continue ACK reading until sufficient bytes available\n- fixes test failures on low network receives\n\nCloses #12071\n",
+            "commit_timestamp": 1696869257.0
         }
     ]
 }

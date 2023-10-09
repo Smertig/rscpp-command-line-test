@@ -9323,6 +9323,22 @@
             "commit_ref": "414709ee5c74ae35ac5eb204007fef35cc1c8079",
             "commit_message": "[mlir][tosa] Add verifier for `ArgMax` operator (#68410)\n\nVerifier ensures that operator is valid by checking:\r\n\r\n* Output type is I32\r\n* Axis is within the rank of the tensor\r\n\r\nSigned-off-by: Georgios Pinitas <georgios.pinitas@arm.com>",
             "commit_timestamp": 1696866918.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1696882755.220231,
+            "elapsed_time": 9740.29052233696,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "7a73da4c85a12341752a4573c55ebff46ba20db0",
+            "commit_message": "[clang-tidy] Add support for optional parameters in config.\n\nIf a parameter value is either 'none', 'null', 'false', '-1'\nor '', we will in that case use the default value.\n\nReviewed By: PiotrZSL\n\nDifferential Revision: https://reviews.llvm.org/D159436\n",
+            "commit_timestamp": 1696881524.0
         }
     ]
 }

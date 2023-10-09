@@ -9579,6 +9579,20 @@
             "commit_ref": "95d2b2ed5039c1b1606a5f8c9d9cb362a2a33c95",
             "commit_message": "Reduce `Map::size_type` to 32-bits. Protobuf containers can't have more than\n2^32 elements anyway because they are not serializable.\nThis saves 16 bytes for each `map` field.\n\nPiperOrigin-RevId: 571943973\n",
             "commit_timestamp": 1696865319.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1696881871.267944,
+            "elapsed_time": 386.2820174694061,
+            "x64": false,
+            "actual_files_count": 849,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "863b9d319076297158447605449fbeab7d920deb",
+            "commit_message": "Add additional proto validation to descriptor builds.\n\nThese would normally be caught by the parser, but would be bypassed by dynamic descriptor builds.\n\nPiperOrigin-RevId: 572010482\n",
+            "commit_timestamp": 1696880369.0
         }
     ]
 }
