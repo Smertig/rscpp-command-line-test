@@ -8553,6 +8553,20 @@
             "commit_ref": "0e4bef0862cb6dfb7693b9b67a6835cf85e23e4e",
             "commit_message": "h3: add support for ngtcp2 with AWS-LC builds\n\n```\ncurl 8.4.0-DEV (x86_64-apple-darwin) libcurl/8.4.0-DEV (SecureTransport) AWS-LC/1.15.0 nghttp2/1.56.0 ngtcp2/0.19.1 nghttp3/0.15.0\nRelease-Date: [unreleased]\nProtocols: dict file ftp ftps gopher gophers http https imap imaps ldap ldaps mqtt pop3 pop3s rtsp smb smbs smtp smtps telnet tftp ws wss\nFeatures: alt-svc AsynchDNS HSTS HTTP2 HTTP3 HTTPS-proxy IPv6 Largefile MultiSSL NTLM SSL threadsafe UnixSockets\n```\n\nAlso delete an obsolete GnuTLS TODO and update the header comment in\n`FindNGTCP2.cmake`.\n\nReviewed-by: Daniel Stenberg\nCloses #12066\n",
             "commit_timestamp": 1696804504.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1696838721.590733,
+            "elapsed_time": 323.1210398674011,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "dc4e885f35afed10f941cd7e3090f5d5904078cf",
+            "commit_message": "curl_easy_pause: set \"in callback\" true on exit if true\n\nBecause it might have called another callback in the mean time that then\nset the bit FALSE on exit.\n\nReported-by: Jay Satiro\nFixes #12059\nCloses #12061\n",
+            "commit_timestamp": 1696832511.0
         }
     ]
 }
