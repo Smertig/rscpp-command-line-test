@@ -9649,6 +9649,20 @@
             "commit_ref": "7881433762c679045d6d9ef8972b6c7c0f43fdbe",
             "commit_message": "Use absl's wrappers around __has_attribute etc rather than polyfilling.\n\nThe goal is to reduce the surface area and size of port_def.inc, as a somewhat\nmagic textual header.\n(Also #defining __reserved_names is a bit of a maintenance risk)\n\nPiperOrigin-RevId: 572188636\n",
             "commit_timestamp": 1696932454.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1696953880.186012,
+            "elapsed_time": 470.72822618484497,
+            "x64": false,
+            "actual_files_count": 849,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "8f8513835c0c4ebe206a5ead04a1bd0c8c7d1dbf",
+            "commit_message": "Timestamps.parse: Add error handling for invalid hours/minutes in the timezone offset.\n\nBefore this CL, bad offsets result in a NumberFormatException (from parseLong) instead of the documented ParseException/IllegalArgumentException.\n\nPiperOrigin-RevId: 572266056\n",
+            "commit_timestamp": 1696953647.0
         }
     ]
 }
