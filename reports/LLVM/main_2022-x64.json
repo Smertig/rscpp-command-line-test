@@ -9419,6 +9419,22 @@
             "commit_ref": "fc654b4f598eba8c4cf8989be8376277d268740f",
             "commit_message": "[RISCV][NFC] Correct/clarify RISCVPushPopOptimizer.cpp header comment\n\nRefer to Zcmp rather than Zca. Also, this pass will only modify POP\ninstructions (replacing with POPRET if possible).\n",
             "commit_timestamp": 1696953015.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1696969040.188892,
+            "elapsed_time": 8016.790988683701,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "97b989b27496d5aeadb3b90cbb9305ddcd9e35d2",
+            "commit_message": "[compiler-rt] During profile flushing, setup SIGKILL mask earlier (#68622)\n\nIn multi threaded application, it is possible for one thread to\r\nterminate the program while another is flushing profile information. We\r\nsetup a signal mask to delay SIGKILL so that we can safely flush the\r\nprofile.\r\n\r\nThis patch setups the mask earlier: it reduces the window during which a\r\nSIGKILL can end the computation prematurely.\r\n\r\nThis fixes https://bugzilla.mozilla.org/show_bug.cgi?id=1850940, where a\r\nprofiled firefox was encountering several:\r\n\r\nLLVM Profile Error: Failed to write file \"default_*.profraw\": Broken\r\npipe\r\n\r\nCo-authored-by: serge-sans-paille <sguelton@mozilla.com>",
+            "commit_timestamp": 1696965563.0
         }
     ]
 }

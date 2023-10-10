@@ -8539,6 +8539,20 @@
             "commit_ref": "62eeb158a5abef92d3dcc50f62395395df7f25f1",
             "commit_message": "[MSPAINT] Improve Zoom tool (#5781)\n\n- Delete CCanvasWindow::drawZoomFrame.\r\n- Invalidate the canvas on mouse move when\r\n  the active tool is Zoom tool.\r\n- Add ZoomTool::OnDrawOverlayOnCanvas to\r\n  draw the zoom rectangle without flickering.\r\n- Improve the zoom trackbar position.\r\n- Display the zoom rate on changing the value\r\n  of the zoom trackbar.\r\n- Reverse the direction of the zoom trackbar.\r\n- Don't draw the focus rectangle.\r\nCORE-19215, CORE-19216",
             "commit_timestamp": 1696903169.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1696968231.762144,
+            "elapsed_time": 183.96759963035583,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "8451230753d1941471ec2f41a522e70caae2e1a9",
+            "commit_message": "[DEVMGR] Allow to copy text from Details page of device properties (#5775)\n\nIn driver properties, in details tab, add a \"Copy\" popup menu for listview.\r\nThis will allow to copy driver's information to buffer.",
+            "commit_timestamp": 1696965774.0
         }
     ]
 }
