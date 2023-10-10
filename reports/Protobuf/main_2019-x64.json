@@ -9635,6 +9635,20 @@
             "commit_ref": "e032784c57060cfb3d2377b79b362f45cca1014f",
             "commit_message": "Unconditionally poison RepeatedPtrField array after destruction.\n\nPrior to RepeatedPtrField having an SOO, we did this for all sizes.  This\npoisoning step can aid debugging for use-after-frees.\n\nPiperOrigin-RevId: 572115487\n",
             "commit_timestamp": 1696908312.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1696939478.85924,
+            "elapsed_time": 563.7783424854279,
+            "x64": false,
+            "actual_files_count": 849,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "7881433762c679045d6d9ef8972b6c7c0f43fdbe",
+            "commit_message": "Use absl's wrappers around __has_attribute etc rather than polyfilling.\n\nThe goal is to reduce the surface area and size of port_def.inc, as a somewhat\nmagic textual header.\n(Also #defining __reserved_names is a bit of a maintenance risk)\n\nPiperOrigin-RevId: 572188636\n",
+            "commit_timestamp": 1696932454.0
         }
     ]
 }
