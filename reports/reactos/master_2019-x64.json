@@ -8483,6 +8483,20 @@
             "commit_ref": "0c164f081aa9330992a4f81a61a425d015f4d1c9",
             "commit_message": "[MSPAINT] Check out of image in updating status bar (#5779)\n\nCheck out of the image by using ::PtInRect and CCanvasWindow::GetImageRect.\r\nIf out, then don't show the status bar text.\r\nCORE-19219",
             "commit_timestamp": 1696808371.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1696910655.406368,
+            "elapsed_time": 169.2054545879364,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "62eeb158a5abef92d3dcc50f62395395df7f25f1",
+            "commit_message": "[MSPAINT] Improve Zoom tool (#5781)\n\n- Delete CCanvasWindow::drawZoomFrame.\r\n- Invalidate the canvas on mouse move when\r\n  the active tool is Zoom tool.\r\n- Add ZoomTool::OnDrawOverlayOnCanvas to\r\n  draw the zoom rectangle without flickering.\r\n- Improve the zoom trackbar position.\r\n- Display the zoom rate on changing the value\r\n  of the zoom trackbar.\r\n- Reverse the direction of the zoom trackbar.\r\n- Don't draw the focus rectangle.\r\nCORE-19215, CORE-19216",
+            "commit_timestamp": 1696903169.0
         }
     ]
 }

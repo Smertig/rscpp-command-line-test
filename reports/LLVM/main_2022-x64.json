@@ -9355,6 +9355,22 @@
             "commit_ref": "ac0dda894231e6281e7739aa0ea01a4e9697c747",
             "commit_message": "[lldb] add stop-at-user-entry option to process launch (#67019)\n\n## Description\r\nThis pull request adds a new `stop-at-user-entry` option to LLDB\r\n`process launch` command, allowing users to launch a process and pause\r\nexecution at the entry point of the program (for C-based languages,\r\n`main` function).\r\n\r\n## Motivation\r\nThis option provides a convenient way to begin debugging a program by\r\nlaunching it and breaking at the desired entry point.\r\n\r\n## Changes Made\r\n- Added `stop-at-user-entry` option to `Options.td` and the\r\ncorresponding case in `CommandOptionsProcessLaunch.cpp` (short option is\r\n'm')\r\n- Implemented `GetUserEntryPointName` method in the Language plugins\r\navailable at the moment.\r\n- Declared the `CreateBreakpointAtUserEntry` method in the Target API.\r\n- Create Shell test for the command\r\n`command-process-launch-user-entry.test`.\r\n\r\n## Usage\r\n`process launch --stop-at-user-entry` or `process launch -m` launches\r\nthe process and pauses execution at the entry point of the program.",
             "commit_timestamp": 1696895039.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1696911374.662043,
+            "elapsed_time": 8112.668198823929,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "9ab732f630de94aeac47d95a8d1e6093f432506e",
+            "commit_message": "[MLIR][TOSA] Add tosa.slice operation conversion failure scenario (#68578)\n\nFixes #68481, In the following scenario, the conversion fails:\r\n1. resultType of tosa.slice is UnrankedTensorType\r\n2. tosa.slice.getsize().size() < resultType.getRank()",
+            "commit_timestamp": 1696909165.0
         }
     ]
 }
