@@ -9593,6 +9593,20 @@
             "commit_ref": "863b9d319076297158447605449fbeab7d920deb",
             "commit_message": "Add additional proto validation to descriptor builds.\n\nThese would normally be caught by the parser, but would be bypassed by dynamic descriptor builds.\n\nPiperOrigin-RevId: 572010482\n",
             "commit_timestamp": 1696880369.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1696896357.040213,
+            "elapsed_time": 404.349014043808,
+            "x64": false,
+            "actual_files_count": 849,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "d0d52fe3fac99757f2ca6e657ad1fd557e6d50f3",
+            "commit_message": "Remove reflection during feature resolution.\n\nInstead, we will hardcode the feature validation using macros and add a reflective test to make sure it stays in sync.  Reflection during descriptor builds is problematic, and in order to migrate proto2/proto3 to editions fully, we'll need to do feature resolution in *all* builds.\n\nPiperOrigin-RevId: 572054031\n",
+            "commit_timestamp": 1696889900.0
         }
     ]
 }

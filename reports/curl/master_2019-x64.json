@@ -8609,6 +8609,20 @@
             "commit_ref": "b0f3d71c1fdb7aeb3872c1cf179cf69a457a4f07",
             "commit_message": "MQTT: improve receive of ACKs\n\n- add `mq->recvbuf` to provide buffering of incomplete\n  ACK responses\n- continue ACK reading until sufficient bytes available\n- fixes test failures on low network receives\n\nCloses #12071\n",
             "commit_timestamp": 1696869257.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1696896344.927786,
+            "elapsed_time": 309.13403844833374,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "f64ecb2bc0db94cf0516baac04683ceb6a0f3f1f",
+            "commit_message": "test670: increase the test timeout\n\nThis should make it more immune to loaded servers.\n\nRef: #11328\n",
+            "commit_timestamp": 1696886129.0
         }
     ]
 }
