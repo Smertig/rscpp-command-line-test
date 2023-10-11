@@ -8623,6 +8623,20 @@
             "commit_ref": "a6b281c2280710e684a208deb07abd9838ce7cb6",
             "commit_message": "[KS] KsRead/WriteFile: finish IRP initialization and properly setup I/O stack location for it (#5784)\n\n- Initialize the rest of IRP data which is not initialized by IoBuildSynchronousFsdRequest.\r\n- Setup an IO_STACK_LOCATION structure for the IRP before calling the driver's read/write routine.\r\n- Do this for both KsReadFile and KsWriteFile functions in our Kernel Streaming driver (ks.sys).\r\nThis fixes several problems when calling these functions from outside, so now they are working correctly, as expected.\r\nDiscovered during my audio investigations.\r\nCORE-19232",
             "commit_timestamp": 1696969800.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1697054668.151613,
+            "elapsed_time": 244.6767463684082,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "ff3dadf89d999c0212de9ec4fa9d7f7c05ee2967",
+            "commit_message": "[FREELDR] Enable UEFI boot for x86 and amd64 (#5267)\n\nCo-authored-by: Stanislav Motylkov <x86corez@gmail.com>\r\nCo-authored-by: Herm\u00e8s B\u00c9LUSCA - MA\u00cfTO <hermes.belusca-maito@reactos.org>\r\n\r\n- Allow to boot NT kernel on UEFI systems with our 2 primary supported architectures\r\n- Implement remaining code needed to pass execution to x86 and amd64 kernels\r\n\r\nCORE-11954",
+            "commit_timestamp": 1697053508.0
         }
     ]
 }

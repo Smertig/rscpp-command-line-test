@@ -9515,6 +9515,22 @@
             "commit_ref": "6d88ac11d7d7353beab83016a363d7542e0b020c",
             "commit_message": "[mlir][bufferization] Transfer `restrict` during empty tensor elimination (#68729)\n\nEmpty tensor elimination is looking for\r\n`bufferization.materialize_in_destination` ops with a `tensor.empty`\r\nsource. It replaces the `tensor.empty` with a `bufferization.to_tensor\r\nrestrict` of the memref destination. As part of this rewrite, the\r\n`restrict` keyword should be removed, so that no second `to_tensor\r\nrestrict` op will be inserted. Such IR would be invalid.\r\n`bufferization.materialize_in_destination` with memref destination and\r\nwithout the `restrict` attribute are ignored by empty tensor\r\nelimination.\r\n\r\nAlso relax the verifier of `materialize_in_destination`. The `restrict`\r\nkeyword is not generally needed because the op does not expose the\r\nbuffer as a tensor.",
             "commit_timestamp": 1697039476.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1697055414.632161,
+            "elapsed_time": 7945.115653514862,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "eb21049b4b904b072679ece60e73c6b0dc0d1ebf",
+            "commit_message": "[libunwind] Avoid reading OOB for non-existent .eh_frame_hdr (#68815)\n\nI was running the tests with baremetal picolibc which has a linker\r\nscript that __eh_frame_start==__eh_frame_end (not equal to zero) in\r\ncase there is no .eh_frame_hdr.\r\nI noticed that libunwind was trying to read nonsense data because it\r\nwas printing messages such as\r\n`libunwind: unsupported .eh_frame_hdr version: 20 at\r\nhttps://github.com/llvm/llvm-project/commit/8000d308146ebf49cb364cb600e28a0a42e22c83`\r\n\r\nThis change adds a ehHdr size check to avoid reading this out-of-bounds\r\ndata and potentially crashing.",
+            "commit_timestamp": 1697049969.0
         }
     ]
 }
