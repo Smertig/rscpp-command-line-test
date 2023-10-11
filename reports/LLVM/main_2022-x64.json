@@ -9483,6 +9483,22 @@
             "commit_ref": "d5444ab26743115e42e4abb3782bbefb0e8912d0",
             "commit_message": "[clang][C2x] Remove confusing diagnostic auto storage class specifier (#68710)\n\nWhen declaring `auto int` at local or file scope, we emit a warning\r\nintended for C++11 and later, which is incorrect and confusing in C23.\r\nSee [Godbolt example](https://godbolt.org/z/j1acGhecd).\r\nNow this diagnostic does not show up in C23.",
             "commit_timestamp": 1697010706.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1697026539.586712,
+            "elapsed_time": 7407.588338851929,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "25935c384dd83b131f3c09caaf23f7c63822cd46",
+            "commit_message": "Revert \"[HIP][LLVM][Opt] Add LLVM support for `hipstdpar`\"\n\nThis reverts commit c5bba7ea5a05f540948f76a189c880eb24a5e8c6.\n",
+            "commit_timestamp": 1697023623.0
         }
     ]
 }

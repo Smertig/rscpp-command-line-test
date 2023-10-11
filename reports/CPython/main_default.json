@@ -6019,6 +6019,20 @@
             "commit_ref": "5c6e85480ad8365c1b05fdbd678c7867103f7d76",
             "commit_message": "gh-84489: C API: Add tests for Py_BuildValue() (GH-110596)\n\n",
             "commit_timestamp": 1697008131.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1697026066.461362,
+            "elapsed_time": 999.3955447673798,
+            "x64": true,
+            "actual_files_count": 925,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "f83fa0b9eb1c11a4ef53275d77c603b97335eb23",
+            "commit_message": "gh-84489: Properly handle trailing spaces in Py_BuildValue() format strings (GH-21158)\n\nThe docs state that the space, tab, colon, and comma characters are\r\nignored in Py_BuildValue() format strings.\r\n\r\nCo-authored-by: Serhiy Storchaka <storchaka@gmail.com>\r\n",
+            "commit_timestamp": 1697024646.0
         }
     ]
 }

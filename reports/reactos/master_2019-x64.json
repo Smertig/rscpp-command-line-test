@@ -8595,6 +8595,20 @@
             "commit_ref": "a6b281c2280710e684a208deb07abd9838ce7cb6",
             "commit_message": "[KS] KsRead/WriteFile: finish IRP initialization and properly setup I/O stack location for it (#5784)\n\n- Initialize the rest of IRP data which is not initialized by IoBuildSynchronousFsdRequest.\r\n- Setup an IO_STACK_LOCATION structure for the IRP before calling the driver's read/write routine.\r\n- Do this for both KsReadFile and KsWriteFile functions in our Kernel Streaming driver (ks.sys).\r\nThis fixes several problems when calling these functions from outside, so now they are working correctly, as expected.\r\nDiscovered during my audio investigations.\r\nCORE-19232",
             "commit_timestamp": 1696969800.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1697025911.560628,
+            "elapsed_time": 333.96243929862976,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "a6b281c2280710e684a208deb07abd9838ce7cb6",
+            "commit_message": "[KS] KsRead/WriteFile: finish IRP initialization and properly setup I/O stack location for it (#5784)\n\n- Initialize the rest of IRP data which is not initialized by IoBuildSynchronousFsdRequest.\r\n- Setup an IO_STACK_LOCATION structure for the IRP before calling the driver's read/write routine.\r\n- Do this for both KsReadFile and KsWriteFile functions in our Kernel Streaming driver (ks.sys).\r\nThis fixes several problems when calling these functions from outside, so now they are working correctly, as expected.\r\nDiscovered during my audio investigations.\r\nCORE-19232",
+            "commit_timestamp": 1696969800.0
         }
     ]
 }
