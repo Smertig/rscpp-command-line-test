@@ -9499,6 +9499,22 @@
             "commit_ref": "25935c384dd83b131f3c09caaf23f7c63822cd46",
             "commit_message": "Revert \"[HIP][LLVM][Opt] Add LLVM support for `hipstdpar`\"\n\nThis reverts commit c5bba7ea5a05f540948f76a189c880eb24a5e8c6.\n",
             "commit_timestamp": 1697023623.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1697041267.443189,
+            "elapsed_time": 10451.419733285904,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "6d88ac11d7d7353beab83016a363d7542e0b020c",
+            "commit_message": "[mlir][bufferization] Transfer `restrict` during empty tensor elimination (#68729)\n\nEmpty tensor elimination is looking for\r\n`bufferization.materialize_in_destination` ops with a `tensor.empty`\r\nsource. It replaces the `tensor.empty` with a `bufferization.to_tensor\r\nrestrict` of the memref destination. As part of this rewrite, the\r\n`restrict` keyword should be removed, so that no second `to_tensor\r\nrestrict` op will be inserted. Such IR would be invalid.\r\n`bufferization.materialize_in_destination` with memref destination and\r\nwithout the `restrict` attribute are ignored by empty tensor\r\nelimination.\r\n\r\nAlso relax the verifier of `materialize_in_destination`. The `restrict`\r\nkeyword is not generally needed because the op does not expose the\r\nbuffer as a tensor.",
+            "commit_timestamp": 1697039476.0
         }
     ]
 }

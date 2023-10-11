@@ -6033,6 +6033,20 @@
             "commit_ref": "f83fa0b9eb1c11a4ef53275d77c603b97335eb23",
             "commit_message": "gh-84489: Properly handle trailing spaces in Py_BuildValue() format strings (GH-21158)\n\nThe docs state that the space, tab, colon, and comma characters are\r\nignored in Py_BuildValue() format strings.\r\n\r\nCo-authored-by: Serhiy Storchaka <storchaka@gmail.com>\r\n",
             "commit_timestamp": 1697024646.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1697040535.996806,
+            "elapsed_time": 1592.2828164100647,
+            "x64": true,
+            "actual_files_count": 943,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "467abfe1d4de8ea3fb576759259574730528a398",
+            "commit_message": "gh-110313: Revert \"gh-90108: Disable LTO on _freeze_module and _teste\u2026 (#110720)\n\ngh-110313: Revert \"gh-90108: Disable LTO on _freeze_module and _testembed (#109581)\"\r\n\r\nThis reverts commit 3e3a7da590e1c3e5f03802e538f26c5204889c82.",
+            "commit_timestamp": 1697039680.0
         }
     ]
 }
