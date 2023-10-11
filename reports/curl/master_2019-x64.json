@@ -8693,6 +8693,20 @@
             "commit_ref": "ba8c5c49a3e0e825e96356ffda748dd65ba05aea",
             "commit_message": "libcurl-env-dbg.3: move debug variables from libcurl-env.3\n\n- Move documentation of libcurl environment variables used only in debug\n  builds from libcurl-env into a separate document libcurl-env-dbg.\n\n- Document more debug environment variables.\n\nPreviously undocumented or missing a description:\n\nCURL_ALTSVC_HTTP, CURL_DBG_SOCK_WBLOCK, CURL_DBG_SOCK_WPARTIAL,\nCURL_DBG_QUIC_WBLOCK, CURL_DEBUG, CURL_DEBUG_SIZE, CURL_GETHOSTNAME,\nCURL_HSTS_HTTP, CURL_FORCETIME, CURL_SMALLREQSEND, CURL_SMALLSENDS,\nCURL_TIME.\n\nCloses https://github.com/curl/curl/pull/11811\n",
             "commit_timestamp": 1696966636.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1696982756.443251,
+            "elapsed_time": 336.6042866706848,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "09e25b9d94f4106eac8ca3a43b221bdc66f405e4",
+            "commit_message": "CI: remove slowed-network tests\n\n- remove these tests as they are currently not reliable in our CI\n  setups.\n\ncurl handles the test cases, but CI sometimes fails on these due to\nadditional conditions. Rather than mix them in, an additional CI job\nwill be added in the future that is specific to them.\n\nCloses https://github.com/curl/curl/pull/12075\n",
+            "commit_timestamp": 1696969741.0
         }
     ]
 }

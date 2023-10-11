@@ -9435,6 +9435,22 @@
             "commit_ref": "97b989b27496d5aeadb3b90cbb9305ddcd9e35d2",
             "commit_message": "[compiler-rt] During profile flushing, setup SIGKILL mask earlier (#68622)\n\nIn multi threaded application, it is possible for one thread to\r\nterminate the program while another is flushing profile information. We\r\nsetup a signal mask to delay SIGKILL so that we can safely flush the\r\nprofile.\r\n\r\nThis patch setups the mask earlier: it reduces the window during which a\r\nSIGKILL can end the computation prematurely.\r\n\r\nThis fixes https://bugzilla.mozilla.org/show_bug.cgi?id=1850940, where a\r\nprofiled firefox was encountering several:\r\n\r\nLLVM Profile Error: Failed to write file \"default_*.profraw\": Broken\r\npipe\r\n\r\nCo-authored-by: serge-sans-paille <sguelton@mozilla.com>",
             "commit_timestamp": 1696965563.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1696983422.685443,
+            "elapsed_time": 7958.904709339142,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "4df74963ea0f6c8650d5837ab52e3cdcf1dcf016",
+            "commit_message": "[analyzer] Compute length of string literal initializers (#66990) (#68368)\n\nFix issue https://github.com/llvm/llvm-project/issues/66990",
+            "commit_timestamp": 1696979298.0
         }
     ]
 }
