@@ -5991,6 +5991,20 @@
             "commit_ref": "e07c37cd5212c9d13749b4d02a1d68e1efcba6cf",
             "commit_message": "gh-110647: Fix signal test_stress_modifying_handlers() (#110650)\n\n* cycle_handlers() now waits until at least one signal is received.\r\n* num_received_signals can be equal to num_sent_signals.",
             "commit_timestamp": 1696982383.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1696997303.465373,
+            "elapsed_time": 1287.7940492630005,
+            "x64": true,
+            "actual_files_count": 925,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "b5f7777cb3ecae02d49e0b348968c1ff1ffe21f4",
+            "commit_message": "GH-110488: Fix two small issues in `pathlib.PurePath.with_name()` (#110651)\n\nEnsure that `PurePath('foo/a').with_name('.')` raises `ValueError`\r\n\r\nEnsure that `PureWindowsPath('foo/a').with_name('a:b')` does not raise\r\n`ValueError`.",
+            "commit_timestamp": 1696995911.0
         }
     ]
 }

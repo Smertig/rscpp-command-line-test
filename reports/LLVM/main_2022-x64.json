@@ -9451,6 +9451,22 @@
             "commit_ref": "4df74963ea0f6c8650d5837ab52e3cdcf1dcf016",
             "commit_message": "[analyzer] Compute length of string literal initializers (#66990) (#68368)\n\nFix issue https://github.com/llvm/llvm-project/issues/66990",
             "commit_timestamp": 1696979298.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1696997757.153361,
+            "elapsed_time": 7766.048278808594,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "255f826d6f656bad17cc0aeacbd20306c266f653",
+            "commit_message": "[X86] Fix value-extending/truncating loads and stores of __ptr32/__ptr64 pointers (#67168)\n\nThe value extension and truncation were missed during casting __ptr32/__ptr64\r\npointers to the default address space.\r\n\r\nCloses #66873",
+            "commit_timestamp": 1696994376.0
         }
     ]
 }
