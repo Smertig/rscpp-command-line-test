@@ -9467,6 +9467,22 @@
             "commit_ref": "255f826d6f656bad17cc0aeacbd20306c266f653",
             "commit_message": "[X86] Fix value-extending/truncating loads and stores of __ptr32/__ptr64 pointers (#67168)\n\nThe value extension and truncation were missed during casting __ptr32/__ptr64\r\npointers to the default address space.\r\n\r\nCloses #66873",
             "commit_timestamp": 1696994376.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1697012306.150908,
+            "elapsed_time": 9241.21955704689,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "d5444ab26743115e42e4abb3782bbefb0e8912d0",
+            "commit_message": "[clang][C2x] Remove confusing diagnostic auto storage class specifier (#68710)\n\nWhen declaring `auto int` at local or file scope, we emit a warning\r\nintended for C++11 and later, which is incorrect and confusing in C23.\r\nSee [Godbolt example](https://godbolt.org/z/j1acGhecd).\r\nNow this diagnostic does not show up in C23.",
+            "commit_timestamp": 1697010706.0
         }
     ]
 }

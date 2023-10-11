@@ -8721,6 +8721,20 @@
             "commit_ref": "09e25b9d94f4106eac8ca3a43b221bdc66f405e4",
             "commit_message": "CI: remove slowed-network tests\n\n- remove these tests as they are currently not reliable in our CI\n  setups.\n\ncurl handles the test cases, but CI sometimes fails on these due to\nadditional conditions. Rather than mix them in, an additional CI job\nwill be added in the future that is specific to them.\n\nCloses https://github.com/curl/curl/pull/12075\n",
             "commit_timestamp": 1696969741.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1697011482.026036,
+            "elapsed_time": 316.0041153430939,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "d755a5f7c009dd63a61b2c745180d8ba937cbfeb",
+            "commit_message": "RELEASE-NOTES: synced\n",
+            "commit_timestamp": 1697002459.0
         }
     ]
 }
