@@ -9531,6 +9531,22 @@
             "commit_ref": "eb21049b4b904b072679ece60e73c6b0dc0d1ebf",
             "commit_message": "[libunwind] Avoid reading OOB for non-existent .eh_frame_hdr (#68815)\n\nI was running the tests with baremetal picolibc which has a linker\r\nscript that __eh_frame_start==__eh_frame_end (not equal to zero) in\r\ncase there is no .eh_frame_hdr.\r\nI noticed that libunwind was trying to read nonsense data because it\r\nwas printing messages such as\r\n`libunwind: unsupported .eh_frame_hdr version: 20 at\r\nhttps://github.com/llvm/llvm-project/commit/8000d308146ebf49cb364cb600e28a0a42e22c83`\r\n\r\nThis change adds a ehHdr size check to avoid reading this out-of-bounds\r\ndata and potentially crashing.",
             "commit_timestamp": 1697049969.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1697070027.854539,
+            "elapsed_time": 9500.440246105194,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "b6043f98673e33f17564dd240be3878c61e22333",
+            "commit_message": "[RA] Disable split around hint register if optimize for size (#68619)\n\nSplit a virtual register with hint may generate COPY instructions in\r\nmultiple cold basic blocks, and increase code size. So disable this\r\nsplit when the function is optimized for size.",
+            "commit_timestamp": 1697061435.0
         }
     ]
 }
