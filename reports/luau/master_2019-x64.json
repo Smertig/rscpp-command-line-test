@@ -9071,6 +9071,20 @@
             "commit_ref": "984336448cedccc31a926e69c00d9220196de3e2",
             "commit_message": "Improve POSIX compliance in CLI/FileUtils.cpp (#1064)\n\nSome POSIX platforms, such as Haiku and some BSDs, don't supply DT_*\r\nidentifiers and the corresponding d_type field in stat. This fixes that\r\nand has been tested to still work on 64-bit Linux as well as 64-bit\r\nHaiku.",
             "commit_timestamp": 1697114813.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1697141053.832564,
+            "elapsed_time": 452.6940839290619,
+            "x64": false,
+            "actual_files_count": 416,
+            "expected_files_count": 379,
+            "repo_url": "https://github.com/Roblox/luau",
+            "commit_ref": "1173e415ef705dfc66fcc6198e9ed155161fdc6c",
+            "commit_message": "Modify the way line breaks are added when printing unions/intersections (#1047)\n\nAdds an option `compositeTypesSingleLineLimit` to control when\r\nunions/intersections are broken up onto multiple lines when printed.\r\nSimple unions/intersections will remain on one line. Default value is\r\nset to `5`.\r\n\r\nI took the liberty to always expand overloaded function intersections on\r\nmultiple lines, as I believe they are best viewed that way, even if\r\ntheres only 2 functions.\r\n\r\nCloses #963",
+            "commit_timestamp": 1697126987.0
         }
     ]
 }
