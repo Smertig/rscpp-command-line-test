@@ -8693,6 +8693,20 @@
             "commit_ref": "70d5c864bc14a2427ca7f0b762f20589c1206491",
             "commit_message": "[MSPAINT] Do type-cast (float) for xDpi and yDpi\n\nCORE-19094\n",
             "commit_timestamp": 1697107409.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1697126670.551079,
+            "elapsed_time": 190.1140513420105,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "1183e797b4c9e7fe97a78b7f3dfd2922a0598eff",
+            "commit_message": "[MSPAINT] Reset scroll position in some situations (#5789)\n\nIn some situations, the scroll position should be reset.\r\n- Add CCanvasWindow::resetScrollPos method.\r\n- Reset the scroll position on loading a file.\r\n- Reset the scroll position on mirroring/rotating\r\n  the image.\r\nCORE-19094",
+            "commit_timestamp": 1697119157.0
         }
     ]
 }

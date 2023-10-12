@@ -8833,6 +8833,20 @@
             "commit_ref": "1f7d8cd478f024bc16cad204a9b62feb6e92a0c5",
             "commit_message": "docs: use SOURCE_DATE_EPOCH for generated manpages\n\nThis should make builds from Git reproducible.\n\nCloses #12092\n",
             "commit_timestamp": 1697096741.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1697126716.479983,
+            "elapsed_time": 287.60381412506104,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "f2de575242c01df4bec71b0f561788e1159c1f11",
+            "commit_message": "http: avoid Expect: 100-continue if Upgrade: is used\n\nReported-by: Daniel Jelinski\nFixes #12022\nCloses #12062\n",
+            "commit_timestamp": 1697121101.0
         }
     ]
 }

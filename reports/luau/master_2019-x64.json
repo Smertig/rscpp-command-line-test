@@ -9057,6 +9057,20 @@
             "commit_ref": "3d4e99fc6c0b8d17eb1405de0765e054e5511cb7",
             "commit_message": "rfcs: Update status\n\nString interpolation and table.getn/et al deprecation has been live for\na while.\n\ngetfenv/setfenv linter diagnostics is going to ship in the next release,\nso preemptively marking this as Implemented as well.\n",
             "commit_timestamp": 1697038165.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1697126666.285854,
+            "elapsed_time": 434.17356967926025,
+            "x64": false,
+            "actual_files_count": 416,
+            "expected_files_count": 379,
+            "repo_url": "https://github.com/Roblox/luau",
+            "commit_ref": "984336448cedccc31a926e69c00d9220196de3e2",
+            "commit_message": "Improve POSIX compliance in CLI/FileUtils.cpp (#1064)\n\nSome POSIX platforms, such as Haiku and some BSDs, don't supply DT_*\r\nidentifiers and the corresponding d_type field in stat. This fixes that\r\nand has been tested to still work on 64-bit Linux as well as 64-bit\r\nHaiku.",
+            "commit_timestamp": 1697114813.0
         }
     ]
 }

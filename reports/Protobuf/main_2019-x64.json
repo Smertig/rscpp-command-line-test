@@ -9817,6 +9817,20 @@
             "commit_ref": "0401c70b92c861285ec095f62d1b711d259e38f4",
             "commit_message": "Internal change\n\nPiperOrigin-RevId: 572664792\n",
             "commit_timestamp": 1697055446.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1697126693.534093,
+            "elapsed_time": 405.5912606716156,
+            "x64": false,
+            "actual_files_count": 849,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "312986896dafdbf2475601be8fa0a2faefc40b2f",
+            "commit_message": "Disable Bzlmod explicitly in .bazelrc\n\nThis will help make sure [Bazel Downstream Pipeline](https://github.com/bazelbuild/continuous-integration/blob/master/docs/downstream-testing.md) is green after enabling Bzlmod at Bazel@HEAD\n\nSee https://github.com/bazelbuild/bazel/issues/18958#issuecomment-1749058780\n\nRelated https://github.com/protocolbuffers/protobuf/issues/14313\n\nCloses: https://github.com/protocolbuffers/protobuf/pull/14314\nPiperOrigin-RevId: 572920528\n",
+            "commit_timestamp": 1697126297.0
         }
     ]
 }
