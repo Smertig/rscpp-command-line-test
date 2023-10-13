@@ -9099,6 +9099,20 @@
             "commit_ref": "1173e415ef705dfc66fcc6198e9ed155161fdc6c",
             "commit_message": "Modify the way line breaks are added when printing unions/intersections (#1047)\n\nAdds an option `compositeTypesSingleLineLimit` to control when\r\nunions/intersections are broken up onto multiple lines when printed.\r\nSimple unions/intersections will remain on one line. Default value is\r\nset to `5`.\r\n\r\nI took the liberty to always expand overloaded function intersections on\r\nmultiple lines, as I believe they are best viewed that way, even if\r\ntheres only 2 functions.\r\n\r\nCloses #963",
             "commit_timestamp": 1697126987.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1697169806.484957,
+            "elapsed_time": 445.55773162841797,
+            "x64": false,
+            "actual_files_count": 416,
+            "expected_files_count": 379,
+            "repo_url": "https://github.com/Roblox/luau",
+            "commit_ref": "1173e415ef705dfc66fcc6198e9ed155161fdc6c",
+            "commit_message": "Modify the way line breaks are added when printing unions/intersections (#1047)\n\nAdds an option `compositeTypesSingleLineLimit` to control when\r\nunions/intersections are broken up onto multiple lines when printed.\r\nSimple unions/intersections will remain on one line. Default value is\r\nset to `5`.\r\n\r\nI took the liberty to always expand overloaded function intersections on\r\nmultiple lines, as I believe they are best viewed that way, even if\r\ntheres only 2 functions.\r\n\r\nCloses #963",
+            "commit_timestamp": 1697126987.0
         }
     ]
 }

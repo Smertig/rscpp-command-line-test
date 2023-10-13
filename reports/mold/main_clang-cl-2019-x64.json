@@ -6439,6 +6439,20 @@
             "commit_ref": "83ec409426cb21611799b4723081b79c1a139375",
             "commit_message": "Support R_PPC64_TPREL34\n",
             "commit_timestamp": 1697153074.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1697169863.206401,
+            "elapsed_time": 202.6049087047577,
+            "x64": false,
+            "actual_files_count": 525,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/rui314/mold",
+            "commit_ref": "0f714710f0f55291b588f8eb9c1981b02c01fc7d",
+            "commit_message": "Fix relocations for POWER10\n\nWith this change, all tests now pass on an actual POWER10 machine\n(gcc120.fsffrance.org).\n",
+            "commit_timestamp": 1697159512.0
         }
     ]
 }
