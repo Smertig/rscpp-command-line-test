@@ -8803,6 +8803,20 @@
             "commit_ref": "519c12da1566e03b87cd1066999ed673ade30608",
             "commit_message": "Merge pull request #11746 from liamwhite/relr\n\njit: add support for relr-type relocations",
             "commit_timestamp": 1697149411.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1697214370.259718,
+            "elapsed_time": 1531.7524764537811,
+            "x64": true,
+            "actual_files_count": 2654,
+            "expected_files_count": 2555,
+            "repo_url": "https://github.com/yuzu-emu/yuzu",
+            "commit_ref": "56e5d996846e72b3ffa8bf8a462e0ee81f3e2c1f",
+            "commit_message": "Improvement in Directory Path Detection for Shortcuts (#11749)\n\n* Improvement in Directory Path Detection for Shortcuts\r\n\r\nThis pull request updates how the directory path for shortcuts is determined. The main changes are:\r\n\r\n1. Replaced the use of environment variables to determine the path of the desktop and applications menu with `QStandardPaths::writableLocation`. This change addresses an issue where the desktop path was not correctly identified when its location was customized, as shown in the attached screenshot.\r\n\r\n2. Added conversion from `QString` to `std::string` using `toUtf8()`, which correctly handles non-ASCII characters in directory paths. This change ensures that directory paths containing Portuguese words like \"\u00c1rea de trabalho\" are supported.\r\n\r\n3. Replaced directory checking using `Common::FS::IsDir()` with `QDir::exists()`.\r\n\r\nThese changes should improve cross-platform compatibility and code robustness. Because it couldn't locate my desktop, which wasn't on the C drive, but on the F, and even though localization wouldn't work because it was setting it to find the 'Desktop' folder and in the computer's language it says '\u00c1rea de trabalho', that will fix for other languages too.\r\n\r\n* Update main.cpp\r\n\r\n* formatting\r\n\r\n* Update src/yuzu/main.cpp\r\n\r\nCo-authored-by: Tobias <thm.frey@gmail.com>\r\n\r\n* Update src/yuzu/main.cpp\r\n\r\nCo-authored-by: Tobias <thm.frey@gmail.com>\r\n\r\n* Update main.cpp\r\n\r\n* Update main.cpp\r\n\r\n* Update main.cpp\r\n\r\ndesktopPath > desktop_Path\r\napplicationsPath > applications_Path\r\n\r\n* Update main.cpp\r\n\r\n* formatting\r\n\r\n* Update main.cpp\r\n\r\nThis code will attempt to use QStandardPaths to find the applications directory. If that fails, it will resort to using the ~/.local/share/applications directory, which is a common location for application shortcuts in Linux.\r\n\r\n* Update main.cpp\r\n\r\n* formatting\r\n\r\n---------\r\n\r\nCo-authored-by: Tobias <thm.frey@gmail.com>",
+            "commit_timestamp": 1697212669.0
         }
     ]
 }

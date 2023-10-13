@@ -8917,6 +8917,20 @@
             "commit_ref": "4e57d0f0cb3907a6b65968200292d92c5305a7a6",
             "commit_message": "lib: fix gcc warning in printf call\n\nDo not pass NULL to printf %s.\n\nSeen with gcc 13.2.0 on Debian:\n```\n.../curl/lib/connect.c:696:27: warning: '%s' directive argument is null [-Wformat-overflow=]\n```\nRef: https://github.com/curl/curl-for-win/actions/runs/6476161689/job/17584426483#step:3:11104\n\nRef: #10284\nCo-authored-by: Jay Satiro\nCloses #12082\n",
             "commit_timestamp": 1697188745.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1697213142.891956,
+            "elapsed_time": 367.04803586006165,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "f1e05a6e6e7225fa09952abb2c935ae1abe44f45",
+            "commit_message": "CI: ignore test 286 on Appveyor gcc 9 build\n\nThis test fails sometimes with a super fast retry loop due to what may\njust be a compiler bug. The test results are ignored on the one CI job\nwhere it occurs because there seems to be nothing we can do to fix it.\n\nFixes #12040\nCloses #12106\n",
+            "commit_timestamp": 1697212876.0
         }
     ]
 }

@@ -9901,6 +9901,20 @@
             "commit_ref": "42fe8b9927911cc81bf9a47c680c34b4413ee179",
             "commit_message": "Auto-generate files after cl/573014410\n",
             "commit_timestamp": 1697147582.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1697213148.206579,
+            "elapsed_time": 394.64362597465515,
+            "x64": false,
+            "actual_files_count": 851,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "ec57ed7625cb2e26232a8d079776446a154d76ae",
+            "commit_message": "Remove override for MapEntry::GetTypeName.\nThis override is a leftover from when it potentially inherited from\nMessageLite.\n\nPiperOrigin-RevId: 573231045\n",
+            "commit_timestamp": 1697212817.0
         }
     ]
 }
