@@ -8889,6 +8889,20 @@
             "commit_ref": "2e283c69e0dfdc85390cd8277352d105d9f11657",
             "commit_message": "CI: add autotools, out-of-tree, debug build to distro check job\n\nAdd a job that builds curl from a generated source tarball sample, with\nautotools, out-of-tree, in debug mode.\n\nRef: #12085\nCloses #12088\n",
             "commit_timestamp": 1697153379.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1697184292.243164,
+            "elapsed_time": 320.5686900615692,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "732d8ef758eef5611732945ce999baf5fdc97929",
+            "commit_message": "cmake: fix CURL_DISABLE_GETOPTIONS\n\n- Add CURL_DISABLE_GETOPTIONS to curl_config.h.cmake.\n\nPrior to this change the option had no effect because it was missing\nfrom that file.\n\nCloses https://github.com/curl/curl/pull/12091\n",
+            "commit_timestamp": 1697173029.0
         }
     ]
 }
