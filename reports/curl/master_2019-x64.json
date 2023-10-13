@@ -8903,6 +8903,20 @@
             "commit_ref": "732d8ef758eef5611732945ce999baf5fdc97929",
             "commit_message": "cmake: fix CURL_DISABLE_GETOPTIONS\n\n- Add CURL_DISABLE_GETOPTIONS to curl_config.h.cmake.\n\nPrior to this change the option had no effect because it was missing\nfrom that file.\n\nCloses https://github.com/curl/curl/pull/12091\n",
             "commit_timestamp": 1697173029.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1697198788.357919,
+            "elapsed_time": 363.3988585472107,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "4e57d0f0cb3907a6b65968200292d92c5305a7a6",
+            "commit_message": "lib: fix gcc warning in printf call\n\nDo not pass NULL to printf %s.\n\nSeen with gcc 13.2.0 on Debian:\n```\n.../curl/lib/connect.c:696:27: warning: '%s' directive argument is null [-Wformat-overflow=]\n```\nRef: https://github.com/curl/curl-for-win/actions/runs/6476161689/job/17584426483#step:3:11104\n\nRef: #10284\nCo-authored-by: Jay Satiro\nCloses #12082\n",
+            "commit_timestamp": 1697188745.0
         }
     ]
 }
