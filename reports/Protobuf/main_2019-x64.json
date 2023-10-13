@@ -9915,6 +9915,20 @@
             "commit_ref": "ec57ed7625cb2e26232a8d079776446a154d76ae",
             "commit_message": "Remove override for MapEntry::GetTypeName.\nThis override is a leftover from when it potentially inherited from\nMessageLite.\n\nPiperOrigin-RevId: 573231045\n",
             "commit_timestamp": 1697212817.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1697227477.819541,
+            "elapsed_time": 453.72227716445923,
+            "x64": false,
+            "actual_files_count": 851,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "7eef3c906a068014dcf901a95835b8529f5776ae",
+            "commit_message": "Assert equality between InternalGetArena() and InternalGetOwningArena().\n\nPiperOrigin-RevId: 573291278\n",
+            "commit_timestamp": 1697225367.0
         }
     ]
 }
