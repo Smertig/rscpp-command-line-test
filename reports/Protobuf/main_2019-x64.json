@@ -9957,6 +9957,20 @@
             "commit_ref": "4a24a29780835addf10a2a21fe1f7d80c78f8a64",
             "commit_message": "Avoid double counting lite test protos\n\nThis is likely the cause of our macos cmake flakes.  Both the lite and full tests trigger codegen of the lite protos, but there's no dependency between them.  This creates a race condition, where it's possible for the files to be invalid by the time one of their builds is triggered.  This is consistent with the error message we see:\nliblibtest_common_lite.a(unittest_lite.pb.cc.o) has no symbols\n\nPiperOrigin-RevId: 573381442\n",
             "commit_timestamp": 1697254842.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1697270606.611938,
+            "elapsed_time": 466.6044354438782,
+            "x64": false,
+            "actual_files_count": 851,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "4a24a29780835addf10a2a21fe1f7d80c78f8a64",
+            "commit_message": "Avoid double counting lite test protos\n\nThis is likely the cause of our macos cmake flakes.  Both the lite and full tests trigger codegen of the lite protos, but there's no dependency between them.  This creates a race condition, where it's possible for the files to be invalid by the time one of their builds is triggered.  This is consistent with the error message we see:\nliblibtest_common_lite.a(unittest_lite.pb.cc.o) has no symbols\n\nPiperOrigin-RevId: 573381442\n",
+            "commit_timestamp": 1697254842.0
         }
     ]
 }
