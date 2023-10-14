@@ -8945,6 +8945,20 @@
             "commit_ref": "f1e05a6e6e7225fa09952abb2c935ae1abe44f45",
             "commit_message": "CI: ignore test 286 on Appveyor gcc 9 build\n\nThis test fails sometimes with a super fast retry loop due to what may\njust be a compiler bug. The test results are ignored on the one CI job\nwhere it occurs because there seems to be nothing we can do to fix it.\n\nFixes #12040\nCloses #12106\n",
             "commit_timestamp": 1697212876.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1697241971.339254,
+            "elapsed_time": 292.2979884147644,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "9cc57875777eacbb514bcc741350393999e14eca",
+            "commit_message": "quic: manage connection idle timeouts\n\n- configure a 120s idle timeout on our side of the connection\n- track the timestamp when actual socket IO happens\n- check IO timestamp to our *and* the peer's idle timeouts\n  in \"is this connection alive\" checks\n\nReported-by: calvin2021y on github\nFixes #12064\nCloses #12077\n",
+            "commit_timestamp": 1697231747.0
         }
     ]
 }
