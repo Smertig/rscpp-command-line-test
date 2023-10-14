@@ -9001,6 +9001,20 @@
             "commit_ref": "f80ab60c273da1d527279839b9dbdaa1c0ef672b",
             "commit_message": "curl_trc: remove a bad assertion\n\n- Remove DEBUGASSERT that an internal handle must not have user\n  private_data set before calling the user's debug callback.\n\nThis is a follow-up to 0dc40b2a. The user can distinguish their easy\nhandle from an internal easy handle by setting CURLOPT_PRIVATE on their\neasy handle. I had wrongly assumed that meant the user couldn't then\nset CURLOPT_PRIVATE on an internal handle as well.\n\nBug: https://github.com/curl/curl/pull/12060#issuecomment-1754594697\nReported-by: Daniel Stenberg\n\nCloses https://github.com/curl/curl/pull/12104\n",
             "commit_timestamp": 1697267999.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1697299418.525106,
+            "elapsed_time": 292.5526442527771,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "f80ab60c273da1d527279839b9dbdaa1c0ef672b",
+            "commit_message": "curl_trc: remove a bad assertion\n\n- Remove DEBUGASSERT that an internal handle must not have user\n  private_data set before calling the user's debug callback.\n\nThis is a follow-up to 0dc40b2a. The user can distinguish their easy\nhandle from an internal easy handle by setting CURLOPT_PRIVATE on their\neasy handle. I had wrongly assumed that meant the user couldn't then\nset CURLOPT_PRIVATE on an internal handle as well.\n\nBug: https://github.com/curl/curl/pull/12060#issuecomment-1754594697\nReported-by: Daniel Stenberg\n\nCloses https://github.com/curl/curl/pull/12104\n",
+            "commit_timestamp": 1697267999.0
         }
     ]
 }
