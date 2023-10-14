@@ -8959,6 +8959,20 @@
             "commit_ref": "9cc57875777eacbb514bcc741350393999e14eca",
             "commit_message": "quic: manage connection idle timeouts\n\n- configure a 120s idle timeout on our side of the connection\n- track the timestamp when actual socket IO happens\n- check IO timestamp to our *and* the peer's idle timeouts\n  in \"is this connection alive\" checks\n\nReported-by: calvin2021y on github\nFixes #12064\nCloses #12077\n",
             "commit_timestamp": 1697231747.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1697256291.911732,
+            "elapsed_time": 313.6277003288269,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "a2b4391a1d5709df452dffd000a09f4590e646f5",
+            "commit_message": "test613: stop showing an error on missing output file\n\nThis test would show an error message if the output was missing during\nthe log post-processing step, but the message was not captured by the\ntest harness and wasn't useful since the normal golden log file\ncomparison would the problem more clearly.\n",
+            "commit_timestamp": 1697254138.0
         }
     ]
 }
