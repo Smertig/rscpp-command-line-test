@@ -1217,6 +1217,7 @@
                     "file": "..\\PC\\launcher.c",
                     "line": 1682,
                     "message": "Cannot resolve symbol 'MAXINT'",
+                    "flaky": true,
                     "reason": "Can't find this macro anywhere ¯\\_(ツ)_/¯"
                 }
             ]
@@ -1229,16 +1230,17 @@
                         "reason": "Not included on Windows"
                     },
                     {
+                        "file": "..\\Include\\cpython\\pystats.h",
+                        "message": "Not directly included in build? (unresolved macro `PyAPI_DATA`)"
+                    }
+                ],
+                "known errors": [
+                    {
                         "file": "..\\PC\\launcher.c",
                         "line": 1683,
                         "message": "Cannot resolve symbol 'MAXINT'",
+                        "flaky": true,
                         "reason": "Can't find this macro anywhere ¯\\_(ツ)_/¯"
-                    },
-                    {
-                        "file": "..\\Include\\cpython\\pystats.h",
-                        "line": 133,
-                        "message": "Unexpected identifier",
-                        "reason": "TODO (unresolved macro `PyAPI_DATA`)"
                     }
                 ]
             }
