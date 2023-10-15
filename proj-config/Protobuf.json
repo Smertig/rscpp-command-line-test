@@ -13,8 +13,11 @@
     "fixup sources": "proj-config/scripts/fix-protobuf.py",
     "to skip": [
         "stacktrace_*-inl.inc",
-        "symbolize_*.inc"
+        "symbolize_*.inc",
+        "*linux.inc",
+        "*posix.inc"
     ],
+    "__to skip reason": "platform specific",
     "stable": {
         "inspected files count": 818,
         "mem traffic": 0

@@ -467,8 +467,14 @@
         },
         "to skip": [
             "syslog_sink.h",
-            "systemd_sink.h"
+            "systemd_sink.h",
+            "tcp_client.h",
+            "udp_client.h",
+            "kafka_sink.h",
+            "mongo_sink.h",
+            "qt_sinks.h"
         ],
+        "__to skip reason": "platform specific",
         "stable": {
             "inspected files count": 101,
             "mem traffic": 1670
@@ -641,6 +647,11 @@
         "cmake options": [
             "-DENABLE_QT=OFF"
         ],
+        "to skip": [
+            "ir_matcher.h",
+            "unix.h"
+        ],
+        "__to skip reason": "platform specific",
         "required toolchain": ["2022-x64"],
         "stable": {
             "inspected files count": 2555,
@@ -731,31 +742,31 @@
                     },
                     {
                         "file": "..\\src\\video_core\\renderer_opengl\\gl_texture_cache.cpp",
-                        "line": 1092,
+                        "line": 1094,
                         "message": "Cannot substitute arguments for class 'VideoCommon::SlotVector<T>' because of violated constraint 'std::is_nothrow_move_assignable_v<Image> && std::is_nothrow_move_constructible_v<Image>'",
                         "reason": "RSCPP-14556 Implement __is_nothrow_assignable trait"
                     },
                     {
                         "file": "..\\src\\video_core\\renderer_opengl\\gl_texture_cache.h",
-                        "line": 243,
+                        "line": 245,
                         "message": "Cannot substitute arguments for class 'VideoCommon::SlotVector<T>' because of violated constraint 'std::is_nothrow_move_assignable_v<Image> && std::is_nothrow_move_constructible_v<Image>'",
                         "reason": "RSCPP-14556 Implement __is_nothrow_assignable trait"
                     },
                     {
                         "file": "..\\src\\video_core\\renderer_vulkan\\vk_texture_cache.cpp",
-                        "line": 1753,
+                        "line": 1757,
                         "message": "Cannot substitute arguments for class 'VideoCommon::SlotVector<T>' because of violated constraint 'std::is_nothrow_move_assignable_v<Image> && std::is_nothrow_move_constructible_v<Image>'",
                         "reason": "RSCPP-14556 Implement __is_nothrow_assignable trait"
                     },
                     {
                         "file": "..\\src\\video_core\\renderer_vulkan\\vk_texture_cache.h",
-                        "line": 204,
+                        "line": 206,
                         "message": "Cannot substitute arguments for class 'VideoCommon::SlotVector<T>' because of violated constraint 'std::is_nothrow_move_assignable_v<Image> && std::is_nothrow_move_constructible_v<Image>'",
                         "reason": "RSCPP-14556 Implement __is_nothrow_assignable trait"
                     },
                     {
                         "file": "..\\src\\video_core\\renderer_vulkan\\vk_texture_cache.h",
-                        "line": 261,
+                        "line": 263,
                         "message": "Cannot substitute arguments for class 'VideoCommon::SlotVector<T>' because of violated constraint 'std::is_nothrow_move_assignable_v<Image> && std::is_nothrow_move_constructible_v<Image>'",
                         "reason": "RSCPP-14556 Implement __is_nothrow_assignable trait"
                     },
@@ -935,6 +946,10 @@
         },
         "use x64": true,
         "fixup sources": "proj-config/scripts/fix-cemu.py",
+        "to skip": [
+            "bluetooth.h"
+        ],
+        "__to skip reason": "platform specific",
         "stable": {
             "inspected files count": 1013,
             "known errors": [
@@ -961,6 +976,18 @@
                         "line": 50,
                         "message": "Cannot convert 'this' argument from type 'const std::vector<std::shared_ptr<ControllerBase>>' to type 'std::vector<std::shared_ptr<ControllerBase>>': function is missing 'const' qualifier",
                         "reason": "RSCPP-34303 Incorrect decltype calculation of non-captured variable in lambda scope"
+                    },
+                    {
+                        "file": "..\\src\\Cafe\\OS\\libs\\coreinit\\coreinit_Spinlock.cpp",
+                        "line": 230,
+                        "message": "The '#pragma endregion' directive is missing a matching '#pragma region' directive",
+                        "reason": "RSCPP-34954 Missing `#pragma region` should be warning instead of error"
+                    },
+                    {
+                        "file": "..\\src\\Cafe\\OS\\libs\\padscore\\padscore.cpp",
+                        "line": 671,
+                        "message": "The '#pragma endregion' directive is missing a matching '#pragma region' directive",
+                        "reason": "RSCPP-34954 Missing `#pragma region` should be warning instead of error"
                     }
                 ]
             }
@@ -995,39 +1022,11 @@
             "cmake --build . --target tl_generate_common tl_generate_json tl_generate_c"
         ],
         "stable": {
-            "inspected files count": 1103,
-            "known errors": [
-                {
-                    "file": "..\\td\\generate\\tl-parser\\tlc.c",
-                    "line": 115,
-                    "message": "Function has 0 parameters, but is called with 3 arguments",
-                    "reason": "C-style `void f()` with unknown number of parameters"
-                },
-                {
-                    "file": "..\\td\\generate\\tl-parser\\wgetopt.c",
-                    "line": 401,
-                    "message": "Function has 0 parameters, but is called with 1 argument",
-                    "reason": "C-style `void f()` with unknown number of parameters"
-                }
-            ]
+            "inspected files count": 1103
         },
         "latest": {
             "master": {
-                "inspected files count": 1103,
-                "known errors": [
-                    {
-                        "file": "..\\td\\generate\\tl-parser\\tlc.c",
-                        "line": 115,
-                        "message": "Function has 0 parameters, but is called with 3 arguments",
-                        "reason": "C-style `void f()` with unknown number of parameters"
-                    },
-                    {
-                        "file": "..\\td\\generate\\tl-parser\\wgetopt.c",
-                        "line": 401,
-                        "message": "Function has 0 parameters, but is called with 1 argument",
-                        "reason": "C-style `void f()` with unknown number of parameters"
-                    }
-                ]
+                "inspected files count": 1103
             }
         }
     },
@@ -1054,6 +1053,10 @@
             "commit": "1561d0675208854b39066877b140780a965702fa"
         },
         "fixup sources": "proj-config/scripts/fix-curl.py",
+        "to skip": [
+            "setup-vms.h"
+        ],
+        "__to skip reason": "platform specific",
         "stable": {
             "inspected files count": 2323
         },
@@ -1069,6 +1072,10 @@
             "commit": "0a566963584446e9f9574a0b281ae9c07564b0f0"
         },
         "use x64": true,
+        "to skip": [
+            "lv_demos.c"
+        ],
+        "__to skip reason": "platform specific",
         "stable": {
             "inspected files count": 454
         },
@@ -1172,7 +1179,7 @@
                     },
                     {
                         "file": "..\\third-party\\zlib\\zlib.h",
-                        "line": 1920,
+                        "line": 1923,
                         "message": "Ambiguous symbol 'wchar_t'",
                         "flaky": true,
                         "reason": "TODO"
