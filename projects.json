@@ -964,6 +964,18 @@
                     "line": 50,
                     "message": "Cannot convert 'this' argument from type 'const std::vector<std::shared_ptr<ControllerBase>>' to type 'std::vector<std::shared_ptr<ControllerBase>>': function is missing 'const' qualifier",
                     "reason": "RSCPP-34303 Incorrect decltype calculation of non-captured variable in lambda scope"
+                },
+                {
+                    "file": "..\\src\\Cafe\\OS\\libs\\coreinit\\coreinit_Spinlock.cpp",
+                    "line": 230,
+                    "message": "The '#pragma endregion' directive is missing a matching '#pragma region' directive",
+                    "reason": "RSCPP-34954 Missing `#pragma region` should be warning instead of error"
+                },
+                {
+                    "file": "..\\src\\Cafe\\OS\\libs\\padscore\\padscore.cpp",
+                    "line": 671,
+                    "message": "The '#pragma endregion' directive is missing a matching '#pragma region' directive",
+                    "reason": "RSCPP-34954 Missing `#pragma region` should be warning instead of error"
                 }
             ]
         },
