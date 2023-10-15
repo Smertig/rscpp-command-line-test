@@ -9867,6 +9867,22 @@
             "commit_ref": "fad99d398a714f2fed18e2e65aef47a9b273f2f7",
             "commit_message": "[clang][Driver] Fix a spot in commit 169f60f7c76cb6f7d234ab5dfb2b5e367a35ccbb\n\nMy previous commit leads to a failure in 'Builders/ppc64le-lld-multistage-test',\nas shown at \"https://lab.llvm.org/buildbot/#/builders/36/builds/38790\".\n",
             "commit_timestamp": 1697354954.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1697372190.190037,
+            "elapsed_time": 7925.090465068817,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "eca2fcbdeb328c396d19f7970e94eca40ae79229",
+            "commit_message": "[AMDGPU] Fix cost of fast unsafe f32 fdiv (#68988)\n\n",
+            "commit_timestamp": 1697369136.0
         }
     ]
 }
