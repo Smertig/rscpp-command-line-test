@@ -9379,6 +9379,20 @@
             "commit_ref": "24fdac4c05f5ae189ede5153a83af4c1bd25351d",
             "commit_message": "Sync to upstream/release/599 (#1069)\n\n## What's Changed\r\n\r\n- Improve POSIX compliance in `CLI/FileUtils.cpp` by @SamuraiCrow #1064\r\n- `AstStat*::hasEnd` is deprecated; use `AstStatBlock::hasEnd` instead\r\n- Added a lint for common misuses of the `#` operator\r\n- Luau now issues deprecated diagnostics for some uses of `getfenv` and\r\n`setfenv`\r\n- Fixed a case where we included a trailing space in some error\r\nstringifications\r\n\r\n### Compiler\r\n\r\n- Do not do further analysis in O2 on self functions\r\n- Improve detection of invalid repeat..until expressions vs continue\r\n\r\n### New Type Solver\r\n\r\n- We now cache subtype test results to improve performance\r\n- Improved operator inference mechanics (aka type families)\r\n- Further work towards type states\r\n- Work towards [new non-strict\r\nmode](https://github.com/Roblox/luau/blob/master/rfcs/new-nonstrict.md)\r\ncontinues\r\n\r\n### Native Codegen\r\n\r\n- Instruction last use locations should follow the order in which blocks\r\nare lowered\r\n- Add a bonus assertion to IrLoweringA64::tempAddr\r\n\r\n---\r\n\r\nCo-authored-by: Arseny Kapoulkine <arseny.kapoulkine@gmail.com>\r\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>\r\nCo-authored-by: Andy Friesen <afriesen@roblox.com>\r\nCo-authored-by: Aaron Weiss <aaronweiss@roblox.com>\r\nCo-authored-by: Alexander McCord <amccord@roblox.com>\r\nCo-authored-by: Vighnesh Vijay <vvijay@roblox.com>",
             "commit_timestamp": 1697228412.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1697400232.080295,
+            "elapsed_time": 431.43100571632385,
+            "x64": false,
+            "actual_files_count": 418,
+            "expected_files_count": 379,
+            "repo_url": "https://github.com/Roblox/luau",
+            "commit_ref": "24fdac4c05f5ae189ede5153a83af4c1bd25351d",
+            "commit_message": "Sync to upstream/release/599 (#1069)\n\n## What's Changed\r\n\r\n- Improve POSIX compliance in `CLI/FileUtils.cpp` by @SamuraiCrow #1064\r\n- `AstStat*::hasEnd` is deprecated; use `AstStatBlock::hasEnd` instead\r\n- Added a lint for common misuses of the `#` operator\r\n- Luau now issues deprecated diagnostics for some uses of `getfenv` and\r\n`setfenv`\r\n- Fixed a case where we included a trailing space in some error\r\nstringifications\r\n\r\n### Compiler\r\n\r\n- Do not do further analysis in O2 on self functions\r\n- Improve detection of invalid repeat..until expressions vs continue\r\n\r\n### New Type Solver\r\n\r\n- We now cache subtype test results to improve performance\r\n- Improved operator inference mechanics (aka type families)\r\n- Further work towards type states\r\n- Work towards [new non-strict\r\nmode](https://github.com/Roblox/luau/blob/master/rfcs/new-nonstrict.md)\r\ncontinues\r\n\r\n### Native Codegen\r\n\r\n- Instruction last use locations should follow the order in which blocks\r\nare lowered\r\n- Add a bonus assertion to IrLoweringA64::tempAddr\r\n\r\n---\r\n\r\nCo-authored-by: Arseny Kapoulkine <arseny.kapoulkine@gmail.com>\r\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>\r\nCo-authored-by: Andy Friesen <afriesen@roblox.com>\r\nCo-authored-by: Aaron Weiss <aaronweiss@roblox.com>\r\nCo-authored-by: Alexander McCord <amccord@roblox.com>\r\nCo-authored-by: Vighnesh Vijay <vvijay@roblox.com>",
+            "commit_timestamp": 1697228412.0
         }
     ]
 }

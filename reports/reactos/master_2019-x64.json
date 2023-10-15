@@ -9015,6 +9015,20 @@
             "commit_ref": "5c2ec83fa7658fb472313e094f7a29a216fe16b1",
             "commit_message": "[USETUP] Decouple bootloader install choice page from its actual installation (#5786)\n\nThis allows to move this choice sooner in the process, thus having all\nthe user key presses at first, then all the actual installation going\nwithout any key presses needed anymore... (that is, unless you wanted\nto install the bootloader on a removable device. Then it will prompt\nyou there!)\n\n- Additional \"cosmetic\"/future-proof changes: Rename all instances\n  of \"floppy\" in the bootloader install variables to \"RemovableDisk\"\n  because it would be great to have this install choice later.\n\n- Layout adjustments in the translated bootloader pages.\n\n- Skip bootloader installation on upgrades. The idea here is that if\n  we were able to find a ReactOS installation to upgrade, this means\n  we were able to find a valid bootloader + boot entry.\n  See also PR #5633.\n\n  This logic may be slightly improved in the future to detect whether\n  the underlying bootloader is FreeLdr and if so, only update its files.\n  But this is for the future.\n",
             "commit_timestamp": 1697293783.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1697400184.187628,
+            "elapsed_time": 158.76065111160278,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "5c2ec83fa7658fb472313e094f7a29a216fe16b1",
+            "commit_message": "[USETUP] Decouple bootloader install choice page from its actual installation (#5786)\n\nThis allows to move this choice sooner in the process, thus having all\nthe user key presses at first, then all the actual installation going\nwithout any key presses needed anymore... (that is, unless you wanted\nto install the bootloader on a removable device. Then it will prompt\nyou there!)\n\n- Additional \"cosmetic\"/future-proof changes: Rename all instances\n  of \"floppy\" in the bootloader install variables to \"RemovableDisk\"\n  because it would be great to have this install choice later.\n\n- Layout adjustments in the translated bootloader pages.\n\n- Skip bootloader installation on upgrades. The idea here is that if\n  we were able to find a ReactOS installation to upgrade, this means\n  we were able to find a valid bootloader + boot entry.\n  See also PR #5633.\n\n  This logic may be slightly improved in the future to detect whether\n  the underlying bootloader is FreeLdr and if so, only update its files.\n  But this is for the future.\n",
+            "commit_timestamp": 1697293783.0
         }
     ]
 }
