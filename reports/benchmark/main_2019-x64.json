@@ -10237,6 +10237,20 @@
             "commit_ref": "682153afda11d0d376413abfac2e81552a6e7b0f",
             "commit_message": "Update bazel.yml (#1671)\n\nUpdated actions/checkout@v4\r\n\r\nCo-authored-by: dominic <510002+dmah42@users.noreply.github.com>",
             "commit_timestamp": 1697209160.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1697472288.894336,
+            "elapsed_time": 106.05237317085266,
+            "x64": false,
+            "actual_files_count": 86,
+            "expected_files_count": 86,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "ea3c3f983b8d7d67acf98ea090eae57a0130434e",
+            "commit_message": "Fix building on MinGW: default `WINVER` is too old (#1681)\n\nMinGW defaults `WINVER` to something very old,\r\nwhile benchmark requires features gated by `WINVER = 0x0600`,\r\nso manually set update to that.",
+            "commit_timestamp": 1697469557.0
         }
     ]
 }
