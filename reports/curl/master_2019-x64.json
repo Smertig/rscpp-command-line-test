@@ -9197,6 +9197,20 @@
             "commit_ref": "84a65791320e5e2f08bd05954f2b12d5ee8778a8",
             "commit_message": "cmake: replace `check_library_exists_concat()`\n\nThe idea of `check_library_exists_concat()` is that it detects an\noptional component and adds it to the list of libs that we also use in\nsubsequent component checks. This caused problems when detecting\ncomponents with unnecessary dependencies that were not yet built.\n\nCMake offers the `CMAKE_REQUIRED_LIBRARIES` variable to set libs used\nfor component checks, which we already use in most cases. That left 4\nuses of `check_library_exists_concat()`. Only one of these actually\nneeded the 'concat' feature (ldap/lber).\n\nDelete this function and replace it with standard\n`check_library_exists()` and manual management of our `CURL_LIBS`\nlist we use when linking build targets. And special logic to handle the\nldap/lber case.\n\n(We have a similar function for headers: `check_include_file_concat()`.\nIt works, but problematic for performance reasons and because it hides\nthe actual headers required in `check_symbol_exists()` calls.)\n\nRef: #11537 #11558\nFixes #11285\nFixes #11648\nCloses #12070\n",
             "commit_timestamp": 1697402897.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1697443535.015715,
+            "elapsed_time": 357.2362778186798,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "7f7fa2fd6784247338e80642ba77af9d4943dd8c",
+            "commit_message": "tool_operate: fix links in ipfs errors\n\nURL fragment links generated from headers in\nhttps://curl.se/docs/ipfs.html are lowercase.\n\nCloses #12133\n",
+            "commit_timestamp": 1697438539.0
         }
     ]
 }
