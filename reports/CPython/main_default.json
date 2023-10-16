@@ -6523,6 +6523,20 @@
             "commit_ref": "6a4528d70c8435d4403e09937068a446f35a78ac",
             "commit_message": "gh-110864: TypeVar constructor: Partially revert gh-110784, `constraints` cannot be `NULL` (#110922)\n\n",
             "commit_timestamp": 1697468464.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1697486963.70009,
+            "elapsed_time": 1938.1746525764465,
+            "x64": true,
+            "actual_files_count": 943,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "f07ca27709855d4637b43bba23384cc795143ee3",
+            "commit_message": "C-API docs: Clarify the size of arenas (#110895)\n\nClarify the size of arenas\r\n\r\nFrom 3.10.0 alpha 7, the pymalloc allocator uses arenas with a fixed size of 1\r\nMiB on 64-bit platforms instead of 256 KiB on 32-bit platforms.",
+            "commit_timestamp": 1697482333.0
         }
     ]
 }

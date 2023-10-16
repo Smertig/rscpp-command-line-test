@@ -10223,6 +10223,20 @@
             "commit_ref": "dc4a800a2d34ff032aac5f6a218386845d291242",
             "commit_message": "Improve fuzz testing of C++ JSON parser and serializer\n\nPiperOrigin-RevId: 573826612\n",
             "commit_timestamp": 1697472141.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1697486735.311268,
+            "elapsed_time": 479.2638838291168,
+            "x64": false,
+            "actual_files_count": 851,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "6424bcad0af3a6e00f607eee37d38af60aaa74ae",
+            "commit_message": "Add custom matchers for ProxiedWithPresence.\n\nWe continue our foray into googletest-rust [1], this time with homegrown matchers.\n\nOur unit tests will now be able to check is_unset() and is_set() for all types that implement ProxiedWithPresence. In practice, this boils down to [u8] and ProtoStr.\n\nNote that we've broken out matchers_upb and matchers_cpp, similar to what was done with aliasing here [2].\n\n[1] https://github.com/google/googletest-rust\n[2] https://github.com/protocolbuffers/protobuf/commit/9a0bc392b3011cabc214f01b41314acab33658c2#diff-08e5182ff36ad340a3bfb628995524a2a36a89b59a514ba027b0f25e048dd5c3R90\n\nPiperOrigin-RevId: 573895179\n",
+            "commit_timestamp": 1697484919.0
         }
     ]
 }

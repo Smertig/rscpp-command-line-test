@@ -9099,6 +9099,20 @@
             "commit_ref": "13a145b6d808816b299b1691d699996f7a34e4fe",
             "commit_message": "[USERENV] SetUserEnvironmentVariable(): Remove use of uninit' ShortName\n\nAddendum to 96fe018 (r72066).\n",
             "commit_timestamp": 1697472147.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1697486643.483693,
+            "elapsed_time": 213.89913177490234,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "e2d3aa7f4ac40e0d84c05aa98dd1554ba8c6c456",
+            "commit_message": "[NTUSER] Remove a wrong check in MENU_MouseMove (#5736)\n\nThis check doesn't seem to be correct in modern ReactOS. Furthermore, it\r\nactually hadn't been working for a long time until it was uncovered by\r\nthe recent system menu changes.\r\n\r\nReverts a hack introduced in 17a315285 (r72517), fixes CORE-19170.\r\nThe initial bug described in CORE-2338 is not observed.",
+            "commit_timestamp": 1697472652.0
         }
     ]
 }
