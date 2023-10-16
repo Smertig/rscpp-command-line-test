@@ -9963,6 +9963,22 @@
             "commit_ref": "2371d0ab263c164be820f961095cc22076566d12",
             "commit_message": "[DebugInfo] Only call upgradeCULocals() at module level (#68965)\n\nLoading a 2GB bitcode file, I noticed that we spend minutes just running\r\nupgradeCULocals(). Apparently it gets invoked every time a metadata\r\nblock is loaded, which will be once at the module level and then once\r\nper function. However, the relevant metadata only exists at the module\r\nlevel, so running this upgrade per function is unnecessary.",
             "commit_timestamp": 1697442902.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1697458600.525533,
+            "elapsed_time": 8142.3275492191315,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "4d6fc88946eec6b2ef1d8a91e3425a8e0a84288b",
+            "commit_message": "[AMDGPU] Add patterns for V_CMP_O/U (#69157)\n\nFixes SWDEV-427162",
+            "commit_timestamp": 1697454476.0
         }
     ]
 }
