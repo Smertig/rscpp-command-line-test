@@ -9169,6 +9169,20 @@
             "commit_ref": "b1b755280366b241ff60401e6c043803fd487ad5",
             "commit_message": "tool_cb_wrt: fix write output for very old Windows versions\n\n- Pass missing parameter for 'lpNumberOfCharsWritten' to WriteConsoleW()\n  function.\n\nApparently this parameter was *not* optional on older Windows versions.\n\nIssue observed on Windows XP SP2. Issue not observed on Windows 7 SP1.\nSo at some point between those two Microsoft changed the behavior.\n\nPrior to this change, on those versions if parameter is NULL then the\nfunction call fails with error ERROR_INVALID_ACCESS.\n\nRegression since af3f4e41.\n\nRef: https://github.com/MicrosoftDocs/Console-Docs/issues/299\n\nFixes https://github.com/curl/curl/issues/12131\nCloses https://github.com/curl/curl/pull/12130\n",
             "commit_timestamp": 1697395391.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1697414796.730622,
+            "elapsed_time": 312.32082176208496,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "84a65791320e5e2f08bd05954f2b12d5ee8778a8",
+            "commit_message": "cmake: replace `check_library_exists_concat()`\n\nThe idea of `check_library_exists_concat()` is that it detects an\noptional component and adds it to the list of libs that we also use in\nsubsequent component checks. This caused problems when detecting\ncomponents with unnecessary dependencies that were not yet built.\n\nCMake offers the `CMAKE_REQUIRED_LIBRARIES` variable to set libs used\nfor component checks, which we already use in most cases. That left 4\nuses of `check_library_exists_concat()`. Only one of these actually\nneeded the 'concat' feature (ldap/lber).\n\nDelete this function and replace it with standard\n`check_library_exists()` and manual management of our `CURL_LIBS`\nlist we use when linking build targets. And special logic to handle the\nldap/lber case.\n\n(We have a similar function for headers: `check_include_file_concat()`.\nIt works, but problematic for performance reasons and because it hides\nthe actual headers required in `check_symbol_exists()` calls.)\n\nRef: #11537 #11558\nFixes #11285\nFixes #11648\nCloses #12070\n",
+            "commit_timestamp": 1697402897.0
         }
     ]
 }
