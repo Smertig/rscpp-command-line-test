@@ -8161,6 +8161,20 @@
             "commit_ref": "4528726dbbb72a4bbcc802ce703a2a2bde7d3c68",
             "commit_message": "Merge topic 'vtkWrap-warn-on-empty'\n\nabf260977b vtkModuleWrap{Java,Python}: support enabling warnings\n05e80ab053 vtkWrapJava, vtkWrapPython: support warning when wrapping nothing\n64745ee364 vtkWrapTools: use `return` instead of `exit`\nae4116c64b vtkParseMain: parse `-Wempty` flags for wrappers\nb824e52382 vtkModuleWrapPython: wrap generator expression in quotes\n\nAcked-by: Kitware Robot <kwrobot@kitware.com>\nTested-by: buildbot <buildbot@kitware.com>\nReviewed-by: David Gobbi <david.gobbi@gmail.com>\nMerge-request: !10602\n",
             "commit_timestamp": 1697480526.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": "vtkCommonCoreCxxTests",
+            "timestamp": 1697501356.795665,
+            "elapsed_time": 316.48899698257446,
+            "x64": false,
+            "actual_files_count": 78,
+            "expected_files_count": 68,
+            "repo_url": "https://gitlab.kitware.com/vtk/vtk.git",
+            "commit_ref": "a419c8f2fc2a1e459868e4f6be93ab9abe14db47",
+            "commit_message": "Merge topic 'remove-trailing-whitespace'\n\n27d58c7e7b vtkDIYGhostUtilities: remove trailing whitespace\n9c1ce43dc7 cmake: remove trailing whitespace\n9120f8f656 ci: remove trailing whitespace from scripts\n\nAcked-by: Kitware Robot <kwrobot@kitware.com>\nTested-by: buildbot <buildbot@kitware.com>\nMerge-request: !10604\n",
+            "commit_timestamp": 1697495991.0
         }
     ]
 }

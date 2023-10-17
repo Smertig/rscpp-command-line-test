@@ -9113,6 +9113,20 @@
             "commit_ref": "e2d3aa7f4ac40e0d84c05aa98dd1554ba8c6c456",
             "commit_message": "[NTUSER] Remove a wrong check in MENU_MouseMove (#5736)\n\nThis check doesn't seem to be correct in modern ReactOS. Furthermore, it\r\nactually hadn't been working for a long time until it was uncovered by\r\nthe recent system menu changes.\r\n\r\nReverts a hack introduced in 17a315285 (r72517), fixes CORE-19170.\r\nThe initial bug described in CORE-2338 is not observed.",
             "commit_timestamp": 1697472652.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1697501120.747146,
+            "elapsed_time": 248.33250999450684,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "8f1eb03ad28f6262b7322a637f775d7e1312351c",
+            "commit_message": "[MSPAINT] Improve Zoom tool (#5798)\n\n- Delete global zoomTo function.\r\n- Add CCanvasWindow::zoomTo and\r\n  CCanvasWindow::getNewZoomRect functions.\r\n- Rename CCanvasWindow::updateScrollInfo as\r\n  CCanvasWindow::updateScrollRange.\r\n- Rename CCanvasWindow::resetScrollPos as\r\n  CCanvasWindow::updateScrollPos.\r\n- Draw the proper zoom rectangle on mouse move.\r\n- Revert the active tool on click when the tool\r\n  was Zoom.\r\nCORE-19094",
+            "commit_timestamp": 1697495150.0
         }
     ]
 }

@@ -10011,6 +10011,22 @@
             "commit_ref": "8e2b2c4181506efc5b9321c203dd107bbd63392b",
             "commit_message": "[SLP]Fix PR69196: Instruction does not dominate all uses\n\nDuring emission of the postponed gathers, need to insert them before\nuser instruction to avoid use before definition crash.\n",
             "commit_timestamp": 1697486238.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1697502066.851918,
+            "elapsed_time": 9184.029834985733,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "28a686a704fab6631d18160e5f8ee2e07620ebe1",
+            "commit_message": "[flang][NFC] Speed up large DATA statement initializations (#67585)\n\nTo ensure that the map from symbols to their initial images has an entry\r\nfor a particular symbol, use std::map<>::find() before\r\nstd::map<>::emplace() to avoid needless memory allocation and\r\ndeallocation. Also, combine adjacent intervals in the lists of\r\ninitialized ranges so that contiguous initializations don't require long\r\nlists.\r\n\r\nFixes https://github.com/llvm/llvm-project/issues/66452.",
+            "commit_timestamp": 1697500306.0
         }
     ]
 }
