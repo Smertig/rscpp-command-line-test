@@ -10251,6 +10251,20 @@
             "commit_ref": "961b340f54deb99968396df87542e6f31a88d4e4",
             "commit_message": "Remove redundant reinterpret_cast<>.\n\nPiperOrigin-RevId: 573941337\n",
             "commit_timestamp": 1697494203.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1697515554.84662,
+            "elapsed_time": 454.031054019928,
+            "x64": false,
+            "actual_files_count": 851,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "d79270313bf53288ded2fa036bdbc38ecc603e9b",
+            "commit_message": "Set `PROTOBUF_EXPORT` on `InternalOutOfLineDeleteMessageLite()`\n\nThis function needs to be visible to generated code, so this CL ensures that\nit's exported on libprotobuf.so.\n\nPiperOrigin-RevId: 573980166\n",
+            "commit_timestamp": 1697503867.0
         }
     ]
 }
