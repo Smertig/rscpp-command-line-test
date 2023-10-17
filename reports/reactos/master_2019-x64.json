@@ -9141,6 +9141,20 @@
             "commit_ref": "8f1eb03ad28f6262b7322a637f775d7e1312351c",
             "commit_message": "[MSPAINT] Improve Zoom tool (#5798)\n\n- Delete global zoomTo function.\r\n- Add CCanvasWindow::zoomTo and\r\n  CCanvasWindow::getNewZoomRect functions.\r\n- Rename CCanvasWindow::updateScrollInfo as\r\n  CCanvasWindow::updateScrollRange.\r\n- Rename CCanvasWindow::resetScrollPos as\r\n  CCanvasWindow::updateScrollPos.\r\n- Draw the proper zoom rectangle on mouse move.\r\n- Revert the active tool on click when the tool\r\n  was Zoom.\r\nCORE-19094",
             "commit_timestamp": 1697495150.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1697529858.171639,
+            "elapsed_time": 190.65955209732056,
+            "x64": true,
+            "actual_files_count": 155,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "97e53c6963678be5f399e99e179c177358c14ab3",
+            "commit_message": "[MSPAINT] Implement mouse middle button dragging (#5804)\n\n- Handle WM_MBUTTONDOWN and\r\n  WM_MBUTTONUP messages.\r\n- Implement dragging by mouse middle button.\r\n- Add IDC_HANDDRAG cursor resource.\r\nCORE-19094",
+            "commit_timestamp": 1697525914.0
         }
     ]
 }

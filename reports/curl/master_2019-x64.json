@@ -9281,6 +9281,20 @@
             "commit_ref": "1a5c0db090dd656bc9da673200e09028329b3f06",
             "commit_message": "test729: verify socks4a with excessive proxy user name length\n",
             "commit_timestamp": 1697492838.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1697529893.364962,
+            "elapsed_time": 315.3299615383148,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "e160d17a02bb6ed735027b36d5b94d5703daa20c",
+            "commit_message": "build: fix 'threadsafe' feature detection for older gcc\n\n- Add 'threadsafe' to the feature list shown during build if POSIX\n  threads are being used.\n\nThis is a follow-up to 5adb6000 which added support for building a\nthread-safe libcurl with older versions of gcc where atomic is not\navailable but pthread is.\n\nReported-by: Dan Fandrich\nCo-authored-by: Dan Fandrich\n\nFixes https://github.com/curl/curl/issues/12125\nCloses https://github.com/curl/curl/pull/12127\n",
+            "commit_timestamp": 1697528022.0
         }
     ]
 }

@@ -10043,6 +10043,22 @@
             "commit_ref": "cc6a5ea6e33d3febafc4334617230c528a0c4fa7",
             "commit_message": "[M68k][NFC] Fix some unused variable warnings\n\nInduced by variables that are only used in assertion statements. NFC.\n",
             "commit_timestamp": 1697514671.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1697530646.41141,
+            "elapsed_time": 7862.003201007843,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "4606712ef5b422edbe3799b665dcad7dcf348b90",
+            "commit_message": "[lldb][lldb-vscode] Add example configuration for connecting to a remote gdbserver (#68866)\n\nThis can be used to have VS Code debug various emulators, remote\r\nsystems, hardware probes, etc.\r\n\r\nIn my case I was doing this for the Gameboy Advance,\r\nhttps://github.com/stuij/gba-llvm-devkit/blob/main/docs/Debugging.md#debugging-using-visual-studio-code.\r\n\r\nIt's not very complex if you know LLDB well, but when using another\r\nplugin, CodeLLDB, I was very glad that they had an example for it. So we\r\nshould have one too.",
+            "commit_timestamp": 1697529667.0
         }
     ]
 }

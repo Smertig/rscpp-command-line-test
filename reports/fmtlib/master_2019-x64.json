@@ -10623,6 +10623,20 @@
             "commit_ref": "2ac6c5ca8b3dfbcb1cc5cf49a8cc121e3984559c",
             "commit_message": "Fix error C2668 on Windows with option /std:c++latest (#3680)\n\n* Namespace-qualify to avoid ambiguity with std::format_to for format-test.cc\r\n\r\nWhen build fmt with MSVC under option /std:c++latest, it failed due to `error 2668: 'std::format_to': ambiguous call to overloaded function`, so add namespace to qualify the call to format_to to avoid this issue.\r\n",
             "commit_timestamp": 1697475242.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1697529805.207246,
+            "elapsed_time": 113.13192367553711,
+            "x64": false,
+            "actual_files_count": 66,
+            "expected_files_count": 66,
+            "repo_url": "https://github.com/fmtlib/fmt.git",
+            "commit_ref": "2ac6c5ca8b3dfbcb1cc5cf49a8cc121e3984559c",
+            "commit_message": "Fix error C2668 on Windows with option /std:c++latest (#3680)\n\n* Namespace-qualify to avoid ambiguity with std::format_to for format-test.cc\r\n\r\nWhen build fmt with MSVC under option /std:c++latest, it failed due to `error 2668: 'std::format_to': ambiguous call to overloaded function`, so add namespace to qualify the call to format_to to avoid this issue.\r\n",
+            "commit_timestamp": 1697475242.0
         }
     ]
 }
