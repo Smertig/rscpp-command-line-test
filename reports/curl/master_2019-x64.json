@@ -9309,6 +9309,20 @@
             "commit_ref": "e160d17a02bb6ed735027b36d5b94d5703daa20c",
             "commit_message": "build: fix 'threadsafe' feature detection for older gcc\n\n- Add 'threadsafe' to the feature list shown during build if POSIX\n  threads are being used.\n\nThis is a follow-up to 5adb6000 which added support for building a\nthread-safe libcurl with older versions of gcc where atomic is not\navailable but pthread is.\n\nReported-by: Dan Fandrich\nCo-authored-by: Dan Fandrich\n\nFixes https://github.com/curl/curl/issues/12125\nCloses https://github.com/curl/curl/pull/12127\n",
             "commit_timestamp": 1697528022.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1697558776.027026,
+            "elapsed_time": 404.58200216293335,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "03a70edc508c1674666643778942bcadf2997cba",
+            "commit_message": "multi: use pipe instead of socketpair to *wakeup()\n\nIf pipe() is present. Less overhead.\n\nCloses #12142\n",
+            "commit_timestamp": 1697549371.0
         }
     ]
 }

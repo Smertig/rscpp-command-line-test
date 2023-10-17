@@ -10075,6 +10075,22 @@
             "commit_ref": "90576084c1d797f845055e8d95c2d9f455268841",
             "commit_message": "[Bazel] fix typo\n",
             "commit_timestamp": 1697543923.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1697559579.709907,
+            "elapsed_time": 9930.000549554825,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "20af0e5e8d5692327753286ac869ff1c347d819b",
+            "commit_message": "Enable v for RISCV64 Android (#69261)\n\nAndroid has already enabled V by default for aosp:\r\nhttps://android-review.googlesource.com/c/platform/build/soong/+/2752805\r\nfour weeks back.",
+            "commit_timestamp": 1697557975.0
         }
     ]
 }

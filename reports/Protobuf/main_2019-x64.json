@@ -10293,6 +10293,20 @@
             "commit_ref": "d79270313bf53288ded2fa036bdbc38ecc603e9b",
             "commit_message": "Set `PROTOBUF_EXPORT` on `InternalOutOfLineDeleteMessageLite()`\n\nThis function needs to be visible to generated code, so this CL ensures that\nit's exported on libprotobuf.so.\n\nPiperOrigin-RevId: 573980166\n",
             "commit_timestamp": 1697503867.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1697558680.556445,
+            "elapsed_time": 497.3594665527344,
+            "x64": false,
+            "actual_files_count": 851,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "3688d8cb4acb46625793cdbf9f534ef57d6a129e",
+            "commit_message": "Remove PROTOBUF_EXPLICIT_CONSTRUCTORS define\n\nThe switch from aggregate initialization to explicit constructors in `Impl_` has been enabled since 09/06, and no issues have been reported or found. This change removes the back-out option and code from the various sources for aggregate initialization.\n\nPiperOrigin-RevId: 574161896\n",
+            "commit_timestamp": 1697557392.0
         }
     ]
 }

@@ -10321,6 +10321,20 @@
             "commit_ref": "ea3c3f983b8d7d67acf98ea090eae57a0130434e",
             "commit_message": "Fix building on MinGW: default `WINVER` is too old (#1681)\n\nMinGW defaults `WINVER` to something very old,\r\nwhile benchmark requires features gated by `WINVER = 0x0600`,\r\nso manually set update to that.",
             "commit_timestamp": 1697469557.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1697558573.861432,
+            "elapsed_time": 87.22653269767761,
+            "x64": false,
+            "actual_files_count": 86,
+            "expected_files_count": 86,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "365bf7602b569b97e8c35ab34fb0350563959ca3",
+            "commit_message": "fix format in src/sysinfo\n",
+            "commit_timestamp": 1697557822.0
         }
     ]
 }
