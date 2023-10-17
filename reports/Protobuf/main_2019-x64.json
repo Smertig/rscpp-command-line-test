@@ -10307,6 +10307,20 @@
             "commit_ref": "3688d8cb4acb46625793cdbf9f534ef57d6a129e",
             "commit_message": "Remove PROTOBUF_EXPLICIT_CONSTRUCTORS define\n\nThe switch from aggregate initialization to explicit constructors in `Impl_` has been enabled since 09/06, and no issues have been reported or found. This change removes the back-out option and code from the various sources for aggregate initialization.\n\nPiperOrigin-RevId: 574161896\n",
             "commit_timestamp": 1697557392.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1697573081.576877,
+            "elapsed_time": 477.92908358573914,
+            "x64": false,
+            "actual_files_count": 851,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "cbef12f8cf99d13bf4684273b16554d517d809f0",
+            "commit_message": "Update test matrix to 8.0\n\nPiperOrigin-RevId: 574210079\n",
+            "commit_timestamp": 1697567164.0
         }
     ]
 }
