@@ -10187,6 +10187,22 @@
             "commit_ref": "e3ae2a52d2232e3b41caa9cf1197c24130249ddd",
             "commit_message": "[llvm][CMake] Check dependency cxx source compiles (#68549)\n\nIf a CMake project doesn't enable the C language, then the CMake FFI and\r\nTerminfo find modules will fail their checks for compilation and\r\nlinking.\r\n\r\nThis commit allows projects to enable only C++ by first checking if a C\r\ncompiler is set before testing C source compilation; if not, it checks\r\nwhether C++ compilation succeeds.\r\n\r\nFixes #53950",
             "commit_timestamp": 1697644984.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1697660124.996092,
+            "elapsed_time": 7405.222554683685,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "400389db7de3aac4cd56c95789014aa9206e376b",
+            "commit_message": "Initialize sigset in asan_interceptors (#69502)\n\nWhen compiling for Darwin, sigset is not initialized. \r\n\r\nWhen -Werror,-Wuninitialized-const-reference are enabled we see the\r\nerror:\r\nasan_interceptors.cpp:260:38: error: variable 'sigset' is uninitialized\r\nwhen passed as a const reference argument here\r\n[-Werror,-Wuninitialized-const-reference]\r\n\r\nThis fixes the error",
+            "commit_timestamp": 1697659296.0
         }
     ]
 }
