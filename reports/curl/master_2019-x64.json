@@ -9351,6 +9351,20 @@
             "commit_ref": "64936919b90278c9a173e007ccb7b0e7b3719850",
             "commit_message": "tests: Fix Windows test helper tool search & use it for handle64\n\nThe checkcmd() and checktestcmd() functions would not have worked on\nWindows due to hard-coding the UNIX PATH separator character and not\nadding .exe file extension. This meant that tools like stunnel, valgrind\nand nghttpx would not have been found and used on Windows, and\ninspection of previous test runs show none of those being found in pure\nWindows CI builds.\n\nWith this fixed, they can be used to detect the handle64.exe program\nbefore attempting to use it. When handle64.exe was called\nunconditionally without it existing, it caused perl to abort the test\nrun with the error\n\n    The running command stopped because the preference variable\n    \"ErrorActionPreference\" or common parameter is set to Stop:\n    sh: handle64.exe: command not found\n\nCloses #12115\n",
             "commit_timestamp": 1697570841.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1697601937.67134,
+            "elapsed_time": 387.3528182506561,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "64936919b90278c9a173e007ccb7b0e7b3719850",
+            "commit_message": "tests: Fix Windows test helper tool search & use it for handle64\n\nThe checkcmd() and checktestcmd() functions would not have worked on\nWindows due to hard-coding the UNIX PATH separator character and not\nadding .exe file extension. This meant that tools like stunnel, valgrind\nand nghttpx would not have been found and used on Windows, and\ninspection of previous test runs show none of those being found in pure\nWindows CI builds.\n\nWith this fixed, they can be used to detect the handle64.exe program\nbefore attempting to use it. When handle64.exe was called\nunconditionally without it existing, it caused perl to abort the test\nrun with the error\n\n    The running command stopped because the preference variable\n    \"ErrorActionPreference\" or common parameter is set to Stop:\n    sh: handle64.exe: command not found\n\nCloses #12115\n",
+            "commit_timestamp": 1697570841.0
         }
     ]
 }
