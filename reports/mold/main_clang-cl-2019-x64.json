@@ -6929,6 +6929,20 @@
             "commit_ref": "ab1ab78f8ac8b9058bfb5f93358a274d14cd6075",
             "commit_message": "Fix gdb-index hash computation\n",
             "commit_timestamp": 1697590592.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1697616266.391856,
+            "elapsed_time": 177.02103304862976,
+            "x64": false,
+            "actual_files_count": 525,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/rui314/mold",
+            "commit_ref": "17c292c2b4c3e6d304b95d382b25c0702b9ffbf6",
+            "commit_message": "Fix CI\n\nIt looks like older versions of gdb falls into an infinite loop\nif the gdb hash table is full.\n",
+            "commit_timestamp": 1697611934.0
         }
     ]
 }
