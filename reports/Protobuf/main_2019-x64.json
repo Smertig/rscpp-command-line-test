@@ -10419,6 +10419,20 @@
             "commit_ref": "898d8fa1fd6ff07149b283b3bbff00a6a3d8c52b",
             "commit_message": "Open-source editions Bazel rules for embedding defaults.\n\nThese utilities provide a way to embed a FeatureSetDefaults message into generators or runtimes that need to implement feature resolution.  They use protoc to handle the tricky reflection-based algorithm over feature protos, leaving only simple merges to be implemented in other languages.  See docs/design/editions/editions-life-of-a-featureset.md for more information.\n\nPiperOrigin-RevId: 574554333\n",
             "commit_timestamp": 1697657007.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1697673960.034923,
+            "elapsed_time": 406.0727274417877,
+            "x64": false,
+            "actual_files_count": 851,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "0883b22ac4b830a0cb771ea7485481575a2cc7a5",
+            "commit_message": "Enable staleness tests for 25.x branch\n\nPiperOrigin-RevId: 574579237\n",
+            "commit_timestamp": 1697661555.0
         }
     ]
 }

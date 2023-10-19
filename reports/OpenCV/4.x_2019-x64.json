@@ -9763,6 +9763,20 @@
             "commit_ref": "ba4d6c859d21536f84e0328c16f4cc3e96bf3065",
             "commit_message": "added detection & dispatching of some modern NEON instructions (NEON_FP16, NEON_BF16) (#24420)\n\n* added more or less cross-platform (based on POSIX signal() semantics) method to detect various NEON extensions, such as FP16 SIMD arithmetics, BF16 SIMD arithmetics, SIMD dotprod etc. It could be propagated to other instruction sets if necessary.\r\n\r\n* hopefully fixed compile errors\r\n\r\n* continue to fix CI\r\n\r\n* another attempt to fix build on Linux aarch64\r\n\r\n* * reverted to the original method to detect special arm neon instructions without signal()\r\n* renamed FP16_SIMD & BF16_SIMD to NEON_FP16 and NEON_BF16, respectively\r\n\r\n* removed extra whitespaces",
             "commit_timestamp": 1697655980.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1697674011.56994,
+            "elapsed_time": 638.8037347793579,
+            "x64": false,
+            "actual_files_count": 466,
+            "expected_files_count": 459,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "ba4d6c859d21536f84e0328c16f4cc3e96bf3065",
+            "commit_message": "added detection & dispatching of some modern NEON instructions (NEON_FP16, NEON_BF16) (#24420)\n\n* added more or less cross-platform (based on POSIX signal() semantics) method to detect various NEON extensions, such as FP16 SIMD arithmetics, BF16 SIMD arithmetics, SIMD dotprod etc. It could be propagated to other instruction sets if necessary.\r\n\r\n* hopefully fixed compile errors\r\n\r\n* continue to fix CI\r\n\r\n* another attempt to fix build on Linux aarch64\r\n\r\n* * reverted to the original method to detect special arm neon instructions without signal()\r\n* renamed FP16_SIMD & BF16_SIMD to NEON_FP16 and NEON_BF16, respectively\r\n\r\n* removed extra whitespaces",
+            "commit_timestamp": 1697655980.0
         }
     ]
 }
