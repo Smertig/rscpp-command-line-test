@@ -10251,6 +10251,22 @@
             "commit_ref": "416884544e0210c32c113f02c3d3881e78aac6a4",
             "commit_message": "[TableGen] Update editor modes for new keywords and bang operators. (#68897)\n\n* `dump`, added in https://github.com/llvm/llvm-project/pull/68793\r\n* `!repr`, added in https://github.com/llvm/llvm-project/pull/68716\r\n\r\nThe keyword `assert` was missing, so I have added that too.",
             "commit_timestamp": 1697700719.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1697718070.26771,
+            "elapsed_time": 9797.024002313614,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "3d7802d2107f4f6518f366effc0e237bffe67bf1",
+            "commit_message": "[Clang] Actually fix tests for __builtin_vectorelements (#69589)\n\nIn #69582, I accidentally disabled all tests for the changed introduced\r\nin #69010. This change should use the correct `REQUIRES` syntax to\r\nen-/disable target-specific tests.",
+            "commit_timestamp": 1697715641.0
         }
     ]
 }
