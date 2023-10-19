@@ -9819,6 +9819,20 @@
             "commit_ref": "c96f48e7c91748f896e99f5bf943faf08cd98f0e",
             "commit_message": "Merge pull request #24412 from vrabaud:inter_area1\n\nSpeed up line merging in INTER_AREA #24412\r\n\r\nThis provides a 10 to 20% speed-up.\r\n\r\nRelated perf test fix: https://github.com/opencv/opencv/pull/24417\r\nThis is a split of https://github.com/opencv/opencv/pull/23525 that will be updated to only deal with column merging.\r\n\r\n### Pull Request Readiness Checklist\r\n\r\nSee details at https://github.com/opencv/opencv/wiki/How_to_contribute#making-a-good-pull-request\r\n\r\n- [x] I agree to contribute to the project under Apache 2 License.\r\n- [x] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\r\n- [x] The PR is proposed to the proper branch\r\n- [x] There is a reference to the original bug report and related work\r\n- [x] There is accuracy test, performance test and test data in opencv_extra repository, if applicable\r\n      Patch to opencv_extra has the same branch name.\r\n- [x] The feature is well documented and sample code can be built with the project CMake",
             "commit_timestamp": 1697713610.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1697731699.218992,
+            "elapsed_time": 755.0743262767792,
+            "x64": false,
+            "actual_files_count": 466,
+            "expected_files_count": 459,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "c96f48e7c91748f896e99f5bf943faf08cd98f0e",
+            "commit_message": "Merge pull request #24412 from vrabaud:inter_area1\n\nSpeed up line merging in INTER_AREA #24412\r\n\r\nThis provides a 10 to 20% speed-up.\r\n\r\nRelated perf test fix: https://github.com/opencv/opencv/pull/24417\r\nThis is a split of https://github.com/opencv/opencv/pull/23525 that will be updated to only deal with column merging.\r\n\r\n### Pull Request Readiness Checklist\r\n\r\nSee details at https://github.com/opencv/opencv/wiki/How_to_contribute#making-a-good-pull-request\r\n\r\n- [x] I agree to contribute to the project under Apache 2 License.\r\n- [x] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\r\n- [x] The PR is proposed to the proper branch\r\n- [x] There is a reference to the original bug report and related work\r\n- [x] There is accuracy test, performance test and test data in opencv_extra repository, if applicable\r\n      Patch to opencv_extra has the same branch name.\r\n- [x] The feature is well documented and sample code can be built with the project CMake",
+            "commit_timestamp": 1697713610.0
         }
     ]
 }
