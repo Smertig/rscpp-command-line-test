@@ -7013,6 +7013,20 @@
             "commit_ref": "6ad942cb270f55467842b008312b9b96c9dd99e2",
             "commit_message": "Bump mold version to 2.3.0\n",
             "commit_timestamp": 1697624657.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1697688281.381119,
+            "elapsed_time": 195.75004649162292,
+            "x64": false,
+            "actual_files_count": 525,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/rui314/mold",
+            "commit_ref": "1a2baee0964ef6426ee18ccce9197e41825bcd9a",
+            "commit_message": "Fix test\n\n`test_cflags` uses $CC to test if a given flag is supported, so\nwe should use $CC instead of $GCC for the rest of the file.\n\nFixes https://github.com/rui314/mold/issues/1128\n",
+            "commit_timestamp": 1697683481.0
         }
     ]
 }
