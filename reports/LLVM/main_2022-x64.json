@@ -10283,6 +10283,22 @@
             "commit_ref": "03d1c99d99d7918115b993f14dcb6fc39cf09f72",
             "commit_message": "[mlir][ODS] Add `OptionalTypesMatchWith` and remove a custom assemblyFormat (#68876)\n\nThis is just a slight specialization of `TypesMatchWith` that returns\r\nsuccess if an optional parameter is missing.\r\n\r\nThere may be other places this could help e.g.:\r\n\r\nhttps://github.com/llvm/llvm-project/blob/eb21049b4b904b072679ece60e73c6b0dc0d1ebf/mlir/include/mlir/Dialect/X86Vector/X86Vector.td#L58-L59\r\n...but I'm leaving those to avoid some churn.\r\n\r\nThis constraint will be handy for us in some later patches, it's a\r\nformalization of a short circuiting trick with the `comparator` of the\r\n`TypesMatchWith` constraint (devised for #69195).\r\n\r\n```\r\nTypesMatchWith<\r\n  \"padding type matches element type of result (if present)\",\r\n  \"result\", \"padding\",\r\n  \"::llvm::cast<VectorType>($_self).getElementType()\",\r\n  // This returns true if no padding is present, or it's present with a type that matches the element type of `result`.\r\n  \"!getPadding() || std::equal_to<>()\">\r\n```\r\n\r\nThis is a little non-obvious, so after this patch you can instead do:\r\n```\r\nOptionalTypesMatchWith<\r\n  \"padding type matches element type of result (if present)\",\r\n  \"result\", \"padding\",\r\n  \"::llvm::cast<VectorType>($_self).getElementType()\">\r\n```",
             "commit_timestamp": 1697731202.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1697746767.766603,
+            "elapsed_time": 9680.854655981064,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "3cac608fbd0811b2f5c59c6e13148162ccd8543e",
+            "commit_message": "[LV] Add interleave only test case with reduction requiring casts.\n\nThis adds test coverage for a crash exposed by\nd311126349b8fe1684d62154a9fa5a7bbb0b713.\n",
+            "commit_timestamp": 1697745141.0
         }
     ]
 }
