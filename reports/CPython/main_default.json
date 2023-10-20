@@ -6803,6 +6803,20 @@
             "commit_ref": "d731579bfb9a497cfb0076cb6b221058a20088fe",
             "commit_message": "gh-111089: PyUnicode_AsUTF8() now raises on embedded NUL (#111091)\n\n* PyUnicode_AsUTF8() now raises an exception if the string contains\r\n  embedded null characters.\r\n* Update related C API tests (test_capi.test_unicode).\r\n* type_new_set_doc() uses PyUnicode_AsUTF8AndSize() to silently\r\n  truncate doc containing null bytes.\r\n\r\nCo-authored-by: Serhiy Storchaka <storchaka@gmail.com>",
             "commit_timestamp": 1697817569.0
+        },
+        {
+            "tool_version": "233.0.20231013.113827-eap03",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1697826133.632245,
+            "elapsed_time": 1266.235203742981,
+            "x64": true,
+            "actual_files_count": 941,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "37e4e20eaa8f27ada926d49e5971fecf0477ad26",
+            "commit_message": "gh-111089: Use PyUnicode_AsUTF8() in sqlite3 (#111122)\n\nPyUnicode_AsUTF8() now raises an exception if the string contains\r\nembedded null characters.",
+            "commit_timestamp": 1697825067.0
         }
     ]
 }
