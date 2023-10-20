@@ -6789,6 +6789,20 @@
             "commit_ref": "11312eae6ec3acf51aacafce4cb6d1a5edfd5f2e",
             "commit_message": "gh-110913: Fix WindowsConsoleIO chunking of UTF-8 text (GH-111007)\n\n",
             "commit_timestamp": 1697802751.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1697818093.391311,
+            "elapsed_time": 1360.9791054725647,
+            "x64": true,
+            "actual_files_count": 941,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "d731579bfb9a497cfb0076cb6b221058a20088fe",
+            "commit_message": "gh-111089: PyUnicode_AsUTF8() now raises on embedded NUL (#111091)\n\n* PyUnicode_AsUTF8() now raises an exception if the string contains\r\n  embedded null characters.\r\n* Update related C API tests (test_capi.test_unicode).\r\n* type_new_set_doc() uses PyUnicode_AsUTF8AndSize() to silently\r\n  truncate doc containing null bytes.\r\n\r\nCo-authored-by: Serhiy Storchaka <storchaka@gmail.com>",
+            "commit_timestamp": 1697817569.0
         }
     ]
 }
