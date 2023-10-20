@@ -9407,6 +9407,20 @@
             "commit_ref": "63eaf2bd529f5bf94cde65afc26944e98b47850b",
             "commit_message": "[TASKMGR] *.rc Deduplicate dynamic menu strings (#5772)\n\n\r\nSome of the Menu-controls are just dummies in the RC,\r\nbecause those controls are dynamically replaced at runtime\r\nbased on which tab/propsheet is active in taskmgr.\r\nThey are replaced by the IDS_MENU_* strings then.\r\n\r\nDeduplicating them has many advantages:\r\n1.) It shrinks binary size:\r\n    master taskmgr.exe RosBEWin2.2.2 GCC8.4.0dbg  708.608 -> 696.832 bytes\r\n2.) Translators don't get lured into translating dead stuff,\r\n    assuming they translated the menu properly, while in fact they did not.\r\n    This is *real*. Happened even to me multiple times already, although\r\n    I am actually aware of the design.\r\n3.) Some of them were offsync already between the dummy and the real thing.\r\n4.) It reduces diff between en-US and other rc's.\r\n\r\n\r\n* Aside of that improve alignment in some languages rcs in the \"Shutdown\"-menu-section,\r\n* and improve a translation in de-DE, sq-AL, and zh-CN.\r\n* [TASKMGR] id-ID.rc 2 accelerators in the same string is definitely wrong\r\n* [TASKMGR] *.rc, make sure that warning is in all 30 langs, especially in en-US.rc\r\n* [TASKMGR] for several translations add FIXME-comments regarding accelerator collisions",
             "commit_timestamp": 1697710760.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1697803461.702622,
+            "elapsed_time": 219.65805649757385,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "1fed9475cc51f3b5fc40bd52bced98c89614dae4",
+            "commit_message": "[BOOTDATA] vfatfs.sys is packaged for xbox only (#5805)\n\nAddendum to 14c3936 (0.4.15-dev-5090).\r\nCORE-16373",
+            "commit_timestamp": 1697800781.0
         }
     ]
 }

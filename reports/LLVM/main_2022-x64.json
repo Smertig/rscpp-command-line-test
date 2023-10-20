@@ -10347,6 +10347,22 @@
             "commit_ref": "5db75d74a10d60d13536836089b8efacc98bc003",
             "commit_message": "[BOLT] Filter itrace from perf script mmap & task events (#69585)\n\nperf2bolt launches a few perf script commands and stores the output in\r\ntemporary files before processing the output and cleaning them up before\r\nit exits.\r\n\r\nThe command `perf script --show-mmap-events` outputs PERF_RECORD_MMAP2\r\nand instruction tracing data but when processed it only looks for\r\nPERF_RECORD_MMAP2 and the instruction tracing data is ignored. This is\r\nfine for small amounts of instruction trace data but when I've recorded\r\nArm ETM or Intel PT AUX I get lots of it\r\n\r\nBy adding `--no-itrace` is will just show the PERF_RECORD_MMAP2 records\r\nand will save on time running the `perf script`, disk space storing the\r\noutput & time parsing the output.\r\n\r\nIt is the same for `perf script --show-task-events` where BOLT is only\r\ninterested in the PERF_RECORD_COMM & PERF_RECORD_FORK records.\r\n\r\n### Data\r\n\r\n| Perf Record | Perf Data Size  | MMap Size | MMap No Itrace Size |\r\n|---|---|---|---|\r\n| perf record -e cs_etm/@tmc_etr0/u | 137K | 4468K | 0.632K |\r\n| perf record -e intel_pt//u | 890K | 33378K | 0.673K |",
             "commit_timestamp": 1697788805.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1697804288.098646,
+            "elapsed_time": 9318.319209098816,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "ba8565fbcb975e2d067ce3ae5a7dbaae4953edd3",
+            "commit_message": "[LIT] Print discovered tests and percentages (#66057)\n\nThis patch adds \"nice-to-have\" feature in lit.\r\nit prints the total number of discovered tests at the beginning. It is\r\ncovenient to see the total number of tests and avoid scrolling up to the\r\nbeginning of log.\r\n\r\nFurther, this patch also prints %ge of tests.\r\n\r\nReviewed By: RoboTux, jdenny-ornl\r\n\r\nCo-authored-by: Madhur A <madhura@nvidia.com>",
+            "commit_timestamp": 1697802814.0
         }
     ]
 }
