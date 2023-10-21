@@ -10475,6 +10475,22 @@
             "commit_ref": "f9906508bc4f05d3950e2219b4c56f6c078a61ef",
             "commit_message": "[analyzer][NFC] Substitute operator() with lambda in StreamChecker\n\n",
             "commit_timestamp": 1697898554.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1697919306.301717,
+            "elapsed_time": 7508.477356910706,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "241c290ad73f57ee12a6d1c3ee3fe38d79405c3a",
+            "commit_message": "Reland [LLD] [COFF] Don't try to detect MSVC installations in mingw mode\n\nIn mingw mode, all linker paths are passed explicitly to the linker\nby the compiler driver. Don't try to implicitly add linker paths\nfrom the LIB environment variable or by detecting an MSVC\ninstallation directory.\n\nIf the /winsysroot command line parameter is explicitly passed to\nlld-link while /lldmingw is specified, it could be considered reasonable\nto actually include those paths. However, modifying the code to\nhandle only the /winsysroot case but not the other ones, when the\nmingw mode has been enabled, seems like much more code complexity\nfor a mostly hypothetical case.\n\nAdd a test for this when case when using LIB. (The code paths for\ntrying to detect an MSVC installation aren't really regression tested.)\n\nAlso fix an issue in the existing test for \"Check that when /winsysroot\nis specified, %LIB% is ignored.\", where the LIB variable pointed\nto a nonexistent directory, so the test would pass even if /winsysroot\nwouldn't be specified.\n\nReland this after https://github.com/llvm/llvm-project/pull/68077 and\nhttps://github.com/llvm/llvm-project/pull/69781 - the compiler-rt test\nthat used -lldmingw in MSVC environments has been updated to use a more\nspecific option.\n\nDifferential Revision: https://reviews.llvm.org/D144084\n",
+            "commit_timestamp": 1697916971.0
         }
     ]
 }
