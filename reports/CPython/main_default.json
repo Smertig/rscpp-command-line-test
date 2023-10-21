@@ -6845,6 +6845,20 @@
             "commit_ref": "37e4e20eaa8f27ada926d49e5971fecf0477ad26",
             "commit_message": "gh-111089: Use PyUnicode_AsUTF8() in sqlite3 (#111122)\n\nPyUnicode_AsUTF8() now raises an exception if the string contains\r\nembedded null characters.",
             "commit_timestamp": 1697825067.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1697846986.707932,
+            "elapsed_time": 1345.0251319408417,
+            "x64": true,
+            "actual_files_count": 941,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "b07f23259d30e61fd7cc975b8b0e3b2e846fed8f",
+            "commit_message": "gh-106310 - document the __signature__ attribute (#106311)\n\nDocument the __signature__ attribute\r\n\r\nCo-authored-by: Alex Waygood <Alex.Waygood@Gmail.com>",
+            "commit_timestamp": 1697842442.0
         }
     ]
 }
