@@ -7335,6 +7335,20 @@
             "commit_ref": "651ae8a2a8d42ebabe82b46268df7eaf920a49cd",
             "commit_message": "Do not create a PLT for an IFUNC unless necessary\n",
             "commit_timestamp": 1697974296.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1697990699.891884,
+            "elapsed_time": 196.919203042984,
+            "x64": false,
+            "actual_files_count": 525,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/rui314/mold",
+            "commit_ref": "f7dea3a21b263405b8620e4756d0d1d11ccc4b90",
+            "commit_message": "Revert \"Do not create a PLT for an IFUNC unless necessary\"\n\nThis reverts commit 651ae8a2a8d42ebabe82b46268df7eaf920a49cd because\nit broke CI.\n",
+            "commit_timestamp": 1697981749.0
         }
     ]
 }
