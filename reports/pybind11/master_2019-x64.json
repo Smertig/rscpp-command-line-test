@@ -11035,6 +11035,20 @@
             "commit_ref": "3414c56b6c7c521d868c9a137ca2ace2e26b5b2e",
             "commit_message": "Workaround NVCC parse failure in `cast_op` (#4893)\n\n* Workaround NVCC parse failure in `cast_op`\r\n\r\nThere is a bug in some CUDA versions (observed in CUDA 12.1 and 11.7 w/ GCC 12.2),\r\nthat makes `cast_op` fail to compile:\r\n  `cast.h:45:120: error: expected template-name before \u2018<\u2019 token`\r\n\r\nDefining the nested type as an alias and using it allows this to work\r\nwithout any change in semantics.\r\n\r\nFixes #4606\r\n\r\n* style: pre-commit fixes\r\n\r\n* Add comments to result_t referencing PR\r\n\r\n---------\r\n\r\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>",
             "commit_timestamp": 1697910614.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1697961859.009313,
+            "elapsed_time": 190.7664954662323,
+            "x64": false,
+            "actual_files_count": 218,
+            "expected_files_count": 197,
+            "repo_url": "https://github.com/pybind/pybind11",
+            "commit_ref": "3414c56b6c7c521d868c9a137ca2ace2e26b5b2e",
+            "commit_message": "Workaround NVCC parse failure in `cast_op` (#4893)\n\n* Workaround NVCC parse failure in `cast_op`\r\n\r\nThere is a bug in some CUDA versions (observed in CUDA 12.1 and 11.7 w/ GCC 12.2),\r\nthat makes `cast_op` fail to compile:\r\n  `cast.h:45:120: error: expected template-name before \u2018<\u2019 token`\r\n\r\nDefining the nested type as an alias and using it allows this to work\r\nwithout any change in semantics.\r\n\r\nFixes #4606\r\n\r\n* style: pre-commit fixes\r\n\r\n* Add comments to result_t referencing PR\r\n\r\n---------\r\n\r\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>",
+            "commit_timestamp": 1697910614.0
         }
     ]
 }

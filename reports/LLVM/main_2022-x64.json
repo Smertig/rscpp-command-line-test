@@ -10523,6 +10523,22 @@
             "commit_ref": "0b7ae41b23fc05c2ac3afc8566b8a923d7f76c45",
             "commit_message": "[LIT] Print discovered tests and percentages (#66057) (#69831)\n\nThis patch adds \"nice-to-have\" feature in lit.\r\nit prints the total number of discovered tests at the beginning. It is\r\ncovenient to see the total number of tests and avoid scrolling up to the\r\nbeginning of log.\r\n\r\nFurther, this patch also prints %ge of tests.\r\n\r\nThis patch fixes tests pointed by previous attempt of landing this\r\npatch.\r\n\r\nReviewed By: RoboTux, jdenny-ornl\r\n\r\nCo-authored-by: Madhur A <madhura@nvidia.com>",
             "commit_timestamp": 1697946745.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1697962591.614764,
+            "elapsed_time": 8179.069714784622,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "3d40411ee88958864316ff9afb23ec2d0166b285",
+            "commit_message": "[AMDGPU] Set size to all SOP pseudos (#69756)\n\n",
+            "commit_timestamp": 1697960025.0
         }
     ]
 }

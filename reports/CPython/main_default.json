@@ -6957,6 +6957,20 @@
             "commit_ref": "6c23635f2b7067ef091a550954e09f8b7c329e3f",
             "commit_message": "gh-111085: Fix invalid state handling in TaskGroup and Timeout (#111111)\n\nasyncio.TaskGroup and asyncio.Timeout classes now raise proper RuntimeError\r\nif they are improperly used.\r\n\r\n* When they are used without entering the context manager.\r\n* When they are used after finishing.\r\n* When the context manager is entered more than once (simultaneously or\r\n  sequentially).\r\n* If there is no current task when entering the context manager.\r\n\r\nThey now remain in a consistent state after an exception is thrown,\r\nso subsequent operations can be performed correctly (if they are allowed).\r\n\r\nCo-authored-by: James Hilton-Balfe <gobot1234yt@gmail.com>\r\n",
             "commit_timestamp": 1697915914.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1697962158.247304,
+            "elapsed_time": 1620.5503296852112,
+            "x64": true,
+            "actual_files_count": 941,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "c9c4a87f5da8d1e9b7ab19c687b49ba5431f6d36",
+            "commit_message": "gh-109975: What's new in 3.13: Add PEP 594 to release highlights (#110993)\n\n",
+            "commit_timestamp": 1697959023.0
         }
     ]
 }
