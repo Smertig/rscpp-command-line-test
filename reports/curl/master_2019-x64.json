@@ -9785,6 +9785,20 @@
             "commit_ref": "514969db04b9c6e444e1a3177486bbfd64c88ec7",
             "commit_message": "cmake: fix OpenSSL quic detection in quiche builds\n\nAn orphan call to `CheckQuicSupportInOpenSSL()` remained after a recent\nupdate when checking QUIC for quiche. Move back QUIC detection to\na function and fixup callers to use that. Also make sure that quiche\ngets QUIC from BoringSSL, because it doesn't support other forks at this\ntime.\n\nRegression from dee310d54261f9a8416e87d50bccfe2cbe404949 #11555\n\nReported-by: Casey Bodley <cbodley@redhat.com>\nFixes #12160\nCloses #12162\n",
             "commit_timestamp": 1697972085.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1698005105.58802,
+            "elapsed_time": 305.55910873413086,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "f4ff41080719099eec3475d93aed4c1b70a5447a",
+            "commit_message": "configure: check for the fseeko declaration too\n\n... and make the code require both symbol and declaration.\n\nThis is because for Android, the symbol is always present in the lib at\nbuild-time even when not actually available in run-time.\n\nAssisted-by: Viktor Szakats\nReported-by: 12932 on github\nFixes #12086\nCloses #12158\n",
+            "commit_timestamp": 1697998849.0
         }
     ]
 }
