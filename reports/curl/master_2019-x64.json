@@ -9715,6 +9715,20 @@
             "commit_ref": "014ce7c0d0dfa43cd261983926a04a07fcb70ac8",
             "commit_message": "tool: fix --capath when proxy support is disabled\n\nAfter 95e8515ca0, --capath always sets CURLOPT_PROXY_CAPATH, which fails\nwith CURLE_UNKNOWN_OPTION when proxy support is disabled.\n\nCloses #12089\n",
             "commit_timestamp": 1697892767.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1697933168.539202,
+            "elapsed_time": 309.4649963378906,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "014ce7c0d0dfa43cd261983926a04a07fcb70ac8",
+            "commit_message": "tool: fix --capath when proxy support is disabled\n\nAfter 95e8515ca0, --capath always sets CURLOPT_PROXY_CAPATH, which fails\nwith CURLE_UNKNOWN_OPTION when proxy support is disabled.\n\nCloses #12089\n",
+            "commit_timestamp": 1697892767.0
         }
     ]
 }
