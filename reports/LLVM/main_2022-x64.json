@@ -10507,6 +10507,22 @@
             "commit_ref": "74ca07295f3224a77ea5202858b3f4195b23fbcf",
             "commit_message": "[lldb] improve dwo path in missing dwo error when relative (#69783)\n\nWhen the debug info refers to a dwo with relative `DW_AT_comp_dir` and\r\n`DW_AT_dwo_name`, we only print the `DW_AT_comp_dir` in our error\r\nmessage if we can't find it. This often isn't very helpful, especially\r\nwhen the `DW_AT_comp_dir` is \".\":\r\n```\r\n(lldb) fr v\r\nerror: unable to locate .dwo debug file \".\" for skeleton DIE 0x000000000000003c\r\n```\r\n\r\nI'm updating the error message to include both `DW_AT_comp_dir` (if it\r\nexists) and `DW_AT_dwo_name` when the `DW_AT_dwo_name` is relative. The\r\nbehavior when `DW_AT_dwo_name` is absolute should be the same.",
             "commit_timestamp": 1697932784.0
+        },
+        {
+            "tool_version": "233.0.20230922.73406-eap01",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1697948204.293342,
+            "elapsed_time": 8422.060481786728,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "0b7ae41b23fc05c2ac3afc8566b8a923d7f76c45",
+            "commit_message": "[LIT] Print discovered tests and percentages (#66057) (#69831)\n\nThis patch adds \"nice-to-have\" feature in lit.\r\nit prints the total number of discovered tests at the beginning. It is\r\ncovenient to see the total number of tests and avoid scrolling up to the\r\nbeginning of log.\r\n\r\nFurther, this patch also prints %ge of tests.\r\n\r\nThis patch fixes tests pointed by previous attempt of landing this\r\npatch.\r\n\r\nReviewed By: RoboTux, jdenny-ornl\r\n\r\nCo-authored-by: Madhur A <madhura@nvidia.com>",
+            "commit_timestamp": 1697946745.0
         }
     ]
 }
