@@ -9813,6 +9813,20 @@
             "commit_ref": "19a82c12c098ec201fe3a03c6b5dcc8962843864",
             "commit_message": "http2: provide an error callback and failf the message\n\nGetting nghttp2's error message helps users understand what's going\non. For example when the connection is brought down due a forbidden\nheader is used - as that header is then not displayed by curl itself.\n\nExample:\n\n  curl: (92) Invalid HTTP header field was received: frame type: 1,\n  stream: 1, name: [upgrade], value: [h2,h2c]\n\nRef: #12172\nCloses #12179\n",
             "commit_timestamp": 1698057252.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1698077203.186658,
+            "elapsed_time": 396.6266493797302,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "19a82c12c098ec201fe3a03c6b5dcc8962843864",
+            "commit_message": "http2: provide an error callback and failf the message\n\nGetting nghttp2's error message helps users understand what's going\non. For example when the connection is brought down due a forbidden\nheader is used - as that header is then not displayed by curl itself.\n\nExample:\n\n  curl: (92) Invalid HTTP header field was received: frame type: 1,\n  stream: 1, name: [upgrade], value: [h2,h2c]\n\nRef: #12172\nCloses #12179\n",
+            "commit_timestamp": 1698057252.0
         }
     ]
 }

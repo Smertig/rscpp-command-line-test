@@ -10037,6 +10037,20 @@
             "commit_ref": "011c1afbde3a82712a4bffee1acc3bbdde319e2d",
             "commit_message": "Implement bit32.byteswap (#1075)\n\nI've decided to take a stab at implementing `bit32.byteswap` from the\r\n[recently merged\r\nRFC](https://github.com/Roblox/luau/blob/master/rfcs/function-bit32-byteswap.md).\r\nI asked on Discord for some guidance, but for the sake of posterity:\r\nthis is my first time doing this and I am likely to have made some\r\nmistakes.\r\n\r\nThe biggest gaps in this implementation are the lack of tests and the\r\nlack of native codegen support. I'd appreciate help with those since I'm\r\nnot sure what's relevant for me to touch for tests, and I'm told that\r\nrelevant assembler instructions don't exist publicly yet. Intuition\r\ntells me that Luau-side tests would go into\r\n`tests/conformance/bitwise.luau` but this is not well documented and I'm\r\nnot sure how I'm meant to test built-in implementations.\r\n\r\nThe current implementation compiles down to `bswap` and `rev` on x86 and\r\nARM respectively when optimized.\r\n\r\n---------\r\n\r\nCo-authored-by: Arseny Kapoulkine <arseny.kapoulkine@gmail.com>",
             "commit_timestamp": 1698073248.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1698077008.282836,
+            "elapsed_time": 445.39007449150085,
+            "x64": false,
+            "actual_files_count": 427,
+            "expected_files_count": 379,
+            "repo_url": "https://github.com/Roblox/luau",
+            "commit_ref": "13e3af27247020eda4759165a6f93aad122b1a7b",
+            "commit_message": "Delete papers directory\n\nThe directory was moved to https://github.com/luau-lang/research\r\n\r\nSee https://github.com/Roblox/luau/issues/1074 for context",
+            "commit_timestamp": 1698076928.0
         }
     ]
 }
