@@ -10811,6 +10811,20 @@
             "commit_ref": "7495f83e2a6e1aa69592fcda6e5c6c1b0b4fa118",
             "commit_message": "Set -Wno-unused-variable for tests (#1682)\n\nWe  used assert() a lot in tests and that can cause build breakages in some of the opt builds (since assert() are removed)\r\n\r\nit's not practical to sprinkle \"(void)\" everywhere so I think setting this warning option is the best option for now.",
             "commit_timestamp": 1697806292.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1698074834.076913,
+            "elapsed_time": 110.10365533828735,
+            "x64": false,
+            "actual_files_count": 86,
+            "expected_files_count": 86,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "5893034e46da730ba9e8ecdc27fe77745fb1511f",
+            "commit_message": "Add Python 3.12 support (#1676)\n\n* Add Python 3.12 support tag\r\n\r\n* Bump nanobind to latest stable v1.6.2 tag\r\n\r\n* Add PyPI trusted publishing to GitHub workflow, add Python 3.12 wheel builds\r\n\r\nTrusted publishing has been available since v1.8.0 of the pypa-publish\r\naction. It enables password-less authentication and wheel uploads from\r\nthe wheel upload job.\r\n\r\n`cibuildwheel` was bumped to v2.16.2 to allow Python 3.12 wheel builds.\r\n\r\nMore info on trusted publishing:\r\nhttps://github.com/marketplace/actions/pypi-publish#trusted-publishing\r\n\r\nThe Windows distribution was reverted to `latest` in the OS matrix,\r\nsince the discovery problem of MSVC was fixed in a Bazel patch release.\r\n\r\n* Bump nanobind to stable v1.7.0 tag",
+            "commit_timestamp": 1698062679.0
         }
     ]
 }
