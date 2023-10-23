@@ -10603,6 +10603,22 @@
             "commit_ref": "9022f402120b4e55ec1201c16f8f6d2388498e1d",
             "commit_message": "[clang][Interp] Only evaluate the source array initialization of an `ArrayInitLoopExpr` once (#68039)\n\nThis patch implements an `OpaqueValueExpr` caching functionality in `Interp`\r\nby storing the result of the expression in a local variable.",
             "commit_timestamp": 1698076347.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1698092143.086843,
+            "elapsed_time": 2775.415019750595,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "2f15082b15f12461246e9e1fe1ea0cb106c27a34",
+            "commit_message": "[LLDB] Update docs on building documentation (#69858)\n\nThis patch updates the documentation to match recent changes and make it\r\nmore clear. More specifically, the process for installing sphinx has\r\nchanged with the transition to myst with the requirements.txt in\r\nllvm/docs being the preferred method for installation now. In addition,\r\nthe docs-lldb-html target is never generated if swig isn't installed, so\r\nhaving something expliti in the documentation section (even if it is\r\nmentioned as a dependency of lldb itself above) probably doesn't hurt.",
+            "commit_timestamp": 1698091179.0
         }
     ]
 }

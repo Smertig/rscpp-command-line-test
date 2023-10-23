@@ -11119,6 +11119,20 @@
             "commit_ref": "3414c56b6c7c521d868c9a137ca2ace2e26b5b2e",
             "commit_message": "Workaround NVCC parse failure in `cast_op` (#4893)\n\n* Workaround NVCC parse failure in `cast_op`\r\n\r\nThere is a bug in some CUDA versions (observed in CUDA 12.1 and 11.7 w/ GCC 12.2),\r\nthat makes `cast_op` fail to compile:\r\n  `cast.h:45:120: error: expected template-name before \u2018<\u2019 token`\r\n\r\nDefining the nested type as an alias and using it allows this to work\r\nwithout any change in semantics.\r\n\r\nFixes #4606\r\n\r\n* style: pre-commit fixes\r\n\r\n* Add comments to result_t referencing PR\r\n\r\n---------\r\n\r\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>",
             "commit_timestamp": 1697910614.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1698091545.802666,
+            "elapsed_time": 186.93880653381348,
+            "x64": false,
+            "actual_files_count": 218,
+            "expected_files_count": 197,
+            "repo_url": "https://github.com/pybind/pybind11",
+            "commit_ref": "bf88e29c95d20a94528637c1827df757821b5a88",
+            "commit_message": "Bug fix: Replace bare `static exception<T>` with `gil_safe_call_once_and_store`. (#4897)\n\nThis is to ensure that `Py_DECREF()` is not called after the Python interpreter was finalized already:\r\n\r\nhttps://github.com/pybind/pybind11/blob/3414c56b6c7c521d868c9a137ca2ace2e26b5b2e/include/pybind11/gil_safe_call_once.h#L19",
+            "commit_timestamp": 1698090664.0
         }
     ]
 }
