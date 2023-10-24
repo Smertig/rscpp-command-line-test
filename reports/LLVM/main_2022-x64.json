@@ -10635,6 +10635,22 @@
             "commit_ref": "cc455033d4d4f5731461a6d5fa72e0f9bf871a70",
             "commit_message": "[X86][GlobalISel] Reorganize shift scalar tests (NFC) (#68232)\n\nRemoved duplicated tests from GlobalISel directory",
             "commit_timestamp": 1698105630.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1698120938.873176,
+            "elapsed_time": 2683.2438476085663,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "6768a3d4318455dd61029ebbd3015b1748f1e603",
+            "commit_message": "[Github] Add libcxx docs to CI (#69828)\n\nThis patch adds a step to the documentation Github action to build the\r\nlibc++ docs if they have changed. This enables easily diagnosing build\r\nfailures/warnings in PRs.",
+            "commit_timestamp": 1698118028.0
         }
     ]
 }

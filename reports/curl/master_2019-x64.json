@@ -9855,6 +9855,20 @@
             "commit_ref": "b6e6d4ff8f253c8b8055bab9d4d6a10f9be109f3",
             "commit_message": "OpenSSL: Include SIG and KEM algorithms in verbose\n\nCurrently the verbose output does not include which algorithms are used\nfor the signature and key exchange when using OpenSSL. Including the\nalgorithms used will enable better debugging when working on using new\nalgorithm implementations. Know what algorithms are used has become more\nimportant with the fast growing research into new quantum-safe\nalgorithms.\n\nThis implementation includes a build time check for the OpenSSL version\nto use a new function that will be included in OpenSSL 3.2 that was\nintroduced in openssl/openssl@6866824\n\nBased-on-patch-by: Martin Schmatz <mrt@zurich.ibm.com>\nCloses #12030\n",
             "commit_timestamp": 1698099072.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1698120373.445987,
+            "elapsed_time": 390.28203201293945,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "b6e6d4ff8f253c8b8055bab9d4d6a10f9be109f3",
+            "commit_message": "OpenSSL: Include SIG and KEM algorithms in verbose\n\nCurrently the verbose output does not include which algorithms are used\nfor the signature and key exchange when using OpenSSL. Including the\nalgorithms used will enable better debugging when working on using new\nalgorithm implementations. Know what algorithms are used has become more\nimportant with the fast growing research into new quantum-safe\nalgorithms.\n\nThis implementation includes a build time check for the OpenSSL version\nto use a new function that will be included in OpenSSL 3.2 that was\nintroduced in openssl/openssl@6866824\n\nBased-on-patch-by: Martin Schmatz <mrt@zurich.ibm.com>\nCloses #12030\n",
+            "commit_timestamp": 1698099072.0
         }
     ]
 }
