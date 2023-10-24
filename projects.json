@@ -736,7 +736,7 @@
                     },
                     {
                         "file": "..\\src\\core\\hle\\kernel\\kernel.cpp",
-                        "line": 864,
+                        "line": 883,
                         "message": "Type 'SlabHeapContainer' is incomplete",
                         "reason": "Bug? Should not compile"
                     },
@@ -754,7 +754,7 @@
                     },
                     {
                         "file": "..\\src\\video_core\\renderer_vulkan\\vk_texture_cache.cpp",
-                        "line": 1757,
+                        "line": 1778,
                         "message": "Cannot substitute arguments for class 'VideoCommon::SlotVector<T>' because of violated constraint 'std::is_nothrow_move_assignable_v<Image> && std::is_nothrow_move_constructible_v<Image>'",
                         "reason": "RSCPP-14556 Implement __is_nothrow_assignable trait"
                     },
@@ -775,16 +775,6 @@
                         "line": 455,
                         "message": "Cannot substitute arguments for class 'VideoCommon::SlotVector<T>' because of violated constraint 'std::is_nothrow_move_assignable_v<ImageMapView> && std::is_nothrow_move_constructible_v<ImageMapView>'",
                         "reason": "RSCPP-14556 Implement __is_nothrow_assignable trait"
-                    },
-                    {
-                        "file": "..\\src\\common\\settings_setting.h",
-                        "line": 176,
-                        "message": "'final' member function 'Settings::Setting<Type, ranged>::LoadStringW' is not virtual"
-                    },
-                    {
-                        "file": "..\\src\\common\\settings_setting.h",
-                        "line": 176,
-                        "message": "Function 'void Settings::Setting<Type, ranged>::LoadStringW(const std::string& input)' has the 'override' specifier but does not override a base class member"
                     }
                 ]
             }
@@ -814,20 +804,6 @@
                     "message": "static_assert failed: 'Concept assertion failed : can_convert_to<B *, void *>()'"
                 }
             ],
-            "known errors": [
-                {
-                    "file": "..\\include\\range\\v3\\iterator\\common_iterator.hpp",
-                    "line": "76",
-                    "message": "Specialized template is not found",
-                    "reason": "RSCPP-26427 Wrong error \"Specialized template not found\" for friend function"
-                },
-                {
-                    "file": "..\\include\\range\\v3\\iterator\\common_iterator.hpp",
-                    "line": "77",
-                    "message": "Specialized template is not found",
-                    "reason": "RSCPP-26427 Wrong error \"Specialized template not found\" for friend function"
-                }
-            ],
             "inspected files count": 210
         },
         "latest": {
@@ -841,20 +817,6 @@
                     {
                         "file": "..\\test\\view\\any_view.cpp",
                         "message": "static_assert failed: 'Concept assertion failed : can_convert_to<B *, void *>()'"
-                    }
-                ],
-                "known errors": [
-                    {
-                        "file": "..\\include\\range\\v3\\iterator\\common_iterator.hpp",
-                        "line": "76",
-                        "message": "Specialized template is not found",
-                        "reason": "RSCPP-26427 Wrong error \"Specialized template not found\" for friend function"
-                    },
-                    {
-                        "file": "..\\include\\range\\v3\\iterator\\common_iterator.hpp",
-                        "line": "77",
-                        "message": "Specialized template is not found",
-                        "reason": "RSCPP-26427 Wrong error \"Specialized template not found\" for friend function"
                     }
                 ]
             }
@@ -964,18 +926,6 @@
                     "line": 50,
                     "message": "Cannot convert 'this' argument from type 'const std::vector<std::shared_ptr<ControllerBase>>' to type 'std::vector<std::shared_ptr<ControllerBase>>': function is missing 'const' qualifier",
                     "reason": "RSCPP-34303 Incorrect decltype calculation of non-captured variable in lambda scope"
-                },
-                {
-                    "file": "..\\src\\Cafe\\OS\\libs\\coreinit\\coreinit_Spinlock.cpp",
-                    "line": 230,
-                    "message": "The '#pragma endregion' directive is missing a matching '#pragma region' directive",
-                    "reason": "RSCPP-34954 Missing `#pragma region` should be warning instead of error"
-                },
-                {
-                    "file": "..\\src\\Cafe\\OS\\libs\\padscore\\padscore.cpp",
-                    "line": 671,
-                    "message": "The '#pragma endregion' directive is missing a matching '#pragma region' directive",
-                    "reason": "RSCPP-34954 Missing `#pragma region` should be warning instead of error"
                 }
             ]
         },
@@ -988,18 +938,6 @@
                         "line": 50,
                         "message": "Cannot convert 'this' argument from type 'const std::vector<std::shared_ptr<ControllerBase>>' to type 'std::vector<std::shared_ptr<ControllerBase>>': function is missing 'const' qualifier",
                         "reason": "RSCPP-34303 Incorrect decltype calculation of non-captured variable in lambda scope"
-                    },
-                    {
-                        "file": "..\\src\\Cafe\\OS\\libs\\coreinit\\coreinit_Spinlock.cpp",
-                        "line": 230,
-                        "message": "The '#pragma endregion' directive is missing a matching '#pragma region' directive",
-                        "reason": "RSCPP-34954 Missing `#pragma region` should be warning instead of error"
-                    },
-                    {
-                        "file": "..\\src\\Cafe\\OS\\libs\\padscore\\padscore.cpp",
-                        "line": 671,
-                        "message": "The '#pragma endregion' directive is missing a matching '#pragma region' directive",
-                        "reason": "RSCPP-34954 Missing `#pragma region` should be warning instead of error"
                     }
                 ]
             }
@@ -1214,12 +1152,6 @@
         },
         "use x64": true,
         "stable": {
-            "known file errors": [
-                {
-                    "file": "..\\Include\\py_curses.h",
-                    "reason": "Not included on Windows"
-                }
-            ],
             "known errors": [
                 {
                     "file": "..\\PC\\launcher.c",
@@ -1233,10 +1165,6 @@
         "latest": {
             "main": {
                 "known file errors": [
-                    {
-                        "file": "..\\Include\\py_curses.h",
-                        "reason": "Not included on Windows"
-                    },
                     {
                         "file": "..\\Include\\cpython\\pystats.h",
                         "message": "Not directly included in build? (unresolved macro `PyAPI_DATA`)"
