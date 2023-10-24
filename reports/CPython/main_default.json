@@ -7055,6 +7055,20 @@
             "commit_ref": "96cbd1e1db3447a33e5cc5cc2886ce79b61cc6eb",
             "commit_message": "gh-101100: Fix Sphinx warnings for `fileno` (#111118)\n\n",
             "commit_timestamp": 1698087956.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1698106218.238605,
+            "elapsed_time": 1848.2598662376404,
+            "x64": true,
+            "actual_files_count": 941,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "47d3e2ed930a9f3d228aed4f62133737dae74cf7",
+            "commit_message": "gh-109894: Fix initialization of static `MemoryError` in subinterpreter (gh-110911)\n\nFixes #109894\r\n\r\n* set `interp.static_objects.last_resort_memory_error.args` to empty tuple to avoid crash on `PyErr_Display()` call\r\n* allow `_PyExc_InitGlobalObjects()` to be called on subinterpreter init\r\n\r\n---------\r\n\r\nCo-authored-by: blurb-it[bot] <43283697+blurb-it[bot]@users.noreply.github.com>",
+            "commit_timestamp": 1698102419.0
         }
     ]
 }

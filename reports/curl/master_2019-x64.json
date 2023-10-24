@@ -9841,6 +9841,20 @@
             "commit_ref": "19a82c12c098ec201fe3a03c6b5dcc8962843864",
             "commit_message": "http2: provide an error callback and failf the message\n\nGetting nghttp2's error message helps users understand what's going\non. For example when the connection is brought down due a forbidden\nheader is used - as that header is then not displayed by curl itself.\n\nExample:\n\n  curl: (92) Invalid HTTP header field was received: frame type: 1,\n  stream: 1, name: [upgrade], value: [h2,h2c]\n\nRef: #12172\nCloses #12179\n",
             "commit_timestamp": 1698057252.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1698106005.127056,
+            "elapsed_time": 345.92069268226624,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "b6e6d4ff8f253c8b8055bab9d4d6a10f9be109f3",
+            "commit_message": "OpenSSL: Include SIG and KEM algorithms in verbose\n\nCurrently the verbose output does not include which algorithms are used\nfor the signature and key exchange when using OpenSSL. Including the\nalgorithms used will enable better debugging when working on using new\nalgorithm implementations. Know what algorithms are used has become more\nimportant with the fast growing research into new quantum-safe\nalgorithms.\n\nThis implementation includes a build time check for the OpenSSL version\nto use a new function that will be included in OpenSSL 3.2 that was\nintroduced in openssl/openssl@6866824\n\nBased-on-patch-by: Martin Schmatz <mrt@zurich.ibm.com>\nCloses #12030\n",
+            "commit_timestamp": 1698099072.0
         }
     ]
 }
