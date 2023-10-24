@@ -9869,6 +9869,20 @@
             "commit_ref": "b6e6d4ff8f253c8b8055bab9d4d6a10f9be109f3",
             "commit_message": "OpenSSL: Include SIG and KEM algorithms in verbose\n\nCurrently the verbose output does not include which algorithms are used\nfor the signature and key exchange when using OpenSSL. Including the\nalgorithms used will enable better debugging when working on using new\nalgorithm implementations. Know what algorithms are used has become more\nimportant with the fast growing research into new quantum-safe\nalgorithms.\n\nThis implementation includes a build time check for the OpenSSL version\nto use a new function that will be included in OpenSSL 3.2 that was\nintroduced in openssl/openssl@6866824\n\nBased-on-patch-by: Martin Schmatz <mrt@zurich.ibm.com>\nCloses #12030\n",
             "commit_timestamp": 1698099072.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1698134765.436254,
+            "elapsed_time": 399.6412718296051,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "7fdf30f25604195245b05c6bf6f3b10bee6af36a",
+            "commit_message": "page-footer: clarify exit code 25\n\n- Clarify that curl tool exit code 25 means an upload failed to start.\n\nExit code 25 is equivalent to CURLE_UPLOAD_FAILED (25). Prior to this\nchange the documentation only mentioned the case of FTP STOR failing.\n\nReported-by: Emanuele Torre\n\nRef: https://github.com/curl/curl/blob/curl-8_4_0/docs/libcurl/libcurl-errors.3#L113-L115\n\nFixes https://github.com/curl/curl/issues/12189\nCloses https://github.com/curl/curl/pull/12190\n",
+            "commit_timestamp": 1698133888.0
         }
     ]
 }

@@ -10651,6 +10651,22 @@
             "commit_ref": "6768a3d4318455dd61029ebbd3015b1748f1e603",
             "commit_message": "[Github] Add libcxx docs to CI (#69828)\n\nThis patch adds a step to the documentation Github action to build the\r\nlibc++ docs if they have changed. This enables easily diagnosing build\r\nfailures/warnings in PRs.",
             "commit_timestamp": 1698118028.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1698135352.721307,
+            "elapsed_time": 2619.386843442917,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "eb86de63d901941fba0a54eb41551456447cd789",
+            "commit_message": "[IR] Require that ptrmask mask matches pointer index size (#69343)\n\nCurrently, we specify that the ptrmask intrinsic allows the mask to have\r\nany size, which will be zero-extended or truncated to the pointer size.\r\n\r\nHowever, what semantics of the specified GEP expansion actually imply is\r\nthat the mask is only meaningful up to the pointer type *index* size --\r\nany higher bits of the pointer will always be preserved. In other words,\r\nthe mask gets 1-extended from the index size to the pointer size. This\r\nis also the behavior we want for CHERI architectures.\r\n\r\nThis PR makes two changes:\r\n* It spells out the interaction with the pointer type index size more\r\nexplicitly.\r\n* It requires that the mask matches the pointer type index size. The\r\nintention here is to make handling of this intrinsic more robust, to\r\navoid accidental mix-ups of pointer size and index size in code\r\ngenerating this intrinsic. If a zero-extend or truncate of the mask is\r\ndesired, it should just be done explicitly in IR. This also cuts down on\r\nthe amount of testing we have to do, and things transforms needs to\r\ncheck for.\r\n\r\nAs far as I can tell, we don't actually support pointers with different\r\nindex type size at the SDAG level, so I'm just asserting the sizes match\r\nthere for now. Out-of-tree targets using different index sizes may need\r\nto adjust that code.",
+            "commit_timestamp": 1698134069.0
         }
     ]
 }
