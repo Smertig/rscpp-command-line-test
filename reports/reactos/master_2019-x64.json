@@ -9757,6 +9757,20 @@
             "commit_ref": "501c2bdd63c4d4b97c4bc3b54241abe53e0fabdf",
             "commit_message": "[NTOS:LPC] Fix input parameter for ProbeAndCaptureUnicodeString (#5815)\n\nAddendum to commit b3c55b9e6 (PR #4399).\n\nPassing &CapturedObjectName as pointer to be probed and captured would\nfail if e.g. PreviousMode == UserMode, since that pointer is always in\nkernel space. Instead, pass the original user-mode pointer.\n\nBug caught by Timo Kreuzer ;)\n",
             "commit_timestamp": 1698077925.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1698164769.469208,
+            "elapsed_time": 276.19780588150024,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "501c2bdd63c4d4b97c4bc3b54241abe53e0fabdf",
+            "commit_message": "[NTOS:LPC] Fix input parameter for ProbeAndCaptureUnicodeString (#5815)\n\nAddendum to commit b3c55b9e6 (PR #4399).\n\nPassing &CapturedObjectName as pointer to be probed and captured would\nfail if e.g. PreviousMode == UserMode, since that pointer is always in\nkernel space. Instead, pass the original user-mode pointer.\n\nBug caught by Timo Kreuzer ;)\n",
+            "commit_timestamp": 1698077925.0
         }
     ]
 }

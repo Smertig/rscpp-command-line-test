@@ -9925,6 +9925,20 @@
             "commit_ref": "7fdf30f25604195245b05c6bf6f3b10bee6af36a",
             "commit_message": "page-footer: clarify exit code 25\n\n- Clarify that curl tool exit code 25 means an upload failed to start.\n\nExit code 25 is equivalent to CURLE_UPLOAD_FAILED (25). Prior to this\nchange the documentation only mentioned the case of FTP STOR failing.\n\nReported-by: Emanuele Torre\n\nRef: https://github.com/curl/curl/blob/curl-8_4_0/docs/libcurl/libcurl-errors.3#L113-L115\n\nFixes https://github.com/curl/curl/issues/12189\nCloses https://github.com/curl/curl/pull/12190\n",
             "commit_timestamp": 1698133888.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1698164783.546911,
+            "elapsed_time": 380.7025988101959,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "7fdf30f25604195245b05c6bf6f3b10bee6af36a",
+            "commit_message": "page-footer: clarify exit code 25\n\n- Clarify that curl tool exit code 25 means an upload failed to start.\n\nExit code 25 is equivalent to CURLE_UPLOAD_FAILED (25). Prior to this\nchange the documentation only mentioned the case of FTP STOR failing.\n\nReported-by: Emanuele Torre\n\nRef: https://github.com/curl/curl/blob/curl-8_4_0/docs/libcurl/libcurl-errors.3#L113-L115\n\nFixes https://github.com/curl/curl/issues/12189\nCloses https://github.com/curl/curl/pull/12190\n",
+            "commit_timestamp": 1698133888.0
         }
     ]
 }
