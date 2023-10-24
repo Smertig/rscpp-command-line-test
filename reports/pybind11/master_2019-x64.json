@@ -11203,6 +11203,20 @@
             "commit_ref": "bf88e29c95d20a94528637c1827df757821b5a88",
             "commit_message": "Bug fix: Replace bare `static exception<T>` with `gil_safe_call_once_and_store`. (#4897)\n\nThis is to ensure that `Py_DECREF()` is not called after the Python interpreter was finalized already:\r\n\r\nhttps://github.com/pybind/pybind11/blob/3414c56b6c7c521d868c9a137ca2ace2e26b5b2e/include/pybind11/gil_safe_call_once.h#L19",
             "commit_timestamp": 1698090664.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1698163444.590059,
+            "elapsed_time": 163.51509761810303,
+            "x64": false,
+            "actual_files_count": 218,
+            "expected_files_count": 197,
+            "repo_url": "https://github.com/pybind/pybind11",
+            "commit_ref": "bf88e29c95d20a94528637c1827df757821b5a88",
+            "commit_message": "Bug fix: Replace bare `static exception<T>` with `gil_safe_call_once_and_store`. (#4897)\n\nThis is to ensure that `Py_DECREF()` is not called after the Python interpreter was finalized already:\r\n\r\nhttps://github.com/pybind/pybind11/blob/3414c56b6c7c521d868c9a137ca2ace2e26b5b2e/include/pybind11/gil_safe_call_once.h#L19",
+            "commit_timestamp": 1698090664.0
         }
     ]
 }

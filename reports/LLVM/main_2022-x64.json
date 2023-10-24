@@ -10683,6 +10683,22 @@
             "commit_ref": "f7a46d700f6458a382304339c5b3589bf30ae45d",
             "commit_message": "[analyzer][clangsa] Add new option to alpha.security.cert.InvalidPtrChecker (#67663)\n\nIntroduce 'InvalidatingGetEnv' checker option for 'getenv' calls.\r\n\r\n- POSIX suggests consecutive 'getenv' calls may invalidate \r\n  pointer pointers. This is often too strict in real-world scenarios.\r\n- New 'InvalidatingGetEnv' checker option provides a more \r\n  pragmatic default that doesn't treat consecutive 'getenv' \r\n  calls as invalidating.\r\n- Now also handles main function specifications with an \r\n  environment pointer as the third parameter.\r\n\r\nOriginal Phabricator review:\r\nhttps://reviews.llvm.org/D154603",
             "commit_timestamp": 1698148794.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1698164258.946009,
+            "elapsed_time": 3189.9612119197845,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "9f3e3405603177c46b873fa219624b759e6ef851",
+            "commit_message": "[clang]Transform uninstantiated ExceptionSpec in TemplateInstantiator (#68878)\n\nFixes #68543, #42496",
+            "commit_timestamp": 1698163282.0
         }
     ]
 }

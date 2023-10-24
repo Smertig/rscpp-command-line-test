@@ -10923,6 +10923,20 @@
             "commit_ref": "e45585a4b8e75c28479fa4107182c28172799640",
             "commit_message": "Change nanobind linkage to response file approach on macOS (#1638)\n\n* Change nanobind linkage to response file approach\r\n\r\nThis change needs https://github.com/bazelbuild/bazel/pull/18952 to be\r\nmerged first. Fixes macOS linkage of GBM's nanobind bindings on macOS by\r\nsupplying a linker response file instead of `-undefined dynamic_lookup`.\r\n\r\nThe latter has since been deprecated on macOS.\r\n\r\n* Fix bazel_skylib checksum, bump skylib version in MODULE.bazel\r\n\r\n* Bump Bazel to version 6.4.0 for linker response file support",
             "commit_timestamp": 1698149052.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1698163426.07833,
+            "elapsed_time": 102.00143122673035,
+            "x64": false,
+            "actual_files_count": 86,
+            "expected_files_count": 86,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "e45585a4b8e75c28479fa4107182c28172799640",
+            "commit_message": "Change nanobind linkage to response file approach on macOS (#1638)\n\n* Change nanobind linkage to response file approach\r\n\r\nThis change needs https://github.com/bazelbuild/bazel/pull/18952 to be\r\nmerged first. Fixes macOS linkage of GBM's nanobind bindings on macOS by\r\nsupplying a linker response file instead of `-undefined dynamic_lookup`.\r\n\r\nThe latter has since been deprecated on macOS.\r\n\r\n* Fix bazel_skylib checksum, bump skylib version in MODULE.bazel\r\n\r\n* Bump Bazel to version 6.4.0 for linker response file support",
+            "commit_timestamp": 1698149052.0
         }
     ]
 }
