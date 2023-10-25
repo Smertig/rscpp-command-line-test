@@ -10023,6 +10023,20 @@
             "commit_ref": "47f5b1a37f3e8055dfea446236c05478087858dc",
             "commit_message": "lib: introduce struct easy_poll_set for poll information\n\nConnection filter had a `get_select_socks()` method, inspired by the\nvarious `getsocks` functions involved during the lifetime of a\ntransfer. These, depending on transfer state (CONNECT/DO/DONE/ etc.),\nreturn sockets to monitor and flag if this shall be done for POLLIN\nand/or POLLOUT.\n\nDue to this design, sockets and flags could only be added, not\nremoved. This led to problems in filters like HTTP/2 where flow control\nprohibits the sending of data until the peer increases the flow\nwindow. The general transfer loop wants to write, adds POLLOUT, the\nsocket is writeable but no data can be written.\n\nThis leads to cpu busy loops. To prevent that, HTTP/2 did set the\n`SEND_HOLD` flag of such a blocked transfer, so the transfer loop cedes\nfurther attempts. This works if only one such filter is involved. If a\nHTTP/2 transfer goes through a HTTP/2 proxy, two filters are\nsetting/clearing this flag and may step on each other's toes.\n\nConnection filters `get_select_socks()` is replaced by\n`adjust_pollset()`. They get passed a `struct easy_pollset` that keeps\nup to `MAX_SOCKSPEREASYHANDLE` sockets and their `POLLIN|POLLOUT`\nflags. This struct is initialized in `multi_getsock()` by calling the\nvarious `getsocks()` implementations based on transfer state, as before.\n\nAfter protocol handlers/transfer loop have set the sockets and flags\nthey want, the `easy_pollset` is *always* passed to the filters. Filters\n\"higher\" in the chain are called first, starting at the first\nnot-yet-connection one. Each filter may add sockets and/or change\nflags. When all flags are removed, the socket itself is removed from the\npollset.\n\nExample:\n\n * transfer wants to send, adds POLLOUT\n * http/2 filter has a flow control block, removes POLLOUT and adds\n   POLLIN (it is waiting on a WINDOW_UPDATE from the server)\n * TLS filter is connected and changes nothing\n * h2-proxy filter also has a flow control block on its tunnel stream,\n   removes POLLOUT and adds POLLIN also.\n * socket filter is connected and changes nothing\n * The resulting pollset is then mixed together with all other transfers\n   and their pollsets, just as before.\n\nUse of `SEND_HOLD` is no longer necessary in the filters.\n\nAll filters are adapted for the changed method. The handling in\n`multi.c` has been adjusted, but its state handling the the protocol\nhandlers' `getsocks` method are untouched.\n\nThe most affected filters are http/2, ngtcp2, quiche and h2-proxy. TLS\nfilters needed to be adjusted for the connecting handshake read/write\nhandling.\n\nNo noticeable difference in performance was detected in local scorecard\nruns.\n\nCloses #11833\n",
             "commit_timestamp": 1698219272.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1698249863.169671,
+            "elapsed_time": 390.47456216812134,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "6ec70a9dd305e17b017f1283a034dfa1c03bbd7c",
+            "commit_message": "autotools: update references to deleted `crypt-auth` option\n\nDelete leftovers of the `crypt-auth` `./configure` option and\nadd the new ones that replaced them.\n\nFollow-up to e92edfbef64448ef461117769881f3ed776dec4e #11490\n\nReviewed-by: Daniel Stenberg\nCloses #12194\n",
+            "commit_timestamp": 1698237943.0
         }
     ]
 }
