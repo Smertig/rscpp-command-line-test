@@ -10747,6 +10747,22 @@
             "commit_ref": "d72aa10a9a08e8213c84060de5a78bfb2fc1a6e5",
             "commit_message": "[ADT] Remove an extraneous ternary operator (NFC)\n",
             "commit_timestamp": 1698205456.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1698222046.269873,
+            "elapsed_time": 3463.3680613040924,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "99c15eb49ba0b607314b3bd221f0760049130d97",
+            "commit_message": "[mlir][transform] Handle multiple library preloading passes. (#69705)\n\nThis is a new attempt at #69320.\r\n\r\nThe transform dialect stores a \"library module\" that the preload pass\r\ncan populate. Until now, each pass registered an additional module by\r\nsimply pushing it to a vector; however, the interpreter only used the\r\nfirst of them. This commit turns the registration into \"loading\", i.e.,\r\neach newly added module gets merged into the existing one. This allows\r\nthe loading to be split into several passes, and using the library in\r\nthe interpreter now takes all of them into account. While this design\r\navoids repeated merging every time the library is accessed, it requires\r\nthat the implementation of merging modules lives in the\r\nTransformDialect target (since it at the dialect depend on each\r\nother).\r\n\r\nThis resolves https://github.com/llvm/llvm-project/issues/69111.",
+            "commit_timestamp": 1698220350.0
         }
     ]
 }
