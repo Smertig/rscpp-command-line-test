@@ -10731,6 +10731,22 @@
             "commit_ref": "2282af26ead1f58fc3b8a9acb36f6af532c17a45",
             "commit_message": "[libc] Disable -NaN test on float128 systems (#70146)\n\nSome float128 systems (specifically the ones used for aarch64 buildbots)\ndon't respect signs for long double NaNs. This patch disables the printf\ntest that was failing due to this.",
             "commit_timestamp": 1698191154.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1698207369.362759,
+            "elapsed_time": 2683.945353269577,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "d72aa10a9a08e8213c84060de5a78bfb2fc1a6e5",
+            "commit_message": "[ADT] Remove an extraneous ternary operator (NFC)\n",
+            "commit_timestamp": 1698205456.0
         }
     ]
 }

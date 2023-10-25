@@ -10211,6 +10211,20 @@
             "commit_ref": "a661e0e74b8b65e9313604a17253cc220526c9a8",
             "commit_message": "STYLE: Use `volatile` to avoid global SingletonIndex being optimized out\n\nPassing `initializedGlobalSingletonIndex` to a dummy function (`Unused`) may not\nalways avoid being optimized out. Instead, the C++ `volatile` keyword is really\nmeant to be used to avoid such optimization.\n\nAdded the C++17 `[[maybe_unused]]` attribute to avoid possible warnings.\n\nRemoved the claim that `Unused` ensures that its parameter is not optimized out.\n",
             "commit_timestamp": 1697802215.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1698206975.215206,
+            "elapsed_time": 430.4541115760803,
+            "x64": false,
+            "actual_files_count": 100,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "4f71b7d992a7e2a58819b379b7a45cdb40aac6ca",
+            "commit_message": "Merge pull request #4268 from jhlegarreta/FixDiversityStatementLink\n\nDOC: Fix diversity statement link in code of conduct",
+            "commit_timestamp": 1698194000.0
         }
     ]
 }
