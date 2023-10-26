@@ -10875,6 +10875,22 @@
             "commit_ref": "e9c4dc18bc9d34a2c055117a93799be9ade57d41",
             "commit_message": "Revert \"[AMDGPU] Use `S_CSELECT` for uniform i1 ext (#69703)\"\n\nThis reverts commit a1260b5209968c08886e3c6183aa793de8931578.\n\nIt was causing some Vulkan CTS failures.\n",
             "commit_timestamp": 1698321392.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1698336951.435241,
+            "elapsed_time": 2718.376622915268,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "09e8ef975d9970560b893f79ec283f69ea8db953",
+            "commit_message": "Diagnose use of VLAs in a coroutine (#70341)\n\nFixes https://github.com/llvm/llvm-project/issues/65858",
+            "commit_timestamp": 1698335957.0
         }
     ]
 }
