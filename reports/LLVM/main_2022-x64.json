@@ -10859,6 +10859,22 @@
             "commit_ref": "f7dc26cab25e1000b1198625e30ce1acdbe8fcb4",
             "commit_message": "[mlir] Fixed typo in type (128x64 -> 64x128) in TMA load test (#70022)\n\nThe test was meant to check `64x128xf16` as the contiguous dimension\r\nexceeds the cache line (128b). TMA requires cache line-aligned loads, so\r\nloading 64x128 can be done with two 64x64 loads, as documented in the\r\ntest.\r\n\r\nHowever, there was a typo in the type, which was `memref<128x64xf16>`\r\ninstead of the correct `memref<64x128xf16>`. This PR corrects the issue\r\nand updates the verification.",
             "commit_timestamp": 1698307374.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1698322929.279384,
+            "elapsed_time": 3545.9629673957825,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "e9c4dc18bc9d34a2c055117a93799be9ade57d41",
+            "commit_message": "Revert \"[AMDGPU] Use `S_CSELECT` for uniform i1 ext (#69703)\"\n\nThis reverts commit a1260b5209968c08886e3c6183aa793de8931578.\n\nIt was causing some Vulkan CTS failures.\n",
+            "commit_timestamp": 1698321392.0
         }
     ]
 }
