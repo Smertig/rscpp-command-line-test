@@ -9897,6 +9897,20 @@
             "commit_ref": "9360423cc22d1b5a8f064895ba2390edc6dea045",
             "commit_message": "[SYSSETUP] syssetup.rc improve URLs (#5810)\n\n\r\nReformat those URLs in a way that allows new lines to be added, or\r\nexisting lines to be removed or changed,\r\nwithout the need to touch any neighbor line.\r\nThis will also allow git blame to work much better in the future.\r\n\r\nFix outdated URLs:\r\nhttp://www.icu-project.org -> http://icu.unicode.org\r\nhttps://fedorahosted.org/liberation-fonts -> http://pagure.io/liberation-fonts\r\n\r\nI checked: all of the URLs do still work as good as before.\r\n\r\n* Update ext2fsd links in syssetup.rc and media/doc\r\n",
             "commit_timestamp": 1698181168.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1698293027.283531,
+            "elapsed_time": 231.4352970123291,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "fea414b9ed2cc7a81fddad18bc90f9d023beee15",
+            "commit_message": "[REGEDIT] Use <strsafe.h> functions strictly Part 2 (#5832)\n\nFollow-up to #5825. Use StringCchPrintfW instead of swprintf.\r\nCORE-18876",
+            "commit_timestamp": 1698284352.0
         }
     ]
 }

@@ -10827,6 +10827,22 @@
             "commit_ref": "b82c62978690a8a518f22780bd13ac2b5ddcd2b8",
             "commit_message": "Fix log format strings\n",
             "commit_timestamp": 1698277357.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1698293998.723277,
+            "elapsed_time": 3270.481695652008,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "fa18827754ebdd144f41fd4a889016c8ae1caf0c",
+            "commit_message": "[Driver] Remove some misused NoXarchOption\n\nIf an option has the `NoXarchOption` flag, ClangDriver will emit an error if the\noption is used after `-Xarch_*` (originally for universal macOS binary, reused\nby offloading purposes `-Xarch_host`/etc). The error checking only applies to a\nsmall set of options (e.g. `-o`) and is not very useful for most options, but\n`NoXarchOption` was improperly named `DriverOption` (commit\naabb0b11a3c1d8a6bb859db80400cffdcc9b336f) and lured some contributors to add\n`NoXarchOption` to options that should not have the flag.\n",
+            "commit_timestamp": 1698292769.0
         }
     ]
 }
