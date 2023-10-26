@@ -11063,6 +11063,20 @@
             "commit_ref": "698d1dc8c321d0797487e7988825f3f43c1d86b0",
             "commit_message": "Reapply size optimizations for clang & MSVC, LTO for Mac+Linux (#1685)\n\n* Reapply size optimization for clang, equivalent options for MSVC\r\n\r\nWorking towards cross-platform optimal nanobind building configurations.\r\n\r\n* Add LTO back to non-Windows builds\r\n\r\nThe Windows case (the option name is \"/GL\") is more complicated, since\r\nthere, the compiler options also need to be passed to the linker if LTO\r\nis enabled.\r\n\r\nSince we are gating the linker options on platform at the moment instead\r\nof compiler, we need to implement a Bazel boolean flag for the case\r\n\"Platform == MacOS && Compiler == AnyOf(gcc, clang)\".",
             "commit_timestamp": 1698232338.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1698278772.414271,
+            "elapsed_time": 104.49585723876953,
+            "x64": false,
+            "actual_files_count": 86,
+            "expected_files_count": 86,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "698d1dc8c321d0797487e7988825f3f43c1d86b0",
+            "commit_message": "Reapply size optimizations for clang & MSVC, LTO for Mac+Linux (#1685)\n\n* Reapply size optimization for clang, equivalent options for MSVC\r\n\r\nWorking towards cross-platform optimal nanobind building configurations.\r\n\r\n* Add LTO back to non-Windows builds\r\n\r\nThe Windows case (the option name is \"/GL\") is more complicated, since\r\nthere, the compiler options also need to be passed to the linker if LTO\r\nis enabled.\r\n\r\nSince we are gating the linker options on platform at the moment instead\r\nof compiler, we need to implement a Bazel boolean flag for the case\r\n\"Platform == MacOS && Compiler == AnyOf(gcc, clang)\".",
+            "commit_timestamp": 1698232338.0
         }
     ]
 }
