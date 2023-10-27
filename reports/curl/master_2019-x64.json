@@ -10177,6 +10177,20 @@
             "commit_ref": "a426b5050f778fc8f0198bcca62a30928919fce6",
             "commit_message": "build: variadic macro tidy-ups\n\n- delete unused `HAVE_VARIADIC_MACROS_C99/GCC` feature checks.\n  (both autotools and CMake.)\n- delete duplicate `NULL` check in `Curl_trc_cf_infof()`.\n- fix compiler warning in `CURL_DISABLE_VERBOSE_STRINGS` builds.\n  ```\n  ./lib/cf-socket.c:122:41: warning: unused parameter 'data' [-Wunused-parameter]\n  static void nosigpipe(struct Curl_easy *data,\n                                          ^\n  ```\n- fix `#ifdef` comments in `lib/curl_trc.{c,h}`.\n- fix indentation in some `infof()` calls.\n\nFollow-up to dac293cfb7026b1ca4175d88b80f1432d3d3c684 #12167\n\nCherry-picked from #12105\nCloses #12210\n",
             "commit_timestamp": 1698367054.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1698408364.771071,
+            "elapsed_time": 373.1992735862732,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "a426b5050f778fc8f0198bcca62a30928919fce6",
+            "commit_message": "build: variadic macro tidy-ups\n\n- delete unused `HAVE_VARIADIC_MACROS_C99/GCC` feature checks.\n  (both autotools and CMake.)\n- delete duplicate `NULL` check in `Curl_trc_cf_infof()`.\n- fix compiler warning in `CURL_DISABLE_VERBOSE_STRINGS` builds.\n  ```\n  ./lib/cf-socket.c:122:41: warning: unused parameter 'data' [-Wunused-parameter]\n  static void nosigpipe(struct Curl_easy *data,\n                                          ^\n  ```\n- fix `#ifdef` comments in `lib/curl_trc.{c,h}`.\n- fix indentation in some `infof()` calls.\n\nFollow-up to dac293cfb7026b1ca4175d88b80f1432d3d3c684 #12167\n\nCherry-picked from #12105\nCloses #12210\n",
+            "commit_timestamp": 1698367054.0
         }
     ]
 }

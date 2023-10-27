@@ -10009,6 +10009,20 @@
             "commit_ref": "8f6b01696316bd4213f4f8b2157f032f3c8a1047",
             "commit_message": "[SHELL32] Fix copyto/moveto actions of Search Results (#5816)\n\n- Extend CDefView::InvokeContextMenuCommand 2nd parameter to LPCSTR.\r\n- Add CDefView::_DoCopyToMoveToFolder method.\r\n- Use CDefView::_DoCopyToMoveToFolder for FCIDM_SHVIEW_COPYTO\r\n  and FCIDM_SHVIEW_MOVETO command actions.\r\nCORE-18426",
             "commit_timestamp": 1698377691.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1698408244.350748,
+            "elapsed_time": 211.44435119628906,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "dcc9a2d8f3c298401b1be40967264892b03188e3",
+            "commit_message": "[SHELL32][SDK] Implement SHOpenPropSheetA (#5830)\n\n- Add SHOpenPropSheetA and\r\n  SHOpenPropSheetW prototypes to <shlobj.h>.\r\n- Implement SHOpenPropSheetA function.",
+            "commit_timestamp": 1698402842.0
         }
     ]
 }
