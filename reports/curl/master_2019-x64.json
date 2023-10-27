@@ -10135,6 +10135,20 @@
             "commit_ref": "9ee6da65d8061ccb7e1cbee19d9bda1a15a25b3d",
             "commit_message": "openssl: fix infof() to avoid compiler warning for %s with null\n\nvtls/openssl.c: In function \u2018ossl_connect_step2\u2019:\n../lib/curl_trc.h:120:10: error: \u2018%s\u2019 directive argument is null [-Werror=format-overflow=]\n  120 |          Curl_infof(data, __VA_ARGS__); } while(0)\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nvtls/openssl.c:4008:5: note: in expansion of macro \u2018infof\u2019\n 4008 |     infof(data, \"SSL connection using %s / %s / %s / %s\",\n      |     ^~~~~\nvtls/openssl.c:4008:49: note: format string is defined here\n 4008 |     infof(data, \"SSL connection using %s / %s / %s / %s\",\n      |                                                 ^~\n\nFollow-up to b6e6d4ff8f253c8b8055bab\nCloses #12196\n",
             "commit_timestamp": 1698335018.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1698365131.364155,
+            "elapsed_time": 339.8234145641327,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "9ee6da65d8061ccb7e1cbee19d9bda1a15a25b3d",
+            "commit_message": "openssl: fix infof() to avoid compiler warning for %s with null\n\nvtls/openssl.c: In function \u2018ossl_connect_step2\u2019:\n../lib/curl_trc.h:120:10: error: \u2018%s\u2019 directive argument is null [-Werror=format-overflow=]\n  120 |          Curl_infof(data, __VA_ARGS__); } while(0)\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nvtls/openssl.c:4008:5: note: in expansion of macro \u2018infof\u2019\n 4008 |     infof(data, \"SSL connection using %s / %s / %s / %s\",\n      |     ^~~~~\nvtls/openssl.c:4008:49: note: format string is defined here\n 4008 |     infof(data, \"SSL connection using %s / %s / %s / %s\",\n      |                                                 ^~\n\nFollow-up to b6e6d4ff8f253c8b8055bab\nCloses #12196\n",
+            "commit_timestamp": 1698335018.0
         }
     ]
 }
