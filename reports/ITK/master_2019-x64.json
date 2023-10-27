@@ -10421,6 +10421,20 @@
             "commit_ref": "da418c11c538f21183fec5444174e074db0f2df0",
             "commit_message": "COMP: Use conjunction_v to check argument types of MakePoint, MakeVector\n\nThe previous approach, using the class template argument deduction guide of\nstd::array appeared to trigger compile errors from  AppleClang 10.0.0.10001044,\nas Mihail Isakov remarked at https://github.com/InsightSoftwareConsortium/ITK/pull/4154#discussion_r1292840598,\nlike:\n\n> Modules/Core/Common/include/itkPoint.h:371:20: error: no viable constructor or deduction guide for deduction of template arguments of 'array'\n>   const std::array stdArray{ firstValue, otherValues... };\n>                   ^\n> [CTest: warning matched] Modules/Core/Common/test/itkPointGTest.cxx:63:46: note: in instantiation of function template specialization 'itk::MakePoint<int>' requested here\n>   static_assert(std::is_same_v<decltype(itk::MakePoint(0))::ValueType, int> &&\n",
             "commit_timestamp": 1698367867.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1698423054.075887,
+            "elapsed_time": 448.8853642940521,
+            "x64": false,
+            "actual_files_count": 100,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "3bbcb195fb3f8ed84d7e2081eced74ff1b0baf32",
+            "commit_message": "Merge pull request #4270 from thewtex/serialize-empty-image\n\nBUG: Support serialization of an empty itk.Image",
+            "commit_timestamp": 1698416176.0
         }
     ]
 }
