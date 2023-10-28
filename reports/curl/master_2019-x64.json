@@ -10247,6 +10247,20 @@
             "commit_ref": "5839b8ae98ffb30afcc6808c736c62a6520bd289",
             "commit_message": "Makefile.mk: restore `_mingw.h` for default `_WIN32_WINNT`\n\nIn 8.4.0 we deleted `_mingw.h` as part of purging old-mingw support.\nTurns out `_mingw.h` had the side-effect of setting a default\n`_WIN32_WINNT` value expected by `lib/config-win32.h` to enable\n`getaddrinfo` support in `Makefile.mk` mingw-w64 builds. This caused\ndisabling support for this unless specifying the value manually.\n\nRestore this header and update its comment to tell why we continue\nto need it.\n\nThis triggered a regression in official Windows curl builds starting\nwith 8.4.0_1. Fixed in 8.4.0_6. (8.5.0 will be using CMake.)\n\nRegression from 38029101e2d78ba125732b3bab6ec267b80a0e72 #11625\n\nReported-by: zhengqwe on github\nHelped-by: Nico Rieck\nFixes #12134\nFixes #12136\nCloses #12217\n",
             "commit_timestamp": 1698451812.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1698480213.415597,
+            "elapsed_time": 373.32459259033203,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "68673c3e9e35969f12f4417b4ff6d411f10f486a",
+            "commit_message": "hostip6: fix DEBUG_ADDRINFO builds\n\n- Removed unused and incorrect parameter from dump_addrinfo().\n\nBug: https://github.com/curl/curl/commit/56a4db2e#commitcomment-131050442\nReported-by: Gisle Vanem\n\nCloses https://github.com/curl/curl/pull/12212\n",
+            "commit_timestamp": 1698467240.0
         }
     ]
 }
