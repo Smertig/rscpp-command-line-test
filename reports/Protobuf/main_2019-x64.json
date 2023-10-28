@@ -11273,6 +11273,20 @@
             "commit_ref": "b2efcdc1c50b204e2b612eacf5db599f74153376",
             "commit_message": "Internal Code Change\n\nPiperOrigin-RevId: 577274352\n",
             "commit_timestamp": 1698435153.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1698523432.623375,
+            "elapsed_time": 388.9370288848877,
+            "x64": false,
+            "actual_files_count": 851,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "57bb1e55f1e439399491fe762465120fbf1c09a3",
+            "commit_message": "Set up editions codegen tests for python\n\nThese tests aren't super useful for python because of how little codegen we actually do, but the pyi ones specifically will guard against major editions regressions.\n\nPiperOrigin-RevId: 577495652\n",
+            "commit_timestamp": 1698523206.0
         }
     ]
 }
