@@ -7839,6 +7839,20 @@
             "commit_ref": "37919009ab60b55c537931747c1a4b0cafc695e6",
             "commit_message": "Do not report incompatibe relocation table as an error\n\nSpecifically, .llvm.call-graph-profile is always REL even on x86-64.\nWe can safely ignore the relocation table because it contains only\nR_NONE relocations.\n\nFixes https://github.com/rui314/mold/issues/653\n",
             "commit_timestamp": 1698487940.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1698509083.567735,
+            "elapsed_time": 217.25343894958496,
+            "x64": false,
+            "actual_files_count": 525,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/rui314/mold",
+            "commit_ref": "37919009ab60b55c537931747c1a4b0cafc695e6",
+            "commit_message": "Do not report incompatibe relocation table as an error\n\nSpecifically, .llvm.call-graph-profile is always REL even on x86-64.\nWe can safely ignore the relocation table because it contains only\nR_NONE relocations.\n\nFixes https://github.com/rui314/mold/issues/653\n",
+            "commit_timestamp": 1698487940.0
         }
     ]
 }

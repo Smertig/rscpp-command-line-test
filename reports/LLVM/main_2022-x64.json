@@ -11067,6 +11067,22 @@
             "commit_ref": "497b2ebb9edcfd5315586b796f47589e9820b4b9",
             "commit_message": "[clang-format] Change LLVM style to BreakAfterAttributes == ABS_Leave (#70360)\n\nThis patch addresses some examples of bad formatting in Clang. The following commit contains only changes suggested by clang-format: https://github.com/llvm/llvm-project/pull/70349/commits/21689b56d1fc1db0b2263e8049ff656d3757ad36.\r\nI believe it's a net negative on readability, with a couple of particularly bad cases. Highlights:\r\n```diff\r\n-    [[clang::preferred_type(bool)]]\r\n-    mutable unsigned CachedLocalOrUnnamed : 1;\r\n+    [[clang::preferred_type(bool)]] mutable unsigned CachedLocalOrUnnamed : 1;\r\n```\r\n```diff\r\n-    [[clang::preferred_type(TypeDependence)]]\r\n-    unsigned Dependence : llvm::BitWidth<TypeDependence>;\r\n+    [[clang::preferred_type(TypeDependence)]] unsigned Dependence\r\n+        : llvm::BitWidth<TypeDependence>;\r\n```\r\n```diff\r\n-    [[clang::preferred_type(ExceptionSpecificationType)]]\r\n-    unsigned ExceptionSpecType : 4;\r\n+    [[clang::preferred_type(\r\n+        ExceptionSpecificationType)]] unsigned ExceptionSpecType : 4;\r\n```\r\nStyle guides doesn't appear to have an opinion on this matter.",
             "commit_timestamp": 1698494523.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1698509751.89093,
+            "elapsed_time": 2754.139205932617,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "497b2ebb9edcfd5315586b796f47589e9820b4b9",
+            "commit_message": "[clang-format] Change LLVM style to BreakAfterAttributes == ABS_Leave (#70360)\n\nThis patch addresses some examples of bad formatting in Clang. The following commit contains only changes suggested by clang-format: https://github.com/llvm/llvm-project/pull/70349/commits/21689b56d1fc1db0b2263e8049ff656d3757ad36.\r\nI believe it's a net negative on readability, with a couple of particularly bad cases. Highlights:\r\n```diff\r\n-    [[clang::preferred_type(bool)]]\r\n-    mutable unsigned CachedLocalOrUnnamed : 1;\r\n+    [[clang::preferred_type(bool)]] mutable unsigned CachedLocalOrUnnamed : 1;\r\n```\r\n```diff\r\n-    [[clang::preferred_type(TypeDependence)]]\r\n-    unsigned Dependence : llvm::BitWidth<TypeDependence>;\r\n+    [[clang::preferred_type(TypeDependence)]] unsigned Dependence\r\n+        : llvm::BitWidth<TypeDependence>;\r\n```\r\n```diff\r\n-    [[clang::preferred_type(ExceptionSpecificationType)]]\r\n-    unsigned ExceptionSpecType : 4;\r\n+    [[clang::preferred_type(\r\n+        ExceptionSpecificationType)]] unsigned ExceptionSpecType : 4;\r\n```\r\nStyle guides doesn't appear to have an opinion on this matter.",
+            "commit_timestamp": 1698494523.0
         }
     ]
 }
