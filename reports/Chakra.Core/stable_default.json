@@ -3457,6 +3457,20 @@
             "commit_ref": "c7786bf81ae1bb592221b61b7e38684b9cb029ed",
             "commit_message": "[MERGE #5837 @rhuanjl] Syntax error for module exporting undeclared name\n\nMerge pull request #5837 from rhuanjl:undefinedNames\n\nThis PR causes CC to throw a syntax error when a module is parsed that exports a name with no local definition, this is per point 4 of https://tc39.github.io/ecma262/#sec-module-semantics-static-semantics-early-errors\n\n@boingoing @pleath Thanks for the help with how to do this, please could one of you review?\n\nfix: #5778\n",
             "commit_timestamp": 1542859269.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": false,
+            "project": "Chakra.Runtime.Debug",
+            "timestamp": 1698505646.699683,
+            "elapsed_time": 246.1786072254181,
+            "x64": false,
+            "actual_files_count": 51,
+            "expected_files_count": 51,
+            "repo_url": "https://github.com/Microsoft/ChakraCore.git",
+            "commit_ref": "c7786bf81ae1bb592221b61b7e38684b9cb029ed",
+            "commit_message": "[MERGE #5837 @rhuanjl] Syntax error for module exporting undeclared name\n\nMerge pull request #5837 from rhuanjl:undefinedNames\n\nThis PR causes CC to throw a syntax error when a module is parsed that exports a name with no local definition, this is per point 4 of https://tc39.github.io/ecma262/#sec-module-semantics-static-semantics-early-errors\n\n@boingoing @pleath Thanks for the help with how to do this, please could one of you review?\n\nfix: #5778\n",
+            "commit_timestamp": 1542859269.0
         }
     ]
 }
