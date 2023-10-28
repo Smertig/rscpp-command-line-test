@@ -10233,6 +10233,20 @@
             "commit_ref": "d14e11d24843326afe39bfea664f8ba8bb819a7c",
             "commit_message": "hostip: silence compiler warning `-Wparentheses-equality`\n\nSeen with LLVM 17.\n\n```\nhostip.c:1336:22: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]\n 1336 |        (a->ai_family == PF_INET)) {\n      |         ~~~~~~~~~~~~~^~~~~~~~~~\nhostip.c:1336:22: note: remove extraneous parentheses around the comparison to silence this warning\n 1336 |        (a->ai_family == PF_INET)) {\n      |        ~             ^         ~\nhostip.c:1336:22: note: use '=' to turn this equality comparison into an assignment\n 1336 |        (a->ai_family == PF_INET)) {\n      |                      ^~\n      |                      =\n1 warning generated.\n```\n\nFollow-up to b651aba0962bb31353f55de4dc35f745952a1b10 #12145\n\nReviewed-by: Daniel Stenberg\nCloses #12215\n",
             "commit_timestamp": 1698445826.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1698465784.377529,
+            "elapsed_time": 346.95196056365967,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "5839b8ae98ffb30afcc6808c736c62a6520bd289",
+            "commit_message": "Makefile.mk: restore `_mingw.h` for default `_WIN32_WINNT`\n\nIn 8.4.0 we deleted `_mingw.h` as part of purging old-mingw support.\nTurns out `_mingw.h` had the side-effect of setting a default\n`_WIN32_WINNT` value expected by `lib/config-win32.h` to enable\n`getaddrinfo` support in `Makefile.mk` mingw-w64 builds. This caused\ndisabling support for this unless specifying the value manually.\n\nRestore this header and update its comment to tell why we continue\nto need it.\n\nThis triggered a regression in official Windows curl builds starting\nwith 8.4.0_1. Fixed in 8.4.0_6. (8.5.0 will be using CMake.)\n\nRegression from 38029101e2d78ba125732b3bab6ec267b80a0e72 #11625\n\nReported-by: zhengqwe on github\nHelped-by: Nico Rieck\nFixes #12134\nFixes #12136\nCloses #12217\n",
+            "commit_timestamp": 1698451812.0
         }
     ]
 }
