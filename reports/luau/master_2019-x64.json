@@ -10331,6 +10331,20 @@
             "commit_ref": "87d955d5eb579048b16542bb73ed3efd5208928b",
             "commit_message": "Fix remaining references to Roblox org outside of source code\n",
             "commit_timestamp": 1698168779.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1698451475.467359,
+            "elapsed_time": 373.7156665325165,
+            "x64": false,
+            "actual_files_count": 428,
+            "expected_files_count": 379,
+            "repo_url": "https://github.com/luau-lang/luau",
+            "commit_ref": "e5ec0cdff3cfaae6c2d2f3c0f0803ead164f12a1",
+            "commit_message": "Sync to upstream/release/601 (#1084)\n\n## What's changed\r\n\r\n- `bit32.byteswap` added\r\n([RFC](https://github.com/luau-lang/rfcs/blob/4f543ec23b6a1b53396e0803dd253c83041bae62/docs/function-bit32-byteswap.md))\r\n- Buffer library implementation\r\n([RFC](https://github.com/luau-lang/rfcs/blob/4f543ec23b6a1b53396e0803dd253c83041bae62/docs/type-byte-buffer.md))\r\n- Fixed a missing `stdint.h` include\r\n- Fixed parser limiter for recursive type annotations being kind of\r\nweird (fixes #645)\r\n\r\n### Native Codegen\r\n- Fixed a pair of issues when lowering `bit32.extract`\r\n- Fixed a narrow edge case that could result in an infinite loop without\r\nan interruption\r\n- Fixed a negative array out-of-bounds access issue\r\n- Temporarily reverted linear block predecessor value propagation\r\n\r\n### New type solver\r\n- We now type check assignments to annotated variables\r\n- Fixed some test cases under local type inference\r\n- Moved `isPending` checks for type families to improve performance\r\n- Optimized our process for testing if a free type is sufficiently\r\nsolved\r\n- Removed \"none ptr\" from lea instruction disassembly logging\r\n\r\n### Build system & tooling\r\n- CMake configuration now validates dependencies to maintain separation\r\nbetween components\r\n- Improvements to the fuzzer coverage\r\n- Deduplicator for fuzzed callstacks\r\n\r\n---------\r\n\r\nCo-authored-by: Arseny Kapoulkine <arseny.kapoulkine@gmail.com>\r\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>\r\nCo-authored-by: Andy Friesen <afriesen@roblox.com>\r\nCo-authored-by: Aaron Weiss <aaronweiss@roblox.com>\r\nCo-authored-by: Vighnesh Vijay <vvijay@roblox.com>",
+            "commit_timestamp": 1698441521.0
         }
     ]
 }

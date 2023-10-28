@@ -10219,6 +10219,20 @@
             "commit_ref": "277486b6b4a63e005eef25094d648e74bf02ed0f",
             "commit_message": "doh: use PIPEWAIT when HTTP/2 is attempted\n\nCloses #12214\n",
             "commit_timestamp": 1698419604.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1698451528.118774,
+            "elapsed_time": 321.22287583351135,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "d14e11d24843326afe39bfea664f8ba8bb819a7c",
+            "commit_message": "hostip: silence compiler warning `-Wparentheses-equality`\n\nSeen with LLVM 17.\n\n```\nhostip.c:1336:22: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]\n 1336 |        (a->ai_family == PF_INET)) {\n      |         ~~~~~~~~~~~~~^~~~~~~~~~\nhostip.c:1336:22: note: remove extraneous parentheses around the comparison to silence this warning\n 1336 |        (a->ai_family == PF_INET)) {\n      |        ~             ^         ~\nhostip.c:1336:22: note: use '=' to turn this equality comparison into an assignment\n 1336 |        (a->ai_family == PF_INET)) {\n      |                      ^~\n      |                      =\n1 warning generated.\n```\n\nFollow-up to b651aba0962bb31353f55de4dc35f745952a1b10 #12145\n\nReviewed-by: Daniel Stenberg\nCloses #12215\n",
+            "commit_timestamp": 1698445826.0
         }
     ]
 }
