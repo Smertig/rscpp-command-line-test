@@ -13,9 +13,7 @@
     "fixup sources": "proj-config/scripts/fix-protobuf.py",
     "to skip": [
         "stacktrace_*-inl.inc",
-        "symbolize_*.inc",
-        "*linux.inc",
-        "*posix.inc"
+        "symbolize_*.inc"
     ],
     "__to skip reason": "platform specific",
     "stable": {
