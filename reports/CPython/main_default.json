@@ -7503,6 +7503,20 @@
             "commit_ref": "26553695592ad399f735d4dbaf32fd871d0bb1e1",
             "commit_message": "gh-79033: Try to fix asyncio.Server.wait_closed() again (GH-111336)\n\n* Try to fix asyncio.Server.wait_closed() again\r\n\r\nI identified the condition that `wait_closed()` is intended\r\nto wait for: the server is closed *and* there are no more\r\nactive connections.\r\n\r\nWhen this condition first becomes true, `_wakeup()` is called\r\n(either from `close()` or from `_detach()`) and it sets `_waiters`\r\nto `None`. So we just check for `self._waiters is None`; if it's\r\nnot `None`, we know we have to wait, and do so.\r\n\r\nA problem was that the new test introduced in 3.12 explicitly\r\ntested that `wait_closed()` returns immediately when the server\r\nis *not* closed but there are currently no active connections.\r\nThis was a mistake (probably a misunderstanding of the intended\r\nsemantics). I've fixed the test, and added a separate test that\r\nchecks exactly for this scenario.\r\n\r\nI also fixed an oddity where in `_wakeup()` the result of the\r\nwaiter was set to the waiter itself. This result is not used\r\nanywhere and I changed this to `None`, to avoid a GC cycle.\r\n\r\n* Update Lib/asyncio/base_events.py\r\n\r\n---------\r\n\r\nCo-authored-by: Carol Willing <carolcode@willingconsulting.com>",
             "commit_timestamp": 1698516269.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1698538183.005156,
+            "elapsed_time": 1287.9642305374146,
+            "x64": true,
+            "actual_files_count": 942,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "66bea2555dc7b3dd18282cc699fe9a22dea50de3",
+            "commit_message": "gh-111426: Remove `test_cmd.test_coverage` (#111427)\n\n",
+            "commit_timestamp": 1698534113.0
         }
     ]
 }
