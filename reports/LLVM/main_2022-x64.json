@@ -11179,6 +11179,22 @@
             "commit_ref": "d96529af3c362c53ef2e8c883a9e571fb3626927",
             "commit_message": "[DAG] Attempt shl narrowing in SimplifyDemandedBits (REAPPLIED)\n\nIf a shl node leaves the upper half bits zero / undemanded, then see if we can profitably perform this with a half-width shl and a free trunc/zext.\n\nFollowup to D146121\n\nReapplied - moved after the ShrinkDemandedOp call; reuse the existing KnownBits result; ensure that we only attempt this if all the upper bits are demanded; 547dc461225ba should address the remaining regressions that were noticed in the previous commit.\n\nDifferential Revision: https://reviews.llvm.org/D155472\n",
             "commit_timestamp": 1698593926.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1698610541.90846,
+            "elapsed_time": 2683.0879640579224,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "91b9a661c21891dc06e1721a26478d5bfe53e4ed",
+            "commit_message": "[clang-format][NFC] Reduce indent\n\nBy using if init statement.",
+            "commit_timestamp": 1698609312.0
         }
     ]
 }
