@@ -712,18 +712,6 @@
                 "known errors": [
                     {
                         "file": "..\\src\\common\\settings_setting.h",
-                        "line": 176,
-                        "message": "'final' member function 'Settings::Setting<Type, ranged>::LoadStringW' is not virtual",
-                        "reason": "Something is wrong with #define LoadString LoadStringW"
-                    },
-                    {
-                        "file": "..\\src\\common\\settings_setting.h",
-                        "line": 176,
-                        "message": "Function 'void Settings::Setting<Type, ranged>::LoadStringW(const std::string& input)' has the 'override' specifier but does not override a base class member",
-                        "reason": "Something is wrong with #define LoadString LoadStringW"
-                    },
-                    {
-                        "file": "..\\src\\common\\settings_setting.h",
                         "line": 407,
                         "message": "'final' member function 'Settings::SwitchableSetting<Type, ranged>::operator const Type&' is not virtual",
                         "reason": "RSCPP-34260 Incorrect \"invalid override\" error"
