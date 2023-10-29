@@ -116,6 +116,10 @@
             "commit": "cab15f6c5e32110b1c9ee0359ee7f8801defe53d"
         },
         "project to check": "opencv_test_*",
+        "to skip": [
+            "*.inl.hpp",
+            "gapi_streaming_utils_test.cpp"
+        ],
         "stable": {
             "inspected files count": 309,
             "mem traffic": 11750
