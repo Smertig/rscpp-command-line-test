@@ -11329,6 +11329,20 @@
             "commit_ref": "63f4c503a2762abaec136209ee5b62452ecf206e",
             "commit_message": "Editions: Embed resolved features of descriptor.proto for pure python.\n\nBecause pure python builds all descriptors at runtime via reflection, it's unable to parse options during the build of descriptor.proto (i.e. before we've built the options schemas).  We always lazily parse these options to avoid this, but that still means options can't be *used* during this build.  Since the current build process makes heavy use of features (which previously just relied on syntax), this poses a problem for editions.\n\nTo get around this, we just embed the resolved features directly into the gencode for this one file.  This will allow us to skip feature resolution for these descriptors and still consider features in their build.\n\nPiperOrigin-RevId: 577495949\n",
             "commit_timestamp": 1698523532.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1698581100.438545,
+            "elapsed_time": 403.1714770793915,
+            "x64": false,
+            "actual_files_count": 851,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "63f4c503a2762abaec136209ee5b62452ecf206e",
+            "commit_message": "Editions: Embed resolved features of descriptor.proto for pure python.\n\nBecause pure python builds all descriptors at runtime via reflection, it's unable to parse options during the build of descriptor.proto (i.e. before we've built the options schemas).  We always lazily parse these options to avoid this, but that still means options can't be *used* during this build.  Since the current build process makes heavy use of features (which previously just relied on syntax), this poses a problem for editions.\n\nTo get around this, we just embed the resolved features directly into the gencode for this one file.  This will allow us to skip feature resolution for these descriptors and still consider features in their build.\n\nPiperOrigin-RevId: 577495949\n",
+            "commit_timestamp": 1698523532.0
         }
     ]
 }
