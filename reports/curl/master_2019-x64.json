@@ -10331,6 +10331,20 @@
             "commit_ref": "c0d4fbb1f5e64581813e8c8dbfd8e8b8d0a47483",
             "commit_message": "Makefile.mk: fix `-rtmp` option for non-Windows [ci skip]\n",
             "commit_timestamp": 1698487603.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1698566642.497901,
+            "elapsed_time": 327.88249135017395,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "904ae1223829303f0e61d78585aa9b7a3a7ea0ca",
+            "commit_message": "curl_setup: disallow Windows IPv6 builds missing getaddrinfo\n\n- On Windows if IPv6 is enabled but getaddrinfo is missing then #error\n  the build.\n\ncurl can be built with IPv6 support (ENABLE_IPV6) but without the\nability to resolve hosts to IPv6 addresses (HAVE_GETADDRINFO). On\nWindows this is highly unlikely and should be considered a bad build\nconfiguration.\n\nSuch a bad configuration has already given us a bug that was hard to\ndiagnose. See #12134 and #12136 for discussion.\n\nRef: https://github.com/curl/curl/issues/12134\nRef: https://github.com/curl/curl/pull/12136\n\nCloses https://github.com/curl/curl/pull/12221\n",
+            "commit_timestamp": 1698565293.0
         }
     ]
 }
