@@ -116,10 +116,6 @@
             "commit": "cab15f6c5e32110b1c9ee0359ee7f8801defe53d"
         },
         "project to check": "opencv_test_*",
-        "to skip": [
-            "*.inl.hpp",
-            "gapi_streaming_utils_test.cpp"
-        ],
         "stable": {
             "inspected files count": 309,
             "mem traffic": 11750
@@ -248,9 +244,6 @@
             "repo": "https://github.com/catchorg/Catch2.git",
             "commit": "4902cd721586822ded795afe0c418c553137306a"
         },
-        "to skip": [
-            "catch_objc*"
-        ],
         "stable": {
             "inspected files count": 203,
             "mem traffic": 1857
@@ -339,9 +332,6 @@
             "repo": "https://github.com/google/draco.git",
             "commit": "785c9c4aa2b952236c29ad639901dbbaf216da38"
         },
-        "to skip": [
-            "mesh_*_helpers.h"
-        ],
         "stable": {
             "inspected files count": 303,
             "mem traffic": 2221
@@ -431,10 +421,6 @@
             "repo": "https://github.com/dmlc/xgboost.git",
             "commit": "0ce300e73ad9c586e41762d07f7acdcfa03f323d"
         },
-        "to skip": [
-            "input_split_shuffle.h",
-            "lua.h"
-        ],
         "stable": {
             "inspected files count": 88,
             "mem traffic": 1821
@@ -637,11 +623,6 @@
         "cmake options": [
             "-DENABLE_QT=OFF"
         ],
-        "to skip": [
-            "ir_matcher.h",
-            "unix.h"
-        ],
-        "__to skip reason": "platform specific",
         "required toolchain": ["2022-x64"],
         "stable": {
             "inspected files count": 2555,
@@ -768,9 +749,6 @@
             "-DRANGE_V3_TESTS=ON",
             "-DRANGE_V3_EXAMPLES=ON"
         ],
-        "to skip": [
-            "generator.hpp"
-        ],
         "stable": {
             "known file errors": [
                 {
@@ -886,10 +864,6 @@
         },
         "use x64": true,
         "fixup sources": "proj-config/scripts/fix-cemu.py",
-        "to skip": [
-            "bluetooth.h"
-        ],
-        "__to skip reason": "platform specific",
         "stable": {
             "inspected files count": 1013,
             "known errors": [
@@ -981,10 +955,6 @@
             "commit": "1561d0675208854b39066877b140780a965702fa"
         },
         "fixup sources": "proj-config/scripts/fix-curl.py",
-        "to skip": [
-            "setup-vms.h"
-        ],
-        "__to skip reason": "platform specific",
         "stable": {
             "inspected files count": 2323
         },
@@ -1000,10 +970,6 @@
             "commit": "0a566963584446e9f9574a0b281ae9c07564b0f0"
         },
         "use x64": true,
-        "to skip": [
-            "lv_demos.c"
-        ],
-        "__to skip reason": "platform specific",
         "stable": {
             "inspected files count": 454
         },
@@ -1046,10 +1012,6 @@
         "custom build tool": {
             "path to .sln": "Osiris.sln"
         },
-        "to skip": [
-            "Linux*",
-            "UserHomeFolderPath.h"
-        ],
         "stable": {
             "inspected files count": 362
         },
