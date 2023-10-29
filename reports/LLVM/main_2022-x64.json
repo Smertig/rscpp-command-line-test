@@ -11163,6 +11163,22 @@
             "commit_ref": "640274ff1fe17852615564a80d9f8c69b67f1d59",
             "commit_message": "[libc++][NFC] Refactor __enable_ifs in <cstddef> to be defaulted\ntemplate arguments\n\nThis makes the library more consistent and reduces the size of mangled\nnames a bit as a bonus.\n",
             "commit_timestamp": 1698576590.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1698596125.659515,
+            "elapsed_time": 2711.7216036319733,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "d96529af3c362c53ef2e8c883a9e571fb3626927",
+            "commit_message": "[DAG] Attempt shl narrowing in SimplifyDemandedBits (REAPPLIED)\n\nIf a shl node leaves the upper half bits zero / undemanded, then see if we can profitably perform this with a half-width shl and a free trunc/zext.\n\nFollowup to D146121\n\nReapplied - moved after the ShrinkDemandedOp call; reuse the existing KnownBits result; ensure that we only attempt this if all the upper bits are demanded; 547dc461225ba should address the remaining regressions that were noticed in the previous commit.\n\nDifferential Revision: https://reviews.llvm.org/D155472\n",
+            "commit_timestamp": 1698593926.0
         }
     ]
 }
