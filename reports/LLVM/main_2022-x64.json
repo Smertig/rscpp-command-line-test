@@ -11227,6 +11227,22 @@
             "commit_ref": "22043643c64f748cb00ae92476f2085b3c0903c9",
             "commit_message": "[docs] [C++20] [Modules] Add document for the case of duplicated '-fmodule-file=<module-name>='\n\nThis patch clarifies that in case there are multiple\n'-fmodule-file=<module-name>=' optins for the same `<module-name>`,\nthe last '-fmodule-file=<module-name>=' will override the previous\n'-fmodule-file=<module-name>=' option.\n",
             "commit_timestamp": 1698636321.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1698653801.883082,
+            "elapsed_time": 3355.964403629303,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "41f3b83fb066b4c3273e9abe02a8630864f22f30",
+            "commit_message": "[MLIR][SPIRVToLLVM] Remove typed pointer support (#70568)\n\nThis commit removes the support for lowering SPIRV to LLVM dialect with\r\ntyped pointers. Typed pointers have been deprecated for a while now and\r\nit's planned to soon remove them from the LLVM dialect.\r\n\r\nRelated PSA:\r\nhttps://discourse.llvm.org/t/psa-removal-of-typed-pointers-from-the-llvm-dialect/74502",
+            "commit_timestamp": 1698652655.0
         }
     ]
 }
