@@ -11259,6 +11259,22 @@
             "commit_ref": "f6643263631bcb0d191ef923963ac1a5ca9ac5fd",
             "commit_message": "Remove the opaque pointers flag from tools\n\nThis has been the default for a while and the flags are slowly going\naway. NFCI.\n",
             "commit_timestamp": 1698667104.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1698682703.152165,
+            "elapsed_time": 3224.852945327759,
+            "x64": true,
+            "actual_files_count": 1706,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "d9b15b068d19089f72fc0d7dc59ed1d6d77125dc",
+            "commit_message": "[CGExprConstant] stop calling into ConstExprEmitter for Reference type destinations (#70366)\n\nFixes a bug introduced by\ncommit b54294e2c959 (\"[clang][ConstantEmitter] have\ntryEmitPrivate[ForVarInit] try ConstExprEmitter fast-path first\")\n\nIn the added test case, the QualType is a LValueReferenceType.\n\n    LValueReferenceType 0x558412998d90 'const char (&)[41]'\n    `-ParenType 0x558412998d30 'const char[41]' sugar\n      `-ConstantArrayType 0x558412998cf0 'const char[41]' 41\n        `-QualType 0x55841294c271 'const char' const\n          `-BuiltinType 0x55841294c270 'char'\n\nFixes: #69979",
+            "commit_timestamp": 1698680911.0
         }
     ]
 }
