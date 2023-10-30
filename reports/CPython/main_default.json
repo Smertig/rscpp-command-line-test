@@ -7699,6 +7699,20 @@
             "commit_ref": "4a929d432b48775096d40f5c72bcd9be052b0a2d",
             "commit_message": "GH-111339: Fix initialization and finalization of static optimizer types (GH-111430)\n\n",
             "commit_timestamp": 1698612805.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1698667737.731629,
+            "elapsed_time": 1400.064847946167,
+            "x64": true,
+            "actual_files_count": 942,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "940ee962a8a1e87543fd36338228e526e7f35067",
+            "commit_message": "gh-106168: Check allocated instead of size index bounds in PyList_SET_ITEM() (#111480)\n\nCheck the index bound assertions in PyList_SET_ITEM() against [0:allocated] instead of [0:size] to re-allow valid use cases that assign within the allocated area.",
+            "commit_timestamp": 1698665061.0
         }
     ]
 }

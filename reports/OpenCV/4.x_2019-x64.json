@@ -10673,6 +10673,20 @@
             "commit_ref": "617d7ff575200c0a647cc615b86003f10b64587b",
             "commit_message": "Merge pull request #24454 from komakai:refactorObjcRange\n\nRefactor ObjectiveC Range class #24454\r\n\r\n### Pull Request Readiness Checklist\r\n\r\n- [x] I agree to contribute to the project under Apache 2 License.\r\n- [x] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\r\n- [x] The PR is proposed to the proper branch\r\n\r\nFix for build issue in #24405",
             "commit_timestamp": 1698406301.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1698667651.388558,
+            "elapsed_time": 818.539986371994,
+            "x64": false,
+            "actual_files_count": 466,
+            "expected_files_count": 459,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "e9e6b1e22c1a966a81aca1217b16a51fe7311b3b",
+            "commit_message": "Merge pull request #24405 from kochanczyk:4.x\n\nExtend the signature of imdecodemulti() #24405\r\n\r\n(Edited after addressing Reviewers' comments.)\r\n\r\nAdd an argument to `imdecodemulti()` to enable optional selection of pages of multi-page images.\r\n\r\nBe default, all pages are decoded. If used, the additional argument may specify a continuous selection of pages to decode.\r\n\r\n\r\n### Pull Request Readiness Checklist\r\n\r\nSee details at https://github.com/opencv/opencv/wiki/How_to_contribute#making-a-good-pull-request\r\n\r\n- [x] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\r\n- [X] I agree to contribute to the project under Apache 2 License.\r\n- [X] The PR is proposed to the proper branch\r\n- [ ] There is a reference to the original bug report and related work\r\n- [x] There is accuracy test, performance test and test data in opencv_extra repository, if applicable\r\n      Patch to opencv_extra has the same branch name.\r\n- [ ] The feature is well documented and sample code can be built with the project CMake",
+            "commit_timestamp": 1698656288.0
         }
     ]
 }
