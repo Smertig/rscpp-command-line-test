@@ -11275,6 +11275,22 @@
             "commit_ref": "d9b15b068d19089f72fc0d7dc59ed1d6d77125dc",
             "commit_message": "[CGExprConstant] stop calling into ConstExprEmitter for Reference type destinations (#70366)\n\nFixes a bug introduced by\ncommit b54294e2c959 (\"[clang][ConstantEmitter] have\ntryEmitPrivate[ForVarInit] try ConstExprEmitter fast-path first\")\n\nIn the added test case, the QualType is a LValueReferenceType.\n\n    LValueReferenceType 0x558412998d90 'const char (&)[41]'\n    `-ParenType 0x558412998d30 'const char[41]' sugar\n      `-ConstantArrayType 0x558412998cf0 'const char[41]' 41\n        `-QualType 0x55841294c271 'const char' const\n          `-BuiltinType 0x55841294c270 'char'\n\nFixes: #69979",
             "commit_timestamp": 1698680911.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1698696952.661956,
+            "elapsed_time": 2499.2413754463196,
+            "x64": true,
+            "actual_files_count": 1706,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "0d5b7dd25cc47123d6920207c089c8a9b98571b4",
+            "commit_message": "[OpenMP] Add a test for D158802 (#70678)\n\nIn D158802 we honored user's `thread_limit` value even with the\r\noptimization\r\nintroduced in D152014. This patch adds a simple test.",
+            "commit_timestamp": 1698695945.0
         }
     ]
 }
