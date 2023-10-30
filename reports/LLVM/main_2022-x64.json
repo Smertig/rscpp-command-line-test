@@ -11195,6 +11195,22 @@
             "commit_ref": "91b9a661c21891dc06e1721a26478d5bfe53e4ed",
             "commit_message": "[clang-format][NFC] Reduce indent\n\nBy using if init statement.",
             "commit_timestamp": 1698609312.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1698625292.811434,
+            "elapsed_time": 3610.883805036545,
+            "x64": true,
+            "actual_files_count": 1704,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "072a7edec3ca3729ec597c413d2fcc9557d88ffc",
+            "commit_message": "[AArch64] Add additional concat trunc -> UZP1 patterns\n\nThese extra patterns come from the lowering of fptoi, where an extra assertzext\nis present between some of the vectors.\n",
+            "commit_timestamp": 1698620337.0
         }
     ]
 }
