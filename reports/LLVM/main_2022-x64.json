@@ -11355,6 +11355,22 @@
             "commit_ref": "a6dabed3483c60469ff53d51622b22efc4b7b7d2",
             "commit_message": "[AMDGPU] Fix nondeterminism in SIFixSGPRCopies (#70644)\n\nThere are a couple of loops that iterate over V2SCopies. The iteration\r\norder needs to be deterministic, otherwise we can call moveToVALU in\r\ndifferent orders, which causes temporary vregs to be allocated in\r\ndifferent orders, which can affect register allocation heuristics.",
             "commit_timestamp": 1698752862.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1698768920.731158,
+            "elapsed_time": 2550.5558037757874,
+            "x64": true,
+            "actual_files_count": 1706,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "e107c9468b9c734fba016166fccc82a7e2b6527b",
+            "commit_message": "[clang-scan-deps] [P1689] Keep consistent behavior for make dependencies with clang (#69551)\n\nClose https://github.com/llvm/llvm-project/issues/69439.\r\n\r\nThis patch tries to reuse the codes to generate make style dependencies\r\ninformation with P1689 format directly.",
+            "commit_timestamp": 1698767987.0
         }
     ]
 }

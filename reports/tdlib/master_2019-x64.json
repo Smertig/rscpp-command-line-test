@@ -9645,6 +9645,20 @@
             "commit_ref": "dd77e4628f1a65f332f0cb81c82a19c0fcfa40c2",
             "commit_message": "Strong typed API for synchronous TDLib method execution in Java interface\n\n`Client.execute` in Java interface is now strongly typed: returned TDLib object type depends on the return type defined in the corresponding Function class.\r\n\r\nWhen TDLib error is occurred, method now throws `Client.ExecutionError`.\r\n\r\nThis change adds compile-time protection against return type change and allows using this pattern:\r\n\r\n```\r\ntry {\r\n  TdApi.SpecificReturnType result = Client.execute(function);\r\n  // work with strongly typed resultl without casting and type checks\r\n} catch (Client.ExecutionError error) {\r\n  // Handle error\r\n}\r\n```",
             "commit_timestamp": 1698315337.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1698769088.550909,
+            "elapsed_time": 3160.3323328495026,
+            "x64": true,
+            "actual_files_count": 1161,
+            "expected_files_count": 1103,
+            "repo_url": "https://github.com/tdlib/td",
+            "commit_ref": "dd77e4628f1a65f332f0cb81c82a19c0fcfa40c2",
+            "commit_message": "Strong typed API for synchronous TDLib method execution in Java interface\n\n`Client.execute` in Java interface is now strongly typed: returned TDLib object type depends on the return type defined in the corresponding Function class.\r\n\r\nWhen TDLib error is occurred, method now throws `Client.ExecutionError`.\r\n\r\nThis change adds compile-time protection against return type change and allows using this pattern:\r\n\r\n```\r\ntry {\r\n  TdApi.SpecificReturnType result = Client.execute(function);\r\n  // work with strongly typed resultl without casting and type checks\r\n} catch (Client.ExecutionError error) {\r\n  // Handle error\r\n}\r\n```",
+            "commit_timestamp": 1698315337.0
         }
     ]
 }
