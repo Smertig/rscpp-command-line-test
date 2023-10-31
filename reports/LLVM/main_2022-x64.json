@@ -11371,6 +11371,22 @@
             "commit_ref": "e107c9468b9c734fba016166fccc82a7e2b6527b",
             "commit_message": "[clang-scan-deps] [P1689] Keep consistent behavior for make dependencies with clang (#69551)\n\nClose https://github.com/llvm/llvm-project/issues/69439.\r\n\r\nThis patch tries to reuse the codes to generate make style dependencies\r\ninformation with P1689 format directly.",
             "commit_timestamp": 1698767987.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1698783308.004362,
+            "elapsed_time": 2563.1465394496918,
+            "x64": true,
+            "actual_files_count": 1706,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "b799080f19c2c1a23d096289e6e03cdbd8b44895",
+            "commit_message": "[ASan][Windows] Add __cdecl to public sanitizer functions (#69625)\n\nThis is necessary for many projects which pass `/Gz` to their compiles,\r\nwhich makes their default calling convention `__stdcall`.\r\n\r\n(personal note, I _really_ wish there was a pragma for this)",
+            "commit_timestamp": 1698782364.0
         }
     ]
 }
