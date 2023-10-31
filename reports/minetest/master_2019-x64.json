@@ -6681,6 +6681,20 @@
             "commit_ref": "2025dcffbd4d937afbac757931891172c4465614",
             "commit_message": "Revert \"Don't trigger a key event if a key with the same associated char was pressed (#13773)\"\n\nThis partially reverts commit d57c936b080f404df0b544561242b0c45c57f04d.\n\nThe reverted commit prevented recognition of key combinations.\nIt correctly changed a test case to no longer use \u201cKEY_NUMPAD_5\u201d.\n\nSeveral keyboard layouts use a key combination to input a \u201c+\u201d (e.g. Neo2);\ntherefore some users could no longer input \u201c+\u201d to increase the view range.\n\nCo-authored-by: savilli <78875209+savilli@users.noreply.github.com>\n",
             "commit_timestamp": 1698697439.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1698725456.756787,
+            "elapsed_time": 286.70895552635193,
+            "x64": false,
+            "actual_files_count": 405,
+            "expected_files_count": 105,
+            "repo_url": "https://github.com/minetest/minetest",
+            "commit_ref": "2025dcffbd4d937afbac757931891172c4465614",
+            "commit_message": "Revert \"Don't trigger a key event if a key with the same associated char was pressed (#13773)\"\n\nThis partially reverts commit d57c936b080f404df0b544561242b0c45c57f04d.\n\nThe reverted commit prevented recognition of key combinations.\nIt correctly changed a test case to no longer use \u201cKEY_NUMPAD_5\u201d.\n\nSeveral keyboard layouts use a key combination to input a \u201c+\u201d (e.g. Neo2);\ntherefore some users could no longer input \u201c+\u201d to increase the view range.\n\nCo-authored-by: savilli <78875209+savilli@users.noreply.github.com>\n",
+            "commit_timestamp": 1698697439.0
         }
     ]
 }

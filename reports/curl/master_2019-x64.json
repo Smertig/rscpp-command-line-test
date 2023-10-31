@@ -10555,6 +10555,20 @@
             "commit_ref": "d2d48f21f3b0d4e4f7a77f73f95b30900d809ec8",
             "commit_message": "configure: better --disable-http\n\n- disable HTTPS-proxy as well, since it can't work without HTTP\n\n- curl_setup: when HTTP is disabled, also disable all features that are\n  HTTP-only\n\n- version: HTTPS-proxy only exists if HTTP support exists\n\nCloses #12223\n",
             "commit_timestamp": 1698681733.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1698724983.465536,
+            "elapsed_time": 325.9320261478424,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "d2d48f21f3b0d4e4f7a77f73f95b30900d809ec8",
+            "commit_message": "configure: better --disable-http\n\n- disable HTTPS-proxy as well, since it can't work without HTTP\n\n- curl_setup: when HTTP is disabled, also disable all features that are\n  HTTP-only\n\n- version: HTTPS-proxy only exists if HTTP support exists\n\nCloses #12223\n",
+            "commit_timestamp": 1698681733.0
         }
     ]
 }
