@@ -11339,6 +11339,22 @@
             "commit_ref": "f3fd1ecd5759cfa7f368a2e0a876ca7cddcc8b2b",
             "commit_message": "[gn build] Port d6bfa3341181\n",
             "commit_timestamp": 1698738867.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1698754603.717498,
+            "elapsed_time": 2907.4348130226135,
+            "x64": true,
+            "actual_files_count": 1706,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "a6dabed3483c60469ff53d51622b22efc4b7b7d2",
+            "commit_message": "[AMDGPU] Fix nondeterminism in SIFixSGPRCopies (#70644)\n\nThere are a couple of loops that iterate over V2SCopies. The iteration\r\norder needs to be deterministic, otherwise we can call moveToVALU in\r\ndifferent orders, which causes temporary vregs to be allocated in\r\ndifferent orders, which can affect register allocation heuristics.",
+            "commit_timestamp": 1698752862.0
         }
     ]
 }
