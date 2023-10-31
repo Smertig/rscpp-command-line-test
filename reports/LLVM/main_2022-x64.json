@@ -11323,6 +11323,22 @@
             "commit_ref": "a5403a3a69d10d79c1abd361f02460380e08b2c0",
             "commit_message": "[libcxx] Amend XFAIL for failing tests on Windows (#70422)\n\nSome tests starting passing/failing after #69431 because Clang no longer\r\nenables -fdelayed-template-parsing by default on Windows with C++20.",
             "commit_timestamp": 1698723903.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1698740343.259786,
+            "elapsed_time": 3368.7560942173004,
+            "x64": true,
+            "actual_files_count": 1706,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "f3fd1ecd5759cfa7f368a2e0a876ca7cddcc8b2b",
+            "commit_message": "[gn build] Port d6bfa3341181\n",
+            "commit_timestamp": 1698738867.0
         }
     ]
 }
