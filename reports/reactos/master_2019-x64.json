@@ -10359,6 +10359,20 @@
             "commit_ref": "00f192fa94068d9ad3ce8397864850a04227bea1",
             "commit_message": "[SHELL32] Improve file properties dialog (#5852)\n\nBased on KRosUser's patches.\r\n- Add missing version strings \"Comments\" and\r\n  \"LegalTrademarks\".\r\n- Add version strings \"PrivateBuild\" and\r\n  \"SpecialBuild\" if necessary.\r\n- Trim the version string for pretty display.\r\nCORE-19270, CORE-19114, CORE-19275",
             "commit_timestamp": 1698647643.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1698710664.893444,
+            "elapsed_time": 216.79738879203796,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "ad12c6cdea05e2164396e3794e9bee7b821cc709",
+            "commit_message": "[NTUSER] Disable SC_MOVE if WS_MAXIMIZE or WS_MINIMIZE (#5855)\n\nBased on KRosUser's scmove.patch.\r\n- Check also WS_MINIMIZE window style to\r\n  determine to disable SC_MOVE system command.\r\nCORE-19272",
+            "commit_timestamp": 1698702600.0
         }
     ]
 }

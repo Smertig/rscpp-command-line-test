@@ -11553,6 +11553,20 @@
             "commit_ref": "b93f5a592972b9017539cf15a5d299149c1cc2f4",
             "commit_message": "Add pre-commit config and GitHub Actions job (#1688)\n\n* Add pre-commit config and GitHub Actions job\r\n\r\nContains the following hooks:\r\n* buildifier - for formatting and linting Bazel files.\r\n* mypy, ruff, isort, black - for Python typechecking, import hygiene,\r\nstatic analysis, and formatting.\r\n\r\nThe pylint CI job was changed to be a pre-commit CI job, where pre-commit\r\nis bootstrapped via Python.\r\n\r\nPylint is currently no longer part of the\r\ncode checks, but can be re-added if requested. The reason to drop was\r\nthat it does not play nicely with pre-commit, and lots of its\r\nfunctionality and responsibilities are actually covered in ruff.\r\n\r\n* Add dev extra to pyproject.toml for development installs\r\n\r\n* Clarify that pre-commit contains only Python and Bazel hooks\r\n\r\n* Add one-line docstrings to Bazel modules\r\n\r\n* Apply buildifier pre-commit fixes to Bazel files\r\n\r\n* Apply pre-commit fixes to Python files\r\n\r\n* Supply --profile=black to isort to prevent conflicts\r\n\r\n* Fix nanobind build file formatting\r\n\r\n* Add tooling configs to `pyproject.toml`\r\n\r\nIn particular, set line length 80 for all Python files.\r\n\r\n* Reformat all Python files to line length 80, fix return type annotations\r\n\r\nAlso ignores the `tools/compare.py` and `tools/gbench/report.py` files\r\nfor mypy, since they emit a barrage of errors which we can deal with\r\nlater. The errors are mostly related to dynamic classmethod definition.",
             "commit_timestamp": 1698680137.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1698710796.200989,
+            "elapsed_time": 119.14730262756348,
+            "x64": false,
+            "actual_files_count": 86,
+            "expected_files_count": 86,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "b93f5a592972b9017539cf15a5d299149c1cc2f4",
+            "commit_message": "Add pre-commit config and GitHub Actions job (#1688)\n\n* Add pre-commit config and GitHub Actions job\r\n\r\nContains the following hooks:\r\n* buildifier - for formatting and linting Bazel files.\r\n* mypy, ruff, isort, black - for Python typechecking, import hygiene,\r\nstatic analysis, and formatting.\r\n\r\nThe pylint CI job was changed to be a pre-commit CI job, where pre-commit\r\nis bootstrapped via Python.\r\n\r\nPylint is currently no longer part of the\r\ncode checks, but can be re-added if requested. The reason to drop was\r\nthat it does not play nicely with pre-commit, and lots of its\r\nfunctionality and responsibilities are actually covered in ruff.\r\n\r\n* Add dev extra to pyproject.toml for development installs\r\n\r\n* Clarify that pre-commit contains only Python and Bazel hooks\r\n\r\n* Add one-line docstrings to Bazel modules\r\n\r\n* Apply buildifier pre-commit fixes to Bazel files\r\n\r\n* Apply pre-commit fixes to Python files\r\n\r\n* Supply --profile=black to isort to prevent conflicts\r\n\r\n* Fix nanobind build file formatting\r\n\r\n* Add tooling configs to `pyproject.toml`\r\n\r\nIn particular, set line length 80 for all Python files.\r\n\r\n* Reformat all Python files to line length 80, fix return type annotations\r\n\r\nAlso ignores the `tools/compare.py` and `tools/gbench/report.py` files\r\nfor mypy, since they emit a barrage of errors which we can deal with\r\nlater. The errors are mostly related to dynamic classmethod definition.",
+            "commit_timestamp": 1698680137.0
         }
     ]
 }

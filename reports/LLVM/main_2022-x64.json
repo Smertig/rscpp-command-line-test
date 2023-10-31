@@ -11291,6 +11291,22 @@
             "commit_ref": "0d5b7dd25cc47123d6920207c089c8a9b98571b4",
             "commit_message": "[OpenMP] Add a test for D158802 (#70678)\n\nIn D158802 we honored user's `thread_limit` value even with the\r\noptimization\r\nintroduced in D152014. This patch adds a simple test.",
             "commit_timestamp": 1698695945.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1698711407.005276,
+            "elapsed_time": 2656.263015270233,
+            "x64": true,
+            "actual_files_count": 1706,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "5908559c1091245989672ca486c6b3c0a8f60b5a",
+            "commit_message": "[X86] Don't set SHF_X86_64_LARGE for variables with explicit section name of a well-known small data section prefix (#70748)\n\nCommit f3ea73133f91c1c23596d45680c8f2269c1dd289 allows SHF_X86_64_LARGE\r\nfor all global variables with an explicit section. For the following\r\nvariables, their data sections will be annotated as SHF_X86_64_LARGE.\r\n\r\n```\r\nconst char relro[512] __attribute__((section(\".rodata\"))) = \"a\";\r\nconst char *const relro __attribute__((section(\".data.rel.ro\"))) = \"a\";\r\nchar data[512] __attribute__((section(\".data\"))) = \"a\";\r\n```\r\n\r\nThe typical linker requirement is that we do not create more than one\r\noutput section with the same name, and the only output section should\r\nhave the bitwise OR value of all input section flags. Therefore, the\r\noutput .data section will have the SHF_X86_64_LARGE flag and be\r\nmoved away from the regular sections. This is undesired but benign.\r\nHowever, .data.rel.ro having the SHF_X86_64_LARGE flag is problematic\r\nbecause dynamic loaders do not support more than one PT_GNU_RELRO\r\nprogram header, and LLD produces the error\r\n`error: section: .jcr is not contiguous with other relro sections`.\r\n\r\nI believe the most appropriate solution is to disallow SHF_X86_64_LARGE\r\non variables with an explicit section of certain prefixes (\r\n.bss/.data/.bss) and allow others (e.g. metadata sections for various\r\ninstrumentation). Fortunately, global variables with an explicit\r\n.bss/.data/.bss section are rare, so they should not cause excessive\r\nrelocation overflow pressure.",
+            "commit_timestamp": 1698710584.0
         }
     ]
 }

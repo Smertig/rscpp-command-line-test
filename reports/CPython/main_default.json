@@ -7741,6 +7741,20 @@
             "commit_ref": "c4dc5a6ae8aa13abb743182df088f1a3526d1bcd",
             "commit_message": "gh-111181: Fix enum doctests (GH-111180)\n\nCo-authored-by: Ethan Furman <ethan@stoneleaf.us>",
             "commit_timestamp": 1698695789.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1698711079.587499,
+            "elapsed_time": 1834.7283766269684,
+            "x64": true,
+            "actual_files_count": 1002,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "84b4533e8446cbff3325fffe939c87f7120a3ffd",
+            "commit_message": "gh-109329: Count tier2 opcode misses (#110561)\n\nThis keeps a separate 'miss' counter for each micro-opcode, incremented whenever a guard uop takes a deoptimization side exit.",
+            "commit_timestamp": 1698710565.0
         }
     ]
 }
