@@ -11957,6 +11957,20 @@
             "commit_ref": "79d39a1954837f234b48e3bc342b7f26e535d8a5",
             "commit_message": "Fix tests for C++23's multi-arg index operator\n\nCloses #2744\n",
             "commit_timestamp": 1698522598.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1698797091.375766,
+            "elapsed_time": 93.55242443084717,
+            "x64": false,
+            "actual_files_count": 274,
+            "expected_files_count": 272,
+            "repo_url": "https://github.com/catchorg/Catch2.git",
+            "commit_ref": "a8cf3e671047da6e7bf6c3c0d9a2178afeed1b54",
+            "commit_message": "Mark `CATCH_CONFIG_` options as advanced\n\nThese options are rather low-level and don't need to be seen in the\nCMake cache unless you opt into seeing all other advanced options.\n\nThis removes a lot of cache entries from the screen when using a GUI\nor TUI to view the cache thus making it easier for users to focus on\nthe cache variables they're more likely to change on a frequent\nbasis.\n",
+            "commit_timestamp": 1698794866.0
         }
     ]
 }
