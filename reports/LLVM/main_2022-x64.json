@@ -11435,6 +11435,22 @@
             "commit_ref": "e144ae54dcb96838a6176fd9eef21028935ccd4f",
             "commit_message": "[symbolizer] Support symbol lookup\n\nRecent versions of GNU binutils starting from 2.39 support symbol+offset\nlookup in addition to the usual numeric address lookup. This change adds\nsymbol lookup to llvm-symbolize and llvm-addr2line.\n\nNow llvm-symbolize behaves closer to GNU addr2line, - if the value specified\nas address in command line or input stream is not a number, it is treated as\na symbol name. For example:\n\n    llvm-symbolize --obj=abc.so func_22\n    llvm-symbolize --obj=abc.so \"CODE func_22\"\n\nThis lookup is now supported only for functions. Specification with\noffset is not supported yet.\n\nThis is a recommit of 2b27948783e4bbc1132d3220d8517ef62607b558, reverted\nin 39fec5457c0925bd39f67f63fe17391584e08258 because the test\nllvm/test/Support/interrupts.test started failing on Windows. The test was\nchanged in 18f036d0105589c3175bb51a518c5d272dae61e2 and is also updated in\nthis commit.\n\nDifferential Revision: https://reviews.llvm.org/D149759\n",
             "commit_timestamp": 1698824499.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1698841119.599764,
+            "elapsed_time": 3181.92266869545,
+            "x64": true,
+            "actual_files_count": 1706,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "aca9c891a26eaa6e9078b19096cd9aa52d136091",
+            "commit_message": "[InstCombine] Avoid use of ConstantExpr::getIntegerCast()\n\nRequire that constants are ImmConstant for this transform, as we\nmay otherwise generate constant expressions, which are not\nnecessarily free.\n",
+            "commit_timestamp": 1698839790.0
         }
     ]
 }
