@@ -7839,6 +7839,20 @@
             "commit_ref": "102685c4c8481ec5d9c132fcf06b46057e815969",
             "commit_message": "gh-111282: Fix NamedTemporaryFile example code (GH-111283)\n\n",
             "commit_timestamp": 1698789962.0
+        },
+        {
+            "tool_version": "233.0.20231019.194555-eap04",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1698811741.228733,
+            "elapsed_time": 1468.51744556427,
+            "x64": true,
+            "actual_files_count": 974,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "d9a5530d2327efa1fe66a04d31b5c67e42dbcd9c",
+            "commit_message": "gh-110367: Make regrtest --verbose3 compatible with --huntrleaks -jN (#111577)\n\n\"./python -m test -j1 -R 3:3 --verbose3\" now works as expected, since\r\nrun_single_test() does not replace sys.stdout with StringIO in this\r\ncase.",
+            "commit_timestamp": 1698809335.0
         }
     ]
 }
