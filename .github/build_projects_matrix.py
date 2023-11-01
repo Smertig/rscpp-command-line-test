@@ -29,14 +29,14 @@ assert len(sys.argv) == 6, f"{sys.argv[0]} projects.json proj-config-dir mode gi
 
 _, projects_path, projects_dir, mode, github_event, github_run_all = sys.argv
 
-print(f"{github_run_all=}")
-print(f"{type(github_run_all)=}")
-exit(0)
-
 assert mode in ('correctness-fixed', 'correctness-latest'), f"unknown mode: {mode}"
 IS_CORRECTNESS_FIXED = mode == 'correctness-fixed'
 IS_CORRECTNESS_LATEST = mode == 'correctness-latest'
 IS_SCHEDULED = github_event == 'schedule'
+IS_RUN_ALL = github_run_all == 'true'
+
+# Run slow projects only on schedule
+RUN_SLOW_PROJECTS = IS_SCHEDULED or IS_RUN_ALL
 
 with open(projects_path) as f:
     projects = json.load(f)
@@ -51,8 +51,7 @@ for project_name, project_config in projects.items():
     if project_config.get("disabled", False):
         continue
 
-    # Run slow projects only on schedule
-    if not IS_SCHEDULED and is_slow_project(project_name):
+    if not RUN_SLOW_PROJECTS and is_slow_project(project_name):
         continue
 
     cmake_gens = project_config.get("required toolchain", [DEFAULT_GENERATOR])
