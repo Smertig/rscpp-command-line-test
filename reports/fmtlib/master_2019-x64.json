@@ -12051,6 +12051,20 @@
             "commit_ref": "e0d3e346d2308ba581457efb024c88c7a6ed5fe1",
             "commit_message": "Wrap Char in array to avoid pointer arithmetic (#3695)\n\nThis resolves the following finding reported by Coverity Static Analysis\r\nv2023.6.1 on line 1964 of fmt/include/fmt/format.h:\r\n\r\n  ptr_arith: Using &v as an array. This might corrupt or misinterpret\r\n             adjacent memory locations.",
             "commit_timestamp": 1698786346.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1698854699.017872,
+            "elapsed_time": 168.2558467388153,
+            "x64": false,
+            "actual_files_count": 66,
+            "expected_files_count": 66,
+            "repo_url": "https://github.com/fmtlib/fmt.git",
+            "commit_ref": "e0d3e346d2308ba581457efb024c88c7a6ed5fe1",
+            "commit_message": "Wrap Char in array to avoid pointer arithmetic (#3695)\n\nThis resolves the following finding reported by Coverity Static Analysis\r\nv2023.6.1 on line 1964 of fmt/include/fmt/format.h:\r\n\r\n  ptr_arith: Using &v as an array. This might corrupt or misinterpret\r\n             adjacent memory locations.",
+            "commit_timestamp": 1698786346.0
         }
     ]
 }

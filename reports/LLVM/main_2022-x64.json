@@ -11467,6 +11467,22 @@
             "commit_ref": "bc44e6e7c64ae7abd885fc31a62e37f649e307be",
             "commit_message": "[clang] Remove no-op ptr-to-ptr bitcasts (NFC)\n\nOpaque pointer cleanup effort.\n",
             "commit_timestamp": 1698847575.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1698855359.727601,
+            "elapsed_time": 2760.550683259964,
+            "x64": true,
+            "actual_files_count": 1706,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "e2550b7aa072130230baa9dba0feff808ffe907d",
+            "commit_message": "Revert \"[AArch64][Clang] Refactor code to emit SVE & SME builtins (#70662)\"\n\nThis reverts commit c34efe3c2734629b925d9411b3c86a710911a93a.\n",
+            "commit_timestamp": 1698854234.0
         }
     ]
 }
