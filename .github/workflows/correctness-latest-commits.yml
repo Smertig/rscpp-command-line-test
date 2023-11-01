@@ -18,7 +18,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - id: set-matrix
-        run: python .github/build_projects_matrix.py ./projects.json ./proj-config correctness-latest ${{github.event_name}} >> $GITHUB_OUTPUT
+        run: python .github/build_projects_matrix.py ./projects.json ./proj-config correctness-latest ${{github.event_name}} ${{contains(github.event.head_commit.message, '[ci-all]')}} >> $GITHUB_OUTPUT
 
   run_correctness_test:
     needs: generate_matrix

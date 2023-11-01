@@ -25,9 +25,13 @@ def is_slow_project(project_name: str):
     return project_name in ('ITK', 'rocksdb', 'OpenCV', 'yuzu', 'minetest', 'Cemu', 'LLVM', 'tdlib')
 
 
-assert len(sys.argv) == 5, f"{sys.argv[0]} projects.json proj-config-dir mode github_event"
+assert len(sys.argv) == 6, f"{sys.argv[0]} projects.json proj-config-dir mode github_event github_run_all"
 
-_, projects_path, projects_dir, mode, github_event = sys.argv
+_, projects_path, projects_dir, mode, github_event, github_run_all = sys.argv
+
+print(f"{github_run_all=}")
+print(f"{type(github_run_all)=}")
+exit(0)
 
 assert mode in ('correctness-fixed', 'correctness-latest'), f"unknown mode: {mode}"
 IS_CORRECTNESS_FIXED = mode == 'correctness-fixed'
