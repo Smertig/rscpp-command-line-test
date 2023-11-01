@@ -248,6 +248,9 @@
             "repo": "https://github.com/catchorg/Catch2.git",
             "commit": "4902cd721586822ded795afe0c418c553137306a"
         },
+        "to skip": [
+            "catch_objc*"
+        ],
         "stable": {
             "inspected files count": 203,
             "mem traffic": 1857
@@ -336,6 +339,9 @@
             "repo": "https://github.com/google/draco.git",
             "commit": "785c9c4aa2b952236c29ad639901dbbaf216da38"
         },
+        "to skip": [
+            "mesh_*_helpers.h"
+        ],
         "stable": {
             "inspected files count": 303,
             "mem traffic": 2221
@@ -563,11 +569,27 @@
             "-DYACLIB_TEST=ON"
         ],
         "stable": {
-            "inspected files count": 1809
+            "inspected files count": 1809,
+            "known errors": [
+                {
+                    "file": "..\\test\\unit\\async\\core_size.cpp",
+                    "line": 66,
+                    "message": "static_assert failed\r\n    Expression '8 == 4 || 64 == (32 + 24 + 0 + 0)' evaluates to false",
+                    "reason": "RSCPP-34991 Incorrect `no_unique_address` handling for non-MSVC compiler"
+                }
+            ]
         },
         "latest": {
             "main": {
-                "inspected files count": 1809
+                "inspected files count": 1809,
+                "known errors": [
+                    {
+                        "file": "..\\test\\unit\\async\\core_size.cpp",
+                        "line": 66,
+                        "message": "static_assert failed\r\n    Expression '8 == 4 || 64 == (32 + 24 + 0 + 0)' evaluates to false",
+                        "reason": "RSCPP-34991 Incorrect `no_unique_address` handling for non-MSVC compiler"
+                    }
+                ]
             }
         }
     },
@@ -627,6 +649,12 @@
         "cmake options": [
             "-DENABLE_QT=OFF"
         ],
+        "to skip": [
+            "*armv4*",
+            "*armv5*",
+            "*mipsr1*"
+        ],
+        "__to skip reason": "platform specific",
         "required toolchain": ["2022-x64"],
         "stable": {
             "inspected files count": 2555,
