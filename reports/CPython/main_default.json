@@ -7937,6 +7937,20 @@
             "commit_ref": "5d6db168b9cda58b4897763041a6109b93e421cb",
             "commit_message": "Simplify trivial calls of PyUnicode_FromFormat() (GH-111605)\n\n",
             "commit_timestamp": 1698861272.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1698883835.375375,
+            "elapsed_time": 1801.721984386444,
+            "x64": true,
+            "actual_files_count": 980,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "9322ce90ac8f4d4647a59bbfab48fad6f4e4e856",
+            "commit_message": "gh-76785: Crossinterp utils additions (gh-111530)\n\nThis moves several general internal APIs out of _xxsubinterpretersmodule.c and into the new Python/crossinterp.c (and the corresponding internal headers).\r\n\r\nSpecifically:\r\n\r\n* _Py_excinfo, etc.:  the initial implementation for non-object exception snapshots (in pycore_pyerrors.h and Python/errors.c)\r\n* _PyXI_exception_info, etc.:  helpers for passing an exception beween interpreters (wraps _Py_excinfo)\r\n* _PyXI_namespace, etc.:  helpers for copying a dict of attrs between interpreters\r\n* _PyXI_Enter(), _PyXI_Exit():  functions that abstract out the transitions between one interpreter and a second that will do some work temporarily\r\n\r\nAgain, these were all abstracted out of _xxsubinterpretersmodule.c as generalizations.  I plan on proposing these as public API at some point.",
+            "commit_timestamp": 1698881800.0
         }
     ]
 }

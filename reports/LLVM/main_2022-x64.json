@@ -11499,6 +11499,22 @@
             "commit_ref": "6266b964202336a02f40007928719e060bc81694",
             "commit_message": "Add support of the next Ubuntu (Ubuntu 24.04 - Noble Numbat)\n\nCo-authored-by: Sylvestre Ledru <sylvestre@debian.org>\n",
             "commit_timestamp": 1698868879.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1698884260.909907,
+            "elapsed_time": 2841.646703720093,
+            "x64": true,
+            "actual_files_count": 1706,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "373c343a77a7afaa07179db1754a52b620dfaf2e",
+            "commit_message": "Reland: [GlobalISel] LegalizationArtifactCombiner: Elide redundant G_AND\n\nReland 3686a0b after fixing an exposed miscompile in #68840\n\nDifferential Revision: https://reviews.llvm.org/D159140\n",
+            "commit_timestamp": 1698880699.0
         }
     ]
 }
