@@ -7951,6 +7951,20 @@
             "commit_ref": "9322ce90ac8f4d4647a59bbfab48fad6f4e4e856",
             "commit_message": "gh-76785: Crossinterp utils additions (gh-111530)\n\nThis moves several general internal APIs out of _xxsubinterpretersmodule.c and into the new Python/crossinterp.c (and the corresponding internal headers).\r\n\r\nSpecifically:\r\n\r\n* _Py_excinfo, etc.:  the initial implementation for non-object exception snapshots (in pycore_pyerrors.h and Python/errors.c)\r\n* _PyXI_exception_info, etc.:  helpers for passing an exception beween interpreters (wraps _Py_excinfo)\r\n* _PyXI_namespace, etc.:  helpers for copying a dict of attrs between interpreters\r\n* _PyXI_Enter(), _PyXI_Exit():  functions that abstract out the transitions between one interpreter and a second that will do some work temporarily\r\n\r\nAgain, these were all abstracted out of _xxsubinterpretersmodule.c as generalizations.  I plan on proposing these as public API at some point.",
             "commit_timestamp": 1698881800.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1698898037.291868,
+            "elapsed_time": 1071.59481215477,
+            "x64": true,
+            "actual_files_count": 980,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "230e8e924dbafe093fd1cc7b6c510dc0b9ec0caf",
+            "commit_message": "GH-111435: Add Support for Sharing True and False Between Interpreters (gh-111436)\n\nThis only affects users of the APIs in pycore_crossinterp.h (AKA _xxsubinterpretersmodule.c and _xxinterpchannels.c).",
+            "commit_timestamp": 1698883741.0
         }
     ]
 }
