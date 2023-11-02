@@ -11531,6 +11531,22 @@
             "commit_ref": "ba0763e4cb08015bd0acef5cf05a372d423017b4",
             "commit_message": "[GlobalISel][M68k] Update test after 373c343\n\nMissed test case in experimental target, which was not covered by pre-merge checks.\n",
             "commit_timestamp": 1698892367.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1698912922.858114,
+            "elapsed_time": 2424.4238209724426,
+            "x64": true,
+            "actual_files_count": 1706,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "3bc056d5f0ebe9e4074afa088c3a0355f9ab901a",
+            "commit_message": "[clang-repl] [test] Make an XFAIL more precise (#70991)\n\nThe const.cpp testcase fails when running in MSVC mode, while it does\r\nsucceed in MinGW mode.\r\n\r\nIn MSVC mode, there are more constructor invocations than expected, as\r\nthe printout looks like this:\r\n\r\n    A(1), this = 0000025597930000\r\n    A(1), this = 0000025597930000\r\n    f: this = 0000025597930000, val = 1\r\n    A(1), this = 0000025597930000\r\n    f: this = 0000025597930000, val = 1\r\n    ~A, this = 0000025597930000, val = 1\r\n    ~A, this = 0000025597930000, val = 1\r\n    ~A, this = 0000025597930000, val = 1\r\n\r\nWhile the expected printout looks like this:\r\n\r\n    A(1), this = 000002C903E10000\r\n    f: this = 000002C903E10000, val = 1\r\n    f: this = 000002C903E10000, val = 1\r\n    ~A, this = 000002C903E10000, val = 1",
+            "commit_timestamp": 1698911493.0
         }
     ]
 }

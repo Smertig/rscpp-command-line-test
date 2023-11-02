@@ -11749,6 +11749,20 @@
             "commit_ref": "769ab10e3b9f5b9ccf9a46c786091960812938c2",
             "commit_message": "Fix windows 2019 build.\n\nsetup-gcloud doesn't honor the environment variables set by setup-python, so we need to manually set CLOUDSDK_PYTHON before running it.\n\nPiperOrigin-RevId: 578674246\n",
             "commit_timestamp": 1698880802.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1698912227.993432,
+            "elapsed_time": 370.06081652641296,
+            "x64": false,
+            "actual_files_count": 851,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "5f146f8dfefd136eb969ed3bb73bdd95a462c4f3",
+            "commit_message": "Enable caching of pip dependencies\n\nPiperOrigin-RevId: 578740011\n",
+            "commit_timestamp": 1698902471.0
         }
     ]
 }

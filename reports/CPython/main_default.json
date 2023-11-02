@@ -7965,6 +7965,20 @@
             "commit_ref": "230e8e924dbafe093fd1cc7b6c510dc0b9ec0caf",
             "commit_message": "GH-111435: Add Support for Sharing True and False Between Interpreters (gh-111436)\n\nThis only affects users of the APIs in pycore_crossinterp.h (AKA _xxsubinterpretersmodule.c and _xxinterpchannels.c).",
             "commit_timestamp": 1698883741.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1698912468.438599,
+            "elapsed_time": 1576.8834414482117,
+            "x64": true,
+            "actual_files_count": 980,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "229f44d353c71185414a072017f46f125676bdd6",
+            "commit_message": "GH-110894: Call loop exception handler for exceptions in client_connected_cb (#111601)\n\nCall loop exception handler for exceptions in `client_connected_cb` of `asyncio.start_server` so that applications can handle it.",
+            "commit_timestamp": 1698910698.0
         }
     ]
 }
