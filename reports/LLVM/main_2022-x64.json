@@ -11675,6 +11675,22 @@
             "commit_ref": "015c06ade023362ba7410e06618dea407fa07e5f",
             "commit_message": "Regenerate a couple scev/indvars tests [nfc]\n\nUpdate to modern output to reduce spurious deltas in upcoming change.\n",
             "commit_timestamp": 1699026179.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1699042694.761372,
+            "elapsed_time": 3220.917481660843,
+            "x64": true,
+            "actual_files_count": 1707,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "71a13675dad588712094fb09c655570974f98540",
+            "commit_message": "[dsymutil] Filter our swiftinterface files from the toolchain. (#71205)\n\nDsymutil already avoids copying textual Swift interface files from the\r\nSDK, since any consumer would have to have a matching SDK installed\r\nanyway. It should also do the same thing with interfaces found in the\r\ntoolchain itself, which includes the compiler built-in libraries such as\r\nSwift (=the standard library), and _Concurrency.\r\n\r\nrdar://117881604",
+            "commit_timestamp": 1699041461.0
         }
     ]
 }

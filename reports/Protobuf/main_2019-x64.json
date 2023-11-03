@@ -11875,6 +11875,20 @@
             "commit_ref": "b0d4b2c1fe5a759b4e0459a0c2efd7dd690d97fe",
             "commit_message": "Separate Build / IDE / Documentation from Other on Third Party doc\n\nPiperOrigin-RevId: 579193733\n",
             "commit_timestamp": 1699026204.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1699041810.408669,
+            "elapsed_time": 447.3918294906616,
+            "x64": false,
+            "actual_files_count": 853,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "70cc55aeb229c8bf3e8962ace8cafee2d9abff59",
+            "commit_message": "Reduce stack usage on recursion by making all error generation lazy on\nout-of-line functions. This avoids local std::string temporaries and alike.\n\nIt also speeds up code because we delay constructing the errors via StrCat\nuntil an error has actually occurred.\n\nPiperOrigin-RevId: 579269516\n",
+            "commit_timestamp": 1699040453.0
         }
     ]
 }
