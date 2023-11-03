@@ -11627,6 +11627,22 @@
             "commit_ref": "063e3fe648533004e6970ab767ece845e3c0afb1",
             "commit_message": "[clang-format] Skip PP directives when determining brace kind (#69473)\n\nPull request #65409 changed the brace kind heuristic to not treat a\r\npreprocessor if directive as a in statement, however, this caused some\r\nregressions.\r\n\r\nIf the contents of a brace don't immediately determine the brace kind,\r\nthe heuristic will look at the characters immediately before and after\r\nthe closing brace to determine the brace type.\r\n\r\nUnfortunately, if the closing brace was preceded by a preprocessor\r\ndirective, for example `#endif`, the preceding token was `endif`, seen\r\nas just an identifier, so the braces were understood as a braced list.\r\n\r\nThis patch fixes this behaviour by skipping all preprocessor directives\r\nwhen calculating brace types. Comments were already being skipped, so\r\nnow preprocessor lines are skipped alongside comments.\r\n\r\nFixes https://github.com/llvm/llvm-project/issues/68404",
             "commit_timestamp": 1698983480.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1698999381.001796,
+            "elapsed_time": 2666.3631365299225,
+            "x64": true,
+            "actual_files_count": 1707,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "8e2b3309a975748649a504620a9600da9fe3c837",
+            "commit_message": "[Docs][LTO] Updated HowToSubmitABug.rst for LTO crashes (#68389)\n\n",
+            "commit_timestamp": 1698997406.0
         }
     ]
 }
