@@ -11847,6 +11847,20 @@
             "commit_ref": "e682ab6bc378ede1d98735b39bcc0d426d4f5ffb",
             "commit_message": "Annotate message field builder getters with Semantic::kSet\n\nAs an analog to the C++ mutable_foo() member functions,\nuses of Java builders should appear as writes in Code Search.\nThey should be marked with the kSet semantic.\n\nNote that the get*OrBuilder[List] methods should *not* be\nmarked with kSet as they do not return a mutable object.\n\nPiperOrigin-RevId: 579079084\n",
             "commit_timestamp": 1698992146.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1699013132.031016,
+            "elapsed_time": 549.3700094223022,
+            "x64": false,
+            "actual_files_count": 853,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "e682ab6bc378ede1d98735b39bcc0d426d4f5ffb",
+            "commit_message": "Annotate message field builder getters with Semantic::kSet\n\nAs an analog to the C++ mutable_foo() member functions,\nuses of Java builders should appear as writes in Code Search.\nThey should be marked with the kSet semantic.\n\nNote that the get*OrBuilder[List] methods should *not* be\nmarked with kSet as they do not return a mutable object.\n\nPiperOrigin-RevId: 579079084\n",
+            "commit_timestamp": 1698992146.0
         }
     ]
 }

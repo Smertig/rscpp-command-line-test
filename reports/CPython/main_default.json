@@ -8063,6 +8063,20 @@
             "commit_ref": "26c0e5e03a8603eccfd98045bc69fde2e24682e3",
             "commit_message": "gh-108082: Remove _PyErr_WriteUnraisableMsg() (GH-111643)\n\nReplace the remaining calls with PyErr_FormatUnraisable().\r\n",
             "commit_timestamp": 1698997553.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1699013389.363371,
+            "elapsed_time": 1709.577032327652,
+            "x64": true,
+            "actual_files_count": 980,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "24ddaee5ca112063b460e72d31b3da551a02bf0a",
+            "commit_message": "gh-106168: Revert the \"size before item\" setting (#111683)\n\ngh-106168: Update the size only after setting the item, to avoid temporary inconsistencies.\r\nAlso remove the \"what's new\" sentence regarding the size setting since tuples cannot grow after allocation.",
+            "commit_timestamp": 1699009359.0
         }
     ]
 }

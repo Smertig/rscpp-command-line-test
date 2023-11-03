@@ -10863,6 +10863,20 @@
             "commit_ref": "7e828fe503ed1966252d68cedcdb7d92adb7807d",
             "commit_message": "curl_sspi: support more revocation error names in error messages\n\n- Add these revocation errors to sspi error list:\n  CRYPT_E_NO_REVOCATION_DLL, CRYPT_E_NO_REVOCATION_CHECK,\n  CRYPT_E_REVOCATION_OFFLINE and CRYPT_E_NOT_IN_REVOCATION_DATABASE.\n\nPrior to this change those error codes were not matched to their macro\nname and instead shown as \"unknown error\".\n\nBefore:\n\nschannel: next InitializeSecurityContext failed:\nUnknown error (0x80092013) - The revocation function was\nunable to check revocation because the revocation server was offline.\n\nAfter:\n\nschannel: next InitializeSecurityContext failed:\nCRYPT_E_REVOCATION_OFFLINE (0x80092013) - The revocation function was\nunable to check revocation because the revocation server was offline.\n\nBug: https://github.com/curl/curl/issues/12239\nReported-by: Niracler Li\n\nCloses https://github.com/curl/curl/pull/12241\n",
             "commit_timestamp": 1698997859.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1699013070.035096,
+            "elapsed_time": 352.9567058086395,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "7e828fe503ed1966252d68cedcdb7d92adb7807d",
+            "commit_message": "curl_sspi: support more revocation error names in error messages\n\n- Add these revocation errors to sspi error list:\n  CRYPT_E_NO_REVOCATION_DLL, CRYPT_E_NO_REVOCATION_CHECK,\n  CRYPT_E_REVOCATION_OFFLINE and CRYPT_E_NOT_IN_REVOCATION_DATABASE.\n\nPrior to this change those error codes were not matched to their macro\nname and instead shown as \"unknown error\".\n\nBefore:\n\nschannel: next InitializeSecurityContext failed:\nUnknown error (0x80092013) - The revocation function was\nunable to check revocation because the revocation server was offline.\n\nAfter:\n\nschannel: next InitializeSecurityContext failed:\nCRYPT_E_REVOCATION_OFFLINE (0x80092013) - The revocation function was\nunable to check revocation because the revocation server was offline.\n\nBug: https://github.com/curl/curl/issues/12239\nReported-by: Niracler Li\n\nCloses https://github.com/curl/curl/pull/12241\n",
+            "commit_timestamp": 1698997859.0
         }
     ]
 }
