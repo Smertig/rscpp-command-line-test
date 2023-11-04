@@ -8105,6 +8105,20 @@
             "commit_ref": "df9815eb11b58dfaae02a8e3fb85ae8aa725dc17",
             "commit_message": "gh-111684: Avoid a Compiler Warning (gh-111706)\n\n",
             "commit_timestamp": 1699040230.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1699070775.78889,
+            "elapsed_time": 1405.4077820777893,
+            "x64": true,
+            "actual_files_count": 980,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "ac01e2243a1104b2154c0d1bdbc9f8d5b3ada778",
+            "commit_message": "gh-111644: Fix asyncio test_unhandled_exceptions() (#111713)\n\nFix test_unhandled_exceptions() of test_asyncio.test_streams: break\r\nexplicitly a reference cycle.\r\n\r\nFix also StreamTests.tearDown(): the loop must not be closed\r\nexplicitly, but using set_event_loop() which takes care of shutting\r\ndown the executor with executor.shutdown(wait=True).\r\nBaseEventLoop.close() calls executor.shutdown(wait=False).",
+            "commit_timestamp": 1699058827.0
         }
     ]
 }
