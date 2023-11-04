@@ -8469,6 +8469,20 @@
             "commit_ref": "4dd5d2f8cb27304b00605c485f8269c8c830345c",
             "commit_message": "Propagate mergeable sections' sh_entsize and sh_addralign attributes\n\nFor --relocatable output, we need to pass through these attributes\nfor correctness. With this change, we'll have more .rodata sections\nsuch as .rodata.str1.1, rodata.str1.4, etc. in the final executable,\nbut that should be fine because the runtime doesn't care about\nsection tables at all. The table isn't even loaded to memory at runtime.\n",
             "commit_timestamp": 1699014857.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1699056385.240536,
+            "elapsed_time": 161.79638385772705,
+            "x64": false,
+            "actual_files_count": 525,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/rui314/mold",
+            "commit_ref": "4dd5d2f8cb27304b00605c485f8269c8c830345c",
+            "commit_message": "Propagate mergeable sections' sh_entsize and sh_addralign attributes\n\nFor --relocatable output, we need to pass through these attributes\nfor correctness. With this change, we'll have more .rodata sections\nsuch as .rodata.str1.1, rodata.str1.4, etc. in the final executable,\nbut that should be fine because the runtime doesn't care about\nsection tables at all. The table isn't even loaded to memory at runtime.\n",
+            "commit_timestamp": 1699014857.0
         }
     ]
 }
