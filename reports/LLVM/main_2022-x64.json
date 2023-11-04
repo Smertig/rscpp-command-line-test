@@ -11755,6 +11755,22 @@
             "commit_ref": "54574d3272b5d0bb35d82fd8f5941703d91ef087",
             "commit_message": "[AArch64][GlobalISel] Expand handling for fptosi and fptoui (#70635)\n\nNow that we have more types handled for zext/sext and trunc, it is\r\npossible to get more types working for the vector float to integer\r\nconversions. This patch adds fp16, widening and narrowing vector support\r\nto handle more types. The smaller types wil be expanded to the size of\r\nthe larger element type. A couple of case require more awkward truncates\r\nto get working as they go from illegal to illegal types.",
             "commit_timestamp": 1699098425.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1699114541.490275,
+            "elapsed_time": 2812.2161662578583,
+            "x64": true,
+            "actual_files_count": 1707,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "1085b70a94d34a645d97990e1ac213882af5128e",
+            "commit_message": "[DAG] Don't fold (zext (bitop (load x), cst)) -> (bitop (zextload x), (zext cst)) if the zext is free\n\nPrevents an infinite loop if we've been trying to narrow the bitop to a more preferable type\n",
+            "commit_timestamp": 1699111933.0
         }
     ]
 }
