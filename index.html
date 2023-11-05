@@ -141,6 +141,31 @@
           }
         }
 
+        Chart.controllers.lineAlt = Chart.controllers.line.extend({
+          draw: function (ease) {
+            let fillAreas = this.chart.config.options.fillAreas
+            if (fillAreas) {
+              for (const fillArea of fillAreas) {
+                var ctx = this.chart.chart.ctx;
+                var chartArea = this.chart.chartArea;
+
+                var meta = this.chart.getDatasetMeta(0);
+
+                var start = meta.data[fillArea.start]._model.x;
+                var stop = meta.data[fillArea.stop]._model.x;
+
+                ctx.save();
+                ctx.fillStyle = fillArea.color;
+                ctx.fillRect(start, chartArea.top, stop - start, chartArea.bottom - chartArea.top);
+                ctx.restore();
+              }
+            }
+
+            // Perform regular chart draw
+            Chart.controllers.line.prototype.draw.call(this, ease);
+          }
+        });
+
         async function renderAllCharts(dataSets) {
           function renderGraph(parent, reportSet) {
             let hashColor = function(s) {
@@ -158,6 +183,24 @@
               return toDate(duration).toISOString().substring(11, 19)
             }
 
+            let groupByToolVersion = function*(reports) {
+              if (reports.length === 0)
+                return [];
+
+              let lastVersion = reports[0].tool_version;
+              let lastIndex = 0
+              for (let i = 1; i < reports.length; i++) {
+                let report = reports[i];
+                if (report.tool_version !== lastVersion) {
+                  yield { version: lastVersion, start: lastIndex, stop: i }
+                  lastIndex = i
+                  lastVersion = report.tool_version
+                }
+              }
+
+              yield { version: lastVersion, start: lastIndex, stop: reports.length - 1 }
+            }
+
             const canvas = document.createElement('canvas');
             canvas.className = 'report-chart';
             parent.appendChild(canvas);
@@ -168,9 +211,6 @@
               const color = hashColor(reportName).to('hwb')
               color.hwb.w = 30
 
-              const backColor = new Color(color)
-              backColor.alpha = 0.375
-
               datasets.push({
                 label: reportName,
                 data: reports.map(d => ({
@@ -178,7 +218,21 @@
                   y: d.elapsed_time
                 })),
                 borderColor: color.toString(),
-                backgroundColor: backColor.toString(),
+                backgroundColor: '#FFFFFF00', // transparent background
+              })
+            }
+
+            let fillAreas = []
+            for (const range of groupByToolVersion(Object.values(reportSet)[0])) {
+              const color = hashColor(range.version).to('hwb')
+
+              const fillColor = new Color(color)
+              fillColor.alpha = 0.1
+
+              fillAreas.push({
+                color: fillColor.toString(),
+                start: range.start,
+                stop: range.stop
               })
             }
 
@@ -254,10 +308,11 @@
                   window.open(commit_url, '_blank');
                 }
               },
+              fillAreas: fillAreas
             };
 
             new Chart(canvas, {
-              type: 'line',
+              type: 'lineAlt',
               data,
               options,
             });
