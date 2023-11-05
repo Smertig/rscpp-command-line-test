@@ -106,11 +106,17 @@
     <script id="main-script">
       'use strict';
       (async function () {
+        let toDate = function(duration) {
+          return new Date(duration * 1000)
+        }
+
         async function* init() {
+          const startDate = Date.now() - 90 * 24 * 60 * 60 * 1000 // Show only last 90 days
+
           function getStats(entries) {
             const result = entries['v1']
             result.sort((lhs, rhs) => lhs.timestamp - rhs.timestamp)
-            return result
+            return result.filter(d => toDate(d.timestamp) > startDate)
           }
 
           const all_reports = await fetch('reports/all.json').then(resp => resp.json())
@@ -148,10 +154,6 @@
               return new Color("srgb", [clamp(color >> 16), clamp(color >> 8), clamp(color)], 1.0);
             }
 
-            let toDate = function(duration) {
-              return new Date(duration * 1000)
-            }
-
             let formatDuration = function(duration) {
               return toDate(duration).toISOString().substring(11, 19)
             }
@@ -161,8 +163,6 @@
             parent.appendChild(canvas);
 
             const datasets = [];
-            const startDate = Date.now() - 90 * 24 * 60 * 60 * 1000 // Show only last 90 days
-
             for (const [reportName, reports] of Object.entries(reportSet))
             {
               const color = hashColor(reportName).to('hwb')
@@ -173,7 +173,7 @@
 
               datasets.push({
                 label: reportName,
-                data: reports.filter(d => toDate(d.timestamp) > startDate).map(d => ({
+                data: reports.map(d => ({
                   x: toDate(d.timestamp),
                   y: d.elapsed_time
                 })),
