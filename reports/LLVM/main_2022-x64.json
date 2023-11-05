@@ -11835,6 +11835,22 @@
             "commit_ref": "c0a73918bfddc6a04a897aab57fb95e8d2da7ec0",
             "commit_message": "[ItaniumCXXABI] Add -fassume-nothrow-exception-dtor to assume that all exception objects' destructors are non-throwing\n\nLink: https://lists.llvm.org/pipermail/cfe-dev/2021-August/068740.html (\"[Exception Handling] Could we mark __cxa_end_catch as nounwind conditionally?\"\nLink: https://github.com/llvm/llvm-project/issues/57375\n\nA catch handler calls `__cxa_begin_catch` and `__cxa_end_catch`. For a catch-all\nclause or a catch clause matching a record type, we:\n\n* assume that the exception object may have a throwing destructor\n* emit `invoke void @__cxa_end_catch` (as the call is not marked as the `nounwind` attribute).\n* emit a landing pad to destroy local variables and call `_Unwind_Resume`\n\n```\nstruct A { ~A(); };\nstruct B { int x; };\nvoid opaque();\nvoid foo() {\n  A a;\n  try { opaque(); } catch (...) { } // the exception object has an unknown type and may throw\n  try { opaque(); } catch (B b) { } // B::~B is nothrow, but we do not utilize this\n}\n```\n\nPer C++ [dcl.fct.def.coroutine], a coroutine's function body implies a `catch (...)`.\nOur code generation pessimizes even simple code, like:\n```\nUserFacing foo() {\n  A a;\n  opaque();\n  co_return;\n  // For `invoke void @__cxa_end_catch()`, the landing pad destroys the\n  // promise_type and deletes the coro frame.\n}\n```\n\nThrowing destructors are typically discouraged. In many environments, the\ndestructors of exception objects are guaranteed to never throw, making our\nconservative code generation approach seem wasteful.\n\nFurthermore, throwing destructors tend not to work well in practice:\n\n* GCC does not emit call site records for the region containing `__cxa_end_catch`. This has been a long time, since 2000.\n* If a catch-all clause catches an exception object that throws, both GCC and Clang using libstdc++ leak the allocated exception object.\n\nTo avoid code generation pessimization, add an opt-in driver option\n-fassume-nothrow-exception-dtor to assume that `__cxa_end_catch` calls have the\n`nounwind` attribute. This implies that thrown exception objects' destructors\nwill never throw.\n\nTo detect misuses, diagnose throw expressions with a potentially-throwing\ndestructor. Technically, it is possible that a potentially-throwing destructor\nnever throws when called transitively by `__cxa_end_catch`, but these cases seem\nrare enough to justify a relaxed mode.\n\nReviewed By: ChuanqiXu\n\nDifferential Revision: https://reviews.llvm.org/D108905\n",
             "commit_timestamp": 1699169978.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1699186347.991703,
+            "elapsed_time": 1922.2018308639526,
+            "x64": true,
+            "actual_files_count": 1707,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "7c1ad51e018c5a1517ca6fb58a4d7027a8bec64e",
+            "commit_message": "[gn] port c3a302d399e6 (SymbolLocator)\n\nThis isn't referenced from anything yet, so no effect.\n(It's not referenced yet in CMake either from what I can tell.)\n",
+            "commit_timestamp": 1699182848.0
         }
     ]
 }

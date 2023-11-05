@@ -10849,6 +10849,20 @@
             "commit_ref": "81ba804b55b7edea31a95b6b808cb3613563db9a",
             "commit_message": "[HOTPLUG] Trivial fixes (#5887)\n\n- Update files header and copyright information\r\n- Minor code formatting",
             "commit_timestamp": 1699142542.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1699185847.116161,
+            "elapsed_time": 183.78864908218384,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "7f80d5ee79562ae8a7c78f0d0acf32581e69facf",
+            "commit_message": "[CMLIB] Revert previous commit to avoid future merges of other devs\n\nbecause George is having an open Draft PR since July 2022,\nwhich might also touch this file on master in some years.\nAnd it ofc is easier for me to revert my work now, then for him to\ngo through the great lengths of merging his work then.\n",
+            "commit_timestamp": 1699174503.0
         }
     ]
 }
