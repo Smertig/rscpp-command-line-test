@@ -11803,6 +11803,22 @@
             "commit_ref": "ad9147399f196c1c9b6bec373a5ad3afadc51a4a",
             "commit_message": "[InstCombine] Improve eq/ne by parts to handle `ult/ugt` equality pattern.\n\n(icmp eq/ne (lshr x, C), (lshr y, C) gets optimized to `(icmp\nult/uge (xor x, y), (1 << C)`. This can cause the current equal by\nparts detection to miss the high-bits as it may get optimized to the\nnew pattern.\n\nThis commit adds support for detecting / combining the ult/ugt\npattern.\n\nCloses #69884\n",
             "commit_timestamp": 1699142428.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1699157789.472093,
+            "elapsed_time": 2669.299627304077,
+            "x64": true,
+            "actual_files_count": 1707,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "c8bc72dc79eec511d76c741fe6b6334355903dbe",
+            "commit_message": "[mlir][spirv][cf] legalize block arguments when convert cf to spirv (#71288)\n\nWhen converting branches, legalize target block arguments first.\r\n\r\nFixes llvm#70813",
+            "commit_timestamp": 1699156139.0
         }
     ]
 }
