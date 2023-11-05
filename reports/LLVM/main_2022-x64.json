@@ -11867,6 +11867,22 @@
             "commit_ref": "a54545ba6514802178cf7cf1c1dd9f7efbf3cde7",
             "commit_message": "[CMake] Fix __builtin_thread_pointer check with LTO\n\nWith LTO, gcc's IPA passes might drop the foo() function and then the test\nwill pass even on platforms where __builtin_thread_pointer is unavailable.\n\nOn PPC64, we get this as a result:\n```\nllvm/tools/llvm-exegesis/lib/BenchmarkRunner.cpp:361:61: error: \u2018__builtin_thread_pointer\u2019 is not supported on this targ\n```\n\nJust mark the function in the CMake configure test with the 'used' attribute to\navoid it being optimised out. The test then behaves correctly with -flto.\n\nTested with e.g. 'powerpc64le-linux-gnu-gcc -O2 -flto a.c'.\n\nReported-by: matoro\nReviewed-by: maskray\nCloses: https://github.com/llvm/llvm-project/pull/70968\nSigned-off-by: Sam James <sam@gentoo.org>\n",
             "commit_timestamp": 1699196087.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1699215120.841389,
+            "elapsed_time": 1930.7651617527008,
+            "x64": true,
+            "actual_files_count": 1707,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "5d2f9aee662fd83dc3265d75a55f3f4b4d4b79bb",
+            "commit_message": "[RISCV][GISel] Add call preserved regmask to calls created by RISCVCallLowering::lowerCall.\n",
+            "commit_timestamp": 1699213535.0
         }
     ]
 }

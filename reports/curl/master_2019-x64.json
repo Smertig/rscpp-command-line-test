@@ -11059,6 +11059,20 @@
             "commit_ref": "859e88f6533f9e1f890f6f39f34178871c48869e",
             "commit_message": "curl: improved IPFS and IPNS URL support\n\nPreviously just ipfs://<cid> and ipns://<cid> was supported, which is\ntoo strict for some usecases.\n\nThis patch allows paths and query arguments to be used too.\nMaking this work according to normal http semantics:\n\n ipfs://<cid>/foo/bar?key=val\n ipns://<cid>/foo/bar?key=val\n\nThe gateway url support is changed.\nIt now only supports gateways in the form of:\n\n http://<gateway>/foo/bar\n http://<gateway>\n\nQuery arguments here are explicitly not allowed and trigger an intended\nmalformed url error.\n\nThere also was a crash when IPFS_PATH was set with a non trailing\nforward slash. This has been fixed.\n\nLastly, a load of test cases have been added to verify the above.\n\nReported-by: Steven Allen\nFixes #12148\nCloses #12152\n",
             "commit_timestamp": 1699178360.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1699214590.875589,
+            "elapsed_time": 364.43044328689575,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "46878b9e3fd89fc1f2beff04d989129a2fe30731",
+            "commit_message": "HTTP: fix empty-body warning\n\nThis change fixes a compiler warning with gcc-12.2.0 when\n`-DCURL_DISABLE_BEARER_AUTH=ON` is used.\n\n    /home/tox/src/curl/lib/http.c: In function 'Curl_http_input_auth':\n    /home/tox/src/curl/lib/http.c:1147:12: warning: suggest braces around empty body in an 'else' statement [-Wempty-body]\n     1147 |            ;\n          |            ^\n\nCloses #12262\n",
+            "commit_timestamp": 1699202307.0
         }
     ]
 }
