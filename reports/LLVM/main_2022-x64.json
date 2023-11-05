@@ -11851,6 +11851,22 @@
             "commit_ref": "7c1ad51e018c5a1517ca6fb58a4d7027a8bec64e",
             "commit_message": "[gn] port c3a302d399e6 (SymbolLocator)\n\nThis isn't referenced from anything yet, so no effect.\n(It's not referenced yet in CMake either from what I can tell.)\n",
             "commit_timestamp": 1699182848.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1699201034.893,
+            "elapsed_time": 3315.6208169460297,
+            "x64": true,
+            "actual_files_count": 1707,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "a54545ba6514802178cf7cf1c1dd9f7efbf3cde7",
+            "commit_message": "[CMake] Fix __builtin_thread_pointer check with LTO\n\nWith LTO, gcc's IPA passes might drop the foo() function and then the test\nwill pass even on platforms where __builtin_thread_pointer is unavailable.\n\nOn PPC64, we get this as a result:\n```\nllvm/tools/llvm-exegesis/lib/BenchmarkRunner.cpp:361:61: error: \u2018__builtin_thread_pointer\u2019 is not supported on this targ\n```\n\nJust mark the function in the CMake configure test with the 'used' attribute to\navoid it being optimised out. The test then behaves correctly with -flto.\n\nTested with e.g. 'powerpc64le-linux-gnu-gcc -O2 -flto a.c'.\n\nReported-by: matoro\nReviewed-by: maskray\nCloses: https://github.com/llvm/llvm-project/pull/70968\nSigned-off-by: Sam James <sam@gentoo.org>\n",
+            "commit_timestamp": 1699196087.0
         }
     ]
 }

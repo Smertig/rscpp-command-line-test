@@ -10863,6 +10863,20 @@
             "commit_ref": "7f80d5ee79562ae8a7c78f0d0acf32581e69facf",
             "commit_message": "[CMLIB] Revert previous commit to avoid future merges of other devs\n\nbecause George is having an open Draft PR since July 2022,\nwhich might also touch this file on master in some years.\nAnd it ofc is easier for me to revert my work now, then for him to\ngo through the great lengths of merging his work then.\n",
             "commit_timestamp": 1699174503.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1699200218.458645,
+            "elapsed_time": 222.02077436447144,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "0ae6a509b0057d91c7ac67149025a1dd3ecc5d30",
+            "commit_message": "[SHLWAPI][SDK] Implement IContextMenu_Invoke (#5856)\n\n- Modify shlwapi.spec.\r\n- Add dll/win32/shlwapi/utils.cpp.\r\n- Implement IContextMenu_Invoke function.\r\n- Add it to <shlwapi_undoc.h>.\r\nCORE-19278",
+            "commit_timestamp": 1699188308.0
         }
     ]
 }
