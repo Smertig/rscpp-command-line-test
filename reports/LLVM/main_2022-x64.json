@@ -11787,6 +11787,22 @@
             "commit_ref": "bf87638a9d2771a75f59aa40296368cdec3e7353",
             "commit_message": "[gn] port 3fe69bab1149 (all archs in llvm-config.h :/)\n",
             "commit_timestamp": 1699126048.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1699143415.10046,
+            "elapsed_time": 2539.700247526169,
+            "x64": true,
+            "actual_files_count": 1707,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "ad9147399f196c1c9b6bec373a5ad3afadc51a4a",
+            "commit_message": "[InstCombine] Improve eq/ne by parts to handle `ult/ugt` equality pattern.\n\n(icmp eq/ne (lshr x, C), (lshr y, C) gets optimized to `(icmp\nult/uge (xor x, y), (1 << C)`. This can cause the current equal by\nparts detection to miss the high-bits as it may get optimized to the\nnew pattern.\n\nThis commit adds support for detecting / combining the ult/ugt\npattern.\n\nCloses #69884\n",
+            "commit_timestamp": 1699142428.0
         }
     ]
 }
