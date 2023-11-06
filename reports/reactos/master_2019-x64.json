@@ -10933,6 +10933,20 @@
             "commit_ref": "561ad3c1d6ab4d5f617e54e03a3e9f0feb46cc70",
             "commit_message": "[ADVAPI32] Mute frequent taskmgr logspam CORE-18521 (#5888)\n\n\r\nGeorge explained that this is supposed to fail like that,\r\naka \"works as designed\". So let's at least mute this now,\r\nas it is spammed with every taskmgr refresh cycle\r\nand allows me to reduce logfile-sizes from ~50MB back to ~2MB\r\nwhen building ros on ros.\r\n\r\nerr:(dll/win32/advapi32/wine/security.c:309) NtOpenProcessToken failed! Status c0000022.\r\n\r\nFixes CORE-18521\r\n\r\nAlso strip some EOL-whitespace in the file, and slightly improve the header.\r\n",
             "commit_timestamp": 1699205533.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1699272276.210728,
+            "elapsed_time": 132.41498589515686,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "561ad3c1d6ab4d5f617e54e03a3e9f0feb46cc70",
+            "commit_message": "[ADVAPI32] Mute frequent taskmgr logspam CORE-18521 (#5888)\n\n\r\nGeorge explained that this is supposed to fail like that,\r\naka \"works as designed\". So let's at least mute this now,\r\nas it is spammed with every taskmgr refresh cycle\r\nand allows me to reduce logfile-sizes from ~50MB back to ~2MB\r\nwhen building ros on ros.\r\n\r\nerr:(dll/win32/advapi32/wine/security.c:309) NtOpenProcessToken failed! Status c0000022.\r\n\r\nFixes CORE-18521\r\n\r\nAlso strip some EOL-whitespace in the file, and slightly improve the header.\r\n",
+            "commit_timestamp": 1699205533.0
         }
     ]
 }
