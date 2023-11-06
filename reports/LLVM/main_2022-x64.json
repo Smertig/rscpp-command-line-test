@@ -11899,6 +11899,22 @@
             "commit_ref": "c5ecf5a130f087f493802800f3565c7bb75c238a",
             "commit_message": "Fix compression header size check in ELF writer (#66888)\n\nThe test had 32-bit and 64-bit header sizes the wrong way around.",
             "commit_timestamp": 1699227200.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1699244005.914546,
+            "elapsed_time": 1956.8066084384918,
+            "x64": true,
+            "actual_files_count": 1707,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "267a437920904723360cb2837172bd776db73057",
+            "commit_message": "[Clang][Sema] Skip RecordDecl when checking scope of declarations (#69432)\n\nIn non C++ mode, struct definitions does not create a scope for\r\ndeclaration.",
+            "commit_timestamp": 1699242891.0
         }
     ]
 }
