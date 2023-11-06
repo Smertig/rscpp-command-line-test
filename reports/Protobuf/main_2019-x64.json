@@ -12113,6 +12113,20 @@
             "commit_ref": "d580fde63aa8ea5c6f4619396e68aaf017fc9d61",
             "commit_message": "Add Automatic-Module-Name (#14562)\n\nAdds Automatic-Module-Name after it was lost during the maven-bazel migration (and subsequent re-addition of osgi bundle support).\n\nUpdates OsgiWrapper to support adding the Automatic-Module-Name header to the list of properties supported by the `osgi_java_library` rule.\n\nFixes #12639\n\nCloses #14562\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/14562 from Sineaggi:add-automatic-module-name a27b3e6695acb4f1f253422fd2d324bb1b3f6669\nPiperOrigin-RevId: 579748655\n",
             "commit_timestamp": 1699259290.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1699286607.69898,
+            "elapsed_time": 284.6026146411896,
+            "x64": false,
+            "actual_files_count": 853,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "08ec050c44c3ffe3074f0e14a4a47095d14dd855",
+            "commit_message": "Delete obsolete function.\n\n`WeakRepeatedPtrField::AddWeak` is not used anywhere, hence deleting it and related code in `RepeatedPtrField`.\n\nPiperOrigin-RevId: 579830701\n",
+            "commit_timestamp": 1699282866.0
         }
     ]
 }

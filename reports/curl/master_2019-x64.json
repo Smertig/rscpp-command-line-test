@@ -11129,6 +11129,20 @@
             "commit_ref": "2b16b86bb6a70c88b727a8299cfe0a2fc6c3dba5",
             "commit_message": "VULN-DISCLOSURE-POLICY: escape sequences are not a security flaw\n\nCloses #12278\n",
             "commit_timestamp": 1699271460.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1699286629.349731,
+            "elapsed_time": 365.8520436286926,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "ba281e5c7251d92615dcfdac5e6da1da51bb77c6",
+            "commit_message": "tool_operate: do not mix memory models\n\nMake sure 'inputpath' only points to memory allocated by libcurl so that\ncurl_free works correctly.\n\nPointed out by Coverity\n\nFollow-up to 859e88f6533f9e1f890\n\nCloses #12280\n",
+            "commit_timestamp": 1699277393.0
         }
     ]
 }
