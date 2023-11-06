@@ -11963,6 +11963,22 @@
             "commit_ref": "5fc69134a15a436e69c5b1db26f0a91c1deb3acb",
             "commit_message": "[flang] Match argument types for std::min (#71102)\n\nPR #68342 causes build breakage on MacOS due to uint64_t being defined\r\nas unsigned long long instead of unsigned long. It leads to type\r\nmismatch in the arguments for std::min.",
             "commit_timestamp": 1699286539.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1699301542.68222,
+            "elapsed_time": 1978.6965947151184,
+            "x64": true,
+            "actual_files_count": 1707,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "f2d8a0ac1dd1fe55b2c3b358c525fbc01b0121ed",
+            "commit_message": "[clang][NFC] Refactor `ParamCommandComment::PassDirection`\n\nThis patch converts `ParamCommandComment::PassDirection` to a scoped enum at namespace scope, making it eligible for forward declaring. This is useful for e.g. annotating bit-fields with `preferred_type`.\n",
+            "commit_timestamp": 1699300551.0
         }
     ]
 }

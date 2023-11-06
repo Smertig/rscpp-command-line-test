@@ -11143,6 +11143,20 @@
             "commit_ref": "ba281e5c7251d92615dcfdac5e6da1da51bb77c6",
             "commit_message": "tool_operate: do not mix memory models\n\nMake sure 'inputpath' only points to memory allocated by libcurl so that\ncurl_free works correctly.\n\nPointed out by Coverity\n\nFollow-up to 859e88f6533f9e1f890\n\nCloses #12280\n",
             "commit_timestamp": 1699277393.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1699301057.468578,
+            "elapsed_time": 372.3257088661194,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "60359ad5049c42f333ac179a58cda87d6e4143a0",
+            "commit_message": "build: delete `HAVE_STDINT_H` and `HAVE_INTTYPES_H`\n\nWe use `stdint.h` unconditionally in all places except one. These uses\nare imposed by external dependencies / features. nghttp2, quic, wolfSSL\nand `HAVE_MACH_ABSOLUTE_TIME` do require this C99 header. It means that\nany of these features make curl require a C99 compiler. (In case of\nMSVC, this means Visual Studio 2010 or newer.)\n\nThis patch changes the single use of `stdint.h` guarded by\n`HAVE_STDINT_H` to use `stdint.h` unconditionally. Also stop using\n`inttypes.h` as an alternative there. `HAVE_INTTYPES_H` wasn't used\nanywhere else, allowing to delete this feature check as well.\n\nCloses #12275\n",
+            "commit_timestamp": 1699291239.0
         }
     ]
 }

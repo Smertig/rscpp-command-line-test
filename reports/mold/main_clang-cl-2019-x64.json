@@ -8707,6 +8707,20 @@
             "commit_ref": "31c3b5397b91ea058dbd9e773e2a2c397f17558e",
             "commit_message": "[POWER10] Emit dynamic relocation for ifunc\n\nPreviously, we didn't emit a dynamic relocation for a statically-\ninitialized function pointer pointing to an ifunc on POWER10, e.g.\n\n  int fn() __attribute__((ifunc(\"resolve_fn\")));\n  void *ptr = fn;\n\nFixes https://github.com/rui314/mold/issues/1142\n",
             "commit_timestamp": 1699244825.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1699300981.365869,
+            "elapsed_time": 129.6826572418213,
+            "x64": false,
+            "actual_files_count": 525,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/rui314/mold",
+            "commit_ref": "31c3b5397b91ea058dbd9e773e2a2c397f17558e",
+            "commit_message": "[POWER10] Emit dynamic relocation for ifunc\n\nPreviously, we didn't emit a dynamic relocation for a statically-\ninitialized function pointer pointing to an ifunc on POWER10, e.g.\n\n  int fn() __attribute__((ifunc(\"resolve_fn\")));\n  void *ptr = fn;\n\nFixes https://github.com/rui314/mold/issues/1142\n",
+            "commit_timestamp": 1699244825.0
         }
     ]
 }

@@ -12127,6 +12127,20 @@
             "commit_ref": "08ec050c44c3ffe3074f0e14a4a47095d14dd855",
             "commit_message": "Delete obsolete function.\n\n`WeakRepeatedPtrField::AddWeak` is not used anywhere, hence deleting it and related code in `RepeatedPtrField`.\n\nPiperOrigin-RevId: 579830701\n",
             "commit_timestamp": 1699282866.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1699301110.625483,
+            "elapsed_time": 437.9786012172699,
+            "x64": false,
+            "actual_files_count": 853,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "349122f777a3d6029e9a189729720b0842072a71",
+            "commit_message": "Move the declarations in SerialArena to more closely match the style guide.\n\nRoughly, this means: types, static constants, constructors, other functions, data members.\n\nAlso, remove a redundant `private:`.\n\nPiperOrigin-RevId: 579911543\n",
+            "commit_timestamp": 1699300227.0
         }
     ]
 }
