@@ -11073,6 +11073,20 @@
             "commit_ref": "46878b9e3fd89fc1f2beff04d989129a2fe30731",
             "commit_message": "HTTP: fix empty-body warning\n\nThis change fixes a compiler warning with gcc-12.2.0 when\n`-DCURL_DISABLE_BEARER_AUTH=ON` is used.\n\n    /home/tox/src/curl/lib/http.c: In function 'Curl_http_input_auth':\n    /home/tox/src/curl/lib/http.c:1147:12: warning: suggest braces around empty body in an 'else' statement [-Wempty-body]\n     1147 |            ;\n          |            ^\n\nCloses #12262\n",
             "commit_timestamp": 1699202307.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1699229080.97568,
+            "elapsed_time": 299.7119331359863,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "1e4f5a4a745bd1b4018889f88e0ba7c1935992d5",
+            "commit_message": "RELEASE-NOTES: synced\n",
+            "commit_timestamp": 1699223325.0
         }
     ]
 }
