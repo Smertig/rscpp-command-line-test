@@ -8399,6 +8399,20 @@
             "commit_ref": "a077b2fbb88f5192bb47e514334f760bf08d0295",
             "commit_message": "gh-111765: Move old PyFloat_* tests to Lib/test/test_capi/test_float.py  (GH-111766)\n\n",
             "commit_timestamp": 1699357258.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1699373153.278729,
+            "elapsed_time": 1215.861116886139,
+            "x64": true,
+            "actual_files_count": 980,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "f55cb44359821e71c29903f2152b4658509dac0d",
+            "commit_message": "gh-106672: C API: Report indiscriminately ignored errors (GH-106674)\n\nFunctions which indiscriminately ignore all errors now report them as\r\nunraisable errors.\r\n",
+            "commit_timestamp": 1699365484.0
         }
     ]
 }

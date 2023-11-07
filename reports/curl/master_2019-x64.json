@@ -11213,6 +11213,20 @@
             "commit_ref": "36662c38604c80e27f2528dfc3973abf7127f201",
             "commit_message": "vtls: use ALPN \"http/1.1\" for HTTP/1.x, including HTTP/1.0\n\nSome servers don't support the ALPN protocol \"http/1.0\" (e.g. IIS 10),\navoid it and use \"http/1.1\" instead.\n\nThis reverts commit df856cb5c9 (#10183).\n\nFixes #12259\nCloses #12285\n",
             "commit_timestamp": 1699353830.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1699373002.398896,
+            "elapsed_time": 359.1540026664734,
+            "x64": false,
+            "actual_files_count": 2768,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "82ba603da44b9f066d07a074b3e73b08d0ce98b0",
+            "commit_message": "content_encoding: make Curl_all_content_encodings allocless\n\n- Fixes a memory leak pointed out by Coverity\n- Also found by OSS-Fuzz: https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=63947\n- Avoids unncessary allocations\n\nFollow-up ad051e1cbec68b2456a22661b\n\nCloses #12289\n",
+            "commit_timestamp": 1699371330.0
         }
     ]
 }

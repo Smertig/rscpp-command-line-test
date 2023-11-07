@@ -11373,6 +11373,20 @@
             "commit_ref": "30549d65c24e25c4041a01aa1658df63cb3bb265",
             "commit_message": "Merge pull request #24456 from alexlyulkov:al/aar\n\nAdded scripts for creating an AAR package and a local Maven repository with OpenCV library #24456\r\n\r\nAdded scripts for creating an AAR package and a local Maven repository with OpenCV library.\r\n\r\nThe build_java_shared_aar.py script creates AAR with Java + C++ shared libraries.\r\nThe build_static_aar.py script creates AAR with static C++ libraries.\r\n\r\nThe scripts use an Android project template. The project is almost a default Android AAR library project with empty Java code and one empty C++ library. Only build.gradle.template and CMakeLists.txt.template files contain significant changes.\r\n\r\nSee README.md for more information.",
             "commit_timestamp": 1699356213.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1699373133.27039,
+            "elapsed_time": 659.7206044197083,
+            "x64": false,
+            "actual_files_count": 467,
+            "expected_files_count": 459,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "6079e225237eeed344953bf375b75ac62902046d",
+            "commit_message": "Merge pull request #24500 from fengyuentau:test_layer_fusion\n\ndnn (onnx): add subgraph fusion tests #24500\r\n\r\n### Pull Request Readiness Checklist\r\n\r\nSee details at https://github.com/opencv/opencv/wiki/How_to_contribute#making-a-good-pull-request\r\n\r\n- [x] I agree to contribute to the project under Apache 2 License.\r\n- [x] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\r\n- [x] The PR is proposed to the proper branch\r\n- [x] There is a reference to the original bug report and related work\r\n- [x] There is accuracy test, performance test and test data in opencv_extra repository, if applicable\r\n      Patch to opencv_extra has the same branch name.\r\n- [x] The feature is well documented and sample code can be built with the project CMake\r\n",
+            "commit_timestamp": 1699368031.0
         }
     ]
 }
