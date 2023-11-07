@@ -11995,6 +11995,22 @@
             "commit_ref": "3c356eef31ab309466c198de3915037b068d8861",
             "commit_message": "[flang][openacc] Support variable from equivalence in data clauses (#71434)\n\nThe value for a var in an equivalence is represented by a `fir.ptr`.\r\nSupport this type in the recipe creation.",
             "commit_timestamp": 1699314580.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1699330314.924718,
+            "elapsed_time": 1975.115065574646,
+            "x64": true,
+            "actual_files_count": 1707,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "23099ac23983194e82d574b6bf53da14c57ae84d",
+            "commit_message": "Add known and demanded bits support for zext nneg (#70858)\n\nzext nneg was recently added to the IR in #67982.   This patch teaches\r\ndemanded bits and known bits about the semantics of the instruction, and\r\nadds a couple of test cases to illustrate basic functionality.",
+            "commit_timestamp": 1699325276.0
         }
     ]
 }

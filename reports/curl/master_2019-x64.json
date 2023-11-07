@@ -11171,6 +11171,20 @@
             "commit_ref": "fd7ef00f4305a2919e6950def1cf83d0110a4acd",
             "commit_message": "build: delete support bits for obsolete Windows compilers\n\n- Pelles C: Unclear status, failed to obtain a fresh copy a few months\n  ago. Possible website is HTTP-only. ~10 years ago I left this compiler\n  dealing with crashes and other issues with no response on the forum\n  for years. It has seen some activity in curl back in 2021.\n- LCC: Last stable release in September 2002.\n- Salford C: Misses winsock2 support, possibly abandoned? Last mentioned\n  in 2006.\n- Borland C++: We dropped Borland C++ support in 2018.\n- MS Visual C++ 6.0: Released in 1998. curl already requires VS 2010\n  (or possibly 2008) as a minimum.\n\nCloses #12222\n",
             "commit_timestamp": 1699308010.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1699329769.944041,
+            "elapsed_time": 200.03139352798462,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "fd7ef00f4305a2919e6950def1cf83d0110a4acd",
+            "commit_message": "build: delete support bits for obsolete Windows compilers\n\n- Pelles C: Unclear status, failed to obtain a fresh copy a few months\n  ago. Possible website is HTTP-only. ~10 years ago I left this compiler\n  dealing with crashes and other issues with no response on the forum\n  for years. It has seen some activity in curl back in 2021.\n- LCC: Last stable release in September 2002.\n- Salford C: Misses winsock2 support, possibly abandoned? Last mentioned\n  in 2006.\n- Borland C++: We dropped Borland C++ support in 2018.\n- MS Visual C++ 6.0: Released in 1998. curl already requires VS 2010\n  (or possibly 2008) as a minimum.\n\nCloses #12222\n",
+            "commit_timestamp": 1699308010.0
         }
     ]
 }
