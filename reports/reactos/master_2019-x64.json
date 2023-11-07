@@ -11003,6 +11003,20 @@
             "commit_ref": "0177b1af45ee8b2161cab9bed18984eae110a551",
             "commit_message": "[NETCFGX] *.rc 640x480-ify IDD_TCPIP_BASIC_DLG and IDD_TCPIP_ALTCF_DLG (#5902)\n\nBoth dialogs can easily fit 640x480, like their twins from XPSP3 and 2k3sp2\r\n\r\nFor IDD_TCPIP_BASIC_DLG we can achieve that by just shrinking the upper groupbox in height by 10 units, and then move all controls below that by 10 units upwards. That doesn't require much brain, only diligence.\r\n\r\nFor IDD_TCPIP_ALTCF_DLG it is even easier, because the dlgs contents are small enough yet to still fit 640x480, so only the dlg itself must be shrinked for now. Later if more stuff will be added, we can perform pretty easy still by just moving everything a bit upwards. But we can leave that for later.\r\n\r\nFix a common typo in a 3rd dlg regarding a missing space before \"(in order)\". I decided to put that into this PR, because I didn't touch that dlgs dimensions yet. So the change is not mixed with position changes and therefore the review remains simple.\r\n\r\nFor ja-JP.rc fix a\r\n-FONT 8, \"MS Shell Dlg\"\r\nto\r\n+FONT 9, \"MS UI Gothic\"",
             "commit_timestamp": 1699327021.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1699344228.648715,
+            "elapsed_time": 125.40760827064514,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "0177b1af45ee8b2161cab9bed18984eae110a551",
+            "commit_message": "[NETCFGX] *.rc 640x480-ify IDD_TCPIP_BASIC_DLG and IDD_TCPIP_ALTCF_DLG (#5902)\n\nBoth dialogs can easily fit 640x480, like their twins from XPSP3 and 2k3sp2\r\n\r\nFor IDD_TCPIP_BASIC_DLG we can achieve that by just shrinking the upper groupbox in height by 10 units, and then move all controls below that by 10 units upwards. That doesn't require much brain, only diligence.\r\n\r\nFor IDD_TCPIP_ALTCF_DLG it is even easier, because the dlgs contents are small enough yet to still fit 640x480, so only the dlg itself must be shrinked for now. Later if more stuff will be added, we can perform pretty easy still by just moving everything a bit upwards. But we can leave that for later.\r\n\r\nFix a common typo in a 3rd dlg regarding a missing space before \"(in order)\". I decided to put that into this PR, because I didn't touch that dlgs dimensions yet. So the change is not mixed with position changes and therefore the review remains simple.\r\n\r\nFor ja-JP.rc fix a\r\n-FONT 8, \"MS Shell Dlg\"\r\nto\r\n+FONT 9, \"MS UI Gothic\"",
+            "commit_timestamp": 1699327021.0
         }
     ]
 }

@@ -12011,6 +12011,22 @@
             "commit_ref": "23099ac23983194e82d574b6bf53da14c57ae84d",
             "commit_message": "Add known and demanded bits support for zext nneg (#70858)\n\nzext nneg was recently added to the IR in #67982.   This patch teaches\r\ndemanded bits and known bits about the semantics of the instruction, and\r\nadds a couple of test cases to illustrate basic functionality.",
             "commit_timestamp": 1699325276.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1699344742.439621,
+            "elapsed_time": 1957.3137214183807,
+            "x64": true,
+            "actual_files_count": 1707,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "4d9f3ca77cb9deff1d5652e161acf3b1be069509",
+            "commit_message": "[HWASAN] Add memset interceptor (#71244)\n\nCo-authored-by: Vitaly Buka <vitalybuka@google.com>",
+            "commit_timestamp": 1699344064.0
         }
     ]
 }
