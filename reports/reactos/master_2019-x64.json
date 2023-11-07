@@ -10975,6 +10975,20 @@
             "commit_ref": "561ad3c1d6ab4d5f617e54e03a3e9f0feb46cc70",
             "commit_message": "[ADVAPI32] Mute frequent taskmgr logspam CORE-18521 (#5888)\n\n\r\nGeorge explained that this is supposed to fail like that,\r\naka \"works as designed\". So let's at least mute this now,\r\nas it is spammed with every taskmgr refresh cycle\r\nand allows me to reduce logfile-sizes from ~50MB back to ~2MB\r\nwhen building ros on ros.\r\n\r\nerr:(dll/win32/advapi32/wine/security.c:309) NtOpenProcessToken failed! Status c0000022.\r\n\r\nFixes CORE-18521\r\n\r\nAlso strip some EOL-whitespace in the file, and slightly improve the header.\r\n",
             "commit_timestamp": 1699205533.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1699315464.499111,
+            "elapsed_time": 121.65351009368896,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "55563fa891475a70026b97b48258175907d797f2",
+            "commit_message": "[NETSHELL] IDD_NETPROPERTIES must fit 640x480 CORE-19284 (#5899)\n\n\r\n- adds 3 missing accelerators for zh-CN.rc, zh-HK.rc, zh-TW.rc for IDC_SHOWTASKBAR\r\n- shrinks the dialog in y to fit on a 640x480 screen, like the XPSP3 and 2k3sp2 dlgs do\r\n- for that some controls positions have to be slightly moved up (which cannot lead to text truncation here, guaranteed)\r\n- only 3 controls change in size:\r\n  - IDC_COMPONENTSLIST gets 3 units smaller in height, but is still larger than in XPSP3/2k3sp2. So it is still large enough\r\n  - IDC_NETCARDNAME shrinks a bit in width, but is still larger than in XPSP3/2k3sp2, so what fits there will also fit for us\r\n  - pushbutton IDC_CONFIGURE is slightly increased in width for all languages because that looks better\r\n     except ru-RU.rc (which had the largest width) it is slightly smaller now, but still large enough.\r\n     We can use the same width here now for all rcs!\r\n\r\n- strip the lorem ipsum text from IDC_DESCRIPTION, which is never supposed to be displayed. That syncs all rcs in that line and slightly shrinks the binary size and fixes CORE-19284.\r\n\r\n- add a FIXME comment for a missing accelerator in sv-SE.rc\r\n\r\n*as a consequence all rcs do now use the exact same positions and sizes for all controls again, YIPPIE!*\r\nThe only exception that the dlg had before from that rule, was the ru-RU.rc IDC_CONFIGURE was larger in x.\r\nBut now that is not needed anymore.",
+            "commit_timestamp": 1699313497.0
         }
     ]
 }

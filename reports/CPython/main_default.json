@@ -8343,6 +8343,20 @@
             "commit_ref": "d4426e8d001cfb4590911e2e7de6963e12529faf",
             "commit_message": "gh-76785: Move _Py_excinfo Functions Out of the Internal C-API (gh-111715)\n\nI added _Py_excinfo to the internal API (and added its functions in Python/errors.c) in gh-111530 (9322ce9).  Since then I've had a nagging sense that I should have added the type and functions in its own PR.  While I do plan on using _Py_excinfo outside crossinterp.c very soon (see gh-111572/gh-111573), I'd still feel more comfortable if the _Py_excinfo stuff went in as its own PR.  Hence, here we are.\r\n\r\n(FWIW, I may combine that with gh-111572, which I may, in turn, combine with gh-111573.  We'll see.)",
             "commit_timestamp": 1699294162.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1699315765.353988,
+            "elapsed_time": 1907.8229067325592,
+            "x64": true,
+            "actual_files_count": 980,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "d4426e8d001cfb4590911e2e7de6963e12529faf",
+            "commit_message": "gh-76785: Move _Py_excinfo Functions Out of the Internal C-API (gh-111715)\n\nI added _Py_excinfo to the internal API (and added its functions in Python/errors.c) in gh-111530 (9322ce9).  Since then I've had a nagging sense that I should have added the type and functions in its own PR.  While I do plan on using _Py_excinfo outside crossinterp.c very soon (see gh-111572/gh-111573), I'd still feel more comfortable if the _Py_excinfo stuff went in as its own PR.  Hence, here we are.\r\n\r\n(FWIW, I may combine that with gh-111572, which I may, in turn, combine with gh-111573.  We'll see.)",
+            "commit_timestamp": 1699294162.0
         }
     ]
 }

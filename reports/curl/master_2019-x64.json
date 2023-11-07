@@ -11157,6 +11157,20 @@
             "commit_ref": "60359ad5049c42f333ac179a58cda87d6e4143a0",
             "commit_message": "build: delete `HAVE_STDINT_H` and `HAVE_INTTYPES_H`\n\nWe use `stdint.h` unconditionally in all places except one. These uses\nare imposed by external dependencies / features. nghttp2, quic, wolfSSL\nand `HAVE_MACH_ABSOLUTE_TIME` do require this C99 header. It means that\nany of these features make curl require a C99 compiler. (In case of\nMSVC, this means Visual Studio 2010 or newer.)\n\nThis patch changes the single use of `stdint.h` guarded by\n`HAVE_STDINT_H` to use `stdint.h` unconditionally. Also stop using\n`inttypes.h` as an alternative there. `HAVE_INTTYPES_H` wasn't used\nanywhere else, allowing to delete this feature check as well.\n\nCloses #12275\n",
             "commit_timestamp": 1699291239.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1699315530.636849,
+            "elapsed_time": 222.73349595069885,
+            "x64": false,
+            "actual_files_count": 2764,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "fd7ef00f4305a2919e6950def1cf83d0110a4acd",
+            "commit_message": "build: delete support bits for obsolete Windows compilers\n\n- Pelles C: Unclear status, failed to obtain a fresh copy a few months\n  ago. Possible website is HTTP-only. ~10 years ago I left this compiler\n  dealing with crashes and other issues with no response on the forum\n  for years. It has seen some activity in curl back in 2021.\n- LCC: Last stable release in September 2002.\n- Salford C: Misses winsock2 support, possibly abandoned? Last mentioned\n  in 2006.\n- Borland C++: We dropped Borland C++ support in 2018.\n- MS Visual C++ 6.0: Released in 1998. curl already requires VS 2010\n  (or possibly 2008) as a minimum.\n\nCloses #12222\n",
+            "commit_timestamp": 1699308010.0
         }
     ]
 }

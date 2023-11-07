@@ -11979,6 +11979,22 @@
             "commit_ref": "f2d8a0ac1dd1fe55b2c3b358c525fbc01b0121ed",
             "commit_message": "[clang][NFC] Refactor `ParamCommandComment::PassDirection`\n\nThis patch converts `ParamCommandComment::PassDirection` to a scoped enum at namespace scope, making it eligible for forward declaring. This is useful for e.g. annotating bit-fields with `preferred_type`.\n",
             "commit_timestamp": 1699300551.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1699316248.481528,
+            "elapsed_time": 2967.1766917705536,
+            "x64": true,
+            "actual_files_count": 1707,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "3c356eef31ab309466c198de3915037b068d8861",
+            "commit_message": "[flang][openacc] Support variable from equivalence in data clauses (#71434)\n\nThe value for a var in an equivalence is represented by a `fir.ptr`.\r\nSupport this type in the recipe creation.",
+            "commit_timestamp": 1699314580.0
         }
     ]
 }
