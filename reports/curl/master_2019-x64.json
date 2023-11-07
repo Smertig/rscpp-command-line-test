@@ -11199,6 +11199,20 @@
             "commit_ref": "01d9b8bc7ceb56dc1169b6f232dd7aea784145d6",
             "commit_message": "curl: move IPFS code into src/tool_ipfs.[ch]\n\n- convert ensure_trailing into ensure_trailing_slash\n- strdup the URL string to own it proper\n- use shorter variable names\n- combine some expressions\n- simplify error handling in ipfs_gateway()\n- add MAX_GATEWAY_URL_LEN + proper bailout if maximum is reached\n- ipfs-gateway.d polish and simplification\n- shorten ipfs error message + make them \"synthetic\"\n\nCloses #12281\n",
             "commit_timestamp": 1699339348.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1699358637.897767,
+            "elapsed_time": 426.2152659893036,
+            "x64": false,
+            "actual_files_count": 2768,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "36662c38604c80e27f2528dfc3973abf7127f201",
+            "commit_message": "vtls: use ALPN \"http/1.1\" for HTTP/1.x, including HTTP/1.0\n\nSome servers don't support the ALPN protocol \"http/1.0\" (e.g. IIS 10),\navoid it and use \"http/1.1\" instead.\n\nThis reverts commit df856cb5c9 (#10183).\n\nFixes #12259\nCloses #12285\n",
+            "commit_timestamp": 1699353830.0
         }
     ]
 }
