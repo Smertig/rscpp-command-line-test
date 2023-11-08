@@ -12123,6 +12123,22 @@
             "commit_ref": "24b11ba24da3e65f718391ccc85d4d22a081e893",
             "commit_message": "[RISCV][GISel] Use default lowering for G_DYN_STACKALLOC.\n",
             "commit_timestamp": 1699430367.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1699445615.834735,
+            "elapsed_time": 1945.5592589378357,
+            "x64": true,
+            "actual_files_count": 1710,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "ee03dc1836348420221f8830cae9868d3a51484c",
+            "commit_message": "Revert \"[clangd] Allow hover over 128-bit variable without crashing (#71415)\"\n\nThis reverts commit 2626916c45f428226052f5e431e510743aba9e75.\n\nIt failed on buildbots not supporting __int128_t.\n",
+            "commit_timestamp": 1699444586.0
         }
     ]
 }

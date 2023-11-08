@@ -11283,6 +11283,20 @@
             "commit_ref": "82ba603da44b9f066d07a074b3e73b08d0ce98b0",
             "commit_message": "content_encoding: make Curl_all_content_encodings allocless\n\n- Fixes a memory leak pointed out by Coverity\n- Also found by OSS-Fuzz: https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=63947\n- Avoids unncessary allocations\n\nFollow-up ad051e1cbec68b2456a22661b\n\nCloses #12289\n",
             "commit_timestamp": 1699371330.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1699445022.735812,
+            "elapsed_time": 222.0593068599701,
+            "x64": false,
+            "actual_files_count": 2768,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "6d558cbfd03ad70b365ad322676c76ec47d18619",
+            "commit_message": "resolve.d: drop a multi use-sentence\n\nSince the `multi:` keyword adds that message.\n\nReported-by: \u7a4d\u4e39\u5c3c Dan Jacobson\nFixes https://github.com/curl/curl/discussions/12294\nCloses #12295\n",
+            "commit_timestamp": 1699443624.0
         }
     ]
 }

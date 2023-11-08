@@ -12267,6 +12267,20 @@
             "commit_ref": "15eccf3ec4636cab20a16b7570d3967d79ecfa95",
             "commit_message": "Implement Editions in Pure Python.\n\nThis change only covers pure python, and follow-up changes will handle C++/upb variants and actually enable editions support.  The C++ one works (as evident from the conformance tests), but needs some APIs added to allow for testing.\n\nPiperOrigin-RevId: 580304039\n",
             "commit_timestamp": 1699396826.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1699445061.120632,
+            "elapsed_time": 298.2302813529968,
+            "x64": false,
+            "actual_files_count": 854,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "90aa298406fa8333be23924195fe2e92c137bb08",
+            "commit_message": "Migrate upb.rs to googletest\n\nPiperOrigin-RevId: 580469265\n",
+            "commit_timestamp": 1699442034.0
         }
     ]
 }
