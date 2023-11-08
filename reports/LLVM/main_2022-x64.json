@@ -12139,6 +12139,22 @@
             "commit_ref": "ee03dc1836348420221f8830cae9868d3a51484c",
             "commit_message": "Revert \"[clangd] Allow hover over 128-bit variable without crashing (#71415)\"\n\nThis reverts commit 2626916c45f428226052f5e431e510743aba9e75.\n\nIt failed on buildbots not supporting __int128_t.\n",
             "commit_timestamp": 1699444586.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1699460292.094702,
+            "elapsed_time": 3534.7212512493134,
+            "x64": true,
+            "actual_files_count": 1710,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "2c61f9cab51b4e358e4c86343cbcfa6ffa8504a2",
+            "commit_message": "[CVP] Fix use after scope\n\nStore the result of ConstantRange::sdiv() in a variable, as\ngetSingleElement() will return a pointer to the APInt it contains.\n",
+            "commit_timestamp": 1699458827.0
         }
     ]
 }
