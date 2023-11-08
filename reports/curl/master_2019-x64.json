@@ -11255,6 +11255,20 @@
             "commit_ref": "82ba603da44b9f066d07a074b3e73b08d0ce98b0",
             "commit_message": "content_encoding: make Curl_all_content_encodings allocless\n\n- Fixes a memory leak pointed out by Coverity\n- Also found by OSS-Fuzz: https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=63947\n- Avoids unncessary allocations\n\nFollow-up ad051e1cbec68b2456a22661b\n\nCloses #12289\n",
             "commit_timestamp": 1699371330.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1699416252.125304,
+            "elapsed_time": 305.35795640945435,
+            "x64": false,
+            "actual_files_count": 2768,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "82ba603da44b9f066d07a074b3e73b08d0ce98b0",
+            "commit_message": "content_encoding: make Curl_all_content_encodings allocless\n\n- Fixes a memory leak pointed out by Coverity\n- Also found by OSS-Fuzz: https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=63947\n- Avoids unncessary allocations\n\nFollow-up ad051e1cbec68b2456a22661b\n\nCloses #12289\n",
+            "commit_timestamp": 1699371330.0
         }
     ]
 }

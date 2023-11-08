@@ -12091,6 +12091,22 @@
             "commit_ref": "b1af3c0857f236fa665055d7e8cf76eed41be3ae",
             "commit_message": "[libc][FIXME] Disable math tests to make the GPU bots green (#71603)\n\nSummary:\nThis is a quick hack to disable affected GPU math tests so the bots will\nbe green again.\n\nThe offending commit is d2361b204857820d18aa344b890072df8d6154dd. If\nthat is reverted along with this patch the tests also pass.",
             "commit_timestamp": 1699400601.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1699416822.598679,
+            "elapsed_time": 1978.4702026844025,
+            "x64": true,
+            "actual_files_count": 1710,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "d199fd76f7b76d902d8ef210d82689f299934793",
+            "commit_message": "[NFC] Add f128 frexp intrinsics for PowerPC\n",
+            "commit_timestamp": 1699414060.0
         }
     ]
 }
