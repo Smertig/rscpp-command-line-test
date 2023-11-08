@@ -8427,6 +8427,20 @@
             "commit_ref": "0e83d941bea921380ce4a1494121f3ec30ae652e",
             "commit_message": "gh-111808: Fix recursion error on WASM in `test_typing` (GH-111819)\n\n",
             "commit_timestamp": 1699385037.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1699402056.285375,
+            "elapsed_time": 1105.949292421341,
+            "x64": true,
+            "actual_files_count": 980,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "11e83488c5a4a6e75a4f363a2e1a45574fd53573",
+            "commit_message": "gh-111089: Revert PyUnicode_AsUTF8() changes (#111833)\n\n* Revert \"gh-111089: Use PyUnicode_AsUTF8() in Argument Clinic (#111585)\"\r\n\r\nThis reverts commit d9b606b3d04fc56fb0bcc479d7d6c14562edb5e2.\r\n\r\n* Revert \"gh-111089: Use PyUnicode_AsUTF8() in getargs.c (#111620)\"\r\n\r\nThis reverts commit cde1071b2a72e8261ca66053ef61431b7f3a81fd.\r\n\r\n* Revert \"gh-111089: PyUnicode_AsUTF8() now raises on embedded NUL (#111091)\"\r\n\r\nThis reverts commit d731579bfb9a497cfb0076cb6b221058a20088fe.\r\n\r\n* Revert \"gh-111089: Add PyUnicode_AsUTF8() to the limited C API (#111121)\"\r\n\r\nThis reverts commit d8f32be5b6a736dc2fc9dca3f1bf176c82fc9b44.\r\n\r\n* Revert \"gh-111089: Use PyUnicode_AsUTF8() in sqlite3 (#111122)\"\r\n\r\nThis reverts commit 37e4e20eaa8f27ada926d49e5971fecf0477ad26.",
+            "commit_timestamp": 1699396573.0
         }
     ]
 }

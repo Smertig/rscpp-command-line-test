@@ -12225,6 +12225,20 @@
             "commit_ref": "62f48888247587eeee4f13ff0cc464d78b8e2d04",
             "commit_message": "Bump mac PHP version to 8.2 to fix non-hermetic breakages.\n\nThis was likely either a change in macos or the github runners\n\nPiperOrigin-RevId: 580245853\n",
             "commit_timestamp": 1699385483.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1699401873.052995,
+            "elapsed_time": 464.8877251148224,
+            "x64": false,
+            "actual_files_count": 853,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "15eccf3ec4636cab20a16b7570d3967d79ecfa95",
+            "commit_message": "Implement Editions in Pure Python.\n\nThis change only covers pure python, and follow-up changes will handle C++/upb variants and actually enable editions support.  The C++ one works (as evident from the conformance tests), but needs some APIs added to allow for testing.\n\nPiperOrigin-RevId: 580304039\n",
+            "commit_timestamp": 1699396826.0
         }
     ]
 }

@@ -12075,6 +12075,22 @@
             "commit_ref": "0bb510c59d0133dc4dc0509123fff08a689d8f23",
             "commit_message": "[openacc] Remove duplicate operand from LoopOp getDataOperand (#71576)\n\nvectorLength operand was counted twice - should only be counted once.",
             "commit_timestamp": 1699386166.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1699402417.532388,
+            "elapsed_time": 1956.1194775104523,
+            "x64": true,
+            "actual_files_count": 1710,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "b1af3c0857f236fa665055d7e8cf76eed41be3ae",
+            "commit_message": "[libc][FIXME] Disable math tests to make the GPU bots green (#71603)\n\nSummary:\nThis is a quick hack to disable affected GPU math tests so the bots will\nbe green again.\n\nThe offending commit is d2361b204857820d18aa344b890072df8d6154dd. If\nthat is reverted along with this patch the tests also pass.",
+            "commit_timestamp": 1699400601.0
         }
     ]
 }
