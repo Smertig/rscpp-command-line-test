@@ -8553,6 +8553,20 @@
             "commit_ref": "97c4c06d0d235aad00e5b6b10af8b8d68c889b9b",
             "commit_message": "GH-111804: Drop posix.fallocate() under WASI (GH-111869)\n\nDrop posix.fallocate() under WASI.\r\n\r\nThe underlying POSIX function, posix_fallocate(), was found to vary too\r\nmuch between implementations to remain in WASI. As such, while it was\r\navailable in WASI preview1, it's been dropped in preview2.",
             "commit_timestamp": 1699492835.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1699531578.858417,
+            "elapsed_time": 1212.4801964759827,
+            "x64": true,
+            "actual_files_count": 986,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "25c49564880e6868e4c76602f9f1650f0bc71c75",
+            "commit_message": "GH-109369: Exit tier 2 if executor is invalid (GH-111657)\n\n",
+            "commit_timestamp": 1699528791.0
         }
     ]
 }
