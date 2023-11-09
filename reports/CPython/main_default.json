@@ -8539,6 +8539,20 @@
             "commit_ref": "97c4c06d0d235aad00e5b6b10af8b8d68c889b9b",
             "commit_message": "GH-111804: Drop posix.fallocate() under WASI (GH-111869)\n\nDrop posix.fallocate() under WASI.\r\n\r\nThe underlying POSIX function, posix_fallocate(), was found to vary too\r\nmuch between implementations to remain in WASI. As such, while it was\r\navailable in WASI preview1, it's been dropped in preview2.",
             "commit_timestamp": 1699492835.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1699518362.771416,
+            "elapsed_time": 1056.585557937622,
+            "x64": true,
+            "actual_files_count": 986,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "97c4c06d0d235aad00e5b6b10af8b8d68c889b9b",
+            "commit_message": "GH-111804: Drop posix.fallocate() under WASI (GH-111869)\n\nDrop posix.fallocate() under WASI.\r\n\r\nThe underlying POSIX function, posix_fallocate(), was found to vary too\r\nmuch between implementations to remain in WASI. As such, while it was\r\navailable in WASI preview1, it's been dropped in preview2.",
+            "commit_timestamp": 1699492835.0
         }
     ]
 }

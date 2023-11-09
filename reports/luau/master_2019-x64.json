@@ -11465,6 +11465,20 @@
             "commit_ref": "7105c815797cbc5404566db22b807b0579b75ca5",
             "commit_message": "Sync to upstream/release/602 (#1089)\n\n# What's changed?\r\n\r\n* Fixed a bug in type cloning by maintaining persistent types.\r\n* We now parse imprecise integer literals to report the imprecision as a\r\nwarning to developers.\r\n* Add a compiler flag to specify the name of the statistics output file.\r\n\r\n### New type solver\r\n\r\n* Renamed `ConstraintGraphBuilder` to `ConstraintGenerator`\r\n* LValues now take into account the type being assigned during\r\nconstraint generation.\r\n* Normalization performance has been improved by 33% by replacing the an\r\ninternal usage of `std::unordered_set` with `DenseHashMap`.\r\n* Normalization now has a helper to identify types that are equivalent\r\nto `unknown`, which is being used to fix some bugs in subtyping.\r\n* Uses of the old unifier in the new type solver have been eliminated.\r\n* Improved error explanations for subtyping errors in `TypeChecker2`.\r\n\r\n### Native code generation\r\n\r\n* Expanded some of the statistics recorded during compilation to include\r\nthe number of instructions and blocks.\r\n* Introduce instruction and block count limiters for controlling what\r\nbytecode is translated into native code.\r\n* Implement code generation for byteswap instruction.\r\n\r\n### Internal Contributors\r\n\r\nCo-authored-by: Aaron Weiss <aaronweiss@roblox.com>\r\nCo-authored-by: Alexander McCord <amccord@roblox.com>\r\nCo-authored-by: Andy Friesen <afriesen@roblox.com>\r\nCo-authored-by: Aviral Goel <agoel@roblox.com>\r\nCo-authored-by: Lily Brown <lbrown@roblox.com>",
             "commit_timestamp": 1699055104.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1699517023.001727,
+            "elapsed_time": 391.17527985572815,
+            "x64": false,
+            "actual_files_count": 428,
+            "expected_files_count": 379,
+            "repo_url": "https://github.com/luau-lang/luau",
+            "commit_ref": "7105c815797cbc5404566db22b807b0579b75ca5",
+            "commit_message": "Sync to upstream/release/602 (#1089)\n\n# What's changed?\r\n\r\n* Fixed a bug in type cloning by maintaining persistent types.\r\n* We now parse imprecise integer literals to report the imprecision as a\r\nwarning to developers.\r\n* Add a compiler flag to specify the name of the statistics output file.\r\n\r\n### New type solver\r\n\r\n* Renamed `ConstraintGraphBuilder` to `ConstraintGenerator`\r\n* LValues now take into account the type being assigned during\r\nconstraint generation.\r\n* Normalization performance has been improved by 33% by replacing the an\r\ninternal usage of `std::unordered_set` with `DenseHashMap`.\r\n* Normalization now has a helper to identify types that are equivalent\r\nto `unknown`, which is being used to fix some bugs in subtyping.\r\n* Uses of the old unifier in the new type solver have been eliminated.\r\n* Improved error explanations for subtyping errors in `TypeChecker2`.\r\n\r\n### Native code generation\r\n\r\n* Expanded some of the statistics recorded during compilation to include\r\nthe number of instructions and blocks.\r\n* Introduce instruction and block count limiters for controlling what\r\nbytecode is translated into native code.\r\n* Implement code generation for byteswap instruction.\r\n\r\n### Internal Contributors\r\n\r\nCo-authored-by: Aaron Weiss <aaronweiss@roblox.com>\r\nCo-authored-by: Alexander McCord <amccord@roblox.com>\r\nCo-authored-by: Andy Friesen <afriesen@roblox.com>\r\nCo-authored-by: Aviral Goel <agoel@roblox.com>\r\nCo-authored-by: Lily Brown <lbrown@roblox.com>",
+            "commit_timestamp": 1699055104.0
         }
     ]
 }
