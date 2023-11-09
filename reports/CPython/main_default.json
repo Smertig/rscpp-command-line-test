@@ -8525,6 +8525,20 @@
             "commit_ref": "31c90d5838e8d6e4c47d98500a34810ccb33a6d4",
             "commit_message": "gh-111569: Implement Python critical section API (gh-111571)\n\nCritical sections are helpers to replace the global interpreter lock\r\nwith finer grained locking.  They provide similar guarantees to the GIL\r\nand avoid the deadlock risk that plain locking involves.  Critical\r\nsections are implicitly ended whenever the GIL would be released.  They\r\nare resumed when the GIL would be acquired.  Nested critical sections\r\nbehave as if the sections were interleaved.",
             "commit_timestamp": 1699483169.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1699502910.708877,
+            "elapsed_time": 1741.8936650753021,
+            "x64": true,
+            "actual_files_count": 986,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "97c4c06d0d235aad00e5b6b10af8b8d68c889b9b",
+            "commit_message": "GH-111804: Drop posix.fallocate() under WASI (GH-111869)\n\nDrop posix.fallocate() under WASI.\r\n\r\nThe underlying POSIX function, posix_fallocate(), was found to vary too\r\nmuch between implementations to remain in WASI. As such, while it was\r\navailable in WASI preview1, it's been dropped in preview2.",
+            "commit_timestamp": 1699492835.0
         }
     ]
 }
