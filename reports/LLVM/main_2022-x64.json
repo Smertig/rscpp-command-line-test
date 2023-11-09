@@ -12171,6 +12171,22 @@
             "commit_ref": "05fa923a9bbb657fc47f3c238c8f6b48f0a892a9",
             "commit_message": "Fix SmallVector usage in SerailzeToHsaco (#71702)\n\nEnable merging #71439 by removing a definitely-wrong usage of\r\nstd::unique_ptr<SmallVectorImpl<char>> as a return value with passing in\r\na SmallVectorImpl<char>&\r\n\r\nAlso change the following function to take ArrayRef<char> instead of\r\nconst SmalVectorImpl<char>& .",
             "commit_timestamp": 1699473461.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1699488800.68845,
+            "elapsed_time": 2001.2811357975006,
+            "x64": true,
+            "actual_files_count": 1713,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "71de61259a513120796c294568754b0b9e2ee085",
+            "commit_message": "[lld][MachO] Prevent doubled N_SO when comp_dir and name absolute (#71608)\n\nWhen forming MachO STABS, this change detects if the DW_AT_name of the\r\ncompile unit is already absolute (as allowed by DWARF), and if so, does\r\nnot prepend DW_AT_comp_dir.\r\n\r\nFixes #70995",
+            "commit_timestamp": 1699487722.0
         }
     ]
 }
