@@ -12235,6 +12235,22 @@
             "commit_ref": "59a063d5c65d963ef20529b49796c83aeb33e864",
             "commit_message": "[ExpandMemCmp] Improve memcmp optimisation for boolean results (#71221)\n\nThis patch enhances the optimization of memcmp calls when only two\r\noutcomes\r\nare needed and comparison fits into one block, for example:\r\n\r\n\tbool result = memcmp(a, b, 6) > 0;\r\n\r\nPreviously, LLVM would generate unnecessary operations even when the\r\nuser of\r\nmemcmp was only interested in a binary outcome.",
             "commit_timestamp": 1699530724.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1699546285.010939,
+            "elapsed_time": 1989.3748733997345,
+            "x64": true,
+            "actual_files_count": 1713,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "8131eeb9e1ee9d61a84c053f6449044afbe40266",
+            "commit_message": "[scudo] document allocation_ring_buffer_size (#71812)\n\n",
+            "commit_timestamp": 1699545587.0
         }
     ]
 }

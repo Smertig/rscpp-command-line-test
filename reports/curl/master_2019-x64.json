@@ -11381,6 +11381,20 @@
             "commit_ref": "9fb6cc54c59760bee23c730f668653895e713a25",
             "commit_message": "tidy-up: use `OPENSSL_VERSION_NUMBER`\n\nUniformly use `OPENSSL_VERSION_NUMBER` to check for OpenSSL version.\nBefore this patch some places used `OPENSSL_VERSION_MAJOR`.\n\nAlso fix `lib/md4.c`, which included `opensslconf.h`, but that doesn't\ndefine any version number in these implementations: BoringSSL, AWS-LC,\nLibreSSL, wolfSSL. (Only in mainline OpenSSL/quictls). Switch that to\n`opensslv.h`. This wasn't causing a deeper problem because the code is\nlooking for v3, which is only provided by OpenSSL/quictls as of now.\n\nAccording to https://github.com/openssl/openssl/issues/17517, the macro\n`OPENSSL_VERSION_NUMBER` is safe to use and not deprecated.\n\nReviewed-by: Marcel Raad\nCloses #12298\n",
             "commit_timestamp": 1699466122.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1699545862.283461,
+            "elapsed_time": 333.9214506149292,
+            "x64": false,
+            "actual_files_count": 2768,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "9fb6cc54c59760bee23c730f668653895e713a25",
+            "commit_message": "tidy-up: use `OPENSSL_VERSION_NUMBER`\n\nUniformly use `OPENSSL_VERSION_NUMBER` to check for OpenSSL version.\nBefore this patch some places used `OPENSSL_VERSION_MAJOR`.\n\nAlso fix `lib/md4.c`, which included `opensslconf.h`, but that doesn't\ndefine any version number in these implementations: BoringSSL, AWS-LC,\nLibreSSL, wolfSSL. (Only in mainline OpenSSL/quictls). Switch that to\n`opensslv.h`. This wasn't causing a deeper problem because the code is\nlooking for v3, which is only provided by OpenSSL/quictls as of now.\n\nAccording to https://github.com/openssl/openssl/issues/17517, the macro\n`OPENSSL_VERSION_NUMBER` is safe to use and not deprecated.\n\nReviewed-by: Marcel Raad\nCloses #12298\n",
+            "commit_timestamp": 1699466122.0
         }
     ]
 }

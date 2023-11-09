@@ -8567,6 +8567,20 @@
             "commit_ref": "25c49564880e6868e4c76602f9f1650f0bc71c75",
             "commit_message": "GH-109369: Exit tier 2 if executor is invalid (GH-111657)\n\n",
             "commit_timestamp": 1699528791.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1699546127.543682,
+            "elapsed_time": 2136.123136281967,
+            "x64": true,
+            "actual_files_count": 986,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "6f09f69b7f85962f66d10637c3325bbb2b2d9853",
+            "commit_message": "gh-111881: Import doctest lazily in libregrtest (#111884)\n\nIn most cases, doctest is not needed. So don't always import it at\r\nstartup. The change reduces the number of modules already\r\nimported when a test is run.",
+            "commit_timestamp": 1699542010.0
         }
     ]
 }
