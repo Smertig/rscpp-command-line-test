@@ -11241,6 +11241,20 @@
             "commit_ref": "393a88a3721a1d72f49060f3245befec5bebf8e5",
             "commit_message": "[POWERCFG] 640x480-ify and overhaul (#5933)\n\n\r\nMain goal was making the dlg display well in 640x480 resolution.\r\nSince the dialogs in that propsheet had very different sizes between the languages\r\nthat was a lot of work. Now all of the propsheet-dlgs are harmonized in size to 252x220.\r\nAlso I found a way to align some controls in a way that they are more immune\r\nto differing languages lengths for specific strings, so we can currently\r\nto 100% use the same controls dimensions and positions also,\r\nwhich is a very nice trait. I double-checked all dialogs visually in ResHacker\r\nfor all languages (except no-NO.rc for technical reasons), and they do look all\r\nvery well like that. The slider for the alarms dlg I enlarged in x,\r\nit has 100 distinct positions, so a larger slider helps the user\r\nnot having to position the mouse extremely accurate.\r\nI also fixed various typos, and several places where text cutoff occurred for many languages,\r\ntoo many to name them all.\r\nSome dummy-strings \"unknown\" I changed to \"?\" instead.\r\nThat still allows to see its position in a previewer,\r\nbut does not lure all the translators into translating that nonsense,\r\nand therefore keeps the rcs better in sync. It also shrinks binary size.\r\n",
             "commit_timestamp": 1699572797.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1699589011.889808,
+            "elapsed_time": 118.25368595123291,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "393a88a3721a1d72f49060f3245befec5bebf8e5",
+            "commit_message": "[POWERCFG] 640x480-ify and overhaul (#5933)\n\n\r\nMain goal was making the dlg display well in 640x480 resolution.\r\nSince the dialogs in that propsheet had very different sizes between the languages\r\nthat was a lot of work. Now all of the propsheet-dlgs are harmonized in size to 252x220.\r\nAlso I found a way to align some controls in a way that they are more immune\r\nto differing languages lengths for specific strings, so we can currently\r\nto 100% use the same controls dimensions and positions also,\r\nwhich is a very nice trait. I double-checked all dialogs visually in ResHacker\r\nfor all languages (except no-NO.rc for technical reasons), and they do look all\r\nvery well like that. The slider for the alarms dlg I enlarged in x,\r\nit has 100 distinct positions, so a larger slider helps the user\r\nnot having to position the mouse extremely accurate.\r\nI also fixed various typos, and several places where text cutoff occurred for many languages,\r\ntoo many to name them all.\r\nSome dummy-strings \"unknown\" I changed to \"?\" instead.\r\nThat still allows to see its position in a previewer,\r\nbut does not lure all the translators into translating that nonsense,\r\nand therefore keeps the rcs better in sync. It also shrinks binary size.\r\n",
+            "commit_timestamp": 1699572797.0
         }
     ]
 }
