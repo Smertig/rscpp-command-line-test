@@ -12267,6 +12267,22 @@
             "commit_ref": "a2d9d2e1d96a3e81f4eed7f70e0a62cbc0e77cfd",
             "commit_message": "[mlir][sparse] re-enable aarch64 test. (#71855)\n\nShould have been fixed by initializing output tensor to zeros in\r\nhttps://github.com/llvm/llvm-project/pull/71845",
             "commit_timestamp": 1699559212.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1699575154.804406,
+            "elapsed_time": 1962.51691031456,
+            "x64": true,
+            "actual_files_count": 1713,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "51af040b22c117e4f2429277c515299cd62c58ea",
+            "commit_message": "[mlir][gpu] Eliminate redundant gpu.barrier ops (#71575)\n\nAdds a canonicalizer for gpu.barrier that gets rid of duplicates.\r\n\r\nCo-authored-by: Eric Eaton <eric@nod-labs.com>",
+            "commit_timestamp": 1699571180.0
         }
     ]
 }
