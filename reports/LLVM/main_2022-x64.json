@@ -12427,6 +12427,22 @@
             "commit_ref": "4effdc47947b9260a1540ee7d8b699b077cbedb5",
             "commit_message": "[clang][CodeGen] Regenerate `wasm-eh.cpp` test (NFC)\n\nClang buildbot was previously failing when targeting WebAssembly.\n\nFixes: https://lab.llvm.org/buildbot/#/builders/45/builds/14145.\n",
             "commit_timestamp": 1699700399.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1699719115.478621,
+            "elapsed_time": 1992.4613156318665,
+            "x64": true,
+            "actual_files_count": 1713,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "5c91b2886f6bf400b60ca7839069839ac3980f8f",
+            "commit_message": "[clang] Replace uses of CreatePointerBitCastOrAddrSpaceCast (NFC) (#68277)\n\nWith opaque pointers, `CreatePointerBitCastOrAddrSpaceCast` can be replaced with `CreateAddrSpaceCast`.\r\nReplace or remove uses of `CreatePointerBitCastOrAddrSpaceCast`.\r\n\r\nOpaque pointer cleanup effort.",
+            "commit_timestamp": 1699718264.0
         }
     ]
 }
