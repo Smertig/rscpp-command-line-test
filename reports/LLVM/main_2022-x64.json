@@ -12363,6 +12363,22 @@
             "commit_ref": "81a76902ae0fc08138e37212239c5c704eec2f26",
             "commit_message": "[lldb] Only run ignored_artificial_fields.test when gcc is available.\n",
             "commit_timestamp": 1699646187.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1699661584.100835,
+            "elapsed_time": 1952.5075070858002,
+            "x64": true,
+            "actual_files_count": 1713,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "64f62de96609dc3ea9a8a914a9e9445b7f4d625d",
+            "commit_message": "[lldb] Read Checksum from DWARF line tables (#71458)\n\nRead the MD5 checksum from DWARF line tables and store it in the\ncorresponding support files.\n\nThis is a re-land after fixing an off-by-one error in LLDB's\nParseSupportFilesFromPrologue (fixed in #71984).\n",
+            "commit_timestamp": 1699656227.0
         }
     ]
 }

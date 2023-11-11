@@ -8679,6 +8679,20 @@
             "commit_ref": "771bd3c94a366547e0c3451a72a430e1132c1ac1",
             "commit_message": "Add private _PyUnicode_AsUTF8NoNUL() function (GH-111957)\n\nLike PyUnicode_AsUTF8(), but check for embedded null characters.\r\n",
             "commit_timestamp": 1699644696.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1699661263.641429,
+            "elapsed_time": 1096.9841752052307,
+            "x64": true,
+            "actual_files_count": 986,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "fa84e5fe0a3bd8e77c33b20867d71ac6bee270f9",
+            "commit_message": "gh-110481: fix 'unused function' warning for `is_shared_refcnt_dead`. (gh-111974)\n\nFix 'unused function' warning for `is_shared_refcnt_dead`.\r\n\r\nThe `is_shared_refcnt_dead` function is only used if `Py_REF_DEBUG` is set.",
+            "commit_timestamp": 1699660475.0
         }
     ]
 }

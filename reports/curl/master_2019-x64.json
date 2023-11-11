@@ -11493,6 +11493,20 @@
             "commit_ref": "aace27b0965c10394544d1dacc9c2cb2fe0de3d3",
             "commit_message": "cmake: option to disable install & drop `curlu` target when unused\n\nThis patch makes the following changes:\n- adds the option `CURL_DISABLE_INSTALL` - to disable 'install' targets.\n- Removes the target `curlu` when the option `BUILD_TESTING` is set to\n  `OFF` - to prevent it from being loaded in Visual Studio.\n\nCloses #12287\n",
             "commit_timestamp": 1699640654.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1699661094.573687,
+            "elapsed_time": 177.14545226097107,
+            "x64": false,
+            "actual_files_count": 2447,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "ad6fc6414dc9706e15c8f7f58dd6ab18fa6157bf",
+            "commit_message": "RELEASE-NOTES: synced\n",
+            "commit_timestamp": 1699655181.0
         }
     ]
 }
