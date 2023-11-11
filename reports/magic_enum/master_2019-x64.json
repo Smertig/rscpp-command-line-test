@@ -10985,6 +10985,20 @@
             "commit_ref": "5523803cfc0590e78a289c1a886cae46e7e0b4b8",
             "commit_message": "Explicitly mark the result of detail::names as constexpr (#305)\n\nIt might make no sense, but on MSVC it can generate a compile-time\r\nerror, especially if an enumerator's value is out of range.\r\n\r\nExample:\r\nerror C3615: constexpr function 'magic_enum::detail::names' cannot\r\nresult in a constant expression\r\n...\r\nnote: failure was caused by call of undefined function or one not\r\ndeclared 'constexpr'\r\n...\r\nnote: see usage of '__builtin_array_init_helper'",
             "commit_timestamp": 1699524577.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1699675371.413861,
+            "elapsed_time": 3570.0627036094666,
+            "x64": false,
+            "actual_files_count": 22,
+            "expected_files_count": 19,
+            "repo_url": "https://github.com/Neargye/magic_enum",
+            "commit_ref": "5523803cfc0590e78a289c1a886cae46e7e0b4b8",
+            "commit_message": "Explicitly mark the result of detail::names as constexpr (#305)\n\nIt might make no sense, but on MSVC it can generate a compile-time\r\nerror, especially if an enumerator's value is out of range.\r\n\r\nExample:\r\nerror C3615: constexpr function 'magic_enum::detail::names' cannot\r\nresult in a constant expression\r\n...\r\nnote: failure was caused by call of undefined function or one not\r\ndeclared 'constexpr'\r\n...\r\nnote: see usage of '__builtin_array_init_helper'",
+            "commit_timestamp": 1699524577.0
         }
     ]
 }
