@@ -11675,6 +11675,20 @@
             "commit_ref": "ff1fdfecb1396a44c4761e822bd2011d096c5c9f",
             "commit_message": "tidy-up: dedupe Windows system libs in cmake\n\nReviewed-by: Daniel Stenberg\nCloses #12307\n",
             "commit_timestamp": 1699744162.0
+        },
+        {
+            "tool_version": "233.0.20231104.234410-eap06",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1699819341.23158,
+            "elapsed_time": 168.0808835029602,
+            "x64": false,
+            "actual_files_count": 2447,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "cdac7cd3f30a6ea3c845cff55d91252cd09e8d95",
+            "commit_message": "CURLOPT_CAINFO_BLOB.3: explain what CURL_BLOB_COPY does\n\n- Add an explanation of the CURL_BLOB_COPY flag to CURLOPT_CAINFO_BLOB\n  and CURLOPT_PROXY_CAINFO_BLOB docs.\n\nAll the other _BLOB option docs already have the same explanation.\n\nCloses https://github.com/curl/curl/pull/12277\n",
+            "commit_timestamp": 1699817341.0
         }
     ]
 }
