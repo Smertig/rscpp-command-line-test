@@ -569,27 +569,11 @@
             "-DYACLIB_TEST=ON"
         ],
         "stable": {
-            "inspected files count": 1809,
-            "known errors": [
-                {
-                    "file": "..\\test\\unit\\async\\core_size.cpp",
-                    "line": 66,
-                    "message": "static_assert failed\r\n    Expression '8 == 4 || 64 == (32 + 24 + 0 + 0)' evaluates to false",
-                    "reason": "RSCPP-34991 Incorrect `no_unique_address` handling for non-MSVC compiler"
-                }
-            ]
+            "inspected files count": 1809
         },
         "latest": {
             "main": {
-                "inspected files count": 1809,
-                "known errors": [
-                    {
-                        "file": "..\\test\\unit\\async\\core_size.cpp",
-                        "line": 66,
-                        "message": "static_assert failed\r\n    Expression '8 == 4 || 64 == (32 + 24 + 0 + 0)' evaluates to false",
-                        "reason": "RSCPP-34991 Incorrect `no_unique_address` handling for non-MSVC compiler"
-                    }
-                ]
+                "inspected files count": 1809
             }
         }
     },
