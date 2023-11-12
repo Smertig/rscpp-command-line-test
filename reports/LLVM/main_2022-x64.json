@@ -12459,6 +12459,22 @@
             "commit_ref": "e8209b2486d8fa1a5314af0fe896b9628effa471",
             "commit_message": "[MachineSink] Drop debug info for instructions deleted by sink-and-fold (#71443)\n\nAfter performing sink-and-fold over a COPY, the original instruction is\r\nreplaced with one that produces its output in the destination of the\r\ncopy. Its value is still available (in a hard register), so if there are\r\ndebug instructions which refer to the (now deleted) virtual register\r\nthey could be updated to refer to the hard register, in principle.\r\nHowever, it's not clear how to do that, moreover in some cases the debug\r\ninstructions may need to be replicated proportionally to the number of\r\nthe COPY instructions replaced and in some extreme cases we can end up\r\nwith quadratic increase in the number of debug instructions, e.g:\r\n\r\n        int f(int);\r\n    \r\n        void g(int x) {\r\n          int y = x + 1;\r\n    \r\n          int t0 = y;\r\n          f(t0);\r\n    \r\n          int t1 = y;\r\n          f(t1);\r\n        }",
             "commit_timestamp": 1699731794.0
+        },
+        {
+            "tool_version": "233.0.20231029.171547-eap05",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1699748023.975902,
+            "elapsed_time": 2021.0639684200287,
+            "x64": true,
+            "actual_files_count": 1713,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "fdc904e5681c00f5e347f5889f4dfd4a448ebaf4",
+            "commit_message": "[RISCV] Add isel pattern to turn (or (zext X), Y) into add.uw when X and Y are disjoint.\n\nImprove code for -riscv-experimental-rv64-legal-i32.\n",
+            "commit_timestamp": 1699746698.0
         }
     ]
 }
