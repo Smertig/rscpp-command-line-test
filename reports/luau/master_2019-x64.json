@@ -11801,6 +11801,20 @@
             "commit_ref": "c2ba1058c35315a71e6f4b3fdf5b415a9a45bc80",
             "commit_message": "Sync to upstream/release/603 (#1097)\n\n# What's changed?\r\n\r\n- Record the location of properties for table types (closes #802)\r\n- Implement stricter UTF-8 validations as per the RFC\r\n(https://github.com/luau-lang/rfcs/pull/1)\r\n- Implement `buffer` as a new type in both the old and new solvers.\r\n- Changed errors produced by some `buffer` builtins to be a bit more\r\ngeneric to avoid platform-dependent error messages.\r\n- Fixed a bug where `Unifier` would copy some persistent types, tripping\r\nsome internal assertions.\r\n- Type checking rules on relational operators is now a little bit more\r\nlax.\r\n- Improve dead code elimination for some `if` statements with complex\r\nalways-false conditions\r\n\r\n## New type solver\r\n\r\n- Dataflow analysis now generates phi nodes on exit of branches.\r\n- Dataflow analysis avoids producing a new definition for locals or\r\nproperties that are not owned by that loop.\r\n- If a function parameter has been constrained to `never`, report errors\r\nat all uses of that parameter within that function.\r\n- Switch to using the new `Luau::Set` to replace `std::unordered_set` to\r\nalleviate some poor allocation characteristics which was negatively\r\naffecting overall performance.\r\n- Subtyping can now report many failing reasons instead of just the\r\nfirst one that we happened to find during the test.\r\n- Subtyping now also report reasons for type pack mismatches.\r\n- When visiting `if` statements or expressions, the resulting context\r\nare the common terms in both branches.\r\n\r\n## Native codegen\r\n\r\n- Implement support for `buffer` builtins to its IR for x64 and A64.\r\n- Optimized `table.insert` by not inserting a table barrier if it is\r\nfastcalled with a constant.\r\n\r\n## Internal Contributors\r\n\r\nCo-authored-by: Aaron Weiss <aaronweiss@roblox.com>\r\nCo-authored-by: Alexander McCord <amccord@roblox.com>\r\nCo-authored-by: Andy Friesen <afriesen@roblox.com>\r\nCo-authored-by: Arseny Kapoulkine <arseny@roblox.com>\r\nCo-authored-by: Aviral Goel <agoel@roblox.com>\r\nCo-authored-by: Lily Brown <lbrown@roblox.com>\r\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>",
             "commit_timestamp": 1699650607.0
+        },
+        {
+            "tool_version": "233.0.20231104.234410-eap06",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1699833856.793967,
+            "elapsed_time": 272.80166935920715,
+            "x64": false,
+            "actual_files_count": 430,
+            "expected_files_count": 379,
+            "repo_url": "https://github.com/luau-lang/luau",
+            "commit_ref": "4b2af900c28598a18221e4798b72b16010ce7f2a",
+            "commit_message": "Fix link to `.luaurc` info in README (#1101)\n\n",
+            "commit_timestamp": 1699825721.0
         }
     ]
 }
