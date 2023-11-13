@@ -12635,6 +12635,22 @@
             "commit_ref": "1a9fbf61661558d4f3e03390161400db734aab59",
             "commit_message": "[X86] combineLoad - reuse an existing VBROADCAST_LOAD constant for a smaller vector load of the same constant\n\nExtends the existing code that performed something similar for SUBV_BROADCAST_LOAD, but this is just for cases where AVX2 targets loads full width 128-bit constant vectors but broadcasts the equivalent 256-bit constant vector\n\nFixes AVX2 case for Issue #70947\n",
             "commit_timestamp": 1699876744.0
+        },
+        {
+            "tool_version": "233.0.20231104.234410-eap06",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1699891938.297679,
+            "elapsed_time": 1947.4997606277466,
+            "x64": true,
+            "actual_files_count": 1713,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "96ef623a7525f71184b6111f8389e45260ef13ff",
+            "commit_message": "[AArch64] Cast predicate operand of SVE gather loads/scater stores to the parameter type of the intrinsic (NFC) (#71289)\n\nWhen emitting LLVM IR for gather loads/scatter stores, the predicate\r\nparameter is cast to a type that depends on the loaded, resp. stored\r\ntype. That's correct for operation where we have a predicate per lane,\r\nhowever it is not correct for quadword loads and stores (`LD1Q`, `ST1Q`)\r\nwhere the predicate is per 128-bit chunk, independent from the ACLE\r\nintrinsic type.\r\n\r\nThis can be universally handled by cast to the corresponding parameter\r\ntype of the intrinsic. The intrinsic itself should be defined in a way\r\nthat enforces relations between parameter types.",
+            "commit_timestamp": 1699891267.0
         }
     ]
 }

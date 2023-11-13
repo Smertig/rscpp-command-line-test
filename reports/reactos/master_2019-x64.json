@@ -11563,6 +11563,20 @@
             "commit_ref": "bac646f9febb3703447fbe8ba52de8490207e1bf",
             "commit_message": "[VMX_SVGA] Demote 3 DPRINT1() and define NDEBUG (#5843)\n\nAddendum to 486e587 (r45778).",
             "commit_timestamp": 1699870270.0
+        },
+        {
+            "tool_version": "233.0.20231104.234410-eap06",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1699891398.14653,
+            "elapsed_time": 113.56414127349854,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "6eb8a1d0c70fcda787b9f16147564372bc630faf",
+            "commit_message": "[ADVPACK] Handle ADN_DEL_IF_EMPTY in DelNodeW and DelNodeRunDLL32 (#5821)\n\n- Handling ADN_DEL_IF_EMPTY is critical to avoid data loss.\r\n- SetFileAttributesW failing is not fatal, the delete might still succeed.\r\n\r\nNOTE: Not in Wine yet.",
+            "commit_timestamp": 1699890146.0
         }
     ]
 }
