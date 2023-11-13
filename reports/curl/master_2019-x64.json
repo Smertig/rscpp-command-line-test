@@ -11759,6 +11759,20 @@
             "commit_ref": "addabb179411c8329b818153ea28013bb7406e80",
             "commit_message": "RELEASE-NOTES: synced\n",
             "commit_timestamp": 1699887672.0
+        },
+        {
+            "tool_version": "233.0.20231104.234410-eap06",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1699905811.493557,
+            "elapsed_time": 182.93419218063354,
+            "x64": false,
+            "actual_files_count": 2452,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "baf7b803b329e46fe2728fbf62da62c7925546f5",
+            "commit_message": "duphandle: use strdup to clone *COPYPOSTFIELDS if size is not set\n\nPreviously it would unconditionally use the size, which is set to -1\nwhen strlen is requested.\n\nUpdated test 544 to verify.\n\nCloses #12317\n",
+            "commit_timestamp": 1699894200.0
         }
     ]
 }
