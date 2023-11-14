@@ -12731,6 +12731,22 @@
             "commit_ref": "63537872aefe845ba40770112d0a2cf0927f27b8",
             "commit_message": "ExtractAPI: use zero-based indices for line/column in symbol graph (#71753)\n\nOther implementations of the symbol graph format use zero-based indices\r\nfor source locations, which causes problems when combined with clang's\r\ncurrent one-based indices. This commit sets ExtractAPI's symbol graph\r\noutput to use zero-based indices to align with other implementations.\r\n\r\nrdar://107639783",
             "commit_timestamp": 1699962372.0
+        },
+        {
+            "tool_version": "233.0.20231104.234410-eap06",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1699978612.853161,
+            "elapsed_time": 3072.807470560074,
+            "x64": true,
+            "actual_files_count": 1713,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "f6ae50f710d02d8553d28192a1f048b2a9e1fc4d",
+            "commit_message": "[SLP]Emit actual bitwidth for analyzed MinBitwidth nodes, NFCI.\n\nSLP includes analysis for the minimum bitwidth, the actual integer\noperations can be emitted. It allows to reduce register pressure and\nimprove perf. Currently, it includes only cost model and the next\ntransformation relies on InstructionCombiner. Better to do it directly\nin SLP, it allows to reduce compile time and fix cost model issues.\n",
+            "commit_timestamp": 1699977457.0
         }
     ]
 }

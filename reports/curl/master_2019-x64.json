@@ -11829,6 +11829,20 @@
             "commit_ref": "efbbbf4f7a92cc1b6bd5d86b0da567e7c71d0d04",
             "commit_message": "tool_cb_hdr: add an additional parsing check\n\n- Don't dereference the past-the-end element when parsing the server's\n  Content-disposition header.\n\nAs 'p' is advanced it can point to the past-the-end element and prior\nto this change 'p' could be dereferenced in that case.\n\nTechnically the past-the-end element is not out of bounds because dynbuf\n(which manages the header line) automatically adds a null terminator to\nevery buffer and that is not included in the buffer length passed to\nthe header callback.\n\nCloses https://github.com/curl/curl/pull/12320\n",
             "commit_timestamp": 1699953241.0
+        },
+        {
+            "tool_version": "233.0.20231104.234410-eap06",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1699977856.553454,
+            "elapsed_time": 183.9204785823822,
+            "x64": false,
+            "actual_files_count": 2452,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "b365a34c60fb9fb30ab78edd1c0d8e7f859a9531",
+            "commit_message": "autotools: accept linker flags via `CURL_LDFLAGS_{LIB,BIN}`\n\nTo allow passing `LDFLAGS` specific to libcurl (`CURL_LDFLAGS_LIB`) and\ncurl tool (`CURL_LDFLAGS_BIN`).\n\nThis makes it possible to build libcurl and curl with a single\ninvocation with lib- and tool-specific custom linker flags.\n\nSuch flag can be enabling `.map` files, a `.def` file for libcurl DLL,\ncontrolling static/shared, incl. requesting a static curl tool (with\n`-static-libtool-libs`) while building both shared and static libcurl.\n\ncurl-for-win uses the above and some more.\n\nThese options are already supported in `Makefile.mk`. CMake has built-in\nvariables for this.\n\nCloses #12312\n",
+            "commit_timestamp": 1699969174.0
         }
     ]
 }
