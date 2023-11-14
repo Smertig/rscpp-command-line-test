@@ -13175,6 +13175,20 @@
             "commit_ref": "01cac90c6298f8d5cda34eebda24412f644142f8",
             "commit_message": "Bump up actions/checkout version to v4 (#2760)\n\n",
             "commit_timestamp": 1699522309.0
+        },
+        {
+            "tool_version": "233.0.20231104.234410-eap06",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1699992243.813195,
+            "elapsed_time": 104.06055283546448,
+            "x64": false,
+            "actual_files_count": 274,
+            "expected_files_count": 272,
+            "repo_url": "https://github.com/catchorg/Catch2.git",
+            "commit_ref": "2c68a0d05f4fa8fb79cd43824f69568eb3954d4c",
+            "commit_message": "lifted suggested version\n\nDid this, because with 3.0.1, the files\n- catch_xmlwriter.cpp\n- catch_string_manip.hpp\n- catch_test_case_info.hpp\n\nwere missing\n\nThis led to some obvious and some obscure compile errors when compiling\nwith g++ 13.2.0 (std c++17 or c++20)\nOne of these errors being \"Elaborated-type-specifier for a scoped enum\nmust not use the \u2018class\u2019 keyword\"\n\nSince this is a rather bad experience and debugging it is\ntime-consuming, I suggest to simply boost the recommended version in the\nsnippet which is likely copied by new Catch2 users\n",
+            "commit_timestamp": 1699978231.0
         }
     ]
 }
