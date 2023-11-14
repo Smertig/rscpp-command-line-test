@@ -9001,6 +9001,20 @@
             "commit_ref": "e31d65e0b7bb6d6fee4e8df54e10976b4cfab1de",
             "commit_message": "gh-111622: Fix doc for items views (#112051)\n\nThey are set-like even when some values are not hashable,\r\nbut work even better when all are.",
             "commit_timestamp": 1699947680.0
+        },
+        {
+            "tool_version": "233.0.20231104.234410-eap06",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1699963612.9532,
+            "elapsed_time": 1090.926245689392,
+            "x64": true,
+            "actual_files_count": 986,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "324531df909721978446d504186738a33ab03fd5",
+            "commit_message": "gh-111903: Add `@critical_section` directive to Argument Clinic. (#111904)\n\nThe `@critical_section` directive instructs Argument Clinic to generate calls\r\nto `Py_BEGIN_CRITICAL_SECTION()` and `Py_END_CRITICAL_SECTION()` around the\r\nbound function. In `--disable-gil` builds, these calls will lock and unlock\r\nthe `self` object. They are no-ops in the default build.\r\n\r\nThis is used in one place (`_io._Buffered.close`) as a demonstration.\r\nSubsequent PRs will use it more widely in the `_io.Buffered` bindings.",
+            "commit_timestamp": 1699958866.0
         }
     ]
 }

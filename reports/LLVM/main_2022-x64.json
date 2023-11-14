@@ -12715,6 +12715,22 @@
             "commit_ref": "e96eddec5e8ecc0fdab377571aabe85a2ee7617e",
             "commit_message": "Reland \"[X86][AVX10] Fix a bug when using -march with no-evex512 attribute (#72126)\"\n\nFixes #72106\n",
             "commit_timestamp": 1699947570.0
+        },
+        {
+            "tool_version": "233.0.20231104.234410-eap06",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1699963951.865183,
+            "elapsed_time": 1942.6006088256836,
+            "x64": true,
+            "actual_files_count": 1713,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "63537872aefe845ba40770112d0a2cf0927f27b8",
+            "commit_message": "ExtractAPI: use zero-based indices for line/column in symbol graph (#71753)\n\nOther implementations of the symbol graph format use zero-based indices\r\nfor source locations, which causes problems when combined with clang's\r\ncurrent one-based indices. This commit sets ExtractAPI's symbol graph\r\noutput to use zero-based indices to align with other implementations.\r\n\r\nrdar://107639783",
+            "commit_timestamp": 1699962372.0
         }
     ]
 }
