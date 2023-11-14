@@ -11773,6 +11773,20 @@
             "commit_ref": "baf7b803b329e46fe2728fbf62da62c7925546f5",
             "commit_message": "duphandle: use strdup to clone *COPYPOSTFIELDS if size is not set\n\nPreviously it would unconditionally use the size, which is set to -1\nwhen strlen is requested.\n\nUpdated test 544 to verify.\n\nCloses #12317\n",
             "commit_timestamp": 1699894200.0
+        },
+        {
+            "tool_version": "233.0.20231104.234410-eap06",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1699920274.158974,
+            "elapsed_time": 187.5315718650818,
+            "x64": false,
+            "actual_files_count": 2452,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "34eddaac922aca4a9a61fe353f8e1bd7c86ac4c9",
+            "commit_message": "easy: in duphandle, init the cookies for the new handle\n\n... not the source handle.\n\nCloses #12318\n",
+            "commit_timestamp": 1699912853.0
         }
     ]
 }
