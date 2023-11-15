@@ -11941,6 +11941,20 @@
             "commit_ref": "70e3b534d54b566aedff78be3361adac3db4143f",
             "commit_message": "urldata: move cookielist from UserDefined to UrlState\n\n1. Because the value is not strictly set with a setopt option.\n\n2. Because otherwise when duping a handle when all the set.* fields are\n   first copied and an error happens (think out of memory mid-function),\n   the function would easily free the list *before* it was deep-copied,\n   which could lead to a double-free.\n\nCloses #12323\n",
             "commit_timestamp": 1700037750.0
+        },
+        {
+            "tool_version": "233.0.20231113.130711-eap07",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1700078650.514365,
+            "elapsed_time": 174.81456351280212,
+            "x64": false,
+            "actual_files_count": 2452,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "d1820768cce0e797d1f072343868ce1902170e93",
+            "commit_message": "duphandle: also free 'outcurl->cookies' in error path\n\nFixes memory-leak when OOM mid-function\n\nUse plain free instead of safefree, since the entire struct is\nfreed below.\n\nRemove some free calls that is already freed in Curl_freeset()\n\nCloses #12329\n",
+            "commit_timestamp": 1700058916.0
         }
     ]
 }

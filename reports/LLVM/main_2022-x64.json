@@ -12859,6 +12859,22 @@
             "commit_ref": "afdc0c5c96a776be16c151c5622ea5c348124f20",
             "commit_message": "Fix MSV signed/unsigned mismatch warning. NFC.\n",
             "commit_timestamp": 1700049632.0
+        },
+        {
+            "tool_version": "233.0.20231113.130711-eap07",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1700079096.091266,
+            "elapsed_time": 6881.87774014473,
+            "x64": true,
+            "actual_files_count": 1713,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "0901f918daa6c5da19b3d2cf38d7de63c265a086",
+            "commit_message": "[builtins][test] Don't XFAIL divtc3_test.c on 32-bit Solaris/sparc fo\u2026 (#72403)\n\nAs detailed in Issue #72398, the recent builtins rework and\r\n77d75dc9be5c4bb1d9986a475e1c661718067c6a caused `Builtins-sparc-sunos::\r\ndivtc3_test.c` to `XPASS` on 32-bit Solaris/SPARC. Since there are\r\nseveral underlying issues, un-`XFAIL` the test for now until those are\r\nresolved, to turn the Solaris/sparcv9 buildbot green again after 5 days.\r\n\r\nTested on `sparcv9-sun-solaris2.11` and `x86_64-pc-linux-gnu`.",
+            "commit_timestamp": 1700077943.0
         }
     ]
 }

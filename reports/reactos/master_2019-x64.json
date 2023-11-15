@@ -11759,6 +11759,20 @@
             "commit_ref": "bd9e2d6beb50fc4048fb33f01c96e3a0372efb4e",
             "commit_message": "[FIND] Update Romanian (ro-RO) translation (#5965)\n\n",
             "commit_timestamp": 1700044029.0
+        },
+        {
+            "tool_version": "233.0.20231113.130711-eap07",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1700078705.042075,
+            "elapsed_time": 201.87050032615662,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "bd0a5498b04cf77e611cb6526fd88459be2a7b19",
+            "commit_message": "[NTDLL:LDR] Little fixes about SAL annotation and behavior (#5793)\n\n- Uniform function declarations in .c and .h with fixes and SAL2 improvements.\r\n- Use LDR_[UN]LOCK_LOADER_LOCK_FLAG_XXX correctly.\r\n- Fix incorrect UsedSize calculation in LdrQueryProcessModuleInformationEx (caught by ThFabba).\r\n- Whatever the callback request stop the enumeration or not in LdrEnumerateLoadedModules, the following operations should be the same.\r\n- Fix 2 incorrect DPRINT1 that printed incorrect parameter.\r\n- Return error if RtlAllocateHeap failed in LdrpGetProcedureAddress, and add comments about NT6.2 new changes.\r\n",
+            "commit_timestamp": 1700078372.0
         }
     ]
 }
