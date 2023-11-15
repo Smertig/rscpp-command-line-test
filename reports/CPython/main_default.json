@@ -9043,6 +9043,20 @@
             "commit_ref": "9302f05f9af07332c414b3c19003efd1b1763cf3",
             "commit_message": "gh-111942: Fix SystemError in the TextIOWrapper constructor (#112061)\n\nIn non-debug more the check for the \"errors\" argument is skipped,\r\nand then PyUnicode_AsUTF8() can fail, but its result was not checked.\r\n\r\nCo-authored-by: Victor Stinner <vstinner@python.org>",
             "commit_timestamp": 1699992148.0
+        },
+        {
+            "tool_version": "233.0.20231104.234410-eap06",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1700006846.062234,
+            "elapsed_time": 1190.7319130897522,
+            "x64": true,
+            "actual_files_count": 986,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "9302f05f9af07332c414b3c19003efd1b1763cf3",
+            "commit_message": "gh-111942: Fix SystemError in the TextIOWrapper constructor (#112061)\n\nIn non-debug more the check for the \"errors\" argument is skipped,\r\nand then PyUnicode_AsUTF8() can fail, but its result was not checked.\r\n\r\nCo-authored-by: Victor Stinner <vstinner@python.org>",
+            "commit_timestamp": 1699992148.0
         }
     ]
 }
