@@ -12897,6 +12897,20 @@
             "commit_ref": "70876bd87ea9050b46c8efdf191c246cf452349e",
             "commit_message": "Short-circuit destruction of an empty field using SSO.\n\n```\nname                                   old cpu/op   new cpu/op   delta\nBM_RepeatedPtrField_Ctor                133ns \u00b1 2%     78ns \u00b1 1%  -41.64%   (p=0.000 n=80+87)\n\n```\n\nPiperOrigin-RevId: 582667999\n",
             "commit_timestamp": 1700062052.0
+        },
+        {
+            "tool_version": "233.0.20231113.130711-eap07",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1700049863.552559,
+            "elapsed_time": 319.350656747818,
+            "x64": false,
+            "actual_files_count": 533,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "3f636d4072c0ef0915095f96387bb1a007c36146",
+            "commit_message": "Auto-generate files after cl/582497327\n",
+            "commit_timestamp": 1700014558.0
         }
     ]
 }
