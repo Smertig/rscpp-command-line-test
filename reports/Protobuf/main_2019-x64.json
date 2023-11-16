@@ -12981,6 +12981,20 @@
             "commit_ref": "24dfcacc687de419f14b5645a69c685d20746749",
             "commit_message": "Minimize the scope of unsafe blocks in gencode\n\nBefore this change we would generate nested unsafe blocks that led to compiler warnings. This change minimizes each unsafe block and thereby avoids the nesting and compiler warnings. It's generally a best practice to keep unsafe blocks minimal to avoid the situation where a currently safe function is marked unsafe at a later point and all existing callsides don't need to be updated.\n\nPiperOrigin-RevId: 582993146\n",
             "commit_timestamp": 1700137548.0
+        },
+        {
+            "tool_version": "233.0.20231113.130711-eap07",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1700165029.125268,
+            "elapsed_time": 612.0836968421936,
+            "x64": false,
+            "actual_files_count": 644,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "1a5cdb937826dbabc2c05872c5d7f1d918dea861",
+            "commit_message": "Migrate optional.rs to googletest-rust\n\nPiperOrigin-RevId: 583072875\n",
+            "commit_timestamp": 1700156274.0
         }
     ]
 }

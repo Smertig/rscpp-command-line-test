@@ -12939,6 +12939,22 @@
             "commit_ref": "667ba7f8f31f7439e204c4efbd2aa576cd17273f",
             "commit_message": "[AMDGPU] Fix GCNRewritePartialRegUses pass: vector regclass is selected instead of scalar. (#69957)\n\nFor the following testcase:\r\n\r\nundef %1.sub1:sgpr_96 = COPY undef %0:sgpr_32\r\n%3:vgpr_32 = V_LSHL_ADD_U32_e64 %1.sub1:sgpr_96, ...\r\n\r\nGCNRewritePartialRegUses produced:\r\n\r\n%4:vgpr_32 = COPY undef %1:sgpr_32\r\ndead %2:vgpr_32 = V_LSHL_ADD_U32_e64 %4, ...\r\n\r\nRegister class for %4 is incorrect: there should be sgpr_32 instead of\r\nvgpr_32 because the original %1 had scalar regclass. This patch fixes\r\nthat.\r\n\r\nNote that GCNRewritePartialRegUses pass isn't enabled by default yet.",
             "commit_timestamp": 1700150206.0
+        },
+        {
+            "tool_version": "233.0.20231113.130711-eap07",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1700165589.854833,
+            "elapsed_time": 3989.786063194275,
+            "x64": true,
+            "actual_files_count": 1713,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "f97a579b74a6e65a3f58813b36f6a789102ce315",
+            "commit_message": "[runtimes] Add TODO about CXX_STANDARD_REQUIRED being off after review comment\n",
+            "commit_timestamp": 1700164732.0
         }
     ]
 }
