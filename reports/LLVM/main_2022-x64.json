@@ -12875,6 +12875,22 @@
             "commit_ref": "0901f918daa6c5da19b3d2cf38d7de63c265a086",
             "commit_message": "[builtins][test] Don't XFAIL divtc3_test.c on 32-bit Solaris/sparc fo\u2026 (#72403)\n\nAs detailed in Issue #72398, the recent builtins rework and\r\n77d75dc9be5c4bb1d9986a475e1c661718067c6a caused `Builtins-sparc-sunos::\r\ndivtc3_test.c` to `XPASS` on 32-bit Solaris/SPARC. Since there are\r\nseveral underlying issues, un-`XFAIL` the test for now until those are\r\nresolved, to turn the Solaris/sparcv9 buildbot green again after 5 days.\r\n\r\nTested on `sparcv9-sun-solaris2.11` and `x86_64-pc-linux-gnu`.",
             "commit_timestamp": 1700077943.0
+        },
+        {
+            "tool_version": "233.0.20231113.130711-eap07",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1700107895.943089,
+            "elapsed_time": 2789.493220090866,
+            "x64": true,
+            "actual_files_count": 1713,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "84044061e880bd6c7994cb2e3048a073cf76a683",
+            "commit_message": "[RISCV] Make getDefaultVLOps call getDefaultScalableVLOps instead of the other way around. NFC\n\nPreviously getDefaultScalableVLOps called getDefaultVLOps. getDefaultVLOps\nalso handles fixed vectors so had to then check if it was fixed\nor scalable.\n\nSince getDefaultScalableVLOps know the type is scalable, it makes\nsense for it to contain the scalable case directly and have\ngetDefaultVLOps call it for the scalable case.\n",
+            "commit_timestamp": 1700105280.0
         }
     ]
 }
