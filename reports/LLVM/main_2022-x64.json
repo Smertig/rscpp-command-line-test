@@ -12907,6 +12907,22 @@
             "commit_ref": "f8986dfce2dbe040ad41e017e3b87abb60138df8",
             "commit_message": "[GitHub] Compress mlir/spirv patterns in CODEOWNERS. NFCI. (#72485)\n\nSuggested by @joker-eph in\r\nhttps://github.com/llvm/llvm-project/pull/72412#discussion_r1395210901.",
             "commit_timestamp": 1700121481.0
+        },
+        {
+            "tool_version": "233.0.20231113.130711-eap07",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1700136800.082057,
+            "elapsed_time": 4650.72252035141,
+            "x64": true,
+            "actual_files_count": 1713,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "865f54e501739f382d33866baebfd0f9aaad01bb",
+            "commit_message": "[DAG] ISD::is*Load/is*Store - merge isa<>/cast<> calls into single dyn_cast<>. NFCI.\n\ncast<> repeats most of the work that isa<> will have already done (and even calls assert(isa<>) in debug builds) - just use dyn_cast and a pointer check to avoid all this duplicated work.\n",
+            "commit_timestamp": 1700134215.0
         }
     ]
 }
