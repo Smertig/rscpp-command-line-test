@@ -12967,6 +12967,20 @@
             "commit_ref": "ba7067c9fa5ffe3855e26d7bc206924ea882dea7",
             "commit_message": "Fix a bug where we did not return a mutable message for _mut() accessors\n\nThis bug has been found by the TSAN sanitizer as part of cl/582814210. Before this change we were incorrectly returning an immutable Message instance for mutable accessors. This bug has been detected by TSAN because for embedded message fields the C++ runtime returns a static message instance if a field has not been set. In cl/582814210 this bug led to two separate unit tests read and write from/to the same object without any synchronization. Thus TSAN found a data race.\n\nTests for this change will be added as part of cl/582814210. At this state of the source we don't have any mutation functions available to trigger the TSAN error.\n\nPiperOrigin-RevId: 582978261\n",
             "commit_timestamp": 1700134254.0
+        },
+        {
+            "tool_version": "233.0.20231113.130711-eap07",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1700150621.544851,
+            "elapsed_time": 422.84863781929016,
+            "x64": false,
+            "actual_files_count": 537,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "24dfcacc687de419f14b5645a69c685d20746749",
+            "commit_message": "Minimize the scope of unsafe blocks in gencode\n\nBefore this change we would generate nested unsafe blocks that led to compiler warnings. This change minimizes each unsafe block and thereby avoids the nesting and compiler warnings. It's generally a best practice to keep unsafe blocks minimal to avoid the situation where a currently safe function is marked unsafe at a later point and all existing callsides don't need to be updated.\n\nPiperOrigin-RevId: 582993146\n",
+            "commit_timestamp": 1700137548.0
         }
     ]
 }

@@ -12923,6 +12923,22 @@
             "commit_ref": "865f54e501739f382d33866baebfd0f9aaad01bb",
             "commit_message": "[DAG] ISD::is*Load/is*Store - merge isa<>/cast<> calls into single dyn_cast<>. NFCI.\n\ncast<> repeats most of the work that isa<> will have already done (and even calls assert(isa<>) in debug builds) - just use dyn_cast and a pointer check to avoid all this duplicated work.\n",
             "commit_timestamp": 1700134215.0
+        },
+        {
+            "tool_version": "233.0.20231113.130711-eap07",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1700151120.760279,
+            "elapsed_time": 3325.8891310691833,
+            "x64": true,
+            "actual_files_count": 1713,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "667ba7f8f31f7439e204c4efbd2aa576cd17273f",
+            "commit_message": "[AMDGPU] Fix GCNRewritePartialRegUses pass: vector regclass is selected instead of scalar. (#69957)\n\nFor the following testcase:\r\n\r\nundef %1.sub1:sgpr_96 = COPY undef %0:sgpr_32\r\n%3:vgpr_32 = V_LSHL_ADD_U32_e64 %1.sub1:sgpr_96, ...\r\n\r\nGCNRewritePartialRegUses produced:\r\n\r\n%4:vgpr_32 = COPY undef %1:sgpr_32\r\ndead %2:vgpr_32 = V_LSHL_ADD_U32_e64 %4, ...\r\n\r\nRegister class for %4 is incorrect: there should be sgpr_32 instead of\r\nvgpr_32 because the original %1 had scalar regclass. This patch fixes\r\nthat.\r\n\r\nNote that GCNRewritePartialRegUses pass isn't enabled by default yet.",
+            "commit_timestamp": 1700150206.0
         }
     ]
 }

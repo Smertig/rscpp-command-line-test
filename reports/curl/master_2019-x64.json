@@ -12011,6 +12011,20 @@
             "commit_ref": "626365ef828150849c78ea42e9048bdcba1317d0",
             "commit_message": "http: fix `-Wunused-variable` compiler warning\n\nFix compiler warnings in builds with disabled auths, NTLM and SPNEGO.\n\nE.g. with `CURL_DISABLE_BASIC_AUTH` + `CURL_DISABLE_BEARER_AUTH` +\n`CURL_DISABLE_DIGEST_AUTH` + `CURL_DISABLE_NEGOTIATE_AUTH` +\n`CURL_DISABLE_NTLM` on non-Windows.\n\n```\n./curl/lib/http.c:737:12: warning: unused variable 'result' [-Wunused-variable]\n  CURLcode result = CURLE_OK;\n           ^\n./curl/lib/http.c:995:18: warning: variable 'availp' set but not used [-Wunused-but-set-variable]\n  unsigned long *availp;\n                 ^\n./curl/lib/http.c:996:16: warning: variable 'authp' set but not used [-Wunused-but-set-variable]\n  struct auth *authp;\n               ^\n```\n\nRegression from e92edfbef64448ef461117769881f3ed776dec4e #11490\n\nFixes #12228\nCloses #12335\n",
             "commit_timestamp": 1700135419.0
+        },
+        {
+            "tool_version": "233.0.20231113.130711-eap07",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1700150586.363072,
+            "elapsed_time": 172.73307585716248,
+            "x64": false,
+            "actual_files_count": 2452,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "4998bbd828070e386a1d5b49e3a20960ccc228b9",
+            "commit_message": "RELEASE-NOTES: synced\n",
+            "commit_timestamp": 1700146752.0
         }
     ]
 }
