@@ -13003,6 +13003,22 @@
             "commit_ref": "d8ab8b95baa43fbc1dfedf83ca2e5ef7cbed74ee",
             "commit_message": "[Docs][llvm-exegesis] Fix minor issues in llvm-exegesis docs\n",
             "commit_timestamp": 1700206876.0
+        },
+        {
+            "tool_version": "233.0.20231113.130711-eap07",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1700223318.883554,
+            "elapsed_time": 6646.620174884796,
+            "x64": true,
+            "actual_files_count": 1713,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "ec42d547eba5c0ad0bddbecc8902d35383968e78",
+            "commit_message": "[lld][COFF][NFC] Factor out exception table sorting. (#72518)\n\nThis is a preparation for ARM64EC support, which needs to sort both ARM\r\nand x86_64 tables separately.",
+            "commit_timestamp": 1700221352.0
         }
     ]
 }

@@ -12227,6 +12227,20 @@
             "commit_ref": "fad0dbb9acc7d14b0a85bcadf305aa2a2ee21c81",
             "commit_message": "Merge pull request #24364 from bagelbytes61:bugfix/qrcode-version-estimator\n\nBugfix/qrcode version estimator #24364\r\n\r\nFixes https://github.com/opencv/opencv/issues/24366\r\n\r\n### Pull Request Readiness Checklist\r\n\r\nSee details at https://github.com/opencv/opencv/wiki/How_to_contribute#making-a-good-pull-request\r\n\r\n- [x] I agree to contribute to the project under Apache 2 License.\r\n- [x] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\r\n- [x] The PR is proposed to the proper branch\r\n- [x] There is a reference to the original bug report and related work\r\n- [x] There is accuracy test, performance test and test data in opencv_extra repository, if applicable\r\n      Patch to opencv_extra has the same branch name.\r\n- [x] The feature is well documented and sample code can be built with the project CMake",
             "commit_timestamp": 1700141308.0
+        },
+        {
+            "tool_version": "233.0.20231113.130711-eap07",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1700222751.377864,
+            "elapsed_time": 439.4691677093506,
+            "x64": false,
+            "actual_files_count": 467,
+            "expected_files_count": 459,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "6c57ce9e09011763a973234f2e6d8acfe2984e1a",
+            "commit_message": "Merge pull request #24473 from alexlyulkov:al/samples_with_maven\n\nUpdated Android samples for modern Android studio. Added OpenCV from Maven support. #24473\r\n\r\nUpdated samples for recent Android studio:\r\n\r\n- added namespace field that is required in build.gradle files\r\n- replaced _switch_ by _if-else_ because it doesn't work with constants from resources\r\n- added missed log library dependency in face-detection/jni/CMakeLists.txt\r\n- use local.properties to define NDK location\r\n\r\nAdded support for OpenCV from Maven. Now you can choose 3 possible sources of OpenCV lib in settings.gradle: SDK path, local Maven repository, public Maven repository. (Creating Maven repository from SDK is added here #24456 )\r\n\r\nThere are differences in project configs for SDK and Maven versions:\r\n\r\n- different dependencies in build.gradle\r\n- different OpenCV library names in CMakeLists.txt\r\n- SDK version requires OpenCV_DIR definition\r\n\r\nRequires:\r\n- https://github.com/opencv/ci-gha-workflow/pull/124\r\n- https://github.com/opencv-infrastructure/opencv-gha-dockerfile/pull/26",
+            "commit_timestamp": 1700219837.0
         }
     ]
 }

@@ -13413,6 +13413,20 @@
             "commit_ref": "de7ba4e8897bbe56c612b980d02f249a92d0eada",
             "commit_message": "fn need to be in parenthesis \n\nOtherwise intel c++ 19.1 cause an error\r\n\"expression preceding parentheses of apparent call must have (pointer-to-) function type CATCH2\"",
             "commit_timestamp": 1700134415.0
+        },
+        {
+            "tool_version": "233.0.20231113.130711-eap07",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1700222611.914178,
+            "elapsed_time": 64.32035493850708,
+            "x64": false,
+            "actual_files_count": 278,
+            "expected_files_count": 272,
+            "repo_url": "https://github.com/catchorg/Catch2.git",
+            "commit_ref": "32d9ae24bc4a0fed9a136a73e116b4ded0ac84b7",
+            "commit_message": "JSONWriter deals in StringRefs instead of std::strings\n\nTogether with liberal use of `_sr` UDL to compile-time convert\nstring literals into StringRefs, this will reduce the number of\nallocation and remove most of the strcpy calls inherent in\nconverting string lits into `std::string`s.\n",
+            "commit_timestamp": 1700211243.0
         }
     ]
 }
