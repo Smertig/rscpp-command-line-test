@@ -12207,6 +12207,20 @@
             "commit_ref": "0492ecffdfae8c838067494f5761627b5563cb5a",
             "commit_message": "Add #include <algorithm> to fix building with gcc 14 (#1104)\n\nWith gcc 14 some C++ Standard Library headers have been changed to no\r\nlonger include other headers that were used internally by the library.\r\nIn luau's case it is the `<algorithm>` header.\r\n",
             "commit_timestamp": 1700164276.0
+        },
+        {
+            "tool_version": "233.0.20231113.130711-eap07",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1700236997.634586,
+            "elapsed_time": 281.210001707077,
+            "x64": false,
+            "actual_files_count": 430,
+            "expected_files_count": 379,
+            "repo_url": "https://github.com/luau-lang/luau",
+            "commit_ref": "298cd70154dfa83dac8b4ee02acd77e48448fea2",
+            "commit_message": "Optimize vector literals by storing them in the constant table (#1096)\n\nWith this optimization, built-in vector constructor calls with 3/4 arguments are detected by the compiler and turned into vector constants when the arguments are constant numbers.\r\nRequires optimization level 2 because built-ins are not folded otherwise by the compiler.\r\nBytecode version is bumped because of the new constant type, but old bytecode versions can still be loaded.\r\n\r\nThe following synthetic benchmark shows ~6.6x improvement.\r\n```\r\nlocal v\r\nfor i = 1, 10000000 do\r\n\tv = vector(1, 2, 3)\r\n\tv = vector(1, 2, 3)\r\n\tv = vector(1, 2, 3)\r\n\tv = vector(1, 2, 3)\r\n\tv = vector(1, 2, 3)\r\n\tv = vector(1, 2, 3)\r\n\tv = vector(1, 2, 3)\r\n\tv = vector(1, 2, 3)\r\n\tv = vector(1, 2, 3)\r\n\tv = vector(1, 2, 3)\r\nend\r\n```\r\n\r\nAlso tried a more real world scenario and could see a few percent improvement.\r\n\r\nAdded a new fast flag LuauVectorLiterals for enabling the feature.\r\n\r\n---------\r\n\r\nCo-authored-by: Petri H\u00e4kkinen <petrih@rmd.remedy.fi>\r\nCo-authored-by: vegorov-rbx <75688451+vegorov-rbx@users.noreply.github.com>\r\nCo-authored-by: Arseny Kapoulkine <arseny.kapoulkine@gmail.com>",
+            "commit_timestamp": 1700225672.0
         }
     ]
 }

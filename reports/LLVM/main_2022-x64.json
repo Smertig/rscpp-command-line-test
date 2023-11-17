@@ -13019,6 +13019,22 @@
             "commit_ref": "ec42d547eba5c0ad0bddbecc8902d35383968e78",
             "commit_message": "[lld][COFF][NFC] Factor out exception table sorting. (#72518)\n\nThis is a preparation for ARM64EC support, which needs to sort both ARM\r\nand x86_64 tables separately.",
             "commit_timestamp": 1700221352.0
+        },
+        {
+            "tool_version": "233.0.20231113.130711-eap07",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1700237546.238072,
+            "elapsed_time": 3681.8234481811523,
+            "x64": true,
+            "actual_files_count": 1719,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "ec6a34e2a781fcfc6fe1d30e7cd358fb779157cf",
+            "commit_message": "[lldb] Pass important options to dsymForUUID (#72669)\n\nOn macOS, we usually use the DebugSymbols framework to find dSYMs, but\r\nwe have a few places (including crashlog.py) that calls out directly to\r\ndsymForUUID. Currently, this invocation is missing two important\r\noptions:\r\n\r\n* `--ignoreNegativeCache`: Poor network connectivity or lack of VPN can\r\nlead to a negative cache hit. Avoiding those issues is worth the penalty\r\nof skipping these caches.\r\n* `--copyExecutable`: Ensure we copy the executable as it might not be\r\navailable at its original location.\r\n\r\nrdar://118480731",
+            "commit_timestamp": 1700236807.0
         }
     ]
 }

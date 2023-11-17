@@ -9281,6 +9281,20 @@
             "commit_ref": "0ee2d77331f2362fcaab20cc678530b18e467e3c",
             "commit_message": "gh-112070: make `functools.lru_cache` threadsafe in --disable-gil build (gh-112111)\n\n* gh-112070: make `functools.lrucacle` threadsafe in --disable-gil build\r\n\r\n* gh-112070: update generate `functoolsmodule` files\r\n\r\n* gh-112070: add NEWS file\r\n\r\n* Delete Misc/NEWS.d/next/Library/2023-11-15-20-19-45.gh-issue-112070.q6OhcU.rst\r\n\r\n* gh-112070: reformat functoolsmodule.c\r\n\r\n---------\r\n\r\nCo-authored-by: Sam Gross <colesbury@gmail.com>",
             "commit_timestamp": 1700197382.0
+        },
+        {
+            "tool_version": "233.0.20231113.130711-eap07",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1700237203.026168,
+            "elapsed_time": 1999.5960521697998,
+            "x64": true,
+            "actual_files_count": 988,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "2dbb2e035b968811ddc00317ccf0cadafacffe1c",
+            "commit_message": "GH-110109: Churn `pathlib.PurePath` methods (#112012)\n\nRe-arrange `pathlib.PurePath` methods in source code. No other changes.\r\n\r\nThe `PurePath` implementations of certain special methods, such as\r\n`__eq__()` and `__hash__()`, are not usually applicable to user subclasses\r\nof `_PathBase`. To facilitate their removal, another patch will split the\r\n`PurePath` class into `_PurePathBase` and `PurePath`, with the latter\r\nproviding these special methods.\r\n\r\nThis patch prepares the ground for splitting `PurePath`. It's similar to\r\ne8d77b0, which preceded splitting `Path`. By churning the methods here,\r\nsubsequent patches will be easier to review and less likely to break\r\nthings.",
+            "commit_timestamp": 1700235170.0
         }
     ]
 }
