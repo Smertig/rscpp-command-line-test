@@ -9309,6 +9309,20 @@
             "commit_ref": "f489ace9e7aaa29b5a83b0a74a247abc8b032910",
             "commit_message": "GH-111808: Make the default value for `test.support.infinite_recursion()` conditional on compiler optimizations (GH-112223)\n\nCo-authored-by: Victor Stinner <vstinner@python.org>",
             "commit_timestamp": 1700265131.0
+        },
+        {
+            "tool_version": "233.0.20231113.130711-eap07",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1700251535.466814,
+            "elapsed_time": 1934.8308553695679,
+            "x64": true,
+            "actual_files_count": 988,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "be0bd54c6b3b2382d03f2073070353c8b946902b",
+            "commit_message": "gh-106529: Cleanups split off gh-112134 (#112214)\n\n- Double max trace size to 256\r\n- Add a dependency on executor_cases.c.h for ceval.o\r\n- Mark `_SPECIALIZE_UNPACK_SEQUENCE` as `TIER_ONE_ONLY`\r\n- Add debug output back showing the optimized trace\r\n- Bunch of cleanups to Tools/cases_generator/",
+            "commit_timestamp": 1700250582.0
         }
     ]
 }
