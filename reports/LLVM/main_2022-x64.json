@@ -13083,6 +13083,22 @@
             "commit_ref": "2b71f91b06ad4f5a0c54725b06283fd731620b92",
             "commit_message": "Revert \"[mlir][sparse] stress test BSR\" (#72735)\n\nReverts llvm/llvm-project#72712\r\n\r\nThis causes timeouts on the bots.",
             "commit_timestamp": 1700276809.0
+        },
+        {
+            "tool_version": "233.0.20231113.130711-eap07",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1700295072.837276,
+            "elapsed_time": 4472.441958904266,
+            "x64": true,
+            "actual_files_count": 1720,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "6da4ecdf9285225ccc8fa4441b7e9f65e8f4f49c",
+            "commit_message": "[InstCombine] Infer shift flags with unknown shamt (#72535)\n\nAlive2: https://alive2.llvm.org/ce/z/82Wr3q\r\n\r\nRelated patch:\r\nhttps://github.com/llvm/llvm-project/commit/2dd52b4527667837cc525aa48435ab5cbfa30a0b\r\n",
+            "commit_timestamp": 1700291714.0
         }
     ]
 }
