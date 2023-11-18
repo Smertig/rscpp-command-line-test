@@ -13099,6 +13099,22 @@
             "commit_ref": "6da4ecdf9285225ccc8fa4441b7e9f65e8f4f49c",
             "commit_message": "[InstCombine] Infer shift flags with unknown shamt (#72535)\n\nAlive2: https://alive2.llvm.org/ce/z/82Wr3q\r\n\r\nRelated patch:\r\nhttps://github.com/llvm/llvm-project/commit/2dd52b4527667837cc525aa48435ab5cbfa30a0b\r\n",
             "commit_timestamp": 1700291714.0
+        },
+        {
+            "tool_version": "233.0.20231113.130711-eap07",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1700309629.412612,
+            "elapsed_time": 3904.5764741897583,
+            "x64": true,
+            "actual_files_count": 1720,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "394bba766ddd2f5ea8ac8007dcadb724f79bafc4",
+            "commit_message": "[CodeGen][DebugInfo] Add missing debug info for jump table BB (#71021)\n\nvisitJumpTable is called on FinishBasicBlock. At that time, getCurSDLoc\nwill always return SDLoc without DebugLoc since CurInst was set to\nnullptr after visiting each instruction.\nThis patch passes SDLoc to buildJumpTable when visiting SwitchInst so\nthat visitJumpTable can use it later.",
+            "commit_timestamp": 1700306271.0
         }
     ]
 }
