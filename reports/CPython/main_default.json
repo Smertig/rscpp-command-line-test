@@ -9379,6 +9379,20 @@
             "commit_ref": "9c7c8bacc140b0ce7bbb17b1756a1ea9fb376983",
             "commit_message": "GH-110109: Fix misplaced tests for `pathlib.WindowsPath.owner()` and `group()` (#112239)\n\nMove test methods from `WindowsPathAsPureTest` to `WindowsPathTest` unit.\r\nThe former test unit is intended to exercise only pure path functionality.",
             "commit_timestamp": 1700322127.0
+        },
+        {
+            "tool_version": "233.0.20231113.130711-eap07",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1700337934.315745,
+            "elapsed_time": 2116.3940229415894,
+            "x64": true,
+            "actual_files_count": 988,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "607b5e30c67bad35b90240d9ac176131e51423a5",
+            "commit_message": "GH-110109: Test pure functionality of `pathlib.Path` user subclasses (#112242)\n\nAdd `PurePathTest` as a superclass of `PathTest`, and therefore also\r\n`PathSubclassTest`. This adds coverage of pure functionality in user\r\nsubclasses of `pathlib.Path`.\r\n\r\nRemove `PosixPathAsPureTest` and `WindowsPathAsPureTest`, as they\r\nnow duplicate `PosixPathTest` and `WindowsPathTest`.\r\n\r\nThis makes the MROs of test unit classes match the MROs of pathlib\r\nclasses.",
+            "commit_timestamp": 1700327170.0
         }
     ]
 }

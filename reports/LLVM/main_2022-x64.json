@@ -13131,6 +13131,22 @@
             "commit_ref": "c093383ffadff8dfadfd6bc0ab7107a0e194aa7e",
             "commit_message": "[SelectionDAG] Fix crash for salvaging with indirect debug values (#72645)\n\nThis is a follow-up to #68981, and fix for #72630, #72447.\n\nWe may end up in SelectionDAG::salvageDebugInfo() with indirect debug\nvalues, and attempting to salvage ADD nodes with non-constant RHS would\nlead us to try to turn those indirect debug values variadic, which is\nnot allowed.\n\nThis triggered the following assert in the SDDbgValue constructor:\n\n  Assertion `!(IsVariadic && IsIndirect)' failed.\n\nThis also adds a lit test for salvaging when having an indirect debug\nvalue and constant RHS, as there seems like there was no such lit test.\nHowever, I am not sure if the use of the stack_value operation is\ncorrect in that case (which is existing behavior before #68981), but\nthat at least documents the current behavior.",
             "commit_timestamp": 1700323287.0
+        },
+        {
+            "tool_version": "233.0.20231113.130711-eap07",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1700338378.460163,
+            "elapsed_time": 5992.894953727722,
+            "x64": true,
+            "actual_files_count": 1720,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "0154e53bf307aa501a6d9d6a1bafa6a6fcb2a7ad",
+            "commit_message": "[RISCV][GISel] Remove the rv32/rv64 subdirectories for legalizer tests. NFC\n\nAdd -rv32 -rv64 as suffix to test name. First step towards trying\nto merge the content of these tests.\n",
+            "commit_timestamp": 1700335509.0
         }
     ]
 }

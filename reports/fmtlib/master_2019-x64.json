@@ -13535,6 +13535,20 @@
             "commit_ref": "864a8b5f38d1742da51a1f1dc827bb4c55c97a3a",
             "commit_message": "fix: support optional<T> with format_as(T) (#3713)\n\nFormatting a std::optional<T> where T had a custom format_as(T) function failed to compile with clang,\r\ndue to set_debug_format being hidden by private inheritance. This fix makes the function available through a using clause.",
             "commit_timestamp": 1700175753.0
+        },
+        {
+            "tool_version": "233.0.20231113.130711-eap07",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1700337839.665076,
+            "elapsed_time": 111.71386885643005,
+            "x64": false,
+            "actual_files_count": 66,
+            "expected_files_count": 66,
+            "repo_url": "https://github.com/fmtlib/fmt.git",
+            "commit_ref": "c13753a70cc55f3b1c99fb8f8395e78e5f9cae43",
+            "commit_message": "Fix handling of invalid Unicode in precision\n",
+            "commit_timestamp": 1700332571.0
         }
     ]
 }
