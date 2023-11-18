@@ -13115,6 +13115,22 @@
             "commit_ref": "394bba766ddd2f5ea8ac8007dcadb724f79bafc4",
             "commit_message": "[CodeGen][DebugInfo] Add missing debug info for jump table BB (#71021)\n\nvisitJumpTable is called on FinishBasicBlock. At that time, getCurSDLoc\nwill always return SDLoc without DebugLoc since CurInst was set to\nnullptr after visiting each instruction.\nThis patch passes SDLoc to buildJumpTable when visiting SwitchInst so\nthat visitJumpTable can use it later.",
             "commit_timestamp": 1700306271.0
+        },
+        {
+            "tool_version": "233.0.20231113.130711-eap07",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1700323944.43693,
+            "elapsed_time": 7285.616597175598,
+            "x64": true,
+            "actual_files_count": 1720,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "c093383ffadff8dfadfd6bc0ab7107a0e194aa7e",
+            "commit_message": "[SelectionDAG] Fix crash for salvaging with indirect debug values (#72645)\n\nThis is a follow-up to #68981, and fix for #72630, #72447.\n\nWe may end up in SelectionDAG::salvageDebugInfo() with indirect debug\nvalues, and attempting to salvage ADD nodes with non-constant RHS would\nlead us to try to turn those indirect debug values variadic, which is\nnot allowed.\n\nThis triggered the following assert in the SDDbgValue constructor:\n\n  Assertion `!(IsVariadic && IsIndirect)' failed.\n\nThis also adds a lit test for salvaging when having an indirect debug\nvalue and constant RHS, as there seems like there was no such lit test.\nHowever, I am not sure if the use of the stack_value operation is\ncorrect in that case (which is existing behavior before #68981), but\nthat at least documents the current behavior.",
+            "commit_timestamp": 1700323287.0
         }
     ]
 }
