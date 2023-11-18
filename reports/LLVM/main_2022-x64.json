@@ -13067,6 +13067,22 @@
             "commit_ref": "fab690d6b5d50f263bdb2413c913c9bd34d47625",
             "commit_message": "[NFC][SHT_LLVM_BB_ADDR_MAP] Define and use constructor and accessors for BBAddrMap fields. (#72689)\n\nThe fields are still kept as public for now since our tooling accesses\r\nthem. Will change them to private visibility in a later patch.",
             "commit_timestamp": 1700250246.0
+        },
+        {
+            "tool_version": "233.0.20231113.130711-eap07",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1700280685.987813,
+            "elapsed_time": 3261.4930272102356,
+            "x64": true,
+            "actual_files_count": 1720,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "2b71f91b06ad4f5a0c54725b06283fd731620b92",
+            "commit_message": "Revert \"[mlir][sparse] stress test BSR\" (#72735)\n\nReverts llvm/llvm-project#72712\r\n\r\nThis causes timeouts on the bots.",
+            "commit_timestamp": 1700276809.0
         }
     ]
 }
