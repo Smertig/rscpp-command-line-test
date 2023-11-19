@@ -12221,6 +12221,20 @@
             "commit_ref": "a9fd0d0083a534ef1efa82e7546846776cbd7373",
             "commit_message": "build: always revert `#pragma GCC diagnostic` after use\n\nBefore this patch some source files were overriding gcc warning options,\nbut without restoring them at the end of the file. In CMake UNITY builds\nthese options spilled over to the remainder of the source code,\neffecitvely disabling them for a larger portion of the codebase than\nintended.\n\n`#pragma clang diagnostic` didn't have such issue in the codebase.\n\nReviewed-by: Marcel Raad\nCloses #12352\n",
             "commit_timestamp": 1700306192.0
+        },
+        {
+            "tool_version": "233.0.20231113.130711-eap07",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1700366661.213439,
+            "elapsed_time": 183.53441405296326,
+            "x64": false,
+            "actual_files_count": 2452,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "a9fd0d0083a534ef1efa82e7546846776cbd7373",
+            "commit_message": "build: always revert `#pragma GCC diagnostic` after use\n\nBefore this patch some source files were overriding gcc warning options,\nbut without restoring them at the end of the file. In CMake UNITY builds\nthese options spilled over to the remainder of the source code,\neffecitvely disabling them for a larger portion of the codebase than\nintended.\n\n`#pragma clang diagnostic` didn't have such issue in the codebase.\n\nReviewed-by: Marcel Raad\nCloses #12352\n",
+            "commit_timestamp": 1700306192.0
         }
     ]
 }
