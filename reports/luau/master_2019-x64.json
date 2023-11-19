@@ -12319,6 +12319,20 @@
             "commit_ref": "74c532053f829d31bb000c16d3c12732e37dbf3f",
             "commit_message": "Sync to upstream/release/604 (#1106)\n\nNew Solver\r\n\r\n* New algorithm for inferring the types of locals that have no\r\nannotations. This\r\nalgorithm is very conservative by default, but is augmented with some\r\ncontrol\r\n  flow awareness to handle most common scenarios.\r\n* Fix bugs in type inference of tables\r\n* Improve performance of by switching out standard C++ containers for\r\n`DenseHashMap`\r\n* Infrastructure to support clearer error messages in strict mode\r\n\r\nNative Code Generation\r\n\r\n* Fix a lowering issue with buffer.writeu8 and 0x80-0xff values: A\r\nconstant\r\n  argument wasn't truncated to the target type range and that causes an\r\n  assertion failure in `build.mov`.\r\n* Store full lightuserdata value in loop iteration protocol lowering\r\n* Add analysis to compute function bytecode distribution\r\n* This includes a class to analyze the bytecode operator distribution\r\nper\r\nfunction and a CLI tool that produces a JSON report. See the new cmake\r\n      target `Luau.Bytecode.CLI`\r\n\r\n---------\r\n\r\nCo-authored-by: Aaron Weiss <aaronweiss@roblox.com>\r\nCo-authored-by: Alexander McCord <amccord@roblox.com>\r\nCo-authored-by: Andy Friesen <afriesen@roblox.com>\r\nCo-authored-by: Aviral Goel <agoel@roblox.com>\r\nCo-authored-by: Lily Brown <lbrown@roblox.com>\r\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>",
             "commit_timestamp": 1700246778.0
+        },
+        {
+            "tool_version": "233.0.20231113.130711-eap07",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1700352232.90301,
+            "elapsed_time": 268.82460045814514,
+            "x64": false,
+            "actual_files_count": 437,
+            "expected_files_count": 379,
+            "repo_url": "https://github.com/luau-lang/luau",
+            "commit_ref": "74c532053f829d31bb000c16d3c12732e37dbf3f",
+            "commit_message": "Sync to upstream/release/604 (#1106)\n\nNew Solver\r\n\r\n* New algorithm for inferring the types of locals that have no\r\nannotations. This\r\nalgorithm is very conservative by default, but is augmented with some\r\ncontrol\r\n  flow awareness to handle most common scenarios.\r\n* Fix bugs in type inference of tables\r\n* Improve performance of by switching out standard C++ containers for\r\n`DenseHashMap`\r\n* Infrastructure to support clearer error messages in strict mode\r\n\r\nNative Code Generation\r\n\r\n* Fix a lowering issue with buffer.writeu8 and 0x80-0xff values: A\r\nconstant\r\n  argument wasn't truncated to the target type range and that causes an\r\n  assertion failure in `build.mov`.\r\n* Store full lightuserdata value in loop iteration protocol lowering\r\n* Add analysis to compute function bytecode distribution\r\n* This includes a class to analyze the bytecode operator distribution\r\nper\r\nfunction and a CLI tool that produces a JSON report. See the new cmake\r\n      target `Luau.Bytecode.CLI`\r\n\r\n---------\r\n\r\nCo-authored-by: Aaron Weiss <aaronweiss@roblox.com>\r\nCo-authored-by: Alexander McCord <amccord@roblox.com>\r\nCo-authored-by: Andy Friesen <afriesen@roblox.com>\r\nCo-authored-by: Aviral Goel <agoel@roblox.com>\r\nCo-authored-by: Lily Brown <lbrown@roblox.com>\r\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>",
+            "commit_timestamp": 1700246778.0
         }
     ]
 }

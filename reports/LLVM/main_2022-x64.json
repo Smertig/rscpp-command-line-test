@@ -13147,6 +13147,22 @@
             "commit_ref": "0154e53bf307aa501a6d9d6a1bafa6a6fcb2a7ad",
             "commit_message": "[RISCV][GISel] Remove the rv32/rv64 subdirectories for legalizer tests. NFC\n\nAdd -rv32 -rv64 as suffix to test name. First step towards trying\nto merge the content of these tests.\n",
             "commit_timestamp": 1700335509.0
+        },
+        {
+            "tool_version": "233.0.20231113.130711-eap07",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1700352761.842412,
+            "elapsed_time": 3501.9713475704193,
+            "x64": true,
+            "actual_files_count": 1720,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "695662b00c993dc33f7196c6d156c967a0aad6af",
+            "commit_message": "[clang] Remove ConstantAggregateBuilderBase::addBitCast (NFC)\n\n* Replace all existing uses of ConstantAggregateBuilderBase::addBitCast,\n  as they involve a no-op ptr-to-ptr bitcast\n* Remove method ConstantAggregateBuilderBase::addBitCast\n\nOpaque ptr cleanup effort (NFC)\n",
+            "commit_timestamp": 1700351168.0
         }
     ]
 }
