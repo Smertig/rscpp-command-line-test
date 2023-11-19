@@ -12067,6 +12067,20 @@
             "commit_ref": "e3f204e2282f25d9556d9d83f43f31b6578eaa84",
             "commit_message": "[CMAKE] Remove \"/Gy\" option from ML\n\nReason: VS solution builds pass the compiler options to the assembler. These are usually ignored and result in a warning only, but ML of the latest VS supports /Gy (function level linking), but that requires all functions to be declared with \"PROC\" and otherwise results in an error.\n",
             "commit_timestamp": 1700378373.0
+        },
+        {
+            "tool_version": "233.0.20231113.130711-eap07",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1700395464.99444,
+            "elapsed_time": 159.0647909641266,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "d5cfd837891ec004c956b22d377d73b6655b332d",
+            "commit_message": "[HOTPLUG] Update Japanese (ja-JP) translation\n\nCORE-18706\n",
+            "commit_timestamp": 1700394719.0
         }
     ]
 }
