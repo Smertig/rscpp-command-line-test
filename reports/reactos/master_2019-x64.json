@@ -12053,6 +12053,20 @@
             "commit_ref": "72081168fb0f8e279ba24eaab601fee4525a71d7",
             "commit_message": "[MSPAINT] Introduce partial image history (#5994)\n\n- Add IMAGE_PART structure and use as history items.\r\n- Overload ImageModel::PushImageForUndo(const RECT& rcPartial).\r\n- Add ToolsModel::GetToolSize.\r\n- Implement partial image history on TwoPointDrawTool.\r\nCORE-19094",
             "commit_timestamp": 1700366379.0
+        },
+        {
+            "tool_version": "233.0.20231113.130711-eap07",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1700380993.698125,
+            "elapsed_time": 159.49088096618652,
+            "x64": true,
+            "actual_files_count": 266,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "e3f204e2282f25d9556d9d83f43f31b6578eaa84",
+            "commit_message": "[CMAKE] Remove \"/Gy\" option from ML\n\nReason: VS solution builds pass the compiler options to the assembler. These are usually ignored and result in a warning only, but ML of the latest VS supports /Gy (function level linking), but that requires all functions to be declared with \"PROC\" and otherwise results in an error.\n",
+            "commit_timestamp": 1700378373.0
         }
     ]
 }

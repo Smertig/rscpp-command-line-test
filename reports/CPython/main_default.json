@@ -9421,6 +9421,20 @@
             "commit_ref": "18c692946953e586db432fd06c856531a2b05127",
             "commit_message": "gh-112186: Improve test case `test_loop_is_closed_resource_warnings` (#112187)\n\n",
             "commit_timestamp": 1700364094.0
+        },
+        {
+            "tool_version": "233.0.20231113.130711-eap07",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1700381130.243084,
+            "elapsed_time": 2171.3153173923492,
+            "x64": true,
+            "actual_files_count": 988,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "14fd86a59d0d91fe72641efeb14a59d99127dec3",
+            "commit_message": "IDLE: Fix test_debugger bug and buildbot failures (#112258)\n\nMissing \"requires('gui')\" causes Tk() to fail when no gui.\r\nThis caused CI Hypothesis test to fail, but I did not understand\r\nthe its error message. Then buildbots failed.\r\n\r\nIdbTest failed on draft Bdb replacement because so different.\r\nSimplified version works on old and new.\r\n",
+            "commit_timestamp": 1700375966.0
         }
     ]
 }
