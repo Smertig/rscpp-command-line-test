@@ -13723,6 +13723,20 @@
             "commit_ref": "e122fcbf58e142e837a2bba382ef7ca4f5eaa13b",
             "commit_message": "[debug] Don't define g_debuglevel in the kernel\n\nWe only use this constant when `DEBUGLEVEL>=2`, but we get\n-Werror=pedantic errors for empty translation units, so still define it\nexcept in kernel environments.\n\nBackport from the kernel:\n\nhttps://lore.kernel.org/lkml/20230616144400.172683-1-ben.dooks@codethink.co.uk/\n",
             "commit_timestamp": 1700243650.0
+        },
+        {
+            "tool_version": "233.0.20231113.130711-eap07",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1700510636.001572,
+            "elapsed_time": 108.9494321346283,
+            "x64": false,
+            "actual_files_count": 196,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/facebook/zstd.git",
+            "commit_ref": "c7269add7eaf028ed828d9af41e732cf01993aad",
+            "commit_message": "[huf] Improve fast huffman decoding speed in linux kernel\n\ngcc in the linux kernel was not unrolling the inner loops of the Huffman\ndecoder, which was destroying decoding performance. The compiler was\ngenerating crazy code with all sorts of branches. I suspect because of\nSpectre mitigations, but I'm not certain. Once the loops were manually\nunrolled, performance was restored.\n\nAdditionally, when gcc couldn't prove that the variable left shift in\nthe 4X2 decode loop wasn't greater than 63, it inserted checks to verify\nit. To fix this, mask `entry.nbBits & 0x3F`, which allows gcc to eliete\nthis check. This is a no op, because `entry.nbBits` is guaranteed to be\nless than 64.\n\nLastly, introduce the `HUF_DISABLE_FAST_DECODE` macro to disable the\nfast C loops for Issue #3762. So if even after this change, there is a\nperformance regression, users can opt-out at compile time.\n",
+            "commit_timestamp": 1700510206.0
         }
     ]
 }

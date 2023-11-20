@@ -12179,6 +12179,20 @@
             "commit_ref": "5a0cd3743e01da6ac95066f414058a1b8ce16160",
             "commit_message": "[WIDL] CMakeLists.txt: Remove an obsolete comment (#6016)\n\nAddendum to 8184186 (r55855).",
             "commit_timestamp": 1700492866.0
+        },
+        {
+            "tool_version": "233.0.20231113.130711-eap07",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1700510615.019998,
+            "elapsed_time": 175.13140273094177,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "51a89791c1dbd30e2dee34b17bf2a4d68cdb3a5e",
+            "commit_message": "[RAPPS] Validate DisplayIcon value and support icon index (#5664)\n\n- If the DisplayIcon value points to an invalid path, ExtractIconW()\n  can return 1! ExtractIconExW() does not have this problem nor the -1 issue.\n  Reference: https://devblogs.microsoft.com/oldnewthing/20050526-07/?p=35533\n- Use the icon index from PathParseIconLocationW().\n\nAddendum to c6c7fc1. CORE-19317\n\nTest to reproduce:\n\n```\n@echo off\nreg add HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Ex1 /v DisplayName /d \"Ex1 Normal\" /f\nreg add HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Ex1 /v DisplayIcon /d \"%windir%\\explorer.exe\" /f\nreg add HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Ex1 /v UninstallString /d \"calc.exe\" /f\nreg add HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Ex2 /v DisplayName /d \"Ex2 Bad icon path\" /f\nreg add HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Ex2 /v DisplayIcon /d \"%windir%\\DoesNotExist.exe\" /f\nreg add HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Ex2 /v UninstallString /d \"calc.exe\" /f\nreg add HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Ex3 /v DisplayName /d \"Ex3 Resource index\" /f\nreg add HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Ex3 /v DisplayIcon /d \"%windir%\\explorer.exe,4\" /f\nreg add HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Ex3 /v UninstallString /d \"calc.exe\" /f\nstart appwiz.cpl\n```\n",
+            "commit_timestamp": 1700502642.0
         }
     ]
 }

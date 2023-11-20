@@ -9547,6 +9547,20 @@
             "commit_ref": "d59feb5dbe5395615d06c30a95e6a6a9b7681d4d",
             "commit_message": "gh-112243: Don't include comments in f-string debug expressions (#112284)\n\n",
             "commit_timestamp": 1700493504.0
+        },
+        {
+            "tool_version": "233.0.20231113.130711-eap07",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1700510780.272602,
+            "elapsed_time": 2130.423457145691,
+            "x64": true,
+            "actual_files_count": 988,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "8deb8bc2e5af0e229df87002ee8e0b0c1383f572",
+            "commit_message": "gh-112287: Speed up Tier 2 (uop) interpreter a little (#112286)\n\nThis makes the Tier 2 interpreter a little faster.\r\nI calculated by about 3%,\r\nthough I hesitate to claim an exact number.\r\n\r\nThis starts by doubling the trace size limit (to 512),\r\nmaking it more likely that loops fit in a trace.\r\n\r\nThe rest of the approach is to only load\r\n`oparg` and `operand` in cases that use them.\r\nThe code generator know when these are used.\r\n\r\nFor `oparg`, it will conditionally emit\r\n```\r\noparg = CURRENT_OPARG();\r\n```\r\nat the top of the case block.\r\n(The `oparg` variable may be referenced multiple times\r\nby the instructions code block, so it must be in a variable.)\r\n\r\nFor `operand`, it will use `CURRENT_OPERAND()` directly\r\ninstead of referencing the `operand` variable,\r\nwhich no longer exists.\r\n(There is only one place where this will be used.)\r\n",
+            "commit_timestamp": 1700508332.0
         }
     ]
 }

@@ -13307,6 +13307,22 @@
             "commit_ref": "8bd06d5b65845e5e01dd899a2deb773580460b89",
             "commit_message": "[C23] Complete support for WG14 N2508 (#71398)\n\nIn Clang 16, we implemented the ability to add a label at the end of a\r\ncompound statement. These changes complete the implementation by\r\nallowing a label to be followed by a declaration in C.\r\n\r\nNote, this seems to have fixed an issue with some OpenMP stand-alone\r\ndirectives not being properly diagnosed as per:\r\nhttps://www.openmp.org/spec-html/5.1/openmpsu19.html#x34-330002.1.3\r\n(The same requirement exists in OpenMP 5.2 as well.)",
             "commit_timestamp": 1700495531.0
+        },
+        {
+            "tool_version": "233.0.20231113.130711-eap07",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1700511204.077345,
+            "elapsed_time": 3269.893360376358,
+            "x64": true,
+            "actual_files_count": 1720,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "f4c6947a18d5c07d5743eb435c2854e61804ad24",
+            "commit_message": "Move all libc++ builders to one machine type.\n\nThere are ongoing issues with the libc++ bots, some of them seem\nrelated to a new release of the gha action runner controllers.\n\nUntil I get this figured out, it's a lot easier to have 99% of the\nbots using a single machine shape\n",
+            "commit_timestamp": 1700509704.0
         }
     ]
 }
