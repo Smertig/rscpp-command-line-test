@@ -12123,6 +12123,20 @@
             "commit_ref": "516ccad340b3da703d5955cdf1fa602c8f9e0c6c",
             "commit_message": "[NTOS:KE][HALX86] Implement AP startup code (#5879)\n\nCo-authored-by: Victor Perevertkin <victor.perevertkin@reactos.org>\r\n\r\nIntroduce the initial changes needed to get other processors up and into kernel mode. \r\nThis only supports x86 as of now but is the first real step towards using other system processors.",
             "commit_timestamp": 1700437893.0
+        },
+        {
+            "tool_version": "233.0.20231113.130711-eap07",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1700453037.907984,
+            "elapsed_time": 142.57450008392334,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "edaeef94180e961a78c5a5ddbb1c4e1e94473763",
+            "commit_message": "[SHELL32] Fix exception on modifying deleted file type (#5996)\n\nBased on KRosUser's filetypes.patch. Check NULL for pEntry.\r\nCORE-19324",
+            "commit_timestamp": 1700440026.0
         }
     ]
 }
