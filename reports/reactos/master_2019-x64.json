@@ -12109,6 +12109,20 @@
             "commit_ref": "2cc7eeb9397549e3bc3d491dc18ab333707ea875",
             "commit_message": "[HALX86] Add missing \\n to DPRINT() calls (#5993)\n\nAnd promote some DPRINT() to DPRINT1().",
             "commit_timestamp": 1700419486.0
+        },
+        {
+            "tool_version": "233.0.20231113.130711-eap07",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1700438707.580291,
+            "elapsed_time": 177.00090336799622,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "516ccad340b3da703d5955cdf1fa602c8f9e0c6c",
+            "commit_message": "[NTOS:KE][HALX86] Implement AP startup code (#5879)\n\nCo-authored-by: Victor Perevertkin <victor.perevertkin@reactos.org>\r\n\r\nIntroduce the initial changes needed to get other processors up and into kernel mode. \r\nThis only supports x86 as of now but is the first real step towards using other system processors.",
+            "commit_timestamp": 1700437893.0
         }
     ]
 }
