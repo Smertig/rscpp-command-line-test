@@ -9589,6 +9589,20 @@
             "commit_ref": "6a00a58f60a1ce18d32503f11b95d6fcf00c7406",
             "commit_message": "gh-111786: Use separate opcode vars for Tier 1 and Tier 2 (#112289)\n\nThis makes Windows about 3% faster on pyperformance benchmarks.\r\n",
             "commit_timestamp": 1700522024.0
+        },
+        {
+            "tool_version": "233.0.20231113.130711-eap07",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1700554132.640311,
+            "elapsed_time": 1835.751778125763,
+            "x64": true,
+            "actual_files_count": 988,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "de2715f086bc799b20e420a82b76180338352565",
+            "commit_message": "gh-59703: use the system dladdr function in getpath.c for macOS framework builds (GH-111546)\n\nCo-authored-by: Ned Deily <nad@python.org>",
+            "commit_timestamp": 1700543725.0
         }
     ]
 }
