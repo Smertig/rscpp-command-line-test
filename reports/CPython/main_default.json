@@ -9561,6 +9561,20 @@
             "commit_ref": "8deb8bc2e5af0e229df87002ee8e0b0c1383f572",
             "commit_message": "gh-112287: Speed up Tier 2 (uop) interpreter a little (#112286)\n\nThis makes the Tier 2 interpreter a little faster.\r\nI calculated by about 3%,\r\nthough I hesitate to claim an exact number.\r\n\r\nThis starts by doubling the trace size limit (to 512),\r\nmaking it more likely that loops fit in a trace.\r\n\r\nThe rest of the approach is to only load\r\n`oparg` and `operand` in cases that use them.\r\nThe code generator know when these are used.\r\n\r\nFor `oparg`, it will conditionally emit\r\n```\r\noparg = CURRENT_OPARG();\r\n```\r\nat the top of the case block.\r\n(The `oparg` variable may be referenced multiple times\r\nby the instructions code block, so it must be in a variable.)\r\n\r\nFor `operand`, it will use `CURRENT_OPERAND()` directly\r\ninstead of referencing the `operand` variable,\r\nwhich no longer exists.\r\n(There is only one place where this will be used.)\r\n",
             "commit_timestamp": 1700508332.0
+        },
+        {
+            "tool_version": "233.0.20231113.130711-eap07",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1700525194.575956,
+            "elapsed_time": 1689.5812420845032,
+            "x64": true,
+            "actual_files_count": 988,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "6a00a58f60a1ce18d32503f11b95d6fcf00c7406",
+            "commit_message": "gh-111786: Use separate opcode vars for Tier 1 and Tier 2 (#112289)\n\nThis makes Windows about 3% faster on pyperformance benchmarks.\r\n",
+            "commit_timestamp": 1700522024.0
         }
     ]
 }

@@ -12375,6 +12375,20 @@
             "commit_ref": "b9b50f3193914149fbdcc0d93f15298327b4803c",
             "commit_message": "hyper: temporarily remove HTTP/2 support\n\nThe current design of the Hyper integration requires rebuilding the\nHyper clientconn for each request. However, building the clientconn\nrequires resending the HTTP/2 connection preface, which is incorrect\nfrom a protocol perspective. That in turn causes servers to send GOAWAY\nframes, effectively degrading performance to \"no connection reuse\" in\nthe best case. It may also be triggering some bugs where requests get\ndropped entirely and reconnects take too long.\n\nThis doesn't rule out HTTP/2 support with Hyper, but it may take a\nredesign of the Hyper integration in order to make things work.\n\nCloses #12191\n",
             "commit_timestamp": 1700474508.0
+        },
+        {
+            "tool_version": "233.0.20231113.130711-eap07",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1700525131.143218,
+            "elapsed_time": 205.23024344444275,
+            "x64": false,
+            "actual_files_count": 2452,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "413a0fedd02c8c6df1d294534b8c6e306fcca7a2",
+            "commit_message": "autotools: stop setting `-std=gnu89` with `--enable-warnings`\n\nDo not alter the C standard when building with `--enable-warnings` when\nbuilding with gcc.\n\nOn one hand this alters warning results compared to a default build.\nOn the other, it may produce different binaries, which is unexpected.\n\nAlso fix new warnings that appeared after removing `-std=gnu89`:\n\n- include: fix public curl headers to use the correct printf mask for\n  `CURL_FORMAT_CURL_OFF_T` and `CURL_FORMAT_CURL_OFF_TU` with mingw-w64\n  and Visual Studio 2013 and newer. This fixes the printf mask warnings\n  in examples and tests. E.g. [1]\n\n- conncache: fix printf format string [2].\n\n- http2: fix potential null pointer dereference [3].\n  (seen on Slackware with gcc 11.)\n\n- libssh: fix printf format string in SFTP code [4].\n  Also make MSVC builds compatible with old CRT versions.\n\n- libssh2: fix printf format string in SFTP code for MSVC.\n  Applying the same fix as for libssh above.\n\n- unit1395: fix `argument is null` and related issues [5]:\n  - stop calling `strcmp()` with NULL to avoid undefined behaviour.\n  - fix checking results if some of them were NULL.\n  - do not pass NULL to printf `%s`.\n\n- ci: keep a build job with `-std=gnu89` to continue testing for\n  C89-compliance. We can apply this to other gcc jobs as needed.\n  Ref: b23ce2cee7329bbf425f18b49973b7a5f23dfcb4 (2022-09-23) #9542\n\n[1] https://dev.azure.com/daniel0244/curl/_build/results?buildId=18581&view=logs&jobId=ccf9cc6d-2ef1-5cf2-2c09-30f0c14f923b\n[2] https://github.com/curl/curl/actions/runs/6896854263/job/18763831142?pr=12346#step:6:67\n[3] https://github.com/curl/curl/actions/runs/6896854253/job/18763839238?pr=12346#step:30:214\n[4] https://github.com/curl/curl/actions/runs/6896854253/job/18763838007?pr=12346#step:29:895\n[5] https://github.com/curl/curl/actions/runs/6896854253/job/18763836775?pr=12346#step:33:1689\n\nCloses #12346\n",
+            "commit_timestamp": 1700519297.0
         }
     ]
 }

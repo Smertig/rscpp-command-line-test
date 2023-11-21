@@ -13323,6 +13323,22 @@
             "commit_ref": "f4c6947a18d5c07d5743eb435c2854e61804ad24",
             "commit_message": "Move all libc++ builders to one machine type.\n\nThere are ongoing issues with the libc++ bots, some of them seem\nrelated to a new release of the gha action runner controllers.\n\nUntil I get this figured out, it's a lot easier to have 99% of the\nbots using a single machine shape\n",
             "commit_timestamp": 1700509704.0
+        },
+        {
+            "tool_version": "233.0.20231113.130711-eap07",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1700525690.293537,
+            "elapsed_time": 7118.885564088821,
+            "x64": true,
+            "actual_files_count": 1720,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "eaffcc85ea53d7d90ac0271490f62526f91a5af6",
+            "commit_message": "[DebugInfo][RemoveDIs] Make dropping variable locations explicit (#72399)\n\nIn present-day debug-info, when you delete all instructions, you delete\r\nall their debug-info with it because debug-info is stored in\r\ninstructions. With debug-info stored in DPValue objects however,\r\ndeleting instructions causes DPValue objects to clump together into a\r\nlarge blob of debug-info that hangs around in the block, as nothing has\r\nexplicitly deleted it.\r\n\r\nTo restore this behaviour, scatter calls to dropDbgValues around in\r\nplaces that used to delete chunks of dbg.values, for example during\r\nstripDebugInfo and in the code that deletes everything after an\r\nUnreachable instruction. DCE is another example.\r\n\r\nThe tests with --try... added to them are new scenarios where we can now\r\ncorrectly replicate the \"normal\" debug-info behaviour. Alas, there's no\r\nexplicit test for the opt -strip-debug option though (in dbg.value mode\r\nor DPValue mode).",
+            "commit_timestamp": 1700524860.0
         }
     ]
 }
