@@ -13763,6 +13763,20 @@
             "commit_ref": "32d9ae24bc4a0fed9a136a73e116b4ded0ac84b7",
             "commit_message": "JSONWriter deals in StringRefs instead of std::strings\n\nTogether with liberal use of `_sr` UDL to compile-time convert\nstring literals into StringRefs, this will reduce the number of\nallocation and remove most of the strcpy calls inherent in\nconverting string lits into `std::string`s.\n",
             "commit_timestamp": 1700211243.0
+        },
+        {
+            "tool_version": "232.0.20231101.135615",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1700566269.486363,
+            "elapsed_time": 65.64914846420288,
+            "x64": false,
+            "actual_files_count": 278,
+            "expected_files_count": 272,
+            "repo_url": "https://github.com/catchorg/Catch2.git",
+            "commit_ref": "32d9ae24bc4a0fed9a136a73e116b4ded0ac84b7",
+            "commit_message": "JSONWriter deals in StringRefs instead of std::strings\n\nTogether with liberal use of `_sr` UDL to compile-time convert\nstring literals into StringRefs, this will reduce the number of\nallocation and remove most of the strcpy calls inherent in\nconverting string lits into `std::string`s.\n",
+            "commit_timestamp": 1700211243.0
         }
     ]
 }

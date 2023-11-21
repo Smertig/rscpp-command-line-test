@@ -13793,6 +13793,20 @@
             "commit_ref": "dd4de1dd7a78ccff933025cf1de08a75d310802b",
             "commit_message": "[huf] Fix null pointer addition\n\n`HUF_DecompressFastArgs_init()` was adding 0 to NULL. Fix it by exiting\nearly for empty outputs. This is no change in behavior, because the\nfunction was already exiting 0 in this case, just slightly later.\n",
             "commit_timestamp": 1700518381.0
+        },
+        {
+            "tool_version": "232.0.20231101.135615",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1700566270.307505,
+            "elapsed_time": 79.7390456199646,
+            "x64": false,
+            "actual_files_count": 196,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/facebook/zstd.git",
+            "commit_ref": "dd4de1dd7a78ccff933025cf1de08a75d310802b",
+            "commit_message": "[huf] Fix null pointer addition\n\n`HUF_DecompressFastArgs_init()` was adding 0 to NULL. Fix it by exiting\nearly for empty outputs. This is no change in behavior, because the\nfunction was already exiting 0 in this case, just slightly later.\n",
+            "commit_timestamp": 1700518381.0
         }
     ]
 }
