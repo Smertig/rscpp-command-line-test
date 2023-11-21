@@ -13403,6 +13403,22 @@
             "commit_ref": "7f740be4acddd8acf46796229c46117b735a9be8",
             "commit_message": "[BasicAA] Don't assume DT is nonnull\n\nI thought DT is required in BasicAA, but apparently it can be null\nin unit tests at least. This should fix the ubsan bot failures.\n",
             "commit_timestamp": 1700565733.0
+        },
+        {
+            "tool_version": "241.0.20231120.201033-eap01d",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1700574759.547201,
+            "elapsed_time": 2075.4683709144592,
+            "x64": true,
+            "actual_files_count": 1722,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "ad86d3e94f21fb13e504b0b1044ef7c10bc86a98",
+            "commit_message": "[BasicAA] Add wrapping test for #72831.\n\nAdd test with GEP where the index may wrap.\n",
+            "commit_timestamp": 1700573937.0
         }
     ]
 }

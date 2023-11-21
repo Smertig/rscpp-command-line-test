@@ -13373,6 +13373,20 @@
             "commit_ref": "c5b3eb805930da4a6f1352e467e8b251dacb36e2",
             "commit_message": "Auto-generate files after cl/584154442\n",
             "commit_timestamp": 1700526520.0
+        },
+        {
+            "tool_version": "241.0.20231120.201033-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1700574331.428877,
+            "elapsed_time": 280.00431728363037,
+            "x64": false,
+            "actual_files_count": 854,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "95073f8e78ee685da37d62d631e65a5e3d4fa51e",
+            "commit_message": "Implement Proxied for Maps\n\nThis change implements the Proxied trait for the Map type.\n\nIt leaves a TODO to implement SettableValue. I haven't implemented SettableValue yet because I have not yet been able to verify that we get the right copy_from semantics for both kernels. I'll implement set_on in a follow up.\n\nPiperOrigin-RevId: 584285061\n",
+            "commit_timestamp": 1700569844.0
         }
     ]
 }

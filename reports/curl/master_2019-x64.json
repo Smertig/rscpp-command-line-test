@@ -12445,6 +12445,20 @@
             "commit_ref": "1cd2f0072fa482e25baa2051f4d2b373424d6d4e",
             "commit_message": "transfer: readwrite improvements\n\n- changed header/chunk/handler->readwrite prototypes to accept `buf`,\n  `blen` and a `pconsumed` pointer. They now get the buffer to work on\n  and report back how many bytes they consumed\n- eliminated `k->str` in SingleRequest\n- improved excess data handling to properly calculate with any body data\n  left in the headerb buffer\n- eliminated `k->badheader` enum to only be a bool\n\nCloses #12283\n",
             "commit_timestamp": 1700550225.0
+        },
+        {
+            "tool_version": "241.0.20231120.201033-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1700574219.658507,
+            "elapsed_time": 171.0486924648285,
+            "x64": false,
+            "actual_files_count": 2452,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "891f1041d61ad86bbdc2e9b3423b04ec856a8058",
+            "commit_message": "transfer: avoid unreachable expression\n\nIf curl_off_t and size_t have the same size (which is common on modern\n64 bit systems), a condition cannot occur which Coverity pointed\nout. Avoid the warning by having the code conditionally only used if\ncurl_off_t actually is larger.\n\nFollow-up to 1cd2f0072fa482e25baa2\n\nCloses #12370\n",
+            "commit_timestamp": 1700571082.0
         }
     ]
 }
