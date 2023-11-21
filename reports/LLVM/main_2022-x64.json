@@ -13371,6 +13371,22 @@
             "commit_ref": "88f0e4c75c1ac498f2223fc640c4ff6c572c5ed1",
             "commit_message": "[mlir][async] Avoid crash when not using `func.func` (#72801)\n\nThe `createParallelComputeFunction` crashed when calling\r\n`getFunctionTypeAttrName` during the creation of a new `FuncOp` inside\r\nthe pass. The problem is that `getFunctionTypeAttrName` looks up the\r\nattribute name for the function type which in this case is `func.func`.\r\nHowever, `name.getAttributeNames()` was empty when clients used\r\n`llvm.func` instead of `func.func`.\r\n\r\nTo fix this, the `func` dialect is now registered as a dependent\r\ndialect. Also, I've added an assertion which could save other people\r\nsome time.\r\n\r\nFixes #71281, fixes #64326.",
             "commit_timestamp": 1700552416.0
+        },
+        {
+            "tool_version": "233.0.20231113.130711-eap07",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1700568735.837071,
+            "elapsed_time": 3733.192722082138,
+            "x64": true,
+            "actual_files_count": 1720,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "7f740be4acddd8acf46796229c46117b735a9be8",
+            "commit_message": "[BasicAA] Don't assume DT is nonnull\n\nI thought DT is required in BasicAA, but apparently it can be null\nin unit tests at least. This should fix the ubsan bot failures.\n",
+            "commit_timestamp": 1700565733.0
         }
     ]
 }

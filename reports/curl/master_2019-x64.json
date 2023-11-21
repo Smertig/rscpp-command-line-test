@@ -12417,6 +12417,20 @@
             "commit_ref": "1cd2f0072fa482e25baa2051f4d2b373424d6d4e",
             "commit_message": "transfer: readwrite improvements\n\n- changed header/chunk/handler->readwrite prototypes to accept `buf`,\n  `blen` and a `pconsumed` pointer. They now get the buffer to work on\n  and report back how many bytes they consumed\n- eliminated `k->str` in SingleRequest\n- improved excess data handling to properly calculate with any body data\n  left in the headerb buffer\n- eliminated `k->badheader` enum to only be a bool\n\nCloses #12283\n",
             "commit_timestamp": 1700550225.0
+        },
+        {
+            "tool_version": "233.0.20231113.130711-eap07",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1700568329.441118,
+            "elapsed_time": 208.1676185131073,
+            "x64": false,
+            "actual_files_count": 2452,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "1cd2f0072fa482e25baa2051f4d2b373424d6d4e",
+            "commit_message": "transfer: readwrite improvements\n\n- changed header/chunk/handler->readwrite prototypes to accept `buf`,\n  `blen` and a `pconsumed` pointer. They now get the buffer to work on\n  and report back how many bytes they consumed\n- eliminated `k->str` in SingleRequest\n- improved excess data handling to properly calculate with any body data\n  left in the headerb buffer\n- eliminated `k->badheader` enum to only be a bool\n\nCloses #12283\n",
+            "commit_timestamp": 1700550225.0
         }
     ]
 }

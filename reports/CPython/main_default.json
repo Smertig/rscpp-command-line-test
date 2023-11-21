@@ -9603,6 +9603,20 @@
             "commit_ref": "de2715f086bc799b20e420a82b76180338352565",
             "commit_message": "gh-59703: use the system dladdr function in getpath.c for macOS framework builds (GH-111546)\n\nCo-authored-by: Ned Deily <nad@python.org>",
             "commit_timestamp": 1700543725.0
+        },
+        {
+            "tool_version": "233.0.20231113.130711-eap07",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1700568314.177085,
+            "elapsed_time": 1850.9491560459137,
+            "x64": true,
+            "actual_files_count": 988,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "d67f947c72af8a215db2fd285e5de9b1e671fde1",
+            "commit_message": "gh-110950: add upstream Tk fixes to macOS installer. (GH-111041)\n\nAdd upstream Tk patches for three problems affecting tkinter users:\r\n\r\n- Update macOS installer to include a fix accepted by upstream Tcl/Tk\r\nfor a crash encountered after the first :meth:`tkinter.Tk` instance\r\nis destroyed. (gh-92603)\r\n\r\n- Update macOS installer to include an upstream Tcl/Tk fix\r\nfor the ``ttk::ThemeChanged`` error encountered in Tkinter. (gh-71383)\r\n\r\n- Update macOS installer to include an upstream Tcl/Tk fix for the\r\n``Secure coding is not enabled for restorable state!`` warning\r\nencountered in Tkinter on macOS 14 Sonoma. (gh-110950)\r\n\r\nCo-authored-by: Ned Deily <nad@python.org>",
+            "commit_timestamp": 1700554339.0
         }
     ]
 }
