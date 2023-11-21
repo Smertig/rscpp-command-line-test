@@ -34,13 +34,15 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Install R++
-        run: dotnet tool update --global JetBrains.ReSharper.GlobalTools --version ${{ env.RSCPP_VERSION }}
-
       - name: Install python
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
+
+      - name: Install R++
+        id: install-tool
+        shell: bash
+        run: python .github/tool_installer.py ${{ env.RSCPP_VERSION }}
 
       - name: Install python dependencies
         run: pip install -r requirements.txt
@@ -56,7 +58,7 @@ jobs:
           python CorrectnessTest.py \
             --project ${{matrix.project}} \
             --vcpkg-dir $VCPKG_INSTALLATION_ROOT \
-            --build-dir $USERPROFILE/.dotnet/tools/.store/jetbrains.resharper.globaltools/${{ env.RSCPP_VERSION }}/jetbrains.resharper.globaltools/${{ env.RSCPP_VERSION }}/tools/netcoreapp3.1/any \
+            --build-dir ${{ steps.install-tool.outputs.TOOL_DIR }} \
             --projects-cache $RUNNER_TEMP/projects \
             --supported-generators ${{matrix.cmake_gen}} \
             --report-path $RUNNER_TEMP/report.json \
