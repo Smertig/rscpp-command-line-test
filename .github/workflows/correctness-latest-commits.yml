@@ -37,6 +37,9 @@ jobs:
         with:
           python-version: '3.10'
 
+      - name: Install CI python dependencies
+        run: pip install -r .github/ci_requirements.txt
+
       - name: Install R++
         id: install-tool
         shell: bash
