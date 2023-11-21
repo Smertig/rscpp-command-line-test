@@ -13849,6 +13849,20 @@
             "commit_ref": "dd4de1dd7a78ccff933025cf1de08a75d310802b",
             "commit_message": "[huf] Fix null pointer addition\n\n`HUF_DecompressFastArgs_init()` was adding 0 to NULL. Fix it by exiting\nearly for empty outputs. This is no change in behavior, because the\nfunction was already exiting 0 in this case, just slightly later.\n",
             "commit_timestamp": 1700518381.0
+        },
+        {
+            "tool_version": "233.0.20231113.130711-eap07",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1700596997.960162,
+            "elapsed_time": 94.80751371383667,
+            "x64": false,
+            "actual_files_count": 196,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/facebook/zstd.git",
+            "commit_ref": "6b3d12fe5479940a274d8b54db5d99b91a6bce41",
+            "commit_message": "Merge pull request #3820 from facebook/xxh082\n\nupdate xxhash library to v0.8.2",
+            "commit_timestamp": 1700586700.0
         }
     ]
 }
