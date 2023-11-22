@@ -12571,6 +12571,20 @@
             "commit_ref": "cfdcdc8d2fb5431b4597e029c3d094ebf3f17681",
             "commit_message": "wolfssh: remove redundant static prototypes\n\nvssh/wolfssh.c:346:18: error: redundant redeclaration of \u2018wscp_recv\u2019 [-Werror=redundant-decls]\n\nCloses #12381\n",
             "commit_timestamp": 1700642348.0
+        },
+        {
+            "tool_version": "233.0.20231113.130711-eap07",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1700669075.093901,
+            "elapsed_time": 202.4921519756317,
+            "x64": false,
+            "actual_files_count": 2452,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "2c4c780472e4b2d5a998d25dc23b9ec67af60dc7",
+            "commit_message": "curl.h: delete Symbian OS references\n\ncurl deprecated Symbian OS in 3d64031fa7a80ac4ae3fd09a5939196268b92f81\nvia #5989. Delete references to it from public headers, because there\nis no fresh release to use those headers with.\n\nReviewed-by: Dan Fandrich\nReviewed-by: Jay Satiro\nCloses #12378\n",
+            "commit_timestamp": 1700667790.0
         }
     ]
 }
