@@ -12361,6 +12361,20 @@
             "commit_ref": "7f346b1aa350942540c7dee9fce3869bea2a72a6",
             "commit_message": "[SETUPAPI] CM_Request_Device_Eject_ExA/W: Fix pszVetoName buffer size validation (#5943)\n\n- Return CR_INVALID_POINTER if pszVetoName is NULL and ulNameLength is not zero\r\n- CM_Request_Device_Eject_ExA: Allow ulNameLength to be zero when pszVetoName is not NULL\r\n\r\nVerified with Windows 2003 SP2.",
             "commit_timestamp": 1700618307.0
+        },
+        {
+            "tool_version": "233.0.20231113.130711-eap07",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1700640229.920744,
+            "elapsed_time": 210.14213681221008,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "7f346b1aa350942540c7dee9fce3869bea2a72a6",
+            "commit_message": "[SETUPAPI] CM_Request_Device_Eject_ExA/W: Fix pszVetoName buffer size validation (#5943)\n\n- Return CR_INVALID_POINTER if pszVetoName is NULL and ulNameLength is not zero\r\n- CM_Request_Device_Eject_ExA: Allow ulNameLength to be zero when pszVetoName is not NULL\r\n\r\nVerified with Windows 2003 SP2.",
+            "commit_timestamp": 1700618307.0
         }
     ]
 }
