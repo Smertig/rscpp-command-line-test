@@ -12557,6 +12557,20 @@
             "commit_ref": "92efb39c00e0f68aafc5c709d1469833306bb7a3",
             "commit_message": "setopt: remove superfluous use of ternary expressions\n\nCloses #12374\n",
             "commit_timestamp": 1700635462.0
+        },
+        {
+            "tool_version": "233.0.20231113.130711-eap07",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1700654577.341321,
+            "elapsed_time": 171.56852221488953,
+            "x64": false,
+            "actual_files_count": 2452,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "cfdcdc8d2fb5431b4597e029c3d094ebf3f17681",
+            "commit_message": "wolfssh: remove redundant static prototypes\n\nvssh/wolfssh.c:346:18: error: redundant redeclaration of \u2018wscp_recv\u2019 [-Werror=redundant-decls]\n\nCloses #12381\n",
+            "commit_timestamp": 1700642348.0
         }
     ]
 }

@@ -9743,6 +9743,20 @@
             "commit_ref": "fde8fe50e495b66c397c6ce147ca3af2e7d9b289",
             "commit_message": "gh-59703: restore include of mach-o/dyld.h  (gh-112309)\n\nOn older versions of macOS, _NSGetExecutablePath appears to only\r\nbe available via macho-o/dyld so macho-o/dyld.h is still needed.",
             "commit_timestamp": 1700634057.0
+        },
+        {
+            "tool_version": "233.0.20231113.130711-eap07",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1700654854.787317,
+            "elapsed_time": 2102.949891805649,
+            "x64": true,
+            "actual_files_count": 988,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "fef6fb876267f28fbb2c5fcb17aebe1a52cc8e12",
+            "commit_message": "gh-111965: Use critical sections to make io.BufferedIOBase and its related classes thread safe (gh-112298)\n\n",
+            "commit_timestamp": 1700652307.0
         }
     ]
 }
