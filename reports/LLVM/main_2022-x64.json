@@ -13675,6 +13675,22 @@
             "commit_ref": "a9ea02d679b948332af111292a7d6c00ae057070",
             "commit_message": "Recommit \"[ConstraintElim] Treat ConstantPointerNull as constant offset 0.\"\n\nThis reverts commit 58286f9c665ad4aa748779d559f2f296de704094.\n\nNow with the test correctly updated.\n\nOriginal message:\n    Treat ConstantPointerNull (null) as constant offset 0 in the constraint\n    instead of a variable. This slightly reduces the number of variables. I\n    was not able to find a test case where this actually caused any changes.\n",
             "commit_timestamp": 1700754997.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1700770305.600597,
+            "elapsed_time": 6873.665346622467,
+            "x64": true,
+            "actual_files_count": 1722,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "9ebe6e28cdbe97f6c03209b87e91be6b55a8026a",
+            "commit_message": "Revert \"[ClangRepl] Type Directed Code Completion\" (#73259)\n\nReverts llvm/llvm-project#67349\r\n\r\nThere are some issues with the sanitizers. We will reland once that's fixed.",
+            "commit_timestamp": 1700766471.0
         }
     ]
 }

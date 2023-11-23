@@ -14045,6 +14045,20 @@
             "commit_ref": "8193250615f56ace446a3bf963d195f9f33fa9a9",
             "commit_message": "Modernize macros to use `do { } while (0)`\n\nThis PR introduces no functional changes. It attempts to change all\nmacros currently using `{ }` or some variant of that to to\n`do { } while (0)`, and introduces trailing `;` where necessary.\nThere were no bugs found during this migration.\n\nThe bug in Visual Studios warning on this has been fixed since VS2015.\nAdditionally, we have several instances of `do { } while (0)` which have\nbeen present for several releases, so we don't have to worry about\nbreaking peoples builds.\n\nFixes Issue #3830.\n",
             "commit_timestamp": 1700615117.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1700769791.318301,
+            "elapsed_time": 93.15289282798767,
+            "x64": false,
+            "actual_files_count": 196,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/facebook/zstd.git",
+            "commit_ref": "8193250615f56ace446a3bf963d195f9f33fa9a9",
+            "commit_message": "Modernize macros to use `do { } while (0)`\n\nThis PR introduces no functional changes. It attempts to change all\nmacros currently using `{ }` or some variant of that to to\n`do { } while (0)`, and introduces trailing `;` where necessary.\nThere were no bugs found during this migration.\n\nThe bug in Visual Studios warning on this has been fixed since VS2015.\nAdditionally, we have several instances of `do { } while (0)` which have\nbeen present for several releases, so we don't have to worry about\nbreaking peoples builds.\n\nFixes Issue #3830.\n",
+            "commit_timestamp": 1700615117.0
         }
     ]
 }
