@@ -13611,6 +13611,22 @@
             "commit_ref": "dc683d2e66de79bbea786f51788961eec5d0b793",
             "commit_message": "[X86] Remove unused IES_IDENTIFIER state from IntelExprState. NFC\n",
             "commit_timestamp": 1700711392.0
+        },
+        {
+            "tool_version": "233.0.20231113.130711-eap07",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1700727204.620261,
+            "elapsed_time": 3872.5946769714355,
+            "x64": true,
+            "actual_files_count": 1722,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "083a53971758c6f9bbd448eeb9c5d839661e3f68",
+            "commit_message": "clang/CodeGen/RISCV: test lowering of math builtins (#71399)\n\nEver since 98c90a1 (ISel: introduce vector ISD::LRINT, ISD::LLRINT;\r\ncustom RISCV lowering) landed, there have been several discussions on\r\nhow the lrint and llrint libcalls would lower to LLVM IR via clang on\r\nRV32 and RV64, in an effort to enable vectorization of lrint and llrint\r\nvia SLPVectorizer and LoopVectorize. This patch adds a new\r\nmath-builtins.c test to the RISC-V target to test the lowering of all\r\nmath libcalls, including lrint and llrint.",
+            "commit_timestamp": 1700725172.0
         }
     ]
 }
