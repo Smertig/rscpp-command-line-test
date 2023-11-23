@@ -12417,6 +12417,20 @@
             "commit_ref": "6cdaad13bdfd5dca8cce7b88c146162d818df1fe",
             "commit_message": "Add missing OEMRESOURCE for using the OBM_, OIC_, OCR_ defines from winuser.h\n\nFix build by commit 072965eb0 for modules:\nEXPLORER, COMCTL32, IERNONCE, URLMON, USER32_(API|WINE)TESTS\n\nNote that some of these modules (from Wine) already have the OEMRESOURCE\ndefined; however, only in one of their files. But we have added\nprecompiled headers for them where we have included either windows.h\nor winuser.h in them, without OEMRESOURCE. The result is, that when\ncompiling these modules with PCH support, the OEMRESOURCE define was\n_not_ satisfied and thus, compile errors arose.\n\nFix this by adding #define OEMRESOURCE before the windows headers also\nin the precompiled headers we have added for these modules.\n",
             "commit_timestamp": 1700668965.0
+        },
+        {
+            "tool_version": "233.0.20231113.130711-eap07",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1700697967.331536,
+            "elapsed_time": 187.6946120262146,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "df54fb01fda9e7b24e89786ce1d9abd5f6fc33eb",
+            "commit_message": "[VGAFONTEDIT] Fix exception on New\n\nBased on KRosUser's vgafont.patch. CORE-19192\n",
+            "commit_timestamp": 1700696096.0
         }
     ]
 }
