@@ -12459,6 +12459,20 @@
             "commit_ref": "c20b4ca29e826f78f5b8cfb3cce8a60d7aebbd2c",
             "commit_message": "[MSPAINT] Simplify mouse.cpp with deleting ctors\n\nRefactoring. CORE-19094\n",
             "commit_timestamp": 1700725600.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1700741293.205256,
+            "elapsed_time": 150.3129119873047,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "0c2827a3f3134925b03a2d5a45e8febc31b820bd",
+            "commit_message": "[USER32] Fix OEM resources compilation due to missing OBM_, OIC_, OCR_ defines...\n\n... addendum to commits 072965eb0 and 6cdaad13b.\n\nDue to the wrapping of these defines within an #ifdef OEMRESOURCE block\nin winuser.h (for MS PSDK compatibility), these defines became unavailable\nin user32.rc resource file. Thus, during user32 resources compilation,\nthe resource compiler fell back to the behaviour of considering these\nresource IDs as literal string IDs (not numerical ones).\n\nThus, whenever code was trying to refer to these resources via their\nnumerical IDs, these resources could not be found now, rendering ReactOS\nunusuable.\n",
+            "commit_timestamp": 1700735997.0
         }
     ]
 }
