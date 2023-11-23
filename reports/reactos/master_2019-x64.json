@@ -12487,6 +12487,20 @@
             "commit_ref": "0c2827a3f3134925b03a2d5a45e8febc31b820bd",
             "commit_message": "[USER32] Fix OEM resources compilation due to missing OBM_, OIC_, OCR_ defines...\n\n... addendum to commits 072965eb0 and 6cdaad13b.\n\nDue to the wrapping of these defines within an #ifdef OEMRESOURCE block\nin winuser.h (for MS PSDK compatibility), these defines became unavailable\nin user32.rc resource file. Thus, during user32 resources compilation,\nthe resource compiler fell back to the behaviour of considering these\nresource IDs as literal string IDs (not numerical ones).\n\nThus, whenever code was trying to refer to these resources via their\nnumerical IDs, these resources could not be found now, rendering ReactOS\nunusuable.\n",
             "commit_timestamp": 1700735997.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1700755416.660774,
+            "elapsed_time": 209.15121603012085,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "99efc2ae50fef55c182c5576937ee99e6b926b3e",
+            "commit_message": "[PSDK][AFD][VGADDI] Further build and MS PSDK compatibility fixes.\n\n- windows.h:\n  * should define _WINDOWS_ and _INC_WINDOWS instead of _WINDOWS_H\n  * include winresrc.h if RC_INVOKED and not NOWINRES (Wine also agrees\n    with that)\n  * also, some .h included from there should _not_ be included if their\n    respective NO*** flags are defined.\n\n- batclass.h: Use correct _WINDOWS_ guard.\n\n- winsnmp.h:\n  * should define _INC_WINSNMP instead of _WINSNMP_H\n  * use _INC_WINDOWS instead of _WINDOWS_H\n\n- afd.h, vgaddi.h: Use the correct guards.\n\n- winnt.rh: Define the (SUB)LANG_* exactly as they are in the winnt.h,\n  otherwise we get macro redefinition compile errors.\n\nNOTE: Ideally these .rh files should be auto-generated from their\ncorresponding .h files.\n\n- afxres.h: Do not include the whole windows.h, but instead, only\n  the winres.h file, and only if RC_INVOKED is defined.\n\nNOTE: Both afxres.h and winres.h do not really belong to the PSDK,\nbut belong instead to MFC. The reason why we have them here is twofold:\n\n1. Wine used to have also winres.h (from where we got ours). This is\n   because the .rc resource files of some non-MFC modules were generated\n   with Visual Studio, which always includes afxres.h for these, and the\n   solution was to use a slightly less MFC-specific header: winres.h\n   (Wine commit cb08c82244673f26842e7a0766de90f091b5a493).\n   However, this winres.h has been since removed from Wine tree\n   (Wine commit 197f4059ab2af5f13f9c56faa26e3b4af902f869).\n\n2. Few of our modules either use afxres.h or winres.h in their resource\n   files, and we still want to be able to compile them.\n",
+            "commit_timestamp": 1700753190.0
         }
     ]
 }
