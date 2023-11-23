@@ -12613,6 +12613,20 @@
             "commit_ref": "2c4c780472e4b2d5a998d25dc23b9ec67af60dc7",
             "commit_message": "curl.h: delete Symbian OS references\n\ncurl deprecated Symbian OS in 3d64031fa7a80ac4ae3fd09a5939196268b92f81\nvia #5989. Delete references to it from public headers, because there\nis no fresh release to use those headers with.\n\nReviewed-by: Dan Fandrich\nReviewed-by: Jay Satiro\nCloses #12378\n",
             "commit_timestamp": 1700667790.0
+        },
+        {
+            "tool_version": "233.0.20231113.130711-eap07",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1700712286.448388,
+            "elapsed_time": 194.18433451652527,
+            "x64": false,
+            "actual_files_count": 2452,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "006977859dcc4b8670878bd669276d778a2715bb",
+            "commit_message": "openssl: fix building with v3 `no-deprecated` + add CI test\n\n- build quictls with `no-deprecated` in CI to have test coverage for\n  this OpenSSL 3 configuration.\n\n- don't call `OpenSSL_add_all_algorithms()`, `OpenSSL_add_all_digests()`.\n  The caller code is meant for OpenSSL 3, while these two functions were\n  only necessary before OpenSSL 1.1.0. They are missing from OpenSSL 3\n  if built with option `no-deprecated`, causing build errors:\n  ```\n  vtls/openssl.c:4097:3: error: call to undeclared function 'OpenSSL_add_all_algorithms'; ISO C99 and later do not   support implicit function declarations [-Wimplicit-function-declaration]\n  vtls/openssl.c:4098:3: error: call to undeclared function 'OpenSSL_add_all_digests'; ISO C99 and later do not   support implicit function declarations [-Wimplicit-function-declaration]\n  ```\n  Ref: https://ci.appveyor.com/project/curlorg/curl-for-win/builds/48587418?fullLog=true#L7667\n\n  Regression from b6e6d4ff8f253c8b8055bab9d4d6a10f9be109f3 #12030\n  Bug: https://github.com/curl/curl/issues/12380#issuecomment-1822944669\n  Reviewed-by: Alex Bozarth\n\n- vquic/curl_ngtcp2: fix using `SSL_get_peer_certificate` with\n  `no-deprecated` quictls 3 builds.\n  Do it by moving an existing solution for this from `vtls/openssl.c`\n  to `vtls/openssl.h` and adjusting caller code.\n  ```\n  vquic/curl_ngtcp2.c:1950:19: error: implicit declaration of function 'SSL_get_peer_certificate'; did you mean   'SSL_get1_peer_certificate'? [-Wimplicit-function-declaration]\n  ```\n  Ref: https://github.com/curl/curl/actions/runs/6960723097/job/18940818625#step:24:1178\n\n- curl_ntlm_core: fix `-Wunused-parameter`, `-Wunused-variable` and\n  `-Wunused-function` when trying to build curl with NTLM enabled but\n  without the necessary TLS backend (with DES) support.\n\nCloses #12384\n",
+            "commit_timestamp": 1700704982.0
         }
     ]
 }
