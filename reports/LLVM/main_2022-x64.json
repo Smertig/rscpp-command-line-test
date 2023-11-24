@@ -13691,6 +13691,22 @@
             "commit_ref": "9ebe6e28cdbe97f6c03209b87e91be6b55a8026a",
             "commit_message": "Revert \"[ClangRepl] Type Directed Code Completion\" (#73259)\n\nReverts llvm/llvm-project#67349\r\n\r\nThere are some issues with the sanitizers. We will reland once that's fixed.",
             "commit_timestamp": 1700766471.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1700784844.217628,
+            "elapsed_time": 7997.43013381958,
+            "x64": true,
+            "actual_files_count": 1722,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "ba89749cd24950c9c51f4cc64277ce0421d86d20",
+            "commit_message": "[libc++] <experimental/simd> Add implicit type conversion constructor for class simd/simd_mask (#71132)\n\n",
+            "commit_timestamp": 1700782181.0
         }
     ]
 }
