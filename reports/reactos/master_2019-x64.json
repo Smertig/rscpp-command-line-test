@@ -12543,6 +12543,20 @@
             "commit_ref": "898fb5f414195931dd1a9fafb0fb1033c128c27a",
             "commit_message": "[MSPAINT] Move CHECKED_IF and ENABLED_IF macros and improve\n\nRefactoring. CORE-19094\n",
             "commit_timestamp": 1700789956.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1700813023.812355,
+            "elapsed_time": 158.43128657341003,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "f710e5a260d77985394244e98aa57b3f5063c762",
+            "commit_message": "[MSPAINT] Define SelectionBaseTool and use it (#6034)\n\nRefactoring and arrangement for selection handling.\r\n- Move some selection-related codes in canvas.cpp to mouse.cpp.\r\n- Add SelectionBaseTool structure for FreeSelTool and RectSelTool.\r\nCORE-19094",
+            "commit_timestamp": 1700808256.0
         }
     ]
 }
