@@ -13771,6 +13771,22 @@
             "commit_ref": "ee5749bf785b66adfd9b4edc4d3a676691f28599",
             "commit_message": "[libc] Provide compiler version properties (#73344)\n\nThis will be used to support conditional compilation based on compiler\r\nversion.\r\nWe adopt the same convention as\r\n[libc++](https://github.com/llvm/llvm-project/blob/main/libcxx/include/__config)\r\n- thx @legrosbuffle for the suggestion!\r\nUsage:\r\n```\r\n#if defined(LIBC_COMPILER_CLANG_VER)\r\n#  if LIBC_COMPILER_CLANG_VER < 1500\r\n#    warning \"Libc only supports Clang 15 and later\"\r\n#  endif\r\n#elif defined(LIBC_COMPILER_GCC_VER)\r\n#  if LIBC_COMPILER_GCC_VER < 1500\r\n#    warning \"Libc only supports GCC 15 and later\"\r\n#  endif\r\n#elif defined(LIBC_COMPILER_MSC_VER)\r\n#  if LIBC_COMPILER_MSC_VER < 1930\r\n#    warning \"Libc only supports Visual Studio 2022 RTW (17.0) and later\"\r\n#  endif\r\n#endif\r\n```",
             "commit_timestamp": 1700841731.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1700856756.059117,
+            "elapsed_time": 3734.317118406296,
+            "x64": true,
+            "actual_files_count": 1722,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "4233176f9bf8d0309c03b127aa113ae826718dfa",
+            "commit_message": "[SimpleLoopUnswitch] Remove callbacks (#73300)\n\nAfter the removal of the legacyPM version of simple loop unswitch, there\r\nis no longer a need for the callback mechanism to handle PM specific\r\ntasks. This patch removes the callbacks to help simplify the code now\r\nthat they're no longer needed.",
+            "commit_timestamp": 1700854612.0
         }
     ]
 }
