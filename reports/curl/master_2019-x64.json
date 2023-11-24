@@ -12711,6 +12711,20 @@
             "commit_ref": "03cb1ff4d629d6110dab787c75c187626d58323d",
             "commit_message": "fopen: create new file using old file's mode\n\nBecause the function renames the temp file to the target name as a last\nstep, if the file was previously owned by a different user, not ORing\nthe old mode could otherwise end up creating a file that was no longer\nreadable by the original owner after save.\n\nReported-by: Lo\u00efc Yhuel\nFixes #12299\nCloses #12395\n",
             "commit_timestamp": 1700775042.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1700798629.864764,
+            "elapsed_time": 166.93667244911194,
+            "x64": false,
+            "actual_files_count": 2452,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "03cb1ff4d629d6110dab787c75c187626d58323d",
+            "commit_message": "fopen: create new file using old file's mode\n\nBecause the function renames the temp file to the target name as a last\nstep, if the file was previously owned by a different user, not ORing\nthe old mode could otherwise end up creating a file that was no longer\nreadable by the original owner after save.\n\nReported-by: Lo\u00efc Yhuel\nFixes #12299\nCloses #12395\n",
+            "commit_timestamp": 1700775042.0
         }
     ]
 }
