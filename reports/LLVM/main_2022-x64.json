@@ -13787,6 +13787,22 @@
             "commit_ref": "4233176f9bf8d0309c03b127aa113ae826718dfa",
             "commit_message": "[SimpleLoopUnswitch] Remove callbacks (#73300)\n\nAfter the removal of the legacyPM version of simple loop unswitch, there\r\nis no longer a need for the callback mechanism to handle PM specific\r\ntasks. This patch removes the callbacks to help simplify the code now\r\nthat they're no longer needed.",
             "commit_timestamp": 1700854612.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1700871145.464504,
+            "elapsed_time": 3741.2353200912476,
+            "x64": true,
+            "actual_files_count": 1722,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "afe8b93ffdfef5d8879e1894b9d7dda40dee2b8d",
+            "commit_message": "[clang] Avoid memcopy for small structure with padding under -ftrivial-auto-var-init (#71677)\n\nRecommit of 0d2860b795879f4dd152963b52f969b53b136899 with extra test\ncases fixed.\n",
+            "commit_timestamp": 1700867480.0
         }
     ]
 }
