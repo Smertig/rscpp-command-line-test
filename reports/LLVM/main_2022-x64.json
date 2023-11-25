@@ -13803,6 +13803,22 @@
             "commit_ref": "afe8b93ffdfef5d8879e1894b9d7dda40dee2b8d",
             "commit_message": "[clang] Avoid memcopy for small structure with padding under -ftrivial-auto-var-init (#71677)\n\nRecommit of 0d2860b795879f4dd152963b52f969b53b136899 with extra test\ncases fixed.\n",
             "commit_timestamp": 1700867480.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1700885480.466965,
+            "elapsed_time": 5051.427582025528,
+            "x64": true,
+            "actual_files_count": 1722,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "024718313b526a4530d7cd58886fcc157247e0ff",
+            "commit_message": "[Flang] Fix a test case that depends on stderr output of nullptr. (#73349)\n\nThis test case depends on the stderr output of a `nullptr` being\r\n\"(null)\". However, it is empty string on AIX.\r\nThis PR is to initialize the `sourceFileName_` to be a specific string\r\nto avoid that.",
+            "commit_timestamp": 1700884441.0
         }
     ]
 }
