@@ -13931,6 +13931,22 @@
             "commit_ref": "9ba74c2ee044381544c8e1e736c4c85a1a9d56bf",
             "commit_message": "[NewPM] Remove CFGPrinterLegacyPass (#73414)\n\nThis pass has no test coverage in upstream LLVM, is not used anywhere in\r\nupstream LLVM, and has a NewPM equivalent. For these reasons, remove it.",
             "commit_timestamp": 1700991991.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1701015167.445836,
+            "elapsed_time": 6243.04069685936,
+            "x64": true,
+            "actual_files_count": 1722,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "dc8b055c71d2ff2f43c0f4cac66e15a210b91e3b",
+            "commit_message": "[GitHub] Update bot message to suggest GitHub pull requests (#65914)\n\nFixes #65890.\r\n\r\n---------\r\n\r\nCo-authored-by: Danny M\u00f6sch <danny.moesch@icloud.com>",
+            "commit_timestamp": 1701014017.0
         }
     ]
 }

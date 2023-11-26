@@ -12739,6 +12739,20 @@
             "commit_ref": "de9c956c360d070a631100f4c41c1a1322ac4b34",
             "commit_message": "fix(anim): remove custom_exec_cb equality check to fix MixroPython issue\n\nWe can't test for custom_exec_cb equality because in the MicroPython binding\na wrapper callback is used here an the real callback data is stored in the .\nTherefore equality check would remove all animations.\n",
             "commit_timestamp": 1700976800.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1701014541.507576,
+            "elapsed_time": 303.87194871902466,
+            "x64": true,
+            "actual_files_count": 579,
+            "expected_files_count": 454,
+            "repo_url": "https://github.com/lvgl/lvgl",
+            "commit_ref": "de9c956c360d070a631100f4c41c1a1322ac4b34",
+            "commit_message": "fix(anim): remove custom_exec_cb equality check to fix MixroPython issue\n\nWe can't test for custom_exec_cb equality because in the MicroPython binding\na wrapper callback is used here an the real callback data is stored in the .\nTherefore equality check would remove all animations.\n",
+            "commit_timestamp": 1700976800.0
         }
     ]
 }
