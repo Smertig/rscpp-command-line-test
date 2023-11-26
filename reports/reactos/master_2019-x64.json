@@ -12697,6 +12697,20 @@
             "commit_ref": "9d0b6f318589c5a07bce1fc164a29c6264860fad",
             "commit_message": "[IMM32][SDK] Implement CtfImmSetCiceroStartInThread\n\n- Add CtfImmSetCiceroStartInThread function.\n- Add its prototype to <imm32_undoc.h>\n- Modify imm32.spec.\n\nCORE-19268\n",
             "commit_timestamp": 1700956739.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1700971440.176125,
+            "elapsed_time": 180.13488483428955,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "0bfa0cd0d27a31580abc2d0598fdd1f02c49ee71",
+            "commit_message": "[NTGDI] Fix PatBlt with negative values (#6038)\n\nWhen I am implementing the IME soft keyboard (#6021 and #6036),\r\nI noticed an issue with PatBlt function.\r\n\r\n- Fix the rectangle coordinates when the value was\r\n  negative in NtGdiPatBlt function.\r\n- Fix NC_DrawFrame function.\r\n- Fix UserDrawWindowFrame function.\r\n\r\nCORE-19334",
+            "commit_timestamp": 1700966802.0
         }
     ]
 }
