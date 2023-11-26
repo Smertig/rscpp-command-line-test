@@ -12711,6 +12711,20 @@
             "commit_ref": "0bfa0cd0d27a31580abc2d0598fdd1f02c49ee71",
             "commit_message": "[NTGDI] Fix PatBlt with negative values (#6038)\n\nWhen I am implementing the IME soft keyboard (#6021 and #6036),\r\nI noticed an issue with PatBlt function.\r\n\r\n- Fix the rectangle coordinates when the value was\r\n  negative in NtGdiPatBlt function.\r\n- Fix NC_DrawFrame function.\r\n- Fix UserDrawWindowFrame function.\r\n\r\nCORE-19334",
             "commit_timestamp": 1700966802.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1700985760.264133,
+            "elapsed_time": 140.19910883903503,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "f3bd8ffb203180a09299b767571d1db8f59008f1",
+            "commit_message": "[GDI32_APITEST] Strengthen PatBlt with negative values\n\nCORE-19334\n",
+            "commit_timestamp": 1700980260.0
         }
     ]
 }

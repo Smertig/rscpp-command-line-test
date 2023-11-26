@@ -13899,6 +13899,22 @@
             "commit_ref": "abc405858d6d6212d1eb40298865771e8a3b759a",
             "commit_message": "[XCOFF] make related SD symbols as isFunction (#69553)\n\nThis will help tools like llvm-symbolizer recognizes more functions.",
             "commit_timestamp": 1700971149.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1700986366.663913,
+            "elapsed_time": 3761.601898431778,
+            "x64": true,
+            "actual_files_count": 1722,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "f4834255d30d695fb89c4b566d65917a8e505ca2",
+            "commit_message": "[BOLT] Reset output addresses for deleted blocks (#73429)\n\nThis is a follow-up to #73076. We need to reset output addresses for\r\ndeleted blocks, otherwise the address translation may mistakenly\r\nattribute input address of a deleted block to a non-zero address.\r\n\r\nWhile working on a test case, I've discovered that DWARF output ranges\r\nwere already broken for deleted basic blocks: #73428. I will provide a\r\ntest case for this PR with a DWARF address range fix PR.",
+            "commit_timestamp": 1700983427.0
         }
     ]
 }
