@@ -13867,6 +13867,22 @@
             "commit_ref": "bee78b88f8effdb378a809e0416988ce9c37f5ac",
             "commit_message": "Reland \"[clang][Sema] Use original template pattern when declaring implicit deduction guides for nested template classes\" (#73087)\n\nReland of f418319730341e9d41ce8ead6fbfe5603c343985 with proper handling\r\nof template constructors\r\n\r\nWhen a nested template is instantiated, the template pattern of the\r\ninner class is not copied into the outer class\r\nClassTemplateSpecializationDecl. The specialization contains a\r\nClassTemplateDecl with an empty record that points to the original\r\ntemplate pattern instead.\r\n\r\nAs a result, when looking up the constructors of the inner class, no\r\nresults are returned. This patch finds the original template pattern and\r\nuses that for the lookup instead.\r\n\r\nBased on CWG2471 we must also substitute the known outer template\r\narguments when creating deduction guides for the inner class.\r\n\r\nChanges from last iteration:\r\n\r\n1. In template constructors, arguments are first rewritten to depth - 1\r\nrelative to the constructor as compared to depth 0 originally. These\r\narguments are needed for substitution into constraint expressions.\r\n2. Outer arguments are then applied with the template instantiator to\r\nproduce a template argument at depth zero for use in the deduction\r\nguide. This substitution does not evaluate constraints, which preserves\r\nconstraint arguments at the correct depth for later evaluation.\r\n3. Tests are added that cover template constructors within nested\r\ndeduction guides for all special substitution cases.\r\n4. Computation of the template pattern and outer instantiation arguments\r\nare pulled into the constructor of\r\n`ConvertConstructorToDeductionGuideTransform`.",
             "commit_timestamp": 1700940404.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1700957608.780502,
+            "elapsed_time": 5554.428574323654,
+            "x64": true,
+            "actual_files_count": 1722,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "505523ed34869c4f4324d79da11d27fe0c628238",
+            "commit_message": "[NewPM] Remove CFGOnlyPrinterLegacyPass (#73412)\n\nThis pass has no test coverage upstream, is not used anywhere upstream,\r\nand has a NewPM equivalent. For these reasons, remove it.",
+            "commit_timestamp": 1700955796.0
         }
     ]
 }
