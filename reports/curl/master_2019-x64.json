@@ -12935,6 +12935,20 @@
             "commit_ref": "50a1c30b91f91139a13ec352d08c383699b183df",
             "commit_message": "RELEASE-NOTES: synced\n",
             "commit_timestamp": 1700856114.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1701029015.317108,
+            "elapsed_time": 180.40880370140076,
+            "x64": false,
+            "actual_files_count": 2452,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "dbf4c4030a95b610cf86aa576ba7676736f81dc3",
+            "commit_message": "conncache: use the closure handle when disconnecting surplus connections\n\nUse the closure handle for disconnecting connection cache entries so\nthat anything that happens during the disconnect is not stored and\nassociated with the 'data' handle which already just finished a transfer\nand it is important that details from the unrelated disconnect does not\ntaint meta-data in the data handle.\n\nLike storing the response code.\n\nThis also adjust test 1506. Unfortunately it also removes a key part of\nthe test that verifies that a connection is closed since when this\noutput vanishes (because the closure handle is used), we don't know\nexactly that the connection actually gets closed in this test...\n\nReported-by: ohyeaah on github\nFixes #12367\nCloses #12405\n",
+            "commit_timestamp": 1701017355.0
         }
     ]
 }
