@@ -13103,6 +13103,20 @@
             "commit_ref": "1cda8304bf085b955109f9cc32cd51b581cdff54",
             "commit_message": "Add missing include file to BytecodeSummary.h (#1110)\n\n",
             "commit_timestamp": 1700584134.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1701086646.663566,
+            "elapsed_time": 288.7545518875122,
+            "x64": false,
+            "actual_files_count": 437,
+            "expected_files_count": 379,
+            "repo_url": "https://github.com/luau-lang/luau",
+            "commit_ref": "7fb7f4382dd4fde31e0e044ef3a9b4f63646bd96",
+            "commit_message": "Use ubuntu-latest on GHA when possible (#1112)\n\nWe need ubuntu-20.04 for coverage analysis (clang after 10 doesn't seem\r\nto properly interact with gcov version used for codecov) and for\r\nreleases (to produce binaries targeting earlier glibc).\r\n\r\nHowever, we still should be verifying that Luau builds on latest,\r\nbecause newer toolchains have stricter standard library headers and/or\r\nwarnings; without this we're at risk of constantly regressing the build\r\nfor packaging or external applications.\r\n\r\nNote that release.yml can probably just be deleted but for now we simply\r\nadjust it.",
+            "commit_timestamp": 1701084297.0
         }
     ]
 }

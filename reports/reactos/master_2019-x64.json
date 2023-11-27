@@ -12809,6 +12809,20 @@
             "commit_ref": "fb642f727fa883645d4e61ade79d62949ea75ac5",
             "commit_message": "[IMM32] s/CopyMemory/RtlCopyMemory/\n\nCORE-19268\n",
             "commit_timestamp": 1701069694.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1701086629.80432,
+            "elapsed_time": 158.03776502609253,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "f7a4c26322d789e9f40bed61484376b6cef930c5",
+            "commit_message": "[INPUT] Fix exception on SPI_SETDEFALTINPUTLANG (#6043)\n\nFollow-up to #4666. Fix an abnormal termination at setting the default language.\r\n- pCurrent was NULL at the scene. Don't use it there for SPI_SETDEFALTINPUTLANG.\r\n- Save the default keyboard layout. Use it.\r\nCORE-11700, CORE-13244, CORE-18364",
+            "commit_timestamp": 1701084358.0
         }
     ]
 }
