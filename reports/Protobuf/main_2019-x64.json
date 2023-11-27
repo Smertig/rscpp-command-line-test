@@ -13877,6 +13877,20 @@
             "commit_ref": "f9929e997ec7862ec371462d2c09e764f19d16ca",
             "commit_message": "Internal Change\n\nPiperOrigin-RevId: 585644617\n",
             "commit_timestamp": 1701098683.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1701115378.467606,
+            "elapsed_time": 356.9446029663086,
+            "x64": false,
+            "actual_files_count": 546,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "578e07e9bd19b4ae959c57bbe4c1524d5642b58e",
+            "commit_message": "Have Arena::Create support arena constructible types\n\nUnlike Arena::CreateMessage, Arena::Create creates only the top level object\nfrom arena even if it is arena constructalble; e.g. messages, RepeatedPtrField,\netc. This renders arenas less effective.\n\nInstead of asking users to be aware of such nuances to use the right API for\nthe right type, this CL makes Arena::Create recognizes and fully supports arena\nconstructable types.\n\nWhile extremly rare, some users try to emulate Arena::CreateMessage with\nArena::Create by passing arena parameter twice. For example,\n\n```\nauto foo = Arena::Create<Foo>(&arena, &arena);  // bad\n```\n\nThis pattern is not supported and  will break after this change. The following\nis recommended instead.\n\n```\nauto foo = Arena::CreateMessage<Foo>(&arena);  // recommended\nauto foo = Arena::Create<Foo>(&arena);  // after this change\n```\n\nPiperOrigin-RevId: 585709990\n",
+            "commit_timestamp": 1701113716.0
         }
     ]
 }

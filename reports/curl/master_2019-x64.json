@@ -13019,6 +13019,20 @@
             "commit_ref": "97ccc4479f77ba3191c64c05d253d422025de5cd",
             "commit_message": "tool_parsecfg: make warning output propose double-quoting\n\nWhen the config file parser detects a word that *probably* should be\nquoted, mention double-quotes as a possible remedy.\n\nTest 459 verifies.\n\nProposed-by: Jiehong on github\nFixes #12409\nCloses #12412\n",
             "commit_timestamp": 1701090170.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1701115425.483143,
+            "elapsed_time": 192.74168801307678,
+            "x64": false,
+            "actual_files_count": 2452,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "e6bf2001c79f242b9a4ea61fbbdbc99a3ebd1d82",
+            "commit_message": "tool_cb_prg: make the carriage return fit for wide progress bars\n\nWhen the progress bar was made max width (256 columns), the fly()\nfunction attempted to generate its output buffer too long so that the\ntrailing carriage return would not fit and then the output would show\nwrongly. The fly function is called when the expected total transfer is\nunknown, which could be one or more progress calls before the actual\nprogress meter get shown when the expected transfer size is provided.\n\nThis new take also replaces the msnprintf() call with a much simpler\nmemset() for speed.\n\nReported-by: Tim Hill\nFixes #12407\nCloses #12415\n",
+            "commit_timestamp": 1701108965.0
         }
     ]
 }
