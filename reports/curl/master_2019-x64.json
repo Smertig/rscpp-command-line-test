@@ -12949,6 +12949,20 @@
             "commit_ref": "dbf4c4030a95b610cf86aa576ba7676736f81dc3",
             "commit_message": "conncache: use the closure handle when disconnecting surplus connections\n\nUse the closure handle for disconnecting connection cache entries so\nthat anything that happens during the disconnect is not stored and\nassociated with the 'data' handle which already just finished a transfer\nand it is important that details from the unrelated disconnect does not\ntaint meta-data in the data handle.\n\nLike storing the response code.\n\nThis also adjust test 1506. Unfortunately it also removes a key part of\nthe test that verifies that a connection is closed since when this\noutput vanishes (because the closure handle is used), we don't know\nexactly that the connection actually gets closed in this test...\n\nReported-by: ohyeaah on github\nFixes #12367\nCloses #12405\n",
             "commit_timestamp": 1701017355.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1701043523.272665,
+            "elapsed_time": 186.13685083389282,
+            "x64": false,
+            "actual_files_count": 2452,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "1b04dfa3719eb5d5dcc666ac83cd86217fa5673c",
+            "commit_message": "curl.rc: switch out the copyright symbol for plain ASCII\n\n.. like we already do for libcurl.rc.\n\nlibcurl.rc copyright symbol used to cause a \"non-ascii 8-bit codepoint\"\nwarning so it was switched to ascii.\n\nRef: https://github.com/curl/curl/commit/1ca62bb5#commitcomment-133474972\n\nSuggested-by: Robert Southee\n\nCloses https://github.com/curl/curl/pull/12403\n",
+            "commit_timestamp": 1701042122.0
         }
     ]
 }
