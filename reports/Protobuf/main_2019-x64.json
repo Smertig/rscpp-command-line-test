@@ -13891,6 +13891,20 @@
             "commit_ref": "578e07e9bd19b4ae959c57bbe4c1524d5642b58e",
             "commit_message": "Have Arena::Create support arena constructible types\n\nUnlike Arena::CreateMessage, Arena::Create creates only the top level object\nfrom arena even if it is arena constructalble; e.g. messages, RepeatedPtrField,\netc. This renders arenas less effective.\n\nInstead of asking users to be aware of such nuances to use the right API for\nthe right type, this CL makes Arena::Create recognizes and fully supports arena\nconstructable types.\n\nWhile extremly rare, some users try to emulate Arena::CreateMessage with\nArena::Create by passing arena parameter twice. For example,\n\n```\nauto foo = Arena::Create<Foo>(&arena, &arena);  // bad\n```\n\nThis pattern is not supported and  will break after this change. The following\nis recommended instead.\n\n```\nauto foo = Arena::CreateMessage<Foo>(&arena);  // recommended\nauto foo = Arena::Create<Foo>(&arena);  // after this change\n```\n\nPiperOrigin-RevId: 585709990\n",
             "commit_timestamp": 1701113716.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1701129981.766794,
+            "elapsed_time": 376.2888774871826,
+            "x64": false,
+            "actual_files_count": 532,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "8659e5e7c64c59160e4aa734a47f5cf0a4324e9c",
+            "commit_message": "Support the profile proto analyzer to analyze some statistics of a profile.\n\nIt can also scan profiles under a directory and aggregate the statistics.\n\nPiperOrigin-RevId: 585765536\n",
+            "commit_timestamp": 1701125857.0
         }
     ]
 }

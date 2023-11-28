@@ -12851,6 +12851,20 @@
             "commit_ref": "628d4a92e978eda0da873b4234bbded65dcde8b0",
             "commit_message": "[TASKMGR] Fix text cutoff statusbar2 CPU%, improve statusbar3 Mem (#5978)\n\n\r\nReactOS taskmgr writes a bit more *useful* dynamically\r\ngenerated strings in the status-bar field 3 with the memory\r\nthan MS Windows XP taskmgr does for example.\r\nAvailable space in the statusbar is very limited,\r\ntherefore we use the following trick to get as much as possible of that helpful text visible\r\nfor the majority of the translations:\r\n- We do shrink the CPU% column a bit in width and static text lengths, as it is the one which\r\nhas very little variety in length of its dynamic part: 0% to 100%\r\n\r\nThis improves the display for all languages, and for some languages it also fixes\r\ntext-cutoff that we even had with the wider width in the CPU% column already.\r\n\r\nalso fix an accelerator collision in nl-NL.rc",
             "commit_timestamp": 1701107614.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1701129918.427174,
+            "elapsed_time": 320.3541085720062,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "12a5971b7a31338b5171a37a672751cf7c3fb701",
+            "commit_message": "[NTOS:PNP] Queue a device change event on interface enable or disable\n",
+            "commit_timestamp": 1701121012.0
         }
     ]
 }
