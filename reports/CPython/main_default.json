@@ -10261,6 +10261,20 @@
             "commit_ref": "a194938f33a71e727e53490815bae874eece1460",
             "commit_message": "gh-112431: Unconditionally call `hash -r` (GH-112432)\n\nThe `activate` script calls `hash -r` in two places to make sure the shell picks\r\nup the environment changes the script makes. Before that, it checks to\r\nsee if the shell running the script is bash or zsh.\r\n\r\n`hash -r` is specified by POSIX and is not exclusive to bash and zsh.\r\nThis guard prevents the script from calling `hash -r` in other\r\n`#!/bin/sh`-compatible shells like dash.",
             "commit_timestamp": 1701163499.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1701187572.942266,
+            "elapsed_time": 1999.1739110946655,
+            "x64": true,
+            "actual_files_count": 988,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "48dfd74a9db9d4aa9c6f23b4a67b461e5d977173",
+            "commit_message": "GH-112245: Promote free threaded CI (#112246)\n\n",
+            "commit_timestamp": 1701186303.0
         }
     ]
 }

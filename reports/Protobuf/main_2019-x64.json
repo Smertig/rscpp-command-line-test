@@ -13947,6 +13947,20 @@
             "commit_ref": "37a8316fc997da258bdda248cd3787b6a5720941",
             "commit_message": "Auto-generate files after cl/585817227\n",
             "commit_timestamp": 1701140268.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1701187394.279814,
+            "elapsed_time": 363.5571377277374,
+            "x64": false,
+            "actual_files_count": 531,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "150b724d76f4a84eae1cc9e5b40a27ad9f581c63",
+            "commit_message": "Cleanup \"mergeable\" types.\n\nAll types supported by RepeatedPtrField have corresponding merge/copy, hence TypeImplementsMergeBehavior is obsolete.\n\nPiperOrigin-RevId: 585928795\n",
+            "commit_timestamp": 1701175112.0
         }
     ]
 }
