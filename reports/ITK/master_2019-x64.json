@@ -13193,6 +13193,20 @@
             "commit_ref": "f486c3c2f7de2912336a2ffcb5625c28f03e60b8",
             "commit_message": "PERF: Fixed COPY_INSTEAD_OF_MOVE in MultiThreaderBase\n\nDetected by Coverity 2023.6.2.\n\n330  template <unsigned int VDimension>\n331  ITK_TEMPLATE_EXPORT void\n332  ParallelizeImageRegion(const ImageRegion<VDimension> &           requestedRegion,\n333                         TemplatedThreadingFunctorType<VDimension> funcP,\n334                         ProcessObject *                           filter)\n335  {\n336    this->ParallelizeImageRegion(\n337      VDimension,\n338      requestedRegion.GetIndex().m_InternalArray,\n339      requestedRegion.GetSize().m_InternalArray,\n   CID 315595 (1-2 of 2): COPY_INSTEAD_OF_MOVE (COPY_INSTEAD_OF_MOVE)1. copy_constructor_call:\n   funcP is copied in call to copy constructor std::function<void (itk::ImageRegion<3u> const &)>,\n   when it could be moved instead.\n   Use std::move(funcP) instead of funcP.\n340      [funcP](const IndexValueType index[], const SizeValueType size[]) {\n341        ImageRegion<VDimension> region;\n342        for (unsigned int d = 0; d < VDimension; ++d)\n343        {\n344          region.SetIndex(d, index[d]);\n345          region.SetSize(d, size[d]);\n346        }\n347        funcP(region);\n348      },\n349      filter);\n350  }\n",
             "commit_timestamp": 1701001952.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1701158964.478652,
+            "elapsed_time": 305.9007999897003,
+            "x64": false,
+            "actual_files_count": 100,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "f486c3c2f7de2912336a2ffcb5625c28f03e60b8",
+            "commit_message": "PERF: Fixed COPY_INSTEAD_OF_MOVE in MultiThreaderBase\n\nDetected by Coverity 2023.6.2.\n\n330  template <unsigned int VDimension>\n331  ITK_TEMPLATE_EXPORT void\n332  ParallelizeImageRegion(const ImageRegion<VDimension> &           requestedRegion,\n333                         TemplatedThreadingFunctorType<VDimension> funcP,\n334                         ProcessObject *                           filter)\n335  {\n336    this->ParallelizeImageRegion(\n337      VDimension,\n338      requestedRegion.GetIndex().m_InternalArray,\n339      requestedRegion.GetSize().m_InternalArray,\n   CID 315595 (1-2 of 2): COPY_INSTEAD_OF_MOVE (COPY_INSTEAD_OF_MOVE)1. copy_constructor_call:\n   funcP is copied in call to copy constructor std::function<void (itk::ImageRegion<3u> const &)>,\n   when it could be moved instead.\n   Use std::move(funcP) instead of funcP.\n340      [funcP](const IndexValueType index[], const SizeValueType size[]) {\n341        ImageRegion<VDimension> region;\n342        for (unsigned int d = 0; d < VDimension; ++d)\n343        {\n344          region.SetIndex(d, index[d]);\n345          region.SetSize(d, size[d]);\n346        }\n347        funcP(region);\n348      },\n349      filter);\n350  }\n",
+            "commit_timestamp": 1701001952.0
         }
     ]
 }
