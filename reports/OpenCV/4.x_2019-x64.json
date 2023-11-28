@@ -13221,6 +13221,20 @@
             "commit_ref": "e9f35610a54479eb170c101745cbd6bcc8e1d122",
             "commit_message": "Merge pull request #24575 from asmorkalov:as/drop_android_engine\n\nDrop OpenCV Manager from samples initialization",
             "commit_timestamp": 1700824603.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1701173101.906427,
+            "elapsed_time": 471.5806727409363,
+            "x64": false,
+            "actual_files_count": 468,
+            "expected_files_count": 459,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "06f62a3dd1dcf5d2474ad4f2615e8aad9bfa555c",
+            "commit_message": "Merge pull request #24581 from vrabaud:tsan\n\nFix race condition in color_lab.cpp initLabTabs(). #24581\r\n\r\nThere is a race condition between when the static bool is initialized (which is thread safe) and its value check. This PR changes the static bool to a static lambda call to make it thread safe. The static_cast<void> in the end is to prevent unused variables warnings.\r\n\r\n### Pull Request Readiness Checklist\r\n\r\nSee details at https://github.com/opencv/opencv/wiki/How_to_contribute#making-a-good-pull-request\r\n\r\n- [x] I agree to contribute to the project under Apache 2 License.\r\n- [x] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\r\n- [x] The PR is proposed to the proper branch\r\n- [x] There is a reference to the original bug report and related work\r\n",
+            "commit_timestamp": 1701172901.0
         }
     ]
 }

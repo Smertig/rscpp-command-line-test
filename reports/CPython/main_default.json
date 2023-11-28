@@ -10247,6 +10247,20 @@
             "commit_ref": "2df26d83486b8f9ac6b7df2a9a4669508aa61983",
             "commit_message": "gh-112105: Make completer delims work on libedit (gh-112106)\n\n",
             "commit_timestamp": 1701152603.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1701173204.433038,
+            "elapsed_time": 1734.0094902515411,
+            "x64": true,
+            "actual_files_count": 988,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "a194938f33a71e727e53490815bae874eece1460",
+            "commit_message": "gh-112431: Unconditionally call `hash -r` (GH-112432)\n\nThe `activate` script calls `hash -r` in two places to make sure the shell picks\r\nup the environment changes the script makes. Before that, it checks to\r\nsee if the shell running the script is bash or zsh.\r\n\r\n`hash -r` is specified by POSIX and is not exclusive to bash and zsh.\r\nThis guard prevents the script from calling `hash -r` in other\r\n`#!/bin/sh`-compatible shells like dash.",
+            "commit_timestamp": 1701163499.0
         }
     ]
 }

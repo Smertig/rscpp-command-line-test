@@ -14091,6 +14091,22 @@
             "commit_ref": "4cf4c5201830c5854ee34acd868576083204011d",
             "commit_message": "Reland \"[gn] port 92b821f2dcdd\"\n\nThis reverts commit 344b5346a0e899d59ff52f60421788eef4e2c864.\n92b821f2dcdd relanded in 04072485204c7.\n",
             "commit_timestamp": 1701157520.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1701173624.804653,
+            "elapsed_time": 3104.493079662323,
+            "x64": true,
+            "actual_files_count": 1722,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "3e6207a775dfed9a8b54e4afbbffb9d6cdabf3ef",
+            "commit_message": "[InstCombine] Use SimplifyQuery for computeKnownBits() (NFC)\n\nCall computeKnownBits() with SimplifyQuery to make sure it gets\nall available analyses, even if more are added in the future.\n\nAs this code is performance-critical, I'm exporting the variant\nwith by-ref KnownBits and SimplifyQuery, as the variant returning\nKnownBits is measurably slower in this context.\n",
+            "commit_timestamp": 1701172773.0
         }
     ]
 }
