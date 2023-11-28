@@ -10653,6 +10653,20 @@
             "commit_ref": "0fdbace9b2b1d078ebfabbdbe47dad83a7b8e6e5",
             "commit_message": "Improve compatibility of precedences in version script patterns\n\nPreviously, symbol names or wildcard patterns in version script files\nwere processed strictly from top to bottom. When a single symbol\nmatches two or more patterns, the first one was given precedence.\n\nHowever, GNU ld appears to treat exact matches differently, assigning\nthem higher precedence over wildcard patterns. This discrepancy led to\nprograms linked with Qt 6.6.1 using mold failing to launch.\n\nFixes https://github.com/rui314/mold/issues/1158\n",
             "commit_timestamp": 1701153828.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1701201907.666699,
+            "elapsed_time": 171.23817992210388,
+            "x64": false,
+            "actual_files_count": 525,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/rui314/mold",
+            "commit_ref": "0fdbace9b2b1d078ebfabbdbe47dad83a7b8e6e5",
+            "commit_message": "Improve compatibility of precedences in version script patterns\n\nPreviously, symbol names or wildcard patterns in version script files\nwere processed strictly from top to bottom. When a single symbol\nmatches two or more patterns, the first one was given precedence.\n\nHowever, GNU ld appears to treat exact matches differently, assigning\nthem higher precedence over wildcard patterns. This discrepancy led to\nprograms linked with Qt 6.6.1 using mold failing to launch.\n\nFixes https://github.com/rui314/mold/issues/1158\n",
+            "commit_timestamp": 1701153828.0
         }
     ]
 }
