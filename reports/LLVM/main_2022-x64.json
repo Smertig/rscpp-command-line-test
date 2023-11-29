@@ -14219,6 +14219,22 @@
             "commit_ref": "002c54a2e6cced2eb9d79608afee5fb36dcc5b98",
             "commit_message": "[flang][openacc] Representing Fortran descriptor management with OpenACC. (#72725)\n\nThis document describes the aspects of Fortran descriptor management\r\nin the offload data environment and how this semantics can be\r\nrepresented using MLIR OpenACC dialect.\r\n\r\nIn the document I tried to clarify some parts of the OpenACC\r\nspecification that seemed unclear to me, e.g. where the spec allowed different\r\ninterpretations (in my opinion) or did not specify the actual runtime\r\nbehavior. I tried to demonstrate how this ambiguity can affect user\r\nprograms with examples.\r\n\r\nThe document proposes using `attachRecipe` on the data operations\r\nto represent the non-trivial pointer attachment semantics for variables\r\nrepresented by descriptors. The recipe provides the actual\r\nimplementation of the pointer attachment, e.g. we can call an F18 offload runtime\r\nfunction that will perform all necessary checks and actions.\r\n\r\nIt is unclear at this point if we want to expose the implementation\r\ndetails in FIR, otherwise, the recipe could have contained more low\r\nlevel acc operations such as is_present lookups, host to device\r\nmemory copies, etc.",
             "commit_timestamp": 1701286949.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1701274326.545089,
+            "elapsed_time": 7042.932814359665,
+            "x64": true,
+            "actual_files_count": 1722,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "953d675c42c254676ca446951bd728abefecf436",
+            "commit_message": "Fix accsessing \"PresentModifierLocs\" array beyond its end. (#73579)\n\nCurrently PresentModifierLocs defined with size DefaultmapKindNum; where\r\nDefaultmapKindNum = OMPC_DEFAULTMAP_pointer + 1\r\n\r\nBefore 5.0 variable-category can not be omitted. For the test like\r\n\\#pragma omp target map(tofrom: errors) defaultmap(present)\r\n\r\nerror would be mitted.\r\n\r\nAfter 5.0 that is allowd.\r\n\r\nWhen try to:\r\nPresentModifierLocs[DMC->getDefaultmapKind()] =\r\n              DMC->getDefaultmapModifierLoc();\r\nIt is accessed beyond array end.\r\n\r\nTo fix this using OMPC_DEFAULTMAP_unknow instead OMPC_DEFAULTMAP_poiner.",
+            "commit_timestamp": 1701273717.0
         }
     ]
 }
