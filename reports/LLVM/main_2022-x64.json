@@ -14315,6 +14315,22 @@
             "commit_ref": "1d05b21e035f579af2f96b4a61847d2c9f358ac2",
             "commit_message": "Add test coverage for -Wunknown-directives; NFC\n\nWhile working on #embed, I noticed that the PR accidentally broke the\nwarning group but no tests failed as a result. This is adding the\nmissing test coverage.\n",
             "commit_timestamp": 1701360046.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1701375116.540316,
+            "elapsed_time": 4680.9456470012665,
+            "x64": true,
+            "actual_files_count": 1722,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "ff485a0e77a55847cb50768b01c04fe45a6879ea",
+            "commit_message": "[clang] Remove no-op ptr-to-ptr bitcasts (NFC)\n\nOpaque ptr cleanup effort (NFC).\n",
+            "commit_timestamp": 1701374431.0
         }
     ]
 }

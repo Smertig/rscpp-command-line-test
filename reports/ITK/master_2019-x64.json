@@ -13403,6 +13403,20 @@
             "commit_ref": "f2b0974e6c1038110f34b292a84b757c395b4fdf",
             "commit_message": "Merge pull request #4341 from jhlegarreta/ReleaseDocumentationCodeBlockStyleConsistency\n\nSTYLE: Remove unnecessary whitespaces in Release doc code blocks",
             "commit_timestamp": 1701267638.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1701375072.056042,
+            "elapsed_time": 351.30819392204285,
+            "x64": false,
+            "actual_files_count": 100,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "8061d3ce1504e30203235ab16c5e2f9507145e24",
+            "commit_message": "STYLE: Remove pre-C++17 definitions of static `constexpr` data members\n\nAccording to C++17, \"a `constexpr` static data member may be redundantly\nredeclared outside the class with no initializer\", but then it says: \"This usage\nis deprecated.\"\n\nCases found by Notepad++ regular expression `^constexpr .+::\\w+.+;`\n\nFollow-up to pull request https://github.com/InsightSoftwareConsortium/ITK/pull/3985\ncommit 014ea433aaef9f931a24fba6a7a416b14473280a\n\"STYLE: Remove pre-C++17 definition constexpr data member `SupportSize`\"\n",
+            "commit_timestamp": 1701373517.0
         }
     ]
 }
