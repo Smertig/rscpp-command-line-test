@@ -13257,6 +13257,20 @@
             "commit_ref": "6a0dc7cf23cae900b75b2c133fb9f9bfab6e2b1e",
             "commit_message": "transfer: abort pause send when connection is marked for closing\n\nThis handles cases of some bi-directional \"upgrade\" scenarios\n(i.e. WebSockets) where sending is paused until some \"upgrade\" handshake\nis completed, but server rejects the handshake and closes the\nconnection.\n\nCloses #12428\n",
             "commit_timestamp": 1701333051.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1701360179.191959,
+            "elapsed_time": 172.2032458782196,
+            "x64": false,
+            "actual_files_count": 2457,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "d1c2bb3d8d9c68395de815b8217ffb7d2dc795c5",
+            "commit_message": "multi: during ratelimit multi_getsock should return no sockets\n\n... as there is nothing to wait for then, it just waits. Otherwise, this\ncauses much more CPU work and updates than necessary during ratelimit\nperiods.\n\nRef: https://curl.se/mail/lib-2023-11/0056.html\nCloses #12430\n",
+            "commit_timestamp": 1701356002.0
         }
     ]
 }
