@@ -13061,6 +13061,20 @@
             "commit_ref": "01a8288d2819b0ed92f13d1aec7a962bcdcdc079",
             "commit_message": "[UMPNPMGR] Move the pnp event thread to a separate file\n",
             "commit_timestamp": 1701295380.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1701345972.551359,
+            "elapsed_time": 217.18502855300903,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "f92c44b21761ca4f23dac20bde3b9afe40a7210f",
+            "commit_message": "[NTOS:KE] Remove KiMask32Array\n\nIt's useless and also broken in the way it is used. Replace it with a simple shift and make it correct for 64 bit.\n",
+            "commit_timestamp": 1701342232.0
         }
     ]
 }
