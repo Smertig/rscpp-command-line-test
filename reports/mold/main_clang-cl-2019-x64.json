@@ -10779,6 +10779,20 @@
             "commit_ref": "3d9b4d5c05250fa7c507b0c74038915929f990f1",
             "commit_message": "Bump mold version to 2.4.0\n",
             "commit_timestamp": 1701248280.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1701331545.413122,
+            "elapsed_time": 139.10154819488525,
+            "x64": false,
+            "actual_files_count": 525,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/rui314/mold",
+            "commit_ref": "ea9864bbd5da9cec3a2867d9ecd0754fb1b5c5d6",
+            "commit_message": "Do not try to demangle C++ symbols as Rust ones\n\nPreviously, we always tried to demangle a symbol name as a Rust\nsymbol first and then attempted to demangle it as a C++ symbol.\nThis resulted in an incorrect demangled result, as the Rust legacy\nmangling scheme is not distinguishable from C++.\n\nThis patch fix the issue by adding the \"is_rust_obj\" flag to the\nObjectFile. We try to demangle a symbol as a Rust one before as a C++\nonly if the flag is true.\n\nFixes https://github.com/rui314/mold/issues/1159\n",
+            "commit_timestamp": 1701320003.0
         }
     ]
 }
