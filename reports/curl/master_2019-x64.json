@@ -13313,6 +13313,20 @@
             "commit_ref": "d1c2bb3d8d9c68395de815b8217ffb7d2dc795c5",
             "commit_message": "multi: during ratelimit multi_getsock should return no sockets\n\n... as there is nothing to wait for then, it just waits. Otherwise, this\ncauses much more CPU work and updates than necessary during ratelimit\nperiods.\n\nRef: https://curl.se/mail/lib-2023-11/0056.html\nCloses #12430\n",
             "commit_timestamp": 1701356002.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1701417844.022476,
+            "elapsed_time": 188.83145260810852,
+            "x64": false,
+            "actual_files_count": 2457,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "841427376e42c11a659a6effc74715895f5bb032",
+            "commit_message": "CURLINFO_PRETRANSFER_TIME_T.3: fix time explanation\n\n- Change CURLINFO_PRETRANSFER_TIME_T explanation to say that it\n  includes protocol-specific instructions that trigger a transfer.\n\nPrior to this change it explicitly said that it did not include those\ninstructions in the time, but that is incorrect.\n\nThe change is a copy of the fixed explanation already in\nCURLINFO_PRETRANSFER_TIME, fixed by ec8dcd7b.\n\nReported-by: eeverettrbx@users.noreply.github.com\n\nFixes https://github.com/curl/curl/issues/12431\nCloses https://github.com/curl/curl/pull/12432\n",
+            "commit_timestamp": 1701417480.0
         }
     ]
 }
