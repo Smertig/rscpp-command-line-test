@@ -13431,6 +13431,20 @@
             "commit_ref": "8061d3ce1504e30203235ab16c5e2f9507145e24",
             "commit_message": "STYLE: Remove pre-C++17 definitions of static `constexpr` data members\n\nAccording to C++17, \"a `constexpr` static data member may be redundantly\nredeclared outside the class with no initializer\", but then it says: \"This usage\nis deprecated.\"\n\nCases found by Notepad++ regular expression `^constexpr .+::\\w+.+;`\n\nFollow-up to pull request https://github.com/InsightSoftwareConsortium/ITK/pull/3985\ncommit 014ea433aaef9f931a24fba6a7a416b14473280a\n\"STYLE: Remove pre-C++17 definition constexpr data member `SupportSize`\"\n",
             "commit_timestamp": 1701373517.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1701403746.978963,
+            "elapsed_time": 311.43302392959595,
+            "x64": false,
+            "actual_files_count": 100,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "8a4ab318ef5db4da6f0aeda35d0df7caedea1057",
+            "commit_message": "DOC: Fix grammar in the ITK ecosystem documentation page\n\nFix grammar in the ITK ecosystem documentation page.\n",
+            "commit_timestamp": 1701397165.0
         }
     ]
 }

@@ -13299,6 +13299,20 @@
             "commit_ref": "d1c2bb3d8d9c68395de815b8217ffb7d2dc795c5",
             "commit_message": "multi: during ratelimit multi_getsock should return no sockets\n\n... as there is nothing to wait for then, it just waits. Otherwise, this\ncauses much more CPU work and updates than necessary during ratelimit\nperiods.\n\nRef: https://curl.se/mail/lib-2023-11/0056.html\nCloses #12430\n",
             "commit_timestamp": 1701356002.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1701403409.991196,
+            "elapsed_time": 179.0209686756134,
+            "x64": false,
+            "actual_files_count": 2457,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "d1c2bb3d8d9c68395de815b8217ffb7d2dc795c5",
+            "commit_message": "multi: during ratelimit multi_getsock should return no sockets\n\n... as there is nothing to wait for then, it just waits. Otherwise, this\ncauses much more CPU work and updates than necessary during ratelimit\nperiods.\n\nRef: https://curl.se/mail/lib-2023-11/0056.html\nCloses #12430\n",
+            "commit_timestamp": 1701356002.0
         }
     ]
 }

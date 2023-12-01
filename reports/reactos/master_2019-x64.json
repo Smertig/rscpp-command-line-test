@@ -13117,6 +13117,20 @@
             "commit_ref": "f92c44b21761ca4f23dac20bde3b9afe40a7210f",
             "commit_message": "[NTOS:KE] Remove KiMask32Array\n\nIt's useless and also broken in the way it is used. Replace it with a simple shift and make it correct for 64 bit.\n",
             "commit_timestamp": 1701342232.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1701403395.676212,
+            "elapsed_time": 171.04256963729858,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "e0c17c3f462e3b62bf0c4ca2479c1e5c6b8ff496",
+            "commit_message": "[DXG] Don't repeat \"DXG\" module name in version info",
+            "commit_timestamp": 1701393793.0
         }
     ]
 }
