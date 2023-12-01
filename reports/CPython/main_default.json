@@ -10513,6 +10513,20 @@
             "commit_ref": "a9073564ee50bc610e1fd36e45b0a5204618883a",
             "commit_message": "gh-110481: Fix typo in Py_SET_REFCNT() (#112595)\n\n",
             "commit_timestamp": 1701446080.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1701461178.358552,
+            "elapsed_time": 2198.2763152122498,
+            "x64": true,
+            "actual_files_count": 988,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "5c5022b8625e34f0035ad5a23bc4c2f16649d134",
+            "commit_message": "gh-112567: Add _PyTimeFraction C API (#112568)\n\nUse a fraction internally in the _PyTime API to reduce the risk of\r\ninteger overflow: simplify the fraction using Greatest Common\r\nDivisor (GCD). The fraction API is used by time functions:\r\nperf_counter(), monotonic() and process_time().\r\n\r\nFor example, QueryPerformanceFrequency() usually returns 10 MHz on\r\nWindows 10 and newer. The fraction SEC_TO_NS / frequency =\r\n1_000_000_000 / 10_000_000 can be simplified to 100 / 1.\r\n\r\n* Add _PyTimeFraction type.\r\n* Add functions:\r\n\r\n  * _PyTimeFraction_Set()\r\n  * _PyTimeFraction_Mul()\r\n  * _PyTimeFraction_Resolution()\r\n\r\n* No longer check \"numer * denom <= _PyTime_MAX\" in\r\n  _PyTimeFraction_Set(). _PyTimeFraction_Mul() uses _PyTime_Mul()\r\n  which handles integer overflow.",
+            "commit_timestamp": 1701456610.0
         }
     ]
 }
