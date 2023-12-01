@@ -14395,6 +14395,22 @@
             "commit_ref": "8727982bdfb84ce4adbd138c146a6b7ecaf98fdb",
             "commit_message": "[Driver] Add exclusive-group feature to multilib.yaml. (#69447)\n\nThis allows a YAML-based multilib configuration to specify explicitly\r\nthat a subset of its library directories are alternatives to each\r\nother, i.e. at most one of that subset should be selected.\r\n\r\nSo if you have multiple sysroots each including a full set of headers\r\nand libraries, you can mark them as members of the same mutually\r\nexclusive group, and then you'll be sure that only one of them is\r\nselected, even if two or more are compatible with the compile options.\r\n\r\nThis is particularly important in multilib setups including the libc++\r\nheaders, where selecting the include directories from two different\r\nsysroots can cause an actual build failure. This occurs when including\r\n<stdio.h>, for example: libc++'s stdio.h is included first, and will\r\ntry to use `#include_next` to fetch the underlying libc's version. But\r\nif there are two include directories from separate multilibs, then\r\nboth of their C++ include directories will end up on the include path\r\nfirst, followed by both the C directories. So the `#include_next` from\r\nthe first libc++ stdio.h will include the second libc++ stdio.h, which\r\nwill do nothing because it has the same include guard macro, and the\r\nlibc header won't ever be included at all.\r\n\r\nIf more than one of the options in an exclusive group matches the\r\ngiven flags, the last one wins.\r\n\r\nThe syntax for specifying this in multilib.yaml is to define a Groups\r\nsection in which you specify your group names, and for each one,\r\ndeclare it to have Type: Exclusive. (This reserves space in the syntax\r\nfor maybe adding other group types later, such as a group of mutually\r\n_dependent_ things that you must have all or none of.) Then each\r\nVariant record that's a member of a group has a Group: property giving\r\nthat group's name.\r\n",
             "commit_timestamp": 1701432018.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1701447118.796888,
+            "elapsed_time": 3663.3384759426117,
+            "x64": true,
+            "actual_files_count": 1722,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "14e991740b5425680d49d75336132e793f1315e8",
+            "commit_message": "[clang][ExtractAPI] Ensure LocationFileChecker doesn't try to traverse VFS when determining file path (#74071)\n\nAs part of https://reviews.llvm.org/D154130 the logic of\r\nLocationFileChecker changed slightly to try and get the absolute\r\nexternal file path instead of the name as requested when the file was\r\nopenened which would be before VFS mappings in our usage. Ensure that we\r\nonly check against the name as requested instead of trying to generate\r\nthe external canonical file path.\r\n\r\nrdar://115195433",
+            "commit_timestamp": 1701446076.0
         }
     ]
 }
