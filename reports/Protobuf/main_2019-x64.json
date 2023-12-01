@@ -14101,6 +14101,20 @@
             "commit_ref": "745aa6edbd812876d081896d4278cd6f4747de72",
             "commit_message": "Introduce set_and_test_mut! to cleanup simple_nested_test.rs\n\nPiperOrigin-RevId: 586723934\n",
             "commit_timestamp": 1701369997.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1701389112.839701,
+            "elapsed_time": 404.5522720813751,
+            "x64": false,
+            "actual_files_count": 539,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "c8e01607aec4c09f510aa7e0d5df6a204e74189e",
+            "commit_message": "Support pretty printing proto2 Extensions inside of proto3 Anys in TextFormat.Printer.\n\nIn Java, in order to include Extensions inside a proto message, the ExtensionRegistry for the extensions must be included during deserialization, otherwise they are treated as unknown fields.\nThis change adds support for providing an ExtensionRegistry for TextFormat.Printer which is then used during Any deserialization.\n\nPiperOrigin-RevId: 586807633\n",
+            "commit_timestamp": 1701387636.0
         }
     ]
 }
