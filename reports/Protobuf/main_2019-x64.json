@@ -14143,6 +14143,20 @@
             "commit_ref": "f0c495ef3e3ce5e431178651c487bd6344dfe2a6",
             "commit_message": "Fix unnecessary switching of map representation for DiscardUnknownFields (#14879)\n\nWhen unknown fields are discarded using reflection in reflection_ops.cc, unnecessary switching of the internal map representation is triggered.\n\nA map<int,int> field cannot have unknown fields. However, in the current code the check used is\n\nif (field->IsMap() && IsMapValueMessageTyped(field)) {\n  // Discard map field\n} else {\n  // Discard repeated message field\n}\n\nThis means that the code proceeds discarding unknown fields for each mapentry using the RepeatedPtrField of MapEntry representation of the map. Causing unnecessary work and unnecessary, potentially big, memory allocation. This PR fixes this.\n\nSee also issue https://github.com/protocolbuffers/protobuf/issues/13222\n\nThis is also a bug fix. When a map<int, MyProto> is in a dirty state, previously it would be skipped. After this change it will correctly use the repeated path to clean the MyProto sub-entries\n\nCloses #14879\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/14879 from gerben-stavenga:patch_discardunknown fb0749ab8da78d1187922630f0c11f2e279c94b0\nPiperOrigin-RevId: 586820137\n",
             "commit_timestamp": 1701390272.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1701432277.816484,
+            "elapsed_time": 321.77640891075134,
+            "x64": false,
+            "actual_files_count": 532,
+            "expected_files_count": 818,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "f0c495ef3e3ce5e431178651c487bd6344dfe2a6",
+            "commit_message": "Fix unnecessary switching of map representation for DiscardUnknownFields (#14879)\n\nWhen unknown fields are discarded using reflection in reflection_ops.cc, unnecessary switching of the internal map representation is triggered.\n\nA map<int,int> field cannot have unknown fields. However, in the current code the check used is\n\nif (field->IsMap() && IsMapValueMessageTyped(field)) {\n  // Discard map field\n} else {\n  // Discard repeated message field\n}\n\nThis means that the code proceeds discarding unknown fields for each mapentry using the RepeatedPtrField of MapEntry representation of the map. Causing unnecessary work and unnecessary, potentially big, memory allocation. This PR fixes this.\n\nSee also issue https://github.com/protocolbuffers/protobuf/issues/13222\n\nThis is also a bug fix. When a map<int, MyProto> is in a dirty state, previously it would be skipped. After this change it will correctly use the repeated path to clean the MyProto sub-entries\n\nCloses #14879\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/14879 from gerben-stavenga:patch_discardunknown fb0749ab8da78d1187922630f0c11f2e279c94b0\nPiperOrigin-RevId: 586820137\n",
+            "commit_timestamp": 1701390272.0
         }
     ]
 }

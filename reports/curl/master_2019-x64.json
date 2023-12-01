@@ -13327,6 +13327,20 @@
             "commit_ref": "841427376e42c11a659a6effc74715895f5bb032",
             "commit_message": "CURLINFO_PRETRANSFER_TIME_T.3: fix time explanation\n\n- Change CURLINFO_PRETRANSFER_TIME_T explanation to say that it\n  includes protocol-specific instructions that trigger a transfer.\n\nPrior to this change it explicitly said that it did not include those\ninstructions in the time, but that is incorrect.\n\nThe change is a copy of the fixed explanation already in\nCURLINFO_PRETRANSFER_TIME, fixed by ec8dcd7b.\n\nReported-by: eeverettrbx@users.noreply.github.com\n\nFixes https://github.com/curl/curl/issues/12431\nCloses https://github.com/curl/curl/pull/12432\n",
             "commit_timestamp": 1701417480.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1701432236.966641,
+            "elapsed_time": 179.88464784622192,
+            "x64": false,
+            "actual_files_count": 2457,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "6c7da8156173bb28cb019a56f83f9f2fcccb8ee6",
+            "commit_message": "tool_writeout_json: fix JSON encoding of non-ascii bytes\n\nchar variables if unspecified can be either signed or unsigned depending\non the platform according to the C standard; in most platforms, they are\nsigned.\n\nThis meant that the  *i<32  waas always true for bytes with the top bit\nset. So they were always getting encoded as \\uXXXX, and then since they\nwere also signed negative, they were getting extended with 1s causing\n'\\xe2' to be expanded to \\uffffffe2, for example:\n\n  $ curl --variable 'v=\u201c' --expand-write-out '{{v:json}}\\n' file:///dev/null\n  \\uffffffe2\\uffffff80\\uffffff9c\n\nI fixed this bug by making the code use explicitly unsigned char*\nvariables instead of char* variables.\n\nTest 268 verifies\n\nReported-by: iconoclasthero\nCloses #12434\n",
+            "commit_timestamp": 1701423553.0
         }
     ]
 }
