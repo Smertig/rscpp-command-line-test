@@ -14475,6 +14475,22 @@
             "commit_ref": "66a3e4fafb6eae19764f8a192ca3a116c0554211",
             "commit_message": "[LoongArch] Override TargetLowering::isShuffleMaskLegal\n\n By default, `isShuffleMaskLegal` always returns true, which can result\n in the expansion of `BUILD_VECTOR` into a `VECTOR_SHUFFLE` node in\n certain situations. Subsequently, the `VECTOR_SHUFFLE` node is expanded\n again into a `BUILD_VECTOR`, leading to an infinite loop.\n To address this, we always return false, allowing the expansion of\n `BUILD_VECTOR` through the stack.\n",
             "commit_timestamp": 1701498317.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1701519103.713868,
+            "elapsed_time": 4355.054525613785,
+            "x64": true,
+            "actual_files_count": 1724,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "e9c6f3f5e7e23b23de4eeaa182ebfcb7d2188495",
+            "commit_message": "[AArch64] Fix -Wunused-variable in AArch64FrameLowering.cpp (NFC)\n\nllvm-project/llvm/lib/Target/AArch64/AArch64FrameLowering.cpp:497:21:\nerror: unused variable 'MFI' [-Werror,-Wunused-variable]\n  MachineFrameInfo &MFI = MF.getFrameInfo();\n                    ^\n1 error generated.\n",
+            "commit_timestamp": 1701513140.0
         }
     ]
 }
