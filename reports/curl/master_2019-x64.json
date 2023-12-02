@@ -13397,6 +13397,20 @@
             "commit_ref": "0eda1f6c9f94b5ead1981f1510f1938ef3c0784b",
             "commit_message": "connect: reduce number of transportation providers\n\nUse only the ones necessary - the ones that are built-in. Saves a few\nbytes in the resulting code.\n\nCloses #12438\n",
             "commit_timestamp": 1701468847.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1701504173.429186,
+            "elapsed_time": 166.51651167869568,
+            "x64": false,
+            "actual_files_count": 2457,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "c44671ed431aa3d40819e59f63c471be158480a7",
+            "commit_message": "build: fix builds that disable protocols but not digest auth\n\n- Build base64 functions if digest auth is not disabled.\n\nPrior to this change if some protocols were disabled but not digest auth\nthen a build error would occur due to missing base64 functions.\n\nFixes https://github.com/curl/curl/issues/12440\nCloses https://github.com/curl/curl/pull/12442\n",
+            "commit_timestamp": 1701491213.0
         }
     ]
 }
