@@ -13439,6 +13439,20 @@
             "commit_ref": "c44671ed431aa3d40819e59f63c471be158480a7",
             "commit_message": "build: fix builds that disable protocols but not digest auth\n\n- Build base64 functions if digest auth is not disabled.\n\nPrior to this change if some protocols were disabled but not digest auth\nthen a build error would occur due to missing base64 functions.\n\nFixes https://github.com/curl/curl/issues/12440\nCloses https://github.com/curl/curl/pull/12442\n",
             "commit_timestamp": 1701491213.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1701547407.079177,
+            "elapsed_time": 179.53430318832397,
+            "x64": false,
+            "actual_files_count": 2457,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "586e3c19cd408379d9bca72e86393154661e34c3",
+            "commit_message": "INSTALL: update list of ports and CPU archs\n",
+            "commit_timestamp": 1701535248.0
         }
     ]
 }
