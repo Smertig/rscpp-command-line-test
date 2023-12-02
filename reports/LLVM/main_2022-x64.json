@@ -14427,6 +14427,22 @@
             "commit_ref": "4c44dcffd5f1557bde2c21773221081437308895",
             "commit_message": "Support soft failure on DWP section overflow, producing a truncated but valid DWP(#71902)\n\nWhen 'ContinueOnCuIndexOverflow' enables without this modification, the\r\nforcibly generated '.dwp' won't be recognized by Debugger(gdb 10.1)\r\ncorrectly.\r\n<img width=\"657\" alt=\"image\"\r\nsrc=\"https://github.com/llvm/llvm-project/assets/150100070/31732775-2548-453a-a47a-fa04c6d05fe9\">\r\nit looks like there's a problem with processing the dwarf header, which\r\nmakes debugging completely impossible. (unless the consumer walks the debug_info section to rebuild that column (if that's the only section that overflowed - if it's another section, there's no recovery))\r\n\r\n**About patch:**\r\nWhen llvm-dwp enables option '--continue-on-cu-index-overflow=soft-stop'\r\nand recognizes the overflow problem , it will stop packing and generate\r\nthe '.dwp' file at once, discarding any DWO files that would not fit\r\nwithin the 32 bit/4GB limits of the format.\r\n<img width=\"625\" alt=\"image\"\r\nsrc=\"https://github.com/llvm/llvm-project/assets/150100070/77d6be24-262b-4f4c-afc0-9a6c49e133c7\">",
             "commit_timestamp": 1701460882.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1701476034.296342,
+            "elapsed_time": 5288.338274478912,
+            "x64": true,
+            "actual_files_count": 1722,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "357b8b46b125810c5c383c485b1fb3f3db233759",
+            "commit_message": "[Driver] Remove tests for NetBSD 7. No longer supported.\n",
+            "commit_timestamp": 1701474982.0
         }
     ]
 }

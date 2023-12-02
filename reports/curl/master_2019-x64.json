@@ -13369,6 +13369,20 @@
             "commit_ref": "f5ba531ed269fc3a36d414114835c1785ba65a93",
             "commit_message": "libcurl-security.3: fix typo\n\nFixed minimal typo.\n\nCloses #12437\n",
             "commit_timestamp": 1701449678.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1701475488.716218,
+            "elapsed_time": 193.4370665550232,
+            "x64": false,
+            "actual_files_count": 2457,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "0eda1f6c9f94b5ead1981f1510f1938ef3c0784b",
+            "commit_message": "connect: reduce number of transportation providers\n\nUse only the ones necessary - the ones that are built-in. Saves a few\nbytes in the resulting code.\n\nCloses #12438\n",
+            "commit_timestamp": 1701468847.0
         }
     ]
 }
