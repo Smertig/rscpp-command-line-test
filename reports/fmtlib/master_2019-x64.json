@@ -14907,6 +14907,20 @@
             "commit_ref": "71bd51e6c20d1674b67c3089fecfac98ce3f9169",
             "commit_message": "Implement `%j` specifier for `std::chrono::duration` (#3732)\n\nThis adds support for `%j` presentation type for duration types:\r\n\r\n> \"If the type being formatted is a specialization of duration, the decimal\r\nnumber of days without padding.\"\r\n\r\nFixes #3643.",
             "commit_timestamp": 1701617398.0
+        },
+        {
+            "tool_version": "233.0.20231128.202159-rc01",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1701633766.518012,
+            "elapsed_time": 84.75439667701721,
+            "x64": false,
+            "actual_files_count": 66,
+            "expected_files_count": 66,
+            "repo_url": "https://github.com/fmtlib/fmt.git",
+            "commit_ref": "5d55375a8a6aabf39528bdf48f7b3ded5ef4e9bb",
+            "commit_message": "Experiment with scan buffering\n",
+            "commit_timestamp": 1701619776.0
         }
     ]
 }
