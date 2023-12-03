@@ -1,4 +1,5 @@
 import os
+import sys
 from os import path, makedirs
 from subprocess import PIPE
 import subprocess
@@ -11,6 +12,8 @@ from zipfile import ZipFile
 from typing import Optional, List
 from contextlib import contextmanager
 
+
+sys.stdout.reconfigure(encoding='utf-8')
 
 # assert 'VsInstallRoot' in os.environ, 'Missing VsInstallRoot environment variable'
 # assert 'VCTargetsPath' in os.environ, 'Missing VCTargetsPath environment variable'
@@ -102,6 +105,10 @@ class Environment:
         return self._cli_test_dir
 
     @property
+    def trace_inspector_dir(self) -> str:
+        return os.path.join(self.cli_test_dir, "trace-inspector")
+
+    @property
     def resharper_version(self) -> Optional[str]:
         return self._get_env("resharper version")
 
@@ -112,6 +119,10 @@ class Environment:
     @property
     def caches_home(self) -> str:
         return self._get_env("caches home") or path.join(self.cli_test_dir, "caches-home")
+
+    @property
+    def snapshots_home(self) -> str:
+        return self._get_env("snapshots home") or path.join(self.cli_test_dir, "snapshots-home")
 
     def get_project_dir(self, project_name) -> str:
         projects_dir = self._projects_cache_directory or path.join(self.cli_test_dir, "projects")
@@ -124,6 +135,10 @@ class Environment:
     @property
     def inspect_code_path_x64(self) -> str:
         return path.join(self.resharper_build, "inspectcode.exe")
+
+    @property
+    def inspect_code_runtime_config_path(self) -> str:
+        return path.join(self.resharper_build, "inspectcode.runtimeconfig.json")
 
     @property
     def verbose(self) -> bool:
@@ -228,6 +243,7 @@ def invoke_cmake(build_dir, cmake_generator, cmake_options, cmake_new_env, cmake
             raise Exception(f"project has required dependencies {required_dependencies}, but environment doesn't contain path to vcpkg")
 
         with cwd(vcpkg_dir):
+            print('[invoke_cmake] Running vcpkg', flush=True)
             subprocess.run(["vcpkg", "install"] + required_dependencies + ["--triplet", cmake_generator["vcpkg_triplet"]], check=True, stdout=_env.verbose_handle)
 
         cmd_line_args.append("-DCMAKE_TOOLCHAIN_FILE={0}/scripts/buildsystems/vcpkg.cmake".format(vcpkg_dir))
@@ -243,9 +259,9 @@ def invoke_cmake(build_dir, cmake_generator, cmake_options, cmake_new_env, cmake
 
     with cwd(build_dir):
         if _env.verbose and cmake_new_env:
-            print(f'Running cmake with modified env: {cmake_env}')
+            print(f'[invoke_cmake] Running cmake with modified env: {cmake_env}', flush=True)
 
-        print(subprocess.list2cmdline(cmd_line_args))
+        print('[invoke_cmake] Running cmake:', subprocess.list2cmdline(cmd_line_args), flush=True)
         subprocess.run(cmd_line_args, check=True, stdout=_env.verbose_handle, env=cmake_env)
 
     with open(path.join(build_dir, "CMakeCache.txt")) as cmake_cache:

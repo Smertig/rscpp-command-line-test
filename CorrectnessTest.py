@@ -1,11 +1,13 @@
 import datetime
 import json
+import shutil
 import subprocess
 import sys
 import time
 import traceback
 import xml.etree.ElementTree as ET
 import git
+import os
 from subprocess import Popen, PIPE
 from typing import Optional, Tuple, List
 
@@ -100,21 +102,58 @@ def check_report(report_file, known_errors, known_file_errors) -> Tuple[Optional
     }
 
 
-def run_inspect_code(project_dir, sln_file, project_to_check, msbuild_props, use_x64: bool):
+def run_inspect_code(project_dir, sln_file, project_to_check, msbuild_props, use_x64: bool, snapshot_path: str = None):
     args, report_file = common.inspect_code_run_arguments(project_dir, sln_file, project_to_check, msbuild_props)
     args.insert(0, env.inspect_code_path_x64 if use_x64 else env.inspect_code_path_x86)
-    print(subprocess.list2cmdline(args))
+
+    if snapshot_path:
+        # TODO: support for x86 somehow?
+        assert use_x64, "dotnet-trace doesn't work with x86 inspect code tool"
+
+        dotnet_args = ["dotnet", "exec", "--runtimeconfig", env.inspect_code_runtime_config_path]
+        args = dotnet_args + args
+
+    print('[run_inspect_code]', subprocess.list2cmdline(args), flush=True)
     process = Popen(args, stdout=PIPE, text=True, encoding='cp1251')
     start = time.time()
-    out, err = process.communicate()
+
+    if snapshot_path:
+        time.sleep(1)
+        inspect_code_pid = process.pid
+        profiler_args = ["dotnet-trace",
+                         "collect",
+                         "--profile", "gc-verbose",
+                         "--output", snapshot_path,
+                         "--process-id", str(inspect_code_pid),
+                         ]
+
+        profiler_process = Popen(profiler_args)
+        print(f"[run_inspect_code] Running profiler for pid={inspect_code_pid}..", flush=True)
+
+    while True:
+        try:
+            out, err = process.communicate(timeout=60)
+            break
+        except subprocess.TimeoutExpired:
+            print(f"[run_inspect_code] Still running.. elapsed time: {common.duration(start, time.time())}", flush=True)
+            pass
+
     exit_code = process.wait()
     end = time.time()
     if exit_code != 0:
-        print("Error: exit code = " + str(exit_code))
+        print(f"[run_inspect_code] Error: exit code = {exit_code}", flush=True)
+
     if err:
-        print("Error:")
-        print(err)
-    print("Elapsed time: " + common.duration(start, end))
+        print(f"[run_inspect_code] stderr:\n{err}")
+
+    print('::group::stdout')
+    print(f"[run_inspect_code] stdout:\n{out}")
+    print('::endgroup::', flush=True)
+
+    if snapshot_path:
+        profiler_process.wait()
+
+    print("[run_inspect_code] Elapsed time: " + common.duration(start, end), flush=True)
     return report_file, out
 
 
@@ -122,20 +161,51 @@ def check_project(project, project_dir, sln_file, branch: Optional[str]) -> Tupl
     project_to_check = project.get("project to check")
     msbuild_props = project.get("msbuild properties")
     use_x64 = project.get("use x64", False)
+    trace_memory = use_x64
     local_config = project["latest"][branch] if branch else project["stable"]
+
+    if trace_memory:
+        os.makedirs(env.snapshots_home, exist_ok=True)
+        snapshot_path = os.path.join(env.snapshots_home, 'snapshot.dtt')
+    else:
+        snapshot_path = None
 
     start_date = datetime.datetime.utcnow()
     start_time = time.time()
-    report_file, output = run_inspect_code(project_dir, sln_file, project_to_check, msbuild_props, use_x64)
+    report_file, output = run_inspect_code(project_dir, sln_file, project_to_check, msbuild_props, use_x64, snapshot_path)
     end_time = time.time()
+
+    if trace_memory:
+        with common.cwd(env.trace_inspector_dir):
+            inspector_args = ["dotnet", "run", snapshot_path]
+            print("[check_project] Running trace inspector:", subprocess.list2cmdline(inspector_args), flush=True)
+            memory_stats_json = subprocess.check_output(inspector_args)
+            memory_stats = json.loads(memory_stats_json)
+
+            actual_traffic = memory_stats["AllocationAmount"] / (1 << 20)
+    else:
+        actual_traffic = None
 
     expected_files_count = local_config.get("inspected files count")
     actual_files_count = common.inspected_files_count(output)
     if expected_files_count:
         if expected_files_count != actual_files_count:
-            print(f"expected count of inspected files is {expected_files_count}, but actual is {actual_files_count}")
+            print(f"[check_project] expected count of inspected files is {expected_files_count}, but actual is {actual_files_count}", flush=True)
     else:
-        print(f"count of inspected files is {actual_files_count}")
+        print(f"[check_project] count of inspected files is {actual_files_count}", flush=True)
+
+    if actual_traffic is not None:
+        expected_traffic = local_config.get("mem traffic")
+        if expected_traffic:
+            relative_delta = (actual_traffic - expected_traffic) / expected_traffic * 100
+            if abs(relative_delta) < (3.0 if expected_traffic < 1000 else 0.5):
+                shutil.rmtree(env.snapshots_home)
+
+            print(f"[check_project] expected traffic is {expected_traffic:0.1f} MB, "
+                  f"actual traffic is {actual_traffic:0.1f} MB; "
+                  f"delta = {relative_delta:.2f}%", flush=True)
+        else:
+            print(f"[check_project] traffic is {actual_traffic:0.1f} MB", flush=True)
 
     result, report = check_report(report_file, local_config.get("known errors", []), local_config.get("known file errors", []))
     report |= {
@@ -146,6 +216,10 @@ def check_project(project, project_dir, sln_file, branch: Optional[str]) -> Tupl
         'actual_files_count': actual_files_count,
         'expected_files_count': expected_files_count,
     }
+
+    if actual_traffic:
+        report['memory_traffic'] = actual_traffic
+
     return result, report
 
 
@@ -214,7 +288,7 @@ def main():
             result, report = process_project(project_name, common.projects[project_name], project_branch)
         except Exception as e:
             error_info = traceback.format_exc()
-            print(error_info)
+            print(error_info, flush=True)
 
             result = f"exception: {e}"
             report = {
@@ -239,7 +313,7 @@ def main():
         with open(report_path, 'w') as f_report:
             json.dump(full_report, f_report, indent=4)
 
-    print("Total time: " + common.duration(start_time, time.time()))
+    print("Total time: " + common.duration(start_time, time.time()), flush=True)
     if len(summary) == 0:
         print("Summary: OK")
         return 0
