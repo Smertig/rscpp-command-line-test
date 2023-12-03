@@ -14507,6 +14507,22 @@
             "commit_ref": "1c6a6ba43ba1a331177bd30194f97ce26117cf04",
             "commit_message": "[bazel] Remove :CAPIGPU as a dependency of :MLIRPythonBindingsCore. (#74133)\n\nThis dependency appears unused and it bloats the size of the Python\r\nbindings for non-GPU users.",
             "commit_timestamp": 1701531712.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1701562454.76902,
+            "elapsed_time": 3439.423274755478,
+            "x64": true,
+            "actual_files_count": 1724,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "bb41fc682ee779c775185ada1aeab6f4be5c282f",
+            "commit_message": "[ORC-RT][ORC][MachO] Add executor-side symbol tables to MachO platform support.\n\nAdds symbol tables to the JITDylibState struct in the ORC runtime\nMachOPlatformRuntimeState class. This table will hold the addresses of\nmaterialized symbols (registered by a new JITLink pass in MachOPlatform),\nallowing these to be looked up in the executor without an IPC request to the\ncontroller.\n\nThe old lookup-symbols callback (made by the runtime in response to dlsym\nlookups) is replaced with a push-symbols callback that can trigger\nmaterialization of requested symbols.\n\nHolding a symbol table on the executor side should make repeat calls to dlsym\n(and other symbol lookup operations) cheaper since the IPC to trigger\nmaterialization happens at most once per symbol. It should also enable us (at\nsome point in the future) to symbolicate backtraces in JIT'd code even if the\ncontroller process is gone (e.g. detached or crashed). The trade-off for this\nis increased memory consumption in the executor and larger JIT'd data transfers\n(since symbol names are now transferred to the executor unconditionally, even\nthough they may never be used).\n",
+            "commit_timestamp": 1701559525.0
         }
     ]
 }

@@ -13271,6 +13271,20 @@
             "commit_ref": "4bccb6e6c93df7566c7266e56cfbb66eece86191",
             "commit_message": "[SHELL32][SDK][SHELL32_APITEST] Add PathIsTemporaryA/W (#6067)\n\n- Implement PathIsTemporaryA and\r\n  PathIsTemporaryW functions.\r\n- Add them to <undocshell.h>.\r\n- Add PathIsTemporary testcase.\r\nCORE-19278",
             "commit_timestamp": 1701526048.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1701561927.894926,
+            "elapsed_time": 167.20703792572021,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "d795021a750e92f320c3a07c73bfe3cbcc799567",
+            "commit_message": "[IMM32][SDK] Implement GetKeyboardLayoutCP (#6068)\n\n- Add IMM32!GetKeyboardLayoutCP function.\r\n- Add it to <imm32_undoc.h>.\r\n- Delete ImmDisableLegacyIME and\r\n  ImmSendMessageToActiveDefImeWndW functions\r\n  (2k3/xp IMM32 doesn't have such functions).\r\n- Modify imm32.spec.\r\n- Refer ntdll!RtlDllShutdownInProgress function (that is WinXP+).\r\nCORE-19268",
+            "commit_timestamp": 1701557195.0
         }
     ]
 }
