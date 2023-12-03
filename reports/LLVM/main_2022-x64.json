@@ -14571,6 +14571,23 @@
             "commit_ref": "ecc080c07d97f7879ce64e644cac828922a7b0d9",
             "commit_message": "[OpenMP] return empty stmt for `nothing` (#74042)\n\n- `nothing` directive was effecting the `if` block structure which it\r\nshould not. So return an empty statement instead of an error statement\r\nwhile parsing to avoid this.",
             "commit_timestamp": 1701590618.0
+        },
+        {
+            "tool_version": "233.0.20231128.202159-rc01",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1701599025.326094,
+            "elapsed_time": 1508.8819053173065,
+            "x64": true,
+            "actual_files_count": 1724,
+            "expected_files_count": 1661,
+            "memory_traffic": 643536.1258544922,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "2a3f1195d61e9fc1837926aa394ea73cc6f90bee",
+            "commit_message": "[clang-format] Fix a bug in `git-clang-format --binary` (#74176)\n\nFixed #74165.",
+            "commit_timestamp": 1701598027.0
         }
     ]
 }
