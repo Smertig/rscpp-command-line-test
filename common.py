@@ -102,6 +102,10 @@ class Environment:
         return self._cli_test_dir
 
     @property
+    def trace_inspector_dir(self) -> str:
+        return os.path.join(self.cli_test_dir, "trace-inspector")
+
+    @property
     def resharper_version(self) -> Optional[str]:
         return self._get_env("resharper version")
 
@@ -112,6 +116,10 @@ class Environment:
     @property
     def caches_home(self) -> str:
         return self._get_env("caches home") or path.join(self.cli_test_dir, "caches-home")
+
+    @property
+    def snapshots_home(self) -> str:
+        return self._get_env("snapshots home") or path.join(self.cli_test_dir, "snapshots-home")
 
     def get_project_dir(self, project_name) -> str:
         projects_dir = self._projects_cache_directory or path.join(self.cli_test_dir, "projects")
@@ -124,6 +132,10 @@ class Environment:
     @property
     def inspect_code_path_x64(self) -> str:
         return path.join(self.resharper_build, "inspectcode.exe")
+
+    @property
+    def inspect_code_runtime_config_path(self) -> str:
+        return path.join(self.resharper_build, "inspectcode.runtimeconfig.json")
 
     @property
     def verbose(self) -> bool:

@@ -1,11 +1,13 @@
 import datetime
 import json
+import shutil
 import subprocess
 import sys
 import time
 import traceback
 import xml.etree.ElementTree as ET
 import git
+import os
 from subprocess import Popen, PIPE
 from typing import Optional, Tuple, List
 
@@ -100,9 +102,24 @@ def check_report(report_file, known_errors, known_file_errors) -> Tuple[Optional
     }
 
 
-def run_inspect_code(project_dir, sln_file, project_to_check, msbuild_props, use_x64: bool):
+def run_inspect_code(project_dir, sln_file, project_to_check, msbuild_props, use_x64: bool, snapshot_path: str = None):
     args, report_file = common.inspect_code_run_arguments(project_dir, sln_file, project_to_check, msbuild_props)
     args.insert(0, env.inspect_code_path_x64 if use_x64 else env.inspect_code_path_x86)
+
+    if snapshot_path:
+        # TODO: support for x86 somehow?
+        assert use_x64, "dotnet-trace doesn't work with x86 inspect code tool"
+        profiler_args = ["dotnet-trace",
+                         "collect",
+                         "--profile", "gc-verbose",
+                         "--output", snapshot_path,
+                         "--show-child-io",
+                         "--",
+                         "dotnet", "exec", "--runtimeconfig", env.inspect_code_runtime_config_path
+         ]
+
+        args = profiler_args + args
+
     print(subprocess.list2cmdline(args))
     process = Popen(args, stdout=PIPE, text=True, encoding='cp1251')
     start = time.time()
@@ -122,12 +139,30 @@ def check_project(project, project_dir, sln_file, branch: Optional[str]) -> Tupl
     project_to_check = project.get("project to check")
     msbuild_props = project.get("msbuild properties")
     use_x64 = project.get("use x64", False)
+    trace_memory = use_x64
     local_config = project["latest"][branch] if branch else project["stable"]
+
+    if trace_memory:
+        os.makedirs(env.snapshots_home, exist_ok=True)
+        snapshot_path = os.path.join(env.snapshots_home, 'snapshot.dtt')
+    else:
+        snapshot_path = None
 
     start_date = datetime.datetime.utcnow()
     start_time = time.time()
-    report_file, output = run_inspect_code(project_dir, sln_file, project_to_check, msbuild_props, use_x64)
+    report_file, output = run_inspect_code(project_dir, sln_file, project_to_check, msbuild_props, use_x64, snapshot_path)
     end_time = time.time()
+
+    if trace_memory:
+        with common.cwd(env.trace_inspector_dir):
+            dumper_args = ["dotnet", "run", snapshot_path]
+            print(subprocess.list2cmdline(dumper_args))
+            memory_stats_json = subprocess.check_output(dumper_args)
+            memory_stats = json.loads(memory_stats_json)
+
+            actual_traffic = memory_stats["AllocationAmount"] / (1 << 20)
+    else:
+        actual_traffic = None
 
     expected_files_count = local_config.get("inspected files count")
     actual_files_count = common.inspected_files_count(output)
@@ -136,6 +171,19 @@ def check_project(project, project_dir, sln_file, branch: Optional[str]) -> Tupl
             print(f"expected count of inspected files is {expected_files_count}, but actual is {actual_files_count}")
     else:
         print(f"count of inspected files is {actual_files_count}")
+
+    if actual_traffic is not None:
+        expected_traffic = local_config.get("mem traffic")
+        if expected_traffic:
+            relative_delta = (actual_traffic - expected_traffic) / expected_traffic * 100
+            if abs(relative_delta) < (3.0 if expected_traffic < 1000 else 0.5):
+                shutil.rmtree(env.snapshots_home)
+
+            print(f"expected traffic is {expected_traffic:0.1f} MB, "
+                  f"actual traffic is {actual_traffic:0.1f} MB; "
+                  f"delta = {relative_delta:.2f}%", flush=True)
+        else:
+            print(f"traffic is {actual_traffic:0.1f} MB", flush=True)
 
     result, report = check_report(report_file, local_config.get("known errors", []), local_config.get("known file errors", []))
     report |= {
@@ -146,6 +194,10 @@ def check_project(project, project_dir, sln_file, branch: Optional[str]) -> Tupl
         'actual_files_count': actual_files_count,
         'expected_files_count': expected_files_count,
     }
+
+    if actual_traffic:
+        report['memory_traffic'] = actual_traffic
+
     return result, report
 
 
