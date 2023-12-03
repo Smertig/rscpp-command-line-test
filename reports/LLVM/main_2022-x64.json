@@ -14588,6 +14588,22 @@
             "commit_ref": "2a3f1195d61e9fc1837926aa394ea73cc6f90bee",
             "commit_message": "[clang-format] Fix a bug in `git-clang-format --binary` (#74176)\n\nFixed #74165.",
             "commit_timestamp": 1701598027.0
+        },
+        {
+            "tool_version": "233.0.20231128.202159-rc01",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1701605521.926247,
+            "elapsed_time": 1868.608190536499,
+            "x64": true,
+            "actual_files_count": 1724,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "c89058291248aecd7d43373b719aff74706026e7",
+            "commit_message": "[VPlan] Account for live-in entries in MinBW used by replicate recipes.\n\nIn some cases MinBWs may contain entries for live-ins that are not used\nby VPWidenRecipe or VPWidenSelectRecipes. In those cases, the live-ins\nwon't get processed, so make sure we include them in the count when used\nas operands in VPWidenCast and VPWidenSelectRecipe.\n\nFixes https://github.com/llvm/llvm-project/issues/74231\n",
+            "commit_timestamp": 1701602129.0
         }
     ]
 }
