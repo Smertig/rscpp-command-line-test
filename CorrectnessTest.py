@@ -112,7 +112,7 @@ def run_inspect_code(project_dir, sln_file, project_to_check, msbuild_props, use
 
         profiler_args = ["dotnet-trace",
                          "collect",
-                         "--profile", "gc-verbose",
+                         "--profile", "gc-collect",
                          "--output", snapshot_path,
                          "--show-child-io",
                          "--",
