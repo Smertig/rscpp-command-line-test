@@ -1,9 +1,6 @@
 name: Correctness test for latest repository versions
 
-on:
-  push:
-  schedule:
-    - cron: "0 */4 * * *"  # every 4 hours
+on: push
 
 env:
   RSCPP_VERSION: 2023.3.0-rc01
