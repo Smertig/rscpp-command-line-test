@@ -109,6 +109,7 @@ def run_inspect_code(project_dir, sln_file, project_to_check, msbuild_props, use
     if snapshot_path:
         # TODO: support for x86 somehow?
         assert use_x64, "dotnet-trace doesn't work with x86 inspect code tool"
+
         profiler_args = ["dotnet-trace",
                          "collect",
                          "--profile", "gc-verbose",
@@ -120,19 +121,39 @@ def run_inspect_code(project_dir, sln_file, project_to_check, msbuild_props, use
 
         args = profiler_args + args
 
+        # Try to avoid "It means that MSBuild crashed or froze during startup." error on CI
+        if env.is_ci or True:
+            print('::group::Cold pre-run..', flush=True)
+            try:
+                subprocess.check_call(args, timeout=60)
+            except subprocess.TimeoutExpired:
+                pass
+            print('::endgroup::', flush=True)
+
     print('[run_inspect_code]', subprocess.list2cmdline(args), flush=True)
     process = Popen(args, stdout=PIPE, text=True, encoding='cp1251')
     start = time.time()
-    out, err = process.communicate()
+    while True:
+        try:
+            out, err = process.communicate(timeout=60)
+            break
+        except subprocess.TimeoutExpired:
+            print(f"[run_inspect_code] Still running.. elapsed time: {common.duration(start, time.time())}", flush=True)
+            pass
+
     exit_code = process.wait()
     end = time.time()
     if exit_code != 0:
         print(f"[run_inspect_code] Error: exit code = {exit_code}", flush=True)
+
     if err:
-        print("[run_inspect_code] stderr:")
+        print(f"[run_inspect_code] stderr:")
         print(err)
-        print("[run_inspect_code] stdout:")
-        print(out, flush=True)
+
+    print('::group::stdout')
+    print(f"[run_inspect_code] stdout:")
+    print(out)
+    print('::endgroup::', flush=True)
 
     print("[run_inspect_code] Elapsed time: " + common.duration(start, end), flush=True)
     return report_file, out
