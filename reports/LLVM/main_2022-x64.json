@@ -14523,6 +14523,22 @@
             "commit_ref": "bb41fc682ee779c775185ada1aeab6f4be5c282f",
             "commit_message": "[ORC-RT][ORC][MachO] Add executor-side symbol tables to MachO platform support.\n\nAdds symbol tables to the JITDylibState struct in the ORC runtime\nMachOPlatformRuntimeState class. This table will hold the addresses of\nmaterialized symbols (registered by a new JITLink pass in MachOPlatform),\nallowing these to be looked up in the executor without an IPC request to the\ncontroller.\n\nThe old lookup-symbols callback (made by the runtime in response to dlsym\nlookups) is replaced with a push-symbols callback that can trigger\nmaterialization of requested symbols.\n\nHolding a symbol table on the executor side should make repeat calls to dlsym\n(and other symbol lookup operations) cheaper since the IPC to trigger\nmaterialization happens at most once per symbol. It should also enable us (at\nsome point in the future) to symbolicate backtraces in JIT'd code even if the\ncontroller process is gone (e.g. detached or crashed). The trade-off for this\nis increased memory consumption in the executor and larger JIT'd data transfers\n(since symbol names are now transferred to the executor unconditionally, even\nthough they may never be used).\n",
             "commit_timestamp": 1701559525.0
+        },
+        {
+            "tool_version": "233.0.20231119.234619-eap08",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1701576702.023759,
+            "elapsed_time": 3665.2668175697327,
+            "x64": true,
+            "actual_files_count": 1724,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "38f75d606f94e6b552fd74d487b061a1f8f907fa",
+            "commit_message": "[llvm-exegesis] Removed useless test\n\nThis test was an exact duplicate of the one above, providing no value,\nand also adding confusion as it referred to a behavior that (was\npresumably) moved around and tested differently during the review\nprocess with the test being forgotten about.\n",
+            "commit_timestamp": 1701569043.0
         }
     ]
 }
