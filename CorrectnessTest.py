@@ -120,18 +120,21 @@ def run_inspect_code(project_dir, sln_file, project_to_check, msbuild_props, use
 
         args = profiler_args + args
 
-    print(subprocess.list2cmdline(args))
+    print('[run_inspect_code]', subprocess.list2cmdline(args))
     process = Popen(args, stdout=PIPE, text=True, encoding='cp1251')
     start = time.time()
     out, err = process.communicate()
     exit_code = process.wait()
     end = time.time()
     if exit_code != 0:
-        print("Error: exit code = " + str(exit_code))
+        print(f"[run_inspect_code] Error: exit code = {exit_code}")
     if err:
-        print("Error:")
+        print("[run_inspect_code] stderr:")
         print(err)
-    print("Elapsed time: " + common.duration(start, end))
+        print("[run_inspect_code] stdout:")
+        print(out)
+
+    print("[run_inspect_code] Elapsed time: " + common.duration(start, end))
     return report_file, out
 
 
