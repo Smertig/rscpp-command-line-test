@@ -120,21 +120,21 @@ def run_inspect_code(project_dir, sln_file, project_to_check, msbuild_props, use
 
         args = profiler_args + args
 
-    print('[run_inspect_code]', subprocess.list2cmdline(args))
+    print('[run_inspect_code]', subprocess.list2cmdline(args), flush=True)
     process = Popen(args, stdout=PIPE, text=True, encoding='cp1251')
     start = time.time()
     out, err = process.communicate()
     exit_code = process.wait()
     end = time.time()
     if exit_code != 0:
-        print(f"[run_inspect_code] Error: exit code = {exit_code}")
+        print(f"[run_inspect_code] Error: exit code = {exit_code}", flush=True)
     if err:
         print("[run_inspect_code] stderr:")
         print(err)
         print("[run_inspect_code] stdout:")
-        print(out)
+        print(out, flush=True)
 
-    print("[run_inspect_code] Elapsed time: " + common.duration(start, end))
+    print("[run_inspect_code] Elapsed time: " + common.duration(start, end), flush=True)
     return report_file, out
 
 
@@ -158,9 +158,9 @@ def check_project(project, project_dir, sln_file, branch: Optional[str]) -> Tupl
 
     if trace_memory:
         with common.cwd(env.trace_inspector_dir):
-            dumper_args = ["dotnet", "run", snapshot_path]
-            print(subprocess.list2cmdline(dumper_args))
-            memory_stats_json = subprocess.check_output(dumper_args)
+            inspector_args = ["dotnet", "run", snapshot_path]
+            print("[check_project] Running trace inspector:", subprocess.list2cmdline(inspector_args), flush=True)
+            memory_stats_json = subprocess.check_output(inspector_args)
             memory_stats = json.loads(memory_stats_json)
 
             actual_traffic = memory_stats["AllocationAmount"] / (1 << 20)
@@ -171,9 +171,9 @@ def check_project(project, project_dir, sln_file, branch: Optional[str]) -> Tupl
     actual_files_count = common.inspected_files_count(output)
     if expected_files_count:
         if expected_files_count != actual_files_count:
-            print(f"expected count of inspected files is {expected_files_count}, but actual is {actual_files_count}")
+            print(f"[check_project] expected count of inspected files is {expected_files_count}, but actual is {actual_files_count}", flush=True)
     else:
-        print(f"count of inspected files is {actual_files_count}")
+        print(f"[check_project] count of inspected files is {actual_files_count}", flush=True)
 
     if actual_traffic is not None:
         expected_traffic = local_config.get("mem traffic")
@@ -182,11 +182,11 @@ def check_project(project, project_dir, sln_file, branch: Optional[str]) -> Tupl
             if abs(relative_delta) < (3.0 if expected_traffic < 1000 else 0.5):
                 shutil.rmtree(env.snapshots_home)
 
-            print(f"expected traffic is {expected_traffic:0.1f} MB, "
+            print(f"[check_project] expected traffic is {expected_traffic:0.1f} MB, "
                   f"actual traffic is {actual_traffic:0.1f} MB; "
                   f"delta = {relative_delta:.2f}%", flush=True)
         else:
-            print(f"traffic is {actual_traffic:0.1f} MB", flush=True)
+            print(f"[check_project] traffic is {actual_traffic:0.1f} MB", flush=True)
 
     result, report = check_report(report_file, local_config.get("known errors", []), local_config.get("known file errors", []))
     report |= {
@@ -269,7 +269,7 @@ def main():
             result, report = process_project(project_name, common.projects[project_name], project_branch)
         except Exception as e:
             error_info = traceback.format_exc()
-            print(error_info)
+            print(error_info, flush=True)
 
             result = f"exception: {e}"
             report = {
@@ -294,7 +294,7 @@ def main():
         with open(report_path, 'w') as f_report:
             json.dump(full_report, f_report, indent=4)
 
-    print("Total time: " + common.duration(start_time, time.time()))
+    print("Total time: " + common.duration(start_time, time.time()), flush=True)
     if len(summary) == 0:
         print("Summary: OK")
         return 0
