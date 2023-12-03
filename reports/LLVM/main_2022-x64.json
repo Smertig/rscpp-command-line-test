@@ -14604,6 +14604,22 @@
             "commit_ref": "c89058291248aecd7d43373b719aff74706026e7",
             "commit_message": "[VPlan] Account for live-in entries in MinBW used by replicate recipes.\n\nIn some cases MinBWs may contain entries for live-ins that are not used\nby VPWidenRecipe or VPWidenSelectRecipes. In those cases, the live-ins\nwon't get processed, so make sure we include them in the count when used\nas operands in VPWidenCast and VPWidenSelectRecipe.\n\nFixes https://github.com/llvm/llvm-project/issues/74231\n",
             "commit_timestamp": 1701602129.0
+        },
+        {
+            "tool_version": "233.0.20231128.202159-rc01",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1701619912.376701,
+            "elapsed_time": 1982.676227092743,
+            "x64": true,
+            "actual_files_count": 1724,
+            "expected_files_count": 1661,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "9f78edbd20ed922cced9482f7791deb9899a6d82",
+            "commit_message": "[libc++] tests with picolibc: Fix iterator diff_type to std::streamoff (#74072)\n\nThe hardcoded value of long int was not valid for newlib and picolibc.",
+            "commit_timestamp": 1701617918.0
         }
     ]
 }
