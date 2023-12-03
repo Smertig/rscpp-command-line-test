@@ -147,12 +147,10 @@ def run_inspect_code(project_dir, sln_file, project_to_check, msbuild_props, use
         print(f"[run_inspect_code] Error: exit code = {exit_code}", flush=True)
 
     if err:
-        print(f"[run_inspect_code] stderr:")
-        print(err)
+        print(f"[run_inspect_code] stderr:\n{err}")
 
     print('::group::stdout')
-    print(f"[run_inspect_code] stdout:")
-    print(out)
+    print(f"[run_inspect_code] stdout:\n{out}")
     print('::endgroup::', flush=True)
 
     print("[run_inspect_code] Elapsed time: " + common.duration(start, end), flush=True)

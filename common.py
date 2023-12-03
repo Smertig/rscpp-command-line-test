@@ -1,4 +1,5 @@
 import os
+import sys
 from os import path, makedirs
 from subprocess import PIPE
 import subprocess
@@ -11,6 +12,8 @@ from zipfile import ZipFile
 from typing import Optional, List
 from contextlib import contextmanager
 
+
+sys.stdout.reconfigure(encoding='utf-8')
 
 # assert 'VsInstallRoot' in os.environ, 'Missing VsInstallRoot environment variable'
 # assert 'VCTargetsPath' in os.environ, 'Missing VCTargetsPath environment variable'
