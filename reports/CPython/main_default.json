@@ -10738,6 +10738,20 @@
             "commit_ref": "09505c5c26d6a4c81b54786eb4196379e9cb223c",
             "commit_message": "GH-106747: Improve `Path.glob()` expectations in pathlib tests (#112365)\n\nAdd trailing slashes to expected `Path.glob()` results wherever a pattern\r\nhas a trailing slash. This matches what `glob.glob()` produces.\r\n\r\nDue to another bug (GH-65238) pathlib strips all trailing slashes, so this\r\nchange is academic for now.",
             "commit_timestamp": 1701635710.0
+        },
+        {
+            "tool_version": "233.0.20231128.202159-rc01",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1701662794.772023,
+            "elapsed_time": 1497.0943820476532,
+            "x64": true,
+            "actual_files_count": 988,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "09505c5c26d6a4c81b54786eb4196379e9cb223c",
+            "commit_message": "GH-106747: Improve `Path.glob()` expectations in pathlib tests (#112365)\n\nAdd trailing slashes to expected `Path.glob()` results wherever a pattern\r\nhas a trailing slash. This matches what `glob.glob()` produces.\r\n\r\nDue to another bug (GH-65238) pathlib strips all trailing slashes, so this\r\nchange is academic for now.",
+            "commit_timestamp": 1701635710.0
         }
     ]
 }
