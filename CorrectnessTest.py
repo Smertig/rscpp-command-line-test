@@ -110,29 +110,29 @@ def run_inspect_code(project_dir, sln_file, project_to_check, msbuild_props, use
         # TODO: support for x86 somehow?
         assert use_x64, "dotnet-trace doesn't work with x86 inspect code tool"
 
-        profiler_args = ["dotnet-trace",
-                         "collect",
-                         "--profile", "gc-collect",
-                         "--output", snapshot_path,
-                         "--show-child-io",
-                         "--",
-                         "dotnet", "exec", "--runtimeconfig", env.inspect_code_runtime_config_path
-         ]
-
-        args = profiler_args + args
-
-        # Try to avoid "It means that MSBuild crashed or froze during startup." error on CI
-        if env.is_ci or True:
-            print('::group::Cold pre-run..', flush=True)
-            try:
-                subprocess.check_call(args, timeout=60)
-            except subprocess.TimeoutExpired:
-                pass
-            print('::endgroup::', flush=True)
+        dotnet_args = ["dotnet", "exec", "--runtimeconfig", env.inspect_code_runtime_config_path]
+        args = dotnet_args + args
 
     print('[run_inspect_code]', subprocess.list2cmdline(args), flush=True)
     process = Popen(args, stdout=PIPE, text=True, encoding='cp1251')
     start = time.time()
+
+    if snapshot_path:
+        # TODO: support for x86 somehow?
+        assert use_x64, "dotnet-trace doesn't work with x86 inspect code tool"
+
+        time.sleep(1)
+        inspect_code_pid = process.pid
+        profiler_args = ["dotnet-trace",
+                         "collect",
+                         "--profile", "gc-verbose",
+                         "--output", snapshot_path,
+                         "--process-id", str(inspect_code_pid),
+                         ]
+
+        profiler_process = Popen(profiler_args)
+        print(f"[run_inspect_code] Running profiler for pid={inspect_code_pid}..", flush=True)
+
     while True:
         try:
             out, err = process.communicate(timeout=60)
@@ -152,6 +152,9 @@ def run_inspect_code(project_dir, sln_file, project_to_check, msbuild_props, use
     print('::group::stdout')
     print(f"[run_inspect_code] stdout:\n{out}")
     print('::endgroup::', flush=True)
+
+    if snapshot_path:
+        profiler_process.wait()
 
     print("[run_inspect_code] Elapsed time: " + common.duration(start, end), flush=True)
     return report_file, out
