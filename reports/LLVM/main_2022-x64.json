@@ -14684,6 +14684,23 @@
             "commit_ref": "b96bae2887f276345f9c0ea9974703e8dd3b5ddf",
             "commit_message": "[lldb] Fix building on NetBSD 8.x (#74191)\n\nPT_STOP was introduced with NetBSD 9.0.",
             "commit_timestamp": 1701676933.0
+        },
+        {
+            "tool_version": "233.0.20231128.202159-rc01",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1701679781.753663,
+            "elapsed_time": 1489.2836260795593,
+            "x64": true,
+            "actual_files_count": 1724,
+            "expected_files_count": 1661,
+            "memory_traffic": 643575.7046203613,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "71f2ec2db1295462d61e1407fcc1e715ba5d458b",
+            "commit_message": "[clang][dataflow] Add synthetic fields to `RecordStorageLocation` (#73860)\n\nSynthetic fields are intended to model the internal state of a class\r\n(e.g. the value stored in a `std::optional`) without having to depend on\r\nthat class's implementation details.\r\n\r\nToday, this is typically done with properties on `RecordValue`s, but\r\nthese have several drawbacks:\r\n\r\n* Care must be taken to call `refreshRecordValue()` before modifying a\r\nproperty so that the modified property values aren\u2019t seen by other\r\nenvironments that may have access to the same `RecordValue`.\r\n\r\n* Properties aren\u2019t associated with a storage location. If an analysis\r\nneeds to associate a location with the value stored in a property (e.g.\r\nto model the reference returned by `std::optional::value()`), it needs\r\nto manually add an indirection using a `PointerValue`. (See for example\r\nthe way this is done in UncheckedOptionalAccessModel.cpp, specifically\r\nin `maybeInitializeOptionalValueMember()`.)\r\n\r\n* Properties don\u2019t participate in the builtin compare, join, and widen\r\noperations. If an analysis needs to apply these operations to\r\nproperties, it needs to override the corresponding methods of\r\n`ValueModel`.\r\n\r\n* Longer-term, we plan to eliminate `RecordValue`, as by-value\r\noperations on records aren\u2019t really \u201ca thing\u201d in C++ (see\r\nhttps://discourse.llvm.org/t/70086#changed-structvalue-api-14). This\r\nwould obviously eliminate the ability to set properties on\r\n`RecordValue`s.\r\n\r\nTo demonstrate the advantages of synthetic fields, this patch converts\r\nUncheckedOptionalAccessModel.cpp to synthetic fields. This greatly\r\nsimplifies the implementation of the check.\r\n\r\nThis PR is pretty big; to make it easier to review, I have broken it\r\ndown into a stack of three commits, each of which contains a set of\r\nlogically related changes. I considered submitting each of these as a\r\nseparate PR, but the commits only really make sense when taken together.\r\n\r\nTo review, I suggest first looking at the changes in\r\nUncheckedOptionalAccessModel.cpp. This gives a flavor for how the\r\nvarious API changes work together in the context of an analysis. Then,\r\nreview the rest of the changes.",
+            "commit_timestamp": 1701678562.0
         }
     ]
 }
