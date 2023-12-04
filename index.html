@@ -125,6 +125,10 @@
           return toDate(duration).toISOString().substring(11, 19)
         }
 
+        let formatMemoryTraffic = function(traffic) {
+          return `${(traffic / 1024).toFixed(1)} Gb`
+        }
+
         let groupByToolVersion = function*(reports) {
           if (reports.length === 0)
             return [];
@@ -143,7 +147,7 @@
           yield { version: lastVersion, start: lastIndex, stop: reports.length - 1 }
         }
 
-        function renderGraph(reportSet) {
+        function renderGraph(reportSet, yAxisLabel, yAxisFormat, yAxisGetter) {
           const datasets = [];
           for (const [reportName, reports] of Object.entries(reportSet)) {
             const color = hashColor(reportName).to('hwb')
@@ -153,12 +157,16 @@
               label: reportName,
               data: reports.map(d => ({
                 x: toDate(d.timestamp),
-                y: d.elapsed_time
+                y: yAxisGetter(d)
               })),
               borderColor: color.toString(),
               backgroundColor: '#FFFFFF00', // transparent background
             })
           }
+
+          // Don't show empty dataset (i.e. without memory traffic)
+          if (datasets.every(dataset => dataset.data.every(value => value.y === undefined)))
+            return null
 
           let fillAreas = []
           for (const range of groupByToolVersion(Object.values(reportSet)[0])) {
@@ -191,11 +199,11 @@
                 {
                   scaleLabel: {
                     display: true,
-                    labelString: 'Elapsed time',
+                    labelString: yAxisLabel,
                   },
                   ticks: {
                     beginAtZero: true,
-                    callback: formatDuration
+                    callback: yAxisFormat
                   }
                 }
               ],
@@ -221,7 +229,7 @@
                     return text
                   }).join('\n\n')
                 },
-                label: item => formatDuration(item.value)
+                label: item => yAxisFormat(item.value)
               }
             },
             onClick: (_mouseEvent, activeElems) => {
@@ -332,9 +340,13 @@
             graphsElem.className = 'report-graphs';
             setElem.appendChild(graphsElem);
 
-            let canvas = renderGraph(reportSet)
-            if (canvas)
-              graphsElem.appendChild(canvas);
+            let elapsedTimeCanvas = renderGraph(reportSet, 'Elapsed time', formatDuration, d => d.elapsed_time)
+            if (elapsedTimeCanvas)
+              graphsElem.appendChild(elapsedTimeCanvas);
+
+            let memTrafficCanvas = renderGraph(reportSet, 'Memory traffic', formatMemoryTraffic, d => d.memory_traffic)
+            if (memTrafficCanvas)
+              graphsElem.appendChild(memTrafficCanvas);
           }
 
           const main = document.getElementById('main');
