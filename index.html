@@ -150,22 +150,27 @@
         function renderGraph(reportSet, yAxisLabel, yAxisFormat, yAxisGetter) {
           const datasets = [];
           for (const [reportName, reports] of Object.entries(reportSet)) {
+            let data = reports.map(d => ({
+              x: toDate(d.timestamp),
+              y: yAxisGetter(d)
+            }))
+
+            if (data.every(value => value.y === undefined))
+              continue
+
             const color = hashColor(reportName).to('hwb')
             color.hwb.w = 30
 
             datasets.push({
               label: reportName,
-              data: reports.map(d => ({
-                x: toDate(d.timestamp),
-                y: yAxisGetter(d)
-              })),
+              data: data,
               borderColor: color.toString(),
               backgroundColor: '#FFFFFF00', // transparent background
             })
           }
 
-          // Don't show empty dataset (i.e. without memory traffic)
-          if (datasets.every(dataset => dataset.data.every(value => value.y === undefined)))
+          // Don't show empty chart (i.e. no memory traffic in all datasets)
+          if (datasets.length === 0)
             return null
 
           let fillAreas = []
