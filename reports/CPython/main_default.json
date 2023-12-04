@@ -10752,6 +10752,21 @@
             "commit_ref": "09505c5c26d6a4c81b54786eb4196379e9cb223c",
             "commit_message": "GH-106747: Improve `Path.glob()` expectations in pathlib tests (#112365)\n\nAdd trailing slashes to expected `Path.glob()` results wherever a pattern\r\nhas a trailing slash. This matches what `glob.glob()` produces.\r\n\r\nDue to another bug (GH-65238) pathlib strips all trailing slashes, so this\r\nchange is academic for now.",
             "commit_timestamp": 1701635710.0
+        },
+        {
+            "tool_version": "233.0.20231128.202159-rc01",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1701674233.605018,
+            "elapsed_time": 1121.3522667884827,
+            "x64": true,
+            "actual_files_count": 988,
+            "expected_files_count": null,
+            "memory_traffic": 258290.25367736816,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "e5b0db0315941b968ebcc2414bfcdd2da44fd3c2",
+            "commit_message": "gh-66819: More IDLE htest updates(4) (#112686)\n\nMostly double spacing before 'if __name__...'.\r\n",
+            "commit_timestamp": 1701671800.0
         }
     ]
 }
