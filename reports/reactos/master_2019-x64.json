@@ -13369,6 +13369,20 @@
             "commit_ref": "2f0a5e546f690fdfdc5b1e172856b3b0418221d8",
             "commit_message": "[NTOS:KE] Don't hardcode pool tag and TSS flag values (#6051)\n\nCo-authored-by: Serge Gautherie <32623169+SergeGautherie@users.noreply.github.com>\n",
             "commit_timestamp": 1701621190.0
+        },
+        {
+            "tool_version": "233.0.20231128.202159-rc01",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1701648314.281931,
+            "elapsed_time": 117.58892273902893,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "a6341b49d866b037ad5bc1f6e6eb7bc641dec474",
+            "commit_message": "[NETSHELL] 640x480-ify complete that module (#6109)\n\nAddendum to (#5899)\r\n\r\nThe change in sk-SK.rc\r\nIDD_NETPROPERTIES DIALOGEX 0, 0, 246, 246\r\nto\r\nIDD_NETPROPERTIES DIALOGEX 0, 0, 246, 216\r\nis an addendum to (#5899). In sk-SK.rc that line was accidentally forgotten to be changed.\r\n\r\nThe change to \"all\" rc's:\r\nIDD_STATUS DIALOGEX 0, 0, 200, 280\r\nto\r\nIDD_STATUS DIALOGEX 0, 0, 200, 180\r\nchanges the last dialog, that had a greater value here than 220 (which is the max we can use for 640x480-ability).\r\nI decided to use 180 for 2 reasons:\r\n1.) bg-BG.rc already used IDD_STATUS DIALOGEX 0, 0, 200, 180 here, so we can sync all langs to that.\r\n2.) We have some dialogs nearby which do use that same dimension for all langs, e.g.:\r\nIDD_LAN_NETSTATUS DIALOGEX 0, 0, 200, 180\r\nIDD_LAN_NETSTATUSADVANCED DIALOGEX 0, 0, 200, 180",
+            "commit_timestamp": 1701639357.0
         }
     ]
 }

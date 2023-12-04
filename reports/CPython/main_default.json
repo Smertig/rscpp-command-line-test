@@ -10724,6 +10724,20 @@
             "commit_ref": "c27b09c81368bc3b756e94a79a39307ce44a4a2c",
             "commit_message": "Fix link to 'The Perils of Floating Point', on the tutorial (GH-112499)\n\nUse author link to 'The Perils of Floating Point'.",
             "commit_timestamp": 1701616454.0
+        },
+        {
+            "tool_version": "233.0.20231128.202159-rc01",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1701648476.134138,
+            "elapsed_time": 1391.232406616211,
+            "x64": true,
+            "actual_files_count": 988,
+            "expected_files_count": null,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "09505c5c26d6a4c81b54786eb4196379e9cb223c",
+            "commit_message": "GH-106747: Improve `Path.glob()` expectations in pathlib tests (#112365)\n\nAdd trailing slashes to expected `Path.glob()` results wherever a pattern\r\nhas a trailing slash. This matches what `glob.glob()` produces.\r\n\r\nDue to another bug (GH-65238) pathlib strips all trailing slashes, so this\r\nchange is academic for now.",
+            "commit_timestamp": 1701635710.0
         }
     ]
 }
