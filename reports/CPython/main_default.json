@@ -10841,6 +10841,21 @@
             "commit_ref": "304a1b3f3a8ed9a734ef1d098cafccb6725162db",
             "commit_message": "GH-112727: Speed up `pathlib.Path.absolute()` (#112728)\n\nUse `_from_parsed_parts()` to create a pre-joined/pre-parsed path, rather\r\nthan passing multiple arguments to `with_segments()`\r\n\r\nCo-authored-by: Alex Waygood <Alex.Waygood@Gmail.com>",
             "commit_timestamp": 1701732099.0
+        },
+        {
+            "tool_version": "233.0.20231128.202159-rc01",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1701779997.849072,
+            "elapsed_time": 1038.827781677246,
+            "x64": true,
+            "actual_files_count": 988,
+            "expected_files_count": null,
+            "memory_traffic": 258423.1054840088,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "5aa317e4ca619c3735e1d67b507f01a8e49a4c49",
+            "commit_message": "gh-112535: Add comment for ppc32/64 registers (gh-112746)\n\n",
+            "commit_timestamp": 1701773059.0
         }
     ]
 }
