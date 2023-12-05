@@ -160,7 +160,8 @@ def run_inspect_code(project_dir, sln_file, project_to_check, msbuild_props, use
 def check_project(project, project_dir, sln_file, branch: Optional[str]) -> Tuple[Optional[str], dict]:
     project_to_check = project.get("project to check")
     msbuild_props = project.get("msbuild properties")
-    use_x64 = project.get("use x64", False)
+    use_x86 = env.is_x86 and project.get("only x64", False) is False
+    use_x64 = not use_x86
     trace_memory = use_x64
     local_config = project["latest"][branch] if branch else project["stable"]
 

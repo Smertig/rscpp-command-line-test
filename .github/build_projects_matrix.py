@@ -29,9 +29,10 @@ assert len(sys.argv) == 6, f"{sys.argv[0]} projects.json proj-config-dir mode gi
 
 _, projects_path, projects_dir, mode, github_event, github_run_all = sys.argv
 
-assert mode in ('correctness-fixed', 'correctness-latest'), f"unknown mode: {mode}"
+assert mode in ('correctness-fixed', 'correctness-latest', 'oom-fixed'), f"unknown mode: {mode}"
 IS_CORRECTNESS_FIXED = mode == 'correctness-fixed'
 IS_CORRECTNESS_LATEST = mode == 'correctness-latest'
+IS_OOM_FIXED = mode == 'oom-fixed'
 IS_SCHEDULED = github_event == 'schedule'
 IS_RUN_ALL = github_run_all == 'true'
 
@@ -85,6 +86,16 @@ for project_name, project_config in projects.items():
         elif IS_CORRECTNESS_FIXED:
             stable_branch = project_config.get("stable")
             if not stable_branch:
+                continue
+
+            matrix["include"].append(conf)
+        elif IS_OOM_FIXED:
+            # Run OOM tests only for stable branches of project not marked as "only x64"
+            stable_branch = project_config.get("stable")
+            if not stable_branch:
+                continue
+
+            if project_config.get('only x64'):
                 continue
 
             matrix["include"].append(conf)

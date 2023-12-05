@@ -624,7 +624,7 @@
                 "commit": "bc6b2bc17adef055e540ac607aa2ce10916449d1"
             }
         },
-        "use x64": true,
+        "only x64": true,
         "fixup sources": "proj-config/scripts/fix-yuzu.py",
         "build step": [
             "cmake --build . --target host_shaders",
@@ -878,7 +878,7 @@
             "commit": "eda4cf4b241d56c5c16f6aa4d135b8a269676a76",
             "recursive": true
         },
-        "use x64": true,
+        "only x64": true,
         "fixup sources": "proj-config/scripts/fix-cemu.py",
         "stable": {
             "inspected files count": 1013,
@@ -935,7 +935,7 @@
             "openssl",
             "gperf"
         ],
-        "use x64": true,
+        "only x64": true,
         "build step": [
             "cmake --build . --target tl_generate_common tl_generate_json tl_generate_c"
         ],
@@ -985,7 +985,7 @@
             "repo": "https://github.com/lvgl/lvgl",
             "commit": "0a566963584446e9f9574a0b281ae9c07564b0f0"
         },
-        "use x64": true,
+        "only x64": true,
         "stable": {
             "inspected files count": 454
         },
@@ -1009,7 +1009,7 @@
             "BISON_PKGDATADIR": "${BUILD_DIR}/bin",
             "M4": "${BUILD_DIR}/bin/m4.exe"
         },
-        "use x64": true,
+        "only x64": true,
         "stable": {
             "inspected files count": 266
         },
@@ -1106,7 +1106,7 @@
             ],
             "path to .sln": "PCBuild/pcbuild.sln"
         },
-        "use x64": true,
+        "only x64": true,
         "stable": {
             "known errors": [
                 {

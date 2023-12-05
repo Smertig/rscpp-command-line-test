@@ -3,7 +3,7 @@
         "repo": "https://github.com/llvm/llvm-project",
         "commit": "1b0ba1c12fcc86dcf4097b3b8941260e8c6361fa"
     },
-    "use x64": true,
+    "only x64": true,
     "required toolchain": ["2022-x64"],
     "cmake options": [
         "-Thost=x64",

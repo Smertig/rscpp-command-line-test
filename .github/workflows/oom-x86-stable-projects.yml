@@ -1,0 +1,75 @@
+name: Correctness test for stable repository versions
+
+on:
+  push:
+  schedule:
+    - cron: "0 6 * * 0"  # every Sunday at 6am
+
+env:
+  RSCPP_VERSION: 2023.3.0-rc01
+
+jobs:
+  generate_matrix:
+    name: Generate build matrix
+    if: "contains(github.event.head_commit.message, '[ci-oom]') || contains(github.event.head_commit.message, '[ci-all]') || github.event_name == 'schedule'"
+
+    runs-on: ubuntu-22.04
+    outputs:
+      matrix: ${{ steps.set-matrix.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v3
+
+      - id: set-matrix
+        run: python .github/build_projects_matrix.py ./projects.json ./proj-config oom-fixed ${{github.event_name}} ${{contains(github.event.head_commit.message, '[ci-all]')}} >> $GITHUB_OUTPUT
+
+  run_correctness_test:
+    needs: generate_matrix
+    runs-on: ${{matrix.os}}
+    name: Run test on ${{matrix.project}} (${{matrix.cmake_gen}})
+
+    strategy:
+      fail-fast: false
+      matrix: ${{fromJson(needs.generate_matrix.outputs.matrix)}}
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install CI python dependencies
+        run: pip install -r .github/ci_requirements.txt
+
+      - name: Install .NET tools
+        id: install-tool
+        shell: bash
+        run: python .github/tool_installer.py ${{ env.RSCPP_VERSION }}
+
+      - name: Install python dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run correctness test
+        id: inspect-code
+        shell: bash
+        run: |
+          [[ "${{matrix.VsInstallRoot}}" ]] && export VsInstallRoot="${{matrix.VsInstallRoot}}"
+          [[ "${{matrix.VCTargetsPath}}" ]] && export VCTargetsPath="${{matrix.VCTargetsPath}}"
+          echo "RSCPP_WORK_DIR=$RUNNER_TEMP/projects/${{matrix.project}}/${{matrix.rscpp_work_dir}}" >> $GITHUB_OUTPUT
+          python CorrectnessTest.py \
+            --project ${{matrix.project}} \
+            --vcpkg-dir $VCPKG_INSTALLATION_ROOT \
+            --build-dir ${{ steps.install-tool.outputs.TOOL_DIR }} \
+            --projects-cache $RUNNER_TEMP/projects \
+            --supported-generators ${{matrix.cmake_gen}} \
+            --x86 \
+            --ci \
+            --verbose
+
+      - name: Save logs
+        if: success() || failure()
+        uses: actions/upload-artifact@v3
+        with:
+          name: ${{matrix.project}}-logs
+          path: "${{ steps.inspect-code.outputs.RSCPP_WORK_DIR }}/resharper-*"

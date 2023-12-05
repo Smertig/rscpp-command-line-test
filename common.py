@@ -75,6 +75,7 @@ class Environment:
         self._verbose = args.verbose
         self._cli_test_dir = os.path.dirname(os.path.abspath(__file__))
         self._is_ci = args.is_ci
+        self._is_x86 = args.is_x86
 
         assert self._build_directory, 'Missing build directory'
 
@@ -152,6 +153,9 @@ class Environment:
     def is_ci(self) -> bool:
         return self._is_ci
 
+    @property
+    def is_x86(self) -> bool:
+        return self._is_x86
 
 # TODO: remove global vars completely
 _env: Environment = None
@@ -467,3 +471,4 @@ argparser.add_argument('--projects-cache', dest='projects_cache_directory')
 argparser.add_argument('--supported-generators', dest='supported_generators', nargs='*', type=str)
 argparser.add_argument('--ci', action='store_true', dest='is_ci')
 argparser.add_argument('--verbose', action='store_true', dest='verbose')
+argparser.add_argument('--x86', action='store_true', dest='is_x86')
