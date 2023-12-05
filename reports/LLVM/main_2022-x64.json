@@ -14718,6 +14718,23 @@
             "commit_ref": "e0357e9ce390a8be6c4a9ea89977c8b8a30b5454",
             "commit_message": "[CodeGen] Remove redundant ID in WinEHPrepareImpl (#74322)\n\nFix ppc build bot",
             "commit_timestamp": 1701701592.0
+        },
+        {
+            "tool_version": "233.0.20231128.202159-rc01",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1701746162.367634,
+            "elapsed_time": 1511.7742688655853,
+            "x64": true,
+            "actual_files_count": 1724,
+            "expected_files_count": 1661,
+            "memory_traffic": 643270.5330200195,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "3dae97cc011ca097bd457bbfa5855da86290f631",
+            "commit_message": "[mlir][bufferization] Fix op dominance bug in rewrite pattern (#74159)\n\nFixes a bug in `SplitDeallocWhenNotAliasingAnyOther`. This pattern used\r\nto generate invalid IR (op dominance error). We never noticed this bug\r\nin existing test cases because other patterns and/or foldings were\r\napplied afterwards and those rewrites \"fixed up\" the IR again. (The bug\r\nis visible when running `mlir-opt -debug`.) Also add additional comments\r\nto the implementation and simplify the code a bit.\r\n\r\nApart from the fixed dominance error, this change is NFC. Without this\r\nchange, buffer deallocation tests will fail when running with #74270.",
+            "commit_timestamp": 1701744390.0
         }
     ]
 }

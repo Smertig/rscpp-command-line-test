@@ -13677,6 +13677,20 @@
             "commit_ref": "0fbbc80b2409116dd1a1bed37be9f87f6f040926",
             "commit_message": "ngtcp2: ignore errors on unknown streams\n\n- expecially in is_alive checks on connections, we might\n  see incoming packets on streams already forgotten and closed,\n  leading to errors reported by nghttp3. Ignore those.\n\nCloses #12449\n",
             "commit_timestamp": 1701691044.0
+        },
+        {
+            "tool_version": "233.0.20231128.202159-rc01",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1701745606.367047,
+            "elapsed_time": 182.2459306716919,
+            "x64": false,
+            "actual_files_count": 2457,
+            "expected_files_count": 2323,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "ad040e1262e6d5e4f362d88085b80d90ada9e969",
+            "commit_message": "rustls: implement connect_blocking\n\nCloses #11647\n",
+            "commit_timestamp": 1701727425.0
         }
     ]
 }
