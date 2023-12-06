@@ -13833,6 +13833,21 @@
             "commit_ref": "aafea36235a7014047ad95cc82d56d54a562f82f",
             "commit_message": "Fixed the backwards compatible benchmark support library require (#1125)\n\nPrevious benchmark require fix wasn't actually working correctly for the\r\nold style require (or running in Lua).",
             "commit_timestamp": 1701722911.0
+        },
+        {
+            "tool_version": "233.0.20231128.202159-rc01",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1701831996.550576,
+            "elapsed_time": 284.31749987602234,
+            "x64": true,
+            "actual_files_count": 442,
+            "expected_files_count": 379,
+            "memory_traffic": 32732.563682556152,
+            "repo_url": "https://github.com/luau-lang/luau",
+            "commit_ref": "2ea7193777c3f5fa5011be83eb354d42351f753d",
+            "commit_message": "Resolve RequireByString test suite failures on Ubuntu CI (#1124)\n\nThis PR resolves the RequireByString test suite failures in CI on\r\nUbuntu. The issue was that paths on linux are case sensitive and thus\r\nMacOS/Windows machines simply behaved as if the paths to the test files\r\nwere case-insensitive, but the linux machine was unable to find the test\r\nfiles. Those tests were `#ifdef'd` out, and have been un `#ifdef'd` to\r\ndemonstrate these changes work.",
+            "commit_timestamp": 1701815462.0
         }
     ]
 }
