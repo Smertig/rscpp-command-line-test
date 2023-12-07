@@ -14793,6 +14793,21 @@
             "commit_ref": "68689bf9660110ab1368d55b2b6a66dbb3e811cf",
             "commit_message": "Fix `pre-commit` GitHub Actions job (#1708)\n\nFor some reason, editable pip installs are now broken, which means that\r\nthey will break the pre-commit workflow due to the `pip install -e .`\r\ninstruction.\r\n\r\nSince the normal install is unaffected, we can just drop the `-e` switch.\r\nIt does not matter which mode is used, since the environment is only\r\nused for linting.",
             "commit_timestamp": 1701942094.0
+        },
+        {
+            "tool_version": "241.0.20231206.222733-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1701944416.929626,
+            "elapsed_time": 66.8117253780365,
+            "x64": true,
+            "actual_files_count": 86,
+            "expected_files_count": 86,
+            "memory_traffic": 4375.69832611084,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "68689bf9660110ab1368d55b2b6a66dbb3e811cf",
+            "commit_message": "Fix `pre-commit` GitHub Actions job (#1708)\n\nFor some reason, editable pip installs are now broken, which means that\r\nthey will break the pre-commit workflow due to the `pip install -e .`\r\ninstruction.\r\n\r\nSince the normal install is unaffected, we can just drop the `-e` switch.\r\nIt does not matter which mode is used, since the environment is only\r\nused for linting.",
+            "commit_timestamp": 1701942094.0
         }
     ]
 }
