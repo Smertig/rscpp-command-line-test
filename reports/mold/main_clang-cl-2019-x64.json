@@ -11301,6 +11301,21 @@
             "commit_ref": "663ac74610f6852f26297c01372b3c3263989ce0",
             "commit_message": "Simplify\n",
             "commit_timestamp": 1701859882.0
+        },
+        {
+            "tool_version": "233.0.20231128.202159-rc01",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1701918385.144802,
+            "elapsed_time": 131.1200075149536,
+            "x64": true,
+            "actual_files_count": 529,
+            "expected_files_count": null,
+            "memory_traffic": 17265.901748657227,
+            "repo_url": "https://github.com/rui314/mold",
+            "commit_ref": "0c8a872c371fddfba338247bf975d413e41b1b7e",
+            "commit_message": "Avoid using the HOST environment variable\n\nIt seems HOST is a fairly common environment variable. Let's use\nMACHINE instead.\n\nFixes https://github.com/rui314/mold/issues/1163\n",
+            "commit_timestamp": 1701909929.0
         }
     ]
 }
