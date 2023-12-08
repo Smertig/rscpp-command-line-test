@@ -14871,6 +14871,23 @@
             "commit_ref": "8275dc97483347b88a2fa9067446dfb9d7d7f72e",
             "commit_message": "[MC] .reloc: register used symbols\n\nWhen `sym` in `.reloc ., BFD_RELOC_NONE, sym` is not referenced\nelsewhere, `sym` is not in the symbol table and the relocation\nreferences the null symbol. Visit the expression to fix the issue.\n",
             "commit_timestamp": 1702002876.0
+        },
+        {
+            "tool_version": "233.0.20231204.3905",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1702048459.654657,
+            "elapsed_time": 1490.3948001861572,
+            "x64": true,
+            "actual_files_count": 1724,
+            "expected_files_count": 1661,
+            "memory_traffic": 643760.5005722046,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "8758e648da5f3565dde6c00800008f2509526b6c",
+            "commit_message": "[ARM][AArch32] Add support for AArch32 Cortex-M52 CPU (#74822)\n\nCortex-M52 is an Armv8.1 AArch32 CPU.\r\n\r\nTechnical specifications available at:\r\n  https://developer.arm.com/processors/cortex-m52",
+            "commit_timestamp": 1702047848.0
         }
     ]
 }
