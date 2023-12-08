@@ -14854,6 +14854,23 @@
             "commit_ref": "f1200ca7ac88c6ff9aa4fe3b560cf326dc3d4e25",
             "commit_message": "[DAG] visitEXTRACT_VECTOR_ELT - constant fold legal fp imm values (#74304)\n\nIf we're extracting a constant floating point value, and the constant is a legal fp imm value, then replace the extraction with a fp constant.",
             "commit_timestamp": 1701960972.0
+        },
+        {
+            "tool_version": "233.0.20231204.3905",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1702005215.915823,
+            "elapsed_time": 1475.4386837482452,
+            "x64": true,
+            "actual_files_count": 1724,
+            "expected_files_count": 1661,
+            "memory_traffic": 643531.8163757324,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "8275dc97483347b88a2fa9067446dfb9d7d7f72e",
+            "commit_message": "[MC] .reloc: register used symbols\n\nWhen `sym` in `.reloc ., BFD_RELOC_NONE, sym` is not referenced\nelsewhere, `sym` is not in the symbol table and the relocation\nreferences the null symbol. Visit the expression to fix the issue.\n",
+            "commit_timestamp": 1702002876.0
         }
     ]
 }

@@ -15143,6 +15143,21 @@
             "commit_ref": "f14accb7b6ff4499321e14c61497bc7e4b28e49b",
             "commit_message": "Release v0.14.2\n",
             "commit_timestamp": 1701747072.0
+        },
+        {
+            "tool_version": "233.0.20231204.3905",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1702004818.576353,
+            "elapsed_time": 65.20769906044006,
+            "x64": true,
+            "actual_files_count": 5,
+            "expected_files_count": 3,
+            "memory_traffic": 2779.850616455078,
+            "repo_url": "https://github.com/yhirose/cpp-httplib",
+            "commit_ref": "e426a38c3e9b1ae8610fb023ba8104cb390d8520",
+            "commit_message": "Fix: Query parameter including query delimiter ('?') not being parsed properly (#1713)\n\n* Fix: Query parameter including query delimiter ('?') not being parsed properly\r\n\r\n* Add details::split function with and without m argument to allow split parameters with/without counter\r\n\r\n* Revert changes in SplitTest.ParseQueryString",
+            "commit_timestamp": 1701977321.0
         }
     ]
 }
