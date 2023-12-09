@@ -14905,6 +14905,23 @@
             "commit_ref": "b88b480640f173582ffbfd2faae690f2bc895d14",
             "commit_message": "[RISCV] Remove Type::isRVVType() and replace with isRVVSizelessBuiltinType(). NFC\n\nThese both do the same thing, but some profiling on a\nReleast+Asserts build suggests isRVVSizelessBuiltinType() is the\nmore efficient version so lets keep that one.\n",
             "commit_timestamp": 1702089866.0
+        },
+        {
+            "tool_version": "233.0.20231204.3905",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1702134867.18153,
+            "elapsed_time": 1465.6005246639252,
+            "x64": true,
+            "actual_files_count": 1724,
+            "expected_files_count": 1661,
+            "memory_traffic": 643557.4681472778,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "b5a6e8a433e9ecc0e3a05fc428d515f3a12413cf",
+            "commit_message": "[NFC][libc++] Rewrites a return statement.\n\nThis fixes a clang-tidy diagnostic when building libc++ with RTTI\ndisabled. This was originally part of #65518.\n",
+            "commit_timestamp": 1702133418.0
         }
     ]
 }

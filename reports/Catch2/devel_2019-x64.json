@@ -15188,6 +15188,21 @@
             "commit_ref": "dacbf4fd6c80d726b3d87e77c91bcacdd4fc57c0",
             "commit_message": "Drop VS 2017 support\n\nWe do not support specific compilers, but rather compilers with\nreasonable quality of their C++14 support. While developing the\nnew random generators, I ran into issues with VS2017 where it\nrejects perfectly valid C++14 code, **and** the error does not\npoint me in the right direction to try and work around the issue.\n\nIt is time for VS2017 to go.\n",
             "commit_timestamp": 1702076040.0
+        },
+        {
+            "tool_version": "233.0.20231204.3905",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1702134295.646669,
+            "elapsed_time": 62.85457396507263,
+            "x64": true,
+            "actual_files_count": 278,
+            "expected_files_count": 272,
+            "memory_traffic": 5645.107772827148,
+            "repo_url": "https://github.com/catchorg/Catch2.git",
+            "commit_ref": "d1d7414eb9859092bee6329c85592d90096618c5",
+            "commit_message": "Always run apt-get update before apt-get install\n\nThe base images for GitHub Actions are updated weekly, but\nsometimes that is not enough to be able to install the packages\nwe require. The recommended fix for this is to always run\n`apt-get update` before `apt-get install`.\n",
+            "commit_timestamp": 1702119945.0
         }
     ]
 }
