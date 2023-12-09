@@ -14888,6 +14888,23 @@
             "commit_ref": "8758e648da5f3565dde6c00800008f2509526b6c",
             "commit_message": "[ARM][AArch32] Add support for AArch32 Cortex-M52 CPU (#74822)\n\nCortex-M52 is an Armv8.1 AArch32 CPU.\r\n\r\nTechnical specifications available at:\r\n  https://developer.arm.com/processors/cortex-m52",
             "commit_timestamp": 1702047848.0
+        },
+        {
+            "tool_version": "233.0.20231204.3905",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1702091708.379758,
+            "elapsed_time": 1455.8338513374329,
+            "x64": true,
+            "actual_files_count": 1724,
+            "expected_files_count": 1661,
+            "memory_traffic": 643540.4368591309,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "b88b480640f173582ffbfd2faae690f2bc895d14",
+            "commit_message": "[RISCV] Remove Type::isRVVType() and replace with isRVVSizelessBuiltinType(). NFC\n\nThese both do the same thing, but some profiling on a\nReleast+Asserts build suggests isRVVSizelessBuiltinType() is the\nmore efficient version so lets keep that one.\n",
+            "commit_timestamp": 1702089866.0
         }
     ]
 }

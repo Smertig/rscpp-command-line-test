@@ -10991,6 +10991,21 @@
             "commit_ref": "c744dbe9ac0e88e395a7464f20a4fd4184a0a222",
             "commit_message": "gh-112535: Update _Py_ThreadId() to support s390/s390x (gh-112751)\n\n",
             "commit_timestamp": 1702045687.0
+        },
+        {
+            "tool_version": "233.0.20231204.3905",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1702091252.56339,
+            "elapsed_time": 991.0985851287842,
+            "x64": true,
+            "actual_files_count": 989,
+            "expected_files_count": null,
+            "memory_traffic": 258263.2183380127,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "10e9bb13b8dcaa414645b9bd10718d8f7179e82b",
+            "commit_message": "gh-112334: Regression test that vfork is used when expected. (#112734)\n\nRegression test that vfork is used when expected by subprocess.\r\n\r\nThis is written integration test style, it uses strace if it is present and appears to work to find out what system call actually gets used in different scenarios.\r\n\r\nTest coverage is added for the default behavior and that of each of the specific arguments that must disable the use of vfork.  obviously not an entire test matrix, but it covers the most important aspects.\r\n\r\nIf there are ever issues with this test being flaky or failing on new platforms, rather than try and adapt it for all possible platforms, feel free to narrow the range it gets tested on when appropriate. That is not likely to reduce coverage.",
+            "commit_timestamp": 1702081115.0
         }
     ]
 }

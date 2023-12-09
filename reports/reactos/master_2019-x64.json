@@ -13636,6 +13636,21 @@
             "commit_ref": "57e7f0b321a9f5f7d55d7122767ae0b9fd7b0da1",
             "commit_message": "[SHIMGVW] Add g_ or s_ prefix to global variables (#6134)\n\nRenaming global variables:\r\n- s/hInstance/g_hInstance/\r\n- s/shiSettings/g_Settings/\r\n- s/currentFile/g_pCurrentFile/\r\n- s/image/g_pImage/\r\n- s/PrevProc/g_fnPrevProc/\r\n- s/hDispWnd/g_hDispWnd/\r\n- s/hToolBar/g_hToolBar/\r\n- s/ZoomPercents/s_nZoomPercents/\r\n- s/ZoomSteps/s_ZoomSteps/\r\n- s/Buttons/s_Buttons/\r\n- s/BtnConfig/s_ButtonConfig/\r\nCORE-19358",
             "commit_timestamp": 1702038943.0
+        },
+        {
+            "tool_version": "233.0.20231204.3905",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1702091216.390416,
+            "elapsed_time": 134.9429612159729,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 76133.20749664307,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "b7dcc1024b001e45f3cecf945ff46ff1e79f4c5a",
+            "commit_message": "[IMM32] Rewrite ImmLoadLayout (#6138)\n\nImmLoadLayout was buggy.\r\n- Don't do zero fill pImeInfoEx.\r\n- Simplify registry handling.\r\n- Don't reset pImeInfoEx->fLoadFlag if failed early.\r\nCORE-19268",
+            "commit_timestamp": 1702082997.0
         }
     ]
 }
