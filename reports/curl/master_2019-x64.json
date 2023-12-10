@@ -13886,6 +13886,21 @@
             "commit_ref": "d65b8868c6d04d2d7fdedbc42bce3cf0fe60887a",
             "commit_message": "doh: remove unused local variable\n\nThe nurl variable is no longer used during probing following\na refactoring, so remove.\n\nCloses #12491\n",
             "commit_timestamp": 1702077258.0
+        },
+        {
+            "tool_version": "233.0.20231204.3905",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1702220707.861585,
+            "elapsed_time": 164.16621732711792,
+            "x64": true,
+            "actual_files_count": 2457,
+            "expected_files_count": 2323,
+            "memory_traffic": 29763.84661102295,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "9fa8652fd573c3a1fa4b3c3df34d742952e3d3dc",
+            "commit_message": "cmdline/gen: fix the sorting of the man page options\n\nThey were previously sorted based on the file names, which use a .d\nextension, making \"data\" get placed after \"data-binary\" etc. Making the\nsort ignore the extention fixes the ordering.\n\nReported-by: Boris Verkhovskiy\nBug: https://curl.se/mail/archive-2023-12/0014.html\nCloses #12494\n",
+            "commit_timestamp": 1702213492.0
         }
     ]
 }
