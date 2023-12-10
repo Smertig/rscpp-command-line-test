@@ -13666,6 +13666,21 @@
             "commit_ref": "b7dcc1024b001e45f3cecf945ff46ff1e79f4c5a",
             "commit_message": "[IMM32] Rewrite ImmLoadLayout (#6138)\n\nImmLoadLayout was buggy.\r\n- Don't do zero fill pImeInfoEx.\r\n- Simplify registry handling.\r\n- Don't reset pImeInfoEx->fLoadFlag if failed early.\r\nCORE-19268",
             "commit_timestamp": 1702082997.0
+        },
+        {
+            "tool_version": "233.0.20231204.3905",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1702177573.46769,
+            "elapsed_time": 125.41967034339905,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 75777.64351654053,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "5a2c451696b0fdefe4b6381f4941b9347ae4199c",
+            "commit_message": "[SHIMGVW] Some minor refactoring (#6139)\n\nImprove human readability. Reduce code amount.\r\nCORE-19358",
+            "commit_timestamp": 1702164017.0
         }
     ]
 }
