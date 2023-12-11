@@ -11466,6 +11466,21 @@
             "commit_ref": "cc884d57ca13ae10b3f1fa7156b8cc45ed461f7c",
             "commit_message": "Fix cross building of ARM64 binaries on big-endian machines\n\nIt's probably very rare to do so, but mold couldn't create ARM64\nbinaries on big-endian machines due to a typo in an ELF struct\ndefinition.\n",
             "commit_timestamp": 1702192012.0
+        },
+        {
+            "tool_version": "233.0.20231204.3905",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1702307249.853496,
+            "elapsed_time": 146.93643450737,
+            "x64": true,
+            "actual_files_count": 529,
+            "expected_files_count": null,
+            "memory_traffic": 17224.567207336426,
+            "repo_url": "https://github.com/rui314/mold",
+            "commit_ref": "cc884d57ca13ae10b3f1fa7156b8cc45ed461f7c",
+            "commit_message": "Fix cross building of ARM64 binaries on big-endian machines\n\nIt's probably very rare to do so, but mold couldn't create ARM64\nbinaries on big-endian machines due to a typo in an ELF struct\ndefinition.\n",
+            "commit_timestamp": 1702192012.0
         }
     ]
 }

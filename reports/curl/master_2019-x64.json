@@ -13916,6 +13916,21 @@
             "commit_ref": "9fa8652fd573c3a1fa4b3c3df34d742952e3d3dc",
             "commit_message": "cmdline/gen: fix the sorting of the man page options\n\nThey were previously sorted based on the file names, which use a .d\nextension, making \"data\" get placed after \"data-binary\" etc. Making the\nsort ignore the extention fixes the ordering.\n\nReported-by: Boris Verkhovskiy\nBug: https://curl.se/mail/archive-2023-12/0014.html\nCloses #12494\n",
             "commit_timestamp": 1702213492.0
+        },
+        {
+            "tool_version": "233.0.20231204.3905",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1702307256.330929,
+            "elapsed_time": 164.50197958946228,
+            "x64": true,
+            "actual_files_count": 2457,
+            "expected_files_count": 2323,
+            "memory_traffic": 29725.671478271484,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "e38a8e0cd0cdab91967ec5c0cb90803097ac0618",
+            "commit_message": "docs: clean up Protocols: for cmdline options\n\n... and some other minor polish.\n\nCloses #12496\n",
+            "commit_timestamp": 1702287616.0
         }
     ]
 }

@@ -13711,6 +13711,21 @@
             "commit_ref": "2de6e7559ed24dd8d5a3f3eba90efc096aad0740",
             "commit_message": "[SHIMGVW] Refactor Part 3 (#6148)\n\nImprove code flexibility.\r\n- Remove g_fnPrevProc, g_hDispWnd, g_hToolBar, and g_Anime global variables.\r\n- Declare PREVIEW_DATA structure and use it.\r\n- Encapsulate preview window by using user data.\r\nCORE-19358",
             "commit_timestamp": 1702248738.0
+        },
+        {
+            "tool_version": "233.0.20231204.3905",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1702307195.729668,
+            "elapsed_time": 121.26923060417175,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 76115.66139984131,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "17617221ce3b488d1c8ec2f24cfd5fc0eabcf627",
+            "commit_message": "[MSCTFIME][SDK][USER32] Add msctfime.ime (stub) (#6141)\n\n## Overview\r\n1. msctfime.ime is an IME file interface\r\n  for new-style IMEs a.k.a. \"Text Input\r\n  Processors\" (TIPs).\r\n2. msctfime.ime is loaded as old-style\r\n  IME file at ImmLoadLayout in specific\r\n  condition.\r\n3. msctfime.ime communicates with\r\n  the current TIP (This feature is not\r\n  implemented yet).\r\n\r\n## Proposed changes\r\n- Add msctfime module at dll/ime/msctfime.\r\n- The functions in this module are currently\r\n  stub.\r\n- Move IME file interface declarations from\r\n  <imm.h> to <ddk/immdev.h>.\r\n- Modify ImmNotifyIME, NotifyIME, and\r\n  ImeProcessKey prototypes for x64\r\n  compliance.\r\nCORE-19360",
+            "commit_timestamp": 1702301845.0
         }
     ]
 }
