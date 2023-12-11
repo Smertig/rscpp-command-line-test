@@ -15243,6 +15243,21 @@
             "commit_ref": "640e0c02d48e19076e976b395d919c815a27ae5d",
             "commit_message": "Update README.md",
             "commit_timestamp": 1702172227.0
+        },
+        {
+            "tool_version": "233.0.20231204.3905",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1702263938.541864,
+            "elapsed_time": 87.40471172332764,
+            "x64": true,
+            "actual_files_count": 66,
+            "expected_files_count": 66,
+            "memory_traffic": 7719.514335632324,
+            "repo_url": "https://github.com/fmtlib/fmt.git",
+            "commit_ref": "274ba2645bdae12f6f0c7d7ca24659c4af670548",
+            "commit_message": "allow format_as() to format reference (#3739)\n\nbefore this change, format_as() is unable to format a type which\r\nhas `auto format_as() -> const another_type&`, and `another_type`\r\nis formattable. because `format_as_result` maps the result type\r\nas it is, and the compiler refuses to compile\r\n`static_cast<T*>(nullptr)`, where T is a reference type. but\r\nit would be handy if we could use `format_as()` to format types\r\nwhich, for instance, owns / inherit from a formattable type, and\r\ndelegate the formatter to these variables instead without creating\r\na copy of them.\r\n\r\nin this change:\r\n\r\n* instruct `format_as_result` to map the\r\n  result type to the decayed type, so that `type` can be the decayed\r\n  type of result type, and this also enables `type` to be formattable,\r\n  as long as the decayed type is formattable.\r\n* corresponding test is added to format-test.cc\r\n\r\nSigned-off-by: Kefu Chai <tchaikov@gmail.com>",
+            "commit_timestamp": 1702226993.0
         }
     ]
 }

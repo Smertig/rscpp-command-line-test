@@ -13696,6 +13696,21 @@
             "commit_ref": "dc2d2232f45956cf496b8f80ecb9a4c19d77f7f2",
             "commit_message": "[SHIMGVW] Use HeapAlloc/HeapFree instead of malloc/calloc/free\n\nmalloc/free are slow. CORE-19358\n",
             "commit_timestamp": 1702199399.0
+        },
+        {
+            "tool_version": "233.0.20231204.3905",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1702263984.471951,
+            "elapsed_time": 111.73503112792969,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 76069.10334014893,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "2de6e7559ed24dd8d5a3f3eba90efc096aad0740",
+            "commit_message": "[SHIMGVW] Refactor Part 3 (#6148)\n\nImprove code flexibility.\r\n- Remove g_fnPrevProc, g_hDispWnd, g_hToolBar, and g_Anime global variables.\r\n- Declare PREVIEW_DATA structure and use it.\r\n- Encapsulate preview window by using user data.\r\nCORE-19358",
+            "commit_timestamp": 1702248738.0
         }
     ]
 }
