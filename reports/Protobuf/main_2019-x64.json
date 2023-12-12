@@ -14748,6 +14748,21 @@
             "commit_ref": "0c3e116c251bd335acc42e789357067c8043f453",
             "commit_message": "upb: tag _upb_Message_AddUnknown() as UPB_PRIVATE()\n\nPiperOrigin-RevId: 590013675\n",
             "commit_timestamp": 1702347099.0
+        },
+        {
+            "tool_version": "233.0.20231204.3905",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1702393593.080089,
+            "elapsed_time": 292.6279847621918,
+            "x64": true,
+            "actual_files_count": 853,
+            "expected_files_count": 818,
+            "memory_traffic": 33972.43679046631,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "13c9be2cf2255df4063e07b5563e7ce5ec0d76a3",
+            "commit_message": "Reduce inlined part of the destructor.\n\nWe do not expect well-behaved code to ever rely on this check and well-behaved code should not being paying the price for it. We still need to keep it until b/290091828 is fixed but we can move it to slow out-of-line function.\n\n```\nname                                   old cpu/op   new cpu/op   delta\nBM_RepeatedPtrField_Ctor               75.3ns \u00b1 4%  63.8ns \u00b1 1%  -15.27%   (p=0.000 n=99+86)\n```\n\nPiperOrigin-RevId: 590139004\n",
+            "commit_timestamp": 1702380893.0
         }
     ]
 }

@@ -14035,6 +14035,21 @@
             "commit_ref": "6ee71fee88d26df529eaad7209dbdcd3baf86577",
             "commit_message": "Merge pull request #24547 from WanliZhong:refactor_conv_perf_test\n\nClassify and extend convolution and depthwise performance tests #24547\r\n\r\nThis PR aims to:\r\n1. Extend the test cases from models: `YOLOv5`, `YOLOv8`, `EfficientNet`, `YOLOX`, `YuNet`, `SFace`, `MPPalm`, `MPHand`, `MPPose`, `ViTTrack`, `PPOCRv3`, `CRNN`, `PPHumanSeg`. (371 new test cases are added)\r\n\r\n2. Classify the existing convolution performance test to below cases\r\n    - CONV_1x1\r\n    - CONV_3x3_S1_D1 (winograd)\r\n    - CONV\r\n    - DEPTHWISE\r\n\r\n3. Reduce unnecessary test cases by follow 3 rules (366 test cases are pruned):\r\n(i). For all tests, except for pad and bias related parameters, all other parameters are the same. Only one case can be reserved.\r\n(ii). When the only difference is the channel of input shape, and other parameters are the same. Only one case can be reserved in each range `[1, 3], [4, 7], [8, 15], [16, 31], [32, 63], [64, 127], [128, 255], [256, 511], [512, 1023], [1024, 2047], [2048, 4095]`\r\n(iii). When the only difference is the width and height of input shape, and other parameters are the same. Only one case can be reserved in each range `[1, 31], [32, 63], [64, 95]... `\r\n\r\n> **Reproduced**: 1. follow step in https://github.com/alalek/opencv/commit/dnn_dump_conv_kernels to dump all convolution cases from new models. (declared flops may not right, need to be checked manually) 2 and 3. Use the script from python code [classify conv.txt](https://github.com/opencv/opencv/files/13522228/classify.conv.txt)\r\n\r\n\r\n**Performance test result on Apple M2**\r\n\r\n**Test result details**:  [M2.md](https://github.com/opencv/opencv/files/13379189/M2.md)\r\n\r\n**Additional test result details with FP16**:  [m2_results_with_fp16.zip](https://github.com/opencv/opencv/files/13491070/m2_results_with_fp16.zip)\r\n\r\n\r\n**Brief summary for 4.8.1 vs 4.7.0 or 4.6.0**: \r\n1. `CONV_1x1_S1_D1` dropped significant with small or large input shape.\r\n2. `DEPTHWISE_5x5 ` dropped a little compared with 4.7.0. \r\n\r\n---\r\n\r\n**Performance test result on [Intel Core i7-12700K](https://www.intel.com/content/www/us/en/products/sku/134594/intel-core-i712700k-processor-25m-cache-up-to-5-00-ghz/specifications.html)**: 8 Performance-cores (3.60 GHz, turbo up to 4.90 GHz), 4 Efficient-cores (2.70 GHz, turbo up to 3.80 GHz), 20 threads.\r\n\r\n**Test result details**: [INTEL.md](https://github.com/opencv/opencv/files/13374093/INTEL.md)\r\n**Brief summary for 4.8.1 vs 4.5.5**: \r\n1. `CONV_5x5_S1_D1` dropped significant. \r\n2. `CONV_1x1_S1_D1`, `CONV_3x3_S1_D1`, `DEPTHWISE_3x3_S1_D1`, `DEPTHWISW_3x3_S2_D1` dropped with small input shape.\r\n\r\n---\r\n\r\nTODO:\r\n- [x] Perform tests on arm with each opencv version\r\n- [x] Perform tests on x86 with each opencv version\r\n- [x] Split each test classification with single test config\r\n- [x] test enable fp16\r\n",
             "commit_timestamp": 1702319733.0
+        },
+        {
+            "tool_version": "233.0.20231204.3905",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1702393704.108045,
+            "elapsed_time": 382.76181745529175,
+            "x64": true,
+            "actual_files_count": 469,
+            "expected_files_count": 459,
+            "memory_traffic": 42944.108459472656,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "850be1e0874a4881b94392773d2f1702344658ac",
+            "commit_message": "Merge pull request #24653 from savuor:doc_android_tutorials\n\nAndroid Studio tutorials rewritten",
+            "commit_timestamp": 1702390211.0
         }
     ]
 }

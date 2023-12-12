@@ -15007,6 +15007,23 @@
             "commit_ref": "3850131197b7508e2e2f25f966f75105a0be3929",
             "commit_message": "[X86] Handle ifuncs in TargetMachine::isLargeGlobalObject() (#74911)\n\nisLargeGlobalObject() didn't handle GlobalIFuncs, resulting in crashes.\r\n\r\nTreat ifuncs the same as normal Functions.",
             "commit_timestamp": 1702350104.0
+        },
+        {
+            "tool_version": "233.0.20231204.3905",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1702394106.463968,
+            "elapsed_time": 1561.0603914260864,
+            "x64": true,
+            "actual_files_count": 1724,
+            "expected_files_count": 1661,
+            "memory_traffic": 643301.3900146484,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "220e095a2c26b26a8d7a74b90461b650e020d2f2",
+            "commit_message": "[AMDGPU] Remove unused function splitScalar64BitAddSub\n",
+            "commit_timestamp": 1702393317.0
         }
     ]
 }

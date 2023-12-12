@@ -13946,6 +13946,21 @@
             "commit_ref": "02d81c5a6808e189cd20418274abccbd9bb1385d",
             "commit_message": "CONNECTION-FILTERS: update documentation\n\nCloses #12497\n",
             "commit_timestamp": 1702333826.0
+        },
+        {
+            "tool_version": "233.0.20231204.3905",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1702393534.218851,
+            "elapsed_time": 153.4406521320343,
+            "x64": true,
+            "actual_files_count": 2457,
+            "expected_files_count": 2323,
+            "memory_traffic": 29859.613067626953,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "5d5dfdbd1a6c40bd75e982b66f49e1fa3a7eeae7",
+            "commit_message": "cmake: delete obsolete TODO items [ci skip]\n\nThere is always room for improvement, but CMake is up to par now with\nautotools, so there is no longer a good reason to keep around these\ninline TODO items.\n\nAnswering one of questions:\n\nQ: \"The gcc command line use neither -g nor any -O options. As a\n   developer, I also treasure our configure scripts's --enable-debug\n   option that sets a long range of \"picky\" compiler options.\"\n\nA: CMake offers the `CMAKE_BUILD_TYPE` variable to control debug info\n   and optimization level. E.g.:\n   - `Release`    = `-O3` + no debug info\n   - `MinSizeRel` = `-Os` + no debug info\n   - `Debug`      = `-O0` + debug info\n\n   https://stackoverflow.com/questions/48754619/what-are-cmake-build-type-debug-release-relwithdebinfo-and-minsizerel/59314670#59314670\n   https://cmake.org/cmake/help/latest/manual/cmake-buildsystem.7.html#default-and-custom-configurations\n\n   For picky warnings we have the `PICKY_COMPILER` options, enabled by\n   default.\n\nCloses #12500\n",
+            "commit_timestamp": 1702382075.0
         }
     ]
 }
