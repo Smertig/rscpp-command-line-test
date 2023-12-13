@@ -14988,6 +14988,21 @@
             "commit_ref": "754ef08ab91767be54f56e8de3f00527aef3f779",
             "commit_message": "Upgrade core bazel dependencies (#1711)\n\nBumps `rules_foreign_cc` to v0.10.1 (October 2023), `bazel_skylib` to\r\nv1.5.0 (November 2023), `rules_python` to v0.27.1 (December 2023).\r\n\r\nAlso syncs GoogleTest to v1.12.1 (the last C++11 supporting version) to\r\nbe the same as in MODULE.bazel.\r\n\r\nSince the latest `rules_python` changed its setup calling convention,\r\nthat is updated also in the WORKSPACE file.",
             "commit_timestamp": 1701961243.0
+        },
+        {
+            "tool_version": "233.0.20231204.3905",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1702479990.002987,
+            "elapsed_time": 69.60974669456482,
+            "x64": true,
+            "actual_files_count": 86,
+            "expected_files_count": 86,
+            "memory_traffic": 5009.599594116211,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "c2de5261302fa307ebe06b24c0fc30653bed5e17",
+            "commit_message": "Run `pre-commit autoupdate`, fix stale pyproject.toml comments (#1712)\n\n* Run `pre-commit autoupdate`, fix stale pyproject.toml comments\r\n\r\n* Set `--enable_bzlmod=false` for the moment\r\n\r\nUntil the newer nanobind tags are pushed to the BCR, it's best to disable\r\nbzlmod for the bindings, because the Python CI breaks due to Bazel 7\r\nenabling bzlmod by default.\r\n\r\n* Remove E203 ignore, add linebreaks to semantically group ruff options",
+            "commit_timestamp": 1702477575.0
         }
     ]
 }

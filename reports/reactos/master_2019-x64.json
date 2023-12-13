@@ -13771,6 +13771,21 @@
             "commit_ref": "a19ba4760e1720998594582600bfec5ccdb6d146",
             "commit_message": "[MSCTF] Add ADD_IMPORTLIB to CMakeLists.txt spec2def\n\nCORE-19361\n",
             "commit_timestamp": 1702433406.0
+        },
+        {
+            "tool_version": "233.0.20231204.3905",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1702480051.373935,
+            "elapsed_time": 126.1447548866272,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 76182.96788787842,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "079b36542c87b5f64eb549d1d3836297b61ea6c2",
+            "commit_message": "[CTFMON][SDK] Add ctfmon.exe (#6149)\n\nctfmon.exe will be a replacement of our\r\nkbswitch.exe in the future. That is the\r\nfront-end of Language Bar. It is needed\r\nto support TIPs.\r\n- Add ctfmon.exe at base/applications/ctfmon.\r\n- Add <cicero/cicbase.h>,\r\n  <cicero/CModulePath.h>, and\r\n  <cicero/osinfo.h> headers and use them.\r\nCORE-19362",
+            "commit_timestamp": 1702471035.0
         }
     ]
 }

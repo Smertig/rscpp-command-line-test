@@ -11126,6 +11126,21 @@
             "commit_ref": "a3a1cb48456c809f7b1ab6a6ffe83e8b3f69be0f",
             "commit_message": "gh-112622: Pass name to loop create_task method (#112623)\n\nThis affects task creation through either `asyncio.create_task()` or `TaskGroup.create_task()` -- the redundant call to `task.set_name()` is skipped. We still call `set_name()` when a task factory is involved, because the task factory call signature (unfortunately) doesn't take a `name` argument.",
             "commit_timestamp": 1702430800.0
+        },
+        {
+            "tool_version": "233.0.20231204.3905",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1702480148.406949,
+            "elapsed_time": 1034.4102036952972,
+            "x64": true,
+            "actual_files_count": 990,
+            "expected_files_count": null,
+            "memory_traffic": 258171.23461914062,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "498a096a51a215cd3084845131e619222b906b3e",
+            "commit_message": "gh-112205: Support `@setter` annotation from AC (gh-112922)\n\n\r\n---------\r\n\r\nCo-authored-by: Erlend E. Aasland <erlend.aasland@protonmail.com>\r\nCo-authored-by: Alex Waygood <Alex.Waygood@Gmail.com>",
+            "commit_timestamp": 1702476034.0
         }
     ]
 }

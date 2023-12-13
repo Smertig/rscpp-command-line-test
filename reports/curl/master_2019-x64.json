@@ -13976,6 +13976,21 @@
             "commit_ref": "3be759610f1e51e2daca68d49c4e93a1e34e3463",
             "commit_message": "CLIENT-WRITERS: design and use documentation\n\nCloses #12507\n",
             "commit_timestamp": 1702399072.0
+        },
+        {
+            "tool_version": "233.0.20231204.3905",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1702479980.937529,
+            "elapsed_time": 168.83918046951294,
+            "x64": true,
+            "actual_files_count": 2457,
+            "expected_files_count": 2323,
+            "memory_traffic": 29794.697235107422,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "246e0d805ac11aa2a2e14aee485e5deb58653b8b",
+            "commit_message": "tests/server: delete workaround for old-mingw\n\nmingw-w64 1.0 comes with w32api v3.12, thus doesn't need this.\n\nFollow-up to 38029101e2d78ba125732b3bab6ec267b80a0e72 #11625\n\nReviewed-by: Jay Satiro\nCloses #12510\n",
+            "commit_timestamp": 1702454493.0
         }
     ]
 }
