@@ -15303,6 +15303,21 @@
             "commit_ref": "89860eb9013a345608c8144b1aad5f12b0682d7e",
             "commit_message": "Use void(*)(void*) instead of decltype(&std::free) to satisfy clang in CUDA mode (#3751)\n\nclang can't resolve &std::free in decltype(&std::free) because std::free\r\nis overloaded (for host and device).",
             "commit_timestamp": 1702316642.0
+        },
+        {
+            "tool_version": "233.0.20231204.3905",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1702436815.967649,
+            "elapsed_time": 104.48965787887573,
+            "x64": true,
+            "actual_files_count": 66,
+            "expected_files_count": 66,
+            "memory_traffic": 7630.710113525391,
+            "repo_url": "https://github.com/fmtlib/fmt.git",
+            "commit_ref": "89860eb9013a345608c8144b1aad5f12b0682d7e",
+            "commit_message": "Use void(*)(void*) instead of decltype(&std::free) to satisfy clang in CUDA mode (#3751)\n\nclang can't resolve &std::free in decltype(&std::free) because std::free\r\nis overloaded (for host and device).",
+            "commit_timestamp": 1702316642.0
         }
     ]
 }
