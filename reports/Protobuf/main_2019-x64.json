@@ -14793,6 +14793,21 @@
             "commit_ref": "5076e6206e327942630e82bcec145826cf380559",
             "commit_message": "In ruby/README.md, correct a target name (#15041)\n\nWhen attempting to run the Ruby tests, I noticed that the README is slightly off; it points to a target that doesn't exist:\n\n```\ncharles@AlterCation:~/protobuf$ bazel test //ruby/tests/... //ruby:ffi=enabled --test_env=PROTOCOL_BUFFERS_RUBY_IMPLEMENTATION=FFI\nERROR: Skipping '//ruby:ffi=enabled': no such target '//ruby:ffi=enabled': target 'ffi=enabled' not declared in package 'ruby' defined by /home/charles/protobuf/ruby/BUILD.bazel (did you mean 'ffi_enabled'? Tip: use `query \"//ruby:*\"` to see all the targets in that package)\nERROR: no such target '//ruby:ffi=enabled': target 'ffi=enabled' not declared in package 'ruby' defined by /home/charles/protobuf/ruby/BUILD.bazel (did you mean 'ffi_enabled'? Tip: use `query \"//ruby:*\"` to see all the targets in that package)\nINFO: Elapsed time: 0.679s\nINFO: 0 processes.\nERROR: Build did NOT complete successfully\nERROR: Couldn't start the build. Unable to run tests\ncharles@AlterCation:~/protobuf$\n```\n\nInstead, it looks like `//ruby:ffi_enabled` is what you're supposed to use, which sets the flag on:\nhttps://github.com/protocolbuffers/protobuf/blob/main/ruby/BUILD.bazel#L28-L30\n\nCloses #15041\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/15041 from shaldengeki:ouguoc/fix-ruby-readme-ffi-enabled 245d84942df99984906aea76a547d76dc754c2d5\nPiperOrigin-RevId: 590501532\n",
             "commit_timestamp": 1702460737.0
+        },
+        {
+            "tool_version": "233.0.20231204.3905",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1702523233.917371,
+            "elapsed_time": 277.56601309776306,
+            "x64": true,
+            "actual_files_count": 853,
+            "expected_files_count": 818,
+            "memory_traffic": 34165.7995223999,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "543fbcdbd9496de9d93a6eb4645640cb47a5514b",
+            "commit_message": "Breaking change: Remove deprecated std::string error collector overrides\n\nPiperOrigin-RevId: 590740727\n",
+            "commit_timestamp": 1702512313.0
         }
     ]
 }
