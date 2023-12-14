@@ -55,14 +55,12 @@ jobs:
           [[ "${{matrix.VsInstallRoot}}" ]] && export VsInstallRoot="${{matrix.VsInstallRoot}}"
           [[ "${{matrix.VCTargetsPath}}" ]] && export VCTargetsPath="${{matrix.VCTargetsPath}}"
           echo "RSCPP_WORK_DIR=$RUNNER_TEMP/projects/${{matrix.project}}/${{matrix.rscpp_work_dir}}" >> $GITHUB_OUTPUT
-          echo "REPORT_PATH=$RUNNER_TEMP/report.json" >> $GITHUB_OUTPUT
           python CorrectnessTest.py \
             --project ${{matrix.project}}:${{matrix.branch}} \
             --vcpkg-dir $VCPKG_INSTALLATION_ROOT \
             --build-dir ${{ steps.install-tool.outputs.TOOL_DIR }} \
             --projects-cache $RUNNER_TEMP/projects \
             --supported-generators ${{matrix.cmake_gen}} \
-            --report-path $RUNNER_TEMP/report.json \
             --ci \
             --verbose
 
@@ -72,41 +70,3 @@ jobs:
         with:
           name: ${{matrix.project}}-${{matrix.branch}}-logs
           path: "${{ steps.inspect-code.outputs.RSCPP_WORK_DIR }}/resharper-*"
-
-      - name: Upload reports'
-        if: success() || failure()
-        uses: actions/upload-artifact@v3
-        with:
-          name: ${{matrix.project}}-${{matrix.branch}}-${{matrix.cmake_gen}}-report
-          path: "${{ steps.inspect-code.outputs.REPORT_PATH }}"
-          retention-days: 1
-
-  collect_reports:
-    needs: run_correctness_test
-    if: success() || failure()
-    runs-on: ubuntu-22.04
-    name: Collect reports
-
-    steps:
-    - uses: actions/checkout@v3
-
-    - name: Clone report branch
-      uses: actions/checkout@v3
-      with:
-        ref: "gh-pages"
-        path: gh-pages
-
-    - name: Download reports' artifacts
-      uses: actions/download-artifact@v3
-      with:
-        path: downloaded_artifacts
-
-    - name: Update report
-      shell: bash
-      run: python .github/save_stats.py ./downloaded_artifacts $GITHUB_WORKSPACE/gh-pages
-
-    - name: Commit report
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: gh-pages
