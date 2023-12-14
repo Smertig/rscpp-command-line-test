@@ -14006,6 +14006,21 @@
             "commit_ref": "1e4cd519355b63b26a0a9ee1f125153bfcc4995e",
             "commit_message": "cookie: avoid fopen with empty file name\n\nCloses #12514\n",
             "commit_timestamp": 1702509357.0
+        },
+        {
+            "tool_version": "233.0.20231204.3905",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1702566445.286176,
+            "elapsed_time": 194.8080132007599,
+            "x64": true,
+            "actual_files_count": 2457,
+            "expected_files_count": 2323,
+            "memory_traffic": 29726.209342956543,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "8706b680108919d9cdca1acd3a17fff6a57e245c",
+            "commit_message": "lib: eliminate `conn->cselect_bits`\n\n- use `data->state.dselect_bits` everywhere instead\n- remove `bool *comeback` parameter as non-zero\n  `data->state.dselect_bits` will indicate that IO is\n  incomplete.\n\nCloses #12512\n",
+            "commit_timestamp": 1702563605.0
         }
     ]
 }
