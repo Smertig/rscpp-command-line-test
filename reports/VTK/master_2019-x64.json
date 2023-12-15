@@ -12915,6 +12915,21 @@
             "commit_ref": "ac4be86cc54e30f1de1c6043daad1c3f2f501caf",
             "commit_message": "Merge branch 'paraview/release' into master",
             "commit_timestamp": 1702556266.0
+        },
+        {
+            "tool_version": "233.0.20231204.3905",
+            "error_mismatch": false,
+            "project": "vtkCommonCoreCxxTests",
+            "timestamp": 1702609763.487098,
+            "elapsed_time": 188.97657656669617,
+            "x64": true,
+            "actual_files_count": 79,
+            "expected_files_count": 68,
+            "memory_traffic": 24800.36004638672,
+            "repo_url": "https://gitlab.kitware.com/vtk/vtk.git",
+            "commit_ref": "5476c77485fb76c6ed0c7d828b2ba8a08e5256ed",
+            "commit_message": "Merge topic 'fix-implicitPolyDataDistance'\n\nFix an issue in vtkImplicitPolyDataDistance that returns the correct distance with\nthe wrong sign under certain conditions.\n\n8340c9c1ec7 Refactoring: use vtkNotUsed to suppress unused warnings\nf89b16dd7ee Refactor: Move isPointInsideCube definition on top\nffbe9c8fdd7 Refactor include statements and variable naming\nc59723eba1f Add empty line for clarity as per review\ne15b0af222d Fix wrong sign in vtkImplicitPolyDataDistance (Issue #18307)\n\nAcked-by: Kitware Robot <kwrobot@kitware.com>\nTested-by: buildbot <buildbot@kitware.com>\nReviewed-by: Mathieu Westphal (Kitware) <mathieu.westphal@kitware.com>\nMerge-request: !10758\n",
+            "commit_timestamp": 1702577688.0
         }
     ]
 }

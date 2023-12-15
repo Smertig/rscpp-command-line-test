@@ -14823,6 +14823,21 @@
             "commit_ref": "2d7376ea378b14548b1d417df285a0a5c84957ba",
             "commit_message": "Internal change\n\nPiperOrigin-RevId: 590871044\n",
             "commit_timestamp": 1702550460.0
+        },
+        {
+            "tool_version": "233.0.20231204.3905",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1702609648.233855,
+            "elapsed_time": 308.274169921875,
+            "x64": true,
+            "actual_files_count": 852,
+            "expected_files_count": 818,
+            "memory_traffic": 34020.99042510986,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "0a2f7757e38b07c2e40c5c885a7100e8c16eb40f",
+            "commit_message": "Branch-free varint size calculation. On android art, compiles to:\n\n```\nint com.google.android.test.Outer.computeUInt32SizeNoTag(int) [24 bytes]\n    0x000024d0    mov w0, #0x160\n    0x000024d4    clz w1, w1\n    0x000024d8    add w1, w1, w1, lsl #3\n    0x000024dc    sub w0, w0, w1\n    0x000024e0    lsr w0, w0, #6\n    0x000024e4    ret\n```\nversus existing:\n```\nint com.google.android.test.Outer.computeUInt32SizeNoTag(int) [72 bytes]\n    0x000022a0    and w0, w1, #0xffffff80\n    0x000022a4    cbnz w0, #+0xc (addr 0x22b0)\n    0x000022a8    mov w0, #0x1\n    0x000022ac    b #+0x38 (addr 0x22e4)\n    0x000022b0    and w0, w1, #0xffffc000\n    0x000022b4    cbnz w0, #+0xc (addr 0x22c0)\n    0x000022b8    mov w0, #0x2\n    0x000022bc    b #+0x28 (addr 0x22e4)\n    0x000022c0    and w0, w1, #0xffe00000\n    0x000022c4    cbnz w0, #+0xc (addr 0x22d0)\n    0x000022c8    mov w0, #0x3\n    0x000022cc    b #+0x18 (addr 0x22e4)\n    0x000022d0    mov w2, #0x5\n    0x000022d4    mov w0, #0x4\n    0x000022d8    and w1, w1, #0xf0000000\n    0x000022dc    cmp w1, #0x0 (0)\n    0x000022e0    csel w0, w2, w0, ne\n    0x000022e4    ret\n```\n\nPiperOrigin-RevId: 591113652\n",
+            "commit_timestamp": 1702609143.0
         }
     ]
 }

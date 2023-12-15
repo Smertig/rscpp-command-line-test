@@ -15263,6 +15263,21 @@
             "commit_ref": "9d0b5bf57cf0dc5388568127bcf079812d3f989e",
             "commit_message": "Fix an old bug that can manifest during factoring.\n\n`AddFoldedRange()` can terminate prematurely if the character class\nalready contains the rune. For example, if it contains `a` and we\nwant to add folded `a`, it sees `a` and stops without adding `A`.\nTo avoid that, we use an empty character class and then merge it.\n\nFixes #467.\n\nChange-Id: I1f26b182e23b8a03da5d98107705bdf443d931d6\nReviewed-on: https://code-review.googlesource.com/c/re2/+/62270\nReviewed-by: Alex Chernyakhovsky <achernya@google.com>\nReviewed-by: Paul Wankadia <junyer@google.com>\n",
             "commit_timestamp": 1702407764.0
+        },
+        {
+            "tool_version": "233.0.20231204.3905",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1702609740.058399,
+            "elapsed_time": 50.48000693321228,
+            "x64": true,
+            "actual_files_count": 22,
+            "expected_files_count": null,
+            "memory_traffic": 2678.6245498657227,
+            "repo_url": "https://github.com/google/re2.git",
+            "commit_ref": "c21710327d0330cd933cf52ca89482e845824269",
+            "commit_message": "Delete the `AUTHORS` and `CONTRIBUTORS` files.\n\nI discovered from https://github.com/golang/go/issues/53961 and\nelsewhere that our lawyercats no longer require these files for\nlicensing compliance. Which is just as well because these files\nhaven't been touched since 2014...\n\nChange-Id: I7f4cabeae86b08703ad7f145e5354e78b6baa59f\nReviewed-on: https://code-review.googlesource.com/c/re2/+/62310\nReviewed-by: Paul Wankadia <junyer@google.com>\nReviewed-by: Alex Chernyakhovsky <achernya@google.com>\n",
+            "commit_timestamp": 1702578217.0
         }
     ]
 }

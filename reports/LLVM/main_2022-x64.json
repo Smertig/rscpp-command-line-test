@@ -15092,6 +15092,23 @@
             "commit_ref": "fd6e19cdc399fbda5a63a07ba4d5a0f6bc4b12f5",
             "commit_message": "[SystemZ][z/OS] yaml2obj for header and end records (#73859)\n\nThis PR implements part 1 of yaml2obj for the GOFF Object File Format.\r\nIt adds support for the header and end records.\r\n\r\n---------\r\n\r\nCo-authored-by: Yusra Syeda <yusra.syeda@ibm.com>",
             "commit_timestamp": 1702565823.0
+        },
+        {
+            "tool_version": "233.0.20231204.3905",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1702610148.280035,
+            "elapsed_time": 1493.842056274414,
+            "x64": true,
+            "actual_files_count": 1726,
+            "expected_files_count": 1661,
+            "memory_traffic": 644024.3357925415,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "3dde0d02568d31ae48b557c486a3ff4edb24199b",
+            "commit_message": "[RISCV] Support printing immediate of RISCV MCInst in hexadecimal format (#74053)\n\nEnable the llvm-objdump to disassemble the immediate of RISCV\r\ninstruction in hexadecimal format with --print-imm-hex flag.",
+            "commit_timestamp": 1702606400.0
         }
     ]
 }
