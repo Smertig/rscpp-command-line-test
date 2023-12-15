@@ -14838,6 +14838,21 @@
             "commit_ref": "0a2f7757e38b07c2e40c5c885a7100e8c16eb40f",
             "commit_message": "Branch-free varint size calculation. On android art, compiles to:\n\n```\nint com.google.android.test.Outer.computeUInt32SizeNoTag(int) [24 bytes]\n    0x000024d0    mov w0, #0x160\n    0x000024d4    clz w1, w1\n    0x000024d8    add w1, w1, w1, lsl #3\n    0x000024dc    sub w0, w0, w1\n    0x000024e0    lsr w0, w0, #6\n    0x000024e4    ret\n```\nversus existing:\n```\nint com.google.android.test.Outer.computeUInt32SizeNoTag(int) [72 bytes]\n    0x000022a0    and w0, w1, #0xffffff80\n    0x000022a4    cbnz w0, #+0xc (addr 0x22b0)\n    0x000022a8    mov w0, #0x1\n    0x000022ac    b #+0x38 (addr 0x22e4)\n    0x000022b0    and w0, w1, #0xffffc000\n    0x000022b4    cbnz w0, #+0xc (addr 0x22c0)\n    0x000022b8    mov w0, #0x2\n    0x000022bc    b #+0x28 (addr 0x22e4)\n    0x000022c0    and w0, w1, #0xffe00000\n    0x000022c4    cbnz w0, #+0xc (addr 0x22d0)\n    0x000022c8    mov w0, #0x3\n    0x000022cc    b #+0x18 (addr 0x22e4)\n    0x000022d0    mov w2, #0x5\n    0x000022d4    mov w0, #0x4\n    0x000022d8    and w1, w1, #0xf0000000\n    0x000022dc    cmp w1, #0x0 (0)\n    0x000022e0    csel w0, w2, w0, ne\n    0x000022e4    ret\n```\n\nPiperOrigin-RevId: 591113652\n",
             "commit_timestamp": 1702609143.0
+        },
+        {
+            "tool_version": "233.0.20231204.3905",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1702652838.032437,
+            "elapsed_time": 300.3655242919922,
+            "x64": true,
+            "actual_files_count": 852,
+            "expected_files_count": 818,
+            "memory_traffic": 34066.294372558594,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "b10d3f93b689a0b39fbc861d8d367491b4442a4f",
+            "commit_message": "Avoid interface calls in hot loop\n\nBefore, every charAt would emit (on android):\n```\n    0x00002104    adrp x17, #+0x1000 (addr 0x3000)\n    0x00002108    ldr w17, [x17, #20]\n    0x0000210c    ldr x0, [x0, #128]\n    0x00002110    ldr x0, [x0, #328]\n    0x00002114    ldr lr, [x0, #24]\n    0x00002118    blr lr <-- Call into String.charAt(int)\n```\nNow, it emits the inlined implementation of charAt (branch is for possibly compressed strings):\n```\n    0x000020b4    ldur w16, [x4, #-8]\n    0x000020b8    tbnz w16, #0, #+0xc (addr 0x20c4)\n    0x000020bc    ldrb w4, [x4, x0]\n    0x000020c0    b #+0x8 (addr 0x20c8)\n    0x000020c4    ldrh w4, [x4, x0, lsl #1]\n```\n\nPiperOrigin-RevId: 591147406\n",
+            "commit_timestamp": 1702621228.0
         }
     ]
 }

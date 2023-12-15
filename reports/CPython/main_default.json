@@ -11186,6 +11186,21 @@
             "commit_ref": "f34e22c6470d1c5d0e2a3ffb2272d375c22654b9",
             "commit_message": "gh-112535: Update _Py_ThreadId() to support RISC-V (gh-113084)\n\nUpdate _Py_ThreadId() to support RISC-V",
             "commit_timestamp": 1702597353.0
+        },
+        {
+            "tool_version": "233.0.20231204.3905",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1702652959.471866,
+            "elapsed_time": 1130.4524903297424,
+            "x64": true,
+            "actual_files_count": 989,
+            "expected_files_count": null,
+            "memory_traffic": 258108.65906524658,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "4026ad5b2c595b855a3605420cfa0e3d49e63db7",
+            "commit_message": "gh-113009: Fix multiprocessing Process.terminate() on Windows (#113128)\n\nOn Windows, Process.terminate() no longer sets the returncode\r\nattribute to always call WaitForSingleObject() in Process.wait().\r\nPreviously, sometimes the process was still running after\r\nTerminateProcess() even if GetExitCodeProcess() is not STILL_ACTIVE.",
+            "commit_timestamp": 1702652269.0
         }
     ]
 }
