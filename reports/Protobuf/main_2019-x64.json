@@ -14853,6 +14853,21 @@
             "commit_ref": "b10d3f93b689a0b39fbc861d8d367491b4442a4f",
             "commit_message": "Avoid interface calls in hot loop\n\nBefore, every charAt would emit (on android):\n```\n    0x00002104    adrp x17, #+0x1000 (addr 0x3000)\n    0x00002108    ldr w17, [x17, #20]\n    0x0000210c    ldr x0, [x0, #128]\n    0x00002110    ldr x0, [x0, #328]\n    0x00002114    ldr lr, [x0, #24]\n    0x00002118    blr lr <-- Call into String.charAt(int)\n```\nNow, it emits the inlined implementation of charAt (branch is for possibly compressed strings):\n```\n    0x000020b4    ldur w16, [x4, #-8]\n    0x000020b8    tbnz w16, #0, #+0xc (addr 0x20c4)\n    0x000020bc    ldrb w4, [x4, x0]\n    0x000020c0    b #+0x8 (addr 0x20c8)\n    0x000020c4    ldrh w4, [x4, x0, lsl #1]\n```\n\nPiperOrigin-RevId: 591147406\n",
             "commit_timestamp": 1702621228.0
+        },
+        {
+            "tool_version": "233.0.20231204.3905",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1702695984.845115,
+            "elapsed_time": 284.1843466758728,
+            "x64": true,
+            "actual_files_count": 852,
+            "expected_files_count": 818,
+            "memory_traffic": 34185.11306762695,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "481c4fede513a606f3cb061cc0ad0a839f21f781",
+            "commit_message": "Allow friendly use of Reflection::MutableRaw(), Reflection::MutableRawNonOneof().\n\nPiperOrigin-RevId: 591330894\n",
+            "commit_timestamp": 1702672598.0
         }
     ]
 }

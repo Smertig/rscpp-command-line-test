@@ -15126,6 +15126,23 @@
             "commit_ref": "48e96e97d15833c3b7d74d59dfd6dbb171d990ed",
             "commit_message": "[flang][driver][nfc] Rename one variable (res -> invoc) (#75535)\n\nThe new name better reflects what the variable represents.",
             "commit_timestamp": 1702652694.0
+        },
+        {
+            "tool_version": "233.0.20231204.3905",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1702696468.917687,
+            "elapsed_time": 1474.9673540592194,
+            "x64": true,
+            "actual_files_count": 1726,
+            "expected_files_count": 1661,
+            "memory_traffic": 643979.0165023804,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "433498ce4619d0269977ad6dd273c584301d546f",
+            "commit_message": "[llvm-readobj] Print the associated CUDA SM flags (#75664)\n\nSummary:\r\nThe architecture that the CUDA application was compiled for is stored in\r\nthe ELF flags. This patch just adds some simple enum values to indicate\r\nthis to the user in a readable way.",
+            "commit_timestamp": 1702695157.0
         }
     ]
 }
