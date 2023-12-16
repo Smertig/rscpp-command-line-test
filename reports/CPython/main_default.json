@@ -11216,6 +11216,21 @@
             "commit_ref": "5ae75e1be24bd6b031a68040cfddb71732461f67",
             "commit_message": "gh-111964: Add _PyRWMutex a \"readers-writer\" lock (gh-112859)\n\nThis adds `_PyRWMutex`, a \"readers-writer\" lock, which wil be used to\r\nserialize global stop-the-world pauses with per-interpreter pauses.",
             "commit_timestamp": 1702691815.0
+        },
+        {
+            "tool_version": "233.0.20231204.3905",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1702739339.110716,
+            "elapsed_time": 1064.8598413467407,
+            "x64": true,
+            "actual_files_count": 989,
+            "expected_files_count": null,
+            "memory_traffic": 258135.7525253296,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "fe479fb8a979894224a4d279d1e46a5cdb108fa4",
+            "commit_message": "gh-67790: Support basic formatting for Fraction (#111320)\n\nPR #100161 added fancy float-style formatting for the Fraction type,\r\nbut left us in a state where basic formatting for fractions (alignment,\r\nfill, minimum width, thousands separators) still wasn't supported.\r\n\r\nThis PR adds that support.\r\n\r\n---------\r\n\r\nCo-authored-by: Serhiy Storchaka <storchaka@gmail.com>",
+            "commit_timestamp": 1702724311.0
         }
     ]
 }
