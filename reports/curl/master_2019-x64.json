@@ -14081,6 +14081,21 @@
             "commit_ref": "423645a1ef34526d424e48d23f573e7a5137c88f",
             "commit_message": "build: delete unused `HAVE_{GSSHEIMDAL,GSSMIT,HEIMDAL}`\n\nStop setting `HAVE_GSSHEIMDAL`, `HAVE_GSSMIT` and `HAVE_HEIMDAL`.\nThere was no place in the build system or source code that used them.\n\nReviewed-by: Daniel Stenberg\nCloses #12506\n",
             "commit_timestamp": 1702732612.0
+        },
+        {
+            "tool_version": "233.0.20231204.3905",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1702782361.268029,
+            "elapsed_time": 171.1009533405304,
+            "x64": true,
+            "actual_files_count": 2457,
+            "expected_files_count": 2323,
+            "memory_traffic": 29799.357543945312,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "17e61d4e3a50dfbfbcc9c2867f387d160205328b",
+            "commit_message": "cmake: whitespace tidy-up in `OtherTests.cmake`\n\nCloses #12538\n",
+            "commit_timestamp": 1702773578.0
         }
     ]
 }
