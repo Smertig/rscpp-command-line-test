@@ -15177,6 +15177,23 @@
             "commit_ref": "942b0901b09a89b09ebb75e75141e678a206cc36",
             "commit_message": "[llvm-objdump,test] Improve zero dumping and inline relocs tests\n",
             "commit_timestamp": 1702774485.0
+        },
+        {
+            "tool_version": "233.0.20231204.3905",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1702826070.102882,
+            "elapsed_time": 1483.223905801773,
+            "x64": true,
+            "actual_files_count": 1726,
+            "expected_files_count": 1661,
+            "memory_traffic": 643930.2321777344,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "a418be96de7872f6058207c695ef4698cb1dbb93",
+            "commit_message": "[X86] combineLoad - extract target constants at the minimum scalar element width.\n\nNo need to extract at the byte level, and will make it easier to reconstruct constants in a future patch.\n",
+            "commit_timestamp": 1702820657.0
         }
     ]
 }
