@@ -11261,6 +11261,21 @@
             "commit_ref": "21d52995ea490328edf9be3ba072821cd445dd30",
             "commit_message": "gh-112890: `unittest` Test Discovery page updated \"`unittest` dropped the namspace packages support\" (GH-113195)\n\n",
             "commit_timestamp": 1702811661.0
+        },
+        {
+            "tool_version": "233.0.20231204.3905",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1702868914.829434,
+            "elapsed_time": 1104.9342422485352,
+            "x64": true,
+            "actual_files_count": 989,
+            "expected_files_count": null,
+            "memory_traffic": 258340.32891082764,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "2b93f5224216d10f8119373e72b5c2b3984e0af6",
+            "commit_message": "gh-113117: Support posix_spawn in subprocess.Popen with close_fds=True (#113118)\n\nAdd support for `os.POSIX_SPAWN_CLOSEFROM` and\r\n`posix_spawn_file_actions_addclosefrom_np` and have the `subprocess` module use\r\nthem when available.  This means `posix_spawn` can now be used in the default\r\n`close_fds=True` situation on many platforms.\r\n\r\nCo-authored-by: Gregory P. Smith [Google LLC] <greg@krypto.org>",
+            "commit_timestamp": 1702848897.0
         }
     ]
 }
