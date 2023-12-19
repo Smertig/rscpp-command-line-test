@@ -15168,6 +15168,21 @@
             "commit_ref": "c2de5261302fa307ebe06b24c0fc30653bed5e17",
             "commit_message": "Run `pre-commit autoupdate`, fix stale pyproject.toml comments (#1712)\n\n* Run `pre-commit autoupdate`, fix stale pyproject.toml comments\r\n\r\n* Set `--enable_bzlmod=false` for the moment\r\n\r\nUntil the newer nanobind tags are pushed to the BCR, it's best to disable\r\nbzlmod for the bindings, because the Python CI breaks due to Bazel 7\r\nenabling bzlmod by default.\r\n\r\n* Remove E203 ignore, add linebreaks to semantically group ruff options",
             "commit_timestamp": 1702477575.0
+        },
+        {
+            "tool_version": "233.0.20231204.3905",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1702998333.556779,
+            "elapsed_time": 57.76493048667908,
+            "x64": true,
+            "actual_files_count": 86,
+            "expected_files_count": 86,
+            "memory_traffic": 5023.146286010742,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "9a0422eb2319cbfa9e6dd9915ab212478cfcf83a",
+            "commit_message": "Check out repo at depth 0 for Python tests, bump Python and PyPI actions (#1713)\n\nThe reason for this is that `setuptools-scm` installs a version relative\r\nto the last release tag - if no tag is found, the default version is taken\r\nto be v0.1.0. This was the case in GitHub Actions, where only the PR\r\nbranch is checked out.\r\n\r\nAlso unpins build system requirements in the `pyproject.toml`.\r\n\r\nThe sdist build system was changed to `build` from `python setup.py sdist`\r\nfor forward compatibility - `build` is superior in every way, and the\r\nadvertised solution by both cibuildwheel and PyPA itself.\r\n\r\nBump `actions/setup-python` to v5, `pypa/gh-action-pypi-publish` to v1.8.11,\r\nand `docker/setup-qemu-action` to v3.",
+            "commit_timestamp": 1702995188.0
         }
     ]
 }
