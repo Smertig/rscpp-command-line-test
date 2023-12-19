@@ -14943,6 +14943,21 @@
             "commit_ref": "bacf61a3ef03a23d00abec06bc0357408ed16ef6",
             "commit_message": "Remove unnecessary duplicative +Sized\n\nPiperOrigin-RevId: 591868644\n",
             "commit_timestamp": 1702906754.0
+        },
+        {
+            "tool_version": "233.0.20231204.3905",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1702955182.598969,
+            "elapsed_time": 298.1209440231323,
+            "x64": true,
+            "actual_files_count": 852,
+            "expected_files_count": 818,
+            "memory_traffic": 34118.4979095459,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "7315f6d398d2d18443b26c513cbdcdbffaeebaa3",
+            "commit_message": "lzcnt enabled varint size calculation for proto\n\nThe x86 microbenchmark speedups here are only representative for packed repeated primitive fields, as they benefit from some improved vectorization.\n\nFor normal cases like non-repeated fields, the util/coding microbenchmarks showed roughly 18% for arm and 2-3% for 32 bit x86, 10% for 64 bit x86 (including loop overhead)\n\nPiperOrigin-RevId: 592061508\n",
+            "commit_timestamp": 1702951106.0
         }
     ]
 }

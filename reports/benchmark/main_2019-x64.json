@@ -15153,6 +15153,21 @@
             "commit_ref": "c2de5261302fa307ebe06b24c0fc30653bed5e17",
             "commit_message": "Run `pre-commit autoupdate`, fix stale pyproject.toml comments (#1712)\n\n* Run `pre-commit autoupdate`, fix stale pyproject.toml comments\r\n\r\n* Set `--enable_bzlmod=false` for the moment\r\n\r\nUntil the newer nanobind tags are pushed to the BCR, it's best to disable\r\nbzlmod for the bindings, because the Python CI breaks due to Bazel 7\r\nenabling bzlmod by default.\r\n\r\n* Remove E203 ignore, add linebreaks to semantically group ruff options",
             "commit_timestamp": 1702477575.0
+        },
+        {
+            "tool_version": "233.0.20231204.3905",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1702955134.024508,
+            "elapsed_time": 64.91801357269287,
+            "x64": true,
+            "actual_files_count": 86,
+            "expected_files_count": 86,
+            "memory_traffic": 5017.583358764648,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "c2de5261302fa307ebe06b24c0fc30653bed5e17",
+            "commit_message": "Run `pre-commit autoupdate`, fix stale pyproject.toml comments (#1712)\n\n* Run `pre-commit autoupdate`, fix stale pyproject.toml comments\r\n\r\n* Set `--enable_bzlmod=false` for the moment\r\n\r\nUntil the newer nanobind tags are pushed to the BCR, it's best to disable\r\nbzlmod for the bindings, because the Python CI breaks due to Bazel 7\r\nenabling bzlmod by default.\r\n\r\n* Remove E203 ignore, add linebreaks to semantically group ruff options",
+            "commit_timestamp": 1702477575.0
         }
     ]
 }

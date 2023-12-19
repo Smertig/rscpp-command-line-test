@@ -13936,6 +13936,21 @@
             "commit_ref": "a3288862e1012e2bc0063b3cb2a31aca6273b32f",
             "commit_message": "[MSCTFIME] Implement ImeDestroy and CtfImeDestroyThreadMgr (#6189)\n\n- Define ITfSysHookSink interface.\r\n- Add implementation to CicBridge class.\r\n- Implement ImeDestroy and CtfImeDestroyThreadMgr functions.\r\n- Implement CtfImeCreateThreadMgr function.\r\nCORE-19360",
             "commit_timestamp": 1702904181.0
+        },
+        {
+            "tool_version": "233.0.20231204.3905",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1702955161.148268,
+            "elapsed_time": 121.73665380477905,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 76189.86647033691,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "53cc92613fbfc315409c7d93cc8f5fab83e47a34",
+            "commit_message": "[WINESYNC] Support improvements for staging patches (#5898)\n\n- Simplify patch directory usage;\n- Fix the path shown in the warning message.\n\nThe staging patch path in the warning message didn't show the correct\nsub-directory where the patch resides.\n",
+            "commit_timestamp": 1702934501.0
         }
     ]
 }
