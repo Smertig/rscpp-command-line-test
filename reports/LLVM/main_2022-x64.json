@@ -15279,6 +15279,23 @@
             "commit_ref": "a8081ed8ff0fd11fb8d5f4c83df49da909e49612",
             "commit_message": "[LoongArch] Allow delayed decision for ADD/SUB relocations (#72960)\n\nRefer to RISCV [1], LoongArch also need delayed decision for ADD/SUB\r\nrelocations. In handleAddSubRelocations, just return directly if SecA !=\r\nSecB, handleFixup usually will finish the the rest of creating PCRel\r\nrelocations works. Otherwise we emit relocs depends on whether\r\nrelaxation is enabled. If not, we return true and avoid record ADD/SUB\r\nrelocations.\r\nNow the two symbols separated by alignment directive will return without\r\nfolding symbol offset in AttemptToFoldSymbolOffsetDifference, which has\r\nthe same effect when relaxation is enabled.\r\n\r\n[1] https://reviews.llvm.org/D155357",
             "commit_timestamp": 1703040891.0
+        },
+        {
+            "tool_version": "233.0.20231204.3905",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1703085286.417941,
+            "elapsed_time": 1493.0664348602295,
+            "x64": true,
+            "actual_files_count": 1726,
+            "expected_files_count": 1661,
+            "memory_traffic": 644266.5696868896,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "8b8f2ef06e341ef634f85fa01800f4e441cacd91",
+            "commit_message": "[MergeFunc] Fix comparison of constant expressions\n\nFunctions using different constant expressions were incorrectly\nmerged, because a lot of state was missing from the comparison,\nincluding the opcode, the comparison predicate, the GEP element\ntype, as well as the inbounds, inrange and nowrap poison flags.\n",
+            "commit_timestamp": 1703084342.0
         }
     ]
 }
