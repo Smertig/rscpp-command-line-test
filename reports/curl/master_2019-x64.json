@@ -14171,6 +14171,21 @@
             "commit_ref": "2dbe75bd7f3c36837aa06fd87a442bdf3fb7faef",
             "commit_message": "build: fix some `-Wsign-conversion`/`-Warith-conversion` warnings\n\n- enable `-Wsign-conversion` warnings, but also setting them to not\n  raise errors.\n- fix `-Warith-conversion` warnings seen in CI.\n  These are triggered by `-Wsign-converion` and causing errors unless\n  explicitly silenced. It makes more sense to fix them, there just a few\n  of them.\n- fix some `-Wsign-conversion` warnings.\n- hide `-Wsign-conversion` warnings with a `#pragma`.\n- add macro `CURL_WARN_SIGN_CONVERSION` to unhide them on a per-build\n  basis.\n- update a CI job to unhide them with the above macro:\n  https://github.com/curl/curl/actions/workflows/linux.yml -> OpenSSL -O3\n\nCloses #12492\n",
             "commit_timestamp": 1702989928.0
+        },
+        {
+            "tool_version": "233.0.20231204.3905",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1703041523.480104,
+            "elapsed_time": 168.1037139892578,
+            "x64": true,
+            "actual_files_count": 2457,
+            "expected_files_count": 2323,
+            "memory_traffic": 29733.39656829834,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "2dbe75bd7f3c36837aa06fd87a442bdf3fb7faef",
+            "commit_message": "build: fix some `-Wsign-conversion`/`-Warith-conversion` warnings\n\n- enable `-Wsign-conversion` warnings, but also setting them to not\n  raise errors.\n- fix `-Warith-conversion` warnings seen in CI.\n  These are triggered by `-Wsign-converion` and causing errors unless\n  explicitly silenced. It makes more sense to fix them, there just a few\n  of them.\n- fix some `-Wsign-conversion` warnings.\n- hide `-Wsign-conversion` warnings with a `#pragma`.\n- add macro `CURL_WARN_SIGN_CONVERSION` to unhide them on a per-build\n  basis.\n- update a CI job to unhide them with the above macro:\n  https://github.com/curl/curl/actions/workflows/linux.yml -> OpenSSL -O3\n\nCloses #12492\n",
+            "commit_timestamp": 1702989928.0
         }
     ]
 }
