@@ -11381,6 +11381,21 @@
             "commit_ref": "fae096cd4b7025f91473546ca6a243c86374dd6a",
             "commit_message": "gh-113336: Remove the 'version' directive from Argument Clinic (#113341)\n\nThe 'version' directive was introduced with gh-63929 in Nov 2013. It has\r\nnot been in use in the CPython code base, and the 'version' variable has\r\nnever been bumped.",
             "commit_timestamp": 1703160641.0
+        },
+        {
+            "tool_version": "233.0.20231218.102231",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1703171310.82921,
+            "elapsed_time": 1001.7063729763031,
+            "x64": true,
+            "actual_files_count": 989,
+            "expected_files_count": null,
+            "memory_traffic": 257642.46421813965,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "526d0a9b6eafb95c425838715a4961d97dc600da",
+            "commit_message": "gh-110383: Improve accuracy of str.split() and str.rsplit() docstrings (#113355)\n\nClarify split direction in the docstring body,\r\ninstead of in the 'maxsplit' param docstring.",
+            "commit_timestamp": 1703168559.0
         }
     ]
 }
