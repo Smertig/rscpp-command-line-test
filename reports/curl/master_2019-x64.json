@@ -14216,6 +14216,21 @@
             "commit_ref": "95a882d26844745f1776fb6c7522b3df57dc9821",
             "commit_message": "build: fix `-Wconversion`/`-Wsign-conversion` warnings\n\nFix remaining warnings in examples and tests which are not suppressed\nby the pragma in `lib/curl_setup.h`.\n\nSilence a toolchain issue causing warnings in `FD_SET()` calls with\nolder Cygwin/MSYS2 builds. Likely fixed on 2020-08-03 by:\nhttps://cygwin.com/git/?p=newlib-cygwin.git;a=commitdiff;h=5717262b8ecfed0f7fab63e2c09c78991e36f9dd\n\nFollow-up to 2dbe75bd7f3c36837aa06fd87a442bdf3fb7faef #12492\n\nCloses #12557\n",
             "commit_timestamp": 1703086725.0
+        },
+        {
+            "tool_version": "233.0.20231218.102231",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1703161703.981271,
+            "elapsed_time": 161.53722596168518,
+            "x64": true,
+            "actual_files_count": 2457,
+            "expected_files_count": 2323,
+            "memory_traffic": 29817.90965270996,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "000c7381402d03c8de8605d56f55c69bc6dc34ca",
+            "commit_message": "RELEASE-NOTES: synced\n\nBumped version to 8.6.0 because of changes\n",
+            "commit_timestamp": 1703154782.0
         }
     ]
 }

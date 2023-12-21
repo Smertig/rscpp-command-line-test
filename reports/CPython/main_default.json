@@ -11366,6 +11366,21 @@
             "commit_ref": "a2dd0e7038ad65a2464541f91604524d871d98a7",
             "commit_message": "gh-111375: Use `NULL` rather than `None` in the exception stack to indicate that an exception was handled (#113302)\n\n",
             "commit_timestamp": 1703123201.0
+        },
+        {
+            "tool_version": "233.0.20231218.102231",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1703161867.398737,
+            "elapsed_time": 980.299957036972,
+            "x64": true,
+            "actual_files_count": 989,
+            "expected_files_count": null,
+            "memory_traffic": 257525.1435623169,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "fae096cd4b7025f91473546ca6a243c86374dd6a",
+            "commit_message": "gh-113336: Remove the 'version' directive from Argument Clinic (#113341)\n\nThe 'version' directive was introduced with gh-63929 in Nov 2013. It has\r\nnot been in use in the CPython code base, and the 'version' variable has\r\nnever been bumped.",
+            "commit_timestamp": 1703160641.0
         }
     ]
 }
