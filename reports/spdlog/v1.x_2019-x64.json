@@ -15593,6 +15593,21 @@
             "commit_ref": "ac55e60488032b9acde8940a5de099541c4515da",
             "commit_message": "Update README.md",
             "commit_timestamp": 1699112171.0
+        },
+        {
+            "tool_version": "233.0.20231218.102231",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1703257611.004132,
+            "elapsed_time": 66.21580815315247,
+            "x64": true,
+            "actual_files_count": 107,
+            "expected_files_count": 107,
+            "memory_traffic": 3466.452278137207,
+            "repo_url": "https://github.com/gabime/spdlog.git",
+            "commit_ref": "ba508057b18ebddb1e7a73b60f9b20e2652f3c92",
+            "commit_message": "Update example.cpp to fix the vector issue in bin_example (#2963)\n\nwith std::vector<char> buf(80),  80 elements are put in the vector, which is not the expected behavior.",
+            "commit_timestamp": 1703248746.0
         }
     ]
 }

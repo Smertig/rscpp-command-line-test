@@ -14056,6 +14056,21 @@
             "commit_ref": "c4308d1e49c27849f5f7c960cb909d33684b032e",
             "commit_message": "[CTFMON][MSCTFIME][SDK] Improve cicGetOSInfo\n\nand s/OSINFO_/CIC_OSINFO/.\nAdapt ctfmon and msctfime to these changes.\nCORE-19360\n",
             "commit_timestamp": 1703213526.0
+        },
+        {
+            "tool_version": "233.0.20231218.102231",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1703257579.467515,
+            "elapsed_time": 120.8891613483429,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 75858.72162628174,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "19f3d6bd8d736ad15e78923be339261098d2484e",
+            "commit_message": "[MSCTFIME] Delay-import msctf, oleaut32, and imm32 (#6220)\n\nReduce DLL initialization cost.\r\n- Delay-import msctf.dll, oleaut32.dll, and imm32.dll.\r\n- Unlink comctl32.dll.\r\nCORE-19360",
+            "commit_timestamp": 1703244085.0
         }
     ]
 }
