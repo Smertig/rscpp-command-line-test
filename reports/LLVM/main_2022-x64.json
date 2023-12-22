@@ -15347,6 +15347,23 @@
             "commit_ref": "8eccf2b872cc1a88a1e5d4e5af0bfdabfb66c7bb",
             "commit_message": "[X86] Set Uses = [EFLAGS] for ADCX/ADOX\n\nAccording to Intel SDE, ADCX reads CF and ADOX reads OF. `Uses` was\nset to empty by accident, the bug was not exposed b/c compiler never\nemits these instructions.\n",
             "commit_timestamp": 1703170860.0
+        },
+        {
+            "tool_version": "233.0.20231218.102231",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1703214920.092575,
+            "elapsed_time": 1475.2792346477509,
+            "x64": true,
+            "actual_files_count": 1726,
+            "expected_files_count": 1661,
+            "memory_traffic": 644055.1372528076,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "26ddf4eee2a009147faa3000c55d7822c2087dce",
+            "commit_message": "[ELF] Change .debug_names tombstone value to UINT32_MAX/UINT64_MAX (#74686)\n\n`clang -g -gpubnames -fdebug-types-section` now emits .debug_names\r\nsection with references to local type unit entries defined in COMDAT\r\n.debug_info sections.\r\n\r\n```\r\n.section        .debug_info,\"G\",@progbits,5657452045627120676,comdat\r\n.Ltu_begin0:\r\n...\r\n\r\n.section        .debug_names,\"\",@progbits\r\n...\r\n// DWARF32\r\n.long   .Ltu_begin0                     # Type unit 0\r\n// DWARF64\r\n// .long   .Ltu_begin0                     # Type unit 0\r\n```\r\n\r\nWhen `.Ltu_begin0` is relative to a non-prevailing .debug_info section,\r\nthe relocation resolves to 0, which is a valid offset within the\r\n.debug_info section.\r\n\r\n```\r\ncat > a.cc <<e\r\nstruct A { int x; };\r\ninline A foo() { return {1}; }\r\nint main() { foo(); }\r\ne\r\ncat > b.cc <<e\r\nstruct A { int x; };\r\ninline A foo() { return {1}; }\r\nvoid use() { foo(); }\r\ne\r\nclang++ -g -gpubnames -fdebug-types-section -fuse-ld=lld a.cc b.cc -o old\r\n```\r\n```\r\n% llvm-dwarfdump old\r\n...\r\n  Local Type Unit offsets [\r\n    LocalTU[0]: 0x00000000\r\n  ]\r\n...\r\n  Local Type Unit offsets [\r\n    LocalTU[0]: 0x00000000  // indistinguishable from a valid offset within .debug_info\r\n  ]\r\n```\r\n\r\nhttps://dwarfstd.org/issues/231013.1.html proposes that we use a\r\ntombstone value instead to inform consumers. This patch implements the\r\nidea. The second LocalTU entry will now use 0xffffffff.\r\n\r\nhttps://reviews.llvm.org/D84825 has a TODO that we should switch the\r\ntombstone value for most `.debug_*` sections to UINT64_MAX. We have\r\npostponed the change for more than three years for consumers to migrate.\r\nAt some point we shall make the change, so that .debug_names is no long\r\ndifferent from other debug section that is not .debug_loc/.debug_ranges.\r\n\r\nCo-authored-by: Alexander Yermolovich <ayermolo@meta.com>",
+            "commit_timestamp": 1703213951.0
         }
     ]
 }

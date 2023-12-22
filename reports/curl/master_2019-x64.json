@@ -14246,6 +14246,21 @@
             "commit_ref": "98794c56af0287879177a212bb414e2f9214ded9",
             "commit_message": "ngtcp2: put h3 at the front of alpn\n\nCloses #12576\n",
             "commit_timestamp": 1703168920.0
+        },
+        {
+            "tool_version": "233.0.20231218.102231",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1703214323.142586,
+            "elapsed_time": 153.83555674552917,
+            "x64": true,
+            "actual_files_count": 2457,
+            "expected_files_count": 2323,
+            "memory_traffic": 29846.57917022705,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "2d4d0c1fd32f5cc3f946c407c8eccd5477b287df",
+            "commit_message": "appveyor: replace PowerShell with bash + parallel autotools\n\nPowerShell works (after a steep development curve), but one property of\nit stuck and kept causing unresolvable usability issues: With\n`$ErrorActionPreference=Stop`, it does abort on failures, but shows only\nthe first line of the error message. In `Continue` mode, it shows the\nfull error message, but doesn't stop on all errors. Another issue is\nPowerShell considering any stderr output as if the command failed (this\nhas been improved in 7.2 (2021-Nov), but fixed versions aren't running\nin CI and will not be for a long time in all test images.)\n\nThus, we're going with bash.\n\nAlso:\n- use `-j2` with autotools tests, making them finish 5-15 minutes per\n  job faster.\n- omit `POSIX_PATH_PREFIX`.\n- use `WINDIR`.\n- prefer forward slashes.\n\nFollow-up to: 75078a415d9c769419aed4153d3d525a8eba95af #11999\nRef: #12444\n\nFixes #12560\nCloses #12572\n",
+            "commit_timestamp": 1703199247.0
         }
     ]
 }

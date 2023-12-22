@@ -14041,6 +14041,21 @@
             "commit_ref": "34068456a53047ab3bd97b8851a5d35a445a31d0",
             "commit_message": "[COMCTL32][USER32] EDIT control: Check bCaptureState on WM_CHAR (#6206)\n\nBased on KRosUser's edit_v2.patch.\r\nEdit control should stop processing\r\ncharacters when left mouse button\r\nis down.\r\nIf es->bCaptureState is set, then\r\nignore WM_CHAR message.\r\nCORE-10259",
             "commit_timestamp": 1703157884.0
+        },
+        {
+            "tool_version": "233.0.20231218.102231",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1703214330.960176,
+            "elapsed_time": 111.5201723575592,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 75960.74747467041,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "c4308d1e49c27849f5f7c960cb909d33684b032e",
+            "commit_message": "[CTFMON][MSCTFIME][SDK] Improve cicGetOSInfo\n\nand s/OSINFO_/CIC_OSINFO/.\nAdapt ctfmon and msctfime to these changes.\nCORE-19360\n",
+            "commit_timestamp": 1703213526.0
         }
     ]
 }
