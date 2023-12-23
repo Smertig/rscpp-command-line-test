@@ -11426,6 +11426,21 @@
             "commit_ref": "45e09f921be55e23bed19b5db4c95ce7bd7aad6b",
             "commit_message": "GH-112215: Increase C recursion limit for non debug builds (GH-113397)\n\n",
             "commit_timestamp": 1703255125.0
+        },
+        {
+            "tool_version": "233.0.20231218.102231",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1703300919.82106,
+            "elapsed_time": 1013.2854559421539,
+            "x64": true,
+            "actual_files_count": 989,
+            "expected_files_count": null,
+            "memory_traffic": 257499.44888305664,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "c3f92f6a7513340dfe2d82bfcd38eb77453e935d",
+            "commit_message": "gh-113317: Clean up Argument Clinic global namespace (#113414)\n\nSplit up clinic.py by establishing libclinic as a support package for\r\nArgument Clinic. Get rid of clinic.py globals by either making them\r\nclass members, or by putting them into libclinic.\r\n\r\n- Move INCLUDE_COMMENT_COLUMN to BlockPrinter\r\n- Move NO_VARARG to CLanguage\r\n- Move formatting helpers to libclinic\r\n- Move some constants to libclinic (and annotate them as Final)",
+            "commit_timestamp": 1703291859.0
         }
     ]
 }

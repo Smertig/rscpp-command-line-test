@@ -15381,6 +15381,23 @@
             "commit_ref": "5cb7534a7d17e65bdfa676a4e56698e2a05b89b9",
             "commit_message": "[tsan] Only intercept pthread_mutex_clocklock on Linux (#76220)\n\n`tsan_interceptors_posix.cpp` doesn't compile on FreeBSD 14.0/amd64:\r\n```\r\nIn file included from /vol/llvm/src/llvm-project/local-freebsd/compiler-rt/lib/tsan/rtl/tsan_interceptors_posix.cpp:25:\r\n/vol/llvm/src/llvm-project/local-freebsd/compiler-rt/lib/tsan/rtl/tsan_interceptors_posix.cpp: In function \u2018void __tsan::InitializeInterceptors()\u2019:\r\n/vol/llvm/src/llvm-project/local-freebsd/compiler-rt/lib/tsan/rtl/../../interception/interception.h:243:25: error: \u2018real_pthread_mutex_clocklock\u2019 is not a member of \u2018__interception\u2019; did you mean \u2018real_pthread_mutex_unlock\u2019?\r\n```\r\nFixed by wrapping the `TSAN_INTERCEPT` invocation with `SANITIZER_LINUX`\r\nas is already done for the interceptor definition.\r\n\r\nTested on `amd64-pc-freebsd14.0`.",
             "commit_timestamp": 1703257083.0
+        },
+        {
+            "tool_version": "233.0.20231218.102231",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1703301342.557486,
+            "elapsed_time": 1542.7005405426025,
+            "x64": true,
+            "actual_files_count": 1726,
+            "expected_files_count": 1661,
+            "memory_traffic": 644078.7315292358,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "bbe1b06fbb7127d613cb4958e06c737967878388",
+            "commit_message": "[NFC][CLANG] Fix static analyzer bugs about unnecessary object copies with auto keyword (#75082)\n\nReported by Static Analyzer Tool:\r\n\r\nIn \u200bEmitAssemblyHelper::\u200bRunOptimizationPipeline(): Using the auto\r\nkeyword without an & causes the copy of an object of type function.\r\n\r\n /// List of pass builder callbacks (\"CodeGenOptions.h\").\r\nstd::vector<std::function<void(llvm::PassBuilder &)>>\r\nPassBuilderCallbacks;",
+            "commit_timestamp": 1703299162.0
         }
     ]
 }

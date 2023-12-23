@@ -14071,6 +14071,21 @@
             "commit_ref": "19f3d6bd8d736ad15e78923be339261098d2484e",
             "commit_message": "[MSCTFIME] Delay-import msctf, oleaut32, and imm32 (#6220)\n\nReduce DLL initialization cost.\r\n- Delay-import msctf.dll, oleaut32.dll, and imm32.dll.\r\n- Unlink comctl32.dll.\r\nCORE-19360",
             "commit_timestamp": 1703244085.0
+        },
+        {
+            "tool_version": "233.0.20231218.102231",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1703300790.096706,
+            "elapsed_time": 127.45427799224854,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 75920.12824249268,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "f2d34ab4c9532af5b22b0c56dc5eb882f1ae234e",
+            "commit_message": "[SDK] Add cicRealCoCreateInstance into <cicero/cicbase.h>\n\nIt looks like Cicero wants to hook CoCreateInstance.\nCORE-19363\n",
+            "commit_timestamp": 1703296960.0
         }
     ]
 }
