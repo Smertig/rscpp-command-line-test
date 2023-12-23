@@ -15398,6 +15398,23 @@
             "commit_ref": "bbe1b06fbb7127d613cb4958e06c737967878388",
             "commit_message": "[NFC][CLANG] Fix static analyzer bugs about unnecessary object copies with auto keyword (#75082)\n\nReported by Static Analyzer Tool:\r\n\r\nIn \u200bEmitAssemblyHelper::\u200bRunOptimizationPipeline(): Using the auto\r\nkeyword without an & causes the copy of an object of type function.\r\n\r\n /// List of pass builder callbacks (\"CodeGenOptions.h\").\r\nstd::vector<std::function<void(llvm::PassBuilder &)>>\r\nPassBuilderCallbacks;",
             "commit_timestamp": 1703299162.0
+        },
+        {
+            "tool_version": "233.0.20231218.102231",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1703344479.648102,
+            "elapsed_time": 1455.4119083881378,
+            "x64": true,
+            "actual_files_count": 1726,
+            "expected_files_count": 1661,
+            "memory_traffic": 644104.8366012573,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "fbcf8a8cbb2461730bfd0603b396842925a88ef2",
+            "commit_message": "[ConstraintElim] Add (UGE, var, 0) to unsigned system for new vars. (#76262)\n\nThe constraint system used for ConstraintElimination assumes all\r\nvaribles to be signed. This can cause missed optimization in the\r\nunsigned system, due to missing the information that all variables are\r\nunsigned (non-negative).\r\n\r\nVariables can be marked as non-negative by adding Var >= 0 for all\r\nvariables. This is done for arguments on ConstraintInfo construction and\r\nafter adding new variables. This handles cases like the ones outlined in\r\nhttps://discourse.llvm.org/t/why-does-llvm-not-perform-range-analysis-on-integer-values/74341\r\n\r\nThe original example shared above is now handled without this change,\r\nbut adding another variable means that instcombine won't be able to\r\nsimplify examples like https://godbolt.org/z/hTnra7zdY\r\n\r\nAdding the extra variables comes with a slight compile-time increase\r\nhttps://llvm-compile-time-tracker.com/compare.php?from=7568b36a2bc1a1e496ec29246966ffdfc3a8b87f&to=641a47f0acce7755e340447386013a2e086f03d9&stat=instructions:u\r\n\r\nstage1-O3    stage1-ReleaseThinLTO    stage1-ReleaseLTO-g  stage1-O0-g\r\n +0.04%           +0.07%                   +0.05%           +0.02%\r\nstage2-O3    stage2-O0-g    stage2-clang\r\n  +0.05%         +0.05%        +0.05%\r\n\r\nhttps://github.com/llvm/llvm-project/pull/76262",
+            "commit_timestamp": 1703343228.0
         }
     ]
 }

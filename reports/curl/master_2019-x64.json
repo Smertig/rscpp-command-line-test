@@ -14291,6 +14291,21 @@
             "commit_ref": "e492c7c524263e47844ec9354102fcf200e686a8",
             "commit_message": "transfer: fix upload rate limiting, add test cases\n\n- add test cases for rate limiting uploads for all\n  http versions\n- fix transfer loop handling of limits. Signal a re-receive\n  attempt only on exhausting maxloops without an EAGAIN\n- fix `data->state.selectbits` forcing re-receive to also\n  set re-sending when transfer is doing this.\n\nReported-by: Karthikdasari0423 on github\nFixes #12559\nCloses #12586\n",
             "commit_timestamp": 1703260322.0
+        },
+        {
+            "tool_version": "233.0.20231218.102231",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1703343897.158821,
+            "elapsed_time": 169.37062549591064,
+            "x64": true,
+            "actual_files_count": 2457,
+            "expected_files_count": 2323,
+            "memory_traffic": 29721.26496887207,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "296cb805cfac11a09912b148b4f2d054af1e77d9",
+            "commit_message": "appveyor: tidy-ups\n\n- replace two remaining backslashes with forward slashes.\n- tidy up the way we form and pass `TFLAGS`.\n\nFollow-up to 2d4d0c1fd32f5cc3f946c407c8eccd5477b287df #12572\n\nCloses #12582\n",
+            "commit_timestamp": 1703302402.0
         }
     ]
 }
