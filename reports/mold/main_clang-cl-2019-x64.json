@@ -11856,6 +11856,21 @@
             "commit_ref": "e1e16bf85a47b1e85944ca7fdbae858fddfe5e2e",
             "commit_message": "Fix version script priority\n\nPreviously, if two or more VERSION clauses match to the same symbol,\nthe first one took precedence. This was incompatible with GNU ld, which\ngives the last one the highesth priority.\n\nThis change inverted the priority so that the last one will take\nprecedence other the others.\n\nFixes https://github.com/rui314/mold/issues/1158\n",
             "commit_timestamp": 1703323222.0
+        },
+        {
+            "tool_version": "233.0.20231218.102231",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1703387250.589122,
+            "elapsed_time": 149.13877153396606,
+            "x64": true,
+            "actual_files_count": 529,
+            "expected_files_count": null,
+            "memory_traffic": 17124.664924621582,
+            "repo_url": "https://github.com/rui314/mold",
+            "commit_ref": "e1e16bf85a47b1e85944ca7fdbae858fddfe5e2e",
+            "commit_message": "Fix version script priority\n\nPreviously, if two or more VERSION clauses match to the same symbol,\nthe first one took precedence. This was incompatible with GNU ld, which\ngives the last one the highesth priority.\n\nThis change inverted the priority so that the last one will take\nprecedence other the others.\n\nFixes https://github.com/rui314/mold/issues/1158\n",
+            "commit_timestamp": 1703323222.0
         }
     ]
 }
