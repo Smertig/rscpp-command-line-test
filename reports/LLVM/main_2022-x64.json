@@ -15432,6 +15432,23 @@
             "commit_ref": "6e20df1a3b0f7654b2821fe182c7ae9bd52672e6",
             "commit_message": "[X86][NFC] Set default OpPrefix to PS for XOP/VEX/EVEX instructions\n\nIt helps simplify the class definitions. Now, the only explicit usage of PS is\nto check prefix 0x66/0xf2/0xf3 can not be used a prefix, e.g. wbinvd.\n\nSee 82974e0114f02ffc07557e217d87f8dc4e100a26 for more details.\n",
             "commit_timestamp": 1703384440.0
+        },
+        {
+            "tool_version": "233.0.20231218.102231",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1703430895.255374,
+            "elapsed_time": 1522.3226521015167,
+            "x64": true,
+            "actual_files_count": 1728,
+            "expected_files_count": 1661,
+            "memory_traffic": 644362.2199554443,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "1e710cfc8091b901f53828318287c650332194a7",
+            "commit_message": "[DAG] Add TLI::isTruncateFree(SDValue, EVT) wrapper.\n\nSimilar to the existing isZExtFree(SDValue, EVT) wrapper, this will allow targets to override for specific cases (e.g. free truncation of an ext/extload node). But for now its just used to wrap the existing isTruncateFree(EVT, EVT) call.\n",
+            "commit_timestamp": 1703423950.0
         }
     ]
 }
