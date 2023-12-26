@@ -14366,6 +14366,21 @@
             "commit_ref": "9faeebca883b3d8a57ca291e4f1b80382e236b5a",
             "commit_message": "CURLOPT_POSTFIELDS.3: fix incorrect C string escape in example\n\n- Escape inner quotes with two backslashes.\n\nTwo backslashes escapes the backslash for the man page and will show as\na single backslash.\n\neg: \"{\\\\\"name\\\\\": \\\\\"daniel\\\\\"}\" shows as \"{\\\"name\\\": \\\"daniel\\\"}\".\n\nCloses https://github.com/curl/curl/pull/12588\n",
             "commit_timestamp": 1703361896.0
+        },
+        {
+            "tool_version": "233.0.20231218.102231",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1703559922.137082,
+            "elapsed_time": 165.58070611953735,
+            "x64": true,
+            "actual_files_count": 2457,
+            "expected_files_count": 2323,
+            "memory_traffic": 29731.419708251953,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "9faeebca883b3d8a57ca291e4f1b80382e236b5a",
+            "commit_message": "CURLOPT_POSTFIELDS.3: fix incorrect C string escape in example\n\n- Escape inner quotes with two backslashes.\n\nTwo backslashes escapes the backslash for the man page and will show as\na single backslash.\n\neg: \"{\\\\\"name\\\\\": \\\\\"daniel\\\\\"}\" shows as \"{\\\"name\\\": \\\"daniel\\\"}\".\n\nCloses https://github.com/curl/curl/pull/12588\n",
+            "commit_timestamp": 1703361896.0
         }
     ]
 }

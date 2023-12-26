@@ -15483,6 +15483,23 @@
             "commit_ref": "6452395561eaae59e38f1df84f5413dffdb9169f",
             "commit_message": "Revert \"[lld][test][LoongArch] Remove the test for R_LARCH_CALL36 range checking\"\n\nThis reverts commit 0fbc728dba97149e530cfb7f2ada0283c398a7ce.\n\nIn 88548df0fc08, both the .sec.foo and .tex sections used the same\nsection flags, hence sharing one segment, pushing the output file\nsize too large. This breaks on many buildbots.\n\nNow assign section .sec.foo different flags (\"awx\") from .text (\"ax\")\nso that both sections get their own segment.\n",
             "commit_timestamp": 1703515736.0
+        },
+        {
+            "tool_version": "233.0.20231218.102231",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1703560569.358838,
+            "elapsed_time": 1492.238646030426,
+            "x64": true,
+            "actual_files_count": 1728,
+            "expected_files_count": 1661,
+            "memory_traffic": 644069.5279922485,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "5c39b8d1a86cc0c92acd438d4799d19e67ae70db",
+            "commit_message": "[X86][MC] Support Enc/Dec for EGPR for promoted AMX-TILE instruction (#76210)\n\nR16-R31 was added into GPRs in\r\nhttps://github.com/llvm/llvm-project/pull/70958,\r\nThis patch supports the encoding/decoding for promoted AMX-TILE\r\ninstruction in EVEX space.\r\n\r\nRFC:\r\nhttps://discourse.llvm.org/t/rfc-design-for-apx-feature-egpr-and-ndd-support/73031/4",
+            "commit_timestamp": 1703558493.0
         }
     ]
 }
