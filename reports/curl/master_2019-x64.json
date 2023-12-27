@@ -14411,6 +14411,21 @@
             "commit_ref": "82cbdd8396d8b70173757d06ac833c1f7c8f8f47",
             "commit_message": "examples/sendrecv: fix comment line length\n\nCaught by checksrc.\n",
             "commit_timestamp": 1703579326.0
+        },
+        {
+            "tool_version": "233.0.20231218.102231",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1703672908.023871,
+            "elapsed_time": 168.38329482078552,
+            "x64": true,
+            "actual_files_count": 2457,
+            "expected_files_count": 2323,
+            "memory_traffic": 29722.12078857422,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "68f96fc9bfce90c264d4d95b91135f3ef945eea8",
+            "commit_message": "getinfo: CURLINFO_QUEUE_TIME_T\n\nReturns the time, in microseconds, during which this transfer was held\nin a waiting queue before it started \"for real\". A transfer might be put\nin a queue if after getting started, it cannot create a new connection\netc due to set conditions and limits imposed by the application.\n\nRef: #12293\nCloses #12368\n",
+            "commit_timestamp": 1703665728.0
         }
     ]
 }
