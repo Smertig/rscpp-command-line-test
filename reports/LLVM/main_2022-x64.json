@@ -15517,6 +15517,23 @@
             "commit_ref": "aca3727e97bced3e98f8e0719de95c93034a97d2",
             "commit_message": "[clang-tidy] Treat fields in anonymous records as names in enclosing scope when checking name styles (#75701)\n\nCurrently, fields in anonymous records are treated as normal record\r\nmembers during naming style check. This can be undesirable in certain\r\nsituations since these fields are used just like names in their\r\nenclosing scopes:\r\n\r\n```c++\r\nclass Foo {\r\n  union {\r\n    int iv_;    // warning: invalid case style for public member 'iv_'\r\n    float fv_;  // warning: invalid case style for public member 'fv_'\r\n  };\r\n};\r\n```\r\n\r\n`iv_` and `fv_` are used in the code like private members of `Foo` but\r\ntheir naming style comes from rules for public members.\r\n\r\nThis PR changes this behavior. It adds a new option\r\n`CheckAnonFieldInParent` to `readability-identifier-naming`. When set to\r\n`true`, fields in anonymous records will be treated as names in their\r\nenclosing scopes when checking name styles. Specifically:\r\n\r\n- If the anonymous record is defined within the file scope or in a\r\nnamespace scope, treat its fields as global variables when checking name\r\nstyles;\r\n- If the anonymous record is defined within a function, treat its fields\r\nas local variables when checking name styles;\r\n- If the anonymous record is defined within a non-anonymous record,\r\ntreat its fields as non-static record members when checking name styles.",
             "commit_timestamp": 1703602181.0
+        },
+        {
+            "tool_version": "233.0.20231218.102231",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1703646887.921399,
+            "elapsed_time": 1478.3217241764069,
+            "x64": true,
+            "actual_files_count": 1728,
+            "expected_files_count": 1661,
+            "memory_traffic": 644153.6548995972,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "4a601cf75c6c7033cdd5557d54a74bacb372679b",
+            "commit_message": "[RISCV] Fix formatting. NFC\n",
+            "commit_timestamp": 1703644566.0
         }
     ]
 }

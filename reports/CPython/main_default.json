@@ -11546,6 +11546,21 @@
             "commit_ref": "36adc79041f4d2764e1daf7db5bb478923e89a1f",
             "commit_message": "Docs: make htmllive: open browser when ready (#113288)\n\n",
             "commit_timestamp": 1703592133.0
+        },
+        {
+            "tool_version": "233.0.20231218.102231",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1703646522.80942,
+            "elapsed_time": 1006.841227054596,
+            "x64": true,
+            "actual_files_count": 989,
+            "expected_files_count": null,
+            "memory_traffic": 257701.2268295288,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "af2b8f6845e31dd6ab3bb0bac41b19a0e023fd61",
+            "commit_message": "gh-113332: Simplify calls to SSL_(CTX_)set_verify in _ssl.c (#113333)\n\n_ssl.c currently tries to preserve the verification callback, but at no\r\npoint does it ever set one. Just pass in NULL.",
+            "commit_timestamp": 1703626541.0
         }
     ]
 }

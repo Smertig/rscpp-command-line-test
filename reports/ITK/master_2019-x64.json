@@ -14471,6 +14471,21 @@
             "commit_ref": "35ca213979424c4ac040e38addb5fd639331f9fb",
             "commit_message": "Merge pull request #4374 from jhlegarreta/RenameFDASWGuidelinesDocFile\n\nDOC: Rename the FDA SW development guidelines doc file",
             "commit_timestamp": 1703365505.0
+        },
+        {
+            "tool_version": "233.0.20231218.102231",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1703646644.681076,
+            "elapsed_time": 267.3167014122009,
+            "x64": true,
+            "actual_files_count": 100,
+            "expected_files_count": null,
+            "memory_traffic": 31889.829612731934,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "72aa9a602bd92b665acc915d8df4bd00a27c98f0",
+            "commit_message": "ENH: `ImageRegion` support C++17 structured binding\n\nAdded `get()` member functions and specializations of `std::tuple_size` and\n`std::tuple_element` for ImageRegion, in order to support structured binding,\nfor example:\n\n    auto [index, size] = image.GetRequestedRegion();\n\nSuppressed the undeserved Clang-Tidy \"cert-dcl58-cpp\" warnings that appeared\nwhen specializing those `std` templates.\n",
+            "commit_timestamp": 1703635033.0
         }
     ]
 }
