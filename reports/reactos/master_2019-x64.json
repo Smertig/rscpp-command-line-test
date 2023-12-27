@@ -14221,6 +14221,21 @@
             "commit_ref": "d528cc401345fb5a2f39c9aeaf18c8d4e57fbd4b",
             "commit_message": "[MSCTFIME][SDK] Implement CicBridge::ActivateIMMX etc. (#6237)\n\nSupporting TIPs...\r\nJIRA issue: CORE-19360\r\n- Implement CicBridge::ActivateIMMX and\r\n  CicBridge::DeactivateIMMX functions.",
             "commit_timestamp": 1703661587.0
+        },
+        {
+            "tool_version": "233.0.20231218.102231",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1703689569.819375,
+            "elapsed_time": 113.85001611709595,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 76088.3330154419,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "73a1c9d4185cb0f183c2df787562d082888ed763",
+            "commit_message": "[MSCTFIME][SDK] Implement CtfImeSelectEx (#6238)\n\nSupporting TIPs...\r\nJIRA issue: CORE-19360\r\n- Add GetCharsetFromLangId and\r\n  InternalSelectEx helper functions.\r\n- Add CicBridge::GetInputContext\r\n  and CicBridge::SelectEx.\r\n- Implement CtfImeSelectEx function.\r\n- CTFIMECONTEXT structure moved\r\n  into <cicero/cicimc.h>.",
+            "commit_timestamp": 1703676542.0
         }
     ]
 }
