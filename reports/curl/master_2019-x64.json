@@ -14456,6 +14456,21 @@
             "commit_ref": "e251e858b941e29bb95a6c0d26bb45981a872585",
             "commit_message": "vtls: fix missing multissl version info\n\n- Fix erroneous buffer copy logic from ff74cef5.\n\nPrior to this change the MultiSSL version info returned to the user\nwas empty.\n\nCloses https://github.com/curl/curl/pull/12599\n",
             "commit_timestamp": 1703717367.0
+        },
+        {
+            "tool_version": "233.0.20231218.102231",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1703775915.864358,
+            "elapsed_time": 159.6922812461853,
+            "x64": true,
+            "actual_files_count": 2457,
+            "expected_files_count": 2323,
+            "memory_traffic": 29728.030853271484,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "26f002e02ef1142a432c8dc087bd27de71ce38bf",
+            "commit_message": "system_win32: fix a function pointer assignment warning\n\n- Use CURLX_FUNCTION_CAST to suppress a function pointer assignment\n  warning.\n\na6bbc87f added lookups of some Windows API functions and then cast them\nlike `*(FARPROC*)&Curl_funcname = address`. Some versions of gcc warn\nabout that as breaking strict-aliasing rules so this PR changes those\nassignments to use CURLX_FUNCTION_CAST.\n\nBug: https://github.com/curl/curl/pull/12581#issuecomment-1869804317\nReported-by: Marcel Raad\n\nCloses https://github.com/curl/curl/pull/12602\n",
+            "commit_timestamp": 1703752724.0
         }
     ]
 }
