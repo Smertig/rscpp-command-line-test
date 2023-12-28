@@ -14236,6 +14236,21 @@
             "commit_ref": "73a1c9d4185cb0f183c2df787562d082888ed763",
             "commit_message": "[MSCTFIME][SDK] Implement CtfImeSelectEx (#6238)\n\nSupporting TIPs...\r\nJIRA issue: CORE-19360\r\n- Add GetCharsetFromLangId and\r\n  InternalSelectEx helper functions.\r\n- Add CicBridge::GetInputContext\r\n  and CicBridge::SelectEx.\r\n- Implement CtfImeSelectEx function.\r\n- CTFIMECONTEXT structure moved\r\n  into <cicero/cicimc.h>.",
             "commit_timestamp": 1703676542.0
+        },
+        {
+            "tool_version": "233.0.20231218.102231",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1703732716.661351,
+            "elapsed_time": 107.37691569328308,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 75921.49797821045,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "6c93f3ca6b95fa5e1806fc29295d3bc8ada979f9",
+            "commit_message": "[MSI_WINETEST][BASEADDRESS] Rename the 'custom' and 'selfreg' build targets.\n\nThey are renamed to 'msi_custom' and 'msi_selfreg', respectively.\nThis is to avoid any future build target name collisions with other\ntests that would also use similarly-named targets. (For example, a\nfuture setupapi wine-synced commit.)\n",
+            "commit_timestamp": 1703710232.0
         }
     ]
 }

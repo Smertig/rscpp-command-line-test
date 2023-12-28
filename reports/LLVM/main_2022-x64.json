@@ -15568,6 +15568,23 @@
             "commit_ref": "38c9390b59c4d2b9181614d6a909887497d3692f",
             "commit_message": "[AArch64] Add an extra test for #75822. NFC\n",
             "commit_timestamp": 1703673646.0
+        },
+        {
+            "tool_version": "233.0.20231218.102231",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1703733322.494874,
+            "elapsed_time": 1505.525770664215,
+            "x64": true,
+            "actual_files_count": 1728,
+            "expected_files_count": 1661,
+            "memory_traffic": 644092.767326355,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "c2c840bd92cfac155f6205ff7505b109b301d389",
+            "commit_message": "[Modules] Don't prevent @import from ObjectiveC\n\nPreviously we forbiden the users to import named modules from clang header\nmodules. However, due to an oversight, the @import form of Objective C\ngot involved. This is not want and we fix that in this patch.\n",
+            "commit_timestamp": 1703731547.0
         }
     ]
 }

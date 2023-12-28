@@ -14441,6 +14441,21 @@
             "commit_ref": "fa6e123929de94064f1b1cb135f30b0a945ba399",
             "commit_message": "openldap: fix an LDAP crash\n\nReported-by: Ozan Cansel\nFixes #12593\nCloses #12600\n",
             "commit_timestamp": 1703684552.0
+        },
+        {
+            "tool_version": "233.0.20231218.102231",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1703732756.999562,
+            "elapsed_time": 162.46413493156433,
+            "x64": true,
+            "actual_files_count": 2457,
+            "expected_files_count": 2323,
+            "memory_traffic": 29745.024589538574,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "e251e858b941e29bb95a6c0d26bb45981a872585",
+            "commit_message": "vtls: fix missing multissl version info\n\n- Fix erroneous buffer copy logic from ff74cef5.\n\nPrior to this change the MultiSSL version info returned to the user\nwas empty.\n\nCloses https://github.com/curl/curl/pull/12599\n",
+            "commit_timestamp": 1703717367.0
         }
     ]
 }
