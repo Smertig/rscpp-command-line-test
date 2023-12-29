@@ -11621,6 +11621,21 @@
             "commit_ref": "f108468970bf4e70910862476900f924fb701399",
             "commit_message": "bpo-11102: Make configure enable major(), makedev(), and minor() on HP-UX (GH-19856)\n\nAlways include <sys/types.h> before <sys/sysmacros.h>.\r\n\r\nCo-authored-by: Serhiy Storchaka <storchaka@gmail.com>",
             "commit_timestamp": 1703760464.0
+        },
+        {
+            "tool_version": "233.0.20231218.102231",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1703819331.137836,
+            "elapsed_time": 1108.2773532867432,
+            "x64": true,
+            "actual_files_count": 989,
+            "expected_files_count": null,
+            "memory_traffic": 257649.81130981445,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "6ca0e6754eedf4c9cf48794fa6c27281668b8d7c",
+            "commit_message": "GH-113528: Remove a couple of expensive pathlib ABC tests (#113534)\n\nRun expensive tests for walking and globbing from `test_pathlib` but not\r\n`test_pathlib_abc`. The ABCs are not as tightly optimised as the classes\r\nin top-level `pathlib`, and so these tests are taking rather a long time on\r\nsome buildbots. Coverage of the main `pathlib` classes should suffice.",
+            "commit_timestamp": 1703803469.0
         }
     ]
 }

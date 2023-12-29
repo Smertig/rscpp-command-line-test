@@ -15602,6 +15602,23 @@
             "commit_ref": "d488adb7c2928551d801efd8d4c1bcb2f07e2651",
             "commit_message": "[analyzer][docs] Update the release notes for llvm-18 (#76446)\n\nThis PR prepares the release notes of the Clang Static Analyzer for the\r\nllvm-18 release branch, due in about a week.\r\nSee the regular [release schedule](https://llvm.org/docs/HowToReleaseLLVM.html#annual-release-schedule).\r\n\r\nThis patch was written after examining the relevant Static Analyzer\r\ncommits since the last release.\r\nHave a look at the commits, and provide feedback if I missed anything\r\ninteresting.\r\nNote that the release notes is not meant to be an exhaustive list of the\r\nchanges, but rather a curated list of the relevant changes that might\r\ninterest our stakeholders, such as tool vendors based on top of CSA or\r\nusers with custom checkers.\r\n\r\nSee the relevant commits by using this command:\r\n```\r\ngit log --oneline llvmorg-18-init..llvm/main   clang/{lib/StaticAnalyzer,include/clang/StaticAnalyzer} | grep -v NFC | grep -v -i revert\r\n```",
             "commit_timestamp": 1703774939.0
+        },
+        {
+            "tool_version": "233.0.20231218.102231",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1703819724.751665,
+            "elapsed_time": 1513.8733863830566,
+            "x64": true,
+            "actual_files_count": 1728,
+            "expected_files_count": 1661,
+            "memory_traffic": 644275.5737915039,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "eaa32d20a2612370371047140734e91f8f22dea1",
+            "commit_message": "[mlir] fix affine-loop-fusion crash (#76351)\n\nIf `user` not lies in `Region` `findAncestorOpInRegion` will return\r\n`nullptr`.\r\n\r\nFixes https://github.com/llvm/llvm-project/issues/76281.",
+            "commit_timestamp": 1703818311.0
         }
     ]
 }

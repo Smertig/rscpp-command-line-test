@@ -14471,6 +14471,21 @@
             "commit_ref": "26f002e02ef1142a432c8dc087bd27de71ce38bf",
             "commit_message": "system_win32: fix a function pointer assignment warning\n\n- Use CURLX_FUNCTION_CAST to suppress a function pointer assignment\n  warning.\n\na6bbc87f added lookups of some Windows API functions and then cast them\nlike `*(FARPROC*)&Curl_funcname = address`. Some versions of gcc warn\nabout that as breaking strict-aliasing rules so this PR changes those\nassignments to use CURLX_FUNCTION_CAST.\n\nBug: https://github.com/curl/curl/pull/12581#issuecomment-1869804317\nReported-by: Marcel Raad\n\nCloses https://github.com/curl/curl/pull/12602\n",
             "commit_timestamp": 1703752724.0
+        },
+        {
+            "tool_version": "233.0.20231218.102231",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1703819145.090452,
+            "elapsed_time": 163.65021753311157,
+            "x64": true,
+            "actual_files_count": 2457,
+            "expected_files_count": 2323,
+            "memory_traffic": 29794.8510055542,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "69b6953681d3e3172e27ef59c541d6b705ad6f9b",
+            "commit_message": "CURLOPT_AUTOREFERER.3: mention CURLINFO_REFERER\n",
+            "commit_timestamp": 1703806803.0
         }
     ]
 }
