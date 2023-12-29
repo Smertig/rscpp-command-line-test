@@ -11636,6 +11636,21 @@
             "commit_ref": "6ca0e6754eedf4c9cf48794fa6c27281668b8d7c",
             "commit_message": "GH-113528: Remove a couple of expensive pathlib ABC tests (#113534)\n\nRun expensive tests for walking and globbing from `test_pathlib` but not\r\n`test_pathlib_abc`. The ABCs are not as tightly optimised as the classes\r\nin top-level `pathlib`, and so these tests are taking rather a long time on\r\nsome buildbots. Coverage of the main `pathlib` classes should suffice.",
             "commit_timestamp": 1703803469.0
+        },
+        {
+            "tool_version": "233.0.20231218.102231",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1703862512.898737,
+            "elapsed_time": 1163.4829206466675,
+            "x64": true,
+            "actual_files_count": 989,
+            "expected_files_count": null,
+            "memory_traffic": 257764.0336074829,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "cf34b7704be4c97d0479c04df0d9cd8fe210e5f4",
+            "commit_message": "gh-103092: Make ``pyexpat`` module importable in sub-interpreters (#113555)\n\n",
+            "commit_timestamp": 1703855626.0
         }
     ]
 }
