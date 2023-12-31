@@ -14341,6 +14341,21 @@
             "commit_ref": "10bb50b45673f5e7d9318cf40eda4cef5b9f2fbf",
             "commit_message": "[HAL] Fix SMP initialization\n\n- Don't use CONFIG_SMP, this isn't handled in (most of) hal\n- Add a dummy HalpSetupProcessorsTable for UP\n- Call HalpRegisterKdSupportFunctions only for processor 0\n",
             "commit_timestamp": 1703933598.0
+        },
+        {
+            "tool_version": "233.0.20231218.102231",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1704035108.802418,
+            "elapsed_time": 108.18996715545654,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 76006.17115783691,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "f5346cbc1b0c08559b77ded0ef76a27a484c20fa",
+            "commit_message": "[ADVAPI32][IDL][SERVICES] Implement I_ScValidatePnPService\n\nThis is actually a Vista+ function, but we need it enable umpnpmgr.dll to notify services of device events. Up until WinXP it was possible to make direct calls to the service manager by umpnpmgr.dll because umpnpmgr.dll was loaded into the service manager process. From Vista onwards umpnpmgr.dll is run as a separate service host process. And since ReactOS always ran umpnpmgr.dll as a separate process, we have to use the Vista RPC functions to notify services.\n",
+            "commit_timestamp": 1704033199.0
         }
     ]
 }
