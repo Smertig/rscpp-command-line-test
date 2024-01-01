@@ -15853,6 +15853,21 @@
             "commit_ref": "976fea05a36585958d067a26092b48288a2af977",
             "commit_message": "Fix Clazy warnings (#4988)\n\n* stl.h: Use C++11 range-loops with const reference\r\n\r\nThis saves copy-ctor and dtor for non-trivial types by value\r\nFound by clazy (range-loop-reference)\r\n\r\n* test_smart_ptr.cpp cleanup\r\n\r\nIntroduce `pointer_set<T>`\r\n\r\nhttps://github.com/boostorg/unordered/issues/139\r\n\r\n> Based on the standard, the first move should leave a in a \"valid but unspecified state\";\r\n\r\n---------\r\n\r\nCo-authored-by: Ralf W. Grosse-Kunstleve <rwgk@google.com>",
             "commit_timestamp": 1703915987.0
+        },
+        {
+            "tool_version": "233.0.20231218.102231",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1704078370.430973,
+            "elapsed_time": 127.74928998947144,
+            "x64": true,
+            "actual_files_count": 219,
+            "expected_files_count": 197,
+            "memory_traffic": 13621.709083557129,
+            "repo_url": "https://github.com/pybind/pybind11",
+            "commit_ref": "976fea05a36585958d067a26092b48288a2af977",
+            "commit_message": "Fix Clazy warnings (#4988)\n\n* stl.h: Use C++11 range-loops with const reference\r\n\r\nThis saves copy-ctor and dtor for non-trivial types by value\r\nFound by clazy (range-loop-reference)\r\n\r\n* test_smart_ptr.cpp cleanup\r\n\r\nIntroduce `pointer_set<T>`\r\n\r\nhttps://github.com/boostorg/unordered/issues/139\r\n\r\n> Based on the standard, the first move should leave a in a \"valid but unspecified state\";\r\n\r\n---------\r\n\r\nCo-authored-by: Ralf W. Grosse-Kunstleve <rwgk@google.com>",
+            "commit_timestamp": 1703915987.0
         }
     ]
 }
