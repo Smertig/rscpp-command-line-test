@@ -15738,6 +15738,23 @@
             "commit_ref": "4b2f1184fcb1df8f86a5d6d364656168bb77ec0a",
             "commit_message": "Skip tranformConstExprCastCall for naked function (#76496)\n\nFix this issue https://github.com/llvm/llvm-project/issues/72843 .\r\n\r\nFor naked function, assembly might be using an argument, or otherwise\r\nrely on the frame layout, so don't transformConstExprCastCall",
             "commit_timestamp": 1704120733.0
+        },
+        {
+            "tool_version": "233.0.20231218.102231",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1704165294.106755,
+            "elapsed_time": 1449.0457293987274,
+            "x64": true,
+            "actual_files_count": 1728,
+            "expected_files_count": 1661,
+            "memory_traffic": 644252.416923523,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "d8db2733c87ef2ee54c322cbee76711147a94948",
+            "commit_message": "[X86][MC] Support Enc/Dec for EGPR for promoted CRC32 (#76434)\n\nR16-R31 was added into GPRs in\r\nhttps://github.com/llvm/llvm-project/pull/70958,\r\nThis patch supports the encoding/decoding for promoted CRC32 instruction\r\nin EVEX space.\r\n\r\nRFC:\r\nhttps://discourse.llvm.org/t/rfc-design-for-apx-feature-egpr-and-ndd-support/73031/4",
+            "commit_timestamp": 1704163722.0
         }
     ]
 }
