@@ -15408,6 +15408,21 @@
             "commit_ref": "18d4a7651b8b74d7e0e5e177c54319530fdd6ddf",
             "commit_message": "Auto-generate files after cl/595018281\n",
             "commit_timestamp": 1704174107.0
+        },
+        {
+            "tool_version": "233.0.20231218.102231",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1704251182.841382,
+            "elapsed_time": 278.7785921096802,
+            "x64": true,
+            "actual_files_count": 856,
+            "expected_files_count": 818,
+            "memory_traffic": 31811.261154174805,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "670e0c2a0d0b64c994f743a73ee9b8926c47580d",
+            "commit_message": "Fix begin iterator for empty arrays.\n\nIf the underlying array for a repeated field is a nullptr (which is possible for const array access on a message field that hasn't been set) the begin iterator will currently contain garbage data, which can lead to an illegal access. This CL adds a nullptr check to `begin()`, similar to what already exists for `size()`.\n\nPiperOrigin-RevId: 595217999\n",
+            "commit_timestamp": 1704236590.0
         }
     ]
 }
