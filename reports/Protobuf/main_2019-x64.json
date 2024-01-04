@@ -15438,6 +15438,21 @@
             "commit_ref": "670e0c2a0d0b64c994f743a73ee9b8926c47580d",
             "commit_message": "Fix begin iterator for empty arrays.\n\nIf the underlying array for a repeated field is a nullptr (which is possible for const array access on a message field that hasn't been set) the begin iterator will currently contain garbage data, which can lead to an illegal access. This CL adds a nullptr check to `begin()`, similar to what already exists for `size()`.\n\nPiperOrigin-RevId: 595217999\n",
             "commit_timestamp": 1704236590.0
+        },
+        {
+            "tool_version": "233.0.20231218.102231",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1704337566.280084,
+            "elapsed_time": 255.87039732933044,
+            "x64": true,
+            "actual_files_count": 856,
+            "expected_files_count": 818,
+            "memory_traffic": 31900.22661590576,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "a7b0421c78412baa48704d727601a17ac0f451d1",
+            "commit_message": "Breaking change: make protobuf comply with the C++ layering check\n\nThis check enforces that each C++ build target has the correct dependencies for\nall headers that it includes. We have many targets that were not correct with\nrespect to this check, so I fixed them up.\n\nI also cleaned up the C++ targets related to the well-known types. I created a\ncc_proto_library() target for each one and removed the :wkt_cc_protos target,\nsince this was necessary to satisfy the layering check. I deleted the\n//src/google/protobuf:protobuf_nowkt target and deprecated :protobuf_nowkt,\nbecause the distinction between the :protobuf and :protobuf_nowkt targets was\nnot really correct. Neither one exposed the headers for the well-known types in\na way that was valid with respect to the layering check, and the idea of\nbundling all the well-known types together is not idiomatic in Bazel anyway.\nThis is a breaking change, because the //:protobuf target no longer bundles the\nwell-known types. From now on they should be accessed through the new\n//:*_cc_proto aliases in our top-level package.\n\nI renamed the :port_def target to :port, which simplifies things a bit by\nmatching our internal name.\n\nThe original motivation for this change was that to move utf8_range onto our CI\ninfrastructure, we needed to make its dependency rules_fuzzing compatible with\nBazel 6. The rules_fuzzing project builds with the layering check, and I found\nthat the process of upgrading it to Bazel 6 made it take a dependency on\nprotobuf, which caused it to break due to layering violations. I was able to\nwork around this, but it would still be nice to comply with the layering check\nso that we don't have to worry about this kind of thing in the future.\n\nPiperOrigin-RevId: 595516736\n",
+            "commit_timestamp": 1704324005.0
         }
     ]
 }
