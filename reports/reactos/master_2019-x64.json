@@ -14461,6 +14461,21 @@
             "commit_ref": "35f83286c5e5fad1e307ac51c05dca5507dc594c",
             "commit_message": "[MSCTFIME][SDK] Implement CicCaret class (#6287)\n\nSupporting TIPs... UIComposition class requires a caret class.\r\nJIRA issue: CORE-19360\r\n- Add <cicero/ciccaret.h> header.\r\n- Add CicCaret class for displaying a caret.",
             "commit_timestamp": 1704279314.0
+        },
+        {
+            "tool_version": "233.0.20231218.102231",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1704380759.753068,
+            "elapsed_time": 109.60561442375183,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 76000.15436553955,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "90432c1a4c2051a0a00a7780d04fb5555eca20e2",
+            "commit_message": "[COMCTL32][USER32] EDIT & ListView & TreeView: Fix HRGN leaks (#6268)\n\nBased on KRosUser's memleak_comctl32.patch.\r\nJIRA issue: CORE-19405\r\nFix HRGN handle leaks.",
+            "commit_timestamp": 1704359139.0
         }
     ]
 }

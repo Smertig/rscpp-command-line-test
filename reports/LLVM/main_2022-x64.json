@@ -15823,6 +15823,23 @@
             "commit_ref": "ddf0096a92e4c2852fd57321f02cbd78e596943c",
             "commit_message": "[NFC][X86] Reorg MC tests for APX promoted instrs (#76697)\n\nAs suggested in https://github.com/llvm/llvm-project/pull/76210, this\r\npatch re-organize the mc tests for apx promoted instrs, instr tests\r\nwithin same cpuid would be listed in one test.\r\nAlso add explicit prefix {evex} tests and 8 displacement memory test,\r\npromoted instrs need set No_CD8 to avoid AVX512 compress encoding.",
             "commit_timestamp": 1704336147.0
+        },
+        {
+            "tool_version": "233.0.20231218.102231",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1704381292.557222,
+            "elapsed_time": 1498.2077412605286,
+            "x64": true,
+            "actual_files_count": 1728,
+            "expected_files_count": 1661,
+            "memory_traffic": 644001.0903625488,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "79e62315be5b762f399e98c0b638e682eac66322",
+            "commit_message": "[SLP]Use revectorized value for extracts from buildvector, beeing\nvectorized.\n\nWhen trying to reuse the extractelement instruction, emitted for the\ninsertelement instruction, need to check, if the this insertelement\ninstruction was vectorized. In this case, need to use vectorized value,\nnot the original insertelement.\n",
+            "commit_timestamp": 1704379526.0
         }
     ]
 }
