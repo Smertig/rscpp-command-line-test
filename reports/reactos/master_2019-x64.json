@@ -14476,6 +14476,21 @@
             "commit_ref": "90432c1a4c2051a0a00a7780d04fb5555eca20e2",
             "commit_message": "[COMCTL32][USER32] EDIT & ListView & TreeView: Fix HRGN leaks (#6268)\n\nBased on KRosUser's memleak_comctl32.patch.\r\nJIRA issue: CORE-19405\r\nFix HRGN handle leaks.",
             "commit_timestamp": 1704359139.0
+        },
+        {
+            "tool_version": "233.0.20231218.102231",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1704423929.880739,
+            "elapsed_time": 105.32718801498413,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 76061.9726638794,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "90ed6862090902349ebd80571a3356bc96e8f8c5",
+            "commit_message": "[NTUSER] Use UserHMGetHandle macro (#6244)\n\nUse UserHMGetHandle macro everywhere instead of obj->head.h for consistency.",
+            "commit_timestamp": 1704413804.0
         }
     ]
 }

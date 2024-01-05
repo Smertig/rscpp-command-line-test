@@ -11831,6 +11831,21 @@
             "commit_ref": "1ae7ceba29771baf8f2e8d2d4c50a0355cb6b5c8",
             "commit_message": "gh-113696: Docs: Annotate PyObject_CallOneArg and PyObject_CallNoArgs as returning a strong reference (#113697)\n\n",
             "commit_timestamp": 1704377131.0
+        },
+        {
+            "tool_version": "233.0.20231218.102231",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1704424274.633456,
+            "elapsed_time": 1037.192437171936,
+            "x64": true,
+            "actual_files_count": 989,
+            "expected_files_count": null,
+            "memory_traffic": 196873.54948425293,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "ed6ea3ea79fac68b127c7eb457c7ecb996461010",
+            "commit_message": "gh-113320: Reduce the number of dangerous `getattr()` calls when constructing protocol classes (#113401)\n\n- Only attempt to figure out whether protocol members are \"method members\" or not if the class is marked as a runtime protocol. This information is irrelevant for non-runtime protocols; we can safely skip the risky introspection for them.\r\n- Only do the risky getattr() calls in one place (the runtime_checkable class decorator), rather than in three places (_ProtocolMeta.__init__, _ProtocolMeta.__instancecheck__ and _ProtocolMeta.__subclasscheck__). This reduces the number of locations in typing.py where the risky introspection could go wrong.\r\n- For runtime protocols, if determining whether a protocol member is callable or not fails, give a better error message. I think it's reasonable for us to reject runtime protocols that have members which raise strange exceptions when you try to access them. PEP-544 clearly states that all protocol member must be callable for issubclass() calls against the protocol to be valid -- and if a member raises when we try to access it, there's no way for us to figure out whether it's a callable member or not!",
+            "commit_timestamp": 1704416508.0
         }
     ]
 }
