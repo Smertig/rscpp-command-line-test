@@ -11846,6 +11846,21 @@
             "commit_ref": "ed6ea3ea79fac68b127c7eb457c7ecb996461010",
             "commit_message": "gh-113320: Reduce the number of dangerous `getattr()` calls when constructing protocol classes (#113401)\n\n- Only attempt to figure out whether protocol members are \"method members\" or not if the class is marked as a runtime protocol. This information is irrelevant for non-runtime protocols; we can safely skip the risky introspection for them.\r\n- Only do the risky getattr() calls in one place (the runtime_checkable class decorator), rather than in three places (_ProtocolMeta.__init__, _ProtocolMeta.__instancecheck__ and _ProtocolMeta.__subclasscheck__). This reduces the number of locations in typing.py where the risky introspection could go wrong.\r\n- For runtime protocols, if determining whether a protocol member is callable or not fails, give a better error message. I think it's reasonable for us to reject runtime protocols that have members which raise strange exceptions when you try to access them. PEP-544 clearly states that all protocol member must be callable for issubclass() calls against the protocol to be valid -- and if a member raises when we try to access it, there's no way for us to figure out whether it's a callable member or not!",
             "commit_timestamp": 1704416508.0
+        },
+        {
+            "tool_version": "233.0.20231218.102231",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1704467366.105307,
+            "elapsed_time": 962.3913357257843,
+            "x64": true,
+            "actual_files_count": 989,
+            "expected_files_count": null,
+            "memory_traffic": 196739.1503982544,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "e56c53334f1adf5b4ea940036c76d18e80fe809d",
+            "commit_message": "gh-101100: Fix Sphinx warnings for 2.6 deprecations and removals (#113725)\n\nCo-authored-by: Alex Waygood <Alex.Waygood@Gmail.com>\r\nCo-authored-by: Hugo van Kemenade <hugovk@users.noreply.github.com>\r\n",
+            "commit_timestamp": 1704461488.0
         }
     ]
 }

@@ -15708,6 +15708,21 @@
             "commit_ref": "e3824e7503187993b287ac8c8144a35bf5ccfd44",
             "commit_message": "fix per-thread timing error on z/OS (#1719)\n\nCo-authored-by: dominic <510002+dmah42@users.noreply.github.com>",
             "commit_timestamp": 1704366421.0
+        },
+        {
+            "tool_version": "233.0.20231218.102231",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1704467138.798486,
+            "elapsed_time": 58.114200830459595,
+            "x64": true,
+            "actual_files_count": 86,
+            "expected_files_count": 86,
+            "memory_traffic": 4957.4572830200195,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "e61e332df951b947e858011449a32c3ed5049db7",
+            "commit_message": "Issue1731 created console does not receive output (#1732)\n\n* Instead of directly comparing std::cout and GetOutputStream(), the underlying buffers are retreived via rdbuf(), and then compared.\r\n\r\n* Instead of fflush(stdout), call out.flush().\r\nUse out << FormatString() instead of vprintf\r\n\r\n---------\r\n\r\nCo-authored-by: dominic <510002+dmah42@users.noreply.github.com>",
+            "commit_timestamp": 1704463708.0
         }
     ]
 }
