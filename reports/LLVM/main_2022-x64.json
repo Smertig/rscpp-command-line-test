@@ -15891,6 +15891,23 @@
             "commit_ref": "2873060f3cfbd92dcff8d1037a08e9fb60f7882e",
             "commit_message": "[SHT_LLVM_BB_ADDR_MAP] Fixes two bugs in decoding of PGOAnalyses in BBAddrMap. (#77139)\n\nWe had specified that `readBBAddrMap` will always keep PGOAnalyses and\r\nBBAddrMaps the same length on success.\r\n\r\nhttps://github.com/llvm/llvm-project/blob/365fbbfbcfefb8766f7716109b9c3767b58e6058/llvm/include/llvm/Object/ELFObjectFile.h#L116-L117\r\n\r\nIt turns out that this is not currently the case when no analyses exist\r\nin a function. No test had caught it.\r\n\r\nWe also should not append PGOBBEntries when there is no BBFreq or\r\nBrProb.\r\n\r\nThis patch adds:\r\n* tests that PGOAnalyses and BBAddrMaps are same length even when no\r\nanalyses are enabled\r\n* fixes decode so that PGOAnalyses and BBAddrMaps are same length\r\n* updates test to not emit unnecessary PGOBBEntries\r\n* fixes decode to not emit PGOBBEntries when unnecessary",
             "commit_timestamp": 1704509991.0
+        },
+        {
+            "tool_version": "233.0.20231218.102231",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1704554104.066683,
+            "elapsed_time": 1467.1398675441742,
+            "x64": true,
+            "actual_files_count": 1728,
+            "expected_files_count": 1661,
+            "memory_traffic": 644013.230682373,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "0c7d46a7fd5b7956e285d385a6945153d6a06eb0",
+            "commit_message": "[Clang] Correctly construct template arguments for template template parameters (#76811)\n\nThis fixes the bug introduced by\r\n\r\nhttps://github.com/llvm/llvm-project/commit/6db007a0654ed7a6ed5c3aa3b61a937c19a6bc6b.\r\n\r\nWe construct placeholder template arguments for template-template\r\nparameters to avoid mismatching argument substitution since they have\r\ndifferent depths with their corresponding template arguments. In this\r\ncase,\r\n\r\n```cpp\r\ntemplate <template <Concept C> class T> void foo(T<int>);\r\n```\r\n\r\nT lies at the depth 0, and C lies at 1. The corresponding argument, of\r\nwhich there is exactly one, int, is at depth 0. If we consider the\r\nargument as the outermost one, then we would end up substituting 'int'\r\ninto the wrong parameter T.\r\n\r\nWe used to perform such placeholder construction during the context\r\nwalk-up. In the previous patch, we slipped through that inadvertently\r\nbecause we would walk up to the parent, which is precisely a FileContext\r\nfor template-template parameters, after adding innermost arguments.\r\n\r\nBesides, this patch moves the sanity check up to the context switch.\r\nThat way, we avoid dereferencing null pointers if ND is unspecified.\r\n\r\nCloses https://github.com/llvm/llvm-project/issues/57410.\r\nCloses https://github.com/llvm/llvm-project/issues/76604. (The case is\r\nslightly different than that in #57410. We should *not* assume the\r\nsurrounding context to be a file-scope one.)",
+            "commit_timestamp": 1704551194.0
         }
     ]
 }
