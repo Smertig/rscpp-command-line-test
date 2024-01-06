@@ -14506,6 +14506,21 @@
             "commit_ref": "267a1c9cdac64bd1e9758213683b9980fc7146c4",
             "commit_message": "[MSCTFIME] Reduce comment lines (#6297)\n\nImprove readability.\r\nJIRA issue: CORE-19360\r\n- Reduce the lines of comments\r\n  by using C++ comments.",
             "commit_timestamp": 1704447390.0
+        },
+        {
+            "tool_version": "233.0.20231218.102231",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1704510357.368083,
+            "elapsed_time": 115.95134162902832,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 76008.46141052246,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "d689cfe1582db3e554784cc29917cf3637817c64",
+            "commit_message": "[SHELL32] Don't crash on Control Panel item D&D (#6289)\n\nBased on @douglyons 's control-panel-copy-to-desktop-fix.patch.\r\nJIRA issue: CORE-19210\r\n- Delete needless #ifdef __REACTOS__ guards because\r\n  shlfileop.cpp is a forked file.\r\n- Do NULL check against feFrom->szFilename.",
+            "commit_timestamp": 1704506436.0
         }
     ]
 }
