@@ -14756,6 +14756,21 @@
             "commit_ref": "8edcfedc1a144f438bd1cdf814a0016cbe678aaf",
             "commit_message": "ftp: use memdup0 to store the OS from a SYST 215 response\n\navoid malloc + direct buffer fiddle\n\nCloses #12639\n",
             "commit_timestamp": 1704536791.0
+        },
+        {
+            "tool_version": "233.0.20231218.102231",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1704640025.899944,
+            "elapsed_time": 165.92204308509827,
+            "x64": true,
+            "actual_files_count": 2457,
+            "expected_files_count": 2323,
+            "memory_traffic": 29452.754364013672,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "a0f94800d507de580f04a447cf14edc9f52697dc",
+            "commit_message": "transfer: adjust_pollset improvements\n\n- let `multi_getsock()` initialize the pollset in what the\n  transfer state requires in regards to SEND/RECV\n- change connection filters `adjust_pollset()` implementation\n  to react on the presence of POLLIN/-OUT in the pollset and\n  no longer check CURL_WANT_SEND/CURL_WANT_RECV\n- cf-socket will no longer add POLLIN on its own\n- http2 and http/3 filters will only do adjustments if the\n  passed pollset wants to POLLIN/OUT for the transfer on\n  the socket. This is similar to the HTTP/2 proxy filter\n  and works in stacked filters.\n\nCloses #12640\n",
+            "commit_timestamp": 1704634585.0
         }
     ]
 }
