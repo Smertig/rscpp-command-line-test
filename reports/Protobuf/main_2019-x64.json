@@ -15528,6 +15528,21 @@
             "commit_ref": "585c87904ab9b1887ad144e6f6b6e720be2dc1ae",
             "commit_message": "Fix BUILD.bazel for newer rules_android_ndk (#15298)\n\nWhen using transitions, and `rules_android_ndk` the constraint needs to be changed to `@platforms`.\n\nCloses #15298\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/15298 from gferon:fix-android-constraint d15c794da30a72bc8ac7900c1bd38d4ca31135b4\nPiperOrigin-RevId: 596140608\n",
             "commit_timestamp": 1704514125.0
+        },
+        {
+            "tool_version": "233.0.20231218.102231",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1704596828.284536,
+            "elapsed_time": 280.2645676136017,
+            "x64": true,
+            "actual_files_count": 856,
+            "expected_files_count": 818,
+            "memory_traffic": 31742.786247253418,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "69cffdca9c064a40bcb47de168f39072bce47c36",
+            "commit_message": "Annotate some Kotlin generated protobuf code.\n\nNote that this change removes the use of ${$ and $}$ in\nthe body of a template `clear` method. These brackets are\ncurrently unused (there's no Annotate call and the variables are\nset to the empty string); it also shouldn't be necessary to\nannotate non-definitions.\n\nPiperOrigin-RevId: 596254156\n",
+            "commit_timestamp": 1704571503.0
         }
     ]
 }
