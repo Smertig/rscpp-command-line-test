@@ -15798,6 +15798,21 @@
             "commit_ref": "e61e332df951b947e858011449a32c3ed5049db7",
             "commit_message": "Issue1731 created console does not receive output (#1732)\n\n* Instead of directly comparing std::cout and GetOutputStream(), the underlying buffers are retreived via rdbuf(), and then compared.\r\n\r\n* Instead of fflush(stdout), call out.flush().\r\nUse out << FormatString() instead of vprintf\r\n\r\n---------\r\n\r\nCo-authored-by: dominic <510002+dmah42@users.noreply.github.com>",
             "commit_timestamp": 1704463708.0
+        },
+        {
+            "tool_version": "233.0.20231218.102231",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1704726414.4697,
+            "elapsed_time": 69.43529009819031,
+            "x64": true,
+            "actual_files_count": 86,
+            "expected_files_count": 86,
+            "memory_traffic": 4862.706336975098,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "96d820f73f01647490782f65f8fb984663575d03",
+            "commit_message": "tools/compare: don't actually discard valid (but zero) `pvalue` (#1733)\n\n* tools/compare: when dumping json, pretty-print it\r\n\r\nIt's rather completely non-human-readable otherwise.\r\nI can't imagine the filesize really matters,\r\nand if it does, it should just be compressed later on.\r\n\r\n* tools/compare: add failing test\r\n\r\n* tools/compare: don't actually discard valid (but zero) `pvalue`\r\n\r\nSo, this is embarressing. For a very large number of repetitions,\r\nwe can end up with pvalue of a true zero, and it obviously compares false,\r\nand we treat it as-if we failed to compute it...",
+            "commit_timestamp": 1704707820.0
         }
     ]
 }

@@ -15959,6 +15959,23 @@
             "commit_ref": "b58a97d6aea12a30e2d1b01c6289abb2fd061f0b",
             "commit_message": "[RISCV][NFC] Move Zawrs/Zacas implementation to RISCVInstrInfoZa.td (#76940)\n\nTo keep the structure of TableGen files clear.\n\nThe definitions are simplified by the way.",
             "commit_timestamp": 1704683096.0
+        },
+        {
+            "tool_version": "233.0.20231218.102231",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1704726855.029202,
+            "elapsed_time": 1481.2964041233063,
+            "x64": true,
+            "actual_files_count": 1728,
+            "expected_files_count": 1661,
+            "memory_traffic": 644297.8291473389,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "97e3220d6312ae00bcbe08673f218bd0f705776b",
+            "commit_message": "[InstSimplify] Consider bitcast as potential cross-lane operation\n\nThe bitcast might change the number of vector lanes, in which case\nit will be a cross-lane operation.\n\nFixes https://github.com/llvm/llvm-project/issues/77320.\n",
+            "commit_timestamp": 1704725578.0
         }
     ]
 }

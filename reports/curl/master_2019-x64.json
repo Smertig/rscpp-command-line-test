@@ -14786,6 +14786,21 @@
             "commit_ref": "105848361558d47a10c285c82df5be5ed4f0667f",
             "commit_message": "ftp: only consider entry path if it has a length\n\nFollow-up from 8edcfedc1a144f438bd1cdf814a0016cb\n\nBug: https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=65631\n\nAvoids a NULL pointer deref.\n\nCloses #12648\n",
             "commit_timestamp": 1704641695.0
+        },
+        {
+            "tool_version": "233.0.20231218.102231",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1704726403.37833,
+            "elapsed_time": 162.81062173843384,
+            "x64": true,
+            "actual_files_count": 2457,
+            "expected_files_count": 2323,
+            "memory_traffic": 29683.124549865723,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "e556470c23c6f375df93736f8488de3b658fc35f",
+            "commit_message": "connect: remove margin from eyeballer alloc\n\nPresumably leftovers from debugging\n\nCloses #12647\n",
+            "commit_timestamp": 1704702645.0
         }
     ]
 }
