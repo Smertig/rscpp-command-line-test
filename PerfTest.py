@@ -22,7 +22,7 @@ def invoke(args):
 
 
 def run_inspect_code(project_dir, sln_file, project_to_check, msbuild_props, indexing):
-    args, report_file = common.inspect_code_run_arguments(project_dir, sln_file, project_to_check, msbuild_props)
+    args, report_file, _ = common.inspect_code_run_arguments(project_dir, sln_file, project_to_check, msbuild_props)
     args.insert(0, env.inspect_code_path_x86)
     if indexing:
         args.append('--exclude="**"')

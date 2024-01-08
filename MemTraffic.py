@@ -27,7 +27,7 @@ def process_project(project_name, project):
 
     project_to_check = project.get("project to check")
     msbuild_props = project.get("msbuild properties")
-    inspect_code_args, report_file = common.inspect_code_run_arguments(project_dir, sln_file, project_to_check, msbuild_props)
+    inspect_code_args, report_file, _ = common.inspect_code_run_arguments(project_dir, sln_file, project_to_check, msbuild_props)
     inspect_code_args.append("-j=1") # reduce nondetermenism
     #inspect_code_args.append("--debug")
     snapshot_dir = path.join(snapshots_home, project_name)

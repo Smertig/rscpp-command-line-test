@@ -318,7 +318,7 @@ def inspect_code_run_arguments(project_dir, sln_file, project_to_check, msbuild_
     args.append("--LogFile=" + log_file)
 
     args.append(sln_file)
-    return args, report_file
+    return args, report_file, err_file
 
 
 def count_substring(text, substr):

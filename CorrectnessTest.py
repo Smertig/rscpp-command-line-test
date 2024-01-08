@@ -32,7 +32,7 @@ def is_flaky(error: dict) -> bool:
     return error.get("flaky", False)
 
 
-def check_report(report_file, known_errors, known_file_errors) -> Tuple[Optional[str], dict]:
+def check_report(report_file, known_errors, known_file_errors) -> Tuple[str, dict]:
     def get_error_id(error):
         return error["file"], int(error["line"]), error["message"]
 
@@ -108,7 +108,7 @@ def check_report(report_file, known_errors, known_file_errors) -> Tuple[Optional
 
 
 def run_inspect_code(project_dir, sln_file, project_to_check, msbuild_props, use_x64: bool, snapshot_path: str = None):
-    args, report_file = common.inspect_code_run_arguments(project_dir, sln_file, project_to_check, msbuild_props)
+    args, report_file, err_file = common.inspect_code_run_arguments(project_dir, sln_file, project_to_check, msbuild_props)
     args.insert(0, env.inspect_code_path_x64 if use_x64 else env.inspect_code_path_x86)
 
     if snapshot_path:
@@ -158,11 +158,14 @@ def run_inspect_code(project_dir, sln_file, project_to_check, msbuild_props, use
     if snapshot_path:
         profiler_process.wait()
 
+    if os.path.exists(err_file):
+        print(f"[run_inspect_code] Non-empty errors log", flush=True)
+
     print("[run_inspect_code] Elapsed time: " + common.duration(start, end), flush=True)
-    return report_file, out
+    return report_file, err_file, out
 
 
-def check_project(project, project_dir, sln_file, branch: Optional[str]) -> Tuple[Optional[str], dict]:
+def check_project(project, project_dir, sln_file, branch: Optional[str]) -> Tuple[str, dict]:
     project_to_check = project.get("project to check")
     msbuild_props = project.get("msbuild properties")
     use_x86 = env.is_x86 and project.get("only x64", False) is False
@@ -178,7 +181,7 @@ def check_project(project, project_dir, sln_file, branch: Optional[str]) -> Tupl
 
     start_date = datetime.datetime.utcnow()
     start_time = time.time()
-    report_file, output = run_inspect_code(project_dir, sln_file, project_to_check, msbuild_props, use_x64, snapshot_path)
+    report_file, err_file, output = run_inspect_code(project_dir, sln_file, project_to_check, msbuild_props, use_x64, snapshot_path)
     end_time = time.time()
 
     if trace_memory:
@@ -226,10 +229,13 @@ def check_project(project, project_dir, sln_file, branch: Optional[str]) -> Tupl
     if actual_traffic:
         report['memory_traffic'] = actual_traffic
 
+    if os.path.exists(err_file):
+        result = f'(non-empty errors log) {result}'.rstrip()
+
     return result, report
 
 
-def process_project_with_cmake_generator(project, project_name, cmake_generator: str, branch: Optional[str]) -> Tuple[Optional[str], dict]:
+def process_project_with_cmake_generator(project, project_name, cmake_generator: str, branch: Optional[str]) -> Tuple[str, dict]:
     project_dir, sln_file = common.prepare_project(project_name, project, cmake_generator, branch)
     result, report = check_project(project, project_dir, sln_file, branch)
     if result:
@@ -237,7 +243,7 @@ def process_project_with_cmake_generator(project, project_name, cmake_generator:
     return result, report
 
 
-def process_project(project_name, project, branch: Optional[str]) -> Tuple[Optional[str], dict]:
+def process_project(project_name, project, branch: Optional[str]) -> Tuple[str, dict]:
     project = common.read_conf_if_needed(project)
 
     available_toolchains = common.get_compatible_toolchains(project)
@@ -251,7 +257,7 @@ def process_project(project_name, project, branch: Optional[str]) -> Tuple[Optio
             'default': default_report
         }
     else:
-        result = None
+        result = ''
         toolchain_reports = {}
         for generator in available_toolchains:
             local_result, local_report = process_project_with_cmake_generator(project, project_name, generator, branch)
