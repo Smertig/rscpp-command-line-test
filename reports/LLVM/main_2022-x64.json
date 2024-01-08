@@ -15976,6 +15976,23 @@
             "commit_ref": "97e3220d6312ae00bcbe08673f218bd0f705776b",
             "commit_message": "[InstSimplify] Consider bitcast as potential cross-lane operation\n\nThe bitcast might change the number of vector lanes, in which case\nit will be a cross-lane operation.\n\nFixes https://github.com/llvm/llvm-project/issues/77320.\n",
             "commit_timestamp": 1704725578.0
+        },
+        {
+            "tool_version": "241.0.20240108.83533-eap01d",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1704731722.463898,
+            "elapsed_time": 1658.3003861904144,
+            "x64": true,
+            "actual_files_count": 1728,
+            "expected_files_count": 1661,
+            "memory_traffic": 654795.5116348267,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "01410103a6eb50436c39f71299773749b7de9dec",
+            "commit_message": "[libc++][doc] Marks LWG3257 as complete (#77237)\n\nThe macros were already updated\r\n- __cpp_lib_string_view in 466df1718e41fe2fca6ce6bd98c01b18f42c05e4\r\n- __cpp_lib_array_constexpr in 77b9abfc8e89ca627e4f9a1cc206bea131db6db1\r\n\r\nBased on the dates of the commit and that\r\n P0858 \"Constexpr iterator requirements\"\r\nwas completed in LLVM 12, set this issue as completed in the same\r\nversion.\r\n\r\nCompletes\r\n- LWG3257 Missing feature testing macro update from P0858",
+            "commit_timestamp": 1704731082.0
         }
     ]
 }

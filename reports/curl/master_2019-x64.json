@@ -14816,6 +14816,21 @@
             "commit_ref": "e556470c23c6f375df93736f8488de3b658fc35f",
             "commit_message": "connect: remove margin from eyeballer alloc\n\nPresumably leftovers from debugging\n\nCloses #12647\n",
             "commit_timestamp": 1704702645.0
+        },
+        {
+            "tool_version": "241.0.20240108.83533-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1704731219.801255,
+            "elapsed_time": 199.5336000919342,
+            "x64": true,
+            "actual_files_count": 2457,
+            "expected_files_count": 2323,
+            "memory_traffic": 32400.73561859131,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "d0cb2c7a1f09c17442987be8937cd2ac3708e524",
+            "commit_message": "url: init conn->sockfd and writesockfd to CURL_SOCKET_BAD\n\nAlso add more tracing to test 19\n\nFollow-up to a0f9480\n\nFixes #12657\nCloses #12659\n",
+            "commit_timestamp": 1704729073.0
         }
     ]
 }
