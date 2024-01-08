@@ -43,6 +43,9 @@ def check_report(report_file, known_errors, known_file_errors) -> Tuple[str, dic
     issue_severities = {issue_type.get("Id"): issue_type.get("Severity")
                         for issue_type in xml_doc.getroot().findall("IssueTypes")[0]}
 
+    def get_severity(issue) -> str:
+        return issue.get("Severity") or issue_severities[issue.get("TypeId")]
+
     issue_nodes = xml_doc.getroot().findall("Issues")[0]
     if len(issue_nodes) == 0:
         print("No compilation errors found")
@@ -61,7 +64,7 @@ def check_report(report_file, known_errors, known_file_errors) -> Tuple[str, dic
     else:
         actual_errors = set((issue.get("File"), int(issue.get("Line", "0")), issue.get("Message"))
                             for issue in issue_nodes.iter("Issue")
-                            if issue_severities[issue.get("TypeId")] == 'ERROR')
+                            if get_severity(issue) == 'ERROR')
         if known_file_errors:
             known_error_files = set(error["file"] for error in known_file_errors)
             actual_error_files = set(error[0] for error in actual_errors)
