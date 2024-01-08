@@ -10782,6 +10782,21 @@
             "commit_ref": "171f911237ba937b70f7dab01a1ff5cbaef7d48b",
             "commit_message": "Android: Add selection dialog (drop down/combo box) (#13814)\n\n- The handling of IGUIComboBox uses the new setAndSendSelected() method.\r\n- getDialogState() is now getInputDialogState() and returns the state of the input dialog.\r\n- getLastDialogType() is added and returns current/last shown dialog's type.\r\n- getInputDialogState() now returns an enum instead of int.\r\n- getAndroidUIInput() now returns void instead of bool.\r\n- New data types (enum) are added:\r\n  (1) GameActivity.DialogType (Java) and porting::AndroidDialogType (C++)\r\n  (2) GameActivity.DialogState (Java) and porting::AndroidDialogState (C++)\r\n- When showing a text input dialog, there is no custom accept button text any more.\r\n- showDialog()/showDialogUI() for text input is now showTextInputDialog()/showTextInputDialogUI().\r\n- showInputDialog()/showDialogUI() for text input is now showTextInputDialog()/showTextInputDialogUI().\r\n- getDialogValue()/getInputDialogValue() is now getDialogMessage()/getInputDialogMessage().\r\n\r\n\r\nCo-authored-by: Gregor Parzefall <82708541+grorp@users.noreply.github.com>",
             "commit_timestamp": 1704628804.0
+        },
+        {
+            "tool_version": "233.0.20231218.102231",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1704683492.95885,
+            "elapsed_time": 184.62164497375488,
+            "x64": true,
+            "actual_files_count": 406,
+            "expected_files_count": 105,
+            "memory_traffic": 25115.589157104492,
+            "repo_url": "https://github.com/minetest/minetest",
+            "commit_ref": "2766c70ad3b32f61b6f8f5bbcb2af9cfd38c6cef",
+            "commit_message": "Fix dividing by zero crashes in texture modifiers\n\n",
+            "commit_timestamp": 1704660566.0
         }
     ]
 }
