@@ -15813,6 +15813,21 @@
             "commit_ref": "96d820f73f01647490782f65f8fb984663575d03",
             "commit_message": "tools/compare: don't actually discard valid (but zero) `pvalue` (#1733)\n\n* tools/compare: when dumping json, pretty-print it\r\n\r\nIt's rather completely non-human-readable otherwise.\r\nI can't imagine the filesize really matters,\r\nand if it does, it should just be compressed later on.\r\n\r\n* tools/compare: add failing test\r\n\r\n* tools/compare: don't actually discard valid (but zero) `pvalue`\r\n\r\nSo, this is embarressing. For a very large number of repetitions,\r\nwe can end up with pvalue of a true zero, and it obviously compares false,\r\nand we treat it as-if we failed to compute it...",
             "commit_timestamp": 1704707820.0
+        },
+        {
+            "tool_version": "241.0.20240108.83533-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1704728935.087759,
+            "elapsed_time": 72.55487298965454,
+            "x64": true,
+            "actual_files_count": 86,
+            "expected_files_count": 86,
+            "memory_traffic": 4806.511253356934,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "96d820f73f01647490782f65f8fb984663575d03",
+            "commit_message": "tools/compare: don't actually discard valid (but zero) `pvalue` (#1733)\n\n* tools/compare: when dumping json, pretty-print it\r\n\r\nIt's rather completely non-human-readable otherwise.\r\nI can't imagine the filesize really matters,\r\nand if it does, it should just be compressed later on.\r\n\r\n* tools/compare: add failing test\r\n\r\n* tools/compare: don't actually discard valid (but zero) `pvalue`\r\n\r\nSo, this is embarressing. For a very large number of repetitions,\r\nwe can end up with pvalue of a true zero, and it obviously compares false,\r\nand we treat it as-if we failed to compute it...",
+            "commit_timestamp": 1704707820.0
         }
     ]
 }

@@ -15588,6 +15588,21 @@
             "commit_ref": "991a2f4d54c6944396f55eaf13ae5248598ed28a",
             "commit_message": "#refactor Simplify maps through the new ProxiedInMapValue<K> trait\n\nThis change is a pure refactoring and simplification of the code. We replace all MapsWith<TYPE>KeyOps traits through a single generic ProxiedInMapValue<K> trait. Through connecting the runtime maps implementation with Proxied the code gets a lot simpler e.g. we can use View<T> instead of hardcoding the concrete type behind it.\n\nI also expect this change to be beneficial for the gencode. In a subsequent CL we'll implement message values for maps. After this change we'll only have to implement a single trait, while before we had to implement num(key types) many traits.\n\nPiperOrigin-RevId: 596562909\n",
             "commit_timestamp": 1704720581.0
+        },
+        {
+            "tool_version": "241.0.20240108.83533-eap01d",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1704729046.747405,
+            "elapsed_time": 285.42032957077026,
+            "x64": true,
+            "actual_files_count": 856,
+            "expected_files_count": 818,
+            "memory_traffic": 33572.35068511963,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "4e90eadcb3ccdfe817abb87786365d79ad950ac4",
+            "commit_message": "Auto-generate files after cl/596588385\n",
+            "commit_timestamp": 1704728794.0
         }
     ]
 }

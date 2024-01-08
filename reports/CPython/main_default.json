@@ -11951,6 +11951,21 @@
             "commit_ref": "802d4954f12541ba28dd7f18bf4a65054941a80d",
             "commit_message": "gh-74678: Increase base64 test coverage (GH-21913)\n\nEnsure the character y is disallowed within an Ascii85 5-tuple.\r\n\r\nCo-authored-by: Lee Cannon <leecannon@leecannon.xyz>\r\n",
             "commit_timestamp": 1704711691.0
+        },
+        {
+            "tool_version": "241.0.20240108.83533-eap01d",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1704729135.075378,
+            "elapsed_time": 1090.5821869373322,
+            "x64": true,
+            "actual_files_count": 992,
+            "expected_files_count": null,
+            "memory_traffic": 203836.05001831055,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "61dd77b04ea205f492498d30637f2d516d8e2a8b",
+            "commit_message": "gh-113391: fix outdated PyObject_HasAttr docs (#113420)\n\nAfter #53875: PyObject_HasAttr is not an equivalent of hasattr.\r\nPyObject_HasAttrWithError is; it already has the note.\r\n",
+            "commit_timestamp": 1704727423.0
         }
     ]
 }
