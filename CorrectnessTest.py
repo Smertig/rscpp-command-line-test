@@ -123,7 +123,7 @@ def run_inspect_code(project_dir, sln_file, project_to_check, msbuild_props, use
         args = dotnet_args + args
 
     print('[run_inspect_code]', subprocess.list2cmdline(args), flush=True)
-    process = Popen(args, stdout=PIPE, text=True, encoding='cp1251')
+    process = Popen(args, stdout=PIPE, stderr=PIPE, text=True, encoding='cp1251')
     start = time.time()
 
     if snapshot_path:
@@ -241,6 +241,10 @@ def check_project(project, project_dir, sln_file, branch: Optional[str]) -> Tupl
 
         print(f"[check_project] found {len(runtime_errors)} runtime error(s)", flush=True)
         if runtime_errors:
+            for error in runtime_errors:
+                analyzer_short_name = error.analyzer.split(".")[-1]
+                print(f"[check_project]   \"{error.file_path}\" {analyzer_short_name} => {error.message}")
+
             result = f'({len(runtime_errors)} errors in logs) {result}'.rstrip()
 
     return result, report
