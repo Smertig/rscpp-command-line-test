@@ -34,7 +34,7 @@ class MyTestCase(unittest.TestCase):
         ])
 
     def _test_one(self, file_path, expected_errors):
-        with open(file_path, encoding='utf8') as f:
+        with open(file_path, encoding='cp1251') as f:
             log = f.read()
 
         errors = parse_logs(log)

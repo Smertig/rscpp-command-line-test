@@ -239,6 +239,7 @@ def check_project(project, project_dir, sln_file, branch: Optional[str]) -> Tupl
         with open(err_file, encoding='cp1251') as f:
             runtime_errors = util.error_parser.parse_logs(f.read())
 
+        print(f"[check_project] found {len(runtime_errors)} runtime error(s)", flush=True)
         if runtime_errors:
             result = f'({len(runtime_errors)} errors in logs) {result}'.rstrip()
 

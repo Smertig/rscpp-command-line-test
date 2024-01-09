@@ -10,10 +10,12 @@ class AnalyzerError:
     file_path: str
 
 
-RUNTIME_ERROR_REGEX = re.compile(r"""Analyzer '(.*)' threw the following exception: (.*)\.
+LEFT_MARK = '“'.encode('utf8').decode('cp1251')
+RIGHT_MARK = '”'.encode('utf8').decode('cp1251')
+RUNTIME_ERROR_REGEX = re.compile(fr"""Analyzer '(.*)' threw the following exception: (.*)\.
 
 --- EXCEPTION .*
-Message = “.*”
+Message = {LEFT_MARK}.*{RIGHT_MARK}
 ExceptionPath = .*
 ClassName = .*
 Data.File = (.*)""", flags=re.MULTILINE)
