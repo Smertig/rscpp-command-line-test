@@ -12,6 +12,7 @@ from subprocess import Popen, PIPE
 from typing import Optional, Tuple, List
 
 import common
+import util.error_parser
 
 
 def print_errors(title, errors):
@@ -235,7 +236,11 @@ def check_project(project, project_dir, sln_file, branch: Optional[str]) -> Tupl
         report['memory_traffic'] = actual_traffic
 
     if os.path.exists(err_file):
-        result = f'(non-empty errors log) {result}'.rstrip()
+        with open(err_file) as f:
+            runtime_errors = util.error_parser.parse_logs(f.read())
+
+        if runtime_errors:
+            result = f'({len(runtime_errors)} errors in logs) {result}'.rstrip()
 
     return result, report
 
