@@ -16010,6 +16010,23 @@
             "commit_ref": "7dd20637c801b429f2dd1040941d00141459d64e",
             "commit_message": "Improve modeling of 'getcwd' in the StdLibraryFunctionsChecker (#77040)\n\n1. Improve the 'errno' modeling.\r\n2. Improve constraints of the arguments.",
             "commit_timestamp": 1704763677.0
+        },
+        {
+            "tool_version": "241.0.20240108.83533-eap01d",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1704808038.591813,
+            "elapsed_time": 1662.200765132904,
+            "x64": true,
+            "actual_files_count": 1728,
+            "expected_files_count": 1661,
+            "memory_traffic": 654827.4912261963,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "2c651e6c381905aff6c7ac4b1585bad168f5b553",
+            "commit_message": "[AArch64] Fix regression introduced by c7148467fc08eefaaae876c7d11d62\u2026 (#77467)\n\n\u20269c849f42cf",
+            "commit_timestamp": 1704806548.0
         }
     ]
 }
