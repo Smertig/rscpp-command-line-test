@@ -31,24 +31,24 @@ def install_tool(tool_name: str, version: str = None, extra_args: list = None):
     return subprocess.check_call(args)
 
 
-def retry(callback, tries: int, delay: int):
+def retry_while_none(callback, tries: int, delay: int):
     for i in range(tries):
-        try:
-            return callback()
-        except:
-            if i == tries - 1:
-                raise
+        result = callback()
+        if result is not None:
+            return result
 
-            print(f"Attempt {i+1} failed, retrying in {delay} seconds.")
-            time.sleep(delay)
-            delay = delay * 2
+        print(f"Attempt {i+1} failed, retrying in {delay} seconds.")
+        time.sleep(delay)
+        delay = delay * 2
+
+    raise Exception(f"Cannot get result in {tries} attemps.")
 
 
 tool_version = sys.argv[1]
 if tool_version.startswith('gdrive:'):
     gdrive_id = tool_version.removeprefix('gdrive:')
     with tempfile.TemporaryDirectory() as package_dir:
-        package_path = retry(
+        package_path = retry_while_none(
             lambda: gdown.download(id=gdrive_id, output=package_dir + os.sep),
             tries=3, delay=10
         )
