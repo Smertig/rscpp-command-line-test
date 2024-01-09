@@ -16044,6 +16044,23 @@
             "commit_ref": "7c00a5be5cdeb34711a546054ba0aa89c26d14eb",
             "commit_message": "[PhaseOrdering] Regenerate test checks (NFC)\n",
             "commit_timestamp": 1704809357.0
+        },
+        {
+            "tool_version": "241.0.20240108.83533-eap01d",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1704813270.376246,
+            "elapsed_time": 1694.0807027816772,
+            "x64": true,
+            "actual_files_count": 1728,
+            "expected_files_count": 1661,
+            "memory_traffic": 654854.0176696777,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "06286a553280fc843d6f5df477a2c776aa2ece35",
+            "commit_message": "[GISel] Add RegState::Define to temporary defs in apply patterns (#77425)\n\nPreviously, registers created for temporary defs in apply patterns were\r\nrendered as uses, resulting in machine verifier errors.",
+            "commit_timestamp": 1704812121.0
         }
     ]
 }
