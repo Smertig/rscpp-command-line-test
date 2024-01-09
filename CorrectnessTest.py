@@ -153,8 +153,12 @@ def run_inspect_code(project_dir, sln_file, project_to_check, msbuild_props, use
         print(f"[run_inspect_code] Error: exit code = {exit_code}", flush=True)
 
     if err:
+        max_displayed_len = 1_000_000
         print('::group::stderr')
-        print(f"[run_inspect_code] stderr:\n{err}")
+        if len(err) > max_displayed_len:
+            print(f"[run_inspect_code] stderr:\n{err[:max_displayed_len]}...\n...\n...(too big: {len(err)} bytes)")
+        else:
+            print(f"[run_inspect_code] stderr:\n{err}")
         print('::endgroup::', flush=True)
 
     print('::group::stdout')
