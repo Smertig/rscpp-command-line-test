@@ -16169,6 +16169,21 @@
             "commit_ref": "46e59a2174228922d19d2887756d6dbfef80dc04",
             "commit_message": "Disable mac osx CI",
             "commit_timestamp": 1702006092.0
+        },
+        {
+            "tool_version": "241.0.20240108.83533-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1704769639.182896,
+            "elapsed_time": 118.1563982963562,
+            "x64": true,
+            "actual_files_count": 137,
+            "expected_files_count": null,
+            "memory_traffic": 8135.5932540893555,
+            "repo_url": "https://github.com/davisking/dlib.git",
+            "commit_ref": "b0f6be80587b94585949f6943a7ee263394c2d15",
+            "commit_message": "loss_barlow_twins: add get_eccm member function (#2906)\n\nThis allows us to greatly simplify the self supervised learning example:\r\n- the computation in user code was a bit too distracting\r\n- avoids duplicated computation/allocation of this matrix\r\n- avoids edge case where net outputs are zero due to trainer synchronization",
+            "commit_timestamp": 1704769149.0
         }
     ]
 }
