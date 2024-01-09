@@ -236,7 +236,7 @@ def check_project(project, project_dir, sln_file, branch: Optional[str]) -> Tupl
         report['memory_traffic'] = actual_traffic
 
     if os.path.exists(err_file):
-        with open(err_file) as f:
+        with open(err_file, encoding='cp1251') as f:
             runtime_errors = util.error_parser.parse_logs(f.read())
 
         if runtime_errors:
