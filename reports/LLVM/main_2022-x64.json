@@ -16078,6 +16078,23 @@
             "commit_ref": "2aec7083ada09c8b8a0aad79492cbedcf8f9fbb7",
             "commit_message": "[mlir][gpu] Use DenseI32Array for NVVM's maxntid and reqntid (NFC) (#77466)\n\n",
             "commit_timestamp": 1704815065.0
+        },
+        {
+            "tool_version": "241.0.20240108.83533-eap01d",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1704820032.243903,
+            "elapsed_time": 1637.86749792099,
+            "x64": true,
+            "actual_files_count": 1728,
+            "expected_files_count": 1661,
+            "memory_traffic": 654756.3374328613,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "affd9e8e00fc94ccfe87cc41b337852fb681adde",
+            "commit_message": "AMDGPU: Break vop3p handling out of vop3 base patterns (#77472)\n\nAdd the vop3p op_sel fields in getInsVOP3P instead of getInsVOP3Base.\r\nAlso start using defvar for some of the intermediate fields. let\r\noverrides of all the visible fields are really difficult to follow.",
+            "commit_timestamp": 1704819406.0
         }
     ]
 }

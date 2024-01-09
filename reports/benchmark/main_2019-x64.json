@@ -15903,6 +15903,21 @@
             "commit_ref": "54e4327190b6c06aeadc3186ed17566fd8da2a61",
             "commit_message": "Issue 1734: Streams not flushed if not running actual benchmarks (#1735)\n\nConsistently flush Out and Err streams, otherwise they might not get flushed\r\nand the output lost when using custom streams.\r\n\r\nFixes #1734.",
             "commit_timestamp": 1704812350.0
+        },
+        {
+            "tool_version": "241.0.20240108.83533-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1704819414.842257,
+            "elapsed_time": 58.14328384399414,
+            "x64": true,
+            "actual_files_count": 86,
+            "expected_files_count": 86,
+            "memory_traffic": 4887.53800201416,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "882f6f5ae00a117ffb3b2e105eedfe4d411c12ef",
+            "commit_message": "fix(cmakelists.txt): enforce CMake to find PFM or fail when BENCHMARK_ENABLE_LIBPFM is ON (#1705)\n\nFixes #1702\r\n",
+            "commit_timestamp": 1704814482.0
         }
     ]
 }
