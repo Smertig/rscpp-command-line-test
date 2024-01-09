@@ -310,8 +310,8 @@ def inspect_code_run_arguments(project_dir, sln_file, project_to_check, msbuild_
         props = ["{0}={1}".format(key, value) for key, value in msbuild_props.items()]
         args.append("--properties:" + ";".join(props))
 
-    log_file = path.join(project_dir, "resharper-logs.txt")
-    err_file = path.join(project_dir, "resharper-logs.err.txt")
+    log_file = path.join(project_dir, "resharper-logs.log")
+    err_file = path.join(project_dir, "resharper-logs.err.log")
     if os.path.exists(log_file): os.remove(log_file)
     if os.path.exists(err_file): os.remove(err_file)
     args.append("--LogLevel=INFO")

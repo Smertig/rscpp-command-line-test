@@ -163,6 +163,8 @@ def run_inspect_code(project_dir, sln_file, project_to_check, msbuild_props, use
 
     if os.path.exists(err_file):
         print(f"[run_inspect_code] Non-empty errors log", flush=True)
+    else:
+        print(f"[run_inspect_code] No runtime errors", flush=True)
 
     print("[run_inspect_code] Elapsed time: " + common.duration(start, end), flush=True)
     return report_file, err_file, out
