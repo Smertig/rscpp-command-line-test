@@ -14921,6 +14921,21 @@
             "commit_ref": "48d86999af12c8dee410296ae7a8f7072ea02042",
             "commit_message": "multi: pollset adjust, init with FIRSTSOCKET during connect\n\n- `conn->sockfd` is set by `Curl_setup_transfer()`, but that\n  is called *after* the connection has been established\n- use `conn->sock[FIRSTSOCKET]` instead\n\nFollow-up to a0f94800d507de\nCloses #12664\n",
             "commit_timestamp": 1704818473.0
+        },
+        {
+            "tool_version": "241.0.20240108.83533-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1704855993.848471,
+            "elapsed_time": 192.86870908737183,
+            "x64": true,
+            "actual_files_count": 2457,
+            "expected_files_count": 2323,
+            "memory_traffic": 32354.477737426758,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "48d86999af12c8dee410296ae7a8f7072ea02042",
+            "commit_message": "multi: pollset adjust, init with FIRSTSOCKET during connect\n\n- `conn->sockfd` is set by `Curl_setup_transfer()`, but that\n  is called *after* the connection has been established\n- use `conn->sock[FIRSTSOCKET]` instead\n\nFollow-up to a0f94800d507de\nCloses #12664\n",
+            "commit_timestamp": 1704818473.0
         }
     ]
 }

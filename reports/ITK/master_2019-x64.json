@@ -14981,6 +14981,21 @@
             "commit_ref": "d45127b5a3296b7f1721b57e0ffe8e0071d0c64f",
             "commit_message": "ENH: Check `thisClass` argument of `GetNameOfClass` macro calls\n\nAsserted in both `itkVirtualGetNameOfClassMacro` and\n`itkOverrideGetNameOfClassMacro` that `thisClass` is indeed the name of the\nclass that contains the macro call.\n\nThe assert helped finding three classes whose `GetNameOfClass()` member function\nreturned the wrong name.\n",
             "commit_timestamp": 1704232513.0
+        },
+        {
+            "tool_version": "241.0.20240108.83533-eap01d",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1704856261.604987,
+            "elapsed_time": 240.20646786689758,
+            "x64": true,
+            "actual_files_count": 100,
+            "expected_files_count": null,
+            "memory_traffic": 26433.76210784912,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "d45127b5a3296b7f1721b57e0ffe8e0071d0c64f",
+            "commit_message": "ENH: Check `thisClass` argument of `GetNameOfClass` macro calls\n\nAsserted in both `itkVirtualGetNameOfClassMacro` and\n`itkOverrideGetNameOfClassMacro` that `thisClass` is indeed the name of the\nclass that contains the macro call.\n\nThe assert helped finding three classes whose `GetNameOfClass()` member function\nreturned the wrong name.\n",
+            "commit_timestamp": 1704232513.0
         }
     ]
 }

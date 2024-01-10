@@ -16095,6 +16095,23 @@
             "commit_ref": "affd9e8e00fc94ccfe87cc41b337852fb681adde",
             "commit_message": "AMDGPU: Break vop3p handling out of vop3 base patterns (#77472)\n\nAdd the vop3p op_sel fields in getInsVOP3P instead of getInsVOP3Base.\r\nAlso start using defvar for some of the intermediate fields. let\r\noverrides of all the visible fields are really difficult to follow.",
             "commit_timestamp": 1704819406.0
+        },
+        {
+            "tool_version": "241.0.20240108.83533-eap01d",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1704856456.275012,
+            "elapsed_time": 1602.8353297710419,
+            "x64": true,
+            "actual_files_count": 1728,
+            "expected_files_count": 1661,
+            "memory_traffic": 654925.2163009644,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "3593ade43dd8af557432dce72f93aa0186c281ef",
+            "commit_message": "[gn build] Port a828cda9c802\n",
+            "commit_timestamp": 1704855205.0
         }
     ]
 }

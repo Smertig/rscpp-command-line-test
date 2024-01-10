@@ -12071,6 +12071,21 @@
             "commit_ref": "c31be58da8577ef140e83d4e46502c7bb1eb9abf",
             "commit_message": "gh-87868: Sort and remove duplicates in getenvironment() (GH-102731)\n\nCo-authored-by: Alex Waygood <Alex.Waygood@Gmail.com>\r\nCo-authored-by: Pieter Eendebak <pieter.eendebak@gmail.com>\r\nCo-authored-by: Erlend E. Aasland <erlend.aasland@protonmail.com>",
             "commit_timestamp": 1704815906.0
+        },
+        {
+            "tool_version": "241.0.20240108.83533-eap01d",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1704856142.835115,
+            "elapsed_time": 1301.1951048374176,
+            "x64": true,
+            "actual_files_count": 997,
+            "expected_files_count": null,
+            "memory_traffic": 265156.26469421387,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "5d8a3e74b51a59752f24cb869e7daa065b673f83",
+            "commit_message": "pathlib ABCs: Require one or more initialiser arguments (#113885)\n\nRefuse to guess what a user means when they initialise a pathlib ABC\r\nwithout any positional arguments. In mainline pathlib it's normalised to\r\n`.`, but in the ABCs this guess isn't appropriate; for example, the path\r\ntype may not represent the current directory as `.`, or may have no concept\r\nof a \"current directory\" at all.",
+            "commit_timestamp": 1704849178.0
         }
     ]
 }
