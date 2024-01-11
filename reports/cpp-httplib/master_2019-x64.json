@@ -16283,6 +16283,21 @@
             "commit_ref": "d948e38820ddc60650655e8cc65797c37d1984ac",
             "commit_message": "Minor cmake fix & cleanup (#1754)\n\n* Reorder cmake docs a bit\r\n\r\nJust wanted to group the more related build options together.\r\n\r\nAlso removed a pointless reference to the old reasoning for the required\r\nmin ver since it's 3.14 now anyways.\r\n\r\n* Fix outdated cmake comment\r\n\r\nWe don't use Git to find the version string anymore.\r\nJust updated to match what it's actually used for now.\r\n\r\n* Group options and build-tree vars in Cmake\r\n\r\nDoesn't really change anything, I just wanted to clean these up a bit.\r\n\r\n* Fix how we set HTTPLIB_IS_USING_XXX vars in Cmake\r\n\r\nPrevents us acidentally using libs when the user didn't want them\r\nactually used. This could happen if they set the option to OFF but their\r\nown project itself is using the lib, thus we'd find and use it anyways.\r\n\r\nRef #1602 to see an example of this already happening before.\r\nThis is merely apply that kind of fix to all 3 of our deps, instead of\r\njust OpenSSL.\r\n\r\n* Minor formatting/comment change to Cmake\r\n\r\nPointless, but these things were bothering me..",
             "commit_timestamp": 1704410437.0
+        },
+        {
+            "tool_version": "241.0.20240108.83533-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1704942372.515871,
+            "elapsed_time": 66.34009385108948,
+            "x64": true,
+            "actual_files_count": 5,
+            "expected_files_count": 3,
+            "memory_traffic": 2518.464775085449,
+            "repo_url": "https://github.com/yhirose/cpp-httplib",
+            "commit_ref": "d948e38820ddc60650655e8cc65797c37d1984ac",
+            "commit_message": "Minor cmake fix & cleanup (#1754)\n\n* Reorder cmake docs a bit\r\n\r\nJust wanted to group the more related build options together.\r\n\r\nAlso removed a pointless reference to the old reasoning for the required\r\nmin ver since it's 3.14 now anyways.\r\n\r\n* Fix outdated cmake comment\r\n\r\nWe don't use Git to find the version string anymore.\r\nJust updated to match what it's actually used for now.\r\n\r\n* Group options and build-tree vars in Cmake\r\n\r\nDoesn't really change anything, I just wanted to clean these up a bit.\r\n\r\n* Fix how we set HTTPLIB_IS_USING_XXX vars in Cmake\r\n\r\nPrevents us acidentally using libs when the user didn't want them\r\nactually used. This could happen if they set the option to OFF but their\r\nown project itself is using the lib, thus we'd find and use it anyways.\r\n\r\nRef #1602 to see an example of this already happening before.\r\nThis is merely apply that kind of fix to all 3 of our deps, instead of\r\njust OpenSSL.\r\n\r\n* Minor formatting/comment change to Cmake\r\n\r\nPointless, but these things were bothering me..",
+            "commit_timestamp": 1704410437.0
         }
     ]
 }
