@@ -14966,6 +14966,21 @@
             "commit_ref": "c8cffcb8d45449b3b9b7ce48d3e8ee24ceb3e6b2",
             "commit_message": "headers: remove assert from Curl_headers_push\n\nThe fuzzer managed to reach the function without a terminating CR or LF\nso let's handle it normally. While there, remove the goto.\n\nBug: https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=65839\n\nCloses #12721\n",
             "commit_timestamp": 1705652204.0
+        },
+        {
+            "tool_version": "241.0.20240119.32221-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1705676808.830766,
+            "elapsed_time": 182.64812350273132,
+            "x64": true,
+            "actual_files_count": 2459,
+            "expected_files_count": 2323,
+            "memory_traffic": 32525.733108520508,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "524253dc9078e69300c5390eda496603067f325f",
+            "commit_message": "rtsp: Convert assertion into debug log\n\nBug: https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=65934\n\n- write excess bytes to the client where the standard excess bytes\n  checks will report any wrongness and fail the transfer\n\nFixes #12738\nCloses #12739\n",
+            "commit_timestamp": 1705662936.0
         }
     ]
 }
