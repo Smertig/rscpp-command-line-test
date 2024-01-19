@@ -4,7 +4,7 @@ import subprocess
 import sys
 import tempfile
 import time
-
+import urllib.request
 import gdown
 
 assert len(sys.argv) == 2, f"Usage: {sys.argv[0]} tool_version"
@@ -61,6 +61,19 @@ if tool_version.startswith('gdrive:'):
         tool_version = m.group(1)
         print(f'Parsed tool version: \'{tool_version}\'')
 
+        install_tool(JB_TOOL_NAME, tool_version, ['--add-source', package_dir])
+elif tool_version.startswith('https://uploads.jetbrains.com'):
+    package_url = tool_version
+    m = JB_TOOL_VERSION_RE.findall(package_url)
+    if len(m) != 1:
+        raise Exception(f'invalid format of nupkg url: \'{package_url}\'')
+
+    tool_version = m[0]
+    print(f'Parsed tool version: \'{tool_version}\'')
+    package_name = f'{JB_TOOL_NAME}.{tool_version}.nupkg'
+
+    with tempfile.TemporaryDirectory() as package_dir:
+        urllib.request.urlretrieve(package_url, f'{package_dir}/{package_name}')
         install_tool(JB_TOOL_NAME, tool_version, ['--add-source', package_dir])
 else:
     install_tool(JB_TOOL_NAME, tool_version)
