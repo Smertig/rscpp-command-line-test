@@ -15738,6 +15738,21 @@
             "commit_ref": "648c20d60225f0fc551c28c6c57e997f6fd76fd9",
             "commit_message": "Pass crate mapping from Bazel to protoc\n\nThis will enable us to get the correct crate names for Rust gencode. The actual\nreading of the mapping file in protoc happens in the followup.\n\nPiperOrigin-RevId: 597509582\n",
             "commit_timestamp": 1704974238.0
+        },
+        {
+            "tool_version": "241.0.20240111.164711-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1705653465.425884,
+            "elapsed_time": 314.20593190193176,
+            "x64": true,
+            "actual_files_count": 864,
+            "expected_files_count": 818,
+            "memory_traffic": 34010.69241333008,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "65a353fa10ad6243d4ae2de18ec2a824dc709fd2",
+            "commit_message": "Update JSON parser to reject overlong UTF-8 encodings\n\nA fuzz test discovered that our JSON parser will accept \"overlong\" UTF-8\ncharacters, i.e. encodings that use more bytes than necessary. We should reject\nthese overlong encodings, because they are not considered valid.\n\nTo fix this problem, I updated the JSON lexer to rely on utf8_range for\nchecking UTF-8 validity. This way, the lexer does not need to do any UTF-8\nvalidation of its own, but just has to interpret the UTF-8 enough to know how\nmany bytes to read for each character.\n\nPiperOrigin-RevId: 599657903\n",
+            "commit_timestamp": 1705623958.0
         }
     ]
 }

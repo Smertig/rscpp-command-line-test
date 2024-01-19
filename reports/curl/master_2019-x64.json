@@ -14936,6 +14936,21 @@
             "commit_ref": "48d86999af12c8dee410296ae7a8f7072ea02042",
             "commit_message": "multi: pollset adjust, init with FIRSTSOCKET during connect\n\n- `conn->sockfd` is set by `Curl_setup_transfer()`, but that\n  is called *after* the connection has been established\n- use `conn->sock[FIRSTSOCKET]` instead\n\nFollow-up to a0f94800d507de\nCloses #12664\n",
             "commit_timestamp": 1704818473.0
+        },
+        {
+            "tool_version": "241.0.20240111.164711-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1705653197.487527,
+            "elapsed_time": 176.0284116268158,
+            "x64": true,
+            "actual_files_count": 2459,
+            "expected_files_count": 2323,
+            "memory_traffic": 32569.829177856445,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "c8cffcb8d45449b3b9b7ce48d3e8ee24ceb3e6b2",
+            "commit_message": "headers: remove assert from Curl_headers_push\n\nThe fuzzer managed to reach the function without a terminating CR or LF\nso let's handle it normally. While there, remove the goto.\n\nBug: https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=65839\n\nCloses #12721\n",
+            "commit_timestamp": 1705652204.0
         }
     ]
 }

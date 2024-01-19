@@ -16283,6 +16283,21 @@
             "commit_ref": "863c662c0eff026300f4d729a7054e90d6d12cdd",
             "commit_message": "Fix adding Opts with | to lvalue Parser\n\nThis is the recommended way of adding new Opts in our documentation\nfor using custom main, but we did not compile the code to see if it\nworks. We now compile the example as part of the BUILD_EXAMPLES\noption.\n\nFixes #2787\n",
             "commit_timestamp": 1704234433.0
+        },
+        {
+            "tool_version": "241.0.20240111.164711-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1705653273.437295,
+            "elapsed_time": 90.07676649093628,
+            "x64": true,
+            "actual_files_count": 282,
+            "expected_files_count": 272,
+            "memory_traffic": 4147.726020812988,
+            "repo_url": "https://github.com/catchorg/Catch2.git",
+            "commit_ref": "79205da6a67f5ad3d7874cf1c6423283dfeab199",
+            "commit_message": "Fix typo in release notes for v3.5.2\n",
+            "commit_timestamp": 1705324980.0
         }
     ]
 }

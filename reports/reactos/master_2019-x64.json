@@ -14731,6 +14731,21 @@
             "commit_ref": "5719896650f0a51ddf18a2dd3c85a8dea9f08d5c",
             "commit_message": "[SDK] cicuif.h: Refactoring Part 2 (#6330)\n\nSupporting TIPs...\r\nJIRA issue: CORE-19360\r\n- Fix some mistakes of\r\n  CUIFButton::OnMouseIn and\r\n  CUIFButton::OnMouseOut.\r\n- Fix some mistakes of CUIFObject\r\n  and CUIFWindow.",
             "commit_timestamp": 1704860001.0
+        },
+        {
+            "tool_version": "241.0.20240111.164711-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1705653499.346619,
+            "elapsed_time": 127.83742666244507,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 76511.3600692749,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "9c1cfe058706ff31dbcd3c7b53eec879f66c8030",
+            "commit_message": "[NTOS:KE] Fix initialization of node block for application processors\n\n- Initialize KeNodeBlock[0] statically\n- Update Prcb->ParentNode->ProcessorMask for all processors\n",
+            "commit_timestamp": 1705614106.0
         }
     ]
 }

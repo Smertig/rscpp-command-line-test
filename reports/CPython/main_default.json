@@ -12101,6 +12101,21 @@
             "commit_ref": "66363b9a7b9fe7c99eba3a185b74c5fdbf842eba",
             "commit_message": "gh-109858: Protect zipfile from \"quoted-overlap\" zipbomb (GH-110016)\n\nRaise BadZipFile when try to read an entry that overlaps with other entry or\r\ncentral directory.\r\n",
             "commit_timestamp": 1704894936.0
+        },
+        {
+            "tool_version": "241.0.20240111.164711-eap01d",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1705653345.337333,
+            "elapsed_time": 1354.037258863449,
+            "x64": true,
+            "actual_files_count": 996,
+            "expected_files_count": null,
+            "memory_traffic": 265341.12633514404,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "a34e4db28a98904f6c9976675ed7121ed61edabe",
+            "commit_message": "gh-111968: Fix --without-freelists build (gh-114270)\n\n",
+            "commit_timestamp": 1705620313.0
         }
     ]
 }
