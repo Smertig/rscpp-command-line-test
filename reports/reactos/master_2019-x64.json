@@ -14746,6 +14746,21 @@
             "commit_ref": "9c1cfe058706ff31dbcd3c7b53eec879f66c8030",
             "commit_message": "[NTOS:KE] Fix initialization of node block for application processors\n\n- Initialize KeNodeBlock[0] statically\n- Update Prcb->ParentNode->ProcessorMask for all processors\n",
             "commit_timestamp": 1705614106.0
+        },
+        {
+            "tool_version": "241.0.20240119.32221-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1705654229.089562,
+            "elapsed_time": 150.13123965263367,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 76585.94254302979,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "9c1cfe058706ff31dbcd3c7b53eec879f66c8030",
+            "commit_message": "[NTOS:KE] Fix initialization of node block for application processors\n\n- Initialize KeNodeBlock[0] statically\n- Update Prcb->ParentNode->ProcessorMask for all processors\n",
+            "commit_timestamp": 1705614106.0
         }
     ]
 }
