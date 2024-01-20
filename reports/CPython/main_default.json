@@ -12161,6 +12161,21 @@
             "commit_ref": "6313cdde58f34648a430d2830357c9d2a5b67b87",
             "commit_message": "GH-79634: Accept path-like objects as pathlib glob patterns. (#114017)\n\nAllow `os.PathLike` objects to be passed as patterns to `pathlib.Path.glob()` and `rglob()`. (It's already possible to use them in `PurePath.match()`)\r\n\r\nWhile we're in the area:\r\n\r\n- Allow empty glob patterns in `PathBase` (but not `Path`)\r\n- Speed up globbing in `PathBase` by generating paths with trailing slashes only as a final step, rather than for every intermediate directory.\r\n- Simplify and speed up handling of rare patterns involving both `**` and `..` segments.",
             "commit_timestamp": 1705716625.0
+        },
+        {
+            "tool_version": "241.0.20240119.171944-eap01d",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1705740447.966127,
+            "elapsed_time": 1213.7759130001068,
+            "x64": true,
+            "actual_files_count": 996,
+            "expected_files_count": null,
+            "memory_traffic": 48428.853523254395,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "1e610fb05fa4ba61a759b68461f1a9aed07622fc",
+            "commit_message": "GH-113225: Speed up `pathlib.Path.walk(top_down=False)` (#113693)\n\nUse `_make_child_entry()` rather than `_make_child_relpath()` to retrieve\r\npath objects for directories to visit. This saves the allocation of one\r\npath object per directory in user subclasses of `PathBase`, and avoids a\r\nsecond loop.\r\n\r\nThis trick does not apply when walking top-down, because users can affect\r\nthe walk by modifying *dirnames* in-place.\r\n\r\nA side effect of this change is that, in bottom-up mode, subdirectories of\r\neach directory are visited in reverse order, and that this order doesn't\r\nmatch that of the names in *dirnames*. I suspect this is fine as the\r\norder is arbitrary anyway.",
+            "commit_timestamp": 1705719960.0
         }
     ]
 }

@@ -16197,6 +16197,23 @@
             "commit_ref": "02232307ce18c095ef0bf26b5cef23e4efbc1e4b",
             "commit_message": "[clang][analyzer] Improve modeling of 'fdopen' in StdLibraryFunctionsChecker (#78680)\n\n",
             "commit_timestamp": 1705719760.0
+        },
+        {
+            "tool_version": "241.0.20240119.171944-eap01d",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1705740757.738088,
+            "elapsed_time": 1443.075600385666,
+            "x64": true,
+            "actual_files_count": 1728,
+            "expected_files_count": 1661,
+            "memory_traffic": 233679.47225952148,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "9eb0f86c279f40a792ec27bf0e9b491b8c90a640",
+            "commit_message": "[clang] Implement CWG1878 \"`operator auto` template\" (#78103)\n\nC++14 introduced deduced return type for regular functions, but shortly after [CWG1878](https://wg21.link/cwg1878) was filed and resolved to disallow deduced return types in conversion function templates. So this patch diagnoses such usage of deduced return type in C++14 mode onwards.\r\n\r\nFixes #51776",
+            "commit_timestamp": 1705738988.0
         }
     ]
 }

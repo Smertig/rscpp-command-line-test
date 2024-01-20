@@ -15070,6 +15070,21 @@
             "commit_ref": "e64857c5611d5898b7b30640a775331488a5ebef",
             "commit_message": "Merge pull request #23736 from seanm:c++11-simplifications\n\nRemoved all pre-C++11 code, workarounds, and branches #23736\r\n\r\nThis removes a bunch of pre-C++11 workrarounds that are no longer necessary as C++11 is now required.\r\nIt is a nice clean up and simplification.\r\n\r\n* No longer unconditionally #include <array> in cvdef.h, include explicitly where needed\r\n* Removed deprecated CV_NODISCARD, already unused in the codebase\r\n* Removed some pre-C++11 workarounds, and simplified some backwards compat defines\r\n* Removed CV_CXX_STD_ARRAY\r\n* Removed CV_CXX_MOVE_SEMANTICS and CV_CXX_MOVE\r\n* Removed all tests of CV_CXX11, now assume it's always true. This allowed removing a lot of dead code.\r\n* Updated some documentation consequently.\r\n* Removed all tests of CV_CXX11, now assume it's always true\r\n* Fixed links.\r\n\r\n---------\r\n\r\nCo-authored-by: Maksim Shabunin <maksim.shabunin@gmail.com>\r\nCo-authored-by: Alexander Smorkalov <alexander.smorkalov@xperience.ai>",
             "commit_timestamp": 1705672388.0
+        },
+        {
+            "tool_version": "241.0.20240119.171944-eap01d",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1705740345.976844,
+            "elapsed_time": 427.0205457210541,
+            "x64": true,
+            "actual_files_count": 469,
+            "expected_files_count": 459,
+            "memory_traffic": 41941.513244628906,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "e64857c5611d5898b7b30640a775331488a5ebef",
+            "commit_message": "Merge pull request #23736 from seanm:c++11-simplifications\n\nRemoved all pre-C++11 code, workarounds, and branches #23736\r\n\r\nThis removes a bunch of pre-C++11 workrarounds that are no longer necessary as C++11 is now required.\r\nIt is a nice clean up and simplification.\r\n\r\n* No longer unconditionally #include <array> in cvdef.h, include explicitly where needed\r\n* Removed deprecated CV_NODISCARD, already unused in the codebase\r\n* Removed some pre-C++11 workarounds, and simplified some backwards compat defines\r\n* Removed CV_CXX_STD_ARRAY\r\n* Removed CV_CXX_MOVE_SEMANTICS and CV_CXX_MOVE\r\n* Removed all tests of CV_CXX11, now assume it's always true. This allowed removing a lot of dead code.\r\n* Updated some documentation consequently.\r\n* Removed all tests of CV_CXX11, now assume it's always true\r\n* Fixed links.\r\n\r\n---------\r\n\r\nCo-authored-by: Maksim Shabunin <maksim.shabunin@gmail.com>\r\nCo-authored-by: Alexander Smorkalov <alexander.smorkalov@xperience.ai>",
+            "commit_timestamp": 1705672388.0
         }
     ]
 }
