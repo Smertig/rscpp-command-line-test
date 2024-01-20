@@ -13933,6 +13933,21 @@
             "commit_ref": "0f98d766837c9ec2875470d2f71a8acdea5eb2d5",
             "commit_message": "Fix DialogActionManager::send_dialog_action in secret chats (#2756)\n\n* Fix DialogActionManager::send_dialog_action in secret chats \r\n\r\nThe code in `DialogActionManager::send_dialog_action` made the assumption that since we'd either have early returned or `DialogManager::have_input_peer` would be true, and therefore the else block of the conditional, which intended to set input_peer, should have done so successfully.\r\n\r\nHowever, `DialogManager::have_input_peer` will return true for secret chats when `contacts_manager->have_input_encrypted_peer`\r\nAnd `DialogManager::get_input_peer` will return a `nullptr` for secret chats by design (I believe this is because they operate using structures that are currently incompatible)\r\n\r\nThis should fix the root of a crash that happens when typing in or sending messages to secret chats on:\r\nTelegram X 0.26.4.1678-arm64-v8a (99b10675)\r\nTDLib: 1.8.23 (tdlib/td@4bafdc2)\r\n\r\n* Move CHECK below SecretChat case instead per feedback",
             "commit_timestamp": 1705269776.0
+        },
+        {
+            "tool_version": "241.0.20240119.32221-eap01d",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1705720556.368805,
+            "elapsed_time": 1667.876249074936,
+            "x64": true,
+            "actual_files_count": 1190,
+            "expected_files_count": 1103,
+            "memory_traffic": 125945.23329162598,
+            "repo_url": "https://github.com/tdlib/td",
+            "commit_ref": "09c6bad8bddf2d42668f0b48b3a9d4ba3cb21222",
+            "commit_message": "Remove pinned message notification only if new pinned message is added to Mentions.\n",
+            "commit_timestamp": 1705710610.0
         }
     ]
 }

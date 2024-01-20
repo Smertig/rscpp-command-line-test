@@ -12146,6 +12146,21 @@
             "commit_ref": "7e49f27b41d5728cde1f8790586d113ddc25f18d",
             "commit_message": "gh-114265: move line number propagation before cfg optimization, remove guarantee_lineno_for_exits (#114267)\n\n",
             "commit_timestamp": 1705675766.0
+        },
+        {
+            "tool_version": "241.0.20240119.32221-eap01d",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1705720040.442178,
+            "elapsed_time": 1389.2923758029938,
+            "x64": true,
+            "actual_files_count": 996,
+            "expected_files_count": null,
+            "memory_traffic": 265381.803314209,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "6313cdde58f34648a430d2830357c9d2a5b67b87",
+            "commit_message": "GH-79634: Accept path-like objects as pathlib glob patterns. (#114017)\n\nAllow `os.PathLike` objects to be passed as patterns to `pathlib.Path.glob()` and `rglob()`. (It's already possible to use them in `PurePath.match()`)\r\n\r\nWhile we're in the area:\r\n\r\n- Allow empty glob patterns in `PathBase` (but not `Path`)\r\n- Speed up globbing in `PathBase` by generating paths with trailing slashes only as a final step, rather than for every intermediate directory.\r\n- Simplify and speed up handling of rare patterns involving both `**` and `..` segments.",
+            "commit_timestamp": 1705716625.0
         }
     ]
 }
