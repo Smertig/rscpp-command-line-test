@@ -14806,6 +14806,21 @@
             "commit_ref": "9c1cfe058706ff31dbcd3c7b53eec879f66c8030",
             "commit_message": "[NTOS:KE] Fix initialization of node block for application processors\n\n- Initialize KeNodeBlock[0] statically\n- Update Prcb->ParentNode->ProcessorMask for all processors\n",
             "commit_timestamp": 1705614106.0
+        },
+        {
+            "tool_version": "241.0.20240119.171944-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1705763161.753365,
+            "elapsed_time": 88.9079966545105,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 8284.308151245117,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "ab528ac6ae105b19d457587dc680d8016720bc3d",
+            "commit_message": "[NTOS:KE] Acquire PRCB lock before marking thread ready for execution in dispatch interrupt routine (#6387)\n\nFixed in x86 and ARM (this was already done in x64).\r\n\r\nThis is needed because thread preparation routine KxQueueReadyThread()\r\nreleases PRCB lock, but does not acquire it, so that the locking must\r\nalways be done outside the function, same as in all its other usage cases.\r\nThis fixes an assert from release PRCB routine, when booting x86 ReactOS\r\nin SMP mode, because it attempts to release the lock when it is not\r\nactually acquired.\r\n\r\nAddendum to commit a011d19ed.\r\n\r\n+ Add an assert in KxQueueReadyThread() to ensure the PRCB lock is actually acquired.\r\n",
+            "commit_timestamp": 1705762719.0
         }
     ]
 }
