@@ -14836,6 +14836,21 @@
             "commit_ref": "748a2e165534e107492a2c97c231deb3e5d79bbc",
             "commit_message": "[NTOS] Fix boot on UP build - PrcbLocks are not used on UP (#6391)\n\nOn the uniprocessor kernel KiAcquirePrcbLock is a stub that doesn't modify the current Prcb's PrcbLock value.\r\nQuickly protect this assert around CONFIG_SMP",
             "commit_timestamp": 1705769953.0
+        },
+        {
+            "tool_version": "241.0.20240119.171944-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1705849530.414383,
+            "elapsed_time": 83.6242344379425,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 8276.094314575195,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "748a2e165534e107492a2c97c231deb3e5d79bbc",
+            "commit_message": "[NTOS] Fix boot on UP build - PrcbLocks are not used on UP (#6391)\n\nOn the uniprocessor kernel KiAcquirePrcbLock is a stub that doesn't modify the current Prcb's PrcbLock value.\r\nQuickly protect this assert around CONFIG_SMP",
+            "commit_timestamp": 1705769953.0
         }
     ]
 }
