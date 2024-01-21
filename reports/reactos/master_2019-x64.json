@@ -14821,6 +14821,21 @@
             "commit_ref": "ab528ac6ae105b19d457587dc680d8016720bc3d",
             "commit_message": "[NTOS:KE] Acquire PRCB lock before marking thread ready for execution in dispatch interrupt routine (#6387)\n\nFixed in x86 and ARM (this was already done in x64).\r\n\r\nThis is needed because thread preparation routine KxQueueReadyThread()\r\nreleases PRCB lock, but does not acquire it, so that the locking must\r\nalways be done outside the function, same as in all its other usage cases.\r\nThis fixes an assert from release PRCB routine, when booting x86 ReactOS\r\nin SMP mode, because it attempts to release the lock when it is not\r\nactually acquired.\r\n\r\nAddendum to commit a011d19ed.\r\n\r\n+ Add an assert in KxQueueReadyThread() to ensure the PRCB lock is actually acquired.\r\n",
             "commit_timestamp": 1705762719.0
+        },
+        {
+            "tool_version": "241.0.20240119.171944-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1705806380.183669,
+            "elapsed_time": 91.30691123008728,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 8270.059783935547,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "748a2e165534e107492a2c97c231deb3e5d79bbc",
+            "commit_message": "[NTOS] Fix boot on UP build - PrcbLocks are not used on UP (#6391)\n\nOn the uniprocessor kernel KiAcquirePrcbLock is a stub that doesn't modify the current Prcb's PrcbLock value.\r\nQuickly protect this assert around CONFIG_SMP",
+            "commit_timestamp": 1705769953.0
         }
     ]
 }

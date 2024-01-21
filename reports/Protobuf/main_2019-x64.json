@@ -15828,6 +15828,21 @@
             "commit_ref": "1eff9d74519c7d21592dddc3c3665993bb0f117f",
             "commit_message": "Proper fix utf8 command line arguments (#14253)\n\nhttps://github.com/protocolbuffers/protobuf/pull/14197\nTried to fix utf-8 issue, but it didnt handle multibyte chars.\nOnly way I found that works constantly is using `CommandLineToArgvW`.\nTo not ripple out `wchar_t`, I convert to and from where needed\n\nCloses #14253\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/14253 from hknielsen:proper-fix-none-ascii-issue cad753e9e6f229d83657db6e3df7dfdefa39b7e5\nPiperOrigin-RevId: 599990369\n",
             "commit_timestamp": 1705718845.0
+        },
+        {
+            "tool_version": "241.0.20240119.171944-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1705806388.635535,
+            "elapsed_time": 286.99621176719666,
+            "x64": true,
+            "actual_files_count": 864,
+            "expected_files_count": 818,
+            "memory_traffic": 33666.10317993164,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "c0d08bdcade9d44698015b85c9c23343ca1319b7",
+            "commit_message": "Breaking Change: Stop generating the \"newInstance\" method. This is not used anymore.\n\nPiperOrigin-RevId: 600123108\n",
+            "commit_timestamp": 1705784072.0
         }
     ]
 }
