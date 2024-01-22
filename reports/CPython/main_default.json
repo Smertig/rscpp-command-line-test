@@ -12236,6 +12236,21 @@
             "commit_ref": "fd49e226700e2483a452c3c92da6f15d822ae054",
             "commit_message": "gh-114328: tty cbreak mode should not alter ICRNL (#114335)\n\nThe terminal CR -> NL mapping setting should be inherited in cbreak mode as OSes do not specify altering it as part of their stty cbreak mode definition.",
             "commit_timestamp": 1705879552.0
+        },
+        {
+            "tool_version": "241.0.20240119.171944-eap01d",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1705936134.629055,
+            "elapsed_time": 1337.544007062912,
+            "x64": true,
+            "actual_files_count": 997,
+            "expected_files_count": null,
+            "memory_traffic": 48240.13626861572,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "49785b06ded19c7c4afce186bac90fea707470ea",
+            "commit_message": "gh-102512: Turn _DummyThread into _MainThread after os.fork() called from a foreign thread (GH-113261)\n\nAlways set a _MainThread as a main thread after os.fork() is called from\r\na thread started not by the threading module.\r\n\r\nA new _MainThread was already set as a new main thread after fork if\r\nthreading.current_thread() was not called for a foreign thread before fork.\r\nNow, if it was called before fork, the implicitly created _DummyThread will\r\nbe turned into _MainThread after fork.\r\n\r\nIt fixes, in particularly, an incompatibility of _DummyThread with\r\nthe threading shutdown logic which relies on the main thread\r\nhaving tstate_lock.\r\n\r\nCo-authored-by: Marek Marczykowski-G\u00f3recki <marmarek@invisiblethingslab.com>",
+            "commit_timestamp": 1705932882.0
         }
     ]
 }

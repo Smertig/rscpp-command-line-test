@@ -16282,6 +16282,23 @@
             "commit_ref": "be0fa319f922e6ea3661640aa55f6b9092be5a99",
             "commit_message": "[libc] fix unit tests in fullbuild (#78864)\n\nfixes https://github.com/llvm/llvm-project/issues/78743\r\n\r\n- For normal objects, the patch removes `RTTI` and exceptions in `fullbuild`\r\n- For FP tests, the patch adds links to `stdc++` and `gcc_s` if `MPFR` is used.",
             "commit_timestamp": 1705891037.0
+        },
+        {
+            "tool_version": "241.0.20240119.171944-eap01d",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1705936512.211068,
+            "elapsed_time": 1505.5527906417847,
+            "x64": true,
+            "actual_files_count": 1728,
+            "expected_files_count": 1661,
+            "memory_traffic": 233476.50076293945,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "3de5d8e1254977c8812412a159da4185c9853fd0",
+            "commit_message": "[include-cleaner] Add --only-headers flag, opposite of --ignore-headers (#78714)\n\n",
+            "commit_timestamp": 1705935817.0
         }
     ]
 }

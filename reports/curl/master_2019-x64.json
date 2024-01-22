@@ -15071,6 +15071,21 @@
             "commit_ref": "ca01aca878e096f68482c8b7b4be5fca657eb026",
             "commit_message": "TODO: update broken link to ratelimit-headers draft\n\nCloses #12741\n",
             "commit_timestamp": 1705684685.0
+        },
+        {
+            "tool_version": "241.0.20240119.171944-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1705935959.458616,
+            "elapsed_time": 177.70880031585693,
+            "x64": true,
+            "actual_files_count": 2459,
+            "expected_files_count": 2323,
+            "memory_traffic": 32655.03450012207,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "f81a335e85ba625c92da5738cb7b693cd71662ad",
+            "commit_message": "cmake: fix `ENABLE_MANUAL` option\n\nFix the `ENABLE_MANUAL` option. Set it to default to `OFF`.\n\nBefore this patch `ENABLE_MANUAL=ON` was a no-op, even though it was the\noption designed to enable building and using the built-in curl manual.\n(`USE_MANUAL=ON` option worked for this instead, by accident).\n\nRef: https://github.com/curl/curl/pull/12730#issuecomment-1902572409\nCloses #12749\n",
+            "commit_timestamp": 1705916078.0
         }
     ]
 }

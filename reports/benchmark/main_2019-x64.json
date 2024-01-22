@@ -16083,6 +16083,21 @@
             "commit_ref": "4682db08bc7bb7e547e0a1056e32392998f8101f",
             "commit_message": "Bump pre-commit dependencies (#1740)\n\nAlso fix a mypy error in `tools.gbench.util` - the condition behaves the\r\nsame as before, but in the new mypy version, the old condition results\r\nin an unreachable code error for the final `return False` statement.\r\n\r\nThis is most likely a bug in mypy's reachability analysis, but the fix\r\nis easy enough here to circumvent it.",
             "commit_timestamp": 1705584957.0
+        },
+        {
+            "tool_version": "241.0.20240119.171944-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1705935963.839138,
+            "elapsed_time": 72.0711669921875,
+            "x64": true,
+            "actual_files_count": 86,
+            "expected_files_count": 86,
+            "memory_traffic": 4513.380767822266,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "4682db08bc7bb7e547e0a1056e32392998f8101f",
+            "commit_message": "Bump pre-commit dependencies (#1740)\n\nAlso fix a mypy error in `tools.gbench.util` - the condition behaves the\r\nsame as before, but in the new mypy version, the old condition results\r\nin an unreachable code error for the final `return False` statement.\r\n\r\nThis is most likely a bug in mypy's reachability analysis, but the fix\r\nis easy enough here to circumvent it.",
+            "commit_timestamp": 1705584957.0
         }
     ]
 }

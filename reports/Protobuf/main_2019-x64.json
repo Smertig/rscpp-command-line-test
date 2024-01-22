@@ -15873,6 +15873,21 @@
             "commit_ref": "c0d08bdcade9d44698015b85c9c23343ca1319b7",
             "commit_message": "Breaking Change: Stop generating the \"newInstance\" method. This is not used anymore.\n\nPiperOrigin-RevId: 600123108\n",
             "commit_timestamp": 1705784072.0
+        },
+        {
+            "tool_version": "241.0.20240119.171944-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1705935974.97697,
+            "elapsed_time": 298.1820020675659,
+            "x64": true,
+            "actual_files_count": 864,
+            "expected_files_count": 818,
+            "memory_traffic": 33677.891426086426,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "0f4cf16815bdf5ca90ee3f30711261e6a6be2f6c",
+            "commit_message": "Depend directly on cc_proto_aspect in rust_cc_proto_library\n\nWe had to wait for cc_proto_aspect to be exposed in Bazel. Now it is, so we can\nsimplify our build rules\n\nPiperOrigin-RevId: 600362773\n",
+            "commit_timestamp": 1705909751.0
         }
     ]
 }
