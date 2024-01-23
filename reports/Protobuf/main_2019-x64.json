@@ -15903,6 +15903,21 @@
             "commit_ref": "303239d74d07daf49ecdba6e23e41c8fe5a9b41e",
             "commit_message": "Drop Protobuf support for Android KitKat per EOL and add existing minimum Java 1.8 in Maven pom.xmls\n\nSee https://android-developers.googleblog.com/2023/07/google-play-services-discontinuing-updates-for-kitkat.html for more details on Android KitKat EOL.\n\nPiperOrigin-RevId: 600609333\n",
             "commit_timestamp": 1705971756.0
+        },
+        {
+            "tool_version": "241.0.20240119.171944-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1706022413.869306,
+            "elapsed_time": 287.0785446166992,
+            "x64": true,
+            "actual_files_count": 862,
+            "expected_files_count": 818,
+            "memory_traffic": 34517.13624572754,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "f9af78e7ee36ea94d0440c957b7b428551452d08",
+            "commit_message": "upb: upb_MiniTable_GetOrPromoteExtension() no longer returns a (upb_Extension*)\n\nPiperOrigin-RevId: 600662130\n",
+            "commit_timestamp": 1705987252.0
         }
     ]
 }
