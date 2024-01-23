@@ -16299,6 +16299,23 @@
             "commit_ref": "3de5d8e1254977c8812412a159da4185c9853fd0",
             "commit_message": "[include-cleaner] Add --only-headers flag, opposite of --ignore-headers (#78714)\n\n",
             "commit_timestamp": 1705935817.0
+        },
+        {
+            "tool_version": "241.0.20240119.171944-eap01d",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1705979743.847203,
+            "elapsed_time": 1463.0328741073608,
+            "x64": true,
+            "actual_files_count": 1728,
+            "expected_files_count": 1661,
+            "memory_traffic": 233428.94636535645,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "4ef646eab3023b52ce8ee529d16605c92caba8ba",
+            "commit_message": "[clang-format]: Fix formatting of if statements with BlockIndent  (#77699)\n\nA bug with BlockIndent prevents line breaks within if (and else if)\r\nclauses.\r\n\r\nWhile fixing this bug, it appears that AlignAfterOpenBracket is not\r\ndesigned to work with loop and if statements, but AlwaysBreak works on\r\nif clauses. The documentation and tests are not clear on whether or not\r\nthis behavior is intended.\r\n\r\nThis PR preserves the `AlwaysBreak` behavior on `if` clauses without\r\nsupporting `BlockIndent` on `if` clauses to avoid regressions while\r\nfixing the bug.\r\n\r\nIt may be reasonable to create an explicit option for alignment of if\r\n(and loop) clauses intentionally for both `AlwaysBreak` and\r\n`BlockIndent`\r\n\r\nFixes #54663.\r\n\r\nMigrated from Differential Revision: https://reviews.llvm.org/D154755\r\nSee more discussion there. Addressed last open comment from the rev\r\nabout refactoring the complex conditional logic involved with the\r\n`AlignAfterOpenBracket` line break behavior.",
+            "commit_timestamp": 1705978876.0
         }
     ]
 }

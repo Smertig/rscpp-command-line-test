@@ -15086,6 +15086,21 @@
             "commit_ref": "f81a335e85ba625c92da5738cb7b693cd71662ad",
             "commit_message": "cmake: fix `ENABLE_MANUAL` option\n\nFix the `ENABLE_MANUAL` option. Set it to default to `OFF`.\n\nBefore this patch `ENABLE_MANUAL=ON` was a no-op, even though it was the\noption designed to enable building and using the built-in curl manual.\n(`USE_MANUAL=ON` option worked for this instead, by accident).\n\nRef: https://github.com/curl/curl/pull/12730#issuecomment-1902572409\nCloses #12749\n",
             "commit_timestamp": 1705916078.0
+        },
+        {
+            "tool_version": "241.0.20240119.171944-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1705979158.659455,
+            "elapsed_time": 183.50107836723328,
+            "x64": true,
+            "actual_files_count": 2461,
+            "expected_files_count": 2323,
+            "memory_traffic": 32650.17096710205,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "3f08d80b2244524646ce86915c585509ac54fb4c",
+            "commit_message": "cmake: add option to disable building docs\n",
+            "commit_timestamp": 1705966142.0
         }
     ]
 }
