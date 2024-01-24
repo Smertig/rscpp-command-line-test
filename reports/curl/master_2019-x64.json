@@ -15116,6 +15116,21 @@
             "commit_ref": "38915d55f954a8115fad292608c1f4a269591e23",
             "commit_message": "RELEASE-NOTES: synced\n",
             "commit_timestamp": 1706016876.0
+        },
+        {
+            "tool_version": "241.0.20240119.171944-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1706065600.767071,
+            "elapsed_time": 184.5431787967682,
+            "x64": true,
+            "actual_files_count": 2461,
+            "expected_files_count": 2323,
+            "memory_traffic": 32477.63819885254,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "2620aa930bc73af1e4c70b10e3125b957b96ecfb",
+            "commit_message": "cmake: speed up curldown processing, enable by default\n\n- cmake: enable `BUILD_DOCS` by default (this controls converting and\n  installing `.3` files from `.md` sources)\n\n- cmake: speed up generating `.3` files by using a single command per\n  directory, instead of a single command per file. This reduces external\n  commands by about a thousand. (There remains some CMake logic kicking\n  in resulting in 500 -one per file- external `-E touch_nocreate` calls.)\n\n- cd2nroff: add ability to process multiple input files.\n\n- cd2nroff: add `-k` option to use the source filename to form the\n  output filename. (instead of the default in-file `Title:` line.)\n\nFollow-up to 3f08d80b2244524646ce86915c585509ac54fb4c\nFollow-up to ea0b575dab86a3c44dd1d547dc500276266aa382 #12753\nFollow-up to eefcc1bda4bccd800f5a56a0fe17a2f44a96e88b #12730\n\nCloses #12762\n",
+            "commit_timestamp": 1706051199.0
         }
     ]
 }
