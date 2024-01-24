@@ -16350,6 +16350,23 @@
             "commit_ref": "baba7e4175b6ca21e83b1cf8229f29dbba02e979",
             "commit_message": "[test] Update dwarf-loongarch-relocs.ll\n\nAddress buildbot faiures:\nhttp://45.33.8.238/macm1/77360/step_11.txt\nhttp://45.33.8.238/linux/128902/step_12.txt\n",
             "commit_timestamp": 1706065396.0
+        },
+        {
+            "tool_version": "241.0.20240119.171944-eap01d",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1706109325.449193,
+            "elapsed_time": 1483.6633327007294,
+            "x64": true,
+            "actual_files_count": 1729,
+            "expected_files_count": 1661,
+            "memory_traffic": 233671.85748291016,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "380ac53dfa05792c6f9fd0a4aba542f8c7e5e17c",
+            "commit_message": "[DebugNames] Implement Entry::GetParentEntry query (#78760)\n\nThis commit introduces a helper function to DWARFAcceleratorTable::Entry\r\nwhich follows DW_IDX_Parent attributes to returns the corresponding\r\nparent Entry in the table.\r\n\r\nIt is tested by enhancing dwarfdump so that it now prints:\r\n\r\n1. When data is corrupt.\r\n2. When parent information is present, but the parent is not indexed.\r\n3. The parent entry offset, when the parent is present and indexed. This\r\nis printed in terms a real entry offset (the same that gets printed at\r\nthe start of each entry: \"Entry @ 0x...\"), instead of the encoded number\r\nin the table (which is an offset from the start off the Entry list).\r\nThis makes it easy to visually inspect the dwarfdump and check what the\r\nparent is.",
+            "commit_timestamp": 1706107443.0
         }
     ]
 }
