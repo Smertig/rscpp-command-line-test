@@ -16384,6 +16384,23 @@
             "commit_ref": "84be954cb26ebde58d4ddd2255dfd99904d9ae1b",
             "commit_message": "[RISCV][CostModel] Refine Arithmetic reduction costs (#79103)\n\nThis patch is split off from #77342\r\n\r\n- Correct for CodeSize cost that 1 instruction is not included. 3 is\r\nfrom {VMV.S, ReductionOp, VMV.X}\r\n- Add SplitCost\r\nUnordered reduction chain a series of VADD/VFADD/... which scales with\r\nLMUL.\r\n Ordered reductions chain a series of VFREDOSUMs.\r\n- Use MVT to estimate VL.",
             "commit_timestamp": 1706150984.0
+        },
+        {
+            "tool_version": "241.0.20240119.171944-eap01d",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1706195733.780692,
+            "elapsed_time": 1420.2988774776459,
+            "x64": true,
+            "actual_files_count": 1729,
+            "expected_files_count": 1661,
+            "memory_traffic": 234002.602684021,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "1f8c3c3ab1321c3e3fb10a5f75851165dfc8c5a5",
+            "commit_message": "[AMDGPU][NFC] Eliminate unnecessary operand classes. (#79450)\n\nThese do not seem to remove many repetitions or add clarity; many of\r\nthem are only used once.\r\n\r\nNot having them also helps further work getting rid of the decoding\r\nfunctions defined using macros.\r\n\r\nPart of <https://github.com/llvm/llvm-project/issues/62629>.",
+            "commit_timestamp": 1706195051.0
         }
     ]
 }

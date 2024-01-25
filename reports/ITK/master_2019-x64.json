@@ -15221,6 +15221,21 @@
             "commit_ref": "902d1f27d8d648a5a671b433f719cd355e668b95",
             "commit_message": "STYLE: Replace tuple with private GlobalObject struct, in SingletonIndex\n\nA simple `struct` appears more readable than an `std::tuple`, in this case,\nespecially because the struct has a name for each data element (`Instance` and\n`DeleteFunc`), whereas each tuple data element is only accessed by its number.\n",
             "commit_timestamp": 1706142279.0
+        },
+        {
+            "tool_version": "241.0.20240119.171944-eap01d",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1706195492.721774,
+            "elapsed_time": 243.60070514678955,
+            "x64": true,
+            "actual_files_count": 100,
+            "expected_files_count": null,
+            "memory_traffic": 27187.625122070312,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "902d1f27d8d648a5a671b433f719cd355e668b95",
+            "commit_message": "STYLE: Replace tuple with private GlobalObject struct, in SingletonIndex\n\nA simple `struct` appears more readable than an `std::tuple`, in this case,\nespecially because the struct has a name for each data element (`Instance` and\n`DeleteFunc`), whereas each tuple data element is only accessed by its number.\n",
+            "commit_timestamp": 1706142279.0
         }
     ]
 }

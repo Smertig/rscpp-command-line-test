@@ -15161,6 +15161,21 @@
             "commit_ref": "a808aab06851d4364ab1773c664df3d906a497a9",
             "commit_message": "cmake: rework options to enable curl and libcurl docs\n\nRework CMake options for building/using curl tool and libcurl manuals.\n\n- rename `ENABLE_MANUAL` to `ENABLE_CURL_MANUAL`, meaning:\n  to build man page and built-in manual for curl tool.\n\n- rename `BUILD_DOCS` to `BUILD_LIBCURL_DOCS`, meaning:\n  to build man pages for libcurl.\n\n- `BUILD_LIBCURL_DOCS` now works without having to enable\n  `ENABLE_CURL_MANUAL` too.\n\n- drop support for existing CMake-level `USE_MANUAL` option to avoid\n  confusion. (It used to work with the effect of current\n  `ENABLE_CURL_MANUAL`, but only by accident.)\n\nAssisted-by: Richard Levitte\nRef: #12771\nCloses #12773\n",
             "commit_timestamp": 1706138547.0
+        },
+        {
+            "tool_version": "241.0.20240119.171944-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1706195229.391849,
+            "elapsed_time": 195.18245387077332,
+            "x64": true,
+            "actual_files_count": 2461,
+            "expected_files_count": 2323,
+            "memory_traffic": 32205.809829711914,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "52c4d8d3f4dba56b0edd7add1195a455eb58fddd",
+            "commit_message": "tool: fix the listhelp generation command\n\nThe previous command line to generate the tool_listhelp.c source file\nbroke with 2494b8dd5175cee7.\n\nMake 'make listhelp' invoked in src/ generate it. Also update the\ncomment in the file to mention the right procedure.\n\nCloses #12786\n",
+            "commit_timestamp": 1706187266.0
         }
     ]
 }
