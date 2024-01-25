@@ -16367,6 +16367,23 @@
             "commit_ref": "380ac53dfa05792c6f9fd0a4aba542f8c7e5e17c",
             "commit_message": "[DebugNames] Implement Entry::GetParentEntry query (#78760)\n\nThis commit introduces a helper function to DWARFAcceleratorTable::Entry\r\nwhich follows DW_IDX_Parent attributes to returns the corresponding\r\nparent Entry in the table.\r\n\r\nIt is tested by enhancing dwarfdump so that it now prints:\r\n\r\n1. When data is corrupt.\r\n2. When parent information is present, but the parent is not indexed.\r\n3. The parent entry offset, when the parent is present and indexed. This\r\nis printed in terms a real entry offset (the same that gets printed at\r\nthe start of each entry: \"Entry @ 0x...\"), instead of the encoded number\r\nin the table (which is an offset from the start off the Entry list).\r\nThis makes it easy to visually inspect the dwarfdump and check what the\r\nparent is.",
             "commit_timestamp": 1706107443.0
+        },
+        {
+            "tool_version": "241.0.20240119.171944-eap01d",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1706152488.831483,
+            "elapsed_time": 1470.0045363903046,
+            "x64": true,
+            "actual_files_count": 1729,
+            "expected_files_count": 1661,
+            "memory_traffic": 234004.6361465454,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "84be954cb26ebde58d4ddd2255dfd99904d9ae1b",
+            "commit_message": "[RISCV][CostModel] Refine Arithmetic reduction costs (#79103)\n\nThis patch is split off from #77342\r\n\r\n- Correct for CodeSize cost that 1 instruction is not included. 3 is\r\nfrom {VMV.S, ReductionOp, VMV.X}\r\n- Add SplitCost\r\nUnordered reduction chain a series of VADD/VFADD/... which scales with\r\nLMUL.\r\n Ordered reductions chain a series of VFREDOSUMs.\r\n- Use MVT to estimate VL.",
+            "commit_timestamp": 1706150984.0
         }
     ]
 }
