@@ -15236,6 +15236,21 @@
             "commit_ref": "902d1f27d8d648a5a671b433f719cd355e668b95",
             "commit_message": "STYLE: Replace tuple with private GlobalObject struct, in SingletonIndex\n\nA simple `struct` appears more readable than an `std::tuple`, in this case,\nespecially because the struct has a name for each data element (`Instance` and\n`DeleteFunc`), whereas each tuple data element is only accessed by its number.\n",
             "commit_timestamp": 1706142279.0
+        },
+        {
+            "tool_version": "241.0.20240119.171944-eap01d",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1706238675.568923,
+            "elapsed_time": 252.7064664363861,
+            "x64": true,
+            "actual_files_count": 100,
+            "expected_files_count": null,
+            "memory_traffic": 26867.958671569824,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "e306437e564dca3b91fbab9f4494b7c0432d1645",
+            "commit_message": "COMP: Remove unnecessary `itkFEMSpatialObjectWriter.h` includes\n\nRemove unnecessary `itkFEMSpatialObjectWriter.h` includes in `FEM`\nobject tests and apply the \"include-what-you-use\" principle.\n",
+            "commit_timestamp": 1706219108.0
         }
     ]
 }

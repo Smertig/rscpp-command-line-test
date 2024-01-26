@@ -12341,6 +12341,21 @@
             "commit_ref": "07ef63fb6a0fb996d5f56c79f4ccd7a1887a6b2b",
             "commit_message": "Doc/library/sys.monitoring.rst: remove contradictory paragraph. (GH-113619)\n\n",
             "commit_timestamp": 1706193523.0
+        },
+        {
+            "tool_version": "241.0.20240119.171944-eap01d",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1706238519.614838,
+            "elapsed_time": 1382.520620584488,
+            "x64": true,
+            "actual_files_count": 999,
+            "expected_files_count": null,
+            "memory_traffic": 48435.58296203613,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "b69548a0f52418b8a2cf7c7a885fdd7d3bfb1b0b",
+            "commit_message": "GH-73435: Add `pathlib.PurePath.full_match()` (#114350)\n\nIn 49f90ba we added support for the recursive wildcard `**` in\r\n`pathlib.PurePath.match()`. This should allow arbitrary prefix and suffix\r\nmatching, like `p.match('foo/**')` or `p.match('**/foo')`, but there's a\r\nproblem: for relative patterns only, `match()` implicitly inserts a `**`\r\ntoken on the left hand side, causing all patterns to match from the right.\r\nAs a result, it's impossible to match relative patterns from the left:\r\n`PurePath('foo/bar').match('bar/**')` is true!\r\n\r\nThis commit reverts the changes to `match()`, and instead adds a new\r\n`full_match()` method that:\r\n\r\n- Allows empty patterns\r\n- Supports the recursive wildcard `**`\r\n- Matches the *entire* path when given a relative pattern",
+            "commit_timestamp": 1706231566.0
         }
     ]
 }

@@ -16523,6 +16523,21 @@
             "commit_ref": "d9c3506a64b86ab9d60ba679843cfa6665729103",
             "commit_message": "SharedMutex improve (#244)\n\n* Make unlock_shared fully wait-free\r\n* Avoid computing writers size twice\r\n* Inline list implementation to keep less instruction in lock critical section\r\n",
             "commit_timestamp": 1701929641.0
+        },
+        {
+            "tool_version": "241.0.20240119.171944-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1706238371.626697,
+            "elapsed_time": 122.47152185440063,
+            "x64": true,
+            "actual_files_count": 1809,
+            "expected_files_count": 1809,
+            "memory_traffic": 13677.296440124512,
+            "repo_url": "https://github.com/YACLib/YACLib",
+            "commit_ref": "4021de17493eb7ce225b7ce169fab7a739ce4c2f",
+            "commit_message": "Disable flaky windows test",
+            "commit_timestamp": 1706206675.0
         }
     ]
 }
