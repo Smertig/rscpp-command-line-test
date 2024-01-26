@@ -15993,6 +15993,21 @@
             "commit_ref": "85938aa654879153203c2def0be594e0be4a563d",
             "commit_message": "Update internalUpdateFileDescriptor() to synchronize setProto() and resolveAllFeatures() to avoid data races.\n\nPiperOrigin-RevId: 601628994\n",
             "commit_timestamp": 1706237076.0
+        },
+        {
+            "tool_version": "241.0.20240119.171944-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1706281587.419655,
+            "elapsed_time": 295.00105023384094,
+            "x64": true,
+            "actual_files_count": 862,
+            "expected_files_count": 818,
+            "memory_traffic": 34231.33736419678,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "5ecfdd76ef25f069cd84fac0b0fb3b95e2d61a34",
+            "commit_message": "Improve error message in the crate mapping code.\n\nBefore this change we would just crash without further details if the crate mapping file or crate mapping was not found.\n\nPiperOrigin-RevId: 601694688\n",
+            "commit_timestamp": 1706260373.0
         }
     ]
 }
