@@ -15206,6 +15206,21 @@
             "commit_ref": "9a90c9dd64d2f03601833a70786d485851bd1b53",
             "commit_message": "vtls: receive max buffer\n\n- do not only receive one TLS record, but try to fill\n  the passed buffer\n- consider <4K remaning space is \"filled\".\n\nCloses #12801\n",
             "commit_timestamp": 1706280375.0
+        },
+        {
+            "tool_version": "241.0.20240119.171944-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1706324749.540556,
+            "elapsed_time": 175.56172108650208,
+            "x64": true,
+            "actual_files_count": 2461,
+            "expected_files_count": 2323,
+            "memory_traffic": 32579.329261779785,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "aee4ebe59161d0a5281743f96e7738ad97fe1cd4",
+            "commit_message": "krb5: add prototype to silence clang warnings on mvsnprintf()\n\n\"error: format string is not a string literal\"\n\nFollow-up to 09230127589eccc7 which made the warning appear\n\nAssisted-by: Viktor Szakats\nCloses #12803\n",
+            "commit_timestamp": 1706308108.0
         }
     ]
 }
