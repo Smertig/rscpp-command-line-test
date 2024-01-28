@@ -16469,6 +16469,23 @@
             "commit_ref": "143b510a8fefb0d203c9ac7e036aa9967dd8a2ef",
             "commit_message": "[Clang] Fix asan error after ad1a65fca\n\nAnnotating tokens can invalid the stack of Peaked tokens.\n",
             "commit_timestamp": 1706362518.0
+        },
+        {
+            "tool_version": "241.0.20240119.171944-eap01d",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1706411695.955867,
+            "elapsed_time": 1417.235221862793,
+            "x64": true,
+            "actual_files_count": 1729,
+            "expected_files_count": 1661,
+            "memory_traffic": 234185.3378982544,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "7089c012ec08450b1d8050b6b1d85a00505aa51a",
+            "commit_message": "[X86][NFC] Replace if-else with switch-case in X86InstrInfo::foldMemoryOperandImpl\n",
+            "commit_timestamp": 1706409026.0
         }
     ]
 }
