@@ -16503,6 +16503,23 @@
             "commit_ref": "ae46855f53b6fe39a8d17797a49b2911c08fb973",
             "commit_message": "[Target] Use getConstantOperand (NFC)\n",
             "commit_timestamp": 1706493818.0
+        },
+        {
+            "tool_version": "241.0.20240119.171944-eap01d",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1706541312.689527,
+            "elapsed_time": 1451.771214723587,
+            "x64": true,
+            "actual_files_count": 1729,
+            "expected_files_count": 1661,
+            "memory_traffic": 233912.5952835083,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "c9a6e993f7b349405b6c8f9244cd9cf0f56a6a81",
+            "commit_message": "[AMDGPU] Do not emit arch dependent macros with unspecified cpu (#79660)\n\nSummary:\nCurrently, the AMDGPU toolchain accepts not passing `-mcpu` as a means\nto create a sort of \"generic\" IR. The resulting IR will not contain any\ntarget dependent attributes and can then be inserted into another\nprogram via `-mlink-builtin-bitcode` to inherit its attributes.\n\nHowever, there are a handful of macros that can leak incorrect\ninformation when compiling for an unspecified architecture. Currently,\nthings like the wavefront size will default to 64, which is actually\nvariable. We should not expose these macros unless it is known.",
+            "commit_timestamp": 1706539574.0
         }
     ]
 }
