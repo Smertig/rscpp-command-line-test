@@ -12416,6 +12416,21 @@
             "commit_ref": "a768e12f094a9b14a9a1680fb50330e1050716c4",
             "commit_message": "Use bool in fileinput.input() docstring and tests for the inplace argument (GH-111998)\n\nThe `.rst` docs, most tests, and typeshed already use bool for it.",
             "commit_timestamp": 1706392075.0
+        },
+        {
+            "tool_version": "241.0.20240119.171944-eap01d",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1706497710.987387,
+            "elapsed_time": 1443.8911859989166,
+            "x64": true,
+            "actual_files_count": 1002,
+            "expected_files_count": null,
+            "memory_traffic": 48660.06113433838,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "a16a9f978f42b8a09297c1efbf33877f6388c403",
+            "commit_message": "GH-113464: A JIT backend for tier 2 (GH-113465)\n\nAdd an option (--enable-experimental-jit for configure-based builds\r\nor --experimental-jit for PCbuild-based ones) to build an\r\n*experimental* just-in-time compiler, based on copy-and-patch\r\n(https://fredrikbk.com/publications/copy-and-patch.pdf).\r\n\r\nSee Tools/jit/README.md for more information, including how to install the required build-time tooling. Merry JIT-mas! ;)",
+            "commit_timestamp": 1706496778.0
         }
     ]
 }
