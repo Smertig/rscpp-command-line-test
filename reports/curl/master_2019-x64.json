@@ -15281,6 +15281,21 @@
             "commit_ref": "cb343182b7181c6df57e7bb711e418ae447fd443",
             "commit_message": "build: delete/replace 3 more clang warning pragmas\n\n- tool_msgs: delete redundant `-Wformat-nonliteral` suppression pragma.\n\n- whitespace formatting in `mprintf.h`, lib518, lib537.\n\n- lib518: fix wrong variable in `sizeof()`.\n\n- lib518: bump variables to `rlim_t`.\n  Follow-up to e2b394106d543c4615a60795b7fdce04bd4e5090 #1469\n\n- lib518: sync error message with lib537\n  Follow-up to 365322b8bcf9efb6a361473d227b70f2032212ce\n\n- lib518, lib537: replace `-Wformat-nonliteral` suppression pragmas\n  by reworking test code.\n\nFollow-up to 5b286c250829e06a135a6ba998e80beb7f43a734 #12812\nFollow-up to aee4ebe59161d0a5281743f96e7738ad97fe1cd4 #12803\nFollow-up to 09230127589eccc7e01c1a7217787ef8e64f3328 #12540\nFollow-up to 3829759bd042c03225ae862062560f568ba1a231 #12489\n\nReviewed-by: Daniel Stenberg\nCloses #12814\n",
             "commit_timestamp": 1706486072.0
+        },
+        {
+            "tool_version": "241.0.20240119.171944-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1706584002.330399,
+            "elapsed_time": 191.74382519721985,
+            "x64": true,
+            "actual_files_count": 2461,
+            "expected_files_count": 2323,
+            "memory_traffic": 32556.90478515625,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "011325ff29638bfaa498c1a930950437c4e7dd62",
+            "commit_message": "lib: error out on multissl + http3\n\nSince the QUIC/h3 code has no knowledge or handling of multissl it might\nbring unintended consequences if we allow it.\n\nconfigure, cmake and curl_setup.h all now reject this combination.\n\nAssisted-by: Viktor Szakats\nAssisted-by: Gisle Vanem\nRef: #12806\nCloses #12807\n",
+            "commit_timestamp": 1706542628.0
         }
     ]
 }
