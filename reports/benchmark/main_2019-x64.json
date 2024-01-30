@@ -16293,6 +16293,21 @@
             "commit_ref": "30a37e1b0bfbec07bbb44f8cac8c162ef9f5f9ed",
             "commit_message": "set library version in bazel (#1746)\n\n* set library version in bazel",
             "commit_timestamp": 1706536084.0
+        },
+        {
+            "tool_version": "241.0.20240119.171944-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1706627194.250639,
+            "elapsed_time": 57.54270100593567,
+            "x64": true,
+            "actual_files_count": 86,
+            "expected_files_count": 86,
+            "memory_traffic": 4688.497772216797,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "e990563876ef92990e873dc5b479d3b79cda2547",
+            "commit_message": "Add `BENCHMARK_TEMPLATE[12]_CAPTURE`, fusion of `BENCHMARK_CAPTURE` and `BENCHMARK_TEMPLATE` (#1747)\n\nTest coverage isn't great, but not worse than the existing one.\r\n\r\nYou'd think `BENCHMARK_CAPTURE` would suffice,\r\nbut you can't pass `func<targs>` to it (due to the `<` and `>`),\r\nand when passing `(func<targs>)` we get issues with brackets.\r\nSo i'm not sure if we can fully avoid this helper.\r\n\r\nThat being said, if there is only a single template argument,\r\n`BENCHMARK_CAPTURE()` works fine if we avoid using function name.",
+            "commit_timestamp": 1706618676.0
         }
     ]
 }

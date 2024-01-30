@@ -12446,6 +12446,21 @@
             "commit_ref": "e8b8f5e9c2da6a436360ce648061c90bdfcba863",
             "commit_message": "gh-101100: Fix datetime reference warnings (GH-114661)\n\nCo-authored-by: Serhiy Storchaka <storchaka@gmail.com>",
             "commit_timestamp": 1706539424.0
+        },
+        {
+            "tool_version": "241.0.20240119.171944-eap01d",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1706627294.529886,
+            "elapsed_time": 1387.7502059936523,
+            "x64": true,
+            "actual_files_count": 1002,
+            "expected_files_count": null,
+            "memory_traffic": 48784.965759277344,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "809eed48058ea7391df57ead09dff53bcc5d81e9",
+            "commit_message": "GH-114610: Fix `pathlib._abc.PurePathBase.with_suffix('.ext')` handling of stems (#114613)\n\nRaise `ValueError` if `with_suffix('.ext')` is called on a path without a\r\nstem. Paths may only have a non-empty suffix if they also have a non-empty\r\nstem.\r\n\r\nABC-only bugfix; no effect on public classes.",
+            "commit_timestamp": 1706624716.0
         }
     ]
 }
