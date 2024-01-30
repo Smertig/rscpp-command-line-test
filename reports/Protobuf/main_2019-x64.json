@@ -16083,21 +16083,6 @@
             "commit_ref": "958fda378d62b3f93dac290ea3e79da5ff768333",
             "commit_message": "Remove superfluous unsafe block\n\nPiperOrigin-RevId: 602349046\n",
             "commit_timestamp": 1706532535.0
-        },
-        {
-            "tool_version": "241.0.20240119.171944-eap01d",
-            "error_mismatch": false,
-            "project": null,
-            "timestamp": 1706584030.567393,
-            "elapsed_time": 298.9247159957886,
-            "x64": true,
-            "actual_files_count": 862,
-            "expected_files_count": 818,
-            "memory_traffic": 34179.93367767334,
-            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
-            "commit_ref": "a5e10aff2b3e81c3e5469dae0b13b183a11a30b0",
-            "commit_message": "[C#] Conformance test: don't skip JsonIgnoreUnknownParsingTest in runner (#15369)\n\n# Motivation\n\nhttps://github.com/protocolbuffers/protobuf/issues/7392#issuecomment-1884666885\n\nThis is for completeness - I am not blocked by this change in any way, so feel free to close the PR or treat is a low priority.\n\n# Changes\n\nImplement JsonIgnoreUnknownParsingTest in C# conformance test runner.\n\n# Tested\n\nLocally with:\n\n```\nbazel test //csharp:conformance_test \\\n    --action_env=DOTNET_CLI_TELEMETRY_OPTOUT=1 --test_env=DOTNET_CLI_HOME=~ \\\n    --action_env=DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1\n```\n\nCloses #15369\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/15369 from noom:issue-7392/show-csharp-failures 3a652202a0764b94acf5773823ac7baa4aae483f\nPiperOrigin-RevId: 602537927\n",
-            "commit_timestamp": 1706575698.0
         }
     ]
 }
