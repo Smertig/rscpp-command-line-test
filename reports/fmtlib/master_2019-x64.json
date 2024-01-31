@@ -16668,6 +16668,21 @@
             "commit_ref": "71a4a8d47999e95f5e460eaf8cec894f60354a13",
             "commit_message": "Really fix MSVC warning about <bit> only being available in C++20. (#3832)\n\n* Really fix MSVC warning about <bit> only being available in C++20.\r\n\r\nThe warning states \"The contents of <bit> are available only with C++20 or later.\",\r\nbut the check was for C++17 and later.\r\n\r\n* Change <bit> inclusion check per https://github.com/fmtlib/fmt/pull/3832#discussion_r1471144867",
             "commit_timestamp": 1706640155.0
+        },
+        {
+            "tool_version": "241.0.20240119.171944-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1706713627.261153,
+            "elapsed_time": 116.73453426361084,
+            "x64": true,
+            "actual_files_count": 71,
+            "expected_files_count": 66,
+            "memory_traffic": 7997.042106628418,
+            "repo_url": "https://github.com/fmtlib/fmt.git",
+            "commit_ref": "71a4a8d47999e95f5e460eaf8cec894f60354a13",
+            "commit_message": "Really fix MSVC warning about <bit> only being available in C++20. (#3832)\n\n* Really fix MSVC warning about <bit> only being available in C++20.\r\n\r\nThe warning states \"The contents of <bit> are available only with C++20 or later.\",\r\nbut the check was for C++17 and later.\r\n\r\n* Change <bit> inclusion check per https://github.com/fmtlib/fmt/pull/3832#discussion_r1471144867",
+            "commit_timestamp": 1706640155.0
         }
     ]
 }

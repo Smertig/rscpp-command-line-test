@@ -15106,6 +15106,21 @@
             "commit_ref": "934cd46df59bdc2bbd0b4e52282b498b56310a50",
             "commit_message": "[MSUTB][SDK] Add Language Bar dialogs (#6422)\n\nSupporting Language Bar...\r\nJIRA issue: CORE-19363\r\n- Add IDD_CLOSELANGBAR and\r\n  IDD_MINIMIZELANGBAR\r\n  resource dialogs.\r\n- Implement CUTBLangBarDlg class.\r\n- Implement CUTBCloseLangBarDlg\r\n  and CUTBMinimizeLangBarDlg\r\n  classes.",
             "commit_timestamp": 1706596733.0
+        },
+        {
+            "tool_version": "241.0.20240119.171944-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1706713636.750578,
+            "elapsed_time": 121.060964345932,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7856.684196472168,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "c1dfd580ab6900eb725502d2125ff42028dbcb1f",
+            "commit_message": "[MSUTB][SDK] Add InitFromReg (#6425)\n\nSupporting Language Bar...\r\nJIRA issue: CORE-19363\r\n- Add many global variables\r\n  to add UTB settings.\r\n- Add IsSkipRedrawHKL, IsBiDiLocalizedSystem,\r\n  InitSkipRedrawHKLArray helper functions.\r\n- Add InitFromReg helper function to\r\n  load the settings from registry.\r\n- Add CicRegKey::EnumValue method.",
+            "commit_timestamp": 1706700741.0
         }
     ]
 }

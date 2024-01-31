@@ -16113,6 +16113,21 @@
             "commit_ref": "58b582ba310afda710585211cc75e7b140284593",
             "commit_message": "When using profiling information and weak descriptors use uniquely named\nsections to allow for GC in the linker. These sections can be merged again after GC.\n\nPiperOrigin-RevId: 602848779\n",
             "commit_timestamp": 1706655281.0
+        },
+        {
+            "tool_version": "241.0.20240119.171944-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1706713633.567557,
+            "elapsed_time": 351.2649600505829,
+            "x64": true,
+            "actual_files_count": 862,
+            "expected_files_count": 818,
+            "memory_traffic": 33861.3685836792,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "6f1d88107f268b8ebdad6690d116e74c403e366e",
+            "commit_message": "Support proto_library targets that contain '-'\n\nCrate names must not contain '-'. So we replace any '-' by a '_' to form a valid crate name.\n\nBazel supports many special characters as target names: !%-@^_\"#$&'()*-+,;<=>?[]{|}~/. We don't have to support all of them in Protobuf Rust, but '-' seems used widely enough and is a common alternative to '_' in naming.\n\nPiperOrigin-RevId: 602963206\n",
+            "commit_timestamp": 1706690890.0
         }
     ]
 }

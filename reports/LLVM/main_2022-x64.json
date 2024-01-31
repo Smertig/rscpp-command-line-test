@@ -16554,6 +16554,23 @@
             "commit_ref": "c761b4a5e4cc003a2c850898e1dc67d2637cfb0c",
             "commit_message": "[AArch64] Fix variadic tail-calls on ARM64EC (#79774)\n\nARM64EC varargs calls expect that x4 = sp at entry, special handling is\r\nneeded to ensure this with tail calls since they occur after the\r\nepilogue and the x4 write happens before.\r\n\r\nI tried going through AArch64MachineFrameLowering for this, hoping to\r\navoid creating the dummy object but this was the best I could do since\r\nthe stack info that uses isn't populated at this stage,\r\nCreateFixedObject also explicitly forbids 0 sized objects.",
             "commit_timestamp": 1706668335.0
+        },
+        {
+            "tool_version": "241.0.20240119.171944-eap01d",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1706714154.499215,
+            "elapsed_time": 1530.4485232830048,
+            "x64": true,
+            "actual_files_count": 1729,
+            "expected_files_count": 1661,
+            "memory_traffic": 233924.22023010254,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "6e6aa44c7d14b37a12e40c6b36478045d6004a0a",
+            "commit_message": "Revert \"[Clang][Sema] fix outline member function template with defau\u2026 (#80144)\n\n\u2026lt align crash (#78400)\"\r\n\r\nThis reverts commit 7b3389980ddbd84f72ccc4776889c67519cc2c14.\r\n\r\nA regression was discovered here:\r\nhttps://github.com/llvm/llvm-project/pull/78400\r\n\r\nand the author requested a revert to give time to review.",
+            "commit_timestamp": 1706713138.0
         }
     ]
 }
