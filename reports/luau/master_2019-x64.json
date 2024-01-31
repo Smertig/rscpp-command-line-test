@@ -15438,6 +15438,21 @@
             "commit_ref": "c0b17daebd3e48c4b4edff74afda32fd87a8abb7",
             "commit_message": "Handle autocomplete in table when no initial character present (#1155)\n\nCloses #685",
             "commit_timestamp": 1706550720.0
+        },
+        {
+            "tool_version": "241.0.20240119.171944-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1706670372.027681,
+            "elapsed_time": 263.718763589859,
+            "x64": true,
+            "actual_files_count": 445,
+            "expected_files_count": 379,
+            "memory_traffic": 30732.910614013672,
+            "repo_url": "https://github.com/luau-lang/luau",
+            "commit_ref": "d409f7946dc2c9c6b77f039e9debe4b1c11761ae",
+            "commit_message": "Fix setting sandbox on Lua instance without strlib (#1156)\n\nCurrently calling `luaL_sandbox` on Lua instance without loaded strlib\r\ncauses crash (assertion).\r\nIt happens because inside `luaL_sandbox` there is no check that\r\nmetatable for strings is present.",
+            "commit_timestamp": 1706628238.0
         }
     ]
 }

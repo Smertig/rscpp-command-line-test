@@ -16643,6 +16643,21 @@
             "commit_ref": "1078e7e95b3a06d4dadc75188de48bc4afffb955",
             "commit_message": "Fix clang-tidy `bugprone-chained-comparison` warnings\n\nThis triggers when running clang-tidy's bugprone-* family of checks\nin code which uses Catch2 even if Catch2 headers are marked as\nSYSTEM headers due to how code expanded from macros is treated as\nfirst party even if the macro comes from a 3rd party library. The\nfix is luckily pretty straightforward.\n\nThis check is added in clang-tidy-18 due for release later this year.\n",
             "commit_timestamp": 1706161260.0
+        },
+        {
+            "tool_version": "241.0.20240119.171944-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1706670298.421091,
+            "elapsed_time": 84.386305809021,
+            "x64": true,
+            "actual_files_count": 282,
+            "expected_files_count": 272,
+            "memory_traffic": 4430.782424926758,
+            "repo_url": "https://github.com/catchorg/Catch2.git",
+            "commit_ref": "1078e7e95b3a06d4dadc75188de48bc4afffb955",
+            "commit_message": "Fix clang-tidy `bugprone-chained-comparison` warnings\n\nThis triggers when running clang-tidy's bugprone-* family of checks\nin code which uses Catch2 even if Catch2 headers are marked as\nSYSTEM headers due to how code expanded from macros is treated as\nfirst party even if the macro comes from a 3rd party library. The\nfix is luckily pretty straightforward.\n\nThis check is added in clang-tidy-18 due for release later this year.\n",
+            "commit_timestamp": 1706161260.0
         }
     ]
 }

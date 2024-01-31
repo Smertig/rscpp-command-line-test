@@ -16537,6 +16537,23 @@
             "commit_ref": "a3e35a4ea6fa8f1d765674c57ad280d1cbeceb4b",
             "commit_message": "[libc++] Move scoped allocator adaptor test to .compile.pass.cpp\n",
             "commit_timestamp": 1706626791.0
+        },
+        {
+            "tool_version": "241.0.20240119.171944-eap01d",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1706670892.20261,
+            "elapsed_time": 1430.365175485611,
+            "x64": true,
+            "actual_files_count": 1729,
+            "expected_files_count": 1661,
+            "memory_traffic": 234315.1223449707,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "c761b4a5e4cc003a2c850898e1dc67d2637cfb0c",
+            "commit_message": "[AArch64] Fix variadic tail-calls on ARM64EC (#79774)\n\nARM64EC varargs calls expect that x4 = sp at entry, special handling is\r\nneeded to ensure this with tail calls since they occur after the\r\nepilogue and the x4 write happens before.\r\n\r\nI tried going through AArch64MachineFrameLowering for this, hoping to\r\navoid creating the dummy object but this was the best I could do since\r\nthe stack info that uses isn't populated at this stage,\r\nCreateFixedObject also explicitly forbids 0 sized objects.",
+            "commit_timestamp": 1706668335.0
         }
     ]
 }

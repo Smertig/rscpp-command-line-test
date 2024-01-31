@@ -16553,6 +16553,21 @@
             "commit_ref": "f56cbe21b72dcddc91f84139b7434cc09b7fdf99",
             "commit_message": "Drop `manylinux2014` from the build matrix.\n\nBumping to `actions/checkout@v4` broke it because it can't run the Node\n20 binary. Its EOL is still a few months away, apparently, but updating\nto Node 20 probably can't wait that long. C'est la vie.\n\nChange-Id: Icf2bbd676583352f323cdac3056b4c8bebbbb07d\nReviewed-on: https://code-review.googlesource.com/c/re2/+/62511\nReviewed-by: Alex Chernyakhovsky <achernya@google.com>\nReviewed-by: Paul Wankadia <junyer@google.com>\n",
             "commit_timestamp": 1706542335.0
+        },
+        {
+            "tool_version": "241.0.20240119.171944-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1706670575.854573,
+            "elapsed_time": 91.23895478248596,
+            "x64": true,
+            "actual_files_count": 22,
+            "expected_files_count": null,
+            "memory_traffic": 2851.4440383911133,
+            "repo_url": "https://github.com/google/re2.git",
+            "commit_ref": "9665465b69ab699279ef9fb9454559d90fed1d76",
+            "commit_message": "Try using larger runners for macOS.\n\n`macos-14` is ARM64 and doesn't seem to have Python 3.8 or 3.9.\nFor now, specify `macos-*-large` instead, which is X64 and will\nhopefully keep working long enough for us to keep getting by...\n\nChange-Id: Id70641ccee65f638ff1fd36a778d563aaf5d78d6\nReviewed-on: https://code-review.googlesource.com/c/re2/+/62570\nReviewed-by: Alex Chernyakhovsky <achernya@google.com>\nReviewed-by: Paul Wankadia <junyer@google.com>\n",
+            "commit_timestamp": 1706648564.0
         }
     ]
 }

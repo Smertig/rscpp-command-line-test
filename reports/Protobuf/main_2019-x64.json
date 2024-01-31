@@ -16098,6 +16098,21 @@
             "commit_ref": "58baeb4c3b664f8918d24cef5151083d9da9767c",
             "commit_message": "Add a new 'includingDefaultValueWithoutPresenceFields' option to the Java parser which is intended to replace the current 'includingDefaultValueFields'.\n\nThe old flag accidentally had inconsistent behavior between proto2 optional and proto3 optional fields, the new flag treats them consistently (and is consistent with the preexisting behavior of the Go JSON serializer).\n\nPiperOrigin-RevId: 602711486\n",
             "commit_timestamp": 1706626424.0
+        },
+        {
+            "tool_version": "241.0.20240119.171944-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1706670416.706234,
+            "elapsed_time": 308.6690218448639,
+            "x64": true,
+            "actual_files_count": 862,
+            "expected_files_count": 818,
+            "memory_traffic": 34488.68605804443,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "58b582ba310afda710585211cc75e7b140284593",
+            "commit_message": "When using profiling information and weak descriptors use uniquely named\nsections to allow for GC in the linker. These sections can be merged again after GC.\n\nPiperOrigin-RevId: 602848779\n",
+            "commit_timestamp": 1706655281.0
         }
     ]
 }

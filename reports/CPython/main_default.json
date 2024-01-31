@@ -12461,6 +12461,21 @@
             "commit_ref": "809eed48058ea7391df57ead09dff53bcc5d81e9",
             "commit_message": "GH-114610: Fix `pathlib._abc.PurePathBase.with_suffix('.ext')` handling of stems (#114613)\n\nRaise `ValueError` if `with_suffix('.ext')` is called on a path without a\r\nstem. Paths may only have a non-empty suffix if they also have a non-empty\r\nstem.\r\n\r\nABC-only bugfix; no effect on public classes.",
             "commit_timestamp": 1706624716.0
+        },
+        {
+            "tool_version": "241.0.20240119.171944-eap01d",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1706670508.458773,
+            "elapsed_time": 1409.5856440067291,
+            "x64": true,
+            "actual_files_count": 1002,
+            "expected_files_count": null,
+            "memory_traffic": 48723.56483459473,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "2ed8f924ee05ec17ce0639a424e5ca7661b09a6b",
+            "commit_message": "GH-114743: Set a low recursion limit for `test_main_recursion_error()` in `test_runpy` (GH-114772)\n\nThis can fail under a debug build of WASI when directly executing test.test_runpy.",
+            "commit_timestamp": 1706665767.0
         }
     ]
 }
