@@ -16571,6 +16571,23 @@
             "commit_ref": "6e6aa44c7d14b37a12e40c6b36478045d6004a0a",
             "commit_message": "Revert \"[Clang][Sema] fix outline member function template with defau\u2026 (#80144)\n\n\u2026lt align crash (#78400)\"\r\n\r\nThis reverts commit 7b3389980ddbd84f72ccc4776889c67519cc2c14.\r\n\r\nA regression was discovered here:\r\nhttps://github.com/llvm/llvm-project/pull/78400\r\n\r\nand the author requested a revert to give time to review.",
             "commit_timestamp": 1706713138.0
+        },
+        {
+            "tool_version": "241.0.20240119.171944-eap01d",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1706757346.854451,
+            "elapsed_time": 1482.6834254264832,
+            "x64": true,
+            "actual_files_count": 1729,
+            "expected_files_count": 1661,
+            "memory_traffic": 234079.32777404785,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "f8be7f29ede5369b96056d3879c57de54781c9cf",
+            "commit_message": "[llvm-objcopy][test] Use llvm-readelf instead for clearer visualization(NFC) (#79874)\n\n",
+            "commit_timestamp": 1706755166.0
         }
     ]
 }

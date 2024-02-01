@@ -16128,6 +16128,21 @@
             "commit_ref": "6f1d88107f268b8ebdad6690d116e74c403e366e",
             "commit_message": "Support proto_library targets that contain '-'\n\nCrate names must not contain '-'. So we replace any '-' by a '_' to form a valid crate name.\n\nBazel supports many special characters as target names: !%-@^_\"#$&'()*-+,;<=>?[]{|}~/. We don't have to support all of them in Protobuf Rust, but '-' seems used widely enough and is a common alternative to '_' in naming.\n\nPiperOrigin-RevId: 602963206\n",
             "commit_timestamp": 1706690890.0
+        },
+        {
+            "tool_version": "241.0.20240119.171944-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1706756801.62509,
+            "elapsed_time": 303.7592351436615,
+            "x64": true,
+            "actual_files_count": 862,
+            "expected_files_count": 818,
+            "memory_traffic": 34434.99882507324,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "bc75a9be3042c168c073fa5e525fbd064cc7cfc8",
+            "commit_message": "upb: remove the default arg from upb_Message_GetMessage()\n\nPiperOrigin-RevId: 603225526\n",
+            "commit_timestamp": 1706756393.0
         }
     ]
 }
