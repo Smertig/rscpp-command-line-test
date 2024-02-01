@@ -15483,6 +15483,21 @@
             "commit_ref": "d409f7946dc2c9c6b77f039e9debe4b1c11761ae",
             "commit_message": "Fix setting sandbox on Lua instance without strlib (#1156)\n\nCurrently calling `luaL_sandbox` on Lua instance without loaded strlib\r\ncauses crash (assertion).\r\nIt happens because inside `luaL_sandbox` there is no check that\r\nmetatable for strings is present.",
             "commit_timestamp": 1706628238.0
+        },
+        {
+            "tool_version": "241.0.20240119.171944-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1706799983.111217,
+            "elapsed_time": 264.0589773654938,
+            "x64": true,
+            "actual_files_count": 445,
+            "expected_files_count": 379,
+            "memory_traffic": 30657.622131347656,
+            "repo_url": "https://github.com/luau-lang/luau",
+            "commit_ref": "974963a87020d6392e36dc616d27d0f1df0765ae",
+            "commit_message": "Enable newly added M1 GHA CI (#1158)\n\nGitHub just released support for M1 runners for open source projects via\r\nGHA. It can be selected by using macos-14 OS to run on.\r\n\r\nThis is very valuable because until now, Luau wasn't tested in OSS CI on\r\nArm64, despite the presence of a fairly large volume of AArch64 specific\r\ncode courtesy of A64 codegen. This change fixes that.\r\n\r\nIn the future we could also expand codecov reporting as it seems to work\r\nwell but it needs a little bit of cleanup for the build in question so\r\nlet's start small.",
+            "commit_timestamp": 1706793507.0
         }
     ]
 }
