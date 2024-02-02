@@ -15446,6 +15446,21 @@
             "commit_ref": "4ae04b35faa24b27dd9884eeb40f91bb9dfc4052",
             "commit_message": "PERF: Make `m_ObjectToWorldTransformInverse->TransformPoint` non-virtual\n\nSuppressed the virtual call mechanism for\n`m_ObjectToWorldTransformInverse->TransformPoint(point)` by explicit\nqualification with the `TransformType` scope, in the five `SpatialObject`\n\"InWorldSpace\" member functions.\n\nA performance improvement of more than 13 % was observed, from more than 0.36\nsec. (before this commit) to less than 0.31 sec. (after this commit) when\ncalling IsInsideInWorldSpace(point) 2^25 times, using VS2022 Release.\n",
             "commit_timestamp": 1706821599.0
+        },
+        {
+            "tool_version": "241.0.20240201.93040-eap03",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1706886655.280657,
+            "elapsed_time": 244.54754900932312,
+            "x64": true,
+            "actual_files_count": 100,
+            "expected_files_count": null,
+            "memory_traffic": 26534.389678955078,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "4ae04b35faa24b27dd9884eeb40f91bb9dfc4052",
+            "commit_message": "PERF: Make `m_ObjectToWorldTransformInverse->TransformPoint` non-virtual\n\nSuppressed the virtual call mechanism for\n`m_ObjectToWorldTransformInverse->TransformPoint(point)` by explicit\nqualification with the `TransformType` scope, in the five `SpatialObject`\n\"InWorldSpace\" member functions.\n\nA performance improvement of more than 13 % was observed, from more than 0.36\nsec. (before this commit) to less than 0.31 sec. (after this commit) when\ncalling IsInsideInWorldSpace(point) 2^25 times, using VS2022 Release.\n",
+            "commit_timestamp": 1706821599.0
         }
     ]
 }
