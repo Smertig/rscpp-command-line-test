@@ -15445,6 +15445,21 @@
             "commit_ref": "fc32903b28bf31ccc2948490cace09427e8978ce",
             "commit_message": "Merge pull request #24548 from dkurt:qrcode_struct_append_decode\n\nQR codes Structured Append decoding mode #24548\r\n\r\n### Pull Request Readiness Checklist\r\n\r\nresolves https://github.com/opencv/opencv/issues/23245\r\n\r\nMerge after https://github.com/opencv/opencv/pull/24299\r\n\r\nCurrent proposal is to use `detectAndDecodeMulti` or `decodeMulti` for structured append mode decoding. 0-th QR code in a sequence gets a full message while the rest of codes will correspond to empty strings.\r\n\r\nSee details at https://github.com/opencv/opencv/wiki/How_to_contribute#making-a-good-pull-request\r\n\r\n- [x] I agree to contribute to the project under Apache 2 License.\r\n- [x] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\r\n- [x] The PR is proposed to the proper branch\r\n- [x] There is a reference to the original bug report and related work\r\n- [x] There is accuracy test, performance test and test data in opencv_extra repository, if applicable\r\n      Patch to opencv_extra has the same branch name.\r\n- [x] The feature is well documented and sample code can be built with the project CMake",
             "commit_timestamp": 1706793314.0
+        },
+        {
+            "tool_version": "241.0.20240201.93040-eap03",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1706883980.265999,
+            "elapsed_time": 375.3485195636749,
+            "x64": true,
+            "actual_files_count": 470,
+            "expected_files_count": 459,
+            "memory_traffic": 42188.29072570801,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "250cfe81c592e84dcb739ba51f6c499e214a89bf",
+            "commit_message": "Merge pull request #24949 from hoodmane:emscripten-enable-file-system\n\nEnable file system on Emscripten",
+            "commit_timestamp": 1706878215.0
         }
     ]
 }

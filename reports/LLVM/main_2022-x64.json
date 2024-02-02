@@ -16622,6 +16622,23 @@
             "commit_ref": "082fe9a5ddfab22f4f07d2332d2d2ec96a5be3ae",
             "commit_message": "[BOLT] Remove duplicate expression (#80380)\n\nReported by cpp check static analyzer in #80111.\r\n\r\nFixes #80111.",
             "commit_timestamp": 1706843111.0
+        },
+        {
+            "tool_version": "241.0.20240201.93040-eap03",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1706884521.755466,
+            "elapsed_time": 1503.972828388214,
+            "x64": true,
+            "actual_files_count": 1729,
+            "expected_files_count": 1661,
+            "memory_traffic": 235190.4422454834,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "1e7d5871eed1bdf1eeb4b50eb9b911774f420ca1",
+            "commit_message": "[MemProf] Fix when CallStackTrie has a single chain to leaf with multi alloc type (#79433)\n\nFix one corner case when `CallStackTrie` has a single chain to leaf with\r\nmulti alloc type. This will cause stackIds in function summary is empty.",
+            "commit_timestamp": 1706883161.0
         }
     ]
 }

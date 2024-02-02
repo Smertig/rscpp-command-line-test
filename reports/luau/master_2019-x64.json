@@ -15513,6 +15513,21 @@
             "commit_ref": "974963a87020d6392e36dc616d27d0f1df0765ae",
             "commit_message": "Enable newly added M1 GHA CI (#1158)\n\nGitHub just released support for M1 runners for open source projects via\r\nGHA. It can be selected by using macos-14 OS to run on.\r\n\r\nThis is very valuable because until now, Luau wasn't tested in OSS CI on\r\nArm64, despite the presence of a fairly large volume of AArch64 specific\r\ncode courtesy of A64 codegen. This change fixes that.\r\n\r\nIn the future we could also expand codecov reporting as it seems to work\r\nwell but it needs a little bit of cleanup for the build in question so\r\nlet's start small.",
             "commit_timestamp": 1706793507.0
+        },
+        {
+            "tool_version": "241.0.20240201.93040-eap03",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1706883874.36514,
+            "elapsed_time": 255.31073236465454,
+            "x64": true,
+            "actual_files_count": 445,
+            "expected_files_count": 379,
+            "memory_traffic": 30875.350776672363,
+            "repo_url": "https://github.com/luau-lang/luau",
+            "commit_ref": "974963a87020d6392e36dc616d27d0f1df0765ae",
+            "commit_message": "Enable newly added M1 GHA CI (#1158)\n\nGitHub just released support for M1 runners for open source projects via\r\nGHA. It can be selected by using macos-14 OS to run on.\r\n\r\nThis is very valuable because until now, Luau wasn't tested in OSS CI on\r\nArm64, despite the presence of a fairly large volume of AArch64 specific\r\ncode courtesy of A64 codegen. This change fixes that.\r\n\r\nIn the future we could also expand codecov reporting as it seems to work\r\nwell but it needs a little bit of cleanup for the build in question so\r\nlet's start small.",
+            "commit_timestamp": 1706793507.0
         }
     ]
 }
