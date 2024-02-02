@@ -16605,6 +16605,23 @@
             "commit_ref": "40f6b7d4761657cebd383b102ff3e6e612337f01",
             "commit_message": "[PowerPC] Fix -Wunused-variable in PPCAsmPrinter.cpp and PPCISelDAGToDAG.cpp (NFC)\n\nllvm-project/llvm/lib/Target/PowerPC/PPCAsmPrinter.cpp:1648:15:\nerror: unused variable 'InstDisp' [-Werror,-Wunused-variable]\n    ptrdiff_t InstDisp = TLSVarAddress + Offset - Delta;\n              ^\nllvm-project/llvm/lib/Target/PowerPC/PPCISelDAGToDAG.cpp:7624:19:\nerror: unused variable 'TPReg' [-Werror,-Wunused-variable]\n  RegisterSDNode *TPReg = dyn_cast<RegisterSDNode>(TPRegNode.getNode());\n                  ^\nllvm-project/llvm/lib/Target/PowerPC/PPCISelDAGToDAG.cpp:7625:23:\nerror: unused variable 'Subtarget' [-Werror,-Wunused-variable]\n  const PPCSubtarget &Subtarget =\n                      ^\n",
             "commit_timestamp": 1706799014.0
+        },
+        {
+            "tool_version": "241.0.20240119.171944-eap01d",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1706843702.223967,
+            "elapsed_time": 1386.4988679885864,
+            "x64": true,
+            "actual_files_count": 1729,
+            "expected_files_count": 1661,
+            "memory_traffic": 234150.30921173096,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "082fe9a5ddfab22f4f07d2332d2d2ec96a5be3ae",
+            "commit_message": "[BOLT] Remove duplicate expression (#80380)\n\nReported by cpp check static analyzer in #80111.\r\n\r\nFixes #80111.",
+            "commit_timestamp": 1706843111.0
         }
     ]
 }
