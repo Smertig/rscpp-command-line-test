@@ -17,7 +17,7 @@ jobs:
     outputs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - id: set-matrix
         run: python .github/build_projects_matrix.py ./projects.json ./proj-config oom-fixed ${{github.event_name}} ${{contains(github.event.head_commit.message, '[ci-all]')}} >> $GITHUB_OUTPUT
@@ -32,10 +32,10 @@ jobs:
       matrix: ${{fromJson(needs.generate_matrix.outputs.matrix)}}
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Install python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.10'
 
