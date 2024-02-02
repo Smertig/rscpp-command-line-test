@@ -15386,6 +15386,21 @@
             "commit_ref": "b8c003832d730bb2f4b9de4204675ca5d9f7a903",
             "commit_message": "sendf: ignore response body to HEAD\n\nand mark the stream for close, but return OK since the response this far\nwas ok - if headers were received. Partly because this is what curl has\ndone traditionally.\n\nTest 499 verifies. Updates test 689.\n\nReported-by: Sergey Bronnikov\nBug: https://curl.se/mail/lib-2024-02/0000.html\nCloses #12842\n",
             "commit_timestamp": 1706823446.0
+        },
+        {
+            "tool_version": "241.0.20240201.93040-eap03",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1706885634.080874,
+            "elapsed_time": 199.53542113304138,
+            "x64": true,
+            "actual_files_count": 2461,
+            "expected_files_count": 2323,
+            "memory_traffic": 33171.8969039917,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "b8c003832d730bb2f4b9de4204675ca5d9f7a903",
+            "commit_message": "sendf: ignore response body to HEAD\n\nand mark the stream for close, but return OK since the response this far\nwas ok - if headers were received. Partly because this is what curl has\ndone traditionally.\n\nTest 499 verifies. Updates test 689.\n\nReported-by: Sergey Bronnikov\nBug: https://curl.se/mail/lib-2024-02/0000.html\nCloses #12842\n",
+            "commit_timestamp": 1706823446.0
         }
     ]
 }
