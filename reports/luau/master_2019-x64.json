@@ -15558,6 +15558,21 @@
             "commit_ref": "974963a87020d6392e36dc616d27d0f1df0765ae",
             "commit_message": "Enable newly added M1 GHA CI (#1158)\n\nGitHub just released support for M1 runners for open source projects via\r\nGHA. It can be selected by using macos-14 OS to run on.\r\n\r\nThis is very valuable because until now, Luau wasn't tested in OSS CI on\r\nArm64, despite the presence of a fairly large volume of AArch64 specific\r\ncode courtesy of A64 codegen. This change fixes that.\r\n\r\nIn the future we could also expand codecov reporting as it seems to work\r\nwell but it needs a little bit of cleanup for the build in question so\r\nlet's start small.",
             "commit_timestamp": 1706793507.0
+        },
+        {
+            "tool_version": "241.0.20240201.93040-eap03",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1706929618.781954,
+            "elapsed_time": 264.7213592529297,
+            "x64": true,
+            "actual_files_count": 447,
+            "expected_files_count": 379,
+            "memory_traffic": 30774.137702941895,
+            "repo_url": "https://github.com/luau-lang/luau",
+            "commit_ref": "67ce75e870cd93ce2d8f0b7b9c11d9dd33964307",
+            "commit_message": "Sync to upstream/release/611 (#1160)\n\n# What's changed?\r\n\r\n### Native Code Generation\r\n\r\n* Fixed an UAF relating to reusing a hash key after a weak table has\r\nundergone some GC.\r\n* Fixed a bounds check on arm64 to allow access to the last byte of a\r\nbuffer.\r\n\r\n### New Type Solver\r\n\r\n* Type states now preserves error-suppression, i.e. `local x: any = 5`\r\nand `x.foo` does not error.\r\n* Made error-suppression logic in subtyping more accurate.\r\n* Subtyping now knows how to reduce type families.\r\n* Fixed function call overload resolution so that the return type\r\nresolves to the correct overload.\r\n* Fixed a case where we attempted to reduce irreducible type families a\r\nfew too many times, leading to duplicate errors.\r\n* Type checker needs to type check annotations in function signatures to\r\nbe able to report errors relating to those annotations.\r\n* Fixed an UAF from a pointer to stack-allocated data in Subtyping's\r\n`explainReasonings`.\r\n\r\n### Nonstrict Type Checker\r\n\r\n* Fixed a crash when calling a checked function of the form `math.abs`\r\nwith an incorrect argument type.\r\n* Fixed a crash when calling a checked function with a number of\r\narguments that did not exactly match the number of parameters required.\r\n\r\n---\r\n\r\n### Internal Contributors\r\n\r\nCo-authored-by: Aaron Weiss <aaronweiss@roblox.com>\r\nCo-authored-by: Andy Friesen <afriesen@roblox.com>\r\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>\r\n\r\n---------\r\n\r\nCo-authored-by: Aaron Weiss <aaronweiss@roblox.com>\r\nCo-authored-by: Andy Friesen <afriesen@roblox.com>\r\nCo-authored-by: Vighnesh <vvijay@roblox.com>\r\nCo-authored-by: Aviral Goel <agoel@roblox.com>\r\nCo-authored-by: David Cope <dcope@roblox.com>\r\nCo-authored-by: Lily Brown <lbrown@roblox.com>\r\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>",
+            "commit_timestamp": 1706909562.0
         }
     ]
 }
