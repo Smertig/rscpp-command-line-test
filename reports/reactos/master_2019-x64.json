@@ -15241,6 +15241,21 @@
             "commit_ref": "290221ef5bf486face9c992dca757b871c5e9550",
             "commit_message": "[SHELL32] Sync HCR_RegGetIconW() function to Wine 9.1 (#6418)\n\nImport the following fixes:\r\n- Use the number of bytes instead of the number of characters in the length\r\n  passed to RegQueryValueExW. Calculate this by multiplying the number of\r\n  characters on the size of one wide character in bytes, since only length\r\n  of characters is passed to the function. This fixes ERROR_MORE_DATA\r\n  returned from RegQueryValueExW, because the passed number of bytes was\r\n  less than the actual length of the output buffer, since it was calculated\r\n  incorrectly, so the function failed even when it received the correct\r\n  number of wide characters.\r\n  This partially imports Wine commit:\r\n  https://github.com/wine-mirror/wine/commit/32584bb521bd9dd14030a663671bea1673053cf2.\r\n- Limit the number of characters in registry icon index buffer from 7 to 5,\r\n  as it done in ANSI version of this function, since registry index number\r\n  can contain up to 4 digits + space for the null-terminator.\r\n\r\nThis fixes problems when loading custom (user-defined) icons from registry,\r\nlike icons defined by the current user or for all users, instead of just\r\ndefault icons from the root classes.\r\n\r\nCORE-14758\r\n\r\nCo-authored-by: Zhiyi Zhang <zzhang@codeweavers.com>",
             "commit_timestamp": 1706886636.0
+        },
+        {
+            "tool_version": "241.0.20240201.93040-eap03",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1707015977.894111,
+            "elapsed_time": 98.72260451316833,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 8147.776458740234,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "290221ef5bf486face9c992dca757b871c5e9550",
+            "commit_message": "[SHELL32] Sync HCR_RegGetIconW() function to Wine 9.1 (#6418)\n\nImport the following fixes:\r\n- Use the number of bytes instead of the number of characters in the length\r\n  passed to RegQueryValueExW. Calculate this by multiplying the number of\r\n  characters on the size of one wide character in bytes, since only length\r\n  of characters is passed to the function. This fixes ERROR_MORE_DATA\r\n  returned from RegQueryValueExW, because the passed number of bytes was\r\n  less than the actual length of the output buffer, since it was calculated\r\n  incorrectly, so the function failed even when it received the correct\r\n  number of wide characters.\r\n  This partially imports Wine commit:\r\n  https://github.com/wine-mirror/wine/commit/32584bb521bd9dd14030a663671bea1673053cf2.\r\n- Limit the number of characters in registry icon index buffer from 7 to 5,\r\n  as it done in ANSI version of this function, since registry index number\r\n  can contain up to 4 digits + space for the null-terminator.\r\n\r\nThis fixes problems when loading custom (user-defined) icons from registry,\r\nlike icons defined by the current user or for all users, instead of just\r\ndefault icons from the root classes.\r\n\r\nCORE-14758\r\n\r\nCo-authored-by: Zhiyi Zhang <zzhang@codeweavers.com>",
+            "commit_timestamp": 1706886636.0
         }
     ]
 }

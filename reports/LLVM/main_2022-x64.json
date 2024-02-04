@@ -16690,6 +16690,23 @@
             "commit_ref": "2906f3626b54136b885d82d2b28b7991f3d728ae",
             "commit_message": "[VPlan] Update ::onlyScalarsGenerated to take IsScalable bool (NFCI).\n\nInstead of passing in a full VF, just pass IsScalable as bool.\n",
             "commit_timestamp": 1706971874.0
+        },
+        {
+            "tool_version": "241.0.20240201.93040-eap03",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1707016531.807472,
+            "elapsed_time": 1458.412263393402,
+            "x64": true,
+            "actual_files_count": 1729,
+            "expected_files_count": 1661,
+            "memory_traffic": 235500.02686309814,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "1da2921bbdff847eb57184f3d5e7ae5c363b9e88",
+            "commit_message": "[RISCV] Add missing extload test cases to xtheadmemidx.ll. NFC\n\nWe had the isel patterns, but no tests that used them. We only had\nsextload and zextload tests.\n\nAlso reduce the alignment on some of the test cases that were\nunnecessarily over aligned.\n",
+            "commit_timestamp": 1707011729.0
         }
     ]
 }

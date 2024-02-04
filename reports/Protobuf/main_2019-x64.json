@@ -16248,6 +16248,21 @@
             "commit_ref": "2faa9d1a5fb89ed3f4486d340e9db3bf39e4c2ad",
             "commit_message": "Force descriptor initialization of dependencies *before* internalUpdateFileDescriptor().\n\nThis fixes an edge-case where EnumDescriptor for a custom option may be unresolved if used in the same file, since adding the field to ExtensionRegistry doesn't trigger its static init block if the Enum is imported from a dependency.\n\nAlso renames feature resolution methods exposed from gencode. Private resolveAllFeaturesInternal() method may be renamed back to resolveAllFeatures() in a followup change.\n\nPiperOrigin-RevId: 603852391\n",
             "commit_timestamp": 1706932885.0
+        },
+        {
+            "tool_version": "241.0.20240201.93040-eap03",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1707016004.215934,
+            "elapsed_time": 282.1437110900879,
+            "x64": true,
+            "actual_files_count": 862,
+            "expected_files_count": 818,
+            "memory_traffic": 34692.85408782959,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "d67f921f90e3aa03f65c3e1e507ca7017c8327a6",
+            "commit_message": "Don't break the trace (#11311)\n\nCloses #11311\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/11311 from umpirsky:patch-1 d280be57b71c32bdc255576aed06e400b07ce506\nPiperOrigin-RevId: 603963886\n",
+            "commit_timestamp": 1706986365.0
         }
     ]
 }

@@ -15491,6 +15491,21 @@
             "commit_ref": "aa65f4b0838d48f1a3350c32df78645c6a3a5034",
             "commit_message": "STYLE: FUTURE_LEGACY_REMOVE virtual SpatialObject InWorldSpace functions\n\nMade a first step towards removing the `virtual` keyword from four\n`SpatialObject` \"InWorldSpace\" member functions, in the future:\n\n    ValueAtInWorldSpace\n    IsInsideInWorldSpace\n    IsEvaluableAtInWorldSpace\n    DerivativeAtInWorldSpace\n\nThese member functions are not really meant to be overridden. Removing these\n`virtual` keyword may yield a run-time performance improvement.\n\nFollowing C++ Core Guidelines, October 12, 2023, \"Don\u2019t make a function\n`virtual` without reason\",\nhttp://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#Rh-virtual\n",
             "commit_timestamp": 1706968023.0
+        },
+        {
+            "tool_version": "241.0.20240201.93040-eap03",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1707016276.540118,
+            "elapsed_time": 225.35152459144592,
+            "x64": true,
+            "actual_files_count": 100,
+            "expected_files_count": null,
+            "memory_traffic": 26379.068717956543,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "aa65f4b0838d48f1a3350c32df78645c6a3a5034",
+            "commit_message": "STYLE: FUTURE_LEGACY_REMOVE virtual SpatialObject InWorldSpace functions\n\nMade a first step towards removing the `virtual` keyword from four\n`SpatialObject` \"InWorldSpace\" member functions, in the future:\n\n    ValueAtInWorldSpace\n    IsInsideInWorldSpace\n    IsEvaluableAtInWorldSpace\n    DerivativeAtInWorldSpace\n\nThese member functions are not really meant to be overridden. Removing these\n`virtual` keyword may yield a run-time performance improvement.\n\nFollowing C++ Core Guidelines, October 12, 2023, \"Don\u2019t make a function\n`virtual` without reason\",\nhttp://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#Rh-virtual\n",
+            "commit_timestamp": 1706968023.0
         }
     ]
 }
