@@ -68,7 +68,7 @@ class Environment:
         else:
             self._env = None
 
-        self._build_directory = args.build_directory or self._get_env("build directory")
+        self._build_directory = args.build_directory or self._get_env("build directory") or self._detect_build_dir()
         self._projects_cache_directory = args.projects_cache_directory or self._get_env("projects cache dir")
         self._supported_generators = args.supported_generators or self._get_env("supported generators") or []
         self._vcpkg_directory = args.vcpkg_directory or self._get_env("vcpkg dir")
@@ -83,6 +83,16 @@ class Environment:
         if self._env is None:
             return None
         return self._env.get(key)
+
+    @staticmethod
+    def _detect_build_dir() -> str:
+        dotnet_tools_path = os.environ['USERPROFILE'] + '/.dotnet/tools/.store'
+        tools_list = os.listdir(f'{dotnet_tools_path}/jetbrains.resharper.globaltools')
+        if not tools_list:
+            raise RuntimeError('No installed JetBrains.ReSharper.GlobalTools')
+
+        last_version = sorted(tools_list)[-1]
+        return f"{dotnet_tools_path}/jetbrains.resharper.globaltools/{last_version}/jetbrains.resharper.globaltools/{last_version}/tools/netcoreapp3.1/any"
 
     @property
     def resharper_build(self) -> str:
