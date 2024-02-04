@@ -792,6 +792,10 @@
                 {
                     "file": "..\\test\\view\\any_view.cpp",
                     "message": "static_assert failed: 'Concept assertion failed : can_convert_to<B *, void *>()'"
+                },
+                {
+                    "file": "..\\include\\range\\v3\\experimental\\utility\\generator.hpp",
+                    "message": "Parser issues in non-project file?"
                 }
             ],
             "inspected files count": 210
@@ -807,6 +811,10 @@
                     {
                         "file": "..\\test\\view\\any_view.cpp",
                         "message": "static_assert failed: 'Concept assertion failed : can_convert_to<B *, void *>()'"
+                    },
+                    {
+                        "file": "..\\include\\range\\v3\\experimental\\utility\\generator.hpp",
+                        "message": "Parser issues in non-project file?"
                     }
                 ]
             }
@@ -1048,11 +1056,21 @@
             "path to .sln": "Osiris.sln"
         },
         "stable": {
-            "inspected files count": 362
+            "inspected files count": 362,
+            "known file errors": [
+                {
+                    "file": "Source\\Platform\\Linux\\LinuxDynamicLibrary.h"
+                }
+            ]
         },
         "latest": {
             "master": {
-                "inspected files count": 362
+                "inspected files count": 362,
+                "known file errors": [
+                    {
+                        "file": "Source\\Platform\\Linux\\LinuxDynamicLibrary.h"
+                    }
+                ]
             }
         }
     },
