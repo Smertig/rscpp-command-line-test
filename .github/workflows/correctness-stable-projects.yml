@@ -72,7 +72,7 @@ jobs:
         if: success() || failure()
         uses: actions/upload-artifact@v4
         with:
-          name: ${{matrix.project}}-logs
+          name: ${{matrix.project}}-${{matrix.cmake_gen}}-logs
           path: "${{ steps.inspect-code.outputs.RSCPP_WORK_DIR }}/resharper-*"
 
       - name: Upload reports'
