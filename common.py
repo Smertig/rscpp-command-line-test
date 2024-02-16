@@ -76,6 +76,7 @@ class Environment:
         self._cli_test_dir = os.path.dirname(os.path.abspath(__file__))
         self._is_ci = args.is_ci
         self._is_x86 = args.is_x86
+        self._is_dry_run = args.is_dry_run
 
         assert self._build_directory, 'Missing build directory'
 
@@ -166,6 +167,10 @@ class Environment:
     @property
     def is_x86(self) -> bool:
         return self._is_x86
+
+    @property
+    def is_dry_run(self) -> bool:
+        return self._is_dry_run
 
 # TODO: remove global vars completely
 _env: Environment = None
@@ -490,3 +495,4 @@ argparser.add_argument('--supported-generators', dest='supported_generators', na
 argparser.add_argument('--ci', action='store_true', dest='is_ci')
 argparser.add_argument('--verbose', action='store_true', dest='verbose')
 argparser.add_argument('--x86', action='store_true', dest='is_x86')
+argparser.add_argument('--dry', action='store_true', dest='is_dry_run', help="If passed, only prepare project without actual checking")

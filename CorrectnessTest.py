@@ -258,6 +258,9 @@ def check_project(project, project_dir, sln_file, branch: Optional[str]) -> Tupl
 
 def process_project_with_cmake_generator(project, project_name, cmake_generator: str, branch: Optional[str]) -> Tuple[str, dict]:
     project_dir, sln_file = common.prepare_project(project_name, project, cmake_generator, branch)
+    if env.is_dry_run:
+        return f'({project_name}-{cmake_generator}) dry run: {sln_file}', dict()
+
     result, report = check_project(project, project_dir, sln_file, branch)
     if result:
         result = f"({cmake_generator}) {result}"
@@ -273,6 +276,9 @@ def process_project(project_name, project, branch: Optional[str]) -> Tuple[str, 
 
     if "custom build tool" in project:
         project_dir, sln_file = common.prepare_project(project_name, project, None, branch)
+        if env.is_dry_run:
+            return f'({project_name}) dry run: {sln_file}', dict()
+
         result, default_report = check_project(project, project_dir, sln_file, branch)
         toolchain_reports = {
             'default': default_report
