@@ -614,6 +614,7 @@
         }
     },
     "yuzu": {
+        "disabled": true,
         "sources": {
             "repo": "https://github.com/yuzu-emu/yuzu",
             "commit": "ce191ba32bed6506878ebf2b01573e67aeee2938",
@@ -901,7 +902,7 @@
     "Cemu": {
         "sources": {
             "repo": "https://github.com/cemu-project/Cemu",
-            "commit": "eda4cf4b241d56c5c16f6aa4d135b8a269676a76",
+            "commit": "ca01e923bf03573d5023feb0f4464ce015910ea6",
             "recursive": true
         },
         "only x64": true,
@@ -1174,6 +1175,12 @@
                     "message": "Cannot resolve symbol 'MAXINT'",
                     "flaky": true,
                     "reason": "Can't find this macro anywhere ¯\\_(ツ)_/¯"
+                },
+                {
+                    "file": "..\\Include\\py_curses.h",
+                    "line": 62,
+                    "message": "Expected a declaration",
+                    "reason": "TODO"
                 }
             ]
         },
