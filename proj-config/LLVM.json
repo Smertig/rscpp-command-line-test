@@ -51,7 +51,7 @@
             "known errors": [
                 {
                     "file": "..\\clang\\lib\\Sema\\TreeTransform.h",
-                    "line": 4693,
+                    "line": 4733,
                     "message": "Member 'Self' is not initialized in this constructor",
                     "reason": "Bug in code?"
                 },
@@ -71,6 +71,12 @@
                     "file": "..\\clang\\lib\\StaticAnalyzer\\Checkers\\BasicObjCFoundationChecks.cpp",
                     "line": 977,
                     "message": "Local variable 'N' used without being initialized"
+                },
+                {
+                    "file": "..\\clang\\include\\clang\\Frontend\\CompilerInvocation.h",
+                    "line": 372,
+                    "message": "Attempt to use deleted constructor 'clang::CompilerInvocationBase::CompilerInvocationBase(const CompilerInvocationBase &X)'",
+                    "reason": "RSCPP-35447 Constructor is incorrectly marked as deleted"
                 }
             ],
             "inspected files count": 1661

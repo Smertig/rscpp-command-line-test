@@ -866,11 +866,11 @@
     "minetest": {
         "sources": {
             "repo": "https://github.com/minetest/minetest",
-            "commit": "96197025b90073a42a071dc23adb7008437b2383",
+            "commit": "8c3a6a819ec11bf8c62109661388720d6122de05",
             "subrepo": {
                 "path": "lib/irrlichtmt",
                 "url": "https://github.com/minetest/irrlicht",
-                "commit": "99be15f40b799910cd30b37a88621037634c1c86"
+                "commit": "bdcd27ab5b3583c8941ec069092aa82a80df4ae3"
             }
         },
         "required dependencies": [
@@ -1018,7 +1018,21 @@
         },
         "latest": {
             "master": {
-                "inspected files count": 454
+                "inspected files count": 454,
+                "known errors": [
+                    {
+                        "file": "..\\src\\draw\\sw\\lv_draw_sw_letter.c",
+                        "line": 82,
+                        "message": "Expected ':'",
+                        "reason": "GNU Case Ranges: https://github.com/lvgl/lvgl/issues/5666, RSCPP-32242"
+                    },
+                    {
+                        "file": "..\\src\\draw\\sw\\lv_draw_sw_letter.c",
+                        "line": 82,
+                        "message": "Expected statement",
+                        "reason": "GNU Case Ranges: https://github.com/lvgl/lvgl/issues/5666, RSCPP-32242"
+                    }
+                ]
             }
         }
     },
@@ -1069,6 +1083,14 @@
                 "known file errors": [
                     {
                         "file": "Source\\Platform\\Linux\\LinuxDynamicLibrary.h"
+                    }
+                ],
+                "known errors": [
+                    {
+                        "file": "Source\\Hooks\\ViewRenderHook.h",
+                        "line": 10,
+                        "message": "Ambiguous symbol 'RefCountedHook<ViewRenderHook>'",
+                        "reason": "TODO"
                     }
                 ]
             }
@@ -1170,6 +1192,12 @@
                         "message": "Cannot resolve symbol 'MAXINT'",
                         "flaky": true,
                         "reason": "Can't find this macro anywhere ¯\\_(ツ)_/¯"
+                    },
+                    {
+                        "file": "..\\Include\\py_curses.h",
+                        "line": 62,
+                        "message": "Expected a declaration",
+                        "reason": "TODO"
                     }
                 ]
             }
