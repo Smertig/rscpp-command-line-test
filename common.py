@@ -433,7 +433,7 @@ def prepare_project(project_name, project, cmake_generator: Optional[str], branc
                 for step in build_step:
                     subprocess.run(step.split(), check=True, stdout=_env.verbose_handle)
         sln_file = path.join(project_dir, custom_build_tool["path to .sln"])
-        assert(path.exists(sln_file))
+        assert path.exists(sln_file)
     else:
         assert cmake_generator in VS_CMAKE_GENERATORS, f"unknown cmake generator '{cmake_generator}'"
         gen_description = VS_CMAKE_GENERATORS[cmake_generator]
@@ -452,6 +452,7 @@ def prepare_project(project_name, project, cmake_generator: Optional[str], branc
             else:
                 raise Exception("unknown build step format, should be list[str] or path to python script")
 
+    sln_file = os.path.abspath(sln_file)
     generate_settings(project.get("to skip")).write(sln_file + ".DotSettings")
     return project_dir, sln_file
 
