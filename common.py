@@ -331,6 +331,7 @@ def inspect_code_run_arguments(project_dir, sln_file, project_to_check, msbuild_
     if os.path.exists(err_file): os.remove(err_file)
     args.append("--LogLevel=INFO")
     args.append("--LogFile=" + log_file)
+    args.append("--Internal")
 
     args.append(sln_file)
     return args, report_file, err_file
