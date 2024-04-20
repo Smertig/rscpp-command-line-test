@@ -22,7 +22,7 @@ GENERATOR_TO_CONFIG["clang-cl-2019-x64"] = GENERATOR_TO_CONFIG["2019-x64"]
 
 def is_slow_project(project_name: str):
     # TODO: extract average build time from stats
-    return project_name in ('ITK', 'rocksdb', 'OpenCV', 'yuzu', 'minetest', 'Cemu', 'LLVM', 'tdlib')
+    return project_name in ('ITK', 'rocksdb', 'OpenCV', 'yuzu', 'minetest', 'Cemu', 'LLVM', 'tdlib', 'CPython')
 
 
 assert len(sys.argv) == 6, f"{sys.argv[0]} projects.json proj-config-dir mode github_event github_run_all"
