@@ -15506,6 +15506,21 @@
             "commit_ref": "aa65f4b0838d48f1a3350c32df78645c6a3a5034",
             "commit_message": "STYLE: FUTURE_LEGACY_REMOVE virtual SpatialObject InWorldSpace functions\n\nMade a first step towards removing the `virtual` keyword from four\n`SpatialObject` \"InWorldSpace\" member functions, in the future:\n\n    ValueAtInWorldSpace\n    IsInsideInWorldSpace\n    IsEvaluableAtInWorldSpace\n    DerivativeAtInWorldSpace\n\nThese member functions are not really meant to be overridden. Removing these\n`virtual` keyword may yield a run-time performance improvement.\n\nFollowing C++ Core Guidelines, October 12, 2023, \"Don\u2019t make a function\n`virtual` without reason\",\nhttp://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#Rh-virtual\n",
             "commit_timestamp": 1706968023.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1713604515.153556,
+            "elapsed_time": 222.11185669898987,
+            "x64": true,
+            "actual_files_count": 100,
+            "expected_files_count": null,
+            "memory_traffic": 26492.533058166504,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "f383fe0a954620eccdaf69d649acf3fa5be8dc21",
+            "commit_message": "STYLE: Improve style of Image.IsXGeometry\n\nCo-authored-by: Niels Dekker <n.dekker@lumc.nl>\n",
+            "commit_timestamp": 1713473770.0
         }
     ]
 }

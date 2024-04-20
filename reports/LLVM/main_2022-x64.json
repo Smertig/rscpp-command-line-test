@@ -16707,6 +16707,23 @@
             "commit_ref": "1da2921bbdff847eb57184f3d5e7ae5c363b9e88",
             "commit_message": "[RISCV] Add missing extload test cases to xtheadmemidx.ll. NFC\n\nWe had the isel patterns, but no tests that used them. We only had\nsextload and zextload tests.\n\nAlso reduce the alignment on some of the test cases that were\nunnecessarily over aligned.\n",
             "commit_timestamp": 1707011729.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1713604805.05927,
+            "elapsed_time": 1508.221910238266,
+            "x64": true,
+            "actual_files_count": 1995,
+            "expected_files_count": 1661,
+            "memory_traffic": 244255.8056564331,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "225ae82fdbbff7d22fbbf9aead00e67e08416ecf",
+            "commit_message": "[InstCombine] fold `cond ? x : -x == 0` into `x == 0` (#85673)\n\nResolve #85250 \r\nAlive2: https://alive2.llvm.org/ce/z/7DMRCy",
+            "commit_timestamp": 1713602714.0
         }
     ]
 }

@@ -16838,6 +16838,21 @@
             "commit_ref": "f2320724a74f95d83f8c259e1a96cf2cd9a1d6aa",
             "commit_message": "Fix build on ARM64EC (#2858)\n\nRemove `#pragma intrinsic(_umul128)` because it doesn't work on\r\nARM64EC and x64 works without it.\r\n\r\nCo-authored-by: Agoston Szepessy <agos@microsoft.com>",
             "commit_timestamp": 1713515797.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1713604129.868989,
+            "elapsed_time": 56.25941729545593,
+            "x64": true,
+            "actual_files_count": 282,
+            "expected_files_count": 272,
+            "memory_traffic": 4354.259407043457,
+            "repo_url": "https://github.com/catchorg/Catch2.git",
+            "commit_ref": "f2320724a74f95d83f8c259e1a96cf2cd9a1d6aa",
+            "commit_message": "Fix build on ARM64EC (#2858)\n\nRemove `#pragma intrinsic(_umul128)` because it doesn't work on\r\nARM64EC and x64 works without it.\r\n\r\nCo-authored-by: Agoston Szepessy <agos@microsoft.com>",
+            "commit_timestamp": 1713515797.0
         }
     ]
 }
