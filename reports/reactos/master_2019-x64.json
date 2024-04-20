@@ -15301,6 +15301,21 @@
             "commit_ref": "68a8619b7b22ef9b6192438f8eac5903b3d71113",
             "commit_message": "[SHELL32] Remove 2 redundant initializations\n\nAddendum to 6146fd0 (r54688) and 99b2e3d (r54979).\n",
             "commit_timestamp": 1713563414.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1713625499.276303,
+            "elapsed_time": 73.44559383392334,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 8087.762397766113,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "0240a876186fcebe59964a8524b3d538f67e29e8",
+            "commit_message": "[SHELL32] SHChangeNotify: SHCNF_DWORD and SHCNF_PRINTERA/W (#6777)\n\nImplementing missing features...\r\nJIRA issue: CORE-13950\r\n- Add Shell_ParsePrinterName helper function.\r\n- Implement SHCNF_DWORD, SHCNF_PRINTERA,\r\n  and SHCNF_PRINTERW types of SHChangeNotify\r\n  function.",
+            "commit_timestamp": 1713622291.0
         }
     ]
 }

@@ -16853,6 +16853,21 @@
             "commit_ref": "f2320724a74f95d83f8c259e1a96cf2cd9a1d6aa",
             "commit_message": "Fix build on ARM64EC (#2858)\n\nRemove `#pragma intrinsic(_umul128)` because it doesn't work on\r\nARM64EC and x64 works without it.\r\n\r\nCo-authored-by: Agoston Szepessy <agos@microsoft.com>",
             "commit_timestamp": 1713515797.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1713625500.854782,
+            "elapsed_time": 59.34507870674133,
+            "x64": true,
+            "actual_files_count": 282,
+            "expected_files_count": 272,
+            "memory_traffic": 4378.6864013671875,
+            "repo_url": "https://github.com/catchorg/Catch2.git",
+            "commit_ref": "df04df94dbe59efdb7496f3d9872f55cbc61bb24",
+            "commit_message": "conanfile: fix cmake_target_name of Catch2::Catch2.\n\nThe \"Catch2 without default main\" target is currently unspecified in\nConan, and defaults to catch2::catch2base. This commit switches it back\nto Catch2::Catch2, as specified in the docs.\n",
+            "commit_timestamp": 1713616264.0
         }
     ]
 }
