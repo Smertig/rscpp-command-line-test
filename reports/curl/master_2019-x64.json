@@ -15521,6 +15521,21 @@
             "commit_ref": "d1a8b3519fd2fd9f77a197079532207e5205ea75",
             "commit_message": "RELEASE-NOTES: synced\n",
             "commit_timestamp": 1713563983.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1713668769.846285,
+            "elapsed_time": 172.35477256774902,
+            "x64": true,
+            "actual_files_count": 2502,
+            "expected_files_count": 2323,
+            "memory_traffic": 33918.70888519287,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "5fa594ab7bcf19b39d98a4e2fae4791740482be4",
+            "commit_message": "tool_operate: init vars unconditionally in post_per_transfer\n\nIn case of (the unlikely) early return, they could otherwise remain\nuninitialized\n\nSpotted by CodeSonar\n\nCloses #13430\n",
+            "commit_timestamp": 1713646062.0
         }
     ]
 }
