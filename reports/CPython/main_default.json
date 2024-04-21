@@ -12686,6 +12686,21 @@
             "commit_ref": "df987331d896031799f33cb0f3a7b5c5712cb4e7",
             "commit_message": "gh-114099: Formalize Tier 3 status of iOS (GH-118020)\n\n",
             "commit_timestamp": 1713668648.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1713712028.65129,
+            "elapsed_time": 1380.6765394210815,
+            "x64": true,
+            "actual_files_count": 1028,
+            "expected_files_count": null,
+            "memory_traffic": 49566.57266998291,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "51ef89cd9acbfbfa7fd8d82f0c6baa388bb650c9",
+            "commit_message": "gh-115961: Add name and mode attributes for compressed file-like objects (GH-116036)\n\n* Add name and mode attributes for compressed and archived file-like objects\r\n  in modules bz2, lzma, tarfile and zipfile.\r\n* Change the value of the mode attribute of GzipFile from integer (1 or 2)\r\n  to string ('rb' or 'wb').\r\n* Change the value of the mode attribute of ZipExtFile from 'r' to 'rb'.\r\n",
+            "commit_timestamp": 1713689199.0
         }
     ]
 }

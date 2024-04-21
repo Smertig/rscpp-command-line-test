@@ -15536,6 +15536,21 @@
             "commit_ref": "5fa594ab7bcf19b39d98a4e2fae4791740482be4",
             "commit_message": "tool_operate: init vars unconditionally in post_per_transfer\n\nIn case of (the unlikely) early return, they could otherwise remain\nuninitialized\n\nSpotted by CodeSonar\n\nCloses #13430\n",
             "commit_timestamp": 1713646062.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1713711935.973058,
+            "elapsed_time": 201.10583782196045,
+            "x64": true,
+            "actual_files_count": 2502,
+            "expected_files_count": 2323,
+            "memory_traffic": 33932.79414367676,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "cf337d851ae0120ec5ed801ad7eb128561bd8cf6",
+            "commit_message": "tool_paramhlp: remove duplicate assign\n\nSpotted by CodeSonar\n\nCloses #13433\n",
+            "commit_timestamp": 1713689472.0
         }
     ]
 }
