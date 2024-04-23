@@ -15376,6 +15376,21 @@
             "commit_ref": "a8ece7e81a6d16b0b2fa115bb4c0afad7898e6c3",
             "commit_message": "[EVTLIB] Fix size of event log record\n\nThe size is 32bit, don't read a SIZE_T. Fixes crashes of advapi32_winetest eventlog on x64.\n",
             "commit_timestamp": 1713796922.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1713841544.662748,
+            "elapsed_time": 80.09384822845459,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 8060.88996887207,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "1dc8d80ca19aa71dbad381ea6839757cdd05641b",
+            "commit_message": "[SHELL32] SHChangeNotify: Add drive, remove drive (#6782)\n\nImplementing missing features...\r\nJIRA issue: CORE-13950\r\n- Add WM_DEVICECHANGE message handler in the shell window to detect\r\n  DBT_DEVICEARRIVAL and DBT_DEVICEREMOVECOMPLETE.\r\n- Use GetLogicalDrives function to detect drives.\r\n- Use SHChangeNotify to send SHCNE_DRIVEADD and\r\n  SHCNE_DRIVEREMOVED notifications.\r\n- Modify CDefView::OnChangeNotify.",
+            "commit_timestamp": 1713828518.0
         }
     ]
 }
