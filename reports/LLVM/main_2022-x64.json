@@ -16826,6 +16826,23 @@
             "commit_ref": "28d85e2d9e9f3b62554ad8446095aac275022c3c",
             "commit_message": "[InstCombine] Add test for #89500 (NFC)\n",
             "commit_timestamp": 1713838778.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1713885256.007318,
+            "elapsed_time": 1477.4963011741638,
+            "x64": true,
+            "actual_files_count": 1995,
+            "expected_files_count": 1661,
+            "memory_traffic": 245131.02977752686,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "c1086532d4d5c0a261457dfb00e79fcb764e3d78",
+            "commit_message": "[libc++][ranges] P2387R3: Pipe support for user-defined range adaptors (#89148)\n\nThis patch finalizes the std::ranges::range_adaptor_closure\r\nclass template from https://wg21.link/P2387R3.\r\n\r\n  // [range.adaptor.object], range adaptor objects\r\n  template<class D>\r\n    requires is_class_v<D> && same_as<D, remove_cv_t<D>>\r\n  class range_adaptor_closure { };\r\n\r\nThe current implementation of __range_adaptor_closure was introduced\r\nin ee44dd8062a26541808fc0d3fd5c6703e19f6016 and has served as the\r\nfoundation for the range adaptors in libc++ for a while. This patch\r\nkeeps its implementation, with the exception of the following changes:\r\n\r\n- __range_adaptor_closure now includes the missing constraints\r\n  `is_class_v<D> && same_as<D, remove_cv_t<D>>` to restrict the \r\n  type of class that can inherit from it. (https://eel.is/c++draft/ranges.syn)\r\n- The operator| of __range_adaptor_closure no longer requires its\r\n  first argument to model viewable_range. (https://eel.is/c++draft/range.adaptor.object#1)\r\n- The _RangeAdaptorClosure concept is refined to exclude cases where\r\n  T models range or where T has base classes of type range_adaptor_closure<U>\r\n  for another type U. (https://eel.is/c++draft/range.adaptor.object#2)",
+            "commit_timestamp": 1713884294.0
         }
     ]
 }

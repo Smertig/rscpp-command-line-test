@@ -15391,6 +15391,21 @@
             "commit_ref": "1dc8d80ca19aa71dbad381ea6839757cdd05641b",
             "commit_message": "[SHELL32] SHChangeNotify: Add drive, remove drive (#6782)\n\nImplementing missing features...\r\nJIRA issue: CORE-13950\r\n- Add WM_DEVICECHANGE message handler in the shell window to detect\r\n  DBT_DEVICEARRIVAL and DBT_DEVICEREMOVECOMPLETE.\r\n- Use GetLogicalDrives function to detect drives.\r\n- Use SHChangeNotify to send SHCNE_DRIVEADD and\r\n  SHCNE_DRIVEREMOVED notifications.\r\n- Modify CDefView::OnChangeNotify.",
             "commit_timestamp": 1713828518.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1713884736.082372,
+            "elapsed_time": 96.75295829772949,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 8006.501159667969,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "6ac260dcec4ce3db960e9797ef410d8c6e3272c0",
+            "commit_message": "[NTOS:KE/x64] Handle NMI vs swapgs race condition\n",
+            "commit_timestamp": 1713880206.0
         }
     ]
 }
