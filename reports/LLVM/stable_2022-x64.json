@@ -7083,6 +7083,23 @@
             "commit_ref": "1b0ba1c12fcc86dcf4097b3b8941260e8c6361fa",
             "commit_message": "[Clang] Fix parsing of `(auto(x))`.\n\nAllow auto(x) to appear in a parenthesis\nexpression.\n\nThe pattern (auto( can appear as part of a declarator,\nso the parser is modified to avoid the ambiguity,\nin a way consistent with the proposed resolution to CWG1223.\n\nReviewed By: aaron.ballman, #clang-language-wg\n\nDifferential Revision: https://reviews.llvm.org/D149276\n",
             "commit_timestamp": 1684581778.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1713972515.108192,
+            "elapsed_time": 1349.984661102295,
+            "x64": true,
+            "actual_files_count": 1661,
+            "expected_files_count": 1661,
+            "memory_traffic": 206639.68940734863,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "1b0ba1c12fcc86dcf4097b3b8941260e8c6361fa",
+            "commit_message": "[Clang] Fix parsing of `(auto(x))`.\n\nAllow auto(x) to appear in a parenthesis\nexpression.\n\nThe pattern (auto( can appear as part of a declarator,\nso the parser is modified to avoid the ambiguity,\nin a way consistent with the proposed resolution to CWG1223.\n\nReviewed By: aaron.ballman, #clang-language-wg\n\nDifferential Revision: https://reviews.llvm.org/D149276\n",
+            "commit_timestamp": 1684581778.0
         }
     ]
 }
