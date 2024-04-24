@@ -15611,6 +15611,21 @@
             "commit_ref": "00bef95946d35115376cedac9a64df22e3b202ab",
             "commit_message": "tool_operate: don't truncate the etag save file by default\n\nThis fixes a regression of 75d79a4486b279100209ddf8c7fdb12955fb66e9. The\ncode in tool-operate truncated the etag save file, under the assumption\nthat the file would be written with a new etag value. However since\n75d79a4486b279100209ddf8c7fdb12955fb66e9 that might not be the case\nanymore and could result in the file being truncated when --etag-compare\nand --etag-save was used and that the etag value matched with what the\nserver responded. Instead the truncation should not be done when a new\netag value should be written.\n\nTest 3204 was added to verify that the file with the etag value doesn't\nchange the contents when used by --etag-compare and --etage-save and\nthat value matches with what the server returns on a non 2xx response.\n\nCloses #13432\n",
             "commit_timestamp": 1713864800.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1713927950.940866,
+            "elapsed_time": 163.24550986289978,
+            "x64": true,
+            "actual_files_count": 2502,
+            "expected_files_count": 2323,
+            "memory_traffic": 33699.19039916992,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "7237ee2c3d8be6de679082a947f139f2e5554322",
+            "commit_message": "tests: fix feature case in test1481\n\nThis test was being skipped everywhere because the feature never\nmatched.\n\nCloses #13445\n",
+            "commit_timestamp": 1713887177.0
         }
     ]
 }
