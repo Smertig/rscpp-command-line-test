@@ -16428,6 +16428,21 @@
             "commit_ref": "2c16decbcee58f0ad3c9ca4ac722e02ac22b4bf7",
             "commit_message": "Internal change.\n\nPiperOrigin-RevId: 627582199\n",
             "commit_timestamp": 1713927516.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1713971251.215155,
+            "elapsed_time": 290.0365786552429,
+            "x64": true,
+            "actual_files_count": 1083,
+            "expected_files_count": 818,
+            "memory_traffic": 36407.9769821167,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "1a7ce6106115d0ff1c2b82a1a9a10d6603a2c2a1",
+            "commit_message": "Split Proxied into Proxied and MutProxied traits.\n\nProxied is not marked as Sized yet, because ProtoStr is still dynamically sized. We will wait for clarity for the string types before marking Proxied Sized.\n\nPiperOrigin-RevId: 627707544\n",
+            "commit_timestamp": 1713965029.0
         }
     ]
 }

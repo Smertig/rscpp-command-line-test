@@ -15421,6 +15421,21 @@
             "commit_ref": "d23573beede756ed85c1b24bfc6938316724eff0",
             "commit_message": "[SHELL32_APITEST] Follow-up to #6796 (25e2f5f)\n\nThis change will massively improve speed.\nJIRA issue: CORE-13950\n- Set zero to INTERVAL.\n- Remove SHCNF_FLUSHNOWAIT.\n",
             "commit_timestamp": 1713921762.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1713971220.69031,
+            "elapsed_time": 108.48907160758972,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7339.806335449219,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "91acf823d8d4e2b6b6e8012c98b1f178922b1547",
+            "commit_message": "[SHELL32] SHChangeNotify: Use tree for CDirectoryList (#6784)\n\nOptimize for speed and memory.\r\nJIRA issue: CORE-13950\r\nCDirectoryList class exists just for remembering which file item is a directory or\r\nnot, in order to notify the filesystem item changes. This information can\r\nbecome a tree data structure.\r\n\r\n- Add CFSPathIterator and CFSNode helper classes.\r\n- CFSNode is a class for tree nodes.\r\n- Re-implement CDirectoryList class by using tree nodes.\r\n- Delete CDirectoryItem class.",
+            "commit_timestamp": 1713955470.0
         }
     ]
 }
