@@ -15451,6 +15451,21 @@
             "commit_ref": "d55f49978d10aebff5378be674c8cc51386c1908",
             "commit_message": "Revert \"[SHELL32] SHChangeNotify: Use tree for CDirectoryList (#6784)\" (#6800)\n\nReverts #6784 that was a guilty commit of CORE-19531 that causing performance regression.\r\n\r\nJIRA issue: CORE-19531",
             "commit_timestamp": 1714003281.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1714057584.998209,
+            "elapsed_time": 105.89231133460999,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7853.759696960449,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "1f49173f8264708c8091b679571e3ae18d2f2275",
+            "commit_message": "[CRT] Massively improve performance of rand_s\n\nCache the pointer to RtlGenRandom instead of loading and unloading advapi32 every single time this function is called.\n",
+            "commit_timestamp": 1714015512.0
         }
     ]
 }

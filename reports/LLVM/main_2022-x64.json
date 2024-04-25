@@ -16894,6 +16894,23 @@
             "commit_ref": "090c92e01586fc515d584b1367b1b5928277c7f2",
             "commit_message": "[BOLT] Emit synthetic FILE symbol for local cold fragments of global symbols (#89794)\n\n",
             "commit_timestamp": 1714013595.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1714058152.844522,
+            "elapsed_time": 1555.4798469543457,
+            "x64": true,
+            "actual_files_count": 1996,
+            "expected_files_count": 1661,
+            "memory_traffic": 247999.58959960938,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "d3f92e30bbd5c295a639f207b9ac92198d538fb3",
+            "commit_message": "[clang-tidy] add check to suggest replacement of nested std::min or std::max with initializer lists (#85572)\n\nIdentifies cases where `std::min` or `std::max` is used to find the\r\nminimum or maximum value among more than two items through repeated\r\ncalls. The check replaces these calls with a single call to `std::min`\r\nor `std::max` that uses an initializer list. This makes the code\r\nslightly more efficient.\r\n\r\nCloses #25340",
+            "commit_timestamp": 1714057365.0
         }
     ]
 }

@@ -15466,6 +15466,21 @@
             "commit_ref": "691554ded85613af6ad06bba655f8e665fd661a4",
             "commit_message": "feat(nuttx): add adaptive color format\n\nSigned-off-by: pengyiqiang <pengyiqiang@xiaomi.com>\n",
             "commit_timestamp": 1713944790.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1714057518.863662,
+            "elapsed_time": 102.6234483718872,
+            "x64": true,
+            "actual_files_count": 637,
+            "expected_files_count": 454,
+            "memory_traffic": 12927.534759521484,
+            "repo_url": "https://github.com/lvgl/lvgl",
+            "commit_ref": "79b64c8bd8f2ee51df6954fe0e0b5fbf58ff85db",
+            "commit_message": "fix(draw_buf): use LV_ROUND_UP to align draw buffer address\n\nFrom test config lv_test_conf.h:\n\n/*Use non power of 2 to avoid the case when `malloc` returns aligned pointer by default, and use a large value be sure any issues will cause crash*/\n\\#define LV_DRAW_BUF_ALIGN                       852\n\nWe need to support non-power-of-2 draw buffer alignement.\nIntroduce LV_ROUND_UP in lv_math.h and use it instead.\n\nSigned-off-by: Xu Xingliang <xuxingliang@xiaomi.com>\n",
+            "commit_timestamp": 1714042578.0
         }
     ]
 }

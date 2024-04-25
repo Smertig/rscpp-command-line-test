@@ -15685,6 +15685,21 @@
             "commit_ref": "ebea65777f30e0090807d410b8ab878517795a32",
             "commit_message": "Merge pull request #24938 from DariaMityagina:icv/dm/add-media-frame-support-to-govbackend\n\nG-API OV backend requires cv::MediaFrame #24938\r\n\r\n### Pull Request Readiness Checklist\r\n\r\n**Background_subtraction demo G-API issue. Update:**\r\n\r\nPorting to API20 resulted in an error (both for CPU and NPU):\r\n```\r\n[ERROR] OpenCV(4.9.0-dev) /home/runner/work/open_model_zoo/open_model_zoo/cache/opencv/modules/gapi/src/backends/ov/govbackend.cpp:813: error: (-215: assertion not done ) cv::util::holds_alternative<cv::GMatDesc>(input_meta) in function 'cfgPreProcessing'\r\n```\r\n\r\nAdding cv::MediaFrame support to govbackend resulted in the following (tested with CPU):\r\n<img width=\"941\" alt=\"image\" src=\"https://github.com/opencv/opencv/assets/52502732/3a003d61-bda7-4b1e-9117-3410cda1ba32\">\r\n\r\n### TODO\r\n\r\n- [ ] **As part of the review process [this comment](https://github.com/opencv/opencv/pull/24938#discussion_r1487694043) was addressed which make it impossible to run the demo. I will bring those changes back in a separate PR [support `PartialShape`]**\r\n\r\nSee details at https://github.com/opencv/opencv/wiki/How_to_contribute#making-a-good-pull-request\r\n\r\n- [x] I agree to contribute to the project under Apache 2 License.\r\n- [x] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\r\n- [x] The PR is proposed to the proper branch\r\n- [x] There is a reference to the original bug report and related work\r\n- [ ] There is accuracy test, performance test and test data in opencv_extra repository, if applicable\r\n      Patch to opencv_extra has the same branch name.\r\n- [ ] The feature is well documented and sample code can be built with the project CMake\r\n",
             "commit_timestamp": 1713965100.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1714057612.129075,
+            "elapsed_time": 364.49865221977234,
+            "x64": true,
+            "actual_files_count": 473,
+            "expected_files_count": 459,
+            "memory_traffic": 41220.48065185547,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "7b58ffebd0b52072fa38fcaa7da547c66ef3c4e6",
+            "commit_message": "Merge pull request #25486 from asmorkalov:as/gapi_warning_fix\n\nFixed build warnings introduced in #24938",
+            "commit_timestamp": 1714033435.0
         }
     ]
 }

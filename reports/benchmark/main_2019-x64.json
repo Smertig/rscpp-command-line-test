@@ -16668,6 +16668,21 @@
             "commit_ref": "bc946b919cac6f25a199a526da571638cfde109f",
             "commit_message": "Modernize wheel building job config (#1783)\n\nIt is now possible to build Mac wheels on native machines in Github\r\nActions, so ARM64 Mac wheels are now built and tested on M1 machines.\r\n\r\nAlso, the artifact up-/download was migrated to v4, which made it\r\nnecessary to upload wheels to unique artifact names, and then later\r\nstitch them together again in a subsequent job.\r\n\r\nThe cross-platform Mac build injection in setup.py was removed,\r\nsince it is no longer necessary.\r\n\r\nI relanded a monkey-patching of Bazel build files, this time for\r\nMODULE.bazel. This is because `rules_python` does not allow running\r\nas the root user, which is the case in cibuildwheel+Linux (happens\r\nin a Docker container). Since I did not see a quick way of switching\r\nto rootless containers, and did not want to hardcode the config change\r\n(it can apparently cause cache misses and build failures), I inject the\r\n\"ignore_root_user_error\" flag into the MODULE.bazel file when running\r\nin cibuildwheel on Linux.",
             "commit_timestamp": 1713199449.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1714057538.969225,
+            "elapsed_time": 59.642640113830566,
+            "x64": true,
+            "actual_files_count": 86,
+            "expected_files_count": 86,
+            "memory_traffic": 4779.381706237793,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "bc946b919cac6f25a199a526da571638cfde109f",
+            "commit_message": "Modernize wheel building job config (#1783)\n\nIt is now possible to build Mac wheels on native machines in Github\r\nActions, so ARM64 Mac wheels are now built and tested on M1 machines.\r\n\r\nAlso, the artifact up-/download was migrated to v4, which made it\r\nnecessary to upload wheels to unique artifact names, and then later\r\nstitch them together again in a subsequent job.\r\n\r\nThe cross-platform Mac build injection in setup.py was removed,\r\nsince it is no longer necessary.\r\n\r\nI relanded a monkey-patching of Bazel build files, this time for\r\nMODULE.bazel. This is because `rules_python` does not allow running\r\nas the root user, which is the case in cibuildwheel+Linux (happens\r\nin a Docker container). Since I did not see a quick way of switching\r\nto rootless containers, and did not want to hardcode the config change\r\n(it can apparently cause cache misses and build failures), I inject the\r\n\"ignore_root_user_error\" flag into the MODULE.bazel file when running\r\nin cibuildwheel on Linux.",
+            "commit_timestamp": 1713199449.0
         }
     ]
 }
