@@ -15466,6 +15466,21 @@
             "commit_ref": "1f49173f8264708c8091b679571e3ae18d2f2275",
             "commit_message": "[CRT] Massively improve performance of rand_s\n\nCache the pointer to RtlGenRandom instead of loading and unloading advapi32 every single time this function is called.\n",
             "commit_timestamp": 1714015512.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1714100747.5532,
+            "elapsed_time": 75.41092562675476,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 8055.113723754883,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "cd0bb1af074b3a8d35b7eddae271d6e5ab484795",
+            "commit_message": "[TASKMGR] Process page: Allow using \"Open File Location\" functionality without running Explorer shell\n\nIf Explorer shell is not available, use ReactOS's alternative file browser instead.\n",
+            "commit_timestamp": 1714090560.0
         }
     ]
 }
