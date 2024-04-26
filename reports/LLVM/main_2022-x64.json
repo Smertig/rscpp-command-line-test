@@ -16928,6 +16928,23 @@
             "commit_ref": "28b55342e1a8d7a4fddde0fe1678883cd3b2d868",
             "commit_message": "Revert \"[MC] Rename temporary symbols of empty name to \".L0 \" (#89693)\"\n\nThis reverts commit 96c45a7fa12619c3abd6b81effe4c80f0916b78b.\n\nBroke BOLT builders and all pre-merge testing:\nhttps://lab.llvm.org/buildbot/#/builders/244/builds/28097\n",
             "commit_timestamp": 1714100729.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1714144552.443862,
+            "elapsed_time": 1525.7685635089874,
+            "x64": true,
+            "actual_files_count": 1997,
+            "expected_files_count": 1661,
+            "memory_traffic": 247956.20970916748,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "e74be35c1abedf87cfaa141284cb730911211ee1",
+            "commit_message": "[libc++][ranges] LWG3984: ranges::to's recursion branch may be ill-formed (#87964)\n\nThis pull request implements LWG3984: ranges::to's recursion branch\r\nmay be ill-formed.\r\n\r\nIn the current implementation, ranges::to's recursion branch pipes the\r\nrange into a `views::transform(/* lambda */)`, which is a __range_adaptor_closure\r\nobject. In libc++, the pipe operator of __range_adaptor_closure requires a\r\nviewable_range, so the following code won't compile, as the type of lvalue\r\n`r` doesn't model viewable_range:\r\n\r\n  #include <ranges>\r\n  #include <vector>\r\n  #include <list>\r\n\r\n  int main() {\r\n    std::vector<std::vector<int>> v;\r\n    auto r = std::views::all(std::move(v));\r\n    auto l = std::ranges::to<std::list<std::list<int>>>(r);\r\n  }\r\n\r\nCo-authored-by: A. Jiang <de34@live.cn>",
+            "commit_timestamp": 1714143647.0
         }
     ]
 }
