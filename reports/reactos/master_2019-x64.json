@@ -15496,6 +15496,21 @@
             "commit_ref": "45aa8f8111a409270f36c7ad8967f717538bf694",
             "commit_message": "[CRT] Remove useless #undef abort from process.h\n",
             "commit_timestamp": 1714137391.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1714187198.84884,
+            "elapsed_time": 100.89002060890198,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7924.414421081543,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "dcf9eb060a9900e01c762c8a2fcec10e9d119518",
+            "commit_message": "[SHELL32] Fix Control_RunDLLW (#5400)\n\nThis commit makes Control_RunDLLW pass all but one tests from rostests (the one test that fails is the first one, but it only fails if the path to the test program contains a space).\r\n\r\n- Rework string parsing in the Control_DoLaunch routine\r\n- Do not send the CPL_STARTWPARMSW message, if no extra parameters were specified (fixes the failing Got NULL lParam2! and some CPL_STARTWPARMSW: expected -1 got %d tests)\r\n- Do not resolve invalid dialog names to index zero, unless the name is empty (fixes some of the failing CPL_DBLCLK: expected -1 got %d tests)\r\n- Handle quotes in the second part of wszCmd\r\n\r\nCORE-8981",
+            "commit_timestamp": 1714177726.0
         }
     ]
 }

@@ -16945,6 +16945,23 @@
             "commit_ref": "e74be35c1abedf87cfaa141284cb730911211ee1",
             "commit_message": "[libc++][ranges] LWG3984: ranges::to's recursion branch may be ill-formed (#87964)\n\nThis pull request implements LWG3984: ranges::to's recursion branch\r\nmay be ill-formed.\r\n\r\nIn the current implementation, ranges::to's recursion branch pipes the\r\nrange into a `views::transform(/* lambda */)`, which is a __range_adaptor_closure\r\nobject. In libc++, the pipe operator of __range_adaptor_closure requires a\r\nviewable_range, so the following code won't compile, as the type of lvalue\r\n`r` doesn't model viewable_range:\r\n\r\n  #include <ranges>\r\n  #include <vector>\r\n  #include <list>\r\n\r\n  int main() {\r\n    std::vector<std::vector<int>> v;\r\n    auto r = std::views::all(std::move(v));\r\n    auto l = std::ranges::to<std::list<std::list<int>>>(r);\r\n  }\r\n\r\nCo-authored-by: A. Jiang <de34@live.cn>",
             "commit_timestamp": 1714143647.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1714187792.634728,
+            "elapsed_time": 1560.4805014133453,
+            "x64": true,
+            "actual_files_count": 1997,
+            "expected_files_count": 1661,
+            "memory_traffic": 248169.72577667236,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "315dc4bbc730a3c672967c27587088cfe9752fe6",
+            "commit_message": "[clang-format] Add a space after a word token only if required (#90161)\n\nFixes #78166.",
+            "commit_timestamp": 1714186476.0
         }
     ]
 }

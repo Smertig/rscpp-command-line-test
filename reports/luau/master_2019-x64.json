@@ -15843,6 +15843,21 @@
             "commit_ref": "259e50903855d1b8be79edc40fc275fd04c9c892",
             "commit_message": "Sync to upstream/release/623 (#1236)\n\n# What's changed?\r\n\r\n### New Type Solver\r\n\r\n- Unification of two fresh types no longer binds them together.\r\n- Replaced uses of raw `emplace` with `emplaceType` to catch cyclic\r\nbound types when they are created.\r\n- `SetIndexerConstraint` is blocked until the indexer result type is not\r\nblocked.\r\n- Fix a case where a blocked type got past the constraint solver.\r\n- Searching for free types should no longer traverse into `ClassType`s.\r\n- Fix a corner case that could result in the non-testable type `~{}`.\r\n- Fix incorrect flagging when `any` was a parameter of some checked\r\nfunction in nonstrict type checker.\r\n- `IterableConstraint` now consider tables without `__iter` to be\r\niterables.\r\n\r\n### Native Code Generation\r\n\r\n- Improve register type info lookup by program counter.\r\n- Generate type information for locals and upvalues\r\n\r\n---\r\n\r\n### Internal Contributors\r\n\r\nCo-authored-by: Aaron Weiss <aaronweiss@roblox.com>\r\nCo-authored-by: Alexander McCord <amccord@roblox.com>\r\nCo-authored-by: Andy Friesen <afriesen@roblox.com>\r\nCo-authored-by: James McNellis <jmcnellis@roblox.com>\r\nCo-authored-by: Vighnesh Vijay <vvijay@roblox.com>\r\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>\r\n\r\n---------\r\n\r\nCo-authored-by: Aaron Weiss <aaronweiss@roblox.com>\r\nCo-authored-by: Andy Friesen <afriesen@roblox.com>\r\nCo-authored-by: Vighnesh <vvijay@roblox.com>\r\nCo-authored-by: Aviral Goel <agoel@roblox.com>\r\nCo-authored-by: David Cope <dcope@roblox.com>\r\nCo-authored-by: Lily Brown <lbrown@roblox.com>\r\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>",
             "commit_timestamp": 1714083969.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1714187178.135671,
+            "elapsed_time": 243.45628380775452,
+            "x64": true,
+            "actual_files_count": 444,
+            "expected_files_count": 379,
+            "memory_traffic": 30306.069534301758,
+            "repo_url": "https://github.com/luau-lang/luau",
+            "commit_ref": "af15c3cf17ed211f7f4a257cbc5bccd298c2e9e0",
+            "commit_message": "CodeGen: Fix a typo in X64 (dis)assembler (#1238)\n\n",
+            "commit_timestamp": 1714155253.0
         }
     ]
 }
