@@ -15716,6 +15716,21 @@
             "commit_ref": "c8e0cd1de8db9eba00c284ebf5fd5b3cba263e06",
             "commit_message": "http3: quiche+ngtcp2 improvements\n\n- quiche: error transfers that try to receive on a closed\n  or draining connection\n- ngtcp2: use callback for extending max bidi streams. This\n  allows more precise calculation of MAX_CONCURRENT as we\n  only can start a new stream when the server acknowledges\n  the close - not when we locally have closed it.\n- remove a fprintf() from h2-download client to avoid excess\n  log files on tests timing out.\n\nCloses #13475\n",
             "commit_timestamp": 1714132985.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1714230344.64829,
+            "elapsed_time": 180.66018056869507,
+            "x64": true,
+            "actual_files_count": 2505,
+            "expected_files_count": 2323,
+            "memory_traffic": 35169.20796966553,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "c8e0cd1de8db9eba00c284ebf5fd5b3cba263e06",
+            "commit_message": "http3: quiche+ngtcp2 improvements\n\n- quiche: error transfers that try to receive on a closed\n  or draining connection\n- ngtcp2: use callback for extending max bidi streams. This\n  allows more precise calculation of MAX_CONCURRENT as we\n  only can start a new stream when the server acknowledges\n  the close - not when we locally have closed it.\n- remove a fprintf() from h2-download client to avoid excess\n  log files on tests timing out.\n\nCloses #13475\n",
+            "commit_timestamp": 1714132985.0
         }
     ]
 }
