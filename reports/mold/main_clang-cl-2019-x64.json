@@ -13296,6 +13296,21 @@
             "commit_ref": "53ebcd80d888778cde16952270f73343f090f342",
             "commit_message": "Reduce memory usage\n\nThis change saves ~1 GiB memory allocation when linking ~3.8 GiB clang-19\nbinary because the binary contains tons of mergeable strings for debug info.\n",
             "commit_timestamp": 1714110661.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1714273615.745659,
+            "elapsed_time": 126.60638475418091,
+            "x64": true,
+            "actual_files_count": 511,
+            "expected_files_count": null,
+            "memory_traffic": 15986.715278625488,
+            "repo_url": "https://github.com/rui314/mold",
+            "commit_ref": "53ebcd80d888778cde16952270f73343f090f342",
+            "commit_message": "Reduce memory usage\n\nThis change saves ~1 GiB memory allocation when linking ~3.8 GiB clang-19\nbinary because the binary contains tons of mergeable strings for debug info.\n",
+            "commit_timestamp": 1714110661.0
         }
     ]
 }
