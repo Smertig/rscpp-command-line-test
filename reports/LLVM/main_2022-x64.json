@@ -17013,6 +17013,23 @@
             "commit_ref": "256d76f48060a353ba3bb885698e2ba8d1c87ec6",
             "commit_message": "[Docs] Improve the description of convergence (#89038)\n\n- Clarify convergence of threads v/s convergence of operations.\r\n- Explicitly address operations that are not in any cycle.\r\n\r\nThis was inspired by a discussion on Discourse:\r\nhttps://discourse.llvm.org/t/llvm-convergence-semantics/77642",
             "commit_timestamp": 1714314374.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1714360458.432294,
+            "elapsed_time": 1517.0041604042053,
+            "x64": true,
+            "actual_files_count": 1997,
+            "expected_files_count": 1661,
+            "memory_traffic": 248047.65120697021,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "42bc4f692dfe699b90f4609b7ad7c6708cf3fc43",
+            "commit_message": "Reland \"[X86] X86LowerTileCopy: Find dead register to use to prevent save-reload of tile register (#83628)\"\n\nFixes compile time regression in previous commit.\n",
+            "commit_timestamp": 1714355570.0
         }
     ]
 }
