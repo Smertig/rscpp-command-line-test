@@ -15776,6 +15776,21 @@
             "commit_ref": "dfdd978f7c60224dffe2aac25b436dc0a5cd0186",
             "commit_message": "cmake: add `BUILD_EXAMPLES` option to build examples\n\nYou can enable it with `-DBUILD_EXAMPLES=ON`.\n\nTo match autotools' `make examples` feature.\nWindows (static) builds not tested.\n\nAlso enable examples in a pair of CI jobs.\n\nApply related updates to the macOS CI workflow:\n- drop unused `CXX` envs.\n- drop no longer needed `-Wno-error=undef -Wno-error=conversion` flags.\n- pass `-Wno-deprecated-declarations` to GCC too (for `BUILD_EXAMPLES`).\n- document why `-Wno-deprecated-declarations` is necessary.\n\nCloses #13491\n",
             "commit_timestamp": 1714343210.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1714403184.748853,
+            "elapsed_time": 175.5824329853058,
+            "x64": true,
+            "actual_files_count": 2505,
+            "expected_files_count": 2323,
+            "memory_traffic": 35069.40615081787,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "86805bfcdadef588e2c325212f066122f2daf4ec",
+            "commit_message": "cmake: FindNGHTTP2 add static lib name to find_library call\n\nAdd the static library name, nghttp2_static as a name to search.\n\nThis provides cmake parity with the winbuild Makefile.vc allowing\nthe cmake build to find and allow the link to static nghttp2 library.\n",
+            "commit_timestamp": 1714402146.0
         }
     ]
 }

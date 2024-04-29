@@ -17030,6 +17030,23 @@
             "commit_ref": "42bc4f692dfe699b90f4609b7ad7c6708cf3fc43",
             "commit_message": "Reland \"[X86] X86LowerTileCopy: Find dead register to use to prevent save-reload of tile register (#83628)\"\n\nFixes compile time regression in previous commit.\n",
             "commit_timestamp": 1714355570.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1714403803.224111,
+            "elapsed_time": 1596.1940836906433,
+            "x64": true,
+            "actual_files_count": 1997,
+            "expected_files_count": 1661,
+            "memory_traffic": 247963.93841552734,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "91f251c31fbbc9b9d8ce69fce4fb50faa0179ef4",
+            "commit_message": "[clang] Fix `remove{CVR|Fast}Qualifiers` with 64-bit `Qualifiers::Mask` (#90329)\n\nAfter #84384, `Qualifiers::Mask` becomes 64-bit. So, operations like\r\n`Mask &= ~U32` where `U32` is `unsigned` produce undesirable results\r\nsince higher 32 bits of `Mask` become zeroed while they should be\r\npreserved. Fix that by explicitly casting `unsigned` values to\r\n`uint64_t` in such operations. Signatures of fixed functions are\r\nintentionally left intact instead of changing the argument itself to\r\n`uint64_t` to keep things consistent with other functions working with\r\nthe same qualifiers and to emphasize that 64-bit masks should not be\r\nused for these types of qualifiers.",
+            "commit_timestamp": 1714402614.0
         }
     ]
 }

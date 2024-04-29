@@ -13341,6 +13341,21 @@
             "commit_ref": "cbbe23aa464e250d4f6df70e7885a032f834588b",
             "commit_message": "Do not show \"entry symbol not found\" error when creating a DSO\n",
             "commit_timestamp": 1714295214.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1714403252.758466,
+            "elapsed_time": 125.01990532875061,
+            "x64": true,
+            "actual_files_count": 511,
+            "expected_files_count": null,
+            "memory_traffic": 15703.700668334961,
+            "repo_url": "https://github.com/rui314/mold",
+            "commit_ref": "ea054ccced2dce076fb468bc64bca969b3d8d056",
+            "commit_message": "Allow a newline or a tab at the begining of a linker script\n\nPreviously, the first four byte must have been \"printable\" bytes,\nwhich exclude newlines or tabs.\n",
+            "commit_timestamp": 1714387271.0
         }
     ]
 }
