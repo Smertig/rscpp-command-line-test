@@ -17063,6 +17063,21 @@
             "commit_ref": "fbb52d987e3156b96da0809f5b61e1946eb26cdb",
             "commit_message": "Prepare to tag release `2024-05-01`.\n\nBump versions of actions and dependencies.\n\nChange-Id: Ifb798e7c320b092e2faed2cd4d03fc962b8c009e\nReviewed-on: https://code-review.googlesource.com/c/re2/+/63010\nReviewed-by: Alex Chernyakhovsky <achernya@google.com>\nReviewed-by: Paul Wankadia <junyer@google.com>\n",
             "commit_timestamp": 1714417324.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1714489640.143015,
+            "elapsed_time": 59.48189449310303,
+            "x64": true,
+            "actual_files_count": 22,
+            "expected_files_count": null,
+            "memory_traffic": 2402.4273986816406,
+            "repo_url": "https://github.com/google/re2.git",
+            "commit_ref": "2b354c6ad0d0479dcff68dab23fb0d1143a482c2",
+            "commit_message": "Use `pkg-config` to find GoogleTest and Benchmark.\n\nThe GNU make CI workflow is currently broken on macOS because the Homebrew\nprefix differs between X64 and ARM64. It turns out that the compiler can't\nfind GoogleTest (and Benchmark) anymore via the default path(s). We should\nreally have been specifying the path(s) explicitly long before now anyway.\n\nChange-Id: If526389aa89b20b64ccfcc486769050c351e759f\nReviewed-on: https://code-review.googlesource.com/c/re2/+/63030\nReviewed-by: Paul Wankadia <junyer@google.com>\nReviewed-by: Alex Chernyakhovsky <achernya@google.com>\n",
+            "commit_timestamp": 1714475933.0
         }
     ]
 }
