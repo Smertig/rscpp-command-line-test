@@ -16638,6 +16638,21 @@
             "commit_ref": "fb054c8e4141b0fe50c33d237a6650d98a412de8",
             "commit_message": "Java Proto lite: avoid boxing Integers accessing enum lists\n\nProvide a specialization for ListAdapter that avoids boxing ints into Integers.\n\nUse this for repeated enum accessors.\n\nIn practice, the ints for most enums will fit into the JDK's \"boxed int cache\", avoiding extra allocations. For large enum numbers, they won't fit, and would allocate. Removing the boxing should also slightly speed up code.\n\nPiperOrigin-RevId: 629583247\n",
             "commit_timestamp": 1714525770.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1714575973.058662,
+            "elapsed_time": 279.9701635837555,
+            "x64": true,
+            "actual_files_count": 1083,
+            "expected_files_count": 818,
+            "memory_traffic": 36360.84697723389,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "a45e0d83abe1b9620c91c8044535236774af3556",
+            "commit_message": "Change `FieldDescriptor::type()` to not have the call_once behavior.\nThe field is always set while building the descriptor, even for lazy descriptors.\nThe `type()` function is called extensively in reflection based code and\nremoving the call_once has significant performance impact.\n\nPiperOrigin-RevId: 629723749\n",
+            "commit_timestamp": 1714575577.0
         }
     ]
 }
