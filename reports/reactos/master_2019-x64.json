@@ -15616,6 +15616,21 @@
             "commit_ref": "e77da17f6857ddbdca4b3e2cf1f2afa0fa02202d",
             "commit_message": "[KMTEST] Add test for FileEndOfFileInformation\n",
             "commit_timestamp": 1714423818.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1714532759.843201,
+            "elapsed_time": 90.11481356620789,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7909.402473449707,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "0f9bf6abb469549106c8db1b5a774cf5ba973b21",
+            "commit_message": "[NTOS:CC] Restore unlock/reacquire locks around MmPageOutPhysicalAddress (#5735)\n\n* [NTOS:CC] Restore unlock and reacquire locks around MmPageOutPhysicalAddress which was mistakenly lost in commit 2b14056\r\n\r\n* Add bypass for problematic code path for now",
+            "commit_timestamp": 1714503590.0
         }
     ]
 }
