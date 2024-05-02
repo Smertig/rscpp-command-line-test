@@ -15646,6 +15646,21 @@
             "commit_ref": "db93cb17096abbd5d0ba6e3288f66021c0a51131",
             "commit_message": "[SHELL32][VFDLIB] Handle size check of CMINVOKECOMMANDINFOEX correctly (#6767)\n\nOlder NT versions (< IE4) had a smaller CMINVOKECOMMANDINFOEX struct. Places where 3rd-party code passes in the struct needs to accept the small size.",
             "commit_timestamp": 1714565828.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1714619163.481326,
+            "elapsed_time": 97.4124526977539,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7928.309585571289,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "db93cb17096abbd5d0ba6e3288f66021c0a51131",
+            "commit_message": "[SHELL32][VFDLIB] Handle size check of CMINVOKECOMMANDINFOEX correctly (#6767)\n\nOlder NT versions (< IE4) had a smaller CMINVOKECOMMANDINFOEX struct. Places where 3rd-party code passes in the struct needs to accept the small size.",
+            "commit_timestamp": 1714565828.0
         }
     ]
 }

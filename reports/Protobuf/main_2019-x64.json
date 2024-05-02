@@ -16653,6 +16653,21 @@
             "commit_ref": "a45e0d83abe1b9620c91c8044535236774af3556",
             "commit_message": "Change `FieldDescriptor::type()` to not have the call_once behavior.\nThe field is always set while building the descriptor, even for lazy descriptors.\nThe `type()` function is called extensively in reflection based code and\nremoving the call_once has significant performance impact.\n\nPiperOrigin-RevId: 629723749\n",
             "commit_timestamp": 1714575577.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1714619195.677519,
+            "elapsed_time": 291.8432116508484,
+            "x64": true,
+            "actual_files_count": 1083,
+            "expected_files_count": 818,
+            "memory_traffic": 36328.98243713379,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "05afdc2f0afbc7f1412ef3384f898f45e419d21a",
+            "commit_message": "Auto-generate files after cl/629808114\n",
+            "commit_timestamp": 1714593884.0
         }
     ]
 }
