@@ -15866,6 +15866,21 @@
             "commit_ref": "38593db4a086e5ac8052e3e94c142b69b5edee58",
             "commit_message": "appveyor: enable websockets for VS2017 jobs\n\nFollow-up to eb4fe6c6340c3d5b0c347c6e30be004d4f9117d7 #13232\nCloses #13513\n",
             "commit_timestamp": 1714586601.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1714662402.220759,
+            "elapsed_time": 167.20293426513672,
+            "x64": true,
+            "actual_files_count": 2505,
+            "expected_files_count": 2323,
+            "memory_traffic": 33790.290435791016,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "6e4b7abfd3bef38130598b7f62289881f448a13c",
+            "commit_message": "bearssl: use common code for cipher suite lookup\n\nTake advantage of the Curl_cipher_suite_walk_str() and\nCurl_cipher_suite_get_str() functions introduced in commit fba9afeb.\n\nThis also fixes CURLOPT_SSL_CIPHER_LIST not working at all for bearssl\ndue to commit ff74cef5.\n\nCloses #13464\n",
+            "commit_timestamp": 1714648622.0
         }
     ]
 }

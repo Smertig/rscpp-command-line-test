@@ -13016,6 +13016,21 @@
             "commit_ref": "a37b0932285b5e883b13a46ff2a32f15d7339894",
             "commit_message": "gh-118335: Rename --experimental-interpreter on Windows to --experimental-jit-interpreter (#118497)\n\nAlso fix docs for this in whatsnew.",
             "commit_timestamp": 1714610914.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1714662583.055797,
+            "elapsed_time": 1295.2477633953094,
+            "x64": true,
+            "actual_files_count": 1029,
+            "expected_files_count": null,
+            "memory_traffic": 49371.301414489746,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "9789440de387219bb7677fe0d66860aa8c9deb02",
+            "commit_message": "gh-82062: Fix support of parameter defaults on methods in extension modules (GH-115270)\n\nNow inspect.signature() supports references to the module globals in\r\nparameter defaults on methods in extension modules.  Previously it was\r\nonly supported in functions.  The workaround was to specify the fully\r\nqualified name, including the module name.\r\n",
+            "commit_timestamp": 1714661073.0
         }
     ]
 }

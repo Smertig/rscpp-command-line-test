@@ -17132,6 +17132,23 @@
             "commit_ref": "1f1a417925624a67cb6cb2bbbdd901e0e90ee237",
             "commit_message": "[clang-tidy] Relax readability-const-return-type (#90560)\n\nFrom now readability-const-return-type won't provide warnings for\r\nreturning const types, where const is not on top level. In such case\r\nconst there is a performance issue, but not a readability.\r\n\r\nCloses #73270",
             "commit_timestamp": 1714617815.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1714662936.130198,
+            "elapsed_time": 1543.5635890960693,
+            "x64": true,
+            "actual_files_count": 1998,
+            "expected_files_count": 1661,
+            "memory_traffic": 248352.44771575928,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "aac588abfa03e9721d96546df917fec913137ecb",
+            "commit_message": "Reapply \"[clang][Interp] Fix locals created in ExprWithCleanups\"\n\nThis reverts commit 427c5bfd39ebb9d008b621370579444fbf2a60d7.\n",
+            "commit_timestamp": 1714661798.0
         }
     ]
 }

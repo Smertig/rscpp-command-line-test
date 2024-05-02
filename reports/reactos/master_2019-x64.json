@@ -15661,6 +15661,21 @@
             "commit_ref": "db93cb17096abbd5d0ba6e3288f66021c0a51131",
             "commit_message": "[SHELL32][VFDLIB] Handle size check of CMINVOKECOMMANDINFOEX correctly (#6767)\n\nOlder NT versions (< IE4) had a smaller CMINVOKECOMMANDINFOEX struct. Places where 3rd-party code passes in the struct needs to accept the small size.",
             "commit_timestamp": 1714565828.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1714662362.836208,
+            "elapsed_time": 76.96951794624329,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 8066.658615112305,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "515f998f0dfe19ef0a158d26cb61b58b9a0def7b",
+            "commit_message": "[NTUSER] Fix co_IntSetParent when calling on itself (#6365)\n\n* Patch by @I_Kill_Bugs.\r\n\r\n* Provide explanation for change.\r\nCORE-9386",
+            "commit_timestamp": 1714639421.0
         }
     ]
 }

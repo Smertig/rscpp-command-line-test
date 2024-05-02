@@ -17123,6 +17123,21 @@
             "commit_ref": "2b354c6ad0d0479dcff68dab23fb0d1143a482c2",
             "commit_message": "Use `pkg-config` to find GoogleTest and Benchmark.\n\nThe GNU make CI workflow is currently broken on macOS because the Homebrew\nprefix differs between X64 and ARM64. It turns out that the compiler can't\nfind GoogleTest (and Benchmark) anymore via the default path(s). We should\nreally have been specifying the path(s) explicitly long before now anyway.\n\nChange-Id: If526389aa89b20b64ccfcc486769050c351e759f\nReviewed-on: https://code-review.googlesource.com/c/re2/+/63030\nReviewed-by: Paul Wankadia <junyer@google.com>\nReviewed-by: Alex Chernyakhovsky <achernya@google.com>\n",
             "commit_timestamp": 1714475933.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1714662493.034362,
+            "elapsed_time": 56.08898091316223,
+            "x64": true,
+            "actual_files_count": 22,
+            "expected_files_count": null,
+            "memory_traffic": 2767.0359115600586,
+            "repo_url": "https://github.com/google/re2.git",
+            "commit_ref": "2b354c6ad0d0479dcff68dab23fb0d1143a482c2",
+            "commit_message": "Use `pkg-config` to find GoogleTest and Benchmark.\n\nThe GNU make CI workflow is currently broken on macOS because the Homebrew\nprefix differs between X64 and ARM64. It turns out that the compiler can't\nfind GoogleTest (and Benchmark) anymore via the default path(s). We should\nreally have been specifying the path(s) explicitly long before now anyway.\n\nChange-Id: If526389aa89b20b64ccfcc486769050c351e759f\nReviewed-on: https://code-review.googlesource.com/c/re2/+/63030\nReviewed-by: Paul Wankadia <junyer@google.com>\nReviewed-by: Alex Chernyakhovsky <achernya@google.com>\n",
+            "commit_timestamp": 1714475933.0
         }
     ]
 }
