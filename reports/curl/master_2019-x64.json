@@ -15896,6 +15896,21 @@
             "commit_ref": "6e4b7abfd3bef38130598b7f62289881f448a13c",
             "commit_message": "bearssl: use common code for cipher suite lookup\n\nTake advantage of the Curl_cipher_suite_walk_str() and\nCurl_cipher_suite_get_str() functions introduced in commit fba9afeb.\n\nThis also fixes CURLOPT_SSL_CIPHER_LIST not working at all for bearssl\ndue to commit ff74cef5.\n\nCloses #13464\n",
             "commit_timestamp": 1714648622.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1714748731.904903,
+            "elapsed_time": 192.9930019378662,
+            "x64": true,
+            "actual_files_count": 2505,
+            "expected_files_count": 2323,
+            "memory_traffic": 35866.95831298828,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "b8435242baf3e7ca117ee3e5739446d599dc6808",
+            "commit_message": "RELEASE-NOTES: synced\n",
+            "commit_timestamp": 1714739979.0
         }
     ]
 }

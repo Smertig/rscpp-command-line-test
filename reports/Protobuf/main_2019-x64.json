@@ -16698,6 +16698,21 @@
             "commit_ref": "4f12891b87a99ecabdc1e1039d0587094e9b57cd",
             "commit_message": "Java full runtime: Avoid allocating iterator if UnknownFieldSet's TreeMap is empty\n\nI also considered using Collections.emptyNavigableMap(), which I thought might\nuse a specialized allocation free empty iterator, but it allocates, and its\nclone() method isn't nicely exposed.\n\nPiperOrigin-RevId: 630234849\n",
             "commit_timestamp": 1714698932.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1714748790.588937,
+            "elapsed_time": 305.60443019866943,
+            "x64": true,
+            "actual_files_count": 1085,
+            "expected_files_count": 818,
+            "memory_traffic": 36379.16162109375,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "733b9c54e9ce720bb2ba77e980778616da45479d",
+            "commit_message": "Implement `is_known` method on the `Enum` trait\n\nThis is equivalent to C++'s `_IsValid` functions. Since proto3 enums are open,\n`is_known` seems to be a better name than the misleading `is_valid`.\n\nC++-specific Protocol Buffers documentation already uses \"known fields\" and\n\"unknown enum values\" expressions.\n\nPiperOrigin-RevId: 630344180\n",
+            "commit_timestamp": 1714733571.0
         }
     ]
 }

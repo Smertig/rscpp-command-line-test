@@ -13461,6 +13461,21 @@
             "commit_ref": "ed1e3c06a25184552e2c3d7deeaa81157d9ae0d5",
             "commit_message": "Do not copy mold executable to a test directory\n\nmold executable can be quite large (~600 MiB with debug info),\nso we don't want to casually copy that file.\n",
             "commit_timestamp": 1714698241.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1714748831.479921,
+            "elapsed_time": 129.70444583892822,
+            "x64": true,
+            "actual_files_count": 511,
+            "expected_files_count": null,
+            "memory_traffic": 15814.391609191895,
+            "repo_url": "https://github.com/rui314/mold",
+            "commit_ref": "f0f61cc7ad482672a73d3bb4778430c65f01e237",
+            "commit_message": "Do not use `yield` asm instruction on arm32\n\n`yield` may not exist on older ARM processors.\n\nFixes https://github.com/rui314/mold/issues/1250\n",
+            "commit_timestamp": 1714740267.0
         }
     ]
 }
