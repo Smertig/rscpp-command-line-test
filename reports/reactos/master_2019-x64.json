@@ -15676,6 +15676,21 @@
             "commit_ref": "515f998f0dfe19ef0a158d26cb61b58b9a0def7b",
             "commit_message": "[NTUSER] Fix co_IntSetParent when calling on itself (#6365)\n\n* Patch by @I_Kill_Bugs.\r\n\r\n* Provide explanation for change.\r\nCORE-9386",
             "commit_timestamp": 1714639421.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1714705704.796729,
+            "elapsed_time": 127.13167381286621,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7435.054550170898,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "bbb3b00398822b1c6853acce1c82d5aeb09b6012",
+            "commit_message": "[ZIPFLDR] Don't handle DFM_INVOKECOMMANDEX if you need DFM_INVOKECOMMAND (#6766)\n\nZipFldr responds incorrectly to DFM_INVOKECOMMANDEX, it needs to return E_NOTIMPL to get the DFM_INVOKECOMMAND message.",
+            "commit_timestamp": 1714669298.0
         }
     ]
 }

@@ -13446,6 +13446,21 @@
             "commit_ref": "fdbe7eecf9bdaec906b3e76406814b63d6287a8e",
             "commit_message": "Do not set root as the file owner\n",
             "commit_timestamp": 1714629137.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1714705692.931719,
+            "elapsed_time": 149.25568175315857,
+            "x64": true,
+            "actual_files_count": 511,
+            "expected_files_count": null,
+            "memory_traffic": 15928.294296264648,
+            "repo_url": "https://github.com/rui314/mold",
+            "commit_ref": "ed1e3c06a25184552e2c3d7deeaa81157d9ae0d5",
+            "commit_message": "Do not copy mold executable to a test directory\n\nmold executable can be quite large (~600 MiB with debug info),\nso we don't want to casually copy that file.\n",
+            "commit_timestamp": 1714698241.0
         }
     ]
 }
