@@ -944,6 +944,21 @@
             "commit_ref": "379950d185852b3c2da14b40e30a872809ad0ac2",
             "commit_message": "coreinit+nn_save: Cleanup some legacy code\n",
             "commit_timestamp": 1714532810.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1714836322.36123,
+            "elapsed_time": 458.70402669906616,
+            "x64": true,
+            "actual_files_count": 1043,
+            "expected_files_count": 1013,
+            "memory_traffic": 76204.32539367676,
+            "repo_url": "https://github.com/cemu-project/Cemu",
+            "commit_ref": "a16c37f0c5b2435a829fc5348c66297d9c762347",
+            "commit_message": "coreinit: Rework thread creation\n\nNew implementation is much closer to console behavior. For example we didn't align the stack which would cause crashes in the Miiverse applet\n",
+            "commit_timestamp": 1714799159.0
         }
     ]
 }

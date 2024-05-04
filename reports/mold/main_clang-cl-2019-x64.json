@@ -13491,6 +13491,21 @@
             "commit_ref": "f0f61cc7ad482672a73d3bb4778430c65f01e237",
             "commit_message": "Do not use `yield` asm instruction on arm32\n\n`yield` may not exist on older ARM processors.\n\nFixes https://github.com/rui314/mold/issues/1250\n",
             "commit_timestamp": 1714740267.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1714835249.020196,
+            "elapsed_time": 126.97866320610046,
+            "x64": true,
+            "actual_files_count": 511,
+            "expected_files_count": null,
+            "memory_traffic": 15766.980590820312,
+            "repo_url": "https://github.com/rui314/mold",
+            "commit_ref": "5ec3d2dcc285c20c472161b8e225fe9f25bf0376",
+            "commit_message": "Do not use std::osyncstream\n",
+            "commit_timestamp": 1714822648.0
         }
     ]
 }
