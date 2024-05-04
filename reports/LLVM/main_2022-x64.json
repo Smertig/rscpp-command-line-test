@@ -17183,6 +17183,23 @@
             "commit_ref": "4821882cdfe46b93935e01805ed413cf1272bcd4",
             "commit_message": "[RISCV][llvm-mca] Add vector crypto llvm-mca tests for P600\n",
             "commit_timestamp": 1714748619.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1714792638.560544,
+            "elapsed_time": 1534.6415917873383,
+            "x64": true,
+            "actual_files_count": 1998,
+            "expected_files_count": 1661,
+            "memory_traffic": 248334.5454788208,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "1022636b0ce3d9799037e59edb7ffb17f57489bb",
+            "commit_message": "[libc] Fix assert dependency on macro header (#91036)\n\nSummary:\nThis file was missing a dependency so it wasn't being installed.",
+            "commit_timestamp": 1714787854.0
         }
     ]
 }

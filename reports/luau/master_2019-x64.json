@@ -16053,6 +16053,21 @@
             "commit_ref": "7edd58afede8950bde2042f9cfeed210242105ca",
             "commit_message": "Add benchmarks for native compilation with type info enabled (#1244)\n\n",
             "commit_timestamp": 1714664027.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1714792000.202643,
+            "elapsed_time": 240.0371971130371,
+            "x64": true,
+            "actual_files_count": 444,
+            "expected_files_count": 379,
+            "memory_traffic": 30347.03786468506,
+            "repo_url": "https://github.com/luau-lang/luau",
+            "commit_ref": "8a64cb8b73996bd69c2734c607acd4b7d092358a",
+            "commit_message": "Sync to upstream/release/624 (#1245)\n\n# What's changed?\r\n\r\n* Optimize table.maxn.  This function is now 5-14x faster\r\n* Reserve Luau stack space for error message.\r\n\r\n## New Solver\r\n\r\n* Globals can be type-stated, but only if they are already in scope\r\n* Fix a stack overflow that could occur when normalizing certain kinds\r\nof recursive unions of intersections (of unions of intersections...)\r\n* Fix an assertion failure that would trigger when the __iter metamethod\r\nhas a bad signature\r\n\r\n## Native Codegen\r\n\r\n* Type propagation and temporary register type hints\r\n* Direct vector property access should only happen for names of right\r\nlength\r\n* BytecodeAnalysis will only predict that some of the vector value\r\nfields are numbers\r\n\r\n---\r\n\r\n## Internal Contributors\r\n\r\nCo-authored-by: Alexander McCord <amccord@roblox.com>\r\nCo-authored-by: Andy Friesen <afriesen@roblox.com>\r\nCo-authored-by: Aviral Goel <agoel@roblox.com>\r\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>",
+            "commit_timestamp": 1714767471.0
         }
     ]
 }
