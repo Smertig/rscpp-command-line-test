@@ -15736,6 +15736,21 @@
             "commit_ref": "565a4b359a9f83eb02fbea40fd1a6594bc72c3e2",
             "commit_message": "[FREELDR] Don't popup about deprecated features in auto-boot scenario (#6803)\n\nAddendum to commit 5f3554a40.\n",
             "commit_timestamp": 1714832362.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1714878328.440968,
+            "elapsed_time": 75.76135110855103,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 8059.537521362305,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "8e799e2d3eeaf350acda68700577671b405580d9",
+            "commit_message": "[SDK:WINE] Some minor additions to wine/test.h (#6822)\n\n- Add two missing debugstr_w* helpers. These will be needed for\n  future winetest syncs.\n\nNote that such change would be unnecessary, would wine/test.h and\nwine/debug.h be also updated with latest Wine versions. Indeed,\nwine/debug.h is now allowed to be included in wine tests since\nwine commit:\n```\ninclude: Allow using debug.h in tests.\n\nSigned-off-by: Alexandre Julliard <julliard@winehq.org>\n\nwine commit id c8f338369695d360e021f2cbd82a18b2c0eb1514 by Alexandre Julliard <julliard@winehq.org>\n```\n\n- Since our wine/test.h doesn't include wine/debug.h for now, include\n  instead stdio.h for the time being, in order to get support for\n  s(w)printf() in tests that don't include stdio.h\n",
+            "commit_timestamp": 1714856661.0
         }
     ]
 }

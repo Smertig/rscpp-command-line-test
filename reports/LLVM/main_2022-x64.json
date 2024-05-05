@@ -17217,6 +17217,23 @@
             "commit_ref": "76aa042dde6ba9ba57c680950f5818259ee02690",
             "commit_message": "[libc++] Adjust some of the [rand.dist] critical values that are too strict (#88669)\n\nAdjust some of the [rand.dist] critical values that are too strict\r\n\r\n- Most critical values are determined empirically by running each test\r\n51\r\ntimes with a different PRNG seed and finding the smallest symmetric\r\ninterval\r\naround the median that contains 90% of the sample means, variances, etc.\r\n\r\n- For the Kolmogorov-Smirnov tests, the alpha=0.1 critical value for\r\nlarge N\r\n   is 1.224/sqrt(N).\r\n\r\n- For normally distributed variates, the sample kurtosis is distributed\r\nas\r\n   Normal(0, 24/N). For N=1e5, this gives a 90% confidence interval of\r\n0+/-0.0255. For Binomial(40, 0.25), which is approximately normal, the\r\n   kurtosis is -0.0167, so the relative 90% CI is large, on the order of\r\n0.0255/0.0167 = 153%. In most cases the distribution of the sample\r\nkurtosis\r\nisn't known analytically, but similarly large relative tolerances can be\r\n   expected if the kurtosis is near zero.",
             "commit_timestamp": 1714823978.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1714878961.806048,
+            "elapsed_time": 1548.8846142292023,
+            "x64": true,
+            "actual_files_count": 1998,
+            "expected_files_count": 1661,
+            "memory_traffic": 248412.80870056152,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "ffc9a30938ae5c42c03f9c563db1465876b4def6",
+            "commit_message": "[TableGen] Use bitwise operations to access HwMode ID.  (#88377)\n\n1. Bitwise operations are used to access HwMode, allowing for the\r\ncoexistence of HwMode IDs for different features (such as RegInfo and\r\nEncodingInfo). This will provide better scalability for HwMode.\r\nCurrently, most users utilize HwMode primarily for configuring\r\nRegister-related information, and few use it for configuring Encoding.\r\nThe limited scalability of HwMode has been a significant factor in this\r\nusage pattern.\r\n2. Sink the HwMode Encodings selection logic down to per instruction\r\nlevel, this makes the logic for choosing encodings clearer and provides\r\nbetter error messages.\r\n3. Add some HwMode ID conflict detection to the getHwMode() interface.",
+            "commit_timestamp": 1714871306.0
         }
     ]
 }
