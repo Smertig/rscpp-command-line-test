@@ -17234,6 +17234,23 @@
             "commit_ref": "ffc9a30938ae5c42c03f9c563db1465876b4def6",
             "commit_message": "[TableGen] Use bitwise operations to access HwMode ID.  (#88377)\n\n1. Bitwise operations are used to access HwMode, allowing for the\r\ncoexistence of HwMode IDs for different features (such as RegInfo and\r\nEncodingInfo). This will provide better scalability for HwMode.\r\nCurrently, most users utilize HwMode primarily for configuring\r\nRegister-related information, and few use it for configuring Encoding.\r\nThe limited scalability of HwMode has been a significant factor in this\r\nusage pattern.\r\n2. Sink the HwMode Encodings selection logic down to per instruction\r\nlevel, this makes the logic for choosing encodings clearer and provides\r\nbetter error messages.\r\n3. Add some HwMode ID conflict detection to the getHwMode() interface.",
             "commit_timestamp": 1714871306.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1714922185.951131,
+            "elapsed_time": 1536.1895616054535,
+            "x64": true,
+            "actual_files_count": 1998,
+            "expected_files_count": 1661,
+            "memory_traffic": 248398.49488067627,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "c6e4f6309184814dfc4bb855ddbdb5375cc971e0",
+            "commit_message": "Revert \"[InlineCost] Correct the default branch cost for the switch statement (#85160)\"\n\nThis reverts commit 882814edd33cab853859f07b1dd4c4fa1393e0ea.\n",
+            "commit_timestamp": 1714917270.0
         }
     ]
 }

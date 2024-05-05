@@ -17303,6 +17303,21 @@
             "commit_ref": "8ce2426e53b2596a9823b4a314f72f1c3b30be82",
             "commit_message": "Handle ANSI escape sequences when performing column wrapping (#2849)\n\nThis PR adds functionality to skip around ANSI escape sequences in catch_textflow so they do not contribute to line length and line wrapping code does not split escape sequences in the middle. I've implemented this by creating a AnsiSkippingString abstraction that has a bidirectional iterator that can skip around escape sequences while iterating. Additionally I refactored Column::const_iterator to be iterator-based rather than index-based so this abstraction is a simple drop-in for std::string.\r\n\r\nCurrently only color sequences are handled, other escape sequences are left unaffected.\r\n\r\nMotivation: Text with ANSI color sequences gets messed up when being output by Catch2 #2833.",
             "commit_timestamp": 1714859032.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1714921516.454636,
+            "elapsed_time": 59.79352807998657,
+            "x64": true,
+            "actual_files_count": 282,
+            "expected_files_count": 272,
+            "memory_traffic": 4234.702545166016,
+            "repo_url": "https://github.com/catchorg/Catch2.git",
+            "commit_ref": "8ce2426e53b2596a9823b4a314f72f1c3b30be82",
+            "commit_message": "Handle ANSI escape sequences when performing column wrapping (#2849)\n\nThis PR adds functionality to skip around ANSI escape sequences in catch_textflow so they do not contribute to line length and line wrapping code does not split escape sequences in the middle. I've implemented this by creating a AnsiSkippingString abstraction that has a bidirectional iterator that can skip around escape sequences while iterating. Additionally I refactored Column::const_iterator to be iterator-based rather than index-based so this abstraction is a simple drop-in for std::string.\r\n\r\nCurrently only color sequences are handled, other escape sequences are left unaffected.\r\n\r\nMotivation: Text with ANSI color sequences gets messed up when being output by Catch2 #2833.",
+            "commit_timestamp": 1714859032.0
         }
     ]
 }
