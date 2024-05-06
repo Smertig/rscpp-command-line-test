@@ -17328,6 +17328,21 @@
             "commit_ref": "16cec4f5913ef4c5c734290cd0d1eda39cf36bd0",
             "commit_message": "Make the map formatter correctly handle elements with custom formatters\n",
             "commit_timestamp": 1714845556.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1714964783.896813,
+            "elapsed_time": 93.88087344169617,
+            "x64": true,
+            "actual_files_count": 72,
+            "expected_files_count": 66,
+            "memory_traffic": 7942.26847076416,
+            "repo_url": "https://github.com/fmtlib/fmt.git",
+            "commit_ref": "10508a30ecd91e5d09a27e4c6c0a01a89fd4edc7",
+            "commit_message": "Enable fmt::join for uncopyable iterators (#3946)\n\nIf iterator not copyable mutate the underlying iterator\r\nNotably std::ranges::basic_istream_view::__iterator\r\nAddresses issue (#3802)",
+            "commit_timestamp": 1714949063.0
         }
     ]
 }
