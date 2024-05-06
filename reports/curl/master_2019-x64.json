@@ -15986,6 +15986,21 @@
             "commit_ref": "3a082cd3c55790870a8025856c42587a06cd295e",
             "commit_message": "libssh2: delete redundant feature guard\n\nDelete `HAVE_LIBSSH2_VERSION` (equivalent to\n`LIBSSH2_VERSION_NUM` > 0x010100) guard surrounding\na `LIBSSH2_VERSION_NUM` > 0x010B00 one.\n\nReviewed-by: Daniel Gustafsson\nCloses #13537\n",
             "commit_timestamp": 1714919681.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1715007992.597782,
+            "elapsed_time": 176.22682905197144,
+            "x64": true,
+            "actual_files_count": 2505,
+            "expected_files_count": 2323,
+            "memory_traffic": 33282.56732940674,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "7490d5488e0e7835199285b0568a1c2e0d51b6a9",
+            "commit_message": "EXPERIMENTAL: add graduation requirements for each feature\n\nStarting now, experimental features should have a set of documentated\nrequirements of what is needed for the feature to graduate.\n\nThis adds requirements to all existing experiments.\n\nCloses #13541\n",
+            "commit_timestamp": 1715007904.0
         }
     ]
 }
