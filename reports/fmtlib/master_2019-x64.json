@@ -17358,6 +17358,21 @@
             "commit_ref": "10508a30ecd91e5d09a27e4c6c0a01a89fd4edc7",
             "commit_message": "Enable fmt::join for uncopyable iterators (#3946)\n\nIf iterator not copyable mutate the underlying iterator\r\nNotably std::ranges::basic_istream_view::__iterator\r\nAddresses issue (#3802)",
             "commit_timestamp": 1714949063.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1715051236.286324,
+            "elapsed_time": 109.14490032196045,
+            "x64": true,
+            "actual_files_count": 72,
+            "expected_files_count": 66,
+            "memory_traffic": 8055.012596130371,
+            "repo_url": "https://github.com/fmtlib/fmt.git",
+            "commit_ref": "57593a123be5a1fcb3e1fbcdd5e9e38779f8cede",
+            "commit_message": "Simplify map formatter\n",
+            "commit_timestamp": 1715033371.0
         }
     ]
 }
