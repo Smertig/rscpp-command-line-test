@@ -16016,6 +16016,21 @@
             "commit_ref": "46d7214ca98f26088c0882804ff61f8800d44343",
             "commit_message": "tls: Remove EXAMPLEs from deprecated options\n\nCURLOPT_EGDSOCKET and CURLOPT_RANDOM_FILE are both completely dead\nso remove their example sections since the code there is useless.\nThere is still a way to inject a random file for OpenSSL older than\n1.1.0 but it's not what the example showed (and it's not even done\nwith this option) so we refrain from documenting it here.\n\nCloses: #13540\nReviewed-by: Daniel Stenberg <daniel@haxx.se>\n",
             "commit_timestamp": 1715021727.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1715094374.220865,
+            "elapsed_time": 188.71298098564148,
+            "x64": true,
+            "actual_files_count": 2505,
+            "expected_files_count": 2323,
+            "memory_traffic": 33703.72246551514,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "62ae1f10e59423e7924a615c79a08dca081cf6ab",
+            "commit_message": "asyn-thread: fix Curl_thread_create result check\n\n- Compare to curl_thread_t_null instead of 0 for error.\n\nCurrently for both supported thread libraries (pthreads and Windows)\ncurl_thread_t_null is defined as 0. However, the pattern throughout the\ncode is to check against curl_thread_t_null and not 0 since for\nposterity some thread library may not use 0 for error.\n\nCloses https://github.com/curl/curl/pull/13542\n",
+            "commit_timestamp": 1715063338.0
         }
     ]
 }

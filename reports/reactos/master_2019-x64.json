@@ -15811,6 +15811,21 @@
             "commit_ref": "c0e31793c93b8cbb429dfc3612493f6ca5043927",
             "commit_message": "[COMDLG32] Remove extra scrollbars in choose font dialog (#6834)\n\n\r\n* Revised comdlg32.dll's resource file for \"Font\" (CHOOSE_FONT DIALOG) \"Style\" combo box to\r\n*   remove CBS_ENABLENOSCROLL flag.\r\n\r\nCORE-15945\r\n",
             "commit_timestamp": 1715050741.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1715094385.793434,
+            "elapsed_time": 93.95443201065063,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7991.099990844727,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "cf9f7548d53dcdea6662d8c8b5c56b5353baf76d",
+            "commit_message": "[NTUSER] Fix double click on title bar icon not closing window (#6697)\n\nPatch by @I_Kill_Bugs\r\n\r\n* [NTUSER] Fix double click on title bar icon not closing window\r\n\r\nImprove MENU_TrackMenu handling.\r\n\r\nGuilty commit:0.4.15-dev-7750-gc17a654 https://github.com/reactos/reactos/commit/c17a6542ac329160ce627267babc8c7ec67b1e86\r\n\r\nCORE-19492",
+            "commit_timestamp": 1715093577.0
         }
     ]
 }
