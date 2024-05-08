@@ -15826,6 +15826,21 @@
             "commit_ref": "cf9f7548d53dcdea6662d8c8b5c56b5353baf76d",
             "commit_message": "[NTUSER] Fix double click on title bar icon not closing window (#6697)\n\nPatch by @I_Kill_Bugs\r\n\r\n* [NTUSER] Fix double click on title bar icon not closing window\r\n\r\nImprove MENU_TrackMenu handling.\r\n\r\nGuilty commit:0.4.15-dev-7750-gc17a654 https://github.com/reactos/reactos/commit/c17a6542ac329160ce627267babc8c7ec67b1e86\r\n\r\nCORE-19492",
             "commit_timestamp": 1715093577.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1715137673.990137,
+            "elapsed_time": 96.62593722343445,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7921.337272644043,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "a7cbb60ebfa3089922138f083b9828205838f157",
+            "commit_message": "[SETUPLIB] Don't flag freeldr.ini as read-only during installation.\nCORE-19575\n\nFor the time being, don't add read-only attribute for ease of testing\nand modifying files, but it won't always stay this way.\n\nFor example, Windows sets its boot.ini (as well as NTLDR, NTDETECT.COM\netc.) as read-only (+ hidden and system) during its 1st-stage setup.\n2nd-stage setup makes some adjustments in boot.ini but doesn't restore\nits read-only attribute.\nWindows tools that can modify boot.ini (i.e. msconfig.exe, bootcfg.exe,\nand sysdm.cpl) **ALL** know how to remove the read-only attribute for\nmodifying boot.ini, before restoring it if needed.\n",
+            "commit_timestamp": 1715103033.0
         }
     ]
 }

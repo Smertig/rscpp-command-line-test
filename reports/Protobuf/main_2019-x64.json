@@ -16833,6 +16833,21 @@
             "commit_ref": "5584c934bf6ea873d8d96ce462896a3573401d2a",
             "commit_message": "Update AbstractMessageLite.addAll so that it won't throw when input is a LazyStringArrayList with byte[] elements.\n\nAccidentally run into an error when I'm doing protoA.addAllFieldA(protoB.getMutableFieldAList())\n\nPiperOrigin-RevId: 631257710\n",
             "commit_timestamp": 1715047863.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1715137679.902378,
+            "elapsed_time": 270.4440562725067,
+            "x64": true,
+            "actual_files_count": 1085,
+            "expected_files_count": 818,
+            "memory_traffic": 36327.19623565674,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "6afb130dca7e4f26d584c8f17f5b3e99a40f5d7f",
+            "commit_message": "Auto-generate files after cl/631620526\n",
+            "commit_timestamp": 1715134762.0
         }
     ]
 }
