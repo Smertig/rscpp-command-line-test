@@ -16046,6 +16046,21 @@
             "commit_ref": "848c104639f6463131bf3f03dc23e3e772196018",
             "commit_message": "lib: remove two instances of \"only only\" messages\n\nFixes #13551\nReported-by: Lucas Nussbaum\nCloses #13552\n",
             "commit_timestamp": 1715119418.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1715180782.678503,
+            "elapsed_time": 165.48515796661377,
+            "x64": true,
+            "actual_files_count": 2505,
+            "expected_files_count": 2323,
+            "memory_traffic": 33726.434425354004,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "bbeeccdea8507ff50efca70a0b33d28aef720267",
+            "commit_message": "lib/cf-h1-proxy: silence compiler warnings (gcc 14)\n\nThey came up ealier with gcc 12 (Windows), but apparently gcc 14 is\nstill reporting them, also under Linux.\n\n```\n/home/runner/work/curl-for-win/curl-for-win/curl/lib/cf-h1-proxy.c: In function 'cf_h1_proxy_close':\n/home/runner/work/curl-for-win/curl-for-win/curl/lib/cf-h1-proxy.c:1060:17: warning: null pointer dereference [-Wnull-dereference]\n 1060 |   cf->connected = FALSE;\n/home/runner/work/curl-for-win/curl-for-win/curl/lib/cf-h1-proxy.c:1061:8: warning: null pointer dereference [-Wnull-dereference]\n 1061 |   if(cf->ctx) {\n      |      ~~^~~~~\nIn function 'tunnel_free',\n    inlined from 'cf_h1_proxy_destroy' at /home/runner/work/curl-for-win/curl-for-win/curl/lib/cf-h1-proxy.c:1053:3:\n/home/runner/work/curl-for-win/curl-for-win/curl/lib/cf-h1-proxy.c:198:27: warning: null pointer dereference [-Wnull-dereference]\n  198 |   struct h1_tunnel_state *ts = cf->ctx;\n      |                           ^~\n```\nRef: https://github.com/curl/curl-for-win/actions/runs/8985369476/job/24679219528#step:3:6320\n\nFixes #13237\nCloses #13555\n",
+            "commit_timestamp": 1715164653.0
         }
     ]
 }

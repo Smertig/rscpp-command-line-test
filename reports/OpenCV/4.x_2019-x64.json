@@ -16075,6 +16075,21 @@
             "commit_ref": "faa259ab344f247c88bd9c4259f77aff3a27aa49",
             "commit_message": "Merge pull request #25553 from asmorkalov:as/HAL_min_max_idx\n\nFix HAL interface for hal_ni_minMaxIdx #25553\r\n\r\nFixes https://github.com/opencv/opencv/issues/25540\r\n\r\nThe original implementation call HAL with the same parameters independently from amount of channels. The patch uses HAL correctly for the case cn > 1.\r\n\r\n### Pull Request Readiness Checklist\r\n\r\nSee details at https://github.com/opencv/opencv/wiki/How_to_contribute#making-a-good-pull-request\r\n\r\n- [x] I agree to contribute to the project under Apache 2 License.\r\n- [x] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\r\n- [x] The PR is proposed to the proper branch\r\n- [x] There is a reference to the original bug report and related work\r\n- [ ] There is accuracy test, performance test and test data in opencv_extra repository, if applicable\r\n      Patch to opencv_extra has the same branch name.\r\n- [ ] The feature is well documented and sample code can be built with the project CMake\r\n",
             "commit_timestamp": 1715103977.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1715181041.105259,
+            "elapsed_time": 404.08516550064087,
+            "x64": true,
+            "actual_files_count": 473,
+            "expected_files_count": 459,
+            "memory_traffic": 40653.2822265625,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "5bd64e09a360e9fa342fbd951a3635f065bc478e",
+            "commit_message": "Merge pull request #25554 from savuor:rv/hal_lut\n\nMerge pull request #25554 from savuor:rv/hal_lut\r\n\r\nHAL for LUT added #25554\r\n\r\n### Pull Request Readiness Checklist\r\n\r\nSee details at https://github.com/opencv/opencv/wiki/How_to_contribute#making-a-good-pull-request\r\n\r\n- [x] I agree to contribute to the project under Apache 2 License.\r\n- [x] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\r\n- [x] The PR is proposed to the proper branch\r\n- [x] There is a reference to the original bug report and related work\r\n- [x] There is accuracy test, performance test and test data in opencv_extra repository, if applicable\r\n      Patch to opencv_extra has the same branch name.\r\n- [x] The feature is well documented and sample code can be built with the project CMake",
+            "commit_timestamp": 1715179508.0
         }
     ]
 }

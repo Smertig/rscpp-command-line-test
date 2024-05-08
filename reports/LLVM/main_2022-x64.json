@@ -17336,6 +17336,23 @@
             "commit_ref": "31b45a9d0d91cc3a78446ee379abc6f2a3000065",
             "commit_message": "[clang][hlsl] Add tan intrinsic part 1 (#90276)\n\nThis change is an implementation of #87367's investigation on supporting\r\nIEEE math operations as intrinsics.\r\nWhich was discussed in this RFC:\r\nhttps://discourse.llvm.org/t/rfc-all-the-math-intrinsics/78294\r\n\r\nIf you want an overarching view of how this will all connect see:\r\nhttps://github.com/llvm/llvm-project/pull/90088\r\n\r\nChanges:\r\n- `clang/docs/LanguageExtensions.rst` - Document the new elementwise tan\r\nbuiltin.\r\n-  `clang/include/clang/Basic/Builtins.td` - Implement the tan builtin.\r\n- `clang/lib/CodeGen/CGBuiltin.cpp` - invoke the tan intrinsic on uses\r\nof the builtin\r\n- `clang/lib/Headers/hlsl/hlsl_intrinsics.h` - Associate the tan builtin\r\nwith the equivalent hlsl apis\r\n- `clang/lib/Sema/SemaChecking.cpp` - Add generic sema checks as well as\r\nHLSL specifc sema checks to the tan builtin\r\n-  `llvm/include/llvm/IR/Intrinsics.td` - Create the tan intrinsic\r\n-  `llvm/docs/LangRef.rst` - Document the tan intrinsic",
             "commit_timestamp": 1715136855.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1715181290.054916,
+            "elapsed_time": 1624.0634965896606,
+            "x64": true,
+            "actual_files_count": 2000,
+            "expected_files_count": 1661,
+            "memory_traffic": 248534.84873962402,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "50b45b24220ead33cf5cedc49c13e0336297e4eb",
+            "commit_message": "[LAA] Add tests with forward dependences known via assumes.\n",
+            "commit_timestamp": 1715179538.0
         }
     ]
 }
