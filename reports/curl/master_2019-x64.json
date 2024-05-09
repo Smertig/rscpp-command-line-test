@@ -16076,6 +16076,21 @@
             "commit_ref": "e1cf21b5c2572bc05504c1b3a39d1c0620123e75",
             "commit_message": "GHA: repair the linux-old job\n\npackage libc6_2.28-10+deb10u2_amd64.deb changed to\nlibc6_2.28-10+deb10u3_amd64.deb\n\nCloses #13564\n",
             "commit_timestamp": 1715204433.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1715267189.233996,
+            "elapsed_time": 175.04487705230713,
+            "x64": true,
+            "actual_files_count": 2505,
+            "expected_files_count": 2323,
+            "memory_traffic": 33226.79860687256,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "3b4b6bd1dfb42fa82948879d4525237db97d76b8",
+            "commit_message": "KNOWN_BUGS: gssapi library name + version is missing in curl_version_info()\n\nCloses #13492\nCloses #13570\n",
+            "commit_timestamp": 1715249059.0
         }
     ]
 }

@@ -17370,6 +17370,23 @@
             "commit_ref": "b910bebc300dafb30569cecc3017b446ea8eafa0",
             "commit_message": "[llvm][MachO] Fix integer truncation in rebase/bind parsing (#89337)\n\n`Count` and `Skip` should use `uint64_t` as they are encoded/decoded\r\nusing 64-bit ULEB128.\r\n\r\nIn `*_OPCODE_DO_*_ULEB_TIMES_SKIPPING_ULEB`, `Skip` could be encoded as\r\na two's complement for moving `SegmentOffset` backwards. Having a 32-bit\r\n`Skip` truncates the encoded value and leads to a malformed\r\n`AdvanceAmount`\r\nand invalid `SegmentOffset` that extends past valid sections.",
             "commit_timestamp": 1715219595.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1715267692.60969,
+            "elapsed_time": 1532.2531588077545,
+            "x64": true,
+            "actual_files_count": 2000,
+            "expected_files_count": 1661,
+            "memory_traffic": 248690.91342926025,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "aa9d467abaeb440dc70b64c0f35b8d5e731f3a19",
+            "commit_message": "Revert \"[AArch64] NFC: Add RUN lines for streaming-compatible code.\" (#91599)\n\nReverts llvm/llvm-project#90617",
+            "commit_timestamp": 1715266996.0
         }
     ]
 }
