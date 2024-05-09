@@ -15856,6 +15856,21 @@
             "commit_ref": "a7cbb60ebfa3089922138f083b9828205838f157",
             "commit_message": "[SETUPLIB] Don't flag freeldr.ini as read-only during installation.\nCORE-19575\n\nFor the time being, don't add read-only attribute for ease of testing\nand modifying files, but it won't always stay this way.\n\nFor example, Windows sets its boot.ini (as well as NTLDR, NTDETECT.COM\netc.) as read-only (+ hidden and system) during its 1st-stage setup.\n2nd-stage setup makes some adjustments in boot.ini but doesn't restore\nits read-only attribute.\nWindows tools that can modify boot.ini (i.e. msconfig.exe, bootcfg.exe,\nand sysdm.cpl) **ALL** know how to remove the read-only attribute for\nmodifying boot.ini, before restoring it if needed.\n",
             "commit_timestamp": 1715103033.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1715223990.006311,
+            "elapsed_time": 118.46096634864807,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 8004.216285705566,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "57b775ef6ec27524a27784cf0cd6e8e4479c6782",
+            "commit_message": "[RAPPS] Automatically generate installer/uninstaller for downloaded zip/cab files (#6652)\n\nWith a single database line added to applications distributed as zip/cab allows rapps.exe to act as an installer that automatically extracts the files and creates a startmenu shortcut. It can also uninstall the extracted files (and optionally other files and registry entries created by the application).",
+            "commit_timestamp": 1715205534.0
         }
     ]
 }

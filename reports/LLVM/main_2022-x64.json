@@ -17353,6 +17353,23 @@
             "commit_ref": "50b45b24220ead33cf5cedc49c13e0336297e4eb",
             "commit_message": "[LAA] Add tests with forward dependences known via assumes.\n",
             "commit_timestamp": 1715179538.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1715224675.184854,
+            "elapsed_time": 1667.133555650711,
+            "x64": true,
+            "actual_files_count": 2000,
+            "expected_files_count": 1661,
+            "memory_traffic": 249704.7809906006,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "b910bebc300dafb30569cecc3017b446ea8eafa0",
+            "commit_message": "[llvm][MachO] Fix integer truncation in rebase/bind parsing (#89337)\n\n`Count` and `Skip` should use `uint64_t` as they are encoded/decoded\r\nusing 64-bit ULEB128.\r\n\r\nIn `*_OPCODE_DO_*_ULEB_TIMES_SKIPPING_ULEB`, `Skip` could be encoded as\r\na two's complement for moving `SegmentOffset` backwards. Having a 32-bit\r\n`Skip` truncates the encoded value and leads to a malformed\r\n`AdvanceAmount`\r\nand invalid `SegmentOffset` that extends past valid sections.",
+            "commit_timestamp": 1715219595.0
         }
     ]
 }
