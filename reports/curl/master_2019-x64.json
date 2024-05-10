@@ -16106,6 +16106,21 @@
             "commit_ref": "3b4b6bd1dfb42fa82948879d4525237db97d76b8",
             "commit_message": "KNOWN_BUGS: gssapi library name + version is missing in curl_version_info()\n\nCloses #13492\nCloses #13570\n",
             "commit_timestamp": 1715249059.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1715353562.350425,
+            "elapsed_time": 179.7644398212433,
+            "x64": true,
+            "actual_files_count": 2505,
+            "expected_files_count": 2323,
+            "memory_traffic": 33788.65727996826,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "2725488bea4b31246bdf7f5836513d56fb68efde",
+            "commit_message": "CI: ignore test 286 on Appveyor gcc 7 build\n\nDisabled earlier for gcc 9 builds. gcc 7 uses the same runner and\nprone to similar intermittent failures.\n\nFollow-up to f1e05a6e6e7225fa09952abb2c935ae1abe44f45 #12106 #12040\nCloses #13575\n",
+            "commit_timestamp": 1715352549.0
         }
     ]
 }

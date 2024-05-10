@@ -16248,6 +16248,21 @@
             "commit_ref": "905a37b9283290f101d54f50d5d06cf6d73fe9ab",
             "commit_message": "Update native code generation note in the security guarantees (#1250)\n\n",
             "commit_timestamp": 1715200512.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1715353556.540286,
+            "elapsed_time": 250.3537483215332,
+            "x64": true,
+            "actual_files_count": 444,
+            "expected_files_count": 379,
+            "memory_traffic": 30362.990257263184,
+            "repo_url": "https://github.com/luau-lang/luau",
+            "commit_ref": "a775bbc6fc9f13ad1e353b2acabcc4965e74885a",
+            "commit_message": "Fix confusing warning when CMake version is too low (#1251)\n\nExperienced brief moment of panic when this warning said I had clang 3\r\ninstalled.",
+            "commit_timestamp": 1715337397.0
         }
     ]
 }
