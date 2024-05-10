@@ -16893,6 +16893,21 @@
             "commit_ref": "1b06cefe337f73ca8c78c855c02f15caf6210c9b",
             "commit_message": "Move casting functions to MessageLite and use ClassData as the uniqueness\ninstead of Reflection. This allows using these functions instead of\n`dynamic_cast` for all generated types including LITE.\n\nPiperOrigin-RevId: 632135009\n",
             "commit_timestamp": 1715263226.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1715310418.036874,
+            "elapsed_time": 300.2056632041931,
+            "x64": true,
+            "actual_files_count": 1085,
+            "expected_files_count": 818,
+            "memory_traffic": 36456.88877868652,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "bc80135f10ca2ad6f307d4a2165cdaa112d68555",
+            "commit_message": "Auto-generate files after cl/632314763\n",
+            "commit_timestamp": 1715301013.0
         }
     ]
 }
