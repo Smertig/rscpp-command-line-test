@@ -16136,6 +16136,21 @@
             "commit_ref": "3a564fecabd1f215a5345086dbe1f312d22693cc",
             "commit_message": "ftp: fix build for CURL_DISABLE_VERBOSE_STRINGS\n\nThis is a follow-up to b7c7dffe which changed the FTP state change\nverbose debug text (aka infof) to tracing debug text (aka trc).\n\nPrior to this change if libcurl was without DEBUGBUILD and built with\nCURL_DISABLE_VERBOSE_STRINGS (ie --disable-verbose) the build would\nerror.\n\nCaught by Circle CI job openssl-no-verbose.\n",
             "commit_timestamp": 1715382869.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1715439982.261639,
+            "elapsed_time": 170.22349452972412,
+            "x64": true,
+            "actual_files_count": 2505,
+            "expected_files_count": 2323,
+            "memory_traffic": 33936.68458557129,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "5b9955e0bdc600d167814daa1e4a57767e248ca0",
+            "commit_message": "examples: fix/silence `-Wsign-conversion`\n\n- extend `FD_SET()` hack to all platforms (was only Cygwin).\n  Warnings may also happen in other envs, e.g. OmniOS.\n  Ref: https://github.com/libssh2/libssh2/actions/runs/8854199687/job/24316762831#step:3:2021\n\n- tidy-up `CURLcode` vs `int` use.\n\n- cast an unsigned to `long` before passing to `curl_easy_setopt()`.\n\nCherry-picked from #13489\nFollow-up to 3829759bd042c03225ae862062560f568ba1a231 #12489\nCloses #13501\n",
+            "commit_timestamp": 1715418692.0
         }
     ]
 }

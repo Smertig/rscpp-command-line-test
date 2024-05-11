@@ -13701,6 +13701,21 @@
             "commit_ref": "3ec4b1787ea412409fbb571f3b9911f23fae2325",
             "commit_message": "Refactor\n",
             "commit_timestamp": 1715154222.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1715439923.390096,
+            "elapsed_time": 121.4481360912323,
+            "x64": true,
+            "actual_files_count": 513,
+            "expected_files_count": null,
+            "memory_traffic": 15812.225509643555,
+            "repo_url": "https://github.com/rui314/mold",
+            "commit_ref": "47030cf6cafb42ffb5a87195edd05ba07718a327",
+            "commit_message": "Fix thread-unsafe code\n\nBitVector is not therad-safe if two threads write to the same byte\nat the same time.\n",
+            "commit_timestamp": 1715424967.0
         }
     ]
 }
