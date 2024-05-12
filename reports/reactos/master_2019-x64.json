@@ -15946,6 +15946,21 @@
             "commit_ref": "ede7389fb64a9c392f2931ea55c2696a80a902a2",
             "commit_message": "[SNDVOL32] Add CTRL-S hotkey to switch between Small/Normal modes (#6867)\n\nThis adds a hotkey (CTRL-S) which switches between the Normal and Small\r\nmodes of the Volume Control window (also seen in Windows XP).\r\n\r\nCORE-17043\r\n\r\nSigned-off-by: Connie Julie <alexnicolas155@yahoo.com>",
             "commit_timestamp": 1715415759.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1715483205.631834,
+            "elapsed_time": 87.04079675674438,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7900.787864685059,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "5db69da46b09b98cf382864cfc4f9967d8d6dbad",
+            "commit_message": "[RAPPS] DelRegEmpty instruction should be best-effort, don't propagate any errors (#6860)\n\nDelRegEmpty exists to clean up \"company\" registry parent keys. If another application is writing to the key at the same time as we are gently trying to remove it, our uninstaller should ignore any errors.",
+            "commit_timestamp": 1715465274.0
         }
     ]
 }

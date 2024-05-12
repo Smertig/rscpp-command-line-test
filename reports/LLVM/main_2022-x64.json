@@ -17455,6 +17455,23 @@
             "commit_ref": "23fe1fc6b78b7643a801ce3eb53d14b47b1dd0ff",
             "commit_message": "[TTI][X86] getGSScalarCost - don't bother with adding cost of ICMP for each i1 mask element\n\nThese can nearly always be folded into the existing cost of the branch, and brings the throughput costs of the scalarised gather/scatter code much closer to the llvm-mca/uica estimates\n",
             "commit_timestamp": 1715431068.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1715483797.544066,
+            "elapsed_time": 1498.518694639206,
+            "x64": true,
+            "actual_files_count": 2000,
+            "expected_files_count": 1661,
+            "memory_traffic": 249978.2105178833,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "f42117c8517cc928c6373bad35ebf75d94fe865b",
+            "commit_message": "[DirectX] Replace bitfield version in ProgramHeader. (#91797)\n\nAvoid using bitfield in dxbc::ProgramHeader.\r\nIt could potentially be read incorrectly on any host depending on the\r\ncompiler.\r\n\r\nFrom [C++17's\r\n[class.bit]](https://timsong-cpp.github.io/cppwp/n4659/class.bit#1)\r\n> Bit-fields are packed into some addressable allocation unit. [\u2009Note:\r\nBit-fields straddle allocation units on some machines and not on others.\r\nBit-fields are assigned right-to-left on some machines, left-to-right on\r\nothers. \u2009\u2014\u2009end note\u2009]\r\n\r\nFor #91793",
+            "commit_timestamp": 1715476582.0
         }
     ]
 }
