@@ -11622,6 +11622,21 @@
             "commit_ref": "a8af0c0ca47c91eea09cbc77b104411f5e22a513",
             "commit_message": "Close buttonbars when hiding TouchScreenGUI (#14630)\n\nTo open the inventory or the pause menu, you first need to open the buttonbar\ncontaining the respective button. Before this commit, the buttonbar is still\nopen after closing the menu, so you have to tap twice before you can continue\nplaying. After this commit, the buttonbar is already closed after closing the\nmenu, so you only have to tap once before you can continue playing.",
             "commit_timestamp": 1715360062.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1715527892.858142,
+            "elapsed_time": 174.25514364242554,
+            "x64": true,
+            "actual_files_count": 396,
+            "expected_files_count": 105,
+            "memory_traffic": 22044.089179992676,
+            "repo_url": "https://github.com/minetest/minetest",
+            "commit_ref": "6303334cc2f39732697a1278532cbe66ed481da8",
+            "commit_message": "Deduplicate GL extension detection\n",
+            "commit_timestamp": 1715516434.0
         }
     ]
 }

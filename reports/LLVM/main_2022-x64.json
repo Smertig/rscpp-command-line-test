@@ -17472,6 +17472,23 @@
             "commit_ref": "f42117c8517cc928c6373bad35ebf75d94fe865b",
             "commit_message": "[DirectX] Replace bitfield version in ProgramHeader. (#91797)\n\nAvoid using bitfield in dxbc::ProgramHeader.\r\nIt could potentially be read incorrectly on any host depending on the\r\ncompiler.\r\n\r\nFrom [C++17's\r\n[class.bit]](https://timsong-cpp.github.io/cppwp/n4659/class.bit#1)\r\n> Bit-fields are packed into some addressable allocation unit. [\u2009Note:\r\nBit-fields straddle allocation units on some machines and not on others.\r\nBit-fields are assigned right-to-left on some machines, left-to-right on\r\nothers. \u2009\u2014\u2009end note\u2009]\r\n\r\nFor #91793",
             "commit_timestamp": 1715476582.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1715526920.752109,
+            "elapsed_time": 1579.460010766983,
+            "x64": true,
+            "actual_files_count": 2000,
+            "expected_files_count": 1661,
+            "memory_traffic": 249049.41716766357,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "502e77df1fc4aa859db6709e14e93af6207e4dc4",
+            "commit_message": "[CostModel][X86] getGSVectorCost - remove FIXME\n\ngetGSVectorCost has supported other TargetCostKind since a55127281b2ed5f24f848b9e5c70870ad170bc3f\n",
+            "commit_timestamp": 1715523844.0
         }
     ]
 }
