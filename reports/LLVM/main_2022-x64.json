@@ -17540,6 +17540,23 @@
             "commit_ref": "e20800c16f0570562fea31e9a02d65ba56e6858a",
             "commit_message": "[clang-format][NFC] Test IsQualifier only needs to call the lexer\n",
             "commit_timestamp": 1715654711.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1715699775.743009,
+            "elapsed_time": 1558.8467438220978,
+            "x64": true,
+            "actual_files_count": 2002,
+            "expected_files_count": 1661,
+            "memory_traffic": 249988.44498443604,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "ac0d415552922436c3136e3dd1446294858c2d7d",
+            "commit_message": "Update documentation for buffer fat pointers (#92034)\n\nNow that we've got (minus some issues around datatypes and invariant\r\nloads) working lowerings for address space 7, update the table in the\r\nAMDGPU usage guide to properly indicate the nature of these address\r\nspaces.",
+            "commit_timestamp": 1715699028.0
         }
     ]
 }
