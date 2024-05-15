@@ -17058,6 +17058,21 @@
             "commit_ref": "6b9a81a0429276e24195064d8733117a25a87148",
             "commit_message": "Add extension declarations for known features.\n\nThis will prevent users from accidentally overriding these with different types (e.g. https://github.com/protocolbuffers/protobuf/issues/16757 and https://github.com/protocolbuffers/protobuf/issues/16756).\n\nPiperOrigin-RevId: 633760581\n",
             "commit_timestamp": 1715734280.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1715785712.737012,
+            "elapsed_time": 328.9011609554291,
+            "x64": true,
+            "actual_files_count": 1085,
+            "expected_files_count": 818,
+            "memory_traffic": 35973.88902282715,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "9f40411caf070c2848281a507529e4f5506dc22d",
+            "commit_message": "fix unneeded mut in enum gencode\n\nPiperOrigin-RevId: 633955047\n",
+            "commit_timestamp": 1715785417.0
         }
     ]
 }

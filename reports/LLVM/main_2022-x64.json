@@ -17574,6 +17574,23 @@
             "commit_ref": "eb103104ef08ebc2d0de63db0592e76b294cf8bb",
             "commit_message": "Revert \"[Serialization] Read the initializer for interesting static variables before consuming it\"\n\nThis reverts commit 11b059145d177ee287c7ada9864addf8d083c160.\n\nThe premerge bot is broken.\n",
             "commit_timestamp": 1715741618.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1715786115.438125,
+            "elapsed_time": 1564.5979282855988,
+            "x64": true,
+            "actual_files_count": 2002,
+            "expected_files_count": 1661,
+            "memory_traffic": 250082.93559265137,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "dceaa0f4491ebe30c0b0f1bc7fa5ec365b60ced6",
+            "commit_message": "[Support] Use malloc instead of non-throwing new (#92157)\n\nWhen allocating a memory buffer, we use a non-throwing new so that we\r\ncan explicitly handle memory buffers that are too large to fit into\r\nmemory. However, when exceptions are disabled, LLVM installs a custom\r\nnew handler\r\n\r\n(https://github.com/llvm/llvm-project/blob/90109d444839683b09f0aafdc50b749cb4b3203b/llvm/lib/Support/InitLLVM.cpp#L61)\r\nthat explicitly crashes when we run out of memory\r\n\r\n(https://github.com/llvm/llvm-project/blob/de14b749fee41d4ded711e771e43043ae3100cb3/llvm/lib/Support/ErrorHandling.cpp#L188)\r\nand that means this particular out-of-memory situation cannot be\r\ngracefully handled.\r\n\r\nThis was discovered while working on #embed\r\n(https://github.com/llvm/llvm-project/pull/68620) on Windows and\r\nresulted in a crash rather than the preprocessor issuing a diagnostic as\r\nexpected.\r\n\r\nThis patch switches away from the non-throwing new to a call to malloc\r\n(and free), which will return a null pointer without calling a custom\r\nnew handler. It is the only instance in Clang or LLVM that I could find\r\nwhich used a non-throwing new, so I did not think we would need anything\r\nmore involved than this change.\r\n\r\nTesting this would be highly platform dependent and so it does not come\r\nwith test coverage. And because it doesn't change behavior that users\r\nare likely to be able to observe, it does not come with a release note.",
+            "commit_timestamp": 1715784934.0
         }
     ]
 }

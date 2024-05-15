@@ -16271,6 +16271,21 @@
             "commit_ref": "ea4ce21fb1a84de4726e4254b8813af99edd18b2",
             "commit_message": "Merge pull request #4660 from blowekamp/cdash_labelgeometry_warning\n\nCOMP: Suppress LabelGeometryImageFilter deprecated warning",
             "commit_timestamp": 1715696400.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1715785948.526285,
+            "elapsed_time": 231.8012194633484,
+            "x64": true,
+            "actual_files_count": 100,
+            "expected_files_count": null,
+            "memory_traffic": 26015.067497253418,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "4f42280e988530cb6d5f9e52bbfd4e5c39577930",
+            "commit_message": "STYLE: Use ITK_DEFAULT_COPY_AND_MOVE for `RealTimeStamp` and `Region`\n\nInstead of \"manually\" defaulting their copy and move member functions.\n\nFollow-up to two commits by Jon Haitz Legarreta Gorro\u00f1o:\n\npull request https://github.com/InsightSoftwareConsortium/ITK/pull/4626\ncommit 9aff2101c1504b425d8da190d1a24700a493190d\n\"COMP: Use default copy, move for construc, assign `RealTimeStamp`\"\n\npull request https://github.com/InsightSoftwareConsortium/ITK/pull/4627\ncommit ec2677f5a59f9078d728cdb5efeff431e3d52ee8\n\"COMP: Use `default` copy and move construct and assign in `itk::Region`\"\n",
+            "commit_timestamp": 1715781982.0
         }
     ]
 }

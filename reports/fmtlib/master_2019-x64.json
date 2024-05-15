@@ -17613,6 +17613,21 @@
             "commit_ref": "8e728044f673774160f43b44a07c6b185352310f",
             "commit_message": "Fix format_as for non-const begin/end views (#3955)\n\nbase::format does not accept rvalues, using the result of format_as\r\ndirectly means it is passed one. Doesn't matter for ranges with a const\r\nbegin and end, but filter_view caches, so it only has mutable begin/end.\r\nUse auto&& to avoid copy if format_as returns const ref",
             "commit_timestamp": 1715618155.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1715785567.555835,
+            "elapsed_time": 128.77691459655762,
+            "x64": true,
+            "actual_files_count": 72,
+            "expected_files_count": 66,
+            "memory_traffic": 7638.329856872559,
+            "repo_url": "https://github.com/fmtlib/fmt.git",
+            "commit_ref": "a4715c48b42e7abb92f9d624c4de39e95d78cbd1",
+            "commit_message": "Bazel support: Add utf-8 to Windows build (#3962)\n\n",
+            "commit_timestamp": 1715780007.0
         }
     ]
 }
