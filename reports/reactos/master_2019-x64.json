@@ -16036,6 +16036,21 @@
             "commit_ref": "3e97f76a3378680345d8ab83ec5e6e429c49f4b9",
             "commit_message": "[SHELL32] ShellExecute: Re-work Part 2 (#6882)\n\nFollow-up to #6871. Reduce indentation level.\r\nJIRA issue: CORE-17482\r\nIn ShellExecuteExW, early check the structure\r\nsize and return on failure before\r\nSHCoInitializeAnyApartment call.",
             "commit_timestamp": 1715695254.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1715742465.633005,
+            "elapsed_time": 91.88316249847412,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 8012.9687423706055,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "0f81f46387683e1a9be61d0a6319672a1f46a757",
+            "commit_message": "[GITHUB] Remove VS 2015 build from the CI (#3872)\n\n[WORKFLOWS] Remove some excludes as well",
+            "commit_timestamp": 1715740782.0
         }
     ]
 }
