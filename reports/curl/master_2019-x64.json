@@ -16286,6 +16286,21 @@
             "commit_ref": "76dba79028c7bbe045acae583b46ded643921ad4",
             "commit_message": "curl_easy_pause.md: use correct defines in example\n\nSpotted-by: Harry Sintonen\nCloses #13664\n",
             "commit_timestamp": 1715808137.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1715871927.375622,
+            "elapsed_time": 157.44684195518494,
+            "x64": true,
+            "actual_files_count": 2510,
+            "expected_files_count": 2323,
+            "memory_traffic": 33944.24045562744,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "9b802e2d1930961a7305eac2c63679de0fe80176",
+            "commit_message": "libtest: 2308 verifies CURLE_WRITE_ERROR after write callback error\n\nVerifies that the issue in #13669 actually is fixed. This return code is\nwhat the CURLOPT_WRITEFUNCTION manpage documents should be returned.\n\nThis code is mostly from the\nSource-written-by: Trumeet on github\nCloses #13671\n",
+            "commit_timestamp": 1715860012.0
         }
     ]
 }

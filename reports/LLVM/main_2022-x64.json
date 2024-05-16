@@ -17608,6 +17608,23 @@
             "commit_ref": "b4d1a606c7492d827aff6ff0c1c109adff1253b9",
             "commit_message": "[SeparateConstOffsetFromGEP] Check correct index for non-negativity\n\nWe were checking the index of GEP twice, instead of checking both\nGEP and PtrGEP.\n",
             "commit_timestamp": 1715828347.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1715872525.873169,
+            "elapsed_time": 1556.814080953598,
+            "x64": true,
+            "actual_files_count": 2002,
+            "expected_files_count": 1661,
+            "memory_traffic": 248768.24277496338,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "5ac34358181b21135851979c1c949632be5a9d32",
+            "commit_message": "Respect the [[clang::unsafe_buffer_usage]] attribute for constructors (#91777)\n\nThe -Wunsafe-buffer-usage warning should fire on any call to a function\r\nannotated with [[clang::unsafe_buffer_usage]], however it omitted calls\r\nto constructors, since the expression is a CXXConstructExpr which does\r\nnot subclass CallExpr. Thus the matcher on callExpr() does not find\r\nthese expressions.\r\n\r\nAdd a new WarningGadget that matches cxxConstructExpr that are calling a\r\nCXXConstructDecl annotated by [[clang::unsafe_buffer_usage]] and fires\r\nthe warning. The new UnsafeBufferUsageCtorAttrGadget gadget explicitly\r\navoids matching against the std::span(ptr, size) constructor because\r\nthat is handled by SpanTwoParamConstructorGadget and we never want two\r\ngadgets to match the same thing (and this is guarded by asserts).\r\n\r\nThe gadgets themselves do not report the warnings, instead each gadget's\r\nStmt is passed to the UnsafeBufferUsageHandler (implemented by\r\nUnsafeBufferUsageReporter). The Reporter is previously hardcoded that a\r\nCXXConstructExpr statement must be a match for std::span(ptr, size), but\r\nthat is no longer the case. We want the Reporter to generate different\r\nwarnings (in the -Wunsafe-buffer-usage-in-container subgroup) for the\r\nspan contructor. And we will want it to report more warnings for other\r\nstd-container-specific gadgets in the future. To handle this we allow\r\nthe gadget to control if the warning is general (it calls\r\nhandleUnsafeBufferUsage()) or is a std-container-specific warning (it\r\ncalls handleUnsafeOperationInContainer()).\r\n\r\nThen the WarningGadget grows a virtual method to dispatch to the\r\nappropriate path in the UnsafeBufferUsageHandler. By doing so, we no\r\nlonger need getBaseStmt in the Gadget interface. The only use of it for\r\nFixableGadgets was to get the SourceLocation, so we make an explicit\r\nvirtual method for that on Gadget. Then the handleUnsafeOperation()\r\ndispatcher can be a virtual method that is only in WarningGadget.\r\n\r\nThe SpanTwoParamConstructorGadget gadget dispatches to\r\nhandleUnsafeOperationInContainer() while the other WarningGadgets all\r\ndispatch to the original handleUnsafeBufferUsage().\r\n\r\nTests are added for annotated constructors, conversion operattors, call\r\noperators, fold expressions, and regular methods.\r\n\r\nIssue #80482",
+            "commit_timestamp": 1715871668.0
         }
     ]
 }
