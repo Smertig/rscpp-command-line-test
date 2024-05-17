@@ -16443,6 +16443,21 @@
             "commit_ref": "2a80f5e1d1311390cd5f69beca628c007fe35d7e",
             "commit_message": "Sync to upstream/release/625 (#1252)\n\n# What's changed?\r\n\r\n* Fix warning issued when Cmake version is too low (contributed by OSS\r\ncommunity)\r\n\r\n## New Solver\r\n\r\n* Fix an issue with inhabitance testing of tables with cyclic properties\r\n* Preserve error suppression during type unification\r\n* Overhaul type reference counting in the constraint solver\r\n* Other miscellaneous constraint ordering fixes\r\n\r\n## Native Codegen\r\n\r\n* Fix incorrect assertion check in loadBytecodeTypeInfo\r\n\r\n---\r\n\r\n## Internal Contributors\r\n\r\nCo-authored-by: Aaron Weiss <aaronweiss@roblox.com>\r\nCo-authored-by: Alexander McCord <amccord@roblox.com>\r\nCo-authored-by: Andy Friesen <afriesen@roblox.com>\r\nCo-authored-by: Vighnesh Vijay <vvijay@roblox.com>\r\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>\r\n\r\n---------\r\n\r\nCo-authored-by: Aaron Weiss <aaronweiss@roblox.com>\r\nCo-authored-by: Alexander McCord <amccord@roblox.com>\r\nCo-authored-by: Andy Friesen <afriesen@roblox.com>\r\nCo-authored-by: Aviral Goel <agoel@roblox.com>\r\nCo-authored-by: David Cope <dcope@roblox.com>\r\nCo-authored-by: Lily Brown <lbrown@roblox.com>\r\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>",
             "commit_timestamp": 1715365305.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1715915119.749742,
+            "elapsed_time": 231.64058303833008,
+            "x64": true,
+            "actual_files_count": 447,
+            "expected_files_count": 379,
+            "memory_traffic": 30423.86139678955,
+            "repo_url": "https://github.com/luau-lang/luau",
+            "commit_ref": "fe0a8194722e3c508c30b8f266a215a99d52dafe",
+            "commit_message": "Sync to upstream/release/626 (#1258)\n\n### New Type Solver\r\n\r\n* Fixed crash in numeric binary operation type families\r\n* Results of an indexing operation are now comparable to `nil` without a\r\nfalse positive error\r\n* Fixed a crash when a type that failed normalization was accessed\r\n* Iterating on a free value now implies that it is iterable\r\n\r\n---\r\n\r\n### Internal Contributors\r\n\r\nCo-authored-by: Aaron Weiss <aaronweiss@roblox.com>\r\nCo-authored-by: Alexander McCord <amccord@roblox.com>\r\nCo-authored-by: James McNellis <jmcnellis@roblox.com>\r\nCo-authored-by: Vighnesh Vijay <vvijay@roblox.com>\r\n",
+            "commit_timestamp": 1715900523.0
         }
     ]
 }

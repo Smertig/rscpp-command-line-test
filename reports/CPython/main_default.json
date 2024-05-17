@@ -13436,6 +13436,21 @@
             "commit_ref": "17cba55786a1b1e6b715b1a88ae1f9088f5d5999",
             "commit_message": "gh-108267: Fix object.__setattr__ regression in dataclasses docs (#119082)\n\n",
             "commit_timestamp": 1715866777.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1715915321.968935,
+            "elapsed_time": 1360.005522966385,
+            "x64": true,
+            "actual_files_count": 1032,
+            "expected_files_count": null,
+            "memory_traffic": 49216.008041381836,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "100c7ab00ab66a8c0d54582f35e38d8eb691743c",
+            "commit_message": "gh-119049: Fix incorrect display of warning which is constructed by C API (GH-119063)\n\nThe source line was not displayed if the warnings module had not yet\r\nbeen imported.\r\n",
+            "commit_timestamp": 1715891279.0
         }
     ]
 }
