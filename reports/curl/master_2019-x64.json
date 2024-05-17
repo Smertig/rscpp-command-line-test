@@ -16316,6 +16316,21 @@
             "commit_ref": "fd0d2ed74afed3e3b169ef6b780818e984707548",
             "commit_message": "wakeup_create: use FD_CLOEXEC/SOCK_CLOEXEC\n\nfor `pipe()`/`socketpair()`\n\nFixes #13618\nCloses #13625\n",
             "commit_timestamp": 1715893332.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1715958368.331297,
+            "elapsed_time": 207.42997646331787,
+            "x64": true,
+            "actual_files_count": 2841,
+            "expected_files_count": 2323,
+            "memory_traffic": 39458.958908081055,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "345557248e7d357e5b9938000d2bd892a9463e33",
+            "commit_message": "pytest: fixes for recent python, add FTP tests\n\nFixes:\n- in uds tests, abort also silently on os errors\n- be conservative on the h3 goaway duration\n- detect curl debug build and use in checks\n- fix caddy version check for slight difference under linux\n- set caddy default path fitting for linux\n- fix deprecation warnings in valid time checks\n\nFTP tests:\n- add '--with-test-vsftpd=path' to configure\n- use vsftpd default path suitable for linux\n- add test_30 with plain FTP tests\n- add test_31 with --ssl-reqd FTP tests\n- add vsftpd to linux GHA for pytest workflows\n\nCloses #13661\n",
+            "commit_timestamp": 1715957597.0
         }
     ]
 }
