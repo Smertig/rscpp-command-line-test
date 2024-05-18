@@ -149,6 +149,12 @@
                     "file": "..\\Rx\\v2\\test\\subscriptions\\coroutine.cpp",
                     "line": "89",
                     "message": "Cannot resolve the awaiter type"
+                },
+                {
+                    "file": "..\\Rx\\v2\\src\\rxcpp\\rx-scheduler.hpp",
+                    "line": 32,
+                    "message": "Type 'action_type' is incomplete",
+                    "reason": "RSCPP-35776 Incorrect \"incomplete type\" error for make_shared"
                 }
             ],
             "inspected files count": 246,

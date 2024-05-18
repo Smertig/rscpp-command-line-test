@@ -1,3 +1,4 @@
+import itertools
 import pathlib
 import re
 import subprocess
@@ -11,10 +12,18 @@ def find_targets(file_path, regex: re.Pattern):
         return (m.group(1) for m in regex.finditer(f.read()))
 
 
-for path in pathlib.Path('../clang').rglob('CMakeLists.txt'):
-    build_targets.extend(find_targets(path, re.compile(r'add_public_tablegen_target\(([a-zA-Z_]+)\)')))
-    build_targets.extend(find_targets(path, re.compile(r'clang_tablegen\([^)]+TARGET ([a-zA-Z_]+)', re.DOTALL)))
+dirs_to_search = [
+    pathlib.Path('../clang'),
+    pathlib.Path('../llvm/lib/Target/AArch64')
+]
 
+for path in itertools.chain(dir_path.rglob('CMakeLists.txt') for dir_path in dirs_to_search):
+    new_targets = []
+    new_targets.extend(find_targets(path, re.compile(r'add_public_tablegen_target\(([a-zA-Z0-9_]+)\)')))
+    new_targets.extend(find_targets(path, re.compile(r'clang_tablegen\([^)]+TARGET ([a-zA-Z0-9_]+)', re.DOTALL)))
+    if new_targets:
+        print(f'Build targets for {path}: {new_targets}')
+        build_targets += new_targets
 
 print(f'>>> Found {len(build_targets)} target(s) to build: {build_targets}', flush=True)
 

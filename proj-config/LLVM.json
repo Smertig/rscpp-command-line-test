@@ -50,12 +50,6 @@
         "main": {
             "known errors": [
                 {
-                    "file": "..\\clang\\lib\\Sema\\TreeTransform.h",
-                    "line": 4742,
-                    "message": "Member 'Self' is not initialized in this constructor",
-                    "reason": "Bug: https://github.com/llvm/llvm-project/pull/82161"
-                },
-                {
                     "file": "..\\clang\\lib\\Driver\\DriverOptions.cpp",
                     "line": 30,
                     "message": "Expected expression",
@@ -69,8 +63,9 @@
                 },
                 {
                     "file": "..\\clang\\lib\\StaticAnalyzer\\Checkers\\BasicObjCFoundationChecks.cpp",
-                    "line": 977,
-                    "message": "Local variable 'N' used without being initialized"
+                    "line": 973,
+                    "message": "Local variable 'N' used without being initialized",
+                    "reason": "RSCPP-35468 Wrong resolve of call expression in range-based for initializer"
                 },
                 {
                     "file": "..\\clang\\include\\clang\\Frontend\\CompilerInvocation.h",
