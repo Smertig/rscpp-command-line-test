@@ -17,7 +17,7 @@ dirs_to_search = [
     pathlib.Path('../llvm/lib/Target/AArch64')
 ]
 
-for path in itertools.chain(dir_path.rglob('CMakeLists.txt') for dir_path in dirs_to_search):
+for path in itertools.chain.from_iterable(dir_path.rglob('CMakeLists.txt') for dir_path in dirs_to_search):
     new_targets = []
     new_targets.extend(find_targets(path, re.compile(r'add_public_tablegen_target\(([a-zA-Z0-9_]+)\)')))
     new_targets.extend(find_targets(path, re.compile(r'clang_tablegen\([^)]+TARGET ([a-zA-Z0-9_]+)', re.DOTALL)))
