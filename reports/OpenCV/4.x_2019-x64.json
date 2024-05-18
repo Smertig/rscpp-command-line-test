@@ -16360,6 +16360,21 @@
             "commit_ref": "6350bfbf79562f257b58843b31e88a3245ee31a4",
             "commit_message": "Merge pull request #25564 from mshabunin:cleanup-imgproc-2\n\nimgproc: C-API cleanup, drawContours refactor #25564\r\n\r\nChanges:\r\n* moved several macros from types_c.h to cvdef.h (assuming we will continue using them)\r\n* removed some cases of C-API usage in _imgproc_ module (`CV_TERMCRIT_*` and `CV_CMP_*`)\r\n* refactored `drawContours` to use C++ API instead of calling `cvDrawContours` + test for filled contours with holes (case with non-filled contours is simpler and is covered in some other tests)\r\n\r\n#### Note:\r\nThere is one case where old drawContours behavior doesn't match the new one - when `contourIdx == -1` (means \"draw all contours\") and `maxLevel == 0` (means draw only selected contours, but not what is inside).\r\n\r\nFrom the docs:\r\n> **contourIdx**\tParameter indicating a contour to draw. If it is negative, all the contours are drawn.\r\n\r\n> **maxLevel**\tMaximal level for drawn contours. If it is 0, only the specified contour is drawn. If it is 1, the function draws the contour(s) and all the nested contours. If it is 2, the function draws the contours, all the nested contours, all the nested-to-nested contours, and so on. This parameter is only taken into account when there is hierarchy available.\r\n\r\n\r\nOld behavior - only one first contour is drawn:\r\n![actual_screenshot_08 05 2024](https://github.com/opencv/opencv/assets/3304494/d0ae1d64-ddad-46bb-8acc-6f696874f71b)\r\na\r\nNew behavior (also expected by the test) - all contours are drawn:\r\n![expected_screenshot_08 05 2024](https://github.com/opencv/opencv/assets/3304494/57ccd980-9dde-4006-90ee-19d6ce76912a)\r\n",
             "commit_timestamp": 1715947265.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1716001682.920231,
+            "elapsed_time": 366.3702960014343,
+            "x64": true,
+            "actual_files_count": 473,
+            "expected_files_count": 459,
+            "memory_traffic": 41227.90596008301,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "6350bfbf79562f257b58843b31e88a3245ee31a4",
+            "commit_message": "Merge pull request #25564 from mshabunin:cleanup-imgproc-2\n\nimgproc: C-API cleanup, drawContours refactor #25564\r\n\r\nChanges:\r\n* moved several macros from types_c.h to cvdef.h (assuming we will continue using them)\r\n* removed some cases of C-API usage in _imgproc_ module (`CV_TERMCRIT_*` and `CV_CMP_*`)\r\n* refactored `drawContours` to use C++ API instead of calling `cvDrawContours` + test for filled contours with holes (case with non-filled contours is simpler and is covered in some other tests)\r\n\r\n#### Note:\r\nThere is one case where old drawContours behavior doesn't match the new one - when `contourIdx == -1` (means \"draw all contours\") and `maxLevel == 0` (means draw only selected contours, but not what is inside).\r\n\r\nFrom the docs:\r\n> **contourIdx**\tParameter indicating a contour to draw. If it is negative, all the contours are drawn.\r\n\r\n> **maxLevel**\tMaximal level for drawn contours. If it is 0, only the specified contour is drawn. If it is 1, the function draws the contour(s) and all the nested contours. If it is 2, the function draws the contours, all the nested contours, all the nested-to-nested contours, and so on. This parameter is only taken into account when there is hierarchy available.\r\n\r\n\r\nOld behavior - only one first contour is drawn:\r\n![actual_screenshot_08 05 2024](https://github.com/opencv/opencv/assets/3304494/d0ae1d64-ddad-46bb-8acc-6f696874f71b)\r\na\r\nNew behavior (also expected by the test) - all contours are drawn:\r\n![expected_screenshot_08 05 2024](https://github.com/opencv/opencv/assets/3304494/57ccd980-9dde-4006-90ee-19d6ce76912a)\r\n",
+            "commit_timestamp": 1715947265.0
         }
     ]
 }

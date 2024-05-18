@@ -16331,6 +16331,21 @@
             "commit_ref": "345557248e7d357e5b9938000d2bd892a9463e33",
             "commit_message": "pytest: fixes for recent python, add FTP tests\n\nFixes:\n- in uds tests, abort also silently on os errors\n- be conservative on the h3 goaway duration\n- detect curl debug build and use in checks\n- fix caddy version check for slight difference under linux\n- set caddy default path fitting for linux\n- fix deprecation warnings in valid time checks\n\nFTP tests:\n- add '--with-test-vsftpd=path' to configure\n- use vsftpd default path suitable for linux\n- add test_30 with plain FTP tests\n- add test_31 with --ssl-reqd FTP tests\n- add vsftpd to linux GHA for pytest workflows\n\nCloses #13661\n",
             "commit_timestamp": 1715957597.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1716001582.19765,
+            "elapsed_time": 183.34206128120422,
+            "x64": true,
+            "actual_files_count": 2841,
+            "expected_files_count": 2323,
+            "memory_traffic": 39292.81155395508,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "36fd2dd6ee874726c628e67fcf6415a2e52bfe29",
+            "commit_message": "GHA: add MSYS, mingw-w64, Cygwin jobs\n\n- re-implement autotools MSYS and Cygwin AppVeyor jobs in GHA.\n  Now build with SSL and PSL to improve test coverage.\n- re-implement MSYS2 mingw-w64 gcc 13 AppVeyor job in GHA.\n  `CMake, mingw-w64, gcc 13, Debug, x64, Schannel, Static, Unicode`\n- add new cmake Cygwin job (build-only).\n- enable `-j14` parallelism when running tests.\n- delete the 5 migrated jobs from AppVeyor CI.\n- add 2 build-only mingw-w64 builds, gcc Release and clang OpenSSL.\n- also enable brotli, libssh2, nghttp2 for more test coverage.\n\nThese jobs offer better performance, more flexibility and\nparallelization compared to the AppVeyor ones they replace. It also\noffloads AppVeyor, allowing to iterate faster. They also appear more\nreliable than e.g. Azure Windows jobs, where runners are prone to fail\n[1].\n\nCloses #13599\n\n[1]:\n`Exit code 143 returned from process: file name 'C:\\Windows\\system32\\docker.EXE',\narguments 'exec -i   6b13a669c6dfe7fb9f59414369872fd64d61c7182f880c3d39c135cb4c115c8f\nC:\\__a\\externals\\node\\bin\\node.exe C:\\__w\\_temp\\containerHandlerInvoker.js'.`\n",
+            "commit_timestamp": 1715985036.0
         }
     ]
 }

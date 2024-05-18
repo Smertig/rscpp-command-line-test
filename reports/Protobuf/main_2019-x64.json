@@ -17133,6 +17133,21 @@
             "commit_ref": "2f3242c576504459621fd7d78bbccf39bfaa49c5",
             "commit_message": "Fix ClangTidy warnings\n\n- Call std::string::insert to insert a character.\n- Use assignment instead of CopyFrom.\n\nPiperOrigin-RevId: 634610391\n",
             "commit_timestamp": 1715915176.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1716001552.555914,
+            "elapsed_time": 264.64844012260437,
+            "x64": true,
+            "actual_files_count": 1085,
+            "expected_files_count": 818,
+            "memory_traffic": 36302.172103881836,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "1f8208031a07ec384dd9f86e41a92fd715e88e37",
+            "commit_message": "Test if a tag with unknown wire type (0x6 or 0x7) causes parsing failures.\n\nPiperOrigin-RevId: 634878920\n",
+            "commit_timestamp": 1715979787.0
         }
     ]
 }

@@ -17659,6 +17659,23 @@
             "commit_ref": "c0cdc1d9569fdb8e3b672befda80cf90db24e814",
             "commit_message": "[flang] Allow flexible producer name in #di_compile_unit (NFC) (#92462)\n\n",
             "commit_timestamp": 1715957360.0
+        },
+        {
+            "tool_version": "241.0.20240415.221055",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1716002145.930397,
+            "elapsed_time": 1535.8531465530396,
+            "x64": true,
+            "actual_files_count": 1996,
+            "expected_files_count": 1661,
+            "memory_traffic": 248956.21434020996,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "faf39f45e3107d6bcb5f9cef8b5681c116b261d7",
+            "commit_message": "Revert \"[LoongArch] Use R_LARCH_ALIGN with section symbol (#84741)\"\n\nThis reverts commit 01f79899ba349a0200586c8d05f5e22cca2ced31.\n\nThis unusual special case has been discussed on the binutils mailing\nlist. The approach will be revisited:\nhttps://sourceware.org/pipermail/binutils/2024-May/134092.html\n\nPull Request: https://github.com/llvm/llvm-project/pull/92584\n",
+            "commit_timestamp": 1716001090.0
         }
     ]
 }
