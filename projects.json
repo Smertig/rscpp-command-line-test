@@ -896,7 +896,21 @@
         },
         "latest": {
             "master": {
-                "inspected files count": 105
+                "inspected files count": 105,
+                "known errors": [
+                    {
+                        "file": "..\\src\\collision.cpp",
+                        "line": 351,
+                        "message": "Cannot convert 'this' argument from type 'const std::vector<NearbyCollisionInfo>' to type 'std::vector<NearbyCollisionInfo>': function is missing 'const' qualifier",
+                        "reason": "RSCPP-35778 Error on accessing non-captured `thread_local` in lambda"
+                    },
+                    {
+                        "file": "..\\src\\collision.cpp",
+                        "line": 351,
+                        "message": "Local variable 'cinfo' is not captured",
+                        "reason": "RSCPP-35778 Error on accessing non-captured `thread_local` in lambda"
+                    }
+                ]
             }
         }
     },
@@ -1062,16 +1076,11 @@
         "latest": {
             "master": {
                 "inspected files count": 362,
-                "known file errors": [
-                    {
-                        "file": "Source\\Platform\\Linux\\LinuxDynamicLibrary.h"
-                    }
-                ],
                 "known errors": [
                     {
-                        "file": "Source\\Hooks\\ViewRenderHook.h",
+                        "file": "Source\\Hooks\\LoopModeGameHook.h",
                         "line": 10,
-                        "message": "Ambiguous symbol 'RefCountedHook<ViewRenderHook>'",
+                        "message": "Ambiguous symbol 'RefCountedHook<LoopModeGameHook>'",
                         "reason": "TODO"
                     }
                 ]
@@ -1183,7 +1192,7 @@
                     },
                     {
                         "file": "..\\Include\\py_curses.h",
-                        "line": 62,
+                        "line": 71,
                         "message": "Expected a declaration",
                         "reason": "TODO"
                     }
