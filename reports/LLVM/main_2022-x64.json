@@ -17676,6 +17676,23 @@
             "commit_ref": "faf39f45e3107d6bcb5f9cef8b5681c116b261d7",
             "commit_message": "Revert \"[LoongArch] Use R_LARCH_ALIGN with section symbol (#84741)\"\n\nThis reverts commit 01f79899ba349a0200586c8d05f5e22cca2ced31.\n\nThis unusual special case has been discussed on the binutils mailing\nlist. The approach will be revisited:\nhttps://sourceware.org/pipermail/binutils/2024-May/134092.html\n\nPull Request: https://github.com/llvm/llvm-project/pull/92584\n",
             "commit_timestamp": 1716001090.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1716089008.767109,
+            "elapsed_time": 1526.2218754291534,
+            "x64": true,
+            "actual_files_count": 1996,
+            "expected_files_count": 1661,
+            "memory_traffic": 250453.1121826172,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "d34be649af1aa849c21a5a0570617c3a89d5f0b8",
+            "commit_message": "[ThinLTO]Sort imported GUIDs before cache key update (#92622)\n\nAdd 'sort' here since it's helpful when container type\r\nchanges (for example, https://github.com/llvm/llvm-project/pull/88024\r\nwants to change container type from `unordered_set` to `DenseMap)\r\n\r\n@MaskRay points out `std::` doesn't randomize the iteration order of\r\n`unordered_{set,map}`, and the iteration order for single build is\r\ndeterministic.",
+            "commit_timestamp": 1716086397.0
         }
     ]
 }
