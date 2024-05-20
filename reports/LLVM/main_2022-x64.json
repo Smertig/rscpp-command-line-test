@@ -17710,6 +17710,23 @@
             "commit_ref": "eab92cb7f33be16a6a17549182e9237112b7a183",
             "commit_message": "[llvm] Add KnownBits implementations for avgFloor and avgCeil (#86445)\n\nThis PR is to address the issue #84640",
             "commit_timestamp": 1716130631.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1716175441.788827,
+            "elapsed_time": 1514.2456860542297,
+            "x64": true,
+            "actual_files_count": 1996,
+            "expected_files_count": 1661,
+            "memory_traffic": 251424.93161010742,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "fc0144a30cf20d6405411da141d11bfde143d3d2",
+            "commit_message": "[Serialization] Read the initializer for interesting static variables before consuming it (#92353)\n\nClose https://github.com/llvm/llvm-project/issues/91418\r\n\r\nSince we load the variable's initializers lazily, it'd be problematic if\r\nthe initializers dependent on each other. So here we try to load the\r\ninitializers of static variables to make sure they are passed to code\r\ngenerator by order. If we read any thing interesting, we would consume\r\nthat before emitting the current declaration.",
+            "commit_timestamp": 1716172563.0
         }
     ]
 }

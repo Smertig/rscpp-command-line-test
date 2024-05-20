@@ -16436,6 +16436,21 @@
             "commit_ref": "df3f4340f28be533423f0a0599fa95a1d114a107",
             "commit_message": "GHA: disable TFTP test on native Windows\n\nSome TFTP tests seem to enter into a loop and maybe hang?\n\nE.g. 1007, 1009, 1238\n\nTry fixing it by skipping all TFTP tests.\n\nRef: https://github.com/curl/curl/actions/runs/9141987545/job/25137038249?pr=13698\n\nAlso drop mingw-w64 test exclusions copy-pasted from MSYS jobs.\n\nPossibly related: cffbcc3110c1eda2e333f9cfe2e269154618793a #5364\n\nClose #13699\n",
             "commit_timestamp": 1716116571.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1716174369.834128,
+            "elapsed_time": 181.88157629966736,
+            "x64": true,
+            "actual_files_count": 2841,
+            "expected_files_count": 2323,
+            "memory_traffic": 39410.85013580322,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "bdfb41a04c3b427d1c24ea26e94269f6a38fd712",
+            "commit_message": "GHA: pin dependencies\n\nCloses #13712\n",
+            "commit_timestamp": 1716154679.0
         }
     ]
 }
