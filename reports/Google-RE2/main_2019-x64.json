@@ -17708,6 +17708,21 @@
             "commit_ref": "4f5fd7a5da8bb8168815d31e9e0e2d0599f5b8ca",
             "commit_message": "Switch to Abseil logging.\n\nFixes #494.\n\nChange-Id: Ie8bd23d44a6f2609b72f115c3b2344a2a91637be\nReviewed-on: https://code-review.googlesource.com/c/re2/+/63091\nReviewed-by: Alex Chernyakhovsky <achernya@google.com>\nReviewed-by: Paul Wankadia <junyer@google.com>\n",
             "commit_timestamp": 1715979364.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1716217782.426222,
+            "elapsed_time": 64.35250163078308,
+            "x64": true,
+            "actual_files_count": 22,
+            "expected_files_count": null,
+            "memory_traffic": 2796.364212036133,
+            "repo_url": "https://github.com/google/re2.git",
+            "commit_ref": "a771d3fbe7c432dc4db68360c6c0004fdde5646b",
+            "commit_message": "Work around a bug in CMake that breaks `^` anchors.\n\nhttps://gitlab.kitware.com/cmake/cmake/-/issues/16899 was reported\nseven years ago. The bug existed at least ten years ago. It hasn't\nbeen fixed.\n\nChange-Id: Ifbe3e77ce6371091b24303d5c4953d401ed29826\nReviewed-on: https://code-review.googlesource.com/c/re2/+/63071\nReviewed-by: Alex Chernyakhovsky <achernya@google.com>\nReviewed-by: Paul Wankadia <junyer@google.com>\n",
+            "commit_timestamp": 1716213406.0
         }
     ]
 }

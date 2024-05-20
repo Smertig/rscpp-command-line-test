@@ -16451,6 +16451,21 @@
             "commit_ref": "bdfb41a04c3b427d1c24ea26e94269f6a38fd712",
             "commit_message": "GHA: pin dependencies\n\nCloses #13712\n",
             "commit_timestamp": 1716154679.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1716217547.319954,
+            "elapsed_time": 203.39951825141907,
+            "x64": true,
+            "actual_files_count": 2841,
+            "expected_files_count": 2323,
+            "memory_traffic": 41297.164627075195,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "9aae9bf81705162756cf209df178c59e55556ec4",
+            "commit_message": "openssl: revert keylog_callback support for LibreSSL\n\n- Revert to the legacy TLS 1.2 key logging code for LibreSSL.\n\n- Document SSLKEYLOGFILE for LibreSSL is TLS 1.2 max.\n\nPrior to this change if the user specified a filename in the\nSSLKEYLOGFILE environment variable and was using LibreSSL 3.5.0+ then\nan empty file would be created and no keys would be logged.\n\nThis is effectively a revert of e43474b4 which changed openssl.c to use\nSSL_CTX_set_keylog_callback for LibreSSL 3.5.0+. Unfortunately LibreSSL\nadded that function only as a stub that doesn't actually do anything.\n\nReported-by: Gon\u00e7alo Carvalho\n\nFixes https://github.com/curl/curl/issues/13672\nCloses https://github.com/curl/curl/pull/13682\n",
+            "commit_timestamp": 1716191740.0
         }
     ]
 }
