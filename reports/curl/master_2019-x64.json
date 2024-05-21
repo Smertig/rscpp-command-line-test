@@ -16481,6 +16481,21 @@
             "commit_ref": "dbd626ab825a28c02dd5b38cd4e5b09985ba9bad",
             "commit_message": "tests: fix TFTP test 2305 on Windows\n\nRef: #13692\nCloses #13724\n",
             "commit_timestamp": 1716232802.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1716303922.546521,
+            "elapsed_time": 179.4036476612091,
+            "x64": true,
+            "actual_files_count": 2841,
+            "expected_files_count": 2323,
+            "memory_traffic": 39305.4140625,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "6ea93881575a06cf2bb3a7ad8d5b47ff8150ca1c",
+            "commit_message": "url: remove duplicate call to Curl_conncache_remove_conn when pruning\n\n- remove unnecessary prunedead struct from prune_dead_connections\n- rename extract_if_dead to prune_if_dead for clarity\n\nCloses #13710\n",
+            "commit_timestamp": 1716301521.0
         }
     ]
 }
