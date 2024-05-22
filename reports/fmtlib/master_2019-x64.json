@@ -17868,6 +17868,21 @@
             "commit_ref": "b81761068b5cc346b30a023cc6077d34afba1e01",
             "commit_message": "Check range_begin is dereferenceable (#3964)\n\nFixes issue #3839\r\nAn Eigen 3.4 2x2 matrix has a begin member function that returns void\r\nBe more strict checking that the result of calling *begin() is valid\r\nSee input_or_output_iterator concept notes about void",
             "commit_timestamp": 1716246667.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1716390295.076128,
+            "elapsed_time": 79.44516062736511,
+            "x64": true,
+            "actual_files_count": 72,
+            "expected_files_count": 66,
+            "memory_traffic": 8147.708847045898,
+            "repo_url": "https://github.com/fmtlib/fmt.git",
+            "commit_ref": "b81761068b5cc346b30a023cc6077d34afba1e01",
+            "commit_message": "Check range_begin is dereferenceable (#3964)\n\nFixes issue #3839\r\nAn Eigen 3.4 2x2 matrix has a begin member function that returns void\r\nBe more strict checking that the result of calling *begin() is valid\r\nSee input_or_output_iterator concept notes about void",
+            "commit_timestamp": 1716246667.0
         }
     ]
 }
