@@ -16321,6 +16321,21 @@
             "commit_ref": "bc2621812fdbdfaeb1d7d27b5b4d9963b6b90993",
             "commit_message": "[SHELL32] Strip undesired format-string (#6924)\n\n\r\nA trivial change.\r\nAn addendum to 4ff1aa5fac01534b7e11c0b78923f55a773344cb (SVN r30784) where el-GR.rc was forgotten.",
             "commit_timestamp": 1716385153.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1716433579.772082,
+            "elapsed_time": 92.96675419807434,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7986.671943664551,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "f69e256376e939e63029c8d8be8b97eaa206eec0",
+            "commit_message": "[ACPI] Register a device interface class with ACPI fans\n\nAs the commit title says, the point of registering a device interface with ACPI fans is to receive incoming PnP notifications of incoming ACPI fan drivers so that the power manager can connect to them by creating a power device policies dedicated to them during power manager initialization.\n\nCORE-18969\n",
+            "commit_timestamp": 1716402186.0
         }
     ]
 }

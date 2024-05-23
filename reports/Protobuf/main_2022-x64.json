@@ -179,6 +179,21 @@
             "commit_ref": "16e0a63077bbfe889b7150543c5f176e0f637682",
             "commit_message": "Remove field SmallSortedMap.maxArraySize\n\nIt's always set to 16 in production code.\n\nExcept for when it's set to 0 for the immutable empty SmallSortedMap, but the number doesn't change anything for that immutable empty map (it's always empty, it will never hit the max).\n\nThis should save 4 bytes of memory per SmallSortedMap.\n\nPiperOrigin-RevId: 636035193\n",
             "commit_timestamp": 1716355742.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1716433613.479228,
+            "elapsed_time": 290.2701303958893,
+            "x64": true,
+            "actual_files_count": 1085,
+            "expected_files_count": 818,
+            "memory_traffic": 37342.39636230469,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "046a07eeade392bef3045deec77116b86ed1a322",
+            "commit_message": "Fix a rare crash from feature lifetime validation.\n\nThis is only reproducible for protos that trigger the lazy build of another proto in the pool that needs feature lifetimes validated.  If an error is encountered, we'll end up throwing the lazy build's descriptors into the deferred validation map, but then rolling it back with the original proto.  This results in a use-after-free crash.\n\nPiperOrigin-RevId: 636324975\n",
+            "commit_timestamp": 1716419502.0
         }
     ]
 }

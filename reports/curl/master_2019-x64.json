@@ -16526,6 +16526,21 @@
             "commit_ref": "ca8cb245e172446507b887ca5b22a04b5b824179",
             "commit_message": "cmake: fix building with both md4 and md5 in unity mode\n\nMacro and static function names were colliding between\n`lib/md4.c` and\n`lib/md5.c`.\n\nFix it by namespacing these symbols.\n\nSeen with a basic macOS build using these options:\n`-DCMAKE_UNITY_BUILD=ON -DCURL_USE_SECTRANSP=ON`\n\nCloses #13737\n",
             "commit_timestamp": 1716380200.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1716433539.574382,
+            "elapsed_time": 182.98223733901978,
+            "x64": true,
+            "actual_files_count": 2841,
+            "expected_files_count": 2323,
+            "memory_traffic": 39339.0671081543,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "1c4813c769ea65c128c067004d0711433288aa05",
+            "commit_message": "mbedtls: send close-notify on close\n\n- send the TLS close notify message when cloding down\n  the mbedtls connection filter\n- this is a \"least\" effort version and, as other TLS filters,\n  is lacking a graceful send/receive/timeout for a really\n  clean shutdown.\n\nCloses #13745\n",
+            "commit_timestamp": 1716412042.0
         }
     ]
 }
