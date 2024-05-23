@@ -17829,6 +17829,23 @@
             "commit_ref": "aa4069ea96e5eb62bc8c7895b9d920f129611b3a",
             "commit_message": "Revert \"[X86] Remove knl/knm specific ISAs supports (#92883)\" (#93123)\n\nThis reverts commit 282d2ab58f56c89510f810a43d4569824a90c538.",
             "commit_timestamp": 1716431123.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1716477772.555624,
+            "elapsed_time": 1657.4439904689789,
+            "x64": true,
+            "actual_files_count": 2004,
+            "expected_files_count": 1661,
+            "memory_traffic": 250822.46467590332,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "477b48e8dc6fe2c911332fc40f2fa67f3be016b9",
+            "commit_message": "[OpenACC][NFC] Implement RecursiveASTVisitor for clauses\n\nClauses that have sub expressions are storing them in 'children', so\nmake sure we visit these properly.\n",
+            "commit_timestamp": 1716475937.0
         }
     ]
 }

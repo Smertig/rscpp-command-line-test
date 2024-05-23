@@ -11967,6 +11967,21 @@
             "commit_ref": "12983748187c46a37a12e37f72c75b84bf33ca8b",
             "commit_message": "Upgrade client active object mgr tests to Catch2 (#14565)\n\n* Upgrade client active object mgr tests to Catch2\r\n\r\nIn addition to invoking Catch2's test runner after Minetest's homemade\r\nrunner, this refactors the tests to follow the DRY principle, and gives\r\nthem expressive names and clear assertions. Catch2 is already bundled\r\nwith Minetest, so there are no added dependencies.\r\n\r\n* Increment failed modules count for Catch2 tests\r\n\r\n* Respect --test-module option for Catch2 tests\r\n\r\n* Improve Catch2 --test-module behavior\r\n\r\nThis switches infostream to rawstream so that test runner output is\r\ndisplayed, and returns the correct boolean depending on the results. The\r\ntests are now found by setting the configuration instead of invoking the\r\ncommand line parser.\r\n\r\n* Test uniqueness of all IDS instead of just one\r\n\r\nCo-Authored-By: Lars M\u00fcller <appgurulars@gmx.de>\r\n\r\n* Include Catch2 test run in timing and logging\r\n\r\n* Flush std::cout after printing Catch results\r\n\r\n* Increment total tests run instead of hardcoding to 1\r\n\r\n* Flush stderr before printing to stdout\r\n\r\nIt's necessary to flush stderr before printing to stdout in adition to\r\nflushing stdout before printing to stderr, to make sure all output is\r\nordered correctly.\r\n\r\n* Make Catch write to rawstream\r\n\r\n---------\r\n\r\nCo-authored-by: Lars M\u00fcller <appgurulars@gmx.de>",
             "commit_timestamp": 1716395993.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1716478385.817686,
+            "elapsed_time": 175.39229702949524,
+            "x64": true,
+            "actual_files_count": 396,
+            "expected_files_count": 105,
+            "memory_traffic": 22119.41756439209,
+            "repo_url": "https://github.com/minetest/minetest",
+            "commit_ref": "12983748187c46a37a12e37f72c75b84bf33ca8b",
+            "commit_message": "Upgrade client active object mgr tests to Catch2 (#14565)\n\n* Upgrade client active object mgr tests to Catch2\r\n\r\nIn addition to invoking Catch2's test runner after Minetest's homemade\r\nrunner, this refactors the tests to follow the DRY principle, and gives\r\nthem expressive names and clear assertions. Catch2 is already bundled\r\nwith Minetest, so there are no added dependencies.\r\n\r\n* Increment failed modules count for Catch2 tests\r\n\r\n* Respect --test-module option for Catch2 tests\r\n\r\n* Improve Catch2 --test-module behavior\r\n\r\nThis switches infostream to rawstream so that test runner output is\r\ndisplayed, and returns the correct boolean depending on the results. The\r\ntests are now found by setting the configuration instead of invoking the\r\ncommand line parser.\r\n\r\n* Test uniqueness of all IDS instead of just one\r\n\r\nCo-Authored-By: Lars M\u00fcller <appgurulars@gmx.de>\r\n\r\n* Include Catch2 test run in timing and logging\r\n\r\n* Flush std::cout after printing Catch results\r\n\r\n* Increment total tests run instead of hardcoding to 1\r\n\r\n* Flush stderr before printing to stdout\r\n\r\nIt's necessary to flush stderr before printing to stdout in adition to\r\nflushing stdout before printing to stderr, to make sure all output is\r\nordered correctly.\r\n\r\n* Make Catch write to rawstream\r\n\r\n---------\r\n\r\nCo-authored-by: Lars M\u00fcller <appgurulars@gmx.de>",
+            "commit_timestamp": 1716395993.0
         }
     ]
 }
