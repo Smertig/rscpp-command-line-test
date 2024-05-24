@@ -16556,6 +16556,21 @@
             "commit_ref": "cc383ee237fd46bfd9b1c6ca3cb8ee2c51e80130",
             "commit_message": "GHA: increase timeout for Cygwin autotools build tests step\n\nApparently 10 minutes are not (always) enough:\nhttps://github.com/curl/curl/actions/runs/9197003907/job/25296439556#step:8:1936\n\nCloses #13753\n",
             "commit_timestamp": 1716463787.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1716519952.050575,
+            "elapsed_time": 188.2336597442627,
+            "x64": true,
+            "actual_files_count": 2841,
+            "expected_files_count": 2323,
+            "memory_traffic": 39284.01050567627,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "86cb12a40087e7bd1373d9bdf477b21bf2b28d37",
+            "commit_message": "ci: update github/codeql-action digest to 9fdb3e4\n\nCloses #13726\n",
+            "commit_timestamp": 1716501723.0
         }
     ]
 }

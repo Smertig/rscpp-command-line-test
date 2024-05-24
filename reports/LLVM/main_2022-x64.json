@@ -17846,6 +17846,23 @@
             "commit_ref": "477b48e8dc6fe2c911332fc40f2fa67f3be016b9",
             "commit_message": "[OpenACC][NFC] Implement RecursiveASTVisitor for clauses\n\nClauses that have sub expressions are storing them in 'children', so\nmake sure we visit these properly.\n",
             "commit_timestamp": 1716475937.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1716520944.964189,
+            "elapsed_time": 1541.7090854644775,
+            "x64": true,
+            "actual_files_count": 2004,
+            "expected_files_count": 1661,
+            "memory_traffic": 250911.70877838135,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "d1d9545ed3db2105449d7fe86e7ccaed1eedd0da",
+            "commit_message": "[BOLT][BAT] Add entries for deleted basic blocks\n\nDeleted basic blocks are required for correct mapping of branches\nmodified by SCTC.\n\nIncreases BAT size, bytes:\n- large binary: 8622496 -> 8703244.\n- small binary (X86/bolt-address-translation.test): 928 -> 940.\n\nTest Plan: updated bb-with-two-tail-calls.s\n\nReviewers: ayermolo, dcci, maksfb, rafaelauler\n\nReviewed By: rafaelauler\n\nPull Request: https://github.com/llvm/llvm-project/pull/91906\n",
+            "commit_timestamp": 1716517147.0
         }
     ]
 }
