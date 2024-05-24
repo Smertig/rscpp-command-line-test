@@ -17928,6 +17928,21 @@
             "commit_ref": "fc723fd6c707064cca9ed95cf4526a955e3cd2b7",
             "commit_message": "Fix regression in #3710 (#3968)\n\nRegression introduced in 11f2f30\r\nAlready have a test for this, but needed to make __cpp_lib_ranges\r\nsmaller to enable it",
             "commit_timestamp": 1716493151.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1716563129.514793,
+            "elapsed_time": 90.62601065635681,
+            "x64": true,
+            "actual_files_count": 72,
+            "expected_files_count": 66,
+            "memory_traffic": 8217.662620544434,
+            "repo_url": "https://github.com/fmtlib/fmt.git",
+            "commit_ref": "1768bf971409effd74346c61446ac4f31c2bedcd",
+            "commit_message": "Added FMT_EXPORT for fmt::range_format and fmt::range_format_kind (#3970)\n\n",
+            "commit_timestamp": 1716559687.0
         }
     ]
 }
