@@ -16381,6 +16381,21 @@
             "commit_ref": "ed7c23fc41ddab7877f9fbc2975d6302a971e1b3",
             "commit_message": "[SHELL32] brfolder.cpp: Rename BrsFolder as BrFolder\n\nand rename BrsItemData as BrItemData to reduce binary size of\nDebug version.\nJIRA issue: CORE-17340\n",
             "commit_timestamp": 1716558867.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1716606398.554937,
+            "elapsed_time": 81.1751446723938,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 8010.010063171387,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "6338913f26934540350146d3a8e3e4f47cec2617",
+            "commit_message": "[NTUSER] menu.c position fix to not obscure 'Close' (#6923)\n\nCORE-19579\r\n\r\nWhen IS_SYSTEM_MENU was redefined in https://github.com/reactos/reactos/commit/3ae0ccdcc,\r\nthis broke the logic here. So now we restore the correctly working logic.",
+            "commit_timestamp": 1716596107.0
         }
     ]
 }

@@ -13691,6 +13691,21 @@
             "commit_ref": "bf5b6467f8cc06759f3396ab1a8ad64fe7d1db2e",
             "commit_message": "GH-119496: accept UTF-8 BOM in .pth files (GH-119503)\n\n`Out-File -Encoding utf8` and similar commands in Windows Powershell 5.1 emit\r\nUTF-8 with a BOM marker, which the regular `utf-8` codec decodes incorrectly.\r\n\r\n`utf-8-sig` accepts a BOM, but also works correctly without one.\r\n\r\nThis change also makes .pth files match the way Python source files are handled.\r\n\r\nCo-authored-by: Inada Naoki <songofacandy@gmail.com>",
             "commit_timestamp": 1716560959.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1716606597.232815,
+            "elapsed_time": 1095.6475508213043,
+            "x64": true,
+            "actual_files_count": 1032,
+            "expected_files_count": null,
+            "memory_traffic": 49318.365242004395,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "84be5244de75c92904fb41326c9a69f19051e7ab",
+            "commit_message": "gh-119180: Update the magic number (#119397)\n\nPR #119321 added a comment about the magic number bump\r\nbut did not actually apply the new magic number.",
+            "commit_timestamp": 1716597137.0
         }
     ]
 }
