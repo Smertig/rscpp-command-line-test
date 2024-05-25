@@ -16396,6 +16396,21 @@
             "commit_ref": "6338913f26934540350146d3a8e3e4f47cec2617",
             "commit_message": "[NTUSER] menu.c position fix to not obscure 'Close' (#6923)\n\nCORE-19579\r\n\r\nWhen IS_SYSTEM_MENU was redefined in https://github.com/reactos/reactos/commit/3ae0ccdcc,\r\nthis broke the logic here. So now we restore the correctly working logic.",
             "commit_timestamp": 1716596107.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1716649534.569214,
+            "elapsed_time": 88.39785671234131,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 8107.5053787231445,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "70e8653f23eae89aa26d70347ccea920f05815a1",
+            "commit_message": "[SHELL32] IDD_BROWSE_FOR_FOLDER: Use IDOK for 1, IDCANCEL for 2 (#6937)\n\nFollow-up to #6934. Don't use magic numbers.\r\nJIRA issue: N/A\r\nUse IDOK and IDCANCEL instead of 1 and 2.",
+            "commit_timestamp": 1716625739.0
         }
     ]
 }
