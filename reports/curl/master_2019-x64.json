@@ -16616,6 +16616,21 @@
             "commit_ref": "b3f23f2084ee575425be8d5c36080a2942f2d7c8",
             "commit_message": "GHA: ignore flaky test 3017 (MQTT) on OpenBSD\n\n```\nTESTFAIL: These test cases failed: 3017\n```\nRef: https://github.com/curl/curl/actions/runs/9223543272/job/25376999226?pr=13759#step:3:16326\nRef: https://github.com/curl/curl/actions/runs/9230183764/job/25397883193?pr=13766#step:3:16345\n\nRef: https://github.com/curl/curl/pull/13583#issuecomment-2119376898\n",
             "commit_timestamp": 1716587241.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1716692728.956568,
+            "elapsed_time": 192.96378350257874,
+            "x64": true,
+            "actual_files_count": 2850,
+            "expected_files_count": 2323,
+            "memory_traffic": 39529.43367767334,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "e101a7a8b072b2766aa5b4de481acd3e4d298e4b",
+            "commit_message": "multi: add multi->proto_hash, a key-value store for protocol data\n\n- add `Curl_hash_add2()` that passes a destructor function for\n  the element added. Call element destructor instead of hash\n  destructor if present.\n- multi: add `proto_hash` for protocol related information,\n  remove `struct multi_ssl_backend_data`.\n- openssl: use multi->proto_hash to keep x509 shared store\n- schannel: use multi->proto_hash to keep x509 shared store\n- vtls: remove Curl_free_multi_ssl_backend_data() and its\n  equivalents in the TLS backends\n\nCloses #13345\n",
+            "commit_timestamp": 1716675301.0
         }
     ]
 }
