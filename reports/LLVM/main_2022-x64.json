@@ -17931,6 +17931,23 @@
             "commit_ref": "c87a7b3bdb673747f2242ba2edc7d5b2f5b53c30",
             "commit_message": "[clang-tools-extra] Revise IDE folder structure  (#89744)\n\nUpdate the folder titles for targets in the monorepository that have not\r\nseen taken care of for some time. These are the folders that targets are\r\norganized in Visual Studio and XCode\r\n(`set_property(TARGET <target> PROPERTY FOLDER \"<title>\")`)\r\nwhen using the respective CMake's IDE generator.\r\n\r\n * Ensure that every target is in a folder\r\n * Use a folder hierarchy with each LLVM subproject as a top-level folder\r\n * Use consistent folder names between subprojects\r\n * When using target-creating functions from AddLLVM.cmake, automatically\r\ndeduce the folder. This reduces the number of\r\n`set_property`/`set_target_property`, but are still necessary when\r\n`add_custom_target`, `add_executable`, `add_library`, etc. are used. A\r\nLLVM_SUBPROJECT_TITLE definition is used for that in each subproject's\r\nroot CMakeLists.txt.",
             "commit_timestamp": 1716672453.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1716736957.961906,
+            "elapsed_time": 1537.5450558662415,
+            "x64": true,
+            "actual_files_count": 2002,
+            "expected_files_count": 1661,
+            "memory_traffic": 251258.46491241455,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "a4a436672a2c179274e07aeb68e9acd6f483a653",
+            "commit_message": "[clang] In Sema use new parentEvaluationContext function (#93338)\n\nFixes #93284",
+            "commit_timestamp": 1716731168.0
         }
     ]
 }

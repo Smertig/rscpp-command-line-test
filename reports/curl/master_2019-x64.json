@@ -16631,6 +16631,21 @@
             "commit_ref": "e101a7a8b072b2766aa5b4de481acd3e4d298e4b",
             "commit_message": "multi: add multi->proto_hash, a key-value store for protocol data\n\n- add `Curl_hash_add2()` that passes a destructor function for\n  the element added. Call element destructor instead of hash\n  destructor if present.\n- multi: add `proto_hash` for protocol related information,\n  remove `struct multi_ssl_backend_data`.\n- openssl: use multi->proto_hash to keep x509 shared store\n- schannel: use multi->proto_hash to keep x509 shared store\n- vtls: remove Curl_free_multi_ssl_backend_data() and its\n  equivalents in the TLS backends\n\nCloses #13345\n",
             "commit_timestamp": 1716675301.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1716735950.288133,
+            "elapsed_time": 186.35389876365662,
+            "x64": true,
+            "actual_files_count": 2850,
+            "expected_files_count": 2323,
+            "memory_traffic": 39438.1614151001,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "4157ccb88c0f7db81d23c7f26315f78456077fc2",
+            "commit_message": "libssh: remove CURLOPT_SSL_VERIFYHOST check\n\nIt was never meant for SSH: it should rely on the knownhosts file (if\nset) in the same way libssh2 already does.\n\nReported-by: James Abbatiello\nFixes #13767\nCloses #13781\n",
+            "commit_timestamp": 1716717676.0
         }
     ]
 }
