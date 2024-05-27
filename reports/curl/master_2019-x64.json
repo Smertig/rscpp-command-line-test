@@ -16661,6 +16661,21 @@
             "commit_ref": "a40204aff434ece9ca9ea54c9eea16f664fb5035",
             "commit_message": "runtests: sort test IDs in summary lines\n\nChanging this output:\n```\nTESTFAIL: These test cases failed: 2301 2303 2302 2307\n```\nRef: https://github.com/curl/curl/actions/runs/9228638364/job/25393106631#step:6:21181\n\nTo:\n```\nTESTFAIL: These test cases failed: 2301 2302 2303 2307\n```\n\nCherry-picked from #13766\nCloses #13774\n",
             "commit_timestamp": 1716756185.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1716822300.465504,
+            "elapsed_time": 177.70117616653442,
+            "x64": true,
+            "actual_files_count": 2850,
+            "expected_files_count": 2323,
+            "memory_traffic": 39612.002616882324,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "d3dbaac3ea59450f8be46343f4cc1fdd01bfaaa3",
+            "commit_message": "GHA: add autotools mingw-64, build-only job\n\nCherry-picked from #13718\nCloses #13793\n",
+            "commit_timestamp": 1716817734.0
         }
     ]
 }
