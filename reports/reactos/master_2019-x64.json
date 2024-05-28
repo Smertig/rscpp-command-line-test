@@ -16471,6 +16471,21 @@
             "commit_ref": "1bc6c900869fe1a01279d199a7a0f7452b145dde",
             "commit_message": "[SHELL32] CDefView: Implement SFVM_CANSELECTALL callback (#6945)\n\nImplementing missing folder view callbacks...\r\nJIRA issue: CORE-19616\r\n- Call SFVM_CANSELECTALL callback on FCIDM_SHVIEW_SELECTALL.\r\n- If it returned S_FALSE, then do not select all.",
             "commit_timestamp": 1716768344.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1716865543.081696,
+            "elapsed_time": 85.89760875701904,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 8061.019393920898,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "1e75ea8a82b337124588ea78e36bdf338d6cefb7",
+            "commit_message": "[SHELL32] CDefView: Implement SFVM_GETNAMELENGTH callback (#6942)\n\nImplementing missing folder view callbacks...\r\nJIRA issue: CORE-19616\r\n- Call _DoFolderViewCB on LVN_BEGINLABELEDITW message.\r\n- Send EM_SETLIMITTEXT message if the limit was set.",
+            "commit_timestamp": 1716851676.0
         }
     ]
 }

@@ -16676,6 +16676,21 @@
             "commit_ref": "d3dbaac3ea59450f8be46343f4cc1fdd01bfaaa3",
             "commit_message": "GHA: add autotools mingw-64, build-only job\n\nCherry-picked from #13718\nCloses #13793\n",
             "commit_timestamp": 1716817734.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1716865549.237304,
+            "elapsed_time": 203.35656213760376,
+            "x64": true,
+            "actual_files_count": 3046,
+            "expected_files_count": 2323,
+            "memory_traffic": 44048.70140838623,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "53b4dfe405dca1eeff0ac48e2fc96d7782e887a7",
+            "commit_message": "examples: delete unused includes\n\nDelete a bunch of unnecessary-looking headers from some examples. This\nis known to be tricky on AIX (perhaps also in other less-tested envs).\n\nLet me know if any of this looks incorrect or outright fails on some\nsystems.\n\nFollow-up to d4b85890555388bec212b75f47a5c1a48705b156 #13771\nCloses #13785\n",
+            "commit_timestamp": 1716848824.0
         }
     ]
 }

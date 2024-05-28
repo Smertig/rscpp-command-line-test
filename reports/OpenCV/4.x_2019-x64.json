@@ -16675,6 +16675,21 @@
             "commit_ref": "b6593517c4d2cd9f3d9e176e82ce43e6d0085e3e",
             "commit_message": "Merge pull request #25647 from Kumataro:fix25646\n\nimgcodecs: support IMWRITE_JPEG_LUMA/CHROMA_QUALITY with internal libjpeg-turbo #25647\r\n\r\nClose #25646\r\n\r\n- increase JPEG_LIB_VERSION for internal libjpeg-turbo from 62 to 70\r\n- add log when using IMWRITE_JPEG_LUMA/CHROMA_QUALITY with JPEG_LIB_VERSION<70\r\n- add document IMWRITE_JPEG_LUMA/CHROMA_QUALITY requests JPEG_LIB_VERSION >= 70\r\n\r\n### Pull Request Readiness Checklist\r\n\r\nSee details at https://github.com/opencv/opencv/wiki/How_to_contribute#making-a-good-pull-request\r\n\r\n- [x] I agree to contribute to the project under Apache 2 License.\r\n- [x] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\r\n- [x] The PR is proposed to the proper branch\r\n- [x] There is a reference to the original bug report and related work\r\n- [x] There is accuracy test, performance test and test data in opencv_extra repository, if applicable\r\n      Patch to opencv_extra has the same branch name.\r\n- [x] The feature is well documented and sample code can be built with the project CMake\r\n",
             "commit_timestamp": 1716820423.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1716865626.797314,
+            "elapsed_time": 369.16833782196045,
+            "x64": true,
+            "actual_files_count": 473,
+            "expected_files_count": 459,
+            "memory_traffic": 41259.81162261963,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "b6593517c4d2cd9f3d9e176e82ce43e6d0085e3e",
+            "commit_message": "Merge pull request #25647 from Kumataro:fix25646\n\nimgcodecs: support IMWRITE_JPEG_LUMA/CHROMA_QUALITY with internal libjpeg-turbo #25647\r\n\r\nClose #25646\r\n\r\n- increase JPEG_LIB_VERSION for internal libjpeg-turbo from 62 to 70\r\n- add log when using IMWRITE_JPEG_LUMA/CHROMA_QUALITY with JPEG_LIB_VERSION<70\r\n- add document IMWRITE_JPEG_LUMA/CHROMA_QUALITY requests JPEG_LIB_VERSION >= 70\r\n\r\n### Pull Request Readiness Checklist\r\n\r\nSee details at https://github.com/opencv/opencv/wiki/How_to_contribute#making-a-good-pull-request\r\n\r\n- [x] I agree to contribute to the project under Apache 2 License.\r\n- [x] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\r\n- [x] The PR is proposed to the proper branch\r\n- [x] There is a reference to the original bug report and related work\r\n- [x] There is accuracy test, performance test and test data in opencv_extra repository, if applicable\r\n      Patch to opencv_extra has the same branch name.\r\n- [x] The feature is well documented and sample code can be built with the project CMake\r\n",
+            "commit_timestamp": 1716820423.0
         }
     ]
 }
