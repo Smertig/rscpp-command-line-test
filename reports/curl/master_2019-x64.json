@@ -16691,6 +16691,21 @@
             "commit_ref": "53b4dfe405dca1eeff0ac48e2fc96d7782e887a7",
             "commit_message": "examples: delete unused includes\n\nDelete a bunch of unnecessary-looking headers from some examples. This\nis known to be tricky on AIX (perhaps also in other less-tested envs).\n\nLet me know if any of this looks incorrect or outright fails on some\nsystems.\n\nFollow-up to d4b85890555388bec212b75f47a5c1a48705b156 #13771\nCloses #13785\n",
             "commit_timestamp": 1716848824.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1716908781.558965,
+            "elapsed_time": 236.37636923789978,
+            "x64": true,
+            "actual_files_count": 3046,
+            "expected_files_count": 2323,
+            "memory_traffic": 42464.47568511963,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "def7d05382743ea7aa1d356d1e41dcb22ecdd4d7",
+            "commit_message": "GHA: disable TFTP tests in Windows jobs\n\nShot in the dark trying to find out which tests are\nhanging / going to an infinite loop.\n\nThe ones failing after 45 minutes (mingw-w64) or 30 minutes (MSVC).\n\nRef: https://github.com/curl/curl/pull/13599#issuecomment-2119372376\n",
+            "commit_timestamp": 1716894820.0
         }
     ]
 }

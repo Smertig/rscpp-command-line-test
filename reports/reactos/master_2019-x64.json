@@ -16486,6 +16486,21 @@
             "commit_ref": "1e75ea8a82b337124588ea78e36bdf338d6cefb7",
             "commit_message": "[SHELL32] CDefView: Implement SFVM_GETNAMELENGTH callback (#6942)\n\nImplementing missing folder view callbacks...\r\nJIRA issue: CORE-19616\r\n- Call _DoFolderViewCB on LVN_BEGINLABELEDITW message.\r\n- Send EM_SETLIMITTEXT message if the limit was set.",
             "commit_timestamp": 1716851676.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1716908784.351077,
+            "elapsed_time": 123.5748884677887,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7918.863883972168,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "c8a3c919e52102b3f2e4092a54b8276b6912d111",
+            "commit_message": "[BOOTDATA][IMM32][NTUSER] Set \"LoadIMM\" to zero\n\nWe set \"LoadIMM\" to zero in order to disable Cicero.\nThe name of \"LoadIMM\" is a brain-dead name. This name\nmeans Cicero despite of its name (brain-dead).\nThey use a human-confusing name intentionally.\n\nJIRA issue: CORE-19320\n\n- Set HKLM\\SOFTWARE\\Microsoft\\Windows NT\\\n  CurrentVersion\\IMM:LoadIMM to 0.\n- Add warning comments to the brain-dead name \"LoadIMM\".\n",
+            "commit_timestamp": 1716905842.0
         }
     ]
 }
