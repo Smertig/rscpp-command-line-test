@@ -13826,6 +13826,21 @@
             "commit_ref": "a8e35e8ebad8c3bb44d14968aa05d1acbc028247",
             "commit_message": "gh-119443: Turn off from __future__ import annotations in REPL (#119493)\n\n",
             "commit_timestamp": 1716941118.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1716995300.655762,
+            "elapsed_time": 1101.9675056934357,
+            "x64": true,
+            "actual_files_count": 1033,
+            "expected_files_count": null,
+            "memory_traffic": 49688.35359954834,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "1f481fd3275dbc12a88c16129621de19ea20e4ca",
+            "commit_message": "gh-119273: Don't run test_ioctl in a process group (#119275)\n\nPython test runner no longer runs tests using TTY (ex: test_ioctl) in\r\na process group (using setsid()). Previously, tests using TTY were\r\nskipped.",
+            "commit_timestamp": 1716986649.0
         }
     ]
 }

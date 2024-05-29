@@ -18033,6 +18033,23 @@
             "commit_ref": "7832769d329ead264aff238c06dce086b3a74922",
             "commit_message": "Revert \"[lld] Support thumb PLTs\" (#93631)\n\nReverts llvm/llvm-project#86223\r\n\r\nwindows pre-merge is broken.",
             "commit_timestamp": 1716947183.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1716996147.03211,
+            "elapsed_time": 1544.2886717319489,
+            "x64": true,
+            "actual_files_count": 2002,
+            "expected_files_count": 1661,
+            "memory_traffic": 251229.95779418945,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "6127f15e5b4834411e8f2e700e25c40490deec35",
+            "commit_message": "[PowerPC] option `-msoft-float` should not block the PC-relative address instruction (#92543)\n\nThe Prefix instruction is introduced on PowerPC ISA3_1.\r\n\r\nIn the PR,  \r\n1. The `FeaturePrefixInstrs` do not imply the `FeatureP8Vector`\r\n,`FeatureP9Vector` .\r\n2. `FeaturePrefixInstrs`  implies only the FeatureISA3_1.\r\n3. For the prefix instructions `paddi` and `pli` , they have `Predicates\r\n= [PrefixInstrs] `\r\n4. For the prefix instructions `plfs` and `plfd`, they have `Predicates\r\n= [PrefixInstrs, HasFPU] `\r\n5. For the prefix instructions \"plxv` , \"plxssp` and `plxsd` , they have\r\n`Predicates = [PrefixInstrs, HasP10Vector]`\r\n\r\nFixes #62372",
+            "commit_timestamp": 1716994380.0
         }
     ]
 }

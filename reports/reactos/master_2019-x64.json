@@ -16516,6 +16516,21 @@
             "commit_ref": "a541a468ba859e7bbf6cd1b5d812029156cf128b",
             "commit_message": "[NTGDI][FREETYPE] Unload font engine on system shut-down (#6955)\n\nCheck system integrity by explicitly\r\nreleasing the font engine.\r\nJIRA issue: CORE-9616\r\n- Use RTL_STATIC_LIST_HEAD against\r\n  g_FontListHead and\r\n  g_FontCacheListHead variables and\r\n  omit initialization of them.\r\n- Implement FreeFontSupport function.\r\n- Call FreeFontSupport in win32k!\r\n  DriverUnload function.\r\n- Fix some usages of\r\n  CONTAINING_RECORD macro.",
             "commit_timestamp": 1716943299.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1716995110.182488,
+            "elapsed_time": 83.26754307746887,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 8008.834373474121,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "dc0ed6de1e50d087dffc8fe2e22a48e1f6deffda",
+            "commit_message": "[SHELL32] SHBrowseForFolder must rename using IShellFolder (#6953)\n\nTo support renaming My Computer and other non-FS folders, one cannot convert the pidl to a path.\r\n\r\nCORE-19622",
+            "commit_timestamp": 1716991228.0
         }
     ]
 }

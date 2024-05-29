@@ -16721,6 +16721,21 @@
             "commit_ref": "f28428972045abd7d3f778525847d81c4d705731",
             "commit_message": "openssl: fix %-specifier in infof() call\n\nCloses #13816\n",
             "commit_timestamp": 1716930864.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1716995154.312367,
+            "elapsed_time": 214.29628825187683,
+            "x64": true,
+            "actual_files_count": 3050,
+            "expected_files_count": 2323,
+            "memory_traffic": 42216.25730895996,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "2b52fe4115e930e94dae75329bd0c11c79880176",
+            "commit_message": "sectransp: use common code for cipher suite lookup\n\nTake advantage of the Curl_cipher_suite_walk_str() and\nCurl_cipher_suite_get_str() functions introduced in commit fba9afe.\n\nCloses #13521\n",
+            "commit_timestamp": 1716980894.0
         }
     ]
 }

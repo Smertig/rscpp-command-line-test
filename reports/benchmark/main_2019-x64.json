@@ -17733,6 +17733,21 @@
             "commit_ref": "d77b69271091c35b1da5d47894d924832f8cfc37",
             "commit_message": "CMake: unbreak version handling for tarballs (#1793)\n\n#1742 changed the placeholder version from `0.0.0` to `v0.0.0`,\r\nbut this line which was further dealing with it, was not updated.\r\n\r\nFixes https://github.com/google/benchmark/issues/1792\r\n\r\nCo-authored-by: dominic <510002+dmah42@users.noreply.github.com>",
             "commit_timestamp": 1716891861.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1716995191.591553,
+            "elapsed_time": 117.47190260887146,
+            "x64": true,
+            "actual_files_count": 86,
+            "expected_files_count": 86,
+            "memory_traffic": 4628.172714233398,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "7f0e99af540a333108b92d792923ec7fc9e9fad9",
+            "commit_message": "cycleclock: Fix type conversion to match function return type (#1794)\n\nfixes build with clang19\r\n\r\nsrc/cycleclock.h:208:52: error: implicit conversion changes signedness: 'uint64_t' (aka 'unsigned long long') to 'int64_t' (aka 'long long') [-Werror,-Wsign-conversion]\r\n  208 |   return (static_cast<uint64_t>(cycles_hi1) << 32) | cycles_lo;\r\n      |   ~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~\r\n1 error generated.",
+            "commit_timestamp": 1716952494.0
         }
     ]
 }
