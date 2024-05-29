@@ -16501,6 +16501,21 @@
             "commit_ref": "c8a3c919e52102b3f2e4092a54b8276b6912d111",
             "commit_message": "[BOOTDATA][IMM32][NTUSER] Set \"LoadIMM\" to zero\n\nWe set \"LoadIMM\" to zero in order to disable Cicero.\nThe name of \"LoadIMM\" is a brain-dead name. This name\nmeans Cicero despite of its name (brain-dead).\nThey use a human-confusing name intentionally.\n\nJIRA issue: CORE-19320\n\n- Set HKLM\\SOFTWARE\\Microsoft\\Windows NT\\\n  CurrentVersion\\IMM:LoadIMM to 0.\n- Add warning comments to the brain-dead name \"LoadIMM\".\n",
             "commit_timestamp": 1716905842.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1716951954.596593,
+            "elapsed_time": 111.67408871650696,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7830.718673706055,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "a541a468ba859e7bbf6cd1b5d812029156cf128b",
+            "commit_message": "[NTGDI][FREETYPE] Unload font engine on system shut-down (#6955)\n\nCheck system integrity by explicitly\r\nreleasing the font engine.\r\nJIRA issue: CORE-9616\r\n- Use RTL_STATIC_LIST_HEAD against\r\n  g_FontListHead and\r\n  g_FontCacheListHead variables and\r\n  omit initialization of them.\r\n- Implement FreeFontSupport function.\r\n- Call FreeFontSupport in win32k!\r\n  DriverUnload function.\r\n- Fix some usages of\r\n  CONTAINING_RECORD macro.",
+            "commit_timestamp": 1716943299.0
         }
     ]
 }

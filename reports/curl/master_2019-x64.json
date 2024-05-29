@@ -16706,6 +16706,21 @@
             "commit_ref": "def7d05382743ea7aa1d356d1e41dcb22ecdd4d7",
             "commit_message": "GHA: disable TFTP tests in Windows jobs\n\nShot in the dark trying to find out which tests are\nhanging / going to an infinite loop.\n\nThe ones failing after 45 minutes (mingw-w64) or 30 minutes (MSVC).\n\nRef: https://github.com/curl/curl/pull/13599#issuecomment-2119372376\n",
             "commit_timestamp": 1716894820.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1716951999.701585,
+            "elapsed_time": 219.55041003227234,
+            "x64": true,
+            "actual_files_count": 3050,
+            "expected_files_count": 2323,
+            "memory_traffic": 42580.195739746094,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "f28428972045abd7d3f778525847d81c4d705731",
+            "commit_message": "openssl: fix %-specifier in infof() call\n\nCloses #13816\n",
+            "commit_timestamp": 1716930864.0
         }
     ]
 }
