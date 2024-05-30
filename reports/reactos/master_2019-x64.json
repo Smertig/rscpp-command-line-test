@@ -16546,6 +16546,21 @@
             "commit_ref": "dc0ed6de1e50d087dffc8fe2e22a48e1f6deffda",
             "commit_message": "[SHELL32] SHBrowseForFolder must rename using IShellFolder (#6953)\n\nTo support renaming My Computer and other non-FS folders, one cannot convert the pidl to a path.\r\n\r\nCORE-19622",
             "commit_timestamp": 1716991228.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1717081558.025652,
+            "elapsed_time": 92.87105393409729,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7717.364105224609,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "6d7648d723c1fa2ee04c60ec657368a3d2516899",
+            "commit_message": "[SHELL32] CDefView::InvokeContextMenuCommand must specify a showcmd (#6966)\n\nZeroMemory causes nShow to be SW_HIDE. This causes shell extensions that propagates the nShow all the way, will start child processes hidden.",
+            "commit_timestamp": 1717075349.0
         }
     ]
 }

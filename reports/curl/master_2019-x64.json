@@ -16751,6 +16751,21 @@
             "commit_ref": "3b9569c3e2b6c35c915a1760a71c3434e570f49c",
             "commit_message": "lib: prefer `var = time(NULL)` over `time(&var)`\n\nFollowing up on previous occurrences showing up as gcc warnings, replace\nthe remaining `time(&var)` calls with `var = time(NULL)`, though these\naren't specifically causing compiler warnings. These are in the TFTP\nclient code (`lib/tftp.c`), except one which is in a debug branch in\n`lib/http_aws_sigv4.c`.\n\nWhat's unexplainable is that this patch seems to mitigate TFTP tests\noften hanging or going into an infinite loop on GHA windows workflows\nwith MSYS2, mingw-w64 and MSVC (Cygwin is unaffected):\n  https://github.com/curl/curl/pull/13599#issuecomment-2119372376\nTFTP hangs did not entirely disappear though, so could be unrelated.\n\n`time()` docs:\nhttps://learn.microsoft.com/en-us/cpp/c-runtime-library/reference/time-time32-time64\nhttps://manpages.debian.org/bookworm/manpages-dev/time.2.en.html\n\nFollow-up to 58ca0a2f0743a586716ca357c382b29e3f08db69 #13800\nFollow-up to d0728c9109629ee82b855b350a4c3f1f52ee61df #13643\nCloses #13815\n",
             "commit_timestamp": 1717011928.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1717081606.970016,
+            "elapsed_time": 220.49118185043335,
+            "x64": true,
+            "actual_files_count": 3052,
+            "expected_files_count": 2323,
+            "memory_traffic": 44982.726501464844,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "dace891e38dfe5122d5cd77ff210fea61ac7a382",
+            "commit_message": "tidy-up: use consistent casing for Windows directories\n\nC:\\Windows\\System32\n\nCloses #13832\n",
+            "commit_timestamp": 1717072812.0
         }
     ]
 }
