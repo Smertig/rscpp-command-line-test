@@ -434,6 +434,21 @@
             "commit_ref": "ae95fa330e42bb3d9fdd9ff597ec7a0d17dd9674",
             "commit_message": "Replace boxed boolean with primitive boolean\n\nAvoids having to call Boolean.booleanValue when passing to method.\n\nPiperOrigin-RevId: 638837295\n",
             "commit_timestamp": 1717114955.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1717167999.2935,
+            "elapsed_time": 286.45644998550415,
+            "x64": true,
+            "actual_files_count": 1085,
+            "expected_files_count": 818,
+            "memory_traffic": 37383.76795196533,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "806be9de4df8d1081ad7a66d968670ac291942d4",
+            "commit_message": "Initial working version of messages with a custom vtable, disabled by default.\n\nWhen enabled, all message instances inject their `ClassData` object into `MessageLite` to be stored there instead of the system generated vtable pointer. It replaces all virtual functions and destructor with alternatives using the custom vtable instead.\n\nWhen disabled, this CL has no effect. The ClassData class is unchanged, and all existing virtual functions remain as they currently are.\n\nUsing a custom vtable will allow us to control the ABI of the type, opening the door to more efficient operations.\n\nPiperOrigin-RevId: 639033776\n",
+            "commit_timestamp": 1717167285.0
         }
     ]
 }

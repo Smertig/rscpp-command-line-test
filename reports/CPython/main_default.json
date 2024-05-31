@@ -13886,6 +13886,21 @@
             "commit_ref": "13a5fdc72f701c053b96abea48cd8f2775e9418e",
             "commit_message": "gh-119744: move a few functions from compile.c to flowgraph.c (#119745)\n\n",
             "commit_timestamp": 1717102506.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1717168156.385519,
+            "elapsed_time": 1104.6873033046722,
+            "x64": true,
+            "actual_files_count": 1033,
+            "expected_files_count": null,
+            "memory_traffic": 49747.74668121338,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "bcc1be39cb1d04ad9fc0bd1b9193d3972835a57c",
+            "commit_message": "gh-119585: Fix crash involving `PyGILState_Release()` and `PyThreadState_Clear()` (#119753)\n\nMake sure that `gilstate_counter` is not zero in when calling\r\n`PyThreadState_Clear()`. A destructor called from `PyThreadState_Clear()` may\r\ncall back into `PyGILState_Ensure()` and `PyGILState_Release()`. If\r\n`gilstate_counter` is zero, it will try to create a new thread state before\r\nthe current active thread state is destroyed, leading to an assertion failure\r\nor crash.",
+            "commit_timestamp": 1717167052.0
         }
     ]
 }

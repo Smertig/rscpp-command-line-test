@@ -16576,6 +16576,21 @@
             "commit_ref": "c3ec1b9ac63ec628f49d8e10c0c1d7950bb26c5a",
             "commit_message": "[SHELL32_APITEST] Stricter SHSimpleIDListFromPath tests (#6894)\n\nThe first x number of bytes in PIDLs for drive letters, folders and files are set in stone and should match Windows.",
             "commit_timestamp": 1717085919.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1717167954.512558,
+            "elapsed_time": 112.22487044334412,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7848.357490539551,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "3cc4361cca3355d446f5008f70339d03f45042bb",
+            "commit_message": "[CMAKE] Clang*: Add '-Werror=unknown-warning-option' for C/CXX (#6383)\n\n* [UDFS] Clang: Fix a #pragma\r\n\r\n'warning: unknown warning group '-Wstringop-overflow', ignored [-Wunknown-warning-option]'\r\n\r\nFollow-up to 612b1f2e6 (0.4.15-dev-1129).\r\n\r\n* [CREATESPEC] Clang: Fix a target_compile_options()\r\n\r\n'warning: unknown warning option '-Wno-stringop-overflow'; did you mean '-Wno-shift-overflow'? [-Wunknown-warning-option]'\r\n\r\nAddendum to 00ed72d7e (0.4.15-dev-1169).\r\n\r\n* [MSVCRT_WINETEST] Clang*: Fix a target_compile_options()\r\n\r\n'warning: unknown warning option '-Wno-stringop-truncation'; did you mean '-Wno-string-concatenation'? [-Wunknown-warning-option]'\r\n\r\nAddendum to commits 00ed72d7e (0.4.15-dev-1169) then f155b9377 (0.4.15-dev-4612).\r\n\r\n* [TELNET] Clang*: Fix a target_compile_options()\r\n\r\n'warning: unknown warning option '-Wno-restrict' [-Wunknown-warning-option]'\r\n\r\nAddendum to 447ef2aa4 (0.4.15-dev-4613).",
+            "commit_timestamp": 1717165571.0
         }
     ]
 }
