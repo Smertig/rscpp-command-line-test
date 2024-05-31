@@ -16766,6 +16766,21 @@
             "commit_ref": "dace891e38dfe5122d5cd77ff210fea61ac7a382",
             "commit_message": "tidy-up: use consistent casing for Windows directories\n\nC:\\Windows\\System32\n\nCloses #13832\n",
             "commit_timestamp": 1717072812.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1717124775.216232,
+            "elapsed_time": 211.24084758758545,
+            "x64": true,
+            "actual_files_count": 3052,
+            "expected_files_count": 2323,
+            "memory_traffic": 42339.01360321045,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "acb9effcdd647b6daf753526ac18c84cb903ee72",
+            "commit_message": "cf-socket: improve SO_SNDBUF update for Winsock\n\n- Rename: Curl_sndbufset => Curl_sndbuf_init\n\n- Rename: win_update_buffer_size => win_update_sndbuf_size\n\n- Save the last set SO_SNDBUF size to compare against so that we can\n  avoid setsockopt calls every second.\n\nThis is a follow-up to 0b520e12 which moved the SO_SNDBUF update check\ninto cf-socket. This change improves it further by making the function\nnames easier to understand and reducing the amount of setsockopt calls.\n\nCloses https://github.com/curl/curl/pull/13827\n",
+            "commit_timestamp": 1717091797.0
         }
     ]
 }

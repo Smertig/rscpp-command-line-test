@@ -16561,6 +16561,21 @@
             "commit_ref": "6d7648d723c1fa2ee04c60ec657368a3d2516899",
             "commit_message": "[SHELL32] CDefView::InvokeContextMenuCommand must specify a showcmd (#6966)\n\nZeroMemory causes nShow to be SW_HIDE. This causes shell extensions that propagates the nShow all the way, will start child processes hidden.",
             "commit_timestamp": 1717075349.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1717124719.816143,
+            "elapsed_time": 73.72044062614441,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7954.168891906738,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "c3ec1b9ac63ec628f49d8e10c0c1d7950bb26c5a",
+            "commit_message": "[SHELL32_APITEST] Stricter SHSimpleIDListFromPath tests (#6894)\n\nThe first x number of bytes in PIDLs for drive letters, folders and files are set in stone and should match Windows.",
+            "commit_timestamp": 1717085919.0
         }
     ]
 }
