@@ -13916,6 +13916,21 @@
             "commit_ref": "cc5cd4d93e3e079e897da9ceb1732ef16d79d01b",
             "commit_message": "statistics.fmean(): speed-up code path for non-sizeable inputs. (gh-119876)\n\n",
             "commit_timestamp": 1717193335.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1717254504.837216,
+            "elapsed_time": 1078.709084033966,
+            "x64": true,
+            "actual_files_count": 1034,
+            "expected_files_count": null,
+            "memory_traffic": 49712.92795562744,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "90ec19fd33e2452902b9788d4821f1fbf6542304",
+            "commit_message": "gh-117657: Fix TSAN race in QSBR assertion (#119887)\n\nDue to a limitation in TSAN, all reads from `PyThreadState.state` must be\r\natomic to avoid reported races.",
+            "commit_timestamp": 1717250678.0
         }
     ]
 }

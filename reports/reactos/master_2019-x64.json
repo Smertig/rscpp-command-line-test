@@ -16606,6 +16606,21 @@
             "commit_ref": "e1db293f12d24f3cd36d286f7d169aecf92afbfb",
             "commit_message": "[REGEDIT] *.rc Improve accels and harmonize a bit, especially de-DE (#6964)\n\n\r\n- all languages: Strip unintended accelerators for Cancel-buttons\r\n- many languages: had accel collision between \"&File\"-menu and \"&Favorites\" menu. It must be \"F&avrites\" for those!\r\n- de-DE: \"&Wertname:\" -> \"&Name:\" was done because this is what Windows does and to fix an accel collision between \"&Wert\" and \"&Wertname\"\r\n- de-DE: use the same name for String, DWORD, MULTISTRING, EXPANDABLESTRING in all 3 dialogs (each of the 3 dlgs used different names before), which also fixes an accel collision between \"&Schl\u00fcssel\" and \"&String\"\r\n- de-DE: structurally use \"Sc&hl\u00fcssel\", instead of mixed things\r\n- de-DE: \"&Trennen\" -> \"&Teilen\" is what Windows does\r\n- de-DE \"&\u00c4ndern\" -> \"\u00c4n&dern\" is what Windows does, and avoids accel at a special character\r\n- de-DE \"&\u00dcber\" -> \"Inf&o\" is what Windows does, and avoids accel at a special character\r\n- de-DE \"S&chl\u00fcsselnamen kopieren\" -> \"Schl\u00fcsselnamen &kopieren\" is to match another already existing \"Schl\u00fcsselnamen &kopieren\" in the file\r\n- de-DE \"A&lles ausw\u00e4hlen\" -> \"Alles &markieren\" is what Windows does\r\n- all languages: fix 26x wrong capitalization for \"Ms Shell Dlg\" -> \"MS Shell Dlg\"\r\n- use the correct fonts for some asian languages (font-size9) this was for 5 new dlgs from 0.4.15-dev'ing\r\n- fix many accelerator collisions for many languages, or leave FIXMEs for them where I found it to be better for the native speakers to act on their own in the future\r\n\r\nJIRA issue: none",
             "commit_timestamp": 1717169319.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1717254407.320653,
+            "elapsed_time": 120.46583795547485,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7868.71183013916,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "fe23a4aaeb1e760c7ebff858602910c61f7e9ee3",
+            "commit_message": "[NTOS:CM] Lock the entire registry down when we unload a hive\n\nThe PR #6649 which fixed an issue with orphaned KCBs leaking in memory which also pointed to unloaded registry hives, it also brought a problem.\nIn CmpEnumerateOpenSubKeys there is a risk of getting hit by a deadlock as we enumerate the cache table to remove empty cache entries.\n\nFundamentally CmpEnumerateOpenSubKeys locks down a KCB from cache for exclusive use in order to tear down its contents from memory but it doesn't address the fact a KCB might have already been locked in the same calling thread, leading to a recursion.\nThis leads to random hangs when unloading a hive during system startup (tipically on a clean install).\n\nThe solution here is to simply lock the whole registry when we unload a hive so that we don't have to worry the KCBs are getting tampered by anybody else. This also simplifies the code.\nAlthough locking the entire registry while other apps are doing registry related operations to other hives can cause overhead. If this turns out to be bad then we have to rethink the locking mechanism here.\n\nCORE-19539\n",
+            "commit_timestamp": 1717251467.0
         }
     ]
 }
