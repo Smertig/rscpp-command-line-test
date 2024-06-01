@@ -16796,6 +16796,21 @@
             "commit_ref": "beff006a8eecc5fc3495badae209791eb779414d",
             "commit_message": "autoconf: remove 'deeper' checks for `AC_CHECK_FUNCS`\n\nThe net effect of the deeper checks is to raise implicit function decls\non modern compilers.\n\nThese checks appear to have been added ~20 years ago, relating to an\nunverifiable claim about HP-UX. Autoconf support for the platform has\ngrown in leaps and bounds since.\n\nIt didn't cause a real problem here, but when investigating a FP this\ncame up. No evidence has been identified that this was actually broken\nin the past, and there is no evidence that this is necessary now.\n\n`-Werror=implicit-function-declarations` is enabled for both checks;\nwithout a working prototype they will both fail regardless. In the\nsecond case there will in fact never be a working prototype and\ntherefore it will always fail unconditionally.\n\n`AC_CHECK_FUNCS` does effectively the same thing as the removed checks,\nexcept it actually defines a dummy prototype to see if it links.\n\nIf `AC_CHECK_FUNCS` is broken on a given platform we have bigger\nproblems than trying to build cURL. This should also be faster.\n\nBug: https://bugs.gentoo.org/932827\nReviewed-By: Eli Schwartz <eschwartz93@gmail.com>\nCloses #13830\n",
             "commit_timestamp": 1717158785.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1717211248.964872,
+            "elapsed_time": 234.3949282169342,
+            "x64": true,
+            "actual_files_count": 3052,
+            "expected_files_count": 2323,
+            "memory_traffic": 44330.476737976074,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "8df910b79c224ce651024f0a504e7ea75cd69b14",
+            "commit_message": "curl_multi_poll.md: expand the example with an custom file descriptor\n\nCloses #13842\n",
+            "commit_timestamp": 1717194295.0
         }
     ]
 }

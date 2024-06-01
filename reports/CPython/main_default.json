@@ -13901,6 +13901,21 @@
             "commit_ref": "bcc1be39cb1d04ad9fc0bd1b9193d3972835a57c",
             "commit_message": "gh-119585: Fix crash involving `PyGILState_Release()` and `PyThreadState_Clear()` (#119753)\n\nMake sure that `gilstate_counter` is not zero in when calling\r\n`PyThreadState_Clear()`. A destructor called from `PyThreadState_Clear()` may\r\ncall back into `PyGILState_Ensure()` and `PyGILState_Release()`. If\r\n`gilstate_counter` is zero, it will try to create a new thread state before\r\nthe current active thread state is destroyed, leading to an assertion failure\r\nor crash.",
             "commit_timestamp": 1717167052.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1717211394.582566,
+            "elapsed_time": 1055.1070847511292,
+            "x64": true,
+            "actual_files_count": 1034,
+            "expected_files_count": null,
+            "memory_traffic": 49813.68370056152,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "cc5cd4d93e3e079e897da9ceb1732ef16d79d01b",
+            "commit_message": "statistics.fmean(): speed-up code path for non-sizeable inputs. (gh-119876)\n\n",
+            "commit_timestamp": 1717193335.0
         }
     ]
 }
