@@ -16636,6 +16636,21 @@
             "commit_ref": "fe23a4aaeb1e760c7ebff858602910c61f7e9ee3",
             "commit_message": "[NTOS:CM] Lock the entire registry down when we unload a hive\n\nThe PR #6649 which fixed an issue with orphaned KCBs leaking in memory which also pointed to unloaded registry hives, it also brought a problem.\nIn CmpEnumerateOpenSubKeys there is a risk of getting hit by a deadlock as we enumerate the cache table to remove empty cache entries.\n\nFundamentally CmpEnumerateOpenSubKeys locks down a KCB from cache for exclusive use in order to tear down its contents from memory but it doesn't address the fact a KCB might have already been locked in the same calling thread, leading to a recursion.\nThis leads to random hangs when unloading a hive during system startup (tipically on a clean install).\n\nThe solution here is to simply lock the whole registry when we unload a hive so that we don't have to worry the KCBs are getting tampered by anybody else. This also simplifies the code.\nAlthough locking the entire registry while other apps are doing registry related operations to other hives can cause overhead. If this turns out to be bad then we have to rethink the locking mechanism here.\n\nCORE-19539\n",
             "commit_timestamp": 1717251467.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1717340694.569169,
+            "elapsed_time": 72.51107788085938,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 8004.683296203613,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "abd34b6d90a65d13749d4ec2901d78ea4474d0bc",
+            "commit_message": "[REGEDIT] pt-PT.rc: Fix accels collisions (#6975)\n\n\r\naccels compatibility closer to Win2003 Server\r\n\r\nCo-authored-by: Joachim Henze <joachim.henze@reactos.org>\r\n",
+            "commit_timestamp": 1717322773.0
         }
     ]
 }
