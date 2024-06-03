@@ -18203,6 +18203,23 @@
             "commit_ref": "f779ec7c13bdfccd29655d13a325f34c60797a76",
             "commit_message": "[BPI] Cache LoopExitBlocks to improve compile time (#93451)\n\nThe `LoopBlock` stored in `LoopWorkList` consist of basic block and its\r\nloop data information. When iterate `LoopWorkList`, if estimated weight\r\nof a loop is not stored in `EstimatedLoopWeight`, `getLoopExitBlocks()`\r\nis called to get all exit blocks of the loop. The estimated weight of a\r\nloop is calculated by iterating over edges leading from basic block to\r\nall exit blocks of the loop. If at least one edge has unknown estimated\r\nweight, the estimated weight of loop is unknown and will not be stored\r\nin `EstimatedLoopWeight`. `LoopWorkList` can contain different blocks in\r\na same loop, so there is wasted work that calls `getLoopExitBlocks()`\r\nfor same loop multiple times.\r\n\r\nSince computing the exit blocks of loop is expensive and the loop\r\nstructure is not mutated in Branch Probability Analysis, we can cache\r\nthe result and improve compile time.\r\n\r\nWith this change, the overall compile time for a file containing a very\r\nlarge loop is dropped by around 82%.",
             "commit_timestamp": 1717381267.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1717428274.962928,
+            "elapsed_time": 1559.0436425209045,
+            "x64": true,
+            "actual_files_count": 2025,
+            "expected_files_count": 1661,
+            "memory_traffic": 253624.44969177246,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "83de21deb3de6a3b74ede098fefa469cec6bc29e",
+            "commit_message": "Revert \"[RISCV] Store only VNInfo val no in VSETVLIInfo. NFC\"\n\nAs noted in\nhttps://github.com/llvm/llvm-project/pull/93796#issuecomment-2142752336,\na better way to teach RISCVInsertVSETVLI to work without LiveIntervals\nis to set VNInfo to nullptr and teach the various methods to handle it.\nWe should try that approach first, so we no longer need this pre-commit\npatch.\n\nThis reverts commit 4b4d36654d8056546b177b3d04c352ba0b16d7ea.\n",
+            "commit_timestamp": 1717426476.0
         }
     ]
 }

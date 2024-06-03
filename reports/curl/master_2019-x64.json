@@ -16871,6 +16871,21 @@
             "commit_ref": "fd149601cc703ba0cae7ef5276880385989c740a",
             "commit_message": "GHA: fix old mingw-w64 32-bit job\n\nThis toolchain resides in the `mingw32` directory. Make sure to\nconfigure `PATH` accordingly.\n\nBefore this patch, it pointed to a non-existing `mingw64` directory,\nmaking the job use the wrong compiler (gcc 12, 64-bit).\n\nFollow-up to e838b341a08b44d4a8486fb0d3f15d12fc794c62 #12927\nCloses #13863\n",
             "commit_timestamp": 1717371244.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1717427157.898887,
+            "elapsed_time": 242.4208903312683,
+            "x64": true,
+            "actual_files_count": 3052,
+            "expected_files_count": 2323,
+            "memory_traffic": 42259.2354888916,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "4edbd5226792c6175f0abdacfb70d66984e019be",
+            "commit_message": "KNOWN_BUGS: quiche: QUIC connection is draining\n\nCloses #12037\nCloses #13867\n",
+            "commit_timestamp": 1717404370.0
         }
     ]
 }
