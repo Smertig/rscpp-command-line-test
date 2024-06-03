@@ -16855,6 +16855,21 @@
             "commit_ref": "a7e53aa1846ada1c4de6986a0d02bd7c740d2eec",
             "commit_message": "Merge pull request #25671 from savuor:rv/arithm_extend_tests\n\nTests added for mixed type arithmetic operations #25671\r\n\r\n### Changes\r\n* added accuracy tests for mixed type arithmetic operations\r\n    _Note: div-by-zero values are removed from checking since the result is implementation-defined in common case_\r\n* added perf tests for the same cases\r\n* fixed a typo in `getMulExtTab()` function that lead to dead code\r\n\r\n### Pull Request Readiness Checklist\r\n\r\nSee details at https://github.com/opencv/opencv/wiki/How_to_contribute#making-a-good-pull-request\r\n\r\n- [x] I agree to contribute to the project under Apache 2 License.\r\n- [x] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\r\n- [x] The PR is proposed to the proper branch\r\n- [x] There is a reference to the original bug report and related work\r\n- [x] There is accuracy test, performance test and test data in opencv_extra repository, if applicable\r\n      Patch to opencv_extra has the same branch name.\r\n- [x] The feature is well documented and sample code can be built with the project CMake\r\n",
             "commit_timestamp": 1717327686.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1717384055.537995,
+            "elapsed_time": 363.37423038482666,
+            "x64": true,
+            "actual_files_count": 473,
+            "expected_files_count": 459,
+            "memory_traffic": 41231.75022125244,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "337c183b9db4cfd5358b09ec8a610f449e3b8e00",
+            "commit_message": "Merge tag '4.10.0'\n",
+            "commit_timestamp": 1717352646.0
         }
     ]
 }
