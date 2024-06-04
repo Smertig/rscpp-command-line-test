@@ -17043,6 +17043,21 @@
             "commit_ref": "daf79328fc85bae9781239271ff3184153484363",
             "commit_message": "Sync to upstream/release/628 (#1278)\n\n### What's new?\r\n\r\n* Remove a case of unsound `table.move` optimization\r\n* Add Luau stack slot reservations that were missing in REPL (fixes\r\n#1273)\r\n\r\n### New Type Solver\r\n\r\n* Assignments have been completely reworked to fix a case of cyclic\r\nconstraint dependency\r\n* When indexing, if the fresh type's upper bound already contains a\r\ncompatible indexer, do not add another upper bound\r\n* Distribute type arguments over all type families sans `eq`, `keyof`,\r\n`rawkeyof`, and other internal type families\r\n* Fix a case where `buffers` component weren't read in two places (fixes\r\n#1267)\r\n* Fix a case where things that constitutes a strong ref were slightly\r\nincorrect\r\n* Fix a case where constraint dependencies weren't setup wrt `for ...\r\nin` statement\r\n\r\n### Native Codegen\r\n\r\n* Fix an optimization that splits TValue store only when its value and\r\nits tag are compatible\r\n* Implement a system to plug additional type information for custom host\r\nuserdata types\r\n\r\n---\r\n\r\n### Internal Contributors\r\n\r\nCo-authored-by: Aaron Weiss <aaronweiss@roblox.com>\r\nCo-authored-by: Alexander McCord <amccord@roblox.com>\r\nCo-authored-by: Andy Friesen <afriesen@roblox.com>\r\nCo-authored-by: Vighnesh Vijay <vvijay@roblox.com>\r\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>\r\n\r\n---------\r\n\r\nCo-authored-by: Aaron Weiss <aaronweiss@roblox.com>\r\nCo-authored-by: Andy Friesen <afriesen@roblox.com>\r\nCo-authored-by: Vighnesh <vvijay@roblox.com>\r\nCo-authored-by: Aviral Goel <agoel@roblox.com>\r\nCo-authored-by: David Cope <dcope@roblox.com>\r\nCo-authored-by: Lily Brown <lbrown@roblox.com>\r\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>",
             "commit_timestamp": 1717183098.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1717513591.695311,
+            "elapsed_time": 261.52883887290955,
+            "x64": true,
+            "actual_files_count": 447,
+            "expected_files_count": 379,
+            "memory_traffic": 30372.679069519043,
+            "repo_url": "https://github.com/luau-lang/luau",
+            "commit_ref": "daf79328fc85bae9781239271ff3184153484363",
+            "commit_message": "Sync to upstream/release/628 (#1278)\n\n### What's new?\r\n\r\n* Remove a case of unsound `table.move` optimization\r\n* Add Luau stack slot reservations that were missing in REPL (fixes\r\n#1273)\r\n\r\n### New Type Solver\r\n\r\n* Assignments have been completely reworked to fix a case of cyclic\r\nconstraint dependency\r\n* When indexing, if the fresh type's upper bound already contains a\r\ncompatible indexer, do not add another upper bound\r\n* Distribute type arguments over all type families sans `eq`, `keyof`,\r\n`rawkeyof`, and other internal type families\r\n* Fix a case where `buffers` component weren't read in two places (fixes\r\n#1267)\r\n* Fix a case where things that constitutes a strong ref were slightly\r\nincorrect\r\n* Fix a case where constraint dependencies weren't setup wrt `for ...\r\nin` statement\r\n\r\n### Native Codegen\r\n\r\n* Fix an optimization that splits TValue store only when its value and\r\nits tag are compatible\r\n* Implement a system to plug additional type information for custom host\r\nuserdata types\r\n\r\n---\r\n\r\n### Internal Contributors\r\n\r\nCo-authored-by: Aaron Weiss <aaronweiss@roblox.com>\r\nCo-authored-by: Alexander McCord <amccord@roblox.com>\r\nCo-authored-by: Andy Friesen <afriesen@roblox.com>\r\nCo-authored-by: Vighnesh Vijay <vvijay@roblox.com>\r\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>\r\n\r\n---------\r\n\r\nCo-authored-by: Aaron Weiss <aaronweiss@roblox.com>\r\nCo-authored-by: Andy Friesen <afriesen@roblox.com>\r\nCo-authored-by: Vighnesh <vvijay@roblox.com>\r\nCo-authored-by: Aviral Goel <agoel@roblox.com>\r\nCo-authored-by: David Cope <dcope@roblox.com>\r\nCo-authored-by: Lily Brown <lbrown@roblox.com>\r\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>",
+            "commit_timestamp": 1717183098.0
         }
     ]
 }

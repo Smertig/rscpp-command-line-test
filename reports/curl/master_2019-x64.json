@@ -16901,6 +16901,21 @@
             "commit_ref": "bc21c505e4d625df38e2f584ac1b7f6d9b923543",
             "commit_message": "tests: log \"Throwing away\" messages before throwing away\n\nIn case the read that follows hangs we'll get a clue as to what it was\ndoing.\n",
             "commit_timestamp": 1717459242.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1717513565.690715,
+            "elapsed_time": 230.09589743614197,
+            "x64": true,
+            "actual_files_count": 3052,
+            "expected_files_count": 2323,
+            "memory_traffic": 42225.558044433594,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "97e5e37cc8269660bc5d4a1936f10f2390b97c5a",
+            "commit_message": "GHA: show cmake error log in Windows and non-native workflows\n\nCMake configure doesn't fail often, but when it does, it helps to see\nits `CMakeFiles/CMakeConfigureLog.yaml` output. This file is present\nsince CMake v3.26:\n  https://cmake.org/cmake/help/v3.26/manual/cmake-configure-log.7.html\n\n(Older CMake versions save similar contend to\n`CMakeFiles\\CMakeOutput.log` and\n`CMakeFiles\\CMakeError.log`. This patch doesn't deal with that because\nthe workflows touched are all running a newer CMake.)\n\nAfter this patch, we dump the content if cmake fails. Syncing this with\nautotools, where we already did that.\n\nCloses #13872\n",
+            "commit_timestamp": 1717494872.0
         }
     ]
 }
