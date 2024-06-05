@@ -16916,6 +16916,21 @@
             "commit_ref": "97e5e37cc8269660bc5d4a1936f10f2390b97c5a",
             "commit_message": "GHA: show cmake error log in Windows and non-native workflows\n\nCMake configure doesn't fail often, but when it does, it helps to see\nits `CMakeFiles/CMakeConfigureLog.yaml` output. This file is present\nsince CMake v3.26:\n  https://cmake.org/cmake/help/v3.26/manual/cmake-configure-log.7.html\n\n(Older CMake versions save similar contend to\n`CMakeFiles\\CMakeOutput.log` and\n`CMakeFiles\\CMakeError.log`. This patch doesn't deal with that because\nthe workflows touched are all running a newer CMake.)\n\nAfter this patch, we dump the content if cmake fails. Syncing this with\nautotools, where we already did that.\n\nCloses #13872\n",
             "commit_timestamp": 1717494872.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1717556856.124883,
+            "elapsed_time": 236.33078718185425,
+            "x64": true,
+            "actual_files_count": 3056,
+            "expected_files_count": 2323,
+            "memory_traffic": 42688.137687683105,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "998b17ea7f0a4aecaa39c15d0e6f9ece110a41e1",
+            "commit_message": "windows: fix UWP builds, add GHA job\n\nAdd new job to test building for UWP (aka `CURL_WINDOWS_APP`).\n\nFix fallouts when building for UWP:\n- rand: do not use `BCryptGenRandom()`.\n- cmake: disable using win32 LDAP.\n- cmake: disable telnet.\n- version_win32: fix code before declaration.\n- schannel: disable `HAS_MANUAL_VERIFY_API`.\n- schannel: disable `SSLSUPP_PINNEDPUBKEY`\n  and make `schannel_checksum()` a stub.\n  Ref: e178fbd40a896f2098278ae61e1166c88e7b31d0 #1429\n- schannel: make `cert_get_name_string()` a failing stub.\n- system_win32: make `Curl_win32_impersonating()` a failing stub.\n- system_win32: try to fix `Curl_win32_init()` (untested).\n- threads: fix to use `CreateThread()`.\n- src: disable searching `PATH` for the CA bundle.\n- src: disable bold text support and capability detection.\n- src: disable `getfiletime()`/`setfiletime()`.\n- tests: make `win32_load_system_library()` a failing stub.\n- tests/server/util: make it compile.\n- tests/server/sockfilt: make it compile.\n- tests/lib3026: fix to use `CreateThread()`.\n\nSee individual commits for build error details.\n\nSome of these fixes may have better solutions, and some may not work\nas expected. The goal of this patch is to make curl build for UWP.\n\nCloses #13870\n",
+            "commit_timestamp": 1717541544.0
         }
     ]
 }
