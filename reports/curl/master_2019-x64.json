@@ -16991,6 +16991,21 @@
             "commit_ref": "b9c2a56be2980c1d2f6192006ac5d306bbb6858b",
             "commit_message": "managen: warn on excessively long help texts\n\nHelp texts at 49 characters or longer get a warning displayed because\nthey make --help output uglier and we should make an effort to keep the\nhelp texts short and succinct.\n\nThe warning is only for display, it does not break the build. That is\nleft for the future if necessary.\n\nI picked 49 because the longest current text is 48.\n\nCloses #13895\n",
             "commit_timestamp": 1717623256.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1717772769.091163,
+            "elapsed_time": 222.55689191818237,
+            "x64": true,
+            "actual_files_count": 3060,
+            "expected_files_count": 2323,
+            "memory_traffic": 44829.68078613281,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "7d934267ab185123e7eaa5e974b61527dbbf14e1",
+            "commit_message": "CURLOPT_CONNECTTIMEOUT*: clarify, document the milliseond version\n\nProvide an explanation in the CURLOPT_CONNECTTIMEOUT_MS page instead of\njust referring to the non-MS version.\n\nCloses #13905\n",
+            "commit_timestamp": 1717764460.0
         }
     ]
 }

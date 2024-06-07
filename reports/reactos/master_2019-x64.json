@@ -16786,6 +16786,21 @@
             "commit_ref": "6c7974d91f8769b15daf449d88fa980ec4bcf523",
             "commit_message": "[GITHUB] Fix toolset version for MSVC 17.10 (#6997)\n\nMSVC 17.10 now uses 14.4x for its toolset version.\r\nGitHub just upgraded to this version as seen here:\r\n- https://github.com/actions/runner-images/releases/tag/win22%2F20240603.1\r\n\r\nUse latest toolset instead of clamping to a specific minor version.",
             "commit_timestamp": 1717712540.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1717772763.375909,
+            "elapsed_time": 99.6525411605835,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 8110.743782043457,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "7e2cd98688d3ee914279b7549142cd71a0eafff4",
+            "commit_message": "[BOOTDATA][INF] Retry: Add Tahoma entry to Asian FontLink (#7001)\n\nThis is re-trial of #6985.\r\nForgot a comma and a backslash.\r\nJIRA issue: CORE-9616\r\nModify boot/bootdata/hivesft.inf.",
+            "commit_timestamp": 1717762863.0
         }
     ]
 }
