@@ -629,6 +629,21 @@
             "commit_ref": "f3c140f96c9a7cb59f02289261c70c91bb9c009f",
             "commit_message": "Add Rust support to MODULE.bazel\n\nPiperOrigin-RevId: 640804047\n",
             "commit_timestamp": 1717661055.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1717729585.863146,
+            "elapsed_time": 285.9871542453766,
+            "x64": true,
+            "actual_files_count": 1085,
+            "expected_files_count": 818,
+            "memory_traffic": 37005.318504333496,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "7dcae81096e7543890d92978f2263664bd0e9ade",
+            "commit_message": "Add serialization test and parameterize tests to verify behavior in multiple versions of the protocol buffer language.\n\nNew serialization test will verify the amount of bytes it takes to serialize a message with a field of type INT32 set to different values.\n\nPiperOrigin-RevId: 641044189\n",
+            "commit_timestamp": 1717713934.0
         }
     ]
 }

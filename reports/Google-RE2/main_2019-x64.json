@@ -18233,6 +18233,21 @@
             "commit_ref": "b91097e3989a8c8b463c0b6d7ffe96dafa5d6fad",
             "commit_message": "Add a `force-sdist` input to the Python release workflow.\n\nThe first run for this month's release failed after uploading some\nof the wheels, but before uploading the sdist, so we need a way to\nforce the sdist on a rerun if necessary.\n\nChange-Id: I3851d20cdeba02caad5f450e77cd7ef8704990d2\nReviewed-on: https://code-review.googlesource.com/c/re2/+/63170\nReviewed-by: Alex Chernyakhovsky <achernya@google.com>\nReviewed-by: Paul Wankadia <junyer@google.com>\n",
             "commit_timestamp": 1717168548.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1717729669.521784,
+            "elapsed_time": 56.7520968914032,
+            "x64": true,
+            "actual_files_count": 22,
+            "expected_files_count": null,
+            "memory_traffic": 2769.536018371582,
+            "repo_url": "https://github.com/google/re2.git",
+            "commit_ref": "e38a588a09495409575df9ec5af55cdb61831bb5",
+            "commit_message": "Try GitHub-hosted runners for Linux on ARM64.\n\nChange-Id: I453072c1a19dabc2d3ed0672ec9936d56f637f7c\nReviewed-on: https://code-review.googlesource.com/c/re2/+/63210\nReviewed-by: Ash Liu <almquist@google.com>\nReviewed-by: Paul Wankadia <junyer@google.com>\n",
+            "commit_timestamp": 1717709298.0
         }
     ]
 }

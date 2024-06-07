@@ -18298,6 +18298,21 @@
             "commit_ref": "1a0ff405498b6aac4b57cf0d95670010e5e37973",
             "commit_message": "tests: avoid immortal objects in tests (#5150)\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>",
             "commit_timestamp": 1717047655.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1717729556.106108,
+            "elapsed_time": 114.79588150978088,
+            "x64": true,
+            "actual_files_count": 219,
+            "expected_files_count": 197,
+            "memory_traffic": 13052.837623596191,
+            "repo_url": "https://github.com/pybind/pybind11",
+            "commit_ref": "9b3a2000653a002abe0fe96ce8bd002f9a67f3d4",
+            "commit_message": "fix(cmake): improved cross-compilation support (#5083)\n\n* fix(cmake): do not use Python::Interpreter when cross-compiling\r\n\r\n* chore: apply cmake-format to pybind11NewTools.cmake\r\n\r\n* fix(cmake): do not look for Python Interpreter component when cross-compiling\r\n\r\n* feat(cmake): guess Python extension suffix\r\n\r\n* fix: add pybind11GuessPythonExtSuffix.cmake to packaging test\r\n\r\n* Use PYBIND11_CROSSCOMPILING instead of CMAKE_CROSSCOMPILING\r\n\r\n* refactor: require PYBIND11_USE_CROSSCOMPILING\r\n\r\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\r\n\r\n---------\r\n\r\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\r\nCo-authored-by: Henry Schreiner <henryschreineriii@gmail.com>",
+            "commit_timestamp": 1717708674.0
         }
     ]
 }
