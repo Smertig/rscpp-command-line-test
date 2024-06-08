@@ -16816,6 +16816,21 @@
             "commit_ref": "3f6af8b8482dfc9c20ad741c496d34667cb4a394",
             "commit_message": "[RAPPS] Improve existing window re-use (#5617)\n\n- Fix small race between CreateMutex and CMainWindow creating the window, and another instance getting NULL from FindWindow.\r\n- If the existing window is minimized, it should be restored.\r\n\r\n",
             "commit_timestamp": 1717802298.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1717859154.793087,
+            "elapsed_time": 86.02265167236328,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 8022.042877197266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "3f6af8b8482dfc9c20ad741c496d34667cb4a394",
+            "commit_message": "[RAPPS] Improve existing window re-use (#5617)\n\n- Fix small race between CreateMutex and CMainWindow creating the window, and another instance getting NULL from FindWindow.\r\n- If the existing window is minimized, it should be restored.\r\n\r\n",
+            "commit_timestamp": 1717802298.0
         }
     ]
 }

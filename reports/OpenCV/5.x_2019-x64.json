@@ -17035,6 +17035,21 @@
             "commit_ref": "70df0233170a66347dd8c13190cab98b0e08fef5",
             "commit_message": "Merge pull request #25605 from alexlyulkov:al/bool-dnn\n\nAdded bool support to dnn #25605\r\n\r\nAdded bool support to dnn pipeline (CPU, OpenVINO and CUDA pipelines).\r\n\r\nAdded bool support to these layers(CPU and OpenVINO):\r\n- Equal, Greater, GreaterOrEqual, Less, LessOrEqual\r\n- Not\r\n- And, Or, Xor\r\n- Where\r\n\r\nEnabled all the conformance tests for these layers.\r\n\r\n### Pull Request Readiness Checklist\r\n\r\nSee details at https://github.com/opencv/opencv/wiki/How_to_contribute#making-a-good-pull-request\r\n\r\n- [x] I agree to contribute to the project under Apache 2 License.\r\n- [x] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\r\n- [x] The PR is proposed to the proper branch\r\n- [ ] There is a reference to the original bug report and related work\r\n- [x] There is accuracy test, performance test and test data in opencv_extra repository, if applicable\r\n      Patch to opencv_extra has the same branch name.\r\n- [x] The feature is well documented and sample code can be built with the project CMake\r\n",
             "commit_timestamp": 1717667526.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1717859226.741911,
+            "elapsed_time": 365.7186646461487,
+            "x64": true,
+            "actual_files_count": 480,
+            "expected_files_count": 480,
+            "memory_traffic": 42428.367904663086,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "70df0233170a66347dd8c13190cab98b0e08fef5",
+            "commit_message": "Merge pull request #25605 from alexlyulkov:al/bool-dnn\n\nAdded bool support to dnn #25605\r\n\r\nAdded bool support to dnn pipeline (CPU, OpenVINO and CUDA pipelines).\r\n\r\nAdded bool support to these layers(CPU and OpenVINO):\r\n- Equal, Greater, GreaterOrEqual, Less, LessOrEqual\r\n- Not\r\n- And, Or, Xor\r\n- Where\r\n\r\nEnabled all the conformance tests for these layers.\r\n\r\n### Pull Request Readiness Checklist\r\n\r\nSee details at https://github.com/opencv/opencv/wiki/How_to_contribute#making-a-good-pull-request\r\n\r\n- [x] I agree to contribute to the project under Apache 2 License.\r\n- [x] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\r\n- [x] The PR is proposed to the proper branch\r\n- [ ] There is a reference to the original bug report and related work\r\n- [x] There is accuracy test, performance test and test data in opencv_extra repository, if applicable\r\n      Patch to opencv_extra has the same branch name.\r\n- [x] The feature is well documented and sample code can be built with the project CMake\r\n",
+            "commit_timestamp": 1717667526.0
         }
     ]
 }
