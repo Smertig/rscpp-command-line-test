@@ -18407,6 +18407,23 @@
             "commit_ref": "f20d8b9dcb07188813f52b9be308325f74154196",
             "commit_message": "[SPARC][IAS] Add GNU extension for `addc`\n\nTransform `addc imm, %rs, %rd` into `addc %rs, imm, %rd`.\nThis is used in some GNU and Linux code.\n\nReviewers: s-barannikov, rorth, jrtc27, brad0\n\nReviewed By: s-barannikov\n\nPull Request: https://github.com/llvm/llvm-project/pull/94245\n",
             "commit_timestamp": 1717901926.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1717946477.054223,
+            "elapsed_time": 1486.6664872169495,
+            "x64": true,
+            "actual_files_count": 2038,
+            "expected_files_count": 1661,
+            "memory_traffic": 254628.68893432617,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "cc19374afa55b6ccafb07ef0cb6550f4222bf99f",
+            "commit_message": "[AMDGPU] Swap range metadata to attribute for workitem id. (#94871)\n\nSwap out range metadata to range attribute for calls to be able to\r\ndeprecate range metadata on calls in the future.",
+            "commit_timestamp": 1717943390.0
         }
     ]
 }
