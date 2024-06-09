@@ -18390,6 +18390,23 @@
             "commit_ref": "bca7864ffe9045e896fe0ed087150af37778eb40",
             "commit_message": "[X86] Support ATOMIC_LOAD_FP_BINOP_MI for other binops (#87524)\n\nSince we can bitcast and then do the same thing sub does in the table\r\nsection above, I figured it was trivial to add fsub, fmul, and fdiv.",
             "commit_timestamp": 1717858865.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1717903417.731216,
+            "elapsed_time": 1606.8406414985657,
+            "x64": true,
+            "actual_files_count": 2038,
+            "expected_files_count": 1661,
+            "memory_traffic": 253354.35079956055,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "f20d8b9dcb07188813f52b9be308325f74154196",
+            "commit_message": "[SPARC][IAS] Add GNU extension for `addc`\n\nTransform `addc imm, %rs, %rd` into `addc %rs, imm, %rd`.\nThis is used in some GNU and Linux code.\n\nReviewers: s-barannikov, rorth, jrtc27, brad0\n\nReviewed By: s-barannikov\n\nPull Request: https://github.com/llvm/llvm-project/pull/94245\n",
+            "commit_timestamp": 1717901926.0
         }
     ]
 }
