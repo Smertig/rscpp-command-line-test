@@ -16891,6 +16891,21 @@
             "commit_ref": "c752e8c0bebb2753adfe8bde93ec78a56bff5b64",
             "commit_message": "[SETUPLIB] FindSupportedSystemPartition(): Add missing NULL check\n\nAddendum to commit 59acff79e.\n",
             "commit_timestamp": 1718018068.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1718075138.486794,
+            "elapsed_time": 72.7774875164032,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 8037.705871582031,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "b84f2a1cdc492dc9402c684ad677035b633bd8a5",
+            "commit_message": "[KDVM] Fix definition of RtlEqualMemory() (#6988)\n\nComply with the standard documented behaviour:\n\nhttps://learn.microsoft.com/en-us/windows-hardware/drivers/ddi/wdm/nf-wdm-rtlequalmemory#return-value\n> RtlEqualMemory returns TRUE if Source1 and Source2 are equivalent; otherwise, it returns FALSE.\n\nand\nhttps://learn.microsoft.com/en-us/windows-hardware/drivers/ddi/wdm/nf-wdm-rtlcomparememory#return-value\n> [...] If all bytes match up to the specified Length value, the Length value is returned.\n",
+            "commit_timestamp": 1718051362.0
         }
     ]
 }
