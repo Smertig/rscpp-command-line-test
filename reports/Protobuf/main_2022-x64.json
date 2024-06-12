@@ -794,6 +794,21 @@
             "commit_ref": "bbf52275dbad317bad3421f3c69b5f3759eb2b23",
             "commit_message": "Auto-generate files after cl/642420355\n",
             "commit_timestamp": 1718147256.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1718204780.006085,
+            "elapsed_time": 308.11989521980286,
+            "x64": true,
+            "actual_files_count": 1085,
+            "expected_files_count": 818,
+            "memory_traffic": 37499.00037384033,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "968087eb61e18394a1e2e3e6bd3ab6eaf8ecb36e",
+            "commit_message": "protos abrogation stage 1 - rename :: hpb for protos_generator\n\nIn this first stage, we rename the directory from protos_generator to hpb_generator, updating all necessary BUILD files and #includes.\n\nPiperOrigin-RevId: 642600953\n",
+            "commit_timestamp": 1718200389.0
         }
     ]
 }

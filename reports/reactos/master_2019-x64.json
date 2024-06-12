@@ -16936,6 +16936,21 @@
             "commit_ref": "bc6c731db3619c308092f019ed60ff620704f6ec",
             "commit_message": "[KERNEL32_VISTA][SDK] Move SRW definitions to NDK (#6806)\n\nMove SRW and condition variable definitions out of kernel32_vista and into the NDK.\r\n\r\nEssentially grabbed from PR #1190\r\nTrying to reduce diff needed for Rtl/ntdll sync.",
             "commit_timestamp": 1718136237.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1718204845.688585,
+            "elapsed_time": 154.7823929786682,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7426.343559265137,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "13b69725008a712640da158c3e0657823df54a1f",
+            "commit_message": "[FONTS] Tahoma: Remove bitmap glyph workaround (#7012)\n\nOur Tahoma font file had a workaround\r\nto make bitmap glyphs working.\r\nThis workaround is no more necessary\r\nbecause new FontForge doesn't have\r\nthis bug.\r\nJIRA issue: CORE-9616\r\n- Remove \u300c\u3044\u3046\u304b\u3072\u306e\u3093\u300d workaround\r\n  (See http://www.electronicdissonance.com/2010/01/raster-fonts-in-visual-studio-2010.html ).\r\n- Remove Traditional Chinese codepage.\r\nVersion 0.020 khmz.",
+            "commit_timestamp": 1718190775.0
         }
     ]
 }
