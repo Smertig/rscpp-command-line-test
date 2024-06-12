@@ -17111,6 +17111,21 @@
             "commit_ref": "69738a9d64f46e0f555d3cfc4bf7d01de1e4178a",
             "commit_message": "ENH: Test QuadEdgeMeshEulerOperatorCreateCenterVertexFunction GetNameOfClass\n",
             "commit_timestamp": 1717709051.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1718161929.015707,
+            "elapsed_time": 224.93921947479248,
+            "x64": true,
+            "actual_files_count": 100,
+            "expected_files_count": null,
+            "memory_traffic": 26429.28741455078,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "5431e0e8d94a0a2e93d4da4afd709f8714fafa47",
+            "commit_message": "COMP: Fix python wrapping build state to match python version\n\nIf initially configured with python >= 3.11 before selecting a\npython version <3.11 as the python environment, then the\nstate of the ITK(USE_PYTHON_LIMITED_API was incorrecly\ncached to retain the compiler settings desired for\nbuilding with the original 3.11 python version.\n\nPy_buffer is only included as part of the limited\npython API in 3.11 or greater versions.\n\nCompilation would fail due to building with\n-DPy_LIMITED_API to restrict the python interfaces\navailable.\n",
+            "commit_timestamp": 1718142358.0
         }
     ]
 }

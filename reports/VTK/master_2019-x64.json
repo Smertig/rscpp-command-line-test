@@ -16050,6 +16050,21 @@
             "commit_ref": "50ca2c90074908d9a7851d92d3f3d49a034b6b62",
             "commit_message": "Merge topic 'WebGPUComputeAPI'\n\n6e105876e90 CMake fixes for VTK install\nff60de6b7dd Compute API v1 - closes vtk/vtk#19319\n\nAcked-by: Kitware Robot <kwrobot@kitware.com>\nTested-by: buildbot <buildbot@kitware.com>\nReviewed-by: Thomas Galland <thomas.galland@kitware.com>\nMerge-request: !11165\n",
             "commit_timestamp": 1718106065.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": "vtkCommonCoreCxxTests",
+            "timestamp": 1718161827.849816,
+            "elapsed_time": 185.32709312438965,
+            "x64": true,
+            "actual_files_count": 81,
+            "expected_files_count": 68,
+            "memory_traffic": 24082.289306640625,
+            "repo_url": "https://gitlab.kitware.com/vtk/vtk.git",
+            "commit_ref": "69105f2217d216e033215ad3a6b8a8d8461b0844",
+            "commit_message": "Merge topic 'fix-clang-tidy-issues'\n\n8f7e8113094 Remove duplicate include in TestBasisFunctions.cxx\nc39e23be613 Use reserve and emplace_back in vtkCellGrid\n11eeb948727 Make vtkCellGridCopyQuery::GetCellAttributeIds return const ref\n1be6de4edf4 Use default keyword for vtkIOSSCellGridReader destructor\nf2f7db082b8 Use .data() instead of address of first element\n\nAcked-by: Kitware Robot <kwrobot@kitware.com>\nAcked-by: buildbot <buildbot@kitware.com>\nReviewed-by: David Thompson <david.thompson@kitware.com>\nMerge-request: !11211\n",
+            "commit_timestamp": 1718160311.0
         }
     ]
 }
