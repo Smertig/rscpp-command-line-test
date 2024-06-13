@@ -17171,6 +17171,21 @@
             "commit_ref": "267c3b31e911dc96c2445c0342bab7b827f9c0a8",
             "commit_message": "request: change the struct field bodywrites to a bool, only for hyper\n\nOnly hyper needs to know this, and it can use it as a boolean.\n\nCloses #13928\n",
             "commit_timestamp": 1718201332.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1718291212.646959,
+            "elapsed_time": 250.4000973701477,
+            "x64": true,
+            "actual_files_count": 3060,
+            "expected_files_count": 2323,
+            "memory_traffic": 42629.59777069092,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "ea12afd5ea4af70b5bfbfab314e186ada1171b19",
+            "commit_message": "GHA: detect and warn for more English contractions\n\nAs we try to avoid them in curl documentation\n\nCloses #13940\n",
+            "commit_timestamp": 1718288469.0
         }
     ]
 }

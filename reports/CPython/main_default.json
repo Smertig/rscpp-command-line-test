@@ -14276,6 +14276,21 @@
             "commit_ref": "030b452e34bbb0096acacb70a31915b9590c8186",
             "commit_message": "gh-120418: Don't assume wheeldata is deleted if `WHEEL_PKG_DIR` is set (#120419)\n\nRemove wheeldata from both sides of the `assertEqual`, so that we're\r\n*actually* ignoring it from the test set.\r\n\r\nThis test is only making assertions about the source tree, no code is\r\nbeing executed that would do anything different based on the value of\r\n`WHEEL_PKG_DIR`.",
             "commit_timestamp": 1718219976.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1718291322.891821,
+            "elapsed_time": 1372.260127067566,
+            "x64": true,
+            "actual_files_count": 1034,
+            "expected_files_count": null,
+            "memory_traffic": 49899.731857299805,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "2078eb45ca0db495972a20fcaf96df8fcf48451d",
+            "commit_message": "gh-120397: Optimize str.count() for single characters (#120398)\n\n",
+            "commit_timestamp": 1718288939.0
         }
     ]
 }
