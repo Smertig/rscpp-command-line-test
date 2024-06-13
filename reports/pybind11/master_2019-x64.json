@@ -18478,6 +18478,21 @@
             "commit_ref": "ab955f158c0f34320d0e65048459a6495f62978e",
             "commit_message": "Fix refcount bug involving trampoline functions with `PyObject *` return type. (#5156)\n\n* Transfer diff from pybind11k fork as-is. New tests are still missing.\r\n\r\n* Add `PYBIND11_WARNING_DISABLE_MSVC(4127)` into `PYBIND11_OVERRIDE_IMPL` macro.\r\n\r\n* Add test_trampoline_with_pyobject_ptr_return()\r\n\r\n* Resolve clang-tidy error: use auto when initializing with a template cast to avoid duplicating the type name [modernize-use-auto,-warnings-as-errors]\r\n\r\n* Disabled checking refcount when building with PyPy.\r\n\r\n* Clang 3.6, 3.7, 3.9 compatibility.\r\n\r\n```\r\n/__w/pybind11/pybind11/tests/test_type_caster_pyobject_ptr.cpp:23:13: error: definition of implicit copy constructor for 'WithPyObjectPtrReturn' is deprecated because it has a user-declared destructor [-Werror,-Wdeprecated]\r\n    virtual ~WithPyObjectPtrReturn() = default;\r\n            ^\r\n```\r\n\r\n* Minor clean-up of production code changes.\r\n\r\n* Add missing `override` (to resolve clang-tidy error).\r\n\r\n* Move PYBIND11_WARNING_POP for a better clang-format outcome.",
             "commit_timestamp": 1718139652.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1718248060.557335,
+            "elapsed_time": 172.98584699630737,
+            "x64": true,
+            "actual_files_count": 219,
+            "expected_files_count": 197,
+            "memory_traffic": 13081.546882629395,
+            "repo_url": "https://github.com/pybind/pybind11",
+            "commit_ref": "ab955f158c0f34320d0e65048459a6495f62978e",
+            "commit_message": "Fix refcount bug involving trampoline functions with `PyObject *` return type. (#5156)\n\n* Transfer diff from pybind11k fork as-is. New tests are still missing.\r\n\r\n* Add `PYBIND11_WARNING_DISABLE_MSVC(4127)` into `PYBIND11_OVERRIDE_IMPL` macro.\r\n\r\n* Add test_trampoline_with_pyobject_ptr_return()\r\n\r\n* Resolve clang-tidy error: use auto when initializing with a template cast to avoid duplicating the type name [modernize-use-auto,-warnings-as-errors]\r\n\r\n* Disabled checking refcount when building with PyPy.\r\n\r\n* Clang 3.6, 3.7, 3.9 compatibility.\r\n\r\n```\r\n/__w/pybind11/pybind11/tests/test_type_caster_pyobject_ptr.cpp:23:13: error: definition of implicit copy constructor for 'WithPyObjectPtrReturn' is deprecated because it has a user-declared destructor [-Werror,-Wdeprecated]\r\n    virtual ~WithPyObjectPtrReturn() = default;\r\n            ^\r\n```\r\n\r\n* Minor clean-up of production code changes.\r\n\r\n* Add missing `override` (to resolve clang-tidy error).\r\n\r\n* Move PYBIND11_WARNING_POP for a better clang-format outcome.",
+            "commit_timestamp": 1718139652.0
         }
     ]
 }

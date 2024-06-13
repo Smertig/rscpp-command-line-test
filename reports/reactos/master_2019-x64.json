@@ -16951,6 +16951,21 @@
             "commit_ref": "13b69725008a712640da158c3e0657823df54a1f",
             "commit_message": "[FONTS] Tahoma: Remove bitmap glyph workaround (#7012)\n\nOur Tahoma font file had a workaround\r\nto make bitmap glyphs working.\r\nThis workaround is no more necessary\r\nbecause new FontForge doesn't have\r\nthis bug.\r\nJIRA issue: CORE-9616\r\n- Remove \u300c\u3044\u3046\u304b\u3072\u306e\u3093\u300d workaround\r\n  (See http://www.electronicdissonance.com/2010/01/raster-fonts-in-visual-studio-2010.html ).\r\n- Remove Traditional Chinese codepage.\r\nVersion 0.020 khmz.",
             "commit_timestamp": 1718190775.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1718247995.475591,
+            "elapsed_time": 96.92528104782104,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7925.845611572266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "d73a83824593d6d9c03f85ebdba716dd058e5d4f",
+            "commit_message": "[RAPPS] Load icons on background thread (#6881)\n\n- Load icons on background thread to massively reduce loading time.\r\n\r\n- Use SM_CXICON sized icons consistently instead of hardcoding 32 in some places.\r\n",
+            "commit_timestamp": 1718238041.0
         }
     ]
 }

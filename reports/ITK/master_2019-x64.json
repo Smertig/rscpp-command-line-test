@@ -17141,6 +17141,21 @@
             "commit_ref": "f448e3e273045bfe9be4f1620c0bdb372e90ca5f",
             "commit_message": "COMP: Prefer initialization over constructor assignment\n\nRemoval of ITKV4 API conditional code makes this easier to\ninitialize consistently.\n",
             "commit_timestamp": 1718202029.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1718248316.63985,
+            "elapsed_time": 244.8655300140381,
+            "x64": true,
+            "actual_files_count": 100,
+            "expected_files_count": null,
+            "memory_traffic": 26192.1240234375,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "a2707a8bcbfc2f0ebc917386a23aa2ac6ffae943",
+            "commit_message": "STYLE: Add `constexpr` to `if (Dimension ...)` statements\n\nMade it clearer that the condition of these `if` statements can be evaluated at\ncompile-time. Cases found by the regular expression ` if \\(\\w*Dimension `.\n\nAlso addressed `-Wunused-but-set-variable` warnings from ITK.Linux\n(Ubuntu 9.4.0-1ubuntu1~20.04.2) saying:\n\n> itkSobelOperator.hxx: warning: variable 'center' set but not used\n> itkJensenHavrdaCharvatTsallisPointSetMetricTest.cxx: warning: variable 'metricValues2D' set but not used\n> itkJensenHavrdaCharvatTsallisPointSetMetricTest.cxx: warning: variable 'metricValues3D' set but not used\n",
+            "commit_timestamp": 1718211806.0
         }
     ]
 }
