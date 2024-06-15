@@ -17011,6 +17011,21 @@
             "commit_ref": "e8b88cf879fc378ac512a3f41044145a39b32adc",
             "commit_message": "Revert \"[BOOT] Don't create CSIDL_ADMINTOOLS folder in initial (#6551)\" (#7017)\n\nReverts #6551\r\nThis caused the non-English programs menu\r\nitems to not be populated.\r\nJIRA issue: CORE-12328 will have to be\r\nreopened afterwards and approached\r\ndifferently\r\nJIRA issue: CORE-19652 will get resolved",
             "commit_timestamp": 1718330894.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1718463974.805552,
+            "elapsed_time": 95.80049061775208,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7965.482551574707,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "365c2c1ce38a34efddea4b444f4eab3c7fed7677",
+            "commit_message": "[HAL:APIC] Fix HalSetTimeIncrement\n\nFix calculation of clock rate. Previously it would go above the maximum, causing issues with KeUpdateSystemTime.\n",
+            "commit_timestamp": 1718454140.0
         }
     ]
 }
