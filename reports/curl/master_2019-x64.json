@@ -17201,6 +17201,21 @@
             "commit_ref": "cb5c7039e89fa3184f4f9396d8d9b967ee4f6256",
             "commit_message": "transfer: set CSELECT_IN if there is data pending\n\nWhen aborting the transfer loop early, like when there is rate limiting\nin effect, there might be buffered data already read off the socket so\nthe socket might not signal reability. Therefore we must set the\nCSELECT_IN manually if data_pending_() suggests there might be more data\nto get. This is particularly noticeable with SSH when the underlying\nlibrary has drained the socket and holds pending data in its buffer.\n\nReported-by: alervd on github\nFixes #13695\nCloses #13943\n",
             "commit_timestamp": 1718301449.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1718420778.303445,
+            "elapsed_time": 213.36119842529297,
+            "x64": true,
+            "actual_files_count": 3060,
+            "expected_files_count": 2323,
+            "memory_traffic": 42190.03155517578,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "aab0c16990ff4cccbb68ab9fa9c81823b288fdcc",
+            "commit_message": "RELEASE-NOTES: synced\n",
+            "commit_timestamp": 1718364606.0
         }
     ]
 }
