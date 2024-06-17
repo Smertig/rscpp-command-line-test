@@ -18662,6 +18662,23 @@
             "commit_ref": "15bb02650e26875c48889053d6a9697444583721",
             "commit_message": "[C++20] [Modules] [Itanium ABI] Generate the vtable in the module unit of dynamic classes (#75912)\n\nClose https://github.com/llvm/llvm-project/issues/70585 and reflect\r\nhttps://github.com/itanium-cxx-abi/cxx-abi/issues/170.\r\n\r\nThe significant change of the patch is: for dynamic classes attached to\r\nmodule units, we generate the vtable to the attached module units\r\ndirectly and the key functions for such classes is meaningless.",
             "commit_timestamp": 1718591135.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1718637728.610982,
+            "elapsed_time": 1529.8815758228302,
+            "x64": true,
+            "actual_files_count": 2041,
+            "expected_files_count": 1661,
+            "memory_traffic": 254372.70637512207,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "c659e3a3f8ab797e65ca72a969b74cd06b1dfbd2",
+            "commit_message": "[TableGen][Docs] Fix `!range` markup (#95540)\n\n",
+            "commit_timestamp": 1718636037.0
         }
     ]
 }
