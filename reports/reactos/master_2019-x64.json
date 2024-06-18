@@ -17086,6 +17086,21 @@
             "commit_ref": "9164419c9c516c9b656d22489993b6d57b475735",
             "commit_message": "[FONTS] Retry: Add our 'Microsoft Sans Serif' font (#7022)\n\nRetrial of #3818.\r\nJIRA issue: CORE-16435\r\nThe font name is \"Microsoft Sans Serif\". This font is not Microsoft's font.\r\nThis font was not a solution of CORE-16435 but we add this font as a side\r\nproduct of CORE-16435.\r\n- Add media/fonts/micross.ttf as \"Microsoft Sans Serif\" font.\r\n- The font height is 14%-shrinked from #3818.\r\n- Add media/fonts/doc/MicrosoftSansSerif/LICENSE_OFL.txt.\r\n- Modify CMakeLists.txt to add the font.\r\n- Improve \"J\" and \"Q\".\r\nVersion: 3\r\nLicense: SIL Open Font License 1.1",
             "commit_timestamp": 1718500097.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1718680033.118257,
+            "elapsed_time": 132.3807773590088,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7973.920654296875,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "32d615fc10e183094f9e01e9cf8889a20b8aa28a",
+            "commit_message": "[DD] Keep the network drivers infs 8.3 like on MS Windows (#7007)\n\n\r\nWindows has all its network drivers inf files in 8.3.\r\n\r\nThis is an addendum to 0.4.15-dev-52-g 019f21ee1d764dff8586acc847a299714e83977a\r\nwhich moved us further away from our target.\r\n\r\nThe commit on its own was a good idea actually to get the inf into the drivers directory\r\nand therefore simplifies adding and excluding drivers more locally (e.g. excluding works by\r\nadding a single hashtag within the specific drivers CMakeLists.txt now).\r\n\r\nBut that cool feature doesn't require us to move away from our target.\r\n\r\nFor the record:\r\nThe historic netrtpnt.inf and netisa.inf (both 8.3) have been merged to\r\nnetne2000.inf (not 8.3) by 0.4.15-dev-2763-g 6924b8ff3985224a2d094ce509e4b843f387ab32\r\nUnification of that was cool too,\r\nbut again: 8.3 is superior. Therefore netne.inf for that.\r\n\r\nWorst of all: Since the .inf files did contain their filename within a comment also, that means\r\nthe historic renaming by the mentioned commit invalidated that comment.\r\nnetamd.inf fixed by restoring the ancient filename before 0.4.15-dev-52-g 019f21ee1d764dff8586acc847a299714e83977a\r\nnetrtl.inf fixed by restoring the ancient filename before 0.4.15-dev-52-g 019f21ee1d764dff8586acc847a299714e83977a\r\nnetne.inf I fixed the comment manually.",
+            "commit_timestamp": 1718656891.0
         }
     ]
 }

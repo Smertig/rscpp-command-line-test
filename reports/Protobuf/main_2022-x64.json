@@ -944,6 +944,21 @@
             "commit_ref": "40ffd46cec1291e1320e46a134c47dd23a74ff43",
             "commit_message": "Automated rollback of commit a30b25578a0435c9c692f9a54b7b060a234dc6b3.\n\nPiperOrigin-RevId: 643407401\n",
             "commit_timestamp": 1718390260.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1718680019.701051,
+            "elapsed_time": 283.92511773109436,
+            "x64": true,
+            "actual_files_count": 1085,
+            "expected_files_count": 818,
+            "memory_traffic": 37396.23735046387,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "9f6a8bd1fa12bfd4e5bc276677b3a69fa4709a3e",
+            "commit_message": "Removes msvc warning in map (#17013)\n\nHi,\nWe get a compiler warning in MSVC that a signed/unsigned comparison is executed.\n\nThe warning is at around line 1073 in src/google/protobuf/map.h\n```cpp\nABSL_DCHECK_GE(new_num_buckets, kMinTableSize); // <-- signed/unsigned comparison\nconst auto old_table = table_;\nconst map_index_t old_table_size = num_buckets_;\nnum_buckets_ = new_num_buckets;\n```\n\nThis is due to `kMinTableSize` is a enum value. Probably a C++98 way to enforce constexpr.\n\nThis PR changes `kMinTableSize` to be a constexpr unsigned `map_index_t` and removes the casts instead of fixing the warning with a cast at ne 1073.\nIt seems like `kMinTableSize` is correlated with the `TableSize` of this class, which is map_index_t. Therefore the min value can at maximum the max value of map_index_t. And the min value of `kMinTableSize` can also not be negative, as this makes no sense.\n\nIt is also nicer to have fewer casts.\n\nCloses #17013\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/17013 from TinyTinni:removes-msvc-warning-map 4f954e8c9bf99a550134345a0086e07fe1c9707c\nPiperOrigin-RevId: 644207177\n",
+            "commit_timestamp": 1718676810.0
         }
     ]
 }
