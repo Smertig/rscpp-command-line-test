@@ -17291,6 +17291,21 @@
             "commit_ref": "f7f9bd64d4153c45ecde1e1fed20e97275bda6aa",
             "commit_message": "STYLE: Default copy and move of `ImageIteratorWithIndex`\n\nUsing `ITK_DEFAULT_COPY_AND_MOVE`.\n",
             "commit_timestamp": 1718390213.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1718723494.535962,
+            "elapsed_time": 250.59918761253357,
+            "x64": true,
+            "actual_files_count": 100,
+            "expected_files_count": null,
+            "memory_traffic": 26054.917121887207,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "328606b71b63048a98a29d4fa4875db5a8db8c96",
+            "commit_message": "ENH: Deprecate unused constructor call\n\nThese constructor signatures are not used, and are\nnot necessary to implement the behavior.\n\nThe derived unused constructors in derived classes (11) are\nalso be deprecated, when MatrixOffsetTransformBase(const MatrixType &,\nconst OutputVectorType &) is deprecated:\n\nAffineTransform(const MatrixType & matrix, const OutputVectorType & offset);\nComposeScaleSkewVersor3DTransform(const MatrixType & matrix, const OutputVectorType & offset);\nFixedCenterOfRotationAffineTransform(const MatrixType & matrix, const OutputVectorType & offset);\nQuaternionRigidTransform(const MatrixType & matrix, const OutputVectorType & offset);\nRigid3DTransform(const MatrixType & matrix, const OutputVectorType & offset);\nScalableAffineTransform(const MatrixType & matrix, const OutputVectorType & offset);\nScaleSkewVersor3DTransform(const MatrixType & matrix, const OutputVectorType & offset);\nScaleVersor3DTransform(const MatrixType & matrix, const OutputVectorType & offset);\nSimilarity3DTransform(const MatrixType & matrix, const OutputVectorType & offset);\nVersorRigid3DTransform(const MatrixType & matrix, const OutputVectorType & offset);\nVersorTransform(const MatrixType & matrix, const OutputVectorType & offset);\n\nThese 11 constructors all directly or indirectly call\nMatrixOffsetTransformBase(const MatrixType &, const OutputVectorType &).\nBut none of them are tested, it appears that they aren't even\ncompiled!!! At least not at the CI. And they are all protected, so they\ncan not be used in the public API.\n\nDisabled GTest that used now deprecated interface.\n",
+            "commit_timestamp": 1718715326.0
         }
     ]
 }
