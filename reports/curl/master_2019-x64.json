@@ -17336,6 +17336,21 @@
             "commit_ref": "04739054cdac5a0614fb94e3655e313c03399f35",
             "commit_message": "TODO: TLS channel binding\n\nCloses #13483\n",
             "commit_timestamp": 1718699424.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1718809665.373869,
+            "elapsed_time": 247.25665497779846,
+            "x64": true,
+            "actual_files_count": 3060,
+            "expected_files_count": 2323,
+            "memory_traffic": 45064.82830810547,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "df2fbc27775b30da6abd3daa2640042e1ed0dd88",
+            "commit_message": "unit2604: use 'unitfail' instead of 'error' variable\n\nSince the framework is already returning that variable by default.\nAvoids a warning for unreachable code.\n\nReported-by: Tal Regev\nFixes #13967\nCloses #13973\n",
+            "commit_timestamp": 1718797056.0
         }
     ]
 }

@@ -17321,6 +17321,21 @@
             "commit_ref": "abb592882a3f4665bdfd7ff4ce835bd3862b835d",
             "commit_message": "STYLE: Simplify code by calling `ProcessObject::MakeRequiredOutputs`\n\nReduced amount of duplicate code in constructors that \"make\" all of their\nrequired outputs.\n",
             "commit_timestamp": 1718730086.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1718809911.191895,
+            "elapsed_time": 252.7618179321289,
+            "x64": true,
+            "actual_files_count": 100,
+            "expected_files_count": null,
+            "memory_traffic": 25909.994750976562,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "9979c7d7c9e08173fb8e0768ba806b34e71ca013",
+            "commit_message": "PERF: Add fast `noexcept` \"move semantics\" to `Array2D`\n\nAdded a `noexcept` move-constructor and move-assignment operator to `Array2D`,\nwhich both _move_ the data of the `Array2D`.\n\nPreviously, an attempt to \"move\" an `Array2D` would have done an expensive copy.\n",
+            "commit_timestamp": 1718800735.0
         }
     ]
 }
