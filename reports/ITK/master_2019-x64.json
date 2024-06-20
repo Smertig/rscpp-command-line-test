@@ -17351,6 +17351,21 @@
             "commit_ref": "b5771fa83f4f1f275c8fbdd574d91b006a0368b4",
             "commit_message": "Merge pull request #4665 from andrei-sandor/WDeprecated\n\nWdeprecated",
             "commit_timestamp": 1718827845.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1718896337.535858,
+            "elapsed_time": 249.1163513660431,
+            "x64": true,
+            "actual_files_count": 100,
+            "expected_files_count": null,
+            "memory_traffic": 26164.294593811035,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "87bcabf7f7bae4906f183952c5a43b16e99cf390",
+            "commit_message": "COMP: macOS-11 Azure CI environment EOL\n\nThe macOS-11 environment is deprecated and scheduled\nto be removed on June 28th, 2024.\n\nUpdate to macos-12 (also Intel) because macos-14 images\nare ARM and the ARM testing is done with GitHub Actions.\n",
+            "commit_timestamp": 1718888438.0
         }
     ]
 }

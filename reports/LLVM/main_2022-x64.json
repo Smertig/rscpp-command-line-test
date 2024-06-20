@@ -18764,6 +18764,23 @@
             "commit_ref": "fa0666876cdf11162af341911b99311a56be2274",
             "commit_message": "[mlir][linalg] Fix numerical issue with softmax (#96090)\n\nFor more info:\r\nhttps://github.com/iree-org/iree/issues/17670#issuecomment-2167591878",
             "commit_timestamp": 1718851117.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1718897004.471864,
+            "elapsed_time": 1583.3384325504303,
+            "x64": true,
+            "actual_files_count": 2043,
+            "expected_files_count": 1661,
+            "memory_traffic": 254176.0140914917,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "e3eb12cce97fa75d1d2443bcc2c2b26aa660fe34",
+            "commit_message": "[Clang][AMDGPU] Add a builtin for `llvm.amdgcn.make.buffer.rsrc` intrinsic (#95276)\n\nDepends on https://github.com/llvm/llvm-project/pull/94830.",
+            "commit_timestamp": 1718895714.0
         }
     ]
 }
