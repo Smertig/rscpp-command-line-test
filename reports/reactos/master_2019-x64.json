@@ -17176,6 +17176,21 @@
             "commit_ref": "cd88a97115b74b55e7ebd4ec7ff6fba732c5bf18",
             "commit_message": "[NTUSER] Fix popup menu positioning for Miranda IM (#6981)\n\n\r\nCORE-17838",
             "commit_timestamp": 1718841312.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1718939126.975947,
+            "elapsed_time": 74.48334312438965,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7979.6157150268555,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "99f0937fd0b6473691bc36e390d66b8affe76caf",
+            "commit_message": "[SETUPLIB][USETUP] Finish unification of extended and primary/logical partitions\n\nSee commits ebcf3cf38 and c9c6902f0 (PR #5837)\n\nIn addition, correctly set the type of extended partition being used,\ndepending on whether it is contained below or above the 1024-cylinder\nboundary (tested on NT).\n",
+            "commit_timestamp": 1718896911.0
         }
     ]
 }

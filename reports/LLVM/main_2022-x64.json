@@ -18781,6 +18781,23 @@
             "commit_ref": "e3eb12cce97fa75d1d2443bcc2c2b26aa660fe34",
             "commit_message": "[Clang][AMDGPU] Add a builtin for `llvm.amdgcn.make.buffer.rsrc` intrinsic (#95276)\n\nDepends on https://github.com/llvm/llvm-project/pull/94830.",
             "commit_timestamp": 1718895714.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1718940170.213519,
+            "elapsed_time": 1560.429357767105,
+            "x64": true,
+            "actual_files_count": 2044,
+            "expected_files_count": 1661,
+            "memory_traffic": 254497.1298675537,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "7b906d46f6e6915f32718dd5b313ba47a7cec259",
+            "commit_message": "[clang-cl][AST] Fix auto NTTP MSVC 1920+ mangling for pointer types (#92477)\n\nhttps://godbolt.org/z/G1K8Wszn9 for reference.\r\n\r\nStarting with MSVC 1920+, VS2019, C++17 auto NTTP now adds `M <type>` to\r\nthe mangled name to avoid name collisions with different deduced types.\r\nThis PR fixes pointers. Pointers to members will be fixed in an upcoming\r\nPR.\r\n\r\nHere is a small example. The godbolt has more thorough examples.\r\n```\r\ntemplate<auto>\r\nstruct AutoParmTemplate\r\n{\r\n    AutoParmTemplate() {}\r\n};\r\n\r\nint i;\r\n\r\nint main()\r\n{\r\n    // MSVC 1916: ??0?$AutoParmTemplate@$1?i@@3HA@@QEAA@XZ\r\n    // MSVC 1929: ??0?$AutoParmTemplate@$MPEAH1?i@@3HA@@QEAA@XZ\r\n    // Clang: ??0?$AutoParmTemplate@$1?i@@3HA@@QEAA@XZ\r\n    AutoParmTemplate<&i> x;\r\n}\r\n```",
+            "commit_timestamp": 1718938157.0
         }
     ]
 }
