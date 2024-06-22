@@ -17410,6 +17410,21 @@
             "commit_ref": "acd16e384fe6253fb082afe33539ede6506a98e1",
             "commit_message": "Merge pull request #25773 from eplankin:eplankin/fix_layout\n\nfix for IPP",
             "commit_timestamp": 1718977890.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1719025648.24672,
+            "elapsed_time": 357.953515291214,
+            "x64": true,
+            "actual_files_count": 473,
+            "expected_files_count": 459,
+            "memory_traffic": 41220.52014160156,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "3f13ce797b89b4bc83a3caddc682ea2158c3f32c",
+            "commit_message": "Merge pull request #25779 from fengyuentau:dnn/fix_onnx_depthtospace\n\ndnn: add DepthToSpace and SpaceToDepth #25779\r\n\r\nWe are working on updating WeChat QRCode module. One of the new models is a fully convolutional model and hence it should be able to run with different input shapes. However,  it has an operator `DepthToSpace`, which is parsed as a subgraph of `Reshape -> Permute -> Reshape` with a fixed shape getting during parsing. The subgraph itself is not a problem, but the true problem is the subgraph with a fixed input and output shape regardless input changes. This does not allow the model to run with different input shapes.\r\n\r\nSolution is to add a dedicated layer for DepthtoSpace and SpaceToDepth.\r\n\r\nBackend support:\r\n\r\n- [x] CPU\r\n- [x] CUDA\r\n- [x] OpenCL\r\n- [x] OpenVINO\r\n- [x] CANN\r\n- [x] TIMVX\r\n-  ~Vulkan~ (missing fundamental tools, like permutation and reshape)\r\n\r\n### Pull Request Readiness Checklist\r\n\r\nSee details at https://github.com/opencv/opencv/wiki/How_to_contribute#making-a-good-pull-request\r\n\r\n- [x] I agree to contribute to the project under Apache 2 License.\r\n- [x] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\r\n- [x] The PR is proposed to the proper branch\r\n- [x] There is a reference to the original bug report and related work\r\n- [x] There is accuracy test, performance test and test data in opencv_extra repository, if applicable\r\n      Patch to opencv_extra has the same branch name.\r\n- [x] The feature is well documented and sample code can be built with the project CMake\r\n",
+            "commit_timestamp": 1718987302.0
         }
     ]
 }
