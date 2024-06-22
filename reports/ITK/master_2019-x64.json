@@ -17411,6 +17411,21 @@
             "commit_ref": "f65606905b7dc493054c584f4fcfe95ef6f5b21d",
             "commit_message": "ENH: Deprecate ITK aliases to CXX keywords\n\nProvide clear replacement instructions for ITK macros to CXX standard\nfeatures.\n\nAdded migration guide hints and updated maintenance script to ease the\nsimple cases of the conversions necessary.\n\nMake use of ITK_NODISCARD on by default.  All cxx-17 compilers support the nodiscard qualifier.\n",
             "commit_timestamp": 1719003619.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1719068998.659889,
+            "elapsed_time": 221.48026871681213,
+            "x64": true,
+            "actual_files_count": 100,
+            "expected_files_count": null,
+            "memory_traffic": 26402.151611328125,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "d31666271a02d40d5e493e576c873711177f0c12",
+            "commit_message": "ENH: Remove outdated maintenance scripts\n\nThese scripts have been used and applied to ITKv5\nand provided mechansisms to demonstrate how to\nmake pre-itkv5 codebases consistent with ITKv5.\n\nITKv6 will have a new set of utility scripts\nto ease consistency with ITKv6 features.\n\nBy removing the dated scripts from the\nprimary code tree we remove the need to\nmaintain them.\n\nComments added the itk_6_migration_guide.md\ndescribe how to easily gain access to the\nolder scripts if access is needed to update\nother codebases.\n",
+            "commit_timestamp": 1719056443.0
         }
     ]
 }

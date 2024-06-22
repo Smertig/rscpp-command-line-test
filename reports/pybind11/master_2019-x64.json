@@ -18748,6 +18748,21 @@
             "commit_ref": "5552cbf2058d9e42182287f0b3ebc86066cb9b7a",
             "commit_message": "Add Python 3.10, 3.11, 3.12 to win32 job matrix. (#5179)\n\n* Add Python 3.10, 3.11, 3.12 to win32 job matrix.\r\n\r\n* Quotes around Python version numbers (win32 job).\r\n\r\n* tests/requirements.txt: no scipy for Python >= 3.10 under win32\r\n\r\n* Try running `cmake --build . --target cpptest` on all platforms (`standard` job).",
             "commit_timestamp": 1718980877.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1719068814.8101,
+            "elapsed_time": 134.63777089118958,
+            "x64": true,
+            "actual_files_count": 219,
+            "expected_files_count": 197,
+            "memory_traffic": 12932.776428222656,
+            "repo_url": "https://github.com/pybind/pybind11",
+            "commit_ref": "f1a2e03d1966fd778ed40d855f6fcc23abd168cd",
+            "commit_message": "feat: remove Python 3.6 support (#5177)\n\n* Change Python version guard: PYTHON < 3.7 IS UNSUPPORTED.\r\n\r\n* Replace or remove Python 3.6 jobs.\r\n\r\n* Move appveyor to Python 3.8\r\n\r\n* Change `[tool.pylint]` `master.py-version` from `3.6` to `3.8`\r\n\r\n* Change `[tool.pylint]` `master.py-version` to `3.7`\r\n\r\n* Remove `centos:7` job; Change almalinux:8 job to use Python 3.8\r\n\r\n* Try \ud83d\udc0d 3.8 \u2022 ubuntu-20.04 \u2022 x64 without `-DCMAKE_CXX_FLAGS=\"-D_=1\"`\r\n\r\n* Update setup.cfg as suggested by @henryiii\r\n\r\n* Try running `cmake --build . --target cpptest` on all platforms (`standard` job).\r\n\r\n* Disable deadsnakes jobs entirely.\r\n\r\n* Apply PR #5179: Add Python 3.10, 3.11, 3.12 to win32 job matrix.\r\n\r\n* Add back `-DCMAKE_CXX_FLAGS=\"-D_=1\"` but do not install boost in that case.\r\n\r\n* PY_VERSION_HEX < 3.7 cleanup pass: include/pybind11\r\n\r\n* WITH_THREAD cleanup pass: include/pybind11\r\n\r\n* Undo incorrect change.\r\n\r\n* Revert \"Disable deadsnakes jobs entirely.\"\r\n\r\nThis reverts commit bbcd0087b2d52e0130f96792dd5dd03704280a57.\r\n\r\n* WITH_THREAD cleanup pass: tests/\r\n\r\n* Change Python version guard in pybind11/__init__.py: pybind11 does not support Python < 3.7.\r\n\r\n* Misc cleanup pass\r\n\r\n* chore: use future imports\r\n\r\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\r\n\r\n* Update tests/test_numpy_array.py\r\n\r\n* Update test_numpy_array.py\r\n\r\n---------\r\n\r\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\r\nCo-authored-by: Henry Schreiner <henryschreineriii@gmail.com>",
+            "commit_timestamp": 1719032100.0
         }
     ]
 }

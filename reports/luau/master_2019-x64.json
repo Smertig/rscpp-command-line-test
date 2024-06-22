@@ -17568,6 +17568,21 @@
             "commit_ref": "caee04d82d014ed104dd63edec1710fb6ab5794c",
             "commit_message": "Sync to upstream/release/631 (#1299)\n\n### What's new\r\n\r\n* Added lint warning for using redundant `@native` attributes on\r\nfunctions inside a `--!native` module\r\n* Improved typechecking speed in old solver for modules with large types\r\n\r\n### New Solver\r\n\r\n* Fixed the length type function sealing the table prematurely\r\n* Fixed crashes caused by general table indexing expressions\r\n\r\n### VM\r\n\r\n* Added support for a specialized 3-argument fast-call instruction to\r\nimprove performance of `vector` constructor, `buffer` writes and a few\r\n`bit32` methods\r\n\r\n---\r\n\r\n### Internal Contributors\r\n\r\nCo-authored-by: Aaron Weiss <aaronweiss@roblox.com>\r\nCo-authored-by: Andy Friesen <afriesen@roblox.com>\r\nCo-authored-by: Aviral Goel <agoel@roblox.com>\r\nCo-authored-by: Vighnesh Vijay <vvijay@roblox.com>\r\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>\r\n\r\n---------\r\n\r\nCo-authored-by: Aaron Weiss <aaronweiss@roblox.com>\r\nCo-authored-by: Alexander McCord <amccord@roblox.com>\r\nCo-authored-by: Andy Friesen <afriesen@roblox.com>\r\nCo-authored-by: Vighnesh <vvijay@roblox.com>\r\nCo-authored-by: Aviral Goel <agoel@roblox.com>\r\nCo-authored-by: David Cope <dcope@roblox.com>\r\nCo-authored-by: Lily Brown <lbrown@roblox.com>",
             "commit_timestamp": 1718926675.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1719068740.368813,
+            "elapsed_time": 264.11132287979126,
+            "x64": true,
+            "actual_files_count": 447,
+            "expected_files_count": 379,
+            "memory_traffic": 30664.485076904297,
+            "repo_url": "https://github.com/luau-lang/luau",
+            "commit_ref": "caee04d82d014ed104dd63edec1710fb6ab5794c",
+            "commit_message": "Sync to upstream/release/631 (#1299)\n\n### What's new\r\n\r\n* Added lint warning for using redundant `@native` attributes on\r\nfunctions inside a `--!native` module\r\n* Improved typechecking speed in old solver for modules with large types\r\n\r\n### New Solver\r\n\r\n* Fixed the length type function sealing the table prematurely\r\n* Fixed crashes caused by general table indexing expressions\r\n\r\n### VM\r\n\r\n* Added support for a specialized 3-argument fast-call instruction to\r\nimprove performance of `vector` constructor, `buffer` writes and a few\r\n`bit32` methods\r\n\r\n---\r\n\r\n### Internal Contributors\r\n\r\nCo-authored-by: Aaron Weiss <aaronweiss@roblox.com>\r\nCo-authored-by: Andy Friesen <afriesen@roblox.com>\r\nCo-authored-by: Aviral Goel <agoel@roblox.com>\r\nCo-authored-by: Vighnesh Vijay <vvijay@roblox.com>\r\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>\r\n\r\n---------\r\n\r\nCo-authored-by: Aaron Weiss <aaronweiss@roblox.com>\r\nCo-authored-by: Alexander McCord <amccord@roblox.com>\r\nCo-authored-by: Andy Friesen <afriesen@roblox.com>\r\nCo-authored-by: Vighnesh <vvijay@roblox.com>\r\nCo-authored-by: Aviral Goel <agoel@roblox.com>\r\nCo-authored-by: David Cope <dcope@roblox.com>\r\nCo-authored-by: Lily Brown <lbrown@roblox.com>",
+            "commit_timestamp": 1718926675.0
         }
     ]
 }

@@ -17426,6 +17426,21 @@
             "commit_ref": "df2fbc27775b30da6abd3daa2640042e1ed0dd88",
             "commit_message": "unit2604: use 'unitfail' instead of 'error' variable\n\nSince the framework is already returning that variable by default.\nAvoids a warning for unreachable code.\n\nReported-by: Tal Regev\nFixes #13967\nCloses #13973\n",
             "commit_timestamp": 1718797056.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1719068743.729071,
+            "elapsed_time": 223.3365318775177,
+            "x64": true,
+            "actual_files_count": 3060,
+            "expected_files_count": 2323,
+            "memory_traffic": 42479.49777984619,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "bd8e45c6c5ce00c0769765dcafefe5f25028a5b0",
+            "commit_message": "cf-socket: optimize curlx_nonblock() and check its return error\n\nReviewed-by: Stefan Eissing\nCloses #13942\n",
+            "commit_timestamp": 1719050197.0
         }
     ]
 }
