@@ -18849,6 +18849,23 @@
             "commit_ref": "34d44eb41dfbbbf01712719558b02763334fbeb3",
             "commit_message": "Revert \"[clang-format] Don't count template template parameter as declaration\" (#96388)\n\nReverts llvm/llvm-project#95025 ; many bots are broken",
             "commit_timestamp": 1719058739.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1719112975.41183,
+            "elapsed_time": 1557.4548528194427,
+            "x64": true,
+            "actual_files_count": 2045,
+            "expected_files_count": 1661,
+            "memory_traffic": 253986.8201675415,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "05ba5c0648ae5e80d5afce270495bf3b1eef9af4",
+            "commit_message": "[MC] MCSectionSubPair: replace const MCExpr * with uint32_t\n",
+            "commit_timestamp": 1719110692.0
         }
     ]
 }
