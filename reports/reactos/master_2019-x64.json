@@ -17281,6 +17281,21 @@
             "commit_ref": "63935f857f8413163f23b1906668217bcf73a3cc",
             "commit_message": "[SHELL32] Implement the desktop folder menu for Explorer tree (#7026)\n\nEnumerates but does not actually allow you to get CF_HDROP if the desktop PIDL is present in the dataobject.",
             "commit_timestamp": 1718990389.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1719241582.743527,
+            "elapsed_time": 117.6225996017456,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7860.715431213379,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "2cdd5eca7b6459df6f8139e1d85879fb4f91e6d2",
+            "commit_message": "[PSDK] ntdddisk.h, winioctl.h: Improve/sync partition types and Is[FT|Recognized]Partition() macros (#7033)\n\n- Synchronize PARTITION_*** definitions between ntdddisk.h and winioctl.h\n\n- Make IsFTPartition() macro definition more accurate with Win2003/Vista+\n  WDK definition. In particular, partition types that would conflict with\n  3rd-party ones are not present in this macro. (See comment in header\n  for more details.)\n  Simplify also its definition by factoring the common\n    ((PartitionType) & PARTITION_NTFT)\n  piece.\n\n- It can be recognized, in all DDK/WDK versions, that the first part of\n  the IsRecognizedPartition() macro definition is basically the definition\n  of IsFTPartition(). So, take this opportunity to simplify the definition\n  of IsRecognizedPartition() accordingly without losing any functionality.\n",
+            "commit_timestamp": 1719239353.0
         }
     ]
 }
