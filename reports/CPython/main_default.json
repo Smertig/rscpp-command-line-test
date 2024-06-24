@@ -14576,6 +14576,21 @@
             "commit_ref": "f4ddaa396715855ffbd94590f89ab7d55feeec07",
             "commit_message": "gh-101830: Fix Tcl_Obj to string conversion (GH-120884)\n\nAccessing the Tkinter object's string representation no longer converts\r\nthe underlying Tcl object to a string on Windows.\r\n",
             "commit_timestamp": 1719149654.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1719198542.311276,
+            "elapsed_time": 1352.9579870700836,
+            "x64": true,
+            "actual_files_count": 1038,
+            "expected_files_count": null,
+            "memory_traffic": 50186.10961151123,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "35e998f5608b04cdd331e67dd80d4829df71a5fd",
+            "commit_message": "GH-73991: Add `pathlib.Path.copytree()` (#120718)\n\nAdd `pathlib.Path.copytree()` method, which recursively copies one\r\ndirectory to another.\r\n\r\nThis differs from `shutil.copytree()` in the following respects:\r\n\r\n1. Our method has a *follow_symlinks* argument, whereas shutil's has a\r\n   *symlinks* argument with an inverted meaning.\r\n2. Our method lacks something like a *copy_function* argument. It always\r\n   uses `Path.copy()` to copy files.\r\n3. Our method lacks something like a *ignore_dangling_symlinks* argument.\r\n   Instead, users can filter out danging symlinks with *ignore*, or\r\n   ignore exceptions with *on_error*\r\n4. Our *ignore* argument is a callable that accepts a single path object,\r\n   whereas shutil's accepts a path and a list of child filenames.\r\n5. We add an *on_error* argument, which is a callable that accepts\r\n   an `OSError` instance. (`Path.walk()` also accepts such a callable).\r\n\r\nCo-authored-by: Nice Zombies <nineteendo19d0@gmail.com>",
+            "commit_timestamp": 1719176472.0
         }
     ]
 }

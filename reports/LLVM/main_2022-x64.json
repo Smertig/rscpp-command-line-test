@@ -18883,6 +18883,23 @@
             "commit_ref": "8990763d2c974a179dd0ed42b0cfb7b8b60e9c0c",
             "commit_message": "[clang][codegen][NFC] Improve const correctness\n",
             "commit_timestamp": 1719153306.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1719199335.241602,
+            "elapsed_time": 1525.5324747562408,
+            "x64": true,
+            "actual_files_count": 2045,
+            "expected_files_count": 1661,
+            "memory_traffic": 253862.04862213135,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "8f49dab19e861baeb0d87452e652ed97d3883d1a",
+            "commit_message": "[BPI] Use BasicBlock::isEHPad() to check exception handling block. (#95771)\n\nThere is no need to iterate all predecessors of current block, check if\r\ncurrent block is the invoke unwind destination of any predecessor. We\r\ncan directly call `BasicBlock::isEHPad()` to check if current block is\r\nan exception handling block.",
+            "commit_timestamp": 1719193504.0
         }
     ]
 }
