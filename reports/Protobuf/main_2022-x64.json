@@ -1154,6 +1154,21 @@
             "commit_ref": "0302c4c43821ac893e8f1071576f80edef5c6398",
             "commit_message": "Fix typos in parse_context.h.\n\nPiperOrigin-RevId: 645498562\n",
             "commit_timestamp": 1719004622.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1719284829.061288,
+            "elapsed_time": 290.9704189300537,
+            "x64": true,
+            "actual_files_count": 1085,
+            "expected_files_count": 818,
+            "memory_traffic": 37519.16316986084,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "69a1888fd587410cc6a4d857d2ad7815e5aad93e",
+            "commit_message": "Bugfix: do not tree shake map entry messages.\n\nSince maps have a different in-memory representation than repeated messages, it is not safe to tree shake map entry messages.\n\nSpecifically, map fields use `kUpb_FieldMode_Map` instead of `kUpb_FieldMode_Array`, and there is no easy way to get the linker to rewrite this when the map entry is dropped.\n\nHowever it is safe to tree shake message typed map values, since these use `kUpb_FieldMode_Scalar`, which remains valid even after the type is tree shaken.\n\nPiperOrigin-RevId: 646199050\n",
+            "commit_timestamp": 1719260627.0
         }
     ]
 }

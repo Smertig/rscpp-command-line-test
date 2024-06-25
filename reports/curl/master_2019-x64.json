@@ -17501,6 +17501,21 @@
             "commit_ref": "1f1975b84c4501cf4562e2e50e658de6d7411d11",
             "commit_message": "cmdline-docs: \"added in\" cleanups\n\n- markup fixes\n- remove some mentions of < 7.60.0 changes\n\nCloses #14003\n",
             "commit_timestamp": 1719241012.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1719284799.763286,
+            "elapsed_time": 219.5089032649994,
+            "x64": true,
+            "actual_files_count": 3060,
+            "expected_files_count": 2323,
+            "memory_traffic": 42485.87717437744,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "b7b41b1ea9e892cf78dac7b33bee9b39e20140ec",
+            "commit_message": "autotools: fix pkg-config names (zstd, ngtcp2*)\n\nAlso verified that all names now match up with CMake.\n\nFollow-up to f057de5a1a950a90d1920021db152a4b695f1a8a #13911\nFollow-up to eeab0ea7aa19af61af881e8a0bf9ff1f2e28ef79 #13994\nReported-by: \u674e\u56db\nFixes #14005\nCloses #14006\n",
+            "commit_timestamp": 1719264318.0
         }
     ]
 }

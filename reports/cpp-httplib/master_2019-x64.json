@@ -18878,6 +18878,21 @@
             "commit_ref": "bdefdce1aecc8dcf6f16e6023a90bb7752c08c70",
             "commit_message": "test: fix GetRangeWithMaxLongLength on 32 bit machines (#1867)\n\nThe test used the hardcoded long value for 64 bit machines even on 32\r\nbit ones, leading to test failures. With this patch the max long length\r\nis obtained using std::numeric_limits<long>::max(). Thanks to q2a3z for\r\nthe hint!\r\n\r\nFixes: https://github.com/yhirose/cpp-httplib/issues/1795",
             "commit_timestamp": 1719179340.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1719284798.988138,
+            "elapsed_time": 85.2649793624878,
+            "x64": true,
+            "actual_files_count": 5,
+            "expected_files_count": 3,
+            "memory_traffic": 2663.9553985595703,
+            "repo_url": "https://github.com/yhirose/cpp-httplib",
+            "commit_ref": "388a8c007c96857b36901f3801f6572362ad6b17",
+            "commit_message": "Fix build on Windows with no WINAPI_PARTITION_APP support (#1865)\n\n",
+            "commit_timestamp": 1719256417.0
         }
     ]
 }
