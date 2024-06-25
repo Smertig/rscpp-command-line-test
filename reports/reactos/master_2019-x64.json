@@ -17311,6 +17311,21 @@
             "commit_ref": "d24675b63d3dee333047ec9712b22ec85aa51fda",
             "commit_message": "[SHELL32][BROWSEUI] CopyMoveToMenu must initialize without a PIDL folder (#7047)\n\n- IShellExtInit cannot rely on a folder PIDL being present\r\n- Use common QueryContextMenu function for both menu items\r\n- Allow copy to the same folder\r\n- Disable toolbar buttons when the selection is not valid\r\n- Minor DefView cache enhancement and bugfixes",
             "commit_timestamp": 1719268175.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1719327924.593086,
+            "elapsed_time": 75.67357683181763,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7975.457649230957,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "2aad6b133fcac6571482aa0e7e4cfe5fcf9d2c95",
+            "commit_message": "[ACCESS] Improve Portuguese (pt-PT) translation (#7028)\n\n- Add file header\r\n- Add missing accelerator keys\r\n- Rearrange the message so it can fit in the window\r\n- Change SUBLANG to NEUTRAL",
+            "commit_timestamp": 1719319715.0
         }
     ]
 }

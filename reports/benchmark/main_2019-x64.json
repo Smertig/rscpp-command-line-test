@@ -18528,6 +18528,21 @@
             "commit_ref": "c2146397ac69e6589a50f6b4fc6a7355669caed5",
             "commit_message": "Find libpfm dependency in installed CMake configs (#1806)\n\nCurrently, Google Benchmark can be built and installed with support for\r\nlibpfm, but this can cause a problem if that installation is later\r\ncalled upon by another CMake project. Indeed, while the installed CMake\r\nconfiguration script correctly identifies that it needs to link against\r\nlibpfm, it doesn't try to find libpfm, meaning that the target will be\r\nunavailable. This commit fixes this potential configuration-time error\r\nby ensuring that an installation of Google Benchmark will correctly try\r\nto find the libpfm dependency when it is used elsewhere.",
             "commit_timestamp": 1718820222.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1719327937.543087,
+            "elapsed_time": 82.73814702033997,
+            "x64": true,
+            "actual_files_count": 86,
+            "expected_files_count": 86,
+            "memory_traffic": 4737.6232833862305,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "c2146397ac69e6589a50f6b4fc6a7355669caed5",
+            "commit_message": "Find libpfm dependency in installed CMake configs (#1806)\n\nCurrently, Google Benchmark can be built and installed with support for\r\nlibpfm, but this can cause a problem if that installation is later\r\ncalled upon by another CMake project. Indeed, while the installed CMake\r\nconfiguration script correctly identifies that it needs to link against\r\nlibpfm, it doesn't try to find libpfm, meaning that the target will be\r\nunavailable. This commit fixes this potential configuration-time error\r\nby ensuring that an installation of Google Benchmark will correctly try\r\nto find the libpfm dependency when it is used elsewhere.",
+            "commit_timestamp": 1718820222.0
         }
     ]
 }
