@@ -14651,6 +14651,21 @@
             "commit_ref": "a905721b9c5c15279e67c2f7785034b7356b2d46",
             "commit_message": "gh-120838: Add _PyThreadState_WHENCE_FINI (gh-121010)\n\nWe also add _PyThreadState_NewBound() and drop _PyThreadState_SetWhence().\r\n\r\nThis change only affects internal API.",
             "commit_timestamp": 1719347712.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1719414576.09598,
+            "elapsed_time": 1118.557401418686,
+            "x64": true,
+            "actual_files_count": 1037,
+            "expected_files_count": null,
+            "memory_traffic": 50221.28793334961,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "44eafd66882589d4f4eb569d70c49724da3e9291",
+            "commit_message": "gh-121008: Fix idlelib.run tests (#121046)\n\nWhen testing IDLE, don't create a Tk to avoid side effects such as\r\ninstalling a PyOS_InputHook hook.",
+            "commit_timestamp": 1719409276.0
         }
     ]
 }

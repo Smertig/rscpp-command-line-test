@@ -18968,6 +18968,23 @@
             "commit_ref": "896dd322afcc1cf5dc4fa7375dedd55b59001eb4",
             "commit_message": "[ORC] Fix block dependence calculation in ObjectLinkingLayer.\n\nThis fixes a bug in ObjectLinkingLayer::computeBlockNonLocalDeps: The worklist\nneeds to be built *after* all immediate dependencies / dependants are recorded,\nrather than trying to populate it as part of the same loop. (Trying to do the\nlatter causes us to miss some blocks that should have been included in the\nworklist).\n\nThis fixes a bug discovered by @Sahil123 on discord during work on\nout-of-process execution support in the clang-repl.\n\nNo testcase yet. This *might* be testable with a unit test and a custom\nJITLinkContext but I believe some aspects of the algorithm depend on memory\nlayout. I'll need to investigate that. Alternatively we could add llvm-jitlink\ntestcases that exercise concurrent linking (and should probably do that anyway).\nEither option will require some investment and I don't want to hold this fix up\nin the mean time.\n",
             "commit_timestamp": 1719370841.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1719415350.326146,
+            "elapsed_time": 1502.449193239212,
+            "x64": true,
+            "actual_files_count": 2045,
+            "expected_files_count": 1661,
+            "memory_traffic": 255501.1697692871,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "586114510c5fa71d1377c7f53e68a3b12c472aa2",
+            "commit_message": "[lldb] fix(lldb/**.py): fix comparison to None (#94017)\n\nfrom PEP8\r\n(https://peps.python.org/pep-0008/#programming-recommendations):\r\n\r\n> Comparisons to singletons like None should always be done with is or\r\nis not, never the equality operators.\r\n\r\nCo-authored-by: Eisuke Kawashima <e-kwsm@users.noreply.github.com>",
+            "commit_timestamp": 1719413947.0
         }
     ]
 }

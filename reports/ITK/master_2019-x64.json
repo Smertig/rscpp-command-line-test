@@ -17531,6 +17531,21 @@
             "commit_ref": "eaadb8c68ac3aff137c0d4a66587c7465aad4d0c",
             "commit_message": "PERF: Add fast \"move semantics\" to SpatialObjectPoint classes\n\nReplaced hand-written copy-constructors and assignment operators by\n`ITK_DEFAULT_COPY_AND_MOVE` macro calls, in `SpatialObjectPoint` and its derived\nclasses.\n\nWill make the move-assignment operator of these classes `noexcept`, as tested.\n",
             "commit_timestamp": 1719324913.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1719414652.438499,
+            "elapsed_time": 217.99552035331726,
+            "x64": true,
+            "actual_files_count": 100,
+            "expected_files_count": null,
+            "memory_traffic": 26185.846969604492,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "651a43f01ee6722bfd30dc938bbac6d2ffcd01b7",
+            "commit_message": "Merge branch 'release'\n",
+            "commit_timestamp": 1719407227.0
         }
     ]
 }
