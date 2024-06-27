@@ -1214,6 +1214,21 @@
             "commit_ref": "3836fd347493e75681c19c0241713eff26046715",
             "commit_message": "Enable Unity(Jumbo) builds (#16454)\n\n**Description**\nAdded a cmake option to enable Unity builds for libprotobuf-lite.\nAdded missing symmetric include for port_def.inc\nAdded preproc guards for PROTOBUF_PRAGMA_INIT_SEG so it does not get included multiple times in unity build.\n\n**Motivation and Context**\nFor large code base, especially in the game dev industry, Unity builds (https://en.wikipedia.org/wiki/Unity_build) are used to speed up the compilations.\nSpecial care must be taken to enable Unity builds for a project, since many translation units will be merged togheter.\n\nCloses #16454\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/16454 from jslap-ubi:enable-unity-build a387ffd86208a456d31fdbf0e98d009ed5d7932f\nPiperOrigin-RevId: 646581094\n",
             "commit_timestamp": 1719346736.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1719457652.407863,
+            "elapsed_time": 303.9630489349365,
+            "x64": true,
+            "actual_files_count": 1087,
+            "expected_files_count": 818,
+            "memory_traffic": 37487.761001586914,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "237332ef92daf83a53e76decd6ac43c3fcee782b",
+            "commit_message": "Add merge_from to Msg and MsgMut codegen. Cpp Kernel uses new thunk to typed MergeFrom() and Upb Kernel uses new upb_Message_MergeFrom() function\n\nPiperOrigin-RevId: 646961954\n",
+            "commit_timestamp": 1719417525.0
         }
     ]
 }
