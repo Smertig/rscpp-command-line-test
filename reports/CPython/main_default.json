@@ -14681,6 +14681,21 @@
             "commit_ref": "4be1f37b20bd51498d3adf8ad603095c0f38d6e5",
             "commit_message": "gh-113433: Automatically Clean Up Subinterpreters in Py_Finalize() (gh-121060)\n\nThis change makes things a little less painful for some users.  It also fixes a failing assert (gh-120765), by making sure all subinterpreters are destroyed before the main interpreter.  As part of that, we make sure Py_Finalize() always runs with the main interpreter active.",
             "commit_timestamp": 1719436646.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1719500997.669251,
+            "elapsed_time": 1396.4329171180725,
+            "x64": true,
+            "actual_files_count": 1038,
+            "expected_files_count": null,
+            "memory_traffic": 50151.97745513916,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "0890ad7c024ccf29614849b6ffadcb92c0e91ce7",
+            "commit_message": "gh-115986 Improve pprint docs formatting (GH-117401)\n\n* Move pprinter parameters description to the table\r\n\r\nThe change improves readability.\r\nSuggested in the GH#116085 PR discussion.\r\n\r\n* Make pprint doc with params markup\r\n\r\n* Fix formatting\r\nIndentation of code blocks made them nested\r\n\"Version changed\" is better placed after the code block\r\n\r\n* Fix formatting for tests\r\n\r\n* fix code indentation for autotests\r\n\r\n* Fix identation for autotests\r\n\r\n* Remove duplication of the parameters' description\r\n\r\n* Rearrange parameters description in a correct order\r\n\r\n---------\r\n\r\nCo-authored-by: Hugo van Kemenade <1324225+hugovk@users.noreply.github.com>",
+            "commit_timestamp": 1719498770.0
         }
     ]
 }
