@@ -15156,6 +15156,21 @@
             "commit_ref": "cf1c02d097fc57113b7f9fabf1bc15f810b8b27c",
             "commit_message": "Bump mold version to 2.32.1\n",
             "commit_timestamp": 1719464666.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1719544051.238938,
+            "elapsed_time": 141.28787922859192,
+            "x64": true,
+            "actual_files_count": 513,
+            "expected_files_count": null,
+            "memory_traffic": 15908.598991394043,
+            "repo_url": "https://github.com/rui314/mold",
+            "commit_ref": "091395df335d577adc2a09e854a129f02081c576",
+            "commit_message": "Link with `-ldl` for dlopen()\n\nFixes https://github.com/rui314/mold/issues/1293\n",
+            "commit_timestamp": 1719540037.0
         }
     ]
 }
