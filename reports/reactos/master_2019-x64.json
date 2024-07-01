@@ -17476,6 +17476,21 @@
             "commit_ref": "0f9e889736f01cef58fd50cd1f5558becbe882d5",
             "commit_message": "[NTGDI][FREETYPE][SETUP][INF] Support FontLink (#7009)\n\nIf East Asian people were unable\r\nto see the Latin characters, it\r\nbecomes a barrier to mutual\r\nunderstanding.\r\nFontLink will break that barrier.\r\nJIRA issue: CORE-9616\r\nJIRA issue: CORE-15480\r\n- Modify font substitutes.\r\n- Unify the lock variables.\r\n- Add FONTLINK and\r\n  FONTLINK_CHAIN structures.\r\n- Add FontLink_Create and\r\n  FontLink_Destroy functions.\r\n- Add FontLink_Chain_Init,\r\n  FontLink_Chain_Free,\r\n  FontLink_Chain_LoadReg,\r\n  FontLink_Chain_Populate, and\r\n  FontLink_Chain_FindGlyph\r\n  functions.\r\n- Implement FontLink.\r\n- Add font file DroidSansFallback.ttf\r\n  for LiveCD.",
             "commit_timestamp": 1719753334.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1719846359.860667,
+            "elapsed_time": 90.70415496826172,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 8139.584548950195,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "f57601d14bb252ac95f0d0ab19d33978016d4fa3",
+            "commit_message": "[SETUPLIB][USETUP] FS utilities: Use the ISO C and C++ conformant name: _wcsicmp\n\nStop using non-conforming wcsicmp.\nSee also PR #6925 by Timo Kreuzer.\n",
+            "commit_timestamp": 1719844097.0
         }
     ]
 }
