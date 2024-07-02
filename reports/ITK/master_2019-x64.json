@@ -17711,6 +17711,21 @@
             "commit_ref": "f3c19777a33eae91b18ac31a34b6b887de594b62",
             "commit_message": "Merge branch 'release'\n",
             "commit_timestamp": 1719886386.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1719933027.091762,
+            "elapsed_time": 235.75459551811218,
+            "x64": true,
+            "actual_files_count": 100,
+            "expected_files_count": null,
+            "memory_traffic": 26424.300994873047,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "af55e5f5b444d3d9db7342cafcdb1598383b2f1f",
+            "commit_message": "STYLE: Improve ivar printing in `PrintSelf` methods\n\nImprove ivar printing in `PrintSelf` methods:\n- Use the `itkPrintSelfObjectMacro` macro to avoid boilerplate code when\n  printing smart pointers/objects that can be null pointers.\n- Rely on the enum classes ostream insertion operator overload to\n  directly print such variables. Avoid boilerplate code.\n- Increase consistency when printing boolean ivars: use the\n  `({ivar} ? \"On\" : \"Off\")`  recipe in agreement with the ITK SW Guide.\n- Do not check whether `std::string` types ivars are empty to\n  conditionally print their contents; rely on the ostream insertion\n  operator overload to print the appropriate content.\n- Print the member variable names verbatim to conform to the ITK SW\n  Guide.\n- Prefer using `std::endl` instead of `\\n` to add a new line for the\n  sake of consistency.\n\nTake advantage of the commit to print ivars that had been missed in the\nmodified classes.\n",
+            "commit_timestamp": 1719925747.0
         }
     ]
 }

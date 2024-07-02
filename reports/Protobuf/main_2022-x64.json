@@ -1379,6 +1379,21 @@
             "commit_ref": "dba1aa1c810e2fd3a9aed48871529b2285eaff02",
             "commit_message": "Upgrade macos-11 tests to macos-12\n\nGithub dropped macos-11 on their runners on June 28th.  This causes all our jobs to stall looking for a suitable runner.\n\nPiperOrigin-RevId: 648527302\n",
             "commit_timestamp": 1719878847.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1719932781.400583,
+            "elapsed_time": 307.4926829338074,
+            "x64": true,
+            "actual_files_count": 1087,
+            "expected_files_count": 818,
+            "memory_traffic": 37657.58631134033,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "a9bc366522b09bb7a8b3dabbf76fe7fd4dfc8a7f",
+            "commit_message": "Stop using double underscores for our C function names and standardize on the 'rust_proto_' prefix.\n\nBesides unnecessary inconsistency on our C symbols, double underscores anywhere in the name are reserved for stdlib use.  In practice its unlikely these symbols would ever hit a collision problem (maybe the prior name 'utf8_debug_string' with no prefix as having some risk), but safer to just standardize on this and have no concerns going forward.\n\nPiperOrigin-RevId: 648709299\n",
+            "commit_timestamp": 1719929951.0
         }
     ]
 }
