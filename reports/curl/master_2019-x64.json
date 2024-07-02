@@ -17711,6 +17711,21 @@
             "commit_ref": "babaf1cbc3de26121662e7ef3739fe9000bbd104",
             "commit_message": "curl_url_set: elaborate on scheme guessing\n\nExplain a little more and refer to the CURLU_NO_GUESS_SCHEME flag\nfor getting scheme or URL.\n\nCloses #14071\n",
             "commit_timestamp": 1719845158.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1719889535.29868,
+            "elapsed_time": 199.06134700775146,
+            "x64": true,
+            "actual_files_count": 3060,
+            "expected_files_count": 2323,
+            "memory_traffic": 42839.98114013672,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "80769b9c9ed917ce51b35758649488a68cbb82f8",
+            "commit_message": "cmake: show protocols, then features\n\nTo match the order used by `curl -V` and `./configure`.\n\nCloses #14082\n",
+            "commit_timestamp": 1719874989.0
         }
     ]
 }

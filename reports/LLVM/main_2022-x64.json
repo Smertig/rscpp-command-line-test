@@ -19155,6 +19155,23 @@
             "commit_ref": "99d8bc9e7686994015fe744af3d11cd9c2050b8c",
             "commit_message": "[InstCombine] Preserve all gep nowrap flags in ptradd canonicalization\n",
             "commit_timestamp": 1719845160.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1719890561.421766,
+            "elapsed_time": 1562.0289685726166,
+            "x64": true,
+            "actual_files_count": 2048,
+            "expected_files_count": 1661,
+            "memory_traffic": 256300.3572845459,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "fb6e024f49ddbf1a018eccab7ccfa7c1f41964d0",
+            "commit_message": "[WebAssembly] Update generic and bleeding-edge CPUs (#96584)\n\nThis updates the list of features in 'generic' and 'bleeding-edge' CPUs\r\nin the backend to match\r\n\r\nhttps://github.com/llvm/llvm-project/blob/4e0a0eae58f7a6998866719f7eb970096a2a52e9/clang/lib/Basic/Targets/WebAssembly.cpp#L150-L178\r\n\r\nThis updates existing CodeGen tests in a way that, if a test has\r\nseparate RUN lines for a reference-types test and a non-reference-types\r\ntest, I added -mattr=-reference-types to the no-reftype test's RUN\r\ncommand line. I didn't delete existing -mattr=+reference-types lines in\r\nreftype tests because having it helps readability.\r\n\r\nAlso, when tests is not really about reference-types but they have to\r\nupdated because they happen to contain call_indirect lines because now\r\ncall_indirect will take __indirect_function_table as an argument, I just\r\nadded the table argument to the expected output.\r\n\r\n`target-features-cpus.ll` has been updated reflecting the newly added\r\nfeatures.",
+            "commit_timestamp": 1719886321.0
         }
     ]
 }
