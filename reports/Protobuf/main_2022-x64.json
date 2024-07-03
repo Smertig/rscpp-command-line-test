@@ -1394,6 +1394,21 @@
             "commit_ref": "a9bc366522b09bb7a8b3dabbf76fe7fd4dfc8a7f",
             "commit_message": "Stop using double underscores for our C function names and standardize on the 'rust_proto_' prefix.\n\nBesides unnecessary inconsistency on our C symbols, double underscores anywhere in the name are reserved for stdlib use.  In practice its unlikely these symbols would ever hit a collision problem (maybe the prior name 'utf8_debug_string' with no prefix as having some risk), but safer to just standardize on this and have no concerns going forward.\n\nPiperOrigin-RevId: 648709299\n",
             "commit_timestamp": 1719929951.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1719976647.380185,
+            "elapsed_time": 294.53537249565125,
+            "x64": true,
+            "actual_files_count": 1087,
+            "expected_files_count": 818,
+            "memory_traffic": 37713.75827026367,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "0aa74497527c6656e073f2635019ebc2a946268c",
+            "commit_message": "[Ruby] Fix mismatched pointer type (#17240)\n\nThis PR fixes the following error on windows ruby 3.4 (head):\n\n```\ncurrent directory:\nD:/a/sass-embedded-host-ruby/sass-embedded-host-ruby/vendor/bundle/ruby/3.4.0+0/gems/google-protobuf-4.27.1/ext/google/protobuf_c\nmake.exe DESTDIR\\= sitearchdir\\=./.gem.20240623-6612-4umz58\nsitelibdir\\=./.gem.20240623-6612-4umz58\ngenerating protobuf_c-x64-mingw-ucrt.def\ncompiling protobuf.c\ncompiling convert.c\ncompiling defs.c\ndefs.c: In function 'MethodDescriptor_initialize':\ndefs.c:1513:19: error: assignment to 'const upb_MethodDef *' from incompatible\npointer type 'const upb_ServiceDef *' [-Wincompatible-pointer-types]\n 1513 |   self->methoddef = (const upb_ServiceDef*)NUM2ULL(ptr);\n      |                   ^\nmake: *** [Makefile:250: defs.o] Error 1\n\nmake failed, exit code 2\n```\n\n- Closes #17266\n\nCloses #17240\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/17240 from ntkme:fix-ruby-upb-pointer-type 22e9859c5758bdc5efc2ddc720555c615dce428d\nPiperOrigin-RevId: 648923147\n",
+            "commit_timestamp": 1719976396.0
         }
     ]
 }
