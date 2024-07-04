@@ -19108,6 +19108,21 @@
             "commit_ref": "bb05e0810b87e74709d9f4c4545f1f57a1b386f5",
             "commit_message": "Use PyMutex instead of std::mutex in free-threaded build. (#5219)\n\n* Use PyMutex instead of std::mutex in free-threaded build.\r\n\r\nPyMutex is now part of the public C API as of 3.13.0b3 and generally has\r\nslightly less overhead than std::mutex.\r\n\r\n* style: pre-commit fixes\r\n\r\n* Fix instance_map_shard padding\r\n\r\n---------\r\n\r\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>",
             "commit_timestamp": 1719939489.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1720105547.214024,
+            "elapsed_time": 120.92204546928406,
+            "x64": true,
+            "actual_files_count": 219,
+            "expected_files_count": 197,
+            "memory_traffic": 13177.011451721191,
+            "repo_url": "https://github.com/pybind/pybind11",
+            "commit_ref": "bb05e0810b87e74709d9f4c4545f1f57a1b386f5",
+            "commit_message": "Use PyMutex instead of std::mutex in free-threaded build. (#5219)\n\n* Use PyMutex instead of std::mutex in free-threaded build.\r\n\r\nPyMutex is now part of the public C API as of 3.13.0b3 and generally has\r\nslightly less overhead than std::mutex.\r\n\r\n* style: pre-commit fixes\r\n\r\n* Fix instance_map_shard padding\r\n\r\n---------\r\n\r\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>",
+            "commit_timestamp": 1719939489.0
         }
     ]
 }
