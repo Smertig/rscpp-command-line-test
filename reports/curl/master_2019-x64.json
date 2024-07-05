@@ -17801,6 +17801,21 @@
             "commit_ref": "62bfcb0c4409e8886cd1af5fb969143848c28303",
             "commit_message": "help: add flags to output and ssh categories\n\n- Add --output, --remove-on-error, --output-dir and --created-dirs to\n  the output help category\n\n- Add --hostpubmd5, --hostpubsha256, --insecure (-k), and --pubkey to\n  the ssh help category\n\nCloses #14076\n",
             "commit_timestamp": 1720079903.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1720148724.400639,
+            "elapsed_time": 197.47865843772888,
+            "x64": true,
+            "actual_files_count": 3060,
+            "expected_files_count": 2323,
+            "memory_traffic": 42760.05178833008,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "b8e098a057caa8cda588209499ff73260f7f819f",
+            "commit_message": "transfer: avoid polling socket every transfer loop\n\nImprove download performance, minimal effort.\n\nDo not poll the socket for pending data every transfer loop iteration.\nThis gives 10-20% performance gains on large HTTP/1.1 downloads (on my\nmachine).\n\nCloses #14098\n",
+            "commit_timestamp": 1720126961.0
         }
     ]
 }

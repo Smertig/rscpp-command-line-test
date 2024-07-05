@@ -19257,6 +19257,23 @@
             "commit_ref": "f15266e9d5d87a291a515064f8f0dd5f0c412ed3",
             "commit_message": "[MC][ELF] Emit instructions directly into fragment (#94950)\n\nAvoid needless copying of instructions and fixups and directly emit into\r\nthe fragment small vectors.\r\n\r\nThis (optionally, second commit) also removes the single use of the\r\nMCCompactEncodedInstFragment to simplify code.",
             "commit_timestamp": 1720104391.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1720149836.253454,
+            "elapsed_time": 1498.3877425193787,
+            "x64": true,
+            "actual_files_count": 2049,
+            "expected_files_count": 1661,
+            "memory_traffic": 257327.17866516113,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "9e211744b82a72e08c137f75b1c671713e2891af",
+            "commit_message": "[clang] Avoid 'raw_string_ostream::str' (NFC)\n\nSince `raw_string_ostream` doesn't own the string buffer, it is\ndesirable (in terms of memory safety) for users to directly reference\nthe string buffer rather than use `raw_string_ostream::str()`.\n\nWork towards TODO item to remove `raw_string_ostream::str()`.\n",
+            "commit_timestamp": 1720148359.0
         }
     ]
 }
