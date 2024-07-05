@@ -18828,6 +18828,21 @@
             "commit_ref": "71f4218c1abf471eed27ccfbf98055a90ace39f6",
             "commit_message": "Add -lkstat to the .pc for Solaris (#1801)\n\n* Add -lkstat to the .pc for Solaris\r\n\r\nThis fixes linking for projects that rely on pkg-config to generate the\r\nlink line on Solaris.\r\n\r\nTest plan: Built the project locally on Solaris and verified -kstat\r\nappears in the .pc file\r\n\r\n```\r\n$ cat lib/pkgconfig/benchmark.pc  | grep Libs.private\r\nLibs.private: -lpthread -lkstat\r\n```\r\n\r\n* Use BENCHMARK_PRIVATE_LINK_LIBRARIES",
             "commit_timestamp": 1720030603.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1720191886.005964,
+            "elapsed_time": 48.96317982673645,
+            "x64": true,
+            "actual_files_count": 86,
+            "expected_files_count": 86,
+            "memory_traffic": 4754.9383544921875,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "71f4218c1abf471eed27ccfbf98055a90ace39f6",
+            "commit_message": "Add -lkstat to the .pc for Solaris (#1801)\n\n* Add -lkstat to the .pc for Solaris\r\n\r\nThis fixes linking for projects that rely on pkg-config to generate the\r\nlink line on Solaris.\r\n\r\nTest plan: Built the project locally on Solaris and verified -kstat\r\nappears in the .pc file\r\n\r\n```\r\n$ cat lib/pkgconfig/benchmark.pc  | grep Libs.private\r\nLibs.private: -lpthread -lkstat\r\n```\r\n\r\n* Use BENCHMARK_PRIVATE_LINK_LIBRARIES",
+            "commit_timestamp": 1720030603.0
         }
     ]
 }
