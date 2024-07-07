@@ -19342,6 +19342,23 @@
             "commit_ref": "f4c781174b4b8fd958d9074c25eb06b6e276cb1c",
             "commit_message": "[Clang] Add captures to the instantiation scope for noexcept specifiers (#97166)\n\nThe noexcept specifiers of dependent lambdas would be transformed and\r\nrebuilt, where the map of instantiation should also contain captured\r\nvariables in case they are used from the noexcept specifier.\r\n\r\nI also uncovered another assertion failure while at it. However, I\r\ndecided to leave it as-is because 1) that doesn't appear to be the case\r\nin the release version and 2) fixing that might lead to ABI breakage.\r\nAnyhow, the case has been added to the test comment.\r\n\r\nFixes https://github.com/llvm/llvm-project/issues/95735",
             "commit_timestamp": 1720316798.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1720365750.997361,
+            "elapsed_time": 1468.6980500221252,
+            "x64": true,
+            "actual_files_count": 2049,
+            "expected_files_count": 1661,
+            "memory_traffic": 257398.91845703125,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "902fb1b4653d5a23613492406cd5693446f06ab6",
+            "commit_message": "[gn build] Port e83e53b70271\n",
+            "commit_timestamp": 1720345155.0
         }
     ]
 }

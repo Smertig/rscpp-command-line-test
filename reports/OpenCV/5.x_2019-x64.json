@@ -17890,6 +17890,21 @@
             "commit_ref": "6a11847d579e95bc5cca64d951684d4b578870ae",
             "commit_message": "Merge pull request #25860 from asmorkalov:as/fix_linux_32bit\n\nFixed 32-bit build with some GCC versions",
             "commit_timestamp": 1720098331.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1720364832.133893,
+            "elapsed_time": 370.5397388935089,
+            "x64": true,
+            "actual_files_count": 480,
+            "expected_files_count": 480,
+            "memory_traffic": 42722.15811920166,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "1d9ca7160bc44e2f99e9925b026ba3757caad40e",
+            "commit_message": "Merge pull request #25796 from hanliutong:hfloat\n\n Use hfloat instead of __fp16. #25796\r\n\r\nRelated: #25743\r\n\r\nCurrently, the type for the half-precision floating point data in the OpenCV source code is `__fp16`, which is a unique(?) type supported by the ARM compiler. Other compilers have very limited support for `__fp16`, so in order to introduce more backends that support FP16 (such as RISC-V), we may need a the more general FP16 type.\r\n\r\nIn this patch, we use `hfloat` instead of `__fp16` in non-ARM code blocks, mainly affected parts are:\r\n- `core/hal/intrin.hpp`: Type Traits, REG Traits and `vx_` interface.\r\n- `core/hal/intrin_neon.hpp`: Universal Intrinsic API for FP16 type.\r\n- `core/test/test_intrin_utils.hpp`: Usage of Univseral Intrinsic\r\n- `core/include/opencv2/core/cvdef.h`: Definition of class `hfloat`\r\n\r\nIf I understand correctly, class `hfloat` acts as a wrapper around FP16 types in different platform (`__fp16` for ARM and `_Float16` for RISC-V). Any OpenCV generic interface/source code should use `hfloat`, while platform-specific FP16 types only used in macro-guarded code blocks.\r\n\r\n/cc @fengyuentau  @mshabunin \r\n\r\n### Pull Request Readiness Checklist\r\n\r\nSee details at https://github.com/opencv/opencv/wiki/How_to_contribute#making-a-good-pull-request\r\n\r\n- [ ] I agree to contribute to the project under Apache 2 License.\r\n- [ ] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\r\n- [ ] The PR is proposed to the proper branch\r\n- [ ] There is a reference to the original bug report and related work\r\n- [ ] There is accuracy test, performance test and test data in opencv_extra repository, if applicable\r\n      Patch to opencv_extra has the same branch name.\r\n- [ ] The feature is well documented and sample code can be built with the project CMake\r\n",
+            "commit_timestamp": 1720341482.0
         }
     ]
 }
