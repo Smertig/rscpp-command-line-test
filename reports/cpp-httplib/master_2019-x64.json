@@ -19283,6 +19283,21 @@
             "commit_ref": "c8bcaf8a913f1ac087b076488e0cbbc272cccd19",
             "commit_message": "Fix build when targeting Windows 7 as platform. (#1869)\n\n* Fix build when targeting Windows 7 as platform.\r\n\r\nThis change makes more of the code introduced in\r\nhttps://github.com/yhirose/cpp-httplib/pull/1775\r\nconditional on feature macros.\r\n\r\n`CreateFile2`, `CreateFileMappingFromApp` and `MapViewOfFileFromApp` are\r\navailable only starting from Windows 8.\r\n\r\n * https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-createfile2\r\n * https://learn.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-createfilemappingfromapp\r\n * https://learn.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffilefromapp\r\n\r\n* Update feature macros used and use `GetFileSizeEx` conditionally.",
             "commit_timestamp": 1719932320.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1720451125.833825,
+            "elapsed_time": 72.90638160705566,
+            "x64": true,
+            "actual_files_count": 5,
+            "expected_files_count": 3,
+            "memory_traffic": 2805.5568313598633,
+            "repo_url": "https://github.com/yhirose/cpp-httplib",
+            "commit_ref": "c8bcaf8a913f1ac087b076488e0cbbc272cccd19",
+            "commit_message": "Fix build when targeting Windows 7 as platform. (#1869)\n\n* Fix build when targeting Windows 7 as platform.\r\n\r\nThis change makes more of the code introduced in\r\nhttps://github.com/yhirose/cpp-httplib/pull/1775\r\nconditional on feature macros.\r\n\r\n`CreateFile2`, `CreateFileMappingFromApp` and `MapViewOfFileFromApp` are\r\navailable only starting from Windows 8.\r\n\r\n * https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-createfile2\r\n * https://learn.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-createfilemappingfromapp\r\n * https://learn.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffilefromapp\r\n\r\n* Update feature macros used and use `GetFileSizeEx` conditionally.",
+            "commit_timestamp": 1719932320.0
         }
     ]
 }
