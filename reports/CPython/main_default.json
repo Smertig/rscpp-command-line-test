@@ -15071,6 +15071,21 @@
             "commit_ref": "f62161837e68c1c77961435f1b954412dd5c2b65",
             "commit_message": "GH-121521: Detect when wasmtime is not installed in `Tools/wasm/wasi.py` (GH-121522)\n\n",
             "commit_timestamp": 1720562881.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1720624179.689091,
+            "elapsed_time": 1445.51828622818,
+            "x64": true,
+            "actual_files_count": 1039,
+            "expected_files_count": null,
+            "memory_traffic": 50414.8215713501,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "af9f6de6ea930b607f948f2c91a87fe4ca9d64db",
+            "commit_message": "gh-107851: Fix spurious failures in fcntl eintr tests (#121556)\n\nOn heavily loaded machines, the subprocess may finish its sleep before\r\nthe parent process manages to synchronize with it via a failed lock.\r\n\r\nThis leads to errors like:\r\n\r\n  Exception: failed to sync child in 300.3 sec\r\n\r\nUse pipes instead to mutually synchronize between parent and child.",
+            "commit_timestamp": 1720622212.0
         }
     ]
 }
