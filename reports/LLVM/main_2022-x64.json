@@ -19512,6 +19512,23 @@
             "commit_ref": "4f1de83d537f62070cde85e09e88bc229316b3e1",
             "commit_message": "[Clang][NFC][Coroutine] Do not leave dangling pointers after removing CoroBegin (#98546)\n\n",
             "commit_timestamp": 1720752395.0
+        },
+        {
+            "tool_version": "241.0.20240506.152321",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1720797780.841868,
+            "elapsed_time": 1596.1326968669891,
+            "x64": true,
+            "actual_files_count": 2048,
+            "expected_files_count": 1661,
+            "memory_traffic": 258148.9566268921,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "da1f491a9d37f549159657ddaba799a7fb39e84a",
+            "commit_message": "[LLVM][runtimes] Prepopulate `LLVM_BUILTIN_TARGETS` with runtimes values (#95554)\n\nSummary:\nWe create the builtins separately because these are required to set up\nbefore others are built. It's configured with a default value if not\nspecified, but this doesn't respect the runtimes from other targets.\nThis patch changes the behavior to prepopulate the builtins list with\nall the targets that have `compiler-rt` enabled if not overridden by the\nuser.",
+            "commit_timestamp": 1720796357.0
         }
     ]
 }
