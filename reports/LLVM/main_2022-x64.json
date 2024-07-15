@@ -19614,6 +19614,23 @@
             "commit_ref": "5c8eb83ce8e4ef40fbd61a05f1de6394eb908da4",
             "commit_message": "[AMDGPU] Generate test fix-wwm-vgpr-copy.ll (NFC)\n",
             "commit_timestamp": 1721012553.0
+        },
+        {
+            "tool_version": "242.0.20240710.160624-eap07",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1721035962.381691,
+            "elapsed_time": 1639.1494178771973,
+            "x64": true,
+            "actual_files_count": 2049,
+            "expected_files_count": 1661,
+            "memory_traffic": 253885.95009613037,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "8fcb822da632ab4330b47641826ace01af0768e0",
+            "commit_message": "[LV] Add uses of result to pointer-runtime-checks-unprofitable.ll test.\n\nOtherwise %p.2 is not used and will be removed by VPlan transforms,\nleading to a difference between legacy and VPlan-based cost.\n",
+            "commit_timestamp": 1721033986.0
         }
     ]
 }

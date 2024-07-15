@@ -15221,6 +15221,21 @@
             "commit_ref": "50eec501fef46f0887df6f2f47d74f4defb35515",
             "commit_message": "gh-57141: Make shallow argument to filecmp.dircmp keyword-only (#121767)\n\nIt is our general practice to make new optional parameters keyword-only,\r\neven if the existing parameters are all positional-or-keyword. Passing\r\nthis parameter as positional would look confusing and could be error-prone\r\nif additional parameters are added in the future.",
             "commit_timestamp": 1720997612.0
+        },
+        {
+            "tool_version": "242.0.20240710.160624-eap07",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1721035044.517155,
+            "elapsed_time": 1372.462676525116,
+            "x64": true,
+            "actual_files_count": 1039,
+            "expected_files_count": null,
+            "memory_traffic": 49188.657539367676,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "8303d32ff55945c5b38eeeaf1b1811dbcf8aa9be",
+            "commit_message": "gh-117765: Improve documentation for `mocker.patch.dict` (#121755)\n\n",
+            "commit_timestamp": 1721027657.0
         }
     ]
 }
