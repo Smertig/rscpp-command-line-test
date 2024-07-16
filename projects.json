@@ -792,10 +792,6 @@
                     "message": "Member is inaccessible"
                 },
                 {
-                    "file": "..\\test\\view\\any_view.cpp",
-                    "message": "static_assert failed: 'Concept assertion failed : can_convert_to<B *, void *>()'"
-                },
-                {
                     "file": "..\\include\\range\\v3\\experimental\\utility\\generator.hpp",
                     "message": "Parser issues in non-project file?"
                 }
@@ -809,10 +805,6 @@
                     {
                         "file": "..\\include\\range\\v3\\utility\\any.hpp",
                         "message": "Member is inaccessible"
-                    },
-                    {
-                        "file": "..\\test\\view\\any_view.cpp",
-                        "message": "static_assert failed: 'Concept assertion failed : can_convert_to<B *, void *>()'"
                     },
                     {
                         "file": "..\\include\\range\\v3\\experimental\\utility\\generator.hpp",
@@ -896,21 +888,7 @@
         },
         "latest": {
             "master": {
-                "inspected files count": 105,
-                "known errors": [
-                    {
-                        "file": "..\\src\\collision.cpp",
-                        "line": 351,
-                        "message": "Cannot convert 'this' argument from type 'const std::vector<NearbyCollisionInfo>' to type 'std::vector<NearbyCollisionInfo>': function is missing 'const' qualifier",
-                        "reason": "RSCPP-35778 Error on accessing non-captured `thread_local` in lambda"
-                    },
-                    {
-                        "file": "..\\src\\collision.cpp",
-                        "line": 351,
-                        "message": "Local variable 'cinfo' is not captured",
-                        "reason": "RSCPP-35778 Error on accessing non-captured `thread_local` in lambda"
-                    }
-                ]
+                "inspected files count": 105
             }
         }
     },
@@ -1079,7 +1057,7 @@
                 "known errors": [
                     {
                         "file": "Source\\Hooks\\LoopModeGameHook.h",
-                        "line": 10,
+                        "line": 9,
                         "message": "Ambiguous symbol 'RefCountedHook<LoopModeGameHook>'",
                         "reason": "TODO"
                     }
@@ -1192,7 +1170,7 @@
                     },
                     {
                         "file": "..\\Include\\py_curses.h",
-                        "line": 71,
+                        "line": 79,
                         "message": "Expected a declaration",
                         "reason": "TODO"
                     }
