@@ -19682,6 +19682,23 @@
             "commit_ref": "b3a446650c2c48743e148daeb9ddec8e74bb83a2",
             "commit_message": "[AMDGPU] Implement GFX12 Memory Model (#98591)\n\n- Emit GLOBAL_WB instructions\r\n- Reflect synscope on instructions's `scope:` operand\r\n\r\nFixes SWDEV-468508\r\nFixes SWDEV-470735\r\nFixes SWDEV-468392\r\nFixes SWDEV-469622",
             "commit_timestamp": 1721119986.0
+        },
+        {
+            "tool_version": "242.0.20240710.160624-eap07",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1721143321.513862,
+            "elapsed_time": 1622.3337302207947,
+            "x64": true,
+            "actual_files_count": 2049,
+            "expected_files_count": 1661,
+            "memory_traffic": 253773.79627227783,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "80d261493e9bd3046fd56c77e276a105cc20c185",
+            "commit_message": "[AMDGPU] clang-tidy: use override consistently. NFC.\n",
+            "commit_timestamp": 1721141739.0
         }
     ]
 }

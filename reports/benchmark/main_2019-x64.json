@@ -19188,6 +19188,21 @@
             "commit_ref": "d2cd246e19bdf4de9fe357daec52cbe38303d9d6",
             "commit_message": "Clarify the difference between `BENCHMARK_TEMPLATE_F` and `BENCHMARK_TEMPLATE_DEFINE_F` + `BENCHMARK_REGISTER_F` (#1815)\n\n* Clarify BENCHMARK_REGISTER_F\r\n\r\nAdd comments highlighting the difference between `BENCHMARK_TEMPLATE_F` and `BENCHMARK_TEMPLATE_DEFINE_F`, mirroring those of `BENCHMARK_F ` and `BENCHMARK_DEFINE_F`.\r\n\r\n* More informative comments.\r\n\r\n* Update user_guide.md",
             "commit_timestamp": 1721119916.0
+        },
+        {
+            "tool_version": "242.0.20240710.160624-eap07",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1721142311.655102,
+            "elapsed_time": 61.19306230545044,
+            "x64": true,
+            "actual_files_count": 88,
+            "expected_files_count": 86,
+            "memory_traffic": 4939.243301391602,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "7c8ed6b082aa3c7a3402f18e50da4480421d08fd",
+            "commit_message": "[FR] Add API to provide custom profilers #1807 (#1809)\n\nThis API is akin to the MemoryManager API and lets tools provide\r\ntheir own profiler which is wrapped in the same way MemoryManager is\r\nwrapped. Namely, the profiler provides Start/Stop methods that are called\r\nat the start/end of running the benchmark in a separate pass.\r\n\r\nCo-authored-by: dominic <510002+dmah42@users.noreply.github.com>",
+            "commit_timestamp": 1721120200.0
         }
     ]
 }

@@ -18161,6 +18161,21 @@
             "commit_ref": "f88a2896a7449088af0a29070e53043f85ad6a3e",
             "commit_message": "COMP: Add ITKMontage's PhaseCorrelationOptimizer to API ignore list\n\nMeant to address:\n\n> python \"M:/Dashboard/ITK/Wrapping/Generators/Python/Tests/verifyGetOutputAPIConsistency.py\"\n...\nTraceback (most recent call last):\n  File \"M:\\Dashboard\\ITK\\Wrapping\\Generators\\Python\\Tests\\verifyGetOutputAPIConsistency.py\", line 104, in <module>\n    tot, w = checkGetOutputConsistency(o, t)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"M:\\Dashboard\\ITK\\Wrapping\\Generators\\Python\\Tests\\verifyGetOutputAPIConsistency.py\", line 83, in checkGetOutputConsistency\n    i.GetOutput()\nTypeError: itkPhaseCorrelationOptimizerF2.GetOutput() missing 1 required positional argument: 'index'\nitkTestDriver: Process exited with return value: 1\n",
             "commit_timestamp": 1721071948.0
+        },
+        {
+            "tool_version": "242.0.20240710.160624-eap07",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1721142638.739186,
+            "elapsed_time": 244.78799605369568,
+            "x64": true,
+            "actual_files_count": 100,
+            "expected_files_count": null,
+            "memory_traffic": 25989.498664855957,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "f88a2896a7449088af0a29070e53043f85ad6a3e",
+            "commit_message": "COMP: Add ITKMontage's PhaseCorrelationOptimizer to API ignore list\n\nMeant to address:\n\n> python \"M:/Dashboard/ITK/Wrapping/Generators/Python/Tests/verifyGetOutputAPIConsistency.py\"\n...\nTraceback (most recent call last):\n  File \"M:\\Dashboard\\ITK\\Wrapping\\Generators\\Python\\Tests\\verifyGetOutputAPIConsistency.py\", line 104, in <module>\n    tot, w = checkGetOutputConsistency(o, t)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"M:\\Dashboard\\ITK\\Wrapping\\Generators\\Python\\Tests\\verifyGetOutputAPIConsistency.py\", line 83, in checkGetOutputConsistency\n    i.GetOutput()\nTypeError: itkPhaseCorrelationOptimizerF2.GetOutput() missing 1 required positional argument: 'index'\nitkTestDriver: Process exited with return value: 1\n",
+            "commit_timestamp": 1721071948.0
         }
     ]
 }
