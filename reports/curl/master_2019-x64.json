@@ -18146,6 +18146,21 @@
             "commit_ref": "50a7602b78b4c670e4c24575f005cb7e2cc6ec89",
             "commit_message": "RELEASE-NOTES: synced\n",
             "commit_timestamp": 1720992131.0
+        },
+        {
+            "tool_version": "242.0.20240710.160624-eap07",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1721099182.345206,
+            "elapsed_time": 201.4670374393463,
+            "x64": true,
+            "actual_files_count": 3060,
+            "expected_files_count": 2323,
+            "memory_traffic": 43193.29495239258,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "58772b0e082eda333e0a5fc8fb0bc7f17a3cd99c",
+            "commit_message": "runtests: set `SOURCE_DATE_EPOCH` to fix failing around midnight\n\nTo make sure that `managen` called by test 1706 uses the same date as\nthe test expects in the `%DATE` macro.\n\nBefore this patch when tests started running before UTC midnight and\nreached test 1706 after, these dates were different and the test failed.\n\nFollow-up to 0e73b69b3dd6d174226c60406d3c4266754d70f8\nFixes #14173\nCloses #14187\n",
+            "commit_timestamp": 1721088828.0
         }
     ]
 }

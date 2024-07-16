@@ -19648,6 +19648,23 @@
             "commit_ref": "acc159aea1e641e3694ab8fe5faa231788077011",
             "commit_message": "[mlir][Transforms] Dialect conversion: Fix missing source materialization (#97903)\n\nThis commit fixes a bug in the dialect conversion. During a 1:N\r\nsignature conversion, the dialect conversion did not insert a cast back\r\nto the original block argument type, producing invalid IR.\r\n\r\nSee `test-block-legalization.mlir`: Without this commit, the operand\r\ntype of the op changes because an `unrealized_conversion_cast` is\r\nmissing:\r\n```\r\n\"test.consumer_of_complex\"(%v) : (!llvm.struct<(f64, f64)>) -> ()\r\n```\r\n\r\nTo implement this fix, it was necessary to change the meaning of\r\nargument materializations. An argument materialization now maps from the\r\nnew block argument types to the original block argument type. (It now\r\nbehaves almost like a source materialization.) This also addresses a\r\n`FIXME` in the code base:\r\n```\r\n// FIXME: The current argument materialization hook expects the original\r\n// output type, even though it doesn't use that as the actual output type\r\n// of the generated IR. The output type is just used as an indicator of\r\n// the type of materialization to do. This behavior is really awkward in\r\n// that it diverges from the behavior of the other hooks, and can be\r\n// easily misunderstood. We should clean up the argument hooks to better\r\n// represent the desired invariants we actually care about.\r\n```\r\n\r\nIt is no longer necessary to distinguish between the \"output type\" and\r\nthe \"original output type\".\r\n\r\nMost type converter are already written according to the new API. (Most\r\nimplementations use the same conversion functions as for source\r\nmaterializations.) One exception is the MemRef-to-LLVM type converter,\r\nwhich materialized an `!llvm.struct` based on the elements of a memref\r\ndescriptor. It still does that, but casts the `!llvm.struct` back to the\r\noriginal memref type. The dialect conversion inserts a target\r\nmaterialization (to `!llvm.struct`) which cancels out with the other\r\ncast.\r\n\r\nThis commit also fixes a bug in `computeNecessaryMaterializations`. The\r\nimplementation did not account for the possibility that a value was\r\nreplaced multiple times. E.g., replace `a` by `b`, then `b` by `c`.\r\n\r\nThis commit also adds a transform dialect op to populate SCF-to-CF\r\npatterns. This transform op was needed to write a test case. The bug\r\ndescribed here appears only during a complex interplay of 1:N signature\r\nconversions and op replacements. (I was not able to trigger it with ops\r\nand patterns from the `test` dialect without duplicating the `scf.if`\r\npattern.)\r\n\r\nNote for LLVM integration: Make sure that all\r\n`addArgument/Source/TargetMaterialization` functions produce an SSA of\r\nthe specified type.\r\n\r\nDepends on #98743.",
             "commit_timestamp": 1721055896.0
+        },
+        {
+            "tool_version": "242.0.20240710.160624-eap07",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1721100179.412446,
+            "elapsed_time": 1695.2851254940033,
+            "x64": true,
+            "actual_files_count": 2049,
+            "expected_files_count": 1661,
+            "memory_traffic": 254034.24188232422,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "27b2f4f861b8aeeabc4eb1a97649062de8fa3992",
+            "commit_message": "[LLDB] Revert #98351 and #98344\n\nThis reverts commit 2fa1220a37a3f55b76a29803d8333b3a3937d53a.\nThis reverts commit b9496a74eb4029629ca2e440c5441614e766f773.\n\nThe patch #98344 causes a crash in LLDB when parsing some files like `numpy.libs/libgfortran-daac5196.so.5.0.0` on graviton (you can download it in https://drive.google.com/file/d/12ygLjJwWpzdYsrzBPp1JGiFHxcgM0-XY/view?usp=drive_link if you want to troubleshoot yourself).\n\nThe assert that is hit is the following:\n\n```\nllvm-project/lldb/source/Plugins/ObjectFile/ELF/ObjectFileELF.cpp:2452: std::pair<unsigned int, std::map<long unsigned int, lldb_private::AddressClass> > ObjectFileELF::ParseSymbolTable(lldb_private::Symtab*, lldb::user_id_t, lldb_private::Section*): Assertion `strtab->GetObjectFile() == this' failed.\n[383588:383636:20240716,025305.572639:ERROR crashpad_client_linux.cc:780] Crashpad isn't enabled\n```\n\nThis object file doesn't have apparently a strings table but LLDB still tries to process it due to the code that is being reverted.\n",
+            "commit_timestamp": 1721098817.0
         }
     ]
 }
