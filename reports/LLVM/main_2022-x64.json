@@ -19665,6 +19665,23 @@
             "commit_ref": "27b2f4f861b8aeeabc4eb1a97649062de8fa3992",
             "commit_message": "[LLDB] Revert #98351 and #98344\n\nThis reverts commit 2fa1220a37a3f55b76a29803d8333b3a3937d53a.\nThis reverts commit b9496a74eb4029629ca2e440c5441614e766f773.\n\nThe patch #98344 causes a crash in LLDB when parsing some files like `numpy.libs/libgfortran-daac5196.so.5.0.0` on graviton (you can download it in https://drive.google.com/file/d/12ygLjJwWpzdYsrzBPp1JGiFHxcgM0-XY/view?usp=drive_link if you want to troubleshoot yourself).\n\nThe assert that is hit is the following:\n\n```\nllvm-project/lldb/source/Plugins/ObjectFile/ELF/ObjectFileELF.cpp:2452: std::pair<unsigned int, std::map<long unsigned int, lldb_private::AddressClass> > ObjectFileELF::ParseSymbolTable(lldb_private::Symtab*, lldb::user_id_t, lldb_private::Section*): Assertion `strtab->GetObjectFile() == this' failed.\n[383588:383636:20240716,025305.572639:ERROR crashpad_client_linux.cc:780] Crashpad isn't enabled\n```\n\nThis object file doesn't have apparently a strings table but LLDB still tries to process it due to the code that is being reverted.\n",
             "commit_timestamp": 1721098817.0
+        },
+        {
+            "tool_version": "242.0.20240710.160624-eap07",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1721121089.860115,
+            "elapsed_time": 1558.9122154712677,
+            "x64": true,
+            "actual_files_count": 2049,
+            "expected_files_count": 1661,
+            "memory_traffic": 253923.19686889648,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "b3a446650c2c48743e148daeb9ddec8e74bb83a2",
+            "commit_message": "[AMDGPU] Implement GFX12 Memory Model (#98591)\n\n- Emit GLOBAL_WB instructions\r\n- Reflect synscope on instructions's `scope:` operand\r\n\r\nFixes SWDEV-468508\r\nFixes SWDEV-470735\r\nFixes SWDEV-468392\r\nFixes SWDEV-469622",
+            "commit_timestamp": 1721119986.0
         }
     ]
 }

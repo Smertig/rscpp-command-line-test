@@ -19173,6 +19173,21 @@
             "commit_ref": "38df9daf489f7e359bbe6709099f0102398261d6",
             "commit_message": "add PERF_FORMAT_TOTAL_TIME_{ENABLED,RUNNING} to support multiplexing (#1814)\n\n",
             "commit_timestamp": 1720776496.0
+        },
+        {
+            "tool_version": "242.0.20240710.160624-eap07",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1721120069.600464,
+            "elapsed_time": 51.32726049423218,
+            "x64": true,
+            "actual_files_count": 86,
+            "expected_files_count": 86,
+            "memory_traffic": 4943.385688781738,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "d2cd246e19bdf4de9fe357daec52cbe38303d9d6",
+            "commit_message": "Clarify the difference between `BENCHMARK_TEMPLATE_F` and `BENCHMARK_TEMPLATE_DEFINE_F` + `BENCHMARK_REGISTER_F` (#1815)\n\n* Clarify BENCHMARK_REGISTER_F\r\n\r\nAdd comments highlighting the difference between `BENCHMARK_TEMPLATE_F` and `BENCHMARK_TEMPLATE_DEFINE_F`, mirroring those of `BENCHMARK_F ` and `BENCHMARK_DEFINE_F`.\r\n\r\n* More informative comments.\r\n\r\n* Update user_guide.md",
+            "commit_timestamp": 1721119916.0
         }
     ]
 }
