@@ -19716,6 +19716,23 @@
             "commit_ref": "befd44bcdc6e9d2f4099bf344826b2cd0fd8cbdc",
             "commit_message": "[AMDGPU] Update hasUnwantedEffectsWhenEXECEmpty (#97982)\n\nAdd barriers and s_wait_event to hasUnwantedEffectsWhenEXECEmpty.\r\nAdd a comment documenting the current expected use of the function.",
             "commit_timestamp": 1721183444.0
+        },
+        {
+            "tool_version": "242.0.20240710.160624-eap07",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1721229887.166429,
+            "elapsed_time": 1689.3121695518494,
+            "x64": true,
+            "actual_files_count": 2051,
+            "expected_files_count": 1661,
+            "memory_traffic": 253925.24904632568,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "5d42d69d936bc3f29e849aac33d331b198143145",
+            "commit_message": "[libc] Change rand implementation so all tests pass in both 32- and 64-bit systems (#98692)\n\nThis patch makes rand select different algorithms depending on the arch.\r\nThis is needed to avoid a test failure in 32-bit systems where the LSB\r\nof rand was not uniform enough when the 64-bit constants are used in\r\n32-bit systems.",
+            "commit_timestamp": 1721228486.0
         }
     ]
 }

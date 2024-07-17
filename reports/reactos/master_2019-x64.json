@@ -17971,6 +17971,21 @@
             "commit_ref": "075894bc4485d35712d0164b4c73403ba39e3016",
             "commit_message": "[CMD] Fix GetPathCase function (#7113)\n\nThis GetPathCase function does\r\nresolve the path with wildcard\r\npattern, and fix the alphabet\r\ncases, by using\r\nkernel32!FindFirstFile function.\r\nEnable wildcard at the middle\r\nof the file path in cmd.exe by\r\nfixing this function.\r\n\r\nJIRA issue: CORE-6609\r\nJIRA issue: CORE-13906\r\n\r\n- Fix GetPathCase function for\r\n  supporting wildcard at the\r\n- middle of the file path.\r\n- Make GetPathCase string-safe.\r\n- Optimize GetPathCase.",
             "commit_timestamp": 1721173113.0
+        },
+        {
+            "tool_version": "242.0.20240710.160624-eap07",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1721228817.662771,
+            "elapsed_time": 81.9369101524353,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7779.421600341797,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "738c8fc27c3ba0717439a7a9250a160964e0de20",
+            "commit_message": "[EXPLORER] Execute RunOnce[Ex] before desktop is created (#7143)\n\nCORE-19501",
+            "commit_timestamp": 1721212942.0
         }
     ]
 }

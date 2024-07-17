@@ -18348,6 +18348,21 @@
             "commit_ref": "4f917420d74aae84912acbaeb42e86691ddea309",
             "commit_message": "Fix incorrect comment in sources of Luau.EqSat. (#1333)\n\n",
             "commit_timestamp": 1721152311.0
+        },
+        {
+            "tool_version": "242.0.20240710.160624-eap07",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1721228778.839568,
+            "elapsed_time": 246.94434022903442,
+            "x64": true,
+            "actual_files_count": 458,
+            "expected_files_count": 379,
+            "memory_traffic": 31994.73666381836,
+            "repo_url": "https://github.com/luau-lang/luau",
+            "commit_ref": "623e1e30dbf0e875349182d75937caa57d6b9c1a",
+            "commit_message": "Store `definitionLocation` in ClassType (#1313)\n\nStore the location of an `AstStatDeclareClass` in the `ClassType` as\r\n`definitionLocation`.\r\n\r\nThis is useful for documentation comments and Go To Definition on a\r\nclass type\r\n\r\nhttps://github.com/luau-lang/luau/issues/1137#issuecomment-2212413633",
+            "commit_timestamp": 1721227411.0
         }
     ]
 }

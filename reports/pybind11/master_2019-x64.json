@@ -19528,6 +19528,21 @@
             "commit_ref": "43de8014f96ab8fc0028f11a26edbcf9b937cd91",
             "commit_message": "fix: make gil_safe_call_once thread-safe in free-threaded CPython (#5246)\n\n* fix: Make gil_safe_call_once thread-safe in free-threaded CPython\r\n\r\nThe \"is_initialized_\" flags is not protected by the GIL in free-threaded\r\nPython, so it needs to be an atomic field.\r\n\r\nFixes #5245\r\n\r\n* style: pre-commit fixes\r\n\r\n* Apply changes from code review\r\n\r\n---------\r\n\r\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>",
             "commit_timestamp": 1721153214.0
+        },
+        {
+            "tool_version": "242.0.20240710.160624-eap07",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1721228792.991205,
+            "elapsed_time": 114.39804077148438,
+            "x64": true,
+            "actual_files_count": 219,
+            "expected_files_count": 197,
+            "memory_traffic": 12857.617416381836,
+            "repo_url": "https://github.com/pybind/pybind11",
+            "commit_ref": "43de8014f96ab8fc0028f11a26edbcf9b937cd91",
+            "commit_message": "fix: make gil_safe_call_once thread-safe in free-threaded CPython (#5246)\n\n* fix: Make gil_safe_call_once thread-safe in free-threaded CPython\r\n\r\nThe \"is_initialized_\" flags is not protected by the GIL in free-threaded\r\nPython, so it needs to be an atomic field.\r\n\r\nFixes #5245\r\n\r\n* style: pre-commit fixes\r\n\r\n* Apply changes from code review\r\n\r\n---------\r\n\r\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>",
+            "commit_timestamp": 1721153214.0
         }
     ]
 }
