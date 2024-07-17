@@ -19699,6 +19699,23 @@
             "commit_ref": "80d261493e9bd3046fd56c77e276a105cc20c185",
             "commit_message": "[AMDGPU] clang-tidy: use override consistently. NFC.\n",
             "commit_timestamp": 1721141739.0
+        },
+        {
+            "tool_version": "242.0.20240710.160624-eap07",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1721186535.213594,
+            "elapsed_time": 1552.557808637619,
+            "x64": true,
+            "actual_files_count": 2050,
+            "expected_files_count": 1661,
+            "memory_traffic": 253962.7004928589,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "befd44bcdc6e9d2f4099bf344826b2cd0fd8cbdc",
+            "commit_message": "[AMDGPU] Update hasUnwantedEffectsWhenEXECEmpty (#97982)\n\nAdd barriers and s_wait_event to hasUnwantedEffectsWhenEXECEmpty.\r\nAdd a comment documenting the current expected use of the function.",
+            "commit_timestamp": 1721183444.0
         }
     ]
 }

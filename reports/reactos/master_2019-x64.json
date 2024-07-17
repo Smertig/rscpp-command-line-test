@@ -17956,6 +17956,21 @@
             "commit_ref": "580824ae1f55a62a2f5503ef54b3204fb9c85094",
             "commit_message": "[BROWSEUI] CExplorerBand: Refresh on change notification (#7141)\n\nUpdate UI on filesystem change.\r\nJIRA issue: CORE-12619\r\n- Add Refresh and RefreshRecurse\r\n  methods.\r\n- Add IsTreeItemInEnum,\r\n  TreeItemHasThisChild,\r\n  GetItemEnum, and\r\n  ItemHasAnyChild helper\r\n  methods.\r\n- Delete RenameItem, DeleteItem\r\n  and RefreshTreePidl methods\r\n  and _ReparsePIDL function.\r\n- Add WM_TIMER message\r\n  handler (OnTimer) to delay\r\n  refreshing.\r\n- Refresh TreeView on change\r\n  notification.",
             "commit_timestamp": 1721132501.0
+        },
+        {
+            "tool_version": "242.0.20240710.160624-eap07",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1721185552.204452,
+            "elapsed_time": 78.37659049034119,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7888.401229858398,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "075894bc4485d35712d0164b4c73403ba39e3016",
+            "commit_message": "[CMD] Fix GetPathCase function (#7113)\n\nThis GetPathCase function does\r\nresolve the path with wildcard\r\npattern, and fix the alphabet\r\ncases, by using\r\nkernel32!FindFirstFile function.\r\nEnable wildcard at the middle\r\nof the file path in cmd.exe by\r\nfixing this function.\r\n\r\nJIRA issue: CORE-6609\r\nJIRA issue: CORE-13906\r\n\r\n- Fix GetPathCase function for\r\n  supporting wildcard at the\r\n- middle of the file path.\r\n- Make GetPathCase string-safe.\r\n- Optimize GetPathCase.",
+            "commit_timestamp": 1721173113.0
         }
     ]
 }
