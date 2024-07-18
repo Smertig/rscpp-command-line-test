@@ -18236,6 +18236,21 @@
             "commit_ref": "1dd71312bf6d42ca89772942665af6209e33a552",
             "commit_message": "runtests: fix newline glitch in FAIL details\n\nFollow-up to bae555359979016999a9425a2d489f219a78abdd #14174\n",
             "commit_timestamp": 1721257829.0
+        },
+        {
+            "tool_version": "242.0.20240710.160624-eap07",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1721315132.669328,
+            "elapsed_time": 201.0116002559662,
+            "x64": true,
+            "actual_files_count": 3060,
+            "expected_files_count": 2323,
+            "memory_traffic": 43279.561180114746,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "d8696dc8c0a8879e2673870d09adc5fa9ab1af22",
+            "commit_message": "doh: fix cleanup\n\nWhen removing an easy handle that had DoH sub-easy handles going, those\nwere not removed from the multi handle. Their memory was reclaimed on\ncurl_easy_cleanup() of the owning handle, but multi still had them in\ntheir list.\n\nAdd `Curl_doh_close()` and `Curl_doh_cleanup()` as common point for\nhandling the DoH resource management. Use the `multi` present in the doh\nhandles (if so), for removal, as the `data->multi` might already have\nbeen NULLed at this time.\n\nReported-by: \u7f57\u671d\u8f89\nFixes #14207\nCloses #14212\n",
+            "commit_timestamp": 1721308410.0
         }
     ]
 }

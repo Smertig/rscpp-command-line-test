@@ -19750,6 +19750,23 @@
             "commit_ref": "ad154281230d83ee551e12d5be48bb956ef47ed3",
             "commit_message": "[NFC][libc++][test] loosen XFAIL condition for setfill_wchar_max.pass.cpp\n\nSo we can also match aarch64 triples which have four components instead of three when disabling the test, which the case on some buildbots.\n\nFollow on to #89305\n",
             "commit_timestamp": 1721270496.0
+        },
+        {
+            "tool_version": "242.0.20240710.160624-eap07",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1721316179.709781,
+            "elapsed_time": 1630.1920583248138,
+            "x64": true,
+            "actual_files_count": 2051,
+            "expected_files_count": 1661,
+            "memory_traffic": 254439.0542755127,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "676efd0ffb717215c752f200fe14163732290dcc",
+            "commit_message": "Reapply 078198f310d5 \"Index DebugVariables and some DILocations\"\n\nNow revised to actually make the unit test compile, which I'd been\nignoring. No actual functional change, it's a type difference.\nOriginal commit message follows.\n\n[DebugInfo][InstrRef] Index DebugVariables and some DILocations (#99318)\n\nA lot of time in LiveDebugValues is spent computing DenseMap keys for\nDebugVariables, and they're made up of three pointers, so are large.\nThis patch installs an index for them: for the SSA and value-to-location\nmapping parts of InstrRefBasedLDV we don't need to access things like\nthe variable declaration or the inlining site, so just use a uint32_t\nidentifier for each variable fragment that's tracked. The compile-time\nperformance improvements are substantial (almost 0.4% on the tracker).\n\nAbout 80% of this patch is just replacing DebugVariable references with\nDebugVariableIDs instead, however there are some larger consequences. We\nspend lots of time fetching DILocations when emitting DBG_VALUE\ninstructions, so index those with the DebugVariables: this means all\nDILocations on all new DBG_VALUE instructions will normalise to the\nfirst-seen DILocation for the variable (which should be fine).\n\nWe also used to keep an ordering of when each variable was seen first in\na DBG_* instruction, in the AllVarsNumbering collection, so that we can\nemit new DBG_* instructions in a stable order. We can hang this off the\nDebugVariable index instead, so AllVarsNumbering is deleted.\n\nFinally, rather than ordering by AllVarsNumbering just before DBG_*\ninstructions are linked into the output MIR, store instructions along\nwith their DebugVariableID, so that they can be sorted by that instead.\n",
+            "commit_timestamp": 1721314506.0
         }
     ]
 }

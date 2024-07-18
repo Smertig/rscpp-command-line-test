@@ -18001,6 +18001,21 @@
             "commit_ref": "61b7fb99eb2140b587efd8d3eb463b97116e7a34",
             "commit_message": "[PARTMGR] Filter some currently-unimplemented MountMgr MOUNTDEV notifications.\nCORE-17200\n\nHelps reducing debug log noise like:\n```\n(drivers\\storage\\port\\scsiport\\ioctl.c:542) unknown ioctl code: 0x4D0018\n```\n\nThe other notifications are already implemented there.\nThese are handled by the volume manager, which is currently\nstubbed into ReactOS' partition manager.\n\nSee commit ed27d733f7 for what the deprecated versions\nof IOCTL_MOUNTDEV_LINK_[CREATED|DELETED] are all about.\n",
             "commit_timestamp": 1721229866.0
+        },
+        {
+            "tool_version": "242.0.20240710.160624-eap07",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1721315153.673907,
+            "elapsed_time": 93.63207221031189,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7781.8874435424805,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "69931a4a7d1a58975cfc73ddf1c225cc87fbc21a",
+            "commit_message": "[SHDOCVW] Initial implementation of Favorites bar (#7146)\n\nFirst step to Favorites bar support.\r\nMenu: [View]\u2192[Explorer bar]\r\n\u2192[Favorites]\r\n\r\nJIRA issue: CORE-19686\r\n\r\n- Add CFavBand.cpp, CFavBand.h,\r\n  favband.rgs, and resource.h files.\r\n- Modify CMakeLists.txt.\r\n- Add IDS_ADD and IDS_ORGANIZE\r\n  resource strings.\r\n- Implement empty Favorites bar.\r\n- The treeview is not populated yet.\r\n- The Add button is not\r\n  implemented yet.",
+            "commit_timestamp": 1721312500.0
         }
     ]
 }
