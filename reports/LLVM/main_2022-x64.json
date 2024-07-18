@@ -19733,6 +19733,23 @@
             "commit_ref": "5d42d69d936bc3f29e849aac33d331b198143145",
             "commit_message": "[libc] Change rand implementation so all tests pass in both 32- and 64-bit systems (#98692)\n\nThis patch makes rand select different algorithms depending on the arch.\r\nThis is needed to avoid a test failure in 32-bit systems where the LSB\r\nof rand was not uniform enough when the 64-bit constants are used in\r\n32-bit systems.",
             "commit_timestamp": 1721228486.0
+        },
+        {
+            "tool_version": "242.0.20240710.160624-eap07",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1721272926.968262,
+            "elapsed_time": 1553.187311887741,
+            "x64": true,
+            "actual_files_count": 2051,
+            "expected_files_count": 1661,
+            "memory_traffic": 254215.77082824707,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "ad154281230d83ee551e12d5be48bb956ef47ed3",
+            "commit_message": "[NFC][libc++][test] loosen XFAIL condition for setfill_wchar_max.pass.cpp\n\nSo we can also match aarch64 triples which have four components instead of three when disabling the test, which the case on some buildbots.\n\nFollow on to #89305\n",
+            "commit_timestamp": 1721270496.0
         }
     ]
 }

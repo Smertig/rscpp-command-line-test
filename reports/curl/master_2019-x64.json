@@ -18221,6 +18221,21 @@
             "commit_ref": "bae555359979016999a9425a2d489f219a78abdd",
             "commit_message": "runtests: show name and keywords for failed tests in summary\n\nUseful to see what the numbers listed in the `TESTFAIL:` and `IGNORED:`\nlines mean. Also list test keywords to help catching failure patterns.\n\nExample:\n```\nFAIL 1034: 'HTTP over proxy with malformatted IDN host name' HTTP, HTTP GET, HTTP proxy, IDN, FAILURE, config file\nFAIL 1035: 'HTTP over proxy with too long IDN host name' HTTP, HTTP GET, HTTP proxy, IDN, FAILURE\n\nTESTFAIL: These test cases failed: 1034 1035\n```\n\nCloses #14174\n",
             "commit_timestamp": 1721123794.0
+        },
+        {
+            "tool_version": "242.0.20240710.160624-eap07",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1721272033.616014,
+            "elapsed_time": 229.13611888885498,
+            "x64": true,
+            "actual_files_count": 3060,
+            "expected_files_count": 2323,
+            "memory_traffic": 45440.44585418701,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "1dd71312bf6d42ca89772942665af6209e33a552",
+            "commit_message": "runtests: fix newline glitch in FAIL details\n\nFollow-up to bae555359979016999a9425a2d489f219a78abdd #14174\n",
+            "commit_timestamp": 1721257829.0
         }
     ]
 }
