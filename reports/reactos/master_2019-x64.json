@@ -18016,6 +18016,21 @@
             "commit_ref": "69931a4a7d1a58975cfc73ddf1c225cc87fbc21a",
             "commit_message": "[SHDOCVW] Initial implementation of Favorites bar (#7146)\n\nFirst step to Favorites bar support.\r\nMenu: [View]\u2192[Explorer bar]\r\n\u2192[Favorites]\r\n\r\nJIRA issue: CORE-19686\r\n\r\n- Add CFavBand.cpp, CFavBand.h,\r\n  favband.rgs, and resource.h files.\r\n- Modify CMakeLists.txt.\r\n- Add IDS_ADD and IDS_ORGANIZE\r\n  resource strings.\r\n- Implement empty Favorites bar.\r\n- The treeview is not populated yet.\r\n- The Add button is not\r\n  implemented yet.",
             "commit_timestamp": 1721312500.0
+        },
+        {
+            "tool_version": "242.0.20240710.160624-eap07",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1721358350.977814,
+            "elapsed_time": 75.81898260116577,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7839.367370605469,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "466a19817fba93197ba7a4c3199fbe24d9edd718",
+            "commit_message": "[COMCTL32][USER32] STATIC: Fix grayed drawing (#7024)\n\nCORE-15298\r\n\r\nUse DrawTextW() to correctly render disabled grayed text.\r\nApplies to both dll\\win32\\comctl32\\static.c and win32ss\\user\\user32\\controls\\static.c\r\n\r\nA similar solution is already used by button.c!BUTTON_DrawLabel().\r\n",
+            "commit_timestamp": 1721333016.0
         }
     ]
 }
