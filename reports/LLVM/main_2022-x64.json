@@ -19818,6 +19818,23 @@
             "commit_ref": "d4dc8e4a85c4a88a9080ac7b4e478498cb5edd33",
             "commit_message": "Fixup for #95588, don't assume `align 8`.\n\nThis shall fix aarch64 builders.\n",
             "commit_timestamp": 1721443896.0
+        },
+        {
+            "tool_version": "242.0.20240710.160624-eap07",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1721488859.113544,
+            "elapsed_time": 1573.6363644599915,
+            "x64": true,
+            "actual_files_count": 2052,
+            "expected_files_count": 1661,
+            "memory_traffic": 254598.75969696045,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "615b7eeaa94d7c2d2c782fcdc21de5b62f3c168e",
+            "commit_message": "Reapply \"[LLVM][LTO] Factor out RTLib calls and allow them to be dropped (#98512)\"\n\nThis reverts commit 740161a9b98c9920dedf1852b5f1c94d0a683af5.\n\nI moved the `ISD` dependencies into the CodeGen portion of the handling,\nit's a little awkward but it's the easiest solution I can think of for\nnow.\n",
+            "commit_timestamp": 1721485771.0
         }
     ]
 }

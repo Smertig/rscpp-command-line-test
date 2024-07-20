@@ -15401,6 +15401,21 @@
             "commit_ref": "97248204a1cc10bd3a66ce857535d133f6bc86a1",
             "commit_message": "gh-121621: Disable asyncio freelist in free-threaded build (#122046)\n\nThe futureobj freelist isn't thread-safe. We intend to re-enable the\r\nfreelist in a thread-safe way for 3.14 (but not 3.13).",
             "commit_timestamp": 1721417189.0
+        },
+        {
+            "tool_version": "242.0.20240710.160624-eap07",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1721488095.228414,
+            "elapsed_time": 1352.1067743301392,
+            "x64": true,
+            "actual_files_count": 1039,
+            "expected_files_count": null,
+            "memory_traffic": 49137.58003234863,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "a09e215abf3c80a3c99c86b4482b512b42aad072",
+            "commit_message": "gh-121988: Fix test hang when pyrepl is not available (#121990)\n\nAlso explicitly fail the test if we timeout while waiting for output so\r\nthat this failure mode is caught earlier.",
+            "commit_timestamp": 1721484254.0
         }
     ]
 }
