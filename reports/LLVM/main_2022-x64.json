@@ -19801,6 +19801,23 @@
             "commit_ref": "4b9fab591916eec9fd1942f37afe3b137b564089",
             "commit_message": "[flang][OpenMP] Implement lastprivate with collapse (#99500)\n\nThis patch enables the lastprivate clause to be used in the presence of\r\nthe collapse clause.\r\n\r\nNote: the way we currently implement lastprivate means that this adds a\r\nlarge number of compare instructions to the end of every iteration of\r\nthe loop. This is a clearly non-optimal thing to do, but lastprivate in\r\ngeneral will need re-implementing to prevent this. This is planned as\r\npart of the delayed privatization work. This current implementation is\r\njust a stop-gap measure as generating sub-optimal but working code is\r\nbetter than crashing out.",
             "commit_timestamp": 1721400936.0
+        },
+        {
+            "tool_version": "242.0.20240710.160624-eap07",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1721445731.278499,
+            "elapsed_time": 1597.848081111908,
+            "x64": true,
+            "actual_files_count": 2052,
+            "expected_files_count": 1661,
+            "memory_traffic": 254261.0867767334,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "d4dc8e4a85c4a88a9080ac7b4e478498cb5edd33",
+            "commit_message": "Fixup for #95588, don't assume `align 8`.\n\nThis shall fix aarch64 builders.\n",
+            "commit_timestamp": 1721443896.0
         }
     ]
 }

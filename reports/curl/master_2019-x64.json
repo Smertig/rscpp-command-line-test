@@ -18281,6 +18281,21 @@
             "commit_ref": "5a488251f7cb79cfbbc72550ca6a8f2a02221cf5",
             "commit_message": "curldown: fixups\n\n- make DEFAULT sections less repetitive\n\n- make historic mentions use HISTORY\n\n- generate the protocols section on `# %PROTOCOLS%` instead of guessing\n  where to put it\n\n- generate the availability section on `# %AVAILABILITY%` instead of\n  guessing where to put it\n\n- make the protocols section more verbose\n\nCloses #14227\n",
             "commit_timestamp": 1721401405.0
+        },
+        {
+            "tool_version": "242.0.20240710.160624-eap07",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1721444729.428442,
+            "elapsed_time": 217.55159425735474,
+            "x64": true,
+            "actual_files_count": 3060,
+            "expected_files_count": 2323,
+            "memory_traffic": 46116.51975250244,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "1f877b0fba8881e1a7b8a2f1c7e9a1f9ae78831c",
+            "commit_message": "md4: fix compilation with OpenSSL 1.x with md4 disabled\n\nIf OpenSSL 1.x is used, and it is configured with md4 disabled,\nOPENSSL_NO_MD4 is defined in opensslconf.h, but this header was not\nincluded before checking for this define.\n\nLater in md4.c, openssl/md4.h is included, and it includes that header\nindirectly, leading to inconsistency within md4.c.\n\nSince the md4.h branch was taken, wincrypt.h (or others) is not\nincluded, and later below the USE_WIN32_CRYPTO branch is taken, but the\ntypes are not defined.\n\nCloses #14218\n",
+            "commit_timestamp": 1721406450.0
         }
     ]
 }

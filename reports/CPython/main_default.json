@@ -15386,6 +15386,21 @@
             "commit_ref": "d66b06107b0104af513f664d9a5763216639018b",
             "commit_message": "gh-118830: Bump pickle.DEFAULT_PROTOCOL to 5 (GH-119340)\n\n",
             "commit_timestamp": 1721400430.0
+        },
+        {
+            "tool_version": "242.0.20240710.160624-eap07",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1721445022.139286,
+            "elapsed_time": 1404.6045863628387,
+            "x64": true,
+            "actual_files_count": 1039,
+            "expected_files_count": null,
+            "memory_traffic": 49065.9974899292,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "97248204a1cc10bd3a66ce857535d133f6bc86a1",
+            "commit_message": "gh-121621: Disable asyncio freelist in free-threaded build (#122046)\n\nThe futureobj freelist isn't thread-safe. We intend to re-enable the\r\nfreelist in a thread-safe way for 3.14 (but not 3.13).",
+            "commit_timestamp": 1721417189.0
         }
     ]
 }
