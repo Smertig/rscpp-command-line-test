@@ -15416,6 +15416,21 @@
             "commit_ref": "a09e215abf3c80a3c99c86b4482b512b42aad072",
             "commit_message": "gh-121988: Fix test hang when pyrepl is not available (#121990)\n\nAlso explicitly fail the test if we timeout while waiting for output so\r\nthat this failure mode is caught earlier.",
             "commit_timestamp": 1721484254.0
+        },
+        {
+            "tool_version": "242.0.20240710.160624-eap07",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1721531391.280934,
+            "elapsed_time": 1439.2073216438293,
+            "x64": true,
+            "actual_files_count": 1039,
+            "expected_files_count": null,
+            "memory_traffic": 49197.13109588623,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "c4c7097e64b0c9cb0081de8872b90594865c892b",
+            "commit_message": "GH-73991: Support preserving metadata in `pathlib.Path.copytree()` (#121438)\n\nAdd *preserve_metadata* keyword-only argument to `pathlib.Path.copytree()`,\r\ndefaulting to false. When set to true, we copy timestamps, permissions,\r\nextended attributes and flags where available, like `shutil.copystat()`.",
+            "commit_timestamp": 1721514772.0
         }
     ]
 }
