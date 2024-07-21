@@ -18326,6 +18326,21 @@
             "commit_ref": "eef17551ac83170f0a4a562e57ba2b28af0ff5bd",
             "commit_message": "lib: Curl_posttransfer => multi_posttransfer\n\nMoved from transfer.c to multi.c as it was only used within multi.c\n\nMade a void, as it returned a fixed return code nothing checked.\n\nCloses #14240\n",
             "commit_timestamp": 1721515610.0
+        },
+        {
+            "tool_version": "242.0.20240710.160624-eap07",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1721574464.445608,
+            "elapsed_time": 236.45496106147766,
+            "x64": true,
+            "actual_files_count": 3060,
+            "expected_files_count": 2323,
+            "memory_traffic": 43280.42674255371,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "eef17551ac83170f0a4a562e57ba2b28af0ff5bd",
+            "commit_message": "lib: Curl_posttransfer => multi_posttransfer\n\nMoved from transfer.c to multi.c as it was only used within multi.c\n\nMade a void, as it returned a fixed return code nothing checked.\n\nCloses #14240\n",
+            "commit_timestamp": 1721515610.0
         }
     ]
 }

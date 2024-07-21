@@ -19852,6 +19852,23 @@
             "commit_ref": "1d5d18924d185a4267462479307f1ff9911cb112",
             "commit_message": "Revert \"[LoongArch] Remove spurious mask operations from andn->icmp on 16 and 8 bit values\" (#99792)\n\nReverts llvm/llvm-project#99272",
             "commit_timestamp": 1721528240.0
+        },
+        {
+            "tool_version": "242.0.20240710.160624-eap07",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1721575465.647428,
+            "elapsed_time": 1658.1161272525787,
+            "x64": true,
+            "actual_files_count": 2052,
+            "expected_files_count": 1661,
+            "memory_traffic": 254241.08727264404,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "c8c0b18b5d58415b79ea13b62eee70c130c26a0a",
+            "commit_message": "[LV] Update tests to not have dead interleave groups.\n\nUpdate existing tests with dead interleave groups by adding users. This\nensures the tests keep testing what they were intended to test with a\nplanned change to skip unused instructions in cost computations.\n",
+            "commit_timestamp": 1721567020.0
         }
     ]
 }

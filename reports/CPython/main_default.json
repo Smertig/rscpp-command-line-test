@@ -15431,6 +15431,21 @@
             "commit_ref": "c4c7097e64b0c9cb0081de8872b90594865c892b",
             "commit_message": "GH-73991: Support preserving metadata in `pathlib.Path.copytree()` (#121438)\n\nAdd *preserve_metadata* keyword-only argument to `pathlib.Path.copytree()`,\r\ndefaulting to false. When set to true, we copy timestamps, permissions,\r\nextended attributes and flags where available, like `shutil.copystat()`.",
             "commit_timestamp": 1721514772.0
+        },
+        {
+            "tool_version": "242.0.20240710.160624-eap07",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1721574567.227002,
+            "elapsed_time": 1346.3263065814972,
+            "x64": true,
+            "actual_files_count": 1039,
+            "expected_files_count": null,
+            "memory_traffic": 49174.83229827881,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "0dcbc8385322ff51f7fc3e586027d880275df4fa",
+            "commit_message": "Delete stale note about mp.Lock.acquire/SIGINT (#120929)\n\n",
+            "commit_timestamp": 1721542677.0
         }
     ]
 }
