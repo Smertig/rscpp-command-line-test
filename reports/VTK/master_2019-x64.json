@@ -17265,6 +17265,21 @@
             "commit_ref": "ddae65df810188659837da1d9cb2f4359628e333",
             "commit_message": "Merge branch 'paraview/release' into master",
             "commit_timestamp": 1721601251.0
+        },
+        {
+            "tool_version": "242.0.20240720.165730-eap08",
+            "error_mismatch": false,
+            "project": "vtkCommonCoreCxxTests",
+            "timestamp": 1721638790.234607,
+            "elapsed_time": 202.07721209526062,
+            "x64": true,
+            "actual_files_count": 81,
+            "expected_files_count": 68,
+            "memory_traffic": 24167.791145324707,
+            "repo_url": "https://gitlab.kitware.com/vtk/vtk.git",
+            "commit_ref": "6ef0621730ff8bc6112c92e2e1fb7b03ea2e9a75",
+            "commit_message": "Merge topic 'HTG_GCG_ShallowCopyCD'\n\nea52af58951 Add description for the GCG improvement\ncbd1d0d5387 Update the vtkHyperTreeGridGhostCellsGenerator test\n61502b13cc3 Improve the memory usage of the vtkHyperTreeGridGhostCellsGenerator\n9eb02a520eb Cast `char`  fields durint the PrintSelf for correct display\n1ef0bcfbd03 Allow for nullptr entries in the ConcatenateDataArrays method\n\nAcked-by: Kitware Robot <kwrobot@kitware.com>\nAcked-by: buildbot <buildbot@kitware.com>\nReviewed-by: Louis Gombert <louis.gombert@kitware.com>\nReviewed-by: Thomas Galland <thomas.galland@kitware.com>\nMerge-request: !11304\n",
+            "commit_timestamp": 1721631720.0
         }
     ]
 }

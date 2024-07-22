@@ -19886,6 +19886,23 @@
             "commit_ref": "197b14223238716a84b423315242f8b10d8922dd",
             "commit_message": "[libc] Add N Threads Benchmark Helper (#99834)\n\nThis PR adds a `BENCHMARK_N_THREADS()` helper to register benchmarks\r\nwith a specific number of threads. This PR replaces the flags used\r\noriginally to allow any amount of threads.",
             "commit_timestamp": 1721617000.0
+        },
+        {
+            "tool_version": "242.0.20240720.165730-eap08",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1721639443.914334,
+            "elapsed_time": 1625.1996297836304,
+            "x64": true,
+            "actual_files_count": 2052,
+            "expected_files_count": 1661,
+            "memory_traffic": 254464.8042602539,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "20d38158ffbe1e01b74e39d36d4b3bc5e7a63d66",
+            "commit_message": "[clang] Fix assertion failure in `injectEmbedTokens` (#99624)\n\nIt seems for C++ lexer has some caching ability which doesn't expect\r\ninjecting \"new\" tokens in the middle of the cache. Technically #embed\r\ntokens are not completely new since they have already been read from the\r\nfile and there was #embed annotation token in this place, so set\r\n`reinject` flag for them to silence assertion.",
+            "commit_timestamp": 1721637989.0
         }
     ]
 }
