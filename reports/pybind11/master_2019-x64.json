@@ -19708,6 +19708,21 @@
             "commit_ref": "6d4805ced1f8fc8f503d41381853f6082f3064a3",
             "commit_message": "Small cleanup/refactoring in support of PR #5213 (#5251)\n\n* Factor out detail/value_and_holder.h (from detail/type_caster_base.h)\r\n\r\nThis is in support of PR #5213:\r\n\r\n* trampoline_self_life_support.h depends on value_and_holder.h\r\n\r\n* type_caster_base.h depends on trampoline_self_life_support.h\r\n\r\n* Fix a minor and inconsequential inconsistency in `copyable_holder_caster`: the correct `load_value()` return type is `void` (as defined in `type_caster_generic`)\r\n\r\nFor easy future reference, this is the long-standing inconsistency:\r\n\r\n* https://github.com/pybind/pybind11/blob/dbf848aff7c37ef8798bc9459a86193e28b1032f/include/pybind11/detail/type_caster_base.h#L634\r\n\r\n* https://github.com/pybind/pybind11/blob/dbf848aff7c37ef8798bc9459a86193e28b1032f/include/pybind11/cast.h#L797\r\n\r\nNoticed in passing while working on PR #5213.\r\n\r\n* Add `DANGER ZONE` comment in detail/init.h, similar to a comment added on the smart_holder branch (all the way back in 2021).",
             "commit_timestamp": 1721349246.0
+        },
+        {
+            "tool_version": "242.0.20240720.165730-eap08",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1721660779.391953,
+            "elapsed_time": 124.6310863494873,
+            "x64": true,
+            "actual_files_count": 224,
+            "expected_files_count": 197,
+            "memory_traffic": 12889.41650390625,
+            "repo_url": "https://github.com/pybind/pybind11",
+            "commit_ref": "6d4805ced1f8fc8f503d41381853f6082f3064a3",
+            "commit_message": "Small cleanup/refactoring in support of PR #5213 (#5251)\n\n* Factor out detail/value_and_holder.h (from detail/type_caster_base.h)\r\n\r\nThis is in support of PR #5213:\r\n\r\n* trampoline_self_life_support.h depends on value_and_holder.h\r\n\r\n* type_caster_base.h depends on trampoline_self_life_support.h\r\n\r\n* Fix a minor and inconsequential inconsistency in `copyable_holder_caster`: the correct `load_value()` return type is `void` (as defined in `type_caster_generic`)\r\n\r\nFor easy future reference, this is the long-standing inconsistency:\r\n\r\n* https://github.com/pybind/pybind11/blob/dbf848aff7c37ef8798bc9459a86193e28b1032f/include/pybind11/detail/type_caster_base.h#L634\r\n\r\n* https://github.com/pybind/pybind11/blob/dbf848aff7c37ef8798bc9459a86193e28b1032f/include/pybind11/cast.h#L797\r\n\r\nNoticed in passing while working on PR #5213.\r\n\r\n* Add `DANGER ZONE` comment in detail/init.h, similar to a comment added on the smart_holder branch (all the way back in 2021).",
+            "commit_timestamp": 1721349246.0
         }
     ]
 }
