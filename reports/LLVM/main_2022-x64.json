@@ -19937,6 +19937,23 @@
             "commit_ref": "2e6558b8bcdaa4c0924f1f49a9200cb2dea44bd4",
             "commit_message": "[flang][OpenMP] fix lastprivate for allocatables (#99686)\n\nDon't use `copyHostAssociateVar` for allocatable variables. It isn't\r\nclear to me whether or not this should be addressed in\r\n`copyHostAssociateVar` instead of inside OpenMP. I opted for OpenMP\r\nto minimise how many things I effected. `copyHostAssociateVar` will\r\nnot update the destination variable if the destination variable\r\nwas unallocated. This is incorrect because assignment inside of the\r\nopenmp block can cause the allocation status of the variable to\r\nchange. Furthermore, `copyHostAssociateVar` seems to only copy the\r\nvariable address not other metadata like the size of the allocation.\r\nReallocation by assignment could cause this to change.",
             "commit_timestamp": 1721660717.0
+        },
+        {
+            "tool_version": "242.0.20240720.165730-eap08",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1721705030.277651,
+            "elapsed_time": 1622.6496937274933,
+            "x64": true,
+            "actual_files_count": 2053,
+            "expected_files_count": 1661,
+            "memory_traffic": 254441.21300506592,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "9e97f80cc5fe802e52f56699ce2df40a3aa989e3",
+            "commit_message": "MCAssembler: Move Symvers to ELFObjectWriter\n\nSimilar to c473e75adeaf2998e4fb444b0bdbf2dd19312e50\n",
+            "commit_timestamp": 1721701980.0
         }
     ]
 }

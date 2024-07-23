@@ -18166,6 +18166,21 @@
             "commit_ref": "a45d375f6069c5e32d643f67c4004c041aff4cb1",
             "commit_message": "[RAPPS] Fix CAB codepage handling (#7165)\n\n- MultiByteToWide parameter bug.\r\n- Use CP_UTF8 to convert cab filenames if the UTF attribute is set.\r\n\r\n",
             "commit_timestamp": 1721658031.0
+        },
+        {
+            "tool_version": "242.0.20240720.165730-eap08",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1721704010.35438,
+            "elapsed_time": 121.40559840202332,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7823.506950378418,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "6219a1abe5302d26182277453ea585de81167344",
+            "commit_message": "[BROWSEUI][SHELL32] Ignore navigation requests during browser destruction (#7161)\n\nPR #7141 causes calls to IShellBrowser::BrowseObject while the shell browser is in the middle of destruction and the ShellView ListView has already been destroyed and DefView is not prepared for this.",
+            "commit_timestamp": 1721676358.0
         }
     ]
 }

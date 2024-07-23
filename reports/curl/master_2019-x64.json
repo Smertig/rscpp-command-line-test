@@ -18401,6 +18401,21 @@
             "commit_ref": "eef17551ac83170f0a4a562e57ba2b28af0ff5bd",
             "commit_message": "lib: Curl_posttransfer => multi_posttransfer\n\nMoved from transfer.c to multi.c as it was only used within multi.c\n\nMade a void, as it returned a fixed return code nothing checked.\n\nCloses #14240\n",
             "commit_timestamp": 1721515610.0
+        },
+        {
+            "tool_version": "242.0.20240720.165730-eap08",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1721703974.832245,
+            "elapsed_time": 241.7484369277954,
+            "x64": true,
+            "actual_files_count": 3060,
+            "expected_files_count": 2323,
+            "memory_traffic": 43155.57964324951,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "8193ca59e1bf248fbfc4eaad0ecd785e958e16c1",
+            "commit_message": "tool_cb_prg: output \"flying saucers\" with leading carriage return\n\nBecause that is how the progress-bar is output, so when the progress-bar\nhas been shown at least once and the information is reset, like for a\nredirect, there might be a moment where the size goes from known to\nunknown and then the flying saucerts are shown after a brief display of\nthe progress-bar.\n\nIt could previously cause accidental character leftovers on the right\nside of the bar when using a narrow display.\n\nReported-by: Chris Webb\nFixes #14213\nCloses #14246\n",
+            "commit_timestamp": 1721662398.0
         }
     ]
 }
