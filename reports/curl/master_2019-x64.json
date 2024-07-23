@@ -18416,6 +18416,21 @@
             "commit_ref": "8193ca59e1bf248fbfc4eaad0ecd785e958e16c1",
             "commit_message": "tool_cb_prg: output \"flying saucers\" with leading carriage return\n\nBecause that is how the progress-bar is output, so when the progress-bar\nhas been shown at least once and the information is reset, like for a\nredirect, there might be a moment where the size goes from known to\nunknown and then the flying saucerts are shown after a brief display of\nthe progress-bar.\n\nIt could previously cause accidental character leftovers on the right\nside of the bar when using a narrow display.\n\nReported-by: Chris Webb\nFixes #14213\nCloses #14246\n",
             "commit_timestamp": 1721662398.0
+        },
+        {
+            "tool_version": "242.0.20240720.165730-eap08",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1721747231.709731,
+            "elapsed_time": 251.44621896743774,
+            "x64": true,
+            "actual_files_count": 3060,
+            "expected_files_count": 2323,
+            "memory_traffic": 43175.78928375244,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "340ef55d97b9d81ed1a4bdf83e0d8a175bca7963",
+            "commit_message": "curl_easy_escape.md: move historic details to HISTORY\n\nCloses #14261\n",
+            "commit_timestamp": 1721726659.0
         }
     ]
 }

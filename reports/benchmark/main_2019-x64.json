@@ -19428,6 +19428,21 @@
             "commit_ref": "64b5d8cd111721e4e3e0174825b04eb95309df96",
             "commit_message": "Update benchmark Python bindings for nanobind 2.0, and update to nanobind 2.0. (#1817)\n\nIncorporates the nanobind_bazel change from https://github.com/google/benchmark/pull/1795.\r\n\r\nnanobind 2.0 reworked the nanobind::enum_ class so it uses a real Python enum or intenum rather than its previous hand-rolled implementation.\r\nhttps://nanobind.readthedocs.io/en/latest/changelog.html#version-2-0-0-may-23-2024\r\n\r\nAs a consequence of that change, nanobind now checks when casting an integer to a enum value that the integer corresponds to a valid enum. Counter::Flags is a bitmask, and many combinations are not valid enum members.\r\n\r\nThis change:\r\na) sets nb::is_arithmetic(), which means Counter::Flags becomes an IntEnum that can be freely cast to an integer.\r\nb) defines the | operator for flags to return an integer, not an enum, avoiding the error.\r\nc) changes Counter's constructor to accept an int, not a Counter::Flags enum. Since Counter::Flags is an IntEnum now, it can be freely coerced to an int.\r\n\r\nIf https://github.com/wjakob/nanobind/pull/599 is merged into nanobind, then we can perhaps use a flag enum here instead.",
             "commit_timestamp": 1721318042.0
+        },
+        {
+            "tool_version": "242.0.20240720.165730-eap08",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1721747244.046134,
+            "elapsed_time": 77.73374843597412,
+            "x64": true,
+            "actual_files_count": 88,
+            "expected_files_count": 86,
+            "memory_traffic": 5173.871871948242,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "df44bf7187fb5df0029979ff5a6d3cdd2f25eb59",
+            "commit_message": "Revert to token authentication for PyPI wheel uploads (#1819)\n\nUntil the PyPI account is recovered, it should be possible to upload\r\nwheels with the GitHub secrets that were previously used.\r\n\r\nChanges the PyPI upload action sourcing to point to the v1 stable release\r\nbranch, which receives rolling updates and is the canonical way of\r\nincluding the wheel publishing action.\r\n\r\nUploading will probably need another release, because setuptools_scm\r\nneeds to produce a clean tag that the PyPI API allows as an upload.",
+            "commit_timestamp": 1721742546.0
         }
     ]
 }
