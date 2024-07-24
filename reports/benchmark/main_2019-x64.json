@@ -19443,6 +19443,21 @@
             "commit_ref": "df44bf7187fb5df0029979ff5a6d3cdd2f25eb59",
             "commit_message": "Revert to token authentication for PyPI wheel uploads (#1819)\n\nUntil the PyPI account is recovered, it should be possible to upload\r\nwheels with the GitHub secrets that were previously used.\r\n\r\nChanges the PyPI upload action sourcing to point to the v1 stable release\r\nbranch, which receives rolling updates and is the canonical way of\r\nincluding the wheel publishing action.\r\n\r\nUploading will probably need another release, because setuptools_scm\r\nneeds to produce a clean tag that the PyPI API allows as an upload.",
             "commit_timestamp": 1721742546.0
+        },
+        {
+            "tool_version": "242.0.20240720.165730-eap08",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1721790508.246467,
+            "elapsed_time": 113.87978649139404,
+            "x64": true,
+            "actual_files_count": 88,
+            "expected_files_count": 86,
+            "memory_traffic": 4944.04679107666,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "df44bf7187fb5df0029979ff5a6d3cdd2f25eb59",
+            "commit_message": "Revert to token authentication for PyPI wheel uploads (#1819)\n\nUntil the PyPI account is recovered, it should be possible to upload\r\nwheels with the GitHub secrets that were previously used.\r\n\r\nChanges the PyPI upload action sourcing to point to the v1 stable release\r\nbranch, which receives rolling updates and is the canonical way of\r\nincluding the wheel publishing action.\r\n\r\nUploading will probably need another release, because setuptools_scm\r\nneeds to produce a clean tag that the PyPI API allows as an upload.",
+            "commit_timestamp": 1721742546.0
         }
     ]
 }

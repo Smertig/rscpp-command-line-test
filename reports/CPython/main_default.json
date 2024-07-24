@@ -15536,6 +15536,21 @@
             "commit_ref": "2c1b1e7a07eba0138b9858c6f2bea3cae9af0808",
             "commit_message": "gh-121973: Fix flaky test_pyrepl tests (GH-122140)\n\nThis fixes the flakiness in:\r\n* test_inspect_keeps_globals_from_inspected_file\r\n* test_inspect_keeps_globals_from_inspected_module\r\n\r\nThe output already includes newlines. Adding newlines for every entry in\r\nthe output list introduces non-determinism because it added '\\n' in\r\nplaces where stdout is flushed or some buffer becomes full.\r\n\r\nThe regex also needed to be updated because pyrepl includes control\r\ncharacters -- the visible output on each line doesn't immediately follow\r\na newline character.\r\n\r\nCo-authored-by: \u0141ukasz Langa <lukasz@langa.pl>",
             "commit_timestamp": 1721740633.0
+        },
+        {
+            "tool_version": "242.0.20240720.165730-eap08",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1721790497.460045,
+            "elapsed_time": 1070.9241921901703,
+            "x64": true,
+            "actual_files_count": 1040,
+            "expected_files_count": null,
+            "memory_traffic": 49017.02242279053,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "e91ef13861e88c27aed51a24e58d1dcc855a01dc",
+            "commit_message": "gh-122029: Log call events in sys.setprofile when it's a method with c function (GH-122072)\n\nLog call events in sys.setprofile when it is a method with a C function.",
+            "commit_timestamp": 1721773526.0
         }
     ]
 }
