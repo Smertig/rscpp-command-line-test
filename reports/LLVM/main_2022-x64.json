@@ -19988,6 +19988,23 @@
             "commit_ref": "9d1d0cc0206aa9a44a9fe0464c70b87a095921b6",
             "commit_message": "[LoongArch][test] Revert \"Pre-commit for fix codegen for ISD::ROTR\". NFC\n\nThis reverts commit bc829b501d0ffa93019d29b0294e998d3dbb3d7a.\n",
             "commit_timestamp": 1721790050.0
+        },
+        {
+            "tool_version": "242.0.20240720.165730-eap08",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1721834707.508316,
+            "elapsed_time": 1665.5700421333313,
+            "x64": true,
+            "actual_files_count": 2055,
+            "expected_files_count": 1661,
+            "memory_traffic": 254863.18828582764,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "1195df25f4df987d258e6b46c090ca3e72eccecb",
+            "commit_message": "[libc] Make the libc files always available to clang for the GPU (#100396)\n\nSummary:\nThe GPU build always wants these to be exported to `clang`. These will\nbe neccesary for setting up tests or using the `libc` from the clang\nbinary. This will cover the standard 'runtimes' build. If the user is\ndoing a direct compilation, we will just leave it as-is and assume they\nknow what they're doing.",
+            "commit_timestamp": 1721833577.0
         }
     ]
 }
