@@ -15566,6 +15566,21 @@
             "commit_ref": "e9681211b9ad11d1c1f471c43bc57cac46814779",
             "commit_message": "gh-122229: Add missing `Py_DECREF` in `func_get_annotation_dict` (#122230)\n\n",
             "commit_timestamp": 1721825272.0
+        },
+        {
+            "tool_version": "242.0.20240720.165730-eap08",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1721876879.544958,
+            "elapsed_time": 1279.4135103225708,
+            "x64": true,
+            "actual_files_count": 1040,
+            "expected_files_count": null,
+            "memory_traffic": 49159.94274902344,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "5592399313c963c110280a7c98de974889e1d353",
+            "commit_message": "gh-122208: Don't delivery PyDict_EVENT_ADDED until it can't fail (#122207)\n\nDon't delivery PyDict_EVENT_ADDED until it can't fail",
+            "commit_timestamp": 1721843908.0
         }
     ]
 }

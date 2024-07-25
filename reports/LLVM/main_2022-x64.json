@@ -20005,6 +20005,23 @@
             "commit_ref": "1195df25f4df987d258e6b46c090ca3e72eccecb",
             "commit_message": "[libc] Make the libc files always available to clang for the GPU (#100396)\n\nSummary:\nThe GPU build always wants these to be exported to `clang`. These will\nbe neccesary for setting up tests or using the `libc` from the clang\nbinary. This will cover the standard 'runtimes' build. If the user is\ndoing a direct compilation, we will just leave it as-is and assume they\nknow what they're doing.",
             "commit_timestamp": 1721833577.0
+        },
+        {
+            "tool_version": "242.0.20240720.165730-eap08",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1721877713.524347,
+            "elapsed_time": 1556.1838788986206,
+            "x64": true,
+            "actual_files_count": 2055,
+            "expected_files_count": 1661,
+            "memory_traffic": 254904.32285308838,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "ccae7b461be339e717d02f99ac857cf0bc7d17fc",
+            "commit_message": "[clang-format] Improve BlockIndent at ColumnLimit (#93140)\n\nFixes #55731\r\n\r\nThe reported formatting problems were related to ignoring deep nesting\r\nof \"simple\" functions (causing #54808) and to allowing the trailing\r\nannotation to become separated from the closing parens, which allowed a\r\nbreak to occur between the closing parens and the trailing annotation.\r\nThe fix for the nesting of \"simple\" functions is to detect them more\r\ncarefully. \"Simple\" was defined in a comment as being a single\r\nnon-expression argument. I tried to stay as close to the original intent\r\nof the implementation while fixing the various bad formatting reports.\r\n\r\nIn the process of fixing these bugs, some latent bugs were discovered\r\nrelated to how JavaScript Template Strings are handled. Those are also\r\nfixed here.\r\n\r\n---------\r\n\r\nCo-authored-by: Owen Pan <owenpiano@gmail.com>",
+            "commit_timestamp": 1721875631.0
         }
     ]
 }
