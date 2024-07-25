@@ -20022,6 +20022,23 @@
             "commit_ref": "ccae7b461be339e717d02f99ac857cf0bc7d17fc",
             "commit_message": "[clang-format] Improve BlockIndent at ColumnLimit (#93140)\n\nFixes #55731\r\n\r\nThe reported formatting problems were related to ignoring deep nesting\r\nof \"simple\" functions (causing #54808) and to allowing the trailing\r\nannotation to become separated from the closing parens, which allowed a\r\nbreak to occur between the closing parens and the trailing annotation.\r\nThe fix for the nesting of \"simple\" functions is to detect them more\r\ncarefully. \"Simple\" was defined in a comment as being a single\r\nnon-expression argument. I tried to stay as close to the original intent\r\nof the implementation while fixing the various bad formatting reports.\r\n\r\nIn the process of fixing these bugs, some latent bugs were discovered\r\nrelated to how JavaScript Template Strings are handled. Those are also\r\nfixed here.\r\n\r\n---------\r\n\r\nCo-authored-by: Owen Pan <owenpiano@gmail.com>",
             "commit_timestamp": 1721875631.0
+        },
+        {
+            "tool_version": "242.0.20240720.165730-eap08",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1721921020.14379,
+            "elapsed_time": 1614.3079104423523,
+            "x64": true,
+            "actual_files_count": 2055,
+            "expected_files_count": 1661,
+            "memory_traffic": 254958.94075012207,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "51d4980a133db12888207698e39c469cb7055cac",
+            "commit_message": "[clang][NFC] remove unneeded nullptr checks after dereference (#100489)\n\nFix static verifer concerns of null pointer checks after dereferencing  \r\nthe pointer. Update the assert to make it super clear it is not null and\r\nremove the checks.",
+            "commit_timestamp": 1721919796.0
         }
     ]
 }
