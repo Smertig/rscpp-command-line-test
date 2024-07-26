@@ -20056,6 +20056,23 @@
             "commit_ref": "f4be6812e203690073280b9ac8d60092d75bbdce",
             "commit_message": "[mlir][bazel] fix for c194bc77a21d\n",
             "commit_timestamp": 1721962351.0
+        },
+        {
+            "tool_version": "242.0.20240720.165730-eap08",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1722007359.409403,
+            "elapsed_time": 1551.9995527267456,
+            "x64": true,
+            "actual_files_count": 2055,
+            "expected_files_count": 1661,
+            "memory_traffic": 255005.15238952637,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "6808e6c78edf63d2c0c9bd6fce168fe7e0a7d49f",
+            "commit_message": "[libc++] Enable Clang modules in carve-out CI jobs (#100571)\n\nThis speeds up the CI a bit (anecdotally ~10%) for those jobs, and it\r\nalso helps ensure that we are clean w.r.t. Clang modules when we disable\r\nsome of the carve-outs like no-localization or no-threads.",
+            "commit_timestamp": 1722005773.0
         }
     ]
 }
