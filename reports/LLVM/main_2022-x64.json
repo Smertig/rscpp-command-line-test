@@ -20090,6 +20090,23 @@
             "commit_ref": "9a3e66e314e698ffb08dba151bc098b6b8867c61",
             "commit_message": "[BOLT][DWARF][NFC] Fix DebugStrOffsetsWriter (#100672)\n\nFix DebugStrOffsetsWriter so updateAddressMap can't be called after it\r\nis finalized.",
             "commit_timestamp": 1722045505.0
+        },
+        {
+            "tool_version": "242.0.20240720.165730-eap08",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1722093795.1002,
+            "elapsed_time": 1634.6922540664673,
+            "x64": true,
+            "actual_files_count": 2055,
+            "expected_files_count": 1661,
+            "memory_traffic": 254637.18074035645,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "803eaf29267c6aae9162d1a83a4a2ae508b440d3",
+            "commit_message": "[BOLT][NFC] Fix test requirement (#100867)\n\nTests that are using instrumentation should have bolt-runtime in\r\nrequirements",
+            "commit_timestamp": 1722091498.0
         }
     ]
 }

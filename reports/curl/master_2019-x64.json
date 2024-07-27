@@ -18536,6 +18536,21 @@
             "commit_ref": "ad8c9a5807dbdd5c90578c24a13371edbcfbe3b5",
             "commit_message": "os400: workaround an IBM ASCII run-time library bug\n\nIBM-provided ASCII function puts() does not output an expected trailing\nnewline: emulate the correct behavior using other functions.\n\nCloses #14281\n",
             "commit_timestamp": 1722032233.0
+        },
+        {
+            "tool_version": "242.0.20240720.165730-eap08",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1722092789.656769,
+            "elapsed_time": 225.47543048858643,
+            "x64": true,
+            "actual_files_count": 3060,
+            "expected_files_count": 2323,
+            "memory_traffic": 43039.433906555176,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "08a68e9a5a7b9d62822a0efd6c917f0b3dde8010",
+            "commit_message": "GHA/macos: update comment about default Xcode on macos-14 runner [ci skip]\n\nNew default since:\nhttps://github.com/actions/runner-images/blob/releases/macos-14-arm64/20240722/images/macos/macos-14-arm64-Readme.md\n",
+            "commit_timestamp": 1722068453.0
         }
     ]
 }
