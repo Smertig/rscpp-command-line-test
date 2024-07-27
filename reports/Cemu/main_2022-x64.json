@@ -3224,6 +3224,21 @@
             "commit_ref": "5328e9eb10b2abeaf303310b06b37269d79dde12",
             "commit_message": "CPU: Fix overflow bit calculation in SUBFO instruction\n\nSince rD can overlap with rA or rB the result needs to be stored in a temporary",
             "commit_timestamp": 1721966580.0
+        },
+        {
+            "tool_version": "242.0.20240720.165730-eap08",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1722050771.47384,
+            "elapsed_time": 467.6710453033447,
+            "x64": true,
+            "actual_files_count": 1067,
+            "expected_files_count": 1013,
+            "memory_traffic": 77113.19259643555,
+            "repo_url": "https://github.com/cemu-project/Cemu",
+            "commit_ref": "c73fa3761c9572db4d09cdb976a0f1510cda548a",
+            "commit_message": "Fix compatibility with GCC\n",
+            "commit_timestamp": 1722048336.0
         }
     ]
 }

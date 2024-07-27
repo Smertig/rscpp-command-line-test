@@ -18663,6 +18663,21 @@
             "commit_ref": "a80abdb9b39c77b9813fba7005eaec73adad70bc",
             "commit_message": "Add new solver pass to the coverage build (#1341)\n\n",
             "commit_timestamp": 1721747312.0
+        },
+        {
+            "tool_version": "242.0.20240720.165730-eap08",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1722049576.411182,
+            "elapsed_time": 243.70978593826294,
+            "x64": true,
+            "actual_files_count": 461,
+            "expected_files_count": 379,
+            "memory_traffic": 32385.628440856934,
+            "repo_url": "https://github.com/luau-lang/luau",
+            "commit_ref": "58f8c24ddb6c509bd570cd7d3232b9f006c175a5",
+            "commit_message": "BytecodeBuilder.cpp: fix invalid assumption that int32_t aliases int (#1347)\n\nI found that Luau failed to build on the devkitPro toolchain for 3DS.\r\n\r\nThis target uses an ILP32 model, and `int32_t` is an alias of `long`.\r\n`BytecodeBuilder.cpp` includes a line where an `int` is passed by\r\nreference to a function expecting an `int32_t`.\r\n",
+            "commit_timestamp": 1722029698.0
         }
     ]
 }

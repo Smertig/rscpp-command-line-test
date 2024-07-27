@@ -18521,6 +18521,21 @@
             "commit_ref": "11e248b782d9a7919f0b138a81ea4c4b693dc91e",
             "commit_message": "wolfSSL: allow wolfSSL's implementation of kyber to be used\n\nCloses #14268\n",
             "commit_timestamp": 1721945001.0
+        },
+        {
+            "tool_version": "242.0.20240720.165730-eap08",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1722049642.848427,
+            "elapsed_time": 251.70441031455994,
+            "x64": true,
+            "actual_files_count": 3060,
+            "expected_files_count": 2323,
+            "memory_traffic": 48424.90965270996,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "ad8c9a5807dbdd5c90578c24a13371edbcfbe3b5",
+            "commit_message": "os400: workaround an IBM ASCII run-time library bug\n\nIBM-provided ASCII function puts() does not output an expected trailing\nnewline: emulate the correct behavior using other functions.\n\nCloses #14281\n",
+            "commit_timestamp": 1722032233.0
         }
     ]
 }
