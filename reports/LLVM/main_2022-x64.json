@@ -20124,6 +20124,23 @@
             "commit_ref": "315a55fcc342077a3b03c9b4383f41ebea60e2ad",
             "commit_message": "Reland \"[gn] port enough of 2914a4b88837 (lldb Interfaces)\"\n\nThis reverts commit 68343d793a089e28f3215c3eaa7e4170442a06f8.\n2914a4b88837 relanded in bccff3baeff8.\n",
             "commit_timestamp": 1722133777.0
+        },
+        {
+            "tool_version": "242.0.20240720.165730-eap08",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1722180205.856412,
+            "elapsed_time": 1582.2174034118652,
+            "x64": true,
+            "actual_files_count": 2055,
+            "expected_files_count": 1661,
+            "memory_traffic": 254989.21628570557,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "bb064535bd071c1bddaf55ff7fe283fc8d23c1fc",
+            "commit_message": "[Clang][CTAD][NFC] Unify transformTemplateParameter() (#100865)\n\nWe ended up having two transformTemplateParameter() after CTAD for type\r\naliases was landed. This patch cleans them up and allows them to share\r\none implementation.\r\n\r\nAs a bonus, this also uses getDepthAndIndex() in preference to\r\ngetTemplateParameter{Depth,Index}().",
+            "commit_timestamp": 1722166463.0
         }
     ]
 }
