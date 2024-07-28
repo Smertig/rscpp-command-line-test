@@ -1177,5 +1177,139 @@
                 ]
             }
         }
+    },
+    "libc++": {
+        "sources": {
+            "repo": "https://github.com/llvm/llvm-project",
+            "commit": "803eaf29267c6aae9162d1a83a4a2ae508b440d3"
+        },
+        "only x64": true,
+        "required toolchain": [
+            "clang-cl-2019-x64"
+        ],
+        "cmake options": [
+            "-DCMAKE_BUILD_TYPE=Release",
+            "-DLLVM_ENABLE_RUNTIMES=libcxx",
+            "-DLIBCXX_ENABLE_SHARED=YES",
+            "-DLIBCXX_ENABLE_STATIC=NO"
+        ],
+        "cmake dir": "../runtimes",
+        "build step": "proj-config/scripts/build-libc++.py",
+        "project to check": [
+            "cxx_shared"
+        ],
+        "to skip": [
+            "*.ipp"
+        ],
+        "stable": {
+            "known file errors": [
+                {
+                    "file": "..\\libcxx\\src\\atomic.cpp",
+                    "message": "Cannot resolve symbol '__cxx_atomic_load'",
+                    "reason": "We don't provide `cxx_atomic` or `c_atomic` feature, getting `_LIBCPP_HAS_NO_ATOMIC_HEADER` defined"
+                },
+                {
+                    "file": "..\\libcxx\\src\\chrono.cpp",
+                    "reason": "RSCPP-35949 Unsupported clang builtins; __remove_cv is used in `is_floating_point` implementation"
+                },
+                { "file": "..\\libcxx\\src\\condition_variable.cpp", "reason": "Same as for chrono" },
+                { "file": "..\\libcxx\\src\\filesystem\\filesystem_clock.cpp", "reason": "Same as for chrono" },
+                { "file": "..\\libcxx\\src\\filesystem\\time_utils.h", "reason": "Same as for chrono" },
+                { "file": "..\\libcxx\\src\\support\\win32\\thread_win32.cpp", "reason": "Same as for chrono" },
+                {
+                    "file": "..\\libcxx\\src\\filesystem\\operations.cpp",
+                    "reason": "RSCPP-35949 Unsupported clang builtins; __remove_cv is used in `unique_ptr` (`std::__1::__pointer`) implementation"
+                },
+                { "file": "..\\libcxx\\src\\filesystem\\posix_compat.h", "reason": "Same with unique_ptr" },
+                { "file": "..\\libcxx\\src\\future.cpp", "reason": "Same with unique_ptr" },
+                { "file": "..\\libcxx\\src\\ios.cpp", "reason": "Same with unique_ptr" },
+                { "file": "..\\libcxx\\src\\locale.cpp", "reason": "Same with unique_ptr" },
+                {
+                    "file": "..\\libcxx\\src\\filesystem\\path.cpp",
+                    "reason": "RSCPP-35949 Unsupported clang builtins; __remove_cv is used in `wstring` (`std::__1::__pointer`) implementation"
+                },
+                {
+                    "file": "..\\libcxx\\src\\string.cpp",
+                    "reason": "RSCPP-35949 Unsupported clang builtins; __libcpp_remove_reference_t is used"
+                },
+                {
+                    "file": "..\\libcxx\\src\\support\\win32\\compiler_rt_shims.cpp",
+                    "reason": "Missing support for _Complex"
+                },
+                {
+                    "file": "..\\libcxx\\src\\thread.cpp",
+                    "reason": "RSCPP-35949 Unsupported clang builtins; __remove_cv is used in `allocator_traits` (`std::__1::__pointer`) implementation"
+                },
+                {
+                    "file": "..\\libcxx\\src\\memory_resource.cpp",
+                    "message": "Cannot resolve symbol 'max_align_t'",
+                    "reason": "TODO: investigate. Probably RSCPP-35950 Support clang __attribute__((__using_if_exists__))"
+                }
+            ],
+            "known errors": [
+                {
+                    "file": "..\\libcxx\\src\\filesystem\\file_descriptor.h",
+                    "line": 104,
+                    "message": "Cannot cast from 'ULONGLONG' to 'file_time_type::duration' via functional-style cast",
+                    "reason": "RSCPP-35949 Unsupported clang builtins; same as with chrono"
+                }
+            ]
+        },
+        "latest": {
+            "main": {
+                "known file errors": [
+                    {
+                        "file": "..\\libcxx\\src\\atomic.cpp",
+                        "message": "Cannot resolve symbol '__cxx_atomic_load'",
+                        "reason": "We don't provide `cxx_atomic` or `c_atomic` feature, getting `_LIBCPP_HAS_NO_ATOMIC_HEADER` defined"
+                    },
+                    {
+                        "file": "..\\libcxx\\src\\chrono.cpp",
+                        "reason": "RSCPP-35949 Unsupported clang builtins; __remove_cv is used in `is_floating_point` implementation"
+                    },
+                    { "file": "..\\libcxx\\src\\condition_variable.cpp", "reason": "Same as for chrono" },
+                    { "file": "..\\libcxx\\src\\filesystem\\filesystem_clock.cpp", "reason": "Same as for chrono" },
+                    { "file": "..\\libcxx\\src\\filesystem\\time_utils.h", "reason": "Same as for chrono" },
+                    { "file": "..\\libcxx\\src\\support\\win32\\thread_win32.cpp", "reason": "Same as for chrono" },
+                    {
+                        "file": "..\\libcxx\\src\\filesystem\\operations.cpp",
+                        "reason": "RSCPP-35949 Unsupported clang builtins; __remove_cv is used in `unique_ptr` (`std::__1::__pointer`) implementation"
+                    },
+                    { "file": "..\\libcxx\\src\\filesystem\\posix_compat.h", "reason": "Same with unique_ptr" },
+                    { "file": "..\\libcxx\\src\\future.cpp", "reason": "Same with unique_ptr" },
+                    { "file": "..\\libcxx\\src\\ios.cpp", "reason": "Same with unique_ptr" },
+                    { "file": "..\\libcxx\\src\\locale.cpp", "reason": "Same with unique_ptr" },
+                    {
+                        "file": "..\\libcxx\\src\\filesystem\\path.cpp",
+                        "reason": "RSCPP-35949 Unsupported clang builtins; __remove_cv is used in `wstring` (`std::__1::__pointer`) implementation"
+                    },
+                    {
+                        "file": "..\\libcxx\\src\\string.cpp",
+                        "reason": "RSCPP-35949 Unsupported clang builtins; __libcpp_remove_reference_t is used"
+                    },
+                    {
+                        "file": "..\\libcxx\\src\\support\\win32\\compiler_rt_shims.cpp",
+                        "reason": "Missing support for _Complex"
+                    },
+                    {
+                        "file": "..\\libcxx\\src\\thread.cpp",
+                        "reason": "RSCPP-35949 Unsupported clang builtins; __remove_cv is used in `allocator_traits` (`std::__1::__pointer`) implementation"
+                    },
+                    {
+                        "file": "..\\libcxx\\src\\memory_resource.cpp",
+                        "message": "Cannot resolve symbol 'max_align_t'",
+                        "reason": "TODO: investigate. Probably RSCPP-35950 Support clang __attribute__((__using_if_exists__))"
+                    }
+                ],
+                "known errors": [
+                    {
+                        "file": "..\\libcxx\\src\\filesystem\\file_descriptor.h",
+                        "line": 104,
+                        "message": "Cannot cast from 'ULONGLONG' to 'file_time_type::duration' via functional-style cast",
+                        "reason": "RSCPP-35949 Unsupported clang builtins; same as with chrono"
+                    }
+                ]
+            }
+        }
     }
 }
