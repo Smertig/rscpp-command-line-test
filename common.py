@@ -56,6 +56,14 @@ VS_CMAKE_GENERATORS = {
         ],
         "vcpkg_triplet": "x64-windows-clang"
     },
+    "clang-cl-2022-x64": {
+        "cmake options": [
+            "-G", "Visual Studio 17 2022",
+            "-A", "x64",
+            "-T", "ClangCL"
+        ],
+        "vcpkg_triplet": "x64-windows-clang"
+    },
 }
 
 
