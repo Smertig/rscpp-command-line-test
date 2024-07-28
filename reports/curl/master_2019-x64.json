@@ -18551,6 +18551,21 @@
             "commit_ref": "08a68e9a5a7b9d62822a0efd6c917f0b3dde8010",
             "commit_message": "GHA/macos: update comment about default Xcode on macos-14 runner [ci skip]\n\nNew default since:\nhttps://github.com/actions/runner-images/blob/releases/macos-14-arm64/20240722/images/macos/macos-14-arm64-Readme.md\n",
             "commit_timestamp": 1722068453.0
+        },
+        {
+            "tool_version": "242.0.20240720.165730-eap08",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1722135999.27401,
+            "elapsed_time": 247.65481805801392,
+            "x64": true,
+            "actual_files_count": 3060,
+            "expected_files_count": 2323,
+            "memory_traffic": 45034.6626663208,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "b446802feb762b02a60d25a7d62c28a9dac87726",
+            "commit_message": "example/multi-uv: remove the use of globals\n\n- shows how to pass on local variables (better)\n\n- start the transfers nicer (with curl_multi_socket_action)\n\n- consistent and helpful function naming - to better show what functions\n  and callbacks that are used for what\n\n- build warning-free with gcc -W -Wall -pedantic\n\nCloses #14287\n",
+            "commit_timestamp": 1722114584.0
         }
     ]
 }

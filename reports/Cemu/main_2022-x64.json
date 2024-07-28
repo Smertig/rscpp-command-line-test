@@ -3254,6 +3254,21 @@
             "commit_ref": "c73fa3761c9572db4d09cdb976a0f1510cda548a",
             "commit_message": "Fix compatibility with GCC\n",
             "commit_timestamp": 1722048336.0
+        },
+        {
+            "tool_version": "242.0.20240720.165730-eap08",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1722137150.193122,
+            "elapsed_time": 487.11535692214966,
+            "x64": true,
+            "actual_files_count": 1067,
+            "expected_files_count": 1013,
+            "memory_traffic": 77271.57266235352,
+            "repo_url": "https://github.com/cemu-project/Cemu",
+            "commit_ref": "593da5ed79cab9ca175391d0ba6666a1f8a52500",
+            "commit_message": "CI: Workaround for MoltenVK crash\n\n1.2.10 and later crash during descriptor set creation. So for now let's stick with the older version",
+            "commit_timestamp": 1722098123.0
         }
     ]
 }
