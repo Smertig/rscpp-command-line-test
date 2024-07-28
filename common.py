@@ -280,6 +280,9 @@ def invoke_cmake(build_dir, cmake_generator, cmake_options, cmake_new_env, cmake
         if _env.verbose and cmake_new_env:
             print(f'[invoke_cmake] Running cmake with modified env: {cmake_env}', flush=True)
 
+        print('[invoke_cmake] Checking cmake:', subprocess.list2cmdline(cmd_line_args), flush=True)
+        subprocess.run(["cmake", "--version"], check=True, stdout=None, env=cmake_env)
+
         print('[invoke_cmake] Running cmake:', subprocess.list2cmdline(cmd_line_args), flush=True)
         subprocess.run(cmd_line_args, check=True, stdout=_env.verbose_handle, env=cmake_env)
 
