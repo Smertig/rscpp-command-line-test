@@ -1239,11 +1239,6 @@
                 {
                     "file": "..\\libcxx\\src\\thread.cpp",
                     "reason": "RSCPP-35949 Unsupported clang builtins; __remove_cv is used in `allocator_traits` (`std::__1::__pointer`) implementation"
-                },
-                {
-                    "file": "..\\libcxx\\src\\memory_resource.cpp",
-                    "message": "Cannot resolve symbol 'max_align_t'",
-                    "reason": "TODO: investigate. Probably RSCPP-35950 Support clang __attribute__((__using_if_exists__))"
                 }
             ],
             "known errors": [
@@ -1294,11 +1289,6 @@
                     {
                         "file": "..\\libcxx\\src\\thread.cpp",
                         "reason": "RSCPP-35949 Unsupported clang builtins; __remove_cv is used in `allocator_traits` (`std::__1::__pointer`) implementation"
-                    },
-                    {
-                        "file": "..\\libcxx\\src\\memory_resource.cpp",
-                        "message": "Cannot resolve symbol 'max_align_t'",
-                        "reason": "TODO: investigate. Probably RSCPP-35950 Support clang __attribute__((__using_if_exists__))"
                     }
                 ],
                 "known errors": [
