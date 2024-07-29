@@ -20141,6 +20141,23 @@
             "commit_ref": "bb064535bd071c1bddaf55ff7fe283fc8d23c1fc",
             "commit_message": "[Clang][CTAD][NFC] Unify transformTemplateParameter() (#100865)\n\nWe ended up having two transformTemplateParameter() after CTAD for type\r\naliases was landed. This patch cleans them up and allows them to share\r\none implementation.\r\n\r\nAs a bonus, this also uses getDepthAndIndex() in preference to\r\ngetTemplateParameter{Depth,Index}().",
             "commit_timestamp": 1722166463.0
+        },
+        {
+            "tool_version": "242.0.20240720.165730-eap08",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1722223414.78056,
+            "elapsed_time": 1614.9026861190796,
+            "x64": true,
+            "actual_files_count": 2055,
+            "expected_files_count": 1661,
+            "memory_traffic": 255039.76447296143,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "71d85ca2f9dba7f08a7a84c6cff5396ed594cb3c",
+            "commit_message": "[RISCV][CFI] Emit cfi_offset for every callee-saved vector registers (#100455)\n\nThe grouped vector register is modeled as a single register, e.g. V2M2,\r\nwhich is actually V2 and V3. We need to decompose the grouped vector\r\nregister(if any) to individual vector register when emitting CFIs in\r\nprologue.\r\n\r\nFixed https://github.com/llvm/llvm-project/issues/94500",
+            "commit_timestamp": 1722222187.0
         }
     ]
 }
