@@ -18798,6 +18798,21 @@
             "commit_ref": "58f8c24ddb6c509bd570cd7d3232b9f006c175a5",
             "commit_message": "BytecodeBuilder.cpp: fix invalid assumption that int32_t aliases int (#1347)\n\nI found that Luau failed to build on the devkitPro toolchain for 3DS.\r\n\r\nThis target uses an ILP32 model, and `int32_t` is an alias of `long`.\r\n`BytecodeBuilder.cpp` includes a line where an `int` is passed by\r\nreference to a function expecting an `int32_t`.\r\n",
             "commit_timestamp": 1722029698.0
+        },
+        {
+            "tool_version": "242.0.20240720.165730-eap08",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1722351975.945906,
+            "elapsed_time": 278.06211495399475,
+            "x64": true,
+            "actual_files_count": 461,
+            "expected_files_count": 379,
+            "memory_traffic": 32353.056564331055,
+            "repo_url": "https://github.com/luau-lang/luau",
+            "commit_ref": "58f8c24ddb6c509bd570cd7d3232b9f006c175a5",
+            "commit_message": "BytecodeBuilder.cpp: fix invalid assumption that int32_t aliases int (#1347)\n\nI found that Luau failed to build on the devkitPro toolchain for 3DS.\r\n\r\nThis target uses an ILP32 model, and `int32_t` is an alias of `long`.\r\n`BytecodeBuilder.cpp` includes a line where an `int` is passed by\r\nreference to a function expecting an `int32_t`.\r\n",
+            "commit_timestamp": 1722029698.0
         }
     ]
 }

@@ -15731,6 +15731,21 @@
             "commit_ref": "ac8da34621a574cd5773217404757a294025ba49",
             "commit_message": "gh-122420: Fix accounting for immortal interned strings in refleak.py (GH-122421)\n\nThe `_PyUnicode_Intern*` functions already adjust the total refcount, so\r\nwe don't want to readjust it in refleak.py.",
             "commit_timestamp": 1722291303.0
+        },
+        {
+            "tool_version": "242.0.20240720.165730-eap08",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1722352163.332283,
+            "elapsed_time": 1132.4926545619965,
+            "x64": true,
+            "actual_files_count": 1040,
+            "expected_files_count": null,
+            "memory_traffic": 49254.50326538086,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "d1a1bca1f0550a4715f1bf32b1586caa7bc4487b",
+            "commit_message": "gh-119896: Fix CTRL-Z behavior in the new REPL on Windows (GH-122217)\n\n",
+            "commit_timestamp": 1722341032.0
         }
     ]
 }

@@ -20192,6 +20192,23 @@
             "commit_ref": "6d02f62e4af90295a6e0386e3e96afe518777c17",
             "commit_message": "[mlir][linalg] Add vectorization support for minnumf/maxnumf reductions. (#101092)\n\nThis is a follow-up for\r\nhttps://discourse.llvm.org/t/rfc-fix-floating-point-max-and-min-operations-in-mlir/72671\r\n\r\nThe ops were splitted to two version, and the vectorization support for\r\none of them is missing.\r\n\r\nThe revision also renames the existing lit tests accordingly, which\r\nexplicitly puts `maximumf/minimumf` to the function names.",
             "commit_timestamp": 1722308440.0
+        },
+        {
+            "tool_version": "242.0.20240720.165730-eap08",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1722352983.443457,
+            "elapsed_time": 1628.4939122200012,
+            "x64": true,
+            "actual_files_count": 2055,
+            "expected_files_count": 1661,
+            "memory_traffic": 254628.3743209839,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "8fc329421b2e3bc5cdda98ce303ea3b07af58ebc",
+            "commit_message": "[mlir][Transforms] Dialect conversion: Add missing \"else if\" branch (#101148)\n\nThis code got lost in #97213 and there was no test for it. Add it back\r\nwith an MLIR test.\r\n\r\nWhen a pattern is run without a type converter, we can assume that the\r\nnew block argument types of a signature conversion are legal. That's\r\nbecause they were specified by the user. This won't work for 1->N\r\nconversions due to limitations in the dialect conversion infrastructure,\r\nso the original `FIXME` has to stay in place.",
+            "commit_timestamp": 1722350207.0
         }
     ]
 }
