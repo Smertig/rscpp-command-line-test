@@ -1799,6 +1799,21 @@
             "commit_ref": "51763f3e4085443160c713ba26bf104c58a55c36",
             "commit_message": "Automated rollback of commit 74f6da4d26173088de178365678891105393799e.\n\nPiperOrigin-RevId: 657257908\n",
             "commit_timestamp": 1722276147.0
+        },
+        {
+            "tool_version": "242.0.20240720.165730-eap08",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1722308807.545617,
+            "elapsed_time": 300.63971519470215,
+            "x64": true,
+            "actual_files_count": 1093,
+            "expected_files_count": 818,
+            "memory_traffic": 38748.722160339355,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "824f6ac9e95563bcf8e4e0c48f9bbc295e7e5222",
+            "commit_message": "Migrate core (sans Parse & Serialize) and extension funcs from `protos` to `hpb`\n\nThis entails:\n- CreateMessage\n- ClearMessage\n- CloneMessage\n- DeepCopy\n\n- HasExtension\n- ClearExtension\n- SetExtension\n- GetExtension\n\nPiperOrigin-RevId: 657386985\n",
+            "commit_timestamp": 1722301277.0
         }
     ]
 }

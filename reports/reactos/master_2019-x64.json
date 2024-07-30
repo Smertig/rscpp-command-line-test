@@ -18406,6 +18406,21 @@
             "commit_ref": "b6bf1108905a2c38d3d75bc5a1dedabc6d8cae5c",
             "commit_message": "[REACTOS] Addendum to Stasms last commit\n\nwhich was not PR'ed even.\nespecially to unbreak modules/rosapps/application/notevil\n\nAddendum to\n9cf6b253e732ac551d40195367bcdc09c6f56b4c\n",
             "commit_timestamp": 1722270036.0
+        },
+        {
+            "tool_version": "242.0.20240720.165730-eap08",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1722308741.190332,
+            "elapsed_time": 77.45353198051453,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7787.830787658691,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "dcf0788f595ba4eb73fa368a7be91999588d58b4",
+            "commit_message": "[IMM32][SDK][USER32] Fix ImmFreeLayout parameter (#7195)\n\nJIRA issue: CORE-19268\r\n- Define ImmFreeLayout parameter special\r\n  values (HKL_SWITCH_TO_NON_IME and\r\n  HKL_RELEASE_IME) at <imm32_undoc.h>.\r\n- Make ImmFreeLayout parameter an HKL.",
+            "commit_timestamp": 1722307523.0
         }
     ]
 }

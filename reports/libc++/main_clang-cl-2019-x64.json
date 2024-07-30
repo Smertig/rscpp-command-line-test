@@ -67,6 +67,23 @@
             "commit_ref": "f9e7cba122c2b636ddb975791aadf33c69f3f056",
             "commit_message": "Fix hasName matcher assertion with inline namespaces (#100975)\n\nFix handling of nodes which can be skipped in the fast path for the\r\nhasName matcher\r\n\r\nFixes #100973",
             "commit_timestamp": 1722276662.0
+        },
+        {
+            "tool_version": "242.0.20240720.165730-eap08",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1722308971.349177,
+            "elapsed_time": 110.86297035217285,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 6596.241134643555,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "6d02f62e4af90295a6e0386e3e96afe518777c17",
+            "commit_message": "[mlir][linalg] Add vectorization support for minnumf/maxnumf reductions. (#101092)\n\nThis is a follow-up for\r\nhttps://discourse.llvm.org/t/rfc-fix-floating-point-max-and-min-operations-in-mlir/72671\r\n\r\nThe ops were splitted to two version, and the vectorization support for\r\none of them is missing.\r\n\r\nThe revision also renames the existing lit tests accordingly, which\r\nexplicitly puts `maximumf/minimumf` to the function names.",
+            "commit_timestamp": 1722308440.0
         }
     ]
 }
