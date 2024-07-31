@@ -152,6 +152,23 @@
             "commit_ref": "b5a7d3b6c2169d84f9da749425a38dcef914d1ce",
             "commit_message": "[SLP][REVEC] Make Instruction::Select support vector instructions. (#100507)\n\n",
             "commit_timestamp": 1722438230.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1722442608.114971,
+            "elapsed_time": 115.6876859664917,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 6611.965354919434,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "8b2688bd173e79392927bcaed91855e7c4db8eaa",
+            "commit_message": "[scudo] Separated committed and decommitted entries. (#100818)\n\nInitially, the LRU list stored all mapped entries with no distinction\r\nbetween the committed (non-madvise()'d) entries and decommitted\r\n(madvise()'d) entries. Now these two types of entries are separated into\r\ntwo lists, allowing future cache logic to branch depending on whether or\r\nnot entries are committed or decommitted. Furthermore, the retrieval\r\nalgorithm will prioritize committed entries over decommitted entries.\r\nSpecifically, valid-fit, committed entries (not necessarily optimal-fit)\r\nare retrieved before optimal-fit, decommitted entries.",
+            "commit_timestamp": 1722442224.0
         }
     ]
 }
