@@ -18671,6 +18671,21 @@
             "commit_ref": "b92ead34dd027c5c3315e9f992474234dbd88412",
             "commit_message": "cmake: drop `if(PKG_CONFIG_FOUND)` guard for `pkg_check_modules()`\n\nThe oldest cmake supported by curl is v3.7.0, which already has such\nguard (using `PKG_CONFIG_EXECUTABLE`) inside `pkg_check_modules()`. The\nadvantage of leaving that guard to CMake is that it will define/reset\nall output variables, while the manual guard doesn't do this and also\nleaves for example `NETTLE_FOUND` undefined.\n\nDelete the single use of this guard from the recently added `nettle`\ndetection, where I included it by accident. Then possibly re-introduce\nit universally if we find it useful after more evaluation.\n\nFollow-up to 669ce42275635dc1f881dab3dfc9a55c9ab49b21 #14285\nCloses #14309\n",
             "commit_timestamp": 1722342830.0
+        },
+        {
+            "tool_version": "242.0.20240720.165730-eap08",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1722395180.510798,
+            "elapsed_time": 234.27245783805847,
+            "x64": true,
+            "actual_files_count": 3064,
+            "expected_files_count": 2323,
+            "memory_traffic": 46009.49962615967,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "27959ecce75cdb2809c0bdb3286e60e08fadb519",
+            "commit_message": "x509asn1: unittests and fixes for gtime2str\n\nFix issues in GTime2str() and add unit test cases to verify correct\nbehaviour.\n\nFollow-up to 3c914bc6801\n\nCloses #14316\n",
+            "commit_timestamp": 1722373739.0
         }
     ]
 }

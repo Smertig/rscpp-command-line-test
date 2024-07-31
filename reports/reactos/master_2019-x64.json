@@ -18436,6 +18436,21 @@
             "commit_ref": "dcf0788f595ba4eb73fa368a7be91999588d58b4",
             "commit_message": "[IMM32][SDK][USER32] Fix ImmFreeLayout parameter (#7195)\n\nJIRA issue: CORE-19268\r\n- Define ImmFreeLayout parameter special\r\n  values (HKL_SWITCH_TO_NON_IME and\r\n  HKL_RELEASE_IME) at <imm32_undoc.h>.\r\n- Make ImmFreeLayout parameter an HKL.",
             "commit_timestamp": 1722307523.0
+        },
+        {
+            "tool_version": "242.0.20240720.165730-eap08",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1722395197.961497,
+            "elapsed_time": 96.47822618484497,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7894.410705566406,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "a532a68d40feee2422baac4d092ce8ce829e293b",
+            "commit_message": "[RASDLG] ro-RO.rc: Fix 2 compiler warnings (#7197)\n\n\r\nwhich have been introduced during 0.4.15-dev'ing when romanian resources were updated.\r\n\r\nC:\\buildbot_config\\worker\\Build_MSVC_x86\\build\\dll\\win32\\rasdlg\\lang/ro-RO.rc(508) : warning RC4206 : title string too long; truncated at 256\r\nC:\\buildbot_config\\worker\\Build_MSVC_x86\\build\\dll\\win32\\rasdlg\\lang/ro-RO.rc(521) : warning RC4206 : title string too long; truncated at 256\r\n\r\nsee MSVC builder https://build.reactos.org/#builders/1/builds/24117\r\n\r\nThe fix respects the rule 1 of the Romania translation notes also, same as Andreis commit did.\r\n\r\nAlso fix a few places where \".  \" was the case (unintended double-space)",
+            "commit_timestamp": 1722390489.0
         }
     ]
 }

@@ -15746,6 +15746,21 @@
             "commit_ref": "d1a1bca1f0550a4715f1bf32b1586caa7bc4487b",
             "commit_message": "gh-119896: Fix CTRL-Z behavior in the new REPL on Windows (GH-122217)\n\n",
             "commit_timestamp": 1722341032.0
+        },
+        {
+            "tool_version": "242.0.20240720.165730-eap08",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1722395405.780812,
+            "elapsed_time": 1401.5891404151917,
+            "x64": true,
+            "actual_files_count": 1040,
+            "expected_files_count": null,
+            "memory_traffic": 49291.58856201172,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "a9344cdffa30fdf60154d645f9e74ab3d67ae2e9",
+            "commit_message": "gh-121381 Remove subprocess._USE_VFORK escape hatch (#121383)\n\nThis flag was added as an escape hatch in gh-91401 and backported to\r\nPython 3.10. The flag broke at some point between its addition and now.\r\nAs there is currently no publicly known environments that require this,\r\nremove it rather than work on fixing it.\r\n\r\nThis leaves the flag in the subprocess module to not break code which\r\nmay have used / checked the flag itself.\r\n\r\ndiscussion: https://discuss.python.org/t/subprocess-use-vfork-escape-hatch-broken-fix-or-remove/56915/2",
+            "commit_timestamp": 1722389994.0
         }
     ]
 }
