@@ -135,6 +135,23 @@
             "commit_ref": "23d188ed91ed39879e6f6e36d07eca6ceae4bab5",
             "commit_message": "[libcxx][test] Require long_tests for eval.PR44847.pass.cp (#100722)\n\nThis takes 1m40s to run when testing picolib on qemu. This isn't the end\r\nof the world but that's on an AArch64 server. So if someone felt the\r\nneed to mark this unsupported in the first place, it's likely much\r\nslower on average hardware.",
             "commit_timestamp": 1722436596.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": true,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1722438515.877502,
+            "elapsed_time": 82.62360787391663,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 6650.903717041016,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "b5a7d3b6c2169d84f9da749425a38dcef914d1ce",
+            "commit_message": "[SLP][REVEC] Make Instruction::Select support vector instructions. (#100507)\n\n",
+            "commit_timestamp": 1722438230.0
         }
     ]
 }

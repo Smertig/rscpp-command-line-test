@@ -1859,6 +1859,21 @@
             "commit_ref": "06a520cdb78be66f506b88a8adba2763f2301dc0",
             "commit_message": "Add wire format parsing unit tests for implicit presence fields.\n\nThis gist of the new test case coverage can be summarized as:\n- The wire does not distinguish between explicit and implicit fields.\n- For implicit presence fields, zeros on the wire can overwrite nonzero values\n  (i.e. they are treated as a 'clear' operation).\n\nIt's TBD whether we want to accept this behaviour going forward.\nRight now we are leaning towards keeping this behaviour, because:\n- If we receive zeros on the wire for implicit-presence fields, the protobuf\n  wire format is \"wrong\" anyway. Well-behaved code should never generate zeros\n  on the wire for implicit presence fields or serialize the same field multiple\n  times.\n- There might be some value to enforce that \"anything on the wire is accepted\".\n  This can make handling of wire format simpler.\n\nThere are some drawbacks with this approach:\n- It might be somewhat surprising for users that zeros on the wire are always\n  read, even for implicit-presence fields.\n- It might make the transition from implicit-presence to explicit-presence\n  harder (or more unsafe) if user wants to migrate.\n- It leads to an inconsistency between what it means to \"Merge\".\n  - Merging from a constructed object, with implicit presence and with field\n    set to zero, will not overwrite.\n  - Merging from the wire, with implicit presence and with zero explicitly\n    present on the wire, WILL overwrite.\n\nI still need to add conformance tests to ensure that this is a consistent\nbehavior across all languages, but for now let's at least add some coverage in\nC++ to ensure that this is a tested behaviour.\n\nPiperOrigin-RevId: 657724599\n",
             "commit_timestamp": 1722374669.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1722438387.136569,
+            "elapsed_time": 345.1521809101105,
+            "x64": true,
+            "actual_files_count": 1093,
+            "expected_files_count": 818,
+            "memory_traffic": 38256.43558502197,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "06a520cdb78be66f506b88a8adba2763f2301dc0",
+            "commit_message": "Add wire format parsing unit tests for implicit presence fields.\n\nThis gist of the new test case coverage can be summarized as:\n- The wire does not distinguish between explicit and implicit fields.\n- For implicit presence fields, zeros on the wire can overwrite nonzero values\n  (i.e. they are treated as a 'clear' operation).\n\nIt's TBD whether we want to accept this behaviour going forward.\nRight now we are leaning towards keeping this behaviour, because:\n- If we receive zeros on the wire for implicit-presence fields, the protobuf\n  wire format is \"wrong\" anyway. Well-behaved code should never generate zeros\n  on the wire for implicit presence fields or serialize the same field multiple\n  times.\n- There might be some value to enforce that \"anything on the wire is accepted\".\n  This can make handling of wire format simpler.\n\nThere are some drawbacks with this approach:\n- It might be somewhat surprising for users that zeros on the wire are always\n  read, even for implicit-presence fields.\n- It might make the transition from implicit-presence to explicit-presence\n  harder (or more unsafe) if user wants to migrate.\n- It leads to an inconsistency between what it means to \"Merge\".\n  - Merging from a constructed object, with implicit presence and with field\n    set to zero, will not overwrite.\n  - Merging from the wire, with implicit presence and with zero explicitly\n    present on the wire, WILL overwrite.\n\nI still need to add conformance tests to ensure that this is a consistent\nbehavior across all languages, but for now let's at least add some coverage in\nC++ to ensure that this is a tested behaviour.\n\nPiperOrigin-RevId: 657724599\n",
+            "commit_timestamp": 1722374669.0
         }
     ]
 }
