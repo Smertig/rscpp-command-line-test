@@ -18746,6 +18746,21 @@
             "commit_ref": "c3fe2dd25cf1e9c1c458a6a57a5be00c5c0cf575",
             "commit_message": "GHA/windows: drop FTP tests\n\nTry reducing hangs.\n\nCloses #14330\n",
             "commit_timestamp": 1722465120.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1722524754.029274,
+            "elapsed_time": 250.82219219207764,
+            "x64": true,
+            "actual_files_count": 3064,
+            "expected_files_count": 2323,
+            "memory_traffic": 46081.32861328125,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "8a9c22796b4dec022adf7ecc650807bb49a80a9c",
+            "commit_message": "CHANGES: rename to CHANGES.md, no longer generated\n\n- scripts/log2changes.pl was not included in release tarballs, which broke\n  reproducible builds\n\n- since log2changes uses git to generate the contents, it makes it difficult\n  to generate the same contents later (it would need to be fixed)\n\n- the CHANGES file has outlived its purpose. the main changes are in the\n  RELEASE-NOTES, the rest are better tracked directly using git or on GitHub\n\n- put a fixed CHANGES.md in there instead pointing out where the info lives\n  now\n\nCloses #14331\n",
+            "commit_timestamp": 1722512232.0
         }
     ]
 }

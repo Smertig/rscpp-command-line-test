@@ -17655,6 +17655,21 @@
             "commit_ref": "cfc6f3d641b8fb542d92570e6a299f958d0e1b59",
             "commit_message": "Merge topic 'gltf_fix_error_image'\n\nf82a8550fab GLTF: Adding a malformed test\n7814824200b vtkPNGReader: Use ErrorCode whenever possible\nb7b0bbd5181 GLTF: Return false when reading an invalid image\n\nAcked-by: Kitware Robot <kwrobot@kitware.com>\nAcked-by: buildbot <buildbot@kitware.com>\nReviewed-by: Michael Migliore <mcmigliore@gmail.com>\nMerge-request: !11353\n",
             "commit_timestamp": 1722454064.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": "vtkCommonCoreCxxTests",
+            "timestamp": 1722524976.08017,
+            "elapsed_time": 208.39310216903687,
+            "x64": true,
+            "actual_files_count": 81,
+            "expected_files_count": 68,
+            "memory_traffic": 23620.405067443848,
+            "repo_url": "https://gitlab.kitware.com/vtk/vtk.git",
+            "commit_ref": "a2f4de9d7d9b7e101a9350ed6c6d2f73d8e279df",
+            "commit_message": "Merge topic 'fix-htg-io-xml'\n\n7e6fa7cbd75 wrong infinity for uchar\nb7be64a2cfe remove const in declaration\nab45504f0c9 del redondant include\nba793d64dc3 Change deprecated to 9_4_0\n9923af728a4 deprecated\n037472b9176 fix typo include\nb2d902f5f70 Fix htg v2 io xml to use HTG's DepthLimiter\n\nAcked-by: Kitware Robot <kwrobot@kitware.com>\nAcked-by: buildbot <buildbot@kitware.com>\nReviewed-by: Charles Gueunet <charles.gueunet@kitware.com>\nReviewed-by: Louis Gombert <louis.gombert@kitware.com>\nMerge-request: !11360\n",
+            "commit_timestamp": 1722502582.0
         }
     ]
 }

@@ -186,6 +186,23 @@
             "commit_ref": "42c413b48917491efc5372752c6ad245530939f5",
             "commit_message": "[mlir][Transforms] Preserve all analysis in print passes (#101315)\n\nPrintIRPass, PrintOpStatsPass and PrintOpGraphPass don't mutate IR so\r\npreserve all analysis to save computation resource a bit.",
             "commit_timestamp": 1722480688.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1722524949.843489,
+            "elapsed_time": 130.52757048606873,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 6600.268218994141,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "e7630a0d60821dc13bb0be4e50b49fba5f90471f",
+            "commit_message": "AMDGPU: Improve cost handling of canonicalize (#101479)\n\n",
+            "commit_timestamp": 1722524540.0
         }
     ]
 }
