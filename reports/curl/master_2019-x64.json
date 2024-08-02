@@ -18776,6 +18776,21 @@
             "commit_ref": "9bfc7f923479235b2fdf0e8fdd8468c0786a369b",
             "commit_message": "escape: allow curl_easy_escape to generate 3*input length output\n\nInstead of capping it to the 3 * CURL_MAX_INPUT_LENGTH. To allow users\nto URL encode larger chunks of data.\n\nCloses #14339\n",
             "commit_timestamp": 1722546201.0
+        },
+        {
+            "tool_version": "242.0.20240801.125602-rc01",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1722582323.171593,
+            "elapsed_time": 206.3764932155609,
+            "x64": true,
+            "actual_files_count": 3064,
+            "expected_files_count": 2323,
+            "memory_traffic": 43500.689697265625,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "eb0a366b7035952f63b2cf61c9bc97982068a543",
+            "commit_message": "http2: improve rate limiting of downloads\n\nSet the initial stream window size to 64KB and increase that to the 10MB\nwe used to start with on the first server reply, unless a rate limit is\nin effect.\n\nContinously monitory changes to the transfers rate limit and adjust the\nstream window size accordingly. `max_recv_speed` is a transfer propert\nthat can be changed during processing by a callback.\n\nCloses #14326\n",
+            "commit_timestamp": 1722581101.0
         }
     ]
 }

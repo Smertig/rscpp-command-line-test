@@ -18541,6 +18541,21 @@
             "commit_ref": "b41146dd808e21d663a2e8ede58723e7bd90da4c",
             "commit_message": "[BROWSEUI] Fix mistake (IDR_EXPLORERBAND -> IDR_FILESEARCHBAND) (#7210)\n\nJIRA issue: CORE-19705\r\n#7163 (960a305) made a regression on DllRegisterServer.\r\nThe cause is lacking IDR_EXPLORERBAND that\r\nCSearchBar wants.\r\nIDR_EXPLORERBAND for CSearchBar is a mistake.\r\n- Use IDR_FILESEARCHBAND resource instead of\r\n  IDR_EXPLORERBAND resource for CSearchBar class.",
             "commit_timestamp": 1722556066.0
+        },
+        {
+            "tool_version": "242.0.20240801.125602-rc01",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1722582375.442067,
+            "elapsed_time": 104.35572743415833,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7852.178565979004,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "b41146dd808e21d663a2e8ede58723e7bd90da4c",
+            "commit_message": "[BROWSEUI] Fix mistake (IDR_EXPLORERBAND -> IDR_FILESEARCHBAND) (#7210)\n\nJIRA issue: CORE-19705\r\n#7163 (960a305) made a regression on DllRegisterServer.\r\nThe cause is lacking IDR_EXPLORERBAND that\r\nCSearchBar wants.\r\nIDR_EXPLORERBAND for CSearchBar is a mistake.\r\n- Use IDR_FILESEARCHBAND resource instead of\r\n  IDR_EXPLORERBAND resource for CSearchBar class.",
+            "commit_timestamp": 1722556066.0
         }
     ]
 }

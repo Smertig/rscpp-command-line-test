@@ -220,6 +220,23 @@
             "commit_ref": "e7f73c03dfe6c895b2dbe6d8d1d03546b87888c4",
             "commit_message": "[Attributor] Use `getPointerAddressSpace` to replace a cast followed by a `getAddressSpace`\n",
             "commit_timestamp": 1722567463.0
+        },
+        {
+            "tool_version": "242.0.20240801.125602-rc01",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1722582507.85061,
+            "elapsed_time": 80.6609697341919,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 6622.9897384643555,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "e9c20b9132c93baaaf78a070fa4cd0a853ca5e65",
+            "commit_message": "[test][asan] Disabled a new test on Android\n\nWill investigate soon.\nThe test is from #100923.\n",
+            "commit_timestamp": 1722582078.0
         }
     ]
 }
