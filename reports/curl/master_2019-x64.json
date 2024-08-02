@@ -18761,6 +18761,21 @@
             "commit_ref": "8a9c22796b4dec022adf7ecc650807bb49a80a9c",
             "commit_message": "CHANGES: rename to CHANGES.md, no longer generated\n\n- scripts/log2changes.pl was not included in release tarballs, which broke\n  reproducible builds\n\n- since log2changes uses git to generate the contents, it makes it difficult\n  to generate the same contents later (it would need to be fixed)\n\n- the CHANGES file has outlived its purpose. the main changes are in the\n  RELEASE-NOTES, the rest are better tracked directly using git or on GitHub\n\n- put a fixed CHANGES.md in there instead pointing out where the info lives\n  now\n\nCloses #14331\n",
             "commit_timestamp": 1722512232.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1722567983.051301,
+            "elapsed_time": 247.01620316505432,
+            "x64": true,
+            "actual_files_count": 3064,
+            "expected_files_count": 2323,
+            "memory_traffic": 43225.318435668945,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "9bfc7f923479235b2fdf0e8fdd8468c0786a369b",
+            "commit_message": "escape: allow curl_easy_escape to generate 3*input length output\n\nInstead of capping it to the 3 * CURL_MAX_INPUT_LENGTH. To allow users\nto URL encode larger chunks of data.\n\nCloses #14339\n",
+            "commit_timestamp": 1722546201.0
         }
     ]
 }

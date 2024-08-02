@@ -15821,6 +15821,21 @@
             "commit_ref": "fda6bd842a2b93a501526f1b830eb900d935ac73",
             "commit_message": "Replace PyObject_Del with PyObject_Free (#122453)\n\nPyObject_Del() is just a alias to PyObject_Free() kept for backward\r\ncompatibility. Use directly PyObject_Free() instead.",
             "commit_timestamp": 1722514353.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1722568178.951596,
+            "elapsed_time": 1382.4480607509613,
+            "x64": true,
+            "actual_files_count": 1040,
+            "expected_files_count": null,
+            "memory_traffic": 48801.253273010254,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "5a7f7c48644baf82988f30bcb43e03dcfceb75dd",
+            "commit_message": "gh-120083: Add IDLE Hovertip foreground color needed for recent macOS (#120605)\n\nOn recent versions of macOS (sometime between Catalina and Sonoma 14.5), the default Hovertip foreground color changed from black to white, thereby matching the background. This might be a matter of matching the white foreground of the dark-mode text. The unreadable result is shown here (#120083 (comment)).\r\n\r\nThe foreground and background colors were made parameters so we can pass different colors for future additional hovertips in IDLE.\r\n---------\r\n\r\nCo-authored-by: Terry Jan Reedy <tjreedy@udel.edu>",
+            "commit_timestamp": 1722567763.0
         }
     ]
 }
