@@ -18556,6 +18556,21 @@
             "commit_ref": "b41146dd808e21d663a2e8ede58723e7bd90da4c",
             "commit_message": "[BROWSEUI] Fix mistake (IDR_EXPLORERBAND -> IDR_FILESEARCHBAND) (#7210)\n\nJIRA issue: CORE-19705\r\n#7163 (960a305) made a regression on DllRegisterServer.\r\nThe cause is lacking IDR_EXPLORERBAND that\r\nCSearchBar wants.\r\nIDR_EXPLORERBAND for CSearchBar is a mistake.\r\n- Use IDR_FILESEARCHBAND resource instead of\r\n  IDR_EXPLORERBAND resource for CSearchBar class.",
             "commit_timestamp": 1722556066.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1722611173.938329,
+            "elapsed_time": 114.7343430519104,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7761.441589355469,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "045333e8904a0eebc8bbf0416df5121e53fc5023",
+            "commit_message": "[EXPLORER] Restore windows on second click of Show Desktop button (#7184)\n\nOn the second click on \"Show desktop\" button, the minimized windows\r\nare not restored, because after the first click, and the addition to\r\n`CSimpleArray<MINWNDPOS> g_MinimizedAll`, a call to `RestoreMinimizedNonTaskWnds()`\r\nvia `HSHELL_WINDOWACTIVATED` message clears the list of minimized windows.\r\n\r\nDon't empty `g_MinimizedAll` while processing HSHELL_WINDOWCREATED or\r\nHSHELL_WINDOWACTIVATED messages (bDestroyed=FALSE).\r\n\r\nEmpty `g_MinimizedAll` only when SendPulseToTray is called with bDestroyed=TRUE.\r\n\r\nAddendum to e6bced7a353 and 70d7009ad95. CORE-19703 CORE-15369",
+            "commit_timestamp": 1722609386.0
         }
     ]
 }

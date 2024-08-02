@@ -15836,6 +15836,21 @@
             "commit_ref": "5a7f7c48644baf82988f30bcb43e03dcfceb75dd",
             "commit_message": "gh-120083: Add IDLE Hovertip foreground color needed for recent macOS (#120605)\n\nOn recent versions of macOS (sometime between Catalina and Sonoma 14.5), the default Hovertip foreground color changed from black to white, thereby matching the background. This might be a matter of matching the white foreground of the dark-mode text. The unreadable result is shown here (#120083 (comment)).\r\n\r\nThe foreground and background colors were made parameters so we can pass different colors for future additional hovertips in IDLE.\r\n---------\r\n\r\nCo-authored-by: Terry Jan Reedy <tjreedy@udel.edu>",
             "commit_timestamp": 1722567763.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1722611284.188758,
+            "elapsed_time": 1297.6451261043549,
+            "x64": true,
+            "actual_files_count": 1040,
+            "expected_files_count": null,
+            "memory_traffic": 48742.88603973389,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "498376d7a7d6f704f22a2c963130cc15c17e7a6f",
+            "commit_message": "gh-122445: populate only modified fields in __static_attributes__ (#122446)\n\n",
+            "commit_timestamp": 1722609642.0
         }
     ]
 }

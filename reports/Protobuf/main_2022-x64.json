@@ -1949,6 +1949,21 @@
             "commit_ref": "db48abbef49312d76d442c0cde6a551961726b28",
             "commit_message": "Add breaking change detection for well-known types (#17513)\n\nAdds new tests in `//compatibility` for detecting undesired breaking changes in the schema of the well-known types and `descriptor.proto` files, using the Buf breaking change detector, via [`rules_buf`](https://github.com/bufbuild/rules_buf/).\n\nIn order to keep things light-touch as far as maintenance goes, I have chosen to keep the integration as small and simple as possible. Some notes:\n\n- Breaking change behavior can be granularly controlled via [`buf.yaml`](https://buf.build/docs/configuration/v1/buf-yaml#breaking).\n\n- Bazel sandboxes us away from meaningful VCS information, so in order to pick a target to check for breaking changes against, a new variable is added to `protobuf_versions.bzl` that needs to be updated with changes in the release version.\n\n- Breaking change detection is performed on a file-level, not a package-level, so migrating types across WKT files would constitute a breaking change. If this is not desired the behavior can be made to work on a package-level, though we need to do some more work as `buf_breaking_test` currently only accepts a single file descriptor set target for the `against` attribute.\n\nCloses #17513\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/17513 from jchadwick-buf:buf-breaking cd46bb2c1e0c768238455e5c2e5faa4b08a55434\nPiperOrigin-RevId: 658624708\n",
             "commit_timestamp": 1722566269.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1722611261.956927,
+            "elapsed_time": 337.62460231781006,
+            "x64": true,
+            "actual_files_count": 1087,
+            "expected_files_count": 818,
+            "memory_traffic": 38356.764305114746,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "f26bdff7cc0bb7e8ed88253ba16f81614a26cf16",
+            "commit_message": "[ObjC] Support errors when merging unknown fields to a message.\n\nPiperOrigin-RevId: 658782615\n",
+            "commit_timestamp": 1722608599.0
         }
     ]
 }

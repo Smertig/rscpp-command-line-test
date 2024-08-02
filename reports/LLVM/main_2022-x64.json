@@ -20311,6 +20311,23 @@
             "commit_ref": "e7f73c03dfe6c895b2dbe6d8d1d03546b87888c4",
             "commit_message": "[Attributor] Use `getPointerAddressSpace` to replace a cast followed by a `getAddressSpace`\n",
             "commit_timestamp": 1722567463.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1722612225.764393,
+            "elapsed_time": 1610.3514046669006,
+            "x64": true,
+            "actual_files_count": 2056,
+            "expected_files_count": 1661,
+            "memory_traffic": 252984.90280151367,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "d96569ecc2807a13dab6495d8cc4e82775b00af1",
+            "commit_message": "[analyzer] Fix crash on using `bitcast(<type>, <array>)` as array subscript (#101647)\n\nCurrent CSA logic does not expect `LazyCompoundValKind` as array index.\r\nThis may happen if array is used as subscript to another, in case of\r\nbitcast to integer type.\r\n\r\nCatch such cases and return `UnknownVal`, since CSA cannot model\r\narray -> int casts.\r\n\r\nCloses #94496",
+            "commit_timestamp": 1722611097.0
         }
     ]
 }

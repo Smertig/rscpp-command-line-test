@@ -19803,6 +19803,21 @@
             "commit_ref": "ebb5e3922dd1909c2fff4057ff45c39590645d14",
             "commit_message": "Move ProfilerManager Start/Stop routines closer to actual benchmark #1807 (#1818)\n\nPreviously, the Start/Stop routines were called before the benchmark function\r\nwas called and after it returned. However, what we really want is for them\r\nto be called within the core of the benchmark:\r\n\r\n  for (auto _ : state) {\r\n    // This is what we want traced, not the entire BM_foo function.\r\n  }",
             "commit_timestamp": 1722498161.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1722611238.357474,
+            "elapsed_time": 139.37419319152832,
+            "x64": true,
+            "actual_files_count": 88,
+            "expected_files_count": 86,
+            "memory_traffic": 5009.494842529297,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "ef73a30083ccd4eb1ad6e67a68b23163bf195561",
+            "commit_message": "Update clang-format-lint-action (#1829)\n\nColorize output in github action\r\n\r\nCo-authored-by: dominic <510002+dmah42@users.noreply.github.com>",
+            "commit_timestamp": 1722593160.0
         }
     ]
 }

@@ -18791,6 +18791,21 @@
             "commit_ref": "eb0a366b7035952f63b2cf61c9bc97982068a543",
             "commit_message": "http2: improve rate limiting of downloads\n\nSet the initial stream window size to 64KB and increase that to the 10MB\nwe used to start with on the first server reply, unless a rate limit is\nin effect.\n\nContinously monitory changes to the transfers rate limit and adjust the\nstream window size accordingly. `max_recv_speed` is a transfer propert\nthat can be changed during processing by a callback.\n\nCloses #14326\n",
             "commit_timestamp": 1722581101.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1722611291.630523,
+            "elapsed_time": 307.43580436706543,
+            "x64": true,
+            "actual_files_count": 3064,
+            "expected_files_count": 2323,
+            "memory_traffic": 46052.73589324951,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "4d34fd26db5fdc8e370c04d2af6555bee1673eb5",
+            "commit_message": "autotools: fix typo in tests/data target\n\nRef: c1b369fd4c2d538c89d6f9342092bead2628ff5c (2002-12-12)\nCloses #14355\n",
+            "commit_timestamp": 1722602176.0
         }
     ]
 }
