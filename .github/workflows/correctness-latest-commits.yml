@@ -83,7 +83,7 @@ jobs:
 
   collect_reports:
     needs: run_correctness_test
-    if: success() || failure()
+    if: success() || failure() || github.ref == 'refs/heads/github-workflow'
     runs-on: ubuntu-22.04
     name: Collect reports
 
