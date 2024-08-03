@@ -18571,6 +18571,21 @@
             "commit_ref": "045333e8904a0eebc8bbf0416df5121e53fc5023",
             "commit_message": "[EXPLORER] Restore windows on second click of Show Desktop button (#7184)\n\nOn the second click on \"Show desktop\" button, the minimized windows\r\nare not restored, because after the first click, and the addition to\r\n`CSimpleArray<MINWNDPOS> g_MinimizedAll`, a call to `RestoreMinimizedNonTaskWnds()`\r\nvia `HSHELL_WINDOWACTIVATED` message clears the list of minimized windows.\r\n\r\nDon't empty `g_MinimizedAll` while processing HSHELL_WINDOWCREATED or\r\nHSHELL_WINDOWACTIVATED messages (bDestroyed=FALSE).\r\n\r\nEmpty `g_MinimizedAll` only when SendPulseToTray is called with bDestroyed=TRUE.\r\n\r\nAddendum to e6bced7a353 and 70d7009ad95. CORE-19703 CORE-15369",
             "commit_timestamp": 1722609386.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1722654374.416802,
+            "elapsed_time": 89.86991214752197,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7766.6759033203125,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "deccfb8c9fb860c2dcc19d28339ab9cbab2bcc8d",
+            "commit_message": "[TASKMGR] Allow setting each column alignment independently (#7208)\n\nAdd dwAlign attribute to the PresetColumnEntry structure to make it work.\r\n\r\nCORE-19280",
+            "commit_timestamp": 1722635681.0
         }
     ]
 }
