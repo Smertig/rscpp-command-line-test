@@ -18821,6 +18821,21 @@
             "commit_ref": "b6089c35d90580fbdaf9bfffb0f26335884048f7",
             "commit_message": "cmake: drop reference to undefined variable\n\nUndefined since the initial commit adding CMake support.\n\nCloses #14358\n",
             "commit_timestamp": 1722640883.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1722697592.360263,
+            "elapsed_time": 231.48381447792053,
+            "x64": true,
+            "actual_files_count": 3064,
+            "expected_files_count": 2323,
+            "memory_traffic": 43293.27492523193,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "0324d557e4b4f754ea89636ea9164065f6446560",
+            "commit_message": "CI: enable parallel testing in CI builds\n\nThe test-ci target now uses 2 processes by default, but the amount of\nparallelism is tuned for each CI service and build environment based on\nresults of a number of test runs.  Some CI services use super-\noversubscribed build machines that can barely run the curl tests\nalready with no parallelism without frequently failing with\ntiming-induced failures. These continue to be run without parallelism.\nOther services provide two fast, unloaded cores and these run with 14\nprocesses, which is a good default for this kind of environment.\n\nHere's a summary of the number of test processes by CI service:\n\n  Appveyor - 2 (Windows MSVC), 1 (others)\n  Azure - 2\n  Circle CI - 14\n  Cirrus - 28 (macOS), 14 (Linux), 7 (FreeBSD), 5 (macOS torture), 2 (Windows)\n  GitHub Actions - 3 (macOS), 2 (Linux)\n\nSome of these are a bit conservative to keep timing-induced flakiness down.\n\nThe net result is that the first test results should arrive only\n3 minutes after a commit submission.\n\nChanges merged via separate commits:\n- 2a7c8b27fdd266894fe24d6d0f5d853ea843dff4 #14171\n- 72341068a2d8f1b94a26add16830c725cc4054e6\n- efce544418971b064d9fc8183a6caa582c54559b #14244\n- c6cf411bacf97f230db160e543d0cc3bbe5b9aba\n\nRef: #10818\nCloses #11510\n",
+            "commit_timestamp": 1722694364.0
         }
     ]
 }

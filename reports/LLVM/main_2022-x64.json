@@ -20345,6 +20345,23 @@
             "commit_ref": "400c7c7cf2b15138aa674355983be74270de93bc",
             "commit_message": "[clang][Interp][NFC] Simplify Pointer move/copy assignment op\n",
             "commit_timestamp": 1722653956.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1722698569.523349,
+            "elapsed_time": 1569.5063016414642,
+            "x64": true,
+            "actual_files_count": 2058,
+            "expected_files_count": 1661,
+            "memory_traffic": 253124.0665512085,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "f78d288d9d77c66f8b3036c62bb55160f19ba9cd",
+            "commit_message": "[clang][Interp] Fix function pointer callexpr eval order (#101821)\n\nWe need to evaluate the callee before the arguments.",
+            "commit_timestamp": 1722696997.0
         }
     ]
 }
