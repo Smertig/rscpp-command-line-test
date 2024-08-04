@@ -288,6 +288,23 @@
             "commit_ref": "f78d288d9d77c66f8b3036c62bb55160f19ba9cd",
             "commit_message": "[clang][Interp] Fix function pointer callexpr eval order (#101821)\n\nWe need to evaluate the callee before the arguments.",
             "commit_timestamp": 1722696997.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1722740898.055127,
+            "elapsed_time": 88.10369277000427,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 6618.8405685424805,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "b024fd267b813149f7bd5ba88731673b9a29258d",
+            "commit_message": "[libc] disable strfroml entrypoint on aarch64 (#101854)\n\nDisable `strfroml` entrypoint on aarch64 to please clang-11 buildbots.\r\nDetailed in https://github.com/llvm/llvm-project/issues/101846. This is\r\nnot a fix for #101846 so I will keep the issue open until our buildbot\r\nis updated or other mitigation is applied.",
+            "commit_timestamp": 1722738493.0
         }
     ]
 }
