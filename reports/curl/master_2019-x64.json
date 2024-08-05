@@ -18881,6 +18881,21 @@
             "commit_ref": "7b1444979094a365c82c665cce0e2ebc6b69467b",
             "commit_message": "cmake: add support for versioned symbols option\n\nImplement the `--enable-versioned-symbols` feature available in\n`./configure` for CMake.\n\nEnable with `-DCURL_LIBCURL_VERSIONED_SYMBOLS=ON`. Customize the version\nprefix with `-DCURL_LIBCURL_VERSIONED_SYMBOLS_PREFIX=MYPREFIX_`. By\ndefault the prefix matches what autotools uses.\n\nWhen enabled, the feature is detected and a warning shown if\nunavailable. (E.g. on Apple and Windows, it isn't.)\n\nIncluded `HIDDEN {};` to match autotools, though I don't know if it's\nnecessary, useful or making any difference.\n\nDifferences from the autotools implementation:\n- soversion is dynamic instead of hard-coded.\n- omits referencing non-curl symbols.\n- allows prefix/flavour override.\n- more universal feature detection.\n- doesn't rely on the in-repo `lib/libcurl.vers.in` file.\n\nAlso:\n- add mbedTLS and BearSSL versioned symbol prefix support to autotools.\n- enable this option in an old-linux job.\n\nFollow-up to 7cc2e8b349df28d55d5f40bfae323485df9f0cf2\nFixes #14349\nCloses #14378\n",
             "commit_timestamp": 1722815097.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1722870393.476354,
+            "elapsed_time": 229.17843389511108,
+            "x64": true,
+            "actual_files_count": 3064,
+            "expected_files_count": 2323,
+            "memory_traffic": 43378.05083465576,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "82bbb386a30f58aae071dd8e57076e0557a3b474",
+            "commit_message": "cmake: fix `GSS_VERSION` for Heimdal found via pkg-config\n\nPreviously used source variable was never defined, possibly due\nto a copy-paste-edit typo.\n\nCloses #14393\n",
+            "commit_timestamp": 1722868639.0
         }
     ]
 }

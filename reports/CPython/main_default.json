@@ -15926,6 +15926,21 @@
             "commit_ref": "d0b92dd5ca46a10558857adeb7bb48ecf39fa783",
             "commit_message": "gh-122573: Require Python 3.10 or newer for Windows builds (GH-122574)\n\nMatch statements in tooling require a more recent Python. Tools/cases_generator/*.py (and `Tools/jit/*.py` in 3.13+).\r\n\r\nCo-authored-by: Erlend E. Aasland <erlend.aasland@protonmail.com>\r\nCo-authored-by: Gregory P. Smith <greg@krypto.org>",
             "commit_timestamp": 1722813771.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1722870529.993783,
+            "elapsed_time": 1470.2834150791168,
+            "x64": true,
+            "actual_files_count": 1040,
+            "expected_files_count": null,
+            "memory_traffic": 48759.97159576416,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "1bb955a2fe0237721c141fdfe520fd3ba46db11e",
+            "commit_message": "gh-122459: Optimize pickling by name objects without __module__ (GH-122460)\n\n",
+            "commit_timestamp": 1722864092.0
         }
     ]
 }

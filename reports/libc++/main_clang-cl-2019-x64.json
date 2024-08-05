@@ -339,6 +339,23 @@
             "commit_ref": "7f78f99fe5af82361d37adcbd2daa4d04afba13d",
             "commit_message": "[clang] Reland: Instantiate alias templates with sugar (#101858)\n\nThis makes use of the changes introduced in D134604, in order to\r\ninstantiate alias templates witn a final sugared substitution.\r\n\r\nThis comes at no additional relevant cost.\r\nSince we don't track / unique them in specializations, we wouldn't be\r\nable to resugar them later anyway.\r\n\r\nDifferential Revision: https://reviews.llvm.org/D136565",
             "commit_timestamp": 1722824934.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1722870470.002809,
+            "elapsed_time": 78.46020770072937,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 6602.354682922363,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "6848b99d170e9ac59ce2007c817bc579536d8e8e",
+            "commit_message": "[OpenMP][Map][NFC] improve map chain. (#101903)\n\nThis is for mapping structure has data members, which have 'default'\r\nmappers, where needs to map these members individually using\r\ntheir 'default' mappers.\r\n\r\nexample map(tofrom: spp[0][0]), look at test case.\r\n\r\ncurrently create 6 maps:\r\n1>&spp, &spp[0],  size 8, maptype TARGET_PARAM | FROM | TO\r\n2>&spp[0], &spp[0][0], size(D)with maptype OMP_MAP_NONE, nullptr\r\n3>&spp[0], &spp[0][0].e, size(e) with maptype MEMBER_OF  | FROM  | TO\r\n4>&spp[0], &spp[0][0].h, size(h) with maptype MEMBER_OF  | FROM  | TO\r\n5>&spp, &spp[0],size(8), maptype MEMBER_OF | IMPLICIT | FROM  | TO\r\n6>&spp[0], &spp[0][0].f size(D) with maptype MEMBER_OF |IMPLICIT\r\n|PTR_AND_OBJ, @.omp_mapper._ZTS1C.default\r\n\r\nmaptype with/without OMP_MAP_PTR_AND_OBJ\r\n   For \"2\" and \"5\", since it is mapping pointer and pointee pair,\r\n   PTR_AND_OBJ should be set\r\n   But for \"6\" the PTR_AND_OBJ should not set.\r\nHowever, \"5\" is duplicate with \"1\" can be skip.\r\n\r\nTo fix \"2\", during the call to emitCombinEntry with false with\r\nNotTargetParams\r\ninstead !PartialStruct.PreliminaryMapData.BasePointers.empty(), since\r\nall captures need to be TARGET_PARAM\r\nAnd inside emitCombineEntry:  check\r\n!PartialStruct.PreliminaryMapData.BasePointers.empty() to set\r\nPTR_AND_OBJ\r\n\r\nFor \"5\" and \"6\": the fix in generateInfoForComponentList:\r\nAdd new variable IsPartialMapped set with\r\n!PartialStruct.PreliminaryMapData.BasePointers.empty();\r\n\r\nWhen that is true, skip generate \"5\" and don\"t set IsExpressionFirstInfo\r\nto false, so that PTR_AND_OBJ would be set.\r\n\r\nAfter fix: will have 5 maps instead 6\r\n1>&spp, &spp[0],  size 8, maptype TARGET_PARAM | FROM | TO\r\n2>&spp[0], &spp[0][0], size(D), maptype PTR_AND_OBJ, nullptr\r\n3>&spp[0], &spp[0][0].e, size(e), maptype MEMBER_OF_2  | FROM  | TO\r\n4>&spp[0], &spp[0][0].h, size(h), maptype MEMBER_OF_2  | FROM  | TO\r\n5>&spp[0], &spp[0][0].f size(32), maptype MEMBER_OF_2 | IMPLICIT,\r\n@.omp_mapper._ZTS1C.default\r\n\r\nFor map(sppp[0][0][0]):\r\nafter fix: will have 6 maps instead 8.\r\n\r\nhttps://github.com/llvm/llvm-project/pull/101903",
+            "commit_timestamp": 1722870071.0
         }
     ]
 }
