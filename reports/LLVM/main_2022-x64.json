@@ -20396,6 +20396,23 @@
             "commit_ref": "0edafc461f5f98b2ed5d2d621e1d9de70ccbd4e5",
             "commit_message": "[libc++] mark P0645 as complete (#101852)\n\nNow that #98275 has been merged, the footnote for P0645 has become\r\noutdated. This updates the status information.",
             "commit_timestamp": 1722779993.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1722828219.530276,
+            "elapsed_time": 1576.241942167282,
+            "x64": true,
+            "actual_files_count": 2058,
+            "expected_files_count": 1661,
+            "memory_traffic": 252908.5237197876,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "7f78f99fe5af82361d37adcbd2daa4d04afba13d",
+            "commit_message": "[clang] Reland: Instantiate alias templates with sugar (#101858)\n\nThis makes use of the changes introduced in D134604, in order to\r\ninstantiate alias templates witn a final sugared substitution.\r\n\r\nThis comes at no additional relevant cost.\r\nSince we don't track / unique them in specializations, we wouldn't be\r\nable to resugar them later anyway.\r\n\r\nDifferential Revision: https://reviews.llvm.org/D136565",
+            "commit_timestamp": 1722824934.0
         }
     ]
 }

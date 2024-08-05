@@ -15911,6 +15911,21 @@
             "commit_ref": "f5c39b3e9cc88d1eaa9229d610b0221305a83ad9",
             "commit_message": "gh-122661: Remove GNU make-specific directive from Doc/Makefile (#122662)\n\n",
             "commit_timestamp": 1722780149.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1722827375.361827,
+            "elapsed_time": 1338.3451972007751,
+            "x64": true,
+            "actual_files_count": 1040,
+            "expected_files_count": null,
+            "memory_traffic": 48636.244483947754,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "d0b92dd5ca46a10558857adeb7bb48ecf39fa783",
+            "commit_message": "gh-122573: Require Python 3.10 or newer for Windows builds (GH-122574)\n\nMatch statements in tooling require a more recent Python. Tools/cases_generator/*.py (and `Tools/jit/*.py` in 3.13+).\r\n\r\nCo-authored-by: Erlend E. Aasland <erlend.aasland@protonmail.com>\r\nCo-authored-by: Gregory P. Smith <greg@krypto.org>",
+            "commit_timestamp": 1722813771.0
         }
     ]
 }
