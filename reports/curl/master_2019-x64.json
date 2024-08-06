@@ -18896,6 +18896,21 @@
             "commit_ref": "82bbb386a30f58aae071dd8e57076e0557a3b474",
             "commit_message": "cmake: fix `GSS_VERSION` for Heimdal found via pkg-config\n\nPreviously used source variable was never defined, possibly due\nto a copy-paste-edit typo.\n\nCloses #14393\n",
             "commit_timestamp": 1722868639.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1722913597.412068,
+            "elapsed_time": 239.2291443347931,
+            "x64": true,
+            "actual_files_count": 3072,
+            "expected_files_count": 2323,
+            "memory_traffic": 43595.28618621826,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "232302f88a152a1d1722da9f69c383a766528918",
+            "commit_message": "cmake: add Linux CI job, fix pytest with cmake\n\n- extend existing Linux workflow with CMake support.\n  Including running pytest the first time with CMake.\n\n- cmake: generate `tests/config` and `tests/http/config.ini`.\n  Required for pytest tests.\n  Uses basic detection logic. Feel free to take it from here.\n  Also dump config files in a CI step for debugging purposes.\n\n- cmake: build `tests/http/clients` programs.\n\n- fix portability issues with `tests/http/clients` programs.\n  Some of them use `getopt()`, which is not supported by MSVC.\n  Fix the rest to compile in CI (old-mingw-w64, MSVC, Windows).\n\n- GHA/linux: add CMake job matching an existing autotools one.\n\n- GHA/linux: test `-DCURL_LIBCURL_VERSIONED_SYMBOLS=ON`\n  in the new CMake job.\n\n- reorder testdeps to build server, client tests first and then\n  libtests and units, to catch errors in the more complex/unique\n  sources earlier.\n\n- sort list in `tests/http/clients/Makefile.inc`.\n\nCloses #14382\n",
+            "commit_timestamp": 1722904832.0
         }
     ]
 }
