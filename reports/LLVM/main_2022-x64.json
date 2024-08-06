@@ -20447,6 +20447,23 @@
             "commit_ref": "874067a22f0f483dbe210d8547c06d564bfa7848",
             "commit_message": "[Sema] Preserve ContainsUnexpandedParameterPack in TransformLambdaExpr (#86265)\n\nThe lambda `ContainsUnexpandedParameterPack` flag is used for the\r\nexpressions' dependency computing and is therefore essential for pack\r\nexpansion.\u00a0We previously lost the flag's preservation during the\r\nlambda's transform, which caused some issues, e.g. a fold expression\r\ncouldn't properly expand inside a template.\r\n\r\nThis patch alleviates the issue by retaining the flag in more scenarios.\r\nNote that we still have problems with constraints involving packs\r\nregarding lambdas, and dealing with that would take more effort, and\r\nwe'd like to fix them in the future.\r\n\r\nFixes https://github.com/llvm/llvm-project/issues/56852\r\nFixes https://github.com/llvm/llvm-project/issues/85667\r\nMitigates https://github.com/llvm/llvm-project/issues/99877 because the\r\nattributes were not handled in this patch.\r\n\r\n---------\r\n\r\nCo-authored-by: Ilya Biryukov <809452+ilya-biryukov@users.noreply.github.com>\r\nCo-authored-by: cor3ntin <corentinjabot@gmail.com>",
             "commit_timestamp": 1722912885.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1722957886.492478,
+            "elapsed_time": 1636.0037820339203,
+            "x64": true,
+            "actual_files_count": 2061,
+            "expected_files_count": 1661,
+            "memory_traffic": 253471.71855163574,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "bd576fe34285c4dcd04837bf07a89a9c00e3cd5e",
+            "commit_message": "[clang][driver][clang-cl] Support `--precompile` and `-fmodule-*` options in Clang-CL (#98761)\n\nThis PR is the first step in improving the situation for `clang-cl`\r\ndetailed in [this LLVM Discourse\r\nthread](https://discourse.llvm.org/t/clang-cl-exe-support-for-c-modules/72257/28).\r\nThere has been some work done in #89772. I believe this is somewhat\r\northogonal.\r\n\r\nThis is a work-in-progress; the functionality has only been tested with\r\nthe [basic 'Hello World'\r\nexample](https://clang.llvm.org/docs/StandardCPlusPlusModules.html#quick-start),\r\nand proper test cases need to be written. I'd like some thoughts on\r\nthis, thanks!\r\n\r\nPartially resolves #64118.",
+            "commit_timestamp": 1722956755.0
         }
     ]
 }
