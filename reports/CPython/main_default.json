@@ -15971,6 +15971,21 @@
             "commit_ref": "4c317918486348ff8486168e1003be8c1daa6cf5",
             "commit_message": "GH-120024: Move three more escaping calls out of conditional statements (GH-122734)\n\n",
             "commit_timestamp": 1722950092.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1723000154.506587,
+            "elapsed_time": 1045.0618567466736,
+            "x64": true,
+            "actual_files_count": 1043,
+            "expected_files_count": null,
+            "memory_traffic": 48816.22235107422,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "98dba73010e807e613b9400e8c4b411302498728",
+            "commit_message": "GH-73991: Rework `pathlib.Path.rmtree()` into `delete()` (#122368)\n\nRename `pathlib.Path.rmtree()` to `delete()`, and add support for deleting\r\nnon-directories. This simplifies the interface for users, and nicely\r\ncomplements the upcoming `move()` and `copy()` methods (which will also\r\naccept any type of file.)",
+            "commit_timestamp": 1722990884.0
         }
     ]
 }

@@ -18691,6 +18691,21 @@
             "commit_ref": "90de2b660b12919c2f60f2f31ad41e37c123d662",
             "commit_message": "[NTUSER] Implement BroadcastSystemMessage with 'Environment' parameter (#6884)\n\n* [NTUSER] Implement BroadcastSystemMessage with 'Environment' parameter\r\n\r\nCORE-19372\r\nCORE-19583\r\n\r\n* Changes based on reviewer comments.\r\n\r\n* Make sure that lParamMsg has a UNICODE_NULL in it.\r\n\r\n* Skip extra handling of 1 word messsages.",
             "commit_timestamp": 1722757984.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1723000033.936493,
+            "elapsed_time": 109.8932716846466,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7774.711761474609,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "e51fddf030f80fc99fa383d4d5212b71f3e92c4a",
+            "commit_message": "[SHELL32] Simplify CExplorerBand::CompareTreeItems (#7214)\n\nReduce code.\r\nJIRA issue: CORE-19686\r\n- Delete useless _ILIsSpecialFolder\r\n  and GetDisplayName helper\r\n  functions.\r\n- Simply use IShellFolder::CompareIDs\r\n  for item comparison.",
+            "commit_timestamp": 1722994428.0
         }
     ]
 }

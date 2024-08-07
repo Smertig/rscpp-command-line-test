@@ -390,6 +390,23 @@
             "commit_ref": "bd576fe34285c4dcd04837bf07a89a9c00e3cd5e",
             "commit_message": "[clang][driver][clang-cl] Support `--precompile` and `-fmodule-*` options in Clang-CL (#98761)\n\nThis PR is the first step in improving the situation for `clang-cl`\r\ndetailed in [this LLVM Discourse\r\nthread](https://discourse.llvm.org/t/clang-cl-exe-support-for-c-modules/72257/28).\r\nThere has been some work done in #89772. I believe this is somewhat\r\northogonal.\r\n\r\nThis is a work-in-progress; the functionality has only been tested with\r\nthe [basic 'Hello World'\r\nexample](https://clang.llvm.org/docs/StandardCPlusPlusModules.html#quick-start),\r\nand proper test cases need to be written. I'd like some thoughts on\r\nthis, thanks!\r\n\r\nPartially resolves #64118.",
             "commit_timestamp": 1722956755.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1723000102.316791,
+            "elapsed_time": 92.96027565002441,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 6583.436080932617,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "b64ec3c9faf0adce6e92c69fb48a7c7473c57200",
+            "commit_message": "[SLP] The order of store chains needs to consider the size of the values. (#101810)\n\nWhen store chains have the same value type ID and pointer type ID, they\r\nmay mix different sizes of values, such as i8 and i64. This can lead to\r\nmissed vectorization opportunities.",
+            "commit_timestamp": 1722999713.0
         }
     ]
 }

@@ -18926,6 +18926,21 @@
             "commit_ref": "dcc5209520251c8c0cb0068f859f3a4a5a17d098",
             "commit_message": "GHA: run badwords check on tests/*.md too\n\nWith several wording updates accordingly.\n\nCloses #14412\n",
             "commit_timestamp": 1722944605.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1723000067.876256,
+            "elapsed_time": 221.90103888511658,
+            "x64": true,
+            "actual_files_count": 3072,
+            "expected_files_count": 2323,
+            "memory_traffic": 43710.38362121582,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "53146dd262c632f44cd283194d724911a1dfa60e",
+            "commit_message": "tool_help: handle longer lines, exit on too long\n\nFollow-up to 9a0cf56471c1a\n\n- increase the buffer to handle 160 characters manpage lines\n- add another assert\n- if the line buffer gets full, abort\n\nIdeally, we add another step in the build process that makes the build\nfail if this long lines are used.\n\nCloses #14422\n",
+            "commit_timestamp": 1722983467.0
         }
     ]
 }
