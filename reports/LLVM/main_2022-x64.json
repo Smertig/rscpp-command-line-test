@@ -20481,6 +20481,23 @@
             "commit_ref": "b64ec3c9faf0adce6e92c69fb48a7c7473c57200",
             "commit_message": "[SLP] The order of store chains needs to consider the size of the values. (#101810)\n\nWhen store chains have the same value type ID and pointer type ID, they\r\nmay mix different sizes of values, such as i8 and i64. This can lead to\r\nmissed vectorization opportunities.",
             "commit_timestamp": 1722999713.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1723044303.883124,
+            "elapsed_time": 1971.8270165920258,
+            "x64": true,
+            "actual_files_count": 2061,
+            "expected_files_count": 1661,
+            "memory_traffic": 253389.24856567383,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "7634a96589637186b640a0441c0544a9868d9913",
+            "commit_message": "[flang][acc] Improve lowering of Fortran optional in data clause (#102224)\n\nFortran optional arguments are effectively null references. To deal with\r\nthis possibility, flang lowering of OpenACC data clauses creates three\r\nif-else regions when preparing the data pointer for the data clause:\r\n1) Load box value from box reference\r\n2) Load box addr from box value\r\n3) Load box dims from box value\r\n\r\nHowever, this pattern makes it more complicated to find the original box\r\nreference. Effectively, the first if-else region to get the box value is\r\nnot needed - since the value can be loaded before the corresponding\r\n`fir.box_addr` and `fir.box_dims` operations. Thus, reduce the number of\r\nif-else regions by deferring the box load to the use sites.\r\n\r\nFor non-optional cases, the old functionality is left alone - which\r\npreloads the box value.",
+            "commit_timestamp": 1723043046.0
         }
     ]
 }
