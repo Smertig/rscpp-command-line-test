@@ -441,6 +441,23 @@
             "commit_ref": "fc0802a1d0bf2ede0ba71df09ddf5e601ab6587b",
             "commit_message": "[Fuchsia][CMake] Remove new/delete from baremetal libc++ (#102415)\n\nThis is causing issues for some baremetal targets.",
             "commit_timestamp": 1723085601.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1723129773.530617,
+            "elapsed_time": 71.83608865737915,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 6607.954986572266,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "b2e69f52bb5da067109b9a7d1f73d0dd1a6bb5ad",
+            "commit_message": "[LoongArch] Add machine function pass to merge base + offset (#101139)\n\nThis commit references RISC-V to add a machine function pass to merge\r\nthe base address and offset.",
+            "commit_timestamp": 1723129538.0
         }
     ]
 }

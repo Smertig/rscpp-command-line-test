@@ -18971,6 +18971,21 @@
             "commit_ref": "2d6fb0f58f508921acfa9348f7b0c5de2a813fb3",
             "commit_message": "cmake: tidy up more value comparisons\n\n- unquote numeric value.\n\n- `NOT LESS` -> `GREATER_EQUAL`.\n\n- replace macro with variable name.\n  It also avoids this error when the variable is undefined:\n  ```\n  CMake Error at CMakeLists.txt:1529 (if):\n  if given arguments:\n    \"GREATER\" \"4\"\n  Unknown arguments specified\n  ```\n  https://github.com/curl/curl/actions/runs/10289921657/job/28478722584#step:30:356\n\nFollow-up to 72ae0d86a42fea83612d8baf59cff2f945aca22a #14409\nFollow-up to acbc6b703f6b0ee568d053f6f2565fbc107b5fd3 #14197\n\nCloses #14449\n",
             "commit_timestamp": 1723066887.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1723129548.790374,
+            "elapsed_time": 202.53525829315186,
+            "x64": true,
+            "actual_files_count": 3072,
+            "expected_files_count": 2323,
+            "memory_traffic": 44320.55740356445,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "919394ee645be8cf92a96ff01140b4daf9cb21a5",
+            "commit_message": "cmake: more small tidy-ups and fixes\n\n- tidy up two `MATCHES` expression by avoiding macros expansion and\n  adding quotes. Then convert then to `STREQUAL` to match other places\n  in the code doing the same checks.\n\n- fix setting `_ALL_SOURCE` for AIX to match what autotools does.\n\n- delete stray `_ALL_SOURCE` reference from `lib/config_riscos.h`\n\n- simplify/fix two `STREQUAL \"\"` checks.\n  The one in the `openssl_check_symbol_exists()` macro succeeded\n  regardless of the value. The other could return TRUE when\n  `CMAKE_OSX_SYSROOT` was undefined.\n\n- delete code for CMake versions (<3.7) we no longer support.\n\n- prefer `LIST(APPEND ...)` to extend `CURL_LIBS`.\n\n- use `CURL_LIBS` to add the `network` lib for Haiku.\n  Before this patch it was done via raw C flags. I could not test this.\n\n- move `_WIN32_WINNT`-related code next to each other.\n  It also moves detection to the top, allowing more code to use\n  the result.\n\n- merge two `WIN32` blocks.\n\n- rename internal variables to underscore + lowercase.\n\n- unwrap a line, indent, whitespace.\n\nCloses #14450\n",
+            "commit_timestamp": 1723117708.0
         }
     ]
 }

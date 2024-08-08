@@ -18736,6 +18736,21 @@
             "commit_ref": "8f483a76a60024ea403823e4970f69ca19bae3c4",
             "commit_message": "[COMDLG32] *.rc Tweak AUTORADIOBUTTONS (#7178)\n\n\r\n- Tweak AUTORADIOBUTTONS (AUTORADIOBUTTON implies BS_AUTORADIOBUTTON). This saves a bit of source-file-size and binary size.\r\n- and use the backspace key for improving alignment to column 39 for the controls names in PRINT32_SETUP DIALOG & PRINT32 DIALOG\r\n- and fix 3 accel collisions for upper chinese translation &OA &A &R\r\n- and add a few FIXMEs for existing accel collisions in other languages\r\n- fix a few strings in cdlg_Sr.rc\r\n\r\nJIRA issue: none\r\n\r\nNote1: I intentionally used only the backspace-key and not the space key to improve the alignment in PRINT32_SETUP DIALOG & PRINT32 DIALOG, so please refrain from any review-suggestions of the form \"oh you could add another space here, or another space there\". I will not do that in this PR. I just aligned some strings to column 39 (same as it is used within the Wine-master-rc-file)\r\n\r\nNote2: I will only accept accelerator suggestions as replacement for the added accel-FIXMEs that have been double-checked by a native translator from the native 2k3sp2, but no guesses.",
             "commit_timestamp": 1723069687.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1723129618.641316,
+            "elapsed_time": 112.72328877449036,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7749.681770324707,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "8f483a76a60024ea403823e4970f69ca19bae3c4",
+            "commit_message": "[COMDLG32] *.rc Tweak AUTORADIOBUTTONS (#7178)\n\n\r\n- Tweak AUTORADIOBUTTONS (AUTORADIOBUTTON implies BS_AUTORADIOBUTTON). This saves a bit of source-file-size and binary size.\r\n- and use the backspace key for improving alignment to column 39 for the controls names in PRINT32_SETUP DIALOG & PRINT32 DIALOG\r\n- and fix 3 accel collisions for upper chinese translation &OA &A &R\r\n- and add a few FIXMEs for existing accel collisions in other languages\r\n- fix a few strings in cdlg_Sr.rc\r\n\r\nJIRA issue: none\r\n\r\nNote1: I intentionally used only the backspace-key and not the space key to improve the alignment in PRINT32_SETUP DIALOG & PRINT32 DIALOG, so please refrain from any review-suggestions of the form \"oh you could add another space here, or another space there\". I will not do that in this PR. I just aligned some strings to column 39 (same as it is used within the Wine-master-rc-file)\r\n\r\nNote2: I will only accept accelerator suggestions as replacement for the added accel-FIXMEs that have been double-checked by a native translator from the native 2k3sp2, but no guesses.",
+            "commit_timestamp": 1723069687.0
         }
     ]
 }
