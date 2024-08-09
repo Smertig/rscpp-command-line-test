@@ -18986,6 +18986,21 @@
             "commit_ref": "919394ee645be8cf92a96ff01140b4daf9cb21a5",
             "commit_message": "cmake: more small tidy-ups and fixes\n\n- tidy up two `MATCHES` expression by avoiding macros expansion and\n  adding quotes. Then convert then to `STREQUAL` to match other places\n  in the code doing the same checks.\n\n- fix setting `_ALL_SOURCE` for AIX to match what autotools does.\n\n- delete stray `_ALL_SOURCE` reference from `lib/config_riscos.h`\n\n- simplify/fix two `STREQUAL \"\"` checks.\n  The one in the `openssl_check_symbol_exists()` macro succeeded\n  regardless of the value. The other could return TRUE when\n  `CMAKE_OSX_SYSROOT` was undefined.\n\n- delete code for CMake versions (<3.7) we no longer support.\n\n- prefer `LIST(APPEND ...)` to extend `CURL_LIBS`.\n\n- use `CURL_LIBS` to add the `network` lib for Haiku.\n  Before this patch it was done via raw C flags. I could not test this.\n\n- move `_WIN32_WINNT`-related code next to each other.\n  It also moves detection to the top, allowing more code to use\n  the result.\n\n- merge two `WIN32` blocks.\n\n- rename internal variables to underscore + lowercase.\n\n- unwrap a line, indent, whitespace.\n\nCloses #14450\n",
             "commit_timestamp": 1723117708.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1723172804.437727,
+            "elapsed_time": 246.1346366405487,
+            "x64": true,
+            "actual_files_count": 3072,
+            "expected_files_count": 2323,
+            "memory_traffic": 49047.90855407715,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "a0ea955f809374fc5765c3379cca0e5cdc597c2f",
+            "commit_message": "ftp: flush pingpong before response\n\nFix FTP protocol to flush the pingpong's send buffer before receiving a\nresponse from the server, as it may never come otherwise.\n\nFixes FTP/FTPS tests with `CURL_DBG_SOCK_WBLOCK=90` set.\n\nCloses #14452\n",
+            "commit_timestamp": 1723132345.0
         }
     ]
 }
