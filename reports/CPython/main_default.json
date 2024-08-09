@@ -16046,6 +16046,21 @@
             "commit_ref": "2f5c3b09e45798a18d60841d04a165fb062be666",
             "commit_message": "gh-116622: Rename build variable MODULE_LDFLAGS back to LIBPYTHON (#122764)\n\n(LIBPYTHON was renamed MODULE_LDFLAGS in commit 7f5e3f04f.)",
             "commit_timestamp": 1723154455.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1723216144.191939,
+            "elapsed_time": 1296.3014888763428,
+            "x64": true,
+            "actual_files_count": 1044,
+            "expected_files_count": null,
+            "memory_traffic": 48809.45684814453,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "d3239976a8e66ae3e2f4314a6889d79cdc9a9625",
+            "commit_message": "gh-105376: Restore deprecated logging warn() method (#122775)\n\nThis reverts commit dcc028d92428bd57358a5028ada2a53fc79fc365 and\r\ncommit 6c54e5d72166d012b52155cbf13af9e533290e06.\r\n\r\nKeep the deprecated logging warn() method in Python 3.13.\r\n\r\nCo-authored-by: Gregory P. Smith <greg@krypto.org>\r\nCo-authored-by: Hugo van Kemenade <1324225+hugovk@users.noreply.github.com>",
+            "commit_timestamp": 1723209204.0
         }
     ]
 }
