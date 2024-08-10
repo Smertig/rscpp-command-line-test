@@ -19016,6 +19016,21 @@
             "commit_ref": "9cb7f08ef1d13c28eebcdda2fe17b182043fdfcd",
             "commit_message": "lib: fix AIX build issues\n\n- memdebug: replace keyword `malloc` with `__malloc__` to\n  not interfere with envs where `malloc` is redefined. Also apply\n  the fix to `alloc_size`.\n  Fixes:\n  ```\n  lib/memdebug.h:107:13: warning: unknown attribute 'vec_malloc' ignored [-Wunknown-attributes]\n  CURL_EXTERN ALLOC_FUNC FILE *curl_dbg_fdopen(int filedes, const char *mode,\n              ^~~~~~~~~~\n  lib/memdebug.h:37:37: note: expanded from macro 'ALLOC_FUNC'\n  # define ALLOC_FUNC __attribute__((malloc))\n                                     ^~~~~~\n  /usr/include/stdlib.h:753:16: note: expanded from macro 'malloc'\n  #define malloc vec_malloc\n                 ^~~~~~~~~~\n  ```\n\n- memdebug: always undef before defining.\n  Also do this for the rest of functions redefined in the same block.\n  Avoids warning on AIX:\n  ```\n  lib/memdebug.h:117:9: warning: 'malloc' macro redefined [-Wmacro-redefined]\n  #define malloc(size) curl_dbg_malloc(size, __LINE__, __FILE__)\n          ^\n  /usr/include/stdlib.h:753:9: note: previous definition is here\n  #define malloc vec_malloc\n          ^\n  ```\n\n- easy: fix `-Wformat` warning on AIX by adding a cast.\n  ```\n  lib/easy.c:608:47: warning: format specifies type 'int' but the argument has type 'long' [-Wformat]\n  \"%\" CURL_FORMAT_SOCKET_T \")\", fds[i].fd);\n  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~\n  ```\n\n- if2ip: silence compiler warning inside AIX system header.\n\n  ```\n  /lib/if2ip.c:219:19: warning: signed shift result (0x80000000) sets the sign bit of the shift expression's type ('int') and becomes negative [-Wshift-sign-overflow]\n  if(ioctl(dummy, SIOCGIFADDR, &req) < 0) {\n                  ^~~~~~~~~~~\n  /usr/include/sys/ioctl.h:401:26: note: expanded from macro 'SIOCGIFADDR'\n  #define SIOCGIFADDR (int)_IOWR('i',33, struct oifreq) /* get ifnet address */\n                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  /usr/include/sys/ioctl.h:174:23: note: expanded from macro '_IOWR'\n  #define _IOWR(x,y,t) (IOC_INOUT|((sizeof(t)&IOCPARM_MASK)<<16)|(x<<8)|y)\n                        ^~~~~~~~~\n  /usr/include/sys/ioctl.h:168:20: note: expanded from macro 'IOC_INOUT'\n  #define IOC_INOUT (IOC_IN|IOC_OUT)\n                     ^~~~~~\n  /usr/include/sys/ioctl.h:167:28: note: expanded from macro 'IOC_IN'\n  #define IOC_IN (0x40000000<<1) /* copy in parameters */\n                  ~~~~~~~~~~^ ~\n  ```\n\nRef: https://curl.se/dev/log.cgi?id=20240808180420-3809007\nAssisted-by: Dan Fandrich\nCloses #14464\n",
             "commit_timestamp": 1723193140.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1723259209.508324,
+            "elapsed_time": 224.7268989086151,
+            "x64": true,
+            "actual_files_count": 3072,
+            "expected_files_count": 2323,
+            "memory_traffic": 43768.53199005127,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "e48d8821ab1d9ff8337f1f64d7f816cc9c974288",
+            "commit_message": "Replace nonportable grep -o with awk\n\nThis stops an error shown at the end of configure on systems with POSIX\ngrep and fixes the warning it's trying to convey.\n\nCloses #14469\n",
+            "commit_timestamp": 1723218078.0
         }
     ]
 }
