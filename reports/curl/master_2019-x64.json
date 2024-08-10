@@ -19031,6 +19031,21 @@
             "commit_ref": "e48d8821ab1d9ff8337f1f64d7f816cc9c974288",
             "commit_message": "Replace nonportable grep -o with awk\n\nThis stops an error shown at the end of configure on systems with POSIX\ngrep and fixes the warning it's trying to convey.\n\nCloses #14469\n",
             "commit_timestamp": 1723218078.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1723302378.613811,
+            "elapsed_time": 226.19369435310364,
+            "x64": true,
+            "actual_files_count": 3072,
+            "expected_files_count": 2323,
+            "memory_traffic": 43861.026107788086,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "9e4a2187e763dd80a1296b07fd3e073f46c4dc8f",
+            "commit_message": "autotools: add `--with-windows-unicode` option\n\n- add `--with-windows-unicode` and `--without-windows-unicode` (default)\n  options.\n\n- enable it in a CI job.\n\nFixes #7229\nCloses #14478\n",
+            "commit_timestamp": 1723276969.0
         }
     ]
 }
