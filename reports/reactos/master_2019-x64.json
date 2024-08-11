@@ -18811,6 +18811,21 @@
             "commit_ref": "81ec0569637a2ff78a2adfe35486eb949176b415",
             "commit_message": "[BROWSEUI] Add checkmark for Explorer bar menu items (#7229)\n\nImprove UI/UX.\r\nJIRA issue: CORE-19689\r\n- In the CShellBrowser::OnInitMenuPopup method,\r\n  check/uncheck menu items depending on\r\n  fCurrentVertBar.\r\n",
             "commit_timestamp": 1723295723.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1723345569.728728,
+            "elapsed_time": 99.72807717323303,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7808.768218994141,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "9ee30c57fdcda9788fc83f4193c6755282524e41",
+            "commit_message": "[NTUSER] Fix popup menu placement when part way off right edge of screen (#7220)\n\n * Move the popup menu to the right edge of the screen when it is past the screen edge on the right.\r\n\r\nCORE-19706\r\n",
+            "commit_timestamp": 1723323644.0
         }
     ]
 }
