@@ -2249,6 +2249,21 @@
             "commit_ref": "a10b619ed91b6bb970e4b33a1901d61c94e97ef4",
             "commit_message": "Remove SmallSortedMap.lazyDescendingEntrySet field caching\n\nI've noted the rationale for this in the comment, and in the attached bug.\n\nThis should save about 4-8 bytes of memory (on the 64bit server JVM depending on if compressed object pointers are on) per object with extensions. And 4 bytes on Android.\n\nPiperOrigin-RevId: 661900014\n",
             "commit_timestamp": 1723421586.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1723475173.350136,
+            "elapsed_time": 293.84808707237244,
+            "x64": true,
+            "actual_files_count": 1087,
+            "expected_files_count": 818,
+            "memory_traffic": 38369.45226287842,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "fda2669a52ea6153ad7869d4ec56812f1afad3a5",
+            "commit_message": "Remove upb/protos/bazel/*\n\nPiperOrigin-RevId: 662077251\n",
+            "commit_timestamp": 1723473205.0
         }
     ]
 }

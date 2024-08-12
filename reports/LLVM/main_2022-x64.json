@@ -20651,6 +20651,23 @@
             "commit_ref": "efc6b50d2d93fa571572ee3ef1d4565c09ad1610",
             "commit_message": "[LoopVectorize][X86][AMDLibm] Add Missing AMD LibM trig vector intrinsics (#101125)\n\nAdding the following linked to their docs:\r\n-\r\n[amd_vrs16_acosf](https://github.com/amd/aocl-libm-ose/blob/9c0b67293ba01e509a6308247d82a8f1adfbbc67/scripts/libalm.def#L221)\r\n-\r\n[amd_vrd2_cosh](https://github.com/amd/aocl-libm-ose/blob/9c0b67293ba01e509a6308247d82a8f1adfbbc67/scripts/libalm.def#L124)\r\n-\r\n[amd_vrs16_tanhf](https://github.com/amd/aocl-libm-ose/blob/9c0b67293ba01e509a6308247d82a8f1adfbbc67/scripts/libalm.def#L224)",
             "commit_timestamp": 1723428669.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1723476133.445664,
+            "elapsed_time": 1539.2104153633118,
+            "x64": true,
+            "actual_files_count": 2061,
+            "expected_files_count": 1661,
+            "memory_traffic": 254160.83178710938,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "49777d7ffe82f1dcace318e51c9d785994f8c32a",
+            "commit_message": "[mlir][spirv] Add atan and atan2 pattern to MathToSPIRV Conversion pass (#102633)\n\nAdd missing math.atan to spirv.CL.atan and math.atan2 to spirv.CL.atan2\r\nin MathToSPIRV.\r\nAdd math.atan to spirv.GL.atan too.",
+            "commit_timestamp": 1723474728.0
         }
     ]
 }

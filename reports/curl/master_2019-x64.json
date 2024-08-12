@@ -19091,6 +19091,21 @@
             "commit_ref": "552d32886b193d5b6846be42fd2362298779f484",
             "commit_message": "TODO: remove 4.2 Alter passive/active on failure and retry\n\nand a dead link to curl issue that has been removed\n\nReported-by: Yedaya Katsman\nFixes #14475\nCloses #14490\n",
             "commit_timestamp": 1723396159.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1723475205.523842,
+            "elapsed_time": 247.06335830688477,
+            "x64": true,
+            "actual_files_count": 3072,
+            "expected_files_count": 2323,
+            "memory_traffic": 50889.96278381348,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "9dfdc6ff42ba045ec48056bb6d2072f2fcac2e9d",
+            "commit_message": "cmake: allow `pkg-config` in more envs\n\nBefore this patch, `pkg-config` was used for `UNIX` builds only (with\na few exceptions like wolfSSL, libssh, gsasl, libuv). This patch extends\n`pkg-config` use to all envs except: `MSVC` without vcpkg. Meaning MSVC\nwith vcpkg will now use it. Also mingw on Windows.\n\nAlso apply the new condition to options where `pkg-config` was used\nunconditionally (= for all targets). These are:\n`-DCURL_USE_WOLFSSL=ON`, `-DCURL_USE_LIBSSH=ON`,\n`-DCURL_USE_GSASL=ON` and `-DCURL_USE_LIBUV=ON`\n\nThis patch may still cause regressions for cross-builds (e.g. mingw\ncross-build from Unix) and potentially other cases. If that happens, we\nrecommend using some of these methods to explicitly disable `pkg-config`\nwhen using CMake:\n- CMake option: `-DPKG_CONFIG_EXECUTABLE=`\n  (or `-DPKG_CONFIG_EXECUTABLE=nonexistent` or similar)\n  This is similar to the (curl-specific) `PKG_CONFIG` env for autotools.\n- export env: `PKG_CONFIG_LIBDIR=`\n  (or `PKG_CONFIG_PATH`, `PKG_CONFIG_SYSROOT_DIR`,\n  or the CMake-specific `PKG_CONFIG`)\n\nWe may improve control over this in a future patch, also allowing opting\nin MSVC (without vcpkg).\n\nRef: #14405\nRef: #14408\nRef: #14140\nCloses #14483\n",
+            "commit_timestamp": 1723467430.0
         }
     ]
 }
