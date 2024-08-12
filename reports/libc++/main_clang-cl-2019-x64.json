@@ -560,6 +560,23 @@
             "commit_ref": "5286656609418c766272ff78e62fda41671ef4cb",
             "commit_message": "[LV] Regenerate check lines in preparation for #99808.\n\nRegenerate check lines for test to avoid unrelated changes in\nhttps://github.com/llvm/llvm-project/pull/99808.\n",
             "commit_timestamp": 1723385165.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1723432135.345996,
+            "elapsed_time": 90.38775968551636,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 6598.463897705078,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "efc6b50d2d93fa571572ee3ef1d4565c09ad1610",
+            "commit_message": "[LoopVectorize][X86][AMDLibm] Add Missing AMD LibM trig vector intrinsics (#101125)\n\nAdding the following linked to their docs:\r\n-\r\n[amd_vrs16_acosf](https://github.com/amd/aocl-libm-ose/blob/9c0b67293ba01e509a6308247d82a8f1adfbbc67/scripts/libalm.def#L221)\r\n-\r\n[amd_vrd2_cosh](https://github.com/amd/aocl-libm-ose/blob/9c0b67293ba01e509a6308247d82a8f1adfbbc67/scripts/libalm.def#L124)\r\n-\r\n[amd_vrs16_tanhf](https://github.com/amd/aocl-libm-ose/blob/9c0b67293ba01e509a6308247d82a8f1adfbbc67/scripts/libalm.def#L224)",
+            "commit_timestamp": 1723428669.0
         }
     ]
 }

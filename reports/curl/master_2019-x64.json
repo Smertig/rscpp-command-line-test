@@ -19076,6 +19076,21 @@
             "commit_ref": "2c15ee4bdb75f256a2943afdf2ad2ad2614d72c3",
             "commit_message": "multi: make the \"general\" list of easy handles a Curl_llist\n\nInstead of having an especially \"unique\" linked list handler for the\nmain list of easy handles within the multi handle, this now uses a\nregular Curl_llist for this as well.\n\nWith this change, it is also clearer that every easy handle added to a\nmulti handle belongs to one and only one out of three different lists:\n\n process - the general one for normal transfer processing\n\n pending - queued up waiting to get a connection (MSTATE_PENDING)\n\n msgsent - transfer completed (MSTATE_MSGSENT)\n\nAn easy handle must therefore be removed from the current list before it\ngets added to another.\n\nCloses #14474\n",
             "commit_timestamp": 1723325098.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1723432068.695328,
+            "elapsed_time": 243.89286875724792,
+            "x64": true,
+            "actual_files_count": 3072,
+            "expected_files_count": 2323,
+            "memory_traffic": 44637.38154602051,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "552d32886b193d5b6846be42fd2362298779f484",
+            "commit_message": "TODO: remove 4.2 Alter passive/active on failure and retry\n\nand a dead link to curl issue that has been removed\n\nReported-by: Yedaya Katsman\nFixes #14475\nCloses #14490\n",
+            "commit_timestamp": 1723396159.0
         }
     ]
 }
