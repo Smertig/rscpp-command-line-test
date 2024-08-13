@@ -20428,6 +20428,21 @@
             "commit_ref": "898794488a23c6d51b3474814939a60e5f68a096",
             "commit_message": "Add `type_caster_std_function_specializations` feature. (#4597)\n\n* Allow specializations based on callback function return values.\r\n\r\n* clang-tidy auto fix\r\n\r\n* Add a test case for function specialization.\r\n\r\n* Add test for callback function that raises Python exception.\r\n\r\n* Fix test failures.\r\n\r\n* style: pre-commit fixes\r\n\r\n* Add `#define PYBIND11_HAS_TYPE_CASTER_STD_FUNCTION_SPECIALIZATIONS`\r\n\r\n---------\r\n\r\nCo-authored-by: Ralf W. Grosse-Kunstleve <rwgk@google.com>\r\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>",
             "commit_timestamp": 1723235292.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1723518333.865879,
+            "elapsed_time": 118.87440323829651,
+            "x64": true,
+            "actual_files_count": 225,
+            "expected_files_count": 197,
+            "memory_traffic": 12988.134300231934,
+            "repo_url": "https://github.com/pybind/pybind11",
+            "commit_ref": "8d90b83b19de61009779edaa363679cfb9babbb5",
+            "commit_message": "chore(deps): bump actions/attest-build-provenance in the actions group (#5297)\n\nBumps the actions group with 1 update: [actions/attest-build-provenance](https://github.com/actions/attest-build-provenance).\r\n\r\n\r\nUpdates `actions/attest-build-provenance` from 1.4.0 to 1.4.1\r\n- [Release notes](https://github.com/actions/attest-build-provenance/releases)\r\n- [Changelog](https://github.com/actions/attest-build-provenance/blob/main/RELEASE.md)\r\n- [Commits](https://github.com/actions/attest-build-provenance/compare/210c1913531870065f03ce1f9440dd87bc0938cd...310b0a4a3b0b78ef57ecda988ee04b132db73ef8)\r\n\r\n---\r\nupdated-dependencies:\r\n- dependency-name: actions/attest-build-provenance\r\n  dependency-type: direct:production\r\n  update-type: version-update:semver-patch\r\n  dependency-group: actions\r\n...\r\n\r\nSigned-off-by: dependabot[bot] <support@github.com>\r\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+            "commit_timestamp": 1723506596.0
         }
     ]
 }
