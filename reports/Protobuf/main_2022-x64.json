@@ -2279,6 +2279,21 @@
             "commit_ref": "769305467a58fc0a8bee1a14fc9e605f6534c8b2",
             "commit_message": "Automated g4 rollback of changelist 662071950.\n\n*** Reason for rollback ***\n\nRolling back while investigating tsan reports.\n\n*** Original change description ***\n\nRemove a volatile read/write in SmallSortedMap.entrySet()\n\nI don't know why this was volatile.\n\nVolatile semantics are not strong enough for making this read-then-write a\ntransaction. You'd need a mutex or AtomicReference to achieve that.\n\n***\n\nPiperOrigin-RevId: 662300377\n",
             "commit_timestamp": 1723511271.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1723561638.400412,
+            "elapsed_time": 313.3721134662628,
+            "x64": true,
+            "actual_files_count": 1087,
+            "expected_files_count": 818,
+            "memory_traffic": 38326.525535583496,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "dd3a8bf3ac98ba5bd7d4875bcae5ca1bcd45fcea",
+            "commit_message": "Genned header: UPB -> HPB\n\nPiperOrigin-RevId: 662515884\n",
+            "commit_timestamp": 1723561091.0
         }
     ]
 }

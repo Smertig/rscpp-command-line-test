@@ -18886,6 +18886,21 @@
             "commit_ref": "daee508516ac190e7e2197e7cc051b2968d031b4",
             "commit_message": "[SETUP:REACTOS] Validate the installation path (#7162)\nCORE-13525\n",
             "commit_timestamp": 1723459582.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1723561610.852246,
+            "elapsed_time": 109.39947700500488,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7764.512161254883,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "07a76b3dec662f32f883a119a339333c523f7eb1",
+            "commit_message": "[STOBJECT] Do not report the remaining battery capacity if it is unknown\n\nSupport for system batteries in ReactOS is really minimal to the point of non-existing. We are detecting the presence of any upcoming battery but since there's lacking in critical code that deals with communication\nbetween PO and the battery class driver as the battery systray icon uses GetSystemPowerStatus to gather battery info which in turn inquires the power manager via NtPowerInformation(SystemBatteryState), we have\nto report to the user that the remaining capacity is unknown rather than returning a pseudo capacity value.\n\nTechnically this so called \"pesudo\" value is just a construct denoted as BATTERY_PERCENTAGE_UNKNOWN. Not reporting the actual remaining capacity makes sense, as there could be a scenario where the battery may not\nproperly report its real datum, therefore it's best to be honest to the user what's really going on.\n\nCORE-19452\nCORE-18969\n",
+            "commit_timestamp": 1723551424.0
         }
     ]
 }

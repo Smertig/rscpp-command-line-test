@@ -19121,6 +19121,21 @@
             "commit_ref": "77d722a052c427c89739b2e9e07aad9ae00837d2",
             "commit_message": "docs: update CIPHERS.md\n\nGive a more consice overview of curl's cipher options and cipher suites.\n\nRemoved long lists of ciphers that were directly copied from the SSL\nbackends' documentation. Instead present the user a more common aproach\nacorss the SSL backends, with notes for backends that do not conform\nand/or provide alternate means.\n\nProvide a shorter list of cipher suites that is more relevant for modern\nusage and should work mostly across all backends, provide a seperate\nlist with all cipher suites, and provide links to the SSL backends'\ndocumentation for more information.\n\nAlso give examples with modern cipher suites.\n\nAdd docs/CIPHERS-TLS12.md for TLS 1.2 ciphers.\n\nCloses #14460\n",
             "commit_timestamp": 1723498556.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1723561641.551376,
+            "elapsed_time": 232.94381546974182,
+            "x64": true,
+            "actual_files_count": 3072,
+            "expected_files_count": 2323,
+            "memory_traffic": 43703.59513092041,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "d76389d82f218b8217a15ba11554d60d5cd53c73",
+            "commit_message": "GHA/macos: disable AppleIDN for autotools in combinations jobs\n\nWithout libidn2, AppleIDN gets enabled by default in autotools.\n\nTo remain minimal and match cmake.\n\nFollow-up to 8de8fe8c98309c8b6183b22cc2e209ce4648173b #14401\n",
+            "commit_timestamp": 1723548934.0
         }
     ]
 }
