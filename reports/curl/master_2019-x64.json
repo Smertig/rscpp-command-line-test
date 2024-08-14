@@ -19136,6 +19136,21 @@
             "commit_ref": "d76389d82f218b8217a15ba11554d60d5cd53c73",
             "commit_message": "GHA/macos: disable AppleIDN for autotools in combinations jobs\n\nWithout libidn2, AppleIDN gets enabled by default in autotools.\n\nTo remain minimal and match cmake.\n\nFollow-up to 8de8fe8c98309c8b6183b22cc2e209ce4648173b #14401\n",
             "commit_timestamp": 1723548934.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1723604823.240823,
+            "elapsed_time": 228.7566740512848,
+            "x64": true,
+            "actual_files_count": 3072,
+            "expected_files_count": 2323,
+            "memory_traffic": 43764.66387939453,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "8ae7049f4bf42a1646544b64296e5750a349ecb7",
+            "commit_message": "cmake: sync up formatting in Find modules\n\n- lowercase internal variable names (FindGSS)\n- comments\n- whitespace\n\nCloses #14527\n",
+            "commit_timestamp": 1723592656.0
         }
     ]
 }

@@ -20702,6 +20702,23 @@
             "commit_ref": "ac26c661ead4c5fb05d13c7d07a706f2a305970a",
             "commit_message": "[compiler-rt][SME] Correct .variant_pcs directives. (#103047)\n\n",
             "commit_timestamp": 1723561389.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1723605937.742849,
+            "elapsed_time": 1664.310341835022,
+            "x64": true,
+            "actual_files_count": 2065,
+            "expected_files_count": 1661,
+            "memory_traffic": 254148.09475708008,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "4f5d866af7fed0de1671a68530d3023e9762b71e",
+            "commit_message": "[llvm-lit] Add REQUIRES: shell to BOLT permission test for lit internal shell (#103012)\n\nThis patch adds the `REQUIRES: shell` directive to the BOLT permission\r\ntest to ensure it only runs in environments with a full-featured\r\nUnix-like shell. This change is necessary because the test relies on\r\nadvanced shell capabilities that are not supported by lit's internal\r\nshell.\r\n\r\n**Reasoning:** The BOLT permission test uses features like running\r\ncommands in the background with `&`, performing arithmetic operations,\r\nand handling special number formats (octal). These features require a\r\nmore capable shell than what lit's internal shell provides. Without a\r\nproper shell, the test could fail or behave unpredictably.\r\n\r\nThis change is relevant for enabling the lit internal shell by default,\r\nas outlined in [[RFC] Enabling the Lit Internal Shell by\r\nDefault](https://discourse.llvm.org/t/rfc-enabling-the-lit-internal-shell-by-default/80179)",
+            "commit_timestamp": 1723604339.0
         }
     ]
 }

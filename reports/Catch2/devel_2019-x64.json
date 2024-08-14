@@ -20483,6 +20483,21 @@
             "commit_ref": "b15158c1db35f4e191acc52c5b84ecfe1add5b38",
             "commit_message": "Fix typo in test-cases-and-sections.md",
             "commit_timestamp": 1723544883.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1723604877.670381,
+            "elapsed_time": 103.04587268829346,
+            "x64": true,
+            "actual_files_count": 282,
+            "expected_files_count": 272,
+            "memory_traffic": 4488.384521484375,
+            "repo_url": "https://github.com/catchorg/Catch2.git",
+            "commit_ref": "f24569a1b4af70352d454ca46eb3be45a0ba51ef",
+            "commit_message": "Large output redirect refactor\n\nThis rework changes two important things\n\n1) the output redirect is deactivated while control is given to the reporters.\n   This means that combining reporters that write to stdout with capturing\n   reporters, e.g. `./tests -s -r console -r junit::out=junit.xml`, no\n   longer leads to the capturing reporter seeing all the output from\n   the other reporter captured.\n\nTrying this with the `SelfTest` binary would previously lead to JUnit\nspending **hours** trying to escape all of ConsoleReporter's output and\nwrite it to the output file. I actually ended up killing the process\nafter 3 hours, during which the JUnit reporter wrote something like 50 MBs\nof output to a file.\n\n2) The redirect object's lifetime is tied to the `RunContext`, instead\n  of being constructed for every partial test case run separately.\n\nThis has no effect on the basic StreamRedirect, but improves the FileRedirect\nsignificantly. Previously, running many tests in single process with this\nredirect (e.g. running `SelfTest -r junit`) would cause later tests to\nalways fail before starting, due to exceeding the limit of temporary files.\n\nFor the current `SelfTest` binary, the old implementation would lead to\n**295** test failures from not being able to initiate the redirect. The\nnew implementation completely eliminates them.\n\n----\n\nThere is one downside to the new implementation of FileRedirect, specific\nto Linux. Running the `SelfTest` binary on Linux causes 3-4 tests to have\nno captured stdout/stderr, even though the tests were supposed to be\nwriting there (there was no output to the actual stdout/stderr either,\nthe output was just completely lost).\n\nSince this never happen for smaller test case sets, nor does it reproduce\non other platforms, this implementation is still strictly better than\nthe old one, and thus it can get reasonably merged.\n",
+            "commit_timestamp": 1723584744.0
         }
     ]
 }
