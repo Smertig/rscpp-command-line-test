@@ -20473,6 +20473,21 @@
             "commit_ref": "0d44d720cb1b911de2d96849860d0c5beb368f95",
             "commit_message": "Make stl.h `list|set|map_caster` more user friendly. (#4686)\n\n* Add `test_pass_std_vector_int()`, `test_pass_std_set_int()` in test_stl\r\n\r\n* Change `list_caster` to also accept generator objects (`PyGen_Check(src.ptr()`).\r\n\r\nNote for completeness: This is a more conservative change than https://github.com/google/pywrapcc/pull/30042\r\n\r\n* Drop in (currently unpublished) PyCLIF code, use in `list_caster`, adjust tests.\r\n\r\n* Use `PyObjectTypeIsConvertibleToStdSet()` in `set_caster`, adjust tests.\r\n\r\n* Use `PyObjectTypeIsConvertibleToStdMap()` in `map_caster`, add tests.\r\n\r\n* Simplify `list_caster` `load()` implementation, push str/bytes check into `PyObjectTypeIsConvertibleToStdVector()`.\r\n\r\n* clang-tidy cleanup with a few extra `(... != 0)` to be more consistent.\r\n\r\n* Also use `PyObjectTypeIsConvertibleToStdVector()` in `array_caster`.\r\n\r\n* Update comment pointing to clif/python/runtime.cc (code is unchanged).\r\n\r\n* Comprehensive test coverage, enhanced set_caster load implementation.\r\n\r\n* Resolve clang-tidy eror.\r\n\r\n* Add a long C++ comment explaining what led to the `PyObjectTypeIsConvertibleTo*()` implementations.\r\n\r\n* Minor function name change in test.\r\n\r\n* strcmp -> std::strcmp (thanks @Skylion007 for catching this)\r\n\r\n* Add `PyCallable_Check(items)` in `PyObjectTypeIsConvertibleToStdMap()`\r\n\r\n* Resolve clang-tidy error\r\n\r\n* Use `PyMapping_Items()` instead of `src.attr(\"items\")()`, to be internally consistent with `PyMapping_Check()`\r\n\r\n* Update link to PyCLIF sources.\r\n\r\n* Fix typo (thanks @wangxf123456 for catching this)\r\n\r\n* Add `test_pass_std_vector_int()`, `test_pass_std_set_int()` in test_stl\r\n\r\n* Change `list_caster` to also accept generator objects (`PyGen_Check(src.ptr()`).\r\n\r\nNote for completeness: This is a more conservative change than https://github.com/google/pywrapcc/pull/30042\r\n\r\n* Drop in (currently unpublished) PyCLIF code, use in `list_caster`, adjust tests.\r\n\r\n* Use `PyObjectTypeIsConvertibleToStdSet()` in `set_caster`, adjust tests.\r\n\r\n* Use `PyObjectTypeIsConvertibleToStdMap()` in `map_caster`, add tests.\r\n\r\n* Simplify `list_caster` `load()` implementation, push str/bytes check into `PyObjectTypeIsConvertibleToStdVector()`.\r\n\r\n* clang-tidy cleanup with a few extra `(... != 0)` to be more consistent.\r\n\r\n* Also use `PyObjectTypeIsConvertibleToStdVector()` in `array_caster`.\r\n\r\n* Update comment pointing to clif/python/runtime.cc (code is unchanged).\r\n\r\n* Comprehensive test coverage, enhanced set_caster load implementation.\r\n\r\n* Resolve clang-tidy eror.\r\n\r\n* Add a long C++ comment explaining what led to the `PyObjectTypeIsConvertibleTo*()` implementations.\r\n\r\n* Minor function name change in test.\r\n\r\n* strcmp -> std::strcmp (thanks @Skylion007 for catching this)\r\n\r\n* Add `PyCallable_Check(items)` in `PyObjectTypeIsConvertibleToStdMap()`\r\n\r\n* Resolve clang-tidy error\r\n\r\n* Use `PyMapping_Items()` instead of `src.attr(\"items\")()`, to be internally consistent with `PyMapping_Check()`\r\n\r\n* Update link to PyCLIF sources.\r\n\r\n* Fix typo (thanks @wangxf123456 for catching this)\r\n\r\n* Fix typo discovered by new version of codespell.",
             "commit_timestamp": 1723574571.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1723648024.692259,
+            "elapsed_time": 179.71604132652283,
+            "x64": true,
+            "actual_files_count": 225,
+            "expected_files_count": 197,
+            "memory_traffic": 12849.413948059082,
+            "repo_url": "https://github.com/pybind/pybind11",
+            "commit_ref": "01169061891d8f5609d8cdf10f6dc396ef4ccd44",
+            "commit_message": "chore: remove repetitive words (#5308)\n\nSigned-off-by: pwdcd <pwdcd@icloud.com>",
+            "commit_timestamp": 1723611850.0
         }
     ]
 }

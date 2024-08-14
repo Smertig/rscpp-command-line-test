@@ -19293,6 +19293,21 @@
             "commit_ref": "bfad1fa7771c97e29648dd98fe94953660b02f80",
             "commit_message": "Sync to upstream/release/638 (#1360)\n\nNew Solver\r\n\r\n* Fix some type inference issues surrounding updates to upvalues eg\r\n\r\n```luau\r\nlocal x = 0\r\n\r\nfunction f()\r\n    x = x + 1\r\nend\r\n```\r\n\r\n* User-defined type function progress\r\n* Bugfixes for normalization of negated class types. eg `SomeClass &\r\n(class & ~SomeClass)`\r\n* Fixes to subtyping between tables and the top `table` type.\r\n\r\n---------\r\n\r\nCo-authored-by: Aaron Weiss <aaronweiss@roblox.com>\r\nCo-authored-by: Vighnesh <vvijay@roblox.com>\r\nCo-authored-by: Aviral Goel <agoel@roblox.com>\r\nCo-authored-by: David Cope <dcope@roblox.com>\r\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>\r\nCo-authored-by: Junseo Yoo <jyoo@roblox.com>",
             "commit_timestamp": 1723223900.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1723648140.171626,
+            "elapsed_time": 335.8353228569031,
+            "x64": true,
+            "actual_files_count": 461,
+            "expected_files_count": 379,
+            "memory_traffic": 32338.3286819458,
+            "repo_url": "https://github.com/luau-lang/luau",
+            "commit_ref": "9dc299ecafd2178e7eff97dcb2437f2568e16d3c",
+            "commit_message": "Fix size of userdata metatable array (#1366)\n\nFix udatamt array to use the correct limit for tagged userdata.",
+            "commit_timestamp": 1723640421.0
         }
     ]
 }
