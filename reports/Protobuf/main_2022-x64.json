@@ -2339,6 +2339,21 @@
             "commit_ref": "840697a35eb2df44fa942d6d74d84ba285e81c58",
             "commit_message": "Minor cleanup: IWYU, clang-tidy, etc.\n\nPiperOrigin-RevId: 663122060\n",
             "commit_timestamp": 1723684758.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1723734373.67126,
+            "elapsed_time": 295.778112411499,
+            "x64": true,
+            "actual_files_count": 1087,
+            "expected_files_count": 818,
+            "memory_traffic": 38373.064880371094,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "c5f623184dc91e5c5bc58adb91b93f24e4467282",
+            "commit_message": "Add Compiler Condition to use inline assembly optimizations with ARM64 for Compatibility with MSVC (#17671)\n\nhttps://github.com/protocolbuffers/protobuf/issues/17665\n\n**Problem**\n`google\\protobuf\\parse_context.h(721,10): error C2059: syntax error: ':'`\n`google\\protobuf\\parse_context.h(898,14): error C3861: 'Ubfx7': identifier not found`\n\nThe latest protobuf versions fail to compile with MSVC on Windows ARM64 architecture.\n\n> Inline assembly is only available for x86 targets. For similar functionality in x64 or ARM64 code, use [compiler intrinsics](https://learn.microsoft.com/en-us/cpp/intrinsics/compiler-intrinsics?view=msvc-170).\n\nhttps://learn.microsoft.com/en-us/cpp/assembler/inline/writing-functions-with-inline-assembly?view=msvc-170\n\n**Solution**\nAs inline assembly for win ARM64 with MSVC as a compiler is not supported (even ARM specific assembly functions), a term has been added to the conditions in parse_context.h to prevent the assembly optimizations for arm64 from executing if the compiler is MSVC.\n\nTested by compiling protobuf with MSVC on Windows ARM64 and AMD64 architecture. Compilation was a success.\n\nCloses #17671\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/17671 from dsmith111:smithdavi/msvc-compatibility-patch 765f8c8e7c5984546b3da9e6251d919579319604\nPiperOrigin-RevId: 663262760\n",
+            "commit_timestamp": 1723722317.0
         }
     ]
 }

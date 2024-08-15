@@ -679,6 +679,23 @@
             "commit_ref": "b57038a611329ec42858b714effb482cbfc4d4e1",
             "commit_message": "[OpenMP] Use range-based for loops (NFC) (#103511)\n\n",
             "commit_timestamp": 1723691025.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1723734561.116231,
+            "elapsed_time": 110.73829817771912,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 6611.145042419434,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "56140a8258a3498cfcd9f0f05c182457d43cbfd2",
+            "commit_message": "[SLP]Fix PR104422: Wrong value truncation\n\nThe minbitwidth restrictions can be skipped only for immediate reduced\nvalues, for other nodes still need to check if external users allow\nbitwidth reduction.\n\nFixes https://github.com/llvm/llvm-project/issues/104422\n",
+            "commit_timestamp": 1723734008.0
         }
     ]
 }
