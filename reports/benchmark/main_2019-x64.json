@@ -20223,6 +20223,21 @@
             "commit_ref": "a008bf82f4aa5ad6605622040c7b2fe7512dc0c7",
             "commit_message": "Ensure reported Time is walltime by removing spurious scaling by threads (#1836)\n\n\n\n* change the default to not scale\n",
             "commit_timestamp": 1723569122.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1723820723.35963,
+            "elapsed_time": 52.44229221343994,
+            "x64": true,
+            "actual_files_count": 88,
+            "expected_files_count": 86,
+            "memory_traffic": 4904.477333068848,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "437fea4b549a449ac319618552981cb328f1aaf4",
+            "commit_message": "Fix Python manual timing example (#1722)\n\nAccording to the user guide, when manual timing, it is necessary to explicit it by using the `UseManualTime` function. Its equivalent in Python is use_manual_time(). This function was not called in the example.\r\n\r\nIt is possible to verify that the use of this function has an impact on the measure by adding another `time.sleep(0.01)` at the end of the iteration. There is a x2 difference depending on whether `use_manual_time()` is used or not.\r\n\r\nCo-authored-by: dominic <510002+dmah42@users.noreply.github.com>",
+            "commit_timestamp": 1723818768.0
         }
     ]
 }
