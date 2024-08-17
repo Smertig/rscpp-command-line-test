@@ -16286,6 +16286,21 @@
             "commit_ref": "35d8ac7cd7ed6cd3d84af721dce970da59bd5f68",
             "commit_message": "GH-120754: Disable buffering in Path.read_bytes (#122111)\n\n`Path.read_bytes()` is used to read a whole file. buffering /\r\nBufferedIO is focused around making small, possibly interleaved,\r\nread/write efficient which doesn't add value in this case.\r\n\r\nOn my Mac, running the benchmark:\r\n\r\n```python\r\nimport pyperf\r\nfrom pathlib import Path\r\n\r\ndef read_all(all_paths):\r\n    for p in all_paths:\r\n        p.read_bytes()\r\n\r\ndef read_file(path_obj):\r\n    path_obj.read_bytes()\r\n\r\nall_rst = list(Path(\"Doc\").glob(\"**/*.rst\"))\r\nall_py = list(Path(\".\").glob(\"**/*.py\"))\r\nassert all_rst, \"Should have found rst files\"\r\nassert all_py, \"Should have found python source files\"\r\n\r\nrunner = pyperf.Runner()\r\nrunner.bench_func(\"read_file_small\", read_file, Path(\"Doc/howto/clinic.rst\"))\r\nrunner.bench_func(\"read_file_large\", read_file, Path(\"Doc/c-api/typeobj.rst\"))\r\n```\r\n\r\nbefore:\r\n```python\r\n.....................\r\nread_file_small: Mean +- std dev: 6.80 us +- 0.07 us\r\n.....................\r\nread_file_large: Mean +- std dev: 10.8 us +- 0.2 us\r\n````\r\n\r\nafter:\r\n```python\r\n.....................\r\nread_file_small: Mean +- std dev: 5.67 us +- 0.05 us\r\n.....................\r\nread_file_large: Mean +- std dev: 9.77 us +- 0.52 us\r\n```",
             "commit_timestamp": 1723841561.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1723907322.925408,
+            "elapsed_time": 1521.905235528946,
+            "x64": true,
+            "actual_files_count": 1047,
+            "expected_files_count": null,
+            "memory_traffic": 50063.35878753662,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "44e458357fca05ca0ae2658d62c8c595b048b5ef",
+            "commit_message": "gh-123067: Fix quadratic complexity in parsing \"-quoted cookie values with backslashes (GH-123075)\n\nThis fixes CVE-2024-7592.\r\n",
+            "commit_timestamp": 1723901452.0
         }
     ]
 }

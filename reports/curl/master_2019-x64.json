@@ -19241,6 +19241,21 @@
             "commit_ref": "d8de4806e1463f589a1b54de1da7d6396de94d11",
             "commit_message": "cmake: tidy-up continues\n\n- move variable dump to a GHA foldable group.\n- minimize scope for an include().\n- rename `HIDES_CURL_PRIVATE_SYMBOLS` to `CURL_HIDES_PRIVATE_SYMBOLS`,\n  to keep it in the curl namespace.\n- drop quotes from a version number.\n- add missing `Makefile.inc` var refs to comment.\n- FindNGTCP2: rename internal var to underscore/lowercase.\n- FindBearSSL, FindGSS: whitespace.\n\nCloses #14571\n",
             "commit_timestamp": 1723847558.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1723907118.365157,
+            "elapsed_time": 218.21879816055298,
+            "x64": true,
+            "actual_files_count": 3072,
+            "expected_files_count": 2323,
+            "memory_traffic": 43574.22531890869,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "88727f7ed048f828e6cf0b2a0981e51e61143c81",
+            "commit_message": "docs: improve cipher options documentation\n\nCloses #14407\n",
+            "commit_timestamp": 1723886061.0
         }
     ]
 }

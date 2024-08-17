@@ -20821,6 +20821,23 @@
             "commit_ref": "6e0fc155782ff5307245a85c7b037a2998ec6c86",
             "commit_message": "[RISCV] Remove feature implication from Zvknhb.\n\nWe don't have feature implications on any other Zvk extensions and\nwe have error messages in RISCVISAInfo if Zve or V is not enabled.\nI'm working on testing and refactoring in that code so I'd like to\nmake it consistent.\n",
             "commit_timestamp": 1723858506.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1723908171.707897,
+            "elapsed_time": 1540.042411327362,
+            "x64": true,
+            "actual_files_count": 2063,
+            "expected_files_count": 1661,
+            "memory_traffic": 254310.8014984131,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "76161451f5ca837b25769c7d142f8271b45d9b28",
+            "commit_message": "[libc] Fix type signature for strlcpy and strlcat (#104643)\n\nSummary:\r\nThese should not be const on the destination pointer.",
+            "commit_timestamp": 1723906145.0
         }
     ]
 }
