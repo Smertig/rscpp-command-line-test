@@ -20238,6 +20238,21 @@
             "commit_ref": "437fea4b549a449ac319618552981cb328f1aaf4",
             "commit_message": "Fix Python manual timing example (#1722)\n\nAccording to the user guide, when manual timing, it is necessary to explicit it by using the `UseManualTime` function. Its equivalent in Python is use_manual_time(). This function was not called in the example.\r\n\r\nIt is possible to verify that the use of this function has an impact on the measure by adding another `time.sleep(0.01)` at the end of the iteration. There is a x2 difference depending on whether `use_manual_time()` is used or not.\r\n\r\nCo-authored-by: dominic <510002+dmah42@users.noreply.github.com>",
             "commit_timestamp": 1723818768.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1723863943.904639,
+            "elapsed_time": 56.08383750915527,
+            "x64": true,
+            "actual_files_count": 88,
+            "expected_files_count": 86,
+            "memory_traffic": 4857.45011138916,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "6126d2a2052bb48d3472ac0468ade50397d393c5",
+            "commit_message": "Align benchmark::State to a cacheline. (#1230)\n\n* Align benchmark::State to a cacheline.\r\n\r\nThis can avoid interference with neighboring objects and stabilize\r\nbenchmark results.\r\n\r\n* separate cachline definition from alignment attribute macro\r\n\r\nCo-authored-by: Roman Lebedev <lebedev.ri@gmail.com>\r\n\r\n---------\r\n\r\nCo-authored-by: dominic <510002+dmah42@users.noreply.github.com>\r\nCo-authored-by: Roman Lebedev <lebedev.ri@gmail.com>",
+            "commit_timestamp": 1723821018.0
         }
     ]
 }

@@ -19226,6 +19226,21 @@
             "commit_ref": "4e2f3641f80e233738147d82218317f331369c50",
             "commit_message": "cmake: add missing version detection to Find modules\n\n- use `pkg-config` version when available and where it wasn't yet used.\n\n- add manual version detection for dependencies where this is possible\n  (via a public header) and where it wasn't done yet.\n\nCloses #14548\n",
             "commit_timestamp": 1723820024.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1723864005.881246,
+            "elapsed_time": 270.1205973625183,
+            "x64": true,
+            "actual_files_count": 3072,
+            "expected_files_count": 2323,
+            "memory_traffic": 49100.88554382324,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "d8de4806e1463f589a1b54de1da7d6396de94d11",
+            "commit_message": "cmake: tidy-up continues\n\n- move variable dump to a GHA foldable group.\n- minimize scope for an include().\n- rename `HIDES_CURL_PRIVATE_SYMBOLS` to `CURL_HIDES_PRIVATE_SYMBOLS`,\n  to keep it in the curl namespace.\n- drop quotes from a version number.\n- add missing `Makefile.inc` var refs to comment.\n- FindNGTCP2: rename internal var to underscore/lowercase.\n- FindBearSSL, FindGSS: whitespace.\n\nCloses #14571\n",
+            "commit_timestamp": 1723847558.0
         }
     ]
 }
