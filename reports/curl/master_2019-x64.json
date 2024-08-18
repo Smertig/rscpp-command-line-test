@@ -19256,6 +19256,21 @@
             "commit_ref": "88727f7ed048f828e6cf0b2a0981e51e61143c81",
             "commit_message": "docs: improve cipher options documentation\n\nCloses #14407\n",
             "commit_timestamp": 1723886061.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1723950368.294045,
+            "elapsed_time": 227.38376641273499,
+            "x64": true,
+            "actual_files_count": 3072,
+            "expected_files_count": 2323,
+            "memory_traffic": 43368.24118804932,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "24889acbfb8030390c19e0db979457932deba44d",
+            "commit_message": "cmake: do not unset the deprecated mixed-case variables\n\nTo avoid interference with the calling env.\n\n(Keep unsetting for the DIRS/DIR cases in BearSSL and mbedTLS, because\nthe deprecated variables play a new role in the detection.)\n\nFollow-up to 9fbda4ca75483ee0a43289526e88d8f1e8ca2a78 #14574\n",
+            "commit_timestamp": 1723927816.0
         }
     ]
 }
