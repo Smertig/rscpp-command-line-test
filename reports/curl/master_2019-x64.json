@@ -19271,6 +19271,21 @@
             "commit_ref": "24889acbfb8030390c19e0db979457932deba44d",
             "commit_message": "cmake: do not unset the deprecated mixed-case variables\n\nTo avoid interference with the calling env.\n\n(Keep unsetting for the DIRS/DIR cases in BearSSL and mbedTLS, because\nthe deprecated variables play a new role in the detection.)\n\nFollow-up to 9fbda4ca75483ee0a43289526e88d8f1e8ca2a78 #14574\n",
             "commit_timestamp": 1723927816.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1723993499.57215,
+            "elapsed_time": 216.200998544693,
+            "x64": true,
+            "actual_files_count": 3072,
+            "expected_files_count": 2323,
+            "memory_traffic": 43561.61679840088,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "c57d3aeb55cf5eeecd108172f52d0439d6182e30",
+            "commit_message": "appveyor: drop uploading artifacts\n\nUploading artifacts sometimes results in this error:\n```\nUploading artifacts...\n[1/1] _bld\\src\\curl.exe (2,022,912 bytes)...100%\nError uploading artifact to the storage: Remote server returned 503: Service Temporarily Unavailable\n```\nRef: https://ci.appveyor.com/project/curlorg/curl/builds/50424126/job/e4envval6xkicv1i#L123\n\nThe artifacts are also probably not useful to upload for every run. Also\nnote that they were missing external DLL dependencies.\n\nLeave the logic there commented, to make it easy to enable as needed for\ndebugging or testing artifacts locally.\n\nCloses #14581\n",
+            "commit_timestamp": 1723976573.0
         }
     ]
 }
