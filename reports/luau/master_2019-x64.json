@@ -19428,6 +19428,21 @@
             "commit_ref": "25f91aa8b82fa3a9e415afbb83574c56b43cad80",
             "commit_message": "Sync to upstream/release/639 (#1368)\n\n# What's Changed?\r\n\r\n- Variety of bugfixes in the new solver\r\n\r\n## New Solver\r\n\r\n- Fix an issue where we would hit a recursion limit when applying long\r\nchains of type refinements.\r\n- Weaken the types of `table.freeze` and `table.clone` in the new solver\r\nso we can accept common code patterns like `local a = table.freeze({x=5,\r\nx=0})` at the expense of accepting code like `table.freeze(true)`.\r\n- Don't warn when the # operator is used on a value of type never\r\n\r\n## VM\r\n- Fix a bug in lua_resume where too many values might be removed from\r\nstack when resume throws an error\r\n\r\n---\r\nCo-authored-by: Aaron Weiss <aaronweiss@roblox.com>\r\nCo-authored-by: Andy Friesen <afriesen@roblox.com>\r\nCo-authored-by: Vighnesh Vijay <vvijay@roblox.com>\r\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>\r\n\r\n---------\r\n\r\nCo-authored-by: Aaron Weiss <aaronweiss@roblox.com>\r\nCo-authored-by: Alexander McCord <amccord@roblox.com>\r\nCo-authored-by: Andy Friesen <afriesen@roblox.com>\r\nCo-authored-by: Aviral Goel <agoel@roblox.com>\r\nCo-authored-by: David Cope <dcope@roblox.com>\r\nCo-authored-by: Lily Brown <lbrown@roblox.com>\r\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>\r\nCo-authored-by: Junseo Yoo <jyoo@roblox.com>",
             "commit_timestamp": 1723832973.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1724036771.299051,
+            "elapsed_time": 268.76299357414246,
+            "x64": true,
+            "actual_files_count": 461,
+            "expected_files_count": 379,
+            "memory_traffic": 32432.263565063477,
+            "repo_url": "https://github.com/luau-lang/luau",
+            "commit_ref": "25f91aa8b82fa3a9e415afbb83574c56b43cad80",
+            "commit_message": "Sync to upstream/release/639 (#1368)\n\n# What's Changed?\r\n\r\n- Variety of bugfixes in the new solver\r\n\r\n## New Solver\r\n\r\n- Fix an issue where we would hit a recursion limit when applying long\r\nchains of type refinements.\r\n- Weaken the types of `table.freeze` and `table.clone` in the new solver\r\nso we can accept common code patterns like `local a = table.freeze({x=5,\r\nx=0})` at the expense of accepting code like `table.freeze(true)`.\r\n- Don't warn when the # operator is used on a value of type never\r\n\r\n## VM\r\n- Fix a bug in lua_resume where too many values might be removed from\r\nstack when resume throws an error\r\n\r\n---\r\nCo-authored-by: Aaron Weiss <aaronweiss@roblox.com>\r\nCo-authored-by: Andy Friesen <afriesen@roblox.com>\r\nCo-authored-by: Vighnesh Vijay <vvijay@roblox.com>\r\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>\r\n\r\n---------\r\n\r\nCo-authored-by: Aaron Weiss <aaronweiss@roblox.com>\r\nCo-authored-by: Alexander McCord <amccord@roblox.com>\r\nCo-authored-by: Andy Friesen <afriesen@roblox.com>\r\nCo-authored-by: Aviral Goel <agoel@roblox.com>\r\nCo-authored-by: David Cope <dcope@roblox.com>\r\nCo-authored-by: Lily Brown <lbrown@roblox.com>\r\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>\r\nCo-authored-by: Junseo Yoo <jyoo@roblox.com>",
+            "commit_timestamp": 1723832973.0
         }
     ]
 }

@@ -19286,6 +19286,21 @@
             "commit_ref": "c57d3aeb55cf5eeecd108172f52d0439d6182e30",
             "commit_message": "appveyor: drop uploading artifacts\n\nUploading artifacts sometimes results in this error:\n```\nUploading artifacts...\n[1/1] _bld\\src\\curl.exe (2,022,912 bytes)...100%\nError uploading artifact to the storage: Remote server returned 503: Service Temporarily Unavailable\n```\nRef: https://ci.appveyor.com/project/curlorg/curl/builds/50424126/job/e4envval6xkicv1i#L123\n\nThe artifacts are also probably not useful to upload for every run. Also\nnote that they were missing external DLL dependencies.\n\nLeave the logic there commented, to make it easy to enable as needed for\ndebugging or testing artifacts locally.\n\nCloses #14581\n",
             "commit_timestamp": 1723976573.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1724036776.459612,
+            "elapsed_time": 247.7000663280487,
+            "x64": true,
+            "actual_files_count": 3072,
+            "expected_files_count": 2323,
+            "memory_traffic": 48146.430236816406,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "73f62acaa2963ca64c5eaf45c75a9506eeee1a6e",
+            "commit_message": "RELEASE-NOTES: synced\n",
+            "commit_timestamp": 1724014657.0
         }
     ]
 }
