@@ -19331,6 +19331,21 @@
             "commit_ref": "96b9027f1638428644f084eff9f2d8146d3911d6",
             "commit_message": "GHA/windows: unblock TFTP MQTT WebSockets SMTP FTP tests\n\nRun them now. Also ignore results for now.\n\nCloses #14607\n",
             "commit_timestamp": 1724107824.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1724166383.833756,
+            "elapsed_time": 236.2003412246704,
+            "x64": true,
+            "actual_files_count": 3072,
+            "expected_files_count": 2323,
+            "memory_traffic": 49516.552001953125,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "ae2c753a8865ed39baaaeac54adbecd249d3c018",
+            "commit_message": "GHA/windows: add missing time limit for msys2 autotools test runs\n\nThe new mingw job (the first msys2/mingw job to run tests) is seen\nhanging frequently.\n\nFollow-up to 9f23c8f201f55f1a148b41b16a5e71f3385faa5e #14541\n",
+            "commit_timestamp": 1724162535.0
         }
     ]
 }

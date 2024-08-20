@@ -849,6 +849,23 @@
             "commit_ref": "52bfb2611f8d30fae3306c652af7ba5c7e88c147",
             "commit_message": "[ADT] Fix a minor build error (#104840)\n\nA quick follow-up fix for\r\nhttps://github.com/llvm/llvm-project/pull/99403\r\n\r\nBuildbot\r\n[reported](https://lab.llvm.org/buildbot/#/builders/168/builds/2330) an\r\nerror:\r\n\r\n```\r\n/home/buildbots/llvm-external-buildbots/workers/ppc64le-lld-multistage-test/ppc64le-lld-multistage-test/llvm-project/llvm/unittests/ADT/FunctionExtrasTest.cpp:320:8: error: variable 'ptr' is uninitialized when used here [-Werror,-Wuninitialized]\r\n  320 |       [ptr](void *self) {\r\n      |        ^~~\r\n/home/buildbots/llvm-external-buildbots/workers/ppc64le-lld-multistage-test/ppc64le-lld-multistage-test/llvm-project/llvm/unittests/ADT/FunctionExtrasTest.cpp:318:12: note: initialize the variable 'ptr' to silence this warning\r\n  318 |   void *ptr;\r\n      |            ^\r\n      |             = nullptr\r\n1 error generated.\r\n```\r\n\r\nSo that PR does exactly what's sugested.",
             "commit_timestamp": 1724118821.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1724166508.528982,
+            "elapsed_time": 69.81195640563965,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 6535.812103271484,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "b5f7b6961d2bc4d852fc3a5992aecf5e2e48baee",
+            "commit_message": "[AArch64] fix buildbot by removing dead code\n\nFailure with -Werror buildbot caused by #104587\n",
+            "commit_timestamp": 1724166194.0
         }
     ]
 }
