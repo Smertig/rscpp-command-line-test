@@ -19316,6 +19316,21 @@
             "commit_ref": "c2e814f8d7e892dea23f481751a27c532d4e2d0f",
             "commit_message": "cmake/FindNettle: log message when found via `pkg-config`\n\nThe message mimics the CMake-native message (by\n`find_package_handle_standard_args()`), with the header path and version number.\n\nCloses #14596\n",
             "commit_timestamp": 1724069354.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1724123206.090647,
+            "elapsed_time": 211.4551181793213,
+            "x64": true,
+            "actual_files_count": 3072,
+            "expected_files_count": 2323,
+            "memory_traffic": 43950.67603302002,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "96b9027f1638428644f084eff9f2d8146d3911d6",
+            "commit_message": "GHA/windows: unblock TFTP MQTT WebSockets SMTP FTP tests\n\nRun them now. Also ignore results for now.\n\nCloses #14607\n",
+            "commit_timestamp": 1724107824.0
         }
     ]
 }
