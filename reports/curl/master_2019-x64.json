@@ -19361,6 +19361,21 @@
             "commit_ref": "2e88ef104962cde9b170b658d2b5fdbe0c6dc210",
             "commit_message": "version: fix shadowing a `libssh.h` symbol\n\n```\n/Users/runner/work/curl/curl/lib/version.c: In function 'curl_version_info':\n/Users/runner/work/curl/curl/lib/version.c:584:15: error: declaration of 'ssh_buffer' shadows a global declaration [-Werror=shadow]\n  584 |   static char ssh_buffer[80];\n      |               ^~~~~~~~~~\nIn file included from /Users/runner/work/curl/curl/lib/vssh/ssh.h:35,\n                 from /Users/runner/work/curl/curl/lib/urldata.h:185,\n                 from /Users/runner/work/curl/curl/lib/altsvc.c:32,\n                 from /Users/runner/work/curl/curl/bld/lib/CMakeFiles/libcurl_shared.dir/Unity/unity_0_c.c:4:\n/opt/homebrew/include/libssh/libssh.h:99:35: note: shadowed declaration is here\n   99 | typedef struct ssh_buffer_struct* ssh_buffer;\n      |                                   ^~~~~~~~~~\n```\nRef: https://github.com/curl/curl/actions/runs/10477958747/job/29020250670#step:9:48\n\nTested via #14614\n\nCloses #14617\n",
             "commit_timestamp": 1724188946.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1724252749.471376,
+            "elapsed_time": 230.25477290153503,
+            "x64": true,
+            "actual_files_count": 3072,
+            "expected_files_count": 2323,
+            "memory_traffic": 46289.28462982178,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "9fff0742b6f61ff03f845b96e0d093eee6f7b777",
+            "commit_message": "GHA/windows: fix indentation in the MSVC section\n",
+            "commit_timestamp": 1724249591.0
         }
     ]
 }
