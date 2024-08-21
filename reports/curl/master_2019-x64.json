@@ -19346,6 +19346,21 @@
             "commit_ref": "ae2c753a8865ed39baaaeac54adbecd249d3c018",
             "commit_message": "GHA/windows: add missing time limit for msys2 autotools test runs\n\nThe new mingw job (the first msys2/mingw job to run tests) is seen\nhanging frequently.\n\nFollow-up to 9f23c8f201f55f1a148b41b16a5e71f3385faa5e #14541\n",
             "commit_timestamp": 1724162535.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1724209597.38276,
+            "elapsed_time": 240.3793113231659,
+            "x64": true,
+            "actual_files_count": 3072,
+            "expected_files_count": 2323,
+            "memory_traffic": 45984.70524597168,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "2e88ef104962cde9b170b658d2b5fdbe0c6dc210",
+            "commit_message": "version: fix shadowing a `libssh.h` symbol\n\n```\n/Users/runner/work/curl/curl/lib/version.c: In function 'curl_version_info':\n/Users/runner/work/curl/curl/lib/version.c:584:15: error: declaration of 'ssh_buffer' shadows a global declaration [-Werror=shadow]\n  584 |   static char ssh_buffer[80];\n      |               ^~~~~~~~~~\nIn file included from /Users/runner/work/curl/curl/lib/vssh/ssh.h:35,\n                 from /Users/runner/work/curl/curl/lib/urldata.h:185,\n                 from /Users/runner/work/curl/curl/lib/altsvc.c:32,\n                 from /Users/runner/work/curl/curl/bld/lib/CMakeFiles/libcurl_shared.dir/Unity/unity_0_c.c:4:\n/opt/homebrew/include/libssh/libssh.h:99:35: note: shadowed declaration is here\n   99 | typedef struct ssh_buffer_struct* ssh_buffer;\n      |                                   ^~~~~~~~~~\n```\nRef: https://github.com/curl/curl/actions/runs/10477958747/job/29020250670#step:9:48\n\nTested via #14614\n\nCloses #14617\n",
+            "commit_timestamp": 1724188946.0
         }
     ]
 }
