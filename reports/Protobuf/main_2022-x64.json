@@ -2549,6 +2549,21 @@
             "commit_ref": "d91dbd4bb7740279d683cc115711054b1a81baf6",
             "commit_message": "Auto-generate files after cl/666132886\n",
             "commit_timestamp": 1724294116.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1724339178.270838,
+            "elapsed_time": 298.7679512500763,
+            "x64": true,
+            "actual_files_count": 1091,
+            "expected_files_count": 818,
+            "memory_traffic": 38394.52732849121,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "df8a11e2666ad2940b0483c00d4aff586315b9a0",
+            "commit_message": "Binary compatibility shims for GeneratedMessageV3, SingleFieldBuilderV3, RepeatedFieldBuilderV3, and their nested classes to restore binary compatibility with <=v3.x.x generated code built against v3.x.x prior to v4.26.0 breaking release.\n\n3.x.x descriptor.proto generated code is *not* supported with 4.x.x runtime, since this results in an ODR violation with the descriptor.proto built into the 4.x.x runtime. This is expected to result in undefined behavior / failures.\n\nTested against //java/core:v25_generated_message_test_jar (binary compatibility) and //java/core:v25_generated_message_test_srcjar (source compatibility)\n\nPiperOrigin-RevId: 666329342\n",
+            "commit_timestamp": 1724334660.0
         }
     ]
 }

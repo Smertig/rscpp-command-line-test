@@ -19391,6 +19391,21 @@
             "commit_ref": "9724526429bb5c41fc7b923c616e4c466faf5f7a",
             "commit_message": "lib: delete stray undefs for `vsnprintf`, `vsprintf`\n\nStop #undefining macros that were not redefined or used in the code.\n\nCloses #14631\n",
             "commit_timestamp": 1724277689.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1724339143.217135,
+            "elapsed_time": 214.78766465187073,
+            "x64": true,
+            "actual_files_count": 3072,
+            "expected_files_count": 2323,
+            "memory_traffic": 43794.922119140625,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "0052b4b52dfbd6455a24dd95837e5236dc8e1f5d",
+            "commit_message": "configure: fix indentation\n\nAlso:\n- move `then`s and an `in` inline.\n- whitespace.\n\nCloses #14628\n",
+            "commit_timestamp": 1724323572.0
         }
     ]
 }

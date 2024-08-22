@@ -20991,6 +20991,23 @@
             "commit_ref": "bf88db78bd80cb624b49510c628ba841fb1fed04",
             "commit_message": "[Symbolizer, DebugInfo] Clean up LLVMSymbolizer API: const string& -> StringRef (#104541)\n\nNothing in the affected code depends on the `ModuleName` being\r\nnull-terminated,\r\nso take it by `StringRef` instead of `const std::string &`.\r\n\r\nThis change simplifies API consumption, since one doesn't always have a\r\n`std::string` at the call site (might have `std::string_view` instead),\r\nand also gives some minor performance improvements by removing\r\nstring-copies in the cache-hit path of `getOrCreateModuleInfo`.",
             "commit_timestamp": 1724295221.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1724340150.142173,
+            "elapsed_time": 1553.00945520401,
+            "x64": true,
+            "actual_files_count": 2061,
+            "expected_files_count": 1661,
+            "memory_traffic": 254378.25400543213,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "ec5e58519d24010beea937fccf5fc4541db3ec21",
+            "commit_message": "[NFC] Replace bool <= bool comparison (#102948)\n\nStatic analyser tool cppcheck flags ordered comparison with `bool`s.\r\nReplace with equivalent logical operators to prevent this.\r\n\r\nCloses #102912",
+            "commit_timestamp": 1724339079.0
         }
     ]
 }
