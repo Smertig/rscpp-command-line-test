@@ -900,6 +900,23 @@
             "commit_ref": "c9ba6d35c19022a582516e9455af3f0d79101adf",
             "commit_message": "[RISCV] Add coverage for fp reductions of <2^N-1 x FP> vectors\n",
             "commit_timestamp": 1724252301.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1724296131.284531,
+            "elapsed_time": 69.72059178352356,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 6595.584381103516,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "bf88db78bd80cb624b49510c628ba841fb1fed04",
+            "commit_message": "[Symbolizer, DebugInfo] Clean up LLVMSymbolizer API: const string& -> StringRef (#104541)\n\nNothing in the affected code depends on the `ModuleName` being\r\nnull-terminated,\r\nso take it by `StringRef` instead of `const std::string &`.\r\n\r\nThis change simplifies API consumption, since one doesn't always have a\r\n`std::string` at the call site (might have `std::string_view` instead),\r\nand also gives some minor performance improvements by removing\r\nstring-copies in the cache-hit path of `getOrCreateModuleInfo`.",
+            "commit_timestamp": 1724295221.0
         }
     ]
 }

@@ -19376,6 +19376,21 @@
             "commit_ref": "9fff0742b6f61ff03f845b96e0d093eee6f7b777",
             "commit_message": "GHA/windows: fix indentation in the MSVC section\n",
             "commit_timestamp": 1724249591.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1724295988.529428,
+            "elapsed_time": 215.22137451171875,
+            "x64": true,
+            "actual_files_count": 3072,
+            "expected_files_count": 2323,
+            "memory_traffic": 43812.56726837158,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "9724526429bb5c41fc7b923c616e4c466faf5f7a",
+            "commit_message": "lib: delete stray undefs for `vsnprintf`, `vsprintf`\n\nStop #undefining macros that were not redefined or used in the code.\n\nCloses #14631\n",
+            "commit_timestamp": 1724277689.0
         }
     ]
 }
