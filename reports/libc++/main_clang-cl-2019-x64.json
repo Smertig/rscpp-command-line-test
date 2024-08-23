@@ -934,6 +934,23 @@
             "commit_ref": "ec5e58519d24010beea937fccf5fc4541db3ec21",
             "commit_message": "[NFC] Replace bool <= bool comparison (#102948)\n\nStatic analyser tool cppcheck flags ordered comparison with `bool`s.\r\nReplace with equivalent logical operators to prevent this.\r\n\r\nCloses #102912",
             "commit_timestamp": 1724339079.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1724425660.296524,
+            "elapsed_time": 78.1961555480957,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 6617.760696411133,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "6a8f73803a32db75d22490d341bf8744722a9025",
+            "commit_message": "Revert \"Reland \"[asan] Remove debug tracing from `report_globals` (#104404)\" (#105601)\"\n\nthat change still breaks\n\n  SanitizerCommon-asan-x86_64-Darwin :: Darwin/print-stack-trace-in-code-loaded-after-fork.cpp\n\n> This reverts commit 2704b804bec50c2b016bf678bd534c330ec655b6\n> and relands #104404.\n>\n> The Darwin should not fail after #105599.\n\nThis reverts commit 8c6f8c29e90666b747fc4b4612647554206a2be5.\n",
+            "commit_timestamp": 1724425264.0
         }
     ]
 }

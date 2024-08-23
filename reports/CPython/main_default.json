@@ -16451,6 +16451,21 @@
             "commit_ref": "297f2e093ec95800ae2184330b8408c875523467",
             "commit_message": "gh-123083: Fix a potential use-after-free in ``STORE_ATTR_WITH_HINT`` (gh-123092)\n\n",
             "commit_timestamp": 1724338149.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1724425673.405645,
+            "elapsed_time": 1505.3163707256317,
+            "x64": true,
+            "actual_files_count": 1047,
+            "expected_files_count": null,
+            "memory_traffic": 50009.855796813965,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "adc5190014efcf7b7a4c5dfc9998faa8345527ed",
+            "commit_message": "gh-123229: Fix valgrind warning by initializing the f-string buffers to 0 in the tokenizer (#123263)\n\nSigned-off-by: Pablo Galindo <pablogsal@gmail.com>",
+            "commit_timestamp": 1724416425.0
         }
     ]
 }
