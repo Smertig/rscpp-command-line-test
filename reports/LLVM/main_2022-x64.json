@@ -21042,6 +21042,23 @@
             "commit_ref": "e439fdf4ea0dbc6f001428f4d4956700bf26bb97",
             "commit_message": "[clang-format] Treat new expressions as simple functions (#105168)\n\nccae7b461be339e717d02f99ac857cf0bc7d17f improved handling for nested\r\ncalls, but this resulted in a lot of changes near `new` expressions.\r\n\r\nThis patch tries to restore previous behavior around new expressions, by\r\ntreating them as simple functions, which seem to align with the concept.\r\n\r\nFixes https://github.com/llvm/llvm-project/issues/105133.",
             "commit_timestamp": 1724461470.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1724513019.383078,
+            "elapsed_time": 1578.1866409778595,
+            "x64": true,
+            "actual_files_count": 2061,
+            "expected_files_count": 1661,
+            "memory_traffic": 254436.35901641846,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "08acc3f73b64bed578d18812a04015cb537c9c82",
+            "commit_message": "[Analysis] Copy-construct SmallVector (NFC) (#105911)\n\n",
+            "commit_timestamp": 1724508822.0
         }
     ]
 }

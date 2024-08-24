@@ -16481,6 +16481,21 @@
             "commit_ref": "556e8556849cb9df0666629b0f564b5dd203344c",
             "commit_message": "gh-117376: Make `Py_DECREF` a macro in ceval.c in free-threaded build (#122975)\n\n`Py_DECREF` and `PyStackRef_CLOSE` are now implemented as macros in the\r\nfree-threaded build in ceval.c. There are two motivations;\r\n\r\n * MSVC has problems inlining functions in ceval.c in the PGO build.\r\n\r\n * We will want to mark escaping calls in order to spill the stack\r\n   pointer in ceval.c and we will want to do this around `_Py_Dealloc`\r\n   (or `_Py_MergeZeroLocalRefcount` or `_Py_DecRefShared`), not around\r\n   the entire `Py_DECREF` or `PyStackRef_CLOSE` call.",
             "commit_timestamp": 1724441774.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1724512146.163746,
+            "elapsed_time": 1453.7109067440033,
+            "x64": true,
+            "actual_files_count": 1047,
+            "expected_files_count": null,
+            "memory_traffic": 50165.19487762451,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "c4ee4e756a311f03633723445299bde90eb7b79c",
+            "commit_message": "GH-122890: Fix low-level error handling in `pathlib.Path.copy()` (#122897)\n\nGive unique names to our low-level FD copying functions, and try each one\r\nin turn. Handle errors appropriately for each implementation:\r\n\r\n- `fcntl.FICLONE`: suppress `EBADF`, `EOPNOTSUPP`, `ETXTBSY`, `EXDEV`\r\n- `posix._fcopyfile`: suppress `EBADF`, `ENOTSUP`\r\n- `os.copy_file_range`: suppress `ETXTBSY`, `EXDEV`\r\n- `os.sendfile`: suppress `ENOTSOCK`",
+            "commit_timestamp": 1724508699.0
         }
     ]
 }
