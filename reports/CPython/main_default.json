@@ -16466,6 +16466,21 @@
             "commit_ref": "adc5190014efcf7b7a4c5dfc9998faa8345527ed",
             "commit_message": "gh-123229: Fix valgrind warning by initializing the f-string buffers to 0 in the tokenizer (#123263)\n\nSigned-off-by: Pablo Galindo <pablogsal@gmail.com>",
             "commit_timestamp": 1724416425.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1724468915.476087,
+            "elapsed_time": 1510.4813764095306,
+            "x64": true,
+            "actual_files_count": 1047,
+            "expected_files_count": null,
+            "memory_traffic": 50210.55323791504,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "556e8556849cb9df0666629b0f564b5dd203344c",
+            "commit_message": "gh-117376: Make `Py_DECREF` a macro in ceval.c in free-threaded build (#122975)\n\n`Py_DECREF` and `PyStackRef_CLOSE` are now implemented as macros in the\r\nfree-threaded build in ceval.c. There are two motivations;\r\n\r\n * MSVC has problems inlining functions in ceval.c in the PGO build.\r\n\r\n * We will want to mark escaping calls in order to spill the stack\r\n   pointer in ceval.c and we will want to do this around `_Py_Dealloc`\r\n   (or `_Py_MergeZeroLocalRefcount` or `_Py_DecRefShared`), not around\r\n   the entire `Py_DECREF` or `PyStackRef_CLOSE` call.",
+            "commit_timestamp": 1724441774.0
         }
     ]
 }

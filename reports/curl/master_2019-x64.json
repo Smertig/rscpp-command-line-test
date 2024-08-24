@@ -19421,6 +19421,21 @@
             "commit_ref": "4d5d171aceccdf0786ef8adf17e41badecfb7f6b",
             "commit_message": "RELEASE-NOTES: synced\n",
             "commit_timestamp": 1724414906.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1724468734.00356,
+            "elapsed_time": 213.53431868553162,
+            "x64": true,
+            "actual_files_count": 3072,
+            "expected_files_count": 2323,
+            "memory_traffic": 46119.32096862793,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "4b791dca37c3130bbe0d4cae12326866c2d553ae",
+            "commit_message": "GHA/macos: ignore flaky tests 2041 and 2037\n\n- FAIL 2037: 'simple HTTPS GET with PEM public key pinning' HTTPS, HTTP GET, PEM certificate\n  https://github.com/curl/curl/actions/runs/10529314166/job/29176801513?pr=14658\n\n- FAIL 2041: 'simple HTTPS GET with base64-sha256 public key pinning' HTTPS, HTTP GET, PEM certificate\n  https://github.com/curl/curl/actions/runs/10529181645/job/29176408976#step:16:4363\n  https://github.com/curl/curl/actions/runs/10529019749/job/29175882809#step:13:5235\n  https://github.com/curl/curl/actions/runs/10528920874/job/29175559070#step:16:4363\n  https://github.com/curl/curl/actions/runs/10528759817/job/29175043048#step:16:4274\n  https://github.com/curl/curl/actions/runs/10525250422/job/29163662307#step:16:4366\n  https://github.com/curl/curl/actions/runs/10525250422/job/29163662602#step:13:3569\n\n  Happened with cmake, autotools, gcc, clang and various TLS backends.\n\nFollow-up to fa461b4eff52b413f88debf543b5350a6cef4724 #14486\n\nCloses #14667\n",
+            "commit_timestamp": 1724439845.0
         }
     ]
 }

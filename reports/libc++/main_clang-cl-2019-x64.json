@@ -951,6 +951,23 @@
             "commit_ref": "6a8f73803a32db75d22490d341bf8744722a9025",
             "commit_message": "Revert \"Reland \"[asan] Remove debug tracing from `report_globals` (#104404)\" (#105601)\"\n\nthat change still breaks\n\n  SanitizerCommon-asan-x86_64-Darwin :: Darwin/print-stack-trace-in-code-loaded-after-fork.cpp\n\n> This reverts commit 2704b804bec50c2b016bf678bd534c330ec655b6\n> and relands #104404.\n>\n> The Darwin should not fail after #105599.\n\nThis reverts commit 8c6f8c29e90666b747fc4b4612647554206a2be5.\n",
             "commit_timestamp": 1724425264.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1724468857.301832,
+            "elapsed_time": 94.4114146232605,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 6587.821235656738,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "e439fdf4ea0dbc6f001428f4d4956700bf26bb97",
+            "commit_message": "[clang-format] Treat new expressions as simple functions (#105168)\n\nccae7b461be339e717d02f99ac857cf0bc7d17f improved handling for nested\r\ncalls, but this resulted in a lot of changes near `new` expressions.\r\n\r\nThis patch tries to restore previous behavior around new expressions, by\r\ntreating them as simple functions, which seem to align with the concept.\r\n\r\nFixes https://github.com/llvm/llvm-project/issues/105133.",
+            "commit_timestamp": 1724461470.0
         }
     ]
 }
