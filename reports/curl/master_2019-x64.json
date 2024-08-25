@@ -19466,6 +19466,21 @@
             "commit_ref": "6f35226415d70f0b21be760a13d9c880d965147b",
             "commit_message": "tests: tweak use of impacket in smbserver\n\nThe missing message only uses a single line now and has a consistent\nprefix making it easier for log parsers to skip. Remove a precheck test\nlooking for impacket in test1451 because it's incomplete, unnecessary\nand in the wrong layer; the test harness will automatically discover\nthat the smbserver won't start and the test was only checking a single\ndependency.  Also update the tests README to no longer mention Python 2.\nThe servers were switched to Python 3 several years ago and no attempt\nis being made to maintain Python 2 compatibility\n\nCloses #14669\n",
             "commit_timestamp": 1724457996.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1724598296.699403,
+            "elapsed_time": 203.7441906929016,
+            "x64": true,
+            "actual_files_count": 3072,
+            "expected_files_count": 2323,
+            "memory_traffic": 44092.41424560547,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "6f35226415d70f0b21be760a13d9c880d965147b",
+            "commit_message": "tests: tweak use of impacket in smbserver\n\nThe missing message only uses a single line now and has a consistent\nprefix making it easier for log parsers to skip. Remove a precheck test\nlooking for impacket in test1451 because it's incomplete, unnecessary\nand in the wrong layer; the test harness will automatically discover\nthat the smbserver won't start and the test was only checking a single\ndependency.  Also update the tests README to no longer mention Python 2.\nThe servers were switched to Python 3 several years ago and no attempt\nis being made to maintain Python 2 compatibility\n\nCloses #14669\n",
+            "commit_timestamp": 1724457996.0
         }
     ]
 }
