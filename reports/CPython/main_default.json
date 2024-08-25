@@ -16496,6 +16496,21 @@
             "commit_ref": "c4ee4e756a311f03633723445299bde90eb7b79c",
             "commit_message": "GH-122890: Fix low-level error handling in `pathlib.Path.copy()` (#122897)\n\nGive unique names to our low-level FD copying functions, and try each one\r\nin turn. Handle errors appropriately for each implementation:\r\n\r\n- `fcntl.FICLONE`: suppress `EBADF`, `EOPNOTSUPP`, `ETXTBSY`, `EXDEV`\r\n- `posix._fcopyfile`: suppress `EBADF`, `ENOTSUP`\r\n- `os.copy_file_range`: suppress `ETXTBSY`, `EXDEV`\r\n- `os.sendfile`: suppress `ENOTSOCK`",
             "commit_timestamp": 1724508699.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1724555270.956695,
+            "elapsed_time": 1404.8563776016235,
+            "x64": true,
+            "actual_files_count": 1047,
+            "expected_files_count": null,
+            "memory_traffic": 50017.47122955322,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "9b3749849eda4012261a112b22eb07f26fd345a9",
+            "commit_message": "GH-123299: Move ctypes What's New entry to 3.14 (#123300)\n\n",
+            "commit_timestamp": 1724546504.0
         }
     ]
 }
