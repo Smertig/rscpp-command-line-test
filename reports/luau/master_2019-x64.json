@@ -19623,6 +19623,21 @@
             "commit_ref": "d518d14b922ff80e7e17d1912d637225472117a1",
             "commit_message": "Sync to upstream/release/640 (#1374)\n\n### What's new\r\n\r\n* Fixed many of the false positive errors in indexing of table unions\r\nand table intersections\r\n* It is now possible to run custom checks over Luau AST during\r\ntypechecking by setting `customModuleCheck` in `FrontendOptions`\r\n* Fixed codegen issue on arm, where number->vector cast could corrupt\r\nthat number value for the next time it's read\r\n\r\n### New Solver\r\n\r\n* `error` type now behaves as the bottom type during subtyping checks\r\n* Fixed the scope that is used in subtyping with generic types\r\n* Fixed `astOriginalCallTypes` table often used by LSP to match the old\r\nsolver\r\n\r\n---\r\n\r\n### Internal Contributors\r\n\r\nCo-authored-by: Aaron Weiss <aaronweiss@roblox.com>\r\nCo-authored-by: Andy Friesen <afriesen@roblox.com>\r\nCo-authored-by: Vighnesh Vijay <vvijay@roblox.com>\r\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>\r\n",
             "commit_timestamp": 1724430930.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1724641598.663074,
+            "elapsed_time": 251.28983616828918,
+            "x64": true,
+            "actual_files_count": 461,
+            "expected_files_count": 379,
+            "memory_traffic": 32421.11656188965,
+            "repo_url": "https://github.com/luau-lang/luau",
+            "commit_ref": "d518d14b922ff80e7e17d1912d637225472117a1",
+            "commit_message": "Sync to upstream/release/640 (#1374)\n\n### What's new\r\n\r\n* Fixed many of the false positive errors in indexing of table unions\r\nand table intersections\r\n* It is now possible to run custom checks over Luau AST during\r\ntypechecking by setting `customModuleCheck` in `FrontendOptions`\r\n* Fixed codegen issue on arm, where number->vector cast could corrupt\r\nthat number value for the next time it's read\r\n\r\n### New Solver\r\n\r\n* `error` type now behaves as the bottom type during subtyping checks\r\n* Fixed the scope that is used in subtyping with generic types\r\n* Fixed `astOriginalCallTypes` table often used by LSP to match the old\r\nsolver\r\n\r\n---\r\n\r\n### Internal Contributors\r\n\r\nCo-authored-by: Aaron Weiss <aaronweiss@roblox.com>\r\nCo-authored-by: Andy Friesen <afriesen@roblox.com>\r\nCo-authored-by: Vighnesh Vijay <vvijay@roblox.com>\r\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>\r\n",
+            "commit_timestamp": 1724430930.0
         }
     ]
 }

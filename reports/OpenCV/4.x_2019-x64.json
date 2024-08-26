@@ -19420,6 +19420,21 @@
             "commit_ref": "f4c2e4f8720cbb990d9be11af4fb87a4a4805da7",
             "commit_message": "Merge pull request #26061 from penghuiho:fix-pow-bug\n\nFixed the simd bugs of iPow8u and iPow16u #26061\r\n\r\nAdd the following cases in opencv_perf_core:\r\n\r\n* OCL_PowFixture_iPow.iPow/0, where GetParam() = (640x480, 8UC1)\r\n* OCL_PowFixture_iPow.iPow/2, where GetParam() = (640x480, 16UC1)\r\n\r\niPow8u and iPow16u failed to call to simd accelerating while executing.\r\n\r\nFix the bug by changing the input type of iPow_SIMD function.\r\n\r\n### Pull Request Readiness Checklist\r\n\r\nSee details at https://github.com/opencv/opencv/wiki/How_to_contribute#making-a-good-pull-request\r\n\r\n- [x] I agree to contribute to the project under Apache 2 License.\r\n- [x] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\r\n- [ ] The PR is proposed to the proper branch\r\n- [ ] There is a reference to the original bug report and related work\r\n- [ ] There is accuracy test, performance test and test data in opencv_extra repository, if applicable\r\n      Patch to opencv_extra has the same branch name.\r\n- [ ] The feature is well documented and sample code can be built with the project CMake\r\n",
             "commit_timestamp": 1724422339.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1724641693.027123,
+            "elapsed_time": 413.4433844089508,
+            "x64": true,
+            "actual_files_count": 475,
+            "expected_files_count": 459,
+            "memory_traffic": 41067.07701873779,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "f4c2e4f8720cbb990d9be11af4fb87a4a4805da7",
+            "commit_message": "Merge pull request #26061 from penghuiho:fix-pow-bug\n\nFixed the simd bugs of iPow8u and iPow16u #26061\r\n\r\nAdd the following cases in opencv_perf_core:\r\n\r\n* OCL_PowFixture_iPow.iPow/0, where GetParam() = (640x480, 8UC1)\r\n* OCL_PowFixture_iPow.iPow/2, where GetParam() = (640x480, 16UC1)\r\n\r\niPow8u and iPow16u failed to call to simd accelerating while executing.\r\n\r\nFix the bug by changing the input type of iPow_SIMD function.\r\n\r\n### Pull Request Readiness Checklist\r\n\r\nSee details at https://github.com/opencv/opencv/wiki/How_to_contribute#making-a-good-pull-request\r\n\r\n- [x] I agree to contribute to the project under Apache 2 License.\r\n- [x] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\r\n- [ ] The PR is proposed to the proper branch\r\n- [ ] There is a reference to the original bug report and related work\r\n- [ ] There is accuracy test, performance test and test data in opencv_extra repository, if applicable\r\n      Patch to opencv_extra has the same branch name.\r\n- [ ] The feature is well documented and sample code can be built with the project CMake\r\n",
+            "commit_timestamp": 1724422339.0
         }
     ]
 }
