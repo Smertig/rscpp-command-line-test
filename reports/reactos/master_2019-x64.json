@@ -19261,6 +19261,21 @@
             "commit_ref": "c948ea859bf7557cc1c4d84bedb4dc2e8cd42372",
             "commit_message": "[CMD] Convert to explicitly unicode\n",
             "commit_timestamp": 1724591837.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1724684802.301888,
+            "elapsed_time": 85.15632104873657,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7650.618705749512,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "6f15802af7948d912be038cfc6083ba14acb4ae6",
+            "commit_message": "[SETUPLIB][REACTOS][USETUP] Split FS-volume-specific functionality from partitions (#7258)\n\nCORE-13525\n\nThis greatly helps in reducing code complexity in some areas: code that\npreviously iterated over all partitions of a given disk, just to find\nwhich ones were partitioned and contained a valid file system, now just\nhave to iterate over mounted volumes.\nSee in particular, `lib/utils/osdetect.c` and `lib/fsutil.c` .\n\n- Remove FORMATSTATE \"Preformatted\" enum value;\n- Cleanup osdetect code after introducing Volume support;\n- Some simplifications for FormatState.\n\n- Differentiate between 'new' partition and 'new' volume:\n\n  * \"New\" partition: it has been created and added in the cached list,\n    but not yet actually written into the disk.\n\n  * \"New\" volume: newly-created volume (may be backed by a partition or\n    not), not yet formatted. May exist on either new, or not new partition,\n    or elsewhere.\n\n- Cache partition and volume NT device names.\n\n  These do not change across repartitioning operations, as long as the\n  partition or the filesystem volume hasn't been deleted/recreated.\n  This avoids doing \\Device\\Harddisk%u\\Partition%u sprintf's everytime\n  we need to retrieve the given partition or volume device name.\n\n  When a partition/fileysystem volume is \"virtually\" created (i.e. in\n  the partition list, but not yet committed to disk and exposed to the\n  OS), no device partition number and device name are available yet.\n  In particular, validate that no manipulation of \\Device\\HarddiskM\\Partition0\n  (i.e. the whole disk) is being made.\n",
+            "commit_timestamp": 1724683367.0
         }
     ]
 }
