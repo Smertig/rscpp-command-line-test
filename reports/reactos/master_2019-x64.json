@@ -19291,6 +19291,21 @@
             "commit_ref": "938adaad22f3ff35db56125bc722fb7ef324958b",
             "commit_message": "[WIN32KNT_APITEST] Add NtUserSetTimer API tests (#7100)\n\nTest 1 - test of creating/canceling 20 timers and comparing the raw number of returned messages - without parent window\r\nTest 2 - test of creating/cancelling 20 timers and comparing the raw number of returned messages - with parent window\r\nTest 3 - test creation/cancellation of 40000 timers - without parent window\r\nTest 4 - test of creation/cancellation of 40000 timers - with parent window\r\nTest 5 - test creation/cancellation of 2 timers and compare their index to see if they differ - without parent window\r\n\r\nCovers the case in CORE-9141 (see #7087).",
             "commit_timestamp": 1724700870.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1724771191.17646,
+            "elapsed_time": 96.58787155151367,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7797.3952713012695,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "fd327db20ffd249bcdb3900a9806e379b5998f16",
+            "commit_message": "[NTUSER] IntSetTimer: Update HintIndex on each call (#7087)\n\n* fix CORE-9141 - adding a change to IDEvent after each pass\r\nIf the first index is 0 the first returned ID will be 0x8000, which is fine.\r\nCo-authored-by: Joachim Henze <joachim.henze@reactos.org>",
+            "commit_timestamp": 1724739291.0
         }
     ]
 }

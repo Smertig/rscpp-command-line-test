@@ -2684,6 +2684,21 @@
             "commit_ref": "6e2fe5b8c96ff6fb38ca887055453d09b30b6689",
             "commit_message": "Update all refs from protos::internal::CreateMessage to hpb::interop::upb::MakeCHandle\n\nPiperOrigin-RevId: 667690021\n",
             "commit_timestamp": 1724703895.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1724771154.866998,
+            "elapsed_time": 293.82925748825073,
+            "x64": true,
+            "actual_files_count": 1096,
+            "expected_files_count": 818,
+            "memory_traffic": 38537.74570465088,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "ede55fec7dff9159520c088286ca2e1bd8207ecf",
+            "commit_message": "Fix `final_is_soo` being accidentally declared as int not bool.\n\nThis check did behave correctly but causes warnings about comparing int and bool.\n\nPiperOrigin-RevId: 667987307\n",
+            "commit_timestamp": 1724770945.0
         }
     ]
 }

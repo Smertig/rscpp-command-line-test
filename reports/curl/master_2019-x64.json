@@ -19526,6 +19526,21 @@
             "commit_ref": "c96551cea9614e07e81244ed6c028709d3b075d4",
             "commit_message": "cmake: `Libs.private` improvements\n\n- skip adding pkg-config libdirs if they are system locations.\n- replace custom regexes with `get_filename_component()`.\n- collect `-L` and `-framework` separately.\n  It means these will appear before libs in the `Libs.private` entry,\n  syncing it with `./configure`.\n- collect in a list variable (was: string).\n- use `list(REMOVE_DUPLICATES)` to deduplicate libdirs.\n- rename internal variable that is now solely used for system libdirs.\n\nFollow-up to 7c0b6eb3bd1680e43e0688677c41b11a39b41962 #14652\n\nCloses #14668\n",
             "commit_timestamp": 1724682707.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1724771194.507648,
+            "elapsed_time": 215.3408181667328,
+            "x64": true,
+            "actual_files_count": 3072,
+            "expected_files_count": 2323,
+            "memory_traffic": 43803.22743225098,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "fa37248d0e5f358117ed842a1f71ecd0a0188c1d",
+            "commit_message": "mailmap: add Moritz Buhl\n",
+            "commit_timestamp": 1724760227.0
         }
     ]
 }

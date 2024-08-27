@@ -21144,6 +21144,23 @@
             "commit_ref": "ce2b488e90d6d5a5c8fe495ede8238938827da39",
             "commit_message": "[mlir] ThreadLocalCache: make TSAN happy about destructors (#106170)\n\nTSAN warns that `ptr` is read and write without protection in\r\n`clearExpiredEntries` and in the destructor of `Owner`. Add an atomic\r\nbool to synchronize these without incurring a cost when calling `get`.",
             "commit_timestamp": 1724727589.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1724772168.532465,
+            "elapsed_time": 1582.9597141742706,
+            "x64": true,
+            "actual_files_count": 2061,
+            "expected_files_count": 1661,
+            "memory_traffic": 254448.86930084229,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "d4ffccfce103b01401b8a9222e373f2d404f8439",
+            "commit_message": "[libc++] Simplify the implementation of std::sort a bit (#104902)\n\nThis does a few things to canonicalize the library a bit. Specifically\r\n- use `__desugars_to_v` instead of the custom `__is_simple_comparator`\r\n- make `__use_branchless_sort` an inline variable\r\n- remove the `_maybe_branchless` versions of the `__sortN` functions and\r\noverload based on whether we can do branchless sorting instead.",
+            "commit_timestamp": 1724770445.0
         }
     ]
 }
