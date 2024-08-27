@@ -2669,6 +2669,21 @@
             "commit_ref": "e26ef8683e5176b73938ed9d086d67bb6bd5be10",
             "commit_message": "Cleanup pass on where we use Private and doc(hidden)\n\nWe were really inconsistent on where we put Private or not and this tries to make a sensible consistent state of:\n\n- For types that are exposed to application code, any pub methods which are only pub so they can be used by gencode (which is mostly anything that has any internal/runtime type anywhere on the parameters or return type list), have those methods have both a `Private` arg and doc(hidden)\n\n- For structs that are only inside __runtime / __internal to begin with, put doc(hidden) on the types, and don't put Private on any of their methods since callers can't reach those types regardless.\n\nNote that for exposed functions which also _accept_ another internal/runtime type in a parameter, the additional `Private` arg is superfluous since application code shouldn't ever be able to reach one of those internal types to be able to pass one in, but this keeps the pattern of keeping Private on it in those cases as well (the `Private` would still be the only guard on methods which only _return_ an internal type).\n\nPiperOrigin-RevId: 667547566\n",
             "commit_timestamp": 1724675553.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1724727978.349099,
+            "elapsed_time": 297.61875915527344,
+            "x64": true,
+            "actual_files_count": 1094,
+            "expected_files_count": 818,
+            "memory_traffic": 38433.76525115967,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "6e2fe5b8c96ff6fb38ca887055453d09b30b6689",
+            "commit_message": "Update all refs from protos::internal::CreateMessage to hpb::interop::upb::MakeCHandle\n\nPiperOrigin-RevId: 667690021\n",
+            "commit_timestamp": 1724703895.0
         }
     ]
 }

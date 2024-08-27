@@ -1053,6 +1053,23 @@
             "commit_ref": "46a4132e167aa44d8ec7776262ce2a0e6d47de59",
             "commit_message": "[Instrumentation] Fix EdgeCounts vector size in SetBranchWeights (#99064)\n\n",
             "commit_timestamp": 1724684205.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1724728034.2268,
+            "elapsed_time": 81.80153274536133,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 6650.50959777832,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "ce2b488e90d6d5a5c8fe495ede8238938827da39",
+            "commit_message": "[mlir] ThreadLocalCache: make TSAN happy about destructors (#106170)\n\nTSAN warns that `ptr` is read and write without protection in\r\n`clearExpiredEntries` and in the destructor of `Owner`. Add an atomic\r\nbool to synchronize these without incurring a cost when calling `get`.",
+            "commit_timestamp": 1724727589.0
         }
     ]
 }
