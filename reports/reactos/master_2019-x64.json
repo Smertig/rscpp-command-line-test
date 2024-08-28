@@ -19321,6 +19321,21 @@
             "commit_ref": "1573461cec345f05890893b721b9aabea186c043",
             "commit_message": "[SETUP:REACTOS] Add partitioning and formatting support (#7159)\n\nCORE-13525\n\n- Newly-created partitions and unpartitioned space ar reinserted\n  or updated in correct order in the tree-list. Volume-creation\n  information data associated with the tree items is persisted\n  across operations.\n\n- Reliably delete data associated to tree-list items via the\n  TVN_DELETEITEM notification.\n  This allows simplifying the cleanup function; keeping simple\n  the code that deletes items when deleting partitions, etc.\n\n- Make the PrintPartitionData() function call itself recursively on\n  extended partitions to display the sub-list of logical partitions.\n\n- Handle the new partition size in MB the same way as in USETUP.\n\n- Allow existing partitions/volumes to be re-formatted, using\n  common code with the partition creation dialog.\n\n- Allow selecting unpartitioned space or non-formatted partitions\n  for installing ReactOS: unused space will automatically be\n  partitioned and non-formatted partitions formatted (the user\n  is prompted for choosing the file system).\n\n- Correctly zero the progress-bar position when starting file copy.\n- Add missing file copy error handler in FileCopyCallback:\n  just copying what USETUP does.\n",
             "commit_timestamp": 1724793492.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1724857577.724826,
+            "elapsed_time": 96.71286487579346,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7704.615005493164,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "9c0eee03335d4edc893c2369678f808a3b4aae11",
+            "commit_message": "[NTUSER] Fix window not updating when scrollbars created and removed. (#7245)\n\n* Revise conditions for window complete redraw.\r\n\r\nCORE-19669\r\n\r\nCo-authored-by: Oleg Dubinskiy <oleg.dubinskij30@gmail.com>\r\nCo-authored-by: Vitaly Orekhov <7opex0@mail.ru>",
+            "commit_timestamp": 1724831788.0
         }
     ]
 }

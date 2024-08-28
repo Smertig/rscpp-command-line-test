@@ -19556,6 +19556,21 @@
             "commit_ref": "d620ec67913b2c4be25e7d72f1933f0a8a3e0a2e",
             "commit_message": "CI: add test timeouts, more cmake build tests, fix VS2010 C warning\n\n- GHA/macos: set timeout for test runs.\n  Double the value for autotools to fit torture tests.\n- GHA/cygwin: reduce test run timeout for autotools.\n- GHA/cygwin: enable building tests with cmake.\n- GHA/windows: enable building tests with MSYS cmake.\n- GHA/windows: enable building tests with MSVC UWP.\n- appveyor: enable building tests with VS2008 x86 and VS2010 x64.\n- tests: add workaround compiler warnings when building with VS2010:\n  ```\n  tests\\server\\util.c(482): warning C4306: 'type cast' : conversion from 'int' to 'void (__cdecl *)(int)' of greater size\n  tests\\server\\util.c(486): warning C4306: 'type cast' : conversion from 'int' to 'void (__cdecl *)(int)' of greater size\n  tests\\server\\util.c(490): warning C4306: 'type cast' : conversion from 'int' to 'void (__cdecl *)(int)' of greater size\n  tests\\server\\util.c(720): warning C4306: 'type cast' : conversion from 'int' to 'void (__cdecl *)(int)' of greater size\n  tests\\server\\util.c(726): warning C4306: 'type cast' : conversion from 'int' to 'void (__cdecl *)(int)' of greater size\n  tests\\server\\util.c(732): warning C4306: 'type cast' : conversion from 'int' to 'void (__cdecl *)(int)' of greater size\n  tests\\server\\util.c(781): warning C4306: 'type cast' : conversion from 'int' to 'void (__cdecl *)(int)' of greater size\n  tests\\server\\util.c(785): warning C4306: 'type cast' : conversion from 'int' to 'void (__cdecl *)(int)' of greater size\n  tests\\server\\util.c(789): warning C4306: 'type cast' : conversion from 'int' to 'void (__cdecl *)(int)' of greater size\n  ```\n  Ref: https://ci.appveyor.com/project/curlorg/curl/builds/50485633/job/4ujlwxod3cexmn2q#L1535\n\nWith this, tests are built in all GHA cygwin/windows jobs.\n\nTimeouts avoid long runs with runaway issues, example:\nhttps://github.com/curl/curl/actions/runs/10575522173\n\nCloses #14700\n",
             "commit_timestamp": 1724794848.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1724857560.760606,
+            "elapsed_time": 264.5763990879059,
+            "x64": true,
+            "actual_files_count": 3070,
+            "expected_files_count": 2323,
+            "memory_traffic": 46481.68795776367,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "09cdcac8d8d17f2e2370d3bbafd53e33d8d5e60a",
+            "commit_message": "RELEASE-NOTES: synced\n",
+            "commit_timestamp": 1724846952.0
         }
     ]
 }
