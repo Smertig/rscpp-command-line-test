@@ -21161,6 +21161,23 @@
             "commit_ref": "d4ffccfce103b01401b8a9222e373f2d404f8439",
             "commit_message": "[libc++] Simplify the implementation of std::sort a bit (#104902)\n\nThis does a few things to canonicalize the library a bit. Specifically\r\n- use `__desugars_to_v` instead of the custom `__is_simple_comparator`\r\n- make `__use_branchless_sort` an inline variable\r\n- remove the `_maybe_branchless` versions of the `__sortN` functions and\r\noverload based on whether we can do branchless sorting instead.",
             "commit_timestamp": 1724770445.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1724815339.793034,
+            "elapsed_time": 1620.332855939865,
+            "x64": true,
+            "actual_files_count": 2061,
+            "expected_files_count": 1661,
+            "memory_traffic": 254448.7363128662,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "fac7e87d6634a153450bbc6dd147245d7b534a16",
+            "commit_message": "[clang-format] Insert a space between new/delete and a C-style cast (#106175)\n\nIt doesn't make sense to remove the space between new/delete and a\r\nC-style cast when SpaceBeforeParensOptions.AfterPlacementOperator is set\r\nto false.\r\n\r\nFixes #105628.",
+            "commit_timestamp": 1724811256.0
         }
     ]
 }

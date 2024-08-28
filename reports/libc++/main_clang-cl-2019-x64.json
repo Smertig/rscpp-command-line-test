@@ -1087,6 +1087,23 @@
             "commit_ref": "fd36a7b9443921a4aa571549543244c5f1c9b6f8",
             "commit_message": "[mlir][gpu] Pass GPU module to `TargetAttrInterface::createObject`. (#94910)\n\nThis patch adds an argument to `gpu::TargetAttrInterface::createObject`\r\nto pass the GPU module. This is useful as `gpu::ObjectAttr` contains a\r\nproperty dict for metadata, hence the module can be used for extracting\r\nthings like the symbol table and adding it to the property dict.\r\n\r\n---------\r\n\r\nCo-authored-by: Oleksandr \"Alex\" Zinenko <ftynse@gmail.com>",
             "commit_timestamp": 1724771104.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1724814525.449765,
+            "elapsed_time": 82.32734155654907,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 6677.594375610352,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "fac7e87d6634a153450bbc6dd147245d7b534a16",
+            "commit_message": "[clang-format] Insert a space between new/delete and a C-style cast (#106175)\n\nIt doesn't make sense to remove the space between new/delete and a\r\nC-style cast when SpaceBeforeParensOptions.AfterPlacementOperator is set\r\nto false.\r\n\r\nFixes #105628.",
+            "commit_timestamp": 1724811256.0
         }
     ]
 }
