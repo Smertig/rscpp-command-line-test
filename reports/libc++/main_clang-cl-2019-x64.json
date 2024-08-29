@@ -1138,6 +1138,23 @@
             "commit_ref": "87c86aa6b93aea3d1603c1759a17fb6b5ba6e814",
             "commit_message": "[X86,SimplifyCFG] Support hoisting load/store with conditional faulting (Part I) (#96878)\n\nThis is simplifycfg part of\r\nhttps://github.com/llvm/llvm-project/pull/95515\r\n\r\nIn this PR, we support hoisting load/store with conditional faulting in\r\n`SimplifyCFGOpt::speculativelyExecuteBB` to eliminate conditional\r\nbranches.\r\nThis is for cases like\r\n```\r\nvoid test (int a, int *b) {\r\n  if (a)\r\n   *b = a;\r\n}\r\n``` \r\n\r\nIn the following patches, we will support the hoist in\r\n`SimplifyCFGOpt::hoistCommonCodeFromSuccessors`.\r\nThat is for cases like\r\n```\r\nvoid test (int a, int *c, int *d) {\r\n  if (a)\r\n   *c = a;\r\n  else \r\n   *d = a;\r\n}\r\n```",
             "commit_timestamp": 1724899364.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1724944210.481159,
+            "elapsed_time": 123.39815473556519,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 6599.854919433594,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "a705e8cb5b071b3bf6d1d55629f18f6b7b9699ac",
+            "commit_message": "[libc++][NFC] Remove __constexpr_is{nan,finite} (#106205)\n\nThey're never used in `constexpr` functions, so we can simply use\r\n`std::isnan` and `std::isfinite` instead.",
+            "commit_timestamp": 1724943956.0
         }
     ]
 }

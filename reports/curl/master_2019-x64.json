@@ -19586,6 +19586,21 @@
             "commit_ref": "a5682d9cb9da3212775bb227488a343d32552fd6",
             "commit_message": "GHA/windows: vcpkg GnuTLS started breaking CI, temp drop it\n\nStarting today vcpkg wants to rebuild GnuTLS but fails:\n```\nerror: building shiftmedia-libgnutls:x64-windows failed with: BUILD_FAILED\n```\nRef: https://github.com/curl/curl/actions/runs/10594890318/job/29359499149#step:5:144\n\nTemporary solution:\n- drop it from the MultiSSL job.\n- replace with mbedTLS job. This job still tests libssh and I could\n  not find a better place for it right away.\n\nGnuTLS to be restored once it builds again. Possibly when this hash\nreaches the GHA `windows-latest` runner:\nhttps://github.com/microsoft/vcpkg/commit/f5ec6f30ff70f04f841436a0f36600bdbabfcfbf\n\nAlso:\n- switch to Debug for the mbedTLS job. Should also work now with\n  GnuTLS, once it's back:\n  Ref: https://github.com/microsoft/vcpkg/pull/40473\n\nCloses #14710\n",
             "commit_timestamp": 1724860285.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1724944056.20907,
+            "elapsed_time": 221.32077145576477,
+            "x64": true,
+            "actual_files_count": 3070,
+            "expected_files_count": 2323,
+            "memory_traffic": 43577.5004196167,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "7c49279aaa2e5c15f28c968ef83a5e1fad5ac42a",
+            "commit_message": "GHA: update github/codeql-action digest to 4dd1613\n\nCloses #14725\n",
+            "commit_timestamp": 1724943203.0
         }
     ]
 }
