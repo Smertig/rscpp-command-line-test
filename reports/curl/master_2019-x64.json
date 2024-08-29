@@ -19571,6 +19571,21 @@
             "commit_ref": "09cdcac8d8d17f2e2370d3bbafd53e33d8d5e60a",
             "commit_message": "RELEASE-NOTES: synced\n",
             "commit_timestamp": 1724846952.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1724900765.190594,
+            "elapsed_time": 216.13308310508728,
+            "x64": true,
+            "actual_files_count": 3070,
+            "expected_files_count": 2323,
+            "memory_traffic": 43261.15252685547,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "a5682d9cb9da3212775bb227488a343d32552fd6",
+            "commit_message": "GHA/windows: vcpkg GnuTLS started breaking CI, temp drop it\n\nStarting today vcpkg wants to rebuild GnuTLS but fails:\n```\nerror: building shiftmedia-libgnutls:x64-windows failed with: BUILD_FAILED\n```\nRef: https://github.com/curl/curl/actions/runs/10594890318/job/29359499149#step:5:144\n\nTemporary solution:\n- drop it from the MultiSSL job.\n- replace with mbedTLS job. This job still tests libssh and I could\n  not find a better place for it right away.\n\nGnuTLS to be restored once it builds again. Possibly when this hash\nreaches the GHA `windows-latest` runner:\nhttps://github.com/microsoft/vcpkg/commit/f5ec6f30ff70f04f841436a0f36600bdbabfcfbf\n\nAlso:\n- switch to Debug for the mbedTLS job. Should also work now with\n  GnuTLS, once it's back:\n  Ref: https://github.com/microsoft/vcpkg/pull/40473\n\nCloses #14710\n",
+            "commit_timestamp": 1724860285.0
         }
     ]
 }

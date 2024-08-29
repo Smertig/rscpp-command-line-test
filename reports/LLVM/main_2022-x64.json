@@ -21195,6 +21195,23 @@
             "commit_ref": "16910a21ee0fabab2df291e4e5bc18289bd5762d",
             "commit_message": "[VPlan] Move logic to create interleave groups to VPlanTransforms (NFC).\n\nThis is a step towards further breaking up the rather large\ntryToBuildVPlanWithVPRecipes. It moves logic create interleave groups to\nVPlanTransforms.cpp, where similar replacements for other recipes are\ndefined as well (e.g. EVL-based ones)\n",
             "commit_timestamp": 1724856969.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1724901857.223152,
+            "elapsed_time": 1608.812697649002,
+            "x64": true,
+            "actual_files_count": 2061,
+            "expected_files_count": 1661,
+            "memory_traffic": 254743.21103668213,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "87c86aa6b93aea3d1603c1759a17fb6b5ba6e814",
+            "commit_message": "[X86,SimplifyCFG] Support hoisting load/store with conditional faulting (Part I) (#96878)\n\nThis is simplifycfg part of\r\nhttps://github.com/llvm/llvm-project/pull/95515\r\n\r\nIn this PR, we support hoisting load/store with conditional faulting in\r\n`SimplifyCFGOpt::speculativelyExecuteBB` to eliminate conditional\r\nbranches.\r\nThis is for cases like\r\n```\r\nvoid test (int a, int *b) {\r\n  if (a)\r\n   *b = a;\r\n}\r\n``` \r\n\r\nIn the following patches, we will support the hoist in\r\n`SimplifyCFGOpt::hoistCommonCodeFromSuccessors`.\r\nThat is for cases like\r\n```\r\nvoid test (int a, int *c, int *d) {\r\n  if (a)\r\n   *c = a;\r\n  else \r\n   *d = a;\r\n}\r\n```",
+            "commit_timestamp": 1724899364.0
         }
     ]
 }
