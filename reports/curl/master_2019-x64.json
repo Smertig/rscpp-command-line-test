@@ -19601,6 +19601,21 @@
             "commit_ref": "7c49279aaa2e5c15f28c968ef83a5e1fad5ac42a",
             "commit_message": "GHA: update github/codeql-action digest to 4dd1613\n\nCloses #14725\n",
             "commit_timestamp": 1724943203.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1724987202.877298,
+            "elapsed_time": 240.2110719680786,
+            "x64": true,
+            "actual_files_count": 3070,
+            "expected_files_count": 2323,
+            "memory_traffic": 43771.68070220947,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "c280010d8b139303470fc3534c38e7d663376d78",
+            "commit_message": "managen: fix superfluous leading blank line in quoted sections\n\nWhen a markdown quoted section using 4-space indentation was converted\nto nroff, managen previously caused a newline to appear after the\nleading .nf. This fix makes sure that newline is inserted *before* .nf\nas intended.\n\nThis is perhaps most notable in the HTML version of rendered manpages if\nthe quoted sections use different colors or similar.\n\nCloses #14732\n",
+            "commit_timestamp": 1724970082.0
         }
     ]
 }

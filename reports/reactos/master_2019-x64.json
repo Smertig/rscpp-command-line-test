@@ -19366,6 +19366,21 @@
             "commit_ref": "a75ed2acd93961412d2d2bda1797862fba726284",
             "commit_message": "[SETUP:REACTOS] Add the update-registry code (#7222)\n\nThis code has been tested on Windows and works as expected.\n",
             "commit_timestamp": 1724875521.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1724987195.553155,
+            "elapsed_time": 94.20337986946106,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7784.784645080566,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "95c340dfb770e6b8c48cd522d029a8dddcaaffb9",
+            "commit_message": "[NTOS:CC] CcRosCreateVacb: Return error code on pool allocation failure (#7275)\n\nReturn STATUS_INSUFFICIENT_RESOURCES error code instead of accessing the invalid pointer.",
+            "commit_timestamp": 1724978088.0
         }
     ]
 }

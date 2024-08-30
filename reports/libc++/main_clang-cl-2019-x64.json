@@ -1155,6 +1155,23 @@
             "commit_ref": "a705e8cb5b071b3bf6d1d55629f18f6b7b9699ac",
             "commit_message": "[libc++][NFC] Remove __constexpr_is{nan,finite} (#106205)\n\nThey're never used in `constexpr` functions, so we can simply use\r\n`std::isnan` and `std::isfinite` instead.",
             "commit_timestamp": 1724943956.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1724987286.959591,
+            "elapsed_time": 100.89578342437744,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 6618.2272872924805,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "e29c5f387f4a4aff039c01bde9eedeb6bd97951f",
+            "commit_message": "[RISCV][TTI] Add legality check of vector of address for gather/scatter. (#106481)\n\nThis patch add a legality check that checks if target machine support\r\nvector of address in `isLegalMaskedGatherScatter()`.",
+            "commit_timestamp": 1724986215.0
         }
     ]
 }
