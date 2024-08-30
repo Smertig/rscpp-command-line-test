@@ -21246,6 +21246,23 @@
             "commit_ref": "e29c5f387f4a4aff039c01bde9eedeb6bd97951f",
             "commit_message": "[RISCV][TTI] Add legality check of vector of address for gather/scatter. (#106481)\n\nThis patch add a legality check that checks if target machine support\r\nvector of address in `isLegalMaskedGatherScatter()`.",
             "commit_timestamp": 1724986215.0
+        },
+        {
+            "tool_version": "243.0.20240731.75611-eap01d",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1725031376.86884,
+            "elapsed_time": 1608.05198097229,
+            "x64": true,
+            "actual_files_count": 2061,
+            "expected_files_count": 1661,
+            "memory_traffic": 254794.98321533203,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "924907bc6aa17bb15241143dc9858da971b25908",
+            "commit_message": "[DAG] Prefer 0.0 over -0.0 as neutral value for FADD w/NoSignedZero (#106616)\n\nWhen getting a neutral value, we can prefer using a positive zero over a\r\nnegative zero if nsz is set on the FADD (or reduction). A positive zero\r\nshould be cheaper to materialize on basically all targets.\r\n\r\nArguably, we should be doing this kind of canonicalization in\r\nDAGCombine, but we don't do that for any of the other reduction\r\nvariants, so this seems like path of least resistance. This does mean\r\nthat we can only do this for \"fast\" reductions. Just nsz isn't enough,\r\nas that goes through the SEQ_FADD path where the IR level start value\r\nisn't folded away.\r\n\r\nIf folks think this is to RISCV specific, let me know. There's a trivial\r\nRISCV specific implementation. I went with the generic one as I through\r\nthis might benefit other targets.",
+            "commit_timestamp": 1725029774.0
         }
     ]
 }
