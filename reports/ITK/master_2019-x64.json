@@ -19556,6 +19556,21 @@
             "commit_ref": "9eb13596cef6009c026b2ee837ea52ee05d00f11",
             "commit_message": "DOC: Document Iterator(image, region) constructors initializing at begin\n\nExplicitly specify that those constructors initialize the iterator at the begin\nof the region.\n",
             "commit_timestamp": 1724870022.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1725181417.186679,
+            "elapsed_time": 229.19213581085205,
+            "x64": true,
+            "actual_files_count": 100,
+            "expected_files_count": null,
+            "memory_traffic": 26020.528549194336,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "923ee4e870f50c4d886085f8198104d980de81a3",
+            "commit_message": "COMP: Fix clang -Wtautological-pointer-compare warnings\n\nWarning was:\n\n```\n/Modules/Registration/GPUPDEDeformable/include/itkGPUPDEDeformableRegistrationFilter.hxx:102:7: warning: comparison of array 'this->m_GPUSmoothingKernels' not equal to a null pointer is always true [-Wtautological-pointer-compare]\n  if (m_GPUSmoothingKernels != nullptr)\n      ^~~~~~~~~~~~~~~~~~~~~    ~~~~~~~\n```\n\nIndeed these can never be null.\n",
+            "commit_timestamp": 1725048947.0
         }
     ]
 }

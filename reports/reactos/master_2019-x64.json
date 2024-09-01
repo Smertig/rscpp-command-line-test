@@ -19396,6 +19396,21 @@
             "commit_ref": "34586814ab70bc2e5d5ccfe43a948a5e6f23a45b",
             "commit_message": "[GDI32][NTUSER] Demote noisy debug prints\n",
             "commit_timestamp": 1725023201.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1725181322.522167,
+            "elapsed_time": 81.44274926185608,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7616.548957824707,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "e168d60bc50058ec0cf78275d333ce80f90c1ffd",
+            "commit_message": "[FREELDR] Fix boot timeout regression on AMD64 (#7281)\n\nInitialize the BootMgrInfo struct globally, so the TimeOut value is guaranteed to be negative when no Multiboot cmdline is provided. This could happen when BootMain is called with a NULL pointer:\r\nhttps://git.reactos.org/?p=reactos.git;a=blob;f=boot/freeldr/freeldr/arch/amd64/entry.S;hb=163f3407c8fa93ce06773fdf9fc53064506bd05e#l73\r\nso CmdLine == NULL and LoadSettings is called with NULL, thus the CmdLineParse isn't run.\r\n\r\nFixes boot timeout regression introduced in commit 7bee32d2372feb55949714eec5c92ca7ef2754bf which occured only on AMD64 builds.",
+            "commit_timestamp": 1725180868.0
         }
     ]
 }

@@ -21263,6 +21263,23 @@
             "commit_ref": "924907bc6aa17bb15241143dc9858da971b25908",
             "commit_message": "[DAG] Prefer 0.0 over -0.0 as neutral value for FADD w/NoSignedZero (#106616)\n\nWhen getting a neutral value, we can prefer using a positive zero over a\r\nnegative zero if nsz is set on the FADD (or reduction). A positive zero\r\nshould be cheaper to materialize on basically all targets.\r\n\r\nArguably, we should be doing this kind of canonicalization in\r\nDAGCombine, but we don't do that for any of the other reduction\r\nvariants, so this seems like path of least resistance. This does mean\r\nthat we can only do this for \"fast\" reductions. Just nsz isn't enough,\r\nas that goes through the SEQ_FADD path where the IR level start value\r\nisn't folded away.\r\n\r\nIf folks think this is to RISCV specific, let me know. There's a trivial\r\nRISCV specific implementation. I went with the generic one as I through\r\nthis might benefit other targets.",
             "commit_timestamp": 1725029774.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1725182076.325136,
+            "elapsed_time": 1614.8905653953552,
+            "x64": true,
+            "actual_files_count": 2061,
+            "expected_files_count": 1661,
+            "memory_traffic": 251696.95211029053,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "840d4d9446ef0a49b7600b42a188148a1826e17c",
+            "commit_message": "[clang] NFCI: don't check deduced constraints when partial ordering (#106882)\n\n",
+            "commit_timestamp": 1725178269.0
         }
     ]
 }

@@ -19631,6 +19631,21 @@
             "commit_ref": "415573a768ac7c08dd90ee276e4be15367787351",
             "commit_message": "RELEASE-NOTES: synced\n",
             "commit_timestamp": 1725027411.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1725181073.256591,
+            "elapsed_time": 219.89284014701843,
+            "x64": true,
+            "actual_files_count": 3070,
+            "expected_files_count": 2323,
+            "memory_traffic": 43559.26605987549,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "1e58665c2b8eb60e10dacf5e5012d6d2bf6f2a3d",
+            "commit_message": "configure: break indentation to fix `--help` output\n\nFor recently added/updated options:\nwindows-unicode, winidn, apple-idn\n\nIt looks like the second `AS_HELP_STRING()` must start in the first\ncolumn, otherwise its indentation will appear in the `--help` output,\nand break unalignment with the rest.\n\n(There must be a better way to tackle this.)\n",
+            "commit_timestamp": 1725111709.0
         }
     ]
 }
