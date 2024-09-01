@@ -19411,6 +19411,21 @@
             "commit_ref": "e168d60bc50058ec0cf78275d333ce80f90c1ffd",
             "commit_message": "[FREELDR] Fix boot timeout regression on AMD64 (#7281)\n\nInitialize the BootMgrInfo struct globally, so the TimeOut value is guaranteed to be negative when no Multiboot cmdline is provided. This could happen when BootMain is called with a NULL pointer:\r\nhttps://git.reactos.org/?p=reactos.git;a=blob;f=boot/freeldr/freeldr/arch/amd64/entry.S;hb=163f3407c8fa93ce06773fdf9fc53064506bd05e#l73\r\nso CmdLine == NULL and LoadSettings is called with NULL, thus the CmdLineParse isn't run.\r\n\r\nFixes boot timeout regression introduced in commit 7bee32d2372feb55949714eec5c92ca7ef2754bf which occured only on AMD64 builds.",
             "commit_timestamp": 1725180868.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1725203183.403276,
+            "elapsed_time": 101.59232902526855,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7790.640838623047,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "b6ae42492b06950d583b0d5bdcdefaa892137aa4",
+            "commit_message": "[INTEROP_UNITTEST] Add interoperability tests for localized strings (#7129)\n\nFinally, an automated way to verify all these localized strings\r\nthat must be in sync between multiple modules.\r\n\r\nCORE-18893",
+            "commit_timestamp": 1725193349.0
         }
     ]
 }
