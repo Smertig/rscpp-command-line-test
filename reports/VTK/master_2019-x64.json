@@ -18570,6 +18570,21 @@
             "commit_ref": "855db27c0aa8f471df9f213ac81f68ef87d1a52f",
             "commit_message": "Merge topic 'add-java-ci-jobs-master'\n\n730b9120f9f ci: add java upload job\ne3684d3d99c add win/mac builds\n31e8bd8b7f7 ci: enable java fedora builds\n2fd39f0d86b java: update java modules to latest vtk modules\n143e6d60721 Fix dependency of vtkjava.jar in vtkjava_tests\nddb255d0e94 Restore JavaInstall.cmake\n7ad909861d2 Revert \"Wrapping/Java: remove unreachable code\"\n\nAcked-by: Kitware Robot <kwrobot@kitware.com>\nTested-by: buildbot <buildbot@kitware.com>\nMerge-request: !11399\n",
             "commit_timestamp": 1725168224.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": "vtkCommonCoreCxxTests",
+            "timestamp": 1725289807.490382,
+            "elapsed_time": 202.89681029319763,
+            "x64": true,
+            "actual_files_count": 81,
+            "expected_files_count": 68,
+            "memory_traffic": 23525.0027923584,
+            "repo_url": "https://gitlab.kitware.com/vtk/vtk.git",
+            "commit_ref": "9af4984f6ee660e5f414544d07743644924a00fc",
+            "commit_message": "Merge topic 'msvc-cpp20-fix'\n\ndf6c6b16dfc Fix two non-const args in operator equals\n\nAcked-by: Kitware Robot <kwrobot@kitware.com>\nTested-by: buildbot <buildbot@kitware.com>\nReviewed-by: Mathieu Westphal (Kitware) <mathieu.westphal@kitware.com>\nMerge-request: !11451\n",
+            "commit_timestamp": 1725280345.0
         }
     ]
 }

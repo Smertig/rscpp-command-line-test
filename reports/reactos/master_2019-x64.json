@@ -19441,6 +19441,21 @@
             "commit_ref": "07abea90d9fecbce58a84ef16018b6603cfb272d",
             "commit_message": "[NTUSER] Optimize BroadcastSystemMessage a bit. Follow-up of #6884 (#7215)\n\nOptimize BroadcastSystemMessage with Environment parameter.\r\nMinimize processing when UserModeMsg->lParam is NULL and KernelModeMsg->message != WM_WININICHANGE\r\nMake sure that we have a UNICODE_NULL within lParamMsg based on comment from @whindsaks\r\n",
             "commit_timestamp": 1725215062.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1725289543.355946,
+            "elapsed_time": 75.33587408065796,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7630.662330627441,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "07abea90d9fecbce58a84ef16018b6603cfb272d",
+            "commit_message": "[NTUSER] Optimize BroadcastSystemMessage a bit. Follow-up of #6884 (#7215)\n\nOptimize BroadcastSystemMessage with Environment parameter.\r\nMinimize processing when UserModeMsg->lParam is NULL and KernelModeMsg->message != WM_WININICHANGE\r\nMake sure that we have a UNICODE_NULL within lParamMsg based on comment from @whindsaks\r\n",
+            "commit_timestamp": 1725215062.0
         }
     ]
 }
