@@ -19661,6 +19661,21 @@
             "commit_ref": "1e58665c2b8eb60e10dacf5e5012d6d2bf6f2a3d",
             "commit_message": "configure: break indentation to fix `--help` output\n\nFor recently added/updated options:\nwindows-unicode, winidn, apple-idn\n\nIt looks like the second `AS_HELP_STRING()` must start in the first\ncolumn, otherwise its indentation will appear in the `--help` output,\nand break unalignment with the rest.\n\n(There must be a better way to tackle this.)\n",
             "commit_timestamp": 1725111709.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1725246408.066859,
+            "elapsed_time": 227.5314884185791,
+            "x64": true,
+            "actual_files_count": 3070,
+            "expected_files_count": 2323,
+            "memory_traffic": 43552.76721191406,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "33629949488c7feb2a50e4869723f75aa8309cd0",
+            "commit_message": "build: add options to disable SHA-512/256 hash algo\n\nExisting C macro lacked build-level counterparts.\nAdd them in this patch.\n\n- cmake: `-DCURL_DISABLE_SHA512_256=ON`\n- autotools: `--disable-sha512-256`\n\nAlso drop the checker exception from `test1165.pl`.\n\nFollow-up to cbe41d151d6a100c1f045eaf37ff06b2b2a7b382 #12897\nCloses #14753\n",
+            "commit_timestamp": 1725221629.0
         }
     ]
 }

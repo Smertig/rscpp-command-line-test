@@ -2819,6 +2819,21 @@
             "commit_ref": "b915e9f44e9d979617d7738f7ddd7dd02ccd7c76",
             "commit_message": "Fix signature of `PyUpb_MessageMeta_Clear` (#17959)\n\nA `tp_clear` function should have signature `int f(PyObject*)`. The presence of erroneous extra parameters leads to undefined behavior as indicated in the C specification 6.3.2.3.8. In WebAssembly builds, this causes crashes. https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1256.pdf#page=60\n\nCloses #17959\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/17959 from hoodmane:fix-message-meta-clear-sig b618f806a9c9a7fec79caedb218c32991c2fbf98\nPiperOrigin-RevId: 669639153\n",
             "commit_timestamp": 1725107195.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1725246446.907316,
+            "elapsed_time": 310.30376052856445,
+            "x64": true,
+            "actual_files_count": 1096,
+            "expected_files_count": 818,
+            "memory_traffic": 38195.3059463501,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "b915e9f44e9d979617d7738f7ddd7dd02ccd7c76",
+            "commit_message": "Fix signature of `PyUpb_MessageMeta_Clear` (#17959)\n\nA `tp_clear` function should have signature `int f(PyObject*)`. The presence of erroneous extra parameters leads to undefined behavior as indicated in the C specification 6.3.2.3.8. In WebAssembly builds, this causes crashes. https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1256.pdf#page=60\n\nCloses #17959\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/17959 from hoodmane:fix-message-meta-clear-sig b618f806a9c9a7fec79caedb218c32991c2fbf98\nPiperOrigin-RevId: 669639153\n",
+            "commit_timestamp": 1725107195.0
         }
     ]
 }

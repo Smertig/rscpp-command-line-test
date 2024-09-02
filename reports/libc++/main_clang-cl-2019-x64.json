@@ -1223,6 +1223,23 @@
             "commit_ref": "affc0c64b65e73e5e0afe790762376f633ea970c",
             "commit_message": "[SDAG] Expand vector [u|s]cmp in VectorLegalizer (#106883)\n\nAddress comment\r\nhttps://github.com/llvm/llvm-project/pull/106747#issuecomment-2322922855.",
             "commit_timestamp": 1725201352.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1725246556.151384,
+            "elapsed_time": 74.04262733459473,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 6537.984916687012,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "837ee5b46a5f7f898f0de7e46a19600b896a0a1f",
+            "commit_message": "[RISCV][TTI] Scale the cost of FP-Int conversion with LMUL (#87506)\n\nWidening/narrowing the source data type to match the destination data\r\ntype may require multiple steps.\r\nTo model the costs, the patch generated the interim type by following\r\nthe logic in RISCVTargetLowering::lowerVPFPIntConvOp.",
+            "commit_timestamp": 1725241122.0
         }
     ]
 }
