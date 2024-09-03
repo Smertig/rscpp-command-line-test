@@ -21013,6 +21013,21 @@
             "commit_ref": "66c3774a6402224b1724329c81c880e76633a92b",
             "commit_message": "Warnings wrappers to use from C++ (#5291)\n\n* Add warning wrappers that allow to call warnings from pybind level\r\n\r\n* Add missing include for warnings.h\r\n\r\n* Change messages on failed checks, extend testing\r\n\r\n* clang-tidy fix\r\n\r\n* Refactor tests for warnings\r\n\r\n* Move handle before check\r\n\r\n* Remove unnecessary parametrized",
             "commit_timestamp": 1724903750.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1725332761.061597,
+            "elapsed_time": 125.70808100700378,
+            "x64": true,
+            "actual_files_count": 236,
+            "expected_files_count": 197,
+            "memory_traffic": 12794.431190490723,
+            "repo_url": "https://github.com/pybind/pybind11",
+            "commit_ref": "aeda49ed0b4e6e8abba7abc265ace86a6c26ba66",
+            "commit_message": "Properly translate C++ exception to Python exception when creating Python buffer from wrapped object (#5324)\n\n* Add test for throwing def_buffer case\r\n\r\n* Translate C++ -> Python exceptions in buffer creation\r\n\r\nThis required a little refactoring to extract exception translation to a separate method\r\n\r\n* Fix code formatting\r\n\r\n* Fix \"unused parameter\" warning\r\n\r\n* Refactor per review\r\n\r\n* style: pre-commit fixes\r\n\r\n* Address review comments\r\n\r\n* Address review comments\r\n\r\n---------\r\n\r\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>",
+            "commit_timestamp": 1725292919.0
         }
     ]
 }

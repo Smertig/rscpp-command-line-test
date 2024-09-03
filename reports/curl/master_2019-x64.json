@@ -19691,6 +19691,21 @@
             "commit_ref": "00ef607326d959e037454d0c809ff3c2d2280ecc",
             "commit_message": "url: fix connection reuse for HTTP/2 upgrades\n\nNormally, when a connection's filters have all connected, the\nmultiplex status is determined. However, HTTP/2 Upgrade:\nrequests will only do this when the first server response\nhas been received.\n\nThe current connection reuse mechanism does not accomodate\nthat and when the time between connect and response is large\nenough, connection reuse may not happen as desired.\n\nSee test case 2405 failures, such as in\nhttps://github.com/curl/curl/actions/runs/10629497461/job/29467166451\n\nAdd 'conn->bits.asks_multiplex' as indicator that a connection is\nstill being evaluated for mulitplexing, so that new transfers\nmay wait on this to be cleared.\n\nCloses #14739\n",
             "commit_timestamp": 1725273543.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1725332766.40934,
+            "elapsed_time": 216.46627259254456,
+            "x64": true,
+            "actual_files_count": 3083,
+            "expected_files_count": 2323,
+            "memory_traffic": 43650.77989196777,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "a2bcec0ee0895c23b98aea8e72ad4e9278fa67c8",
+            "commit_message": "openssl: fix the data race when sharing an SSL session between threads\n\nThe SSL_Session object is mutated during connection inside openssl,\nand it might not be thread-safe. Besides, according to documentation\nof openssl:\n\n```\nSSL_SESSION objects keep internal link information about the session\ncache list, when being inserted into one SSL_CTX object's session\ncache. One SSL_SESSION object, regardless of its reference count,\nmust therefore only be used with one SSL_CTX object (and the SSL\nobjects created from this SSL_CTX object).\n```\nIf I understand correctly, it is not safe to share it even in a\nsingle thread.\n\nInstead, serialize the SSL_SESSION before adding it to the cache,\nand deserialize it after retrieving it from the cache, so that no\nconcurrent write to the same object is infeasible.\n\nAlso\n - add a ci test for thread sanitizer\n - add a test for sharing ssl sessions concurrently\n - avoid redefining memory functions when not building libcurl, but\n   including the soruce in libtest\n - increase the concurrent connections limit in sws\n\nNotice that there are fix for a global data race for openssl which\nis not yet release. The fix is cherry pick for the ci test with\nthread sanitizer.\nhttps://github.com/openssl/openssl/commit/d8def79838cd0d5e7c21d217aa26edb5229f0ab4\n\nCloses #14751\n",
+            "commit_timestamp": 1725312944.0
         }
     ]
 }
