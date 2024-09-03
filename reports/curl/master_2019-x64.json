@@ -19706,6 +19706,21 @@
             "commit_ref": "a2bcec0ee0895c23b98aea8e72ad4e9278fa67c8",
             "commit_message": "openssl: fix the data race when sharing an SSL session between threads\n\nThe SSL_Session object is mutated during connection inside openssl,\nand it might not be thread-safe. Besides, according to documentation\nof openssl:\n\n```\nSSL_SESSION objects keep internal link information about the session\ncache list, when being inserted into one SSL_CTX object's session\ncache. One SSL_SESSION object, regardless of its reference count,\nmust therefore only be used with one SSL_CTX object (and the SSL\nobjects created from this SSL_CTX object).\n```\nIf I understand correctly, it is not safe to share it even in a\nsingle thread.\n\nInstead, serialize the SSL_SESSION before adding it to the cache,\nand deserialize it after retrieving it from the cache, so that no\nconcurrent write to the same object is infeasible.\n\nAlso\n - add a ci test for thread sanitizer\n - add a test for sharing ssl sessions concurrently\n - avoid redefining memory functions when not building libcurl, but\n   including the soruce in libtest\n - increase the concurrent connections limit in sws\n\nNotice that there are fix for a global data race for openssl which\nis not yet release. The fix is cherry pick for the ci test with\nthread sanitizer.\nhttps://github.com/openssl/openssl/commit/d8def79838cd0d5e7c21d217aa26edb5229f0ab4\n\nCloses #14751\n",
             "commit_timestamp": 1725312944.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1725375947.851442,
+            "elapsed_time": 232.65960812568665,
+            "x64": true,
+            "actual_files_count": 3083,
+            "expected_files_count": 2323,
+            "memory_traffic": 45915.98947906494,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "9e629a1484e64ac2569ee5f28eebd0b96f5fcba5",
+            "commit_message": "docs: document the (weak) random value situation in rustls builds\n\nCloses #14770\n",
+            "commit_timestamp": 1725374922.0
         }
     ]
 }

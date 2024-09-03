@@ -19660,6 +19660,21 @@
             "commit_ref": "a735660cc3f020f794b9095a26d65413e0fe12c7",
             "commit_message": "Merge pull request #26023 from WanliZhong:vfunc_hfloat\n\nFix hfloat, float16_t, float collision in 5.x about v_exp and v_log #26023\r\n\r\nThis PR try to fix https://github.com/opencv/opencv/issues/25922\r\nBecause the `hfloat` is defined as explicit conversion, the test code should be modified as it. The `vx_setall_f16` problem has already been fixed.\r\n\r\n### Pull Request Readiness Checklist\r\n\r\nSee details at https://github.com/opencv/opencv/wiki/How_to_contribute#making-a-good-pull-request\r\n\r\n- [x] I agree to contribute to the project under Apache 2 License.\r\n- [x] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\r\n- [ ] The PR is proposed to the proper branch\r\n- [ ] There is a reference to the original bug report and related work\r\n- [ ] There is accuracy test, performance test and test data in opencv_extra repository, if applicable\r\n      Patch to opencv_extra has the same branch name.\r\n- [ ] The feature is well documented and sample code can be built with the project CMake\r\n",
             "commit_timestamp": 1725269877.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1725376031.538238,
+            "elapsed_time": 395.3943917751312,
+            "x64": true,
+            "actual_files_count": 482,
+            "expected_files_count": 480,
+            "memory_traffic": 41914.66110229492,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "82da334ff3f050154947788487347a1b7db7d141",
+            "commit_message": "Merge pull request #26100 from mshabunin:fix-riscv-build\n\nRISC-V: fix XuanTie and Andes builds",
+            "commit_timestamp": 1725365695.0
         }
     ]
 }

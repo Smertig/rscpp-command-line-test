@@ -19471,6 +19471,21 @@
             "commit_ref": "814f3a15f9cfa0f5efa85724d8925c1f5bece5a0",
             "commit_message": "[NOTEPAD] Handle serialized maximized state (#5806)\n\nFixes a bug where if you close Notepad while it is maximized, the next time Notepad is started it will start with its window placed as if maximized but it is still in the SW_RESTORE state and the \"real normal placement\" is lost.\r\n\r\nSetWindowPlacement also takes care of making sure the window is placed correctly on the monitor workarea.",
             "commit_timestamp": 1725311608.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1725375960.272834,
+            "elapsed_time": 94.04812741279602,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7726.021141052246,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "814f3a15f9cfa0f5efa85724d8925c1f5bece5a0",
+            "commit_message": "[NOTEPAD] Handle serialized maximized state (#5806)\n\nFixes a bug where if you close Notepad while it is maximized, the next time Notepad is started it will start with its window placed as if maximized but it is still in the SW_RESTORE state and the \"real normal placement\" is lost.\r\n\r\nSetWindowPlacement also takes care of making sure the window is placed correctly on the monitor workarea.",
+            "commit_timestamp": 1725311608.0
         }
     ]
 }
