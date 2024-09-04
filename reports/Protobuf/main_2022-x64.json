@@ -2879,6 +2879,21 @@
             "commit_ref": "5233b80fb79ded5f158c0604d90c2d54400d5570",
             "commit_message": "[ObjC] Better support class renaming for extensions.\n\nThe symbol renaming support has assumed folks would define a\ncustom version of the macro, but if a developer does renaming\njust by #defining the class, the extension singleton names\nrequired manual handing, by changing to just wrap the class\nin the macro and using the compiler string concat support\nit becomes easier as just the class name remapping can do\nthe work for extensions.\n\nPiperOrigin-RevId: 670536928\n",
             "commit_timestamp": 1725372039.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1725419221.111813,
+            "elapsed_time": 311.13154768943787,
+            "x64": true,
+            "actual_files_count": 1096,
+            "expected_files_count": 818,
+            "memory_traffic": 38285.597885131836,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "c841627af4949957255089466353292431ad45a6",
+            "commit_message": "Use `default_compatible_with` instead of specifying `compatible_with` on every target.\n\nThis also increases compliance by adding `default_applicable_licenses` to several `BUILD` files that previously did not have it.\n\nPiperOrigin-RevId: 670784686\n",
+            "commit_timestamp": 1725415697.0
         }
     ]
 }
