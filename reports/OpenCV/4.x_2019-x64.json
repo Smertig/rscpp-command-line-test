@@ -19675,6 +19675,21 @@
             "commit_ref": "8561f45c2a36f6d3cdda41844c389b59445d0b22",
             "commit_message": "Merge pull request #26084 from vrabaud:avif_check\n\nAvoid uninitialized value read in resize. #26084\r\n\r\nWhen there is no point falling right, an hypothetical value is computed (but unused) using an uninitialized ofst. This triggers warnings in the sanitizers.\r\n\r\nIncluding those values in the for loops is also possible but messy when SIMD is involved.\r\n\r\n### Pull Request Readiness Checklist\r\n\r\nSee details at https://github.com/opencv/opencv/wiki/How_to_contribute#making-a-good-pull-request\r\n\r\n- [x] I agree to contribute to the project under Apache 2 License.\r\n- [x] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\r\n- [x] The PR is proposed to the proper branch\r\n",
             "commit_timestamp": 1725365782.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1725462560.954949,
+            "elapsed_time": 407.07867193222046,
+            "x64": true,
+            "actual_files_count": 475,
+            "expected_files_count": 459,
+            "memory_traffic": 40519.48824310303,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "76f495dce9f465f1e1d194f122f20f9142351ead",
+            "commit_message": "Merge pull request #26105 from mshabunin:fix-cmake-3.30\n\nbuild: minor changes for cmake 3.30 and some cleanup",
+            "commit_timestamp": 1725430588.0
         }
     ]
 }

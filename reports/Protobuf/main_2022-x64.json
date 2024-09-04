@@ -2894,6 +2894,21 @@
             "commit_ref": "c841627af4949957255089466353292431ad45a6",
             "commit_message": "Use `default_compatible_with` instead of specifying `compatible_with` on every target.\n\nThis also increases compliance by adding `default_applicable_licenses` to several `BUILD` files that previously did not have it.\n\nPiperOrigin-RevId: 670784686\n",
             "commit_timestamp": 1725415697.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1725462409.970949,
+            "elapsed_time": 302.5008463859558,
+            "x64": true,
+            "actual_files_count": 1096,
+            "expected_files_count": 818,
+            "memory_traffic": 38210.88772583008,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "b01eee755e716c3f966785eada8f3379b41a99c6",
+            "commit_message": "Migrate PrivateAccess from protos to hpb\n\nPiperOrigin-RevId: 670965004\n",
+            "commit_timestamp": 1725461064.0
         }
     ]
 }
