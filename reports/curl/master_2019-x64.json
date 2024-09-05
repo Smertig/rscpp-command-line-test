@@ -19751,6 +19751,21 @@
             "commit_ref": "bca9c7719a217ea049d1d26d6838032d293ba27a",
             "commit_message": "lib: make SSPI global symbols use Curl_ prefix\n\nDo not pollute the namespace.\n\nCloses #14776\n",
             "commit_timestamp": 1725454510.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1725505596.992375,
+            "elapsed_time": 230.5330295562744,
+            "x64": true,
+            "actual_files_count": 3083,
+            "expected_files_count": 2323,
+            "memory_traffic": 43382.76141357422,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "32eee8f139015dc87dfd6282fc8ce604904b94b1",
+            "commit_message": "src: namespace symbols clashing with lib\n\nBefore this patch `lib/http.h` and `src/tool_sdecls.h` both declared\n`HTTPREQ_*` enums.\n\nRename `src` ones to have distinct names.\n\nThey are not included in the same code for now, but this may change when\nbundling unit/libtests into single programs.\n\nCloses #14785\n",
+            "commit_timestamp": 1725490544.0
         }
     ]
 }

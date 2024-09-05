@@ -1325,6 +1325,23 @@
             "commit_ref": "2d7339ad24b41eb06c417f7067b9fbeb4fdb2e6b",
             "commit_message": "[AMDGPU][LDS] Fix dynamic LDS interaction with \"amdgpu-no-lds-kernel-id\" (#107092)\n\nDynamic lds and Table lds both use the amdgpu_lds_kernel_id intrinsic.\r\nKernels and functons that make an indirect use of this should not have\r\nthe\r\n\"amdgpu-no-lds-kernel-id\" attribute.\r\n\r\nFor the later, this was done. For the dynamic lds case, this was\r\nmissing. This patch fixes it.",
             "commit_timestamp": 1725460903.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1725505720.164524,
+            "elapsed_time": 86.50732183456421,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 6571.384956359863,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "c28b1a19aadff97b369889aee084073a181cfda8",
+            "commit_message": "[LegalizeTypes][RISCV] Use SPLAT_VECTOR_PARTS to legalize splat BUILD_VECTOR (#107290)\n\nIf the element type needs to be expanded, we can use SPLAT_VECTOR_PARTS\r\nif the target supports it.\r\n\r\nThere's already a DAGCombine to turn BUILD_VECTOR into SPLAT_VECTOR if\r\nthe target makes SPLAT_VECTOR legal, but it doesn't fire for vectors\r\nthat need to be split.",
+            "commit_timestamp": 1725502458.0
         }
     ]
 }

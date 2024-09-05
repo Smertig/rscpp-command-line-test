@@ -21103,6 +21103,21 @@
             "commit_ref": "4feb3b1b35394d7c4d4fd89dc5b268ab390cf222",
             "commit_message": "Remove ABI-incompatible assertion code in any_view.hpp (#1816)\n\n* Remove ABI-incompatible assertion code in any_view.hpp\r\n\r\nIf a provider of an any_view is built without NDEBUG defined, but a\r\nconsumer is built with NDEBUG defined, the consumer will crash due to\r\nABI-incompatibility in any_ref.\r\n\r\nRepros on clang with sanitizers, and that's an easily shareable demo:\r\n  https://godbolt.org/z/Go9qxnjrM\r\n\r\nCan't get it to repro with a small example in gcc, even with sanitizers\r\n\r\nRepros in a small example on windows with msvc using same cpp/hpp files\r\nas above link - usually assertion failure in the assertion that this\r\ncommit removes, sometimes Access Violation, but always crashes one way\r\nor another. No sanitizers needed to get a crash with msvc. It's just\r\nnot easily shareable.\r\n\r\n---------\r\n\r\nCo-authored-by: Matt Beardsley <mbeardsl@mathworks.com>\r\nCo-authored-by: Eric Niebler <eniebler@nvidia.com>",
             "commit_timestamp": 1725411584.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1725505612.249605,
+            "elapsed_time": 1302.409725189209,
+            "x64": true,
+            "actual_files_count": 539,
+            "expected_files_count": 210,
+            "memory_traffic": 141978.52223205566,
+            "repo_url": "https://github.com/ericniebler/range-v3",
+            "commit_ref": "a33616bfdb642744acaa937a3f258fba384b7fd4",
+            "commit_message": "Merge pull request #1835 from CaseyCarter/windows-asan\n\nEnable ASan in Windows CI",
+            "commit_timestamp": 1725503365.0
         }
     ]
 }
