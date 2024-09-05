@@ -19691,6 +19691,21 @@
             "commit_ref": "64da5a3f33598c68770941c37f26a8c65e331617",
             "commit_message": "STYLE: Remove redundant non-const `Object::AddObserver` overload\n\nThe `const` overload of `Object::AddObserver` can serve both \"const\" and\n\"non-const\" instances of and references to an `itk::Object`, so the non-const\noverload should not be necessary.\n\nNote: this is an ABI change, and it affects the SWIG output, but it should be\nacceptable for ITK 6.\n",
             "commit_timestamp": 1725378696.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1725549032.467053,
+            "elapsed_time": 240.2912082672119,
+            "x64": true,
+            "actual_files_count": 100,
+            "expected_files_count": null,
+            "memory_traffic": 26221.679679870605,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "fb61d2cadc33bf50d1f0ec5b842b70a1a7021d0e",
+            "commit_message": "Merge pull request #4832 from blowekamp/label_geometry_silent\n\nBUG: Silence LabelGeometry deprecation",
+            "commit_timestamp": 1725540831.0
         }
     ]
 }

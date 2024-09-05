@@ -21416,6 +21416,23 @@
             "commit_ref": "c28b1a19aadff97b369889aee084073a181cfda8",
             "commit_message": "[LegalizeTypes][RISCV] Use SPLAT_VECTOR_PARTS to legalize splat BUILD_VECTOR (#107290)\n\nIf the element type needs to be expanded, we can use SPLAT_VECTOR_PARTS\r\nif the target supports it.\r\n\r\nThere's already a DAGCombine to turn BUILD_VECTOR into SPLAT_VECTOR if\r\nthe target makes SPLAT_VECTOR legal, but it doesn't fire for vectors\r\nthat need to be split.",
             "commit_timestamp": 1725502458.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1725549777.770243,
+            "elapsed_time": 1627.7879633903503,
+            "x64": true,
+            "actual_files_count": 2063,
+            "expected_files_count": 1661,
+            "memory_traffic": 252271.70555877686,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "3b19e480c056a35a60e3c65de476b6097329ceac",
+            "commit_message": "[flang] Warn when F128 is unsupported (#102147) (#106957)\n\nThis generates `warning: REAL(KIND=16) is not an enabled type for this\r\ntarget` if that type is used in a build not correctly configured to\r\nsupport this type. Uses of `selected_real_kind(30)` return -1.\r\n\r\nRelanding #102147 because the test errors turned out to be specific to a\r\ndownstream configuration.",
+            "commit_timestamp": 1725548376.0
         }
     ]
 }

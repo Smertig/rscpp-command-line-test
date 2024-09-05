@@ -15132,6 +15132,21 @@
             "commit_ref": "486dc3288d7b8e8c55bbc20dea11fef32fd7119b",
             "commit_message": "VoxelManipulator code cleanup (#15114)\n\n* Cache node in voxel area index when possible\r\n\r\nThe index function according to the MSVC profiler actually takes up a significant time slice (around ~5% of total time for the process) during normal game-play.\r\nMight not be accurate but still good to not recalculate it twice.\r\n\r\n* Remove `setNodeNoRef` from VM\r\n\r\n* VM: remove old commented out print statement",
             "commit_timestamp": 1725456039.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1725550218.471031,
+            "elapsed_time": 178.12267899513245,
+            "x64": true,
+            "actual_files_count": 402,
+            "expected_files_count": 105,
+            "memory_traffic": 22720.719413757324,
+            "repo_url": "https://github.com/minetest/minetest",
+            "commit_ref": "486dc3288d7b8e8c55bbc20dea11fef32fd7119b",
+            "commit_message": "VoxelManipulator code cleanup (#15114)\n\n* Cache node in voxel area index when possible\r\n\r\nThe index function according to the MSVC profiler actually takes up a significant time slice (around ~5% of total time for the process) during normal game-play.\r\nMight not be accurate but still good to not recalculate it twice.\r\n\r\n* Remove `setNodeNoRef` from VM\r\n\r\n* VM: remove old commented out print statement",
+            "commit_timestamp": 1725456039.0
         }
     ]
 }
