@@ -19561,6 +19561,21 @@
             "commit_ref": "0707475f6974a0add99fc396146c26a970c5148b",
             "commit_message": "[COMCTL32][MEDIA] Sync comctl32 to wine 5.0 (#6789)\n\nFor SOME reason comctl32 has been synched manually multiple times to different versions and different pots\r\nThis PR aims to fix that\r\n\r\nWith the exception of button.c which all in all is a massive fork over wines code entirely.\r\nand datetime.c which is at wine 6.0\r\n\r\nComctl32 is now at wine-5.0",
             "commit_timestamp": 1725425645.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1725635183.693485,
+            "elapsed_time": 98.47676730155945,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7663.676948547363,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "bc76250bd8cad3883397c94ce091632e8424b066",
+            "commit_message": "[COMCTL32] Fix edit control cursor positioning (#7317)\n\nFix caret positioning regression from Wine Sync to Wine 5.0 affecting notepad.\r\nRestore older Wine code that handles caret position with ReactOS better.\r\nThis was a regression from 0.4.15-dev-8612-g0707475 https://github.com/reactos/reactos/commit/0707475f6974a0add99fc396146c26a970c5148b\r\n\r\nCORE-19731",
+            "commit_timestamp": 1725629140.0
         }
     ]
 }

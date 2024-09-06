@@ -21143,6 +21143,21 @@
             "commit_ref": "fa306fc85eca7cc68a5362c503019fa823cbe411",
             "commit_message": "Improve performance of SonarQube reporter handling passing assertions\n\nThis mirrors the changes done to the JUnit reporter in commit\nfe483c056d9516d3550519c29fbf14a4d84d06d4\n",
             "commit_timestamp": 1723631635.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1725635248.491662,
+            "elapsed_time": 94.18268632888794,
+            "x64": true,
+            "actual_files_count": 282,
+            "expected_files_count": 272,
+            "memory_traffic": 4434.590621948242,
+            "repo_url": "https://github.com/catchorg/Catch2.git",
+            "commit_ref": "bc63412e2a3b3e39e178ea75953522f78b840aa7",
+            "commit_message": "Suppress GCC useless-cast warning from CHECK_THROWS_MATCHES\n\nSuppress warning from GCC about useless cast in the\nCHECK_THROWS_MATCHES macro the same way it is already being done for\nthe similar CHECK macros.\n",
+            "commit_timestamp": 1725631475.0
         }
     ]
 }

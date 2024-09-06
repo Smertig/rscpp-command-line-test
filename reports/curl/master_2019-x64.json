@@ -19796,6 +19796,21 @@
             "commit_ref": "88c7182b2060a3790192faf6014dfbb71fd6d330",
             "commit_message": "GHA/distcheck: keep upload artifacts for one day only\n\nThe uploads are only used as a cache mechanism between jobs to save them\nfrom having to re-run maketgz multiple times, so there is no need to\nsave the artifact longer than this.\n\nCloses #14793\n",
             "commit_timestamp": 1725573048.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1725635211.48254,
+            "elapsed_time": 244.52725481987,
+            "x64": true,
+            "actual_files_count": 3083,
+            "expected_files_count": 2323,
+            "memory_traffic": 46641.16700744629,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "b12a8158a55c0e9f4b624ae184bbf6395c042e68",
+            "commit_message": ".dcignore: remove\n\nThis was a config file for deepcode.ai, a static code analyzer that we\nhave not used for ages.\n\nCloses #14811\n",
+            "commit_timestamp": 1725613666.0
         }
     ]
 }
