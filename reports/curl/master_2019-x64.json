@@ -19781,6 +19781,21 @@
             "commit_ref": "519be2b9d825f74c5632310d9d047043ae21630c",
             "commit_message": "system_win32: fix typo\n",
             "commit_timestamp": 1725545420.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1725592018.839681,
+            "elapsed_time": 218.41029453277588,
+            "x64": true,
+            "actual_files_count": 3083,
+            "expected_files_count": 2323,
+            "memory_traffic": 43629.310119628906,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "88c7182b2060a3790192faf6014dfbb71fd6d330",
+            "commit_message": "GHA/distcheck: keep upload artifacts for one day only\n\nThe uploads are only used as a cache mechanism between jobs to save them\nfrom having to re-run maketgz multiple times, so there is no need to\nsave the artifact longer than this.\n\nCloses #14793\n",
+            "commit_timestamp": 1725573048.0
         }
     ]
 }

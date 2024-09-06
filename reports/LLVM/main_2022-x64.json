@@ -21433,6 +21433,23 @@
             "commit_ref": "3b19e480c056a35a60e3c65de476b6097329ceac",
             "commit_message": "[flang] Warn when F128 is unsupported (#102147) (#106957)\n\nThis generates `warning: REAL(KIND=16) is not an enabled type for this\r\ntarget` if that type is used in a build not correctly configured to\r\nsupport this type. Uses of `selected_real_kind(30)` return -1.\r\n\r\nRelanding #102147 because the test errors turned out to be specific to a\r\ndownstream configuration.",
             "commit_timestamp": 1725548376.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1725593053.017622,
+            "elapsed_time": 1654.7425224781036,
+            "x64": true,
+            "actual_files_count": 2063,
+            "expected_files_count": 1661,
+            "memory_traffic": 252380.5467453003,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "ede40da1f8c1e91601b985cd32ad785aa8806880",
+            "commit_message": "[mlir][tensor] Add check for indices of `tensor.gather` (#106894)\n\nThis patch add a check for indices of `tensor.gather` and\r\n`tensor.scatter`. For that the length of gather_dims/scatter_dims should\r\nmatch the size of last dimension of the indices. Fix #94901.",
+            "commit_timestamp": 1725590759.0
         }
     ]
 }

@@ -18675,6 +18675,21 @@
             "commit_ref": "0141cc717c2641c3b5f0a357f4b33d17dcf772b1",
             "commit_message": "Merge topic 'sync-parse-tab'\n\n49626808bd3 Sync vtkParse.y with vtkParse.tab.c\n\nAcked-by: Kitware Robot <kwrobot@kitware.com>\nTested-by: buildbot <buildbot@kitware.com>\nReviewed-by: Christos Tsolakis <christos.tsolakis@kitware.com>\nMerge-request: !11455\n",
             "commit_timestamp": 1725546403.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": "vtkCommonCoreCxxTests",
+            "timestamp": 1725592238.657911,
+            "elapsed_time": 184.58694005012512,
+            "x64": true,
+            "actual_files_count": 81,
+            "expected_files_count": 68,
+            "memory_traffic": 23405.519828796387,
+            "repo_url": "https://gitlab.kitware.com/vtk/vtk.git",
+            "commit_ref": "61a311df6ee80a15a2b590da24573242e7fe910b",
+            "commit_message": "Merge topic 'cutter-leak'\n\n1bec1195a11 Mark reference cycle for vtkResampleWithDataSet\na1a07c4c350 Re-enable the probe.py test, the leaks are fixed\n92dc6660750 Fix vtkCutter ignoring GenerateTriangles\ndd323e54dcd Fix reference loops involving vtkCutter's helpers\n164aff33dde Fix possible reference loop for vtkSphereTree\n2c3202e59f6 Add vtkGarbageCollectorReport() for vtkNew\n\nAcked-by: Kitware Robot <kwrobot@kitware.com>\nAcked-by: buildbot <buildbot@kitware.com>\nAcked-by: Ben Boeckel <ben.boeckel@kitware.com>\nReviewed-by: Spiros Tsalikis <spiros.tsalikis@kitware.com>\nMerge-request: !11315\n",
+            "commit_timestamp": 1725584975.0
         }
     ]
 }

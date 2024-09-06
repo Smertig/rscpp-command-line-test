@@ -20793,6 +20793,21 @@
             "commit_ref": "986423a62dd174e75282e432e9fbaf921c9c7ccc",
             "commit_message": "Bump oldest supported Python to 3.10, eliminate setuptools-scm (#1842)\n\n* Supply MacOS deployment target to delocate, use build+uv frontend\r\n\r\nThis shaves off multiple minutes from the wheel builds alone.\r\n\r\nAlso revert to trusted publishing for wheel uploads as it is now set up.\r\n\r\n* Bump oldest supported Python to 3.10, eliminate setuptools-scm\r\n\r\nThe version is now a string again, under the same attribute as it was\r\nbefore. This is a pragmatic decision in order to be able to upload wheels\r\nagain, possibly directly from main.\r\n\r\nWe could in the future also set the Python version to a development version\r\nif we want to avoid accidental uploads of `main`.\r\n\r\n* Add a note on supported Python versions in the docs\r\n\r\nAlso fixes the setuptools failure observed in the latest CI by pinning\r\nto the last version before v73 until the problem is identified and resolved.",
             "commit_timestamp": 1725468127.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1725592048.816096,
+            "elapsed_time": 85.95837450027466,
+            "x64": true,
+            "actual_files_count": 88,
+            "expected_files_count": 86,
+            "memory_traffic": 4865.133544921875,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "08fdf6eb84cc8a5b65d84041257c908de5879bf5",
+            "commit_message": "enable the /MP MSVC compiler argument for parallel compilation (#1846)\n\n",
+            "commit_timestamp": 1725571723.0
         }
     ]
 }
