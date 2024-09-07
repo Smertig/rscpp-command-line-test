@@ -2969,6 +2969,21 @@
             "commit_ref": "17673f5b90b4a73d8633a25650a4f7d1ae0aff72",
             "commit_message": "Automated rollback of commit 76794bf3adceefcd69a2eb5785635a084fbe2e32.\n\nPiperOrigin-RevId: 671679277\n",
             "commit_timestamp": 1725614703.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1725678341.605023,
+            "elapsed_time": 291.70918321609497,
+            "x64": true,
+            "actual_files_count": 1098,
+            "expected_files_count": 818,
+            "memory_traffic": 38239.17626953125,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "c964e143d97b16fd76a1d00486810cc05874f3ee",
+            "commit_message": "Rename private reflection helpers HasBit to HasFieldSingular.\n\nThis change renames the helper functions to HasFieldSingular(), SetHasBit(),\nClearHasBit(), and SwapHasBit(), which should hopefully be less confusing.\n\nFirst of all, the HasBit(), SetBit(), ClearBit(), and SwapBit() methods are all\nprivate so they are easier to change than a public-facing API.\n\nThe function named HasBit is called for both proto2 and proto3 fields. For\nproto2 fields, it returns true if and only if the hasbit is set -- i.e. if the\nfield is present. For proto3 fields, it returns true if and only if the field\nis nonempty -- i.e. if the field is present.\n\nSee documentation here for what \"field presence\" means:\nhttps://github.com/protocolbuffers/protobuf/blob/main/docs/field_presence.md\n\nNote that in the proto3 case, what this function is doing has nothing to do\nwith bits!\n\nThe name HasFieldSingular is chosen to emphasize the fact that this function\nhas the same semantics has HasField, only that it's narrowly applied to\n\"singular\" (i.e., non-repeating, non-oneof, non-weak) fields.\n\nHasField itself is not a great name -- IsPresent is probably more appripriate\n-- but it is a public API and therefore hard to change. This change at least\nmakes the two share a similar name.\n\n(I considered `HasPresence` too but that also leaves room for ambiguity: \"has\npresence\" might be interpreted to refer to whether a field is an explicit\npresence field or an implicit presence field).\n\nThe other helper functions here do manipulate the hasbit directly. Because of\nthis, they should just make it obvious in the name.\n\nPiperOrigin-RevId: 671966727\n",
+            "commit_timestamp": 1725676763.0
         }
     ]
 }

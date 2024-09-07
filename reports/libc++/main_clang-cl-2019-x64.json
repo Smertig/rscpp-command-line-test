@@ -1393,6 +1393,23 @@
             "commit_ref": "109cd11dc4aea6b3596f8b2cb5a719f35b190cfa",
             "commit_message": "[Attributor] Skip AS specialization for volatile memory instructions (#107250)\n\n",
             "commit_timestamp": 1725634830.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1725678538.795342,
+            "elapsed_time": 68.44668364524841,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 6560.654411315918,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "d7fb5b9df0a8170d082e6f8f254e723283f76bac",
+            "commit_message": "[ctx_prof] PGOCtxProfFlattener must always return `PreservedAnalyses::none()`\n\nThis is because it always removes instrumentation. This fixes failures\ndetectable with extensive checks, e.g. https://lab.llvm.org/buildbot/#/builders/187/builds/987\n\n(Related to PR #107329)\n",
+            "commit_timestamp": 1725678138.0
         }
     ]
 }

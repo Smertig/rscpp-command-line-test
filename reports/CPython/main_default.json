@@ -16841,6 +16841,21 @@
             "commit_ref": "d343f977ba89c415aa4dcaf75122e0b4235d4fb1",
             "commit_message": "gh-121645: Fix typo in PyBytes_Join() doc (#123783)\n\n",
             "commit_timestamp": 1725631697.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1725678520.258196,
+            "elapsed_time": 1171.9016332626343,
+            "x64": true,
+            "actual_files_count": 1049,
+            "expected_files_count": null,
+            "memory_traffic": 50605.28249359131,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "033510e11dff742d9626b9fd895925ac77f566f1",
+            "commit_message": "gh-120221: Support KeyboardInterrupt in asyncio REPL (#123795)\n\nThis switches the main pyrepl event loop to always be non-blocking so that it\r\ncan listen to incoming interruptions from other threads.\r\n\r\nThis also resolves invalid display of exceptions from other threads\r\n(gh-123178).\r\n\r\nThis also fixes freezes with pasting and an active input hook.",
+            "commit_timestamp": 1725650909.0
         }
     ]
 }
