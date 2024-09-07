@@ -2984,6 +2984,21 @@
             "commit_ref": "c964e143d97b16fd76a1d00486810cc05874f3ee",
             "commit_message": "Rename private reflection helpers HasBit to HasFieldSingular.\n\nThis change renames the helper functions to HasFieldSingular(), SetHasBit(),\nClearHasBit(), and SwapHasBit(), which should hopefully be less confusing.\n\nFirst of all, the HasBit(), SetBit(), ClearBit(), and SwapBit() methods are all\nprivate so they are easier to change than a public-facing API.\n\nThe function named HasBit is called for both proto2 and proto3 fields. For\nproto2 fields, it returns true if and only if the hasbit is set -- i.e. if the\nfield is present. For proto3 fields, it returns true if and only if the field\nis nonempty -- i.e. if the field is present.\n\nSee documentation here for what \"field presence\" means:\nhttps://github.com/protocolbuffers/protobuf/blob/main/docs/field_presence.md\n\nNote that in the proto3 case, what this function is doing has nothing to do\nwith bits!\n\nThe name HasFieldSingular is chosen to emphasize the fact that this function\nhas the same semantics has HasField, only that it's narrowly applied to\n\"singular\" (i.e., non-repeating, non-oneof, non-weak) fields.\n\nHasField itself is not a great name -- IsPresent is probably more appripriate\n-- but it is a public API and therefore hard to change. This change at least\nmakes the two share a similar name.\n\n(I considered `HasPresence` too but that also leaves room for ambiguity: \"has\npresence\" might be interpreted to refer to whether a field is an explicit\npresence field or an implicit presence field).\n\nThe other helper functions here do manipulate the hasbit directly. Because of\nthis, they should just make it obvious in the name.\n\nPiperOrigin-RevId: 671966727\n",
             "commit_timestamp": 1725676763.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1725721567.871222,
+            "elapsed_time": 308.0392475128174,
+            "x64": true,
+            "actual_files_count": 1098,
+            "expected_files_count": 818,
+            "memory_traffic": 38199.39213562012,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "50c3191741f9fa3fbe814607c5d3406ca028cd66",
+            "commit_message": "add a dependency to the upb amalgamation on text:debug and text:internal\n\nPiperOrigin-RevId: 672069121\n",
+            "commit_timestamp": 1725717928.0
         }
     ]
 }
