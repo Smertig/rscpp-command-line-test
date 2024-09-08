@@ -16871,6 +16871,21 @@
             "commit_ref": "033510e11dff742d9626b9fd895925ac77f566f1",
             "commit_message": "gh-120221: Support KeyboardInterrupt in asyncio REPL (#123795)\n\nThis switches the main pyrepl event loop to always be non-blocking so that it\r\ncan listen to incoming interruptions from other threads.\r\n\r\nThis also resolves invalid display of exceptions from other threads\r\n(gh-123178).\r\n\r\nThis also fixes freezes with pasting and an active input hook.",
             "commit_timestamp": 1725650909.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1725764970.89719,
+            "elapsed_time": 1191.9470133781433,
+            "x64": true,
+            "actual_files_count": 1049,
+            "expected_files_count": null,
+            "memory_traffic": 50479.816482543945,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "11fa11987990eb7ed75b1597cf2e8237f5991c57",
+            "commit_message": "Add willingc to CODEOWNERS for Lang Reference Doc (#123812)\n\n",
+            "commit_timestamp": 1725734816.0
         }
     ]
 }

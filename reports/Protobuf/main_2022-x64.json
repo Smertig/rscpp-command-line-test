@@ -2999,6 +2999,21 @@
             "commit_ref": "50c3191741f9fa3fbe814607c5d3406ca028cd66",
             "commit_message": "add a dependency to the upb amalgamation on text:debug and text:internal\n\nPiperOrigin-RevId: 672069121\n",
             "commit_timestamp": 1725717928.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1725764845.728355,
+            "elapsed_time": 303.80125093460083,
+            "x64": true,
+            "actual_files_count": 1100,
+            "expected_files_count": 818,
+            "memory_traffic": 38324.41355133057,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "da825e80b1ee68bd6dc3d21b08b725ae842a8276",
+            "commit_message": "Migrated upb code generators to the new code_generator_lite.h library.\n\nThis will remove the dependency on the heavyweight code_generator target.\n\nPiperOrigin-RevId: 672093911\n",
+            "commit_timestamp": 1725729396.0
         }
     ]
 }

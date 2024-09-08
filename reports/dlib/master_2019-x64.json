@@ -21179,6 +21179,21 @@
             "commit_ref": "253098eb1bebb39ea7ca32a6db6f177c8e326b9e",
             "commit_message": "Fix layer_normalize gradients (#3001)\n\n* Fix layer_normalize gradients\r\n\r\n* fix layer_norm CPU\r\n\r\n* attempt to fix the cuda version\r\n\r\n* fix gamma_grad and beta_grad\r\n\r\n* update cuda test\r\n\r\n* use a block of size 1 to avoid race conditions\r\n\r\n* improve the speed of CUDA path of layer_norm\r\n\r\n* improve the speed of CUDA path of layer_norm",
             "commit_timestamp": 1725195909.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1725764855.553578,
+            "elapsed_time": 101.26821970939636,
+            "x64": true,
+            "actual_files_count": 137,
+            "expected_files_count": null,
+            "memory_traffic": 7734.889984130859,
+            "repo_url": "https://github.com/davisking/dlib.git",
+            "commit_ref": "fafdac37f12814981fdc97013aaef4886b6d1bc0",
+            "commit_message": "Add RMS Normalization Layer (#2999)\n\n* Add RMS Normalization Layer\r\n\r\n* Update dnn.cpp\r\n\r\n* Missing entry in visitors.h to take into account the new rms_norm_ layer\r\n\r\n* Fix test function name\r\n\r\n* Fix dangling pointer issue in CUDA implementation of rms_normalize_gradient\r\n\r\n* Fixing the dnn.cpp test program for the new rms_norm_ layer\r\n\r\n* General update of the rms_norm_ class",
+            "commit_timestamp": 1725730180.0
         }
     ]
 }
