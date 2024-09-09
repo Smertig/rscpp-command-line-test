@@ -21552,6 +21552,23 @@
             "commit_ref": "0f5033053a3d4dcf27cd488a360e64c48a36c27a",
             "commit_message": "[gn build] Port fef84c56dcd9\n",
             "commit_timestamp": 1725844517.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1725895472.507083,
+            "elapsed_time": 1639.8762893676758,
+            "x64": true,
+            "actual_files_count": 2063,
+            "expected_files_count": 1661,
+            "memory_traffic": 252621.57223510742,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "ea9204505cf1099b98b1fdcb898f0bd35e463984",
+            "commit_message": "Fix codegen for transparent_union function params (#104816)\n\nUpdate codegen for func param with transparent_union attr to be that of\r\nthe first union member.\r\n\r\nThis is a followup to #101738 to fix non-ppc codegen and closes #76773.",
+            "commit_timestamp": 1725894082.0
         }
     ]
 }

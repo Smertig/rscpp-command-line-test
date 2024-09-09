@@ -16916,6 +16916,21 @@
             "commit_ref": "93b61bc1245fb318a11d3d1a0808174b3c1bc333",
             "commit_message": "gh-123843: Remove broken links to the Zope DateTimeWiki (#123846)\n\nCo-authored-by: Conrad Bhuiyan-Volkoff <hi@cbv.im>",
             "commit_timestamp": 1725849563.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1725894500.734625,
+            "elapsed_time": 1214.2765476703644,
+            "x64": true,
+            "actual_files_count": 1049,
+            "expected_files_count": null,
+            "memory_traffic": 50484.78054046631,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "65fcaa38ada727b504ec60ae283caf8e3ebbb845",
+            "commit_message": "gh-84808: socket.connect_ex: Handle negative errno (GH-122304)\n\nPOSIX allows errno to be negative.\r\nEven though all currently supported platforms have non-negative errno,\r\nrelying on a quirk like that would make Python less portable.",
+            "commit_timestamp": 1725893953.0
         }
     ]
 }

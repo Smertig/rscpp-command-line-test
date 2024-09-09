@@ -19825,6 +19825,21 @@
             "commit_ref": "a7d942b681c5edd0cc27407d8e4d3dbf36c7a40e",
             "commit_message": "Merge pull request #26125 from asmorkalov:as/HAL_fix_nullprt_leak\n\nExcluded nullptr leak to arithmetic HAL got from empty Mat.",
             "commit_timestamp": 1725708034.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1725894422.362265,
+            "elapsed_time": 395.2517099380493,
+            "x64": true,
+            "actual_files_count": 475,
+            "expected_files_count": 459,
+            "memory_traffic": 40587.06555175781,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "79faf857d988bcbfc993f0a17cd38835d9d243d9",
+            "commit_message": "Merge pull request #26042 from pasbi:add-PtrStepSz_size\n\nAdd size() to CUDA PtrStepSz #26042\r\n\r\nAccording to [cppreference.com compiler support table](https://en.cppreference.com/w/cpp/compiler_support/17), `nvcc` supports `[[nodiscard]]` from version 11.\r\n\r\n### Pull Request Readiness Checklist\r\n\r\nSee details at https://github.com/opencv/opencv/wiki/How_to_contribute#making-a-good-pull-request\r\n\r\n- [x] I agree to contribute to the project under Apache 2 License.\r\n- [x] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\r\n- [x] The PR is proposed to the proper branch\r\n- [ ] There is a reference to the original bug report and related work\r\n- [ ] There is accuracy test, performance test and test data in opencv_extra repository, if applicable\r\n      Patch to opencv_extra has the same branch name.\r\n- [ ] The feature is well documented and sample code can be built with the project CMake\r\n\r\nRelated: https://github.com/opencv/opencv/pull/25659",
+            "commit_timestamp": 1725860846.0
         }
     ]
 }

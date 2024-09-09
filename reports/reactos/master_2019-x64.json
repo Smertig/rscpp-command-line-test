@@ -19651,6 +19651,21 @@
             "commit_ref": "bc8c7d185d059677c9fe1c112584e00181807d55",
             "commit_message": "[SHELL32] Fix CRecycleBin crash caused by PR #7173 (#7330)\n\nPR #7173 (22b913928f4a1d13120b0ec7a1c6889d37ec0e3a) fails to initialize the DELETED_FILE_RECORD struct when constructing a RecycleBin5File instance. This causes _ILCreateRecycleItem to create PIDLs without filenames and the CRecycleBin IShellFolder does not expect this to happen.\r\n\r\nAlso fixes incorrect usage of SHFileOperationW when restoring deleted files. The previous code might have worked by chance in the past if the string just happened to be double-null terminated as required by this API!",
             "commit_timestamp": 1725826095.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1725894371.666486,
+            "elapsed_time": 103.17417573928833,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7676.5407791137695,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "c4f42b5a65c5489e2b8628ec6e196ea6909c4ea2",
+            "commit_message": "[UXTHEME] DrawNCPreview: Use DrawThemeTextEx() for drawing \"Window Text\"\n\nAddendum to 118869f69 and d4dc0cb54. CORE-5991\n",
+            "commit_timestamp": 1725884814.0
         }
     ]
 }
