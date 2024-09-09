@@ -3029,6 +3029,21 @@
             "commit_ref": "da825e80b1ee68bd6dc3d21b08b725ae842a8276",
             "commit_message": "Migrated upb code generators to the new code_generator_lite.h library.\n\nThis will remove the dependency on the heavyweight code_generator target.\n\nPiperOrigin-RevId: 672093911\n",
             "commit_timestamp": 1725729396.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1725851298.985671,
+            "elapsed_time": 314.21809673309326,
+            "x64": true,
+            "actual_files_count": 1124,
+            "expected_files_count": 818,
+            "memory_traffic": 38504.663650512695,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "6d832d3aa29f1d6334493cdb064d017e871a6f9c",
+            "commit_message": "Change the parse function to use appropriate calling convention.\n\nPiperOrigin-RevId: 672326894\n",
+            "commit_timestamp": 1725829185.0
         }
     ]
 }

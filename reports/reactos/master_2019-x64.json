@@ -19636,6 +19636,21 @@
             "commit_ref": "c1e642fdb57cb5f7cbc4a83dcb4a9e18a2bd62c6",
             "commit_message": "Revert \"[SHELL32] Show Product version on About dialog bmp (#3621)\" (#7327)\n\nThis reverts commit 2636cff09fdb70bfe63c52ea9d2d24dbfc1e337f\nby C\u0103t\u0103lin Gabriel Dr\u0103ghi\u021b\u0103 (@jeffbox12) as well as any subsequent changes.\n\nThis was agreed upon by the original author on our official Mattermost\nchat (chat.reactos.org)\n\nThe reactos.bmp banners are again generated from the file:\n  dll/win32/msgina/resources/svg/reactos.svg\n",
             "commit_timestamp": 1725800147.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1725851276.737686,
+            "elapsed_time": 99.63133645057678,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7696.172630310059,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "bc8c7d185d059677c9fe1c112584e00181807d55",
+            "commit_message": "[SHELL32] Fix CRecycleBin crash caused by PR #7173 (#7330)\n\nPR #7173 (22b913928f4a1d13120b0ec7a1c6889d37ec0e3a) fails to initialize the DELETED_FILE_RECORD struct when constructing a RecycleBin5File instance. This causes _ILCreateRecycleItem to create PIDLs without filenames and the CRecycleBin IShellFolder does not expect this to happen.\r\n\r\nAlso fixes incorrect usage of SHFileOperationW when restoring deleted files. The previous code might have worked by chance in the past if the string just happened to be double-null terminated as required by this API!",
+            "commit_timestamp": 1725826095.0
         }
     ]
 }
