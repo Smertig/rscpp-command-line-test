@@ -21569,6 +21569,23 @@
             "commit_ref": "ea9204505cf1099b98b1fdcb898f0bd35e463984",
             "commit_message": "Fix codegen for transparent_union function params (#104816)\n\nUpdate codegen for func param with transparent_union attr to be that of\r\nthe first union member.\r\n\r\nThis is a followup to #101738 to fix non-ppc codegen and closes #76773.",
             "commit_timestamp": 1725894082.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1725938648.951259,
+            "elapsed_time": 1655.6878788471222,
+            "x64": true,
+            "actual_files_count": 2063,
+            "expected_files_count": 1661,
+            "memory_traffic": 252236.00415802002,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "56905dab7da50bccfcceaeb496b206ff476127e1",
+            "commit_message": "[clang] fix half && bfloat16 convert node expr codegen (#89051)\n\nData type conversion between fp16 and bf16 will generate fptrunc and\r\nfpextend nodes, but they are actually bitcast nodes.",
+            "commit_timestamp": 1725936453.0
         }
     ]
 }

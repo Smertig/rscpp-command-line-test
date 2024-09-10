@@ -19901,6 +19901,21 @@
             "commit_ref": "a744b7bb45e2f919f3e08c297476e1e7c3a11571",
             "commit_message": "server/getpart: delete unused code\n\nFollow-up to 2610142139d14265ed9acf9ed83cdf73d6bb4d05 #8378\nCloses #14829\n",
             "commit_timestamp": 1725893856.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1725937646.216586,
+            "elapsed_time": 253.19175362586975,
+            "x64": true,
+            "actual_files_count": 3083,
+            "expected_files_count": 2323,
+            "memory_traffic": 43592.53955078125,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "b61d6e088e422694636eabe8da316c8eb4e7c243",
+            "commit_message": "GHA/linux-old: add an autoconf/automake build\n\nThis verifies that using older autotools still works. The results of the\nautoconf build should end up being identical to the second of the two\ncmake builds (the difference in the platform string notwithstanding).\n\nCloses #14816\n",
+            "commit_timestamp": 1725902351.0
         }
     ]
 }

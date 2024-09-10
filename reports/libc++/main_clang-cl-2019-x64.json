@@ -1495,6 +1495,23 @@
             "commit_ref": "6cc3bf7d1d343f910b40cee24d4cda873a6ddd55",
             "commit_message": "[mlir][tensor] Add canonicalization to fold consecutive tensor.pad ops (#107302)\n\n`tensor.pad(tensor.pad)` with the same constant padding value can be\r\ncombined into a single pad that pads to the sum of the high and low\r\npadding amounts.",
             "commit_timestamp": 1725894337.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1725937800.623965,
+            "elapsed_time": 83.10156154632568,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 6546.515625,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "56905dab7da50bccfcceaeb496b206ff476127e1",
+            "commit_message": "[clang] fix half && bfloat16 convert node expr codegen (#89051)\n\nData type conversion between fp16 and bf16 will generate fptrunc and\r\nfpextend nodes, but they are actually bitcast nodes.",
+            "commit_timestamp": 1725936453.0
         }
     ]
 }
