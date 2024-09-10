@@ -19916,6 +19916,21 @@
             "commit_ref": "b61d6e088e422694636eabe8da316c8eb4e7c243",
             "commit_message": "GHA/linux-old: add an autoconf/automake build\n\nThis verifies that using older autotools still works. The results of the\nautoconf build should end up being identical to the second of the two\ncmake builds (the difference in the platform string notwithstanding).\n\nCloses #14816\n",
             "commit_timestamp": 1725902351.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1725980776.019231,
+            "elapsed_time": 241.53146123886108,
+            "x64": true,
+            "actual_files_count": 3055,
+            "expected_files_count": 2323,
+            "memory_traffic": 46223.654708862305,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "813995bb17da4a41c32235feeab156bf1d5bc059",
+            "commit_message": "GHA/windows: raise test run timeouts\n\nGive more time for recently enabled TLS tests to complete.\n\nFollow-up to bc72a78a11764558639131d51fa8e7c81ee1e113 #14488\nRef: #14849\nCloses #14851\n",
+            "commit_timestamp": 1725976535.0
         }
     ]
 }
