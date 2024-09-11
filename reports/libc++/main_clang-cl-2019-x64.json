@@ -1546,6 +1546,23 @@
             "commit_ref": "3dad29b677e427bf69c035605a16efd065576829",
             "commit_message": "[LTO] Remove unused includes (NFC) (#108110)\n\nclangd reports these as unused headers.  My manual inspection agrees\r\nwith the findings.",
             "commit_timestamp": 1726022164.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1726067306.212725,
+            "elapsed_time": 83.36227083206177,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 6592.104515075684,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "512cecad4c384c84b79fea050a755cb7e46c6ac5",
+            "commit_message": "[clang][transformer] Make `describe()` terser for `NamedDecl`s. (#108215)\n\nRight now `describe()`ing a `FunctionDecl` dups the whole code of the\r\nfunction. Dump only its name.",
+            "commit_timestamp": 1726066967.0
         }
     ]
 }
