@@ -20073,6 +20073,21 @@
             "commit_ref": "a8047b2e46e357737abb6283fccebc1d1b4f3f8f",
             "commit_message": "keyof - fix LUAU_ASSERT when there's only one key entry (#1388)\n\nFixes https://github.com/luau-lang/luau/issues/1387\r\n\r\nWas suggested by @alexmccord \r\n\r\nI changed ``singletons[0]`` to ``singletons.front()``, unsure if that\r\nmakes a huge difference, and then I added the rest of the things needed\r\nfor the return type.\r\n\r\nMaybe it's also the ideal location since doing it before looping through\r\n``keys`` won't add the string into the type arena.\r\n\r\nI put comments next to it based on how I thought it would make sense.\r\n\r\n&nbsp;\r\n\r\n``LUAU_ASSERT`` seems to trigger when there's only one entry being put\r\ninside a UnionType. It's as if it was put there for quality.\r\n\r\nAllow edits by maintainers is enabled.\r\n\r\n\r\nI tested this with a quick Unit Test something like\r\n\r\n```lua\r\nlocal test: keyof<typeof({a=\"test\"})>\r\n```",
             "commit_timestamp": 1725915093.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1726023955.395022,
+            "elapsed_time": 278.17655968666077,
+            "x64": true,
+            "actual_files_count": 461,
+            "expected_files_count": 379,
+            "memory_traffic": 31932.847045898438,
+            "repo_url": "https://github.com/luau-lang/luau",
+            "commit_ref": "a8047b2e46e357737abb6283fccebc1d1b4f3f8f",
+            "commit_message": "keyof - fix LUAU_ASSERT when there's only one key entry (#1388)\n\nFixes https://github.com/luau-lang/luau/issues/1387\r\n\r\nWas suggested by @alexmccord \r\n\r\nI changed ``singletons[0]`` to ``singletons.front()``, unsure if that\r\nmakes a huge difference, and then I added the rest of the things needed\r\nfor the return type.\r\n\r\nMaybe it's also the ideal location since doing it before looping through\r\n``keys`` won't add the string into the type arena.\r\n\r\nI put comments next to it based on how I thought it would make sense.\r\n\r\n&nbsp;\r\n\r\n``LUAU_ASSERT`` seems to trigger when there's only one entry being put\r\ninside a UnionType. It's as if it was put there for quality.\r\n\r\nAllow edits by maintainers is enabled.\r\n\r\n\r\nI tested this with a quick Unit Test something like\r\n\r\n```lua\r\nlocal test: keyof<typeof({a=\"test\"})>\r\n```",
+            "commit_timestamp": 1725915093.0
         }
     ]
 }

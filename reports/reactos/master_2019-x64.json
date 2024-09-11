@@ -19696,6 +19696,21 @@
             "commit_ref": "945e856031137b566e616248e2f80c92be807c45",
             "commit_message": "[DESK] _countof and rc-trivia (#7298)\n\n\r\n- use _countof() consistently throughout the module instead of mixed ARRAYSIZE/countof.\r\n\r\nIn *.rc:\r\n- the 3 AUTORADIOBUTTONS should not end with dots. In Windows 2k3sp2 ARB do never end with dots, I double-checked that here also in desk.cpl\r\n- all 3 ARB should have an accel. I added the german ones, and added FIXMEs where I didn't know the correct accels\r\n- the GROUPBOX IDC_SCREENS_DUMMY2 should not have an accel, but the only button in there PUSHBUTTON IDC_SCREENS_POWER_BUTTON should have an accel. This fixes a few existing accel collisions, e.g. in nl-NL.rc\r\n- add a few additional FIXMEs for missing accels where I stumbled over them (most of them I fixed by guessing in the older branches, but I think it makes sense to let the actual native speakers fix them with the same accel that would be used in the 2k3sp2-version of *their* language)\r\n- ro-RO.rc: Fix the forbidden characters according to the romanian-translation-rules\r\n\r\nI noticed those glitches while porting back stuff, and acted on the FIXMEs in the backport instead of just fingerpointing to them (what I did on master).",
             "commit_timestamp": 1725925568.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1726023940.889216,
+            "elapsed_time": 77.11563611030579,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7652.496711730957,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "cf26321e3b136cf81948a5d768124f2825f968aa",
+            "commit_message": "[DESK] *.rc: Strip \", 0, 0\" from the only font-line which is doing that (#7337)\n\n\r\nEach language had exactly one dlg which specified its font like that.\r\nAll other dialogs didn't use that style.\r\n\r\nThis doesn't fix anything. It also doesn't shrink the binary.\r\nIt just saves a few keystrokes in the rc's.\r\nShorter is better. Pure janitorial.",
+            "commit_timestamp": 1726007750.0
         }
     ]
 }
