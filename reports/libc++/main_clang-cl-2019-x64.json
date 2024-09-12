@@ -1563,6 +1563,23 @@
             "commit_ref": "512cecad4c384c84b79fea050a755cb7e46c6ac5",
             "commit_message": "[clang][transformer] Make `describe()` terser for `NamedDecl`s. (#108215)\n\nRight now `describe()`ing a `FunctionDecl` dups the whole code of the\r\nfunction. Dump only its name.",
             "commit_timestamp": 1726066967.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1726110524.490678,
+            "elapsed_time": 79.5326497554779,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 6561.392669677734,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "5e80fc88f484b471ec61ac28894698a946c4fb89",
+            "commit_message": "[opt] Fix opt for LLVM_ENABLE_EXPORTED_SYMBOLS_IN_EXECUTABLES=Off.\n\nBuilding with -DLLVM_ENABLE_EXPORTED_SYMBOLS_IN_EXECUTABLES=Off should not\nprevent use of opt plugins.\n\nThis fix uses the approach implemented in\nhttps://github.com/llvm/llvm-project/pull/101741.\n\nrdar://135841478\n",
+            "commit_timestamp": 1726109433.0
         }
     ]
 }
