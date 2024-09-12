@@ -21654,6 +21654,23 @@
             "commit_ref": "5e80fc88f484b471ec61ac28894698a946c4fb89",
             "commit_message": "[opt] Fix opt for LLVM_ENABLE_EXPORTED_SYMBOLS_IN_EXECUTABLES=Off.\n\nBuilding with -DLLVM_ENABLE_EXPORTED_SYMBOLS_IN_EXECUTABLES=Off should not\nprevent use of opt plugins.\n\nThis fix uses the approach implemented in\nhttps://github.com/llvm/llvm-project/pull/101741.\n\nrdar://135841478\n",
             "commit_timestamp": 1726109433.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1726154639.125576,
+            "elapsed_time": 1734.7237691879272,
+            "x64": true,
+            "actual_files_count": 2066,
+            "expected_files_count": 1661,
+            "memory_traffic": 252649.07585144043,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "8cf3eb49a5d9831620b290b9a0686149bd438267",
+            "commit_message": "[gn build] Port a409ebc1fc13\n",
+            "commit_timestamp": 1726152603.0
         }
     ]
 }

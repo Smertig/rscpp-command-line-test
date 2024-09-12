@@ -3134,6 +3134,21 @@
             "commit_ref": "05a8a4012351b07010afbc76892fe7919d0cb964",
             "commit_message": "Protobuf Lite ArrayLists: Defer allocating backing array until we have some idea how much to allocate.\n\nThis avoids allocating a backing array of size 10 when we are adding >10 elements.\n- If we are adding objects one at a time, inflate a Object[10] and continue.\n- If we are adding objects from a Collection, assume this is the only collection we are adding, and inflate a `Object[collection.size()]`\n- If the existing array is non-empty, resize the array by 1.5x exponential growth as usual.\n\nThere's another small change where if we're addAll(<10 elements), we allocate an exact-sized backing array (e.g. size=3), rather than rounding up to size 10. See android/LiteAllocationTest. I think this is good: this will save memory in the common case of just calling .addAll() once, and if we call addAll twice, we grow still exponentially. But we could decide to avoid this or split it out into its own change.\n\nThis change involves moving some logic out of GeneratedMessageLite. I think the default size of the backing array is better handled inside ProtobufArrayList than inside GeneratedMessageLite's wrapper function.\n\nPiperOrigin-RevId: 673612155\n",
             "commit_timestamp": 1726103663.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1726153603.720551,
+            "elapsed_time": 324.93981742858887,
+            "x64": true,
+            "actual_files_count": 1146,
+            "expected_files_count": 818,
+            "memory_traffic": 38729.727310180664,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "4c38e117acd48750d06f7126d5ca6306028f2ddc",
+            "commit_message": "Use crate:: for assert_linked instead of super::super::\n\nPiperOrigin-RevId: 673847235\n",
+            "commit_timestamp": 1726153416.0
         }
     ]
 }
