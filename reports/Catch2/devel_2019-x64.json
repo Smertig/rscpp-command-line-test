@@ -21353,6 +21353,21 @@
             "commit_ref": "bc63412e2a3b3e39e178ea75953522f78b840aa7",
             "commit_message": "Suppress GCC useless-cast warning from CHECK_THROWS_MATCHES\n\nSuppress warning from GCC about useless cast in the\nCHECK_THROWS_MATCHES macro the same way it is already being done for\nthe similar CHECK macros.\n",
             "commit_timestamp": 1725631475.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1726239952.86079,
+            "elapsed_time": 69.74086713790894,
+            "x64": true,
+            "actual_files_count": 282,
+            "expected_files_count": 272,
+            "memory_traffic": 4435.074264526367,
+            "repo_url": "https://github.com/catchorg/Catch2.git",
+            "commit_ref": "02d3304782c715cb787e53a20f4e44ec249d3466",
+            "commit_message": "Fix bug in TokenStream parser\n\nWhen presented with just '-' it would access the string at position [1]\n",
+            "commit_timestamp": 1726234369.0
         }
     ]
 }

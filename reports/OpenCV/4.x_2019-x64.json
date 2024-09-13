@@ -19945,6 +19945,21 @@
             "commit_ref": "4c81e174bfb28e67251d33ac812ba0cc57a2f3c4",
             "commit_message": "Merge pull request #25901 from mshabunin:fix-riscv-aarch-baseline\n\nRISC-V/AArch64: disable CPU features detection #25901\r\n\r\nThis PR is the first step in fixing current issues with NEON/RVV, FP16, BF16 and other CPU features on AArch64 and RISC-V platforms.\r\n\r\nOn AArch64 and RISC-V platforms we usually have the platform set by default in the toolchain when we compile it or in the cmake toolchain file or in CMAKE_CXX_FLAGS by user. Then, there are two ways to set platform options: a) \"-mcpu=<some_cpu>\" ; b) \"-march=<arch description>\" (e.g. \"rv64gcv\"). Furthermore, there are no similar \"levels\" of optimizations as for x86_64, instead we have features (RVV, FP16,...) which can be enabled or disabled. So, for example, if a user has \"rv64gc\" set by the toolchain and we want to enable RVV. Then we need to somehow parse their current feature set and append \"v\" (vector optimizations) to this string. This task is quite hard and the whole procedure is prone to errors.\r\n\r\nI propose to use \"CPU_BASELINE=DETECT\" by default on AArch64 and RISC-V platforms. And somehow remove other features or make them read-only/detect-only, so that OpenCV wouldn't add any extra \"-march\" flags to the default configuration. We would rely only on the flags provided by the compiler and cmake toolchain file. We can have some predefined configurations in our cmake toolchain files.\r\n\r\nChanges made by this PR:\r\n- `CMakeLists.txt`: \r\n  - use `CMAKE_CROSSCOMPILING` instead of `CMAKE_TOOLCHAIN_FILE` to detect cross-compilation. This might be useful in cases of native compilation with a toolchain file\r\n  - removed obsolete variables `ENABLE_NEON` and `ENABLE_VFPV3`, the first one have been turned ON by default on AArch64 platform which caused setting `CPU_BASELINE=NEON`\r\n  - raise minimum cmake version allowed to 3.7 to allow using `CMAKE_CXX_FLAGS_INIT` in toolchain files\r\n- added separate files with arch flags for native compilation on AArch64 and RISC-V, these files will be used in our toolchain files and in regular cmake\r\n- use `DETECT` as default value for `CPU_BASELINE` also allow `NATIVE`, warn user if other values were used (only for AArch64 and RISC-V)\r\n- for each feature listed in `CPU_DISPATCH` check if corresponding `CPU_${opt}_FLAGS_ON` has been provided, warn user if it is empty (only for AArch64 and RISC-V)\r\n- use `CPU_BASELINE_DISABLE` variable to actually turn off macros responsible for corresponding features even if they are enabled by compiler\r\n- removed Aarch64 feature merge procedure (it didn't support `-mcpu` and built-in `-march`)\r\n- reworked AArch64 and two RISC-V cmake toolchain files (does not affect Android/OSX/iOS/Win):\r\n  - use `CMAKE_CXX_FLAGS_INIT` to set compiler flags\r\n  - use variables `ENABLE_BF16`, `ENABLE_DOTPROD`, `ENABLE_RVV`, `ENABLE_FP16` to control `-march`\r\n  - AArch64: removed other compiler and linker flags\r\n    - `-fdata-sections`, `-fsigned-char`, `-Wl,--no-undefined`, `-Wl,--gc-sections`   - already set by OpenCV\r\n    - `-Wa,--noexecstack`, `-Wl,-z,noexecstack`, `-Wl,-z,relro`, `-Wl,-z,now` - can be enabled by OpenCV via `ENABLE_HARDENING`\r\n    - `-Wno-psabi` - this option used to disable some warnings on older ARM platforms, shouldn't harm\r\n  - ARM: removed same common flags as for AArch64, but left `-mthumb` and `--fix-cortex-a8`, `-z nocopyreloc`\r\n",
             "commit_timestamp": 1726153644.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1726240117.157231,
+            "elapsed_time": 408.961834192276,
+            "x64": true,
+            "actual_files_count": 475,
+            "expected_files_count": 459,
+            "memory_traffic": 40571.85492706299,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "e1fec1562714eb41ae48f97310b254618a26d248",
+            "commit_message": "Merge pull request #26148 from mshabunin:fix-sift-corruption\n\nfeatures2d: fixed out of bounds access in SIFT",
+            "commit_timestamp": 1726231560.0
         }
     ]
 }

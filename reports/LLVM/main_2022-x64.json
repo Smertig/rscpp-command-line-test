@@ -21688,6 +21688,23 @@
             "commit_ref": "dee058f9e3ae95b8f4b95034b65c3d7408060c8e",
             "commit_message": "[RISCV] Emit predefined macro __riscv_cmodel_large for large code model (#108131)\n\nCo-authored-by: patrick <patrick@andestech.com>",
             "commit_timestamp": 1726195068.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1726240929.144541,
+            "elapsed_time": 1600.100855588913,
+            "x64": true,
+            "actual_files_count": 2066,
+            "expected_files_count": 1661,
+            "memory_traffic": 252896.1926422119,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "99fe5954d258511ec2e36e8c7f612568e9701ab7",
+            "commit_message": "[libc] implement clock_gettime using vDSO (#108458)\n\nsupersedes https://github.com/llvm/llvm-project/pull/91805",
+            "commit_timestamp": 1726239519.0
         }
     ]
 }

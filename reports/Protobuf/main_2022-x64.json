@@ -3164,6 +3164,21 @@
             "commit_ref": "8130f3922771e674b5e8aa10d306a4ae31044bf1",
             "commit_message": "Stop duplicating the supported PHP version (link to the support page instead).\n\nPiperOrigin-RevId: 674070935\n",
             "commit_timestamp": 1726187382.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1726240014.992835,
+            "elapsed_time": 320.5937476158142,
+            "x64": true,
+            "actual_files_count": 1148,
+            "expected_files_count": 818,
+            "memory_traffic": 38792.0834274292,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "4834eb75cb30cf25e1ee296f4be5ed27e57d9fa0",
+            "commit_message": "Move some :unittest_(cpp|upb)_rust_proto target to be colocated with the .proto file that defines them\n\nThis CL doesn't unbreak the bazel tests, but is yak shaving in prep for changes that will. This makes it more straightforward how the tests are broken by having bazel test rules name rust proto library targets that don't exist in bazel repo, instead of naming targets that do exist but are bogus.\n\nAlso correct unittest_edition target to match the order of words in the .proto file name (edition_unittest)\n\nPiperOrigin-RevId: 674295376\n",
+            "commit_timestamp": 1726239255.0
         }
     ]
 }

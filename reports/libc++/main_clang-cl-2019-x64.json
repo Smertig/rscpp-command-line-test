@@ -1614,6 +1614,23 @@
             "commit_ref": "dee058f9e3ae95b8f4b95034b65c3d7408060c8e",
             "commit_message": "[RISCV] Emit predefined macro __riscv_cmodel_large for large code model (#108131)\n\nCo-authored-by: patrick <patrick@andestech.com>",
             "commit_timestamp": 1726195068.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1726240164.094911,
+            "elapsed_time": 77.34394311904907,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 6553.6900634765625,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "ea5d37f4c1fd9c0850bee35958568a8b6596b3f9",
+            "commit_message": "[LLD][COFF] Add Support for ARM64EC Import Thunks (#108460)\n\nARM64EC import thunks function similarly to regular ARM64 thunks but use\r\na mangled name and perform the call through the auxiliary IAT.",
+            "commit_timestamp": 1726239902.0
         }
     ]
 }

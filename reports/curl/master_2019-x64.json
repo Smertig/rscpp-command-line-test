@@ -20006,6 +20006,21 @@
             "commit_ref": "8ca60308398e42d77d140ebe5c3331c6e086d355",
             "commit_message": "RELEASE-NOTES: synced\n",
             "commit_timestamp": 1726165901.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1726239960.053394,
+            "elapsed_time": 235.49088215827942,
+            "x64": true,
+            "actual_files_count": 3056,
+            "expected_files_count": 2323,
+            "memory_traffic": 45318.89633178711,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "89728451234ae39a001098157d43633d7eb3f3db",
+            "commit_message": "vtls/rustls: support strong CSRNG data\n\nNow that the curl rustls vtls backend is using rustls 0.14 we can\naddress the weak random situation by using\n`rustls_default_crypto_provider_random()` to provide a `Curl_ssl`\n`random` callback that fills the provided buffer with cryptographically\nsecure random data.\n\nThe mentions in `docs/` about weak RNG when using rustls are removed as\nthey are no longer applicable.\n\nCloses #14889\n",
+            "commit_timestamp": 1726229516.0
         }
     ]
 }
