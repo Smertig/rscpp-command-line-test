@@ -19991,6 +19991,21 @@
             "commit_ref": "70d3a9b6aa69ffdd9435e168463cfabd21e17cd1",
             "commit_message": "http2: when uploading data from stdin, fix eos forwarding\n\nWhen uploading data from stdin ('-T -'), and the EOS was only detected\non a 0-length read, the EOS was not forwarded to the filters. This led\nHTTP/2 to hang on not forwarding this to the server.\n\nAdded test_07_14 to reproduce and verify.\n\nFixes #14870\nReported-by: nekopsykose on github\nCloses #14877\n",
             "commit_timestamp": 1726141598.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1726196801.026024,
+            "elapsed_time": 232.60575008392334,
+            "x64": true,
+            "actual_files_count": 3055,
+            "expected_files_count": 2323,
+            "memory_traffic": 45698.57125091553,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "8ca60308398e42d77d140ebe5c3331c6e086d355",
+            "commit_message": "RELEASE-NOTES: synced\n",
+            "commit_timestamp": 1726165901.0
         }
     ]
 }
