@@ -17586,6 +17586,21 @@
             "commit_ref": "806d7409daee6b367270b6380488e2ba661732b1",
             "commit_message": "Refactor\n",
             "commit_timestamp": 1725706038.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1726283190.370034,
+            "elapsed_time": 129.82467985153198,
+            "x64": true,
+            "actual_files_count": 550,
+            "expected_files_count": null,
+            "memory_traffic": 16227.613395690918,
+            "repo_url": "https://github.com/rui314/mold",
+            "commit_ref": "431fc39db00afb6b5dc9ac7260cd49823fa19160",
+            "commit_message": "Change how we handle word-size absolute relocations\n\nWord-size absolute relocations, such as R_X86_64_64, are special from\nthe linker's point of view because only such symbols can be promoted\nto dynamic symbols. This patch handles them separately.\n",
+            "commit_timestamp": 1726282760.0
         }
     ]
 }

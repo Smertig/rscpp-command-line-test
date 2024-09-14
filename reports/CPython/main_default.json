@@ -17051,6 +17051,21 @@
             "commit_ref": "bb904e063d0cbe4c7c83ebfa5fbed2d9c4980a64",
             "commit_message": "closes gh-124016: update Unicode to 16.0.0 (#124017)\n\n",
             "commit_timestamp": 1726238824.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1726283350.811582,
+            "elapsed_time": 1142.466471672058,
+            "x64": true,
+            "actual_files_count": 1051,
+            "expected_files_count": null,
+            "memory_traffic": 50653.21541595459,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "b02301fa5a543266ee310a6d98278d2b8e26d7b3",
+            "commit_message": "gh-124068: Fix reference leak with generators in the free-threaded build (#124069)\n\nIf the generator is already cleared, then most fields in the\r\ngenerator's frame are not valid other than f_executable. The invalid\r\nfields may contain dangling pointers and should not be used.",
+            "commit_timestamp": 1726279347.0
         }
     ]
 }
