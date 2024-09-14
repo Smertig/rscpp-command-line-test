@@ -17601,6 +17601,21 @@
             "commit_ref": "431fc39db00afb6b5dc9ac7260cd49823fa19160",
             "commit_message": "Change how we handle word-size absolute relocations\n\nWord-size absolute relocations, such as R_X86_64_64, are special from\nthe linker's point of view because only such symbols can be promoted\nto dynamic symbols. This patch handles them separately.\n",
             "commit_timestamp": 1726282760.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1726326327.127718,
+            "elapsed_time": 121.52421689033508,
+            "x64": true,
+            "actual_files_count": 550,
+            "expected_files_count": null,
+            "memory_traffic": 16222.249618530273,
+            "repo_url": "https://github.com/rui314/mold",
+            "commit_ref": "82feeed693031d19ff8f4e08d3c6f45c7f7ef36e",
+            "commit_message": "Build mold binary with mold\n",
+            "commit_timestamp": 1726308711.0
         }
     ]
 }
