@@ -20066,6 +20066,21 @@
             "commit_ref": "8709404fe9f6696ac7d4c6d1c43529acbb311f5e",
             "commit_message": "GHA/macos: make impacket found by tests\n\nAlso move impacket installation right before the test run to avoid\nspending 10s installing if the build fails.\n\nCloses #14913\n",
             "commit_timestamp": 1726362768.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1726412743.512654,
+            "elapsed_time": 235.93067979812622,
+            "x64": true,
+            "actual_files_count": 3056,
+            "expected_files_count": 2323,
+            "memory_traffic": 46102.28338623047,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "0ba70dd13c865da48871bbfd9a540969939b309c",
+            "commit_message": "singleuse: drop `Curl_memrchr()` for no-HTTP builds\n\nMake single-use function check CI test pass by dropping the global\n`Curl_memrchr()` function from the build when it has no caller.\n\nFixes:\n```\nCurl_memrchr in curl_memrchr\n```\nhttps://github.com/curl/curl/actions/runs/10816280747/job/30007145114\n\nSeen while migrating affected job from Azure to GHA.\nRef: #14859\n\nCloses #14919\n",
+            "commit_timestamp": 1726410804.0
         }
     ]
 }

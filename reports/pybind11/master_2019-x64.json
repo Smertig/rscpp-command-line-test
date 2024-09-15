@@ -21388,6 +21388,21 @@
             "commit_ref": "0cf3a0f7b514b3a3fb541ad3197964fa5c4da554",
             "commit_message": "ci: PyPI attestations (#5374)\n\n",
             "commit_timestamp": 1726273303.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1726412774.297498,
+            "elapsed_time": 165.41934847831726,
+            "x64": true,
+            "actual_files_count": 356,
+            "expected_files_count": 197,
+            "memory_traffic": 18389.51969909668,
+            "repo_url": "https://github.com/pybind/pybind11",
+            "commit_ref": "a7910be6307e442297e55c84901a96dd0d046e93",
+            "commit_message": "Add warn disable for GGC 12 bound checking error (#5355)\n\nIssue: #5224\r\n\r\nThe `internals.registered_types_py...` line in pybind11.h triggers a\r\nfalse-positive bounds checking warning in GCC 12.\r\n\r\nThis is discussed in\r\nhttps://gcc.gnu.org/bugzilla/show_bug.cgi?id=115824.\r\n\r\nThe workaround implemented is taken from suggestions then refactored to\r\nuse the `PYBIND11_WARNING_PUSH` and `PYBIND11_WARNING_POP` MACROS.",
+            "commit_timestamp": 1726383110.0
         }
     ]
 }

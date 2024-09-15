@@ -3224,6 +3224,21 @@
             "commit_ref": "48ff2328be2734589940fe4bdc4ea52b30d89daf",
             "commit_message": "Update rules_pkg to get fix for timestamp warning (#18263)\n\nWithout this, we get many warnings about deprecated timestamp methods in python.\n\nCloses #18263\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/18263 from tempoz:tempoz-update-rules-pkg aabe3d8db6818018daa565553434052d632aa359\nPiperOrigin-RevId: 674661085\n",
             "commit_timestamp": 1726328959.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1726412717.258316,
+            "elapsed_time": 292.6545362472534,
+            "x64": true,
+            "actual_files_count": 1148,
+            "expected_files_count": 818,
+            "memory_traffic": 38788.26100921631,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "372ddb308be33fed837043a2446f7b2305dcb075",
+            "commit_message": "Support --incompatible_enable_proto_toolchain_resolution\n\nMove toolchain types into protobuf repo\nAdd default registrations for them (building from sources)\n\nPiperOrigin-RevId: 674801639\n",
+            "commit_timestamp": 1726384125.0
         }
     ]
 }
