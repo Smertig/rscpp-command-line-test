@@ -17081,6 +17081,21 @@
             "commit_ref": "9dacf430c2f4af2acd870291a649b7b957efcd2c",
             "commit_message": "Remove unused `_allowed_types` from `typing.py` (#124090)\n\n",
             "commit_timestamp": 1726319685.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1726370088.458226,
+            "elapsed_time": 1140.1382422447205,
+            "x64": true,
+            "actual_files_count": 1051,
+            "expected_files_count": null,
+            "memory_traffic": 50623.34767913818,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "401fff7423ca3c8bf1d02e594edfd1412616a559",
+            "commit_message": "gh-121459: Add missing return to _PyDict_LoadGlobalStackRef (#124085)\n\nWe need to return immediately if there's an error during dictionary\r\nlookup.\r\n\r\nAlso avoid the conditional-if operator. MSVC versions through v19.27 miscompile\r\ncompound literals with side effects within a conditional operator. This caused\r\ncrashes in the Windows10 buildbot.",
+            "commit_timestamp": 1726338595.0
         }
     ]
 }

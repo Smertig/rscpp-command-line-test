@@ -3209,6 +3209,21 @@
             "commit_ref": "a7d47b3ebfd59574b89ff96a726ca176f18d4911",
             "commit_message": "Fix warnings stating that `always_inline` functions must also be declared `inline` (#18243)\n\nCloses #18243\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/18243 from tempoz:tempoz-add-inline 51f20fa941e34fe142003279e5bb0abd4c771e4f\nPiperOrigin-RevId: 674603701\n",
             "commit_timestamp": 1726306403.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1726369975.187879,
+            "elapsed_time": 331.564982175827,
+            "x64": true,
+            "actual_files_count": 1148,
+            "expected_files_count": 818,
+            "memory_traffic": 38836.705963134766,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "48ff2328be2734589940fe4bdc4ea52b30d89daf",
+            "commit_message": "Update rules_pkg to get fix for timestamp warning (#18263)\n\nWithout this, we get many warnings about deprecated timestamp methods in python.\n\nCloses #18263\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/18263 from tempoz:tempoz-update-rules-pkg aabe3d8db6818018daa565553434052d632aa359\nPiperOrigin-RevId: 674661085\n",
+            "commit_timestamp": 1726328959.0
         }
     ]
 }
