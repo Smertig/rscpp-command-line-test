@@ -17111,6 +17111,21 @@
             "commit_ref": "401fff7423ca3c8bf1d02e594edfd1412616a559",
             "commit_message": "gh-121459: Add missing return to _PyDict_LoadGlobalStackRef (#124085)\n\nWe need to return immediately if there's an error during dictionary\r\nlookup.\r\n\r\nAlso avoid the conditional-if operator. MSVC versions through v19.27 miscompile\r\ncompound literals with side effects within a conditional operator. This caused\r\ncrashes in the Windows10 buildbot.",
             "commit_timestamp": 1726338595.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1726456555.930116,
+            "elapsed_time": 1191.8217191696167,
+            "x64": true,
+            "actual_files_count": 1051,
+            "expected_files_count": null,
+            "memory_traffic": 50656.70169830322,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "56470004e58911b146c016fc9fec4461b8f69454",
+            "commit_message": "gh-121404: update CODEOWNERS (#124109)\n\n",
+            "commit_timestamp": 1726428082.0
         }
     ]
 }

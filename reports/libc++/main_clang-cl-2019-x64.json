@@ -1699,6 +1699,23 @@
             "commit_ref": "43f044ba7ea2cd668805c01055eb2dff70532ba3",
             "commit_message": "[LLVM][TableGen] Change CodeGenTarget to use const RecordKeeper (#108752)\n\nChange CodeGenTarget to use const RecordKeeper.\r\n\r\nThis is a part of effort to have better const correctness in TableGen\r\nbackends:\r\n\r\n\r\nhttps://discourse.llvm.org/t/psa-planned-changes-to-tablegen-getallderiveddefinitions-api-potential-downstream-breakages/81089",
             "commit_timestamp": 1726410828.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1726456518.881157,
+            "elapsed_time": 78.41465926170349,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 6574.7584228515625,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "095b41c6eedb3acc908dc63ee91ff77944c07d75",
+            "commit_message": "[mlir] Reland 5a6e52d6ef96d2bcab6dc50bdb369662ff17d2a0 with update (NFC)\n\nExcluded updates to mlir/lib/AsmParser/Parser.cpp ,\nwhich caused LIT failure \"FAIL: MLIR::completion.test\" on multiple buildbots.\n",
+            "commit_timestamp": 1726454728.0
         }
     ]
 }

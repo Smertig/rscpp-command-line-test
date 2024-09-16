@@ -20081,6 +20081,21 @@
             "commit_ref": "0ba70dd13c865da48871bbfd9a540969939b309c",
             "commit_message": "singleuse: drop `Curl_memrchr()` for no-HTTP builds\n\nMake single-use function check CI test pass by dropping the global\n`Curl_memrchr()` function from the build when it has no caller.\n\nFixes:\n```\nCurl_memrchr in curl_memrchr\n```\nhttps://github.com/curl/curl/actions/runs/10816280747/job/30007145114\n\nSeen while migrating affected job from Azure to GHA.\nRef: #14859\n\nCloses #14919\n",
             "commit_timestamp": 1726410804.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1726456353.277669,
+            "elapsed_time": 215.32502913475037,
+            "x64": true,
+            "actual_files_count": 3056,
+            "expected_files_count": 2323,
+            "memory_traffic": 43369.919525146484,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "71a83b87898d706986e473064d0b99c0fb836f3a",
+            "commit_message": "GHA/non-native: enable SFTP/SCP tests on FreeBSD\n\nIt's working now. Possibly fixed in the runner env?\n\nCloses #14920\n",
+            "commit_timestamp": 1726441375.0
         }
     ]
 }
