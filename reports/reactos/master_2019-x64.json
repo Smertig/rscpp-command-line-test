@@ -19861,6 +19861,21 @@
             "commit_ref": "301675c112f65de2ae1f1cc0a1378ecb90df9613",
             "commit_message": "[RAPPS] Respect partial settings configuration (#7247)\n\nInstead of defaulting all settings if any setting is missing, respect any setting that is already set and default the rest.",
             "commit_timestamp": 1726440713.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1726499185.354768,
+            "elapsed_time": 103.64899682998657,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7671.727355957031,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "96c65e94e1621efb8989aa5ee93961ad1690c6ba",
+            "commit_message": "[NTOS:MM] Properly handle execution in NX section\n\nThis prevents processes from looping forever, thinking the fault was already resolbed, because the page is writable.\n",
+            "commit_timestamp": 1726491883.0
         }
     ]
 }
