@@ -20111,6 +20111,21 @@
             "commit_ref": "8a7efdb87601c6384bb31225f845c0a8b6f1ce22",
             "commit_message": "GHA: misc updates: impacket, timeouts, mingw-w64 32-bit\n\n- NetBSD: enable impacket. Debatable if this hefty package is worth it\n  for the single SMB test (1451) run curl uses it for.\n  (on the upside, it seems to install instantly on NetBSD)\n  It's also a versioned package name that requires active maintenance.\n  The unversioned name doesn't work, though that's what the package\n  search returns: https://pkgsrc.se/net/py-impacket\n\n- FreeBSD: stop installing impacket deps explicitly.\n  They are automatically installed via the impacket package.\n\n- Linux: put time limit on test runs.\n  Started hanging yesterday:\n  linux: https://github.com/curl/curl/actions/runs/10875011573/job/30172946986#step:41:3731\n  awslc: https://github.com/curl/curl/actions/runs/10879782864/job/30185188509\n  wolfssl: https://github.com/curl/curl/actions/runs/10879782864/job/30185188509\n\n- distcheck: reduce time limit to 15m (was 30m)\n  Linux tests started to hang, so reduce the timeout from 30 minutes\n  to 15. These jobs normally take 3 to 6 minutes to finish.\n  https://github.com/curl/curl/actions/runs/10879479914\n\n- Windows: add 32-bit MSYS2/mingw-w64 job.\n  Follow-up to e53523fef07894991c69d907a7c7794c7ada4ff4 #14859\n\nCloses #14929\n",
             "commit_timestamp": 1726494201.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1726542436.879458,
+            "elapsed_time": 219.27075147628784,
+            "x64": true,
+            "actual_files_count": 3056,
+            "expected_files_count": 2323,
+            "memory_traffic": 43173.622901916504,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "89de543204346c7b2a10a326b504d87ac5ea7f35",
+            "commit_message": "GHA/non-native: bump vmactions/omnios-vm from 1.0.2 to 1.0.6\n\nBumps [vmactions/omnios-vm](https://github.com/vmactions/omnios-vm) from 1.0.2 to 1.0.6.\n- [Release notes](https://github.com/vmactions/omnios-vm/releases)\n- [Commits](https://github.com/vmactions/omnios-vm/compare/a61ca1ebafdcb14a9d986928d070c9834ee66fd3...2f97978b477e0a014767f65ecf3656b933541460)\n",
+            "commit_timestamp": 1726534708.0
         }
     ]
 }
