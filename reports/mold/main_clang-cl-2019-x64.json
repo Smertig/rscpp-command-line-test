@@ -17691,6 +17691,21 @@
             "commit_ref": "fea866d910e8551c8528c248b71e0ad596755466",
             "commit_message": "Refactor\n",
             "commit_timestamp": 1726395486.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1726585640.478681,
+            "elapsed_time": 142.94844245910645,
+            "x64": true,
+            "actual_files_count": 550,
+            "expected_files_count": null,
+            "memory_traffic": 16196.328063964844,
+            "repo_url": "https://github.com/rui314/mold",
+            "commit_ref": "1efbe3f1410283cb320d30dc971d5345a9b453a4",
+            "commit_message": "Do not lower the priority of DSO symbols than in-archive symbols\n\nThis commit reverts 0612ea41f1a4dad4439e898b1d2a675bfd1e85a2 and\ninstead solves the original issue with a different approach.\n\nNow, if a hidden symbol was resolved to a DSO symbol, we'll redo\nsymbol resolution so that the symbol won't be resolved to the same one\nnext time.\n\nThis should fix our build-all buildbot.\n",
+            "commit_timestamp": 1726546997.0
         }
     ]
 }
