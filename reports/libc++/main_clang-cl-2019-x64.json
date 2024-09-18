@@ -1784,6 +1784,23 @@
             "commit_ref": "8280651ad57cb9fb24a404cec2401040c28dec98",
             "commit_message": "[llvm] [Demangle] Fix MSVC demangling for placeholder return types (#106178)\n\nProperly demangle `_T` and `_P` return type manglings for MSVC 1920+.\r\nAlso added a unit test for `@` return type that is used when mangling\r\nnon-template auto placeholder return type function.\r\n\r\nTested the output against the undname shipped with MSVC 19.40.",
             "commit_timestamp": 1726628744.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1726672154.087113,
+            "elapsed_time": 72.13573908805847,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 6534.667091369629,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "b334ca6739fb069b7259a89ba246cc600f07c68f",
+            "commit_message": "[NFC] Remove trailing whitespaces in `llvm/docs/LangRef.rst`\n",
+            "commit_timestamp": 1726669600.0
         }
     ]
 }
