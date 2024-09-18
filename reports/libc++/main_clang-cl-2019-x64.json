@@ -1767,6 +1767,23 @@
             "commit_ref": "53bc35a80a844601c10c8bb75832cbee3ba841ac",
             "commit_message": "[polly] Tidy uses of raw_string_ostream (NFC)\n\nAs specified in the docs,\n1) raw_string_ostream is always unbuffered and\n2) the underlying buffer may be used directly\n\n( 65b13610a5226b84889b923bae884ba395ad084d for further reference )\n\n* Don't call raw_string_ostream::flush(), which is essentially a no-op.\n* Avoid unneeded calls to raw_string_ostream::str(), to avoid excess indirection.\n",
             "commit_timestamp": 1726585138.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1726628970.579988,
+            "elapsed_time": 89.9567482471466,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 6536.026496887207,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "8280651ad57cb9fb24a404cec2401040c28dec98",
+            "commit_message": "[llvm] [Demangle] Fix MSVC demangling for placeholder return types (#106178)\n\nProperly demangle `_T` and `_P` return type manglings for MSVC 1920+.\r\nAlso added a unit test for `@` return type that is used when mangling\r\nnon-template auto placeholder return type function.\r\n\r\nTested the output against the undname shipped with MSVC 19.40.",
+            "commit_timestamp": 1726628744.0
         }
     ]
 }

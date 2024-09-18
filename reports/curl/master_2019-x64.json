@@ -20141,6 +20141,21 @@
             "commit_ref": "0cfc7fcca18ff21a5664b5d1552a31dcae2fd3c7",
             "commit_message": "tool_cb_wrt: use \"curl_response\" if no file name in URL\n\nUse the same fallback for content-disposition cases as for regular -O\n\nAdd test692: verify -JO with URL without a file name\n\nReported-by: Brian Inglis\nFixes #14939\nCloses #14940\n",
             "commit_timestamp": 1726573191.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1726628826.879413,
+            "elapsed_time": 257.10361766815186,
+            "x64": true,
+            "actual_files_count": 3056,
+            "expected_files_count": 2323,
+            "memory_traffic": 46303.83045959473,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "210cf7cd9d839c55af8bac8e11d7404641be1c49",
+            "commit_message": "GHA/windows: revert enabling SSPI option\n\nBecause it reduces test coverage significantly:\n```\nTESTINFO: \"curl has SSPI support\" 109 times (64, 65, 67, 68, 69, 70, 72, 81, 88 and 100 more)\n```\n\nFollow-up to e53523fef07894991c69d907a7c7794c7ada4ff4 #14859\nCloses #14947\n",
+            "commit_timestamp": 1726591065.0
         }
     ]
 }

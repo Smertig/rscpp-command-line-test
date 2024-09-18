@@ -3299,6 +3299,21 @@
             "commit_ref": "c860fa37141b0b2e63e508f32b81f88742a26189",
             "commit_message": "Make WireFormat::(ByteSize|_InternalSerialize) LazyField compatible (take #3 but disabled)\n\nPiperOrigin-RevId: 675319986\n",
             "commit_timestamp": 1726527328.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1726628851.922334,
+            "elapsed_time": 312.1565682888031,
+            "x64": true,
+            "actual_files_count": 1148,
+            "expected_files_count": 818,
+            "memory_traffic": 38850.02773284912,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "4c923285a32ebcb53ce2ba03144e50d4dbedaf7b",
+            "commit_message": "Fix packed reflection handling bug in edition 2023.\n\nThis is a very narrow edge case where touching a packed extension via generated APIs first, and then doing so reflectively will trigger a DCHECK.  Otherwise, reflective APIs will work but not use packed encoding for the extension.  This was likely a pre-existing bug dating back to proto3, where it would only be visible on custom options (the only extensions allowed in proto3).\n\nTo help qualify this and uncover similar issues, unittest.proto was migrated to editions.  This turned up some other minor issues in DebugString and python.\n\nPiperOrigin-RevId: 675785611\n",
+            "commit_timestamp": 1726623686.0
         }
     ]
 }
