@@ -20186,6 +20186,21 @@
             "commit_ref": "8445285730e5447861e99c793da56488a7c28f2d",
             "commit_message": "CURLMOPT_PIPELINING.md: clarify that CURLPIPE_NOTHING is not default\n\nFixes #14961\nReported-by: Pavel Kropachev\nCloses #14962\n",
             "commit_timestamp": 1726696601.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1726758351.393087,
+            "elapsed_time": 221.5544741153717,
+            "x64": true,
+            "actual_files_count": 3056,
+            "expected_files_count": 2323,
+            "memory_traffic": 43396.6256942749,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "94139493970349e3f1dc8390c3f975316429d13b",
+            "commit_message": "tets: testrunner fairness\n\nCollect all ready runners from select() and process in a loop. This\nassures fairness in processing among all runners.\n\nFormerly, only the first ready runner in the list of all was processed,\nleading to later runners being delayed in processing and reporting\noverly long test durations.\n\nAlso, reduce the backend idle timeout for the h2/h3 test servers so that\nprocess shutdowns take less time.\n\nCloses #14967\n",
+            "commit_timestamp": 1726756535.0
         }
     ]
 }

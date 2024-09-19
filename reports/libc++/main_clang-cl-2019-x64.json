@@ -1818,6 +1818,23 @@
             "commit_ref": "c9aa9d53b6f92d9780430ab8239ea9117574c95d",
             "commit_message": "[clang-format] Fix regression in BAS_AlwaysBreak for-await (#108634)\n\nFixes #108589.",
             "commit_timestamp": 1726713849.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1726758537.776329,
+            "elapsed_time": 88.89424586296082,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 6549.004493713379,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "14120227a34365e829d05c1413033d235d7d272c",
+            "commit_message": "Target ABI: improve call parameters extensions handling (#100757)\n\nFor the purpose of verifying proper arguments extensions per the target's ABI,\r\nintroduce the NoExt attribute that may be used by a target when neither sign-\r\nor zeroextension is required (e.g. with a struct in register). The purpose of\r\ndoing so is to be able to verify that there is always one of these attributes\r\npresent and by this detecting cases where sign/zero extension is actually\r\nmissing.\r\n\r\nAs a first step, this patch has the verification step done for the SystemZ\r\nbackend only, but left off by default until all known issues have been\r\naddressed.\r\n\r\nOther targets/front-ends can now also add NoExt attribute where needed and do\r\nthis check in the backend.\r\n",
+            "commit_timestamp": 1726757971.0
         }
     ]
 }
