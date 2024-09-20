@@ -3359,6 +3359,21 @@
             "commit_ref": "27ee74e6c6f55759eab3dcb7f8bbdce9891bd433",
             "commit_message": "Add map test cases to no_field_presence_test.\n\nMaps behave in a very interesting way if they are set to be implicit-presence\nfields.\n\nThey present the possibility that the key or value (or both) can be the default\nzero value. When that happens, access to the key or the value is unaffected. In\nthis case, presence is a bit of a meaningless concept. Zero keys are valid as\nmap indices, and if a map entry is set to zero, it just always exists.\n\nReflection is a little weird too.\n- If you do reflection on a normal integer field and ask if a zero-valued field\n  exists, it will tell you that it doesn't exist. This is consistent with what\n  \"implicit presence\" means.\n- If you do reflection on a zero integer field that happens to be a map key, it\n  will tell you that it exists. Fetching the value of map[0] is equally valid.\n\n(Note that this is not exactly *intended*, but it's just hard to change... and\nthis implementation results in simpler gencode.)\n\nI'm adding unit tests in no_field_presence_test to cover this quirk.\n\nPiperOrigin-RevId: 676268392\n",
             "commit_timestamp": 1726723806.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1726801716.995075,
+            "elapsed_time": 319.636705160141,
+            "x64": true,
+            "actual_files_count": 1148,
+            "expected_files_count": 818,
+            "memory_traffic": 38872.69152832031,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "7d3e80ce9c522365bf78c44726e9946975f534e4",
+            "commit_message": "`#ifdef` out `clang`-specific pragmas to avoid unknown pragma warnings when compiling with non-`clang` (#18241)\n\nCloses #18241\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/18241 from tempoz:tempoz-fix-unknown-pragma e67f35888557f4a78341ed373a96a4c4352da9a0\nPiperOrigin-RevId: 676625555\n",
+            "commit_timestamp": 1726792656.0
         }
     ]
 }

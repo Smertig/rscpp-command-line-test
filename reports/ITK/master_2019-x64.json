@@ -20126,6 +20126,21 @@
             "commit_ref": "9a5dade7f7e13fcef307f8224a01c2ce2b0ab13b",
             "commit_message": "Merge branch 'release'\n",
             "commit_timestamp": 1726077804.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1726801939.506434,
+            "elapsed_time": 233.74820756912231,
+            "x64": true,
+            "actual_files_count": 100,
+            "expected_files_count": null,
+            "memory_traffic": 26045.563049316406,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "0b03a81a6cc1d7ec0adfdc9d6045cca357115dfe",
+            "commit_message": "STYLE: Replace `#ifdef`s in \"itkByteSwapper.hxx\" with `if constexpr`\n\nUsing the private static member `m_SystemIsBigEndian` that was introduced with\npull request https://github.com/InsightSoftwareConsortium/ITK/pull/4835\ncommit a44863b27d39415f97ee5b14f9a1864d2d614270\n\"ENH: Declare ByteSwapper SystemIsBigEndian/LittleEndian `constexpr`\"\n\nAdded `[[maybe_unused]]` attributes to prevent warnings like:\n> warning: parameter 'p' set but not used [-Wunused-but-set-parameter]\n",
+            "commit_timestamp": 1726762000.0
         }
     ]
 }

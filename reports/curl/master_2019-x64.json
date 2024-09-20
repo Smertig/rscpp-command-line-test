@@ -20201,6 +20201,21 @@
             "commit_ref": "94139493970349e3f1dc8390c3f975316429d13b",
             "commit_message": "tets: testrunner fairness\n\nCollect all ready runners from select() and process in a loop. This\nassures fairness in processing among all runners.\n\nFormerly, only the first ready runner in the list of all was processed,\nleading to later runners being delayed in processing and reporting\noverly long test durations.\n\nAlso, reduce the backend idle timeout for the h2/h3 test servers so that\nprocess shutdowns take less time.\n\nCloses #14967\n",
             "commit_timestamp": 1726756535.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1726801679.06189,
+            "elapsed_time": 236.0257580280304,
+            "x64": true,
+            "actual_files_count": 3056,
+            "expected_files_count": 2323,
+            "memory_traffic": 43675.88710021973,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "dff66196d0bc52b53a91f59d3972769412f9639b",
+            "commit_message": "CI: disable dependency tracking in Circle CI jobs\n\nFollow-up to 4521eac45aedf7a1d50f70eca5fbdbefdcb09942 #13794\nCloses #14975\n",
+            "commit_timestamp": 1726800719.0
         }
     ]
 }

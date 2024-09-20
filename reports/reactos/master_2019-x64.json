@@ -19966,6 +19966,21 @@
             "commit_ref": "d4815873fedae35c100cccf953d654b0a1d701f5",
             "commit_message": "[SHELL32] Don't leak SetProp (#7347)\n\n",
             "commit_timestamp": 1726688938.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1726801668.952722,
+            "elapsed_time": 80.70094919204712,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7641.805969238281,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "e128cbc6807e60249660d78f3b68a0f92ced6c96",
+            "commit_message": "[GDIPLUS] Fix for gdiplus/graphics.c regression with GCC 8.4.0 from 4.7.2(#7348)\n\nAffects ribbon bar when running Super Finder XT 1.6.3.2 from rapps.\r\n\r\nChange four REAL variables to DOUBLE to improve precision.\r\n\r\nCORE-19456",
+            "commit_timestamp": 1726775689.0
         }
     ]
 }
