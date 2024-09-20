@@ -20216,6 +20216,21 @@
             "commit_ref": "dff66196d0bc52b53a91f59d3972769412f9639b",
             "commit_message": "CI: disable dependency tracking in Circle CI jobs\n\nFollow-up to 4521eac45aedf7a1d50f70eca5fbdbefdcb09942 #13794\nCloses #14975\n",
             "commit_timestamp": 1726800719.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1726844805.170717,
+            "elapsed_time": 262.28797721862793,
+            "x64": true,
+            "actual_files_count": 3056,
+            "expected_files_count": 2323,
+            "memory_traffic": 47531.985359191895,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "5895b71b0e2749a6d8633f0698304bfd599bf531",
+            "commit_message": "libssh.c: handle EGAINS during proto-connect correctly\n\nThe implementation did not check the poll flags when a ssh_connect()\nEAGAINed. Also the poll check did not allow for both directions\nto be signalled by libssh, which it does.\n\nThis appeared during CI testing with higher paralellism.\n\nCloses #14982\n",
+            "commit_timestamp": 1726844636.0
         }
     ]
 }

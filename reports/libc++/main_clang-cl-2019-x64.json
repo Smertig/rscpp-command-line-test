@@ -1852,6 +1852,23 @@
             "commit_ref": "95d4c97a20bb46cd7ca9c5389f9ba33f1bf8f7a0",
             "commit_message": "[libc][wchar] Move wchar's types to proxy headers. (#109334)\n\nAlso protect against extern inline function definitions added when\r\nbuilding with gcc: https://github.com/llvm/llvm-project/issues/60481.",
             "commit_timestamp": 1726799031.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1726844955.616062,
+            "elapsed_time": 79.38793230056763,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 6483.611473083496,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "5bcc82d43388bb0daa122d5fe7ecda5eca27fc16",
+            "commit_message": "[LoopPeel] Fix LCSSA phi node invalidation\n\nIn the test case, the BECount of the second loop uses %load,\nbut we only have an LCSSA phi node for %add, so that is what\ngets invalidated. Use the forgetLcssaPhiWithNewPredecessor()\nAPI instead, which will invalidate the roots of the expression\ninstead.\n\nFixes https://github.com/llvm/llvm-project/issues/109333.\n",
+            "commit_timestamp": 1726844501.0
         }
     ]
 }

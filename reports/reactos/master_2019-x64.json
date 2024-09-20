@@ -19981,6 +19981,21 @@
             "commit_ref": "e128cbc6807e60249660d78f3b68a0f92ced6c96",
             "commit_message": "[GDIPLUS] Fix for gdiplus/graphics.c regression with GCC 8.4.0 from 4.7.2(#7348)\n\nAffects ribbon bar when running Super Finder XT 1.6.3.2 from rapps.\r\n\r\nChange four REAL variables to DOUBLE to improve precision.\r\n\r\nCORE-19456",
             "commit_timestamp": 1726775689.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1726844778.011565,
+            "elapsed_time": 108.36724543571472,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7850.145561218262,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "469d4dbbab3ae55b87e71b583f234fdee0598db9",
+            "commit_message": "[USETUP] Fix handling of 0 sized files in the cab\n",
+            "commit_timestamp": 1726830493.0
         }
     ]
 }
