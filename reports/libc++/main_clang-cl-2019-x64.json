@@ -1869,6 +1869,23 @@
             "commit_ref": "5bcc82d43388bb0daa122d5fe7ecda5eca27fc16",
             "commit_message": "[LoopPeel] Fix LCSSA phi node invalidation\n\nIn the test case, the BECount of the second loop uses %load,\nbut we only have an LCSSA phi node for %add, so that is what\ngets invalidated. Use the forgetLcssaPhiWithNewPredecessor()\nAPI instead, which will invalidate the roots of the expression\ninstead.\n\nFixes https://github.com/llvm/llvm-project/issues/109333.\n",
             "commit_timestamp": 1726844501.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1726888179.48849,
+            "elapsed_time": 83.04410600662231,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 6519.299751281738,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "2c4da3c44bf66e764642b94335f7d718730055f5",
+            "commit_message": "[MC] Remove unneeded null getFragment() check. NFC\n\nFollow-up to d620ba0344c719da51b6067975439ed84024b1ac.\n",
+            "commit_timestamp": 1726887795.0
         }
     ]
 }
