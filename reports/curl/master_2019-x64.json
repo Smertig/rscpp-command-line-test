@@ -20246,6 +20246,21 @@
             "commit_ref": "28d1d71ff63d736a058e0699a7e532eb71d9077d",
             "commit_message": "lib: memdebug comment fixup [ci skip]\n\nFollow-up to 3efba94f773db5d8ae19e33aa749ab7914cafeea #14765\n",
             "commit_timestamp": 1726874863.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1726931156.222881,
+            "elapsed_time": 254.70810723304749,
+            "x64": true,
+            "actual_files_count": 3166,
+            "expected_files_count": 2323,
+            "memory_traffic": 45951.190254211426,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "867c187fdfa66c644ec1df58f65f69d115bf391c",
+            "commit_message": "build: use `configurehelp.pm.in` with autotools and cmake\n\nBefore this patch, each build tool generated `tests/configurehelp.pm`\nmanually.\n\nRef: https://github.com/curl/curl/pull/14802#issuecomment-2332734326\nCloses #14819\n",
+            "commit_timestamp": 1726914074.0
         }
     ]
 }

@@ -17276,6 +17276,21 @@
             "commit_ref": "342e654b8eda24c68da64cc21bc9583e480d9e8e",
             "commit_message": "gh-124213: Skip tests failing inside systemd-nspawn --suppress-sync=true (#124215)\n\nAdd a helper function that checks whether the test suite is running\r\ninside a systemd-nspawn container, and skip the few tests failing\r\nwith `--suppress-sync=true` in that case.  The tests are failing because\r\n`--suppress-sync=true` stubs out `fsync()`, `fdatasync()` and `msync()`\r\ncalls, and therefore they always return success without checking for\r\ninvalid arguments.\r\n\r\nCall `os.open(__file__, os.O_RDONLY | os.O_SYNC)` and check the errno to\r\ndetect whether `--suppress-sync=true` is actually used, and skip\r\nthe tests only in that scenario.",
             "commit_timestamp": 1726839469.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1726931370.926293,
+            "elapsed_time": 1173.1069338321686,
+            "x64": true,
+            "actual_files_count": 1051,
+            "expected_files_count": null,
+            "memory_traffic": 50650.148612976074,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "342e654b8eda24c68da64cc21bc9583e480d9e8e",
+            "commit_message": "gh-124213: Skip tests failing inside systemd-nspawn --suppress-sync=true (#124215)\n\nAdd a helper function that checks whether the test suite is running\r\ninside a systemd-nspawn container, and skip the few tests failing\r\nwith `--suppress-sync=true` in that case.  The tests are failing because\r\n`--suppress-sync=true` stubs out `fsync()`, `fdatasync()` and `msync()`\r\ncalls, and therefore they always return success without checking for\r\ninvalid arguments.\r\n\r\nCall `os.open(__file__, os.O_RDONLY | os.O_SYNC)` and check the errno to\r\ndetect whether `--suppress-sync=true` is actually used, and skip\r\nthe tests only in that scenario.",
+            "commit_timestamp": 1726839469.0
         }
     ]
 }
