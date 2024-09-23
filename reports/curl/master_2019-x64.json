@@ -20291,6 +20291,21 @@
             "commit_ref": "668584a94f59341bdc1b0a08add72af9379f48b0",
             "commit_message": "build: drop exclamation marks, use \"msh3/msquic\" where incomplete\n\nCloses #15002\n",
             "commit_timestamp": 1727012980.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1727061049.283487,
+            "elapsed_time": 249.3898627758026,
+            "x64": true,
+            "actual_files_count": 3400,
+            "expected_files_count": 2323,
+            "memory_traffic": 47836.02951812744,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "8e7ccfd1786165fa160b78889afad724cb4d762c",
+            "commit_message": "CI: add missed updates to the `configure-libssh` job\n\nDisable dependency tracking and enable unity + test bundles for\nthe `configure-libssh` job that was missed in earlier commits.\n\nFollow-up to 71cf0d1fca9e1f53524e1545ef0c08d174458d80 #14772\nFollow-up to dff66196d0bc52b53a91f59d3972769412f9639b #14975\n\nCloses #15010\n",
+            "commit_timestamp": 1727046500.0
         }
     ]
 }

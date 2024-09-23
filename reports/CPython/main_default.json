@@ -17321,6 +17321,21 @@
             "commit_ref": "342e654b8eda24c68da64cc21bc9583e480d9e8e",
             "commit_message": "gh-124213: Skip tests failing inside systemd-nspawn --suppress-sync=true (#124215)\n\nAdd a helper function that checks whether the test suite is running\r\ninside a systemd-nspawn container, and skip the few tests failing\r\nwith `--suppress-sync=true` in that case.  The tests are failing because\r\n`--suppress-sync=true` stubs out `fsync()`, `fdatasync()` and `msync()`\r\ncalls, and therefore they always return success without checking for\r\ninvalid arguments.\r\n\r\nCall `os.open(__file__, os.O_RDONLY | os.O_SYNC)` and check the errno to\r\ndetect whether `--suppress-sync=true` is actually used, and skip\r\nthe tests only in that scenario.",
             "commit_timestamp": 1726839469.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1727061196.165988,
+            "elapsed_time": 1148.6465878486633,
+            "x64": true,
+            "actual_files_count": 1051,
+            "expected_files_count": null,
+            "memory_traffic": 50794.25742340088,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "d5f95ec07bb47a4d6554e04d13a979dbeac05f74",
+            "commit_message": "gh-112938: IDLE - Fix uninteruptable hang when Shell gets rapid continuous output. (#124310)\n\nhttps://github.com/python/cpython/issues/88496 replaced text.update with text.update_idletasks in colorizer.py and outwin.py to fix test failures on macOS.  While theoretically correct, the result was Shell freezing when receiving continuous short strings to print.  Test: `while 1: 1`.\r\n\r\nThe guess is that there is no idle time in which to do the screen update.  Reverting the change in one of the files,\r\noutwin, fixes the issue.  Colorizer runs ever 1/20 second and seems to work fine.\r\n\r\nWhen running test-outwin on macOS, alias 'update'\r\nto 'update_idletasks on the text used for testing.\r\n",
+            "commit_timestamp": 1727034669.0
         }
     ]
 }
