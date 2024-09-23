@@ -17336,6 +17336,21 @@
             "commit_ref": "d5f95ec07bb47a4d6554e04d13a979dbeac05f74",
             "commit_message": "gh-112938: IDLE - Fix uninteruptable hang when Shell gets rapid continuous output. (#124310)\n\nhttps://github.com/python/cpython/issues/88496 replaced text.update with text.update_idletasks in colorizer.py and outwin.py to fix test failures on macOS.  While theoretically correct, the result was Shell freezing when receiving continuous short strings to print.  Test: `while 1: 1`.\r\n\r\nThe guess is that there is no idle time in which to do the screen update.  Reverting the change in one of the files,\r\noutwin, fixes the issue.  Colorizer runs ever 1/20 second and seems to work fine.\r\n\r\nWhen running test-outwin on macOS, alias 'update'\r\nto 'update_idletasks on the text used for testing.\r\n",
             "commit_timestamp": 1727034669.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1727104160.431673,
+            "elapsed_time": 1163.6349959373474,
+            "x64": true,
+            "actual_files_count": 1051,
+            "expected_files_count": null,
+            "memory_traffic": 50509.45812225342,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "6ab634840c662ae07d90655e5e50ca43421da4be",
+            "commit_message": "Add Kirill Podoprigora for AST codeowners (#124302)\n\n",
+            "commit_timestamp": 1727100979.0
         }
     ]
 }
