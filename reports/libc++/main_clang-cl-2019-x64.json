@@ -1971,6 +1971,23 @@
             "commit_ref": "606557ddd68bcb082fb82fd21b0afb260222ae14",
             "commit_message": "[PGO] use atomics for profile counters in instrprof-dlopen-norpath.test\n\nWhen two threads dlopen a shared library, one instance of the library\nis loaded. Hence, code inside the library needs to be thread safe,\nso use atomic updates for profile counters.\n",
             "commit_timestamp": 1727104148.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1727147583.323602,
+            "elapsed_time": 107.3446888923645,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 6528.414688110352,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "9b5a3036adbd9eed0f377cdf06aa622b917a1699",
+            "commit_message": "[OpenMP][Docs] Update OpenMP supported features table (#109726)\n\nOpenMP features table: updated scope directive status from 'worked on'\r\nto 'done' in section OpenMP 5.1 Implementation Details.",
+            "commit_timestamp": 1727146768.0
         }
     ]
 }

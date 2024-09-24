@@ -3479,6 +3479,21 @@
             "commit_ref": "63fc32250a3c174c3f8119fdecd880fabf2ca9fc",
             "commit_message": "Add tests for overflowing space available when writing 32/64-bit fixed integers.\n\nThis was untested before.\n\nSome of the test names had drifted from the code's names; update those.\n\nThese tests have surfaced some problems around inconsistent exception types thrown.\n\nPiperOrigin-RevId: 677588477\n",
             "commit_timestamp": 1727058197.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1727147505.485362,
+            "elapsed_time": 326.22577023506165,
+            "x64": true,
+            "actual_files_count": 1148,
+            "expected_files_count": 818,
+            "memory_traffic": 38879.12740325928,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "95ef4134d3f65237b7adfb66e5e7aa10fcfa1fa3",
+            "commit_message": "Add tests that CodedOutputStream.spaceLeft isn't negative after overflow.\n\nFor writing fixed32 and fixed64.\n\nNot all encoders pass this test yet.\n\nPiperOrigin-RevId: 677948616\n",
+            "commit_timestamp": 1727128563.0
         }
     ]
 }

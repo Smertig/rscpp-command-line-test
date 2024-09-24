@@ -20321,6 +20321,21 @@
             "commit_ref": "4619b4103b7c60e5b72acf81b7b38dd2eedc5350",
             "commit_message": "build: fix possible `-Wformat-overflow` in lib557 with test bundle builds\n\n- lib557: suppress `-Wformat-overflow` warning in source.\n  Fixes:\n  ```\n  lib557.c: In function \u2018test_float_formatting\u2019:\n  lib557.c:1408:37: error: \u2018%*f\u2019 directive output of 2147483648 bytes exceeds \u2018INT_MAX\u2019 [-Werror=format-overflow=]\n   1408 |   curl_msnprintf(buf, sizeof(buf), \"%*f\", INT_MIN, 9.1);\n        |                                     ^~~\n  lib557.c:1408:3: note: \u2018curl_msnprintf\u2019 output 2147483649 bytes\n   1408 |   curl_msnprintf(buf, sizeof(buf), \"%*f\", INT_MIN, 9.1);\n        |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  ```\n  Ref: https://app.circleci.com/pipelines/github/curl/curl/10226/workflows/87642ee9-cda6-4916-8206-c82aac5f595e/jobs/107669?invite=true#step-106-40996_46\n\n  The root cause of why this option gets enabled remains undiscovered.\n\n  Reported-by: Daniel Stenberg\n  Fixes #15008\n  Follow-up to 71cf0d1fca9e1f53524e1545ef0c08d174458d80 #14772\n\n- build: drop `-Wno-format-overflow` from picky warning list.\n  These options only get used with picky warnings enabled.\n  Follow-up to 145f87b9e89f3a5e287233fe7d3cf57aca23dd8c #14598\n\n- unit1652: suppress in source (and not rely on picky warnings anymore.)\n\nCloses #15012\n",
             "commit_timestamp": 1727085175.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1727147408.927289,
+            "elapsed_time": 270.01142263412476,
+            "x64": true,
+            "actual_files_count": 3400,
+            "expected_files_count": 2323,
+            "memory_traffic": 47266.015968322754,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "9b3a7d1e6acec994e17234bb29fb25cc6050c7d6",
+            "commit_message": "GHA/linux: enable test bundles for cmake jobs\n\nTest build step speed-up (3x): 18s -> 6s\n\nFollow-up to 71cf0d1fca9e1f53524e1545ef0c08d174458d80 #14772\nCloses #15022\n",
+            "commit_timestamp": 1727140761.0
         }
     ]
 }
