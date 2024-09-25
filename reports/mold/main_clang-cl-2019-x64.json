@@ -17916,6 +17916,21 @@
             "commit_ref": "3711ddb95e23c12991f6b8c7bfeba4f1421d19d4",
             "commit_message": "Drop DEC Alpha processor support\n\nKeeping DEC Alpha support is difficult because there are no Alpha\nmachines available for toolchain developers, and even if there were,\nno modern Linux distros still support Alpha. For example, Debian\ndropped Alpha support in Debian 6.0. As a result, I cannot test my\nlinker with real-world programs.\n\nIn fact, I believe mold has never been able to link real-world large\nprograms. Object files for Alpha are compiled with the small code\nmodel by default, so it is not easy to support it in the linker.\n\nThere's no means to verify that my implementation is correct for Alpha\nbecause Alpha's psABI has never been published by DEC. The most\n\"reliable\" source of correctness is GNU ld's source code and comments.\n\nLast but not least, I believe there are literally zero mold/Alpha\nusers. Unlike some other retro computers like the m68k, Alpha doesn't\nseem to get much love from the community, perhaps because the\navailability of Alpha machines was limited in the first place, even in\nthe 90s.\n\nTherefore, I'll remove Alpha support now. If there's someone who wants\nto keep it, we can resurrect and re-test it.\n\nThis change should make the mold binary size a little smaller.\n",
             "commit_timestamp": 1727166574.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1727233914.022256,
+            "elapsed_time": 111.64058589935303,
+            "x64": true,
+            "actual_files_count": 529,
+            "expected_files_count": null,
+            "memory_traffic": 15615.32447052002,
+            "repo_url": "https://github.com/rui314/mold",
+            "commit_ref": "3711ddb95e23c12991f6b8c7bfeba4f1421d19d4",
+            "commit_message": "Drop DEC Alpha processor support\n\nKeeping DEC Alpha support is difficult because there are no Alpha\nmachines available for toolchain developers, and even if there were,\nno modern Linux distros still support Alpha. For example, Debian\ndropped Alpha support in Debian 6.0. As a result, I cannot test my\nlinker with real-world programs.\n\nIn fact, I believe mold has never been able to link real-world large\nprograms. Object files for Alpha are compiled with the small code\nmodel by default, so it is not easy to support it in the linker.\n\nThere's no means to verify that my implementation is correct for Alpha\nbecause Alpha's psABI has never been published by DEC. The most\n\"reliable\" source of correctness is GNU ld's source code and comments.\n\nLast but not least, I believe there are literally zero mold/Alpha\nusers. Unlike some other retro computers like the m68k, Alpha doesn't\nseem to get much love from the community, perhaps because the\navailability of Alpha machines was limited in the first place, even in\nthe 90s.\n\nTherefore, I'll remove Alpha support now. If there's someone who wants\nto keep it, we can resurrect and re-test it.\n\nThis change should make the mold binary size a little smaller.\n",
+            "commit_timestamp": 1727166574.0
         }
     ]
 }

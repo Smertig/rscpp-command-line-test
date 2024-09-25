@@ -20116,6 +20116,21 @@
             "commit_ref": "db419efbf26c78e39fb57bcaf4f9e4d915d0c96e",
             "commit_message": "[WIN32K] Fix protection of USER heap\n\nCreate the section with PAGE_READWRITE, not PAGE_EXECUTE_READWRITE and map in user mode with PAGE_READONLY, not PAGE_EXECUTE_READ.\nOriginal commit was ea5261f in 2006. The comments suggest that back then the heap code had issues with it, which is not the case anymore.\n",
             "commit_timestamp": 1727173948.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1727233883.175447,
+            "elapsed_time": 74.04759645462036,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7797.20662689209,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "db419efbf26c78e39fb57bcaf4f9e4d915d0c96e",
+            "commit_message": "[WIN32K] Fix protection of USER heap\n\nCreate the section with PAGE_READWRITE, not PAGE_EXECUTE_READWRITE and map in user mode with PAGE_READONLY, not PAGE_EXECUTE_READ.\nOriginal commit was ea5261f in 2006. The comments suggest that back then the heap code had issues with it, which is not the case anymore.\n",
+            "commit_timestamp": 1727173948.0
         }
     ]
 }
