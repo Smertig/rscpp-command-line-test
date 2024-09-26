@@ -17411,6 +17411,21 @@
             "commit_ref": "d9296529eb0a65f988e8600d3073977dff0ce5a9",
             "commit_message": "gh-119127: functools.partial placeholders (gh-119827)\n\n",
             "commit_timestamp": 1727312678.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1727363377.02839,
+            "elapsed_time": 1206.1465101242065,
+            "x64": true,
+            "actual_files_count": 1051,
+            "expected_files_count": null,
+            "memory_traffic": 50661.49311065674,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "257a20a81764fcc17bcde9c0cec57fbc53a4adc7",
+            "commit_message": "gh-119127: Fix _functools.Placeholder singleton (#124601)\n\n* The module state now stores a strong reference to the Placeholder\r\n  singleton.\r\n* Use a regular dealloc function.\r\n* Add Py_TPFLAGS_HAVE_GC flag and a traverse function to help the GC\r\n  to collect the type when a _functools extension is unloaded.",
+            "commit_timestamp": 1727362238.0
         }
     ]
 }

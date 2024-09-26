@@ -20381,6 +20381,21 @@
             "commit_ref": "7060b9b082e5726d4cc0974d9cb11dd20694c47a",
             "commit_message": "build: fix cross-compile check for poll with bionic\n\nSince it seems the _POSIX_C_SOURCE \"trick\" does not work there, the\ncheck does not find poll().\n\nFixes #15013\nReported-by: vvb2060 on github\nCloses #15037\n",
             "commit_timestamp": 1727300477.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1727363216.457977,
+            "elapsed_time": 240.52028059959412,
+            "x64": true,
+            "actual_files_count": 3404,
+            "expected_files_count": 2323,
+            "memory_traffic": 47518.481216430664,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "dd0405c909ceb20c305cdd1f25d7c1e1174aceeb",
+            "commit_message": "test518: restore valgrind disable\n\nFollow-up to c91c37b6e87c\n\nThe test does not work well when run with valgrind\n\nCloses #15062\n",
+            "commit_timestamp": 1727362929.0
         }
     ]
 }
