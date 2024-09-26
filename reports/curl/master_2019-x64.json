@@ -20366,6 +20366,21 @@
             "commit_ref": "635253caa0c2d0754e1934a24f36089dc2cebcb3",
             "commit_message": "configure: improve help string for some options\n\nCloses #15033\n",
             "commit_timestamp": 1727214769.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1727320317.097747,
+            "elapsed_time": 285.3904390335083,
+            "x64": true,
+            "actual_files_count": 3400,
+            "expected_files_count": 2323,
+            "memory_traffic": 47063.80024719238,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "7060b9b082e5726d4cc0974d9cb11dd20694c47a",
+            "commit_message": "build: fix cross-compile check for poll with bionic\n\nSince it seems the _POSIX_C_SOURCE \"trick\" does not work there, the\ncheck does not find poll().\n\nFixes #15013\nReported-by: vvb2060 on github\nCloses #15037\n",
+            "commit_timestamp": 1727300477.0
         }
     ]
 }

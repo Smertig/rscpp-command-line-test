@@ -22096,6 +22096,23 @@
             "commit_ref": "18b9d49ce3370c012fdd04ec87d854d53293f6a6",
             "commit_message": "lldb: get lldb API tests working with newer Android NDKs\n\n## Purpose\r\nRunning the LLDB API tests against a remote Android target with NDK\r\nversion r22 or later fails to compile the test inferiors. NDK r21 from\r\n2021 is the most recent NDK that still works with the LLDB API tests.\r\nThis PR updates the Android make rules to support newer Android NDK\r\nversions (r19 and later).\r\n\r\n## Overview\r\n* Updates and simplifies `Android.rules` to match the newer Android NDK\r\nunified toolchain layout introduced in NDK r19\r\n* Sets `OBJCOPY` and `ARCHIVER` env vars, required by a few test cases,\r\nto their `llvm-` versions in the unified toolchain\r\n* Drops support for pre-2019 Android NDK versions to keep the rules\r\nsimple\r\n* Provides an error message if the tests are run using an incompatible\r\nNDK layout\r\n\r\n## Problem Details\r\nAndroid introduced a unified tools layout in NDK r19 (2019) and removed\r\nthe old layout in r22 (2021). Releases r19, r20, and r21 support both\r\nthe old and new layout side-by-side. More details are in #106270.\r\n\r\n## Validation\r\nRan a sub-set of the LLDB API tests against remote Android targets for\r\nthe four primary architectures i386, x86_64, arm, and aarch64. No\r\nvalidation was done against riscv targets.\r\n\r\nFor each case, ran the copy of `lldb-server` from the Android NDK on the\r\ndevice with the latest LLDB test cases in llvm-project\r\n\r\nRan tests with both r19 (the oldest supported) and r26 (more recent,\r\nunified layout only) NDK versions.\r\n\r\nExample test command for aarch64:\r\n```\r\n./build/bin/lldb-dotest --out-of-tree-debugserver --arch aarch64 --platform-name remote-android --platform-url connect://localhost:5432 --platform-working-dir /data/local/tmp --compiler=$ANDROID_NDK_ROOT/toolchains/llvm/prebuilt/linux-x86_64/bin/clang lldb/test/API/android/\r\n```\r\n**NOTE: there are a lot of test failures when running the full suite\r\n(especially against 32-bit ARM target). These failures occur independent\r\nof this change.**\r\n\r\nVerified the expected error message appears when attempting to run using\r\nNDK r18\r\n```\r\nBuild Command Output:\r\nmake: Entering directory '/home/andrew/src/llvm/llvm-project/build/lldb-test-build.noindex/android/platform/TestDefaultCacheLineSize.test_cache_line_size'\r\n/home/andrew/src/llvm/llvm-project/lldb/packages/Python/lldbsuite/test/make/Android.rules:16: *** \"No unified toolchain sysroot found in /home/andrew/Android/Sdk/ndk/18.1.5063045/toolchains/llvm/prebuilt/linux-x86_64/bin/../../../../... NDK must be r19 or later.\".  Stop.\r\nmake: Leaving directory '/home/andrew/src/llvm/llvm-project/build/lldb-test-build.noindex/android/platform/TestDefaultCacheLineSize.test_cache_line_size'\r\n```\r\n\r\n## Impact\r\n**This change explicitly removes support for the pre-2019 NDK\r\nstructure.** Only NDK r19 (from 2019) and later can be used when running\r\nthe LLDB API tests. If the maintainers object, we can easily support\r\nboth the old and new NDK toolchain layouts side-by-side at the cost of\r\nreadability/maintainability. Since this change only impacts tests, I\r\ndon't see much value in supporting NDKs that are over 5 years old.\r\n\r\n## Guidance to Reviewers\r\n* I am not an expert on `clang` arguments so if anything looks off let\r\nme know.\r\n* While I personally thing supporting 5+ year old NDKs for testing seems\r\nunnecessary, please chime-in if you are concerned with dropping that\r\nsupport. I can easily revise to support both old and new layouts\r\nside-by-side.\r\n* If there are any specific tests you'd like me to run I will do my best\r\nto accommodate. It doesn't look like there's much (any?) Android LLDB CI\r\ncoverage.",
             "commit_timestamp": 1727233234.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1727321089.200522,
+            "elapsed_time": 1672.594468832016,
+            "x64": true,
+            "actual_files_count": 2070,
+            "expected_files_count": 1661,
+            "memory_traffic": 253925.11666870117,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "14b567dcaae62660aa360bed595b087339143b17",
+            "commit_message": "[X86][IPRA] Add getIPRACSRegs since frame registers are risked to be optimized out. (#109597)\n\nX86 IPRA had below correctness issue:\r\nhttps://gcc.godbolt.org/z/6hh88xv9r\r\nThis patch is a workaround to fix it.",
+            "commit_timestamp": 1727319472.0
         }
     ]
 }
