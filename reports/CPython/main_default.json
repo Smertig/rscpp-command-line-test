@@ -17426,6 +17426,21 @@
             "commit_ref": "257a20a81764fcc17bcde9c0cec57fbc53a4adc7",
             "commit_message": "gh-119127: Fix _functools.Placeholder singleton (#124601)\n\n* The module state now stores a strong reference to the Placeholder\r\n  singleton.\r\n* Use a regular dealloc function.\r\n* Add Py_TPFLAGS_HAVE_GC flag and a traverse function to help the GC\r\n  to collect the type when a _functools extension is unloaded.",
             "commit_timestamp": 1727362238.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1727406808.201096,
+            "elapsed_time": 1203.378015756607,
+            "x64": true,
+            "actual_files_count": 1051,
+            "expected_files_count": null,
+            "memory_traffic": 50450.65084075928,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "6f9525dd3f0ef5809106ca0923a7512d666a04bb",
+            "commit_message": "gh-116510: Fix crash during sub-interpreter shutdown (gh-124645)\n\nFix a bug that can cause a crash when sub-interpreters use \"basic\"\r\nsingle-phase extension modules.  Shared objects could refer to PyGC_Head\r\nnodes that had been freed as part of interpreter shutdown.",
+            "commit_timestamp": 1727404387.0
         }
     ]
 }

@@ -21734,6 +21734,21 @@
             "commit_ref": "72822fe4f9ca43f7a41a5a6e708886d36591fad3",
             "commit_message": "Fix stride indexing bugs in `reorg` and `reorg_gradient` functions (CPU & CUDA) (#3012)\n\n* Fix Stride Indexing Bugs in `reorg` and `reorg_gradient` Functions (CPU & CUDA) and Add `add_to` Parameter\r\n\r\n* 'add_to' parameter missing in cuda call reorg_gradient.launch_kernel()\r\n\r\n* Cleanup: remove using namespace std; (#3016)\r\n\r\n* remove using namespace std from headers\r\n\r\n* more std::\r\n\r\n* more std::\r\n\r\n* more std:: on windows stuff\r\n\r\n* remove uses of using namespace std::chrono\r\n\r\n* do not use C++17 features\r\n\r\n* Add Davis suggestion\r\n\r\n* revert some more stuff\r\n\r\n* revert removing include\r\n\r\n* more std::chrono stuff\r\n\r\n* fix build error\r\n\r\n* Adjust comment formatting to be like other dlib comments\r\n\r\n---------\r\n\r\nCo-authored-by: Adri\u00e0 <1671644+arrufat@users.noreply.github.com>\r\nCo-authored-by: Davis King <davis@dlib.net>",
             "commit_timestamp": 1727091861.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1727406686.246579,
+            "elapsed_time": 118.4175808429718,
+            "x64": true,
+            "actual_files_count": 137,
+            "expected_files_count": null,
+            "memory_traffic": 7748.601028442383,
+            "repo_url": "https://github.com/davisking/dlib.git",
+            "commit_ref": "72822fe4f9ca43f7a41a5a6e708886d36591fad3",
+            "commit_message": "Fix stride indexing bugs in `reorg` and `reorg_gradient` functions (CPU & CUDA) (#3012)\n\n* Fix Stride Indexing Bugs in `reorg` and `reorg_gradient` Functions (CPU & CUDA) and Add `add_to` Parameter\r\n\r\n* 'add_to' parameter missing in cuda call reorg_gradient.launch_kernel()\r\n\r\n* Cleanup: remove using namespace std; (#3016)\r\n\r\n* remove using namespace std from headers\r\n\r\n* more std::\r\n\r\n* more std::\r\n\r\n* more std:: on windows stuff\r\n\r\n* remove uses of using namespace std::chrono\r\n\r\n* do not use C++17 features\r\n\r\n* Add Davis suggestion\r\n\r\n* revert some more stuff\r\n\r\n* revert removing include\r\n\r\n* more std::chrono stuff\r\n\r\n* fix build error\r\n\r\n* Adjust comment formatting to be like other dlib comments\r\n\r\n---------\r\n\r\nCo-authored-by: Adri\u00e0 <1671644+arrufat@users.noreply.github.com>\r\nCo-authored-by: Davis King <davis@dlib.net>",
+            "commit_timestamp": 1727091861.0
         }
     ]
 }

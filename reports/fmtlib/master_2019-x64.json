@@ -21753,6 +21753,21 @@
             "commit_ref": "96dca569a1251ea77f434c2773d4db55c4b8a488",
             "commit_message": "Module linkage fixes for shared build (#4169)\n\n* Mark some in-class defined member functions as explicitly inline/constexpr, to avoid missing external symbols when using fmt module with shared build due to modules not defaulting to implicit inline.\r\n\r\n* Switch constexpr to inline for context::arg(string_view).\r\nNOTE: Looks as if basic_format_args::get(string_view) could probably be made constexpr instead, but sticking with minimal change approach.\r\n\r\n* Work around apparent non-conformance of older MSVC compilers.\r\n\r\n* Switch format_int::str() from constexpr to inline to satisfy libstdc++ std::string constexpr limitations.\r\n\r\n* Replace usages of macros for constexpr/inline with keywords.\r\n\r\n* Fix for locations requiring C++14 constexpr.\r\n\r\n* Further minor constexpr tweaks.\r\n\r\n* Apply clang format",
             "commit_timestamp": 1727362435.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1727406654.044312,
+            "elapsed_time": 102.01618933677673,
+            "x64": true,
+            "actual_files_count": 73,
+            "expected_files_count": 66,
+            "memory_traffic": 7961.670593261719,
+            "repo_url": "https://github.com/fmtlib/fmt.git",
+            "commit_ref": "fade652ade6e9ba4b16e7484cbda5ee4c9178918",
+            "commit_message": "Require clang >=15 for _BitInt support (#4176)\n\nFor appleclang, fixes issue #4173",
+            "commit_timestamp": 1727392251.0
         }
     ]
 }

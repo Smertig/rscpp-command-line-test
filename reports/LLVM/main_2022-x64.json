@@ -22130,6 +22130,23 @@
             "commit_ref": "6d6d15b626a3d6132765a75a103a773b0e45327b",
             "commit_message": "[X86] Avoid repeated hash lookups (NFC) (#110077)\n\n",
             "commit_timestamp": 1727362801.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1727407388.812075,
+            "elapsed_time": 1633.9576630592346,
+            "x64": true,
+            "actual_files_count": 2071,
+            "expected_files_count": 1661,
+            "memory_traffic": 253661.97576904297,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "d435acb8ebb46425e752d1fb02015dbbf6471585",
+            "commit_message": "[DWARF] Don't emit DWARF5 symbols for DWARF2/3 + non-lldb (#110120)\n\nModify other legacy dwarf versions to align with the dwarf4 handling\r\napproach when determining whether to generate DWARF5 or GNU extensions.",
+            "commit_timestamp": 1727404024.0
         }
     ]
 }
