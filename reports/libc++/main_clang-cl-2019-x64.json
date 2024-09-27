@@ -2073,6 +2073,23 @@
             "commit_ref": "d435acb8ebb46425e752d1fb02015dbbf6471585",
             "commit_message": "[DWARF] Don't emit DWARF5 symbols for DWARF2/3 + non-lldb (#110120)\n\nModify other legacy dwarf versions to align with the dwarf4 handling\r\napproach when determining whether to generate DWARF5 or GNU extensions.",
             "commit_timestamp": 1727404024.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1727449684.798952,
+            "elapsed_time": 82.43157768249512,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 6509.37686920166,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "1fd1f65569f565b5b06fd9464b3b91fcd6f2fa2a",
+            "commit_message": " [mlir] Refactor LegalizeToF32 to specify extra supported float types and target type as arguments (#108815)\n\nInstead of hardcoding all fp smaller than 32 bits are unsupported we\r\nprovide a way to pass supported floating point types as well as the\r\ntarget type. fp64 and fp32 are implicitly supported.\r\n\r\nCC: @krzysz00 @manupak",
+            "commit_timestamp": 1727449336.0
         }
     ]
 }

@@ -17441,6 +17441,21 @@
             "commit_ref": "6f9525dd3f0ef5809106ca0923a7512d666a04bb",
             "commit_message": "gh-116510: Fix crash during sub-interpreter shutdown (gh-124645)\n\nFix a bug that can cause a crash when sub-interpreters use \"basic\"\r\nsingle-phase extension modules.  Shared objects could refer to PyGC_Head\r\nnodes that had been freed as part of interpreter shutdown.",
             "commit_timestamp": 1727404387.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1727449726.548207,
+            "elapsed_time": 1118.542132616043,
+            "x64": true,
+            "actual_files_count": 1051,
+            "expected_files_count": null,
+            "memory_traffic": 50552.96492767334,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "0a3577bdfcb7132c92a3f7fb2ac231bc346383c0",
+            "commit_message": "gh-123017: Add Android to the list of platforms where `strftime` doesn't support negative years (#124467)\n\nAdd Android to the list of platforms where `strftime` doesn't support negative years",
+            "commit_timestamp": 1727447718.0
         }
     ]
 }

@@ -15777,6 +15777,21 @@
             "commit_ref": "65ec371b7849606e7a8b6bf31e75d7c210ce7035",
             "commit_message": "Allow `allfaces` drawtypes to have 6 textures (#15175)\n\n",
             "commit_timestamp": 1727364856.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1727451178.941714,
+            "elapsed_time": 177.52133011817932,
+            "x64": true,
+            "actual_files_count": 401,
+            "expected_files_count": 105,
+            "memory_traffic": 22693.701805114746,
+            "repo_url": "https://github.com/minetest/minetest",
+            "commit_ref": "fbb0e82679b35366ae72db42d357b5439d72f9d6",
+            "commit_message": "Fix uninitialized shadow tint regression from #14610 (#15197)\n\n* Fix uninitialized shadow tint\r\n\r\nThis resulted in shadows having a different, random color each time I started a game\r\n\r\n* Fix formatting mistakes from the same PR",
+            "commit_timestamp": 1727428115.0
         }
     ]
 }

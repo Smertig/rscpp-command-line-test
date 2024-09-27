@@ -3569,6 +3569,21 @@
             "commit_ref": "0ea9685deb63106e66a9da388d1d25f8ff5f671d",
             "commit_message": "Use an explicit locale when formatting OutOfSpaceException.\n\nImplicitly using the default locale is a common source of bugs:\nhttps://developer.android.com/reference/java/util/Locale.html#default_locale\n\nPiperOrigin-RevId: 679381814\n",
             "commit_timestamp": 1727403581.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1727449619.590921,
+            "elapsed_time": 316.6865074634552,
+            "x64": true,
+            "actual_files_count": 1148,
+            "expected_files_count": 818,
+            "memory_traffic": 38869.249603271484,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "6fe67db7c0f28e7e327d2ad79d4f853aa8e72039",
+            "commit_message": "Remove usage of `std::hash<google::protobuf::MapKey` and use a single `absl::HashOf` call when calculating the bucket\n\nPiperOrigin-RevId: 679573919\n",
+            "commit_timestamp": 1727445788.0
         }
     ]
 }
