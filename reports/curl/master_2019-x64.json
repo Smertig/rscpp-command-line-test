@@ -20441,6 +20441,21 @@
             "commit_ref": "f2ce14e10ab5ebf9ba5145f74cb6aec1dec1ec20",
             "commit_message": "singleuse: limit checks to non-unity jobs\n\n`singleuse.pl` requires non-unity builds. With unity builds, it remains\nsilent.\n\n- make some jobs non-unity to allow singleuse to do its job.\n- since all jobs used the `--unit` singleuse checker option, make this\n  option permanent.\n\nCloses #15065\n",
             "commit_timestamp": 1727454271.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1727535970.332301,
+            "elapsed_time": 263.41805839538574,
+            "x64": true,
+            "actual_files_count": 3404,
+            "expected_files_count": 2323,
+            "memory_traffic": 47426.146713256836,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "f2ce14e10ab5ebf9ba5145f74cb6aec1dec1ec20",
+            "commit_message": "singleuse: limit checks to non-unity jobs\n\n`singleuse.pl` requires non-unity builds. With unity builds, it remains\nsilent.\n\n- make some jobs non-unity to allow singleuse to do its job.\n- since all jobs used the `--unit` singleuse checker option, make this\n  option permanent.\n\nCloses #15065\n",
+            "commit_timestamp": 1727454271.0
         }
     ]
 }
