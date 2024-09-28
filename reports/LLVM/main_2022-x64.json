@@ -22164,6 +22164,23 @@
             "commit_ref": "1fd1f65569f565b5b06fd9464b3b91fcd6f2fa2a",
             "commit_message": " [mlir] Refactor LegalizeToF32 to specify extra supported float types and target type as arguments (#108815)\n\nInstead of hardcoding all fp smaller than 32 bits are unsupported we\r\nprovide a way to pass supported floating point types as well as the\r\ntarget type. fp64 and fp32 are implicitly supported.\r\n\r\nCC: @krzysz00 @manupak",
             "commit_timestamp": 1727449336.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1727493675.124512,
+            "elapsed_time": 1625.0518991947174,
+            "x64": true,
+            "actual_files_count": 2071,
+            "expected_files_count": 1661,
+            "memory_traffic": 254019.97677612305,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "2a005bff183c6c02004fa61a7bc5ec87d5d88ad3",
+            "commit_message": "[Flang][OpenMP] Fix for error in atomic read for different elements of the common symbol #80399 (#109265)\n\nFixes issue https://github.com/llvm/llvm-project/issues/80399",
+            "commit_timestamp": 1727491349.0
         }
     ]
 }

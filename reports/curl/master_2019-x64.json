@@ -20426,6 +20426,21 @@
             "commit_ref": "7f3d598276e988a46558fe6a2951b1ae354afcdf",
             "commit_message": "CI: improvements in test reliability and performance\n\n- CI default: raise parallelism to 20\n- CI valgind: set parallelism to 6\n- CI non-native: adapt parallelism for OS builds\n- CI Windows: no longer ignore FTP, TFTP, MQTT and SMTP\n- CI Windows: restrict test timeout to 10 minutes\n- CI Windows: do not run tests for msh3 build\n- tests, various: restrict curl invocation to ipv4 to avoid talking to\n  any ipv6 test server running in parallel\n- tests: requiring http/2 server no longer needs to mention http server\n- test 190: use a fixed timeout of 10 seconds instead of %FTPTIME2, as\n  that value rises under parallel load beyond what the server is waiting\n  and then produces different results\n- test 1540: add debug logging\n- testrunner: add verify checks for http/2 and http/3 server\n\nCloses #15040\n",
             "commit_timestamp": 1727448457.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1727493010.576812,
+            "elapsed_time": 333.6612069606781,
+            "x64": true,
+            "actual_files_count": 3404,
+            "expected_files_count": 2323,
+            "memory_traffic": 47157.3444442749,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "f2ce14e10ab5ebf9ba5145f74cb6aec1dec1ec20",
+            "commit_message": "singleuse: limit checks to non-unity jobs\n\n`singleuse.pl` requires non-unity builds. With unity builds, it remains\nsilent.\n\n- make some jobs non-unity to allow singleuse to do its job.\n- since all jobs used the `--unit` singleuse checker option, make this\n  option permanent.\n\nCloses #15065\n",
+            "commit_timestamp": 1727454271.0
         }
     ]
 }
