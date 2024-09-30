@@ -20501,6 +20501,21 @@
             "commit_ref": "e474b02301c146cd36601b0a77251d76e9f90614",
             "commit_message": "runtests: fix indentation\n",
             "commit_timestamp": 1727653872.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1727708980.635391,
+            "elapsed_time": 256.55312180519104,
+            "x64": true,
+            "actual_files_count": 3404,
+            "expected_files_count": 2323,
+            "memory_traffic": 49345.26863861084,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "18143579ba6e7154abe635919f25ae8e6df82973",
+            "commit_message": "cmake: readd `generate-curl.1` dependency for `src` just in case\n\nTrying to fix intermittent build failures with MSVC 2008:\n```\nunity_0.obj : error LNK2019: unresolved external symbol _showhelp referenced in function _tool_help\nunity_0.obj : error LNK2019: unresolved external symbol _hugehelp referenced in function _operate\n```\nhttps://ci.appveyor.com/project/curlorg/curl/builds/50700212/job/h3ekljnbccosej5k#L154\nhttps://ci.appveyor.com/project/curlorg/curl/builds/50701615/job/61mkg9og1eooqli8#L155\n\nFollow-up to 496da69aa0eb988ac92eb815742eb89b975ad83e #14883\n\nCloses #15088\n",
+            "commit_timestamp": 1727698283.0
         }
     ]
 }
