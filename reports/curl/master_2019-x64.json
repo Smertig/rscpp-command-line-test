@@ -20486,6 +20486,21 @@
             "commit_ref": "842f88434f627c0330e263a3881b2d9438786b32",
             "commit_message": "GHA linux: restore `apt-get update`\n\nIt seems like the Ubuntu apt mirror list or other preloaded data on the\nLinux runner can go stale (?) throughout a single week causing failures\nlike this, in some of the jobs:\n```\nIgn:16 http://security.ubuntu.com/ubuntu jammy-updates/main amd64 libapr1-dev amd64 1.7.0-8ubuntu0.22.04.1\nErr:16 mirror+file:/etc/apt/apt-mirrors.txt jammy-updates/main amd64 libapr1-dev amd64 1.7.0-8ubuntu0.22.04.1\n  404  Not Found [IP: 40.81.13.82 80]\nGet:24 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnghttp2-dev amd64 1.43.0-1ubuntu0.2 [117 kB]\nGet:25 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 vsftpd amd64 3.0.5-0ubuntu1.1 [123 kB]\nFetched 4029 kB in 2s (1682 kB/s)\nE: Failed to fetch mirror+file:/etc/apt/apt-mirrors.txt/pool/main/a/apr/libapr1-dev_1.7.0-8ubuntu0.22.04.1_amd64.deb  404  Not Found [IP: 40.81.13.82 80]\nE: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?\nError: Process completed with exit code 100.\n```\nhttps://github.com/curl/curl/actions/runs/11074211380/job/30772496037#step:32:63\n\nRestore `apt update` to fix it.\n\nFollow-up to 1b8449674adb57ee0f60e761d654c69b20ee8fcf #14992\n\nCloses #15082\n",
             "commit_timestamp": 1727549962.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1727666054.982685,
+            "elapsed_time": 246.42812609672546,
+            "x64": true,
+            "actual_files_count": 3404,
+            "expected_files_count": 2323,
+            "memory_traffic": 47187.533950805664,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "e474b02301c146cd36601b0a77251d76e9f90614",
+            "commit_message": "runtests: fix indentation\n",
+            "commit_timestamp": 1727653872.0
         }
     ]
 }

@@ -3644,6 +3644,21 @@
             "commit_ref": "a746c473771364e1213658471482085666523e8b",
             "commit_message": "Update rules_kotlin to 1.9.6\n\nThis should fix some of the failures in downstream: https://buildkite.com/bazel/bazel-at-head-plus-downstream/builds/4152#019231ab-af23-46ae-baf9-296ef1fe8c8c\n\nPiperOrigin-RevId: 679695588\n",
             "commit_timestamp": 1727466922.0
+        },
+        {
+            "tool_version": "243.0.20240901.31354-eap01d",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1727666107.264383,
+            "elapsed_time": 332.65347599983215,
+            "x64": true,
+            "actual_files_count": 1148,
+            "expected_files_count": 818,
+            "memory_traffic": 38845.96977996826,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "390e37b44776bfe8b5323c5d2487c48d83abab0d",
+            "commit_message": "Avoid name conflict of rust Option with message Option\n\nFunctions like `map_get` return a rust Option, which\nmight conflict with a `message Option` defined in the\ncurrent proto file. Use `::__std::option::Option` to\ndisambiguate rust Option and message Option.\n\nPiperOrigin-RevId: 680333636\n",
+            "commit_timestamp": 1727650932.0
         }
     ]
 }
