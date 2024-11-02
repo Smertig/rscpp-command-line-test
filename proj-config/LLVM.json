@@ -20,7 +20,8 @@
     "to skip": [
         "Version.cpp",
         "HTMLLogger.cpp",
-        "NodeIntrospection.cpp"
+        "NodeIntrospection.cpp",
+        "AArch64.cpp"
     ],
     "__to skip reason": "requires codegen",
     "stable": {
@@ -30,18 +31,6 @@
                 "line": "4649",
                 "message": "Member 'Self' is not initialized in this constructor",
                 "reason": "Bug: https://github.com/llvm/llvm-project/pull/82161"
-            },
-            {
-                "file": "..\\clang\\lib\\Driver\\DriverOptions.cpp",
-                "line": 30,
-                "message": "Expected expression",
-                "reason": "TODO"
-            },
-            {
-                "file": "..\\clang\\lib\\Driver\\DriverOptions.cpp",
-                "line": 36,
-                "message": "Failed to match type 'const _Ty(&)[_Size]' against 'const llvm::StringLiteral[]'",
-                "reason": "TODO"
             }
         ],
         "inspected files count": 1661
@@ -49,18 +38,6 @@
     "latest": {
         "main": {
             "known errors": [
-                {
-                    "file": "..\\clang\\lib\\Driver\\DriverOptions.cpp",
-                    "line": 30,
-                    "message": "Expected expression",
-                    "reason": "TODO"
-                },
-                {
-                    "file": "..\\clang\\lib\\Driver\\DriverOptions.cpp",
-                    "line": 36,
-                    "message": "Failed to match type 'const _Ty(&)[_Size]' against 'const llvm::StringLiteral[]'",
-                    "reason": "TODO"
-                },
                 {
                     "file": "..\\clang\\include\\clang\\Frontend\\CompilerInvocation.h",
                     "line": 380,

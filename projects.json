@@ -468,6 +468,13 @@
         },
         "latest": {
             "v1.x": {
+                "known errors": [
+                    {
+                        "file": "..\\include\\spdlog\\fmt\\bundled\\base.h",
+                        "line": 458,
+                        "message": "static_assert failed: 'Unicode support requires compiling with /utf-8'\r\n    Expression '!1 || false' evaluates to false"
+                    }
+                ],
                 "inspected files count": 107
             }
         }
@@ -1053,15 +1060,7 @@
         },
         "latest": {
             "master": {
-                "inspected files count": 362,
-                "known errors": [
-                    {
-                        "file": "Source\\Hooks\\LoopModeGameHook.h",
-                        "line": 9,
-                        "message": "Ambiguous symbol 'RefCountedHook<LoopModeGameHook>'",
-                        "reason": "TODO"
-                    }
-                ]
+                "inspected files count": 362
             }
         }
     },
