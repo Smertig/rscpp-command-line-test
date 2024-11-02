@@ -2209,6 +2209,23 @@
             "commit_ref": "94f9cbbe49b4c836cfbed046637cdc0c63a4a083",
             "commit_message": "[Scalar] Remove unused includes (NFC) (#114645)\n\nIdentified with misc-include-cleaner.",
             "commit_timestamp": 1730561546.0
+        },
+        {
+            "tool_version": "243.0.20241022.70713-eap05",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1730566071.550162,
+            "elapsed_time": 74.65286874771118,
+            "x64": true,
+            "actual_files_count": 90,
+            "expected_files_count": null,
+            "memory_traffic": 6982.713706970215,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "8129ba6c70aef54d87893adeb34e76f84fa69fe3",
+            "commit_message": "[Minidump] Declare MinidumpFile::getListStream in the header instead of extern template (#112568)\n\nThis is part of the work to enable LLVM_BUILD_LLVM_DYLIB and LLVM\r\nplugins on window.",
+            "commit_timestamp": 1730565636.0
         }
     ]
 }
