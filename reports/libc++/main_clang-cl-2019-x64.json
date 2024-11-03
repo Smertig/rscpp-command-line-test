@@ -2226,6 +2226,23 @@
             "commit_ref": "8129ba6c70aef54d87893adeb34e76f84fa69fe3",
             "commit_message": "[Minidump] Declare MinidumpFile::getListStream in the header instead of extern template (#112568)\n\nThis is part of the work to enable LLVM_BUILD_LLVM_DYLIB and LLVM\r\nplugins on window.",
             "commit_timestamp": 1730565636.0
+        },
+        {
+            "tool_version": "243.0.20241022.70713-eap05",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1730603794.415999,
+            "elapsed_time": 92.10550713539124,
+            "x64": true,
+            "actual_files_count": 90,
+            "expected_files_count": null,
+            "memory_traffic": 7065.261268615723,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "5091a359d9807db8f7d62375696f93fc34226969",
+            "commit_message": "[ConstantFold] Special case log1p +/-0.0 (#114635)\n\nC's Annex F specifies that log1p +/-0.0 returns the input value;\r\nhowever, this behavior is optional and host C libraries may behave\r\ndifferently. This change applies the Annex F behavior to constant\r\nfolding by LLVM.",
+            "commit_timestamp": 1730592399.0
         }
     ]
 }
