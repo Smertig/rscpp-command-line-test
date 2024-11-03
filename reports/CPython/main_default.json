@@ -17576,6 +17576,21 @@
             "commit_ref": "7d7d56d8b1147a6b85e1c09d01b164df7c5c4942",
             "commit_message": "gh-99880: document rounding mode for new-style formatting (GH-121481)\n\n* gh-99880: document rounding mode for new-style formatting\r\n\r\nThe CPython uses _Py_dg_dtoa(), which does rounding to nearest with half\r\nto even tie-breaking rule.\r\n\r\nIf that functions is unavailable, PyOS_double_to_string() fallbacks to\r\nsystem snprintf().  Since CPython 3.12, build requirements include C11\r\ncompiler *and* support for IEEE 754 floating point numbers (Annex F).\r\nThis means that FE_TONEAREST macro is available and, per default,\r\nprintf-like functions should use same rounding mode as _Py_dg_dtoa().\r\n\r\n* Update Doc/library/string.rst\r\n\r\nCo-authored-by: B\u00e9n\u00e9dikt Tran <10796600+picnixz@users.noreply.github.com>\r\n\r\n---------\r\n\r\nCo-authored-by: B\u00e9n\u00e9dikt Tran <10796600+picnixz@users.noreply.github.com>",
             "commit_timestamp": 1730567472.0
+        },
+        {
+            "tool_version": "243.0.20241022.70713-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1730646470.31592,
+            "elapsed_time": 1110.7460193634033,
+            "x64": true,
+            "actual_files_count": 1055,
+            "expected_files_count": null,
+            "memory_traffic": 51178.14419555664,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "dcae5cd6abaae4f73e656ebc054f30d3f15ca7b8",
+            "commit_message": "gh-104400: Add more tests to pygettext (GH-108173)\n\n",
+            "commit_timestamp": 1730642469.0
         }
     ]
 }

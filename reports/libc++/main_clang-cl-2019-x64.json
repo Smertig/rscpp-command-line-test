@@ -2243,6 +2243,23 @@
             "commit_ref": "5091a359d9807db8f7d62375696f93fc34226969",
             "commit_message": "[ConstantFold] Special case log1p +/-0.0 (#114635)\n\nC's Annex F specifies that log1p +/-0.0 returns the input value;\r\nhowever, this behavior is optional and host C libraries may behave\r\ndifferently. This change applies the Annex F behavior to constant\r\nfolding by LLVM.",
             "commit_timestamp": 1730592399.0
+        },
+        {
+            "tool_version": "243.0.20241022.70713-eap05",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1730646451.210575,
+            "elapsed_time": 72.52896189689636,
+            "x64": true,
+            "actual_files_count": 90,
+            "expected_files_count": null,
+            "memory_traffic": 7020.831939697266,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "6927a434ba774a578d6d0f28f74cca13452afc84",
+            "commit_message": "[SelectionDAG] Remove unused includes (NFC) (#114697)\n\nIdentified with misc-include-cleaner.",
+            "commit_timestamp": 1730646213.0
         }
     ]
 }
