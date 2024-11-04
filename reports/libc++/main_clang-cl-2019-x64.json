@@ -2260,6 +2260,23 @@
             "commit_ref": "6927a434ba774a578d6d0f28f74cca13452afc84",
             "commit_message": "[SelectionDAG] Remove unused includes (NFC) (#114697)\n\nIdentified with misc-include-cleaner.",
             "commit_timestamp": 1730646213.0
+        },
+        {
+            "tool_version": "243.0.20241022.70713-eap05",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1730690224.592957,
+            "elapsed_time": 106.50029253959656,
+            "x64": true,
+            "actual_files_count": 90,
+            "expected_files_count": null,
+            "memory_traffic": 6989.767555236816,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "80a49487e1b64d32d00f0c80cff746cfd4988b36",
+            "commit_message": "[clang][Driver] Allow -fuse-lld=lld-link when lto is enabled on *windows-msvc targets (#113966)\n\nFollow-up on https://github.com/llvm/llvm-project/pull/109607, we have a\r\nuse case on Windows-on-ARM64 where `cmake -G \"Unix Makefiles\"` generates\r\n`-fuse-ld=lld-link`, which is accidentally disallowed by PR#109607.",
+            "commit_timestamp": 1730687120.0
         }
     ]
 }

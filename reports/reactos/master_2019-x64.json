@@ -20341,6 +20341,21 @@
             "commit_ref": "0e462a3905af0959040c1cab3af176cee40cabc7",
             "commit_message": "[SECLOGON] Add missing service status updates\n\nThe Seclogon service must update its status to SERVICE_STOPPED on a SERVICE_CONTROL_STOP or SERVICE_CONTROL_SHUTDOWN command.\n\nThis fixes CORE-19793.\n",
             "commit_timestamp": 1730626624.0
+        },
+        {
+            "tool_version": "243.0.20241022.70713-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1730690020.612252,
+            "elapsed_time": 88.19998812675476,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7681.751861572266,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "d6eebaa47a90f7a4c182beb5a53f7d903cb9ea62",
+            "commit_message": "[TCPIP] Synchronize LWIP code to 2.2.0\n\n- take code from STABLE-2_2_0_RELEASE commit on https://git.savannah.gnu.org/git/lwip.git\n- remove lwip/contrib directory\n- do required changes due to upgrade in\n  * CMakeLists.txt\n  * include/lwip/arch/cc.h\n  * include/lwip/arch/sys_arch.h\n  * include/lwip/lwipopts.h\n  * include/tcpip.h\n  * ip/CMakeLists.txt\n  * ip/lwip_glue/lwip_glue.h\n  * ip/lwip_glue/tcp.c\n  * ip/transport/tcp/if.c\n  * tcpip/icmp.c\n\nCORE-13098\n",
+            "commit_timestamp": 1730670585.0
         }
     ]
 }
