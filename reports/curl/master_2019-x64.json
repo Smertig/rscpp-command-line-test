@@ -20591,6 +20591,21 @@
             "commit_ref": "78c3172921f6e42143638a894408b729e8038f32",
             "commit_message": "curl_addrinfo: support operating systems with only getaddrinfo(3)\n\nThe gethostbyname(3) family was removed in POSIX-1.2008 in favor of\ngetaddrinfo(3) introduced in POSIX-1.2001. Modern POSIX systems such as\nSortix does not have gethostbyname nor the related definitions and\nstructures.\n\ncurl already only uses getaddrinfo(3) if available and thread safe,\nalthough there is mild breakage if the related gethostbyname definitions\nare missing.\n\nThis change attempts to fix that breakage:\n\nRemove an unnecessary configure error if gethostbyname is missing since\ngetaddrinfo is enough as a fallback.\n\nRewrite Curl_ip2addr to not use struct hostent as it no longer is\nstandardized and create the struct Curl_addrinfo directly.\n\nOnly define the Curl_he2ai function on non-getaddrinfo systems where it\nis going to be used with struct hoestent.\n\nRevoke the fallback logic for when it's unknown whether getaddrinfo is\nthread safe. It doesn't appear to make any sense since h_errno is\nunrelated to getaddrinfo. The logic prevents new POSIX.1-2024 systems\nfrom passing the thread safety test since h_errno does not exist anymore\nand POSIX already requires getaddrinfo to be thread safe. There's\nalready a denylist in place for operating systems with known buggy\nimplementations.\n\nCloses #15475\n",
             "commit_timestamp": 1730582939.0
+        },
+        {
+            "tool_version": "243.0.20241022.70713-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1730732853.275585,
+            "elapsed_time": 265.6712501049042,
+            "x64": true,
+            "actual_files_count": 3408,
+            "expected_files_count": 2323,
+            "memory_traffic": 49122.36808013916,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "3a35901a115e8587a8c45688af2e36cd746b65aa",
+            "commit_message": "wolfssl: coexist with openssl, further work\n\nBuild wolfSSL master with\n\n./configure --prefix=/path --enable-ip-alt-name --enable-quic\n--enable-earlydata --enable-psk --enable-opensslcoexist\n\nand configure curl with openssl + wolfssl. Normal tests run.\n\npytest session resumption fails, as wolfssl does not handle the\nnew_session callback without opensslextra right now.\n\nCloses #15481\n",
+            "commit_timestamp": 1730728110.0
         }
     ]
 }

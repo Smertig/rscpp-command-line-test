@@ -2277,6 +2277,23 @@
             "commit_ref": "80a49487e1b64d32d00f0c80cff746cfd4988b36",
             "commit_message": "[clang][Driver] Allow -fuse-lld=lld-link when lto is enabled on *windows-msvc targets (#113966)\n\nFollow-up on https://github.com/llvm/llvm-project/pull/109607, we have a\r\nuse case on Windows-on-ARM64 where `cmake -G \"Unix Makefiles\"` generates\r\n`-fuse-ld=lld-link`, which is accidentally disallowed by PR#109607.",
             "commit_timestamp": 1730687120.0
+        },
+        {
+            "tool_version": "243.0.20241022.70713-eap05",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1730732935.67979,
+            "elapsed_time": 109.69723725318909,
+            "x64": true,
+            "actual_files_count": 90,
+            "expected_files_count": null,
+            "memory_traffic": 6986.884437561035,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "0653698d8637b8d565cbf59de591e2d8c61c20cc",
+            "commit_message": "[flang][OpenMP] Add parsing support for Task detach (#112312)\n\nAdd parsing support for task detach, along with parse/unparse tests.",
+            "commit_timestamp": 1730731427.0
         }
     ]
 }
