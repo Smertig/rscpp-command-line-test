@@ -2294,6 +2294,23 @@
             "commit_ref": "0653698d8637b8d565cbf59de591e2d8c61c20cc",
             "commit_message": "[flang][OpenMP] Add parsing support for Task detach (#112312)\n\nAdd parsing support for task detach, along with parse/unparse tests.",
             "commit_timestamp": 1730731427.0
+        },
+        {
+            "tool_version": "243.0.20241022.70713-eap05",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1730776201.7927,
+            "elapsed_time": 91.70985150337219,
+            "x64": true,
+            "actual_files_count": 90,
+            "expected_files_count": null,
+            "memory_traffic": 7058.144577026367,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "fade3be83d8e4cad65418d3ab9849e49c8495cb3",
+            "commit_message": "[nfc][tsan] Wrap `Atomic`/`NoTsanAtomic` int struct (#114909)\n\nPrepare to replace macro with template.\r\n\r\nRelated to #114724, but it's not strictly needed.",
+            "commit_timestamp": 1730774845.0
         }
     ]
 }

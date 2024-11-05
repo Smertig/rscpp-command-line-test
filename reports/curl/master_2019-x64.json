@@ -20606,6 +20606,21 @@
             "commit_ref": "3a35901a115e8587a8c45688af2e36cd746b65aa",
             "commit_message": "wolfssl: coexist with openssl, further work\n\nBuild wolfSSL master with\n\n./configure --prefix=/path --enable-ip-alt-name --enable-quic\n--enable-earlydata --enable-psk --enable-opensslcoexist\n\nand configure curl with openssl + wolfssl. Normal tests run.\n\npytest session resumption fails, as wolfssl does not handle the\nnew_session callback without opensslextra right now.\n\nCloses #15481\n",
             "commit_timestamp": 1730728110.0
+        },
+        {
+            "tool_version": "243.0.20241022.70713-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1730776118.999961,
+            "elapsed_time": 252.0588879585266,
+            "x64": true,
+            "actual_files_count": 3408,
+            "expected_files_count": 2323,
+            "memory_traffic": 48871.47822570801,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "3a35901a115e8587a8c45688af2e36cd746b65aa",
+            "commit_message": "wolfssl: coexist with openssl, further work\n\nBuild wolfSSL master with\n\n./configure --prefix=/path --enable-ip-alt-name --enable-quic\n--enable-earlydata --enable-psk --enable-opensslcoexist\n\nand configure curl with openssl + wolfssl. Normal tests run.\n\npytest session resumption fails, as wolfssl does not handle the\nnew_session callback without opensslextra right now.\n\nCloses #15481\n",
+            "commit_timestamp": 1730728110.0
         }
     ]
 }
