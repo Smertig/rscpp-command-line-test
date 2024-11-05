@@ -17636,6 +17636,21 @@
             "commit_ref": "d9602265479bcd96dc377d92a34556baf34ac3cd",
             "commit_message": "gh-125436: Doc: Add missing ``allow_unnamed_section`` parameter to ``ConfigParser`` documentation (#125437)\n\nAdd missing ``allow_unnamed_section`` parameter to ``ConfigParser`` doc, as well as to it's parent ``RawConfigParser``.\r\nSplit too long line on ``ConfigParser`` signature.\r\nAdd some sections about when some of ``RawConfigParser`` parameters were added.",
             "commit_timestamp": 1730775495.0
+        },
+        {
+            "tool_version": "243.0.20241022.70713-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1730819289.425903,
+            "elapsed_time": 1097.8520801067352,
+            "x64": true,
+            "actual_files_count": 1058,
+            "expected_files_count": null,
+            "memory_traffic": 51292.03112792969,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "bbfd9c92fa3e3d77a86c7858617eb3d09de44fd1",
+            "commit_message": "gh-115999: Fix gdb support for libpython.so after thread-local bytecode change (#126440)\n\nFix the gdb pretty printer in the face of --enable-shared by delaying the attempt to load the _PyInterpreterFrame definition until after .so files are loaded.",
+            "commit_timestamp": 1730818167.0
         }
     ]
 }
