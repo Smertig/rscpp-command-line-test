@@ -20636,6 +20636,21 @@
             "commit_ref": "e1ed6b8e290153febd290764f7084ec635a06c0f",
             "commit_message": "mbedtls: remove failf() use from mbedtls_random\n\nSince data can be NULL in here, calling failf() can be bad. This should\nalso be a terribly rare error so the lack of error message for this\nshould be manageable.\n\nReported-by: wxiaoguang on github\nFixes #15485\nCloses #15486\n",
             "commit_timestamp": 1730804095.0
+        },
+        {
+            "tool_version": "243.0.20241022.70713-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1730862550.173776,
+            "elapsed_time": 261.3414218425751,
+            "x64": true,
+            "actual_files_count": 3408,
+            "expected_files_count": 2323,
+            "memory_traffic": 49168.751220703125,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "380790b2449ec5337142fdcb8ac51365ffd86bae",
+            "commit_message": "GHA/non-native: fix installing OpenLDAP on OpenBSD\n\nAlso:\n- drop failing manual install of perl. It's there by default now.\n- add link to OpenBSD package management FAQ page.\n\nCloses #15491\n",
+            "commit_timestamp": 1730857329.0
         }
     ]
 }

@@ -2328,6 +2328,23 @@
             "commit_ref": "877cb9a2edc9057d70321e436e5ea8ccc1a87140",
             "commit_message": "[KnownBits] Make `{s,u}{add,sub}_sat` optimal (#113096)\n\nChanges are:\r\n    1) Make signed-overflow detection optimal\r\n    2) For signed-overflow, try to rule out direction even if we can't\r\n       totally rule out overflow.\r\n    3) Intersect add/sub assuming no overflow with possible overflow\r\n       clamping values as opposed to add/sub without the assumption.",
             "commit_timestamp": 1730819017.0
+        },
+        {
+            "tool_version": "243.0.20241022.70713-eap05",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1730862608.547834,
+            "elapsed_time": 83.9953134059906,
+            "x64": true,
+            "actual_files_count": 90,
+            "expected_files_count": null,
+            "memory_traffic": 7006.316429138184,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "895a8e66c6d1e42519909981ab1bb0ad41231029",
+            "commit_message": "[AArch64][GISel] Support neon.abs intrinsic for vector types (#107226)\n\nThis patch lowers the intrinsic to G_ABS and thus supports the intrinsic in GISel.",
+            "commit_timestamp": 1730862106.0
         }
     ]
 }

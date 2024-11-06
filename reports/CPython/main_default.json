@@ -17651,6 +17651,21 @@
             "commit_ref": "bbfd9c92fa3e3d77a86c7858617eb3d09de44fd1",
             "commit_message": "gh-115999: Fix gdb support for libpython.so after thread-local bytecode change (#126440)\n\nFix the gdb pretty printer in the face of --enable-shared by delaying the attempt to load the _PyInterpreterFrame definition until after .so files are loaded.",
             "commit_timestamp": 1730818167.0
+        },
+        {
+            "tool_version": "243.0.20241022.70713-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1730862685.648324,
+            "elapsed_time": 1086.9866540431976,
+            "x64": true,
+            "actual_files_count": 1058,
+            "expected_files_count": null,
+            "memory_traffic": 51334.51039123535,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "83ba8c2bba834c0b92de669cac16fcda17485e0e",
+            "commit_message": "gh-70764: inspect.getclosurevars now identifies global variables with LOAD_GLOBAL (#120143)\n\n",
+            "commit_timestamp": 1730850834.0
         }
     ]
 }

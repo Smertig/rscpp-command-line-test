@@ -21943,6 +21943,21 @@
             "commit_ref": "75e48c5f959b4f0a49d8c664e059b6fb4b497102",
             "commit_message": "Skip transient tests on GraalPy (#5422)\n\n",
             "commit_timestamp": 1729870095.0
+        },
+        {
+            "tool_version": "243.0.20241022.70713-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1730862557.428931,
+            "elapsed_time": 149.936758518219,
+            "x64": true,
+            "actual_files_count": 356,
+            "expected_files_count": 197,
+            "memory_traffic": 18266.02442932129,
+            "repo_url": "https://github.com/pybind/pybind11",
+            "commit_ref": "bc041de0db118a30cb5588a435e1d56cac95e60b",
+            "commit_message": "Fix buffer protocol implementation (#5407)\n\n* Fix buffer protocol implementation\r\n\r\nAccording to the buffer protocol, `ndim` is a _required_ field [1], and\r\nshould always be set correctly. Additionally, `shape` should be set if\r\nflags includes `PyBUF_ND` or higher [2]. The current implementation only\r\nset those fields if flags was `PyBUF_STRIDES`.\r\n\r\n[1] https://docs.python.org/3/c-api/buffer.html#request-independent-fields\r\n[2] https://docs.python.org/3/c-api/buffer.html#shape-strides-suboffsets\r\n\r\n* Apply suggestions from review\r\n\r\n* Obey contiguity requests for buffer protocol\r\n\r\nIf a contiguous buffer is requested, and the underlying buffer isn't,\r\nthen that should raise. This matches NumPy behaviour if you do something\r\nlike:\r\n```\r\nstruct.unpack_from('5d', np.arange(20.0)[::4])  # Raises for contiguity\r\n```\r\n\r\nAlso, if a buffer is contiguous, then it can masquerade as a\r\nless-complex buffer, either by dropping strides, or even pretending to\r\nbe 1D. This matches NumPy behaviour if you do something like:\r\n```\r\na = np.full((3, 5), 30.0)\r\nstruct.unpack_from('15d', a)  # --> Produces 1D tuple from 2D buffer.\r\n```\r\n\r\n* Handle review comments\r\n\r\n* Test buffer protocol against NumPy\r\n\r\n* Also check PyBUF_FORMAT results",
+            "commit_timestamp": 1730830464.0
         }
     ]
 }
