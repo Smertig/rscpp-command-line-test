@@ -21663,6 +21663,21 @@
             "commit_ref": "d99cdd7356de97b3056684d6b511189778d8a247",
             "commit_message": "Add `nb::is_flag()` annotation to Counter::Flags (#1870)\n\nThis saves us the definition of `__or__`, because we can just use the\r\none from `enum.IntFlag`.",
             "commit_timestamp": 1730139520.0
+        },
+        {
+            "tool_version": "243.0.20241022.70713-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1730905518.088693,
+            "elapsed_time": 53.790422201156616,
+            "x64": true,
+            "actual_files_count": 88,
+            "expected_files_count": 86,
+            "memory_traffic": 4903.604919433594,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "a6af6eeb6a53c599365bc405539c1ec044fefb32",
+            "commit_message": "Add a Python matrix to ensure the bindings build on all supported versions (#1871)\n\nAlso contains a run of `pre-commit autoupdate`, and a bump of cibuildwheel\r\nto its latest tag for CPython 3.13 support.\r\n\r\nBut, since we build for 3.10+ with SABI from 3.12 onwards, we don't even\r\nneed a dedicated Python 3.13 build job or toolchain - the wheels from 3.12\r\ncan be reused.\r\n\r\nSimplifies some version-dependent logic around assembling the bazel\r\nbuild command in setup.py, and fixes a possible unbound local error in\r\nthe toolchain patch context manager.",
+            "commit_timestamp": 1730898922.0
         }
     ]
 }
