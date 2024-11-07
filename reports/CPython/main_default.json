@@ -17696,6 +17696,21 @@
             "commit_ref": "2a6b6b33dfe0f3c435abf2829b62ef3f1ef12cd3",
             "commit_message": "GH-126458: disable SIMD for HACL under WASI (#126512)\n\nRequires an extra `-msimd128` flag and the `*mmintrin.h` header files are exclusive to x86-family CPUs.",
             "commit_timestamp": 1730932426.0
+        },
+        {
+            "tool_version": "243.0.20241022.70713-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1730992203.089376,
+            "elapsed_time": 1130.4461965560913,
+            "x64": true,
+            "actual_files_count": 1058,
+            "expected_files_count": null,
+            "memory_traffic": 51414.20722961426,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "85036c8d612007356d2118eb25b460505078b023",
+            "commit_message": "GH-126222: Fix `_PyUop_num_popped` (GH-126507)\n\n",
+            "commit_timestamp": 1730976507.0
         }
     ]
 }

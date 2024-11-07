@@ -21693,6 +21693,21 @@
             "commit_ref": "a6af6eeb6a53c599365bc405539c1ec044fefb32",
             "commit_message": "Add a Python matrix to ensure the bindings build on all supported versions (#1871)\n\nAlso contains a run of `pre-commit autoupdate`, and a bump of cibuildwheel\r\nto its latest tag for CPython 3.13 support.\r\n\r\nBut, since we build for 3.10+ with SABI from 3.12 onwards, we don't even\r\nneed a dedicated Python 3.13 build job or toolchain - the wheels from 3.12\r\ncan be reused.\r\n\r\nSimplifies some version-dependent logic around assembling the bazel\r\nbuild command in setup.py, and fixes a possible unbound local error in\r\nthe toolchain patch context manager.",
             "commit_timestamp": 1730898922.0
+        },
+        {
+            "tool_version": "243.0.20241022.70713-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1730992126.82103,
+            "elapsed_time": 121.81333041191101,
+            "x64": true,
+            "actual_files_count": 88,
+            "expected_files_count": 86,
+            "memory_traffic": 4948.636787414551,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "50ffd3e546c51686e468042721704ad59d4e0eac",
+            "commit_message": "Declare a Python 3.13 toolchain, revert setup.py toolchain arget selection (#1876)\n\nThe new solution was too smart (read: dense), because it did not account for\r\nthe fact that we look for the Windows libs of the interpreter building\r\nthe wheel, not the hermetic one supplying the header files.\r\n\r\nThe fix is to just align the versions again, so that the libs and headers\r\ncome from the same minor version.",
+            "commit_timestamp": 1730991891.0
         }
     ]
 }

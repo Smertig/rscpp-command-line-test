@@ -2379,6 +2379,23 @@
             "commit_ref": "c6091cdbedd86cdab0a0d0f18569bf28e016ed9d",
             "commit_message": "[SLP][REVEC] Make shufflevector can be vectorized with ReorderIndices and ReuseShuffleIndices. (#114965)\n\n",
             "commit_timestamp": 1730948674.0
+        },
+        {
+            "tool_version": "243.0.20241022.70713-eap05",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1730992031.650875,
+            "elapsed_time": 106.31367039680481,
+            "x64": true,
+            "actual_files_count": 90,
+            "expected_files_count": null,
+            "memory_traffic": 5700.136779785156,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "3ad0148020ca91cc288bffd8ad36e25f7555a3bb",
+            "commit_message": "[MLIR][Linalg] Re-land linalg.matmul move to ODS. + Remove/update failing obsolete OpDSL tests. (#115319)\n\nThe earlier PR(https://github.com/llvm/llvm-project/pull/104783) which\r\nintroduces\r\ntranspose and broadcast semantic to linalg.matmul was reverted due to\r\ntwo failing\r\nOpDSL test for linalg.matmul.\r\n\r\nSince linalg.matmul is now defined using TableGen ODS instead of\r\nPython-based OpDSL,\r\nthese test started failing and needs to be removed/updated.\r\n\r\nThis commit removes/updates the failing obsolete tests from below files.\r\nAll other files\r\nwere part of earlier PR and just cherry picked.\r\n    \"mlir/test/python/integration/dialects/linalg/opsrun.py\"\r\n    \"mlir/test/python/integration/dialects/transform.py\"\r\n\r\n---------\r\n\r\nCo-authored-by: Renato Golin <rengolin@systemcall.eu>",
+            "commit_timestamp": 1730991062.0
         }
     ]
 }
