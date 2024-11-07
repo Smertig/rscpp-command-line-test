@@ -22419,6 +22419,23 @@
             "commit_ref": "5d8be4c036aa5ce4a94f1f37a9155d5c877e23db",
             "commit_message": "[libc++] Define an internal locale API as a shim on top of the current one (#114596)\n\nOur current locale base API is a mix of non-reserved system names that\r\nwe incorrectly (re)define and internal functions and macros starting\r\nwith __libcpp. This patch introduces a function-based internal interface\r\nto isolate the rest of the code base from that mess, so that we can work\r\non refactoring how each platform implements the base API in subsequent\r\npatches. This makes it possible to refactor how each platform implements\r\nthe base localization API without impacting the rest of the code base.",
             "commit_timestamp": 1730905028.0
+        },
+        {
+            "tool_version": "243.0.20241022.70713-eap05",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1730949805.513805,
+            "elapsed_time": 1639.2121531963348,
+            "x64": true,
+            "actual_files_count": 2086,
+            "expected_files_count": 1661,
+            "memory_traffic": 253139.9263305664,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "c6091cdbedd86cdab0a0d0f18569bf28e016ed9d",
+            "commit_message": "[SLP][REVEC] Make shufflevector can be vectorized with ReorderIndices and ReuseShuffleIndices. (#114965)\n\n",
+            "commit_timestamp": 1730948674.0
         }
     ]
 }
