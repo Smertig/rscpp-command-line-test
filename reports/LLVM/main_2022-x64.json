@@ -22453,6 +22453,23 @@
             "commit_ref": "c8a7f14b276fcea68c50ee6b9007680867d2393e",
             "commit_message": "[Backend] Add clearSubtargetMap API for TargetMachine. (#112383)\n\n- [x] Add `clearSubtargetInfo` API to TargetMachine and each backend to\r\nmake it possible to release memory used in each backend's\r\n`SubtargetInfo` map if needed. Keep this API as `protected` so that it\r\nwill be used with precautions.",
             "commit_timestamp": 1730991919.0
+        },
+        {
+            "tool_version": "243.0.20241022.70713-eap05",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1731036154.070911,
+            "elapsed_time": 1578.6789782047272,
+            "x64": true,
+            "actual_files_count": 2086,
+            "expected_files_count": 1661,
+            "memory_traffic": 253007.74535369873,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "e520b28397fa7ad39a9934df65f45cbdf5514a84",
+            "commit_message": "[DXIL][SPIRV] Lower `WaveActiveCountBits` intrinsic (#113382)\n\n```\r\n  - add codegen for llvm builtin to spirv/directx intrinsic in CGBuiltin.cpp\r\n  - add lowering of spirv intrinsic to spirv backend in SPIRVInstructionSelector.cpp\r\n  - add lowering of directx intrinsic to dxil op in DXIL.td\r\n\r\n  - add test cases to illustrate passes\r\n  - add test case for semantic analysis\r\n```\r\n  \r\nResolves #80176",
+            "commit_timestamp": 1731035197.0
         }
     ]
 }

@@ -2396,6 +2396,23 @@
             "commit_ref": "3ad0148020ca91cc288bffd8ad36e25f7555a3bb",
             "commit_message": "[MLIR][Linalg] Re-land linalg.matmul move to ODS. + Remove/update failing obsolete OpDSL tests. (#115319)\n\nThe earlier PR(https://github.com/llvm/llvm-project/pull/104783) which\r\nintroduces\r\ntranspose and broadcast semantic to linalg.matmul was reverted due to\r\ntwo failing\r\nOpDSL test for linalg.matmul.\r\n\r\nSince linalg.matmul is now defined using TableGen ODS instead of\r\nPython-based OpDSL,\r\nthese test started failing and needs to be removed/updated.\r\n\r\nThis commit removes/updates the failing obsolete tests from below files.\r\nAll other files\r\nwere part of earlier PR and just cherry picked.\r\n    \"mlir/test/python/integration/dialects/linalg/opsrun.py\"\r\n    \"mlir/test/python/integration/dialects/transform.py\"\r\n\r\n---------\r\n\r\nCo-authored-by: Renato Golin <rengolin@systemcall.eu>",
             "commit_timestamp": 1730991062.0
+        },
+        {
+            "tool_version": "243.0.20241022.70713-eap05",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1731035488.434036,
+            "elapsed_time": 94.96573042869568,
+            "x64": true,
+            "actual_files_count": 90,
+            "expected_files_count": null,
+            "memory_traffic": 5723.5919189453125,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "e520b28397fa7ad39a9934df65f45cbdf5514a84",
+            "commit_message": "[DXIL][SPIRV] Lower `WaveActiveCountBits` intrinsic (#113382)\n\n```\r\n  - add codegen for llvm builtin to spirv/directx intrinsic in CGBuiltin.cpp\r\n  - add lowering of spirv intrinsic to spirv backend in SPIRVInstructionSelector.cpp\r\n  - add lowering of directx intrinsic to dxil op in DXIL.td\r\n\r\n  - add test cases to illustrate passes\r\n  - add test case for semantic analysis\r\n```\r\n  \r\nResolves #80176",
+            "commit_timestamp": 1731035197.0
         }
     ]
 }
