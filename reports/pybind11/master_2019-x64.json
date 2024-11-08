@@ -22018,6 +22018,21 @@
             "commit_ref": "ce2f00559498f4070821d540ba446e3a59766154",
             "commit_message": "Fixed data race in all_type_info in free-threading mode (#5419)\n\n* Fix data race all_type_info_populate in free-threading mode\r\nDescription:\r\n- fixed data race all_type_info_populate in free-threading mode\r\n- added test\r\n\r\nFor example, we have 2 threads entering `all_type_info`.\r\nBoth enter `all_type_info_get_cache`` function and\r\nthere is a first one which inserts a tuple (type, empty_vector) to the map\r\nand second is waiting. Inserting thread gets the (iter_to_key, True) and non-inserting thread\r\nafter waiting gets (iter_to_key, False).\r\nInserting thread than will add a weakref and will then call into `all_type_info_populate`.\r\nHowever, non-inserting thread is not entering `if (ins.second) {` clause and\r\nreturns `ins.first->second;`` which is just empty_vector.\r\nFinally, non-inserting thread is failing the check in `allocate_layout`:\r\n```c++\r\nif (n_types == 0) {\r\n    pybind11_fail(\r\n        \"instance allocation failed: new instance has no pybind11-registered base types\");\r\n}\r\n```\r\n\r\n* style: pre-commit fixes\r\n\r\n* Addressed PR comments\r\n\r\n---------\r\n\r\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>",
             "commit_timestamp": 1731000729.0
+        },
+        {
+            "tool_version": "243.0.20241022.70713-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1731078372.980612,
+            "elapsed_time": 164.30456590652466,
+            "x64": true,
+            "actual_files_count": 356,
+            "expected_files_count": 197,
+            "memory_traffic": 18387.637809753418,
+            "repo_url": "https://github.com/pybind/pybind11",
+            "commit_ref": "037310ea8a3655ac92b8df5d94c9c73cbadfd3be",
+            "commit_message": "Use std::unique_ptr in pybind11_getbuffer (#5435)\n\n* Use std::unique_ptr in pybind11_getbuffer\r\n\r\n* Move final assignment later",
+            "commit_timestamp": 1731045504.0
         }
     ]
 }

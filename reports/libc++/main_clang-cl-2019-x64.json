@@ -2413,6 +2413,23 @@
             "commit_ref": "e520b28397fa7ad39a9934df65f45cbdf5514a84",
             "commit_message": "[DXIL][SPIRV] Lower `WaveActiveCountBits` intrinsic (#113382)\n\n```\r\n  - add codegen for llvm builtin to spirv/directx intrinsic in CGBuiltin.cpp\r\n  - add lowering of spirv intrinsic to spirv backend in SPIRVInstructionSelector.cpp\r\n  - add lowering of directx intrinsic to dxil op in DXIL.td\r\n\r\n  - add test cases to illustrate passes\r\n  - add test case for semantic analysis\r\n```\r\n  \r\nResolves #80176",
             "commit_timestamp": 1731035197.0
+        },
+        {
+            "tool_version": "243.0.20241022.70713-eap05",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1731078551.105662,
+            "elapsed_time": 77.63371634483337,
+            "x64": true,
+            "actual_files_count": 90,
+            "expected_files_count": null,
+            "memory_traffic": 5713.791122436523,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "8b29c05b73310bba3d7abd007dbbd839c46b0ab4",
+            "commit_message": "[clang] Permit lifetimebound in all language modes (#115482)\n\nLifetimebound annotations can help diagnose common cases of dangling\r\nincluding escaping the address of a stack variable from a function. This\r\nis useful in all C family languages, restricting these diagnostics to\r\nC++ is an artificial limitation.\r\n\r\nCo-authored-by: Gabor Horvath <gaborh@apple.com>",
+            "commit_timestamp": 1731078311.0
         }
     ]
 }

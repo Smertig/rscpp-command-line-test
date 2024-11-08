@@ -16062,6 +16062,21 @@
             "commit_ref": "60cd1e452957e2e924eedf9de6b46f6eb7833ccc",
             "commit_message": "Correctly render transparency in TGA type 1 with color format A1R5G5B5\n\nThe branch removed in this patch handled color format A1R5G5B5 specially\nwhen creating a texture from a TGA type 1 file, i.e. an image that has a\ncolormap. It did not handle the 1-bit alpha channel correctly, rendering\ntransparent pixels black instead.\n\nSince the colormap is converted to A8R8G8B8 earlier anyways, the code\nfor the general case is able to handle this scenario already \u2013 at the\nexpense of making the created texture use twice as much GPU memory as\nnecessary.\n",
             "commit_timestamp": 1730920025.0
+        },
+        {
+            "tool_version": "243.0.20241022.70713-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1731080009.338705,
+            "elapsed_time": 186.76603317260742,
+            "x64": true,
+            "actual_files_count": 400,
+            "expected_files_count": 105,
+            "memory_traffic": 22532.19342803955,
+            "repo_url": "https://github.com/minetest/minetest",
+            "commit_ref": "bafc4779199a0544303290efa7be82ba1be9d5ee",
+            "commit_message": "Revert \"2D rendering: Enable bilinear filter for downscaling textures\" (#15385)\n\nThis reverts commit minetest/irrlicht@fb7a0e4298356a2d339c5ebf23152b441dc06a8f.",
+            "commit_timestamp": 1731061035.0
         }
     ]
 }

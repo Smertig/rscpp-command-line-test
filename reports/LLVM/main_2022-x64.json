@@ -22470,6 +22470,23 @@
             "commit_ref": "e520b28397fa7ad39a9934df65f45cbdf5514a84",
             "commit_message": "[DXIL][SPIRV] Lower `WaveActiveCountBits` intrinsic (#113382)\n\n```\r\n  - add codegen for llvm builtin to spirv/directx intrinsic in CGBuiltin.cpp\r\n  - add lowering of spirv intrinsic to spirv backend in SPIRVInstructionSelector.cpp\r\n  - add lowering of directx intrinsic to dxil op in DXIL.td\r\n\r\n  - add test cases to illustrate passes\r\n  - add test case for semantic analysis\r\n```\r\n  \r\nResolves #80176",
             "commit_timestamp": 1731035197.0
+        },
+        {
+            "tool_version": "243.0.20241022.70713-eap05",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1731079157.875885,
+            "elapsed_time": 1580.8440470695496,
+            "x64": true,
+            "actual_files_count": 2087,
+            "expected_files_count": 1661,
+            "memory_traffic": 253196.19258880615,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "9aea6671085f02e6127750103ca48ae6a09ceeb8",
+            "commit_message": "[symbolizer] Change the ErrorHandler from llvm::function_ref to std::function. (#115477)\n\nThis fixes dangling `ErrorHandler` references\r\n([here](https://github.com/llvm/llvm-project/blob/main/compiler-rt/lib/sanitizer_common/symbolizer/sanitizer_symbolize.cpp#L48-L53)\r\nis an example).\r\n\r\n`llvm::function_ref` doesn't own the callable, and it is not safe to\r\nstore a function_ref (the `PlainPrinterBase` stores a\r\n`llvm::function_ref` which can easily lead to dangling references).",
+            "commit_timestamp": 1731078079.0
         }
     ]
 }
