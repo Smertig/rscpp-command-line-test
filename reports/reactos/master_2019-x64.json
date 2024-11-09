@@ -20491,6 +20491,21 @@
             "commit_ref": "3ecd2363a6d045a38aa68a1b5f17bb53ffaad3e4",
             "commit_message": "[MSI][BOOTDATA][INF] Add missing mnemonic keys for the context menu\n\nAlso add accelerator FIXMEs where I don't know. CORE-12323\n",
             "commit_timestamp": 1730842498.0
+        },
+        {
+            "tool_version": "243.0.20241022.70713-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1731121712.167038,
+            "elapsed_time": 107.3321967124939,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7659.716896057129,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "a17b6e9369568dbbfc67edc0dd7bbe454127eb87",
+            "commit_message": "[SHELL32][BROWSEUI] Set DefView InvokeCommand directory (#7495)\n\nIf a .lnk shortcut does not specify a working directory, it should use the directory provided by the InvokeCommand caller when it's launced.\r\n\r\nCORE-19855",
+            "commit_timestamp": 1731104846.0
         }
     ]
 }

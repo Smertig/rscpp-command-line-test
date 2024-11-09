@@ -20726,6 +20726,21 @@
             "commit_ref": "1cd745a581e38e1c8f97c25b21c7ce2a6e0d4479",
             "commit_message": "ECH: enable support for the AWS-LC backend\n\nExtend existing ECH support for BoringSSL to its AWS-LC fork.\n\nAlso enable ECH in AWS-LC CI jobs.\n\n```\ncurl 8.11.0-DEV (x86_64-pc-linux-gnu) libcurl/8.11.0-DEV AWS-LC/1.37.0 zlib/1.3 brotli/1.1.0 zstd/1.5.5 libpsl/0.21.2\nRelease-Date: [unreleased]\nProtocols: dict file ftp ftps gopher gophers http https imap imaps ipfs ipns mqtt pop3 pop3s rtsp smb smbs smtp smtps telnet tftp ws wss\nFeatures: alt-svc AsynchDNS brotli ECH HSTS HTTPS-proxy IPv6 Largefile libz NTLM PSL SSL threadsafe UnixSockets zstd\n```\n\nCloses #15499\n",
             "commit_timestamp": 1731070779.0
+        },
+        {
+            "tool_version": "243.0.20241022.70713-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1731121702.658725,
+            "elapsed_time": 266.8985860347748,
+            "x64": true,
+            "actual_files_count": 3414,
+            "expected_files_count": 2323,
+            "memory_traffic": 49016.10175323486,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "9416e49ceb5d6fca11c2a363789bb72d420abc21",
+            "commit_message": "GHA/non-native: enable nghttp2 in OmniOS job\n\nCloses #15530\n",
+            "commit_timestamp": 1731111303.0
         }
     ]
 }

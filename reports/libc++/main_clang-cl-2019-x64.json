@@ -2430,6 +2430,23 @@
             "commit_ref": "8b29c05b73310bba3d7abd007dbbd839c46b0ab4",
             "commit_message": "[clang] Permit lifetimebound in all language modes (#115482)\n\nLifetimebound annotations can help diagnose common cases of dangling\r\nincluding escaping the address of a stack variable from a function. This\r\nis useful in all C family languages, restricting these diagnostics to\r\nC++ is an artificial limitation.\r\n\r\nCo-authored-by: Gabor Horvath <gaborh@apple.com>",
             "commit_timestamp": 1731078311.0
+        },
+        {
+            "tool_version": "243.0.20241022.70713-eap05",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1731121917.727923,
+            "elapsed_time": 70.83003830909729,
+            "x64": true,
+            "actual_files_count": 90,
+            "expected_files_count": null,
+            "memory_traffic": 5719.466003417969,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "1bf385f10291101163a346c8f075d56e1578351b",
+            "commit_message": "AMDGPU: Default to selecting frame indexes to SGPRs (#115060)\n\nOnly select to a VGPR if it's trivally used in VGPR only contexts.\nThis fixes mishandling frame indexes used in SGPR only contexts,\nlike inline assembly constraints.\n\nThis is suboptimal in the common case where the frame index\nis transitively used by only VALU ops. We make up for this by later\nfolding the copy to VALU plus scalar op in SIFoldOperands.",
+            "commit_timestamp": 1731121319.0
         }
     ]
 }

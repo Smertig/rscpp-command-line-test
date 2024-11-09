@@ -16077,6 +16077,21 @@
             "commit_ref": "bafc4779199a0544303290efa7be82ba1be9d5ee",
             "commit_message": "Revert \"2D rendering: Enable bilinear filter for downscaling textures\" (#15385)\n\nThis reverts commit minetest/irrlicht@fb7a0e4298356a2d339c5ebf23152b441dc06a8f.",
             "commit_timestamp": 1731061035.0
+        },
+        {
+            "tool_version": "243.0.20241022.70713-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1731123301.133676,
+            "elapsed_time": 176.07730507850647,
+            "x64": true,
+            "actual_files_count": 400,
+            "expected_files_count": 105,
+            "memory_traffic": 22589.164360046387,
+            "repo_url": "https://github.com/minetest/minetest",
+            "commit_ref": "50b75233364c89235ec2f8f77fb54767a228e395",
+            "commit_message": "ogles 2 driver: Delete some dead code\n\ngrepping for IRR_COMPILE_GLES2_COMMON gives no other results\n\nCOGLESCoreExtensionHandler is only used through COpenGL3ExtensionHandler\n",
+            "commit_timestamp": 1731095004.0
         }
     ]
 }
