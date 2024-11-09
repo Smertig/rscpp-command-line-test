@@ -22504,6 +22504,23 @@
             "commit_ref": "1bf385f10291101163a346c8f075d56e1578351b",
             "commit_message": "AMDGPU: Default to selecting frame indexes to SGPRs (#115060)\n\nOnly select to a VGPR if it's trivally used in VGPR only contexts.\nThis fixes mishandling frame indexes used in SGPR only contexts,\nlike inline assembly constraints.\n\nThis is suboptimal in the common case where the frame index\nis transitively used by only VALU ops. We make up for this by later\nfolding the copy to VALU plus scalar op in SIFoldOperands.",
             "commit_timestamp": 1731121319.0
+        },
+        {
+            "tool_version": "243.0.20241022.70713-eap05",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1731165602.61433,
+            "elapsed_time": 1582.7543818950653,
+            "x64": true,
+            "actual_files_count": 2087,
+            "expected_files_count": 1661,
+            "memory_traffic": 252837.6356048584,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "3654183afb283c9515a482f07fde730dd458a883",
+            "commit_message": "[MemProf] Allow promotion if target is a declaration (#115555)\n\nFixes an oversight in the MemProf ICP handling, that was blocking\r\npromotion/cloning of indirect calls when the profiled target is a\r\ndeclaration (i.e wasn't imported). There is no issue promoting in\r\nthat case, and in fact the comment mentions we should attempt to at\r\nleast import as declarations to enable more promotion.\r\n\r\nNote that normal ICP currently requires that the target be a definition,\r\nwhich is how this check ended up here. The comment there says that it\r\nmust be a definition because ThinLTO could remove declarations for\r\nsymbols found to be globally dead in the binary. However, here we are\r\nalways performing MemProf ICP in the ThinLTO backends, which is after\r\nthe globally dead symbols are removed (via dropDeadSymbols before\r\nstarting the optimization pipeline) [1].\r\n\r\nFor now, guard this with an option (flag is off which means the new\r\npromotion is enabled by default) to simplify debugging or disabling it\r\nif\r\nthis proves problematic.\r\n\r\n[1] In fact we could also be more aggressive in regular ICP when invoked\r\nin the ThinLTO backend",
+            "commit_timestamp": 1731164743.0
         }
     ]
 }
