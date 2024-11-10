@@ -21768,6 +21768,21 @@
             "commit_ref": "50ffd3e546c51686e468042721704ad59d4e0eac",
             "commit_message": "Declare a Python 3.13 toolchain, revert setup.py toolchain arget selection (#1876)\n\nThe new solution was too smart (read: dense), because it did not account for\r\nthe fact that we look for the Windows libs of the interpreter building\r\nthe wheel, not the hermetic one supplying the header files.\r\n\r\nThe fix is to just align the versions again, so that the libs and headers\r\ncome from the same minor version.",
             "commit_timestamp": 1730991891.0
+        },
+        {
+            "tool_version": "243.0.20241022.70713-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1731208218.623859,
+            "elapsed_time": 69.56624221801758,
+            "x64": true,
+            "actual_files_count": 88,
+            "expected_files_count": 86,
+            "memory_traffic": 4920.727310180664,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "50ffd3e546c51686e468042721704ad59d4e0eac",
+            "commit_message": "Declare a Python 3.13 toolchain, revert setup.py toolchain arget selection (#1876)\n\nThe new solution was too smart (read: dense), because it did not account for\r\nthe fact that we look for the Windows libs of the interpreter building\r\nthe wheel, not the hermetic one supplying the header files.\r\n\r\nThe fix is to just align the versions again, so that the libs and headers\r\ncome from the same minor version.",
+            "commit_timestamp": 1730991891.0
         }
     ]
 }

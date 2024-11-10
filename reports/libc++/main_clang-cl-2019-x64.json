@@ -2464,6 +2464,23 @@
             "commit_ref": "1d41543c95f884e6ebecc63ab9d0d30ce481345c",
             "commit_message": "[libc][math] Fix log1p SEGV with large inputs when FTZ/DAZ flags are set. (#115541)\n\n",
             "commit_timestamp": 1731163092.0
+        },
+        {
+            "tool_version": "243.0.20241022.70713-eap05",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1731208417.770905,
+            "elapsed_time": 95.43041038513184,
+            "x64": true,
+            "actual_files_count": 90,
+            "expected_files_count": null,
+            "memory_traffic": 5749.086601257324,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "38b0e1c939e818564019bb5bff95a0f1abbf9d19",
+            "commit_message": "[RISCV][GISel] Add legalizer-info-validation test. NFC\n\nBased on the same test from AArch64. I used a reasonable superset\nISA string to get the most coverage. Might be worth adding more\nRUN lines in the future.\n",
+            "commit_timestamp": 1731202505.0
         }
     ]
 }
