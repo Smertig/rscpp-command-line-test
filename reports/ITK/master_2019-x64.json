@@ -20696,6 +20696,21 @@
             "commit_ref": "4f6bdcb9887fef6e3bed6d43d97447e7c7abe1bb",
             "commit_message": "STYLE: Replace `T var; var = x` with `T var = x` for types from `std`\n\nFor Standard Library types that have a non-trivial default-constructor and a\nnon-trivial assignment operator, `T var = x` is typically slightly faster than\n`T var; var = x`. Otherwise it's just a matter of style.\n\nUsing Notepad++, Replace in Files, doing:\n\n    Find what: ^( [ ]+)(std::[^ ]*)([ ]+)(\\w+);[\\r\\n]+\\1\\4\\ =\n    Replace with: $1$2$3$4 =\n    Filters: itk*.*\n    Directory: D:\\src\\ITK\\Modules\n    [v] Match case\n    (*) Regular expression\n\nFollow-up to pull request https://github.com/InsightSoftwareConsortium/ITK/pull/4932\ncommit 5b121f493f17d61c52c197b0c5df530fe01c4f8c\n\"STYLE: Replace `T var; var = x` with `T var = x` for arithmetic types\"\n",
             "commit_timestamp": 1731112961.0
+        },
+        {
+            "tool_version": "243.0.20241022.70713-eap05",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1731294888.337659,
+            "elapsed_time": 212.0397391319275,
+            "x64": true,
+            "actual_files_count": 101,
+            "expected_files_count": null,
+            "memory_traffic": 24080.341682434082,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "4f6bdcb9887fef6e3bed6d43d97447e7c7abe1bb",
+            "commit_message": "STYLE: Replace `T var; var = x` with `T var = x` for types from `std`\n\nFor Standard Library types that have a non-trivial default-constructor and a\nnon-trivial assignment operator, `T var = x` is typically slightly faster than\n`T var; var = x`. Otherwise it's just a matter of style.\n\nUsing Notepad++, Replace in Files, doing:\n\n    Find what: ^( [ ]+)(std::[^ ]*)([ ]+)(\\w+);[\\r\\n]+\\1\\4\\ =\n    Replace with: $1$2$3$4 =\n    Filters: itk*.*\n    Directory: D:\\src\\ITK\\Modules\n    [v] Match case\n    (*) Regular expression\n\nFollow-up to pull request https://github.com/InsightSoftwareConsortium/ITK/pull/4932\ncommit 5b121f493f17d61c52c197b0c5df530fe01c4f8c\n\"STYLE: Replace `T var; var = x` with `T var = x` for arithmetic types\"\n",
+            "commit_timestamp": 1731112961.0
         }
     ]
 }

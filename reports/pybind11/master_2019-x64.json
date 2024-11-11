@@ -22093,6 +22093,21 @@
             "commit_ref": "037310ea8a3655ac92b8df5d94c9c73cbadfd3be",
             "commit_message": "Use std::unique_ptr in pybind11_getbuffer (#5435)\n\n* Use std::unique_ptr in pybind11_getbuffer\r\n\r\n* Move final assignment later",
             "commit_timestamp": 1731045504.0
+        },
+        {
+            "tool_version": "243.0.20241022.70713-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1731294565.793272,
+            "elapsed_time": 151.34461426734924,
+            "x64": true,
+            "actual_files_count": 380,
+            "expected_files_count": 197,
+            "memory_traffic": 18168.45085144043,
+            "repo_url": "https://github.com/pybind/pybind11",
+            "commit_ref": "a90e2af88d8d3a8fb1b5c693e26a0be67cd1f37d",
+            "commit_message": "Factor out pybind11/conduit/pybind11_platform_abi_id.h (#5375)\n\n* Factor out pybind11/compat/wrap_include_python_h.h\r\n\r\n* Fixes to resolve tests_packaging failures.\r\n\r\n* Factor out pybind11/compat/pybind11_platform_abi_id.h\r\n\r\n* Add pybind11/compat/README.txt and a couple source code comments.\r\n\r\n* Minor changes to comments.\r\n\r\n* Factor out pybind11/compat/pybind11_conduit_v1.h\r\n\r\n* Add long comment to pybind11/compat/pybind11_conduit_v1.h\r\n\r\n* Add pybind11/compat/README.txt to wheels.\r\n\r\n* Add `-fno-exceptions` to compiler options for exo_planet_c_api\r\n\r\n* 1. Move `target_compile_options()` into loop over test targets, in case the `\"exo_planet_c_api\"` target does not exist.  2. Add `-fno-exceptions` option also for `NVHPC`.  3. Also check for `__cpp_exceptions` in exo_planet_c_api.cpp.\r\n\r\n* 1. Fix accident (forgot to undo temporary change).  2. Special-case __EMSCRIPTEN__ in exo_planet_c_api.cpp\r\n\r\n* Give up on compiling exo_planet_c_api.cpp with MSVC `/EHs-c-`:\r\n\r\nThere was one trouble maker (all other jobs worked):\r\n\r\nVisual Studio 15 2017:\r\n\r\n```\r\ncl : Command line warning D9025: overriding '/EHc' with '/EHc-' [C:\\projects\\pybind11\\tests\\exo_planet_c_api.vcxproj]\r\n...\r\nC:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\VC\\Tools\\MSVC\\14.16.27023\\include\\xlocale(319): error C2220: warning treated as error - no 'object' file generated [C:\\projects\\pybind11\\tests\\exo_planet_c_api.vcxproj]\r\nC:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\VC\\Tools\\MSVC\\14.16.27023\\include\\xlocale(319): warning C4530: C++ exception handler used, but unwind semantics are not enabled. Specify /EHsc\r\n```\r\n\r\n* Move pybind11/compat to pybind11/conduit as suggested by @henryiii:\r\n\r\nhttps://github.com/pybind/pybind11/pull/5375#pullrequestreview-2329006001",
+            "commit_timestamp": 1731269855.0
         }
     ]
 }

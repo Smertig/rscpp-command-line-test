@@ -17801,6 +17801,21 @@
             "commit_ref": "160758a574d12bf0d965d8206136e7da4f4fd6c3",
             "commit_message": "gh-126565: Skip `zipfile.Path.exists` check in write mode (#126576)\n\nWhen `zipfile.Path.open` is called, the implementation will check\r\nwhether the path already exists in the ZIP file. However, this check is\r\nonly required when the ZIP file is in read mode. By swapping arguments\r\nof the `and` operator, the short-circuiting will prevent the check from\r\nbeing run in write mode.\r\n\r\nThis change will improve the performance of `open()`, because checking\r\nwhether a file exists is slow in write mode, especially when the archive\r\nhas many members.",
             "commit_timestamp": 1731250644.0
+        },
+        {
+            "tool_version": "243.0.20241022.70713-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1731294788.52602,
+            "elapsed_time": 1085.3770725727081,
+            "x64": true,
+            "actual_files_count": 1059,
+            "expected_files_count": null,
+            "memory_traffic": 51374.442039489746,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "434b29767f2fdef9f35c8e93303cf6aca4a66a80",
+            "commit_message": "gh-126543: Docs: change \"bound type var\" to \"bounded\" when used in the context of the 'bound' kw argument to TypeVar (#126584)\n\n",
+            "commit_timestamp": 1731285625.0
         }
     ]
 }
