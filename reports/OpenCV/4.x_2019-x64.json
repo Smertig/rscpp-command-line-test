@@ -20755,6 +20755,21 @@
             "commit_ref": "37c2af63f099909252eeced1258e9a30a317306f",
             "commit_message": "Merge pull request #26434 from dkurt:dk/int64_file_storage_4.x\n\nint64 data type support for FileStorage. 1d and empty Mat with exact dimensions #26434\r\n\r\n### Pull Request Readiness Checklist\r\n\r\nPort of https://github.com/opencv/opencv/pull/26399 to 4.x branch\r\n\r\nSee details at https://github.com/opencv/opencv/wiki/How_to_contribute#making-a-good-pull-request\r\n\r\n- [x] I agree to contribute to the project under Apache 2 License.\r\n- [x] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\r\n- [x] The PR is proposed to the proper branch\r\n- [x] There is a reference to the original bug report and related work\r\n- [x] There is accuracy test, performance test and test data in opencv_extra repository, if applicable\r\n      Patch to opencv_extra has the same branch name.\r\n- [x] The feature is well documented and sample code can be built with the project CMake\r\n",
             "commit_timestamp": 1731323613.0
+        },
+        {
+            "tool_version": "243.0.20241022.70713-eap05",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1731424073.969967,
+            "elapsed_time": 425.5999562740326,
+            "x64": true,
+            "actual_files_count": 475,
+            "expected_files_count": 459,
+            "memory_traffic": 39755.65603637695,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "c230841105876d19cf35d1b824d81f46333e30af",
+            "commit_message": "Merge pull request #26446 from dkurt:file_storage_empty_and_1d_mat\n\n* Change style of empty and 1d Mat in FileStorage\r\n\r\n* Remove misleading 1d Mat test",
+            "commit_timestamp": 1731423070.0
         }
     ]
 }

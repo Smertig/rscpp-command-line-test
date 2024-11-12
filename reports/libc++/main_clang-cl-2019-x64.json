@@ -2549,6 +2549,23 @@
             "commit_ref": "aad256598d7fd14d736eda76ee9eba8905bd84b8",
             "commit_message": "[LoongArch] Pre-commit test for vreplgr2vr + vinsgr2vr intrinsics (#115702)\n\nInspired by https://github.com/llvm/llvm-project/issues/101624.\r\n\r\nA later commit will optimize it.",
             "commit_timestamp": 1731378457.0
+        },
+        {
+            "tool_version": "243.0.20241022.70713-eap05",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1731424013.713084,
+            "elapsed_time": 63.045318603515625,
+            "x64": true,
+            "actual_files_count": 90,
+            "expected_files_count": null,
+            "memory_traffic": 5683.473442077637,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "12e3ed8de8c6063b15916b3faf67c8c9cd17df1f",
+            "commit_message": "[clang] Avoid possibly expensive SM call when suppression-mappings are off\n",
+            "commit_timestamp": 1731423458.0
         }
     ]
 }
