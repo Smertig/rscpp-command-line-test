@@ -2532,6 +2532,23 @@
             "commit_ref": "9f471fd12b9e2d6264f27974feaf893445e92393",
             "commit_message": "[libc++][hardening] Constrain construction for `__{(static_)bounded,wrap}_iter` (#115271)\n\nThis PR restricts construction to cases where reference types of\r\nsource/destination iterators are (`T&`, `T&`) or (`T&`, `const T&`) (\r\nwhere `T` can be const).\r\n\r\nFixes #50058.",
             "commit_timestamp": 1731337478.0
+        },
+        {
+            "tool_version": "243.0.20241022.70713-eap05",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1731381051.894053,
+            "elapsed_time": 70.73241901397705,
+            "x64": true,
+            "actual_files_count": 90,
+            "expected_files_count": null,
+            "memory_traffic": 5727.403717041016,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "aad256598d7fd14d736eda76ee9eba8905bd84b8",
+            "commit_message": "[LoongArch] Pre-commit test for vreplgr2vr + vinsgr2vr intrinsics (#115702)\n\nInspired by https://github.com/llvm/llvm-project/issues/101624.\r\n\r\nA later commit will optimize it.",
+            "commit_timestamp": 1731378457.0
         }
     ]
 }
