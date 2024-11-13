@@ -22623,6 +22623,23 @@
             "commit_ref": "12e3ed8de8c6063b15916b3faf67c8c9cd17df1f",
             "commit_message": "[clang] Avoid possibly expensive SM call when suppression-mappings are off\n",
             "commit_timestamp": 1731423458.0
+        },
+        {
+            "tool_version": "243.0.20241022.70713-eap05",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1731468182.786948,
+            "elapsed_time": 1598.652333498001,
+            "x64": true,
+            "actual_files_count": 2094,
+            "expected_files_count": 1661,
+            "memory_traffic": 256241.42666625977,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "e887f8290df419ffd4e018b6f8afbaeb1912cf0e",
+            "commit_message": "[mlir][LLVM] Add !invariant.group metadata to llvm.load and llvm.store (#115723)\n\nThis patch adds support for the `!invariant.group` metadata to the\r\n`llvm.load` and the `llvm.store` operation.",
+            "commit_timestamp": 1731466474.0
         }
     ]
 }

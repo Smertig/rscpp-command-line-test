@@ -20988,6 +20988,21 @@
             "commit_ref": "53e6e4b8f0b74e8770c41ff9bf7165ecfa9da1e2",
             "commit_message": "Fix mesh-normal-vector benchmark array access (#1514)\n\nmesh-normal-scalar correctly fills sequential values in the output for\r\ntriangle cone function, but mesh-normal-vector accidentally reuses the\r\nloop index, which results in writes to every third index of the array\r\n(1, 4, etc.).\r\n\r\nThis is both slower (as the table turns into a hash map), and incorrect,\r\nespecially as we have a scalar version of the benchmark that does the\r\nright thing.\r\n\r\nNote: there's a bunch of inefficiencies in the benchmark code that I\r\nhave not fixed (around field access mostly, e.g. writing to `v.n` and\r\nthen immediately reading it again). These are not ideal for performance,\r\nbut they can be valuable to keep as is because this redundancy is common\r\nin real-world code, and it would be nice to see codegen optimizations\r\neliminating most of that overhead. This one, however, is a straight up\r\nbug, and sparse arrays should not really be the thing this benchmark\r\nhits.",
             "commit_timestamp": 1731357549.0
+        },
+        {
+            "tool_version": "243.0.20241022.70713-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1731467401.031222,
+            "elapsed_time": 296.210031747818,
+            "x64": true,
+            "actual_files_count": 477,
+            "expected_files_count": 379,
+            "memory_traffic": 33805.326751708984,
+            "repo_url": "https://github.com/luau-lang/luau",
+            "commit_ref": "d1025d00292c4fda84a94ead6b6705c0bedf8e06",
+            "commit_message": "Remove noexcepts from Config (#1523)\n\nFixes https://github.com/luau-lang/luau/issues/1515.\r\n\r\nBy removing these `noexcept`s, we guarantee that the internal call to\r\n`std::swap` uses move semantics when a `Config` is copy-assigned.",
+            "commit_timestamp": 1731450304.0
         }
     ]
 }
