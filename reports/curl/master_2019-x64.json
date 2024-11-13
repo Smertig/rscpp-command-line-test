@@ -20861,6 +20861,21 @@
             "commit_ref": "acc73edce8c08e24ceadb4f46d2d812cf03fc6bb",
             "commit_message": "GHA/non-native: streamline installed packages on FreeBSD\n\nInstead of installing the cmake package which is a meta-port (includes\ndocumentation and manpages etc) install cmake-core which is cmake itself\nto save a few cpu cycles.\n\nAlso drop nghttp2 in favour of the slimmer libnghttp2.\n\nCloses #15540\n",
             "commit_timestamp": 1731412964.0
+        },
+        {
+            "tool_version": "243.0.20241022.70713-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1731510332.988281,
+            "elapsed_time": 259.3547384738922,
+            "x64": true,
+            "actual_files_count": 3414,
+            "expected_files_count": 2323,
+            "memory_traffic": 49136.01710510254,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "2ccd1c5889d0bd9538ca58ce745d13a5f58be44f",
+            "commit_message": "cmakelint: fix to check root `CMakeLists.txt`\n\nCloses #15565\n",
+            "commit_timestamp": 1731498306.0
         }
     ]
 }
