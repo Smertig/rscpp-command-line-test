@@ -22674,6 +22674,23 @@
             "commit_ref": "f407dff50cdcbcfee9dd92397d3792627c3ac708",
             "commit_message": "[DebugInfo][DWARF] Emit Per-Function Line Table Offsets and End Sequences (#110192)\n\n**Summary**\r\n\r\nThis patch introduces a new compiler option `-mllvm\r\n-emit-func-debug-line-table-offsets` that enables the emission of\r\nper-function line table offsets and end sequences in DWARF debug\r\ninformation. This enhancement allows tools and debuggers to accurately\r\nattribute line number information to their corresponding functions, even\r\nin scenarios where functions are merged or share the same address space\r\ndue to optimizations like Identical Code Folding (ICF) in the linker.\r\n\r\n**Background**\r\nRFC: [New DWARF Attribute for Symbolication of Merged\r\nFunctions](https://discourse.llvm.org/t/rfc-new-dwarf-attribute-for-symbolication-of-merged-functions/79434)\r\n\r\nPrevious similar PR:\r\n[#93137](https://github.com/llvm/llvm-project/pull/93137) \u2013 This PR was\r\nvery similar to the current one but at the time, the assembler had no\r\nsupport for emitting labels within the line table. That support was\r\nadded in PR [#99710](https://github.com/llvm/llvm-project/pull/99710) -\r\nand in this PR we use some of the support added in the assembler PR.\r\n\r\nIn the current implementation, Clang generates line information in the\r\n`debug_line` section without directly associating line entries with\r\ntheir originating `DW_TAG_subprogram` DIEs. This can lead to issues when\r\npost-compilation optimizations merge functions, resulting in overlapping\r\naddress ranges and ambiguous line information.\r\n\r\nFor example, when functions are merged by ICF in LLD, multiple functions\r\nmay end up sharing the same address range. Without explicit linkage\r\nbetween functions and their line entries, tools cannot accurately\r\nattribute line information to the correct function, adversely affecting\r\ndebugging and call stack resolution.\r\n\r\n\r\n**Implementation Details**\r\nTo address the above issue, the patch makes the following key changes:\r\n\r\n**`DW_AT_LLVM_stmt_sequence` Attribute**: Introduces a new LLVM-specific\r\nattribute `DW_AT_LLVM_stmt_sequence` to each `DW_TAG_subprogram` DIE.\r\nThis attribute holds a label pointing to the offset in the line table\r\nwhere the function's line entries begin.\r\n\r\n**End-of-Sequence Markers**: Emits an explicit DW_LNE_end_sequence after\r\neach function's line entries in the line table. This marks the end of\r\nthe line information for that function, ensuring that line entries are\r\ncorrectly delimited.\r\n\r\n**Assembler and Streamer Modifications**: Modifies the MCStreamer and\r\nrelated classes to support emitting the necessary labels and tracking\r\nthe current function's line entries. A new flag\r\nGenerateFuncLineTableOffsets is added to control this behavior.\r\n\r\n**Compiler Option**: Introduces the `-mllvm\r\n-emit-func-debug-line-table-offsets` option to enable this\r\nfunctionality, allowing users to opt-in as needed.",
             "commit_timestamp": 1731552694.0
+        },
+        {
+            "tool_version": "243.0.20241022.70713-eap05",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1731597500.219936,
+            "elapsed_time": 1601.3679368495941,
+            "x64": true,
+            "actual_files_count": 2098,
+            "expected_files_count": 1661,
+            "memory_traffic": 256453.82931518555,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "d84d0caf28902843e0aae7ac435daed9aa04e3e2",
+            "commit_message": "[Flang][OpenMP] Update MapInfoFinalization to use BlockArgs Interface and modify use_device_ptr/addr to be order independent (#113919)\n\nThis patch primarily updates the MapInfoFinalization pass to utilise the\r\nBlockArgument interface. It also shuffles newly added arguments the\r\nMapInfoFinalization passes to the end of the BlockArg/Relevant MapInfo\r\nlists, instead of one prior to the owning descriptor type.\r\n\r\nDuring this it was noted that the use_device_ptr/addr handling of target\r\ndata was a little bit too order dependent so I've attempted to make it\r\nless so, as we cannot depend on argument ordering to be the same as\r\nFortran for any future frontends.",
+            "commit_timestamp": 1731595657.0
         }
     ]
 }
