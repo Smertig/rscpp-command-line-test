@@ -21018,6 +21018,21 @@
             "commit_ref": "d1025d00292c4fda84a94ead6b6705c0bedf8e06",
             "commit_message": "Remove noexcepts from Config (#1523)\n\nFixes https://github.com/luau-lang/luau/issues/1515.\r\n\r\nBy removing these `noexcept`s, we guarantee that the internal call to\r\n`std::swap` uses move semantics when a `Config` is copy-assigned.",
             "commit_timestamp": 1731450304.0
+        },
+        {
+            "tool_version": "243.0.20241022.70713-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1731553849.649708,
+            "elapsed_time": 328.14907121658325,
+            "x64": true,
+            "actual_files_count": 477,
+            "expected_files_count": 379,
+            "memory_traffic": 33797.58383178711,
+            "repo_url": "https://github.com/luau-lang/luau",
+            "commit_ref": "d1025d00292c4fda84a94ead6b6705c0bedf8e06",
+            "commit_message": "Remove noexcepts from Config (#1523)\n\nFixes https://github.com/luau-lang/luau/issues/1515.\r\n\r\nBy removing these `noexcept`s, we guarantee that the internal call to\r\n`std::swap` uses move semantics when a `Config` is copy-assigned.",
+            "commit_timestamp": 1731450304.0
         }
     ]
 }

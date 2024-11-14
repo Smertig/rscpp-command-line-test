@@ -20876,6 +20876,21 @@
             "commit_ref": "2ccd1c5889d0bd9538ca58ce745d13a5f58be44f",
             "commit_message": "cmakelint: fix to check root `CMakeLists.txt`\n\nCloses #15565\n",
             "commit_timestamp": 1731498306.0
+        },
+        {
+            "tool_version": "243.0.20241022.70713-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1731553857.578907,
+            "elapsed_time": 299.8572361469269,
+            "x64": true,
+            "actual_files_count": 3414,
+            "expected_files_count": 2323,
+            "memory_traffic": 49151.892097473145,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "2638570241cb9e68240d7621f0213916334a4765",
+            "commit_message": "GHA/linux: fix `pip3 install impacket` breakage\n\nAn upstream update `impacket` pip package started requiring `blinker`.\nAn older version is shipping with Ubuntu, causing this on install:\n```\n  Attempting uninstall: blinker\n    Found existing installation: blinker 1.7.0\nERROR: Cannot uninstall blinker 1.7.0, RECORD file not found. Hint: The package was installed by debian.\n```\n\nFix it by switching to venv and install everything separate from the\nsystem.\n\nThe overhead is the same as using `pip --ignore-installed`, which also\ninstalls everything from scratch.\n\nThe 3rd option is to uninstall the system `python3-blinker` package, but\nit was the slowest.\n\nCloses #15578\n",
+            "commit_timestamp": 1731546842.0
         }
     ]
 }
