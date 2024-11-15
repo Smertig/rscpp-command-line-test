@@ -20906,6 +20906,21 @@
             "commit_ref": "22c45844afd20c217b2c94911020118ae565c2d3",
             "commit_message": "strtok: use namespaced `strtok_r` macro instead of redefining it\n\nkrb5 defines `strtok_r` for Windows unconditionally in its public\nheader:\nhttps://github.com/krb5/krb5/blob/dc5554394e5a4363b3e109623edbeb9ad6c18a62/src/include/win-mac.h#L214-L215\nresulting in this warning:\n```\nlib\\strtok.h(31,9): warning C4005: 'strtok_r': macro redefinition\n      C:\\vcpkg\\installed\\x64-windows\\include\\win-mac.h(215,9):\n      see previous definition of 'strtok_r'\n```\n\nThe krb5 macro collides with curl's internal definition, in case\nthe `strtok_r` function is undetected and falling back to a local\nreplacement.\n\nReported-by: Tal Regev\nBug: https://github.com/curl/curl/pull/15549#issuecomment-2468251761\nCloses #15564\n",
             "commit_timestamp": 1731574545.0
+        },
+        {
+            "tool_version": "243.0.20241022.70713-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1731640560.41294,
+            "elapsed_time": 270.4844584465027,
+            "x64": true,
+            "actual_files_count": 3414,
+            "expected_files_count": 2323,
+            "memory_traffic": 49000.50658416748,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "9eb5c7cff915789c14031c18cd0704a998050ac1",
+            "commit_message": "cmake: restore cmake args list in `buildinfo.txt`\n\nThis feature was recently dropped because of a bad side-effect of\nsilencing unused cmake command-line option warnings.\n\nFix this issue by retrieving variable values using `get_property()`,\ninstead of accessing the variables directly. It allows restoring\nthis feature without the bad side-effect.\n\nAlso limit the logic to CI runs.\n\nFollow-up to 96edb5f611c9e54da1ae824d9dc0e219619c24c0 #15501\nCloses #15563\n",
+            "commit_timestamp": 1731620790.0
         }
     ]
 }
