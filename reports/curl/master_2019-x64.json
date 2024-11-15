@@ -20921,6 +20921,21 @@
             "commit_ref": "9eb5c7cff915789c14031c18cd0704a998050ac1",
             "commit_message": "cmake: restore cmake args list in `buildinfo.txt`\n\nThis feature was recently dropped because of a bad side-effect of\nsilencing unused cmake command-line option warnings.\n\nFix this issue by retrieving variable values using `get_property()`,\ninstead of accessing the variables directly. It allows restoring\nthis feature without the bad side-effect.\n\nAlso limit the logic to CI runs.\n\nFollow-up to 96edb5f611c9e54da1ae824d9dc0e219619c24c0 #15501\nCloses #15563\n",
             "commit_timestamp": 1731620790.0
+        },
+        {
+            "tool_version": "243.0.20241022.70713-eap05",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1731683200.73861,
+            "elapsed_time": 263.461021900177,
+            "x64": true,
+            "actual_files_count": 3414,
+            "expected_files_count": 2323,
+            "memory_traffic": 49201.07130432129,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "cb7558af39301649f6c166eb524fc7a5b40e8153",
+            "commit_message": "configure: replace `$#` shell syntax\n\nWith a more portable alternative.\n\nFixes (seen on macOS):\n```\n../configure: line 47131: 1: command not found\n```\nRef: https://github.com/curl/curl/actions/runs/11846071276/job/33012894013#step:7:635\n\nFollow-up to e244d50064a56723c2ba4f0df8c847d6b70de0cb #15550\nCloses #15584\n",
+            "commit_timestamp": 1731667845.0
         }
     ]
 }
