@@ -22725,6 +22725,23 @@
             "commit_ref": "0fb8fac5d6c10610574e6e472670823eaff0c949",
             "commit_message": "Revert \"[IR] Initial introduction of llvm.experimental.memset_pattern (#97583)\"\n\nThis reverts commit 7ff3a9acd84654c9ec2939f45ba27f162ae7fbc3.\n\nRecent scheduling changes means tests need to be re-generated. Reverting\nto green while I do that.\n",
             "commit_timestamp": 1731682112.0
+        },
+        {
+            "tool_version": "243.0.20241022.70713-eap05",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1731770361.244011,
+            "elapsed_time": 1593.9060525894165,
+            "x64": true,
+            "actual_files_count": 2098,
+            "expected_files_count": 1661,
+            "memory_traffic": 254836.38834381104,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "c95daac4c19fe54eeeb4d0ec5ca23f2673d1de71",
+            "commit_message": "[LangRef] Spell out alias attribute/metadata violations are UB. (#116220)\n\nUpdate the documentation for the noalias attribute, !alias.scope and\n!loop.parallel_accesses metadata to clarify they are UB on voilation the\nnoalias property.\n\nPR: https://github.com/llvm/llvm-project/pull/116220\n---------\n\nCo-authored-by: Nuno Lopes <nuno.lopes@tecnico.ulisboa.pt>",
+            "commit_timestamp": 1731764338.0
         }
     ]
 }
