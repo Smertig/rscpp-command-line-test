@@ -200,7 +200,8 @@ def check_project(project, project_dir, sln_file, branch: Optional[str]) -> Tupl
         with common.cwd(env.trace_inspector_dir):
             inspector_args = ["dotnet", "run", snapshot_path]
             print("[check_project] Running trace inspector:", subprocess.list2cmdline(inspector_args), flush=True)
-            memory_stats_json = subprocess.check_output(inspector_args)
+            memory_stats_json = subprocess.check_output(inspector_args, stderr=env.verbose_handle)
+            print("[check_project] Output:", memory_stats_json, flush=True)
             memory_stats = json.loads(memory_stats_json)
 
             actual_traffic = memory_stats["AllocationAmount"] / (1 << 20)
