@@ -2685,6 +2685,23 @@
             "commit_ref": "d471c85e654ad0111cdffe588b2b958b62eca29f",
             "commit_message": "[mlir][int-range] Update int range inference for `arith.xori` (#117272)\n\nPrevious impl was getting incorrect results for widths > i1 and was\r\ndisabled.\r\n\r\nWhile same algorithm can be used for `andi` and `ori` too, without\r\nadditional modifications it will produce less precise result.",
             "commit_timestamp": 1732618243.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1732633638.223067,
+            "elapsed_time": 60.679341316223145,
+            "x64": true,
+            "actual_files_count": 90,
+            "expected_files_count": null,
+            "memory_traffic": 5006.832992553711,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "b214ca82daeece1568268ebc0fbcc2eaa649425b",
+            "commit_message": "[mlir][vector] Rename vector type TD definitions (nfc) (#117150)\n\nCurrently, the Vector dialect TD file includes the following \"vector\"\r\ntype definitions:\r\n\r\n```mlir\r\ndef AnyVector : VectorOf<[AnyType]>;\r\ndef AnyVectorOfAnyRank : VectorOfAnyRankOf<[AnyType]>;\r\ndef AnyFixedVector : FixedVectorOf<[AnyType]>;\r\ndef AnyScalableVector : ScalableVectorOf<[AnyType]>;\r\n```\r\n\r\nIn short:\r\n\r\n  * `AnyVector` _excludes_ 0-D vectors.\r\n  * `AnyVectorOfAnyRank`, `AnyFixedVector`, and `AnyScalableVector`\r\n    _include_ 0-D vectors.\r\n\r\nThe naming for \"groups\" that include 0-D vectors is inconsistent and can\r\nbe misleading, and `AnyVector` implies that 0-D vectors are included,\r\nwhich is not the case.\r\n\r\nThis patch renames these definitions for clarity:\r\n\r\n```mlir\r\ndef AnyVectorOfNonZeroRank : VectorOfNonZeroRankOf<[AnyType]>;\r\ndef AnyVectorOfAnyRank : VectorOfAnyRankOf<[AnyType]>;\r\ndef AnyFixedVectorOfAnyRank : FixedVectorOfAnyRank<[AnyType]>;\r\ndef AnyScalableVectorOfAnyRank : ScalableVectorOfAnyRank<[AnyType]>;\r\n```\r\n\r\nRationale:\r\n* The updated names are more explicit about 0-D vector support.\r\n* It becomes clearer that scalable vectors currently allow 0-D vectors -\r\n  this might warrant a revisit.\r\n* The renaming paves the way for adding a new group for \"fixed-width\r\n  vectors excluding 0-D vectors\" (e.g., AnyFixedVector), which I plan to\r\n  introduce in a follow-up patch.",
+            "commit_timestamp": 1732633179.0
         }
     ]
 }

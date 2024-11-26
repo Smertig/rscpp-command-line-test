@@ -22810,6 +22810,23 @@
             "commit_ref": "b9e3a769b99e9dafa3e5205dbbef9fae8573e4e2",
             "commit_message": "[flang][mlir][llvm][OpenMP] Add lowering and translation support for mergeable clause on task (#114662)\n\nAdd FIR generation and LLVMIR translation support for mergeable clause\r\non task construct. If mergeable clause is present on a task, the\r\nrelevant flag in `ompt_task_flag_t` is set and passed to\r\n`__kmpc_omp_task_alloc`.",
             "commit_timestamp": 1732617626.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1732634360.892525,
+            "elapsed_time": 1581.218777179718,
+            "x64": true,
+            "actual_files_count": 2098,
+            "expected_files_count": 1661,
+            "memory_traffic": 250925.32806396484,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "b214ca82daeece1568268ebc0fbcc2eaa649425b",
+            "commit_message": "[mlir][vector] Rename vector type TD definitions (nfc) (#117150)\n\nCurrently, the Vector dialect TD file includes the following \"vector\"\r\ntype definitions:\r\n\r\n```mlir\r\ndef AnyVector : VectorOf<[AnyType]>;\r\ndef AnyVectorOfAnyRank : VectorOfAnyRankOf<[AnyType]>;\r\ndef AnyFixedVector : FixedVectorOf<[AnyType]>;\r\ndef AnyScalableVector : ScalableVectorOf<[AnyType]>;\r\n```\r\n\r\nIn short:\r\n\r\n  * `AnyVector` _excludes_ 0-D vectors.\r\n  * `AnyVectorOfAnyRank`, `AnyFixedVector`, and `AnyScalableVector`\r\n    _include_ 0-D vectors.\r\n\r\nThe naming for \"groups\" that include 0-D vectors is inconsistent and can\r\nbe misleading, and `AnyVector` implies that 0-D vectors are included,\r\nwhich is not the case.\r\n\r\nThis patch renames these definitions for clarity:\r\n\r\n```mlir\r\ndef AnyVectorOfNonZeroRank : VectorOfNonZeroRankOf<[AnyType]>;\r\ndef AnyVectorOfAnyRank : VectorOfAnyRankOf<[AnyType]>;\r\ndef AnyFixedVectorOfAnyRank : FixedVectorOfAnyRank<[AnyType]>;\r\ndef AnyScalableVectorOfAnyRank : ScalableVectorOfAnyRank<[AnyType]>;\r\n```\r\n\r\nRationale:\r\n* The updated names are more explicit about 0-D vector support.\r\n* It becomes clearer that scalable vectors currently allow 0-D vectors -\r\n  this might warrant a revisit.\r\n* The renaming paves the way for adding a new group for \"fixed-width\r\n  vectors excluding 0-D vectors\" (e.g., AnyFixedVector), which I plan to\r\n  introduce in a follow-up patch.",
+            "commit_timestamp": 1732633179.0
         }
     ]
 }
