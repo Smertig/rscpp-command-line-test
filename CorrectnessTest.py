@@ -201,7 +201,17 @@ def check_project(project, project_dir, sln_file, branch: Optional[str]) -> Tupl
             inspector_args = ["dotnet", "run", snapshot_path]
             print("[check_project] Running trace inspector:", subprocess.list2cmdline(inspector_args), flush=True)
             memory_stats_json = subprocess.check_output(inspector_args, stderr=env.verbose_handle)
-            print("[check_project] Output:", memory_stats_json, flush=True)
+            if env.verbose:
+                print("[check_project] Output:", memory_stats_json, flush=True)
+
+            # Workaround for https://github.com/dotnet/sdk/issues/44610
+            # In .NET 9.0 `dotnet run` will print progress indicators to the terminal,
+            # even though it should not do this when the output is redirected.
+            memory_stats_json = memory_stats_json.replace(b"\x1b]9;4;3;\x1b\\", b"")
+            memory_stats_json = memory_stats_json.replace(b"\x1b]9;4;0;\x1b\\", b"")
+
+            if env.verbose:
+                print("[check_project] Stripped output:", memory_stats_json, flush=True)
             memory_stats = json.loads(memory_stats_json)
 
             actual_traffic = memory_stats["AllocationAmount"] / (1 << 20)
