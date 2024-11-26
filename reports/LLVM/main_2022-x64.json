@@ -22793,6 +22793,23 @@
             "commit_ref": "314e9b1cffbda767e9f4ac088a3caea80a9212bb",
             "commit_message": "[llvm-profdata] fix typo (#116754)\n\n",
             "commit_timestamp": 1732071136.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1732618745.492601,
+            "elapsed_time": 1521.6187982559204,
+            "x64": true,
+            "actual_files_count": 2098,
+            "expected_files_count": 1661,
+            "memory_traffic": 251126.9054031372,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "b9e3a769b99e9dafa3e5205dbbef9fae8573e4e2",
+            "commit_message": "[flang][mlir][llvm][OpenMP] Add lowering and translation support for mergeable clause on task (#114662)\n\nAdd FIR generation and LLVMIR translation support for mergeable clause\r\non task construct. If mergeable clause is present on a task, the\r\nrelevant flag in `ompt_task_flag_t` is set and passed to\r\n`__kmpc_omp_task_alloc`.",
+            "commit_timestamp": 1732617626.0
         }
     ]
 }

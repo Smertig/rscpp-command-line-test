@@ -20875,6 +20875,21 @@
             "commit_ref": "cd5dbf9389a569a5b961234d5ae87f7841498ed7",
             "commit_message": "Merge pull request #26455 from sturkmen72:minor_fix\n\nFix warnings on documentation built",
             "commit_timestamp": 1731599719.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1732618762.879692,
+            "elapsed_time": 303.8338084220886,
+            "x64": true,
+            "actual_files_count": 358,
+            "expected_files_count": 480,
+            "memory_traffic": 33319.87575531006,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "f7483cd97809217676bedf524c42c6ea064364e6",
+            "commit_message": "Merge pull request #26508 from Kumataro:fix26507\n\nSupport CV_32U, CV_64U and CV_64S for TIFF #26508\r\n\r\nClose https://github.com/opencv/opencv/issues/26507\r\n\r\nNote: Predictor 2 for 64-bit is only supported after libtiff 4.4.0. But Linux x64 Debug uses libtiff 4.1.0 (releases at 2019/11/3). I append fallback fix to NONE. I hope It works well.\r\n\r\n### Pull Request Readiness Checklist\r\n\r\nSee details at https://github.com/opencv/opencv/wiki/How_to_contribute#making-a-good-pull-request\r\n\r\n- [x] I agree to contribute to the project under Apache 2 License.\r\n- [x] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\r\n- [x] The PR is proposed to the proper branch\r\n- [x] There is a reference to the original bug report and related work\r\n- [x] There is accuracy test, performance test and test data in opencv_extra repository, if applicable\r\n      Patch to opencv_extra has the same branch name.\r\n- [x] The feature is well documented and sample code can be built with the project CMake\r\n",
+            "commit_timestamp": 1732521894.0
         }
     ]
 }

@@ -20936,6 +20936,21 @@
             "commit_ref": "cb7558af39301649f6c166eb524fc7a5b40e8153",
             "commit_message": "configure: replace `$#` shell syntax\n\nWith a more portable alternative.\n\nFixes (seen on macOS):\n```\n../configure: line 47131: 1: command not found\n```\nRef: https://github.com/curl/curl/actions/runs/11846071276/job/33012894013#step:7:635\n\nFollow-up to e244d50064a56723c2ba4f0df8c847d6b70de0cb #15550\nCloses #15584\n",
             "commit_timestamp": 1731667845.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1732618696.438252,
+            "elapsed_time": 342.14823722839355,
+            "x64": true,
+            "actual_files_count": 3414,
+            "expected_files_count": 2323,
+            "memory_traffic": 64618.67133331299,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "f988842d85a06d7ad03764433b6dfee9febf0118",
+            "commit_message": "tool_getpass: make local `getpass_r()` a dummy for UWP\n\nThe CRT call `getch()` isn't supported on Windows UWP. This function is\nused to implement `getpass_r()` for reading a password from the console,\nfor platforms not supporting it natively. This patch makes this function\na dummy, so password entry from the command-line is no longer supported\nfor UWP apps. Though it probably did not work before this patch, due to:\n\nCRT headers do declare `getch()`, but it's missing from the CRT DLL.\n\nMSDN documents it as unsupported for UWP:\nhttps://learn.microsoft.com/cpp/c-runtime-library/reference/getch\nhttps://learn.microsoft.com/cpp/c-runtime-library/reference/getch-getwch\n\nSame is true for the non-deprecated `_getch()` function.\n\nAfter mingw-w64 synced its implib with `msvcr120_app.dll`, the CI job\n`mingw, CM x86_64 schannel R uwp` broke with:\n```\n[16/16] Linking C executable src\\curl.exe\nFAILED: src/curl.exe\n[...]\nD:/a/_temp/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe:\n  src/CMakeFiles/curl.dir/Unity/unity_0_c.c.obj:unity_0_c.c:(.text+0x4d05): undefined reference to `getch'\n```\nRef: https://github.com/curl/curl/actions/runs/11873795410/job/33089008727?pr=15597#step:19:25\n\nAlso:\n- GHA/windows: bump `msys2/setup-msys2` action to\n  https://github.com/msys2/setup-msys2/commit/c52d1fa\n  This triggered the build failure above.\n  Closes #15597\n\nRef: https://sourceforge.net/p/mingw-w64/mingw-w64/ci/d408f51e5a3e9a4eb3739efea1fb2daf50dbb058/tree/mingw-w64-crt/def-include/crt-aliases.def.in?diff=9e27bb062a46d20aa9a372559956451d4565c22b\n\nCloses #15637\n",
+            "commit_timestamp": 1732575440.0
         }
     ]
 }

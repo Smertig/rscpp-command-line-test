@@ -2668,6 +2668,23 @@
             "commit_ref": "0fb8fac5d6c10610574e6e472670823eaff0c949",
             "commit_message": "Revert \"[IR] Initial introduction of llvm.experimental.memset_pattern (#97583)\"\n\nThis reverts commit 7ff3a9acd84654c9ec2939f45ba27f162ae7fbc3.\n\nRecent scheduling changes means tests need to be re-generated. Reverting\nto green while I do that.\n",
             "commit_timestamp": 1731682112.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1732618736.02225,
+            "elapsed_time": 96.64508891105652,
+            "x64": true,
+            "actual_files_count": 90,
+            "expected_files_count": null,
+            "memory_traffic": 4965.028793334961,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "d471c85e654ad0111cdffe588b2b958b62eca29f",
+            "commit_message": "[mlir][int-range] Update int range inference for `arith.xori` (#117272)\n\nPrevious impl was getting incorrect results for widths > i1 and was\r\ndisabled.\r\n\r\nWhile same algorithm can be used for `andi` and `ori` too, without\r\nadditional modifications it will produce less precise result.",
+            "commit_timestamp": 1732618243.0
         }
     ]
 }
