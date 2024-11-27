@@ -22844,6 +22844,23 @@
             "commit_ref": "4a7dbede6badd27ce2ad07984134d5d25a2bbada",
             "commit_message": "[RISCV] Support `svukte` extension (#115657)\n\nThis is the extension for \"Address-Independent Latency of User-Mode\r\nFaults to Supervisor Addresses\".\r\nSpec: https://github.com/riscv/riscv-isa-manual/pull/1564,\r\nhttps://lf-riscv.atlassian.net/browse/RVS-2977\r\nThe spec states that the `svukte` depends on `sv39`, but we don't have\r\n`sv39` yet, so I didn't add it to the implied list.",
             "commit_timestamp": 1732676097.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1732720792.391612,
+            "elapsed_time": 1533.7101094722748,
+            "x64": true,
+            "actual_files_count": 2098,
+            "expected_files_count": 1661,
+            "memory_traffic": 251258.4795074463,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "8d6c73cbf53bd6eb410ac08836e7b128d4a99a16",
+            "commit_message": "[OpenACC] enable 'deviceptr' for combined constructs.\n\nThis is another clause whose implementation is identical for combined\nconstructs as with compute constructs, so this adds tests and enables\nit.\n",
+            "commit_timestamp": 1732719855.0
         }
     ]
 }

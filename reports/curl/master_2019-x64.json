@@ -20981,6 +20981,21 @@
             "commit_ref": "4341df5040cb79247cb232699b67e2783db29548",
             "commit_message": "GHA/windows: enable ECH in vcpkg wolfSSL job\n\nEnable ECH feature on wolfSSL\n\nCloses #15649\n",
             "commit_timestamp": 1732644931.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1732720005.093262,
+            "elapsed_time": 271.69452953338623,
+            "x64": true,
+            "actual_files_count": 3414,
+            "expected_files_count": 2323,
+            "memory_traffic": 61690.97780609131,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "96f7547d9afb65d4fae7981283cdb7da712236b8",
+            "commit_message": "tests: re-enable 2086, and 472, 1299, 1613 for Windows\n\n- GHA/windows: un-ignore tests 472 1299 1613.\n  They were ignored for the mingw-w64 c-ares U job.\n  They do run fine now:\n  https://github.com/curl/curl/actions/runs/12032875421/job/33547724780?pr=15644\n\n- globally re-enable test 2086.\n  Comment says it only affected Windows.\n  Seems to be running fine now. Example:\n  Windows:\n  https://github.com/curl/curl/actions/runs/12032875421/job/33547718309?pr=15644#step:13:3856\n  Linux:\n  https://github.com/curl/curl/actions/runs/12032875397/job/33545739712#step:41:3650\n\n- update comments for disabled tests 1184, 1801.\n  They affect all operating systems, likely all CIs.\n\n  FAIL 1801: 'HTTP/2 upgrade with lying server' HTTP, HTTP/2\n  https://github.com/curl/curl/actions/runs/12032362497/job/33544053001#step:14:4265\n  FAIL 1184: 'HTTP 1.1 CONNECT with redirect and set -H user-agent' HTTP, HTTP CONNECT, HTTP proxy, proxytunnel\n  https://github.com/curl/curl/actions/runs/12032362497/job/33544051415#step:14:5252\n\nCloses #15644\n",
+            "commit_timestamp": 1732702757.0
         }
     ]
 }

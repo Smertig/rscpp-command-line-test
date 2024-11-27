@@ -18056,6 +18056,21 @@
             "commit_ref": "71ede1142ddad2d31cc966b8fe4a5aff664f4d53",
             "commit_message": "gh-115999: Add free-threaded specialization for `STORE_SUBSCR` (#127169)\n\nThe specialization only depends on the type, so no special thread-safety\r\nconsiderations there.\r\n\r\nSTORE_SUBSCR_LIST_INT needs to lock the list before modifying it.\r\n\r\n`_PyDict_SetItem_Take2` already internally locks the dictionary using a\r\ncritical section.",
             "commit_timestamp": 1732657566.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1732720172.015506,
+            "elapsed_time": 1126.363357782364,
+            "x64": true,
+            "actual_files_count": 1052,
+            "expected_files_count": null,
+            "memory_traffic": 47927.16902923584,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "9328db7652677a23192cb51b0324a0fdbfa587c9",
+            "commit_message": "Fix indentation for contextlib.asynccontextmanager docs (#127333)\n\n",
+            "commit_timestamp": 1732718335.0
         }
     ]
 }
