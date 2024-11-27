@@ -21108,6 +21108,21 @@
             "commit_ref": "d19a5f06991ac9e723055f5b2bbef7724fd203cf",
             "commit_message": "Sync to upstream/release/653 (#1541)\n\n## What's Changed?\r\n\r\n* Optimized the vector dot product by up to 24%\r\n* Allow for x/y/z/X/Y/Z vector field access by registering a `vector`\r\nmetatable\r\nwith an `__index` method (Fixes #1521)\r\n* Fixed a bug preventing consistent recovery from parse errors in table\r\ntypes.\r\n* Optimized `k*n` and `k+n` when types are known\r\n* Allow fragment autocomplete to handle cases like the automatic\r\ninsertion of\r\nparens, keywords, strings, etc., while maintaining a correct relative\r\npositioning\r\n\r\n### New Solver\r\n\r\n* Allow for `nil` assignment to tables and classes with indexers\r\n\r\n---------\r\n\r\nCo-authored-by: Aaron Weiss <aaronweiss@roblox.com>\r\nCo-authored-by: Andy Friesen <afriesen@roblox.com>\r\nCo-authored-by: Aviral Goel <agoel@roblox.com>\r\nCo-authored-by: Hunter Goldstein <hgoldstein@roblox.com>\r\nCo-authored-by: Varun Saini <vsaini@roblox.com>\r\nCo-authored-by: Vighnesh Vijay <vvijay@roblox.com>\r\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>",
             "commit_timestamp": 1732309251.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1732677577.751182,
+            "elapsed_time": 301.68546199798584,
+            "x64": true,
+            "actual_files_count": 478,
+            "expected_files_count": 379,
+            "memory_traffic": 33652.51566314697,
+            "repo_url": "https://github.com/luau-lang/luau",
+            "commit_ref": "d19a5f06991ac9e723055f5b2bbef7724fd203cf",
+            "commit_message": "Sync to upstream/release/653 (#1541)\n\n## What's Changed?\r\n\r\n* Optimized the vector dot product by up to 24%\r\n* Allow for x/y/z/X/Y/Z vector field access by registering a `vector`\r\nmetatable\r\nwith an `__index` method (Fixes #1521)\r\n* Fixed a bug preventing consistent recovery from parse errors in table\r\ntypes.\r\n* Optimized `k*n` and `k+n` when types are known\r\n* Allow fragment autocomplete to handle cases like the automatic\r\ninsertion of\r\nparens, keywords, strings, etc., while maintaining a correct relative\r\npositioning\r\n\r\n### New Solver\r\n\r\n* Allow for `nil` assignment to tables and classes with indexers\r\n\r\n---------\r\n\r\nCo-authored-by: Aaron Weiss <aaronweiss@roblox.com>\r\nCo-authored-by: Andy Friesen <afriesen@roblox.com>\r\nCo-authored-by: Aviral Goel <agoel@roblox.com>\r\nCo-authored-by: Hunter Goldstein <hgoldstein@roblox.com>\r\nCo-authored-by: Varun Saini <vsaini@roblox.com>\r\nCo-authored-by: Vighnesh Vijay <vvijay@roblox.com>\r\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>",
+            "commit_timestamp": 1732309251.0
         }
     ]
 }

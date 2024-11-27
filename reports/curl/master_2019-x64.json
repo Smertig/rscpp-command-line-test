@@ -20966,6 +20966,21 @@
             "commit_ref": "2aa6d1a2083136eb29c06db100a736eac2451679",
             "commit_message": "GHA/windows: merge cmake/autotools steps\n\nMerge cmake and autotools build steps for cygwin, msys2 and\ncross-linux jobs.\n\nAdvantages:\n- makes it easier to keep the two build tracks in sync.\n- uses the same steps across jobs.\n- avoids scrolling through greyed out steps.\n- syncs steps with other workflows already merged like this.\n- less code.\n\nAlso:\n- stop ignoring WebSockets tests results for msys2/mingw-w64 cmake jobs,\n  except for 2301 2302 that were also ignored for autotools. Syncing the\n  two build methods.\n- drop 'cmake' from step names where cmake was the only build tool.\n  This was redundant as \"CM\" already indicates it in the job name.\n\nCloses #15643\n",
             "commit_timestamp": 1732629944.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1732677500.33201,
+            "elapsed_time": 276.1203899383545,
+            "x64": true,
+            "actual_files_count": 3414,
+            "expected_files_count": 2323,
+            "memory_traffic": 66807.06944274902,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "4341df5040cb79247cb232699b67e2783db29548",
+            "commit_message": "GHA/windows: enable ECH in vcpkg wolfSSL job\n\nEnable ECH feature on wolfSSL\n\nCloses #15649\n",
+            "commit_timestamp": 1732644931.0
         }
     ]
 }
