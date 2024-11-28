@@ -20950,6 +20950,21 @@
             "commit_ref": "c8c64f69ddbcfffd2e1363614bb7eba5c6bf713c",
             "commit_message": "Merge pull request #26533 from mshabunin:fix-reduce-test\n\ntest: fix technical issue with min_element in reduce tests",
             "commit_timestamp": 1732687681.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1732806460.216549,
+            "elapsed_time": 390.3319969177246,
+            "x64": true,
+            "actual_files_count": 476,
+            "expected_files_count": 459,
+            "memory_traffic": 40693.88796234131,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "a5f8711ce127fa3f8c57db74f5038d23cf83bbb2",
+            "commit_message": "Merge pull request #26537 from artoolkitx:emscripten-build-fixes\n\nEmscripten build fixes #26537\r\n\r\n- Corrects typo in Emscripten-only intrinsics header (Fixes https://github.com/opencv/opencv/issues/26536)\r\n- Updates deprecated intrinsic title (as per LLVM final intrinsic name).\r\n\r\n### Pull Request Readiness Checklist\r\n\r\nSee details at https://github.com/opencv/opencv/wiki/How_to_contribute#making-a-good-pull-request\r\n\r\n- [x] I agree to contribute to the project under Apache 2 License.\r\n- [x] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\r\n- [x] The PR is proposed to the proper branch\r\n- [x] There is a reference to the original bug report and related work\r\n- [ ] There is accuracy test, performance test and test data in opencv_extra repository, if applicable\r\n      Patch to opencv_extra has the same branch name.\r\n- [x] The feature is well documented and sample code can be built with the project CMake\r\n",
+            "commit_timestamp": 1732775101.0
         }
     ]
 }

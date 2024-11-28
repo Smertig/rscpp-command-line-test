@@ -2753,6 +2753,23 @@
             "commit_ref": "db273c6c242f51792ed4298a24bd2c344214ce38",
             "commit_message": "[MLIR][ODS] Add support for wrapping enums with std::optional in Type/Attr definitions (#117719)\n\n",
             "commit_timestamp": 1732762782.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1732806534.138927,
+            "elapsed_time": 61.83510613441467,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4987.729766845703,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "b5ed375f9d63c1f37bb490f32898e6dc711c8a15",
+            "commit_message": "[BOLT] Skip _init; avoiding GOT breakage for static binaries (#117751)\n\n_init is used during startup of binaires. Unfortunately, its\r\naddress can be shared (at least on AArch64 glibc static binaries) with a\r\ndata\r\nreference that lives in the GOT. The GOT rewriting is currently unable\r\nto distinguish between data addresses and function addresses. This leads\r\nto the data address being incorrectly rewritten, causing a crash on\r\nstartup of the binary:\r\n\r\n  Unexpected reloc type in static binary.\r\n\r\nTo avoid this, don't consider _init for being moved, by skipping it.\r\n\r\n~We could add further conditions to narrow the skipped case for known\r\ncrashes, but as a straw man I thought it'd be best to keep the condition\r\nas simple as possible and see if there any objections to this.~\r\n(Edit: this broke the test\r\nbolt/test/runtime/X86/retpoline-synthetic.test,\r\nbecause _init was skipped from the retpoline pass and it has an indirect\r\ncall in it, so I include a check for static binaries now, which avoids\r\nthe test failure,\r\nbut perhaps this could/should be narrowed further?)\r\n\r\nFor now, skip _init for static binaries on any architecture; we could\r\nadd further conditions to narrow the skipped case for known crashes, but\r\nas a straw man I thought it'd be best to keep the condition as simple as\r\npossible and see if there any objections to this.\r\n\r\nUpdates #100096.",
+            "commit_timestamp": 1732805947.0
         }
     ]
 }
