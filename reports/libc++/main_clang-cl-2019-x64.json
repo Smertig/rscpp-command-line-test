@@ -2787,6 +2787,23 @@
             "commit_ref": "eb42e94d9793d5426de64266ef637b3267ed0b40",
             "commit_message": "[gn build] Port b96e7570c991\n",
             "commit_timestamp": 1732848415.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1732892916.573178,
+            "elapsed_time": 69.92515993118286,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5006.668617248535,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "2b3266c1701f315d7e89c81977800001563afacb",
+            "commit_message": "[AArch64] Generate zeroing forms of certain SVE2.2 instructions (1/11) (#116259)\n\nSVE2.2 introduces instructions with predicated forms with zeroing of the\r\ninactive lanes. This allows in some cases to save a `movprfx` or a `mov`\r\ninstruction when emitting code for `_x` or `_z` variants of intrinsics.\r\n\r\nThis patch adds support for emitting the zeroing forms of `ABS`, `NEG`,\r\n`FABS`, and `FNEG` instructions.",
+            "commit_timestamp": 1732891995.0
         }
     ]
 }

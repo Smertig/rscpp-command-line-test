@@ -21041,6 +21041,21 @@
             "commit_ref": "04184d45badeb45ce9166725a15f93742fb09770",
             "commit_message": "GHA/windows: avoid libtool wrapper for test and server executables\n\nThis makes `runtests.pl` run the final executables directly.\nBefore this patch it called the autotools/libtool wrapper tool, which\nthen called the final executables.\n\nThis solution was already used for `curl.exe`.\n\nApplies to tests run in the `mingw, AM x86_64 c-ares U` job, which still\nshows unexplained flakiness.\n\nAlso makes tests finish 45 seconds faster.\n\nRef: #14854\nFollow-up to 1a2d38c47c7825ad4d993d10664a45be3e3bbb58 #15437\nCloses #15662\n",
             "commit_timestamp": 1732846492.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1732892839.04559,
+            "elapsed_time": 284.67350721359253,
+            "x64": true,
+            "actual_files_count": 3414,
+            "expected_files_count": 2323,
+            "memory_traffic": 69448.38991546631,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "fc680c8145b35ac903de6fba4454934a222d7a1b",
+            "commit_message": "GHA/windows: extend PATH instead copying libcurl.dll\n\nIt was already done in cmake jobs, but not in autotools ones.\n\nFollow-up to 1a2d38c47c7825ad4d993d10664a45be3e3bbb58 #15437\nFollow-up to 04184d45badeb45ce9166725a15f93742fb09770 #15662\n\nCloses #15663\n",
+            "commit_timestamp": 1732875011.0
         }
     ]
 }
