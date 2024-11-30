@@ -21071,6 +21071,21 @@
             "commit_ref": "b1c54e1006745dc9c0ccc0a0a9ce6d7fb81e8537",
             "commit_message": "setopt: fix missing options for builds without HTTP & MQTT\n\n- Restore some necessary options for builds without HTTP and MQTT.\n\nThe logic to turn off a segment of options in builds without HTTP and\nMQTT was too expansive. Those builds (such as FTP-only builds) could not\nuse options such as CURLOPT_URL or CURLOPT_USERNAME etc.\n\nPrior to this change 30da1f59 (precedes 8.11.0) refactored the options\nprocessing and caused this issue.\n\nReported-by: Yoshimasa Ohno\n\nFixes https://github.com/curl/curl/issues/15634\nCloses https://github.com/curl/curl/pull/15640\n",
             "commit_timestamp": 1732902595.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1732979099.435144,
+            "elapsed_time": 253.79277276992798,
+            "x64": true,
+            "actual_files_count": 3414,
+            "expected_files_count": 2323,
+            "memory_traffic": 69177.80434417725,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "b1c54e1006745dc9c0ccc0a0a9ce6d7fb81e8537",
+            "commit_message": "setopt: fix missing options for builds without HTTP & MQTT\n\n- Restore some necessary options for builds without HTTP and MQTT.\n\nThe logic to turn off a segment of options in builds without HTTP and\nMQTT was too expansive. Those builds (such as FTP-only builds) could not\nuse options such as CURLOPT_URL or CURLOPT_USERNAME etc.\n\nPrior to this change 30da1f59 (precedes 8.11.0) refactored the options\nprocessing and caused this issue.\n\nReported-by: Yoshimasa Ohno\n\nFixes https://github.com/curl/curl/issues/15634\nCloses https://github.com/curl/curl/pull/15640\n",
+            "commit_timestamp": 1732902595.0
         }
     ]
 }

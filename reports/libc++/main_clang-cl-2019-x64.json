@@ -2821,6 +2821,23 @@
             "commit_ref": "ee19eb3037c781361e6f82c524b500ed5f55be18",
             "commit_message": "[ELF] Change some upper-case utohexstr to lower-case to improve consistency\n\nThe convention is to use lower-case addresses.\n",
             "commit_timestamp": 1732934267.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1732979341.270001,
+            "elapsed_time": 89.59877443313599,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4983.84358215332,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "4148aa63e2285ec7198c67d9b231b9097076ba8e",
+            "commit_message": "[Reland][Runtimes] Merge 'compile_commands.json' files from runtimes build (#116303)\n\nSummary:\nWhen building a project in a runtime mode, the compilation database is a\nseparate CMake invocation. So its `compile_commands.json` file will be\nplaced elsewhere in the `runtimes/runtime-bins` directory. This is\nsomewhat annoying for ongoing development when a runtimes build is\nnecessary. This patch adds some CMake magic to merge the two files.\n\nFixed issue w/ standalone runtimes build by checking if the LLVM src and\nCMake src are the same.\n",
+            "commit_timestamp": 1732978208.0
         }
     ]
 }
