@@ -22929,6 +22929,23 @@
             "commit_ref": "2b3266c1701f315d7e89c81977800001563afacb",
             "commit_message": "[AArch64] Generate zeroing forms of certain SVE2.2 instructions (1/11) (#116259)\n\nSVE2.2 introduces instructions with predicated forms with zeroing of the\r\ninactive lanes. This allows in some cases to save a `movprfx` or a `mov`\r\ninstruction when emitting code for `_x` or `_z` variants of intrinsics.\r\n\r\nThis patch adds support for emitting the zeroing forms of `ABS`, `NEG`,\r\n`FABS`, and `FNEG` instructions.",
             "commit_timestamp": 1732891995.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1732937309.073643,
+            "elapsed_time": 1549.086261510849,
+            "x64": true,
+            "actual_files_count": 2097,
+            "expected_files_count": 1661,
+            "memory_traffic": 251885.4149169922,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "ee19eb3037c781361e6f82c524b500ed5f55be18",
+            "commit_message": "[ELF] Change some upper-case utohexstr to lower-case to improve consistency\n\nThe convention is to use lower-case addresses.\n",
+            "commit_timestamp": 1732934267.0
         }
     ]
 }
