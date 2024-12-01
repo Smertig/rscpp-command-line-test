@@ -22963,6 +22963,23 @@
             "commit_ref": "4148aa63e2285ec7198c67d9b231b9097076ba8e",
             "commit_message": "[Reland][Runtimes] Merge 'compile_commands.json' files from runtimes build (#116303)\n\nSummary:\nWhen building a project in a runtime mode, the compilation database is a\nseparate CMake invocation. So its `compile_commands.json` file will be\nplaced elsewhere in the `runtimes/runtime-bins` directory. This is\nsomewhat annoying for ongoing development when a runtimes build is\nnecessary. This patch adds some CMake magic to merge the two files.\n\nFixed issue w/ standalone runtimes build by checking if the LLVM src and\nCMake src are the same.\n",
             "commit_timestamp": 1732978208.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1733024350.312168,
+            "elapsed_time": 1545.6142795085907,
+            "x64": true,
+            "actual_files_count": 2097,
+            "expected_files_count": 1661,
+            "memory_traffic": 251799.62099456787,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "1c7e4074b1efe7c3c9110f1d116b16f50fce9c88",
+            "commit_message": "[lldb] Fix  warning: 'sprintf' is deprecated in RNBSocketTest\n\nFixes warning: 'sprintf' is deprecated: This function is provided for\ncompatibility reasons only.  Due to security concerns inherent in the\ndesign of sprintf(3), it is highly recommended that you use snprintf(3)\ninstead.\n",
+            "commit_timestamp": 1733017200.0
         }
     ]
 }
