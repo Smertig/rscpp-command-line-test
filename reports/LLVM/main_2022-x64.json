@@ -22980,6 +22980,23 @@
             "commit_ref": "1c7e4074b1efe7c3c9110f1d116b16f50fce9c88",
             "commit_message": "[lldb] Fix  warning: 'sprintf' is deprecated in RNBSocketTest\n\nFixes warning: 'sprintf' is deprecated: This function is provided for\ncompatibility reasons only.  Due to security concerns inherent in the\ndesign of sprintf(3), it is highly recommended that you use snprintf(3)\ninstead.\n",
             "commit_timestamp": 1733017200.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1733066350.794476,
+            "elapsed_time": 1541.8279461860657,
+            "x64": true,
+            "actual_files_count": 2097,
+            "expected_files_count": 1661,
+            "memory_traffic": 251598.78531646729,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "22417ec6cca0ed8ccecb0c2b77011e591378fd2a",
+            "commit_message": "[Driver] Do not add gno-column-info when using sampling PGO (#117954)\n\nColumn info is important for sampling PGO to generate/load profile file.\r\nOn windows, it will be automatically added when using -gdwarf to\r\ngenerate\r\nprofile file. It should also be generated when fprofile-sample-use= is\r\nused.",
+            "commit_timestamp": 1733057678.0
         }
     ]
 }

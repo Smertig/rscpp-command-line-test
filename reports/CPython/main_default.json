@@ -18176,6 +18176,21 @@
             "commit_ref": "328187cc4fcdd578db42cf6a16c197c3382157a7",
             "commit_message": "GH-127381: pathlib ABCs: remove `PathBase.cwd()` and `home()` (#127427)\n\nThese classmethods presume that the user has retained the original\r\n`__init__()` signature, which may not be the case. Also, many virtual\r\nfilesystems don't provide current or home directories.",
             "commit_timestamp": 1732991979.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1733065781.495093,
+            "elapsed_time": 1096.6718230247498,
+            "x64": true,
+            "actual_files_count": 1052,
+            "expected_files_count": null,
+            "memory_traffic": 48066.12902832031,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "a880358af03d9cab37f7db04385c5a97051b03b6",
+            "commit_message": "gh-127356: Fix prepend doctrees directory for gettext target (#127357)\n\n",
+            "commit_timestamp": 1733044544.0
         }
     ]
 }
