@@ -16452,6 +16452,21 @@
             "commit_ref": "c3db9492a75b72d764ed3d2893ea87fb34eea861",
             "commit_message": "Update CMakeLists to use `add_compile_definitions` (#15483)\n\nThis is a newer feature introduced in CMake 3.12, which is now our\r\nminimum version. It supercedes `add_definitions`. I've also replaced\r\nsome calls to set `CMAKE_<LANG>_FLAGS` that were used to set\r\ndefinitions. This is a fairly trivial routine build maintenance that\r\nis not intended to have any behavioral effects.",
             "commit_timestamp": 1732878168.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1733111241.140962,
+            "elapsed_time": 179.4503366947174,
+            "x64": true,
+            "actual_files_count": 407,
+            "expected_files_count": 105,
+            "memory_traffic": 22766.678337097168,
+            "repo_url": "https://github.com/minetest/minetest",
+            "commit_ref": "e9080f91f28af50a649c146ea34c371ef19affc3",
+            "commit_message": "Cleanup ban.cpp/h (#15496)\n\nMake BanManager more const correctly\r\nDelete unused includes",
+            "commit_timestamp": 1733082733.0
         }
     ]
 }
