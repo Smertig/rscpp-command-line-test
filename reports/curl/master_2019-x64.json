@@ -21131,6 +21131,21 @@
             "commit_ref": "b1c54e1006745dc9c0ccc0a0a9ce6d7fb81e8537",
             "commit_message": "setopt: fix missing options for builds without HTTP & MQTT\n\n- Restore some necessary options for builds without HTTP and MQTT.\n\nThe logic to turn off a segment of options in builds without HTTP and\nMQTT was too expansive. Those builds (such as FTP-only builds) could not\nuse options such as CURLOPT_URL or CURLOPT_USERNAME etc.\n\nPrior to this change 30da1f59 (precedes 8.11.0) refactored the options\nprocessing and caused this issue.\n\nReported-by: Yoshimasa Ohno\n\nFixes https://github.com/curl/curl/issues/15634\nCloses https://github.com/curl/curl/pull/15640\n",
             "commit_timestamp": 1732902595.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1733151978.39496,
+            "elapsed_time": 302.9866716861725,
+            "x64": true,
+            "actual_files_count": 3414,
+            "expected_files_count": 2323,
+            "memory_traffic": 71688.54006195068,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "fcb59534e37012dec532be6d3afe2e859f5627d1",
+            "commit_message": "curl: --continue-at is mutually exclusive with --range\n\nAllowing both just creates a transfer with behaviors no user can\nproperly anticipate so better just deny the combo.\n\nFixes #15646\nReported-by: Harry Sintonen\nCloses #15666\n",
+            "commit_timestamp": 1733150204.0
         }
     ]
 }
