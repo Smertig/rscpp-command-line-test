@@ -21161,6 +21161,21 @@
             "commit_ref": "8b259498be5f1d65168e7382226c60645b86489a",
             "commit_message": "libssh: use libssh sftp_aio to upload file\n\nSupport async sftp upload for curl built with libssh.\n\nCloses #15625\n",
             "commit_timestamp": 1733171604.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1733238434.368495,
+            "elapsed_time": 263.52531576156616,
+            "x64": true,
+            "actual_files_count": 3414,
+            "expected_files_count": 2323,
+            "memory_traffic": 70633.12716674805,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "381b275314a695cb1156f3c3a1523387438f2f76",
+            "commit_message": "http_proxy: move dynhds_add_custom here from http.c\n\n... and make it static. As it is not used anywhere else.\n\nCloses #15672\n",
+            "commit_timestamp": 1733234578.0
         }
     ]
 }
