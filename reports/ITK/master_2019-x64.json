@@ -21056,6 +21056,21 @@
             "commit_ref": "89d13df59f43d6d68375e217f6be3e7fb45d8447",
             "commit_message": "COMP: Fix 'itkPyCommand.h' file not found\n\nThis is appearing again, which means that previous solution was not thorough enough:\nhttps://github.com/InsightSoftwareConsortium/ITK/pull/4829\n\nSample error message:\n\n28>------ Build started: Project: ITKPyUtilsCastXML, Configuration: RelWithDebInfo x64 ------\n28>Generating ../../../castxml_inputs/itkPyCommand.xml\n28>C:/Dev/ITK-py22/Wrapping/castxml_inputs/itkPyCommand.cxx:16:10: fatal error: 'itkPyCommand.h' file not found\n28>   16 | #include \"itkPyCommand.h\"\n28>      |          ^~~~~~~~~~~~~~~~\n28>1 error generated.\n",
             "commit_timestamp": 1733064713.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1733196313.770426,
+            "elapsed_time": 206.26901364326477,
+            "x64": true,
+            "actual_files_count": 101,
+            "expected_files_count": null,
+            "memory_traffic": 23963.528564453125,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "fb11a100315ce03c4cc48c095d737d529aeb9aea",
+            "commit_message": "ENH: clang-format style ambiguity\n\nRun clang-format verison 19 followed by\nclang-format version 8.  There are some\nchanges that are made by 19 that are not\nexplicitly changed by version 8.  It becomes\nand issue with IDE's that integrate a newer\nversion of clang-format that introduces\nunmandated changes in clang-format version 8.\n",
+            "commit_timestamp": 1733190541.0
         }
     ]
 }

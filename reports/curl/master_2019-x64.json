@@ -21146,6 +21146,21 @@
             "commit_ref": "fcb59534e37012dec532be6d3afe2e859f5627d1",
             "commit_message": "curl: --continue-at is mutually exclusive with --range\n\nAllowing both just creates a transfer with behaviors no user can\nproperly anticipate so better just deny the combo.\n\nFixes #15646\nReported-by: Harry Sintonen\nCloses #15666\n",
             "commit_timestamp": 1733150204.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1733196087.169674,
+            "elapsed_time": 275.634553194046,
+            "x64": true,
+            "actual_files_count": 3414,
+            "expected_files_count": 2323,
+            "memory_traffic": 70866.26846313477,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "8b259498be5f1d65168e7382226c60645b86489a",
+            "commit_message": "libssh: use libssh sftp_aio to upload file\n\nSupport async sftp upload for curl built with libssh.\n\nCloses #15625\n",
+            "commit_timestamp": 1733171604.0
         }
     ]
 }
