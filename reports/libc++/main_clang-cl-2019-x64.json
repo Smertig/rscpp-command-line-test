@@ -2940,6 +2940,23 @@
             "commit_ref": "10223c72a9c2afc3ae86eb7995f0dc47f5f9ad44",
             "commit_message": "[ConstraintElim] Use nusw flag for GEP decomposition\n\nCheck for nusw instead of inbounds when decomposing GEPs.\n\nIn this particular case, we can also look through multiple nusw\nflags, because we will ultimately be working in the unsigned\nconstraint system.\n",
             "commit_timestamp": 1733237789.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1733282648.190343,
+            "elapsed_time": 93.88024473190308,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4975.444770812988,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "e08e5e2c426467342dbe79fbf3ea9723c17a07d1",
+            "commit_message": "[mlir][transforms] Use `isExternal` instead of `isDeclaration` for `FunctionOpInterface` (#116573)\n\nThis PR fixes a bug in `RemoveDeadValues` where the\r\n`FunctionOpInterface` does not have the `isDeclaration` method. As a\r\nresult, we should use the `isExternal` method instead. Fixes #116347.",
+            "commit_timestamp": 1733282077.0
         }
     ]
 }

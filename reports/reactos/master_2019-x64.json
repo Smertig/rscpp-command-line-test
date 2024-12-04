@@ -20941,6 +20941,21 @@
             "commit_ref": "9382aa286cd478366ea1746b509e936ddb8869fb",
             "commit_message": "[DISKPART] Fix typos in string resources for the SELECT command\n",
             "commit_timestamp": 1733182821.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1733282355.433974,
+            "elapsed_time": 69.46602940559387,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7397.574729919434,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "6cf426345b425e9328ebd0b481f955b994dc0cd8",
+            "commit_message": "[NTOS:KD64] Use KdpDprintf() instead of DbgPrint() for the debugger banner DPRINTs (#7540)\n\nOverride DbgPrint(), used by the debugger banner DPRINTs,\nbecause KdInitSystem() can be called under the debugger lock\nby KdEnableDebugger(WithLock)().\n\nIn this case, when DbgPrint() (re-)enters the debugger via an\ninterrupt and acquires the debugger lock, a deadlock occurs.\n",
+            "commit_timestamp": 1733260442.0
         }
     ]
 }
