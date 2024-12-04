@@ -16527,6 +16527,21 @@
             "commit_ref": "a45b04ffb4c0583ef3c8727ea0f73d40e3662e9d",
             "commit_message": "Less explicit memory management in Irrlicht image writer classes (#15493)\n\nCImageWriterPNG::writeImage() and writeJPEGFile() explicitly allocate\r\nand deallocate memory with `new` and `delete`, which is prone to programming errors.\r\nThe code also has non-functional error handling:\r\nWhen memory allocation fails, `new` throws an `std::bad_alloc` exception\r\nand never returns `nullptr`, so the check for `nullptr` is always false.\r\n\r\nCo-authored-by: DS <ds.desour@proton.me>",
             "commit_timestamp": 1733241168.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1733326447.588196,
+            "elapsed_time": 182.904128074646,
+            "x64": true,
+            "actual_files_count": 407,
+            "expected_files_count": 105,
+            "memory_traffic": 22863.233421325684,
+            "repo_url": "https://github.com/minetest/minetest",
+            "commit_ref": "a45b04ffb4c0583ef3c8727ea0f73d40e3662e9d",
+            "commit_message": "Less explicit memory management in Irrlicht image writer classes (#15493)\n\nCImageWriterPNG::writeImage() and writeJPEGFile() explicitly allocate\r\nand deallocate memory with `new` and `delete`, which is prone to programming errors.\r\nThe code also has non-functional error handling:\r\nWhen memory allocation fails, `new` throws an `std::bad_alloc` exception\r\nand never returns `nullptr`, so the check for `nullptr` is always false.\r\n\r\nCo-authored-by: DS <ds.desour@proton.me>",
+            "commit_timestamp": 1733241168.0
         }
     ]
 }

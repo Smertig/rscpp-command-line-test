@@ -20956,6 +20956,21 @@
             "commit_ref": "6cf426345b425e9328ebd0b481f955b994dc0cd8",
             "commit_message": "[NTOS:KD64] Use KdpDprintf() instead of DbgPrint() for the debugger banner DPRINTs (#7540)\n\nOverride DbgPrint(), used by the debugger banner DPRINTs,\nbecause KdInitSystem() can be called under the debugger lock\nby KdEnableDebugger(WithLock)().\n\nIn this case, when DbgPrint() (re-)enters the debugger via an\ninterrupt and acquires the debugger lock, a deadlock occurs.\n",
             "commit_timestamp": 1733260442.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1733324798.621442,
+            "elapsed_time": 88.62910294532776,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7445.313552856445,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "3bd9ddca94bda829b3977918a1be0a92a8a610f6",
+            "commit_message": "[CRT] corecrt.h: add secure function overload macros\n\nTaken from MIT release of UCRT (https://www.nuget.org/packages/Microsoft.Windows.SDK.CRTSource/10.0.22621.3). These are used by newer mingw headers, which we include when compiling C++ code. Fixes build with GCC 13 based RosBE.\n",
+            "commit_timestamp": 1733292829.0
         }
     ]
 }

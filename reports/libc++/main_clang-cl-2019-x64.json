@@ -2957,6 +2957,23 @@
             "commit_ref": "e08e5e2c426467342dbe79fbf3ea9723c17a07d1",
             "commit_message": "[mlir][transforms] Use `isExternal` instead of `isDeclaration` for `FunctionOpInterface` (#116573)\n\nThis PR fixes a bug in `RemoveDeadValues` where the\r\n`FunctionOpInterface` does not have the `isDeclaration` method. As a\r\nresult, we should use the `isExternal` method instead. Fixes #116347.",
             "commit_timestamp": 1733282077.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1733324955.093985,
+            "elapsed_time": 69.95145726203918,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4974.5823974609375,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "7b6e0d9fc3993f3e3df596fd16d97e2ed2e1d0aa",
+            "commit_message": "[Matrix] Use DenseMap for ShapeMap instead of ValueMap. (#118282)\n\nValueMap automatically updates entries with the new value if they have\r\nbeen RAUW. This can lead to instructions that are expected to not have\r\nshape info to be added to the map (e.g. shufflevector as in the added\r\ntest case).\r\n\r\nThis leads to incorrect results. Originally it was used for transpose\r\noptimizations, but they now all use updateShapeAndReplaceAllUsesWith,\r\nwhich takes care of updating the shape info as needed.\r\n\r\nThis fixes a crash in the newly added test cases.\r\n\r\nPR: https://github.com/llvm/llvm-project/pull/118282",
+            "commit_timestamp": 1733323891.0
         }
     ]
 }

@@ -21101,6 +21101,21 @@
             "commit_ref": "a68b8f67dae4466e6e0450b0be35fb5a81eb2090",
             "commit_message": "ENH: FUTURE REMOVE `...CoordRepType` in favor of `...CoordinateType`\n\nFollow-up to pull request https://github.com/InsightSoftwareConsortium/ITK/pull/4997\ncommit e667fa39a6914d666ae5dd0b47202ebfb2acfd1f\n\"ENH: Deprecate (FUTURE REMOVE) CoordRepType in favor of CoordinateType\"\n",
             "commit_timestamp": 1733281742.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1733325056.10854,
+            "elapsed_time": 231.81524920463562,
+            "x64": true,
+            "actual_files_count": 101,
+            "expected_files_count": null,
+            "memory_traffic": 23918.405838012695,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "6a704aaadef717113aa80e7e021c408c086b3677",
+            "commit_message": "ENH: Remove unused clang-format setup code\n\nThe installation of the clang-format tools\nis now performed in the file:\n   Utilities/ClangFormat/DownloadClangFormat.cmake\n\nas an ExternalProject with the target of ClangFormat.\n\nThe option for ITK_USE_CLANG_FORMAT was duplicated in\nCMake/ITKModuleClangFormat.cmake\n",
+            "commit_timestamp": 1733322608.0
         }
     ]
 }
