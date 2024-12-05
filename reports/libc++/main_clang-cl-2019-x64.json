@@ -2991,6 +2991,23 @@
             "commit_ref": "f98c9a9b3665c75a6bf01577734f16185710009d",
             "commit_message": "[mutation analyzer][NFC] combine `ConditionalOperator` `BinaryConditionalOperator` (#118602)\n\n",
             "commit_timestamp": 1733368665.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1733411427.463948,
+            "elapsed_time": 69.63594770431519,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4996.578559875488,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "d09632ba819d21b12cdf0ec107209c0c5cbf100d",
+            "commit_message": "[InstCombine] Remove nusw handling in ptrtoint of gep fold (NFCI) (#118804)\n\nNow that #111144 infers gep nuw, we no longer have to repeat the\r\ninference in this fold.",
+            "commit_timestamp": 1733410775.0
         }
     ]
 }
