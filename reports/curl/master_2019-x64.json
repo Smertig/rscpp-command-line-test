@@ -21206,6 +21206,21 @@
             "commit_ref": "c948971e83f8673342de28691b4e7b6fd9bd670d",
             "commit_message": "digest: produce a shorter cnonce in Digest headers\n\nOther programs (Postman, Chrome, Python request) use a 16 byte cnonce\nand there are instances of server-side implementations that don't\nsupport the larger lengths curl used previously.\n\nFixes #15653\nReported-by: Florian Eckert\nCloses #15670\n",
             "commit_timestamp": 1733322865.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1733368841.502587,
+            "elapsed_time": 279.80509757995605,
+            "x64": true,
+            "actual_files_count": 3414,
+            "expected_files_count": 2323,
+            "memory_traffic": 74925.34386444092,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "c948971e83f8673342de28691b4e7b6fd9bd670d",
+            "commit_message": "digest: produce a shorter cnonce in Digest headers\n\nOther programs (Postman, Chrome, Python request) use a 16 byte cnonce\nand there are instances of server-side implementations that don't\nsupport the larger lengths curl used previously.\n\nFixes #15653\nReported-by: Florian Eckert\nCloses #15670\n",
+            "commit_timestamp": 1733322865.0
         }
     ]
 }
