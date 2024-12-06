@@ -21236,6 +21236,21 @@
             "commit_ref": "ce949ba1dce08cf0de141b5f82309958e0086367",
             "commit_message": "mime: fix reader stall on small read lengths\n\nThe base64 mime encoder stalls when it cannot encode a full 3 byte input\nset into the read buffer. The workaround for this limitation was\nincomplete and could lead to stalled transfers when the last chunk to\nupload was smaller than 4 bytes.\n\nUse a tmp buffer on small reads to allow mime encoders more space to put\ntheir things.\n\nAdd test case reproducing the issue and fix.\n\nReported-by: Alexis Savin\nFixes #15688\nCloses #15691\n",
             "commit_timestamp": 1733409891.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1733455145.844713,
+            "elapsed_time": 280.5759344100952,
+            "x64": true,
+            "actual_files_count": 3414,
+            "expected_files_count": 2323,
+            "memory_traffic": 69822.7709197998,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "a4458c7ee369a4d789168669d6efdf364bb9fb97",
+            "commit_message": "hostip: don't use the resolver for FQDN localhost\n\n- Treat `[<any>.]localhost.` (ie localhost with FQDN period terminator)\n  as fixed value 127.0.0.1 and ::1 instead of querying the resolver.\n\nPrior to this change, b5c0fe20 (precedes 7.85.0) did the same for\nnon-FQDN `<any>.localhost`.\n\nPrior to this change, 1a0ebf66 (precedes 7.78.0) did the same for\nnon-FQDN `localhost`.\n\nRef: https://github.com/curl/curl/issues/15628#issuecomment-2515540315\n\nCloses https://github.com/curl/curl/pull/15676\n",
+            "commit_timestamp": 1733436994.0
         }
     ]
 }
