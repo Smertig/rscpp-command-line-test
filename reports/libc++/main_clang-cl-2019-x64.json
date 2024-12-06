@@ -3025,6 +3025,23 @@
             "commit_ref": "548678ef84bad940caf1610287d7a0e3bdfdae61",
             "commit_message": "[gn build] Port b5bd19211118\n",
             "commit_timestamp": 1733453693.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1733497868.675157,
+            "elapsed_time": 65.42737627029419,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4975.431114196777,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "bb3eb0ca0cf0fe454f6845d429190cb30e6fa0f5",
+            "commit_message": "[ARM] Test unroll behaviour on machines with low overhead branching (#118692)\n\nAdd test for existing loop unroll behaviour.\r\n\r\nCurrent behaviour is the single loop with fmul gets runtime unrolled by\r\ncount of 4, with the loop remainder unrolled as the 3 for.body9.us.prol\r\nsections. This is quite a lot of compare and branch, negating the\r\nbenefits of the low overhead loop mechanism.",
+            "commit_timestamp": 1733497496.0
         }
     ]
 }
