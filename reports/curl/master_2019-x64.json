@@ -21266,6 +21266,21 @@
             "commit_ref": "ec14be6a4db9d2767552dcbf52ece3f23b7a51b0",
             "commit_message": "RELEASE-NOTES: synced\n",
             "commit_timestamp": 1733473485.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1733541508.227312,
+            "elapsed_time": 255.70789074897766,
+            "x64": true,
+            "actual_files_count": 3414,
+            "expected_files_count": 2323,
+            "memory_traffic": 69691.11744689941,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "59fec5ac43ade98b31093e707b5ac2aba305bd2a",
+            "commit_message": "mprintf: fix the integer overflow checks\n\nWhen a floating point precision or string width are provided as a\nbase-10 number, the code could miss to detect integer overflows if the\nprovided value was exactly 2147483648 or 2147483649 (2147483647 being\nthe maxium value a signed integer can hold).\n\nThe chance that such values would actually ever be used is slim.\n\nThis change fixes the detection to also cover those edge cases.\n\nCloses #15699\n",
+            "commit_timestamp": 1733499510.0
         }
     ]
 }

@@ -3042,6 +3042,23 @@
             "commit_ref": "bb3eb0ca0cf0fe454f6845d429190cb30e6fa0f5",
             "commit_message": "[ARM] Test unroll behaviour on machines with low overhead branching (#118692)\n\nAdd test for existing loop unroll behaviour.\r\n\r\nCurrent behaviour is the single loop with fmul gets runtime unrolled by\r\ncount of 4, with the loop remainder unrolled as the 3 for.body9.us.prol\r\nsections. This is quite a lot of compare and branch, negating the\r\nbenefits of the low overhead loop mechanism.",
             "commit_timestamp": 1733497496.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1733541696.18425,
+            "elapsed_time": 65.89797616004944,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4965.893081665039,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "18af3fc1bf8855e1e166e64a9210ed07d610aa54",
+            "commit_message": "[Clang][perf-training] Fix clean command in perf-helper.py (#118978)\n\nThe first path argument was always being ignored, and since most calls\r\nto this command only passed one path, it wasn't actually doing anything\r\nin most cases.\r\n\r\nThis bug was introduced by dd0356d741aefa25ece973d6cc4b55dcb73b84b4.",
+            "commit_timestamp": 1733538899.0
         }
     ]
 }

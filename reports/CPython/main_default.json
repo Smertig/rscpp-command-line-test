@@ -18341,6 +18341,21 @@
             "commit_ref": "36c6178d372b075e9c74b786cfb5e47702976b1c",
             "commit_message": "gh-126024: fix UBSan failure in `unicodeobject.c:find_first_nonascii` (GH-127566)\n\n",
             "commit_timestamp": 1733495490.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1733541715.454902,
+            "elapsed_time": 1058.1550450325012,
+            "x64": true,
+            "actual_files_count": 1052,
+            "expected_files_count": null,
+            "memory_traffic": 48224.04579162598,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "31c9f3ced293492b38e784c17c4befe425da5dab",
+            "commit_message": "GH-127381: pathlib ABCs: remove `PathBase.resolve()` and `absolute()` (#127707)\n\nRemove our implementation of POSIX path resolution in `PathBase.resolve()`.\r\nThis functionality is rather fragile and isn't necessary in most cases. It\r\ndepends on `PathBase.stat()`, which we're looking to remove.\r\n\r\nAlso remove `PathBase.absolute()`. Many legitimate virtual filesystems lack\r\nthe notion of a 'current directory', so it's wrong to include in the basic\r\ninterface.",
+            "commit_timestamp": 1733521185.0
         }
     ]
 }
