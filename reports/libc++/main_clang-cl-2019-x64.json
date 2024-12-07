@@ -3059,6 +3059,23 @@
             "commit_ref": "18af3fc1bf8855e1e166e64a9210ed07d610aa54",
             "commit_message": "[Clang][perf-training] Fix clean command in perf-helper.py (#118978)\n\nThe first path argument was always being ignored, and since most calls\r\nto this command only passed one path, it wasn't actually doing anything\r\nin most cases.\r\n\r\nThis bug was introduced by dd0356d741aefa25ece973d6cc4b55dcb73b84b4.",
             "commit_timestamp": 1733538899.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1733584074.710275,
+            "elapsed_time": 65.36481547355652,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4980.536849975586,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "4bdac0851f4d613890558a8254043e21b0479b1e",
+            "commit_message": "[rtsan] Warn if instrumented rtsan library opened via dlopen and interceptors are not working (#119029)\n\n",
+            "commit_timestamp": 1733583724.0
         }
     ]
 }
