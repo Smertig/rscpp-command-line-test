@@ -22668,6 +22668,21 @@
             "commit_ref": "9600fee020e4166d31adf3e90489acf9625bde02",
             "commit_message": "Include <filesystem> only if FMT_CPP_LIB_FILESYSTEM is set (#4258)\n\nThis change results out of necessity since the Nintendo Switch console\r\nSDK does not support `std::filesystem`. The SDK still provides the\r\n`<filesystem>` header, but with an `#error` directive, effectively\r\nbreaking any build that includes `<filesystem>`\r\n\r\nBecause `<filesystem>` is present, `FMT_HAS_INCLUDE` is insufficient\r\nhere. With this change and `FMT_CPP_LIB_FILESYSTEM` in place, one can\r\ndefine `FMT_CPP_LIB_FILESYSTEM=0` to work around this issue.\r\n\r\nThis assumes that `<filesystem>` can be included (without warnings) if\r\n`FMT_CPP_LIB_FILESYSTEM` is set. If this is not the case, fmt would be\r\nbroken even before this change as `std::filesystem::path` is used\r\nwithout the accompanying header.",
             "commit_timestamp": 1733582754.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1733628038.486695,
+            "elapsed_time": 97.82950115203857,
+            "x64": true,
+            "actual_files_count": 74,
+            "expected_files_count": 66,
+            "memory_traffic": 7784.691474914551,
+            "repo_url": "https://github.com/fmtlib/fmt.git",
+            "commit_ref": "0f51ea79d328d0849c468aa94d8a412e345e09e2",
+            "commit_message": "Update changelog\n",
+            "commit_timestamp": 1733598340.0
         }
     ]
 }

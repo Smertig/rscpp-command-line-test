@@ -23201,6 +23201,23 @@
             "commit_ref": "4bdac0851f4d613890558a8254043e21b0479b1e",
             "commit_message": "[rtsan] Warn if instrumented rtsan library opened via dlopen and interceptors are not working (#119029)\n\n",
             "commit_timestamp": 1733583724.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1733628875.305645,
+            "elapsed_time": 1546.6110048294067,
+            "x64": true,
+            "actual_files_count": 2099,
+            "expected_files_count": 1661,
+            "memory_traffic": 251967.61473083496,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "f0297ae552e1e5aacafc1ed43968041994dc8a6e",
+            "commit_message": "Switch the intrinsic names to a string table (#118929)\n\nThis avoids the need to dynamically relocate each pointer in the table.\r\n\r\nTo make this work, this PR also moves the binary search of intrinsic\r\nnames to an internal function with an adjusted signature, and switches\r\nthe unittesting to test against actual intrinsics.",
+            "commit_timestamp": 1733622839.0
         }
     ]
 }
