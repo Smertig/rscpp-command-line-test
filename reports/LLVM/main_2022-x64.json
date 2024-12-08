@@ -23218,6 +23218,23 @@
             "commit_ref": "f0297ae552e1e5aacafc1ed43968041994dc8a6e",
             "commit_message": "Switch the intrinsic names to a string table (#118929)\n\nThis avoids the need to dynamically relocate each pointer in the table.\r\n\r\nTo make this work, this PR also moves the binary search of intrinsic\r\nnames to an internal function with an adjusted signature, and switches\r\nthe unittesting to test against actual intrinsics.",
             "commit_timestamp": 1733622839.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1733671170.222718,
+            "elapsed_time": 1548.091560125351,
+            "x64": true,
+            "actual_files_count": 2099,
+            "expected_files_count": 1661,
+            "memory_traffic": 252253.61152648926,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "9eb4056144a9d2e940272ba9e9675acaa3fbb354",
+            "commit_message": "[mlir][llvm] Translation support for task detach (#116601)\n\nThis PR adds translation support for task detach. Essentially, if the\r\n`detach` clause is present on a task, emit a\r\n`__kmpc_task_allow_completion_event` on it, and store its return (of\r\ntype `kmp_event_t*`) into the `event_handle`.",
+            "commit_timestamp": 1733666992.0
         }
     ]
 }
