@@ -22633,6 +22633,21 @@
             "commit_ref": "e7c9b907394ef241da7f5a8f93d3faec6adb2df5",
             "commit_message": "chore(deps): bump pypa/cibuildwheel in the actions group (#5451)\n\nBumps the actions group with 1 update: [pypa/cibuildwheel](https://github.com/pypa/cibuildwheel).\r\n\r\n\r\nUpdates `pypa/cibuildwheel` from 2.21 to 2.22\r\n- [Release notes](https://github.com/pypa/cibuildwheel/releases)\r\n- [Changelog](https://github.com/pypa/cibuildwheel/blob/main/docs/changelog.md)\r\n- [Commits](https://github.com/pypa/cibuildwheel/compare/v2.21...v2.22)\r\n\r\n---\r\nupdated-dependencies:\r\n- dependency-name: pypa/cibuildwheel\r\n  dependency-type: direct:production\r\n  update-type: version-update:semver-minor\r\n  dependency-group: actions\r\n...\r\n\r\nSigned-off-by: dependabot[bot] <support@github.com>\r\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
             "commit_timestamp": 1732503702.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1733714504.759393,
+            "elapsed_time": 144.75874423980713,
+            "x64": true,
+            "actual_files_count": 381,
+            "expected_files_count": 197,
+            "memory_traffic": 18323.29599761963,
+            "repo_url": "https://github.com/pybind/pybind11",
+            "commit_ref": "b17555f3403e8494bd83c4c9d5f153c261b3136c",
+            "commit_message": "chore(deps): update pre-commit hooks (#5459)\n\n* chore(deps): update pre-commit hooks\r\n\r\nupdates:\r\n- [github.com/pre-commit/mirrors-clang-format: v19.1.3 \u2192 v19.1.4](https://github.com/pre-commit/mirrors-clang-format/compare/v19.1.3...v19.1.4)\r\n- [github.com/astral-sh/ruff-pre-commit: v0.7.2 \u2192 v0.8.1](https://github.com/astral-sh/ruff-pre-commit/compare/v0.7.2...v0.8.1)\r\n- [github.com/sirosen/texthooks: 0.6.7 \u2192 0.6.8](https://github.com/sirosen/texthooks/compare/0.6.7...0.6.8)\r\n- [github.com/PyCQA/pylint: v3.3.1 \u2192 v3.3.2](https://github.com/PyCQA/pylint/compare/v3.3.1...v3.3.2)\r\n- [github.com/python-jsonschema/check-jsonschema: 0.29.4 \u2192 0.30.0](https://github.com/python-jsonschema/check-jsonschema/compare/0.29.4...0.30.0)\r\n\r\n* Resolve ruff pre-commit errors:\r\n\r\n```\r\nruff.....................................................................Failed\r\n- hook id: ruff\r\n- exit code: 1\r\n\r\nwarning: The following rules have been removed and ignoring them has no effect:\r\n    - PT004\r\n\r\ndocs/benchmark.py:51:17: UP031 Use format specifiers instead of percent format\r\n   |\r\n50 |     for cl in range(nclasses):\r\n51 |         decl += \"class cl%03i {\\n\" % cl\r\n   |                 ^^^^^^^^^^^^^^^^^^ UP031\r\n52 |         decl += \"public:\\n\"\r\n53 |         bindings += f'    py::class_<cl{cl:03}>(\"cl{cl:03}\")\\n'\r\n   |\r\n   = help: Replace with format specifiers\r\n\r\ndocs/benchmark.py:88:15: UP031 Use format specifiers instead of percent format\r\n   |\r\n86 |         elapsed = (n2 - n1).total_seconds()\r\n87 |         size = os.stat(\"test.so\").st_size\r\n88 |         print(\"   {%i, %f, %i},\" % (nclasses * nfns, elapsed, size))\r\n   |               ^^^^^^^^^^^^^^^^^^ UP031\r\n89 |     print(\"}\")\r\n   |\r\n   = help: Replace with format specifiers\r\n\r\ntools/make_changelog.py:62:9: PLC0206 Extracting value from dictionary without calling `.items()`\r\n   |\r\n61 |           msg += f\"\\n  `#{issue.number} <{issue.html_url}>`_\"\r\n62 |           for cat in cats:\r\n   |  _________^\r\n63 | |             if issue.title.lower().startswith(f\"{cat}:\"):\r\n64 | |                 cats[cat].append(msg)\r\n65 | |                 break\r\n66 | |         else:\r\n67 | |             cats[\"unknown\"].append(msg)\r\n   | |_______________________________________^ PLC0206\r\n68 |\r\n69 |   for cat, msgs in cats.items():\r\n   |\r\n\r\nFound 3 errors.\r\n\r\n```\r\n\r\n---------\r\n\r\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>\r\nCo-authored-by: Ralf W. Grosse-Kunstleve <rgrossekunst@nvidia.com>",
+            "commit_timestamp": 1733700109.0
         }
     ]
 }
