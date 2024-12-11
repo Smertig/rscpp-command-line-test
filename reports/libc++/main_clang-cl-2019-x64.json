@@ -3195,6 +3195,23 @@
             "commit_ref": "bc7449c790bab21d9e09c531ce07607fff5a7688",
             "commit_message": "[RISCV] Adjust vrgather.vv test to avoid disjoint indices. NFC\n\nThis is to prevent it from being caught up in the lowering in #119401\n",
             "commit_timestamp": 1733886957.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1733929761.282329,
+            "elapsed_time": 92.65637421607971,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4973.97029876709,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "b4b819ce98f1d77d29ec492f0230018fd633a117",
+            "commit_message": "[MLIR][NVVM] Add Op for TMA Store with reduction (#118853)\n\nPR #116854 adds intrinsics for TMA Store with reduction.\nThis patch adds an NVVM Dialect Op for the same.\n\n* Lit tests are added to verify the lowering to LLVM intrinsics and\ninvalid cases.\n* The common verifier method is updated to handle im2col modes without\noffsets.\n   This helps Ops like TMA Store, TMA StoreReduce etc.\n* The nvvmir.mlir test file is already large. So, this patch adds the\ntests for this Op\n   in a new file under a separate \"nvvm/\" directory.\n   [mlir/test/Target/LLVMIR/\"nvvm\"/tma_store_reduce.mlir]\n\nPTX Spec reference:\n\nhttps://docs.nvidia.com/cuda/parallel-thread-execution/index.html#data-movement-and-conversion-instructions-cp-reduce-async-bulk-tensor\n\nSigned-off-by: Durgadoss R <durgadossr@nvidia.com>",
+            "commit_timestamp": 1733927571.0
         }
     ]
 }

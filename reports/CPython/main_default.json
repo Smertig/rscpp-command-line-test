@@ -18476,6 +18476,21 @@
             "commit_ref": "12b4f1a5a175d4dcec27631fce2883038f0917ae",
             "commit_message": "GH-127381: pathlib ABCs: remove `PathBase.samefile()` and rarer `is_*()` (#127709)\n\nRemove `PathBase.samefile()`, which is fairly specific to the local FS, and\r\nrelies on `stat()`, which we're aiming to remove from `PathBase`.\r\n\r\nAlso remove `PathBase.is_mount()`, `is_junction()`, `is_block_device()`,\r\n`is_char_device()`, `is_fifo()` and `is_socket()`. These rely on POSIX\r\nfile type numbers that we're aiming to remove from the `PathBase` API.",
             "commit_timestamp": 1733875795.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1733929792.404533,
+            "elapsed_time": 1164.2231667041779,
+            "x64": true,
+            "actual_files_count": 1052,
+            "expected_files_count": null,
+            "memory_traffic": 48167.44453430176,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "5a23994a3dbee43a0b08f5920032f60f38b63071",
+            "commit_message": "GH-127058: Make `PySequence_Tuple` safer and probably faster. (#127758)\n\n* Use a small buffer, then list when constructing a tuple from an arbitrary sequence.\n",
+            "commit_timestamp": 1733925779.0
         }
     ]
 }
