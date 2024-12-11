@@ -3178,6 +3178,23 @@
             "commit_ref": "20b071c0ebd9a5de7e1893cf6f1d6081819015c8",
             "commit_message": "[CGData] Change placeholder from `undef` to `poison` when initializing a vector [NFC] (#119134)\n\n",
             "commit_timestamp": 1733843081.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1733887274.183317,
+            "elapsed_time": 62.52182650566101,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5004.22078704834,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "bc7449c790bab21d9e09c531ce07607fff5a7688",
+            "commit_message": "[RISCV] Adjust vrgather.vv test to avoid disjoint indices. NFC\n\nThis is to prevent it from being caught up in the lowering in #119401\n",
+            "commit_timestamp": 1733886957.0
         }
     ]
 }

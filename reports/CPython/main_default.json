@@ -18461,6 +18461,21 @@
             "commit_ref": "cef0a90d8f3a94aa534593f39b4abf98165675b9",
             "commit_message": "gh-126937: ctypes: fix TypeError when a field's size is >65535 bytes (GH-126938)\n\n\r\nCo-authored-by: Peter Bierma <zintensitydev@gmail.com>\r\nCo-authored-by: Terry Jan Reedy <tjreedy@udel.edu>\r\nCo-authored-by: Petr Viktorin <encukou@gmail.com>",
             "commit_timestamp": 1733832791.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1733887399.803683,
+            "elapsed_time": 1195.7681996822357,
+            "x64": true,
+            "actual_files_count": 1052,
+            "expected_files_count": null,
+            "memory_traffic": 48042.34703063965,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "12b4f1a5a175d4dcec27631fce2883038f0917ae",
+            "commit_message": "GH-127381: pathlib ABCs: remove `PathBase.samefile()` and rarer `is_*()` (#127709)\n\nRemove `PathBase.samefile()`, which is fairly specific to the local FS, and\r\nrelies on `stat()`, which we're aiming to remove from `PathBase`.\r\n\r\nAlso remove `PathBase.is_mount()`, `is_junction()`, `is_block_device()`,\r\n`is_char_device()`, `is_fifo()` and `is_socket()`. These rely on POSIX\r\nfile type numbers that we're aiming to remove from the `PathBase` API.",
+            "commit_timestamp": 1733875795.0
         }
     ]
 }
