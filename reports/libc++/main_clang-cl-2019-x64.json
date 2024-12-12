@@ -3212,6 +3212,23 @@
             "commit_ref": "b4b819ce98f1d77d29ec492f0230018fd633a117",
             "commit_message": "[MLIR][NVVM] Add Op for TMA Store with reduction (#118853)\n\nPR #116854 adds intrinsics for TMA Store with reduction.\nThis patch adds an NVVM Dialect Op for the same.\n\n* Lit tests are added to verify the lowering to LLVM intrinsics and\ninvalid cases.\n* The common verifier method is updated to handle im2col modes without\noffsets.\n   This helps Ops like TMA Store, TMA StoreReduce etc.\n* The nvvmir.mlir test file is already large. So, this patch adds the\ntests for this Op\n   in a new file under a separate \"nvvm/\" directory.\n   [mlir/test/Target/LLVMIR/\"nvvm\"/tma_store_reduce.mlir]\n\nPTX Spec reference:\n\nhttps://docs.nvidia.com/cuda/parallel-thread-execution/index.html#data-movement-and-conversion-instructions-cp-reduce-async-bulk-tensor\n\nSigned-off-by: Durgadoss R <durgadossr@nvidia.com>",
             "commit_timestamp": 1733927571.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1733973735.470241,
+            "elapsed_time": 64.47454643249512,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4976.709655761719,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "fd2f8d485df7742320317b14d49b9d808f70625c",
+            "commit_message": "[LoadStoreVectorizer] Postprocess and merge equivalence classes (#114501)\n\nThis patch introduces a new method:\r\nvoid Vectorizer::mergeEquivalenceClasses(EquivalenceClassMap &EQClasses)\r\nconst\r\n\r\nThe method is called at the end of\r\nVectorizer::collectEquivalenceClasses() and is needed to merge\r\nequivalence classes that differ only by their underlying objects (UO1\r\nand UO2), where UO1 is 1-level-indirection underlying base for UO2. This\r\nsituation arises due to the limited lookup depth used during the search\r\nof underlying bases with llvm::getUnderlyingObject(ptr).\r\n\r\nUsing any fixed lookup depth can result into creation of multiple\r\nequivalence classes that only differ by 1-level indirection bases.\r\n\r\nThe new approach merges equivalence classes if they have adjacent bases\r\n(1-level indirection). If a series of equivalence classes form ladder\r\nformed of 1-step/level indirections, they are all merged into a single\r\nequivalence class. This provides more opportunities for the load-store\r\nvectorizer to generate better vectors.\r\n\r\n---------\r\n\r\nSigned-off-by: Klochkov, Vyacheslav N <vyacheslav.n.klochkov@intel.com>",
+            "commit_timestamp": 1733972495.0
         }
     ]
 }
