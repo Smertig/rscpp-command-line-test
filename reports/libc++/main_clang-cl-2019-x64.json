@@ -3229,6 +3229,23 @@
             "commit_ref": "fd2f8d485df7742320317b14d49b9d808f70625c",
             "commit_message": "[LoadStoreVectorizer] Postprocess and merge equivalence classes (#114501)\n\nThis patch introduces a new method:\r\nvoid Vectorizer::mergeEquivalenceClasses(EquivalenceClassMap &EQClasses)\r\nconst\r\n\r\nThe method is called at the end of\r\nVectorizer::collectEquivalenceClasses() and is needed to merge\r\nequivalence classes that differ only by their underlying objects (UO1\r\nand UO2), where UO1 is 1-level-indirection underlying base for UO2. This\r\nsituation arises due to the limited lookup depth used during the search\r\nof underlying bases with llvm::getUnderlyingObject(ptr).\r\n\r\nUsing any fixed lookup depth can result into creation of multiple\r\nequivalence classes that only differ by 1-level indirection bases.\r\n\r\nThe new approach merges equivalence classes if they have adjacent bases\r\n(1-level indirection). If a series of equivalence classes form ladder\r\nformed of 1-step/level indirections, they are all merged into a single\r\nequivalence class. This provides more opportunities for the load-store\r\nvectorizer to generate better vectors.\r\n\r\n---------\r\n\r\nSigned-off-by: Klochkov, Vyacheslav N <vyacheslav.n.klochkov@intel.com>",
             "commit_timestamp": 1733972495.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1734016137.823299,
+            "elapsed_time": 62.24465560913086,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4967.00106048584,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "bc28be0a428020ea803c94adb4df48ee4972e9f1",
+            "commit_message": "[Driver][OHOS] Fix lld link issue for OHOS (#118192)\n\nFor ohos targets, libclang_rt.builtins.a, clang_rt.crtbegin.o and\r\nclang_rt.crtend.o are installed in\r\nclang/20/lib/${arch}-unknown-linux-ohos. However OHOS toolchain search\r\nthem in clang/20/lib/${arch}-linux-ohos folder. It causes link error.\r\nFix the problem by seaching both folders.",
+            "commit_timestamp": 1734015169.0
         }
     ]
 }
