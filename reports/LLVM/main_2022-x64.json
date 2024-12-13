@@ -23388,6 +23388,23 @@
             "commit_ref": "5e53a8dadb0019ee87936c1278fa222781257005",
             "commit_message": "AMDGPU: Fix verifier assert with out of bounds subregister indexes (#119799)\n\nThe manual check for aligned VGPR classes would assert if a virtual\r\nregister used an index not supported by the register class.",
             "commit_timestamp": 1734058331.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1734103272.985702,
+            "elapsed_time": 1591.7859392166138,
+            "x64": true,
+            "actual_files_count": 2101,
+            "expected_files_count": 1661,
+            "memory_traffic": 252335.22172546387,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "1cc71197550b92fc23624d81f2474244772bfcfb",
+            "commit_message": "[clang-tidy][NFC][doc] clean out-dated clang-static-analyzer checks documents and update check list (#119887)\n\nThe missing part of #119580",
+            "commit_timestamp": 1734102245.0
         }
     ]
 }

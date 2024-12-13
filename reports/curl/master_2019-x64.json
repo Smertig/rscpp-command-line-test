@@ -21461,6 +21461,21 @@
             "commit_ref": "d5c738c6086abfb6dec8d272bc6743e602d84646",
             "commit_message": "strparse: string parsing helper functions\n\nDesigned to aid converting off from sscanf parsers. sscanf is hard to\nuse right, easy to mess up and often makes for sloppy error checking.\n\nThe new parsers allow more exact and pedandic parsing.\n\nThis new set of functions should be possible to use (and extend) and\nswitch over other libcurl parser code to use going forward.\n\nAdapts the following to use the new functions:\n\n- altsvc.c\n- hsts.c\n- http_aws_sigv4.c\n\nBonus: fewer memory copies, fewer stack buffers.\n\nTest: Unit test1664\n\nDocs: docs/internals/STRPARSE.md\n\nCloses #15692\n",
             "commit_timestamp": 1734015652.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1734102515.80681,
+            "elapsed_time": 277.03324007987976,
+            "x64": true,
+            "actual_files_count": 3422,
+            "expected_files_count": 2323,
+            "memory_traffic": 72200.57685089111,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "7347ddc9e21e0d3e01fc3c3c4bdd2f660b355dd9",
+            "commit_message": "tool_operate: make --etag-compare always accept a non-existing file\n\nConsider it a blank etag. It allows for more use cases when the file\njust might not have been created yet.\n\nCloses #15737\n",
+            "commit_timestamp": 1734101307.0
         }
     ]
 }
