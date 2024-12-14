@@ -18566,6 +18566,21 @@
             "commit_ref": "2de048ce79e621f5ae0574095b9600fe8595f607",
             "commit_message": "gh-115999: Specialize loading attributes from modules in free-threaded builds (#127711)\n\nWe use the same approach that was used for specialization of LOAD_GLOBAL in free-threaded builds:\r\n\r\n_CHECK_ATTR_MODULE is renamed to _CHECK_ATTR_MODULE_PUSH_KEYS; it pushes the keys object for the following _LOAD_ATTR_MODULE_FROM_KEYS (nee _LOAD_ATTR_MODULE). This arrangement avoids having to recheck the keys version.\r\n\r\n_LOAD_ATTR_MODULE is renamed to _LOAD_ATTR_MODULE_FROM_KEYS; it loads the value from the keys object pushed by the preceding _CHECK_ATTR_MODULE_PUSH_KEYS at the cached index.",
             "commit_timestamp": 1734113836.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1734188964.878567,
+            "elapsed_time": 1116.4256527423859,
+            "x64": true,
+            "actual_files_count": 1052,
+            "expected_files_count": null,
+            "memory_traffic": 48160.14049530029,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "e2325c9db0650fc06d909eb2b5930c0573f24f71",
+            "commit_message": "gh-127852: add remark about ',' separator (#127854)\n\nSpecify that it is valid for floats and ints with 'd' presentation and an error otherwise.\r\n\r\nCo-authored-by: Terry Jan Reedy <tjreedy@udel.edu>\r\n\r\n---------\r\n\r\nCo-authored-by: Terry Jan Reedy <tjreedy@udel.edu>",
+            "commit_timestamp": 1734182906.0
         }
     ]
 }
