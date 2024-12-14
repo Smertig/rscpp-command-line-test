@@ -3280,6 +3280,23 @@
             "commit_ref": "1cc71197550b92fc23624d81f2474244772bfcfb",
             "commit_message": "[clang-tidy][NFC][doc] clean out-dated clang-static-analyzer checks documents and update check list (#119887)\n\nThe missing part of #119580",
             "commit_timestamp": 1734102245.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1734146539.303896,
+            "elapsed_time": 105.57578778266907,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4971.168983459473,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "a222d00c667f5582194ba7e50b870312e4b4427b",
+            "commit_message": "[lld][WebAssembly] Introduce Ctx::arg\n\nand forward it to LinkerDriver's ctor so that some uses of the global\n`config` can be dropped. This is similar to how the ELF port\nmigrates away from the global `config`.\n\nPull Request: https://github.com/llvm/llvm-project/pull/119829\n",
+            "commit_timestamp": 1734146072.0
         }
     ]
 }

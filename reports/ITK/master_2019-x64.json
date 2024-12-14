@@ -21386,6 +21386,21 @@
             "commit_ref": "272ba33925e8d64304ba5317e69c23888e96167a",
             "commit_message": "Merge pull request #5058 from blowekamp/update_libpng_update_script\n\nlibpng: reimport 1.6.44 for new update-third-party script",
             "commit_timestamp": 1734086217.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1734146477.327817,
+            "elapsed_time": 218.2039761543274,
+            "x64": true,
+            "actual_files_count": 101,
+            "expected_files_count": null,
+            "memory_traffic": 23910.97176361084,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "88a13a2fb721488875199ded28ea7e805839125a",
+            "commit_message": "ENH: Test return of GetPointsByCoordinates for set with flat array\n\nAlso check the return value after setting with a flat NumPy array.\n\nIn both cases the Get value is expected to have a shape of n_points x\ndimension.\n",
+            "commit_timestamp": 1734142240.0
         }
     ]
 }
