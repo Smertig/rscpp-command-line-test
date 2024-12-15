@@ -21286,6 +21286,21 @@
             "commit_ref": "3abb21080d1bdd39ac33993895bff401d4543135",
             "commit_message": "[NTOS:KE/EX] Add minimal EMS (headless) support for bugcheck.\n\nIn particular, the HeadlessGlobals->InBugCheck flag MUST be set prior\nto displaying the blue-screen, because the HDL global lock function\nwould trigger a (nested) BSoD otherwise.\n\nRegarding the unimplemented HeadlessCmdSendBlueScreenData:\nit sends to the management console an XML description of the bugcheck.\nAn example can be seen in this issue report:\nhttps://github.com/cloud-hypervisor/cloud-hypervisor/issues/3168\n\nFor more information, please consult:\nhttps://download.microsoft.com/download/1/6/1/161ba512-40e2-4cc9-843a-923143f3456c/windowsserver2003emssacxml.doc\n",
             "commit_timestamp": 1734215923.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1734275108.093117,
+            "elapsed_time": 67.84542870521545,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7408.705184936523,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "44564cb6828ba6e8549d211f06f5848005c3b0b5",
+            "commit_message": "[SETUPAPI] Implement SetupDiGetClassRegistryPropertyW and SetupDiSetClassRegistryPropertyW\n",
+            "commit_timestamp": 1734274475.0
         }
     ]
 }

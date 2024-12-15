@@ -21521,6 +21521,21 @@
             "commit_ref": "c3857eca70e3bf293fff2fe0b3766cfcad1b1251",
             "commit_message": "altsvc: avoid integer overflow in expire calculation\n\nA bad value here just makes for a bad alt-svc experience, not a security\nproblem.\n\nDetected by OSS-Fuzz\n\nBug: https://issues.oss-fuzz.com/issues/383911309\n\nCloses #15745\n",
             "commit_timestamp": 1734217884.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1734275148.319462,
+            "elapsed_time": 259.747775554657,
+            "x64": true,
+            "actual_files_count": 3422,
+            "expected_files_count": 2323,
+            "memory_traffic": 66579.76582336426,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "c3857eca70e3bf293fff2fe0b3766cfcad1b1251",
+            "commit_message": "altsvc: avoid integer overflow in expire calculation\n\nA bad value here just makes for a bad alt-svc experience, not a security\nproblem.\n\nDetected by OSS-Fuzz\n\nBug: https://issues.oss-fuzz.com/issues/383911309\n\nCloses #15745\n",
+            "commit_timestamp": 1734217884.0
         }
     ]
 }
