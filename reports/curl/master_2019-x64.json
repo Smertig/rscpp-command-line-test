@@ -21536,6 +21536,21 @@
             "commit_ref": "c3857eca70e3bf293fff2fe0b3766cfcad1b1251",
             "commit_message": "altsvc: avoid integer overflow in expire calculation\n\nA bad value here just makes for a bad alt-svc experience, not a security\nproblem.\n\nDetected by OSS-Fuzz\n\nBug: https://issues.oss-fuzz.com/issues/383911309\n\nCloses #15745\n",
             "commit_timestamp": 1734217884.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1734319253.961207,
+            "elapsed_time": 251.08629703521729,
+            "x64": true,
+            "actual_files_count": 3422,
+            "expected_files_count": 2323,
+            "memory_traffic": 72696.57150268555,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "6eb86e428d96288c57661f85a798fa8fbc6bd95e",
+            "commit_message": "ws-docs: remove the outdated texts saying ws support is experimental\n\nIt stopped being experimental in 8.10.0\n\nFixes #15749\nReported-by: Mohammed Sadiq\nCloses #15751\n",
+            "commit_timestamp": 1734282892.0
         }
     ]
 }

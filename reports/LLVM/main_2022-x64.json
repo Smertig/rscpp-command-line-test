@@ -23473,6 +23473,23 @@
             "commit_ref": "2067e604a49d49ce054d61a0109ec12a724e3db2",
             "commit_message": "[VPlan] Manage VPWidenPointerInduction debug location via recipe.\n\nUpdate VPWidenPointerInduction to manage its debug location via recipe.\nThis makes sure we emit a proper debug location for\nVPWidenPointerInductionRecipes.\n",
             "commit_timestamp": 1734273667.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1734320122.779623,
+            "elapsed_time": 1521.2414138317108,
+            "x64": true,
+            "actual_files_count": 2101,
+            "expected_files_count": 1661,
+            "memory_traffic": 251207.46103668213,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "818bffcb1c454da8ec778327bde3d974dfe44550",
+            "commit_message": "RegAlloc: Fix failure on undef use when all registers are reserved (#119647)\n\nGreedy and fast would hit different assertions on undef uses if all\nregisters in a class were reserved.",
+            "commit_timestamp": 1734314205.0
         }
     ]
 }
