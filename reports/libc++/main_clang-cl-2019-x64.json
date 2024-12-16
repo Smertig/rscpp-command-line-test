@@ -3365,6 +3365,23 @@
             "commit_ref": "818bffcb1c454da8ec778327bde3d974dfe44550",
             "commit_message": "RegAlloc: Fix failure on undef use when all registers are reserved (#119647)\n\nGreedy and fast would hit different assertions on undef uses if all\nregisters in a class were reserved.",
             "commit_timestamp": 1734314205.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1734361746.063156,
+            "elapsed_time": 70.89154958724976,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4978.981170654297,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "6a4750d227420cad8406d0ee1ea9d8ce05cca10f",
+            "commit_message": "[mlir] Fix crash when folding tensor.dim(tensor.collapse()) on out-of-bound dim (#119941)\n\nAddresses one of the cases described in #119866",
+            "commit_timestamp": 1734361328.0
         }
     ]
 }
