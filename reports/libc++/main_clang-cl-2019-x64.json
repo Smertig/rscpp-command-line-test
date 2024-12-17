@@ -3382,6 +3382,23 @@
             "commit_ref": "6a4750d227420cad8406d0ee1ea9d8ce05cca10f",
             "commit_message": "[mlir] Fix crash when folding tensor.dim(tensor.collapse()) on out-of-bound dim (#119941)\n\nAddresses one of the cases described in #119866",
             "commit_timestamp": 1734361328.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1734405762.441671,
+            "elapsed_time": 98.23465466499329,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4961.6613693237305,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "5e1f87e849d1f94f3e8baf190be20219edf44584",
+            "commit_message": "[flang][cuda] Correctly allocate memory for descriptor load (#120164)\n\nCodeGen will allocate memory for a new descriptor on descriptor loads.\r\nCUDA Fortran local descriptor are allocated in managed memory by the\r\nruntime. The newly allocated storage for cuda descriptor must also be\r\nallocated through the runtime.",
+            "commit_timestamp": 1734405125.0
         }
     ]
 }
