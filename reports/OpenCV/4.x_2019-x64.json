@@ -21520,6 +21520,21 @@
             "commit_ref": "1a1b1901e814bbe06ce1cf2c5ad100148eef4065",
             "commit_message": "Merge pull request #26623 from asmorkalov:as/kelidicv_0.3\n\nUpdate KleidiCV to version 0.3",
             "commit_timestamp": 1734357531.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1734448046.27915,
+            "elapsed_time": 362.11184215545654,
+            "x64": true,
+            "actual_files_count": 477,
+            "expected_files_count": 459,
+            "memory_traffic": 40714.65013885498,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "d77abeddd0be14312f55702cc35fa15261408620",
+            "commit_message": "Merge pull request #26472 from chacha21:gpumatnd_step\n\nMore convenient GpuMatND constructor #26472\r\n\r\nCloses #26471\r\n\r\nFor convenience, GpuMatND can now accept a step.size() equal to size.size(), as long as the last step is equal to elemSize()\r\n\r\n- [x] I agree to contribute to the project under Apache 2 License.\r\n- [x] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\r\n- [X] The PR is proposed to the proper branch\r\n- [X] There is a reference to the original bug report and related work\r\n- [ ] There is accuracy test, performance test and test data in opencv_extra repository, if applicable\r\n      Patch to opencv_extra has the same branch name.\r\n- [ ] The feature is well documented and sample code can be built with the project CMake\r\n",
+            "commit_timestamp": 1734445574.0
         }
     ]
 }

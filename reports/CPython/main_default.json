@@ -18656,6 +18656,21 @@
             "commit_ref": "cfeaa992ba9bad9be2687afcafd85156703d74e8",
             "commit_message": "Free arena on _PyCompile_AstOptimize failure in Py_CompileStringObject (GH-127910)\n\nAfter commit 10a91d7e9 introduced arena cleanup, commit 2dfbd4f36\nremoved the free call when _PyCompile_AstOptimize fails.",
             "commit_timestamp": 1734382776.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1734448124.907166,
+            "elapsed_time": 1081.0448253154755,
+            "x64": true,
+            "actual_files_count": 1052,
+            "expected_files_count": null,
+            "memory_traffic": 48125.393547058105,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "7303f06846b69016a075bca7ad7c6055f29ad024",
+            "commit_message": "gh-126742: Add _PyErr_SetLocaleString, use it for gdbm & dlerror messages (GH-126746)\n\n- Add a helper to set an error from locale-encoded `char*`\n- Use the helper for gdbm & dlerror messages\n\nCo-authored-by: Victor Stinner <vstinner@python.org>",
+            "commit_timestamp": 1734433965.0
         }
     ]
 }

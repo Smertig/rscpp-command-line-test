@@ -3399,6 +3399,23 @@
             "commit_ref": "5e1f87e849d1f94f3e8baf190be20219edf44584",
             "commit_message": "[flang][cuda] Correctly allocate memory for descriptor load (#120164)\n\nCodeGen will allocate memory for a new descriptor on descriptor loads.\r\nCUDA Fortran local descriptor are allocated in managed memory by the\r\nruntime. The newly allocated storage for cuda descriptor must also be\r\nallocated through the runtime.",
             "commit_timestamp": 1734405125.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1734448125.826136,
+            "elapsed_time": 69.54545426368713,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4933.893989562988,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "cf4375d107e8055e52ff43f66b65092b075d8442",
+            "commit_message": "[TableGen][GISel] Extract common function for determining MI's regclass (#120135)\n\nAdd some comments that hopefully clarify a few things.\n\nThis was supposed to be NFC, but there is a difference in the inferred\nregister class for EXTRACT_SUBREG.\n\nPull Request: https://github.com/llvm/llvm-project/pull/120135",
+            "commit_timestamp": 1734447802.0
         }
     ]
 }
