@@ -21738,6 +21738,21 @@
             "commit_ref": "7ab34820038eab9c63d0bd789b9c196a88cdb71d",
             "commit_message": "Remove Ast dependency on CLI.Lib (#1571)\n\n",
             "commit_timestamp": 1734396046.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1734491731.183862,
+            "elapsed_time": 280.8301808834076,
+            "x64": true,
+            "actual_files_count": 477,
+            "expected_files_count": 379,
+            "memory_traffic": 33792.741539001465,
+            "repo_url": "https://github.com/luau-lang/luau",
+            "commit_ref": "8f94786ceb5e34ad50a1ddcfae26c4dce862bdb7",
+            "commit_message": "Refactor CLI structure to match the include/src split that our other projects have. (#1573)\n\nThis PR refactors the CLI folder to use the same project split between\r\ninclude and src directories that we have for all the other artifacts in\r\nluau. It also includes the require-by-string implementation we already\r\nhave as a feature of `Luau.CLI.lib`. Both of these changes are targeted\r\nat making it easier for embedding projects to setup an effective\r\nequivalent to the standalone `luau` executable with whatever runtime\r\nlibraries they need attached and without having to unnecessarily\r\nduplicate code from luau itself.",
+            "commit_timestamp": 1734472227.0
         }
     ]
 }

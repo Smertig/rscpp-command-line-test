@@ -21535,6 +21535,21 @@
             "commit_ref": "d77abeddd0be14312f55702cc35fa15261408620",
             "commit_message": "Merge pull request #26472 from chacha21:gpumatnd_step\n\nMore convenient GpuMatND constructor #26472\r\n\r\nCloses #26471\r\n\r\nFor convenience, GpuMatND can now accept a step.size() equal to size.size(), as long as the last step is equal to elemSize()\r\n\r\n- [x] I agree to contribute to the project under Apache 2 License.\r\n- [x] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\r\n- [X] The PR is proposed to the proper branch\r\n- [X] There is a reference to the original bug report and related work\r\n- [ ] There is accuracy test, performance test and test data in opencv_extra repository, if applicable\r\n      Patch to opencv_extra has the same branch name.\r\n- [ ] The feature is well documented and sample code can be built with the project CMake\r\n",
             "commit_timestamp": 1734445574.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1734491820.640376,
+            "elapsed_time": 445.0391597747803,
+            "x64": true,
+            "actual_files_count": 477,
+            "expected_files_count": 459,
+            "memory_traffic": 40772.7303314209,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "7ddc02907e72511354b9692d482b568b1c0fb576",
+            "commit_message": "Merge pull request #26634 from FantasqueX:fix-test-exif-1\n\nFix test_exif compilation when none of JPEG, PNG, AVIF is enabled",
+            "commit_timestamp": 1734464202.0
         }
     ]
 }
