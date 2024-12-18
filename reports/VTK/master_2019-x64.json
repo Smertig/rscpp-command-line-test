@@ -20490,6 +20490,21 @@
             "commit_ref": "502d2fa398ae6bab5f3452d99a806a8342845542",
             "commit_message": "Merge topic 'xarray'\n\n0f5033fe837 Add missing types to conversion to double\n125de33586e Add missing types np.str_ and np.bytes_\n137b43f1b9e Add VarCoords\n1fabde44161 Add GetSpecialDimensionName\n6cd9b424c49 Only make as time a variable that has the same name as its dimension\n212eeeaf558 Add missing types\nf55c798df61 xarray conversion to vtkDataset through netcdf file\n\nAcked-by: Kitware Robot <kwrobot@kitware.com>\nAcked-by: buildbot <buildbot@kitware.com>\nMerge-request: !11513\n",
             "commit_timestamp": 1734473691.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "vtkCommonCoreCxxTests",
+            "timestamp": 1734534584.359065,
+            "elapsed_time": 164.57219171524048,
+            "x64": true,
+            "actual_files_count": 81,
+            "expected_files_count": 68,
+            "memory_traffic": 21613.538368225098,
+            "repo_url": "https://gitlab.kitware.com/vtk/vtk.git",
+            "commit_ref": "5c3eb4aee957874d497a2446b9ed77ffffe9d5a7",
+            "commit_message": "Merge topic 'WidgetsImprovements'\n\n53b38ef89f0 Add Release note\nc446f2bc8b9 Create vtkBoundedWidgetRepresentation to handle Widget Outline cropping\n9a607cd5152 Simplify AdjustNearPlane computation for Frustum\n3439a2cb22c Invert Inside and Outside for frustum for consistency with vtkImplicitFunction\n242dc20dc6e Simplify TestImplicitAnnulusWidget pipeline\ndd7e35aca9f Test Inner/Outer Radius logic\nc09e2f6cba9 Avoid dynamic logic in setters:\u202fwarn and adjust on use\nea0a1c89d14 Test Annulus Radius Interactions\n...\n\nAcked-by: Kitware Robot <kwrobot@kitware.com>\nAcked-by: buildbot <buildbot@kitware.com>\nReviewed-by: Mathieu Westphal (Kitware) <mathieu.westphal@kitware.com>\nReviewed-by: Thomas Galland <thomas.galland@kitware.com>\nMerge-request: !11708\n",
+            "commit_timestamp": 1734511448.0
         }
     ]
 }
