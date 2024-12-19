@@ -20520,6 +20520,21 @@
             "commit_ref": "5c3eb4aee957874d497a2446b9ed77ffffe9d5a7",
             "commit_message": "Merge topic 'WidgetsImprovements'\n\n53b38ef89f0 Add Release note\nc446f2bc8b9 Create vtkBoundedWidgetRepresentation to handle Widget Outline cropping\n9a607cd5152 Simplify AdjustNearPlane computation for Frustum\n3439a2cb22c Invert Inside and Outside for frustum for consistency with vtkImplicitFunction\n242dc20dc6e Simplify TestImplicitAnnulusWidget pipeline\ndd7e35aca9f Test Inner/Outer Radius logic\nc09e2f6cba9 Avoid dynamic logic in setters:\u202fwarn and adjust on use\nea0a1c89d14 Test Annulus Radius Interactions\n...\n\nAcked-by: Kitware Robot <kwrobot@kitware.com>\nAcked-by: buildbot <buildbot@kitware.com>\nReviewed-by: Mathieu Westphal (Kitware) <mathieu.westphal@kitware.com>\nReviewed-by: Thomas Galland <thomas.galland@kitware.com>\nMerge-request: !11708\n",
             "commit_timestamp": 1734511448.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "vtkCommonCoreCxxTests",
+            "timestamp": 1734621042.631938,
+            "elapsed_time": 187.56372928619385,
+            "x64": true,
+            "actual_files_count": 81,
+            "expected_files_count": 68,
+            "memory_traffic": 21765.297569274902,
+            "repo_url": "https://gitlab.kitware.com/vtk/vtk.git",
+            "commit_ref": "5bf58478665b6577d46aecd5323830d82b3e77ca",
+            "commit_message": "Merge topic 'raytracing_positionallights'\n\n676818051d7 Support positional light attenuation with ray tracing\n\nAcked-by: Kitware Robot <kwrobot@kitware.com>\nAcked-by: buildbot <buildbot@kitware.com>\nMerge-request: !11756\n",
+            "commit_timestamp": 1734616420.0
         }
     ]
 }

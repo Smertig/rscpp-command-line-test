@@ -21551,6 +21551,21 @@
             "commit_ref": "60c3ae5770ea3db0718049f11c38753fc9f5d3cb",
             "commit_message": "COMP: Fix compilation issues\n\nCore/Transform/test/itkTransformTest.cxx:224:46: error:\ndefault initialization of an object of const type 'const\nitk::itkTransformTestHelpers::TransformTester<double, 3,\n3>::InputSymmetricSecondRankTensorType' (aka 'const\nSymmetricSecondRankTensor<double, 3U>') without a user-provided default\nconstructor const InputSymmetricSecondRankTensorType ssrten;\n                                                     ^\n                                                     {}\n",
             "commit_timestamp": 1734555926.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1734621043.078753,
+            "elapsed_time": 209.17351388931274,
+            "x64": true,
+            "actual_files_count": 101,
+            "expected_files_count": null,
+            "memory_traffic": 24085.862869262695,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "e917d9f08801a403ff5b5ea218fa76df37cfb288",
+            "commit_message": "STYLE: Remove (void *) casts from implementation AutoPointer comparisons\n\nFollowing C++ Core Guidelines, Oct 3, 2024, \"Avoid casts\",\nhttp://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#es48-avoid-casts\n",
+            "commit_timestamp": 1734618400.0
         }
     ]
 }

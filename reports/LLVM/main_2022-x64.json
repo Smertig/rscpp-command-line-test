@@ -23592,6 +23592,23 @@
             "commit_ref": "b56d1ec6cb8b5cb3ff46cba39a1049ecf3831afb",
             "commit_message": "[mlir python] Port Python core code to nanobind. (#120473)\n\nRelands #118583, with a fix for Python 3.8 compatibility. It was not\r\npossible to set the buffer protocol accessers via slots in Python 3.8.\r\n\r\nWhy? https://nanobind.readthedocs.io/en/latest/why.html says it better\r\nthan I can, but my primary motivation for this change is to improve MLIR\r\nIR construction time from JAX.\r\n\r\nFor a complicated Google-internal LLM model in JAX, this change improves\r\nthe MLIR\r\nlowering time by around 5s (out of around 30s), which is a significant\r\nspeedup for simply switching binding frameworks.\r\n\r\nTo a large extent, this is a mechanical change, for instance changing\r\n`pybind11::` to `nanobind::`.\r\n\r\nNotes:\r\n* this PR needs Nanobind 2.4.0, because it needs a bug fix\r\n(https://github.com/wjakob/nanobind/pull/806) that landed in that\r\nrelease.\r\n* this PR does not port the in-tree dialect extension modules. They can\r\nbe ported in a future PR.\r\n* I removed the py::sibling() annotations from def_static and def_class\r\nin `PybindAdapters.h`. These ask pybind11 to try to form an overload\r\nwith an existing method, but it's not possible to form mixed\r\npybind11/nanobind overloads this ways and the parent class is now\r\ndefined in nanobind. Better solutions may be possible here.\r\n* nanobind does not contain an exact equivalent of pybind11's buffer\r\nprotocol support. It was not hard to add a nanobind implementation of a\r\nsimilar API.\r\n* nanobind is pickier about casting to std::vector<bool>, expecting that\r\nthe input is a sequence of bool types, not truthy values. In a couple of\r\nplaces I added code to support truthy values during casting.\r\n* nanobind distinguishes bytes (`nb::bytes`) from strings (e.g.,\r\n`std::string`). This required nb::bytes overloads in a few places.",
             "commit_timestamp": 1734576942.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1734621576.035463,
+            "elapsed_time": 1528.3245196342468,
+            "x64": true,
+            "actual_files_count": 2102,
+            "expected_files_count": 1661,
+            "memory_traffic": 251605.04192352295,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "6f8afafd308d37d9abc4af0801dd5a4451c13718",
+            "commit_message": "[InstCombine] Fold `A == MIN_INT ? B != MIN_INT : A < B` to `A < B` (#120177)\n\nThis PR folds:\r\n `A == MIN_INT ? B != MIN_INT : A < B` to `A < B`\r\n `A == MAX_INT ? B != MAX_INT : A > B` to `A > B`\r\n\r\nProof: https://alive2.llvm.org/ce/z/bR6E2s\r\n\r\nThis helps in optimizing comparison of optional unsigned non-zero types\r\nin https://github.com/rust-lang/rust/issues/49892.\r\n\r\nRust compiler's current output: https://rust.godbolt.org/z/9fxfq3Gn8",
+            "commit_timestamp": 1734619975.0
         }
     ]
 }
