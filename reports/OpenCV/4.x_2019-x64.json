@@ -21565,6 +21565,21 @@
             "commit_ref": "d369cf6d50d6b5ddd9bdf438ebe63f3f0e341ad9",
             "commit_message": "Merge pull request #26627 from warped-rudi:torch\n\nAndroid camera feature enhancements #26627\r\n\r\nCloses https://github.com/opencv/opencv/issues/24687\r\n\r\n### Pull Request Readiness Checklist\r\n\r\nSee details at https://github.com/opencv/opencv/wiki/How_to_contribute#making-a-good-pull-request\r\n\r\n- [x] I agree to contribute to the project under Apache 2 License.\r\n- [x] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\r\n- [ ] The PR is proposed to the proper branch\r\n- [ ] There is a reference to the original bug report and related work\r\n- [ ] There is accuracy test, performance test and test data in opencv_extra repository, if applicable\r\n      Patch to opencv_extra has the same branch name.\r\n- [ ] The feature is well documented and sample code can be built with the project CMake\r\n",
             "commit_timestamp": 1734513410.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1734578222.632965,
+            "elapsed_time": 383.6604654788971,
+            "x64": true,
+            "actual_files_count": 477,
+            "expected_files_count": 459,
+            "memory_traffic": 40814.27666473389,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "3fbaad36d737f0576843fc084469637cfec6716b",
+            "commit_message": "Merge pull request #26624 from hanliutong:rvv-mean\n\nAdd RISC-V HAL implementation for meanStdDev #26624\r\n\r\n`meanStdDev` benefits from the Universal Intrinsic backend of RVV, but we also found that the performance on the `8UC4` type is worse than the scalar version when there is a mask, and there is no optimization implementation on `32FC1`.\r\n\r\nThis patch implements `meanStdDev` function in RVV_HAL using native intrinsic, significantly optimizing the performance for `8UC1`, `8UC4` and `32FC1`.\r\n\r\nThis patch is tested on BPI-F3 for both gcc 14.2 and clang 19.1.\r\n```\r\n$ opencv_test_core --gtest_filter=\"*MeanStdDev*\"\r\n$ opencv_perf_core --gtest_filter=\"Size_MatType_meanStdDev*\r\n```\r\n\r\n![1734077611879](https://github.com/user-attachments/assets/71c85c9d-1db1-470d-81d1-bf546e27ad86)\r\n\r\n### Pull Request Readiness Checklist\r\n\r\nSee details at https://github.com/opencv/opencv/wiki/How_to_contribute#making-a-good-pull-request\r\n\r\n- [x] I agree to contribute to the project under Apache 2 License.\r\n- [x] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\r\n- [ ] The PR is proposed to the proper branch\r\n- [ ] There is a reference to the original bug report and related work\r\n- [ ] There is accuracy test, performance test and test data in opencv_extra repository, if applicable\r\n      Patch to opencv_extra has the same branch name.\r\n- [ ] The feature is well documented and sample code can be built with the project CMake\r\n",
+            "commit_timestamp": 1734549542.0
         }
     ]
 }

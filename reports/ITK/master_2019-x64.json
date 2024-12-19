@@ -21536,6 +21536,21 @@
             "commit_ref": "c9b342eefbd95a2506c8e816e33c11976ea0de62",
             "commit_message": "COMP: Fix building with ITK_USE_FLOAT_SPACE_PRECISION=ON\n\nNeed to match precision for types used to allow building.\nIn a few cases double precision was assumed for values\nrelated to spacing precision.\n",
             "commit_timestamp": 1734528582.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1734578394.564113,
+            "elapsed_time": 208.37062287330627,
+            "x64": true,
+            "actual_files_count": 101,
+            "expected_files_count": null,
+            "memory_traffic": 24061.5375289917,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "60c3ae5770ea3db0718049f11c38753fc9f5d3cb",
+            "commit_message": "COMP: Fix compilation issues\n\nCore/Transform/test/itkTransformTest.cxx:224:46: error:\ndefault initialization of an object of const type 'const\nitk::itkTransformTestHelpers::TransformTester<double, 3,\n3>::InputSymmetricSecondRankTensorType' (aka 'const\nSymmetricSecondRankTensor<double, 3U>') without a user-provided default\nconstructor const InputSymmetricSecondRankTensorType ssrten;\n                                                     ^\n                                                     {}\n",
+            "commit_timestamp": 1734555926.0
         }
     ]
 }

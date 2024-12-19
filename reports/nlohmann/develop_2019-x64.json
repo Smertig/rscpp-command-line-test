@@ -22993,6 +22993,21 @@
             "commit_ref": "094bd2651bd16510b3b2d59cfda002beb24922eb",
             "commit_message": "Set parents after insert call (#4537)\n\n* :bug: set parents after insert call\r\n\r\n* :rotating_light: fix warning",
             "commit_timestamp": 1734511449.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1734578106.755929,
+            "elapsed_time": 359.07164669036865,
+            "x64": true,
+            "actual_files_count": 91,
+            "expected_files_count": 85,
+            "memory_traffic": 35965.093978881836,
+            "repo_url": "https://github.com/nlohmann/json",
+            "commit_ref": "58f5f259686d4e716ee9e63b3d30178dbba10908",
+            "commit_message": "json start/end position implementation (#4517)\n\n* Add implementation to retrieve start and end positions of json during parse\r\n\r\n* Add more unit tests and add start/stop parsing for arrays\r\n\r\n* Add raw value for all types\r\n\r\n* Add more tests and fix compiler warning\r\n\r\n* Amalgamate\r\n\r\n* Fix CLang GCC warnings\r\n\r\n* Fix error in build\r\n\r\n* Style using astyle 3.1\r\n\r\n* Fix whitespace changes\r\n\r\n* revert\r\n\r\n* more whitespace reverts\r\n\r\n* Address PR comments\r\n\r\n* Fix failing issues\r\n\r\n* More whitespace reverts\r\n\r\n* Address remaining PR comments\r\n\r\n* Address comments\r\n\r\n* Switch to using custom base class instead of default basic_json\r\n\r\n* Adding a basic using for a json using the new base class. Also address PR comments and fix CI failures\r\n\r\n* Address decltype comments\r\n\r\n* Diagnostic positions macro (#4)\r\n\r\nCo-authored-by: Sush Shringarputale <sushring@linux.microsoft.com>\r\n\r\n* Fix missed include deletion\r\n\r\n* Add docs and address other PR comments (#5)\r\n\r\n* Add docs and address other PR comments\r\n\r\n---------\r\n\r\nCo-authored-by: Sush Shringarputale <sushring@linux.microsoft.com>\r\n\r\n* Address new PR comments and fix CI tests for documentation\r\n\r\n* Update documentation based on feedback (#6)\r\n\r\n---------\r\n\r\nCo-authored-by: Sush Shringarputale <sushring@linux.microsoft.com>\r\n\r\n* Address std::size_t and other comments\r\n\r\n* Fix new CI issues\r\n\r\n* Fix lcov\r\n\r\n* Improve lcov case with update to handle_diagnostic_positions call for discarded values\r\n\r\n* Fix indentation of LCOV_EXCL_STOP comments\r\n\r\n* fix amalgamation astyle issue\r\n\r\n---------\r\n\r\nCo-authored-by: Sush Shringarputale <sushring@linux.microsoft.com>",
+            "commit_timestamp": 1734558374.0
         }
     ]
 }
