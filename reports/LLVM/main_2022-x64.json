@@ -23609,6 +23609,23 @@
             "commit_ref": "6f8afafd308d37d9abc4af0801dd5a4451c13718",
             "commit_message": "[InstCombine] Fold `A == MIN_INT ? B != MIN_INT : A < B` to `A < B` (#120177)\n\nThis PR folds:\r\n `A == MIN_INT ? B != MIN_INT : A < B` to `A < B`\r\n `A == MAX_INT ? B != MAX_INT : A > B` to `A > B`\r\n\r\nProof: https://alive2.llvm.org/ce/z/bR6E2s\r\n\r\nThis helps in optimizing comparison of optional unsigned non-zero types\r\nin https://github.com/rust-lang/rust/issues/49892.\r\n\r\nRust compiler's current output: https://rust.godbolt.org/z/9fxfq3Gn8",
             "commit_timestamp": 1734619975.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1734664996.298004,
+            "elapsed_time": 1517.5793104171753,
+            "x64": true,
+            "actual_files_count": 2102,
+            "expected_files_count": 1661,
+            "memory_traffic": 251936.95552825928,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "e93d226664d7012d1bb017f0cda24ad1b75f37fc",
+            "commit_message": "[flang][cuda] Update CompilerGeneratedNames pass to work on gpu module (#120660)\n\n- Update `CompilerGeneratedNames` so it can perform renaming in\r\ngpu.module\r\n- Update Codegen so it look in the correct module for the type\r\ndescriptor.",
+            "commit_timestamp": 1734664020.0
         }
     ]
 }

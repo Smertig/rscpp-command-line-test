@@ -21566,6 +21566,21 @@
             "commit_ref": "e917d9f08801a403ff5b5ea218fa76df37cfb288",
             "commit_message": "STYLE: Remove (void *) casts from implementation AutoPointer comparisons\n\nFollowing C++ Core Guidelines, Oct 3, 2024, \"Avoid casts\",\nhttp://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#es48-avoid-casts\n",
             "commit_timestamp": 1734618400.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1734664462.34997,
+            "elapsed_time": 221.13643169403076,
+            "x64": true,
+            "actual_files_count": 101,
+            "expected_files_count": null,
+            "memory_traffic": 24178.734252929688,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "f0eadd98414346f195d4cefc68f4e11143a5bbf0",
+            "commit_message": "Merge pull request #5098 from blowekamp/fix_const_theader_test\n\nCOMP: Address non-const operations when TBB enabled in test",
+            "commit_timestamp": 1734651560.0
         }
     ]
 }
