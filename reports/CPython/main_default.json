@@ -18746,6 +18746,21 @@
             "commit_ref": "39e69a7cd54d44c9061db89bb15c460d30fba7a6",
             "commit_message": "gh-112328: Document EnumDict in docs and release notes (GH-121720)\n\nCo-authored-by: Sviatoslav Sydorenko (\u0421\u0432\u044f\u0442\u043e\u0441\u043b\u0430\u0432 \u0421\u0438\u0434\u043e\u0440\u0435\u043d\u043a\u043e) <wk.cvs.github@sydorenko.org.ua>\r\nCo-authored-by: Ethan Furman <ethan@stoneleaf.us>",
             "commit_timestamp": 1734651522.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1734707348.44145,
+            "elapsed_time": 1147.9135177135468,
+            "x64": true,
+            "actual_files_count": 1052,
+            "expected_files_count": null,
+            "memory_traffic": 48124.86348724365,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "78ffba4221dcb2e39fd5db80c297d1777588bb59",
+            "commit_message": "gh-127295: ctypes: Switch field accessors to fixed-width integers (GH-127297)\n\nThis should be a pure refactoring, without user-visible behaviour changes.\r\n\r\nBefore this change, ctypes uses traditional native C types, usually identified \r\nby [`struct` format characters][struct-chars] when a short (and \r\nidentifier-friendly) name is needed:\r\n- `signed char` (`b`) / `unsigned char` (`B`)\r\n- `short` (`h`) / `unsigned short` (`h`)\r\n- `int` (`i`) / `unsigned int` (`i`)\r\n- `long` (`l`) / `unsigned long` (`l`)\r\n- `long long` (`q`) / `unsigned long long` (`q`)\r\n\r\nThese map to C99 fixed-width types, which this PR switches to: - \r\n- `int8_t`/`uint8_t`\r\n- `int16_t`/`uint16_t`\r\n- `int32_t`/`uint32_t`\r\n- `int64_t`/`uint64_t`\r\n\r\nThe C standard doesn't guarantee that the \u201ctraditional\u201d types must map to the \r\nfixints. But, [`ctypes` currently requires it][swapdefs], so the assumption won't \r\nbreak anything.\r\n\r\nBy \u201cmap\u201d I mean that the *size* of the types matches. The *alignment* \r\nrequirements might not. This needs to be kept in mind but is not an issue in \r\n`ctypes` accessors, which [explicitly handle unaligned memory][memcpy] for the \r\ninteger types.\r\n\r\nNote that there are 5 \u201ctraditional\u201d C type sizes, but 4 fixed-width ones. Two of \r\nthe former are functionally identical to one another; which ones they are is \r\nplatform-specific (e.g. `int`==`long`==`int32_t`.) This means that one of the \r\n[current][current-impls-1] [implementations][current-impls-2] is redundant on \r\nany given platform.\r\n\r\n\r\nThe fixint types are parametrized by the number of bytes/bits, and one bit for \r\nsignedness. This makes it easier to autogenerate code for them or to write \r\ngeneric macros (though generic API like \r\n[`PyLong_AsNativeBytes`][PyLong_AsNativeBytes] is problematic for performance \r\nreasons -- especially compared to a `memcpy` with compile-time-constant size).\r\n\r\nWhen one has a *different* integer type, determining the corresponding fixint  \r\nmeans a `sizeof` and signedness check. This is easier and more robust than the \r\ncurrent implementations (see [`wchar_t`][sizeof-wchar_t] or \r\n[`_Bool`][sizeof-bool]).\r\n\r\n\r\n[swapdefs]: https://github.com/python/cpython/blob/v3.13.0/Modules/_ctypes/cfield.c#L420-L444\r\n[struct-chars]: https://docs.python.org/3/library/struct.html#format-characters\r\n[current-impls-1]: https://github.com/python/cpython/blob/v3.13.0/Modules/_ctypes/cfield.c#L470-L653\r\n[current-impls-2]: https://github.com/python/cpython/blob/v3.13.0/Modules/_ctypes/cfield.c#L703-L944\r\n[memcpy]: https://github.com/python/cpython/blob/v3.13.0/Modules/_ctypes/cfield.c#L613\r\n[PyLong_AsNativeBytes]: https://docs.python.org/3/c-api/long.html#c.PyLong_AsNativeBytes\r\n[sizeof-wchar_t]: https://github.com/python/cpython/blob/v3.13.0/Modules/_ctypes/cfield.c#L1547-L1555\r\n[sizeof-bool]: https://github.com/python/cpython/blob/v3.13.0/Modules/_ctypes/cfield.c#L1562-L1572\r\n\r\n\r\nCo-authored-by: B\u00e9n\u00e9dikt Tran <10796600+picnixz@users.noreply.github.com>",
+            "commit_timestamp": 1734701298.0
         }
     ]
 }

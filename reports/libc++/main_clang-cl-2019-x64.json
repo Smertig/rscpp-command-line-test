@@ -3501,6 +3501,23 @@
             "commit_ref": "e93d226664d7012d1bb017f0cda24ad1b75f37fc",
             "commit_message": "[flang][cuda] Update CompilerGeneratedNames pass to work on gpu module (#120660)\n\n- Update `CompilerGeneratedNames` so it can perform renaming in\r\ngpu.module\r\n- Update Codegen so it look in the correct module for the type\r\ndescriptor.",
             "commit_timestamp": 1734664020.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1734707381.802746,
+            "elapsed_time": 76.92132472991943,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5000.113525390625,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "70eac255b8c09244c7a9af7599fbe27d886010e9",
+            "commit_message": "[VectorCombine] Add fp cast handling for shuffletoidentity (#120641)\n\nThis fixes some regressions from recent changes to vector combine in\r\n#120216. It allows shuffleToIdentity to look through fp casts as other\r\ncasts, and makes sure mismatching vector types in splats and casts do\r\nnot block the transform, as only the lanes should matter.",
+            "commit_timestamp": 1734707108.0
         }
     ]
 }

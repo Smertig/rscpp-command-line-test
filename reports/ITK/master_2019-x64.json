@@ -21581,6 +21581,21 @@
             "commit_ref": "f0eadd98414346f195d4cefc68f4e11143a5bbf0",
             "commit_message": "Merge pull request #5098 from blowekamp/fix_const_theader_test\n\nCOMP: Address non-const operations when TBB enabled in test",
             "commit_timestamp": 1734651560.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1734707449.77948,
+            "elapsed_time": 221.41977500915527,
+            "x64": true,
+            "actual_files_count": 101,
+            "expected_files_count": null,
+            "memory_traffic": 24002.621421813965,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "4699cf631172e16f86cb1f91cc8f16936837e142",
+            "commit_message": "BUG: Consistency of enforcing m_ShrinkFactors > 1\n\nThe behavior of setting individual m_ShrinkFactor elements\nshould be the same as setting from an array of shrinkFactors.\n",
+            "commit_timestamp": 1734703899.0
         }
     ]
 }
