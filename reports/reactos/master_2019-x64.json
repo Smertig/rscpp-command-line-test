@@ -21451,6 +21451,21 @@
             "commit_ref": "28399a216b744e6263c772754644743e7a6682f1",
             "commit_message": "[SHELL32] Use FS compatible PIDL format for Recycle Bin items (#7532)\n\n* [SHELL32] Use FS compatible PIDL format for Recycle Bin items\n\nThis allows SHChangeNotify to handle these items and DefView will correctly update the recycle folder.\n\nCORE-18005 CORE-19239 CORE-13950 CORE-18435 CORE-18436 CORE-18437",
             "commit_timestamp": 1734615507.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1734750484.834994,
+            "elapsed_time": 70.2806441783905,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7383.029968261719,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "392473c7b515522742a2d4da7a92140b74b06c04",
+            "commit_message": "[GITHUB] Stick to ubuntu-22.04 for build-linux\n\nFixes clang build, since ubuntu-latest (24.04.1 LTS / Noble Numbat) has no\nLLVM 13 package available:\n\n```\nIgn:6 https://apt.llvm.org/noble llvm-toolchain-noble-13 InRelease\nErr:9 https://apt.llvm.org/noble llvm-toolchain-noble-13 Release\n  404  Not Found [IP: 151.101.46.49 443]\nReading package lists...\nE: The repository 'http://apt.llvm.org/noble llvm-toolchain-noble-13 Release' does not have a Release file.\nError: Process completed with exit code 100.\n```\n",
+            "commit_timestamp": 1734713335.0
         }
     ]
 }

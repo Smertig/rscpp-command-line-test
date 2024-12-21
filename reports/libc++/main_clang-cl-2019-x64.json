@@ -3518,6 +3518,23 @@
             "commit_ref": "70eac255b8c09244c7a9af7599fbe27d886010e9",
             "commit_message": "[VectorCombine] Add fp cast handling for shuffletoidentity (#120641)\n\nThis fixes some regressions from recent changes to vector combine in\r\n#120216. It allows shuffleToIdentity to look through fp casts as other\r\ncasts, and makes sure mismatching vector types in splats and casts do\r\nnot block the transform, as only the lanes should matter.",
             "commit_timestamp": 1734707108.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1734750631.08816,
+            "elapsed_time": 86.75776886940002,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4923.656890869141,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "9ae92d70561bcc95a7f818920238e764253d9758",
+            "commit_message": "[SelectionDAG] Virtualize isTargetStrictFPOpcode / isTargetMemoryOpcode (#119969)\n\nWith this change, targets are no longer required to put memory / strict-fp opcodes after special\n`ISD::FIRST_TARGET_MEMORY_OPCODE`/`ISD::FIRST_TARGET_STRICTFP_OPCODE` markers.\nThis will also allow autogenerating `isTargetMemoryOpcode`/`isTargetStrictFPOpcode (#119709).\n\nPull Request: https://github.com/llvm/llvm-project/pull/119969\n",
+            "commit_timestamp": 1734748191.0
         }
     ]
 }
