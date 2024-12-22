@@ -18806,6 +18806,21 @@
             "commit_ref": "8d9f52a7be5c09c0fd4423943edadaacf6d7f917",
             "commit_message": "GH-127807: pathlib ABCs: move private copying methods to dedicated class (#127810)\n\nMove 9 private `PathBase` attributes and methods into a new `CopyWorker`\r\nclass. Change `PathBase.copy` from a method to a `CopyWorker` instance.\r\n\r\nThe methods remain private in the `CopyWorker` class. In future we might\r\nmake some/all of them public so that user subclasses of `PathBase` can\r\ncustomize the copying process (in particular reading/writing of metadata,)\r\nbut we'd need to make `PathBase` public first.",
             "commit_timestamp": 1734834128.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1734880165.600201,
+            "elapsed_time": 1199.4192442893982,
+            "x64": true,
+            "actual_files_count": 1052,
+            "expected_files_count": null,
+            "memory_traffic": 48149.68030548096,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "b66a4ad9fc32b63da2ba10db24cbc8f4e29f781a",
+            "commit_message": "gh-127949: fix resource warnings in `test_tasks.py` (#128172)\n\n",
+            "commit_timestamp": 1734871562.0
         }
     ]
 }

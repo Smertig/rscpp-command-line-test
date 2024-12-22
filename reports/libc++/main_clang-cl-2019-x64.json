@@ -3569,6 +3569,23 @@
             "commit_ref": "21e6f16517b9b9255729665806f5c0b395854146",
             "commit_message": "[libc++] Mark N4089 as complete\n\nThe paper has been implemented since at least LLVM 5, maybe earlier.\n",
             "commit_timestamp": 1734835407.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1734880066.225682,
+            "elapsed_time": 58.936474084854126,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4983.433784484863,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "a0f0a69b625748b97e40195c8d81b3746d30f985",
+            "commit_message": "[lld][MachO] Fix symbol insertion in `transplantSymbolsAtOffset` (#120737)\n\nThe existing comparison does not insert symbols in the intended place.\n\nCloses #120559.\n\n---------\n\nCo-authored-by: Bjorn Pettersson <bjorn.a.pettersson@ericsson.com>",
+            "commit_timestamp": 1734875415.0
         }
     ]
 }
