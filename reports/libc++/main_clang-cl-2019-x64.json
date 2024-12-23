@@ -3586,6 +3586,23 @@
             "commit_ref": "a0f0a69b625748b97e40195c8d81b3746d30f985",
             "commit_message": "[lld][MachO] Fix symbol insertion in `transplantSymbolsAtOffset` (#120737)\n\nThe existing comparison does not insert symbols in the intended place.\n\nCloses #120559.\n\n---------\n\nCo-authored-by: Bjorn Pettersson <bjorn.a.pettersson@ericsson.com>",
             "commit_timestamp": 1734875415.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1734923664.090169,
+            "elapsed_time": 63.311912059783936,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4958.8999099731445,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "8daba2c13dc3f4856d064f57a2a56dcf4ea1d7b3",
+            "commit_message": "Skip negative length while inferring initializes attr (#120874)\n\nBail out negative length while inferring initializes attr. Otherwise it\r\ncauses an assertion error:\r\n`Attribute 'initializes' does not support unordered ranges`",
+            "commit_timestamp": 1734922912.0
         }
     ]
 }

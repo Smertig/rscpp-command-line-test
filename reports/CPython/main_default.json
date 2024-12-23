@@ -18821,6 +18821,21 @@
             "commit_ref": "b66a4ad9fc32b63da2ba10db24cbc8f4e29f781a",
             "commit_message": "gh-127949: fix resource warnings in `test_tasks.py` (#128172)\n\n",
             "commit_timestamp": 1734871562.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1734923641.799532,
+            "elapsed_time": 1119.7959868907928,
+            "x64": true,
+            "actual_files_count": 1052,
+            "expected_files_count": null,
+            "memory_traffic": 48061.09876251221,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "9d3a8f494985e8bbef698c467099370e233fcbd4",
+            "commit_message": "gh-100384: Error on `unguarded-availability` in macOS builds (#128155)\n\nGenerate a build error on ``unguarded-availability`` in portable macOS builds (i.e. using MACOSX_DEPLOYMENT_TARGET), preventing invalid use of symbols that are not available in older versions of the OS.",
+            "commit_timestamp": 1734894105.0
         }
     ]
 }

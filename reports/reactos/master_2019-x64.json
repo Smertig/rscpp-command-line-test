@@ -21511,6 +21511,21 @@
             "commit_ref": "ae7e375a4d5d9074113172e3edede7c1759746a9",
             "commit_message": "[LSALIB][SECURE32][LSASRV] Improve the check for trusted/untrusted callers\n\n- A caller of LsaRegisterLogonProcess is a trusted caller if the calling process has got the Tcb privilege, otherwise it is an untrusted caller.\n- A caller of LsaConnectUntrusted is always an untrusted caller.\n- A caller of LsapOpenLsaPort is always a trusted caller.\n",
             "commit_timestamp": 1734862537.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1734923438.905134,
+            "elapsed_time": 71.21446418762207,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7435.123710632324,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "0743faf2e322071416d756ddac72ffdb0f3e31eb",
+            "commit_message": "[NETSHELL] Handle DefView accelerators (#7572)\n\nCORE-18750",
+            "commit_timestamp": 1734899240.0
         }
     ]
 }
