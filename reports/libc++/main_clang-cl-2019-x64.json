@@ -3620,6 +3620,23 @@
             "commit_ref": "29c89d7265329c530a6a2cb0307218004cc2ba53",
             "commit_message": "[VectorCombine] foldShuffleOfShuffles - fold \"shuffle (shuffle x, y, m1), (shuffle y, x, m2)\" -> \"shuffle x, y, m3\" (#120959)\n\nfoldShuffleOfShuffles currently only folds unary shuffles to ensure we don't end up with a merged shuffle with more than 2 sources, but this prevented cases where both shuffles were sharing sources.\r\n\r\nThis patch generalizes the merge process to find up to 2 sources as it merges with the inner shuffles, it also moves the undef/poison handling stages into the merge loop as well.\r\n\r\nFixes #120764",
             "commit_timestamp": 1734965775.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1735009874.078731,
+            "elapsed_time": 60.30590844154358,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4951.312767028809,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "2c95e60df53ba1a5765b3fad9e8ddaff70f21994",
+            "commit_message": "TelemetryTest.cpp: Suppress a warning in #121003 [-Wunused-private-field]\n",
+            "commit_timestamp": 1735007672.0
         }
     ]
 }

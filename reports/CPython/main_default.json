@@ -18851,6 +18851,21 @@
             "commit_ref": "180d417e9f9456defd4c5b53cae678c318287921",
             "commit_message": "gh-114203: Optimise simple recursive critical sections (#128126)\n\nAdd a fast path to (single-mutex) critical section locking _iff_ the mutex\r\nis already held by the currently active, top-most critical section of this\r\nthread. This can matter a lot for indirectly recursive critical sections\r\nwithout intervening critical sections.\r\n",
             "commit_timestamp": 1734957093.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1735010010.592799,
+            "elapsed_time": 1129.4714241027832,
+            "x64": true,
+            "actual_files_count": 1052,
+            "expected_files_count": null,
+            "memory_traffic": 48130.48010253906,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "30efede33ca1fe32debbae93cc40b0e7e0b133b3",
+            "commit_message": "gh-128195: Add `_REPLACE_WITH_TRUE` to the tier2 optimizer (GH-128203)\n\nAdd `_REPLACE_WITH_TRUE` to the tier2 optimizer",
+            "commit_timestamp": 1734988667.0
         }
     ]
 }

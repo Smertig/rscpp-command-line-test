@@ -21541,6 +21541,21 @@
             "commit_ref": "6f60301d25a29583d3959fc957aa6530b076ab41",
             "commit_message": "[NEWDEV] Fix bad use of PropSheet_SetCurSelByID (#7574)\n\nPropSheet_SetCurSelByID() was badly called in response of PSN_WIZBACK or\r\nPSN_WIZNEXT notifications. See the reference on these notification codes:\r\n\r\nhttps://learn.microsoft.com/en-us/windows/win32/controls/psn-wizback\r\n\r\n> Returns 0 to allow the wizard to go to the previous page. Returns -1 to\r\n> prevent the wizard from changing pages. To display a particular page,\r\n> return its dialog resource identifier.\r\n> (...)\r\n> To set the return value, the dialog box procedure for the page must call\r\n> the SetWindowLong function with the DWL_MSGRESULT value and return TRUE.\r\n\r\nThis bug sometimes causes the wrong page to appear (e.g. \"Previous\" in\r\nIDD_NODRIVER should come back in IDD_CHSOURCE, but goes to IDD_WELCOME).",
             "commit_timestamp": 1734960261.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1735009794.309641,
+            "elapsed_time": 88.46676278114319,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7460.936630249023,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "d7f1a784a86570863804daaf6479ffba2863422f",
+            "commit_message": "[SHLWAPI] Use an explicit \"int*\" type for the 3rd parameter of StrToIntExA/W\n\nAs this is already present in our PSDK shlwapi.h header, MS PSDK one, and MSDN.\n",
+            "commit_timestamp": 1734990294.0
         }
     ]
 }
