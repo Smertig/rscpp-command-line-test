@@ -23168,6 +23168,21 @@
             "commit_ref": "f0937b83d9a32cb2b59f99bbc4db717ae6e83c9b",
             "commit_message": "[cmake] Fix -z noexecstack portability\n\nSummary:\nIssue reported by @ryandesign and @MarcusCalhoun-Lopez.\n\nCMake doesn't support spaces in flags. This caused older versions of gcc to\nignore the unknown flag \"-z noexecstack\" on MacOS since it was interpreted as a\nsingle flag, not two separate flags. Then, during compilation it was treated as\n\"-z\" \"noexecstack\", which was correctly forwarded to the linker. But the MacOS\nlinker does not support `-z noexecstack` so compilation failed.\n\nThe fix is to use `-Wl,-z,noexecstack`. This is never misinterpreted by a\ncompiler. However, not all compilers support this syntax to forward flags to the\nlinker. To fix this issue, we check if all the relevant `noexecstack` flags have\nbeen successfully set, and if they haven't we disable assembly.\n\nSee also PR#4056 and PR#4061. I decided to go a different route because this is\nsimpler. It might not successfully set these flags on some compilers, but in that\ncase it also disables assembly, so they aren't required.\n\nTest Plan:\n```\nmkdir build-cmake\ncmake ../build/cmake/CMakeLists.txt\nmake -j\n```\n\nSee that the linker flag is successfully detected & that assembly is enabled.\n\nRun the same commands on MacOS which doesn't support `-Wl,-z,noexecstack` and see\nthat everything compiles and that `LD_FLAG_WL_Z_NOEXECSTACK` and\n`ZSTD_HAS_NOEXECSTACK` are both false.\n",
             "commit_timestamp": 1734735983.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1735052786.223929,
+            "elapsed_time": 106.32391858100891,
+            "x64": true,
+            "actual_files_count": 209,
+            "expected_files_count": null,
+            "memory_traffic": 7434.491775512695,
+            "repo_url": "https://github.com/facebook/zstd.git",
+            "commit_ref": "f0937b83d9a32cb2b59f99bbc4db717ae6e83c9b",
+            "commit_message": "[cmake] Fix -z noexecstack portability\n\nSummary:\nIssue reported by @ryandesign and @MarcusCalhoun-Lopez.\n\nCMake doesn't support spaces in flags. This caused older versions of gcc to\nignore the unknown flag \"-z noexecstack\" on MacOS since it was interpreted as a\nsingle flag, not two separate flags. Then, during compilation it was treated as\n\"-z\" \"noexecstack\", which was correctly forwarded to the linker. But the MacOS\nlinker does not support `-z noexecstack` so compilation failed.\n\nThe fix is to use `-Wl,-z,noexecstack`. This is never misinterpreted by a\ncompiler. However, not all compilers support this syntax to forward flags to the\nlinker. To fix this issue, we check if all the relevant `noexecstack` flags have\nbeen successfully set, and if they haven't we disable assembly.\n\nSee also PR#4056 and PR#4061. I decided to go a different route because this is\nsimpler. It might not successfully set these flags on some compilers, but in that\ncase it also disables assembly, so they aren't required.\n\nTest Plan:\n```\nmkdir build-cmake\ncmake ../build/cmake/CMakeLists.txt\nmake -j\n```\n\nSee that the linker flag is successfully detected & that assembly is enabled.\n\nRun the same commands on MacOS which doesn't support `-Wl,-z,noexecstack` and see\nthat everything compiles and that `LD_FLAG_WL_Z_NOEXECSTACK` and\n`ZSTD_HAS_NOEXECSTACK` are both false.\n",
+            "commit_timestamp": 1734735983.0
         }
     ]
 }

@@ -21556,6 +21556,21 @@
             "commit_ref": "d7f1a784a86570863804daaf6479ffba2863422f",
             "commit_message": "[SHLWAPI] Use an explicit \"int*\" type for the 3rd parameter of StrToIntExA/W\n\nAs this is already present in our PSDK shlwapi.h header, MS PSDK one, and MSDN.\n",
             "commit_timestamp": 1734990294.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1735052770.854748,
+            "elapsed_time": 98.27110004425049,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7498.322814941406,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "3b800165b0da7895756a8b88b726a9473f101b87",
+            "commit_message": "[SETUP:REACTOS][SYSSETUP] Fix Shift-F10 cmd.exe invocation.\n\nPressing Shift-F10 to open cmd.exe when the setup program runs from\na different current directory than System32, now works correctly.\n\nUse the 2nd CreateProcessW() `lpCommandLine` parameter, instead of the\n1st parameter `lpApplicationName`, so as to use default path search.\nThe command-line buffer given to the 2nd-parameter can be temporarily\nmodified by CreateProcessW(), thus use an on-stack buffer.\n\nhttps://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw#parameters\n",
+            "commit_timestamp": 1735039362.0
         }
     ]
 }
