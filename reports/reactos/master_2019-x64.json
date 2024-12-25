@@ -21571,6 +21571,21 @@
             "commit_ref": "3b800165b0da7895756a8b88b726a9473f101b87",
             "commit_message": "[SETUP:REACTOS][SYSSETUP] Fix Shift-F10 cmd.exe invocation.\n\nPressing Shift-F10 to open cmd.exe when the setup program runs from\na different current directory than System32, now works correctly.\n\nUse the 2nd CreateProcessW() `lpCommandLine` parameter, instead of the\n1st parameter `lpApplicationName`, so as to use default path search.\nThe command-line buffer given to the 2nd-parameter can be temporarily\nmodified by CreateProcessW(), thus use an on-stack buffer.\n\nhttps://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw#parameters\n",
             "commit_timestamp": 1735039362.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1735096133.284293,
+            "elapsed_time": 81.23437070846558,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7496.664276123047,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "1c55924045facde76d9f7c855f0760e16365b778",
+            "commit_message": "[USER32_APTEST][USER32] CopyImage improve regression test and function. (#7524)\n\nCORE-19806 and CORE-17902.\r\n\r\n* Follow-up of PR #6886 and commit d3ec7cd to remove hack.",
+            "commit_timestamp": 1735084291.0
         }
     ]
 }

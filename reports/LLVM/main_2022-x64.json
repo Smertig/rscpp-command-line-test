@@ -23779,6 +23779,23 @@
             "commit_ref": "334a5766d7591bfaadf6990b3d8568c9688e22a5",
             "commit_message": "[llvm-objcopy] Add support of symbol modification flags for MachO (#120895)\n\nThis patch adds support of the following llvm-objcopy flags for MachO:\r\n\r\n- `--globalize-symbol`, `--globalize-symbols`,\r\n- `--keep-global-symbol`, `-G`, `--keep-global-symbols`,\r\n- `--localize-symbol`, `-L`, `--localize-symbols`,\r\n- `--skip-symbol`, `--skip-symbols`.\r\n\r\nCode in `updateAndRemoveSymbols` for MachO\r\nis kept similar to its version for ELF.\r\n\r\nFixes #120894",
             "commit_timestamp": 1735049110.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1735096959.969071,
+            "elapsed_time": 1547.7404396533966,
+            "x64": true,
+            "actual_files_count": 2105,
+            "expected_files_count": 1661,
+            "memory_traffic": 251745.20943450928,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "34f70007348d2d1a0e59fc0996e90a0b6fba1933",
+            "commit_message": "[clang-tidy]link LLVMTargetParser (#121072)\n\nFix build issue introduced in #120547",
+            "commit_timestamp": 1735096025.0
         }
     ]
 }
