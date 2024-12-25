@@ -23796,6 +23796,23 @@
             "commit_ref": "34f70007348d2d1a0e59fc0996e90a0b6fba1933",
             "commit_message": "[clang-tidy]link LLVMTargetParser (#121072)\n\nFix build issue introduced in #120547",
             "commit_timestamp": 1735096025.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1735139910.104896,
+            "elapsed_time": 1516.0992422103882,
+            "x64": true,
+            "actual_files_count": 2106,
+            "expected_files_count": 1661,
+            "memory_traffic": 251963.2328338623,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "8e7f1bee84ff9421f7a4b57abd1feff6b5680e1a",
+            "commit_message": "[clang][RISCV] Remove unneeded RISCV tuple code (#121024)\n\nThese code are no longer needed because we've modeled tuple type using\r\ntarget extension type rather than structure of scalable vectors.",
+            "commit_timestamp": 1735138134.0
         }
     ]
 }
