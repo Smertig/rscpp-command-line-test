@@ -3705,6 +3705,23 @@
             "commit_ref": "cea738bc9a9e4835f9a076145953ed1369dcad7d",
             "commit_message": "[SimplifyCFG] Replace unreachable switch lookup table holes with poison (#94990)\n\nAs discussed in #94468, this causes switch lookup table entries which\r\nare unreachable to be poison instead of filling them with a value from\r\none of the reachable cases.\r\n\r\n---------\r\n\r\nCo-authored-by: DianQK <dianqk@dianqk.net>",
             "commit_timestamp": 1735170446.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1735225745.900356,
+            "elapsed_time": 63.66650152206421,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4972.935249328613,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "4a92c27f9d29d065156647f9bcc44a8418c98efa",
+            "commit_message": "[TableGen][GISel] Remove check for LLT when emitting renderers (#121144)\n\nTypes used in the destination DAG of a pattern should not matter for\nGlobalISel. All necessary checks are emitted in the form of matchers\nwhen traversing the source DAG.\n\nIn particular, the check prevented importing patterns containing iPTR in\nthe middle of the destination DAG.\n\nThis reduces the number of skipped patterns on Mips and RISCV:\n```\nMips   1270  -> 1212  (-58)\nRISCV 42165 -> 42088  (-77)\n```\n\nMost of these patterns are for atomic operations.",
+            "commit_timestamp": 1735224329.0
         }
     ]
 }
