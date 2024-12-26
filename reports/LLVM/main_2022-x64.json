@@ -23813,6 +23813,23 @@
             "commit_ref": "8e7f1bee84ff9421f7a4b57abd1feff6b5680e1a",
             "commit_message": "[clang][RISCV] Remove unneeded RISCV tuple code (#121024)\n\nThese code are no longer needed because we've modeled tuple type using\r\ntarget extension type rather than structure of scalable vectors.",
             "commit_timestamp": 1735138134.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1735183316.715782,
+            "elapsed_time": 1532.1535832881927,
+            "x64": true,
+            "actual_files_count": 2106,
+            "expected_files_count": 1661,
+            "memory_traffic": 252081.68812561035,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "cea738bc9a9e4835f9a076145953ed1369dcad7d",
+            "commit_message": "[SimplifyCFG] Replace unreachable switch lookup table holes with poison (#94990)\n\nAs discussed in #94468, this causes switch lookup table entries which\r\nare unreachable to be poison instead of filling them with a value from\r\none of the reachable cases.\r\n\r\n---------\r\n\r\nCo-authored-by: DianQK <dianqk@dianqk.net>",
+            "commit_timestamp": 1735170446.0
         }
     ]
 }
