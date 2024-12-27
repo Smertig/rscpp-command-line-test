@@ -23847,6 +23847,23 @@
             "commit_ref": "4a92c27f9d29d065156647f9bcc44a8418c98efa",
             "commit_message": "[TableGen][GISel] Remove check for LLT when emitting renderers (#121144)\n\nTypes used in the destination DAG of a pattern should not matter for\nGlobalISel. All necessary checks are emitted in the form of matchers\nwhen traversing the source DAG.\n\nIn particular, the check prevented importing patterns containing iPTR in\nthe middle of the destination DAG.\n\nThis reduces the number of skipped patterns on Mips and RISCV:\n```\nMips   1270  -> 1212  (-58)\nRISCV 42165 -> 42088  (-77)\n```\n\nMost of these patterns are for atomic operations.",
             "commit_timestamp": 1735224329.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1735269843.455854,
+            "elapsed_time": 1537.896122455597,
+            "x64": true,
+            "actual_files_count": 2106,
+            "expected_files_count": 1661,
+            "memory_traffic": 251986.62594604492,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "179344d9a85934ff83bed1f657c91d4c1ba12460",
+            "commit_message": "[MC] Move AIX specific function to PPCAsmPrinter\n\nhttps://reviews.llvm.org/D95518 used switchSectionNoPrint,\nwhich seems buggy as .ll -> .s -> .o will be different from\n.ll -> .o, but this change intends to be a NFC.\n",
+            "commit_timestamp": 1735268022.0
         }
     ]
 }
