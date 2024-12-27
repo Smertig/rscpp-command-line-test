@@ -3739,6 +3739,23 @@
             "commit_ref": "179344d9a85934ff83bed1f657c91d4c1ba12460",
             "commit_message": "[MC] Move AIX specific function to PPCAsmPrinter\n\nhttps://reviews.llvm.org/D95518 used switchSectionNoPrint,\nwhich seems buggy as .ll -> .s -> .o will be different from\n.ll -> .o, but this change intends to be a NFC.\n",
             "commit_timestamp": 1735268022.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1735312067.048123,
+            "elapsed_time": 58.49797034263611,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4961.3570556640625,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "9ab16d49c99966f33900d68ed5370f19927ca52c",
+            "commit_message": "[mlir][IntRangeInference] Fix `arith.ceildivsi` range inference when it includes `INT_MIN` (#121062)\n\nThere is a special case in `arith.ceildivsi` range inference for\nhandling `lhs.smin()==INT_MIN`, but when `lhs` is not a single value, it\ncan cause it to skip entire negative range. Add `lhs.smin() + 1` check\nto handle it.",
+            "commit_timestamp": 1735307421.0
         }
     ]
 }
