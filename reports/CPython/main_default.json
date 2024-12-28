@@ -18971,6 +18971,21 @@
             "commit_ref": "71de839ec987bb67b98fcfecfc687281841a713c",
             "commit_message": "gh-127089: Add missing description for codes in `http.HTTPStatus` (#127100)\n\nCo-authored-by: Ethan Furman <ethan@stoneleaf.us>\r\nCo-authored-by: Andrew Svetlov <andrew.svetlov@gmail.com>",
             "commit_timestamp": 1735308745.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1735355448.885484,
+            "elapsed_time": 1190.5073852539062,
+            "x64": true,
+            "actual_files_count": 1052,
+            "expected_files_count": null,
+            "memory_traffic": 48145.60028839111,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "aeb9b65aa26444529e4adc7d6e5b0d3dd9889ec2",
+            "commit_message": "gh-127586: multiprocessing.Pool does not properly restore blocked signals (try 2) (GH-128011)\n\nCorrect pthread_sigmask in resource_tracker to restore old signals\n\nUsing SIG_UNBLOCK to remove blocked \"ignored signals\" may accidentally\ncause side effects if the calling parent already had said signals\nblocked to begin with and did not intend to unblock them when\ncreating a pool. Use SIG_SETMASK instead with the previous mask of\nblocked signals to restore the original blocked set.\n\nCo-authored-by: Peter Bierma <zintensitydev@gmail.com>\nCo-authored-by: Gregory P. Smith <greg@krypto.org>",
+            "commit_timestamp": 1735337341.0
         }
     ]
 }
