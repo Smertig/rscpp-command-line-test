@@ -18986,6 +18986,21 @@
             "commit_ref": "aeb9b65aa26444529e4adc7d6e5b0d3dd9889ec2",
             "commit_message": "gh-127586: multiprocessing.Pool does not properly restore blocked signals (try 2) (GH-128011)\n\nCorrect pthread_sigmask in resource_tracker to restore old signals\n\nUsing SIG_UNBLOCK to remove blocked \"ignored signals\" may accidentally\ncause side effects if the calling parent already had said signals\nblocked to begin with and did not intend to unblock them when\ncreating a pool. Use SIG_SETMASK instead with the previous mask of\nblocked signals to restore the original blocked set.\n\nCo-authored-by: Peter Bierma <zintensitydev@gmail.com>\nCo-authored-by: Gregory P. Smith <greg@krypto.org>",
             "commit_timestamp": 1735337341.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1735398504.094237,
+            "elapsed_time": 1192.5300164222717,
+            "x64": true,
+            "actual_files_count": 1052,
+            "expected_files_count": null,
+            "memory_traffic": 48031.1526184082,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "aab51c3414bc815c4c31e8ef2a9003f4a546faa9",
+            "commit_message": "gh-128265: Support WASI/Emscripten on PDB tests, by removing asyncio from pdb tests (#128264)\n\nA part of `Lib/test/test_pdb.py` was previously unable to run on WASI/Emscripten\r\nplatforms because it lacked support for `asyncio`.\r\nIn fact, these tests could be rewritten without the `asyncio` framework because \r\n`test_pdb` tests the behavior of coroutines, which are not part of `asyncio`.\r\n\r\nNow reliance on the availability of `asyncio` has been removed and\r\npart of `test_pdb` that deals with coroutines working on WASI/Emscripten platforms.",
+            "commit_timestamp": 1735397989.0
         }
     ]
 }
