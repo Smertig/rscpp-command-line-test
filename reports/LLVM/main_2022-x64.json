@@ -23932,6 +23932,23 @@
             "commit_ref": "de294c968bf292794ca9f0a6a481d3dff3bcc2eb",
             "commit_message": "[profile] Enable testing Continuous mode on Linux (#121238)\n\nBased on #115987, with the introduction of `REQUIRES: continuous-mode`.\nAlso Linux assumes `runtime_reloc`.\n\nFIXME: image-with-no-counters.c is still excluded.",
             "commit_timestamp": 1735441333.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1735485556.534364,
+            "elapsed_time": 1506.477299451828,
+            "x64": true,
+            "actual_files_count": 2106,
+            "expected_files_count": 1661,
+            "memory_traffic": 251974.88082885742,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "6cbc64ed922cc69bc292d394ba5c681fa309f404",
+            "commit_message": "[TableGen][GISel] Fix IMPLICIT_DEF operand being added as a use (#121283)\n\n`IMPLICIT_DEF` has one operand that is a def, not a use.",
+            "commit_timestamp": 1735478995.0
         }
     ]
 }
