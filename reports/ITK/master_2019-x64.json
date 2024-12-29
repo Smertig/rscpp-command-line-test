@@ -21836,6 +21836,21 @@
             "commit_ref": "74296d2ddcae8c7e5a16e5bdc35d774e8252b4bc",
             "commit_message": "PERF: Replace explicit return calls of constructor\n\nReplaces explicit calls to the constructor in a return with a braced\ninitializer list. This way the return type is not needlessly duplicated in the\nfunction definition and the return statement.\n",
             "commit_timestamp": 1735329354.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1735442240.045211,
+            "elapsed_time": 198.90108132362366,
+            "x64": true,
+            "actual_files_count": 101,
+            "expected_files_count": null,
+            "memory_traffic": 24085.55544281006,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "74296d2ddcae8c7e5a16e5bdc35d774e8252b4bc",
+            "commit_message": "PERF: Replace explicit return calls of constructor\n\nReplaces explicit calls to the constructor in a return with a braced\ninitializer list. This way the return type is not needlessly duplicated in the\nfunction definition and the return statement.\n",
+            "commit_timestamp": 1735329354.0
         }
     ]
 }

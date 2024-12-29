@@ -23915,6 +23915,23 @@
             "commit_ref": "3496e96f78c46f5b94c1892f97c470fd89293795",
             "commit_message": "[clang][bytecode] Add a missing break\n",
             "commit_timestamp": 1735391826.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1735442847.058117,
+            "elapsed_time": 1525.0081071853638,
+            "x64": true,
+            "actual_files_count": 2106,
+            "expected_files_count": 1661,
+            "memory_traffic": 252317.05378723145,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "de294c968bf292794ca9f0a6a481d3dff3bcc2eb",
+            "commit_message": "[profile] Enable testing Continuous mode on Linux (#121238)\n\nBased on #115987, with the introduction of `REQUIRES: continuous-mode`.\nAlso Linux assumes `runtime_reloc`.\n\nFIXME: image-with-no-counters.c is still excluded.",
+            "commit_timestamp": 1735441333.0
         }
     ]
 }
