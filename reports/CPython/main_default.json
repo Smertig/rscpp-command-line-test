@@ -19046,6 +19046,21 @@
             "commit_ref": "ef63cca494571f50906baae1d176469a3dcf8838",
             "commit_message": "GH-127381: pathlib ABCs: remove uncommon `PurePathBase` methods (#127853)\n\nRemove `PurePathBase.relative_to()` and `is_relative_to()` because they\r\ndon't account for *other* being an entirely different kind of path, and\r\nthey can't use `__eq__()` because it's not on the `PurePathBase` interface.\r\n\r\nRemove `PurePathBase.drive`, `root`, `is_absolute()` and `as_posix()`.\r\nThese are all too specific to local filesystems.",
             "commit_timestamp": 1735510032.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1735571337.682551,
+            "elapsed_time": 1115.6475603580475,
+            "x64": true,
+            "actual_files_count": 1052,
+            "expected_files_count": null,
+            "memory_traffic": 48206.93879699707,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "2bd5a7ab0f4a1f65ab8043001bd6e8416c5079bd",
+            "commit_message": "Docs: correctly markup sys.monitoring \"What's New\" entry (#128346)\n\nThe sys.monitoring entry was added with commit d2f1d917e.",
+            "commit_timestamp": 1735563220.0
         }
     ]
 }

@@ -19551,6 +19551,21 @@
             "commit_ref": "dfce2fc8fad7415e98488cd5ef561250c834ae14",
             "commit_message": "[s390x] Reserve _GLOBAL_OFFSET_TABLE_[2]\n\nELF Application Binary Interface s390x Supplement Version 1.6.1, p.58 says\nthat \"The doublewords at _GLOBAL_OFFSET_TABLE_[1...2] are reserved for\nsystem use.\"\n\nWe had previously reserved GOT[0] and GOT[1], but we did not reserve GOT[2].\n\nIt's most likely that GOT[2] is not actually in use, as it appears that\nmold-linked programs work without it. But we need to adhere to the psABI.\n",
             "commit_timestamp": 1735517110.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1735571200.608856,
+            "elapsed_time": 125.17813444137573,
+            "x64": true,
+            "actual_files_count": 624,
+            "expected_files_count": null,
+            "memory_traffic": 16446.017738342285,
+            "repo_url": "https://github.com/rui314/mold",
+            "commit_ref": "7a69bd45ac076d3acb8cf6394769c077b0e3ae3f",
+            "commit_message": "Refactor\n",
+            "commit_timestamp": 1735568305.0
         }
     ]
 }

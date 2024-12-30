@@ -21736,6 +21736,21 @@
             "commit_ref": "26f8fa7ade5c09c6e313b0b695497b1f8a9c75ac",
             "commit_message": "[WKSSVC] NetrWkstaGetInfo Level 102: Return the number of currently logged-on users\n",
             "commit_timestamp": 1735503280.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1735571202.097314,
+            "elapsed_time": 81.99708724021912,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7463.914031982422,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "894e5cddd69ad95b27c12646533f4a0eccaa7b1d",
+            "commit_message": "[SHELL32] Fix BrowseForFolder expanding a folder containing a zip (#7585)\n\nCommit 325d74c30f3 (PR #7437) introduced a side effect that made impossible\r\nto expand a folder when it contained both a ZIP file and subfolders.\r\n\r\nFix this by ignoring the return value of BrFolder_InsertItem and free the\r\npidlTemp pointer explicitly in all cases.\r\n\r\nCORE-19955 CORE-19751",
+            "commit_timestamp": 1735564484.0
         }
     ]
 }
