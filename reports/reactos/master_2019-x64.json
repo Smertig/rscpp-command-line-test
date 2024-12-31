@@ -21766,6 +21766,21 @@
             "commit_ref": "894e5cddd69ad95b27c12646533f4a0eccaa7b1d",
             "commit_message": "[SHELL32] Fix BrowseForFolder expanding a folder containing a zip (#7585)\n\nCommit 325d74c30f3 (PR #7437) introduced a side effect that made impossible\r\nto expand a folder when it contained both a ZIP file and subfolders.\r\n\r\nFix this by ignoring the return value of BrFolder_InsertItem and free the\r\npidlTemp pointer explicitly in all cases.\r\n\r\nCORE-19955 CORE-19751",
             "commit_timestamp": 1735564484.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1735657580.991608,
+            "elapsed_time": 81.16994071006775,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7422.139846801758,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "4920e639f99a4b17ad9b97fbed799a84dcf2692b",
+            "commit_message": "[SETUP:REACTOS] Revamp the Install-type page layout (#7581)\n\n- Update the page title and subtitle.\n- Embolden the types of installation.\n- Introduce title and subtitle for the upgrade/repair page\n  (not translated yet).\n",
+            "commit_timestamp": 1735644807.0
         }
     ]
 }
