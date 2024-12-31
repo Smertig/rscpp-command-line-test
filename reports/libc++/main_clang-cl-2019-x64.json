@@ -3858,6 +3858,23 @@
             "commit_ref": "42dfaa15a60cea6cd75a2efb419aa2c206d2a127",
             "commit_message": "[clang-tidy] add depercation warning for non-whitelisted global options (#121057)\n\nWe plan to depercate `StrictMode` and `IgnoreMacros` global options\nafter 2 major versions and support local options only for them.\nThis patch introduces the depercation warning.",
             "commit_timestamp": 1735569346.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1735614675.782882,
+            "elapsed_time": 69.34482955932617,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4986.838844299316,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "f590963db836ccbf7c547a3dea9dc719f24444d1",
+            "commit_message": "[RISCV] Implement RISCVTTIImpl::getPreferredAddressingMode for HasVendorXCVmem (#120533)\n\nFor a simple matmult kernel this heuristic reduces the length of the\r\ncritical basic block from 15 to 20 instructions, resulting in a 20%\r\nspeedup.\r\n\r\n**Without heuristic:**\r\n\r\n```\r\n       13688: 001b838b      cv.lb   t2, (s7), 0x1\r\n       1368c: 09cdbcab      cv.lb   s9, t3(s11)\r\n       13690: 089db62b      cv.lb   a2, s1(s11)\r\n       13694: 092dbdab      cv.lb   s11, s2(s11)\r\n       13698: 001d028b      cv.lb   t0, (s10), 0x1\r\n       1369c: 00f282b3      add     t0, t0, a5\r\n       136a0: 9072b52b      cv.mac  a0, t0, t2\r\n       136a4: 9192bfab      cv.mac  t6, t0, s9\r\n       136a8: 90c2beab      cv.mac  t4, t0, a2\r\n       136ac: 91b2bf2b      cv.mac  t5, t0, s11\r\n       136b0: fffc0c13      addi    s8, s8, -0x1\r\n       136b4: 018e0633      add     a2, t3, s8\r\n       136b8: 91b2b0ab      cv.mac  ra, t0, s11\r\n       136bc: 000b8d93      mv      s11, s7\r\n       136c0: fc0614e3      bnez    a2, 0x13688 <muriscv_nn_vec_mat_mult_t_s8+0x2f0>\r\n\r\n       #instrs = 15\r\n```\r\n\r\n**With heuristic:**\r\n\r\n```\r\n        7bc0: 001c860b      cv.lb   a2, (s9), 0x1\r\n        7bc4: 001e0d0b      cv.lb   s10, (t3), 0x1\r\n        7bc8: 001e808b      cv.lb   ra, (t4), 0x1\r\n        7bcc: 0015038b      cv.lb   t2, (a0), 0x1\r\n        7bd0: 001c028b      cv.lb   t0, (s8), 0x1\r\n        7bd4: 00f282b3      add     t0, t0, a5\r\n        7bd8: 90c2bfab      cv.mac  t6, t0, a2\r\n        7bdc: 91a2b92b      cv.mac  s2, t0, s10\r\n        7be0: 9012b5ab      cv.mac  a1, t0, ra\r\n        7be4: 9072b9ab      cv.mac  s3, t0, t2\r\n        7be8: 9072b72b      cv.mac  a4, t0, t2\r\n        7bec: fc851ae3      bne     a0, s0, 0x7bc0 <muriscv_nn_vec_mat_mult_t_s8+0x338>\r\n\r\n        #instrs = 12\r\n\r\n        improvement = 1 - 12/15 = 0.2 = 20%\r\n```",
+            "commit_timestamp": 1735613788.0
         }
     ]
 }
