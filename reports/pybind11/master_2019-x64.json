@@ -23323,6 +23323,21 @@
             "commit_ref": "c5ed9d4b193e0c1563282aebcfad57fecb0b4969",
             "commit_message": "Fix module type hint (#5469)\n\n* Fix module type hint\r\n\r\n\"module\" is not a valid python value.\r\nThe correct type hint for a module object is \"types.ModuleType\" which has existed since at least Python 2.6\r\n\r\n* Added module type hint test\r\n\r\n* style: pre-commit fixes\r\n\r\n* Remove doc function\r\n\r\n* Fixed type hint\r\n\r\n---------\r\n\r\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>",
             "commit_timestamp": 1735617210.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1735701280.970576,
+            "elapsed_time": 148.89491629600525,
+            "x64": true,
+            "actual_files_count": 381,
+            "expected_files_count": 197,
+            "memory_traffic": 18439.65044403076,
+            "repo_url": "https://github.com/pybind/pybind11",
+            "commit_ref": "c5ed9d4b193e0c1563282aebcfad57fecb0b4969",
+            "commit_message": "Fix module type hint (#5469)\n\n* Fix module type hint\r\n\r\n\"module\" is not a valid python value.\r\nThe correct type hint for a module object is \"types.ModuleType\" which has existed since at least Python 2.6\r\n\r\n* Added module type hint test\r\n\r\n* style: pre-commit fixes\r\n\r\n* Remove doc function\r\n\r\n* Fixed type hint\r\n\r\n---------\r\n\r\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>",
+            "commit_timestamp": 1735617210.0
         }
     ]
 }

@@ -21727,6 +21727,21 @@
             "commit_ref": "e123cb962fd8f3aed61d41a254a4dd37a5e7e445",
             "commit_message": "Optimize entity classification performance\n\nClassify entities using cs2::CEntityClass* from cs2::CEntityIdentity\ninstead of the VMT pointer of the entity object. Due to the structure of\nthe entity list, classification using entity class pointer is ~2.4x faster\n(as the entity identity is already in the CPU cache) than using the VMT pointer\nwhich requires a fetch from the main memory.\n",
             "commit_timestamp": 1735591538.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1735701239.541436,
+            "elapsed_time": 136.73601055145264,
+            "x64": true,
+            "actual_files_count": 510,
+            "expected_files_count": 362,
+            "memory_traffic": 13074.6791305542,
+            "repo_url": "https://github.com/danielkrupinski/Osiris",
+            "commit_ref": "d434e40bb7ec860818e2c92b9ca92ea9df6635b7",
+            "commit_message": "Fix model glow not being removed when toggling off the master switch\n",
+            "commit_timestamp": 1735670669.0
         }
     ]
 }
