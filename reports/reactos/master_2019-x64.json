@@ -21796,6 +21796,21 @@
             "commit_ref": "ebdb7b3e4d423cd949fb054f9ae8abe7f99ddbd9",
             "commit_message": "A problem has been detected and ReactOS has been shut down to prevent\ndamage to your time machine warp core.\n\nUNEXPECTED_NEW_YEAR_TIMESLIP\n\nIf this is the first time you have seen this Stop error screen,\nrestart your time machine. If this screen appears again, follow\nthese steps:\n\nCheck to make sure you wish the ReactOS Community a\n\ud83c\udf8a \ud83c\udf7e \ud83e\udd73 *:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:* \ud83c\udf86 \u269b\ufe0f \u2622\ufe0f\n\n        \u2588 \u2588 \u2588\u2580\u2588 \u2588\u2580\u2588 \u2588\u2580\u2588 \u2588 \u2588          \u2588\u2588\u2588\u2588\u2588\u2588\u2557  \u2588\u2588\u2588\u2588\u2588\u2588\u2557 \u2588\u2588\u2588\u2588\u2588\u2588\u2557 \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2557    \u2588\u2588\u2557\n        \u2588\u2580\u2588 \u2588\u2580\u2588 \u2588\u2580\u2580 \u2588\u2580\u2580 \u2580\u2588\u2580          \u255a\u2550\u2550\u2550\u2550\u2588\u2588\u2557\u2588\u2588\u2554\u2550\u2588\u2588\u2588\u2588\u2557\u255a\u2550\u2550\u2550\u2550\u2588\u2588\u2557\u2588\u2588\u2554\u2550\u2550\u2550\u2550\u255d    \u2588\u2588\u2551\n        \u2580 \u2580 \u2580 \u2580 \u2580   \u2580    \u2580            \u2588\u2588\u2588\u2588\u2588\u2554\u255d\u2588\u2588\u2551\u2588\u2588\u2554\u2588\u2588\u2551 \u2588\u2588\u2588\u2588\u2588\u2554\u255d\u255a\u2588\u2588\u2588\u2588\u2588\u2557     \u2588\u2588\u2551\n  \u2588\u2584 \u2588 \u2588\u2580\u2580 \u2588 \u2588 \u2588  \u2588 \u2588 \u2588\u2580\u2580 \u2588\u2580\u2588 \u2588\u2580\u2588    \u2588\u2588\u2554\u2550\u2550\u2550\u255d \u2588\u2588\u2588\u2588\u2554\u255d\u2588\u2588\u2551\u2588\u2588\u2554\u2550\u2550\u2550\u255d  \u255a\u2550\u2550\u2550\u2588\u2588\u2557    \u255a\u2550\u255d\n  \u2588\u2580\u2588\u2588 \u2588\u2580\u2580 \u2588 \u2588 \u2588  \u2580\u2588\u2580 \u2588\u2580\u2580 \u2588\u2580\u2588 \u2588\u2588\u2580    \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2557\u255a\u2588\u2588\u2588\u2588\u2588\u2588\u2554\u255d\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2557\u2588\u2588\u2588\u2588\u2588\u2588\u2554\u255d    \u2588\u2588\u2557\n  \u2580  \u2580 \u2580\u2580\u2580  \u2580\u2580\u2580    \u2580  \u2580\u2580\u2580 \u2580 \u2580 \u2580 \u2580    \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u255d \u255a\u2550\u2550\u2550\u2550\u2550\u255d \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u255d\u255a\u2550\u2550\u2550\u2550\u2550\u255d     \u255a\u2550\u255d\n\ud83c\udf86 \u269b\ufe0f \u2622\ufe0f *:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:* \ud83c\udf8a \ud83c\udf7e \ud83e\udd73\nAlso, ensure you use the latest nightly ReactOS version and run it\nattached to a debugger.\n\nIf problems continue, Keep Calm And Carry On Developing. Test your\ncode more thoroughly, use a sane compiler and debugger, or ask any\nquestions on ReactOS' official Mattermost channel.\n\nTechnical information:\n\n*** STOP: 0x42000042 (0x67747770,0x000007E9,0x00000001,0x00000001)\n\n***  jira.reactos.org   - Address chat.reactos.org Base at reactos.org\n***  github.com/reactos - Address  git.reactos.org Base at reactos.org\n",
             "commit_timestamp": 1735686000.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1735743948.739488,
+            "elapsed_time": 71.66053986549377,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7369.9110107421875,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "205eadcb84ce04acd23e8920c7313d55fee28fee",
+            "commit_message": "[NTOS:PS] Fix returned flags for QUOTA_LIMITS_EX query (#7589)\n\nUse the information from EPROCESS::Vm.\r\nAddendum to commit 1e06829961cb597f7e1927a5e35b66febe674a96.",
+            "commit_timestamp": 1735735940.0
         }
     ]
 }

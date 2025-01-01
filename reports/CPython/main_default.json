@@ -19106,6 +19106,21 @@
             "commit_ref": "c5438fdf4706a70bdd19338edc000dacffff6837",
             "commit_message": "Reword `about.rst` to not limit Sphinx (#128325)\n\nCo-authored-by: Adam Turner <9087854+AA-Turner@users.noreply.github.com>",
             "commit_timestamp": 1735680153.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1735744109.44761,
+            "elapsed_time": 1137.171100616455,
+            "x64": true,
+            "actual_files_count": 1052,
+            "expected_files_count": null,
+            "memory_traffic": 48271.28031921387,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "bb9d955e16c5578bdbc72750fbbffc8313559109",
+            "commit_message": "gh-128277: remove unnecessary critical section from `socket.close`  (#128305)\n\nRemove unnecessary critical section from `socket.close` as it now uses relaxed atomics for `sock_fd`.",
+            "commit_timestamp": 1735734647.0
         }
     ]
 }

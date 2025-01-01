@@ -3909,6 +3909,23 @@
             "commit_ref": "2feffecb8853b1cdd38a0653df63d70412e65c12",
             "commit_message": "[ConstantRange] Estimate tighter lower (upper) bounds for masked binary and (or) (#120352)\n\nFixes #118108.\r\n\r\nCo-author: Yingwei Zheng (@dtcxzyw)",
             "commit_timestamp": 1735699217.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1735744133.872602,
+            "elapsed_time": 66.67682194709778,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4978.654151916504,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "ed572f2003275da8e06a634b4d6658b7921e8334",
+            "commit_message": "Reapply \"[libc++] Explicitly convert to masks in SIMD code (#107983)\" (#121352)\n\nThis reverts commit 0ea40bf02138c02e7680ce6fa8169502f2a8bd42.\r\n\r\nPasses with https://github.com/llvm/llvm-project/issues/121365 fix: \r\nhttps://lab.llvm.org/buildbot/#/builders/55/builds/4930",
+            "commit_timestamp": 1735727435.0
         }
     ]
 }
