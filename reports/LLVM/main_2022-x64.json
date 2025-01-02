@@ -24068,6 +24068,23 @@
             "commit_ref": "1a0d0ae234544dc4978f1e12730408cb83f6b923",
             "commit_message": "[clang-format] Add `VariableTemplates` option (#121318)\n\nCloses #120148.",
             "commit_timestamp": 1735784696.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1735831265.023844,
+            "elapsed_time": 1556.5956590175629,
+            "x64": true,
+            "actual_files_count": 2106,
+            "expected_files_count": 1661,
+            "memory_traffic": 251929.04054260254,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "bb27d5e5c6b194a1440b8ac4e5ace68d0ee2a849",
+            "commit_message": "[analyzer] Don't assume third iteration in loops (#119388)\n\nThis commit ensures that if the loop condition is opaque (the analyzer\r\ncannot determine whether it's true or false) and there were at least two\r\niterations, then the analyzer doesn't make the unjustified assumption\r\nthat it can enter yet another iteration.\r\n\r\nNote that the presence of a loop suggests that the developer thought\r\nthat two iterations can happen (otherwise an `if` would've been\r\nsufficient), but it does not imply that the developer expected three or\r\nfour iterations -- and in fact there are many false positives where a\r\nloop iterates over a two-element (or three-element) data structure, but\r\nthe analyzer cannot understand the loop condition and blindly assumes\r\nthat there may be three or more iterations. (In particular, analyzing\r\nthe FFMPEG project produces 100+ such false positives.)\r\n\r\nMoreover, this provides some performance improvements in the sense that\r\nthe analyzer won't waste time on traversing the execution paths with 3\r\nor 4 iterations in a loop (which are very similar to the paths with 2\r\niterations) and therefore will be able to traverse more branches\r\nelsewhere on the `ExplodedGraph`.\r\n\r\nThis logic is disabled if the user enables the widen-loops analyzer\r\noption (which is disabled by default), because the \"simulate one final\r\niteration after the invalidation\" execution path would be suppressed by\r\nthe \"exit the loop if the loop condition is opaque and there were at\r\nleast two iterations\" logic. If we want to support loop widening, we\r\nwould need to create a follow-up commit which ensures that it \"plays\r\nnicely\" with this logic.",
+            "commit_timestamp": 1735829463.0
         }
     ]
 }
