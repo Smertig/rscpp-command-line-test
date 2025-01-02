@@ -19121,6 +19121,21 @@
             "commit_ref": "bb9d955e16c5578bdbc72750fbbffc8313559109",
             "commit_message": "gh-128277: remove unnecessary critical section from `socket.close`  (#128305)\n\nRemove unnecessary critical section from `socket.close` as it now uses relaxed atomics for `sock_fd`.",
             "commit_timestamp": 1735734647.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1735787505.367102,
+            "elapsed_time": 1136.0260951519012,
+            "x64": true,
+            "actual_files_count": 1052,
+            "expected_files_count": null,
+            "memory_traffic": 48179.2414932251,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "c810ed7c8e0a7464d19700ba1c8668a406f1c042",
+            "commit_message": "gh-126469: remove unnecessary error-checking branch in `lexer.c` (#126473)\n\n",
+            "commit_timestamp": 1735769489.0
         }
     ]
 }

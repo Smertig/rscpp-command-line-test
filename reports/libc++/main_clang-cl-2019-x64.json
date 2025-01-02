@@ -3926,6 +3926,23 @@
             "commit_ref": "ed572f2003275da8e06a634b4d6658b7921e8334",
             "commit_message": "Reapply \"[libc++] Explicitly convert to masks in SIMD code (#107983)\" (#121352)\n\nThis reverts commit 0ea40bf02138c02e7680ce6fa8169502f2a8bd42.\r\n\r\nPasses with https://github.com/llvm/llvm-project/issues/121365 fix: \r\nhttps://lab.llvm.org/buildbot/#/builders/55/builds/4930",
             "commit_timestamp": 1735727435.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1735787529.027108,
+            "elapsed_time": 65.24367308616638,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4988.645904541016,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "1a0d0ae234544dc4978f1e12730408cb83f6b923",
+            "commit_message": "[clang-format] Add `VariableTemplates` option (#121318)\n\nCloses #120148.",
+            "commit_timestamp": 1735784696.0
         }
     ]
 }

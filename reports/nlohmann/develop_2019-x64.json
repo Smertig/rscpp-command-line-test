@@ -23413,6 +23413,21 @@
             "commit_ref": "2134cb947a9b589da0835c69243f99d8ae0ac370",
             "commit_message": "Fix NLOHMANN_DEFINE_TYPE_INTRUSIVE_WITH_DEFAULT with an empty JSON instance (#4508)\n\n* change NLOHMANN_JSON_FROM_WITH_DEFAULT to let NLOHMANN_DEFINE_TYPE_INTRUSIVE_WITH_DEFAULT work with an empty JSON instance\r\n\r\n* fix ci_static_analysis_clang (ci_clang_tidy)\r\n\r\n* change NLOHMANN_JSON_FROM_WITH_DEFAULT to let NLOHMANN_DEFINE_TYPE_INTRUSIVE_WITH_DEFAULT work with an empty JSON instance",
             "commit_timestamp": 1735629403.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1735787333.033092,
+            "elapsed_time": 357.0653395652771,
+            "x64": true,
+            "actual_files_count": 91,
+            "expected_files_count": 85,
+            "memory_traffic": 35962.06088256836,
+            "repo_url": "https://github.com/nlohmann/json",
+            "commit_ref": "4f64d8d0b4f3783256c1d8597682d75c3ea587b9",
+            "commit_message": "Modernize integer comparison (#4577)\n\nReplace static_cast<size_t>(-1) with std::numeric_limits<std::size_t>::max()\r\nvia the detail::unknown_size() function",
+            "commit_timestamp": 1735747298.0
         }
     ]
 }
