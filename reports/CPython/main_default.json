@@ -19151,6 +19151,21 @@
             "commit_ref": "c9d2bc6d7f6d74e0539afb0f7066997ae736dfc8",
             "commit_message": "Revert \"Doc: Show object descriptions in the table of contents (#125757)\" (#128406)\n\n",
             "commit_timestamp": 1735828500.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1735873977.149861,
+            "elapsed_time": 1092.6333787441254,
+            "x64": true,
+            "actual_files_count": 1052,
+            "expected_files_count": null,
+            "memory_traffic": 48190.6842880249,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "8eebe4e6d02bb4ad3f1ca6c52624186903dce893",
+            "commit_message": "gh-128212: Fix race in `_PyUnicode_CheckConsistency` (GH-128367)\n\nThere was a data race on the utf8 field between `PyUnicode_SET_UTF8` and\n`_PyUnicode_CheckConsistency`. Use the `_PyUnicode_UTF8()` accessor,\nwhich uses an atomic load internally, to avoid the data race.",
+            "commit_timestamp": 1735844574.0
         }
     ]
 }

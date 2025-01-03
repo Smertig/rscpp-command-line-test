@@ -3960,6 +3960,23 @@
             "commit_ref": "bb27d5e5c6b194a1440b8ac4e5ace68d0ee2a849",
             "commit_message": "[analyzer] Don't assume third iteration in loops (#119388)\n\nThis commit ensures that if the loop condition is opaque (the analyzer\r\ncannot determine whether it's true or false) and there were at least two\r\niterations, then the analyzer doesn't make the unjustified assumption\r\nthat it can enter yet another iteration.\r\n\r\nNote that the presence of a loop suggests that the developer thought\r\nthat two iterations can happen (otherwise an `if` would've been\r\nsufficient), but it does not imply that the developer expected three or\r\nfour iterations -- and in fact there are many false positives where a\r\nloop iterates over a two-element (or three-element) data structure, but\r\nthe analyzer cannot understand the loop condition and blindly assumes\r\nthat there may be three or more iterations. (In particular, analyzing\r\nthe FFMPEG project produces 100+ such false positives.)\r\n\r\nMoreover, this provides some performance improvements in the sense that\r\nthe analyzer won't waste time on traversing the execution paths with 3\r\nor 4 iterations in a loop (which are very similar to the paths with 2\r\niterations) and therefore will be able to traverse more branches\r\nelsewhere on the `ExplodedGraph`.\r\n\r\nThis logic is disabled if the user enables the widen-loops analyzer\r\noption (which is disabled by default), because the \"simulate one final\r\niteration after the invalidation\" execution path would be suppressed by\r\nthe \"exit the loop if the loop condition is opaque and there were at\r\nleast two iterations\" logic. If we want to support loop widening, we\r\nwould need to create a follow-up commit which ensures that it \"plays\r\nnicely\" with this logic.",
             "commit_timestamp": 1735829463.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1735873991.808655,
+            "elapsed_time": 63.17374086380005,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4978.006385803223,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "9df375e5eae726c5a90ada70f9535a5e22e90214",
+            "commit_message": "[lld][WebAssembly] Fix non-pie dynamic-linking executable (#108146)\n\nThe commit 22b7b84860d39da71964c9b329937f2ee1d875ba\r\nmade the symbols provided by shared libraries \"defined\",\r\nand thus effectively made it impossible to generate non-pie\r\ndynamically linked executables using\r\n--unresolved-symbols=import-dynamic.\r\n\r\nThis commit, based on https://github.com/llvm/llvm-project/pull/109249,\r\nfixes it by checking sym->isShared() explictly.\r\n(as a bonus, you don't need to rely on\r\n--unresolved-symbols=import-dynamic\r\nanymore.)\r\n\r\nFixes https://github.com/llvm/llvm-project/issues/107387",
+            "commit_timestamp": 1735872801.0
         }
     ]
 }
