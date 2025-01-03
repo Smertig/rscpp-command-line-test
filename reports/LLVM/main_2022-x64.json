@@ -24102,6 +24102,23 @@
             "commit_ref": "9df375e5eae726c5a90ada70f9535a5e22e90214",
             "commit_message": "[lld][WebAssembly] Fix non-pie dynamic-linking executable (#108146)\n\nThe commit 22b7b84860d39da71964c9b329937f2ee1d875ba\r\nmade the symbols provided by shared libraries \"defined\",\r\nand thus effectively made it impossible to generate non-pie\r\ndynamically linked executables using\r\n--unresolved-symbols=import-dynamic.\r\n\r\nThis commit, based on https://github.com/llvm/llvm-project/pull/109249,\r\nfixes it by checking sym->isShared() explictly.\r\n(as a bonus, you don't need to rely on\r\n--unresolved-symbols=import-dynamic\r\nanymore.)\r\n\r\nFixes https://github.com/llvm/llvm-project/issues/107387",
             "commit_timestamp": 1735872801.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1735917603.108035,
+            "elapsed_time": 1523.513842344284,
+            "x64": true,
+            "actual_files_count": 2107,
+            "expected_files_count": 1661,
+            "memory_traffic": 251909.5125656128,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "9d6527bc12547e28b86d180b76fe934a96aa518e",
+            "commit_message": "[CodeGen] Add MOTargetFlag4 to MachineMemOperand Flags (#120136)\n\n",
+            "commit_timestamp": 1735915552.0
         }
     ]
 }
