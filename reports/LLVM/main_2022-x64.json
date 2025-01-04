@@ -24136,6 +24136,23 @@
             "commit_ref": "a2b9058c392995660956e56c2ac8695a44dc2e4e",
             "commit_message": "[RISCV] Reduce size of CSR lookup tables. NFC (#121606)\n\nInstead of storing 3 different names in each row of the table, use a\r\nseparate row for each name and use a flag to indicate what type of name\r\nit is. The AltName and DeprecatedName weren't used often enough to\r\njustify storing them as a possibility for every register.\r\n\r\nThis reduces the .rodata size by 27k and reduces the number of dynamic\r\nrelocations since we now only need 1 lookup by name function. The lookup\r\nby name function each contained a ~400 entry table of const char*\r\npointing to constant strings. Each of those requires a dynamic\r\nrelocation.\r\n\r\nI also capitalized IsRV32Only in the C++ code to match coding\r\nstandards.",
             "commit_timestamp": 1735959853.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1736003942.658619,
+            "elapsed_time": 1509.9249591827393,
+            "x64": true,
+            "actual_files_count": 2107,
+            "expected_files_count": 1661,
+            "memory_traffic": 252228.85749053955,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "da2a9ede81a88bea0bba28a543441197772e4727",
+            "commit_message": "[clang] Update C++ DR status page (#121642)\n\nThis patch brings our C++ DR status page up to date with WG21 updates.\n\n[CWG1223](https://cplusplus.github.io/CWG/issues/1223.html) \"Syntactic\ndisambiguation and _trailing-return-types_\" is resolved by\n[P2915R0](https://wg21.link/p2915r0) \"Proposed resolution for CWG1223\".\nBoth the test and the paper were written by @cor3ntin, so I presume no\nupdates are needed.\n\n[CWG2819](https://cplusplus.github.io/CWG/issues/2819.html) \"Cast from\nnull pointer value in a constant expression\" was revisited and marked as\nnot a DR, so I updated the test to ensure that the example is not\naccepted in C++23 and earlier modes. CC @offsetof.\n\nTentantive resolutions to the following issues were simply promoted to\nactual resolutions, so tests don't require any meaningful changes:\n- [CWG2913](https://cplusplus.github.io/CWG/issues/2913.html) \"Grammar\nfor deduction-guide has requires-clause in the wrong position\"\n(@zyn0217)\n- [CWG2915](https://cplusplus.github.io/CWG/issues/2915.html) \"Explicit\nobject parameters of type void\" (@MitalAshok)\n- [CWG2922](https://cplusplus.github.io/CWG/issues/2922.html) \"constexpr\nplacement-new is too permissive\" (@cor3ntin)\n\nAs a drive-by fix, I updated the `make_cxx_dr_status` script to\naccommodate for `C++23 onwards` and `C++26 onwards` statuses, which are\nuseful for Core issues that are not DRs.",
+            "commit_timestamp": 1736002381.0
         }
     ]
 }

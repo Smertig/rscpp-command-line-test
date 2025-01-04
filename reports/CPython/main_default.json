@@ -19196,6 +19196,21 @@
             "commit_ref": "f1574859d7d6cd259f867194762f04b72ef2c340",
             "commit_message": "gh-125985: Fix `cmodule_function()` scaling benchmark (#128460)\n\nAdd a separate benchmark that measures the effect of\n`_PyObject_LookupSpecial()` on scaling.\n\nIn the process of cleaning up the scaling benchmarks for inclusion, I\nunintentionally changed the \"cmodule_function\" benchmark to pass an\n`int` to `math.floor()` instead of a `float`, which causes it to use the\n`_PyObject_LookupSpecial()` code path. `_PyObject_LookupSpecial()` has\nits own scaling issues that we want to measure separately from calling a\nfunction on a C module.",
             "commit_timestamp": 1735940927.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1736003367.445982,
+            "elapsed_time": 1207.7817981243134,
+            "x64": true,
+            "actual_files_count": 1052,
+            "expected_files_count": null,
+            "memory_traffic": 48296.27671813965,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "95352dcb9321423d0606ae0b01524ad61c2c2ec1",
+            "commit_message": "GH-127381: pathlib ABCs: remove `PathBase.move()` and `move_into()` (#128337)\n\nThese methods combine `_delete()` and `copy()`, but `_delete()` isn't part\r\nof the public interface, and it's unlikely to be added until the pathlib\r\nABCs are made official, or perhaps even later.",
+            "commit_timestamp": 1735995231.0
         }
     ]
 }

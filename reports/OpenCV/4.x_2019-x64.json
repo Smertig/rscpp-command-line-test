@@ -22060,6 +22060,21 @@
             "commit_ref": "a6f72f813d307f77e7597447bdba25dcb5b6447d",
             "commit_message": "Merge pull request #26698 from warped-rudi:mediandk2\n\nAndroidMediaNdkVideoWriter pixel format enhancement #26698\r\n\r\n* videoio(Android): Add source pixel formats RGBA and GRAY to AndroidMediaNdkVideoWriter\r\n\r\nLet AndroidMediaNdkVideoWriter::write() deduce source pixel format from matrix type:\r\n\r\nCV_8UC3 -> BGR   (as before)\r\nCV_8UC4 -> RGBA  (use in conjunction with CvCameraViewFrame)\r\nCV_8UC1 -> GRAY\r\n\r\n* samples/android/video-recorder: Send images to VideoWriter in RGBA format\r\n\r\n### Pull Request Readiness Checklist\r\n\r\nSee details at https://github.com/opencv/opencv/wiki/How_to_contribute#making-a-good-pull-request\r\n\r\n- [x] I agree to contribute to the project under Apache 2 License.\r\n- [x] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\r\n- [x ] The PR is proposed to the proper branch\r\n- [ ] There is a reference to the original bug report and related work\r\n- [ ] There is accuracy test, performance test and test data in opencv_extra repository, if applicable\r\n      Patch to opencv_extra has the same branch name.\r\n- [ ] The feature is well documented and sample code can be built with the project CMake\r\n",
             "commit_timestamp": 1735915980.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1736003211.205313,
+            "elapsed_time": 372.23348116874695,
+            "x64": true,
+            "actual_files_count": 479,
+            "expected_files_count": 459,
+            "memory_traffic": 40978.46361541748,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "ff18c9cc7904e878b10273265196e0238490e692",
+            "commit_message": "Merge pull request #26688 from sturkmen72:gif-png-webp-avif\n\nAnimated GIF APNG WEBP AVIF revisions",
+            "commit_timestamp": 1735998254.0
         }
     ]
 }
