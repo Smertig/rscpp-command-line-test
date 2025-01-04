@@ -19181,6 +19181,21 @@
             "commit_ref": "4c14f03495724f2c52de2d34f1bfa35dd94757c0",
             "commit_message": "gh-89083: improve UUIDv8 uniqueness tests (GH-128149)\n\nimprove UUIDv8 uniqueness tests",
             "commit_timestamp": 1735915882.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1735960341.033851,
+            "elapsed_time": 1188.9961297512054,
+            "x64": true,
+            "actual_files_count": 1052,
+            "expected_files_count": null,
+            "memory_traffic": 48257.32430267334,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "f1574859d7d6cd259f867194762f04b72ef2c340",
+            "commit_message": "gh-125985: Fix `cmodule_function()` scaling benchmark (#128460)\n\nAdd a separate benchmark that measures the effect of\n`_PyObject_LookupSpecial()` on scaling.\n\nIn the process of cleaning up the scaling benchmarks for inclusion, I\nunintentionally changed the \"cmodule_function\" benchmark to pass an\n`int` to `math.floor()` instead of a `float`, which causes it to use the\n`_PyObject_LookupSpecial()` code path. `_PyObject_LookupSpecial()` has\nits own scaling issues that we want to measure separately from calling a\nfunction on a C module.",
+            "commit_timestamp": 1735940927.0
         }
     ]
 }

@@ -21871,6 +21871,21 @@
             "commit_ref": "faf6123150344a3843b7055ca327104332273736",
             "commit_message": "[CMBATT] Implement support for the _BIX method\n\n_BIX is basically _BIF but with more information added, such as cycle count, measurement capacity accuracy and whatnot.\nStarting with ACPI 4.0 _BIF is rendered obsolete and as a matter of fact a lot of modern hardware fill their ACPI machine data to _BIX.\n\nReactOS must go forward and beyond, compatibility with _BIF is kept. NOTE that a machine can ONLY support one battery static information method!\n\nCORE-18969\nCORE-19452\n",
             "commit_timestamp": 1735838493.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1735960158.306636,
+            "elapsed_time": 104.70376086235046,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7454.472465515137,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "afc130ff3f5b089c0270686d1b76b3cb08133e38",
+            "commit_message": "[SHELL32] Pump COM messages while initializing propsheet from IDataObject (#7571)\n\nCORE-19933",
+            "commit_timestamp": 1735931816.0
         }
     ]
 }

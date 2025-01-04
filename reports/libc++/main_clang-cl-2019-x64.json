@@ -3994,6 +3994,23 @@
             "commit_ref": "9d6527bc12547e28b86d180b76fe934a96aa518e",
             "commit_message": "[CodeGen] Add MOTargetFlag4 to MachineMemOperand Flags (#120136)\n\n",
             "commit_timestamp": 1735915552.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1735960306.964377,
+            "elapsed_time": 82.91614317893982,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4959.177947998047,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "a2b9058c392995660956e56c2ac8695a44dc2e4e",
+            "commit_message": "[RISCV] Reduce size of CSR lookup tables. NFC (#121606)\n\nInstead of storing 3 different names in each row of the table, use a\r\nseparate row for each name and use a flag to indicate what type of name\r\nit is. The AltName and DeprecatedName weren't used often enough to\r\njustify storing them as a possibility for every register.\r\n\r\nThis reduces the .rodata size by 27k and reduces the number of dynamic\r\nrelocations since we now only need 1 lookup by name function. The lookup\r\nby name function each contained a ~400 entry table of const char*\r\npointing to constant strings. Each of those requires a dynamic\r\nrelocation.\r\n\r\nI also capitalized IsRV32Only in the C++ code to match coding\r\nstandards.",
+            "commit_timestamp": 1735959853.0
         }
     ]
 }
