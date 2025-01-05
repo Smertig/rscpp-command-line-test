@@ -24153,6 +24153,23 @@
             "commit_ref": "da2a9ede81a88bea0bba28a543441197772e4727",
             "commit_message": "[clang] Update C++ DR status page (#121642)\n\nThis patch brings our C++ DR status page up to date with WG21 updates.\n\n[CWG1223](https://cplusplus.github.io/CWG/issues/1223.html) \"Syntactic\ndisambiguation and _trailing-return-types_\" is resolved by\n[P2915R0](https://wg21.link/p2915r0) \"Proposed resolution for CWG1223\".\nBoth the test and the paper were written by @cor3ntin, so I presume no\nupdates are needed.\n\n[CWG2819](https://cplusplus.github.io/CWG/issues/2819.html) \"Cast from\nnull pointer value in a constant expression\" was revisited and marked as\nnot a DR, so I updated the test to ensure that the example is not\naccepted in C++23 and earlier modes. CC @offsetof.\n\nTentantive resolutions to the following issues were simply promoted to\nactual resolutions, so tests don't require any meaningful changes:\n- [CWG2913](https://cplusplus.github.io/CWG/issues/2913.html) \"Grammar\nfor deduction-guide has requires-clause in the wrong position\"\n(@zyn0217)\n- [CWG2915](https://cplusplus.github.io/CWG/issues/2915.html) \"Explicit\nobject parameters of type void\" (@MitalAshok)\n- [CWG2922](https://cplusplus.github.io/CWG/issues/2922.html) \"constexpr\nplacement-new is too permissive\" (@cor3ntin)\n\nAs a drive-by fix, I updated the `make_cxx_dr_status` script to\naccommodate for `C++23 onwards` and `C++26 onwards` statuses, which are\nuseful for Core issues that are not DRs.",
             "commit_timestamp": 1736002381.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1736047546.360471,
+            "elapsed_time": 1505.1729295253754,
+            "x64": true,
+            "actual_files_count": 2107,
+            "expected_files_count": 1661,
+            "memory_traffic": 252157.03706359863,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "3092ebcd1e2746ee8db22bf3746b2ad2fb7534dd",
+            "commit_message": "[LLD] Add CHECK-NEXT for cgprofile-obj.s tests (#121677)\n\n",
+            "commit_timestamp": 1736046245.0
         }
     ]
 }
