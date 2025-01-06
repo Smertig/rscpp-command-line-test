@@ -23498,6 +23498,21 @@
             "commit_ref": "b0d0aa43e6785f01e2dc4708c23fd8903de26c5c",
             "commit_message": "Fix crash when stringifying pre 1970 dates on Windows\n\n`gmtime*` on Windows fails on dates pre 1970, and because we didn't\ncheck the return code, we would then pass invalid `tm` struct to\n`strftime` causing it to assert.\n\nCloses #2944\n",
             "commit_timestamp": 1736089478.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1736133152.439062,
+            "elapsed_time": 61.74268174171448,
+            "x64": true,
+            "actual_files_count": 282,
+            "expected_files_count": 272,
+            "memory_traffic": 4280.243743896484,
+            "repo_url": "https://github.com/catchorg/Catch2.git",
+            "commit_ref": "914aeecfe23b1e16af6ea675a4fb5dbd5a5b8d0a",
+            "commit_message": "v3.8.0\n",
+            "commit_timestamp": 1736120505.0
         }
     ]
 }
