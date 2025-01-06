@@ -23558,6 +23558,21 @@
             "commit_ref": "1548bfc3497f45399daab58bcec4ab06a0878af1",
             "commit_message": "[opt] Fix too short of match getting generated\n\nThe optimal parser with LDM enabled using minMatch > 3 could generate a match\nlength of 3 when minMatch >= 4. This is not allowed.\n\n1. Fix the bug\n2. Add validation logic to `ZSTD_buildSeqStore()` in debug mode for all block\n   compressors that checks we never generate too short a match. This way we don't\n   rely on the `generate_sequences` fuzzer to find this issue.\n\nCredit to OSS-Fuzz\n",
             "commit_timestamp": 1735922321.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1736175917.878018,
+            "elapsed_time": 70.0581579208374,
+            "x64": true,
+            "actual_files_count": 209,
+            "expected_files_count": null,
+            "memory_traffic": 7439.1906661987305,
+            "repo_url": "https://github.com/facebook/zstd.git",
+            "commit_ref": "1548bfc3497f45399daab58bcec4ab06a0878af1",
+            "commit_message": "[opt] Fix too short of match getting generated\n\nThe optimal parser with LDM enabled using minMatch > 3 could generate a match\nlength of 3 when minMatch >= 4. This is not allowed.\n\n1. Fix the bug\n2. Add validation logic to `ZSTD_buildSeqStore()` in debug mode for all block\n   compressors that checks we never generate too short a match. This way we don't\n   rely on the `generate_sequences` fuzzer to find this issue.\n\nCredit to OSS-Fuzz\n",
+            "commit_timestamp": 1735922321.0
         }
     ]
 }

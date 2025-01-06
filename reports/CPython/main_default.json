@@ -19256,6 +19256,21 @@
             "commit_ref": "a62ba52f1439c1f878a3ff9b8544caf9aeef9b90",
             "commit_message": "gh-98188: Fix EmailMessage.get_payload to decode data when CTE value has extra text (#127547)\n\nUp to this point message handling has been very strict with regards to content encoding values: mixed case was accepted, but trailing blanks or other text would cause decoding failure, even if the first token was a valid encoding.  By Postel's Rule we should go ahead and decode as long as we can recognize that first token.  We have not thought of any security or backward compatibility concerns with this fix.\r\n\r\nThis fix does introduce a new technique/pattern to the Message code: we look to see if the header has a 'cte' attribute, and if so we use that.  This effectively promotes the header API exposed by HeaderRegistry to an API that any header parser \"should\" support.  This seems like a reasonable thing to do.  It is not, however, a requirement, as the string value of the header is still used if there is no cte attribute.\r\n\r\nThe full fix (ignore any trailing blanks or blank-separated trailing text) applies only to the non-compat32 API.  compat32 is only fixed to the extent that it now ignores trailing spaces.  Note that the HeaderRegistry parsing still records a HeaderDefect if there is extra text.\r\n\r\nCo-authored-by: B\u00e9n\u00e9dikt Tran <10796600+picnixz@users.noreply.github.com>",
             "commit_timestamp": 1736127136.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1736176188.09888,
+            "elapsed_time": 1145.4028098583221,
+            "x64": true,
+            "actual_files_count": 1052,
+            "expected_files_count": null,
+            "memory_traffic": 48093.74405670166,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "b9c693dcca01537eee1ef716ffebc632be37594b",
+            "commit_message": "GH-128073: Include `EXIT_IF` when checking for escaping calls (GH-128537)\n\n",
+            "commit_timestamp": 1736172982.0
         }
     ]
 }
