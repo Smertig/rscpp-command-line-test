@@ -22121,6 +22121,21 @@
             "commit_ref": "f6dd67ced315af995ddbcb0100af57cc7794ff52",
             "commit_message": "DOC: Fix various typos in Modules directory\n\nFound via codespell -q 3 -S \"./Modules/ThirdParty,./Documentation/docs/releases,./Documentation/ReleaseNotes\" -L anc,ans,ba,checkin,childrens,developpement,delte,dota,dum,fiter,indx,inout,isit,ist,iterm,lsit,listin,nd,numer,ot,positionn,serie,sme,te,thirdparty,unser\n",
             "commit_timestamp": 1736207386.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1736264238.669162,
+            "elapsed_time": 201.8206684589386,
+            "x64": true,
+            "actual_files_count": 101,
+            "expected_files_count": null,
+            "memory_traffic": 23784.267974853516,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "a2bef9ce65145392ee699f82c866f5a1e0b8d201",
+            "commit_message": "BUG: fixed accidently dead code found by cppcheck\n\nFrom the look of the enum, and the other branches in the inner `if`, I think this change is what the author intended.\n\ncppcheck warned:\n\nidenticalInnerCondition,ITK/Modules/Core/Mesh/include/itkConnectedRegionsMeshFilter.hxx:218,warning,Identical inner 'if' condition is always true.\n",
+            "commit_timestamp": 1736241818.0
         }
     ]
 }
