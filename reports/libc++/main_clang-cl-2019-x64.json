@@ -4096,6 +4096,23 @@
             "commit_ref": "7cb6e6bced8ca5767c3e609f4826982638fd9543",
             "commit_message": "[libc] Fix sort test failing on NVPTX\n\nSummary:\nThis test uses too much stack and crashes, make the buffer `static` to\npush it to `.bss`. This shouldn't change behavior because the tests are\nall run single threaded.\n",
             "commit_timestamp": 1736175871.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1736219660.37348,
+            "elapsed_time": 72.02563405036926,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4971.826515197754,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "737d6ca44d383bcf33a0605a7d9014027296269a",
+            "commit_message": "[RISCV] Add Qualcomm uC Xqcicm (Conditional Move) extension  (#121752)\n\nThe Qualcomm uC Xqcicm extension adds 13 conditional move instructions.\r\n\r\nThe current spec can be found at:\r\nhttps://github.com/quic/riscv-unified-db/releases/latest\r\n\r\nThis patch adds assembler only support.\r\n\r\n---------\r\n\r\nCo-authored-by: Harsh Chandel <hchandel@qti.qualcomm.com>",
+            "commit_timestamp": 1736218500.0
         }
     ]
 }

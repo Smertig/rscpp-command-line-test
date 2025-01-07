@@ -23503,6 +23503,21 @@
             "commit_ref": "c5ed9d4b193e0c1563282aebcfad57fecb0b4969",
             "commit_message": "Fix module type hint (#5469)\n\n* Fix module type hint\r\n\r\n\"module\" is not a valid python value.\r\nThe correct type hint for a module object is \"types.ModuleType\" which has existed since at least Python 2.6\r\n\r\n* Added module type hint test\r\n\r\n* style: pre-commit fixes\r\n\r\n* Remove doc function\r\n\r\n* Fixed type hint\r\n\r\n---------\r\n\r\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>",
             "commit_timestamp": 1735617210.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1736219496.01644,
+            "elapsed_time": 141.45994424819946,
+            "x64": true,
+            "actual_files_count": 381,
+            "expected_files_count": 197,
+            "memory_traffic": 18407.23663330078,
+            "repo_url": "https://github.com/pybind/pybind11",
+            "commit_ref": "a09cf61844f81f41eb56e22256beeac27b755010",
+            "commit_message": "chore(deps): update pre-commit hooks (#5488)\n\nupdates:\r\n- [github.com/pre-commit/mirrors-clang-format: v19.1.4 \u2192 v19.1.6](https://github.com/pre-commit/mirrors-clang-format/compare/v19.1.4...v19.1.6)\r\n- [github.com/astral-sh/ruff-pre-commit: v0.8.1 \u2192 v0.8.6](https://github.com/astral-sh/ruff-pre-commit/compare/v0.8.1...v0.8.6)\r\n- [github.com/pre-commit/mirrors-mypy: v1.13.0 \u2192 v1.14.1](https://github.com/pre-commit/mirrors-mypy/compare/v1.13.0...v1.14.1)\r\n- [github.com/PyCQA/pylint: v3.3.2 \u2192 v3.3.3](https://github.com/PyCQA/pylint/compare/v3.3.2...v3.3.3)\r\n\r\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>",
+            "commit_timestamp": 1736217811.0
         }
     ]
 }

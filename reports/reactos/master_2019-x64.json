@@ -21961,6 +21961,21 @@
             "commit_ref": "e4748fe448e3e8b04d8082c7ca5e250706a4a8d9",
             "commit_message": "[NTOS:IO] IoVolumeDeviceToDosName(): Add SAL2 annotations, fix pool tag (#6989)\n\nThe DEV2DOS tag value is from the official Windows pooltag.txt file.\n",
             "commit_timestamp": 1736111219.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1736219509.627594,
+            "elapsed_time": 96.02873730659485,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7415.717193603516,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "6363f7820dbe6a7a3b3f4e73d5e0bbc30d787a4b",
+            "commit_message": "[NTOS:IO] Fix special case in IopQueryNameInternal() (#7592)\n\nCORE-13525\n\nThis case is invoked from NtQueryObject(ObjectNameInformation).\n",
+            "commit_timestamp": 1736195418.0
         }
     ]
 }
