@@ -24255,6 +24255,23 @@
             "commit_ref": "96f8cfe4d05049abde300480812c6a96879ccdf8",
             "commit_message": "Cosmetic fixes in the code and typos in Python bindings docs (#121791)\n\nDescription:\n- removed trailing spaces in few files\n- fixed markdown link definition:",
             "commit_timestamp": 1736263921.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1736306625.331417,
+            "elapsed_time": 1556.3501625061035,
+            "x64": true,
+            "actual_files_count": 2110,
+            "expected_files_count": 1661,
+            "memory_traffic": 252387.73990631104,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "b253a80f54fab085322bd856ba7f88c4773f0774",
+            "commit_message": "[RISCV][VLOPT] Add mask load to isSupported and getOperandInfo (#122030)\n\nAdd mask store to getOperandInfo since it has the same behavior.",
+            "commit_timestamp": 1736305677.0
         }
     ]
 }
