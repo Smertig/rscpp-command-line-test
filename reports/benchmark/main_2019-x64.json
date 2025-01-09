@@ -23268,6 +23268,21 @@
             "commit_ref": "077db43001b42af3ad23e993b2bdcb4fadb7bcf8",
             "commit_message": "cycleclock: Use cock_gettime() as fallback for any Linux architecture (#1899)\n\nThe Linux kernel provides the clock_gettime() functions since a long\r\ntime already, so it's possible to use it as a generic fallback option\r\nfor any architecture if no other (better) possibility has been provided\r\ninstead.\r\n\r\nI noticed the benchmark package failed to build on debian on the SH-4\r\narchitecture, so with this change SH-4 is now the first user of this\r\nfallback option.",
             "commit_timestamp": 1736355248.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1736435241.670393,
+            "elapsed_time": 97.59883284568787,
+            "x64": true,
+            "actual_files_count": 88,
+            "expected_files_count": 86,
+            "memory_traffic": 4920.068321228027,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "39be87d3004ff9ff4cdf736651af80c3d15e2497",
+            "commit_message": "Fix runtime crash when parsing /proc/cpuinfo fails (#1900)\n\nThe testcase fails on sparc64, because the parsing of /proc/cpuinfo\r\nfails and thus currently returns \"0\" CPUs which finally leads\r\nto division-by-zero faults in the tests.\r\n\r\nFix the issue by returning at least \"1\" CPU which allows the\r\ntests to run. A error message will be printed in any case.\r\n\r\nLong-term the code should be fixed to parse the cpuinfo output\r\non sparch which looks like this:\r\n...\r\ntype            : sun4v\r\nncpus probed    : 48\r\nncpus active    : 48",
+            "commit_timestamp": 1736419649.0
         }
     ]
 }
