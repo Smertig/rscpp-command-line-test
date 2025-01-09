@@ -23253,6 +23253,21 @@
             "commit_ref": "f981f58da37d1e7214f8b498d5055e48361380b9",
             "commit_message": "README.md: fix build instructions (#1880)\n\nCo-authored-by: dominic <510002+dmah42@users.noreply.github.com>",
             "commit_timestamp": 1736340549.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1736392947.887939,
+            "elapsed_time": 79.71845293045044,
+            "x64": true,
+            "actual_files_count": 88,
+            "expected_files_count": 86,
+            "memory_traffic": 4947.092041015625,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "077db43001b42af3ad23e993b2bdcb4fadb7bcf8",
+            "commit_message": "cycleclock: Use cock_gettime() as fallback for any Linux architecture (#1899)\n\nThe Linux kernel provides the clock_gettime() functions since a long\r\ntime already, so it's possible to use it as a generic fallback option\r\nfor any architecture if no other (better) possibility has been provided\r\ninstead.\r\n\r\nI noticed the benchmark package failed to build on debian on the SH-4\r\narchitecture, so with this change SH-4 is now the first user of this\r\nfallback option.",
+            "commit_timestamp": 1736355248.0
         }
     ]
 }

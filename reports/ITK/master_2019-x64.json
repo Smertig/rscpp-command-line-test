@@ -22166,6 +22166,21 @@
             "commit_ref": "b5908617a1eb643bd8e56577c20ed5891154a013",
             "commit_message": "Merge pull request #5124 from thewtex/datalad-archive-clean\n\nDOC: Remove datalad archive before regenerating",
             "commit_timestamp": 1736306748.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1736393198.154042,
+            "elapsed_time": 231.01502442359924,
+            "x64": true,
+            "actual_files_count": 101,
+            "expected_files_count": null,
+            "memory_traffic": 23893.358108520508,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "dbb5005aa31286b99862b09b94570a56ae7eb0d8",
+            "commit_message": "DOC: Fix legacy methods `itk::Transform` Doxygen warnings\n\nFix legacy methods `itk::Transform` Doxygen warnings: protect with the\n`ITK_LEGACY_REMOVE` macro definition a function declared as legacy with\nthe `itkLegacyMacro` in `itk::Transform`.\n\nFixes:\n```\nWarning\nParsing file /home/kitware/DashboModules/Core/Transform/include/itkTransform.h:535:\n warning: Illegal member name found.\n```\n\nand\n```\nWarning\nModules/Core/Transform/include/itkTransform.h:535:\n warning: no uniquely matching class member found for\n  itk::Transform::virtual void itk::Transform< TParametersValueType, VInputDimension, VOutputDimension >::ComputeInverseJacobianWithRespectToPosition() const &\n```\n\nRaised for example in:\nhttps://open.cdash.org/viewBuildError.php?type=1&buildid=10124761\n",
+            "commit_timestamp": 1736353939.0
         }
     ]
 }
