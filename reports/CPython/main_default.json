@@ -19361,6 +19361,21 @@
             "commit_ref": "43ac9f505903ba806aa6a5d93e6a67beb04bebc4",
             "commit_message": "gh-128673: Increase coverage of `typing.get_type_hints` (#128674)\n\n",
             "commit_timestamp": 1736432703.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1736478887.839191,
+            "elapsed_time": 1200.2913711071014,
+            "x64": true,
+            "actual_files_count": 1053,
+            "expected_files_count": null,
+            "memory_traffic": 48323.572845458984,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "c1417487e98e270d614965ed78ff9439044b65a6",
+            "commit_message": "gh-128691: Use deferred reference counting on `_thread._local` (#128693)\n\nThis change, along with the LOAD_ATTR specializations, makes the\n\"thread_local_read\" micro benchmark in Tools/ftscalingbench/ftscalingbench.py\nscale well to multiple threads.",
+            "commit_timestamp": 1736470750.0
         }
     ]
 }

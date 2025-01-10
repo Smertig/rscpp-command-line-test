@@ -23283,6 +23283,21 @@
             "commit_ref": "39be87d3004ff9ff4cdf736651af80c3d15e2497",
             "commit_message": "Fix runtime crash when parsing /proc/cpuinfo fails (#1900)\n\nThe testcase fails on sparc64, because the parsing of /proc/cpuinfo\r\nfails and thus currently returns \"0\" CPUs which finally leads\r\nto division-by-zero faults in the tests.\r\n\r\nFix the issue by returning at least \"1\" CPU which allows the\r\ntests to run. A error message will be printed in any case.\r\n\r\nLong-term the code should be fixed to parse the cpuinfo output\r\non sparch which looks like this:\r\n...\r\ntype            : sun4v\r\nncpus probed    : 48\r\nncpus active    : 48",
             "commit_timestamp": 1736419649.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1736478734.804149,
+            "elapsed_time": 82.93801546096802,
+            "x64": true,
+            "actual_files_count": 88,
+            "expected_files_count": 86,
+            "memory_traffic": 4921.22639465332,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "c24774dc4f4402c3ad150363321cc972ed2669e7",
+            "commit_message": "Get number of CPUs with sysconf() on Linux (#1901)\n\n* Get number of CPUs with sysconf() on Linux\r\n\r\nAvoid parsing the /proc/cpuinfo just to get number of CPUs.\r\nInstead use the portable function provided by glibc.\r\n\r\n* Update sysinfo.cc",
+            "commit_timestamp": 1736438863.0
         }
     ]
 }

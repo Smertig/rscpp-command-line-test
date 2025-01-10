@@ -22428,6 +22428,21 @@
             "commit_ref": "9a102e2aff99ecaf2ad1e5ca59fc1c893d5e9b7c",
             "commit_message": "Fix negation type 'inner' method in user-defined type functions (#1582)\n\nFixes #1580",
             "commit_timestamp": 1734723043.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1736478742.98233,
+            "elapsed_time": 291.1564757823944,
+            "x64": true,
+            "actual_files_count": 477,
+            "expected_files_count": 379,
+            "memory_traffic": 33791.16065979004,
+            "repo_url": "https://github.com/luau-lang/luau",
+            "commit_ref": "8a4ef26f89d959d94333fee41d09387b278d0e8d",
+            "commit_message": "Implement support for math.lerp (#1608)\n\nThis change implements math.lerp RFC with C function definition, builtin\r\nfunction, builtin constant folding and tests.\r\n\r\nThe tests validate a few lerp properties by providing counter-examples\r\nfor popular lerp implementations; the testing is of course not\r\nexhaustive, as exhaustive testing was done offline using fuzzing.\r\n\r\nType definitions will be updated separately.\r\n\r\nCodegen support will be implemented separately: it requires new IR for\r\nconditional\r\nselects to represent the desired logic without using a branch.",
+            "commit_timestamp": 1736444527.0
         }
     ]
 }
