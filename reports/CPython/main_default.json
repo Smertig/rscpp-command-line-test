@@ -19376,6 +19376,21 @@
             "commit_ref": "c1417487e98e270d614965ed78ff9439044b65a6",
             "commit_message": "gh-128691: Use deferred reference counting on `_thread._local` (#128693)\n\nThis change, along with the LOAD_ATTR specializations, makes the\n\"thread_local_read\" micro benchmark in Tools/ftscalingbench/ftscalingbench.py\nscale well to multiple threads.",
             "commit_timestamp": 1736470750.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1736521784.620041,
+            "elapsed_time": 1284.6983108520508,
+            "x64": true,
+            "actual_files_count": 1053,
+            "expected_files_count": null,
+            "memory_traffic": 48160.004302978516,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "802556abfa008abe0bdd78e6f9e18bef71db90c1",
+            "commit_message": "gh-127257: Add hex code to ssl \"unknown error\" message (GH-127360)\n\n* ssl: Add hex error code to \"unknown error\" messages\n\nTo make it easier to vary the individual parts of the message,\nreplace the if-ladder with constant format strings by building\nthe string piece-wise with PyUnicodeWriter.\n\nUse \"unknown error (0x%x)\" rather than just \"unknown error\" if we\ncan't get a better error message. (Hex makes sense as the error\nincludes two packed parts.)\n",
+            "commit_timestamp": 1736513991.0
         }
     ]
 }
