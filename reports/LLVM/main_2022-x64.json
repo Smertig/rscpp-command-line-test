@@ -24374,6 +24374,23 @@
             "commit_ref": "82aac16ddda8f61d8f547bd127f39b4e81e40464",
             "commit_message": "[bazel] Remove obsolete exclusion from glob.\n\nlib/Tooling/NodeIntrospection.cpp was deleted in commit\n371eccd5dfed88c8e76449233d8388c12be3464b so excluding it from the glob\ndoes nothing.\n",
             "commit_timestamp": 1736561966.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1736608749.702805,
+            "elapsed_time": 1482.3199751377106,
+            "x64": true,
+            "actual_files_count": 2110,
+            "expected_files_count": 1661,
+            "memory_traffic": 252590.68949890137,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "0249554ee1ac49e6f1d93fa78a55971fc706f635",
+            "commit_message": "[clang-tidy] fix incorrect configuration file path resolving when file paths contain `..` (#121323)\n\n`makeAbsolute` will not normalize path. When getting parent folder, `..`\nwill go into the subfolder instead of the parent folder.",
+            "commit_timestamp": 1736607107.0
         }
     ]
 }
