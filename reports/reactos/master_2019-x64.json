@@ -22081,6 +22081,21 @@
             "commit_ref": "02032b71068c9d5808f20dbd7401674b84cb1a2f",
             "commit_message": "[PSDK] Fix BATTERY_UNKNOWN_TIME value constant\n\nWindows SDKs define this constant to 0xFFFFFFFF but we define it to 0x80000000.\nAs a result, when our COMPBATT driver is being tested on Windows (namely XP, Vista and 7), BATTERY_UNKNOWN_TIME is not interpreted as UNKNOWN TIME but entirely something else.\n\nCORE-18969\nCORE-19452\n",
             "commit_timestamp": 1736376555.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1736565011.112029,
+            "elapsed_time": 85.07671904563904,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7501.116889953613,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "e5a6b0f8e572ee1872b987ad7d10418eac073cdf",
+            "commit_message": "[SHELL32] SHELL_ArgifyW(): don't use SearchPathW() for receiving a path to a file (#7605)\n\nGet rid from bogus SearchPathW() call, which is marked as most likely not needed in the comment above (by Wine). Simply get a length of the file name and use the file name directly instead, with checking for its validity too. Similarly as it's done for other cases.\r\nThat call seems actually not needed because it is already done using SearchPathW() in another parts of the code in this file, before calling SHELL_ArgifyW().\r\nFixes another heap corruption when trying to login via OAuth menthod in SpotifyXP 2.0.3 Beta (nightly build). The previous commit did not fix the bug fully, as I discovered it later.\r\nCORE-19953",
+            "commit_timestamp": 1736538343.0
         }
     ]
 }
