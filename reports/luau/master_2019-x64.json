@@ -22488,6 +22488,21 @@
             "commit_ref": "c759cd5581f570980cf05186b0db58e65371c9fb",
             "commit_message": "Sync to upstream/release/656 (#1612)\n\n# General\r\n\r\nAll code has been re-formatted by `clang-format`; this is not\r\nmechanically enforced, so Luau may go out-of-sync over the course of the\r\nyear.\r\n\r\n# New Solver\r\n\r\n* Track free types interior to a block of code on `Scope`, which should\r\nreduce the number of free types that remain un-generalized after type\r\nchecking is complete (e.g.: less errors like `'a <: number is\r\nincompatible with number`).\r\n\r\n# Autocomplete\r\n\r\n* Fragment autocomplete now does *not* provide suggestions within\r\ncomments (matching non-fragment autocomplete behavior).\r\n* Autocomplete now respects iteration and recursion limits (some hangs\r\nwill now early exit with a \"unification too complex error,\" some crashes\r\nwill now become internal complier exceptions).\r\n\r\n# Runtime\r\n\r\n* Add a limit to how many Luau codegen slot nodes addresses can be in\r\nuse at the same time (fixes #1605, fixes #1558).\r\n* Added constant folding for vector arithmetic (fixes #1553).\r\n* Added support for `buffer.readbits` and `buffer.writebits` (see:\r\nhttps://github.com/luau-lang/rfcs/pull/18).\r\n\r\n---\r\n\r\nCo-authored-by: Aaron Weiss <aaronweiss@roblox.com>\r\nCo-authored-by: David Cope <dcope@roblox.com>\r\nCo-authored-by: Hunter Goldstein <hgoldstein@roblox.com>\r\nCo-authored-by: Vighnesh Vijay <vvijay@roblox.com>\r\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>",
             "commit_timestamp": 1736537679.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1736651713.416628,
+            "elapsed_time": 291.8493185043335,
+            "x64": true,
+            "actual_files_count": 477,
+            "expected_files_count": 379,
+            "memory_traffic": 33953.25598144531,
+            "repo_url": "https://github.com/luau-lang/luau",
+            "commit_ref": "c759cd5581f570980cf05186b0db58e65371c9fb",
+            "commit_message": "Sync to upstream/release/656 (#1612)\n\n# General\r\n\r\nAll code has been re-formatted by `clang-format`; this is not\r\nmechanically enforced, so Luau may go out-of-sync over the course of the\r\nyear.\r\n\r\n# New Solver\r\n\r\n* Track free types interior to a block of code on `Scope`, which should\r\nreduce the number of free types that remain un-generalized after type\r\nchecking is complete (e.g.: less errors like `'a <: number is\r\nincompatible with number`).\r\n\r\n# Autocomplete\r\n\r\n* Fragment autocomplete now does *not* provide suggestions within\r\ncomments (matching non-fragment autocomplete behavior).\r\n* Autocomplete now respects iteration and recursion limits (some hangs\r\nwill now early exit with a \"unification too complex error,\" some crashes\r\nwill now become internal complier exceptions).\r\n\r\n# Runtime\r\n\r\n* Add a limit to how many Luau codegen slot nodes addresses can be in\r\nuse at the same time (fixes #1605, fixes #1558).\r\n* Added constant folding for vector arithmetic (fixes #1553).\r\n* Added support for `buffer.readbits` and `buffer.writebits` (see:\r\nhttps://github.com/luau-lang/rfcs/pull/18).\r\n\r\n---\r\n\r\nCo-authored-by: Aaron Weiss <aaronweiss@roblox.com>\r\nCo-authored-by: David Cope <dcope@roblox.com>\r\nCo-authored-by: Hunter Goldstein <hgoldstein@roblox.com>\r\nCo-authored-by: Vighnesh Vijay <vvijay@roblox.com>\r\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>",
+            "commit_timestamp": 1736537679.0
         }
     ]
 }

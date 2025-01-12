@@ -23343,6 +23343,21 @@
             "commit_ref": "c24774dc4f4402c3ad150363321cc972ed2669e7",
             "commit_message": "Get number of CPUs with sysconf() on Linux (#1901)\n\n* Get number of CPUs with sysconf() on Linux\r\n\r\nAvoid parsing the /proc/cpuinfo just to get number of CPUs.\r\nInstead use the portable function provided by glibc.\r\n\r\n* Update sysinfo.cc",
             "commit_timestamp": 1736438863.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1736651632.911399,
+            "elapsed_time": 52.377028942108154,
+            "x64": true,
+            "actual_files_count": 88,
+            "expected_files_count": 86,
+            "memory_traffic": 4919.044303894043,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "c24774dc4f4402c3ad150363321cc972ed2669e7",
+            "commit_message": "Get number of CPUs with sysconf() on Linux (#1901)\n\n* Get number of CPUs with sysconf() on Linux\r\n\r\nAvoid parsing the /proc/cpuinfo just to get number of CPUs.\r\nInstead use the portable function provided by glibc.\r\n\r\n* Update sysinfo.cc",
+            "commit_timestamp": 1736438863.0
         }
     ]
 }

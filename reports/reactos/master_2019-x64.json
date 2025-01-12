@@ -22111,6 +22111,21 @@
             "commit_ref": "e5a6b0f8e572ee1872b987ad7d10418eac073cdf",
             "commit_message": "[SHELL32] SHELL_ArgifyW(): don't use SearchPathW() for receiving a path to a file (#7605)\n\nGet rid from bogus SearchPathW() call, which is marked as most likely not needed in the comment above (by Wine). Simply get a length of the file name and use the file name directly instead, with checking for its validity too. Similarly as it's done for other cases.\r\nThat call seems actually not needed because it is already done using SearchPathW() in another parts of the code in this file, before calling SHELL_ArgifyW().\r\nFixes another heap corruption when trying to login via OAuth menthod in SpotifyXP 2.0.3 Beta (nightly build). The previous commit did not fix the bug fully, as I discovered it later.\r\nCORE-19953",
             "commit_timestamp": 1736538343.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1736651652.592599,
+            "elapsed_time": 74.68143033981323,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7414.535675048828,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "37b0646e76b5a78914b904727591909bad206267",
+            "commit_message": "[SDK:WINE] Fix get_temp_buffer() call in wine_dbgstr_wn()\n\nAddendum to commit dbc7eeb47e (PR #4303).\n\nThe argument to get_temp_buffer() should specify the length of the\nstring being buffered + 1 (for the NUL-terminator).\nThe original code wrongly interverted this with specifying the buffer\nshifted by one character.\n",
+            "commit_timestamp": 1736626648.0
         }
     ]
 }

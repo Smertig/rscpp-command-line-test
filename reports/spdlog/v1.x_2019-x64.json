@@ -23678,6 +23678,21 @@
             "commit_ref": "96a8f6250cbf4e8c76387c614f666710a2fa9bad",
             "commit_message": "fix: remove unused to_string_view overload in fmt >= 11.1 (#3314)\n\n",
             "commit_timestamp": 1736463526.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1736651624.861945,
+            "elapsed_time": 46.88212585449219,
+            "x64": true,
+            "actual_files_count": 109,
+            "expected_files_count": 107,
+            "memory_traffic": 3861.5182189941406,
+            "repo_url": "https://github.com/gabime/spdlog.git",
+            "commit_ref": "ad0f31c00967b342cdccc5c4b585d508b9b3ccd3",
+            "commit_message": "Enabled bin_to_hex utest for stdformat, fixed std::formatter (#3315)\n\n* Enabled bin_to_hex utest for stdformat, and fixed std::formatter\r\n\r\n* fixed usage of \\ in macos.yml\r\n\r\n* explicitly cast diff variable in test_sink\r\n\r\n* moved from ::iterator to decltype\r\n\r\n* added fix for custom callbacks\r\n\r\n---------\r\n\r\nCo-authored-by: Jan Koniarik <veverak@Jans-MacBook-Pro.local>",
+            "commit_timestamp": 1736608899.0
         }
     ]
 }
