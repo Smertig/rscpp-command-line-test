@@ -19436,6 +19436,21 @@
             "commit_ref": "22a442181d5f1ac496dac08e24fd852de404882f",
             "commit_message": "GH-128520: Divide pathlib ABCs into three classes (#128523)\n\nIn the private pathlib ABCs, rename `PurePathBase` to `JoinablePath`, and\r\nsplit `PathBase` into `ReadablePath` and `WritablePath`. This improves the\r\nAPI fit for read-only virtual filesystems.\r\n\r\nThe split of `PathBase` entails a similar split of `CopyWorker` (implements\r\ncopying) and the test cases in `test_pathlib_abc`.\r\n\r\nIn a later patch, we'll make `WritablePath` inherit directly from\r\n`JoinablePath` rather than `ReadablePath`. For a couple of reasons,\r\nthis isn't quite possible yet.",
             "commit_timestamp": 1736623667.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1736694519.701011,
+            "elapsed_time": 1136.9879162311554,
+            "x64": true,
+            "actual_files_count": 1053,
+            "expected_files_count": null,
+            "memory_traffic": 48239.880630493164,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "5e65a1acc0b630397f1d190aed279114e6e99612",
+            "commit_message": "gh-128731: Fix ResourceWarning in robotparser.RobotFileParser.read() (GH-128733)\n\n",
+            "commit_timestamp": 1736687686.0
         }
     ]
 }
