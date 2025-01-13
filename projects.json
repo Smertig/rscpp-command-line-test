@@ -1124,7 +1124,7 @@
     "CPython": {
         "sources": {
             "repo": "https://github.com/python/cpython",
-            "commit": "e6373c0d8b59512aa7f0dea7f3fb162b6ed10fa4"
+            "commit": "b70a567575db37846beecbe8b40fb56b875274db"
         },
         "required toolchain": ["2022-x64"],
         "custom build tool": {
@@ -1135,17 +1135,23 @@
         },
         "only x64": true,
         "stable": {
+            "known file errors": [
+                {
+                    "file": "..\\Include\\cpython\\pystats.h",
+                    "message": "Not directly included in build? (unresolved macro `PyAPI_DATA`)"
+                }
+            ],
             "known errors": [
                 {
                     "file": "..\\PC\\launcher.c",
-                    "line": 1682,
+                    "line": 1683,
                     "message": "Cannot resolve symbol 'MAXINT'",
                     "flaky": true,
                     "reason": "Can't find this macro anywhere ¯\\_(ツ)_/¯"
                 },
                 {
                     "file": "..\\Include\\py_curses.h",
-                    "line": 62,
+                    "line": 79,
                     "message": "Expected a declaration",
                     "reason": "TODO"
                 }
