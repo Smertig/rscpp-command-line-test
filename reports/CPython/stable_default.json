@@ -10820,6 +10820,21 @@
             "commit_ref": "e6373c0d8b59512aa7f0dea7f3fb162b6ed10fa4",
             "commit_message": "gh-101524: Only Use Public C-API in the _xxsubinterpreters Module (gh-105258)\n\nThe _xxsubinterpreters module was meant to only use public API.  Some internal C-API usage snuck in over the last few years (e.g. gh-28969).  This fixes that.",
             "commit_timestamp": 1685746353.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1736789141.898729,
+            "elapsed_time": 1126.8998992443085,
+            "x64": true,
+            "actual_files_count": 1053,
+            "expected_files_count": null,
+            "memory_traffic": 48312.374656677246,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "b70a567575db37846beecbe8b40fb56b875274db",
+            "commit_message": "gh-125997: Increase test coverage for `time.sleep()` (#128751)\n\n- Add tests for durations of invalid types.\n- Add tests for `int` and `float` durations, including signed zeroes durations.\n- Add tests for nonzero very small durations and durations close to the clock resolution.\n\n---------\n\nCo-authored-by: Victor Stinner <vstinner@python.org>",
+            "commit_timestamp": 1736787491.0
         }
     ]
 }
