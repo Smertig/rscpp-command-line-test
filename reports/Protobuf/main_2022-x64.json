@@ -3674,6 +3674,21 @@
             "commit_ref": "ea6908141250427b4a6f77f23b72ce766d339272",
             "commit_message": "Auto-generate files after cl/680562664\n",
             "commit_timestamp": 1727706642.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1736790006.243818,
+            "elapsed_time": 305.6385099887848,
+            "x64": true,
+            "actual_files_count": 1159,
+            "expected_files_count": 818,
+            "memory_traffic": 39611.03202056885,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "5106654585fa5349888b64dbed0327097ebb4a78",
+            "commit_message": "Introduce weirder names for the oneof generated structs to minimize collisions.\n\nGiven:\noneof hello_world {}\n\nWe now generate:\nfn hello_world(&self) -> HelloWorldOneof\nfn hello_world_case(&self) -> HelloWorldCase\n\nThis change is to help mitigate a realistic risk of collisions in cases like:\n\nmessage M {\n  oneof x { ... }\n  enum X { ... }\n}\n\nPiperOrigin-RevId: 714998247\n",
+            "commit_timestamp": 1736789520.0
         }
     ]
 }

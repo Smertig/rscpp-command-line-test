@@ -24459,6 +24459,23 @@
             "commit_ref": "99612a3a18e0c40aac9c52b68e67b106f97ed4fa",
             "commit_message": "[win/asan] GetInstructionSize: Support some more 2 byte instructions. (#120235)\n\nThis patch adds several instructions seen when trying to run a\r\nexecutable built with ASan with llvm-mingw.\r\n(x86 and x86_64, using the git tip in llvm-project).\r\n\r\nAlso includes instructions collected by\r\nRoman Pi\u0161l and Eric Pouech in the Wine bug reports below.\r\n\r\n```\r\nRelated: https://github.com/llvm/llvm-project/issues/96270\r\n\r\nCo-authored-by: Roman Pi\u0161l <rpisl@seznam.cz>\r\n                https://bugs.winehq.org/show_bug.cgi?id=50993\r\n                https://bugs.winehq.org/attachment.cgi?id=70233\r\nCo-authored-by: Eric Pouech <eric.pouech@gmail.com>\r\n                https://bugs.winehq.org/show_bug.cgi?id=52386\r\n                https://bugs.winehq.org/attachment.cgi?id=71626\r\n```\r\n\r\nCC: @zmodem",
             "commit_timestamp": 1736778063.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1736790639.005541,
+            "elapsed_time": 1608.7733812332153,
+            "x64": true,
+            "actual_files_count": 2110,
+            "expected_files_count": 1661,
+            "memory_traffic": 252514.35118865967,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "092d6283838dea79670750b9415955c5f0cb5178",
+            "commit_message": "[SLP]Check for div/rem instructions before extending with poisons\n\nNeed to check if the instructions can be safely extended with poison\nbefore actually doing this to avoid incorrect transformations.\n\nFixes #122691\n",
+            "commit_timestamp": 1736789307.0
         }
     ]
 }
