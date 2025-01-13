@@ -22141,6 +22141,21 @@
             "commit_ref": "37b0646e76b5a78914b904727591909bad206267",
             "commit_message": "[SDK:WINE] Fix get_temp_buffer() call in wine_dbgstr_wn()\n\nAddendum to commit dbc7eeb47e (PR #4303).\n\nThe argument to get_temp_buffer() should specify the length of the\nstring being buffered + 1 (for the NUL-terminator).\nThe original code wrongly interverted this with specifying the buffer\nshifted by one character.\n",
             "commit_timestamp": 1736626648.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1736738042.467854,
+            "elapsed_time": 103.88083291053772,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7477.850257873535,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "a97fcf19ecd2d73def84fc60d206372883599631",
+            "commit_message": "[CMBATT] Minor improvements to estimated battery time code\n\n- Declare CMBATT_DISCHARGE_TIME and CMBATT_CAPACITY_BOGUS constructs\n- Determine if the battery was already discharging and if not, update the time when it's being discharged\n- Fix the condition where it checks if the battery has been discharging for quite some time\n- Default the time to BATTERY_UNKNOWN_TIME if querying the estimated battery time request fails or if the battery has just started discharging not over 15 seconds\n\nCORE-18969\nCORE-19452\n",
+            "commit_timestamp": 1736708414.0
         }
     ]
 }

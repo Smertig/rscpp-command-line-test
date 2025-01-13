@@ -24425,6 +24425,23 @@
             "commit_ref": "d080f78772acf9de4961b89062c02fdd5f82186a",
             "commit_message": "[Clang] Fixed a crash when __PRETTY_FUNCTION__ or __FUNCSIG__ (clang-cl) appears in the trailing return type of the lambda  (#122611)\n\nThe (function) type of the lambda function is null while parsing\ntrailing return type. The type is filled-in when the lambda body is\nentered. So, resolving `__PRETTY_FUNCTION__` before the lambda body is\nentered causes the crash.\n\nFixes #121274.",
             "commit_timestamp": 1736692924.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1736738851.196604,
+            "elapsed_time": 1544.6680998802185,
+            "x64": true,
+            "actual_files_count": 2110,
+            "expected_files_count": 1661,
+            "memory_traffic": 252597.15780639648,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "acbd822879f7727127926c25e1b47f5017f962c5",
+            "commit_message": "Fix print module manifest file for macos (#122370)\n\nThis commit fixes -print-library-module-manifest-path on macos.\r\nCurrently, this only works on linux systems. This is because on macos\r\nsystems the library and header files are installed in a different\r\nlocation. The module manifest is next to the libraries and the search\r\nfunction was not looking in both places. There is also a test included.",
+            "commit_timestamp": 1736734820.0
         }
     ]
 }

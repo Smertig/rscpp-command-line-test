@@ -19451,6 +19451,21 @@
             "commit_ref": "5e65a1acc0b630397f1d190aed279114e6e99612",
             "commit_message": "gh-128731: Fix ResourceWarning in robotparser.RobotFileParser.read() (GH-128733)\n\n",
             "commit_timestamp": 1736687686.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1736738224.152769,
+            "elapsed_time": 1115.3123483657837,
+            "x64": true,
+            "actual_files_count": 1053,
+            "expected_files_count": null,
+            "memory_traffic": 48317.522789001465,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "d0ecbdd838034c1f061e9b4e9b54a900141458c3",
+            "commit_message": "gh-128627: Emscripten: Use wasm-gc based call adaptor if available (#128628)\n\nReplaces the trampoline mechanism in Emscripten with an implementation that uses a\r\nrecently added feature of wasm-gc instead of JS type reflection, when that feature is\r\navailable.\r\n",
+            "commit_timestamp": 1736723379.0
         }
     ]
 }
