@@ -23388,6 +23388,21 @@
             "commit_ref": "c24774dc4f4402c3ad150363321cc972ed2669e7",
             "commit_message": "Get number of CPUs with sysconf() on Linux (#1901)\n\n* Get number of CPUs with sysconf() on Linux\r\n\r\nAvoid parsing the /proc/cpuinfo just to get number of CPUs.\r\nInstead use the portable function provided by glibc.\r\n\r\n* Update sysinfo.cc",
             "commit_timestamp": 1736438863.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1736780808.067307,
+            "elapsed_time": 82.97886562347412,
+            "x64": true,
+            "actual_files_count": 88,
+            "expected_files_count": 86,
+            "memory_traffic": 4912.719055175781,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "d6536acfe80d05d2b9e63e4dc786dd1dc9f0b960",
+            "commit_message": "ci: Update pre-commit hooks (#1905)\n\nAs a fix, also turn the comment in libpfm's build file into a proper Starlark\r\ndocstring.\r\n\r\nCo-authored-by: dominic <510002+dmah42@users.noreply.github.com>",
+            "commit_timestamp": 1736775539.0
         }
     ]
 }

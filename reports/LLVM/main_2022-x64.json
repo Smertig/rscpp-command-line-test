@@ -24442,6 +24442,23 @@
             "commit_ref": "acbd822879f7727127926c25e1b47f5017f962c5",
             "commit_message": "Fix print module manifest file for macos (#122370)\n\nThis commit fixes -print-library-module-manifest-path on macos.\r\nCurrently, this only works on linux systems. This is because on macos\r\nsystems the library and header files are installed in a different\r\nlocation. The module manifest is next to the libraries and the search\r\nfunction was not looking in both places. There is also a test included.",
             "commit_timestamp": 1736734820.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1736781625.472644,
+            "elapsed_time": 1687.9840157032013,
+            "x64": true,
+            "actual_files_count": 2110,
+            "expected_files_count": 1661,
+            "memory_traffic": 252840.30648040771,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "99612a3a18e0c40aac9c52b68e67b106f97ed4fa",
+            "commit_message": "[win/asan] GetInstructionSize: Support some more 2 byte instructions. (#120235)\n\nThis patch adds several instructions seen when trying to run a\r\nexecutable built with ASan with llvm-mingw.\r\n(x86 and x86_64, using the git tip in llvm-project).\r\n\r\nAlso includes instructions collected by\r\nRoman Pi\u0161l and Eric Pouech in the Wine bug reports below.\r\n\r\n```\r\nRelated: https://github.com/llvm/llvm-project/issues/96270\r\n\r\nCo-authored-by: Roman Pi\u0161l <rpisl@seznam.cz>\r\n                https://bugs.winehq.org/show_bug.cgi?id=50993\r\n                https://bugs.winehq.org/attachment.cgi?id=70233\r\nCo-authored-by: Eric Pouech <eric.pouech@gmail.com>\r\n                https://bugs.winehq.org/show_bug.cgi?id=52386\r\n                https://bugs.winehq.org/attachment.cgi?id=71626\r\n```\r\n\r\nCC: @zmodem",
+            "commit_timestamp": 1736778063.0
         }
     ]
 }

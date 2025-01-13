@@ -19466,6 +19466,21 @@
             "commit_ref": "d0ecbdd838034c1f061e9b4e9b54a900141458c3",
             "commit_message": "gh-128627: Emscripten: Use wasm-gc based call adaptor if available (#128628)\n\nReplaces the trampoline mechanism in Emscripten with an implementation that uses a\r\nrecently added feature of wasm-gc instead of JS type reflection, when that feature is\r\navailable.\r\n",
             "commit_timestamp": 1736723379.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1736780954.511077,
+            "elapsed_time": 1113.1325619220734,
+            "x64": true,
+            "actual_files_count": 1053,
+            "expected_files_count": null,
+            "memory_traffic": 48242.3791809082,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "75214f87f1ddd1d7b9a5b663a9c688b1bd41c098",
+            "commit_message": "gh-128421: make getters and setters of `BaseException` thread safe (#128728)\n\n",
+            "commit_timestamp": 1736779113.0
         }
     ]
 }
