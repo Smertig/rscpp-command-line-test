@@ -4368,6 +4368,23 @@
             "commit_ref": "64c2156d8802b0d7724f65ce854844670e4ec457",
             "commit_message": "[Wunsafe-buffer-usage] Fix false positive when const sized array is indexed by const evaluatable expressions (#119340)\n\nDo not warn when constant sized array is indexed by expressions that\r\nevaluate to a const value. For instance, sizeof(T) expression value can\r\nbe evaluated at compile time and if an array is indexed by such an\r\nexpression, it's bounds can be validated.\r\n\r\n(rdar://140320289)\r\n\r\nCo-authored-by: MalavikaSamak <malavika2@apple.com>",
             "commit_timestamp": 1736822715.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1736867275.531352,
+            "elapsed_time": 59.94231820106506,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5025.621978759766,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "5e26ff35c14778a728cd3ee7e70d61529bf49661",
+            "commit_message": "[AMDGPU][True16][MC] true16 for v_cmp_lt_f16 (#122499)\n\nTrue16 format for v_cmp_lt_f16. Update VOPC t16 and fake16 pseudo.",
+            "commit_timestamp": 1736867016.0
         }
     ]
 }

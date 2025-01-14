@@ -19511,6 +19511,21 @@
             "commit_ref": "b70a567575db37846beecbe8b40fb56b875274db",
             "commit_message": "gh-125997: Increase test coverage for `time.sleep()` (#128751)\n\n- Add tests for durations of invalid types.\n- Add tests for `int` and `float` durations, including signed zeroes durations.\n- Add tests for nonzero very small durations and durations close to the clock resolution.\n\n---------\n\nCo-authored-by: Victor Stinner <vstinner@python.org>",
             "commit_timestamp": 1736787491.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1736867375.647648,
+            "elapsed_time": 1143.8020360469818,
+            "x64": true,
+            "actual_files_count": 1053,
+            "expected_files_count": null,
+            "memory_traffic": 48232.66126251221,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "bbd3300ae82a71da483dbb0c345175ba090263c4",
+            "commit_message": "gh-118761: substitute `re` import in `base64.b16decode` for a more efficient alternative (#128736)\n\nCo-authored-by: Adam Turner <9087854+AA-Turner@users.noreply.github.com>\nCo-authored-by: Chris Markiewicz <effigies@gmail.com>\nCo-authored-by: Hugo van Kemenade <1324225+hugovk@users.noreply.github.com>\n",
+            "commit_timestamp": 1736861133.0
         }
     ]
 }
