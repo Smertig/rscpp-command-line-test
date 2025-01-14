@@ -4351,6 +4351,23 @@
             "commit_ref": "1a7d46fac8aa5ff4a96db01937cdb3b106253ac6",
             "commit_message": "[BoundsChecking]  Add guard= pass parameter (#122575)\n\nAnd use that as an argument for\nallow_ubsan_check when needed.\n\nOther ubsan checks use SanitizerKind,\nbut those are known to the clang only.\n\nSo make it a parameter in LLVM.",
             "commit_timestamp": 1736789801.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1736824110.814449,
+            "elapsed_time": 77.08752536773682,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5020.116966247559,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "64c2156d8802b0d7724f65ce854844670e4ec457",
+            "commit_message": "[Wunsafe-buffer-usage] Fix false positive when const sized array is indexed by const evaluatable expressions (#119340)\n\nDo not warn when constant sized array is indexed by expressions that\r\nevaluate to a const value. For instance, sizeof(T) expression value can\r\nbe evaluated at compile time and if an array is indexed by such an\r\nexpression, it's bounds can be validated.\r\n\r\n(rdar://140320289)\r\n\r\nCo-authored-by: MalavikaSamak <malavika2@apple.com>",
+            "commit_timestamp": 1736822715.0
         }
     ]
 }

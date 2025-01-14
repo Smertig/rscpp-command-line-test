@@ -23798,6 +23798,21 @@
             "commit_ref": "a610550e2c05cd08842e173bbeb830f596fdfaeb",
             "commit_message": "Merge pull request #4218 from facebook/externC\n\nMove #includes out of `extern \"C\"` blocks",
             "commit_timestamp": 1736273168.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1736823926.730684,
+            "elapsed_time": 79.46693515777588,
+            "x64": true,
+            "actual_files_count": 209,
+            "expected_files_count": null,
+            "memory_traffic": 7479.096229553223,
+            "repo_url": "https://github.com/facebook/zstd.git",
+            "commit_ref": "80af41e08a630946a75a5cda9e4cdf192247f20a",
+            "commit_message": "[contrib/pzstd] Prevent hangs when there are errors\n\nWhen two threads are using a WorkQueue and the reader thread exits due\nto an error, it must call WorkQueue::finish() to wake up the writer\nthread. Otherwise, if the queue is full and the writer thread is waiting\nfor a free slot, it could hang forever.\n\nThis can happen in pratice when decompressing a large, corrupted file\nthat does not contain pzstd skippable frames.\n",
+            "commit_timestamp": 1736807081.0
         }
     ]
 }

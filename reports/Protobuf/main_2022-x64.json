@@ -3689,6 +3689,21 @@
             "commit_ref": "5106654585fa5349888b64dbed0327097ebb4a78",
             "commit_message": "Introduce weirder names for the oneof generated structs to minimize collisions.\n\nGiven:\noneof hello_world {}\n\nWe now generate:\nfn hello_world(&self) -> HelloWorldOneof\nfn hello_world_case(&self) -> HelloWorldCase\n\nThis change is to help mitigate a realistic risk of collisions in cases like:\n\nmessage M {\n  oneof x { ... }\n  enum X { ... }\n}\n\nPiperOrigin-RevId: 714998247\n",
             "commit_timestamp": 1736789520.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1736823934.100083,
+            "elapsed_time": 277.71071004867554,
+            "x64": true,
+            "actual_files_count": 1159,
+            "expected_files_count": 818,
+            "memory_traffic": 39459.60567474365,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "bf068d9e0e62dd5a1ea1c3660cb7b9385c6b8262",
+            "commit_message": "[ObjC] Make a test for the 30007 format\n\nPull in some 30007 generated sources to help ensure the format\ndoesn't break when moving to a new generated format.\n\nPiperOrigin-RevId: 715082290\n",
+            "commit_timestamp": 1736803048.0
         }
     ]
 }
