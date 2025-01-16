@@ -4419,6 +4419,23 @@
             "commit_ref": "e9504c52edd796a22a879b381f17bd8ed235bfd4",
             "commit_message": "[mlir][vector] Add tests for populateSinkVectorOpsPatterns (2/N) (#122338)\n\nAdds tests for scalable vectors in:\r\n\r\n  * \"vector-sink.mlir\".\r\n\r\nThis test file exercises patterns included in\r\n`populateSinkVectorOpsPatterns`:\r\n\r\n  * `ReorderElementwiseOpsOnBroadcast`,\r\n  * `ReorderCastOpsOnBroadcast`,\r\n  * `ReorderElementwiseOpsOnTranspose`.\r\n\r\nThis PR focuses on adding tests for the latter two patterns\r\n(`ReorderCastOpsOnBroadcast` and `ReorderElementwiseOpsOnTranspose`).\r\n\r\nTests for `ReorderElementwiseOpsOnBroadcast` were added in #102286. Please\r\nnote that in PR #102856, I renamed:\r\n\r\n  * `populateSinkVectorBroadcastPatterns`, to\r\n  * `populateSinkVectorOpsPatterns`.",
             "commit_timestamp": 1736952856.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1736996984.700624,
+            "elapsed_time": 65.82045817375183,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5054.2471923828125,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "ef77188fa85728b07059b5f42b92236998d25b19",
+            "commit_message": "[VP] Remove createStepVector implementation and use IRBuilderBase::CreateStepVector instead. NFC (#122868)\n\n",
+            "commit_timestamp": 1736995789.0
         }
     ]
 }
