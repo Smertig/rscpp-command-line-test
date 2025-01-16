@@ -22406,6 +22406,21 @@
             "commit_ref": "91f4091666d66d7b59b7b494549841b6bd672248",
             "commit_message": "COMP: Update KWStyle\n\nAttempting the address build warnings on Clang. Example:\n\nKWStyle/Utilities/boost/xpressive/basic_regex.hpp:200:43: note: in instantiation of member function 'boost::xpressive::regex_compiler<std::__wrap_iter<const char *>>::compile' requested here\n  200 |         return regex_compiler<BidiIter>().compile(begin, flags);\n      |                                           ^\n\nKWStyle/kwsParser.cxx:575:32: note: in instantiation of member function 'boost::xpressive::basic_regex<std::__wrap_iter<const char *>>::compile' requested here\n\n  575 |   sregex unixNewline = sregex::compile(\"\\r?\\n|\\r\");\n      |                                ^\nIn file included from KWStyle/kwsParser.cxx:18:\nIn file included from KWStyle/Utilities/boost/xpressive/xpressive.hpp:18:\nIn file included from KWStyle/Utilities/boost/xpressive/xpressive_static.hpp:24:\nIn file included from KWStyle/Utilities/boost/xpressive/regex_primitives.hpp:22:\nIn file included from KWStyle/Utilities/boost/xpressive/detail/core/matchers.hpp:46:\nKWStyle/Utilities/boost/xpressive/detail/core/matcher/simple_repeat_matcher.hpp:219:32: warning: definition of implicit copy constructor for 'simple_repeat_matcher<boost::xpressive::detail::shared_matchable<std::__wrap_iter<const char *>>, mpl_::bool_<true>>' is deprecated because it has a user-provided copy assignment operator [-Wdeprecated-copy-with-user-provided-copy]\n  219 |         simple_repeat_matcher &operator =(simple_repeat_matcher const &);\n      |                                ^\n",
             "commit_timestamp": 1736883040.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1737040159.416738,
+            "elapsed_time": 207.94170713424683,
+            "x64": true,
+            "actual_files_count": 101,
+            "expected_files_count": null,
+            "memory_traffic": 24003.19281768799,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "91f4091666d66d7b59b7b494549841b6bd672248",
+            "commit_message": "COMP: Update KWStyle\n\nAttempting the address build warnings on Clang. Example:\n\nKWStyle/Utilities/boost/xpressive/basic_regex.hpp:200:43: note: in instantiation of member function 'boost::xpressive::regex_compiler<std::__wrap_iter<const char *>>::compile' requested here\n  200 |         return regex_compiler<BidiIter>().compile(begin, flags);\n      |                                           ^\n\nKWStyle/kwsParser.cxx:575:32: note: in instantiation of member function 'boost::xpressive::basic_regex<std::__wrap_iter<const char *>>::compile' requested here\n\n  575 |   sregex unixNewline = sregex::compile(\"\\r?\\n|\\r\");\n      |                                ^\nIn file included from KWStyle/kwsParser.cxx:18:\nIn file included from KWStyle/Utilities/boost/xpressive/xpressive.hpp:18:\nIn file included from KWStyle/Utilities/boost/xpressive/xpressive_static.hpp:24:\nIn file included from KWStyle/Utilities/boost/xpressive/regex_primitives.hpp:22:\nIn file included from KWStyle/Utilities/boost/xpressive/detail/core/matchers.hpp:46:\nKWStyle/Utilities/boost/xpressive/detail/core/matcher/simple_repeat_matcher.hpp:219:32: warning: definition of implicit copy constructor for 'simple_repeat_matcher<boost::xpressive::detail::shared_matchable<std::__wrap_iter<const char *>>, mpl_::bool_<true>>' is deprecated because it has a user-provided copy assignment operator [-Wdeprecated-copy-with-user-provided-copy]\n  219 |         simple_repeat_matcher &operator =(simple_repeat_matcher const &);\n      |                                ^\n",
+            "commit_timestamp": 1736883040.0
         }
     ]
 }
