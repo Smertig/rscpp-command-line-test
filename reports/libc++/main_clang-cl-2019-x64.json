@@ -4453,6 +4453,23 @@
             "commit_ref": "383eb0ba1ead7397dc633cbfa328eab254780784",
             "commit_message": "[AArch64][GISel] Use Register instead of MCRegister for markPhysRegUsed in CallLowering. (#122853)\n\nFor \"returned\" attribute arguments, the physical register is really a\r\nvirtual register which shouldn't be stored in an MCRegister. This\r\npatch moves the conversion from Register to MCRegister into the derived\r\nclasses of IncomingArgHandler. The derived class\r\nReturnedArgCallReturnHandler\r\ndoes not use the register so no MCRegister is created in that case.\r\nThe function and argument have been renamed to remove \"Phys\".",
             "commit_timestamp": 1737039661.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1737083409.981963,
+            "elapsed_time": 70.21140766143799,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5012.860252380371,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "1fa02b968431ed0830eb57a229fb864659a1f43f",
+            "commit_message": "[BOLT][AArch64]  Speedup `computeInstructionSize` (#121106)\n\nAArch64 instructions have a fixed size 4 bytes, no need to compute.",
+            "commit_timestamp": 1737078497.0
         }
     ]
 }
