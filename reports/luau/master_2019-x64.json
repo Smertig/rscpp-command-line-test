@@ -22668,6 +22668,21 @@
             "commit_ref": "24cacc94edaae6311f668e8c8cb4b223ff39cf24",
             "commit_message": "CodeGen: Implement support for math.lerp lowering (#1609)\n\nTo implement math.lerp without branches, we add SELECT_NUM which\r\nselects one of the two inputs based on the comparison condition.\r\n\r\nFor simplicity, we only support C == D for now; this can be extended to\r\na more generic version with a IrCondition operand E, but that requires\r\nmore work on the SSE side (to flip the comparison for some conditions\r\nlike Greater, and expose more generic vcmpsd).\r\n\r\nNote: On AArch64 this will effectively result in a change in floating\r\npoint\r\nbehavior between native code and non-native code: clang synthesizes\r\nfmadd (because floating point contraction is allowed by default, and the\r\narch always has the instruction), whereas this change will use\r\nfmul+fadd.\r\n\r\nI am not sure if this is good or bad, and if this is a problem in C or\r\nnot.\r\nSpecifically, clang's behavior results in different results between X64\r\nand AArch64 when *not* using codegen, and with this change the behavior\r\nwhen using codegen is... the same? :)\r\n\r\nFixing this will require either using LERP_NUM instead and hand-coding\r\nlowering, or exposing some sort of \"quasi\" MADD_NUM (which would\r\nlower to fma on AArch64 and mul+add on X64).\r\n\r\nA small benefit to the current approach is `lerp(1, 5, t)`\r\nconstant-folds the\r\nsubtraction. With LERP_NUM this optimization will need to be implemented\r\nmanually as a partial constant-folding for LERP_NUM.\r\n\r\nA similar problem exists today for vector.cross & vector.dot. So maybe\r\nthis\r\nis not something we need to fix, unsure.",
             "commit_timestamp": 1737053307.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1737126303.338306,
+            "elapsed_time": 256.1460587978363,
+            "x64": true,
+            "actual_files_count": 477,
+            "expected_files_count": 379,
+            "memory_traffic": 33887.519706726074,
+            "repo_url": "https://github.com/luau-lang/luau",
+            "commit_ref": "24cacc94edaae6311f668e8c8cb4b223ff39cf24",
+            "commit_message": "CodeGen: Implement support for math.lerp lowering (#1609)\n\nTo implement math.lerp without branches, we add SELECT_NUM which\r\nselects one of the two inputs based on the comparison condition.\r\n\r\nFor simplicity, we only support C == D for now; this can be extended to\r\na more generic version with a IrCondition operand E, but that requires\r\nmore work on the SSE side (to flip the comparison for some conditions\r\nlike Greater, and expose more generic vcmpsd).\r\n\r\nNote: On AArch64 this will effectively result in a change in floating\r\npoint\r\nbehavior between native code and non-native code: clang synthesizes\r\nfmadd (because floating point contraction is allowed by default, and the\r\narch always has the instruction), whereas this change will use\r\nfmul+fadd.\r\n\r\nI am not sure if this is good or bad, and if this is a problem in C or\r\nnot.\r\nSpecifically, clang's behavior results in different results between X64\r\nand AArch64 when *not* using codegen, and with this change the behavior\r\nwhen using codegen is... the same? :)\r\n\r\nFixing this will require either using LERP_NUM instead and hand-coding\r\nlowering, or exposing some sort of \"quasi\" MADD_NUM (which would\r\nlower to fma on AArch64 and mul+add on X64).\r\n\r\nA small benefit to the current approach is `lerp(1, 5, t)`\r\nconstant-folds the\r\nsubtraction. With LERP_NUM this optimization will need to be implemented\r\nmanually as a partial constant-folding for LERP_NUM.\r\n\r\nA similar problem exists today for vector.cross & vector.dot. So maybe\r\nthis\r\nis not something we need to fix, unsure.",
+            "commit_timestamp": 1737053307.0
         }
     ]
 }

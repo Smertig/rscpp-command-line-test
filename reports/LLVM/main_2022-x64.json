@@ -24595,6 +24595,23 @@
             "commit_ref": "1fa02b968431ed0830eb57a229fb864659a1f43f",
             "commit_message": "[BOLT][AArch64]  Speedup `computeInstructionSize` (#121106)\n\nAArch64 instructions have a fixed size 4 bytes, no need to compute.",
             "commit_timestamp": 1737078497.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1737127161.230684,
+            "elapsed_time": 1534.8353531360626,
+            "x64": true,
+            "actual_files_count": 2111,
+            "expected_files_count": 1661,
+            "memory_traffic": 252174.70867156982,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "a4d45fe8462bf7042bac2edfb87e3e41e4156ba4",
+            "commit_message": "[lldb][DWARF] Change GetAttributes parameter from SmallVector to SmallVectorImpl\n\nFixes the lldb-arm-ubuntu buildbot failure:\n```\n../llvm-project/lldb/source/Plugins/SymbolFile/DWARF/DWARFDebugInfoEntry.cpp:374:26:\nerror: non-const lvalue reference to type 'SmallVector<[...], (default)\nCalculateSmallVectorDefaultInlinedElements<T>::value aka 6>' cannot bind\nto a value of unrelated type 'SmallVector<[...], 3>'\n  374 |     if (!::GetAttributes(worklist, seen, attributes)) {\n      |                          ^~~~~~~~\n../llvm-project/lldb/source/Plugins/SymbolFile/DWARF/DWARFDebugInfoEntry.cpp:288:56:\nnote: passing argument to parameter 'worklist' here\n  288 | static bool GetAttributes(llvm::SmallVector<DWARFDIE> &worklist,\n      |                                                        ^\n1 error generated.\n```\n",
+            "commit_timestamp": 1737125801.0
         }
     ]
 }

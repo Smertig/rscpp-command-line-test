@@ -19601,6 +19601,21 @@
             "commit_ref": "ea6cc26e759704ac69cda07740cd484bf96596ca",
             "commit_message": "gh-118761: Improve import time of `tomllib` (#128907)\n\nImprove import time of `tomllib`  (in sync with upstream)",
             "commit_timestamp": 1737082122.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1737126637.979862,
+            "elapsed_time": 1130.590256690979,
+            "x64": true,
+            "actual_files_count": 1053,
+            "expected_files_count": null,
+            "memory_traffic": 48331.68705749512,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "d7f703d54d64c5a380f43e2363c439f7dab0d09d",
+            "commit_message": "gh-59705: Implement _thread.set_name() on Windows (#128675)\n\nImplement set_name() with SetThreadDescription() and _get_name() with\nGetThreadDescription(). If SetThreadDescription() or\nGetThreadDescription() is not available in kernelbase.dll, delete the\nmethod when the _thread module is imported.\n\nTruncate the thread name to 32766 characters.\n\nCo-authored-by: Eryk Sun <eryksun@gmail.com>",
+            "commit_timestamp": 1737122143.0
         }
     ]
 }
