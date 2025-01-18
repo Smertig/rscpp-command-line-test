@@ -24612,6 +24612,23 @@
             "commit_ref": "a4d45fe8462bf7042bac2edfb87e3e41e4156ba4",
             "commit_message": "[lldb][DWARF] Change GetAttributes parameter from SmallVector to SmallVectorImpl\n\nFixes the lldb-arm-ubuntu buildbot failure:\n```\n../llvm-project/lldb/source/Plugins/SymbolFile/DWARF/DWARFDebugInfoEntry.cpp:374:26:\nerror: non-const lvalue reference to type 'SmallVector<[...], (default)\nCalculateSmallVectorDefaultInlinedElements<T>::value aka 6>' cannot bind\nto a value of unrelated type 'SmallVector<[...], 3>'\n  374 |     if (!::GetAttributes(worklist, seen, attributes)) {\n      |                          ^~~~~~~~\n../llvm-project/lldb/source/Plugins/SymbolFile/DWARF/DWARFDebugInfoEntry.cpp:288:56:\nnote: passing argument to parameter 'worklist' here\n  288 | static bool GetAttributes(llvm::SmallVector<DWARFDIE> &worklist,\n      |                                                        ^\n1 error generated.\n```\n",
             "commit_timestamp": 1737125801.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1737170378.602929,
+            "elapsed_time": 1537.2258241176605,
+            "x64": true,
+            "actual_files_count": 2113,
+            "expected_files_count": 1661,
+            "memory_traffic": 252214.36069488525,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "07d496538f5543a8eed5e207148e28e358b7cca4",
+            "commit_message": "[SLP] Replace MainOp and AltOp in TreeEntry with InstructionsState. (#122443)\n\nAdd TreeEntry::hasState.\r\nAdd assert for getTreeEntry.\r\nRemove the OpValue parameter from the canReuseExtract function.\r\nRemove the Opcode parameter from the ComputeMaxBitWidth lambda function.",
+            "commit_timestamp": 1737167000.0
         }
     ]
 }
