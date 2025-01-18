@@ -22321,6 +22321,21 @@
             "commit_ref": "dad3a0938afd502831a8e401aae2b6b5a7fc3c92",
             "commit_message": "[SHELL32][SHELL32_APITEST][SDK] Implement ShellExec_RunDLL (#7615)\n\nImplementing missing features...\r\nJIRA issue: CORE-19278\r\n- Modify shell32.spec.\r\n- Move function definitions\r\n  from stubs.cpp into shlexec.cpp.\r\n- Add prototypes to <undocshell.h>.",
             "commit_timestamp": 1737121878.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1737212746.3092,
+            "elapsed_time": 102.58727836608887,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7386.024978637695,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "9d1c0efb1fbb75ca946fbec580f1e9599f25fc9d",
+            "commit_message": "[BROWSEUI_APITEST] Don't hardcode C:\\Windows (#7634)\n\nAvoid hardcoding and fix tests.\r\nJIRA issue: CORE-13235\r\n- Remove hardcoded \"C:\\\\Windows\\\\system32\",\r\n  using GetSystemDirectoryW call in\r\n  SHExplorerParseCmdLine testcase.",
+            "commit_timestamp": 1737208685.0
         }
     ]
 }
