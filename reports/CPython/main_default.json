@@ -19646,6 +19646,21 @@
             "commit_ref": "f4afaa6f1190fbbea3e27c590096951d8ffdfb71",
             "commit_message": "gh-125997: suggest efficient alternatives for `time.sleep(0)` (#128752)\n\n",
             "commit_timestamp": 1737198163.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1737256367.888527,
+            "elapsed_time": 1175.7769467830658,
+            "x64": true,
+            "actual_files_count": 1054,
+            "expected_files_count": null,
+            "memory_traffic": 48341.8297958374,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "5aaf41685834901e4ed0a40f4c055b92991a0bb5",
+            "commit_message": "gh-80222: Fix email address header folding with long quoted-string (#122753)\n\nEmail generators using email.policy.default could incorrectly omit the\r\nquote ('\"') characters from a quoted-string during header refolding,\r\nleading to invalid address headers and enabling header spoofing. This\r\nchange restores the quote characters on a bare-quoted-string as the\r\nheader is refolded, and escapes backslash and quote chars in the string.",
+            "commit_timestamp": 1737247852.0
         }
     ]
 }

@@ -22336,6 +22336,21 @@
             "commit_ref": "9d1c0efb1fbb75ca946fbec580f1e9599f25fc9d",
             "commit_message": "[BROWSEUI_APITEST] Don't hardcode C:\\Windows (#7634)\n\nAvoid hardcoding and fix tests.\r\nJIRA issue: CORE-13235\r\n- Remove hardcoded \"C:\\\\Windows\\\\system32\",\r\n  using GetSystemDirectoryW call in\r\n  SHExplorerParseCmdLine testcase.",
             "commit_timestamp": 1737208685.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1737256187.314154,
+            "elapsed_time": 84.72863793373108,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7419.240188598633,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "c7d1aa3e92bf3ac643ba138558fcc301b0e28aad",
+            "commit_message": "[SHELL32] SHELL_FindExecutable: improve path handling code (#7633)\n\nFollow-up of 42d5dfd3de5e65da6137413c98b5ab0cbc11325e.\r\n- Revert \"shell32: Fix ShellExecute for non-filespec paths.\" https://gitlab.winehq.org/wine/wine/-/commit/0bad544aab9e2c9ee93bbabac0386e02c58a39c0.\r\n- Apply \"shell32: Look for the file name without extension also for the path search case.\" https://gitlab.winehq.org/wine/wine/-/commit/38b6640be91047b2cae71c103afed8a5b448542d.\r\n- Clear leading/trailing whitespaces (an improvement by Doug Lyons).\r\n- Update the comment for xlpFile buffer definition, to match the current code behaviour.\r\nThis fixes some failures for the following tests:\r\n- shell32_apitest:ShellExecCmdLine: 12 failures less,\r\n- shell32_apitest:ShellExecuteEx: 5 failures less,\r\n- shell32_winetest:shlexec: crash fixed, now 13 failures as before,\r\n- wshom_winetest:wshom: crash fixed, now 2 failures less too (0 failures).\r\nI've also tested: the problem which was intended to be fixed by the guilty commit (CORE-19953) still remains fixed after this change.\r\nCORE-19964",
+            "commit_timestamp": 1737233518.0
         }
     ]
 }
