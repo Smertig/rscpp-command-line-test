@@ -24697,6 +24697,23 @@
             "commit_ref": "ad599c25d91c668391bfae71d813164c4b412d76",
             "commit_message": "[BOLT][AArch64] Add isPush & isPop (#120713)\n\nThis functionality is needed for inliner pass and also for correct dyno\r\nstats.\r\n\r\nNeeded for [PR](https://github.com/llvm/llvm-project/pull/120187)",
             "commit_timestamp": 1737340968.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1737386456.789057,
+            "elapsed_time": 1561.8587822914124,
+            "x64": true,
+            "actual_files_count": 2113,
+            "expected_files_count": 1661,
+            "memory_traffic": 252272.9787826538,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "8552c490462eb4180733d1f80d7b381e1518e29f",
+            "commit_message": "[AArch64] Enable UseFixedOverScalableIfEqualCost for more Cortex-x cpus. (#122807)\n\nFor similar reasons for fixed-width being prefered to scalable for\r\nNeoverse V2, this patch enables the UseFixedOverScalableIfEqualCost\r\nfeature when using -mcpu=cortex-x2, x3, x4 and x925 that are similar to\r\nNeoverse V2.",
+            "commit_timestamp": 1737385515.0
         }
     ]
 }
