@@ -23953,6 +23953,21 @@
             "commit_ref": "15d9dae14b148509f3e1e7a42d5b1260fffff3ad",
             "commit_message": "Fix data race when using shared variables (free threading) (#5494)\n\n* Fix data race when using shared variables (free threading)\r\n\r\nIn the free threading build, there's a race between wrapper re-use and\r\nwrapper deallocation. This can happen with a static variable accessed by\r\nmultiple threads.\r\n\r\nFixing this requires using some private CPython APIs: _Py_TryIncref and\r\n_PyObject_SetMaybeWeakref. The implementations of these functions are\r\nincluded until they're made available as public (\"unstable\") APIs.\r\n\r\nFixes #5489\r\n\r\n* style: pre-commit fixes\r\n\r\n* Avoid unused parameter\r\n\r\n* Add missing return for default build\r\n\r\n* Changes from review\r\n\r\n* Assign result to local variable\r\n\r\n* s/clang-tidy/ruff\r\n\r\n* clang-tidy: static is redundant\r\n\r\n* Use 'noqa: B018'\r\n\r\n---------\r\n\r\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>",
             "commit_timestamp": 1737054801.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1737471982.048082,
+            "elapsed_time": 153.8132357597351,
+            "x64": true,
+            "actual_files_count": 381,
+            "expected_files_count": 197,
+            "memory_traffic": 18412.90283203125,
+            "repo_url": "https://github.com/pybind/pybind11",
+            "commit_ref": "15d9dae14b148509f3e1e7a42d5b1260fffff3ad",
+            "commit_message": "Fix data race when using shared variables (free threading) (#5494)\n\n* Fix data race when using shared variables (free threading)\r\n\r\nIn the free threading build, there's a race between wrapper re-use and\r\nwrapper deallocation. This can happen with a static variable accessed by\r\nmultiple threads.\r\n\r\nFixing this requires using some private CPython APIs: _Py_TryIncref and\r\n_PyObject_SetMaybeWeakref. The implementations of these functions are\r\nincluded until they're made available as public (\"unstable\") APIs.\r\n\r\nFixes #5489\r\n\r\n* style: pre-commit fixes\r\n\r\n* Avoid unused parameter\r\n\r\n* Add missing return for default build\r\n\r\n* Changes from review\r\n\r\n* Assign result to local variable\r\n\r\n* s/clang-tidy/ruff\r\n\r\n* clang-tidy: static is redundant\r\n\r\n* Use 'noqa: B018'\r\n\r\n---------\r\n\r\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>",
+            "commit_timestamp": 1737054801.0
         }
     ]
 }

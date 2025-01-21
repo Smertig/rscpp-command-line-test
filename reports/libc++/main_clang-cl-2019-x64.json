@@ -4606,6 +4606,23 @@
             "commit_ref": "e87b843811e147db8d1edd7fe2dd52bb90be6ebc",
             "commit_message": "Reland [OffloadBundler] Compress bundles over 4GB (#122307)\n\nReland the patch after fixing the lit test.\n",
             "commit_timestamp": 1737425841.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1737472126.676236,
+            "elapsed_time": 70.44100522994995,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5051.620559692383,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "8f5df8891840bb698fec682c1d98346708c038be",
+            "commit_message": "[Flang][Semantics] Allow declare target to be used on functions external to the declare targets scope (#122546)\n\nWhilst a little contrived, OpenMP allows you to utilise declare target\r\nin the scope of one function to mark another function declare target,\r\ncurrently this leads to a semantic error.\r\n\r\nThis appears to be because when we process the declare target directive\r\nin the scope of another function (referring to another function), we do\r\nnot search externally from that functions scope to find possible prior\r\ndefinitions, we only search in the current scope, this leads to us\r\nimplicitly defining a new variable and using that when implicit none is\r\nnot specified and then error'ng out or error'ng out earlier when implict\r\nnone is defined. This patch tries to address this behaviour by looking\r\nexternally for a function first and using that, before defaulting back\r\nto the prior behaviour.",
+            "commit_timestamp": 1737471912.0
         }
     ]
 }

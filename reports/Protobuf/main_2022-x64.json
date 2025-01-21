@@ -3914,6 +3914,21 @@
             "commit_ref": "336d6f04e94efebcefb5574d0c8d487bcb0d187e",
             "commit_message": "Python: Improve refleak checker for Python 3.12.\n\nEach call to `unittest.TestResult.addDuration` increases the total refcount.\nThe refleak checker now mocks this function to get consistent values.\n\nPiperOrigin-RevId: 717548068\n",
             "commit_timestamp": 1737393425.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1737472094.076646,
+            "elapsed_time": 459.463663816452,
+            "x64": true,
+            "actual_files_count": 1570,
+            "expected_files_count": 818,
+            "memory_traffic": 66443.19480895996,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "f06a9e9b11082e368bb12b0e66eb62f3f6351479",
+            "commit_message": "Use $std$ instead of core:: in .rs protobuf codegen.\n\nSince protobuf codegen is not no-std compatible today (due to usage of std::sync::OnceLock), we should use ::std rather than ::core to slightly reduce our surface area for naming based breakages, including proto_library(name=\"core\"). Only this one spot in the codegen didn't already match that.\n\nPiperOrigin-RevId: 717892640\n",
+            "commit_timestamp": 1737470647.0
         }
     ]
 }
