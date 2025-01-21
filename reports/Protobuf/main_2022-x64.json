@@ -3899,6 +3899,21 @@
             "commit_ref": "e3ac4c9342e5393e3fa974a420fc1bbc68e7397a",
             "commit_message": "Auto-generate files after cl/716780695\n",
             "commit_timestamp": 1737150748.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1737428854.804161,
+            "elapsed_time": 466.0482020378113,
+            "x64": true,
+            "actual_files_count": 1570,
+            "expected_files_count": 818,
+            "memory_traffic": 66324.37171936035,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "336d6f04e94efebcefb5574d0c8d487bcb0d187e",
+            "commit_message": "Python: Improve refleak checker for Python 3.12.\n\nEach call to `unittest.TestResult.addDuration` increases the total refcount.\nThe refleak checker now mocks this function to get consistent values.\n\nPiperOrigin-RevId: 717548068\n",
+            "commit_timestamp": 1737393425.0
         }
     ]
 }

@@ -24714,6 +24714,23 @@
             "commit_ref": "8552c490462eb4180733d1f80d7b381e1518e29f",
             "commit_message": "[AArch64] Enable UseFixedOverScalableIfEqualCost for more Cortex-x cpus. (#122807)\n\nFor similar reasons for fixed-width being prefered to scalable for\r\nNeoverse V2, this patch enables the UseFixedOverScalableIfEqualCost\r\nfeature when using -mcpu=cortex-x2, x3, x4 and x925 that are similar to\r\nNeoverse V2.",
             "commit_timestamp": 1737385515.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1737429662.762025,
+            "elapsed_time": 1535.7075202465057,
+            "x64": true,
+            "actual_files_count": 2113,
+            "expected_files_count": 1661,
+            "memory_traffic": 252332.24576568604,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "e87b843811e147db8d1edd7fe2dd52bb90be6ebc",
+            "commit_message": "Reland [OffloadBundler] Compress bundles over 4GB (#122307)\n\nReland the patch after fixing the lit test.\n",
+            "commit_timestamp": 1737425841.0
         }
     ]
 }
