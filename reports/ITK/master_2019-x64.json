@@ -22571,6 +22571,21 @@
             "commit_ref": "95972665805dc58626e18a630d26e447cbc8b582",
             "commit_message": "Merge branch 'release'\n",
             "commit_timestamp": 1737471822.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1737515600.705493,
+            "elapsed_time": 225.62952756881714,
+            "x64": true,
+            "actual_files_count": 101,
+            "expected_files_count": null,
+            "memory_traffic": 23810.140579223633,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "ec7569203a2f9a5c8febba3fad89b1dde5c0cd36",
+            "commit_message": "ENH: add test to reproduce SimpleITK issue #2220\n\nIncorrect results are being computed on windows with the Compose\nfilter (and other filters) and VectorImages of sizes >4GB.\n\nBug was addressed in PR #5071.\n",
+            "commit_timestamp": 1737494883.0
         }
     ]
 }
