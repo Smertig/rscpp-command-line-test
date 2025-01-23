@@ -22441,6 +22441,21 @@
             "commit_ref": "85f42a25d5bcda5ce1720e247b5907d372f0c042",
             "commit_message": "[NTOS:KE/x64] Improve freeze code\n\n- Set ACTIVE flag on freeze owner like on Windows\n- Add a nice state graph\n- Change license to MIT\n",
             "commit_timestamp": 1737547458.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1737601630.454739,
+            "elapsed_time": 95.00799107551575,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7458.518775939941,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "f07ea94798007fcf1b1d6344844f2e5d1aede104",
+            "commit_message": "[UCRT] Fix build of memcpy_s.cpp\n\nextern inline creates a global symbol on MSVC, but not on GCC. Use extern instead.\n",
+            "commit_timestamp": 1737564968.0
         }
     ]
 }

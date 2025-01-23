@@ -22630,6 +22630,21 @@
             "commit_ref": "c623a5afc19a3d204e183f5a09e983aaf7befe42",
             "commit_message": "Merge pull request #26646 from warped-rudi:refactoring\n\nAndroid camera refactoring #26646\r\n\r\nThis patch set does not contain any functional changes. It just cleans up the code structure to improve readability and to prepare for future changes.\r\n\r\n* videoio(Android): Use 'unique_ptr' instead of 'shared_ptr'\r\nUsing shared pointers for unshared data is considered an antipattern.\r\n* videoio(Android): Make callback functions private static members\r\nDon't leak internal functions into global namespace. Some member\r\nvariables are now private as well.\r\n* videoio(Android): Move resolution matching into separate function\r\nAlso make internally used member functions private.\r\n* videoio(Android): Move ranges query into separate function\r\nAlso remove some unneccessary initialisations from initCapture().\r\n* videoio(Android): Wrap extremly long source code lines\r\n* videoio(Android): Rename members of 'RangeValue'\r\n\r\n### Pull Request Readiness Checklist\r\n\r\nSee details at https://github.com/opencv/opencv/wiki/How_to_contribute#making-a-good-pull-request\r\n\r\n- [x] I agree to contribute to the project under Apache 2 License.\r\n- [x] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\r\n- [ ] The PR is proposed to the proper branch\r\n- [ ] There is a reference to the original bug report and related work\r\n- [ ] There is accuracy test, performance test and test data in opencv_extra repository, if applicable\r\n      Patch to opencv_extra has the same branch name.\r\n- [ ] The feature is well documented and sample code can be built with the project CMake\r\n",
             "commit_timestamp": 1737554294.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1737601732.34187,
+            "elapsed_time": 394.61676359176636,
+            "x64": true,
+            "actual_files_count": 479,
+            "expected_files_count": 459,
+            "memory_traffic": 40898.34868621826,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "4a4031dc48475ec3354d28a3cdedda57a8913443",
+            "commit_message": "Merge pull request #26601 from dai-xin:4.x\n\nVideoCapture open camera slow",
+            "commit_timestamp": 1737568109.0
         }
     ]
 }

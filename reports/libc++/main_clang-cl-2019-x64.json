@@ -4657,6 +4657,23 @@
             "commit_ref": "1df50e6245cbc04f3b28de3c40127ad61d46b43b",
             "commit_message": "[PS5][Driver] Don't link with --build-id when -static (#123930)\n\nUsers of the PlayStation SDK aren't given the means to create or run\r\nstatic executables. Uses of `-static` are limited a few specialized\r\ncases within SIE. A `--build-id` isn't wanted in those cases.\r\n\r\nSIE tracker: TOOLCHAIN-16704",
             "commit_timestamp": 1737557872.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1737601845.648419,
+            "elapsed_time": 95.78310346603394,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5016.626770019531,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "652ff20140d79544db4dfa21314fc62c3c9182e5",
+            "commit_message": "[flang][cuda] Adding atomicadd as a cudadevice intrinsic and converting it LLVM dialect (#123840)\n\nWith these changes, CUF atomic operations are handled as cudadevice\r\nintrinsics and are converted straight to the LLVM dialect with the\r\n`llvm.atomicrw` operation.\r\n\r\nI am only submitting changes for `atomicadd` to gather feedback. If we\r\nare to proceed with these changes I will add support for all other\r\napplicable atomic operations following this pattern.",
+            "commit_timestamp": 1737601588.0
         }
     ]
 }
