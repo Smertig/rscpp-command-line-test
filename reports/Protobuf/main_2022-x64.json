@@ -3974,6 +3974,21 @@
             "commit_ref": "4b561582206ab0d6dce6871dd0f20dd5aea975d8",
             "commit_message": "Auto-generate files after cl/718469089\n",
             "commit_timestamp": 1737575856.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1737644814.941906,
+            "elapsed_time": 456.44984006881714,
+            "x64": true,
+            "actual_files_count": 1570,
+            "expected_files_count": 818,
+            "memory_traffic": 66242.46028900146,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "cbf9c9be8488681c2eaad089a2c580d6edcf7fdb",
+            "commit_message": "[ObjC] Remove some of the legacy generated formats support\n\nRemove some of the legacy union fields from the structs used for\nthe generated code. The library has already declared it doesn't\nsupport these old formats (via the version check done by the\nC pre processor).\n\nPiperOrigin-RevId: 718846100\n",
+            "commit_timestamp": 1737644084.0
         }
     ]
 }
