@@ -4691,23 +4691,6 @@
             "commit_ref": "26b61e143b7e6117b57df2b58bbcb146a6f0f4d4",
             "commit_message": "[LoopVectorizer] Propagate underlying instruction to the cloned instances of VPPartialReductionRecipes (#123638)\n\n",
             "commit_timestamp": 1737644251.0
-        },
-        {
-            "tool_version": "243.0.20241111.161023",
-            "error_mismatch": true,
-            "project": [
-                "cxx_shared"
-            ],
-            "timestamp": 1737688164.788732,
-            "elapsed_time": 75.87415957450867,
-            "x64": true,
-            "actual_files_count": 89,
-            "expected_files_count": null,
-            "memory_traffic": 5034.849411010742,
-            "repo_url": "https://github.com/llvm/llvm-project",
-            "commit_ref": "378dcf61014b787b3542b917f6296c9fb5ec490c",
-            "commit_message": "[C++20] [Modules] Fix may-be incorrect ADL for module local entities (#123931)\n\nClose https://github.com/llvm/llvm-project/issues/123815\r\n\r\nSee the comments for details. We can't get primary context arbitrarily\r\nsince the redecl may have different context and information.\r\n\r\nThere is a TODO for modules specific case, I'd like to make it after\r\nthis PR.",
-            "commit_timestamp": 1737687070.0
         }
     ]
 }
