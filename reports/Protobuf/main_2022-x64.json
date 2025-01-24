@@ -3989,6 +3989,21 @@
             "commit_ref": "cbf9c9be8488681c2eaad089a2c580d6edcf7fdb",
             "commit_message": "[ObjC] Remove some of the legacy generated formats support\n\nRemove some of the legacy union fields from the structs used for\nthe generated code. The library has already declared it doesn't\nsupport these old formats (via the version check done by the\nC pre processor).\n\nPiperOrigin-RevId: 718846100\n",
             "commit_timestamp": 1737644084.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1737688042.534718,
+            "elapsed_time": 462.2795262336731,
+            "x64": true,
+            "actual_files_count": 1570,
+            "expected_files_count": 818,
+            "memory_traffic": 66282.20462036133,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "b9ec7e0081e33ac4a5077154f0e5e198b01a9f61",
+            "commit_message": "Fix bug in textformat handling of trailing commas for unknown fields/extensions.\n\nPiperOrigin-RevId: 719030906\n",
+            "commit_timestamp": 1737674344.0
         }
     ]
 }
