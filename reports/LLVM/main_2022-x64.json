@@ -24850,6 +24850,23 @@
             "commit_ref": "ac1ba1f9dd7013852cd27f514467f57ee0e6ed16",
             "commit_message": "[CodeGen] Introduce a VirtRegOrUnit class to hold virtual reg or physical reg unit. NFC (#123768)\n\nLiveIntervals and MachineVerifier were previously using Register to\r\nstore this, but reg units are different than physical registers. One\r\nimportant difference is that 0 is a valid reg unit number, but it is not\r\na valid phyiscal register.\r\n\r\nThis patch introduces a new VirtRegOrUnit class that is distinct from\r\nRegister. It can be be converted to/from a virtual Register or a\r\nMCRegUnit. I've made all conversions explicit and used assertions to\r\ncheck the validity.\r\n\r\nI also fixed a place in MachineVerifier that was ignoring reg unit 0.",
             "commit_timestamp": 1737772228.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1737818412.444551,
+            "elapsed_time": 1594.220823764801,
+            "x64": true,
+            "actual_files_count": 2114,
+            "expected_files_count": 1661,
+            "memory_traffic": 253187.85019683838,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "6383a12e3b4339fa4743bb97da4d51dea6d2e2ea",
+            "commit_message": "[VPlan] Refactor HCFG builder to preserve original vector latch (NFC).\n\nUpdate HCFG builder to preserve the original latch block of the initial\nVPlan, ensuring there is always a latch.\n\nIt also skips creating the BranchOnCond for the latch of the top-level\nloop, instead of removing it later. Exiting via the latch is controlled\nby later recipes.\n\nThis further unifies HCFG construction and prepares for use to also\nbuild an initial VPlan (VPlan0) for inner loops.\n",
+            "commit_timestamp": 1737811921.0
         }
     ]
 }
