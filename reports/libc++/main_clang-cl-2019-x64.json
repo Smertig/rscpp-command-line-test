@@ -4708,6 +4708,23 @@
             "commit_ref": "c546b5317c518987a5f45dd4c4d25321a955c758",
             "commit_message": "[ValueTracking] Pass changed predicate `SignedLPred` to `isImpliedByMatchingCmp` (#124271)\n\nFixes #124267.\r\n\r\nSince we are using the new predicate, we should also update the\r\nparameters of `isImpliedByMatchingCmp`.",
             "commit_timestamp": 1737730970.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1737774561.018366,
+            "elapsed_time": 88.45080280303955,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5026.609710693359,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "ac1ba1f9dd7013852cd27f514467f57ee0e6ed16",
+            "commit_message": "[CodeGen] Introduce a VirtRegOrUnit class to hold virtual reg or physical reg unit. NFC (#123768)\n\nLiveIntervals and MachineVerifier were previously using Register to\r\nstore this, but reg units are different than physical registers. One\r\nimportant difference is that 0 is a valid reg unit number, but it is not\r\na valid phyiscal register.\r\n\r\nThis patch introduces a new VirtRegOrUnit class that is distinct from\r\nRegister. It can be be converted to/from a virtual Register or a\r\nMCRegUnit. I've made all conversions explicit and used assertions to\r\ncheck the validity.\r\n\r\nI also fixed a place in MachineVerifier that was ignoring reg unit 0.",
+            "commit_timestamp": 1737772228.0
         }
     ]
 }

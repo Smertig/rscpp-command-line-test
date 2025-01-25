@@ -4004,6 +4004,21 @@
             "commit_ref": "88681710b5df5e4af9d3e06a505f501813c36207",
             "commit_message": "Generate Kythe annotations for objc messages.\n\nThis introduces both the basic plumbing for generating metadata (guarded by compiler flags), as well as the initial output of metadata for messages and fields. We largely follows the outline used in the C++ generator.\n\nThe second part requires a bit of refactoring on the `FieldGenerator` class since it assumed it was only storing plain string substitutions.\n\nThis does not implement cross-references for all symbols (e.g. enums and oneofs); these will be done in followups.\n\nPiperOrigin-RevId: 719269040\n",
             "commit_timestamp": 1737727751.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1737774405.173445,
+            "elapsed_time": 491.2043480873108,
+            "x64": true,
+            "actual_files_count": 1570,
+            "expected_files_count": 818,
+            "memory_traffic": 66307.27690124512,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "ae3015c78a0ea3baa76f3ad556c0ecd575f2e618",
+            "commit_message": "Pin our python version in upb/windows test\n\nPiperOrigin-RevId: 719461691\n",
+            "commit_timestamp": 1737763393.0
         }
     ]
 }

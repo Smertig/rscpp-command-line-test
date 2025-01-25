@@ -22486,6 +22486,21 @@
             "commit_ref": "dbf784472eec56a6a9e6bba0d3c5a0b90d4a6749",
             "commit_message": "[WIN32SS:NTGDI] FontFamilyFillInfo(): Check returned IntGetOutlineTextMetrics() size...\n\n... before allocating pool memory, as it is done everywhere else in the code.\n",
             "commit_timestamp": 1737670854.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1737774373.197118,
+            "elapsed_time": 78.20557761192322,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7370.802146911621,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "c07fba4508406d2132ac2f11ea011cbe64bcad5e",
+            "commit_message": "[NTOS:KE] Make KeQueryActiveProcessors portable and non-paged\n\nIn Windows Vista and later, this routine can be called at any IRQL.\n",
+            "commit_timestamp": 1737736714.0
         }
     ]
 }

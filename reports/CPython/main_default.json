@@ -19811,6 +19811,21 @@
             "commit_ref": "fc6bc1e4e30c8995cc4f68e56e70686d84495048",
             "commit_message": "gh-129185: Simplify PyTraceMalloc_Track() (#129256)\n\nSince tracemalloc uses PyMutex, it becomes safe to use TABLES_LOCK()\neven after _PyTraceMalloc_Fini(): remove the \"pre-check\" in\nPyTraceMalloc_Track() and PyTraceMalloc_Untrack().\n\nPyTraceMalloc_Untrack() no longer needs to acquire the GIL.\n\n_PyTraceMalloc_Fini() can be called earlier during Python\nfinalization.",
             "commit_timestamp": 1737725376.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1737774568.364654,
+            "elapsed_time": 1170.1335835456848,
+            "x64": true,
+            "actual_files_count": 1054,
+            "expected_files_count": null,
+            "memory_traffic": 48341.39360046387,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "f10b7b29cb2a3cb67d1da114ef9a27be7e62dddd",
+            "commit_message": "gh-111178: fix UBSan failures in `Modules/cjkcodecs/multibytecodec.c` (gh-129090)\n\n",
+            "commit_timestamp": 1737767071.0
         }
     ]
 }
