@@ -4759,6 +4759,23 @@
             "commit_ref": "c1ec5beb4ab36c2c4d99ed6d735d217e74364771",
             "commit_message": "[clang-format] Fix a TableGen crash on comment after l_paren (#124380)\n\nFixes #124248.",
             "commit_timestamp": 1737858702.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1737904099.555621,
+            "elapsed_time": 62.09175682067871,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5007.0915451049805,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "dec47b76f406242dfb9d36da4d7adfb171c71104",
+            "commit_message": "[CostModel][X86] Update baseline CTTZ/CTLZ costs for x86_64 (#124312)\n\nFollowup to #123623 - now that the CMOV has been removed, the throughput has improved, reducing the benefit of vectorization on pre-x86-64-v3 CPUs",
+            "commit_timestamp": 1737902631.0
         }
     ]
 }

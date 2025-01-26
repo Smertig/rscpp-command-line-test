@@ -22531,6 +22531,21 @@
             "commit_ref": "e302bacd7eec26abda16ee3674f61a7cf5588df6",
             "commit_message": "[NTDLL] Acquire LdrpLoaderLock in LdrpInitializeThread\n\nThis is required to protect against a race with LdrShutdownThread, which can lead to all kinds of problems, including deadlocks.\n",
             "commit_timestamp": 1737834632.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1737903954.485986,
+            "elapsed_time": 80.60267543792725,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7503.575180053711,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "56b0f836c518d7f737dc933697836a753fea1bbb",
+            "commit_message": "[SYSSETUP] Move the creation of start menu items into the wizard\n\nStart menu items were created after the wizard had finished. This patch moves the creation of the start menu items into the process page of the wizard and enables the 2nd item of the task list.\n",
+            "commit_timestamp": 1737888364.0
         }
     ]
 }
