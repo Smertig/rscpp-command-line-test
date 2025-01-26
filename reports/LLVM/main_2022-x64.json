@@ -24867,6 +24867,23 @@
             "commit_ref": "6383a12e3b4339fa4743bb97da4d51dea6d2e2ea",
             "commit_message": "[VPlan] Refactor HCFG builder to preserve original vector latch (NFC).\n\nUpdate HCFG builder to preserve the original latch block of the initial\nVPlan, ensuring there is always a latch.\n\nIt also skips creating the BranchOnCond for the latch of the top-level\nloop, instead of removing it later. Exiting via the latch is controlled\nby later recipes.\n\nThis further unifies HCFG construction and prepares for use to also\nbuild an initial VPlan (VPlan0) for inner loops.\n",
             "commit_timestamp": 1737811921.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1737861767.640563,
+            "elapsed_time": 1512.6584095954895,
+            "x64": true,
+            "actual_files_count": 2114,
+            "expected_files_count": 1661,
+            "memory_traffic": 253143.28311157227,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "c1ec5beb4ab36c2c4d99ed6d735d217e74364771",
+            "commit_message": "[clang-format] Fix a TableGen crash on comment after l_paren (#124380)\n\nFixes #124248.",
+            "commit_timestamp": 1737858702.0
         }
     ]
 }

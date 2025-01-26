@@ -22516,6 +22516,21 @@
             "commit_ref": "cc762c2b7132991f828ac4d6b7315bcd3e962ccd",
             "commit_message": "[NTDLL] Demote UNIMPLEMENTED to DPRINT in LdrpValidateImageForMp\n\nThis avoids debug spam on SMP builds.\n",
             "commit_timestamp": 1737815607.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1737860848.924567,
+            "elapsed_time": 85.69878840446472,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7491.498344421387,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "e302bacd7eec26abda16ee3674f61a7cf5588df6",
+            "commit_message": "[NTDLL] Acquire LdrpLoaderLock in LdrpInitializeThread\n\nThis is required to protect against a race with LdrShutdownThread, which can lead to all kinds of problems, including deadlocks.\n",
+            "commit_timestamp": 1737834632.0
         }
     ]
 }

@@ -21645,6 +21645,21 @@
             "commit_ref": "5b5af304e1fd7133d569f2f1e951ab8494e5c7d3",
             "commit_message": "Merge topic 'more-static-python-wrapper-functions'\n\n1556cd921df vtkWrapPython: mark more generated functions as `static`\n\nAcked-by: Kitware Robot <kwrobot@kitware.com>\nAcked-by: buildbot <buildbot@kitware.com>\nReviewed-by: David Gobbi <david.gobbi@gmail.com>\nMerge-request: !11870\n",
             "commit_timestamp": 1737812431.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "vtkCommonCoreCxxTests",
+            "timestamp": 1737861068.55199,
+            "elapsed_time": 174.9072608947754,
+            "x64": true,
+            "actual_files_count": 82,
+            "expected_files_count": 68,
+            "memory_traffic": 21640.3074798584,
+            "repo_url": "https://gitlab.kitware.com/vtk/vtk.git",
+            "commit_ref": "06fa1ef7047bb6e2398dd928e5389072d8c19898",
+            "commit_message": "Merge topic 'remove-nlohmann-json-public-dependency'\n\nd11630acb73 include cstdint header for std::uint64_t\n19b0ffb3820 Reintroduce vtkAbstractArray::PrintValues method without using nlohmannjson\n27f2fd112d9 Document removal of nlohmannjson from CommonCore public API\n88656d5ecaa Revert \"Merge topic 'serialize-print-vtkabstract-array'\"\n\nAcked-by: Kitware Robot <kwrobot@kitware.com>\nAcked-by: buildbot <buildbot@kitware.com>\nMerge-request: !11854\n",
+            "commit_timestamp": 1737831134.0
         }
     ]
 }
