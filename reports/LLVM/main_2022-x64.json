@@ -24901,6 +24901,23 @@
             "commit_ref": "dec47b76f406242dfb9d36da4d7adfb171c71104",
             "commit_message": "[CostModel][X86] Update baseline CTTZ/CTLZ costs for x86_64 (#124312)\n\nFollowup to #123623 - now that the CMOV has been removed, the throughput has improved, reducing the benefit of vectorization on pre-x86-64-v3 CPUs",
             "commit_timestamp": 1737902631.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1737948051.658584,
+            "elapsed_time": 1559.9640169143677,
+            "x64": true,
+            "actual_files_count": 2114,
+            "expected_files_count": 1661,
+            "memory_traffic": 252966.09631347656,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "b2647ffbf797dd5a457b6b19faab06956934d067",
+            "commit_message": "Revert \"[msan] Add avx512-intrinsics.ll and avx512-intrinsics-upgrade.ll test case (#123980)\"\n\nThis reverts commit 980e86f130eea02bd41b887f4ed896340fc90f6c.\n\nReason: buildbot breakage\n(https://lab.llvm.org/buildbot/#/builders/154/builds/10901/steps/5/logs/FAIL__LLVM__avx512-intrinsics-upgrade_ll)\n",
+            "commit_timestamp": 1737941732.0
         }
     ]
 }
