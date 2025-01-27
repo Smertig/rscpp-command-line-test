@@ -4793,6 +4793,23 @@
             "commit_ref": "b2647ffbf797dd5a457b6b19faab06956934d067",
             "commit_message": "Revert \"[msan] Add avx512-intrinsics.ll and avx512-intrinsics-upgrade.ll test case (#123980)\"\n\nThis reverts commit 980e86f130eea02bd41b887f4ed896340fc90f6c.\n\nReason: buildbot breakage\n(https://lab.llvm.org/buildbot/#/builders/154/builds/10901/steps/5/logs/FAIL__LLVM__avx512-intrinsics-upgrade_ll)\n",
             "commit_timestamp": 1737941732.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1737990630.762703,
+            "elapsed_time": 59.94691610336304,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5025.455360412598,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "092372da15e5165be14cdbb7cac3cf4976fd82d0",
+            "commit_message": "[mlir][Tensor] Rework `ReifyRankedShapedTypeInterface` implementation for `tensor.expand_shape` op. (#113501)\n\nThe op carries the output-shape directly. This can be used directly.\nAlso adds a method to get the shape as a `SmallVector<OpFoldResult>`.\n\nSigned-off-by: MaheshRavishankar <mahesh.ravishankar@gmail.com>",
+            "commit_timestamp": 1737990334.0
         }
     ]
 }

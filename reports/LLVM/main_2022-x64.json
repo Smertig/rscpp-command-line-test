@@ -24918,6 +24918,23 @@
             "commit_ref": "b2647ffbf797dd5a457b6b19faab06956934d067",
             "commit_message": "Revert \"[msan] Add avx512-intrinsics.ll and avx512-intrinsics-upgrade.ll test case (#123980)\"\n\nThis reverts commit 980e86f130eea02bd41b887f4ed896340fc90f6c.\n\nReason: buildbot breakage\n(https://lab.llvm.org/buildbot/#/builders/154/builds/10901/steps/5/logs/FAIL__LLVM__avx512-intrinsics-upgrade_ll)\n",
             "commit_timestamp": 1737941732.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1737991211.747392,
+            "elapsed_time": 1564.2653839588165,
+            "x64": true,
+            "actual_files_count": 2114,
+            "expected_files_count": 1661,
+            "memory_traffic": 252873.26359558105,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "27c917307563eae93c7fef9c3944e56e1f5b5f6d",
+            "commit_message": "[Clang] Remove unnecessary Decl transform & profiles for SizeOfPackExpr (#124533)\n\nWe used to always transform the pattern declaration for SizeOfPackExpr\nto ensure the constraint expression's profile produced the desired\nresult. However, this approach failed to handle pack expansions when the\npack referred to function parameters. In such cases, the function\nparameters were formerly expanded to 1 to avoid building Subst* nodes\n(see e6974daa7). That workaround caused us to transform a pack without a\nproper ArgumentPackSubstitutionIndex, leading to crashes when\ntransforming the pattern.\n\nIt turns out that profiling the pattern for partially substituted\nSizeOfPackExprs is unnecessary because their transformed forms are also\nprofiled within the partial arguments.\n\nFixes https://github.com/llvm/llvm-project/issues/124161",
+            "commit_timestamp": 1737990297.0
         }
     ]
 }
