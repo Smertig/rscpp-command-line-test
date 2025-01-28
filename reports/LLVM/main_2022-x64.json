@@ -24935,6 +24935,23 @@
             "commit_ref": "27c917307563eae93c7fef9c3944e56e1f5b5f6d",
             "commit_message": "[Clang] Remove unnecessary Decl transform & profiles for SizeOfPackExpr (#124533)\n\nWe used to always transform the pattern declaration for SizeOfPackExpr\nto ensure the constraint expression's profile produced the desired\nresult. However, this approach failed to handle pack expansions when the\npack referred to function parameters. In such cases, the function\nparameters were formerly expanded to 1 to avoid building Subst* nodes\n(see e6974daa7). That workaround caused us to transform a pack without a\nproper ArgumentPackSubstitutionIndex, leading to crashes when\ntransforming the pattern.\n\nIt turns out that profiling the pattern for partially substituted\nSizeOfPackExprs is unnecessary because their transformed forms are also\nprofiled within the partial arguments.\n\nFixes https://github.com/llvm/llvm-project/issues/124161",
             "commit_timestamp": 1737990297.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1738034478.846257,
+            "elapsed_time": 1492.0760567188263,
+            "x64": true,
+            "actual_files_count": 2114,
+            "expected_files_count": 1661,
+            "memory_traffic": 253397.23222351074,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "ba789c6f82a911f90a5d20b637e02df4439d0153",
+            "commit_message": "[Flang] Add semantics checks for CrayPointer usage in DSA list (#123171)\n\nFollow-up PR to fix the failure caused here:\r\nhttps://github.com/llvm/llvm-project/pull/121028\r\n\r\nFailure:\r\nhttps://lab.llvm.org/buildbot/#/builders/89/builds/14474\r\n\r\nProblems:\r\n- Cray pointee cannot be used in the DSA list (If used results in segmentation fault)\r\n- Cray pointer has to be in the DSA list when Cray pointee is used in the default (none) region\r\n\r\nFix: Added required semantic checks along the tests\r\nReference from the documentation (OpenMP 5.0: 2.19.1):\r\n- Cray pointees have the same data-sharing attribute as the storage with\r\nwhich their Cray pointers are associated.",
+            "commit_timestamp": 1738033062.0
         }
     ]
 }
