@@ -19931,6 +19931,21 @@
             "commit_ref": "180ee43bde99b8ce4c4f1d5237ab191e26118061",
             "commit_message": "gh-129005: Avoid copy in _pyio.FileIO.readinto() (#129324)\n\n`os.read()` allocated and filled a buffer by calling `read(2)`, than that\ndata was copied into the user provied buffer. Read directly into the\ncaller's buffer instead by using `os.readinto()`.\n\n`os.readinto()` uses `PyObject_GetBuffer()` to make sure the passed\nin buffer is writeable and bytes-like, drop the manual check.",
             "commit_timestamp": 1738064444.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1738120152.706888,
+            "elapsed_time": 1052.6011095046997,
+            "x64": true,
+            "actual_files_count": 1054,
+            "expected_files_count": null,
+            "memory_traffic": 48315.255210876465,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "41ad2bb2489c4cf9ba4f13401750b3fcdb33937b",
+            "commit_message": "GH-128563: Don't leave frame->lltrace uninitialized (GH-129417)\n\n",
+            "commit_timestamp": 1738110406.0
         }
     ]
 }

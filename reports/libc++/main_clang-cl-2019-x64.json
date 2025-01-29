@@ -4844,6 +4844,23 @@
             "commit_ref": "7d172f96ff2c4c7cf5c428b79a3c18e067ce0079",
             "commit_message": "[CostModel][X86] getShuffleCosts - convert all shuffle cost tables to be CostKind compatible. NFC. (#124753)\n\nNo change in actual costs yet, but split the costs per cost kind to make it easier to tweak the numbers in future patches.",
             "commit_timestamp": 1738076665.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1738120209.0076,
+            "elapsed_time": 67.2518105506897,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4989.818984985352,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "ff271d04a2fe0af0ad43e9c0bce1cbb10912dc32",
+            "commit_message": "[RISCV][VLOPT] Fix assertion failure across blocks (#124734)\n\nWhilst adding a cross-block test, I encountered an assertion failure in\nthe second pass where we check the instruction popped off the worklist\nis a candidate.\n\nThe leaf instruction %c in this case will be added to the worklist when\nits VL is VLMAX, but during the first pass it will have its VL reduced\nto 1.\n\nThen in the second pass when its processed via the worklist, isCandidate\nwill no longer be true due to its VL == 1.\n\nThis fixes it by moving the VL == 1 check to tryReduceVL, keeping it\nalongside the other VL check for bailing out early as an optimisation.",
+            "commit_timestamp": 1738119650.0
         }
     ]
 }

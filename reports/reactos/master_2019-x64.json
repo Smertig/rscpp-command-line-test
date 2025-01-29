@@ -22606,6 +22606,21 @@
             "commit_ref": "cf2cbe6ff6c11d4c9527a212b3d2953ca7e5c988",
             "commit_message": "[MOUNTMGR_APITEST] Add custom DesiredAccess to GetMountMgrHandle()\n\nThis will allow any future tests, employing IOCTL_MOUNTMGR_*\nthat require read or write accesses, to also use this helper.\n",
             "commit_timestamp": 1738074581.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1738120066.684258,
+            "elapsed_time": 82.595454454422,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7518.480339050293,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "b35becef2eb507c90d5b6d4a8c66a2647445cde1",
+            "commit_message": "[RAPPS] Set working directory for zip generated shortcuts (#7674)\n\nSome applications are broken and assume the working directory is the\nsame as the .exe directory (xrick etc).",
+            "commit_timestamp": 1738107971.0
         }
     ]
 }

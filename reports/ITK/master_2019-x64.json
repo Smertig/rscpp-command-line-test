@@ -22766,6 +22766,21 @@
             "commit_ref": "5df209ffdd2b351939631219de14c782754691ca",
             "commit_message": "ENH: Fix uncalled tests for large image read/write\n\nAlso added a minimum memory guard so that the tests\ndon't run on CI or other systems which cannot\nsupport high memory usage.\n",
             "commit_timestamp": 1738010691.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1738120286.527674,
+            "elapsed_time": 221.56193447113037,
+            "x64": true,
+            "actual_files_count": 101,
+            "expected_files_count": null,
+            "memory_traffic": 23900.243072509766,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "eb490ff5520a4ed42fa607c5e72b2e58518407d2",
+            "commit_message": "STYLE: Add historical bulk changes to git blame ignore\n\nIssue #2623\nThis adds historical changes that\n- start their commit msg header with \"STYLE\"\n- and affect at least 1000 files\n",
+            "commit_timestamp": 1738096766.0
         }
     ]
 }
