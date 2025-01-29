@@ -22621,6 +22621,21 @@
             "commit_ref": "b35becef2eb507c90d5b6d4a8c66a2647445cde1",
             "commit_message": "[RAPPS] Set working directory for zip generated shortcuts (#7674)\n\nSome applications are broken and assume the working directory is the\nsame as the .exe directory (xrick etc).",
             "commit_timestamp": 1738107971.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1738163126.356703,
+            "elapsed_time": 69.2811005115509,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7447.332427978516,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "2f23e70ad55cc661bc756fb492535fdfab2e9921",
+            "commit_message": "Revert \"[NTUSER] Enable SM_CXICON etc. settings from registry (#7679)\" (#7682)\n\nThis reverts commit 3b3741c10af77bd54184e9d271206ac017e73b34 of #7679 .\r\nIt seems like the shell icon size is not the\r\nsystem icon size.\r\n\r\nThe wide string L\"Shell Small Icon Size\" is detected in\r\nshell32.dll and themeui.dll.\r\nNo L\"Shell Small Icon Size\" in win32k.sys found.\r\nJIRA issue: CORE-12905",
+            "commit_timestamp": 1738154059.0
         }
     ]
 }

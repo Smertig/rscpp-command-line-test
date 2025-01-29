@@ -24986,6 +24986,23 @@
             "commit_ref": "ff271d04a2fe0af0ad43e9c0bce1cbb10912dc32",
             "commit_message": "[RISCV][VLOPT] Fix assertion failure across blocks (#124734)\n\nWhilst adding a cross-block test, I encountered an assertion failure in\nthe second pass where we check the instruction popped off the worklist\nis a candidate.\n\nThe leaf instruction %c in this case will be added to the worklist when\nits VL is VLMAX, but during the first pass it will have its VL reduced\nto 1.\n\nThen in the second pass when its processed via the worklist, isCandidate\nwill no longer be true due to its VL == 1.\n\nThis fixes it by moving the VL == 1 check to tryReduceVL, keeping it\nalongside the other VL check for bailing out early as an optimisation.",
             "commit_timestamp": 1738119650.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1738163953.095608,
+            "elapsed_time": 1499.2432026863098,
+            "x64": true,
+            "actual_files_count": 2114,
+            "expected_files_count": 1661,
+            "memory_traffic": 253351.0591583252,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "e9c2e0acd747b7b5260cf022233fa9b5336d2d30",
+            "commit_message": "[AArch64] Match GCC behaviour for zero-size structs (#124760)\n\nWe had a test claiming that this empty struct type consumes a register\r\nslot when passing it to a function with GCC, but that does not appear to\r\nbe the case, at least with GCC versions going back to 4.8.\r\n\r\nThis also caused a miscompilation when passing one of these structs to a\r\nvariadic function, but it turned out that our implementation of `va_arg`\r\nmatches GCC's ABI, so the one change fixes both bugs.",
+            "commit_timestamp": 1738162957.0
         }
     ]
 }

@@ -4139,6 +4139,21 @@
             "commit_ref": "450354722a28413a7df7297bccb405bfc5fa52b1",
             "commit_message": "Comment fix and other internal changes.\n\nPiperOrigin-RevId: 720687117\n",
             "commit_timestamp": 1738099866.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1738163220.007472,
+            "elapsed_time": 478.7029631137848,
+            "x64": true,
+            "actual_files_count": 1570,
+            "expected_files_count": 818,
+            "memory_traffic": 66283.9682006836,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "117e7bbe74ac7c7faa9b6f44c1b22de366302854",
+            "commit_message": "Breaking change: prohibit using Bazel+MSVC to build protobuf\n\nAn opt-out flag `--define=protobuf_allow_msvc=true` will be available until our 2026 breaking release 34.0. See https://github.com/protocolbuffers/protobuf/issues/20085 for more details.\n\n#test-continuous\n\nPiperOrigin-RevId: 720822739\n",
+            "commit_timestamp": 1738130492.0
         }
     ]
 }
