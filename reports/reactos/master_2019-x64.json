@@ -22651,6 +22651,21 @@
             "commit_ref": "70bf3bb8fa7ed1eefde808efb3b43e85040b24bf",
             "commit_message": "[NTOS:KDBG] Add back 'cregs' command\n\nThis command was removed in commit baa47fa5e06948b7e76ba820f7a342547eaf0cde\nbecause there was no way to get the CRx registers from a CONTEXT structure.\nPrevious code was also displaying current GDTR/LDTR and IDT.\n\nRewrite the code to use KdSystemDebugControl(SysDbgReadControlSpace, ...)\nto get CRx, GDTR/LDTR and IDT values just before entering debugger.\n",
             "commit_timestamp": 1738171524.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1738249636.454971,
+            "elapsed_time": 108.54356789588928,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7374.295394897461,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "7e52f64044259fc7d53aac1c28ff36d99c1178bc",
+            "commit_message": "[SDK] Define IAssociationElement, IAssociationArray etc. (#7678)\n\nDefining missing interfaces for\r\nfile association...\r\nJIRA issue: CORE-19278\r\n- Define IID_IAssociationElementOld,\r\n  and IID_IAssociationElement\r\n  interface IDs in <shlguid_undoc.h>.\r\n- Define ASSOCQUERY, and\r\n  IAssociationElementOld in\r\n  <shlwapi_undoc.h>.\r\n- Define IAssociationElement,\r\n  IEnumAssociationElements,\r\n  IAssociationArrayOld, and\r\n  IAssociationArray interfaces in\r\n  <shlobj_undoc.h>.\r\n- Simplify <shlwapi_undoc.h>\r\n  and <shlobj_undoc.h>.",
+            "commit_timestamp": 1738243006.0
         }
     ]
 }
