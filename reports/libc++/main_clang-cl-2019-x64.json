@@ -4878,6 +4878,23 @@
             "commit_ref": "e9c2e0acd747b7b5260cf022233fa9b5336d2d30",
             "commit_message": "[AArch64] Match GCC behaviour for zero-size structs (#124760)\n\nWe had a test claiming that this empty struct type consumes a register\r\nslot when passing it to a function with GCC, but that does not appear to\r\nbe the case, at least with GCC versions going back to 4.8.\r\n\r\nThis also caused a miscompilation when passing one of these structs to a\r\nvariadic function, but it turned out that our implementation of `va_arg`\r\nmatches GCC's ABI, so the one change fixes both bugs.",
             "commit_timestamp": 1738162957.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1738206557.714924,
+            "elapsed_time": 63.50659799575806,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4995.0672607421875,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "1fdf3340fbc8b6f2dcb3f63b9d6763933b3d3335",
+            "commit_message": "[gn build] Port d6524c8dfa37\n",
+            "commit_timestamp": 1738205365.0
         }
     ]
 }
