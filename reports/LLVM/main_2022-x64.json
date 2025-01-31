@@ -25037,6 +25037,23 @@
             "commit_ref": "fc39617746695160cbd5fcef99e20e726f46c3d5",
             "commit_message": "[SLP][NFC]Update tests and remove undefs, NFC\n",
             "commit_timestamp": 1738249094.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1738293644.902871,
+            "elapsed_time": 1524.322422504425,
+            "x64": true,
+            "actual_files_count": 2088,
+            "expected_files_count": 1661,
+            "memory_traffic": 251749.08268737793,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "45f538ecba1a51768002a5bc0c194b5af4cd9c27",
+            "commit_message": "[ELF] ICF: replace includeInDynsym with isExported\n\nSimilar to the change to MarkLive.cpp when isExported was introduced.\nincludeInDynsym might return true even when isExported is false for\nstatically linked executables.\n",
+            "commit_timestamp": 1738292618.0
         }
     ]
 }
