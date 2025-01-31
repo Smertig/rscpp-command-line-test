@@ -4199,6 +4199,21 @@
             "commit_ref": "b168fda877fba8091f9f27205df2a310c888e7cf",
             "commit_message": "Auto-generate files after cl/721507009\n",
             "commit_timestamp": 1738274833.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1738336018.69401,
+            "elapsed_time": 454.34773421287537,
+            "x64": true,
+            "actual_files_count": 1570,
+            "expected_files_count": 818,
+            "memory_traffic": 66372.73175048828,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "8a0c6bf079811acb6d086f8c2551cb7873140c9f",
+            "commit_message": "Fix port_test.cc in optimized builds\n\nIn optimized builds, this test currently calls `__builtin_assume()` on a false\nstatement, which is undefined behavior that trips up ubsan. This change fixes\nthat by skipping the test case when `NDEBUG` is defined.\n\nPiperOrigin-RevId: 721617118\n",
+            "commit_timestamp": 1738298225.0
         }
     ]
 }

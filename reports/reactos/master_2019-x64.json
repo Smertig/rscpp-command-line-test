@@ -22681,6 +22681,21 @@
             "commit_ref": "dddceeb10d3d1afa41d7ce36cfa0494d00566c76",
             "commit_message": "[SHELL32] Load shell icon size from registry (#7683)\n\nImprove usability. Re-trial of #7679 with different approach.\r\nJIRA issue: CORE-12905\r\n- Add ShellSmallIconSize, ShellLargeIconSize, and\r\n  ShellIconBPP global variables in iconcache.cpp.\r\n- Add SIC_GetMetricsValue, SIC_GetLargeIconSize,\r\n  SIC_GetSmallIconSize, and SIC_GetIconBPP helper\r\n  functions in iconcache.cpp.\r\n- Load shell icon size from registry key\r\n  \"HKEY_CURRENT_USER\\\\Control Panel\\\\Desktop\\\\WindowMetrics\".\r\n- Load icon BPP (bits per pixel) from registry.\r\n- Fix SIC_Initialize and SIC_LoadIcon functions for icon size.\r\n- Fix SHGetFileInfoW function for SHGFI_SHELLICONSIZE flag.",
             "commit_timestamp": 1738279265.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1738336009.566688,
+            "elapsed_time": 99.53745889663696,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7473.134841918945,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "6265add14704b955b9ea325713ec6e6f6e0e7e10",
+            "commit_message": "[SHELL32] Don't close Run dialog on execution failure (#7686)\n\nCORE-19983",
+            "commit_timestamp": 1738324340.0
         }
     ]
 }
