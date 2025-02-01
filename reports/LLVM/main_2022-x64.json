@@ -25071,6 +25071,23 @@
             "commit_ref": "6dd07b17c7ff8e61073a7732e09fa828a64f7bec",
             "commit_message": "Revert \"[SLP]Reduce number of alternate instruction, where possible\"\n\nThis reverts commit e588085af03ba4be14a502806918fd74ca1cf367 to fix\na crash reported in https://github.com/llvm/llvm-project/pull/123360#issuecomment-2627439245\n",
             "commit_timestamp": 1738334236.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1738380254.231093,
+            "elapsed_time": 1507.864031791687,
+            "x64": true,
+            "actual_files_count": 2088,
+            "expected_files_count": 1661,
+            "memory_traffic": 251663.56859588623,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "280609c215e4a684cad215ea5be913293de0d255",
+            "commit_message": "[clang-format][NFC] Minor improvement to FormatToken::isTypeName()\n",
+            "commit_timestamp": 1738378373.0
         }
     ]
 }
