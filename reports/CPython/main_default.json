@@ -20036,6 +20036,21 @@
             "commit_ref": "d89a5f6a6e65511a5f6e0618c4c30a7aa5aba56a",
             "commit_message": "gh-105704: Disallow square brackets (`[` and `]`) in domain names for parsed URLs (#129418)\n\n* gh-105704: Disallow square brackets ( and ) in domain names for parsed URLs\r\n\r\n* Use Sphinx references\r\n\r\nCo-authored-by: Peter Bierma <zintensitydev@gmail.com>\r\n\r\n* Add mismatched bracket test cases, fix news format\r\n\r\n* Add more test coverage for ports\r\n\r\n---------\r\n\r\nCo-authored-by: Peter Bierma <zintensitydev@gmail.com>",
             "commit_timestamp": 1738345294.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1738422553.027395,
+            "elapsed_time": 1203.6314992904663,
+            "x64": true,
+            "actual_files_count": 1059,
+            "expected_files_count": null,
+            "memory_traffic": 48496.51111602783,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "71ae93374defd192e5e88fe0912eff4f8e56f286",
+            "commit_message": "gh-93649: Move _testcapi tests to specific files (#129544)\n\nMove many functions from _testcapimodule.c into more specific files\nin Modules/_testcapi/.\n\nIn moved code:\n\n* Replace get_testerror() with PyExc_AssertionError.\n* Replace raiseTestError() with\n  PyErr_Format(PyExc_AssertionError, ...).",
+            "commit_timestamp": 1738413556.0
         }
     ]
 }
