@@ -20571,6 +20571,21 @@
             "commit_ref": "04d71affd16368ccde4f761abe3d3de620c3521d",
             "commit_message": "Define __rela_iplt_{start,end} as absolute symbols if not necessary\n\nPreviously, these symbols were defined relative to a section. That is\nlogically correct, because the runtiem is supposed to apply IREL\nrelocs between `__rela_iplt_start` and `__rela_iplt_end`, so their\nactual locations shouldn't matter if there's no IREL relocs (i.e. they\nrefer to the same location.)\n\nHowever, under some circumstances, glibc reads `__rela_iplt_start`\nbefore applying base relocations and `__rela_iplt_end` after applying\nthem due to compiler instruction reordering.\n\nTherefore, we need to make them absolute symbols that don't require\nbase relocations.\n\nFixes https://github.com/rui314/mold/issues/1407\n",
             "commit_timestamp": 1738461273.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1738508784.194839,
+            "elapsed_time": 125.82923531532288,
+            "x64": true,
+            "actual_files_count": 624,
+            "expected_files_count": null,
+            "memory_traffic": 16490.9705657959,
+            "repo_url": "https://github.com/rui314/mold",
+            "commit_ref": "56748ed199df0e5f2d4a1693bacd793ad0b547d3",
+            "commit_message": "Refactor\n",
+            "commit_timestamp": 1738490067.0
         }
     ]
 }

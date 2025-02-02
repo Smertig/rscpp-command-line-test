@@ -22901,6 +22901,21 @@
             "commit_ref": "f07f9ec492f09790acfbc7de82e5b89721748dca",
             "commit_message": "DOC: Synced Wrapping/DoxygenConfig.cmake with the one in Utilities\n\nThis is a follow-up to 097e2dc87886cc16e71c63dc75ee432f12f4a208.\n",
             "commit_timestamp": 1738359580.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1738509061.294833,
+            "elapsed_time": 203.0940203666687,
+            "x64": true,
+            "actual_files_count": 101,
+            "expected_files_count": null,
+            "memory_traffic": 23852.592247009277,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "68c0581de5ae1aaa34be91f2d3da3e2c03b555e8",
+            "commit_message": "DOC: Fix incorrect `BibTeX` citation keys\n\nFix incorrect `BibTeX` citation keys.\n\nFixes:\n```\n.../ITK/Modules/Filtering/ImageGrid/include/itkBSplineResampleImageFilterBase.h:47:\n warning: \\cite command to 'unser199' does not have an associated number\n\n.../ITK/Modules/Core/Common/include/itkGaussianDerivativeOperator.h:80:\n warning: \\cite command to 'lindeberg1999' does not have an associated number\n\n.../ITK/Modules/Filtering/Convolution/include/itkMaskedFFTNormalizedCorrelationImageFilter.h:128:\n warning: \\cite command to 'padfield' does not have an associated number\n```\n\nReported by: albert-github <albert.tests@gmail.com>\n\nCo-authored-by: albert-github <albert.tests@gmail.com>\n",
+            "commit_timestamp": 1738505150.0
         }
     ]
 }
