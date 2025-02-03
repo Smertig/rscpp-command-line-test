@@ -23148,6 +23148,21 @@
             "commit_ref": "f8a1e0129dce62c8c07ed5828781438e74452671",
             "commit_message": "Sync to upstream/release/659 (#1637)\n\n## What's Changed\n\nGeneral performance improvements and bug fixes. `lua_clonetable` was\nadded too.\n\n### General\n\n## Runtime\n- Improvements were made to Luau's performance, including a\n`lua_clonetable` function and optimizations to string caching. Buffer\nread/write operations were optimized for big-endian machines.\n## New Solver\n- Crashes related to duplicate keys in table literals, fragment AC\ncrashes, and potential hash collisions in the StringCache.\n- We now handle user-defined type functions as opaque and track interior\nfree table types.\n## Require By String\n- Require-by-string path resolution was simplified.\n\n**Full Changelog**:\nhttps://github.com/luau-lang/luau/compare/0.658...0.659\n\n---\n\nCo-authored-by: Ariel Weiss <aaronweiss@roblox.com>\nCo-authored-by: Andy Friesen <afriesen@roblox.com>\nCo-authored-by: Hunter Goldstein <hgoldstein@roblox.com>\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>\nCo-authored-by: Varun Saini <vsaini@roblox.com>\nCo-authored-by: Vighnesh Vijay <vvijay@roblox.com>\nCo-authored-by: Yohoo Lin <yohoo@roblox.com>\n\n---------\n\nCo-authored-by: Hunter Goldstein <hgoldstein@roblox.com>\nCo-authored-by: Varun Saini <61795485+vrn-sn@users.noreply.github.com>\nCo-authored-by: Alexander Youngblood <ayoungblood@roblox.com>",
             "commit_timestamp": 1738378716.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1738552093.540971,
+            "elapsed_time": 278.226811170578,
+            "x64": true,
+            "actual_files_count": 479,
+            "expected_files_count": 379,
+            "memory_traffic": 34058.41886138916,
+            "repo_url": "https://github.com/luau-lang/luau",
+            "commit_ref": "f8a1e0129dce62c8c07ed5828781438e74452671",
+            "commit_message": "Sync to upstream/release/659 (#1637)\n\n## What's Changed\n\nGeneral performance improvements and bug fixes. `lua_clonetable` was\nadded too.\n\n### General\n\n## Runtime\n- Improvements were made to Luau's performance, including a\n`lua_clonetable` function and optimizations to string caching. Buffer\nread/write operations were optimized for big-endian machines.\n## New Solver\n- Crashes related to duplicate keys in table literals, fragment AC\ncrashes, and potential hash collisions in the StringCache.\n- We now handle user-defined type functions as opaque and track interior\nfree table types.\n## Require By String\n- Require-by-string path resolution was simplified.\n\n**Full Changelog**:\nhttps://github.com/luau-lang/luau/compare/0.658...0.659\n\n---\n\nCo-authored-by: Ariel Weiss <aaronweiss@roblox.com>\nCo-authored-by: Andy Friesen <afriesen@roblox.com>\nCo-authored-by: Hunter Goldstein <hgoldstein@roblox.com>\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>\nCo-authored-by: Varun Saini <vsaini@roblox.com>\nCo-authored-by: Vighnesh Vijay <vvijay@roblox.com>\nCo-authored-by: Yohoo Lin <yohoo@roblox.com>\n\n---------\n\nCo-authored-by: Hunter Goldstein <hgoldstein@roblox.com>\nCo-authored-by: Varun Saini <61795485+vrn-sn@users.noreply.github.com>\nCo-authored-by: Alexander Youngblood <ayoungblood@roblox.com>",
+            "commit_timestamp": 1738378716.0
         }
     ]
 }
