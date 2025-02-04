@@ -18387,6 +18387,21 @@
             "commit_ref": "b2a6c3ba23b58bf8c3d4f50b31703ed0505b1286",
             "commit_message": "Server: undo inventory client prediction\n\nThe affected player inventory list is now marked as modified.\nThis way, it will also be re-sent if the server denies the action.\n",
             "commit_timestamp": 1738519509.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1738683182.764827,
+            "elapsed_time": 170.36051416397095,
+            "x64": true,
+            "actual_files_count": 410,
+            "expected_files_count": 105,
+            "memory_traffic": 22797.284217834473,
+            "repo_url": "https://github.com/minetest/minetest",
+            "commit_ref": "0fa56a9f7cea01c48992fc3a2e37642a42b42832",
+            "commit_message": "Revert \"Prefer GL3 driver over legacy GL driver\"\n\nThis reverts commit 9f52f84f2bd569451d7703906dce5bd0110f7344\nand ded8c25e34e45ca438f7d0675e1cc5be58c0eca0.\n",
+            "commit_timestamp": 1738667958.0
         }
     ]
 }

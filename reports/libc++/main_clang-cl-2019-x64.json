@@ -5065,6 +5065,23 @@
             "commit_ref": "635ab515d5ef2469a525952999dce3236d25b2b5",
             "commit_message": "[VectorCombine] Fold vector.interleave2 with two constant splats (#125144)\n\nIf we're interleaving 2 constant splats, for instance `<vscale x 8 x\r\ni32> <splat of 666>` and `<vscale x 8 x i32> <splat of 777>`, we can\r\ncreate a larger splat `<vscale x 8 x i64> <splat of ((777 << 32) |\r\n666)>` first before casting it back into `<vscale x 16 x i32>`.",
             "commit_timestamp": 1738638349.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1738681751.121263,
+            "elapsed_time": 68.07849764823914,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5064.577476501465,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "93b90a532d0ca5a95c226e3d0b37444ef692d3da",
+            "commit_message": "[ReachingDefAnalysis] Fix management of MBBFrameObjsReachingDefs (#124943)\n\nMBBFrameObjsReachingDefs was not being built correctly since we were not\r\ninserting into a reference of Frame2InstrIdx. If there was multiple\r\nstack slot defs in the same basic block, then the bug would occur. This\r\nPR fixes this problem while simplifying the insertion logic.\r\n\r\nAdditionally, when lookup into MBBFrameObjsReachingDefs was occurring,\r\nthere was a chance that there was no entry in the map, in the case that\r\nthere was no reaching def. This was causing us to return a default\r\nvalue, which may or may not have been correct. This patch returns the\r\ncorrect value now.",
+            "commit_timestamp": 1738681459.0
         }
     ]
 }
