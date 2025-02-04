@@ -25173,6 +25173,23 @@
             "commit_ref": "cb2598dda1aae5096a77bc8a9f6679ca1b350e5e",
             "commit_message": "[flang][runtime] Make sure to link libexecinfo if it exists (#125344)\n\nFixes building the backtrace support on FreeBSD/NetBSD/OpenBSD/DragonFly and musl\r\nlibc with libexecinfo.",
             "commit_timestamp": 1738595039.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1738639422.592899,
+            "elapsed_time": 1588.0832805633545,
+            "x64": true,
+            "actual_files_count": 2089,
+            "expected_files_count": 1661,
+            "memory_traffic": 252308.77374267578,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "635ab515d5ef2469a525952999dce3236d25b2b5",
+            "commit_message": "[VectorCombine] Fold vector.interleave2 with two constant splats (#125144)\n\nIf we're interleaving 2 constant splats, for instance `<vscale x 8 x\r\ni32> <splat of 666>` and `<vscale x 8 x i32> <splat of 777>`, we can\r\ncreate a larger splat `<vscale x 8 x i64> <splat of ((777 << 32) |\r\n666)>` first before casting it back into `<vscale x 16 x i32>`.",
+            "commit_timestamp": 1738638349.0
         }
     ]
 }
