@@ -25224,6 +25224,23 @@
             "commit_ref": "fc4210fb6c5a42b3838091a97a00ed1fba042ef0",
             "commit_message": "AMDGPU/Docs: Fix target properties for gfx9-4-generic (#125593)\n\ngfx9-4-generic has architected flat scratch, not absolute",
             "commit_timestamp": 1738723663.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1738768945.402968,
+            "elapsed_time": 1594.7217993736267,
+            "x64": true,
+            "actual_files_count": 2089,
+            "expected_files_count": 1661,
+            "memory_traffic": 253214.794090271,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "08bda1cc6b0d2f1d31a89a76b5c154a11086c420",
+            "commit_message": "Reland: [clang] fix P3310 overload resolution flag propagation (#125791)\n\nClass templates might be only instantiated when they are required to be\ncomplete, but checking the template args against the primary template is\nimmediate.\n\nThis result is cached so that later when the class is instantiated,\nchecking against the primary template is not repeated.\n\nThe 'MatchedPackOnParmToNonPackOnArg' flag is also produced upon\nchecking against the primary template, so it needs to be cached in the\nspecialziation as well.\n\nThis fixes a bug which has not been in any release, so there are no\nrelease notes.\n\nFixes #125290",
+            "commit_timestamp": 1738767744.0
         }
     ]
 }

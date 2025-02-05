@@ -24078,6 +24078,21 @@
             "commit_ref": "c35af58b61daa111c93924e0e7b65022871fadac",
             "commit_message": "Update error message now that /proc/cpuinfo is no longer in use (#1917)\n\nc24774dc4f4402c3ad150363321cc972ed2669e7 removed using /proc/cpuinfo\nso no longer mention it in the error message.",
             "commit_timestamp": 1738665161.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1738768007.539187,
+            "elapsed_time": 80.32109928131104,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": 86,
+            "memory_traffic": 4964.5392990112305,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "2e16afc3fd53586f9949aa347c4bb909d15523a5",
+            "commit_message": "add back /proc/cpuinfo as a fallback for some platforms (#1918)\n\n",
+            "commit_timestamp": 1738758107.0
         }
     ]
 }
