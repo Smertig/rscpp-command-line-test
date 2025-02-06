@@ -22846,6 +22846,21 @@
             "commit_ref": "a1a169fbe811b621188b41c907c8ef51304644cb",
             "commit_message": "[FREELDR] Fix pc98 build\n",
             "commit_timestamp": 1738680348.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1738811333.731755,
+            "elapsed_time": 86.43379950523376,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7521.081703186035,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "2b2bdabe7221f9b35f135b013e44bce4bfd16c66",
+            "commit_message": "[RTL][NTDLL_APITEST] Fix buffer overflow in RtlDosSearchPath_Ustr (#7698)\n\nIn addition:\r\n- `IS_PATH_SEPARATOR(*--End)` -> `--End; IS_PATH_SEPARATOR(*End)` fix,\r\n- Use SIZE_T type for `WorstCaseLength` and `NamePlusExtLength`.",
+            "commit_timestamp": 1738786631.0
         }
     ]
 }

@@ -24093,6 +24093,21 @@
             "commit_ref": "2e16afc3fd53586f9949aa347c4bb909d15523a5",
             "commit_message": "add back /proc/cpuinfo as a fallback for some platforms (#1918)\n\n",
             "commit_timestamp": 1738758107.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1738811302.751647,
+            "elapsed_time": 62.68029808998108,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": 86,
+            "memory_traffic": 5032.690361022949,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "47bc26c8b5ca1f043641ec51d54858402807d107",
+            "commit_message": "change pacboy compiler target for windows builds (#1915)\n\n* change pacboy compiler target for windows builds\n\n* use an action for cmake instead of doing things manually\n\n* set compiler for cmake\n\n* remove cmake action from msys2 build\n\n* readd cmake package for msys2\n\n* fix cmake test path to match build\n\n* fix msvc build type setting\n\n* fix msvc build type setting\n\n* consistent output directory for msvc\n\n* remove legacy environments (https://www.msys2.org/docs/environments/\\#__tabbed_1_2)\n\n* remove shell overrides and depend on default for msys2",
+            "commit_timestamp": 1738777530.0
         }
     ]
 }

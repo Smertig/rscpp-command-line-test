@@ -20171,6 +20171,21 @@
             "commit_ref": "e5c3b7e34974dcd6d7f6a1a50030bf7fbce38e74",
             "commit_message": "gh-129354: Cleanup test_coroutines (#129684)\n\nRemove unused variables.",
             "commit_timestamp": 1738755826.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1738811522.906969,
+            "elapsed_time": 1179.1593053340912,
+            "x64": true,
+            "actual_files_count": 1059,
+            "expected_files_count": null,
+            "memory_traffic": 48470.96417236328,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "cdcacec79f7a216c3c988baa4dc31ce4e76c97ac",
+            "commit_message": "gh-129201: Use prefetch in GC mark alive phase. (gh-129203)\n\nFor the free-threaded version of the cyclic GC, restructure the \"mark alive\" phase to use software prefetch instructions.  This gives a speedup in most cases when the number of objects is large enough.  The prefetching is enabled conditionally based on the number of long-lived objects the GC finds.",
+            "commit_timestamp": 1738784310.0
         }
     ]
 }

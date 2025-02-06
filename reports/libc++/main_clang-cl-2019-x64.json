@@ -5116,6 +5116,23 @@
             "commit_ref": "08bda1cc6b0d2f1d31a89a76b5c154a11086c420",
             "commit_message": "Reland: [clang] fix P3310 overload resolution flag propagation (#125791)\n\nClass templates might be only instantiated when they are required to be\ncomplete, but checking the template args against the primary template is\nimmediate.\n\nThis result is cached so that later when the class is instantiated,\nchecking against the primary template is not repeated.\n\nThe 'MatchedPackOnParmToNonPackOnArg' flag is also produced upon\nchecking against the primary template, so it needs to be cached in the\nspecialziation as well.\n\nThis fixes a bug which has not been in any release, so there are no\nrelease notes.\n\nFixes #125290",
             "commit_timestamp": 1738767744.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1738811408.360916,
+            "elapsed_time": 58.35129976272583,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5040.092903137207,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "8c222c122f1a8edb1be96e482511ad547f7db7b3",
+            "commit_message": "[X86] Do not combine LRINT and TRUNC (#125848)\n\nPer to discussions in #125324, most participants are opposed to this\r\noptimization. So remove the combination to address the concerns.\r\n\r\nFixes #125324",
+            "commit_timestamp": 1738810717.0
         }
     ]
 }
