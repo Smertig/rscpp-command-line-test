@@ -23050,6 +23050,21 @@
             "commit_ref": "e8e49ab7a859da0f669dffb43eee219ba3ed2b1f",
             "commit_message": "Merge pull request #26872 from sturkmen72:ImageEncoders_revisions\n\nPerformance tests for image encoders and decoders and code cleanup #26872\r\n\r\n### Pull Request Readiness Checklist\r\n\r\nSee details at https://github.com/opencv/opencv/wiki/How_to_contribute#making-a-good-pull-request\r\n\r\n- [x] I agree to contribute to the project under Apache 2 License.\r\n- [x] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\r\n- [x] The PR is proposed to the proper branch\r\n- [ ] There is a reference to the original bug report and related work\r\n- [ ] There is accuracy test, performance test and test data in opencv_extra repository, if applicable\r\n      Patch to opencv_extra has the same branch name.\r\n- [ ] The feature is well documented and sample code can be built with the project CMake\r\n",
             "commit_timestamp": 1738660915.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1738854505.884305,
+            "elapsed_time": 385.7225663661957,
+            "x64": true,
+            "actual_files_count": 479,
+            "expected_files_count": 459,
+            "memory_traffic": 41096.554054260254,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "7563cebad50028f18a5c76a61f7a2f1460fcf161",
+            "commit_message": "Merge pull request #26879 from Malacath-92:4.x\n\nAdd missing include in gislandmodel.hpp #26879\r\n\r\nAdd `<exception>`, `<string>`, and `<cstddef>` includes to `gislandmodel.hpp` which are required due to the usage of `std::exception_ptr`, `std::string`, and `size_t` in this header.\r\n\r\nNotably one of those causes a build error on recent versions of Xcode: #26780 \r\n\r\n### Pull Request Readiness Checklist\r\n\r\nSee details at https://github.com/opencv/opencv/wiki/How_to_contribute#making-a-good-pull-request\r\n\r\n- [x] I agree to contribute to the project under Apache 2 License.\r\n- [x] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\r\n- [x] The PR is proposed to the proper branch\r\n- [x] There is a reference to the original bug report and related work\r\n- [N/A] There is accuracy test, performance test and test data in opencv_extra repository, if applicable\r\n      Patch to opencv_extra has the same branch name.\r\n- [N/A] The feature is well documented and sample code can be built with the project CMake\r\n",
+            "commit_timestamp": 1738838086.0
         }
     ]
 }

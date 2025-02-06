@@ -22861,6 +22861,21 @@
             "commit_ref": "2b2bdabe7221f9b35f135b013e44bce4bfd16c66",
             "commit_message": "[RTL][NTDLL_APITEST] Fix buffer overflow in RtlDosSearchPath_Ustr (#7698)\n\nIn addition:\r\n- `IS_PATH_SEPARATOR(*--End)` -> `--End; IS_PATH_SEPARATOR(*End)` fix,\r\n- Use SIZE_T type for `WorstCaseLength` and `NamePlusExtLength`.",
             "commit_timestamp": 1738786631.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1738854409.978972,
+            "elapsed_time": 99.20181274414062,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7358.814041137695,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "d969be0fb4a4ac34eed2e710a4b29cc14c11f7c8",
+            "commit_message": "[SHDOCVW_APITEST] Add WinList testcase (#7702)\n\nJIRA issue: CORE-9368\r\n- Add WinList testcase for\r\n  CLSID_ShellWindows class\r\n  and shdocvw!WinList_*\r\n  functions.",
+            "commit_timestamp": 1738847276.0
         }
     ]
 }

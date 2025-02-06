@@ -20186,6 +20186,21 @@
             "commit_ref": "cdcacec79f7a216c3c988baa4dc31ce4e76c97ac",
             "commit_message": "gh-129201: Use prefetch in GC mark alive phase. (gh-129203)\n\nFor the free-threaded version of the cyclic GC, restructure the \"mark alive\" phase to use software prefetch instructions.  This gives a speedup in most cases when the number of objects is large enough.  The prefetching is enabled conditionally based on the number of long-lived objects the GC finds.",
             "commit_timestamp": 1738784310.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1738854590.268428,
+            "elapsed_time": 1157.571135520935,
+            "x64": true,
+            "actual_files_count": 1059,
+            "expected_files_count": null,
+            "memory_traffic": 48440.88220977783,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "55f17b77c305be877ac856d6426b13591cbc7fc8",
+            "commit_message": "gh-128714: Fix function object races in `__annotate__`, `__annotations__` and `__type_params__` in  free-threading build (#129016)\n\n",
+            "commit_timestamp": 1738852850.0
         }
     ]
 }

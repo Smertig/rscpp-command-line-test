@@ -25258,6 +25258,23 @@
             "commit_ref": "8c222c122f1a8edb1be96e482511ad547f7db7b3",
             "commit_message": "[X86] Do not combine LRINT and TRUNC (#125848)\n\nPer to discussions in #125324, most participants are opposed to this\r\noptimization. So remove the combination to address the concerns.\r\n\r\nFixes #125324",
             "commit_timestamp": 1738810717.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1738855190.335696,
+            "elapsed_time": 1543.332030057907,
+            "x64": true,
+            "actual_files_count": 2089,
+            "expected_files_count": 1661,
+            "memory_traffic": 253371.174118042,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "3041dd5c2065d6fa98546babf7525fc5ed4532be",
+            "commit_message": "Revert \"[OpenMP][SIMD][FIX] Use conservative \"omp simd ordered\" lowering\" (#126079)\n\nReverts llvm/llvm-project#123867 to fix the test failures\r\nhttps://lab.llvm.org/buildbot/#/builders/144/builds/17521",
+            "commit_timestamp": 1738854251.0
         }
     ]
 }
