@@ -22891,6 +22891,21 @@
             "commit_ref": "22577aed85f91b33a25c89ad857951ddb8e1a988",
             "commit_message": "[NTUSER][USER32] Support GetWindow.GW_ENABLEDPOPUP (#7700)\n\nJIRA issue: CORE-6920\r\n- Make the return value of\r\n  NtUserCallHwnd a DWORD_PTR.\r\n- Add DWP_GetEnabledPopup\r\n  helper function in\r\n  win32ss/user/ntuser/defwnd.c.\r\n- Add code to NtUserCallHwnd for\r\n  HWND_ROUTINE_DWP_GETENABLEDPOPUP.\r\n- Add code to GetWindow for\r\n  GW_ENABLEDPOPUP.\r\n- Set last error in GetWindow and\r\n  IntGetWindow.",
             "commit_timestamp": 1738881068.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1738940758.982256,
+            "elapsed_time": 99.8092315196991,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7374.232536315918,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "468a9787d1e39c2034189f4fdc4ca9a9ec5aa7bd",
+            "commit_message": "Revert \"[USER32][LIBPNG] Support PNG/Vista icons (#7704)\"\n\nThis reverts commit 7f4708479dd73dad32838b2329bb7215ea897433.\n\n- PR was still in review;\n- Doug has commit access himself.\n",
+            "commit_timestamp": 1738938005.0
         }
     ]
 }
