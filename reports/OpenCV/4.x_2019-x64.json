@@ -23065,6 +23065,21 @@
             "commit_ref": "7563cebad50028f18a5c76a61f7a2f1460fcf161",
             "commit_message": "Merge pull request #26879 from Malacath-92:4.x\n\nAdd missing include in gislandmodel.hpp #26879\r\n\r\nAdd `<exception>`, `<string>`, and `<cstddef>` includes to `gislandmodel.hpp` which are required due to the usage of `std::exception_ptr`, `std::string`, and `size_t` in this header.\r\n\r\nNotably one of those causes a build error on recent versions of Xcode: #26780 \r\n\r\n### Pull Request Readiness Checklist\r\n\r\nSee details at https://github.com/opencv/opencv/wiki/How_to_contribute#making-a-good-pull-request\r\n\r\n- [x] I agree to contribute to the project under Apache 2 License.\r\n- [x] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\r\n- [x] The PR is proposed to the proper branch\r\n- [x] There is a reference to the original bug report and related work\r\n- [N/A] There is accuracy test, performance test and test data in opencv_extra repository, if applicable\r\n      Patch to opencv_extra has the same branch name.\r\n- [N/A] The feature is well documented and sample code can be built with the project CMake\r\n",
             "commit_timestamp": 1738838086.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1738897890.467873,
+            "elapsed_time": 375.67913603782654,
+            "x64": true,
+            "actual_files_count": 479,
+            "expected_files_count": 459,
+            "memory_traffic": 41044.67699432373,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "2e909c38dcd0ff4d13499114101cde619c6cca56",
+            "commit_message": "Merge pull request #26804 from amane-ame:norm_hal_rvv\n\nAdd RISC-V HAL implementation for cv::norm and cv::normalize #26804\r\n\r\nThis patch implements `cv::norm` with norm types `NORM_INF/NORM_L1/NORM_L2/NORM_L2SQR` and `Mat::convertTo` function in RVV_HAL using native intrinsic, optimizing the performance for `cv::norm(src)`, `cv::norm(src1, src2)`, and `cv::normalize(src)` with data types `8UC1/8UC4/32FC1`.\r\n\r\n`cv::normalize` also calls `minMaxIdx`, #26789 implements RVV_HAL for this.\r\n\r\nTested on MUSE-PI for both gcc 14.2 and clang 20.0.\r\n\r\n```\r\n$ opencv_test_core --gtest_filter=\"*Norm*\"\r\n$ opencv_perf_core --gtest_filter=\"*norm*\" --perf_min_samples=300 --perf_force_samples=300\r\n```\r\n\r\nThe head of the perf table is shown below since the table is too long.\r\n\r\nView the full perf table here: [hal_rvv_norm.pdf](https://github.com/user-attachments/files/18468255/hal_rvv_norm.pdf)\r\n\r\n<img width=\"1304\" alt=\"Untitled\" src=\"https://github.com/user-attachments/assets/3550b671-6d96-4db3-8b5b-d4cb241da650\" />\r\n\r\n### Pull Request Readiness Checklist\r\n\r\nSee details at https://github.com/opencv/opencv/wiki/How_to_contribute#making-a-good-pull-request\r\n\r\n- [x] I agree to contribute to the project under Apache 2 License.\r\n- [x] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\r\n- [ ] The PR is proposed to the proper branch\r\n- [ ] There is a reference to the original bug report and related work\r\n- [ ] There is accuracy test, performance test and test data in opencv_extra repository, if applicable\r\n      Patch to opencv_extra has the same branch name.\r\n- [ ] The feature is well documented and sample code can be built with the project CMake\r\n",
+            "commit_timestamp": 1738859694.0
         }
     ]
 }

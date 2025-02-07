@@ -25275,6 +25275,23 @@
             "commit_ref": "3041dd5c2065d6fa98546babf7525fc5ed4532be",
             "commit_message": "Revert \"[OpenMP][SIMD][FIX] Use conservative \"omp simd ordered\" lowering\" (#126079)\n\nReverts llvm/llvm-project#123867 to fix the test failures\r\nhttps://lab.llvm.org/buildbot/#/builders/144/builds/17521",
             "commit_timestamp": 1738854251.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1738898597.592636,
+            "elapsed_time": 1574.4600081443787,
+            "x64": true,
+            "actual_files_count": 2088,
+            "expected_files_count": 1661,
+            "memory_traffic": 253522.5286026001,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "0cbc4983adcdbbd85ccb38b2dfbfe5985367b1b2",
+            "commit_message": "[lldb] Make ValueObjectDynamicValue::UpdateValue() point to  a host b\u2026 (#125143)\n\n\u2026uffer\r\n\r\nValueObjectDynamicValue::UpdateValue() assumes that the dynamic type\r\nfound by GetDynamicTypeAndAddress() would return an address in the\r\ninferior. This commit makes it so it can deal with being passed a host\r\naddress instead.\r\n\r\nThis is needed downstream by the Swift fork.\r\n\r\nrdar://143357274",
+            "commit_timestamp": 1738897441.0
         }
     ]
 }
