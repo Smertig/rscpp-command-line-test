@@ -23081,6 +23081,21 @@
             "commit_ref": "f28ff8050a75674916cf6cc9f4786dbadc789ef4",
             "commit_message": "DOC: Fix unbalanced grouping commands Doxygen warnings\n\nFix unbalanced grouping commands Doxygen warnings.\n\nFixes:\n```\nModules/Core/Common/include/itkAutoPointer.h:261: warning: unbalanced grouping commands\n```\n\nwarnings across classes.\n\nThe warning is raised when the\nUtilities/Doxygen/itkdoxygen.pl\n\nDoxygen Perl script processes the files at issue and starts a `/**@{`\nblock that gets interrupted by an unexpected symbol (e.g. a brace)\nwithout being previously closed with the corresponding `/**@}*/`\nending token.\n\nRaised for example in:\nhttps://open.cdash.org/viewBuildError.php?type=1&buildid=8344134\n",
             "commit_timestamp": 1738953137.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1739027405.56391,
+            "elapsed_time": 235.06258583068848,
+            "x64": true,
+            "actual_files_count": 101,
+            "expected_files_count": null,
+            "memory_traffic": 24292.952514648438,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "f28ff8050a75674916cf6cc9f4786dbadc789ef4",
+            "commit_message": "DOC: Fix unbalanced grouping commands Doxygen warnings\n\nFix unbalanced grouping commands Doxygen warnings.\n\nFixes:\n```\nModules/Core/Common/include/itkAutoPointer.h:261: warning: unbalanced grouping commands\n```\n\nwarnings across classes.\n\nThe warning is raised when the\nUtilities/Doxygen/itkdoxygen.pl\n\nDoxygen Perl script processes the files at issue and starts a `/**@{`\nblock that gets interrupted by an unexpected symbol (e.g. a brace)\nwithout being previously closed with the corresponding `/**@}*/`\nending token.\n\nRaised for example in:\nhttps://open.cdash.org/viewBuildError.php?type=1&buildid=8344134\n",
+            "commit_timestamp": 1738953137.0
         }
     ]
 }
