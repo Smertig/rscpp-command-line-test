@@ -25309,6 +25309,23 @@
             "commit_ref": "27598aba49a7bbb6751fff5c8dc455edf701e1aa",
             "commit_message": "[libc++] Further refactor sequence container benchmarks (#126129)\n\nThis patch does not significantly change how the sequence container\nbenchmarks are done, but it adopts the same style as the associative\ncontainer benchmarks.\n\nThis commit does adjust how we were benchmarking push_back, where we\nnever really measured the overhead of the slow path of push_back (when\nwe need to reallocate).",
             "commit_timestamp": 1738940205.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1738984896.180408,
+            "elapsed_time": 1517.2248938083649,
+            "x64": true,
+            "actual_files_count": 2088,
+            "expected_files_count": 1661,
+            "memory_traffic": 253352.56503295898,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "b850ce41db1e90cb2573ab5880da1d05de7828fd",
+            "commit_message": "[MLIR][Affine] Fix private memref creation bug in affine fusion (#126028)\n\nFix private memref creation bug in affine fusion exposed in the case of\r\nthe same memref being loaded from/stored to in producer nest. Make the\r\nprivate memref replacement sound.\r\n\r\nChange affine fusion debug string to affine-fusion - more compact.\r\n\r\nFixes: https://github.com/llvm/llvm-project/issues/48703",
+            "commit_timestamp": 1738983910.0
         }
     ]
 }

@@ -4424,6 +4424,21 @@
             "commit_ref": "f031078b6eb71181a63649f2bd9853034bca6460",
             "commit_message": "Allocate enough memory for the InputOver2G test.\n\nThis test was previously causing a pointer to be taken 2GB out of bounds,\nwhich is UB and can cause problems for tools. Fix the problem by using\na suitably sized buffer instead. With most allocators this will just\nresult in pages being mmap()ed without being faulted so this test won't\nactually end up using 2GB of memory.\n\nPiperOrigin-RevId: 724172825\n",
             "commit_timestamp": 1738901037.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1738984032.116667,
+            "elapsed_time": 443.6281793117523,
+            "x64": true,
+            "actual_files_count": 1566,
+            "expected_files_count": 818,
+            "memory_traffic": 66615.74462890625,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "9f2b36d5c5638bad0c84eefca1816e790cfa3dd3",
+            "commit_message": "Simplify generated string_view APIs.\n\nPiperOrigin-RevId: 724407591\n",
+            "commit_timestamp": 1738955534.0
         }
     ]
 }

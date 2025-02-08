@@ -23298,6 +23298,21 @@
             "commit_ref": "f8a1e0129dce62c8c07ed5828781438e74452671",
             "commit_message": "Sync to upstream/release/659 (#1637)\n\n## What's Changed\n\nGeneral performance improvements and bug fixes. `lua_clonetable` was\nadded too.\n\n### General\n\n## Runtime\n- Improvements were made to Luau's performance, including a\n`lua_clonetable` function and optimizations to string caching. Buffer\nread/write operations were optimized for big-endian machines.\n## New Solver\n- Crashes related to duplicate keys in table literals, fragment AC\ncrashes, and potential hash collisions in the StringCache.\n- We now handle user-defined type functions as opaque and track interior\nfree table types.\n## Require By String\n- Require-by-string path resolution was simplified.\n\n**Full Changelog**:\nhttps://github.com/luau-lang/luau/compare/0.658...0.659\n\n---\n\nCo-authored-by: Ariel Weiss <aaronweiss@roblox.com>\nCo-authored-by: Andy Friesen <afriesen@roblox.com>\nCo-authored-by: Hunter Goldstein <hgoldstein@roblox.com>\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>\nCo-authored-by: Varun Saini <vsaini@roblox.com>\nCo-authored-by: Vighnesh Vijay <vvijay@roblox.com>\nCo-authored-by: Yohoo Lin <yohoo@roblox.com>\n\n---------\n\nCo-authored-by: Hunter Goldstein <hgoldstein@roblox.com>\nCo-authored-by: Varun Saini <61795485+vrn-sn@users.noreply.github.com>\nCo-authored-by: Alexander Youngblood <ayoungblood@roblox.com>",
             "commit_timestamp": 1738378716.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1738984042.552561,
+            "elapsed_time": 295.95772337913513,
+            "x64": true,
+            "actual_files_count": 481,
+            "expected_files_count": 379,
+            "memory_traffic": 34541.47075653076,
+            "repo_url": "https://github.com/luau-lang/luau",
+            "commit_ref": "2e61028cba15bce9ab65b465fb484a371d18b4d7",
+            "commit_message": "Sync to upstream/release/660 (#1643)\n\n# General\r\n\r\nThis release introduces initial work on a Roundtrippable AST for Luau,\r\nand numerous fixes to the new type solver, runtime, and fragment\r\nautocomplete.\r\n\r\n## Roundtrippable AST\r\n\r\nTo support tooling around source code transformations, we are extending\r\nthe parser to retain source information so that we can re-emit the\r\ninitial source code exactly as the author wrote it. We have made\r\nnumerous changes to the Transpiler, added new AST types such as\r\n`AstTypeGroup`, and added source information to AST nodes such as\r\n`AstExprInterpString`, `AstExprIfElse`, `AstTypeTable`,\r\n`AstTypeReference`, `AstTypeSingletonString`, and `AstTypeTypeof`.\r\n\r\n## New Type Solver\r\n\r\n* Implement `setmetatable` and `getmetatable` type functions.\r\n* Fix handling of nested and recursive union type functions to prevent\r\nthe solver from getting stuck.\r\n* Free types in both old and new solver now have an upper and lower\r\nbound to resolve mixed mode usage of the solvers in fragment\r\nautocomplete.\r\n* Fix infinite recursion during normalization of cyclic tables.\r\n* Add normalization support for intersections of subclasses with negated\r\nsuperclasses.\r\n\r\n## Runtime\r\n* Fix compilation error in Luau buffer bit operations for big-endian\r\nmachines.\r\n\r\n## Miscellaneous\r\n* Add test and bugfixes to fragment autocomplete.\r\n* Fixed `clang-tidy` warnings in `Simplify.cpp`.\r\n\r\n**Full Changelog**:\r\nhttps://github.com/luau-lang/luau/compare/0.659...0.660\r\n\r\n---\r\n\r\nCo-authored-by: Ariel Weiss <aaronweiss@roblox.com>\r\nCo-authored-by: Hunter Goldstein <hgoldstein@roblox.com>\r\nCo-authored-by: Talha Pathan <tpathan@roblox.com>\r\nCo-authored-by: Varun Saini <vsaini@roblox.com>\r\nCo-authored-by: Vighnesh Vijay <vvijay@roblox.com>\r\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>\r\n\r\n---------\r\n\r\nCo-authored-by: Hunter Goldstein <hgoldstein@roblox.com>\r\nCo-authored-by: Varun Saini <61795485+vrn-sn@users.noreply.github.com>\r\nCo-authored-by: Alexander Youngblood <ayoungblood@roblox.com>\r\nCo-authored-by: Menarul Alam <malam@roblox.com>",
+            "commit_timestamp": 1738973831.0
         }
     ]
 }
