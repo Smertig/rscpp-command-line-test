@@ -25377,6 +25377,23 @@
             "commit_ref": "70906f0514826b5e64bd9354210ae836740c2053",
             "commit_message": "[LV][X86] Regenerate interleaved load/store costs. NFC.\n\nupdate_analyze_test_checks has improved the checks since these were last updated.\n\nReduce noise diffs in future patches.\n",
             "commit_timestamp": 1739113361.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1739157937.309893,
+            "elapsed_time": 1606.5821900367737,
+            "x64": true,
+            "actual_files_count": 2088,
+            "expected_files_count": 1661,
+            "memory_traffic": 253609.15032958984,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "967973512b9eba99dd8b04db42dbafcc50d94728",
+            "commit_message": "[AMDGPU] Don't unify divergent exit nodes with `musttail` calls (#126395)\n\nFixes SWDEV-512254.",
+            "commit_timestamp": 1739155704.0
         }
     ]
 }
