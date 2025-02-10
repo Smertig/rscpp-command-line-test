@@ -20306,6 +20306,21 @@
             "commit_ref": "7e6ee50b6b8c760bcefb92ab4ddbc3d85d37a834",
             "commit_message": "gh-129603: Don't segfault if sqlite3.Row description is None (#129604)\n\n",
             "commit_timestamp": 1739143648.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1739200093.028186,
+            "elapsed_time": 1175.00297498703,
+            "x64": true,
+            "actual_files_count": 1059,
+            "expected_files_count": null,
+            "memory_traffic": 48533.84942626953,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "d7672e5d5a7b9580a72dbe75d3a9e8840bcc604c",
+            "commit_message": "gh-127712: Fix `secure` argument of `logging.handlers.SMTPHandler` (GH-127726)\n\nGH-127712: Fix `secure` argument of `logging.handlers.SMTPHandler`\r\n\r\nPython 3.12 removed support for the `keyfile` and `certfile` parameters\r\nin `smtplib.SMTP.starttls()`, requiring a `ssl.SSLContext` instead.\r\n`SMTPHandler` now creates a context from the `secure` tuple and passes\r\nthat to `starttls`.",
+            "commit_timestamp": 1739190867.0
         }
     ]
 }

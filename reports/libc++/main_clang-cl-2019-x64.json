@@ -5269,6 +5269,23 @@
             "commit_ref": "967973512b9eba99dd8b04db42dbafcc50d94728",
             "commit_message": "[AMDGPU] Don't unify divergent exit nodes with `musttail` calls (#126395)\n\nFixes SWDEV-512254.",
             "commit_timestamp": 1739155704.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1739200048.030138,
+            "elapsed_time": 57.31298589706421,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4987.842658996582,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "3019e49ebfc5d710191712b6d437c56c01e65b87",
+            "commit_message": "SCEV: thread samesign in isBasicBlockEntryGuardedByCond (NFC) (#125840)\n\nisBasicBlockEntryGuardedByCond inadvertedenly drops samesign information\r\nwhen calling ICmpInst::getNonStrictPredicate. Fix this.",
+            "commit_timestamp": 1739198833.0
         }
     ]
 }
