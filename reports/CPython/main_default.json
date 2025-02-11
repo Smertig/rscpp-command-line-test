@@ -20321,6 +20321,21 @@
             "commit_ref": "d7672e5d5a7b9580a72dbe75d3a9e8840bcc604c",
             "commit_message": "gh-127712: Fix `secure` argument of `logging.handlers.SMTPHandler` (GH-127726)\n\nGH-127712: Fix `secure` argument of `logging.handlers.SMTPHandler`\r\n\r\nPython 3.12 removed support for the `keyfile` and `certfile` parameters\r\nin `smtplib.SMTP.starttls()`, requiring a `ssl.SSLContext` instead.\r\n`SMTPHandler` now creates a context from the `secure` tuple and passes\r\nthat to `starttls`.",
             "commit_timestamp": 1739190867.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1739243528.133174,
+            "elapsed_time": 1207.7789723873138,
+            "x64": true,
+            "actual_files_count": 1059,
+            "expected_files_count": null,
+            "memory_traffic": 48498.064445495605,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "1feaecc2bc42cb96f2d7bdc8d7083171bdcd0929",
+            "commit_message": "gh-123299: Copyedit \"What's New in Python 3.14\" (#129970)\n\n",
+            "commit_timestamp": 1739223996.0
         }
     ]
 }

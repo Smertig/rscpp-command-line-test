@@ -24243,6 +24243,21 @@
             "commit_ref": "9d8201efd4cbbe6271d0579ec2047dbfc396d22d",
             "commit_message": "fix sanitizer cmake builds (#1906)\n\n* bump llvm version to 19\n\n* use same standard for feature checks as for the build",
             "commit_timestamp": 1738846994.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1739243349.954254,
+            "elapsed_time": 60.299885749816895,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": 86,
+            "memory_traffic": 4939.405540466309,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "6a508bf11e4bfc47d07f8b0edd1e25a21a76b6a6",
+            "commit_message": "benchmark declarations can and should be const (clang-tidy) (#1924)\n\n* benchmark declarations can and should be const (clang-tidy)\n\n* clang-format\n\n* add clang-tidy ignore file to remove googletest (and other third party) source for consideration",
+            "commit_timestamp": 1739236563.0
         }
     ]
 }

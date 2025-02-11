@@ -25411,6 +25411,23 @@
             "commit_ref": "3019e49ebfc5d710191712b6d437c56c01e65b87",
             "commit_message": "SCEV: thread samesign in isBasicBlockEntryGuardedByCond (NFC) (#125840)\n\nisBasicBlockEntryGuardedByCond inadvertedenly drops samesign information\r\nwhen calling ICmpInst::getNonStrictPredicate. Fix this.",
             "commit_timestamp": 1739198833.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1739244182.738604,
+            "elapsed_time": 1537.1441078186035,
+            "x64": true,
+            "actual_files_count": 2088,
+            "expected_files_count": 1661,
+            "memory_traffic": 253479.96838378906,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "ea6827cacfde062c7d9f03266af5298499313176",
+            "commit_message": "[RISCV] Improve Errors for GPRNoX0 Reg Class (#126397)\n\nMore adoption of better diagnostics for RISC-V register classes:\n- GPRNoX0 (GPRs excluding `zero`)",
+            "commit_timestamp": 1739236911.0
         }
     ]
 }
