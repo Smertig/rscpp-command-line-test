@@ -25445,6 +25445,23 @@
             "commit_ref": "dbe1dafdbde247d9c133626cc38a8c587a49344f",
             "commit_message": "[NFC][TableGen] Code cleanup in InstrInfoEmitter.cpp (#126578)\n\n- Use range for loops and `enumerate` in a few places.\r\n- Use `StringRef` for `TargetName` in `InstrInfoEmitter::run`.\r\n- Use `\\n` character for new line instead of string.\r\n- Use StringRef in `InstrNames` (instead of std::string) and \r\n  avoid string copies.",
             "commit_timestamp": 1739286157.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1739330547.840397,
+            "elapsed_time": 1555.1078915596008,
+            "x64": true,
+            "actual_files_count": 2088,
+            "expected_files_count": 1661,
+            "memory_traffic": 253444.32558441162,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "6de4de893188b1b548417c8073fa929d4befb16d",
+            "commit_message": "[libc] implement endian related macros (#126368)\n\nFollow up of #125168.\n\nThis patch adds endian-related macros to `endian.h`. We utilize compiler\nbuilt-ins for byte swap functions, which are already included in our\nminimal supported compiler version.",
+            "commit_timestamp": 1739326629.0
         }
     ]
 }

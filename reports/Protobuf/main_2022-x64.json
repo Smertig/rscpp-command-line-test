@@ -4544,6 +4544,21 @@
             "commit_ref": "e3b121080ff4f678558cc432ae3c90e0a0bfd82c",
             "commit_message": "Minor refactor to avoid lifetime bound warnings on some callers.\n\nPiperOrigin-RevId: 725319090\n",
             "commit_timestamp": 1739222571.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1739329760.215537,
+            "elapsed_time": 454.0718502998352,
+            "x64": true,
+            "actual_files_count": 1570,
+            "expected_files_count": 818,
+            "memory_traffic": 66856.50896453857,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "40ec76ef674edb4cca75411d26b1984a8bf1eab6",
+            "commit_message": "[PHP] allow encoding enums as integers for json (#12707)\n\nThe php extension already had an implementation for encoding enums as integers, but it was not exposed, so add a bitmask param to `Message::serializeToJsonString()` to enable it as well as `preserve_proto_field_names`.\n\nConverted the existing boolean parameter to preferentially be an integer (with boolean handling for BC), which accepts a bitmask of `Google\\Protobuf\\PrintOptions::*`, eg `PrintOptions::ALWAYS_PRINT_ENUMS_AS_INTS | PrintOptions::PRESERVE_PROTO_FIELD_NAMES`\n\n`PrintOptions` class name and constant names were chosen to align with protobuf-cpp's implementation.\n\nImplemented `preserve_proto_fieldnames` in the native version, to match the existing implementation in the extension (with tests).\n\nCloses #12707\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/12707 from brettmc:php-json-enum-as-int 515a0839b70cb5b2a333bfd97b443e3a64913a43\nPiperOrigin-RevId: 725806573\n",
+            "commit_timestamp": 1739319013.0
         }
     ]
 }
