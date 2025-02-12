@@ -25462,6 +25462,23 @@
             "commit_ref": "6de4de893188b1b548417c8073fa929d4befb16d",
             "commit_message": "[libc] implement endian related macros (#126368)\n\nFollow up of #125168.\n\nThis patch adds endian-related macros to `endian.h`. We utilize compiler\nbuilt-ins for byte swap functions, which are already included in our\nminimal supported compiler version.",
             "commit_timestamp": 1739326629.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1739373672.195293,
+            "elapsed_time": 1580.8216066360474,
+            "x64": true,
+            "actual_files_count": 2088,
+            "expected_files_count": 1661,
+            "memory_traffic": 253497.23300933838,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "830a2911ee164e32a5459e2991233afb7168c812",
+            "commit_message": "[Flang] fix initializer with empty string to fix aarch64 build (#126918)\n\nAfter tuneCPU was changed to std::string in\r\nc8376a93bb9853cbcedeb22d80a9b200060eaf85 the flang builds broke, due to\r\na missing initializer.\r\n\r\nIf we want to add tuneCPU to the MLIRToLLVMPassPipelineConfig, we might\r\nwant to tackle that separately after the build is restored. This should\r\nbe no different than the previous behaviour.",
+            "commit_timestamp": 1739372162.0
         }
     ]
 }
