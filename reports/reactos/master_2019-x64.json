@@ -23056,6 +23056,21 @@
             "commit_ref": "166d83b2065c1b15051a68b8a6092e4d2727f63e",
             "commit_message": "[CRT] Fix cvt to not overflow the buffer on NAN/INF\n\nFixes crash in msvcrt_winetest printf\n",
             "commit_timestamp": 1739372085.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1739416185.949054,
+            "elapsed_time": 95.71869444847107,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7375.329849243164,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "329a41458416f633fb6ec016dc434b063cd92b9b",
+            "commit_message": "[SHIMGVW] Choose a better icon image and also support .cur files (#7706)\n\n- Choose an icon image based on size and color and place it first so GDI+ will pick it\n- Change .cur files to .ico so GDI+ can open it\n\nCORE-19945",
+            "commit_timestamp": 1739390271.0
         }
     ]
 }

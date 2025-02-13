@@ -25479,6 +25479,23 @@
             "commit_ref": "830a2911ee164e32a5459e2991233afb7168c812",
             "commit_message": "[Flang] fix initializer with empty string to fix aarch64 build (#126918)\n\nAfter tuneCPU was changed to std::string in\r\nc8376a93bb9853cbcedeb22d80a9b200060eaf85 the flang builds broke, due to\r\na missing initializer.\r\n\r\nIf we want to add tuneCPU to the MLIRToLLVMPassPipelineConfig, we might\r\nwant to tackle that separately after the build is restored. This should\r\nbe no different than the previous behaviour.",
             "commit_timestamp": 1739372162.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1739417026.973311,
+            "elapsed_time": 1575.8676097393036,
+            "x64": true,
+            "actual_files_count": 2088,
+            "expected_files_count": 1661,
+            "memory_traffic": 253491.5813446045,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "df07121d54432175ffc211d4165bfe7090c58c5e",
+            "commit_message": "[hwasan][NFCI] Rename ClRandomSkipRate to ClRandomKeepRate (#126990)\n\nThe meaning of ClRandomSkipRate was inverted in\r\nhttps://github.com/llvm/llvm-project/pull/88070 but the variable name\r\nwas not changed. This patch fixes it to avoid confusion.\r\n\r\nAdditionally, it elaborates the flag description to mention the\r\ninteraction between the random keep rate and hotness cutoff.",
+            "commit_timestamp": 1739414580.0
         }
     ]
 }

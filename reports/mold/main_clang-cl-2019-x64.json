@@ -20886,6 +20886,21 @@
             "commit_ref": "143d447a66fcb03ace1debf92cc10e5ccd0b9f8f",
             "commit_message": "Take sentinel into account when estimating section size\n",
             "commit_timestamp": 1739079296.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1739416205.693145,
+            "elapsed_time": 123.24310755729675,
+            "x64": true,
+            "actual_files_count": 624,
+            "expected_files_count": null,
+            "memory_traffic": 16394.904914855957,
+            "repo_url": "https://github.com/rui314/mold",
+            "commit_ref": "93f540a10a30d03eb0b0aff32de6ad908ffdda9a",
+            "commit_message": "Use x86 GitHub runners\n\nIt looks like Qemu on ARM64 is unstable on ARM64 runners. I observed\noccasional failures with SEGV.\n",
+            "commit_timestamp": 1739406692.0
         }
     ]
 }
