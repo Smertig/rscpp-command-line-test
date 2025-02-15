@@ -20441,6 +20441,21 @@
             "commit_ref": "fda87c028b36a0ff84aab512b4a813ec40054908",
             "commit_message": "CI: Mark the `cross-build-linux` job as skippable (#130113)\n\n",
             "commit_timestamp": 1739544364.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1739589076.553728,
+            "elapsed_time": 1260.2876236438751,
+            "x64": true,
+            "actual_files_count": 1059,
+            "expected_files_count": null,
+            "memory_traffic": 48621.356941223145,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "39cd9728a6770d8fe7937c57385cda5c2e25a223",
+            "commit_message": "gh-130095: Mark `_py_abc` tests as not thread-safe (gh-130131)\n\nThe `_py_abc` implementation is not currently thread-safe (even with the GIL).\nDon't run these tests with `--parallel-threads=N` for now.",
+            "commit_timestamp": 1739568105.0
         }
     ]
 }

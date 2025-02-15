@@ -4634,6 +4634,21 @@
             "commit_ref": "e04fe69a9f5fa44a89ef3b4410363776101eac0d",
             "commit_message": "feat(php): improve return typehint when repeatedfield (#11734)\n\nAdds the type of the `RepeatedField` to the PHPDoc, e.g.\n\n```php\n/**\n * @return \\Google\\Protobuf\\Internal\\RepeatedField<int>\n */\n```\n\nWhereas before, the `<int>` part was not included.\n\nThis is the \"getter\" counterpart for https://github.com/protocolbuffers/protobuf/pull/4533\n\nCloses #11734\n\nPiperOrigin-RevId: 726881276\n",
             "commit_timestamp": 1739538411.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1739588936.073896,
+            "elapsed_time": 470.84987783432007,
+            "x64": true,
+            "actual_files_count": 1570,
+            "expected_files_count": 818,
+            "memory_traffic": 66892.65340423584,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "78db3094a46e7a8cc34d207808b8008997b5fc82",
+            "commit_message": "Fix redundant clang-cl and msvc platform constraint for Bazel 8 compatibility and enable Bazel 8 presubmits in BCR.\n\n#test-continuous\n\nPiperOrigin-RevId: 727069661\n",
+            "commit_timestamp": 1739573329.0
         }
     ]
 }

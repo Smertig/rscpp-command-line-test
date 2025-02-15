@@ -25547,6 +25547,23 @@
             "commit_ref": "ee76861da9dc2678f9982bf019a9ebcd7fdcede4",
             "commit_message": "[InstCombine][X86] Add SSE shift test coverage for #125228\n\nPulled out of #125935 to show diff\n",
             "commit_timestamp": 1739543517.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1739589712.476423,
+            "elapsed_time": 1522.4744229316711,
+            "x64": true,
+            "actual_files_count": 2090,
+            "expected_files_count": 1661,
+            "memory_traffic": 253542.55503082275,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "7a6d1508ce5c6d33233d250a9d006066e019d712",
+            "commit_message": "[RISCV] Reorder insert_subvector and bitcast in getDeinterleaveShiftAndTrunc. (#127258)\n\nPut the bitcast before the insert_subvector. It's more likely the insert\nsubvector can be combined with other nodes. The insert_subvector is only\nneeded sometimes, and I'm considering reusing this function which might\nrequire pulling the insert_subvector out.",
+            "commit_timestamp": 1739587558.0
         }
     ]
 }

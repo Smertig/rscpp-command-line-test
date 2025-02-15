@@ -23305,6 +23305,21 @@
             "commit_ref": "ae25c3194f4afb37829adb8fa94f0c2b808ed433",
             "commit_message": "Merge pull request #26875 from asmorkalov:as/in_memory_models\n\nAdded trackers factory with pre-loaded dnn models #26875\r\n\r\nReplaces https://github.com/opencv/opencv/pull/26295\r\n\r\nAllows to substitute custom models or initialize tracker from in-memory model.\r\n\r\n### Pull Request Readiness Checklist\r\n\r\nSee details at https://github.com/opencv/opencv/wiki/How_to_contribute#making-a-good-pull-request\r\n\r\n- [x] I agree to contribute to the project under Apache 2 License.\r\n- [x] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\r\n- [ ] The PR is proposed to the proper branch\r\n- [ ] There is a reference to the original bug report and related work\r\n- [ ] There is accuracy test, performance test and test data in opencv_extra repository, if applicable\r\n      Patch to opencv_extra has the same branch name.\r\n- [ ] The feature is well documented and sample code can be built with the project CMake\r\n",
             "commit_timestamp": 1739536538.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1739588985.802547,
+            "elapsed_time": 357.9821894168854,
+            "x64": true,
+            "actual_files_count": 479,
+            "expected_files_count": 459,
+            "memory_traffic": 41180.33074951172,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "36a5176a5fdd46f607c1a0119d6703820a1513ea",
+            "commit_message": "Merge pull request #26907 from asmorkalov:as/openvx_hal_features2d\n\nMigrate remaning OpenVX integrations to OpenVX HAL (features2d)",
+            "commit_timestamp": 1739551198.0
         }
     ]
 }
