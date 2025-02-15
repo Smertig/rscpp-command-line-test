@@ -20456,6 +20456,21 @@
             "commit_ref": "39cd9728a6770d8fe7937c57385cda5c2e25a223",
             "commit_message": "gh-130095: Mark `_py_abc` tests as not thread-safe (gh-130131)\n\nThe `_py_abc` implementation is not currently thread-safe (even with the GIL).\nDon't run these tests with `--parallel-threads=N` for now.",
             "commit_timestamp": 1739568105.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1739632148.648436,
+            "elapsed_time": 1219.1290726661682,
+            "x64": true,
+            "actual_files_count": 1059,
+            "expected_files_count": null,
+            "memory_traffic": 48526.02025604248,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "c26bed1160978fe8b1844878b8123778e47870c6",
+            "commit_message": "gh-128345: properly disable gil for `_freeze_module.vcxproj` (#128344)\n\n",
+            "commit_timestamp": 1739628354.0
         }
     ]
 }

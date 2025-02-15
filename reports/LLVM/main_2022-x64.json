@@ -25564,6 +25564,23 @@
             "commit_ref": "7a6d1508ce5c6d33233d250a9d006066e019d712",
             "commit_message": "[RISCV] Reorder insert_subvector and bitcast in getDeinterleaveShiftAndTrunc. (#127258)\n\nPut the bitcast before the insert_subvector. It's more likely the insert\nsubvector can be combined with other nodes. The insert_subvector is only\nneeded sometimes, and I'm considering reusing this function which might\nrequire pulling the insert_subvector out.",
             "commit_timestamp": 1739587558.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1739632846.762648,
+            "elapsed_time": 1531.6291270256042,
+            "x64": true,
+            "actual_files_count": 2090,
+            "expected_files_count": 1661,
+            "memory_traffic": 253619.73867034912,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "21e956df9b2b283c2f2ed710c542ebeebf8473ff",
+            "commit_message": "[CodeGen] Remove two dead pass initializer decls. NFC\n\n- After #97727 and #101652, `LowerConstantIntrinsics` and\n  `ExpandVectorPredicationPass` are no longer dedicated passes.\n",
+            "commit_timestamp": 1739630379.0
         }
     ]
 }
