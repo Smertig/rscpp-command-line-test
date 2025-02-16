@@ -25598,6 +25598,23 @@
             "commit_ref": "2157aecfe429f763c23d0ec8a59b896799e2d031",
             "commit_message": "[libc] Produce standard-compliant header guard macros in hdrgen (#127356)\n\nMacros starting with alphabetic characters such as \"LLVM\" are in\nthe application name space and cannot be defined or used by a\nconforming implementation's headers.  This fixes the headers that\nare entirely generated, and the __llvm-libc-common.h header to\nuse a conforming macro name for the header guard.  That is, it\nstarts with \"_LLVM_LIBC_\" instead of \"LLVM_LIBC_\", as identifiers\nstarting with an underscore followed by a capital letter are in\nthe name space reserved for the implementation.\n\nThe remaining headers either will be fixed implicitly by removal\nof their custom template files, or will need to be fixed by hand.",
             "commit_timestamp": 1739669804.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1739719213.904799,
+            "elapsed_time": 1546.088639497757,
+            "x64": true,
+            "actual_files_count": 2090,
+            "expected_files_count": 1661,
+            "memory_traffic": 253772.84600830078,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "b55f7512a76f2358000139074c79d4c2521588de",
+            "commit_message": "[Flang] LLVM_ENABLE_RUNTIMES=flang-rt (#110217)\n\nExtract Flang's runtime library to use the LLVM_ENABLE_RUNTIME\nmechanism. It will only become active when\n`LLVM_ENABLE_RUNTIMES=flang-rt` is used, which also changes the\n`FLANG_INCLUDE_RUNTIME` to `OFF` so the old runtime build rules do not\nconflict. This also means that unless `LLVM_ENABLE_RUNTIMES=flang-rt` is\npassed, nothing changes with the current build process.\n\nMotivation:\n* Consistency with LLVM's other runtime libraries (compiler-rt, libc,\nlibcxx, openmp offload, ...)\n* Allows compiling the runtime for multiple targets at once using the\nLLVM_RUNTIME_TARGETS configuration options\n* Installs the runtime into the compiler's per-target resource directory\nso it can be automatically found even when cross-compiling\n\nAlso see RFC discussion at\nhttps://discourse.llvm.org/t/rfc-use-llvm-enable-runtimes-for-flangs-runtime/80826",
+            "commit_timestamp": 1739716792.0
         }
     ]
 }
