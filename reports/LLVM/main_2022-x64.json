@@ -25632,6 +25632,23 @@
             "commit_ref": "ecb7f5aaeed2de738a79f1bb78b2196718007176",
             "commit_message": "[mlir][linalg] Update docs for `linalg.generic`(NFC) (#127178)\n\nThe mixed tensor/buffer semantics has been disallowed in #80660. Closes\n#124090.",
             "commit_timestamp": 1739755796.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1739805635.974164,
+            "elapsed_time": 1621.666417837143,
+            "x64": true,
+            "actual_files_count": 2090,
+            "expected_files_count": 1661,
+            "memory_traffic": 253649.51678466797,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "9d487050a144b895950a6fd48b993513a714e69d",
+            "commit_message": "[clang][analyzer] Teach the BlockInCriticalSectionChecker about O_NONBLOCK streams (#127049)\n\nthis PR close #124474 \r\nwhen calling `read` and `recv` function for a non-block file descriptor\r\nor a invalid file descriptor(`-1`), it will not cause block inside a\r\ncritical section.\r\nthis commit checks for non-block file descriptor assigned by `open`\r\nfunction with `O_NONBLOCK` flag.\r\n\r\n---------\r\n\r\nCo-authored-by: Balazs Benics <benicsbalazs@gmail.com>",
+            "commit_timestamp": 1739802940.0
         }
     ]
 }

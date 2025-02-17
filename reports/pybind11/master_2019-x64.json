@@ -24748,6 +24748,21 @@
             "commit_ref": "34a118fd36e10702fcc4e8dcc53751de070dc315",
             "commit_message": "Add `release_gil_before_calling_cpp_dtor` annotation for `class_` (#5522)\n\n* Backport of https://github.com/google/pybind11clif/pull/30088 (main PR) and https://github.com/google/pybind11clif/pull/30092 (minor fixes).\r\n\r\nNote for completeness:\r\n\r\nThese are identical to the current versions on the pybind11clif main branch (@ commit 4841661df5daf26ecdedaace54e64d0782e63f64):\r\n\r\n* test_class_release_gil_before_calling_cpp_dtor.cpp\r\n* test_class_release_gil_before_calling_cpp_dtor.py\r\n\r\n* Fix potential data race in test_class_release_gil_before_calling_cpp_dtor.cpp\r\n\r\nThe original intent was to let the singleton leak, but making that tread-safe is slightly more involved than this solution. It's totally fine in this case if the RegistryType destructor runs on process teardown.\r\n\r\nSee also: https://github.com/pybind/pybind11/pull/5522#issuecomment-2661068351\r\n\r\n---------\r\n\r\nCo-authored-by: Ralf W. Grosse-Kunstleve <rwgk@google.com>",
             "commit_timestamp": 1739732501.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1739804732.82178,
+            "elapsed_time": 150.94740796089172,
+            "x64": true,
+            "actual_files_count": 382,
+            "expected_files_count": 197,
+            "memory_traffic": 18465.014694213867,
+            "repo_url": "https://github.com/pybind/pybind11",
+            "commit_ref": "34a118fd36e10702fcc4e8dcc53751de070dc315",
+            "commit_message": "Add `release_gil_before_calling_cpp_dtor` annotation for `class_` (#5522)\n\n* Backport of https://github.com/google/pybind11clif/pull/30088 (main PR) and https://github.com/google/pybind11clif/pull/30092 (minor fixes).\r\n\r\nNote for completeness:\r\n\r\nThese are identical to the current versions on the pybind11clif main branch (@ commit 4841661df5daf26ecdedaace54e64d0782e63f64):\r\n\r\n* test_class_release_gil_before_calling_cpp_dtor.cpp\r\n* test_class_release_gil_before_calling_cpp_dtor.py\r\n\r\n* Fix potential data race in test_class_release_gil_before_calling_cpp_dtor.cpp\r\n\r\nThe original intent was to let the singleton leak, but making that tread-safe is slightly more involved than this solution. It's totally fine in this case if the RegistryType destructor runs on process teardown.\r\n\r\nSee also: https://github.com/pybind/pybind11/pull/5522#issuecomment-2661068351\r\n\r\n---------\r\n\r\nCo-authored-by: Ralf W. Grosse-Kunstleve <rwgk@google.com>",
+            "commit_timestamp": 1739732501.0
         }
     ]
 }

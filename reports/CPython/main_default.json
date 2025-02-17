@@ -20516,6 +20516,21 @@
             "commit_ref": "cfe41037eb5293a051846ddc0b4afdb7a5f60540",
             "commit_message": "gh-86069: Add more PyNumber_InPlacePower() tests (GH-130111)\n\nTest it with the third argument.",
             "commit_timestamp": 1739750830.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1739804977.00519,
+            "elapsed_time": 1139.9038262367249,
+            "x64": true,
+            "actual_files_count": 1059,
+            "expected_files_count": null,
+            "memory_traffic": 48632.50887298584,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "a1d4b1c44741bae5bf93009223f3377aa45846b5",
+            "commit_message": "gh-111178: fix UBSan failures in `Modules/_lsprof.c` (GH-129782)\n\nFix UBSan failures for `ProfilerObject`\n\nSuppress unused return value\n",
+            "commit_timestamp": 1739800383.0
         }
     ]
 }
