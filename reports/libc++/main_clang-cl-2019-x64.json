@@ -5490,6 +5490,23 @@
             "commit_ref": "b55f7512a76f2358000139074c79d4c2521588de",
             "commit_message": "[Flang] LLVM_ENABLE_RUNTIMES=flang-rt (#110217)\n\nExtract Flang's runtime library to use the LLVM_ENABLE_RUNTIME\nmechanism. It will only become active when\n`LLVM_ENABLE_RUNTIMES=flang-rt` is used, which also changes the\n`FLANG_INCLUDE_RUNTIME` to `OFF` so the old runtime build rules do not\nconflict. This also means that unless `LLVM_ENABLE_RUNTIMES=flang-rt` is\npassed, nothing changes with the current build process.\n\nMotivation:\n* Consistency with LLVM's other runtime libraries (compiler-rt, libc,\nlibcxx, openmp offload, ...)\n* Allows compiling the runtime for multiple targets at once using the\nLLVM_RUNTIME_TARGETS configuration options\n* Installs the runtime into the compiler's per-target resource directory\nso it can be automatically found even when cross-compiling\n\nAlso see RFC discussion at\nhttps://discourse.llvm.org/t/rfc-use-llvm-enable-runtimes-for-flangs-runtime/80826",
             "commit_timestamp": 1739716792.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1739762011.867686,
+            "elapsed_time": 58.50309777259827,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5001.869743347168,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "ecb7f5aaeed2de738a79f1bb78b2196718007176",
+            "commit_message": "[mlir][linalg] Update docs for `linalg.generic`(NFC) (#127178)\n\nThe mixed tensor/buffer semantics has been disallowed in #80660. Closes\n#124090.",
+            "commit_timestamp": 1739755796.0
         }
     ]
 }
