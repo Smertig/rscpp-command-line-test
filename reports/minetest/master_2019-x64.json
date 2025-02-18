@@ -18807,6 +18807,21 @@
             "commit_ref": "166e02955e719580772ebaabaf70d30300e18fec",
             "commit_message": "Decrease fps_max_unfocused from 20 to 10\n\nThis used to be the default for android.\nThere's not much issues now with using a lower value, so a lower default on all platforms\nis reasonable.\nThe only downside I know of is that if you re-focus the window, it can up till the\nnext client step until it goes back to normal fps, but 10 Hz feels fast enough.\n",
             "commit_timestamp": 1739640061.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1739892903.401448,
+            "elapsed_time": 179.31936311721802,
+            "x64": true,
+            "actual_files_count": 417,
+            "expected_files_count": 105,
+            "memory_traffic": 23113.297492980957,
+            "repo_url": "https://github.com/minetest/minetest",
+            "commit_ref": "166e02955e719580772ebaabaf70d30300e18fec",
+            "commit_message": "Decrease fps_max_unfocused from 20 to 10\n\nThis used to be the default for android.\nThere's not much issues now with using a lower value, so a lower default on all platforms\nis reasonable.\nThe only downside I know of is that if you re-focus the window, it can up till the\nnext client step until it goes back to normal fps, but 10 Hz feels fast enough.\n",
+            "commit_timestamp": 1739640061.0
         }
     ]
 }
