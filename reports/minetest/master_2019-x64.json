@@ -18837,6 +18837,21 @@
             "commit_ref": "ef0219c2ede88750db4ab562794dd4773a77bfa3",
             "commit_message": "Prevent accidental wallmounted_to_dir poisoning (#15810)\n\nPrior to this commit, if you used a function like `core.wallmounted_to_dir`, and modified its output, it would modify all of the output in the future.",
             "commit_timestamp": 1739911893.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1739979431.644279,
+            "elapsed_time": 172.76882767677307,
+            "x64": true,
+            "actual_files_count": 418,
+            "expected_files_count": 105,
+            "memory_traffic": 23045.73935699463,
+            "repo_url": "https://github.com/minetest/minetest",
+            "commit_ref": "ef0219c2ede88750db4ab562794dd4773a77bfa3",
+            "commit_message": "Prevent accidental wallmounted_to_dir poisoning (#15810)\n\nPrior to this commit, if you used a function like `core.wallmounted_to_dir`, and modified its output, it would modify all of the output in the future.",
+            "commit_timestamp": 1739911893.0
         }
     ]
 }

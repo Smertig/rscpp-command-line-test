@@ -5575,6 +5575,23 @@
             "commit_ref": "6662fe393cab2c4e550002c276813a89d9ab4443",
             "commit_message": "[X86] Add missing vNbf16 handling in X86CallingConv.td file (#127102)\n\nLack of these entries caused clang to crash on the following code:\n\n```c\n__m256bh fun(__m256bh arg) {\n\treturn arg;\n\t\n}\n__m256bh run() {\n    __m256bh arg= {0};\n    fun(arg);\n}\n```\nIt caused the FastISel to fail since it handled the call lowering basing\non the X86CallingConv table.\n\nCuriously, if FastISel fails somewhere down the line and\nselectionDAGISel fallbacks, the crash does not occur. Following code\n_does not_ crash:\n\n```c\n__m256bh fun(__m256bh arg) {\n\treturn arg;\n}\n\n__m256bh run() {\n    __m256bh arg= {0};\n    return fun(arg);\n\n}\n```\n\nThis is puzzling to me. Obviously, if FastISel fails then compiler\nfallbacks to something else to lower these calls -- but since the\nX86callingConv table _doesn't_ have entries for vNbf16 how does this\nother thing manage not to crash? It has to use some other mechanism, one\nwhich doesn't use the table. This rises following questions:\n- how is this lowering accomplished without, presumably, using the\nCallingConv entries?\n- why is the table not used? I mean this points to some logic\nduplication (fastISel way vs. the other bug-free way)\n- How to properly test this? There is a test for vNbf16 values, but it\nalso must not be using the FastISel path? This duplication of logic\nmakes it hard to test this, since we don't have direct control whether\nthe FastISel path or the other one is used.\n\nNonetheless, this PR fixes the crash, though I didn't create a test for\nit, since I am unsure yet how it should look like. I would like to learn\nhow the working non-FastISel mechanism works; I tried looking for it,\nbut didn't yet manage to find anything",
             "commit_timestamp": 1739934250.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1739977839.789629,
+            "elapsed_time": 90.39931321144104,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4987.003608703613,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "0b63dfb06698ea1a78ba09506f83a1d427a868b1",
+            "commit_message": "[MLIR][NFC] Use base alias for constructor inheritance (#127756)\n\nDuring my previous cleanup (#127403), I did not notice that we defined a\ntype alias for the base class. This type alias allows us to use the\nshorter form Base::Base, and this PR switches to that.",
+            "commit_timestamp": 1739977525.0
         }
     ]
 }

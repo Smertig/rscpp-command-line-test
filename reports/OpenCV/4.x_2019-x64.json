@@ -23440,6 +23440,21 @@
             "commit_ref": "6092499907c60170db9d38c98ea3e949c8873df2",
             "commit_message": "Merge pull request #26932 from shyama7004:deprecationFix\n\nreplace tostring() with tobytes()",
             "commit_timestamp": 1739874124.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1739977690.359327,
+            "elapsed_time": 383.38149428367615,
+            "x64": true,
+            "actual_files_count": 479,
+            "expected_files_count": 459,
+            "memory_traffic": 40972.620544433594,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "d32d4da9a39ce92bdc5603749ea6f2d90215f4ea",
+            "commit_message": "Merge pull request #26887 from kyler1cartesis:4.x\n\ninvSqrt SIMD_SCALABLE implementation & HAL tests refactoring #26887\n\nEnable CV_SIMD_SCALABLE for invSqrt.\n\n* Banana Pi BF3 (SpacemiT K1) RISC-V\n* Compiler: Syntacore Clang 18.1.4 (build 2024.12)\n\n```\nGeometric mean (ms)\n\n                Name of Test                  baseline   simd      simd   \n                                                       scalable  scalable\n                                                                    vs\n                                                                 baseline\n                                                                (x-factor)\nInvSqrtf::InvSqrtfFixture::(127x61, 32FC1)     0.163    0.051      3.23   \nInvSqrtf::InvSqrtfFixture::(127x61, 64FC1)     0.241    0.103      2.35   \nInvSqrtf::InvSqrtfFixture::(640x480, 32FC1)    6.460    1.893      3.41   \nInvSqrtf::InvSqrtfFixture::(640x480, 64FC1)    9.687    3.999      2.42   \nInvSqrtf::InvSqrtfFixture::(1280x720, 32FC1)   19.292   5.701      3.38   \nInvSqrtf::InvSqrtfFixture::(1280x720, 64FC1)   29.452   11.963     2.46   \nInvSqrtf::InvSqrtfFixture::(1920x1080, 32FC1)  43.326   12.805     3.38   \nInvSqrtf::InvSqrtfFixture::(1920x1080, 64FC1)  65.566   26.881     2.44\n``` ",
+            "commit_timestamp": 1739956428.0
         }
     ]
 }

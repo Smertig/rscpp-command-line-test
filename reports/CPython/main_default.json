@@ -20576,6 +20576,21 @@
             "commit_ref": "388e1ca9f08ee5caefd1dd946dc6e236ce73d46f",
             "commit_message": "gh-115999: Make list and tuple iteration more thread-safe. (#128637)\n\nMake tuple iteration more thread-safe, and actually test concurrent iteration of tuple, range and list. (This is prep work for enabling specialization of FOR_ITER in free-threaded builds.) The basic premise is:\n\nIterating over a shared iterable (list, tuple or range) should be safe, not involve data races, and behave like iteration normally does.\n\nUsing a shared iterator should not crash or involve data races, and should only produce items regular iteration would produce. It is not guaranteed to produce all items, or produce each item only once. (This is not the case for range iteration even after this PR.)\n\nProviding stronger guarantees is possible for some of these iterators, but it's not always straight-forward and can significantly hamper the common case. Since iterators in general aren't shared between threads, and it's simply impossible to concurrently use many iterators (like generators), better to make sharing iterators without explicit synchronization clearly wrong.\n\nSpecific issues fixed in order to make the tests pass:\n\n - List iteration could occasionally fail an assertion when a shared list was shrunk and an item past the new end was retrieved concurrently. There's still some unsafety when deleting/inserting multiple items through for example slice assignment, which uses memmove/memcpy.\n\n - Tuple iteration could occasionally crash when the iterator's reference to the tuple was cleared on exhaustion. Like with list iteration, in free-threaded builds we can't safely and efficiently clear the iterator's reference to the iterable (doing it safely would mean extra, slow refcount operations), so just keep the iterable reference around.\n\n",
             "commit_timestamp": 1739926366.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1739977761.603211,
+            "elapsed_time": 1131.268143415451,
+            "x64": true,
+            "actual_files_count": 1059,
+            "expected_files_count": null,
+            "memory_traffic": 48648.67842102051,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "2498c22fa0a2b560491bc503fa676585c1a603d0",
+            "commit_message": "GH-91079: Implement C stack limits using addresses, not counters. (GH-130007)\n\n* Implement C recursion protection with limit pointers\n\n* Remove calls to PyOS_CheckStack\n\n* Add stack protection to parser\n\n* Make tests more robust to low stacks\n\n* Improve error messages for stack overflow\n",
+            "commit_timestamp": 1739965497.0
         }
     ]
 }
