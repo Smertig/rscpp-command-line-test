@@ -23455,6 +23455,21 @@
             "commit_ref": "d32d4da9a39ce92bdc5603749ea6f2d90215f4ea",
             "commit_message": "Merge pull request #26887 from kyler1cartesis:4.x\n\ninvSqrt SIMD_SCALABLE implementation & HAL tests refactoring #26887\n\nEnable CV_SIMD_SCALABLE for invSqrt.\n\n* Banana Pi BF3 (SpacemiT K1) RISC-V\n* Compiler: Syntacore Clang 18.1.4 (build 2024.12)\n\n```\nGeometric mean (ms)\n\n                Name of Test                  baseline   simd      simd   \n                                                       scalable  scalable\n                                                                    vs\n                                                                 baseline\n                                                                (x-factor)\nInvSqrtf::InvSqrtfFixture::(127x61, 32FC1)     0.163    0.051      3.23   \nInvSqrtf::InvSqrtfFixture::(127x61, 64FC1)     0.241    0.103      2.35   \nInvSqrtf::InvSqrtfFixture::(640x480, 32FC1)    6.460    1.893      3.41   \nInvSqrtf::InvSqrtfFixture::(640x480, 64FC1)    9.687    3.999      2.42   \nInvSqrtf::InvSqrtfFixture::(1280x720, 32FC1)   19.292   5.701      3.38   \nInvSqrtf::InvSqrtfFixture::(1280x720, 64FC1)   29.452   11.963     2.46   \nInvSqrtf::InvSqrtfFixture::(1920x1080, 32FC1)  43.326   12.805     3.38   \nInvSqrtf::InvSqrtfFixture::(1920x1080, 64FC1)  65.566   26.881     2.44\n``` ",
             "commit_timestamp": 1739956428.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1740021091.571459,
+            "elapsed_time": 396.20084166526794,
+            "x64": true,
+            "actual_files_count": 479,
+            "expected_files_count": 459,
+            "memory_traffic": 41026.880378723145,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "d32d4da9a39ce92bdc5603749ea6f2d90215f4ea",
+            "commit_message": "Merge pull request #26887 from kyler1cartesis:4.x\n\ninvSqrt SIMD_SCALABLE implementation & HAL tests refactoring #26887\n\nEnable CV_SIMD_SCALABLE for invSqrt.\n\n* Banana Pi BF3 (SpacemiT K1) RISC-V\n* Compiler: Syntacore Clang 18.1.4 (build 2024.12)\n\n```\nGeometric mean (ms)\n\n                Name of Test                  baseline   simd      simd   \n                                                       scalable  scalable\n                                                                    vs\n                                                                 baseline\n                                                                (x-factor)\nInvSqrtf::InvSqrtfFixture::(127x61, 32FC1)     0.163    0.051      3.23   \nInvSqrtf::InvSqrtfFixture::(127x61, 64FC1)     0.241    0.103      2.35   \nInvSqrtf::InvSqrtfFixture::(640x480, 32FC1)    6.460    1.893      3.41   \nInvSqrtf::InvSqrtfFixture::(640x480, 64FC1)    9.687    3.999      2.42   \nInvSqrtf::InvSqrtfFixture::(1280x720, 32FC1)   19.292   5.701      3.38   \nInvSqrtf::InvSqrtfFixture::(1280x720, 64FC1)   29.452   11.963     2.46   \nInvSqrtf::InvSqrtfFixture::(1920x1080, 32FC1)  43.326   12.805     3.38   \nInvSqrtf::InvSqrtfFixture::(1920x1080, 64FC1)  65.566   26.881     2.44\n``` ",
+            "commit_timestamp": 1739956428.0
         }
     ]
 }
