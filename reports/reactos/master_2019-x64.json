@@ -23281,6 +23281,21 @@
             "commit_ref": "ae79d1af90bfb1281720329540f470d5e980d639",
             "commit_message": "[COMCTL32] ListView LVIS_CUT image does not depend on focus (#7724)\n\nAlso undoes flicker caused by PR #4218.",
             "commit_timestamp": 1739975209.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1740063988.770962,
+            "elapsed_time": 99.47578716278076,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7373.491394042969,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "601646e3b0cf5750e01d31023c46decca7e84fa6",
+            "commit_message": "[RICHED20] Sync to Wine-6.10 (#7713)\n\n* Restore cherry picked commit limiting tab stops in para.c\n* Add 'remove_definitions(-D_CRT_NON_CONFORMING_SWPRINTFS)' to CMakeFiles.txt.\nRestore para.c to standard conforming 'swprintf'.\n\nCORE-6727",
+            "commit_timestamp": 1740024126.0
         }
     ]
 }

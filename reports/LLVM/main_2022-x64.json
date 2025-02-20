@@ -25734,6 +25734,23 @@
             "commit_ref": "f178e51747b47a181cd6be8dc4ad8943ea5728b3",
             "commit_message": "[SDAG] Add missing ppc_fp128 ExpandFloatRes legalization for modf (#127895)\n\nShould fix: https://lab.llvm.org/buildbot/#/builders/72/builds/8380\n\n(`test_modf_ppcf128` is the test case that needed the additional\nlegalization)",
             "commit_timestamp": 1740019816.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1740064832.474896,
+            "elapsed_time": 1599.645257949829,
+            "x64": true,
+            "actual_files_count": 2090,
+            "expected_files_count": 1661,
+            "memory_traffic": 254182.35761260986,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "24cd933d02b820f73c4ee6e4277ed1b6e95b570a",
+            "commit_message": "[MemCpyOpt] Add test for call slot opt with ret-only capture (NFC)\n\nFrom: https://github.com/llvm/llvm-project/pull/125880#issuecomment-2671725079\n",
+            "commit_timestamp": 1740063350.0
         }
     ]
 }
