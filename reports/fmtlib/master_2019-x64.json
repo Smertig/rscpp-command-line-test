@@ -24918,6 +24918,21 @@
             "commit_ref": "7f7695524a4bc3c9b7883afcc86ba61421989b7f",
             "commit_message": "Fix conflict with std::ignore (#4356)\n\nIn situations where `using namespace std;` is used, compiler warnings\ncan be generated because of local variables named `ignore`. This renames\nthose variables to something else to address the name conflict.",
             "commit_timestamp": 1740035301.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1740107429.000158,
+            "elapsed_time": 95.44277739524841,
+            "x64": true,
+            "actual_files_count": 74,
+            "expected_files_count": 66,
+            "memory_traffic": 7795.913345336914,
+            "repo_url": "https://github.com/fmtlib/fmt.git",
+            "commit_ref": "7f7695524a4bc3c9b7883afcc86ba61421989b7f",
+            "commit_message": "Fix conflict with std::ignore (#4356)\n\nIn situations where `using namespace std;` is used, compiler warnings\ncan be generated because of local variables named `ignore`. This renames\nthose variables to something else to address the name conflict.",
+            "commit_timestamp": 1740035301.0
         }
     ]
 }

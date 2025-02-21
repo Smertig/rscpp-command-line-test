@@ -25751,6 +25751,23 @@
             "commit_ref": "24cd933d02b820f73c4ee6e4277ed1b6e95b570a",
             "commit_message": "[MemCpyOpt] Add test for call slot opt with ret-only capture (NFC)\n\nFrom: https://github.com/llvm/llvm-project/pull/125880#issuecomment-2671725079\n",
             "commit_timestamp": 1740063350.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1740108305.405426,
+            "elapsed_time": 1608.0503282546997,
+            "x64": true,
+            "actual_files_count": 2092,
+            "expected_files_count": 1661,
+            "memory_traffic": 254619.84965515137,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "204dcafec0ecf0db81d420d2de57b02ada6b09ec",
+            "commit_message": "[clang-format] Fix a bug in BCIS_AfterColon and `ColumnLimit: 0` (#127964)\n\nFixes #127622",
+            "commit_timestamp": 1740107211.0
         }
     ]
 }
