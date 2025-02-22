@@ -5660,6 +5660,23 @@
             "commit_ref": "d578dbf9fdb4ce5cba13dda88393c2a67e61a30c",
             "commit_message": "[mlir][emitc][NFC] Add type clarification to the description for the emitc.global op (#127997)\n\nCo-authored-by: Marius Brehler <marius.brehler@gmail.com>",
             "commit_timestamp": 1740149935.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1740193848.631317,
+            "elapsed_time": 58.15433597564697,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4994.829345703125,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "998b28f19672ba49925e25f1a78c1252f017c247",
+            "commit_message": "[lldb-dap] Refactoring lldb-dap port listening mode to allow multiple connections. (#116392)\n\nThis adjusts the lldb-dap listening mode to accept multiple clients.\nEach client initializes a new instance of DAP and an associated\n`lldb::SBDebugger` instance.\n\nThe listening mode is configured with the `--connection` option and\nsupports listening on a port or a unix socket on supported platforms.\n\nWhen running in server mode launch and attach performance should\nbe improved by lldb sharing symbols for core libraries between debug\nsessions.",
+            "commit_timestamp": 1740191443.0
         }
     ]
 }

@@ -4844,6 +4844,21 @@
             "commit_ref": "85507b98a603bfee2ee0685f7825e5e903e1716a",
             "commit_message": "Improve performace of repeated packed fixedSize fields (#19667)\n\n## Changes\nImprove performance of packed RepeatedField that has fixed size, by coping `LEN` bytes from serialzied buffer to RepeatedField array (like c memcpy).\n\n## Relevant Information\nAs the docs [here](https://protobuf.dev/programming-guides/encoding/#cheat-sheet) notes, fixed size value is `memcpy of the equivalent C types (u?int64_t, double)`\n\nYou can see benchmark code and results [here](https://github.com/YarinOmesi/protobuf/blob/feature-with-benchmark/csharp/src/Benchmark)\n\n## Summarized result:\n| Method               | Job                          | Size   |         Mean |    Ratio | Allocated |\n|----------------------|------------------------------|--------|-------------:|---------:|----------:|\n| Parse_RepeatedFloats | 3.29.0                       | 100000 | 416,582.7 ns | baseline |  400297 B |\n| Parse_RepeatedFloats | improved-fixed-size-repeated | 100000 | 134,671.7 ns |     -68% |  400776 B |\n| Write_RepeatedFloats | 3.29.0                       | 100000 | 340.549 us | baseline | 391.57 KB |\n| Write_RepeatedFloats | improved-fixed-size-repeated | 100000 | 106.577 us |     -69% |  391.5 KB |\n\n---\nI am pretty new to this repo to tell me what to you think about this.\n\nCloses #19667\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/19667 from YarinOmesi:improve-performance-repeated-packed-fixed-field de11524f94b3c70cfb2b1db73e04ea4b07c3166d\nPiperOrigin-RevId: 729380114\n",
             "commit_timestamp": 1740118492.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1740193734.004015,
+            "elapsed_time": 393.0340850353241,
+            "x64": true,
+            "actual_files_count": 1417,
+            "expected_files_count": 818,
+            "memory_traffic": 57013.708183288574,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "e390402c5e372de349af88ae0197c67529cf9360",
+            "commit_message": "Auto-generate files after cl/729679665\n",
+            "commit_timestamp": 1740182243.0
         }
     ]
 }
