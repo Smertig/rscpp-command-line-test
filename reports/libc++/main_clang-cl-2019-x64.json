@@ -5694,6 +5694,23 @@
             "commit_ref": "91c0aa5c1038ea9f4b1565b2f9894d5e8b10e85a",
             "commit_message": "[mlir][tensor][nfc] Clarify comments for `createPadHighOp`\n\nWhile reviewing this code, I realised that the rationale behind the\nassert was not very clear, so I updated the comments to clarify it.\n\nRelaxing the assert (i.e., allowing `resType.getNumDynamicDims() !=\ndynOutDims.size()`) would require generating a mapping between\n`dynOutDims` and the dynamic dimensions of the output tensor. At the\nmoment, this additional complexity is unnecessary.\n\nTo minimize PR noise, I am submitting this without a review. However,\nplease ping me if you believe this or similar changes should be reviewed\nbefore merging.\n",
             "commit_timestamp": 1740233220.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1740280570.562124,
+            "elapsed_time": 79.20817685127258,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5000.001235961914,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "ccad5e77442f7f237939395ebce1ae7adf187380",
+            "commit_message": "AMDGPU: Respect amdgpu-no-agpr in functions and with calls (#128147)\n\nRemove the MIR scan to detect whether AGPRs are used or not,\nand the special case for callable functions. This behavior was\nconfusing, and not overridable. The amdgpu-no-agpr attribute was\nintended to avoid this imprecise heuristic for how many AGPRs to\nallocate. It was also too confusing to make this interact with\nthe pending amdgpu-num-agpr replacement for amdgpu-no-agpr.\n\nAlso adds an xfail-ish test where the register allocator asserts\nafter allocation fails which I ran into.\n\nFuture work should reintroduce a more refined MIR scan to estimate\nAGPR pressure for how to split AGPRs and VGPRs.",
+            "commit_timestamp": 1740276037.0
         }
     ]
 }
