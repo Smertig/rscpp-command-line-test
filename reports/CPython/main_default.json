@@ -20696,6 +20696,21 @@
             "commit_ref": "5ec4bf86b7f4455432aebace996ef390ae3e9302",
             "commit_message": "gh-121970: Replace `.. coroutine{method,function}` with `:async:` (#130448)\n\nCo-authored-by: Adam Turner <9087854+aa-turner@users.noreply.github.com>",
             "commit_timestamp": 1740246883.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1740323335.058274,
+            "elapsed_time": 1171.4350485801697,
+            "x64": true,
+            "actual_files_count": 1059,
+            "expected_files_count": null,
+            "memory_traffic": 48689.3390045166,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "1e4a4344af4f5fdc7157b195c7d333d088540035",
+            "commit_message": "gh-111178: fix UBSan failures in `Modules/_struct.c` (#129793)\n\nFix some UBSan failures for `PyStructObject` and `unpackiterobject`.\r\n\r\nWe also perform some cleanup by suppressing unused return values and renaming the\r\nunused parameter in `METH_NOARGS` and getter methods to `dummy` and `closure`\r\nrespectively for semantic purposes.",
+            "commit_timestamp": 1740306851.0
         }
     ]
 }

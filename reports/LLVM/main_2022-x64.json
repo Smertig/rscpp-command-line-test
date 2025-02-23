@@ -25836,6 +25836,23 @@
             "commit_ref": "ccad5e77442f7f237939395ebce1ae7adf187380",
             "commit_message": "AMDGPU: Respect amdgpu-no-agpr in functions and with calls (#128147)\n\nRemove the MIR scan to detect whether AGPRs are used or not,\nand the special case for callable functions. This behavior was\nconfusing, and not overridable. The amdgpu-no-agpr attribute was\nintended to avoid this imprecise heuristic for how many AGPRs to\nallocate. It was also too confusing to make this interact with\nthe pending amdgpu-num-agpr replacement for amdgpu-no-agpr.\n\nAlso adds an xfail-ish test where the register allocator asserts\nafter allocation fails which I ran into.\n\nFuture work should reintroduce a more refined MIR scan to estimate\nAGPR pressure for how to split AGPRs and VGPRs.",
             "commit_timestamp": 1740276037.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1740324010.175971,
+            "elapsed_time": 1537.4926056861877,
+            "x64": true,
+            "actual_files_count": 2887,
+            "expected_files_count": 1661,
+            "memory_traffic": 254761.48489379883,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "72791fef6d6c84b72cb961b288b25283bea97310",
+            "commit_message": "[VPlan] Remove unused buildPlainCFG from unit tests (NFC).\n\nAlso clarify the name of buildHCFG -> buildVPlan.\n",
+            "commit_timestamp": 1740317922.0
         }
     ]
 }
