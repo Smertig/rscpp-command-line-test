@@ -472,7 +472,7 @@
                     {
                         "file": "..\\include\\spdlog\\fmt\\bundled\\base.h",
                         "line": 462,
-                        "message": "static_assert failed: 'Unicode support requires compiling with /utf-8'\r\n    Expression '!1 || false' evaluates to false"
+                        "message": "static_assert failed: 'Unicode support requires compiling with /utf-8'\r\n    Expression '!1 || use_utf8' evaluates to false"
                     }
                 ],
                 "inspected files count": 107
@@ -609,6 +609,9 @@
             "repo": "https://github.com/yhirose/cpp-httplib",
             "commit": "f977558a28d6db893cf42131c33d025fa17458e1"
         },
+        "required dependencies": [
+            "curl"
+        ],
         "cmake options": [
             "-DHTTPLIB_TEST=ON"
         ],
@@ -992,6 +995,9 @@
             "repo": "https://github.com/curl/curl",
             "commit": "1561d0675208854b39066877b140780a965702fa"
         },
+        "required dependencies": [
+            "libpsl"
+        ],
         "fixup sources": "proj-config/scripts/fix-curl.py",
         "stable": {
             "inspected files count": 2323
@@ -1221,19 +1227,19 @@
             "known errors": [
                 {
                     "file": "..\\libcxx\\src\\filesystem\\posix_compat.h",
-                    "line": 425,
+                    "line": 432,
                     "message": "Cannot resolve symbol 'PathBuffer'",
                     "reason": "RSCPP-28163 __builtin_offsetof is not recognized"
                 },
                 {
                     "file": "..\\libcxx\\src\\filesystem\\posix_compat.h",
-                    "line": 425,
+                    "line": 432,
                     "message": "Expected ')'",
                     "reason": "RSCPP-28163 __builtin_offsetof is not recognized"
                 },
                 {
                     "file": "..\\libcxx\\src\\filesystem\\posix_compat.h",
-                    "line": 425,
+                    "line": 432,
                     "message": "Left side of member access has non-class type 'unsigned long long'",
                     "reason": "RSCPP-28163 __builtin_offsetof is not recognized"
                 }
@@ -1255,19 +1261,19 @@
                 "known errors": [
                     {
                         "file": "..\\libcxx\\src\\filesystem\\posix_compat.h",
-                        "line": 432,
+                        "line": 425,
                         "message": "Cannot resolve symbol 'PathBuffer'",
                         "reason": "RSCPP-28163 __builtin_offsetof is not recognized"
                     },
                     {
                         "file": "..\\libcxx\\src\\filesystem\\posix_compat.h",
-                        "line": 432,
+                        "line": 425,
                         "message": "Expected ')'",
                         "reason": "RSCPP-28163 __builtin_offsetof is not recognized"
                     },
                     {
                         "file": "..\\libcxx\\src\\filesystem\\posix_compat.h",
-                        "line": 432,
+                        "line": 425,
                         "message": "Left side of member access has non-class type 'unsigned long long'",
                         "reason": "RSCPP-28163 __builtin_offsetof is not recognized"
                     }
