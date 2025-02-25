@@ -21581,6 +21581,21 @@
             "commit_ref": "db2fd7c3de3d8614cb338705a88f7220c1d9adbc",
             "commit_message": "delta: get contributors without changing THANKS\n\nGive contrithanks.sh the option to send the list of names to stdout so\nthat delta can use it appropriately for counting.\n\nCloses #16449\n",
             "commit_timestamp": 1740400008.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1740453638.887117,
+            "elapsed_time": 269.6871962547302,
+            "x64": true,
+            "actual_files_count": 3532,
+            "expected_files_count": 2323,
+            "memory_traffic": 78140.05982971191,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "3175984ab2a7be85d10954df6844314a5d5726dc",
+            "commit_message": "build: drop unused `getpart` tool\n\nDrop the `getpart` test tool from standard builds. This tool was not\nused by tests.\n\nAlso:\n- make it easier to build it standalone for testing `getpart.c` on\n  the command-line.\n- reduce local var scopes in source.\n\nCloses #16460\n",
+            "commit_timestamp": 1740444733.0
         }
     ]
 }

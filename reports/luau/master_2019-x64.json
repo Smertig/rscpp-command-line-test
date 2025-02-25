@@ -23823,6 +23823,21 @@
             "commit_ref": "c1e2f650dbd8c1080a3c5614d02adc5b75254c4e",
             "commit_message": "chore: update applicable .lua files to .luau (#1560)\n\nUpdates all of the APPLICABLE .lua files to the .luau file ending.\n\n---------\n\nCo-authored-by: ramdoys <ramdoysdirect@gmail.com>",
             "commit_timestamp": 1740176960.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1740453130.64355,
+            "elapsed_time": 288.15373063087463,
+            "x64": true,
+            "actual_files_count": 481,
+            "expected_files_count": 379,
+            "memory_traffic": 34654.6051864624,
+            "repo_url": "https://github.com/luau-lang/luau",
+            "commit_ref": "6a21dba68255af9ef93e1924f324ef519d16ddd8",
+            "commit_message": "Lexer: add offset getter (#1688)\n\nAdded a getter for the Lexer's private `offset` to track its cursor\nposition in the buffer.\nThis helps me index tokens by buffer address in a project where I'm\nrendering Luau code with [Dear ImGui](https://github.com/ocornut/imgui).\nWould love this merged so I can use official Luau releases again!\n\nCo-authored-by: Adrian Duermael <adrien@cu.bzh>",
+            "commit_timestamp": 1740443157.0
         }
     ]
 }
