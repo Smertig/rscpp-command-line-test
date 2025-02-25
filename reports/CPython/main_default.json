@@ -20756,6 +20756,21 @@
             "commit_ref": "ccb4ad92199f2a60690fe6f62f22ebd12d6232df",
             "commit_message": "gh-124703: Change back to raising bdb.BdbQuit when exiting pdb in 'inline' mode in a REPL session (#130395)\n\n",
             "commit_timestamp": 1740450446.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1740496236.129326,
+            "elapsed_time": 1153.7348175048828,
+            "x64": true,
+            "actual_files_count": 1059,
+            "expected_files_count": null,
+            "memory_traffic": 48683.191261291504,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "fa6a8140dd2a72da6df2a7dfafbf07045debf64d",
+            "commit_message": "gh-129173: refactor `PyCodec_ReplaceErrors` into separate functions (#129893)\n\nThe logic of `PyCodec_ReplaceErrors` is now split into separate functions,\r\neach of which handling a specific exception type.",
+            "commit_timestamp": 1740489886.0
         }
     ]
 }

@@ -22575,6 +22575,21 @@
             "commit_ref": "268796730b65e67060501d6e056881f90e2ae159",
             "commit_message": "Merge topic 'paraview_backports'\n\n6018941fd9e Add more special keywords to parser\nf46593b8b5d vtkFFT.txx: add needed but missing typename keyword\n\nAcked-by: Kitware Robot <kwrobot@kitware.com>\nAcked-by: buildbot <buildbot@kitware.com>\nReviewed-by: Spiros Tsalikis <spiros.tsalikis@kitware.com>\nMerge-request: !11933\n",
             "commit_timestamp": 1740435332.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "vtkCommonCoreCxxTests",
+            "timestamp": 1740496227.32157,
+            "elapsed_time": 192.69948720932007,
+            "x64": true,
+            "actual_files_count": 82,
+            "expected_files_count": 68,
+            "memory_traffic": 23764.96103668213,
+            "repo_url": "https://gitlab.kitware.com/vtk/vtk.git",
+            "commit_ref": "c389cc72593e2d6624dc4082f8968fbd0dfb5fb1",
+            "commit_message": "Merge topic 'implement-webgpu-hardware-selector'\n\nd6fdc68936e Implement hardware selector in webgpu\na8478e7051d Add utility function to save an attachment of the webgpu render window to VTI\n3a2b802025a Write ids from webgpu shaders into the Ids attachment\na523dd41c8c Clear the ids attachment in vtkWebGPURenderer::Clear\n91afc9aebac Pass actor Id to webgpu shaders\nc89faa64ab5 Add new attachment in webgpu render window for attribute ids.\nce6a9bec2a9 Remove unused member variable `LastActorBufferSize` in vtkWebGPURenderer\n0849386dfeb Refactor color attachment and depth stencil setup\n...\n\nAcked-by: Kitware Robot <kwrobot@kitware.com>\nTested-by: buildbot <buildbot@kitware.com>\nReviewed-by: Cory Quammen <cory.quammen@kitware.com>\nAcked-by: Lucas Givord <lucas.givord@kitware.com>\nMerge-request: !11934\n",
+            "commit_timestamp": 1740491495.0
         }
     ]
 }

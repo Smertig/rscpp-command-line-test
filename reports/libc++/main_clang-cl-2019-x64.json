@@ -5796,6 +5796,23 @@
             "commit_ref": "8009c1fd81ad0b6ac65724d2b134a92db48f8fbf",
             "commit_message": "[LV][VPlan] Prevent calculate cost for skiped instructions in precomputeCosts(). (#127966)\n\nSkip calculating instruction costs for exit conditions in\r\nprecomputeCosts() when it should be skipped.\r\n\r\nReported from:\r\nhttps://github.com/llvm/llvm-project/issues/115744#issuecomment-2670479463\r\nGodbolt for reduced test cases: https://godbolt.org/z/fr4YMeqcv",
             "commit_timestamp": 1740452949.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1740496152.202398,
+            "elapsed_time": 84.09685730934143,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4994.727867126465,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "352c48f278c89ac4c65642d3fadf52032e7fe734",
+            "commit_message": "[SelectionDAG] Utilizing target hook convertSelectOfConstantsToMath for SelectwithConstant (#127599)\n\nThe Target hook convertSelectOfConstantsToMath() needs to be used within\nSimplifySelectCC helper combine function in SelectionDAG Isel, where\ngeneric select folding with constants is happening into simple maths op\nusing the condition as it is.\n\nIt necessarily fixes #121145.",
+            "commit_timestamp": 1740495744.0
         }
     ]
 }
