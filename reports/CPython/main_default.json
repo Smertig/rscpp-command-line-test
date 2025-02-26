@@ -20786,6 +20786,21 @@
             "commit_ref": "0ef4ffeefd1737c18dc9326133c7894d58108c2e",
             "commit_message": "gh-130163: Fix crashes related to PySys_GetObject() (GH-130503)\n\nThe use of PySys_GetObject() and _PySys_GetAttr(), which return a borrowed\nreference, has been replaced by using one of the following functions, which\nreturn a strong reference and distinguish a missing attribute from an error:\n_PySys_GetOptionalAttr(), _PySys_GetOptionalAttrString(),\n_PySys_GetRequiredAttr(), and _PySys_GetRequiredAttrString().\n",
             "commit_timestamp": 1740517467.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1740582578.462167,
+            "elapsed_time": 1146.4508759975433,
+            "x64": true,
+            "actual_files_count": 1059,
+            "expected_files_count": null,
+            "memory_traffic": 48822.24157714844,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "9e474a98af4184615540467dea16da05f4d284d8",
+            "commit_message": "gh-128982: Revert \"#128982: Substitute regular expression in http.cookiejar.join_header_words for an efficient alternative (GH-128983)\" and add tests (GH-130584)\n\n* Revert \"gh-128982: Substitute regular expression in `http.cookiejar.join_header_words` for an efficient alternative (GH-128983)\"\n\nThis reverts commit 56e190068177855266f32a7efa329d145b279f94.\n\n* Add tests",
+            "commit_timestamp": 1740580959.0
         }
     ]
 }
