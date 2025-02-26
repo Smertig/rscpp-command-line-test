@@ -4979,6 +4979,21 @@
             "commit_ref": "0c1f9788a8300d3b3bc723c6dd67557b11e67a8a",
             "commit_message": "Internal change\n\nPiperOrigin-RevId: 730742305\n",
             "commit_timestamp": 1740468468.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1740539574.351662,
+            "elapsed_time": 420.29044795036316,
+            "x64": true,
+            "actual_files_count": 1417,
+            "expected_files_count": 818,
+            "memory_traffic": 57008.86862945557,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "5627e020e5afd1c43429a985a866dde92665d778",
+            "commit_message": "Python 3.12 support:\nChange \"oldrefcount = 0\" to \"oldrefcount = self._getRefcounts()\" to make sure the ref is counted. This will match python 3.12's change for reference (the original \"oldrefcount=0\" added 1 ref in 3.11, but does not increase reference count in 3.12).\n\nPiperOrigin-RevId: 731103561\n",
+            "commit_timestamp": 1740536479.0
         }
     ]
 }

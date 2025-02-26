@@ -20771,6 +20771,21 @@
             "commit_ref": "fa6a8140dd2a72da6df2a7dfafbf07045debf64d",
             "commit_message": "gh-129173: refactor `PyCodec_ReplaceErrors` into separate functions (#129893)\n\nThe logic of `PyCodec_ReplaceErrors` is now split into separate functions,\r\neach of which handling a specific exception type.",
             "commit_timestamp": 1740489886.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1740539781.502448,
+            "elapsed_time": 1144.1196184158325,
+            "x64": true,
+            "actual_files_count": 1059,
+            "expected_files_count": null,
+            "memory_traffic": 48794.526222229004,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "0ef4ffeefd1737c18dc9326133c7894d58108c2e",
+            "commit_message": "gh-130163: Fix crashes related to PySys_GetObject() (GH-130503)\n\nThe use of PySys_GetObject() and _PySys_GetAttr(), which return a borrowed\nreference, has been replaced by using one of the following functions, which\nreturn a strong reference and distinguish a missing attribute from an error:\n_PySys_GetOptionalAttr(), _PySys_GetOptionalAttrString(),\n_PySys_GetRequiredAttr(), and _PySys_GetRequiredAttrString().\n",
+            "commit_timestamp": 1740517467.0
         }
     ]
 }

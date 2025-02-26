@@ -21611,6 +21611,21 @@
             "commit_ref": "af0100fc175c14b32ba5eac1a49880c32c4738cc",
             "commit_message": "INSTALL-CMAKE.md: CMake usage updates\n\nThis PR updates the CMake build/install docs in `docs/INSTALL-CMAKE.md`,\nin particular focusing on the use of libcurl from CMake using\n`find_package` as well as the newly added features/protocols support via\nusing `COMPONENTS` or `OPTIONAL_COMPONENTS` with `find_package`.\nSee #15854 for initial discussion and the corresponding PR #15858 that\nwas merged.\n\nSome additional best-practices notes are added, for example:\n\n* Encouraging building out-of-source\n* Using `--config` with `cmake --build` for multi-config CMake\n  generators, not `CMAKE_BUILD_TYPE`\n\nWe also add a CURL CMake-specific tip on using `CMAKE_INSTALL_PREFIX`\nduring configure time to set the install prefix, not using `--prefix`\nwhen running `cmake --install` so `curl-config` output is consistent.\n\nCloses #16329\n",
             "commit_timestamp": 1740484971.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1740539967.111241,
+            "elapsed_time": 272.0550055503845,
+            "x64": true,
+            "actual_files_count": 3532,
+            "expected_files_count": 2323,
+            "memory_traffic": 73777.3557434082,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "7826927d9b3e05e5a2da18ae0b79e58392028947",
+            "commit_message": "libtest/libprereq.c: set CURLOPT_FOLLOWLOCATION with a long\n\nPreviously this used '1', which as an int. The option needs a long.\n\nCloses #16487\n",
+            "commit_timestamp": 1740524784.0
         }
     ]
 }

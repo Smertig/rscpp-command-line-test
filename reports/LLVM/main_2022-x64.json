@@ -25921,6 +25921,23 @@
             "commit_ref": "352c48f278c89ac4c65642d3fadf52032e7fe734",
             "commit_message": "[SelectionDAG] Utilizing target hook convertSelectOfConstantsToMath for SelectwithConstant (#127599)\n\nThe Target hook convertSelectOfConstantsToMath() needs to be used within\nSimplifySelectCC helper combine function in SelectionDAG Isel, where\ngeneric select folding with constants is happening into simple maths op\nusing the condition as it is.\n\nIt necessarily fixes #121145.",
             "commit_timestamp": 1740495744.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1740540394.660421,
+            "elapsed_time": 1652.8021502494812,
+            "x64": true,
+            "actual_files_count": 2887,
+            "expected_files_count": 1661,
+            "memory_traffic": 254710.0415725708,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "01cc1d13cd0c54bd4c29185b052fa5c16285dca7",
+            "commit_message": "[RISCV] Use Priv tablegen class for sf.cease instruction.\n\nThe encoding for sf.cease is only one bit different than wfi which\nI believe was an intentional choice. wfi uses the Priv class so\nthis makes them consistent.\n",
+            "commit_timestamp": 1740537954.0
         }
     ]
 }

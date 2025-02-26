@@ -22590,6 +22590,21 @@
             "commit_ref": "c389cc72593e2d6624dc4082f8968fbd0dfb5fb1",
             "commit_message": "Merge topic 'implement-webgpu-hardware-selector'\n\nd6fdc68936e Implement hardware selector in webgpu\na8478e7051d Add utility function to save an attachment of the webgpu render window to VTI\n3a2b802025a Write ids from webgpu shaders into the Ids attachment\na523dd41c8c Clear the ids attachment in vtkWebGPURenderer::Clear\n91afc9aebac Pass actor Id to webgpu shaders\nc89faa64ab5 Add new attachment in webgpu render window for attribute ids.\nce6a9bec2a9 Remove unused member variable `LastActorBufferSize` in vtkWebGPURenderer\n0849386dfeb Refactor color attachment and depth stencil setup\n...\n\nAcked-by: Kitware Robot <kwrobot@kitware.com>\nTested-by: buildbot <buildbot@kitware.com>\nReviewed-by: Cory Quammen <cory.quammen@kitware.com>\nAcked-by: Lucas Givord <lucas.givord@kitware.com>\nMerge-request: !11934\n",
             "commit_timestamp": 1740491495.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "vtkCommonCoreCxxTests",
+            "timestamp": 1740539772.124398,
+            "elapsed_time": 186.70461893081665,
+            "x64": true,
+            "actual_files_count": 82,
+            "expected_files_count": 68,
+            "memory_traffic": 23733.08023071289,
+            "repo_url": "https://gitlab.kitware.com/vtk/vtk.git",
+            "commit_ref": "ec049a8b4f74adba4a8a7c2d476751e97d2ac9dd",
+            "commit_message": "Merge branch 'release' into master",
+            "commit_timestamp": 1740528013.0
         }
     ]
 }
