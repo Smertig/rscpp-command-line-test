@@ -21641,6 +21641,21 @@
             "commit_ref": "4ed9db9eef9dc110c92e8c61a91141c16bc2a06b",
             "commit_message": "vtls: move common early data code into vtls.c\n\nWith now 2 backends implementing early data, it makes sense to have the\ncommon handling in a single place.\n\nCloses #16450\n",
             "commit_timestamp": 1740582037.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1740626496.209336,
+            "elapsed_time": 270.88140964508057,
+            "x64": true,
+            "actual_files_count": 3532,
+            "expected_files_count": 2323,
+            "memory_traffic": 79539.82944488525,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "c028a243f2edfc64fa7e3199261e277104a3be98",
+            "commit_message": "build: set `-O3` and tune WinCE in CI, fix `getpart`, `vtls_scache` fallouts\n\n- GHA/windows/WinCE:\n  - set `-O3 -DNDEBUG` C flags manually for the CMake mingw32ce build.\n    CMake doesn't recognize the platform and fails to add them. To match\n    autotools (using `-O2`), and hit similar compiler warnings.\n  - enable parallel builds for cmake.\n  - tune parallelism for cmake using unity batches.\n  - tune parallelism for autotools.\n\n  Follow-up to 2a292c39846107228201674d686be5b3ed96674d #15975\n\n- tests: fix potentially uninitialized value in `readline()` in\n  `getpart.c`. Detected by gcc 4.4.0 `-O2` (Windows CE) jobs:\n  ```\n  tests/server/getpart.c: In function 'getpart':\n  tests/server/getpart.c:298: error: 'datalen' may be used uninitialized in this function\n  ```\n  Ref: https://github.com/curl/curl/actions/runs/13522595237/job/37785147505?pr=16476#step:11:25\n  Follow-up to 592880a3caf0b6f48b1dda6fbcf6a734237fcd43\n\n- vtls_scache: rework returning pointer to avoid compiler warning seen\n  with `-O3` gcc 4.4.0 builds (Windows CE/schannel):\n  ```\n  lib/vtls/schannel.c: In function 'schannel_connect_step1':\n  lib/vtls/vtls_scache.c:975: error: dereferencing pointer 'old_cred.4474' does break strict-aliasing rules\n  lib/vtls/vtls_scache.c:985: error: dereferencing pointer 'old_cred.4474' does break strict-aliasing rules\n  lib/vtls/schannel.c:959: note: initialized from here\n  ```\n  Ref: https://github.com/curl/curl/actions/runs/13523868335/job/37789610845#step:9:25\n  Follow-up to fa0ccd9f1fbbbd77bf50b26e3ba231ea6c729474 #15774\n\nCloses #16476\n",
+            "commit_timestamp": 1740601391.0
         }
     ]
 }
