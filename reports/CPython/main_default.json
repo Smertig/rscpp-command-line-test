@@ -20831,6 +20831,21 @@
             "commit_ref": "e85f81f4309bda4649d99c6b6a8bec9fb53346cd",
             "commit_message": "gh-129107: fix thread safety of `bytearray` where two critical sections are needed (#130227)\n\n",
             "commit_timestamp": 1740668398.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1740712525.349781,
+            "elapsed_time": 1199.993614435196,
+            "x64": true,
+            "actual_files_count": 1059,
+            "expected_files_count": null,
+            "memory_traffic": 48968.58896636963,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "9211b3dabeacb92713ac3f5f0fa43bc7cf69afd8",
+            "commit_message": "gh-129200: Add locking to the iOS testbed startup sequence. (#130564)\n\nAdd a lock to ensure that only one iOS testbed per user can start at a time, so\nthat the simulator discovery process doesn't collide between instances.\n",
+            "commit_timestamp": 1740699190.0
         }
     ]
 }

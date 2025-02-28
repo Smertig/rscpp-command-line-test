@@ -25989,6 +25989,23 @@
             "commit_ref": "c19a303867b0097e27e1cedb486f69064be40476",
             "commit_message": "[SPIR-V] Support 2 more instructions from SPV_INTEL_long_composites (#128190)\n\nThis change adds support for `OpSpecConstantCompositeContinuedINTEL` and\r\n`OpCompositeConstructContinuedINTEL` instructions and continues work\r\ndone in #126545.\r\n\r\nSpecification:\r\n\r\nhttps://github.khronos.org/SPIRV-Registry/extensions/INTEL/SPV_INTEL_long_composites.html",
             "commit_timestamp": 1740667583.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1740713213.799193,
+            "elapsed_time": 1575.4710593223572,
+            "x64": true,
+            "actual_files_count": 2890,
+            "expected_files_count": 1661,
+            "memory_traffic": 255135.96868896484,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "14170b16028c087ca154878f5ed93d3089a965c6",
+            "commit_message": "[HLSL] Add HLSLResourceBindingAttr to default constant buffer numeric declarations ($Globals) (#128981)\n\nTranslates `register(c#`) annotations on numeric constants in the global\nscope to `HLSLResourceBindingAttr`. Applies to scalar, vector and array\nconstants.\n\nFixes #128964",
+            "commit_timestamp": 1740711858.0
         }
     ]
 }
