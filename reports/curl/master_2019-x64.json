@@ -21686,6 +21686,21 @@
             "commit_ref": "399cb7130a375efeeaac7f286a3ee99e227b4fb5",
             "commit_message": "cmake: drop `HAVE_C_FLAG_Wno_long_double` logic for ancient Apple gcc\n\nThe initial curl CMake commit introduced it in 2009-04-02 via\n4c5307b45655ba75ab066564afdc0c111a8b9291. Suppressing a stray\n`-Wlong-double` warning in `mprintf.c`. This was before Apple switched\nto clang, and likely affected the Apple distributed GCC, version 4.2.1\nat the time. It applied the workaround to CMake builds only, though\nthe issue seems build-tool agnostic. Yet, it was not suppressed or\nreported for autotools builds.\n\nFor these reasons this logic seems obsolete and this patch drops it with\nno replacement. It saves a feature detection for GCC builds for macOS.\n\nIn PR sub-commits I added (and reverted) in-source suppression. In case\nit becomes necessary, that should fix it for all build tools.\n\nCloses #16513\n",
             "commit_timestamp": 1740710440.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1740755670.929775,
+            "elapsed_time": 281.23220038414,
+            "x64": true,
+            "actual_files_count": 3532,
+            "expected_files_count": 2323,
+            "memory_traffic": 78544.8638458252,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "049352dd80e1ab73945c49a3bac2e4a08db32f98",
+            "commit_message": "cmake: allow `CURL_STATIC_CRT` with shared libcurl and no curl exe\n\nFollow-up to edfa537100d6b5d2ac1b829c66757880afe59407 #16456\n\nCloses #16516\n",
+            "commit_timestamp": 1740744701.0
         }
     ]
 }
