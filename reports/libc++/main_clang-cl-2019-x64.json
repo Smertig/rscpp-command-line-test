@@ -5932,6 +5932,23 @@
             "commit_ref": "cef6dbbe544ff4c49fca65cdc50df783d8c39c28",
             "commit_message": "[CI] Add Logging for Workflow Jobs\n\nThis patch adds some logging information for individual workflow jobs inside\nthe metrics container. This is mainly intended for debugging why we seem to be\nmissing metrics from some workflows within Grafana.\n",
             "commit_timestamp": 1740798417.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1740841796.212085,
+            "elapsed_time": 64.99799013137817,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5001.378456115723,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "60b44d31afe53556ec707dc855983b93971d83c4",
+            "commit_message": "[MLIR][Affine] Fix bug in `simplifySemiAffine` utility (#129200)\n\nWhenever `symbolicDivide` returns nullptr when called from inside\n`simplifySemiAffine` we substitute the result with the original\nexpression (`expr`). nullptr simply indicates that the floordiv\nexpression cannot be simplified further.\n\nFixes: https://github.com/llvm/llvm-project/issues/122231",
+            "commit_timestamp": 1740838635.0
         }
     ]
 }
