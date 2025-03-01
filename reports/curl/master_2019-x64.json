@@ -21701,6 +21701,21 @@
             "commit_ref": "049352dd80e1ab73945c49a3bac2e4a08db32f98",
             "commit_message": "cmake: allow `CURL_STATIC_CRT` with shared libcurl and no curl exe\n\nFollow-up to edfa537100d6b5d2ac1b829c66757880afe59407 #16456\n\nCloses #16516\n",
             "commit_timestamp": 1740744701.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1740799436.785753,
+            "elapsed_time": 288.8282723426819,
+            "x64": true,
+            "actual_files_count": 3532,
+            "expected_files_count": 2323,
+            "memory_traffic": 91570.95909118652,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "b4834a7d6d119f29a99f0c2b1230fac94d640a87",
+            "commit_message": "examples: prefer `return` over `exit()` (cont.)\n\nSome of these calls were not in callbacks. These examples may leak\nhandles.\n\nAlso fix some whitespace.\n\nFollow-up to 08c7c937dc0dbd1f92f73360e5d8b2bb2ee6afa8 #16507\nCloses #16524\n",
+            "commit_timestamp": 1740791342.0
         }
     ]
 }

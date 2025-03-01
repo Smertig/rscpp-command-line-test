@@ -23696,6 +23696,21 @@
             "commit_ref": "32a2a6de17ffb7c8319ab38dbe61bd3b7c171f00",
             "commit_message": "COMP: Remove spare closing bracket\n\nRemove spare closing bracket.\n\nLeft behind inadvertently in commit 2bd9f0a.\n\nFixes:\n```\nT:\\Dashboard\\ITK\\Modules\\Filtering\\GPUAnisotropicSmoothing\\include\\itkGPUAnisotropicDiffusionImageFilter.hxx(66,76):\n error C2187: syntax error: ')' was unexpected here\n [T:\\Dashboard\\ITK-build\\Modules\\Filtering\\GPUAnisotropicSmoothing\\ITKGPUAnisotropicSmoothingHeaderTest1.vcxproj]\n```\n\nraised for example in:\nhttps://open.cdash.org/viewBuildError.php?buildid=10232159\n",
             "commit_timestamp": 1740659327.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1740799217.152853,
+            "elapsed_time": 204.81501746177673,
+            "x64": true,
+            "actual_files_count": 101,
+            "expected_files_count": null,
+            "memory_traffic": 23738.48931121826,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "32a2a6de17ffb7c8319ab38dbe61bd3b7c171f00",
+            "commit_message": "COMP: Remove spare closing bracket\n\nRemove spare closing bracket.\n\nLeft behind inadvertently in commit 2bd9f0a.\n\nFixes:\n```\nT:\\Dashboard\\ITK\\Modules\\Filtering\\GPUAnisotropicSmoothing\\include\\itkGPUAnisotropicDiffusionImageFilter.hxx(66,76):\n error C2187: syntax error: ')' was unexpected here\n [T:\\Dashboard\\ITK-build\\Modules\\Filtering\\GPUAnisotropicSmoothing\\ITKGPUAnisotropicSmoothingHeaderTest1.vcxproj]\n```\n\nraised for example in:\nhttps://open.cdash.org/viewBuildError.php?buildid=10232159\n",
+            "commit_timestamp": 1740659327.0
         }
     ]
 }
