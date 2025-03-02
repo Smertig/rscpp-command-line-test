@@ -20891,6 +20891,21 @@
             "commit_ref": "ddc27f9c385f57db1c227b655ec84dcf097a8976",
             "commit_message": "gh-128974: Fix `UnicodeError.__str__` when custom attributes have side-effects (#128975)\n\nFix some crashes when (custom) attributes of `UnicodeError` objects implement `object.__str__` with side-effects.",
             "commit_timestamp": 1740826880.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1740885473.982802,
+            "elapsed_time": 1157.6951808929443,
+            "x64": true,
+            "actual_files_count": 1059,
+            "expected_files_count": null,
+            "memory_traffic": 48808.592376708984,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "c9932a9ec8a3077933a85101aae9c3ac155e6d04",
+            "commit_message": "GH-127381: pathlib ABCs: remove `WritablePath.mkdir()` arguments (#130611)\n\nRemove the *mode*, *parents* and *exist_ok* arguments from\n`WritablePath.mkdir()`. These arguments imply support for POSIX permissions\nand checking for preexistence of the path or its parents, but subclasses of\n`WritablePath` may not have these capabilities.\n\nThe public `Path.mkdir()` method retains these arguments.",
+            "commit_timestamp": 1740864338.0
         }
     ]
 }
