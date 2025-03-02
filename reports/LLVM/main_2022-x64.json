@@ -26074,6 +26074,23 @@
             "commit_ref": "a0540e6c98972954f42d3b72d70976d8286113ea",
             "commit_message": "unittests: Use EXPECT_ instead of ASSERT_ in a few tests (#129251)\n\n",
             "commit_timestamp": 1740882596.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1740928809.600409,
+            "elapsed_time": 1565.68643116951,
+            "x64": true,
+            "actual_files_count": 2890,
+            "expected_files_count": 1661,
+            "memory_traffic": 255482.74253082275,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "f5f5286da3a64608b5874d70b32f955267039e1c",
+            "commit_message": "[libc++] Implement LWG3990 for Clang (#128834)\n\nThis patch adds `[[_Clang::__no_specializations__]]` to `tuple`, with\nwarning/error suppressed for `tuple<>`.",
+            "commit_timestamp": 1740927608.0
         }
     ]
 }

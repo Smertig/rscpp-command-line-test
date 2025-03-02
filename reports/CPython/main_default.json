@@ -20906,6 +20906,21 @@
             "commit_ref": "c9932a9ec8a3077933a85101aae9c3ac155e6d04",
             "commit_message": "GH-127381: pathlib ABCs: remove `WritablePath.mkdir()` arguments (#130611)\n\nRemove the *mode*, *parents* and *exist_ok* arguments from\n`WritablePath.mkdir()`. These arguments imply support for POSIX permissions\nand checking for preexistence of the path or its parents, but subclasses of\n`WritablePath` may not have these capabilities.\n\nThe public `Path.mkdir()` method retains these arguments.",
             "commit_timestamp": 1740864338.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1740928165.164272,
+            "elapsed_time": 1198.9763224124908,
+            "x64": true,
+            "actual_files_count": 1059,
+            "expected_files_count": null,
+            "memory_traffic": 48872.34552001953,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "a42168d316f0c9a4fc5658dab87682dc19054efb",
+            "commit_message": "gh-130637: Add validation for numeric response data in `stat()` method (#130646)\n\nCo-authored-by: Eric V. Smith <ericvsmith@users.noreply.github.com>",
+            "commit_timestamp": 1740920740.0
         }
     ]
 }
