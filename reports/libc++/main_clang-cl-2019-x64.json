@@ -5983,6 +5983,23 @@
             "commit_ref": "f5f5286da3a64608b5874d70b32f955267039e1c",
             "commit_message": "[libc++] Implement LWG3990 for Clang (#128834)\n\nThis patch adds `[[_Clang::__no_specializations__]]` to `tuple`, with\nwarning/error suppressed for `tuple<>`.",
             "commit_timestamp": 1740927608.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1740971800.631578,
+            "elapsed_time": 65.94957137107849,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5024.543190002441,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "cb7030dbe7f3f1947c31b3059958ff3968cc22ff",
+            "commit_message": "[LoongArch] use TypeWidenVector for most illegal vector types (#126456)\n\n`TypeWidenVector` makes an illegal vector a larger one\r\ne.g. in lsx\r\nv2i32 -> v4i32\r\nv4i16 -> v8i16\r\nWith this we can make good use of `vilvh`, `vilvl` instructions in\r\nvector `sext`, `zext` in later pr.\r\n\r\nPrevious action is `TypePromoteInteger`, which replaces integer with a\r\nlarger one\r\ne.g. in lsx\r\nv2i32 -> v2i64\r\nv4i16 -> v4i32",
+            "commit_timestamp": 1740968771.0
         }
     ]
 }

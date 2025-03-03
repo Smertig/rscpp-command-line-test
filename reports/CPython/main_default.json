@@ -20921,6 +20921,21 @@
             "commit_ref": "a42168d316f0c9a4fc5658dab87682dc19054efb",
             "commit_message": "gh-130637: Add validation for numeric response data in `stat()` method (#130646)\n\nCo-authored-by: Eric V. Smith <ericvsmith@users.noreply.github.com>",
             "commit_timestamp": 1740920740.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1740971870.806125,
+            "elapsed_time": 1193.4787805080414,
+            "x64": true,
+            "actual_files_count": 1059,
+            "expected_files_count": null,
+            "memory_traffic": 48974.3337097168,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "f97e4098ff71a6488fd3411f9f9e6fa7a7bb4efe",
+            "commit_message": "gh-128041: Add `terminate_workers` and `kill_workers` methods to ProcessPoolExecutor (GH-128043)\n\nThis adds two new methods to `multiprocessing`'s `ProcessPoolExecutor`:\n- **`terminate_workers()`**: forcefully terminates worker processes using `Process.terminate()`\n- **`kill_workers()`**: forcefully kills worker processes using `Process.kill()`\n\nThese methods provide users with a direct way to stop worker processes without `shutdown()` or relying on implementation details, addressing situations where immediate termination is needed.\n\nCo-authored-by: B\u00e9n\u00e9dikt Tran <10796600+picnixz@users.noreply.github.com>\nCo-authored-by: blurb-it[bot] <43283697+blurb-it[bot]@users.noreply.github.com>\nCommit-message-mostly-authored-by: Claude Sonnet 3.7 (because why not -greg)",
+            "commit_timestamp": 1740967305.0
         }
     ]
 }
