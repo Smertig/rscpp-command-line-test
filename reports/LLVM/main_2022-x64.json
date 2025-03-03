@@ -26108,6 +26108,23 @@
             "commit_ref": "cb7030dbe7f3f1947c31b3059958ff3968cc22ff",
             "commit_message": "[LoongArch] use TypeWidenVector for most illegal vector types (#126456)\n\n`TypeWidenVector` makes an illegal vector a larger one\r\ne.g. in lsx\r\nv2i32 -> v4i32\r\nv4i16 -> v8i16\r\nWith this we can make good use of `vilvh`, `vilvl` instructions in\r\nvector `sext`, `zext` in later pr.\r\n\r\nPrevious action is `TypePromoteInteger`, which replaces integer with a\r\nlarger one\r\ne.g. in lsx\r\nv2i32 -> v2i64\r\nv4i16 -> v4i32",
             "commit_timestamp": 1740968771.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1741015272.269899,
+            "elapsed_time": 1605.116753578186,
+            "x64": true,
+            "actual_files_count": 2890,
+            "expected_files_count": 1661,
+            "memory_traffic": 255759.0936279297,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "17857d92416da5997262318a6f62fccad9c5a156",
+            "commit_message": "[X86] Generate `kmov` for masking integers (#120593)\n\nWhen we have an integer used as a bit mask the llvm ir looks something\nlike this\n```\n%1 = and <16 x i32> %.splat, <i32 1, i32 2, i32 4, i32 8, i32 16, i32 32, i32 64, i32 128, i32 256, i32 512, i32 1024, i32 2048, i32 4096, i32 8192, i32 16384, i32 32768>\n%cmp1 = icmp ne <16 x i32> %1, zeroinitializer\n```\nwhere `.splat` is vector containing the mask in all lanes. The assembly\ngenerated for this looks like\n```\nvpbroadcastd    %ecx, %zmm0\nvptestmd        .LCPI0_0(%rip), %zmm0, %k1\n```\nwhere we have a constant table of powers of 2.\nInstead of doing this we could just move the relevant bits directly to\n`k` registers using a `kmov` instruction.\n```\nkmovw   %ecx, %k1\n```\nThis is faster and also reduces code size.",
+            "commit_timestamp": 1741014309.0
         }
     ]
 }

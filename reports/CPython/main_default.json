@@ -20936,6 +20936,21 @@
             "commit_ref": "f97e4098ff71a6488fd3411f9f9e6fa7a7bb4efe",
             "commit_message": "gh-128041: Add `terminate_workers` and `kill_workers` methods to ProcessPoolExecutor (GH-128043)\n\nThis adds two new methods to `multiprocessing`'s `ProcessPoolExecutor`:\n- **`terminate_workers()`**: forcefully terminates worker processes using `Process.terminate()`\n- **`kill_workers()`**: forcefully kills worker processes using `Process.kill()`\n\nThese methods provide users with a direct way to stop worker processes without `shutdown()` or relying on implementation details, addressing situations where immediate termination is needed.\n\nCo-authored-by: B\u00e9n\u00e9dikt Tran <10796600+picnixz@users.noreply.github.com>\nCo-authored-by: blurb-it[bot] <43283697+blurb-it[bot]@users.noreply.github.com>\nCommit-message-mostly-authored-by: Claude Sonnet 3.7 (because why not -greg)",
             "commit_timestamp": 1740967305.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1741014632.571079,
+            "elapsed_time": 1197.1881749629974,
+            "x64": true,
+            "actual_files_count": 1059,
+            "expected_files_count": null,
+            "memory_traffic": 48962.068756103516,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "b3c18bfd828ba90b9c712da74095c4a052887655",
+            "commit_message": "gh-130711: Document `PyBaseObject_Type` (GH-130712)\n\n\nCo-authored-by: Peter Bierma <zintensitydev@gmail.com>",
+            "commit_timestamp": 1741010885.0
         }
     ]
 }
