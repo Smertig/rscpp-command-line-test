@@ -26142,6 +26142,23 @@
             "commit_ref": "8476a5d480304bf7bd934c660a159e1c6906a69d",
             "commit_message": "SplitKit: Fix rematerialization undoing subclass based split (#122110)\n\nThis fixes an allocation failure in the new test.\n\nIn cases where getLargestLegalSuperClass can inflate the register class,\nrematerialization could effectively undo a split which was done to\ninflate\nthe register class, if the defining instruction can only write a\nsubclass\nand the use can read the superclass.\n\nSome of the x86 tests changes look like improvements, but some are\nlikely regressions.\n\nI'm not entirely sure this is the correct place to fix this. It also\nseems more complicated than necessary, but the decision to change\nthe register class is far removed from the point where the decision\nto split the virtual register is made. I'm also also not sure if this\nshould be considering the register classes of all the use indexes\nin getUseSlots, rather than just checking if this use index instruction\nreads the register.",
             "commit_timestamp": 1741057454.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1741101682.873423,
+            "elapsed_time": 1584.1023979187012,
+            "x64": true,
+            "actual_files_count": 2892,
+            "expected_files_count": 1661,
+            "memory_traffic": 255719.4541091919,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "2af0e2f3e6c761ecd3f2dd31d0ae844572fcdce0",
+            "commit_message": "Revert \"Push down the swig module to avoid an import cycle\" (#129714)\n\nReverts llvm/llvm-project#129135 due to buildbot test failures.\n\nDefinitely caused remote Linux to Windows failures\n(https://lab.llvm.org/buildbot/#/builders/197/builds/2712), may be the\ncause of Windows on Arm failures\nhttps://lab.llvm.org/buildbot/#/builders/141/builds/6744.",
+            "commit_timestamp": 1741098242.0
         }
     ]
 }
