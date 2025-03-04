@@ -23641,6 +23641,21 @@
             "commit_ref": "ccf1e97aa1bd056b4d4b7ce6fae1a4b089c6c25b",
             "commit_message": "[NTDLL_VISTA:LDR] Implement DLL Notification (#6795)\n\nImplement DLL Load Notification, an NT6+ feature.\nhttps://learn.microsoft.com/en-us/windows/win32/devnotes/dll-load-notification\n\n- [RTL] Sync `RTL_STATIC_LIST_HEAD` and `RtlFailFast` from XDK to NDK.\n- [NTDLL_VISTA] Introduce ntdll_vista_static static library and link both ntdll_vista and ntdll to it.\n- [NDK][LDR] Add and fix DLL Notification definitions.\n- [NTDLL_VISTA] Code improvements.\n- [NTDLL_VISTA:LDR] Implement Dll Notification.\n- [NTDLL][NTDLL_APITEST] Add Dll Notification API test.",
             "commit_timestamp": 1740946413.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1741058076.421247,
+            "elapsed_time": 94.23759651184082,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7377.727554321289,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "4d605ec26f7516cb7368b83a7aeb7df5ce785cd1",
+            "commit_message": "[NTOS:MM:PS] Little fixes for NTDLL loading (#7707)\n\n- [NTOS:PS] `STATUS_INVALID_IMAGE_PROTECT` returned by `MmCheckSystemImage` should be a fatal error too.\n- [NTOS:PS] Fix object attributes for opening NTDLL.\n- [NTOS:MM] Remove `MmCheckSystemImage` unused parameter.\n- [NTOS:MM] Inline `MmVerifyImageIsOkForMpUse` in `MmCheckSystemImage`, reducing a call to `RtlImageNtHeader`.\n",
+            "commit_timestamp": 1741030581.0
         }
     ]
 }

@@ -6017,6 +6017,23 @@
             "commit_ref": "17857d92416da5997262318a6f62fccad9c5a156",
             "commit_message": "[X86] Generate `kmov` for masking integers (#120593)\n\nWhen we have an integer used as a bit mask the llvm ir looks something\nlike this\n```\n%1 = and <16 x i32> %.splat, <i32 1, i32 2, i32 4, i32 8, i32 16, i32 32, i32 64, i32 128, i32 256, i32 512, i32 1024, i32 2048, i32 4096, i32 8192, i32 16384, i32 32768>\n%cmp1 = icmp ne <16 x i32> %1, zeroinitializer\n```\nwhere `.splat` is vector containing the mask in all lanes. The assembly\ngenerated for this looks like\n```\nvpbroadcastd    %ecx, %zmm0\nvptestmd        .LCPI0_0(%rip), %zmm0, %k1\n```\nwhere we have a constant table of powers of 2.\nInstead of doing this we could just move the relevant bits directly to\n`k` registers using a `kmov` instruction.\n```\nkmovw   %ecx, %k1\n```\nThis is faster and also reduces code size.",
             "commit_timestamp": 1741014309.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1741058205.93295,
+            "elapsed_time": 88.02893233299255,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5047.303009033203,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "8476a5d480304bf7bd934c660a159e1c6906a69d",
+            "commit_message": "SplitKit: Fix rematerialization undoing subclass based split (#122110)\n\nThis fixes an allocation failure in the new test.\n\nIn cases where getLargestLegalSuperClass can inflate the register class,\nrematerialization could effectively undo a split which was done to\ninflate\nthe register class, if the defining instruction can only write a\nsubclass\nand the use can read the superclass.\n\nSome of the x86 tests changes look like improvements, but some are\nlikely regressions.\n\nI'm not entirely sure this is the correct place to fix this. It also\nseems more complicated than necessary, but the decision to change\nthe register class is far removed from the point where the decision\nto split the virtual register is made. I'm also also not sure if this\nshould be considering the register classes of all the use indexes\nin getUseSlots, rather than just checking if this use index instruction\nreads the register.",
+            "commit_timestamp": 1741057454.0
         }
     ]
 }

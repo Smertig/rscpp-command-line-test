@@ -20951,6 +20951,21 @@
             "commit_ref": "b3c18bfd828ba90b9c712da74095c4a052887655",
             "commit_message": "gh-130711: Document `PyBaseObject_Type` (GH-130712)\n\n\nCo-authored-by: Peter Bierma <zintensitydev@gmail.com>",
             "commit_timestamp": 1741010885.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1741058313.210168,
+            "elapsed_time": 1200.9199771881104,
+            "x64": true,
+            "actual_files_count": 1059,
+            "expected_files_count": null,
+            "memory_traffic": 48954.68273925781,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "813bc5694bd8aa43165468c5ea1dc27af973611d",
+            "commit_message": "gh-130599: use static constants str-to-int conversion (gh-130714)\n\nAvoid a data race in free-threaded builds due to mutating global arrays at\nruntime.  Instead, compute the constants with an external Python script and\nthen define them as static global constant arrays.  These constants are\nused by `long_from_non_binary_base()`.",
+            "commit_timestamp": 1741057250.0
         }
     ]
 }
