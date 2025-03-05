@@ -23816,6 +23816,21 @@
             "commit_ref": "01379c10d0e6350b73ed4926cb8226d500d28f16",
             "commit_message": "Merge branch 'upstream-zlib-ng'\n\n# By Zlib-ng Upstream\n* upstream-zlib-ng:\n  zlib-ng 2025-02-10 (860e4cff)\n",
             "commit_timestamp": 1740770384.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1741144661.909208,
+            "elapsed_time": 205.1911473274231,
+            "x64": true,
+            "actual_files_count": 101,
+            "expected_files_count": null,
+            "memory_traffic": 23670.376083374023,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "ede18e226251ffed3e12904f8938d6f544847405",
+            "commit_message": "COMP: Remove `{}` default member initializer from `m_ExceptionData`\n\nWorked around an LLVM 19.1.7 clang-tidy warning, saying:\n\n    itkExceptionObject.h(136): warning: suspicious exception object created but not thrown; did you mean 'throw shared_ptr'? [bugprone-throw-keyword-missing]\n      136 |   std::shared_ptr<const ExceptionData> m_ExceptionData{};\n          |                                                       ^\n\n- As reported at issue https://github.com/llvm/llvm-project/issues/129675\n'[clang-tidy] bugprone-throw-keyword-missing on default member initializer:\n\"did you mean 'throw shared_ptr'?\"'\n\nNote that the `{}` wasn't really necessary here. It was just there for the sake\nof consistency (as a matter of style).\n",
+            "commit_timestamp": 1741122450.0
         }
     ]
 }
