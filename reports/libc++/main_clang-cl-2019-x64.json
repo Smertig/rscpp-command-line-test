@@ -6068,6 +6068,23 @@
             "commit_ref": "3e53aeae94cfe98486ae3186a3eb627b69b51b77",
             "commit_message": "AMDGPU: Make frame index folding logic consistent with eliminateFrameIndex (#129633)\n\nThis adds handling of s_add_u32, which is handled and removes handling of\ns_or_b32 and s_and_b32, which are not. I was working on handling them\nin #102345, but need to finish that patch. This fixes a regression\nexposed by a3165398db0736588daedb07650195502592e567 where the\nfinal instruction would use two literals.",
             "commit_timestamp": 1741144170.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1741187269.219205,
+            "elapsed_time": 66.07866668701172,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5006.327934265137,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "f5d2996d292c2f91694a28c039abd52e667c64e5",
+            "commit_message": "AMDGPU: Fix trying to query end iterator for DebugLoc (#129886)\n\n",
+            "commit_timestamp": 1741186220.0
         }
     ]
 }

@@ -25243,6 +25243,21 @@
             "commit_ref": "d8565ac7317b4838a08308170f5b9ba82d091546",
             "commit_message": "Sync `Py_TPFLAGS_MANAGED_DICT` for PyPy3.11 across the codebase (#5537)\n\n* Sync `Py_TPFLAGS_MANAGED_DICT` for PyPy3.11 across the codebase\n\nAdjust the `Py_TPFLAGS_MANAGED_DICT` logic in `include/pybind11/attr.h`\nto match the one used in `include/pybind11/detail/class.h`.\n\nThis is a followup to #5508.\n\n* Use a common `#define` for pre-`Py_TPFLAGS_MANAGED_DICT` Pythons\n\n* style: pre-commit fixes\n\n---------\n\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>",
             "commit_timestamp": 1740088425.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1741187245.134249,
+            "elapsed_time": 156.82822918891907,
+            "x64": true,
+            "actual_files_count": 382,
+            "expected_files_count": 197,
+            "memory_traffic": 18473.5076751709,
+            "repo_url": "https://github.com/pybind/pybind11",
+            "commit_ref": "d8565ac7317b4838a08308170f5b9ba82d091546",
+            "commit_message": "Sync `Py_TPFLAGS_MANAGED_DICT` for PyPy3.11 across the codebase (#5537)\n\n* Sync `Py_TPFLAGS_MANAGED_DICT` for PyPy3.11 across the codebase\n\nAdjust the `Py_TPFLAGS_MANAGED_DICT` logic in `include/pybind11/attr.h`\nto match the one used in `include/pybind11/detail/class.h`.\n\nThis is a followup to #5508.\n\n* Use a common `#define` for pre-`Py_TPFLAGS_MANAGED_DICT` Pythons\n\n* style: pre-commit fixes\n\n---------\n\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>",
+            "commit_timestamp": 1740088425.0
         }
     ]
 }

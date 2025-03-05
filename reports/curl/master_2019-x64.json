@@ -21836,6 +21836,21 @@
             "commit_ref": "0825cf42f02ba2592489267cd83e1580efa96ade",
             "commit_message": "GHA/windows: drop running tests with dl-mingw 7.3.0 due to flakiness\n\nThis job was never stable. Bumping to -j8 (from -j4) possibly made it\nflakier: 032447e6249bf87958b16eb0c97874490b711ec7 #16271\n\nKeep this job for build tests and drop running tests to improve the CI\nexperience and save CI time.\n\nIt's also a simple build with no dependencies. CI continues to build\na similar job with 9.5.0, which is more stable.\n\nIt remains a puzzle why builds with this toolchain (7.3.0 win32 threads\nmingw-builds) is flakier and requires more test exceptions than the\nindentical build with a slightly different build/version of\nthe toolchain (9.5.0 posix threads winlibs_mingw).\n\nRef: #14854\nCloses #16564\n",
             "commit_timestamp": 1741140645.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1741187653.507158,
+            "elapsed_time": 274.50767183303833,
+            "x64": true,
+            "actual_files_count": 3557,
+            "expected_files_count": 2323,
+            "memory_traffic": 79092.19561767578,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "f79195e7efea75c3109abac17d8637ed3592083f",
+            "commit_message": "tool_getparam: parse_header() without strtok\n\nRead a provided header file line-by-line instead. Avoids strtok(),\navoids a possibly quite large malloc for the entire file.\n\nCloses #16572\n",
+            "commit_timestamp": 1741182955.0
         }
     ]
 }

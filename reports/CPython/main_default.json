@@ -20996,6 +20996,21 @@
             "commit_ref": "e53d105872fafa77507ea33b7ecf0faddd4c3b60",
             "commit_message": "GH-125722: Increase minimum supported Sphinx to 8.2.0 (#130444)\n\n",
             "commit_timestamp": 1741134661.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1741187349.125471,
+            "elapsed_time": 1086.7432827949524,
+            "x64": true,
+            "actual_files_count": 1059,
+            "expected_files_count": null,
+            "memory_traffic": 48875.34607696533,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "2905690a91bf72cdf0fb919b5193849bb67732e2",
+            "commit_message": "gh-130851: Don't crash when deduping unusual code constants (#130853)\n\nThe bytecode compiler only generates a few different types of constants,\nlike str, int, tuple, slices, etc. Users can construct code objects with\nvarious unusual constants, including ones that are not hashable or not\neven constant.\n\nThe free threaded build previously crashed with a fatal error when\nconfronted with these constants. Instead, treat distinct objects of\notherwise unhandled types as not equal for the purposes of deduplication.",
+            "commit_timestamp": 1741183489.0
         }
     ]
 }
