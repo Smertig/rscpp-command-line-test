@@ -6102,6 +6102,23 @@
             "commit_ref": "27e686c788246d6586e38542cf95a987fde63b2b",
             "commit_message": "[libc++] Verify that LWG4140 is implemented (#128624)\n\nAccording to the commit history, the constructors removed by LWG4140\nhave never been added to libc++.\n\nExistence of non-public or deleted default constructor is observable,\nthis patch tests that there's no such default constructor at all.",
             "commit_timestamp": 1741230737.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1741273758.197244,
+            "elapsed_time": 71.48316240310669,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5017.5888671875,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "78281fd12c9f5c46b95d9399ae72ca357812ecee",
+            "commit_message": "Revert \"[AMDGPU] InstCombine llvm.amdgcn.ds.bpermute with uniform arguments (#129895)\"\n\nThis reverts commit be5149a3158cbce3051629e450950ccb96926365.\n\nIt caused build failures in the openmp-offload-amdgpu-runtime buildbot\nand others.\n",
+            "commit_timestamp": 1741273519.0
         }
     ]
 }

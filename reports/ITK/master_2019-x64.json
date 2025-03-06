@@ -23861,6 +23861,21 @@
             "commit_ref": "ede18e226251ffed3e12904f8938d6f544847405",
             "commit_message": "COMP: Remove `{}` default member initializer from `m_ExceptionData`\n\nWorked around an LLVM 19.1.7 clang-tidy warning, saying:\n\n    itkExceptionObject.h(136): warning: suspicious exception object created but not thrown; did you mean 'throw shared_ptr'? [bugprone-throw-keyword-missing]\n      136 |   std::shared_ptr<const ExceptionData> m_ExceptionData{};\n          |                                                       ^\n\n- As reported at issue https://github.com/llvm/llvm-project/issues/129675\n'[clang-tidy] bugprone-throw-keyword-missing on default member initializer:\n\"did you mean 'throw shared_ptr'?\"'\n\nNote that the `{}` wasn't really necessary here. It was just there for the sake\nof consistency (as a matter of style).\n",
             "commit_timestamp": 1741122450.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1741273908.035234,
+            "elapsed_time": 221.3910675048828,
+            "x64": true,
+            "actual_files_count": 101,
+            "expected_files_count": null,
+            "memory_traffic": 23894.298065185547,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "34877cc71e5554a69568e232a3fd8275cb2aaac9",
+            "commit_message": "BUG: Fix strings in DisplacementField VerifyFixedParametersInformation\n\nWhen spacing or direction differences were encountered, the original code would\nproduce an incorrect exception message. The exception might occur when calling\n`DisplacementFieldTransform::SetInverseDisplacementField`.\n\nThe bug appears introduced with commit 70fd79f43c089bec068ba6f6657baca12996842d,\n\"ENH:  Adding transform parameters adaptors.\", 20 Sep 2011.\n",
+            "commit_timestamp": 1741268532.0
         }
     ]
 }
