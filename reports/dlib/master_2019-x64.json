@@ -25274,6 +25274,21 @@
             "commit_ref": "5f58d49d5f2767e2aa48e6179ba3dbb42bc23456",
             "commit_message": "Fix a bug when getting a gzip header extra field with inflate(). (#3063)\n\nIf the extra field was larger than the space the user provided with\ninflateGetHeader(), and if multiple calls of inflate() delivered\nthe extra header data, then there could be a buffer overflow of the\nprovided space. This commit assures that provided space is not\nexceeded.",
             "commit_timestamp": 1741090550.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1741230881.320917,
+            "elapsed_time": 109.82482624053955,
+            "x64": true,
+            "actual_files_count": 137,
+            "expected_files_count": null,
+            "memory_traffic": 7558.740028381348,
+            "repo_url": "https://github.com/davisking/dlib.git",
+            "commit_ref": "5f58d49d5f2767e2aa48e6179ba3dbb42bc23456",
+            "commit_message": "Fix a bug when getting a gzip header extra field with inflate(). (#3063)\n\nIf the extra field was larger than the space the user provided with\ninflateGetHeader(), and if multiple calls of inflate() delivered\nthe extra header data, then there could be a buffer overflow of the\nprovided space. This commit assures that provided space is not\nexceeded.",
+            "commit_timestamp": 1741090550.0
         }
     ]
 }

@@ -21851,6 +21851,21 @@
             "commit_ref": "f79195e7efea75c3109abac17d8637ed3592083f",
             "commit_message": "tool_getparam: parse_header() without strtok\n\nRead a provided header file line-by-line instead. Avoids strtok(),\navoids a possibly quite large malloc for the entire file.\n\nCloses #16572\n",
             "commit_timestamp": 1741182955.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1741231387.148464,
+            "elapsed_time": 280.20744490623474,
+            "x64": true,
+            "actual_files_count": 3557,
+            "expected_files_count": 2323,
+            "memory_traffic": 81811.59761810303,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "c38f9089f3ee4caa2b11f00b07b66b179140769f",
+            "commit_message": "lib1156: pass longs to `curl_easy_setopt()`\n\nTo fix this test on macOS with the gcc compiler.\n\nAlso unignore test 1156 in GHA/macos.\n\nRef: c349bd668c91f2484ae21c0f361ddf497143093c #14097 (issue 15.)\nRef: 7b0240c07799c28dc84272f9e38e1092ce4cc498 #16539\nRef: 2ec00372a1fc7f27cd3a6c43e29007400acfe2b6 #16482\n\nCloses #16579\n",
+            "commit_timestamp": 1741221330.0
         }
     ]
 }

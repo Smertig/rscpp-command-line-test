@@ -6085,6 +6085,23 @@
             "commit_ref": "f5d2996d292c2f91694a28c039abd52e667c64e5",
             "commit_message": "AMDGPU: Fix trying to query end iterator for DebugLoc (#129886)\n\n",
             "commit_timestamp": 1741186220.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1741231004.409282,
+            "elapsed_time": 76.85628628730774,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5018.156433105469,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "27e686c788246d6586e38542cf95a987fde63b2b",
+            "commit_message": "[libc++] Verify that LWG4140 is implemented (#128624)\n\nAccording to the commit history, the constructors removed by LWG4140\nhave never been added to libc++.\n\nExistence of non-public or deleted default constructor is observable,\nthis patch tests that there's no such default constructor at all.",
+            "commit_timestamp": 1741230737.0
         }
     ]
 }
