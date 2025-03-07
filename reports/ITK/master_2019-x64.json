@@ -23891,6 +23891,21 @@
             "commit_ref": "ef37881d317b003121b9ff9c050affb6fa44b5e8",
             "commit_message": "STYLE: Remove local `ostringstream loc` variable from ExceptionObject\n\nThe name `loc` was somewhat confusing here, as it is used elsewhere in\nExceptionObject as the parameter name for the `ITK_LOCATION` argument (the name\nor signature of the function that threw the exception). Moreover, the use of a\nstring stream is no longer necessary, now that we can use `std::to_string`.\n",
             "commit_timestamp": 1741303039.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1741360188.925246,
+            "elapsed_time": 216.25432896614075,
+            "x64": true,
+            "actual_files_count": 101,
+            "expected_files_count": null,
+            "memory_traffic": 23832.823852539062,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "ef37881d317b003121b9ff9c050affb6fa44b5e8",
+            "commit_message": "STYLE: Remove local `ostringstream loc` variable from ExceptionObject\n\nThe name `loc` was somewhat confusing here, as it is used elsewhere in\nExceptionObject as the parameter name for the `ITK_LOCATION` argument (the name\nor signature of the function that threw the exception). Moreover, the use of a\nstring stream is no longer necessary, now that we can use `std::to_string`.\n",
+            "commit_timestamp": 1741303039.0
         }
     ]
 }

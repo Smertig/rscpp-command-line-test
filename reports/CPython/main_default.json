@@ -21056,6 +21056,21 @@
             "commit_ref": "886a4d74ee7b19d027fae1ba4579a99a805878a2",
             "commit_message": "gh-129011: Update comments in FileIO to match current code (#129012)\n\n",
             "commit_timestamp": 1741310302.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1741360250.427672,
+            "elapsed_time": 1246.7756803035736,
+            "x64": true,
+            "actual_files_count": 1059,
+            "expected_files_count": null,
+            "memory_traffic": 49004.406158447266,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "c476410dc5ae62ffb5e32f64f9a3a622485c7d93",
+            "commit_message": "gh-110206: Fix multiprocessing test_notify_all (#130933)\n\nThe test could deadlock trying join on the worker processes due to a\ncombination of behaviors:\n\n* The use of `assertReachesEventually` did not ensure that workers\n  actually woken.release() because the SyncManager's Semaphore does not\n  implement get_value.\n\n* This mean that the test could finish and the variable \"sleeping\" would\n  got out of scope and be collected. This unregisters the proxy leading\n  to failures in the worker or possibly the manager.\n\n* The subsequent call to `p.join()` during cleanUp therefore never\n  finished.\n\nThis takes two approaches to fix this:\n\n1) Use woken.acquire() to ensure that the workers actually finish\n   calling woken.release()\n\n2) At the end of the test, wait until the workers are finished, while `cond`,\n   `sleeping`, and `woken` are still valid.\n",
+            "commit_timestamp": 1741359489.0
         }
     ]
 }

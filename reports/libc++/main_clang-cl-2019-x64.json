@@ -6136,6 +6136,23 @@
             "commit_ref": "8839ba418760a8482b356eeaf76bec0a002b10d1",
             "commit_message": "[Instrumentation] Avoid repeated hash lookups (NFC) (#129988)\n\nCo-authored-by: Nikita Popov <github@npopov.com>",
             "commit_timestamp": 1741316856.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1741360134.362321,
+            "elapsed_time": 93.33739995956421,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5004.961387634277,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "d1bd1c7e825d190fc47cd06956c381cc0f70fba8",
+            "commit_message": "[C2y] Claim conformance to WG14 N3496\n\nThis was a clarification for C23's N2412, primarily about the\nBOOL_WIDTH macro. It should expand to the number of bits in the value\nrepresentation, not the object representation. Clang 20 implements the\ncorrect value.\n",
+            "commit_timestamp": 1741359093.0
         }
     ]
 }
