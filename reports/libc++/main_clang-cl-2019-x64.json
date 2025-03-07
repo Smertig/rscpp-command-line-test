@@ -6119,6 +6119,23 @@
             "commit_ref": "78281fd12c9f5c46b95d9399ae72ca357812ecee",
             "commit_message": "Revert \"[AMDGPU] InstCombine llvm.amdgcn.ds.bpermute with uniform arguments (#129895)\"\n\nThis reverts commit be5149a3158cbce3051629e450950ccb96926365.\n\nIt caused build failures in the openmp-offload-amdgpu-runtime buildbot\nand others.\n",
             "commit_timestamp": 1741273519.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1741317519.712332,
+            "elapsed_time": 107.29910898208618,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5003.851371765137,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "8839ba418760a8482b356eeaf76bec0a002b10d1",
+            "commit_message": "[Instrumentation] Avoid repeated hash lookups (NFC) (#129988)\n\nCo-authored-by: Nikita Popov <github@npopov.com>",
+            "commit_timestamp": 1741316856.0
         }
     ]
 }

@@ -21881,6 +21881,21 @@
             "commit_ref": "e51c494ed1a9eb66390dcad19373a5f75413fb77",
             "commit_message": "tool_operate: change \"1 retries\" to \"1 retry\"\n\nCloses #16586\n",
             "commit_timestamp": 1741273479.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1741317681.862187,
+            "elapsed_time": 260.0112557411194,
+            "x64": true,
+            "actual_files_count": 3569,
+            "expected_files_count": 2323,
+            "memory_traffic": 77098.13838195801,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "914790336664da0451e2f57906373a7707bd7cc3",
+            "commit_message": "GHA/macos: add initial pytest support\n\nAdd support for running pytest in GHA/macos jobs.\n\nExperimental, with caveats:\n- slow.\n- `httpd` often fails to start.\n- 10-15 tests (depending on C compiler) fail consistently:\n  02_20, 02_33, 02_34, 03_01, 03_03, 05_04, 07_42.\n- Homebrew build of vsftpd misses TLS support.\n- `nghttpx` temporarily disabled for pytest.\n\nYou can test pytest by adding `install_steps: pytest` to a job.\n\nCloses #16518\n",
+            "commit_timestamp": 1741310368.0
         }
     ]
 }

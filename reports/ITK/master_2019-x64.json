@@ -23876,6 +23876,21 @@
             "commit_ref": "34877cc71e5554a69568e232a3fd8275cb2aaac9",
             "commit_message": "BUG: Fix strings in DisplacementField VerifyFixedParametersInformation\n\nWhen spacing or direction differences were encountered, the original code would\nproduce an incorrect exception message. The exception might occur when calling\n`DisplacementFieldTransform::SetInverseDisplacementField`.\n\nThe bug appears introduced with commit 70fd79f43c089bec068ba6f6657baca12996842d,\n\"ENH:  Adding transform parameters adaptors.\", 20 Sep 2011.\n",
             "commit_timestamp": 1741268532.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1741317587.232506,
+            "elapsed_time": 203.15051698684692,
+            "x64": true,
+            "actual_files_count": 101,
+            "expected_files_count": null,
+            "memory_traffic": 23641.057495117188,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "ef37881d317b003121b9ff9c050affb6fa44b5e8",
+            "commit_message": "STYLE: Remove local `ostringstream loc` variable from ExceptionObject\n\nThe name `loc` was somewhat confusing here, as it is used elsewhere in\nExceptionObject as the parameter name for the `ITK_LOCATION` argument (the name\nor signature of the function that threw the exception). Moreover, the use of a\nstring stream is no longer necessary, now that we can use `std::to_string`.\n",
+            "commit_timestamp": 1741303039.0
         }
     ]
 }

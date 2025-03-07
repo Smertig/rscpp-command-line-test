@@ -25288,6 +25288,21 @@
             "commit_ref": "79be5c83164ae2362d24dbfc1928035477eafe5c",
             "commit_message": "test: Explicitly mark char as signed in dtype tests (#5545)\n\nWhen run on a platform where `char` is unsigned by default \u2014 which is\nimplementation-defined.\n\nThis explicitly uses `signed char` in two tests where the sign of the\nchar is important (though only `test_dtype_normalized_num` fails without\nthis change).",
             "commit_timestamp": 1741249194.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1741317322.59949,
+            "elapsed_time": 173.8533821105957,
+            "x64": true,
+            "actual_files_count": 432,
+            "expected_files_count": 197,
+            "memory_traffic": 19961.726104736328,
+            "repo_url": "https://github.com/pybind/pybind11",
+            "commit_ref": "d422fda12507f94a30e57541746546048e202b21",
+            "commit_message": "chore(deps): bump jinja2 from 3.1.5 to 3.1.6 in /docs (#5554)\n\nBumps [jinja2](https://github.com/pallets/jinja) from 3.1.5 to 3.1.6.\n- [Release notes](https://github.com/pallets/jinja/releases)\n- [Changelog](https://github.com/pallets/jinja/blob/main/CHANGES.rst)\n- [Commits](https://github.com/pallets/jinja/compare/3.1.5...3.1.6)\n\n---\nupdated-dependencies:\n- dependency-name: jinja2\n  dependency-type: indirect\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+            "commit_timestamp": 1741299499.0
         }
     ]
 }
