@@ -21071,6 +21071,21 @@
             "commit_ref": "c476410dc5ae62ffb5e32f64f9a3a622485c7d93",
             "commit_message": "gh-110206: Fix multiprocessing test_notify_all (#130933)\n\nThe test could deadlock trying join on the worker processes due to a\ncombination of behaviors:\n\n* The use of `assertReachesEventually` did not ensure that workers\n  actually woken.release() because the SyncManager's Semaphore does not\n  implement get_value.\n\n* This mean that the test could finish and the variable \"sleeping\" would\n  got out of scope and be collected. This unregisters the proxy leading\n  to failures in the worker or possibly the manager.\n\n* The subsequent call to `p.join()` during cleanUp therefore never\n  finished.\n\nThis takes two approaches to fix this:\n\n1) Use woken.acquire() to ensure that the workers actually finish\n   calling woken.release()\n\n2) At the end of the test, wait until the workers are finished, while `cond`,\n   `sleeping`, and `woken` are still valid.\n",
             "commit_timestamp": 1741359489.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1741403380.644381,
+            "elapsed_time": 1090.4579780101776,
+            "x64": true,
+            "actual_files_count": 1059,
+            "expected_files_count": null,
+            "memory_traffic": 49084.82744598389,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "72e5b25efb580fb1f0fdfade516be90d90822164",
+            "commit_message": "gh-128646: Implement GzipFile.readinto[1]() methods (GH-128647)\n\nThe new methods simply delegate to the underlying buffer, much like the existing GzipFile.read[1] methods.  This avoids extra allocations caused by the BufferedIOBase.readinto implementation previously used.\n\nThis commit also factors out a common readability check rather than copying it an additional two times.",
+            "commit_timestamp": 1741403085.0
         }
     ]
 }

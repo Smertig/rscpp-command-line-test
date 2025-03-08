@@ -23906,6 +23906,21 @@
             "commit_ref": "ef37881d317b003121b9ff9c050affb6fa44b5e8",
             "commit_message": "STYLE: Remove local `ostringstream loc` variable from ExceptionObject\n\nThe name `loc` was somewhat confusing here, as it is used elsewhere in\nExceptionObject as the parameter name for the `ITK_LOCATION` argument (the name\nor signature of the function that threw the exception). Moreover, the use of a\nstring stream is no longer necessary, now that we can use `std::to_string`.\n",
             "commit_timestamp": 1741303039.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1741403473.378224,
+            "elapsed_time": 200.49969840049744,
+            "x64": true,
+            "actual_files_count": 101,
+            "expected_files_count": null,
+            "memory_traffic": 23832.820152282715,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "ea54c7e956e84bd07c854ad5fb55a4c06cf8ab36",
+            "commit_message": "Merge pull request #5266 from N-Dekker/Add-location-to-ExceptionObject-what\n\nENH: Add location (function) to text returned by ExceptionObject::what()",
+            "commit_timestamp": 1741389342.0
         }
     ]
 }

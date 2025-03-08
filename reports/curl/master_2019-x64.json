@@ -21911,6 +21911,21 @@
             "commit_ref": "27d24690a46138a949a555da3d5487e98fa7f5e9",
             "commit_message": "GHA/windows: msys/mingw improvements\n\n- enable zstd in Cygwin and MSYS jobs.\n- dl-mingw: use Ninja in the 9.5.0 (winlibs-mingw) job.\n  The download package is shipping with it. Saves 15s build time.\n  Keep testing GNU Makefiles with the two mingw-builds jobs.\n- dl-mingw: split `env` prop to `env` and `ver` to aid integrating with\n  MSYS2.\n- dl-mingw: install MSYS2 with options to make it quick (<20s).\n  It allows to use MSYS2 dependency packages with the downloaded\n  toolchains. It also makes configuration cleaner. Install libpsl.\n- dl-mingw: enable mbedTLS in the 7.3.0 job.\n  (OpenSSL took a long time to install, wolfSSL misses features.)\n\nAssisted-by: Jeremy Drake\n\nCloses #16429\n",
             "commit_timestamp": 1741359299.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1741403639.670703,
+            "elapsed_time": 279.5922384262085,
+            "x64": true,
+            "actual_files_count": 3569,
+            "expected_files_count": 2323,
+            "memory_traffic": 81624.44438171387,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "d69425ed7d0918aceddd96048b146a9df85638ec",
+            "commit_message": "curl_setup_once: drop `E*` macro redefines unused (with winsock2)\n\nThese were not used in curl sources at all.\n\nExcept `EDQUOT` which was used after `mkdir()` in `src/tool_dirhie.c`\nfor error display. It should not be redefined to a winsock2 error.\nThis makes the \"exceeded your quota\" error correctly appear on Windows,\nif detected, after operations that create directories.\n\nAfter this patch there remain 14 `E*` macro redefines on Windows,\ndown from 40 before this patch.\n\nBug: https://github.com/curl/curl/pull/16553#issuecomment-2704679377\nRef: #16612\nRef: #16605\nCloses #16615\n",
+            "commit_timestamp": 1741395229.0
         }
     ]
 }

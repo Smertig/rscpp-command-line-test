@@ -6153,6 +6153,23 @@
             "commit_ref": "d1bd1c7e825d190fc47cd06956c381cc0f70fba8",
             "commit_message": "[C2y] Claim conformance to WG14 N3496\n\nThis was a clarification for C23's N2412, primarily about the\nBOOL_WIDTH macro. It should expand to the number of bits in the value\nrepresentation, not the object representation. Clang 20 implements the\ncorrect value.\n",
             "commit_timestamp": 1741359093.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1741403333.320899,
+            "elapsed_time": 99.1783492565155,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4987.102813720703,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "7dd5f2327955458f0aaf1c8cf27dbd684c0a3453",
+            "commit_message": "[NFC][LTO] Move GUID calculation into CfiFunctionIndex (#130370)\n\nPreparation for CFI Index refactoring,\nwhich will fix O(N^2) in ThinLTO indexing.",
+            "commit_timestamp": 1741402788.0
         }
     ]
 }
