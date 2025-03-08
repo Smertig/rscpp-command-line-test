@@ -21926,6 +21926,21 @@
             "commit_ref": "d69425ed7d0918aceddd96048b146a9df85638ec",
             "commit_message": "curl_setup_once: drop `E*` macro redefines unused (with winsock2)\n\nThese were not used in curl sources at all.\n\nExcept `EDQUOT` which was used after `mkdir()` in `src/tool_dirhie.c`\nfor error display. It should not be redefined to a winsock2 error.\nThis makes the \"exceeded your quota\" error correctly appear on Windows,\nif detected, after operations that create directories.\n\nAfter this patch there remain 14 `E*` macro redefines on Windows,\ndown from 40 before this patch.\n\nBug: https://github.com/curl/curl/pull/16553#issuecomment-2704679377\nRef: #16612\nRef: #16605\nCloses #16615\n",
             "commit_timestamp": 1741395229.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1741446947.18605,
+            "elapsed_time": 298.04544377326965,
+            "x64": true,
+            "actual_files_count": 3569,
+            "expected_files_count": 2323,
+            "memory_traffic": 77642.74263763428,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "2fc8f7a3f74f2f07171350df4945f01de58f19ee",
+            "commit_message": "gtls: fix uninitialized variable\n\nFix uninitialized variable (warning by MSVC):\n```\nlib\\vtls\\gtls.c(1207,1): error C2220: the following warning is treated as an error\nlib\\vtls\\gtls.c(1207,1): warning C4701: potentially uninitialized local variable 'result' used\n```\nRef: https://github.com/curl/curl/actions/runs/13733139148/job/38413553053#step:9:31\n\nCloses #16625\n",
+            "commit_timestamp": 1741436664.0
         }
     ]
 }

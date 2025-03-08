@@ -21086,6 +21086,21 @@
             "commit_ref": "72e5b25efb580fb1f0fdfade516be90d90822164",
             "commit_message": "gh-128646: Implement GzipFile.readinto[1]() methods (GH-128647)\n\nThe new methods simply delegate to the underlying buffer, much like the existing GzipFile.read[1] methods.  This avoids extra allocations caused by the BufferedIOBase.readinto implementation previously used.\n\nThis commit also factors out a common readability check rather than copying it an additional two times.",
             "commit_timestamp": 1741403085.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1741446574.795976,
+            "elapsed_time": 1279.2201790809631,
+            "x64": true,
+            "actual_files_count": 1059,
+            "expected_files_count": null,
+            "memory_traffic": 48838.83742523193,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "72e5b25efb580fb1f0fdfade516be90d90822164",
+            "commit_message": "gh-128646: Implement GzipFile.readinto[1]() methods (GH-128647)\n\nThe new methods simply delegate to the underlying buffer, much like the existing GzipFile.read[1] methods.  This avoids extra allocations caused by the BufferedIOBase.readinto implementation previously used.\n\nThis commit also factors out a common readability check rather than copying it an additional two times.",
+            "commit_timestamp": 1741403085.0
         }
     ]
 }

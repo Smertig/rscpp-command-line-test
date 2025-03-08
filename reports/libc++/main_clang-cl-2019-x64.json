@@ -6170,6 +6170,23 @@
             "commit_ref": "7dd5f2327955458f0aaf1c8cf27dbd684c0a3453",
             "commit_message": "[NFC][LTO] Move GUID calculation into CfiFunctionIndex (#130370)\n\nPreparation for CFI Index refactoring,\nwhich will fix O(N^2) in ThinLTO indexing.",
             "commit_timestamp": 1741402788.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1741446456.882184,
+            "elapsed_time": 56.23622417449951,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4987.672477722168,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "b01c71bbd4f7f7565313c38ac7a3b7377eada798",
+            "commit_message": "[MLIR][Affine] Fix crash in loop unswitching/hoistAffineIfOp (#130401)\n\nFix obvious crash as a result of missing affine.parallel handling. Also,\nfix bug exposed in a helper method used by hoistAffineIfOp.\n\nFixes: https://github.com/llvm/llvm-project/issues/62323",
+            "commit_timestamp": 1741445636.0
         }
     ]
 }

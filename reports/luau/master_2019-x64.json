@@ -24168,6 +24168,21 @@
             "commit_ref": "de9f5d6eb6cd6e886056dd03b0ab341fdcb63d60",
             "commit_message": "Sync to upstream/release/664 (#1715)\n\nAs always, a weekly Luau update!\nThis week we have further improvements to new type solver, fixing a few\nof the popular issues reported. The fragment autocomplete is even more\nstable and we believe it's ready for broader use.\n\nAside from that we have a few general fixes/improvements:\n* Fixed data race when multi-threaded typechecking is used, appearing as\na random crash at the end of typechecking\n* AST data is now available from `Luau::Module`\n\n## New Type Solver\n\n* Fixed type refinements made by function calls which could attach `nil`\nas an option of a type before (Fixes #1528)\n* Improved bidirectional typechecking in tables (Fixes #1596)\n* Fixed normalization of negated types\n* `getmetatable()` on `any` type should no longer report an error\n\n## Fragment Autocomplete\n\n* Fixed auto-complete suggestions being provided inside multiline\ncomments\n* Fixed an assertion failure that could happen when old type solver was\nused\n* Fixed issues with missing suggestions when multiple statements are on\nthe same line\n* Fixed memory safety issues\n\n## Internal Contributors\n\nCo-authored-by: Andy Friesen <afriesen@roblox.com>\nCo-authored-by: Hunter Goldstein <hgoldstein@roblox.com>\nCo-authored-by: Vighnesh Vijay <vvijay@roblox.com>\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>\n",
             "commit_timestamp": 1741370847.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1741446285.14168,
+            "elapsed_time": 278.98146295547485,
+            "x64": true,
+            "actual_files_count": 481,
+            "expected_files_count": 379,
+            "memory_traffic": 34798.94747924805,
+            "repo_url": "https://github.com/luau-lang/luau",
+            "commit_ref": "de9f5d6eb6cd6e886056dd03b0ab341fdcb63d60",
+            "commit_message": "Sync to upstream/release/664 (#1715)\n\nAs always, a weekly Luau update!\nThis week we have further improvements to new type solver, fixing a few\nof the popular issues reported. The fragment autocomplete is even more\nstable and we believe it's ready for broader use.\n\nAside from that we have a few general fixes/improvements:\n* Fixed data race when multi-threaded typechecking is used, appearing as\na random crash at the end of typechecking\n* AST data is now available from `Luau::Module`\n\n## New Type Solver\n\n* Fixed type refinements made by function calls which could attach `nil`\nas an option of a type before (Fixes #1528)\n* Improved bidirectional typechecking in tables (Fixes #1596)\n* Fixed normalization of negated types\n* `getmetatable()` on `any` type should no longer report an error\n\n## Fragment Autocomplete\n\n* Fixed auto-complete suggestions being provided inside multiline\ncomments\n* Fixed an assertion failure that could happen when old type solver was\nused\n* Fixed issues with missing suggestions when multiple statements are on\nthe same line\n* Fixed memory safety issues\n\n## Internal Contributors\n\nCo-authored-by: Andy Friesen <afriesen@roblox.com>\nCo-authored-by: Hunter Goldstein <hgoldstein@roblox.com>\nCo-authored-by: Vighnesh Vijay <vvijay@roblox.com>\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>\n",
+            "commit_timestamp": 1741370847.0
         }
     ]
 }
