@@ -21941,6 +21941,21 @@
             "commit_ref": "2fc8f7a3f74f2f07171350df4945f01de58f19ee",
             "commit_message": "gtls: fix uninitialized variable\n\nFix uninitialized variable (warning by MSVC):\n```\nlib\\vtls\\gtls.c(1207,1): error C2220: the following warning is treated as an error\nlib\\vtls\\gtls.c(1207,1): warning C4701: potentially uninitialized local variable 'result' used\n```\nRef: https://github.com/curl/curl/actions/runs/13733139148/job/38413553053#step:9:31\n\nCloses #16625\n",
             "commit_timestamp": 1741436664.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1741490047.101879,
+            "elapsed_time": 268.79580640792847,
+            "x64": true,
+            "actual_files_count": 3569,
+            "expected_files_count": 2323,
+            "memory_traffic": 78495.61235046387,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "66313cc036671cd4d3e72db65a79a715c7b8f154",
+            "commit_message": "GHA/windows: add GnuTLS job, drop default OpenSSL for Cygwin/MSYS2 jobs\n\nTo allow selecting the TLS backend(s) for each individual job.\n\nCloses #16629\n",
+            "commit_timestamp": 1741487442.0
         }
     ]
 }
