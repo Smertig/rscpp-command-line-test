@@ -21116,6 +21116,21 @@
             "commit_ref": "a3990df6121880e8c67824a101bb1316de232898",
             "commit_message": "gh-123726: Document caveats of zipfile.Path around name sanitization (#130537)\n\nAdd a note to the `zipfile.Path` class documentation clarifying that it does not sanitize filenames. This emphasizes the caller's responsibility to validate or sanitize inputs, especially when handling untrusted ZIP archives, to prevent path traversal vulnerabilities. The note also references the `extract` and `extractall` methods for comparison and suggests using `os.path.abspath` and `os.path.commonpath` for safe filename resolution.",
             "commit_timestamp": 1741469825.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1741532978.717752,
+            "elapsed_time": 1182.9602420330048,
+            "x64": true,
+            "actual_files_count": 1059,
+            "expected_files_count": null,
+            "memory_traffic": 48943.16052246094,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "92e5f826ace1eab29920a0a3487a3cac7eeab925",
+            "commit_message": "gh-130160: use `.. program::` directive for documenting `webbrowser` CLI (#130995)\n\nuse `.. program::` directive for documenting `webbrowser` CLI",
+            "commit_timestamp": 1741503479.0
         }
     ]
 }

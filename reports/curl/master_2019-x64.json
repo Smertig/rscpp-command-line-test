@@ -21956,6 +21956,21 @@
             "commit_ref": "66313cc036671cd4d3e72db65a79a715c7b8f154",
             "commit_message": "GHA/windows: add GnuTLS job, drop default OpenSSL for Cygwin/MSYS2 jobs\n\nTo allow selecting the TLS backend(s) for each individual job.\n\nCloses #16629\n",
             "commit_timestamp": 1741487442.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1741533259.620908,
+            "elapsed_time": 293.0242121219635,
+            "x64": true,
+            "actual_files_count": 3569,
+            "expected_files_count": 2323,
+            "memory_traffic": 86851.68618774414,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "5681628e2d748af981e077cb3c456a254c4957e2",
+            "commit_message": "tests/server: sync `wait_ms()` with the libcurl implementation\n\nIt contains a series of bugfixes and updates applied to libcurl's\n`Curl_wait_ms()` over the years, but missed from the copy in\n`tests/server/util.c`:\n- d65321f93916e60f65b89d9bcb502341ea5c5939,\n  52e822173aa3cd4f610531d32fbf943f026cdca6,\n  5912da253b64de3cb2a1a229558077219b2c8a35\n- 4a8f459837e2b7dc146825fc9a864045f7d1ae4a\n- 1ad49feb71418f26aa6114c7a20ce1463beb3ea9\n\nIt fixes `wait_ms()` to check for, and return `SOCKERRNO`. Fixing error\nhandling on Windows.\n\nAlso:\n- tests/server: change callers to check `SOCKERRNO`.\n- `wait_ms()`: fix to check for the correct error code on Windows.\n  Pending for `Curl_wait_ms()`: #16621.\n- `Curl_wait_ms()`: tidy-up `Sleep()` argument cast (nit).\n- lib/curl_trc: drop an unused header.\n\nCloses #16627\n",
+            "commit_timestamp": 1741518270.0
         }
     ]
 }
