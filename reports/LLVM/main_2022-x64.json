@@ -26329,6 +26329,23 @@
             "commit_ref": "fd267082ee6df24aa5d5b4d7790c08a9d50a26b7",
             "commit_message": "[VPlan] Refactor VPlan creation, add transform introducing region (NFC). (#128419)\n\nCreate an empty VPlan first, then let the HCFG builder create a plain\nCFG for the top-level loop (w/o a top-level region). The top-level\nregion is introduced by a separate VPlan-transform. This is instead of\ncreating the vector loop region before building the VPlan CFG for the\ninput loop.\n\nThis simplifies the HCFG builder (which should probably be renamed) and\nmoves along the roadmap ('buildLoop') outlined in [1].\n\nAs follow-up, I plan to also preserve the exit branches in the initial\nVPlan out of the CFG builder, including connections to the exit blocks.\n\nThe conversion from plain CFG with potentially multiple exits to a\nsingle entry/exit region will be done as VPlan transform in a follow-up.\n\nThis is needed to enable VPlan-based predication. Currently early exit\nsupport relies on building the block-in masks on the original CFG,\nbecause exiting branches and conditions aren't preserved in the VPlan.\nSo in order to switch to VPlan-based predication, we will have to\npreserve them in the initial plain CFG, so the exit conditions are\navailable explicitly when we convert to single entry/exit regions.\n\nAnother follow-up is updating the outer loop handling to also introduce\nVPRegionBlocks for nested loops as transform. Currently the existing\nlogic in the builder will take care of creating VPRegionBlocks for\nnested loops, but not the top-level loop.\n\n[1]\nhttps://llvm.org/devmtg/2023-10/slides/techtalks/Hahn-VPlan-StatusUpdateAndRoadmap.pdf\n\nPR: https://github.com/llvm/llvm-project/pull/128419",
             "commit_timestamp": 1741532735.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1741576852.309544,
+            "elapsed_time": 1605.5746121406555,
+            "x64": true,
+            "actual_files_count": 2900,
+            "expected_files_count": 1661,
+            "memory_traffic": 256314.51306152344,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "de132b2a0c344729703358a1c3ac90fb28fdb130",
+            "commit_message": "[Clang][CodeGen] Fix demangler invariant comment assertion (#130522)\n\nThis patch makes the assertion (that is currently in a comment) that\nvalidates that names mangled by clang can be demangled by LLVM actually\ncompile/work. There were some minor issues that needed to be fixed (like\nstarts_with not being available on std::string and needing to call\ngetDecl() on GD), and a logic issue that should be fixed in this patch.\nThis enables just uncommenting the assertion to enable it within the\ncompiler (minus needing to add the header file).",
+            "commit_timestamp": 1741575400.0
         }
     ]
 }
