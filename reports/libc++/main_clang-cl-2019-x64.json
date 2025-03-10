@@ -6238,6 +6238,23 @@
             "commit_ref": "de132b2a0c344729703358a1c3ac90fb28fdb130",
             "commit_message": "[Clang][CodeGen] Fix demangler invariant comment assertion (#130522)\n\nThis patch makes the assertion (that is currently in a comment) that\nvalidates that names mangled by clang can be demangled by LLVM actually\ncompile/work. There were some minor issues that needed to be fixed (like\nstarts_with not being available on std::string and needing to call\ngetDecl() on GD), and a logic issue that should be fixed in this patch.\nThis enables just uncommenting the assertion to enable it within the\ncompiler (minus needing to add the header file).",
             "commit_timestamp": 1741575400.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1741619411.500447,
+            "elapsed_time": 71.23002672195435,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5038.415710449219,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "1f05703176d43a339b41a474f51c0e8b1a83c9bb",
+            "commit_message": "[ARM][Thumb] Save FPSCR + FPEXC for save-vfp attribute\n\nFPSCR and FPEXC will be stored in FPStatusRegs, after GPRCS2 has been\nsaved.\n\n- GPRCS1\n- GPRCS2\n- FPStatusRegs (new)\n- DPRCS\n- GPRCS3\n- DPRCS2\n\nFPSCR is present on all targets with a VFP, but the FPEXC register is\nnot present on Cortex-M devices, so different amounts of bytes are\nbeing pushed onto the stack depending on our target, which would\naffect alignment for subsequent saves.\n\nDPRCS1 will sum up all previous bytes that were saved, and will emit\nextra instructions to ensure that its alignment is correct. My\nassumption is that if DPRCS1 is able to correct its alignment to be\ncorrect, then all subsequent saves will also have correct alignment.\n\nAvoid annotating the saving of FPSCR and FPEXC for functions marked\nwith the interrupt_save_fp attribute, even though this is done as part\nof frame setup.  Since these are status registers, there really is no\nviable way of annotating this. Since these aren't GPRs or DPRs, they\ncan't be used with .save or .vsave directives. Instead, just record\nthat the intermediate registers r4 and r5 are saved to the stack\nagain.\n\nCo-authored-by: Jake Vossen <jake@vossen.dev>\nCo-authored-by: Alan Phipps <a-phipps@ti.com>\n",
+            "commit_timestamp": 1741619115.0
         }
     ]
 }
