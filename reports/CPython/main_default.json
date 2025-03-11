@@ -21176,6 +21176,21 @@
             "commit_ref": "fe186d76cfddf3f4b575d682c034642db07dc762",
             "commit_message": "Minor nits to whats new tail call wording (#130912)\n\n",
             "commit_timestamp": 1741661855.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1741705839.806948,
+            "elapsed_time": 1270.3156428337097,
+            "x64": true,
+            "actual_files_count": 1059,
+            "expected_files_count": null,
+            "memory_traffic": 49243.55000305176,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "4162bc133b21ccb06d3589bd69ddb7bb248c58d2",
+            "commit_message": "gh-130396: Fix thread sanitizer crashes on stack overflow tests (gh-130966)\n\nThread sanitizer will often crash if a test uses more than half the\nstack.",
+            "commit_timestamp": 1741703603.0
         }
     ]
 }
