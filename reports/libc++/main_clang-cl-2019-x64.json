@@ -6306,6 +6306,23 @@
             "commit_ref": "adae90ee35ca6f60e99189dea95cb719b4969860",
             "commit_message": "AMDGPU: Add baseline test for coalescing vgpr to agpr subreg inserts (#130877)\n\n",
             "commit_timestamp": 1741748920.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1741792216.3428,
+            "elapsed_time": 103.33856081962585,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5011.950057983398,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "8be1d1235d58d5b2711295dbd9b36abe4b2401d0",
+            "commit_message": "[X86] combineX86ShufflesRecursively/combineX86ShuffleChain - pass down SDLoc instead of relying on Root node every recursion. NFC.\n\nDon't reconstruct the SDLoc every recursion during shuffle combining.\n\nNoticed while investigating how to reduce the dependency on the Root node.\n",
+            "commit_timestamp": 1741791944.0
         }
     ]
 }

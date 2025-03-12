@@ -25143,6 +25143,21 @@
             "commit_ref": "571c235e1e51633e8ee0995796fae1e093a700b2",
             "commit_message": "Install FindPFM.cmake for bencmarkConfig.cmake (#1942)\n\nThere is no upstream PFM cmake package config file to use, so this has\nto be installed for the benchmark cmake package config file to work.\n\nBug: https://bugs.gentoo.org/950573\nSee-Also: c2146397ac69e6589a50f6b4fc6a7355669caed5\n\nSigned-off-by: Alfred Wingate <parona@protonmail.com>",
             "commit_timestamp": 1741164228.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1741792058.996785,
+            "elapsed_time": 82.8545937538147,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": 86,
+            "memory_traffic": 5128.523666381836,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "45ded53f70e129411b1a00de3876b604f049984e",
+            "commit_message": "update version of gtest to v1.15.2 (latest) and also the cmake config (#1864)\n\n* update version of gtest to v1.15.2 (latest) and also the cmake configuration to avoid deprecation warnings\n\n* `cmake/GoogleTest.cmake.in`: do a shallow clone of google test\n\n---------\n\nCo-authored-by: dominic <510002+dmah42@users.noreply.github.com>\nCo-authored-by: Roman Lebedev <lebedev.ri@gmail.com>",
+            "commit_timestamp": 1741790424.0
         }
     ]
 }

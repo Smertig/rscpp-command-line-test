@@ -23896,6 +23896,21 @@
             "commit_ref": "f37138ce91973d3bc906ea3dab4e89d77a9dae71",
             "commit_message": "[NTOS:OB] Allow ObpCaseInsensitive to be configured via registry (#7751)\n\nThis feature can be controlled by the system policy:\n\"System objects: Require case insensitivity for non-Windows subsystems\"\nhttps://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj852277(v=ws.11)\n\nIt is also used in conjunction with NTFS to get system-wide filesystem case-sensitivity:\nhttps://www.betaarchive.com/wiki/index.php/Microsoft_KB_Archive/929110\n\nThis is controlled with a REG_DWORD value named `ObCaseInsensitive`\ninside the registry key\n`HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Kernel` .\n\nObject case (in)sensitivity check is done in the ObpLookupObjectName() helper.\nThe `ObpCaseInsensitive` variable is used to retrieve the data,\nhence it needs to be a ULONG.\n",
             "commit_timestamp": 1741716902.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1741791976.659457,
+            "elapsed_time": 100.61110305786133,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7362.7463455200195,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "656a5dcc1fd6fac455a469a39383ceeb4533f1f7",
+            "commit_message": "[NTOS:KE] Implement KeI386VirtualIntExtensions code paths for INT and IRET. CORE-19049 (#7742)\n\nCo-authored-by: Thomas Faber <thomas.faber@reactos.org>\nCo-authored-by: Herm\u00e8s B\u00c9LUSCA - MA\u00cfTO <hermes.belusca-maito@reactos.org>\n\nContinued from PR #6070\n\nJIRA issue: CORE-19049",
+            "commit_timestamp": 1741782276.0
         }
     ]
 }
