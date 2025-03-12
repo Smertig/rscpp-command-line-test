@@ -26397,6 +26397,23 @@
             "commit_ref": "222b99d3aac577a561592f160b9ac39f8740d3e5",
             "commit_message": "[AMDGPU][True16][CodeGen] update waitcnt for true16 (#128927)\n\nupdate waitcnt pass to check hi16 and lo16 in true16 mode\n\n---------\n\nCo-authored-by: Jay Foad <jay.foad@gmail.com>",
             "commit_timestamp": 1741705191.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1741750146.157842,
+            "elapsed_time": 1584.89266872406,
+            "x64": true,
+            "actual_files_count": 2901,
+            "expected_files_count": 1661,
+            "memory_traffic": 256419.28476715088,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "adae90ee35ca6f60e99189dea95cb719b4969860",
+            "commit_message": "AMDGPU: Add baseline test for coalescing vgpr to agpr subreg inserts (#130877)\n\n",
+            "commit_timestamp": 1741748920.0
         }
     ]
 }

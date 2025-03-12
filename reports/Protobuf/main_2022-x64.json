@@ -5399,6 +5399,21 @@
             "commit_ref": "6af144717986cc15f34e62c77263d58a67dc43e4",
             "commit_message": "Fix UBSan error:\n\n```\nTest Case '-[GPBEnumArrayTests testEmpty]' started.\nthird_party/protobuf/objectivec/GPBArray.m:2219:25: runtime error: applying zero offset to null pointer\nSUMMARY: UndefinedBehaviorSanitizer: undefined-behavior third_party/protobuf/objectivec/GPBArray.m:2219:25 in\n```\nPiperOrigin-RevId: 735753851\n",
             "commit_timestamp": 1741704768.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1741749268.565775,
+            "elapsed_time": 420.0518796443939,
+            "x64": true,
+            "actual_files_count": 1417,
+            "expected_files_count": 818,
+            "memory_traffic": 57364.22776031494,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "a6e67895f4b85657cf31a1e48086d396e604c54b",
+            "commit_message": "Auto-generate files after cl/735782107\n",
+            "commit_timestamp": 1741711179.0
         }
     ]
 }

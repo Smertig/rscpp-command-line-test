@@ -25508,6 +25508,21 @@
             "commit_ref": "f9a6031963dee08620855545bdad7d519c208e8a",
             "commit_message": "Merge pull request #4334 from Cyan4973/fix4332\n\nfix #4332: setting ZSTD_NBTHREADS=0 via environment variable",
             "commit_timestamp": 1741669944.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1741749282.920992,
+            "elapsed_time": 116.05685472488403,
+            "x64": true,
+            "actual_files_count": 209,
+            "expected_files_count": null,
+            "memory_traffic": 7489.861099243164,
+            "repo_url": "https://github.com/facebook/zstd.git",
+            "commit_ref": "68dfd14a8c504bbb27013043e1f3466d5318e019",
+            "commit_message": "[linux] Opt out of row based match finder for the kernel\n\nThe row based match finder is slower without SIMD. We used to detect the\npresence of SIMD to set the lower bound to 17, but that breaks\ndeterminism. Instead, specifically opt into it for the kernel, because\nit is one of the rare cases that doesn't have SIMD support.\n",
+            "commit_timestamp": 1741724339.0
         }
     ]
 }
