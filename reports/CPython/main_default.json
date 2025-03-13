@@ -21236,6 +21236,21 @@
             "commit_ref": "db1e5827c45ad737bf83f358a2851e943626d29b",
             "commit_message": "gh-127503: Improve tracebacks on Emscripten when there is a trap (#131158)\n\nModifies the behavior of the interpreter on crash under Emscripten:\n1. No Python traceback shown on segfault/trap\n2. The JavaScript source line is shown\n\nThe JavaScript source line is super long and completely unenlightening,\nwhereas the Python traceback is very helpful.",
             "commit_timestamp": 1741825695.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1741878619.074012,
+            "elapsed_time": 1281.5080511569977,
+            "x64": true,
+            "actual_files_count": 1059,
+            "expected_files_count": null,
+            "memory_traffic": 49081.08437347412,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "e9d210bfc248f33cc713a6026b6cbb87fdab3973",
+            "commit_message": "gh-131170: fix duplicated sections in frames.md file (#131177)\n\nfix duplicated sections in frames.md file\n\nIn the frames.md file at InternalDocs, change the first\nduplicated title to Specials, and remove unnecessary content\nunder the Specials section.",
+            "commit_timestamp": 1741874359.0
         }
     ]
 }

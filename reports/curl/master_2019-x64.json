@@ -22076,6 +22076,21 @@
             "commit_ref": "51d8213579c6e92f16912742a25d9567d4a52903",
             "commit_message": "core: stop redefining `E*` macros on Windows, map `EACCES`, related fixes\n\nBefore this patch, standard `E*` errno codes were redefined on Windows,\nonto matching winsock2 `WSA*` error codes, which have different values.\nThis broke uses where using the `E*` value in non-socket context, or\nother places expecting a POSIX `errno`, e.g. file I/O, threads, IDN or\ninterfacing with dependencies.\n\nFix it by introducing a curl-specific `SOCKE*` set of macros that map to\n`WSA*` on Windows and standard POSIX codes on other platforms. Then\nverify and update the code to use `SOCKE*` or `E*` macro depending on\ncontext.\n\n- Add `SOCKE*` macros that map to either winsock2 or POSIX error codes.\n  And use them with `SOCKERRNO` or in contexts requiring\n  platform-dependent socket error codes.\n\n  This fixes `E*` uses which were supposed be POSIX values, not `WSA*`\n  socket errors, on Windows:\n  - lib/curl_multibyte.c\n  - lib/curl_threads.c\n  - lib/idn.c\n  - lib/vtls/gtls.c\n  - lib/vtls/rustls.c\n  - src/tool_cb_wrt.c\n  - src/tool_dirhie.c\n\n- Ban `E*` codes having a `SOCKE*` mapping, via checksrc.\n  Authored-by: Daniel Stenberg\n\n- Add exceptions for `E*` codes used in file I/O, or other contexts\n  requiring POSIX error codes.\n\nAlso:\n- ftp: fix missing `SOCKEACCES` mapping for Windows.\n- add `SOCKENOMEM` for `Curl_getaddrinfo()` via `asyn-thread.c`.\n- tests/server/sockfilt: fix to set `SOCKERRNO` in local `select()`\n  override on Windows.\n- lib/inet_ntop: fix to return `WSAEINVAL` on Windows, where `ENOSPC` is\n  used on other platforms. To simulate Windows' built-in `inet_ntop()`,\n  as tested on a Win10 machine.\n  Note:\n  - WINE returns `STATUS_INVALID_PARAMETER` = `0xC000000D`.\n  - Microsoft documentation says it returns `WSA_INVALID_PARAMETER`\n    (= `ERROR_INVALID_PARAMETER`) 87:\n    https://learn.microsoft.com/windows/win32/api/ws2tcpip/nf-ws2tcpip-inet_ntop#return-value\n- lib/inet_ntop: drop redundant `CURL_SETERRNO(ENOSPC)`.\n  `inet_ntop4()` already sets it before returning `NULL`.\n- replace stray `WSAEWOULDBLOCK` with `USE_WINSOCK` macro to detect\n  winsock2.\n- move existing `SOCKE*` mappings from `tests/server` to\n  `curl_setup_once.h`.\n- add missing `EINTR`, `EINVAL` constants for WinCE.\n\nFollow-up to abf80aae384319ef9b19ffbd0d69a1fbe7421f1f #16612\nFollow-up to d69425ed7d0918aceddd96048b146a9df85638ec #16615\nBug: https://github.com/curl/curl/pull/16553#issuecomment-2704679377\n\nCloses #16621\n",
             "commit_timestamp": 1741820605.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1741878878.578637,
+            "elapsed_time": 280.1411187648773,
+            "x64": true,
+            "actual_files_count": 3578,
+            "expected_files_count": 2323,
+            "memory_traffic": 77780.29633331299,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "d4f9788593b712169fd919d1fe8ba20393224817",
+            "commit_message": "GHA: fix configure disable options\n\nLinux AM openssl https-only:\n```\nconfigure: WARNING: unrecognized options: --disable-rtmp, --disable-scp, --disable-sftp\n```\nRef: https://github.com/curl/curl/actions/runs/13823209634/job/38673119106#step:31:34\n\nmacOS AM clang !ssl HTTP-only:\n```\nconfigure: WARNING: unrecognized options: --disable-rtmp, --disable-scp, --disable-sftp, --without-ntlm-auth\n```\nRef: https://github.com/curl/curl/actions/runs/13823209638/job/38673115560#step:7:54\n\nCloses #16701\n",
+            "commit_timestamp": 1741862250.0
         }
     ]
 }
