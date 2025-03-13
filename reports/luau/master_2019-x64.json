@@ -24303,6 +24303,21 @@
             "commit_ref": "b0c3f40b0c23682376c90d3e16eff57b81367870",
             "commit_message": "Add #include <stdint.h> to fix building with gcc 15 (#1720)\n\nWith gcc 15, the C++ Standard Library no longer includes other headers\nthat were internally used by the library. In Luau's case the missing\nheader is `<stdint.h>`\n\nDownstream Gentoo bug: https://bugs.gentoo.org/938122\nSigned-off-by: Kostadin Shishmanov <kostadinshishmanov@protonmail.com>\n\n---------\n\nCo-authored-by: vegorov-rbx <75688451+vegorov-rbx@users.noreply.github.com>",
             "commit_timestamp": 1741611729.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1741835711.850649,
+            "elapsed_time": 295.08941411972046,
+            "x64": true,
+            "actual_files_count": 481,
+            "expected_files_count": 379,
+            "memory_traffic": 34796.02643585205,
+            "repo_url": "https://github.com/luau-lang/luau",
+            "commit_ref": "b0c3f40b0c23682376c90d3e16eff57b81367870",
+            "commit_message": "Add #include <stdint.h> to fix building with gcc 15 (#1720)\n\nWith gcc 15, the C++ Standard Library no longer includes other headers\nthat were internally used by the library. In Luau's case the missing\nheader is `<stdint.h>`\n\nDownstream Gentoo bug: https://bugs.gentoo.org/938122\nSigned-off-by: Kostadin Shishmanov <kostadinshishmanov@protonmail.com>\n\n---------\n\nCo-authored-by: vegorov-rbx <75688451+vegorov-rbx@users.noreply.github.com>",
+            "commit_timestamp": 1741611729.0
         }
     ]
 }

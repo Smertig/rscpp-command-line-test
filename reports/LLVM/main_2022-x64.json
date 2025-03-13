@@ -26431,6 +26431,23 @@
             "commit_ref": "8be1d1235d58d5b2711295dbd9b36abe4b2401d0",
             "commit_message": "[X86] combineX86ShufflesRecursively/combineX86ShuffleChain - pass down SDLoc instead of relying on Root node every recursion. NFC.\n\nDon't reconstruct the SDLoc every recursion during shuffle combining.\n\nNoticed while investigating how to reduce the dependency on the Root node.\n",
             "commit_timestamp": 1741791944.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1741836517.792122,
+            "elapsed_time": 1557.4309401512146,
+            "x64": true,
+            "actual_files_count": 2902,
+            "expected_files_count": 1661,
+            "memory_traffic": 256657.22129821777,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "0a78bd67b311e418d44f3975b9fd9f62cdbe56c6",
+            "commit_message": "AMDGPU: Make frexp_exp and frexp_mant intrinsics propagate poison (#130915)\n\n",
+            "commit_timestamp": 1741835265.0
         }
     ]
 }

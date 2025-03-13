@@ -25538,6 +25538,21 @@
             "commit_ref": "68dfd14a8c504bbb27013043e1f3466d5318e019",
             "commit_message": "[linux] Opt out of row based match finder for the kernel\n\nThe row based match finder is slower without SIMD. We used to detect the\npresence of SIMD to set the lower bound to 17, but that breaks\ndeterminism. Instead, specifically opt into it for the kernel, because\nit is one of the rare cases that doesn't have SIMD support.\n",
             "commit_timestamp": 1741724339.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1741835701.426537,
+            "elapsed_time": 88.60069108009338,
+            "x64": true,
+            "actual_files_count": 209,
+            "expected_files_count": null,
+            "memory_traffic": 7537.142333984375,
+            "repo_url": "https://github.com/facebook/zstd.git",
+            "commit_ref": "eca205fc7849a61ab287492931a04960ac58e031",
+            "commit_message": "Merge pull request #4336 from Cyan4973/qsort_v2\n\nfix #4312 - musl compilation compatibility",
+            "commit_timestamp": 1741800714.0
         }
     ]
 }
