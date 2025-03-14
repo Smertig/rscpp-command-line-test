@@ -6374,6 +6374,23 @@
             "commit_ref": "910514c6ab32d36edaa7082f9b67cd191e97aa4e",
             "commit_message": "AMDGPU: Replace some test undef uses with poison (#131103)\n\n",
             "commit_timestamp": 1741921007.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1741964958.197044,
+            "elapsed_time": 65.5855507850647,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5014.811706542969,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "389ed474e81f402294a1dc03a5ea7b039a523965",
+            "commit_message": "[BPF] Remove unnecessary BitCast operations (#131260)\n\nIn [1], Nikita Popov spotted that two BitCast operations are not needed\nwith opaque pointers. So remove these two BitCast operations and adjust\ncorresponding comments as well.\n\n  [1] https://github.com/llvm/llvm-project/pull/130722\n\nCo-authored-by: Yonghong Song <yonghong.song@linux.dev>",
+            "commit_timestamp": 1741964009.0
         }
     ]
 }

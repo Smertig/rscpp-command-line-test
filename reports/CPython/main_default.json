@@ -21266,6 +21266,21 @@
             "commit_ref": "f3e275f1a92c0f668b1397b21e8ffaaed576c317",
             "commit_message": "GH-130396: Work around for broken `pthread_get_stackaddr_np` on Emscripten (#131088)\n\nImplements a workaround implementation of `pthread_get_stackaddr_np` for Emscripten.\nThis will be replaced by an implementation that will be included in Emscripten 4.0.6.",
             "commit_timestamp": 1741907080.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1741965008.352487,
+            "elapsed_time": 1274.6145260334015,
+            "x64": true,
+            "actual_files_count": 1059,
+            "expected_files_count": null,
+            "memory_traffic": 49188.93603515625,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "ca1bedc9a4da523f4d1f9c2ec92d98dcbed9c685",
+            "commit_message": "gh-121970: Revert \"GH-121970: Extract ``pydoc_topics`` into a new extension (#129116)\" (#131245)\n\nRevert \"GH-121970: Extract ``pydoc_topics`` into a new extension (#129116)\"\n\nThis reverts commit 01bcf13a1c5bfca5124cf2e0679c9d1b25b04708.",
+            "commit_timestamp": 1741962356.0
         }
     ]
 }

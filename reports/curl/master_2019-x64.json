@@ -22106,6 +22106,21 @@
             "commit_ref": "acdb48272a53fe97f63e5437fce27c7036a9c43e",
             "commit_message": "tool_setopt: reduce use of \"code hiding\" macros\n\nCODEx, DATAx, CLEANx, DECLx, REM3, CHKRET are all removed now.\n\nCloses #16709\n",
             "commit_timestamp": 1741883133.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1741965259.468472,
+            "elapsed_time": 283.53221344947815,
+            "x64": true,
+            "actual_files_count": 3578,
+            "expected_files_count": 2323,
+            "memory_traffic": 80179.40576934814,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "052bfd0a2d5419eec0b2eb859f88056678405a4e",
+            "commit_message": "libtest/lib2311: remove \"extra\" fclose()\n\nFollow-up to 3588df9478d7c27046b34cdb5\n\nFixes #16721\nReported-by: Viktor Szakats\nCloses #16722\n",
+            "commit_timestamp": 1741955839.0
         }
     ]
 }
