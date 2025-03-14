@@ -22091,6 +22091,21 @@
             "commit_ref": "d4f9788593b712169fd919d1fe8ba20393224817",
             "commit_message": "GHA: fix configure disable options\n\nLinux AM openssl https-only:\n```\nconfigure: WARNING: unrecognized options: --disable-rtmp, --disable-scp, --disable-sftp\n```\nRef: https://github.com/curl/curl/actions/runs/13823209634/job/38673119106#step:31:34\n\nmacOS AM clang !ssl HTTP-only:\n```\nconfigure: WARNING: unrecognized options: --disable-rtmp, --disable-scp, --disable-sftp, --without-ntlm-auth\n```\nRef: https://github.com/curl/curl/actions/runs/13823209638/job/38673115560#step:7:54\n\nCloses #16701\n",
             "commit_timestamp": 1741862250.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1741922591.86552,
+            "elapsed_time": 300.5024952888489,
+            "x64": true,
+            "actual_files_count": 3578,
+            "expected_files_count": 2323,
+            "memory_traffic": 78283.18031311035,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "acdb48272a53fe97f63e5437fce27c7036a9c43e",
+            "commit_message": "tool_setopt: reduce use of \"code hiding\" macros\n\nCODEx, DATAx, CLEANx, DECLx, REM3, CHKRET are all removed now.\n\nCloses #16709\n",
+            "commit_timestamp": 1741883133.0
         }
     ]
 }

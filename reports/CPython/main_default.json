@@ -21251,6 +21251,21 @@
             "commit_ref": "e9d210bfc248f33cc713a6026b6cbb87fdab3973",
             "commit_message": "gh-131170: fix duplicated sections in frames.md file (#131177)\n\nfix duplicated sections in frames.md file\n\nIn the frames.md file at InternalDocs, change the first\nduplicated title to Specials, and remove unnecessary content\nunder the Specials section.",
             "commit_timestamp": 1741874359.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1741922254.998743,
+            "elapsed_time": 1194.966980457306,
+            "x64": true,
+            "actual_files_count": 1059,
+            "expected_files_count": null,
+            "memory_traffic": 49168.76039123535,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "f3e275f1a92c0f668b1397b21e8ffaaed576c317",
+            "commit_message": "GH-130396: Work around for broken `pthread_get_stackaddr_np` on Emscripten (#131088)\n\nImplements a workaround implementation of `pthread_get_stackaddr_np` for Emscripten.\nThis will be replaced by an implementation that will be included in Emscripten 4.0.6.",
+            "commit_timestamp": 1741907080.0
         }
     ]
 }
