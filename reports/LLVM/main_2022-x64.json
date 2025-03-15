@@ -26516,6 +26516,23 @@
             "commit_ref": "e86081b6c275cdbf5b83cb9a865ce6c4d713215e",
             "commit_message": "[flang][cuda] Convert cuf.shared_memory operation to LLVM ops (#131396)\n\nConvert the operation to `llvm.addressof` operation with\n`llvm.getelementptr` with the appropriate offset.",
             "commit_timestamp": 1742006095.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1742052025.960334,
+            "elapsed_time": 1599.6688363552094,
+            "x64": true,
+            "actual_files_count": 2905,
+            "expected_files_count": 1661,
+            "memory_traffic": 256483.60876464844,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "d781ac1cf0d561b79f6ff834d786c6a999429901",
+            "commit_message": "[C23] Add __builtin_c23_va_start (#131166)\n\nThis builtin is supported by GCC and is a way to improve diagnostic\nbehavior for va_start in C23 mode. C23 no longer requires a second\nargument to the va_start macro in support of variadic functions with no\nleading parameters. However, we still want to diagnose passing more than\ntwo arguments, or diagnose when passing something other than the last\nparameter in the variadic function.\n\nThis also updates the freestanding <stdarg.h> header to use the new\nbuiltin, same as how GCC works.\n\nFixes #124031",
+            "commit_timestamp": 1742050913.0
         }
     ]
 }
