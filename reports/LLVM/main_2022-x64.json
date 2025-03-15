@@ -26499,6 +26499,23 @@
             "commit_ref": "389ed474e81f402294a1dc03a5ea7b039a523965",
             "commit_message": "[BPF] Remove unnecessary BitCast operations (#131260)\n\nIn [1], Nikita Popov spotted that two BitCast operations are not needed\nwith opaque pointers. So remove these two BitCast operations and adjust\ncorresponding comments as well.\n\n  [1] https://github.com/llvm/llvm-project/pull/130722\n\nCo-authored-by: Yonghong Song <yonghong.song@linux.dev>",
             "commit_timestamp": 1741964009.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1742009259.470788,
+            "elapsed_time": 1567.5165357589722,
+            "x64": true,
+            "actual_files_count": 2905,
+            "expected_files_count": 1661,
+            "memory_traffic": 256362.42281341553,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "e86081b6c275cdbf5b83cb9a865ce6c4d713215e",
+            "commit_message": "[flang][cuda] Convert cuf.shared_memory operation to LLVM ops (#131396)\n\nConvert the operation to `llvm.addressof` operation with\n`llvm.getelementptr` with the appropriate offset.",
+            "commit_timestamp": 1742006095.0
         }
     ]
 }
