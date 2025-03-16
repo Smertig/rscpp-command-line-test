@@ -26533,6 +26533,23 @@
             "commit_ref": "d781ac1cf0d561b79f6ff834d786c6a999429901",
             "commit_message": "[C23] Add __builtin_c23_va_start (#131166)\n\nThis builtin is supported by GCC and is a way to improve diagnostic\nbehavior for va_start in C23 mode. C23 no longer requires a second\nargument to the va_start macro in support of variadic functions with no\nleading parameters. However, we still want to diagnose passing more than\ntwo arguments, or diagnose when passing something other than the last\nparameter in the variadic function.\n\nThis also updates the freestanding <stdarg.h> header to use the new\nbuiltin, same as how GCC works.\n\nFixes #124031",
             "commit_timestamp": 1742050913.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1742096006.827165,
+            "elapsed_time": 1554.2628498077393,
+            "x64": true,
+            "actual_files_count": 2905,
+            "expected_files_count": 1661,
+            "memory_traffic": 256200.61785888672,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "e30a5d657034c1cf7081be4601a39888c0c1f2a6",
+            "commit_message": "[libc++][NFC] Simplify string a bit (#127135)\n\nThis PR refactors `basic_string` a bit to simplify its implementation in\nthe following ways:\n- Instead of manually checking whether a string is short or long,\nfollowed by calling the specific functions (e.g., `__get_short_size()`,\n`__get_long_size()`), we call the general functions (`size()`) to hide\nthe conditional checks and make the code more concise.\n- Once a string is determined to be short or long, we directly call the\nspecific functions instead of the general versions to get rid of\nunnecessary internal conditional checks. For example, for a long string,\nwe would directly call `{__set, __get}_long_pointer` instead of `{__set,\n__get}_pointer()`.\n- Variables that are defined in both the `if` and `else` branches are\nnow declared in a common scope to reduce redundancy.\n- When the string size is calculated multiple times using\n`traits_type::length(__s)`, a variable is introduced to store its\nlength. While modern compilers can optimize this with constant folding,\nexplicitly storing the length improves code readability and makes the\nlogic clearer.\n- Fixed synopsis with missing default arguments.",
+            "commit_timestamp": 1742091057.0
         }
     ]
 }

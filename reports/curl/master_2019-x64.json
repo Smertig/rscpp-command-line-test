@@ -22151,6 +22151,21 @@
             "commit_ref": "d12129dda5e14f384dbb9f24ddb462479501fc87",
             "commit_message": "GHA/non-native: drop building docs with autotools on emulated CPU\n\nIt saves about 1 minute (10%) per run.\nAlso reduces log length from 3800 to 2800 lines.\n\nKeep building docs on native CPU.\n\nCloses #16731\n",
             "commit_timestamp": 1741990102.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1742095467.065248,
+            "elapsed_time": 284.4250087738037,
+            "x64": true,
+            "actual_files_count": 3578,
+            "expected_files_count": 2323,
+            "memory_traffic": 80776.36554718018,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "4911e7af119c1b7efd46a742d47bca44832c3041",
+            "commit_message": "GHA/windows: unignore 2310, disable SCP/FTP for vcpkg `libssh2[core]`\n\nSkipping these tests saves time and reduces test logs from 11500 lines\nto 3800.\n\nTests are permanently broken due to `curl: (67) Authentication failure`.\nThis libssh2 is built with WinCNG. Builds using libcrypto from OpenSSL\nwork fine.\n\nCloses #16735\n",
+            "commit_timestamp": 1742080162.0
         }
     ]
 }
