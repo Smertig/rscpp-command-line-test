@@ -6476,6 +6476,23 @@
             "commit_ref": "4fde8c341f9166e6ec6dff6e7704be175e382f5b",
             "commit_message": "[flang][cuda] Lower CUDA shared variable with cuf.shared_memory op (#131399)\n\nUse `cuf.shared_memory` operation instead of `cuf.alloc` for CUDA shared\nvariable. These variables do not need free operations.",
             "commit_timestamp": 1742172296.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1742224171.82763,
+            "elapsed_time": 75.52276349067688,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5013.2585372924805,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "83356f3b62e95b980ca48083aafa4a1b4040d4c9",
+            "commit_message": "[clang][bytecode] Compile functions lazily (#131596)\n\nCreate the Function* handles for all functions we see, but delay the\nactual compilation until we really call the function. This speeds up\ncompile times with the new interpreter a bit.",
+            "commit_timestamp": 1742223515.0
         }
     ]
 }
