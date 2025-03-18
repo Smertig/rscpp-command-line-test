@@ -21891,6 +21891,21 @@
             "commit_ref": "bf1ec5ac8f9ba297c62f56eacb931acf655aa657",
             "commit_message": "Allow very large offsets in SHT_CREL\n",
             "commit_timestamp": 1741933958.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1742267830.347385,
+            "elapsed_time": 116.96171951293945,
+            "x64": true,
+            "actual_files_count": 626,
+            "expected_files_count": null,
+            "memory_traffic": 16514.894821166992,
+            "repo_url": "https://github.com/rui314/mold",
+            "commit_ref": "f6575d53c1552c31115317e780946c7a156b4f5d",
+            "commit_message": "Report an error if CREL contains addends for REL-type targets\n\nFixes https://github.com/rui314/mold/issues/1430\n",
+            "commit_timestamp": 1742262775.0
         }
     ]
 }

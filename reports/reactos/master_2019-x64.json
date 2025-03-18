@@ -24061,6 +24061,21 @@
             "commit_ref": "bcedb5314c0d0e83e62ca1602c19d5c993f69440",
             "commit_message": "[SYSETUP] Set the tcpip service hostname parameter even if the service key does not exist yet\n",
             "commit_timestamp": 1742130898.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1742267790.061546,
+            "elapsed_time": 85.88726449012756,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7484.871505737305,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "9a093ecbe93a49ceb86d7599480f6f9f32077823",
+            "commit_message": "[FREELDR] Fix menu display on VMware\n\nWhen drawing the menu, the boot options should not be overwritten, but when clearing the screen, everything needs to be drawn, otherwise there will be uninitialized characters at the bottom. See CORE-20014.\n",
+            "commit_timestamp": 1742251000.0
         }
     ]
 }

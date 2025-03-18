@@ -6493,6 +6493,23 @@
             "commit_ref": "83356f3b62e95b980ca48083aafa4a1b4040d4c9",
             "commit_message": "[clang][bytecode] Compile functions lazily (#131596)\n\nCreate the Function* handles for all functions we see, but delay the\nactual compilation until we really call the function. This speeds up\ncompile times with the new interpreter a bit.",
             "commit_timestamp": 1742223515.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1742267923.649373,
+            "elapsed_time": 67.91727805137634,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5034.79362487793,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "e758237352f70fad028f3947e6f0404e50fec024",
+            "commit_message": "[docs] Mention --discard-locals/--discard-all change for llvm-strip\n\nPR #130704 updated llvm-strip as well.\n\nSuggested by @nga888\n\nPull Request: https://github.com/llvm/llvm-project/pull/131491\n",
+            "commit_timestamp": 1742267392.0
         }
     ]
 }

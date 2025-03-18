@@ -22211,6 +22211,21 @@
             "commit_ref": "391543f8c68da7c4bb4fed27535aee6cf9d3fb10",
             "commit_message": "GHA/windows: skip flaky test 498\n\nOn suspect of strain on the runtime env/pipes, disable this test, which\nis flaky due to `runtests` detecting a 2009 result code from curl, while\ncurl is returning the expected 56:\n\n```\ntest 0498...[Reject too large HTTP response headers on endless redirects]\n\ncurl returned 2009, when expecting 56\n 498: exit FAILED\n== Contents of files in the log/5/ dir after test 498\n[...]\n   0     0    0     0    0     0      0      0 --:--:--  0:00:10 --:--:--     0\n curl: (56) Too large response headers: 6144086 > 6144000\n```\n\nIn such cases the number of log lines for this single test is 4800. In\ncomparison the total number of log lines for a clear test run is 3800.\n\nSeen with mingw, dl-mingw, msvc CI jobs.\n\nFollow-up to 4911e7af119c1b7efd46a742d47bca44832c3041 #16735\nRef: https://github.com/curl/curl/discussions/14854#discussioncomment-12503065\n\nCloses #16748\n",
             "commit_timestamp": 1742222888.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1742268197.683359,
+            "elapsed_time": 281.6722991466522,
+            "x64": true,
+            "actual_files_count": 3580,
+            "expected_files_count": 2323,
+            "memory_traffic": 81346.94207000732,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "77861ace49672cad60777845c1288bd1fbc8ae01",
+            "commit_message": "GHA/macos: verbose cmake in test steps\n\nTo sync with other workflows, and autotools. To see build details,\nincluding clang-tidy invocations.\n\nCloses #16757\n",
+            "commit_timestamp": 1742267630.0
         }
     ]
 }
