@@ -24236,6 +24236,21 @@
             "commit_ref": "76d120f090c72c1fc252b0472e9f8225b636023d",
             "commit_message": "STYLE: Flip signs by `x *= -1`, instead of by `x = -x`\n\nAvoided specifying the same expression twice (`<expression> = -<expression>`),\nand avoided evaluating that expression twice.\n\nUsing the following regular expression in Visual Studio:\n\n    Find what:   (.+) = -\\1;\n    Replace with:   $1 *= -1;\n",
             "commit_timestamp": 1742308263.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1742354416.891109,
+            "elapsed_time": 215.29299545288086,
+            "x64": true,
+            "actual_files_count": 101,
+            "expected_files_count": null,
+            "memory_traffic": 23949.44546508789,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "657e16e0ba0e23a6bf4b211657ca0ecc994cb40d",
+            "commit_message": "DOC: replace explicit references to papers with citations.\n\nReplace the explicit references with citations to Lehmann_2006_a,\nTustison_2009_d, Mosaliganti_2009_a, Mosaliganti_2009_b, and\nMosaliganti_2009_c.\n",
+            "commit_timestamp": 1742337296.0
         }
     ]
 }

@@ -21401,6 +21401,21 @@
             "commit_ref": "49234c065cf2b1ea32c5a3976d834b1d07b9b831",
             "commit_message": "gh-114917: Fix typo in getaddrinfo emulation (#131413)\n\n",
             "commit_timestamp": 1742304673.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1742354357.691555,
+            "elapsed_time": 1190.6474132537842,
+            "x64": true,
+            "actual_files_count": 1062,
+            "expected_files_count": null,
+            "memory_traffic": 49599.19095611572,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "b754aeedfbae7de0115b4c228b5e3061bc369812",
+            "commit_message": "gh-121468: Ensure PDB cleans up event loop policies after using asyncio. (#131388)\n\nAdds teardown logic, plus a change to asyncio.run usage, to avoid warnings when\nrunning the test suite single process.",
+            "commit_timestamp": 1742344411.0
         }
     ]
 }

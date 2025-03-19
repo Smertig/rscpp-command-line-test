@@ -23849,6 +23849,21 @@
             "commit_ref": "a413fcc9c46a020a746907136a384c227f3cd095",
             "commit_message": "fix: use `inline` instead of `static` for constexpr in header file (#401)\n\nUsing `static constexpr` in a header file does not seem to be correct - see [1] - and generates a bug when building the magic_enum module with GCC 15\n\n[1] https://isocpp.org/blog/2018/05/quick-q-use-of-constexpr-in-header-file",
             "commit_timestamp": 1740040697.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1742354149.841557,
+            "elapsed_time": 128.03223991394043,
+            "x64": true,
+            "actual_files_count": 22,
+            "expected_files_count": 19,
+            "memory_traffic": 10512.86402130127,
+            "repo_url": "https://github.com/Neargye/magic_enum",
+            "commit_ref": "a413fcc9c46a020a746907136a384c227f3cd095",
+            "commit_message": "fix: use `inline` instead of `static` for constexpr in header file (#401)\n\nUsing `static constexpr` in a header file does not seem to be correct - see [1] - and generates a bug when building the magic_enum module with GCC 15\n\n[1] https://isocpp.org/blog/2018/05/quick-q-use-of-constexpr-in-header-file",
+            "commit_timestamp": 1740040697.0
         }
     ]
 }

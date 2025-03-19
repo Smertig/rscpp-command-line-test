@@ -6527,6 +6527,23 @@
             "commit_ref": "351bcd9fe229121fac58e051f9a83dce2d3066ae",
             "commit_message": "[libc++][NFC] Add a comment that an include is a workaround\n",
             "commit_timestamp": 1742310222.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1742354282.408214,
+            "elapsed_time": 60.28064179420471,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5000.118026733398,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "193866bc243ec466a6354a6c5d8ad8193157fe90",
+            "commit_message": "[tblgen] Fix behavior of !isa to prevent premature folding (#130442)\n\nThe test included with this commit shows a case where, even though a\nrecord's true type was !isa<> some unrelated class, the isa<> operator\nwolud use the declared type of the argument it was examining in order to\nconclude that the !isa<> expression had to be be false.\n\nThe issues is fixed by checking to make sure that the argument to the\n!isa operator is fully concrete before declaring its result to be false.",
+            "commit_timestamp": 1742353537.0
         }
     ]
 }
