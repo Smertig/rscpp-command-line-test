@@ -21416,6 +21416,21 @@
             "commit_ref": "b754aeedfbae7de0115b4c228b5e3061bc369812",
             "commit_message": "gh-121468: Ensure PDB cleans up event loop policies after using asyncio. (#131388)\n\nAdds teardown logic, plus a change to asyncio.run usage, to avoid warnings when\nrunning the test suite single process.",
             "commit_timestamp": 1742344411.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1742397004.396815,
+            "elapsed_time": 1309.587861776352,
+            "x64": true,
+            "actual_files_count": 1063,
+            "expected_files_count": null,
+            "memory_traffic": 49616.993507385254,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "b8367e7cf3d740fdc401902b502c0ef2ccc6197c",
+            "commit_message": "gh-130931: Add pycore_typedefs.h internal header (#131396)\n\nDeclare _PyInterpreterFrame and _PyRuntimeState types before\ndeclaring their structure members. Break reference cycles between\nheader files.",
+            "commit_timestamp": 1742394212.0
         }
     ]
 }

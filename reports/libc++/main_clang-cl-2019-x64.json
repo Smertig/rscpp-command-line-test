@@ -6544,6 +6544,23 @@
             "commit_ref": "193866bc243ec466a6354a6c5d8ad8193157fe90",
             "commit_message": "[tblgen] Fix behavior of !isa to prevent premature folding (#130442)\n\nThe test included with this commit shows a case where, even though a\nrecord's true type was !isa<> some unrelated class, the isa<> operator\nwolud use the declared type of the argument it was examining in order to\nconclude that the !isa<> expression had to be be false.\n\nThe issues is fixed by checking to make sure that the argument to the\n!isa operator is fully concrete before declaring its result to be false.",
             "commit_timestamp": 1742353537.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1742397001.940257,
+            "elapsed_time": 69.05940747261047,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5037.822776794434,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "379a8d1a830f021fbc84e74ccbb316f2327d88c2",
+            "commit_message": "Fix bazel build for 8437b7f5. (#132046)\n\nWhen using parse_headers validation, rpc_server.h fails to build, since\nwe don't expose any of the RPC deps in the Bazel build.\n\nSo at least for now, just exclude it.",
+            "commit_timestamp": 1742396751.0
         }
     ]
 }
