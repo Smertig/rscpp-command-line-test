@@ -21431,6 +21431,21 @@
             "commit_ref": "b8367e7cf3d740fdc401902b502c0ef2ccc6197c",
             "commit_message": "gh-130931: Add pycore_typedefs.h internal header (#131396)\n\nDeclare _PyInterpreterFrame and _PyRuntimeState types before\ndeclaring their structure members. Break reference cycles between\nheader files.",
             "commit_timestamp": 1742394212.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1742440740.96796,
+            "elapsed_time": 1262.7011511325836,
+            "x64": true,
+            "actual_files_count": 1121,
+            "expected_files_count": null,
+            "memory_traffic": 49633.14190673828,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "f141e8ec2a2e8d21fc08c1f56ef40104c7a7fad2",
+            "commit_message": "GH-123599: Deprecate duplicate `pathname2url()` implementation (#127380)\n\nCall `urllib.request.pathname2url()` from `pathlib.Path.as_uri()`, and\ndeprecate the duplicate implementation in `PurePath`.\n\nCo-authored-by: Adam Turner <9087854+AA-Turner@users.noreply.github.com>",
+            "commit_timestamp": 1742432076.0
         }
     ]
 }

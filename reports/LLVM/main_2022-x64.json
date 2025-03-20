@@ -26669,6 +26669,23 @@
             "commit_ref": "1f152527e06dcad57f9af3ea6a0a4997da116706",
             "commit_message": "[SPIR-V] Add support for HLSL SV_GroupIndex (#130670)\n\nThis PR lowers the `llvm.spv.flattened.thread.id.in.group` intrinsic as\na `LocalInvocationIndex` builtin variable.",
             "commit_timestamp": 1742396681.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1742441408.719402,
+            "elapsed_time": 1603.4175815582275,
+            "x64": true,
+            "actual_files_count": 2914,
+            "expected_files_count": 1661,
+            "memory_traffic": 257430.42056274414,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "6003c3055a4630be31cc3d459cdbb88248a007b9",
+            "commit_message": "[clang] NFC: Unify implementations of CheckMemberPointerConversion (#131966)\n\nThis deduplicates the implementation of CheckMemberPointerConversion\naccross SemaCast and SemaOverload.",
+            "commit_timestamp": 1742435329.0
         }
     ]
 }
