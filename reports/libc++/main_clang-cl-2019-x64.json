@@ -6578,6 +6578,23 @@
             "commit_ref": "6003c3055a4630be31cc3d459cdbb88248a007b9",
             "commit_message": "[clang] NFC: Unify implementations of CheckMemberPointerConversion (#131966)\n\nThis deduplicates the implementation of CheckMemberPointerConversion\naccross SemaCast and SemaOverload.",
             "commit_timestamp": 1742435329.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1742483329.299057,
+            "elapsed_time": 60.496689558029175,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5009.132080078125,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "3b3f8c50b646600dc1846c7d3d018fdb39fbfe0b",
+            "commit_message": "[asan] Re-exec without ASLR if needed on 32-bit Linux (#131975)\n\nHigh-entropy ASLR allows up to 16-bits of entropy (2**16 4KB pages ==\n256MB; a bit more in practice because of implementation details), which\nis a significant chunk of the user address space on 32-bit systems (4GB\nor less). This, combined with ASan's shadow (512MB) and ASan's fixed\nshadow offset (512MB), makes it possible for large binaries to fail to\nmap the shadow.\n\nThis patch changes ASan to do a one-time re-exec without ASLR if it\ncannot map the shadow, thus reclaiming the ~256MB of address space.\n\nAlternatives considered:\n1) We don't lower ASan's fixed shadow offset, because that would limit\nnon-PIE binaries.\n2) We don't switch to a dynamic shadow offset, because ASan for 32-bit\nLinux relies on the compile-time constant offset to optimize its\ninstrumentation and compiler-rt.\n\nThis is loosely inspired by\nhttps://github.com/llvm/llvm-project/pull/78351,\nhttps://github.com/llvm/llvm-project/pull/85142, and\nhttps://github.com/llvm/llvm-project/pull/85674, though those were\nrequired because there were no static shadow mappings that could fully\nshadow the range of user mappings; this is not the case for ASan.",
+            "commit_timestamp": 1742482968.0
         }
     ]
 }

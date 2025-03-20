@@ -21446,6 +21446,21 @@
             "commit_ref": "f141e8ec2a2e8d21fc08c1f56ef40104c7a7fad2",
             "commit_message": "GH-123599: Deprecate duplicate `pathname2url()` implementation (#127380)\n\nCall `urllib.request.pathname2url()` from `pathlib.Path.as_uri()`, and\ndeprecate the duplicate implementation in `PurePath`.\n\nCo-authored-by: Adam Turner <9087854+AA-Turner@users.noreply.github.com>",
             "commit_timestamp": 1742432076.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1742483392.166165,
+            "elapsed_time": 1248.1865148544312,
+            "x64": true,
+            "actual_files_count": 1121,
+            "expected_files_count": null,
+            "memory_traffic": 49532.84436035156,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "86d5fa95cf9edf6c6fbc2a72080ac1ee87c4e941",
+            "commit_message": "gh-127989: C API: Refer to \"attached thread states\" instead of the GIL (GH-127990)\n\n\nCo-authored-by: Victor Stinner <vstinner@python.org>",
+            "commit_timestamp": 1742472419.0
         }
     ]
 }

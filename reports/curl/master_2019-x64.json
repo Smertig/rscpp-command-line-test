@@ -22286,6 +22286,21 @@
             "commit_ref": "08553aba97d655cf4098c2ced77564f2ba5908ca",
             "commit_message": "configure: fix ECH detection with MultiSSL\n\nDetect OpenSSL and wolfSSL support independently. Pass detection if\neither of them has support. Before this patch wolfSSL results overwrote\nOpenSSL detection results when both backends were enabled.\n\nAlso fix output message when both of them support ECH.\n\nCloses #16774\n",
             "commit_timestamp": 1742437884.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1742483631.314183,
+            "elapsed_time": 270.02656173706055,
+            "x64": true,
+            "actual_files_count": 3580,
+            "expected_files_count": 2323,
+            "memory_traffic": 79283.70119476318,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "18b0a584cb0d899d1af0fbe1ccfafac9811ed149",
+            "commit_message": "autotools: add dependency of libtest and unit bundles to Makefile.inc\n\nSo that changes in libtests and unit tests are picked up.\n\nCloses #16763\n",
+            "commit_timestamp": 1742466536.0
         }
     ]
 }
