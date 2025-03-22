@@ -26737,6 +26737,23 @@
             "commit_ref": "a013387f73cec51c2df4f7732fa87aa01709cc89",
             "commit_message": "[DebugInfo] Use heterogenous lookups with std::map (NFC) (#132354)\n\nHeterogenous lookups allow us to call find with StringRef, avoiding a\ntemporary heap allocation of std::string.",
             "commit_timestamp": 1742569426.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1742614180.399446,
+            "elapsed_time": 1557.516395330429,
+            "x64": true,
+            "actual_files_count": 2925,
+            "expected_files_count": 1661,
+            "memory_traffic": 258457.13121032715,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "3840f787a21a66686f5d8bf61877d41f3a65f205",
+            "commit_message": "[RISCV] Add Qualcomm uC Xqcisync (Sync Delay) extension (#132184)\n\nThis extension adds nine instructions, eight for non-memory-mapped\ndevices synchronization and delay instruction.\n\nThe current spec can be found at:\nhttps://github.com/quic/riscv-unified-db/releases/tag/Xqci-0.7.0\n\nThis patch adds assembler only support.\n\nCo-authored-by: Sudharsan Veeravalli <quic_svs@quicinc.com>",
+            "commit_timestamp": 1742610427.0
         }
     ]
 }

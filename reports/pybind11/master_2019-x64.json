@@ -25738,6 +25738,21 @@
             "commit_ref": "974eba77a5a984ea3d1be7fa53574c9d9f00efc2",
             "commit_message": "Change PYBIND11_MODULE to use multi-phase init (PEP 489) (#5574)\n\n* Change PYBIND11_MODULE to use multi-phase init\n\nUse slots to specify advanced init options (currently just Py_GIL_NOT_USED).\nAdds a new function `initialize_multiphase_module_def` to module_, similar to the existing (unchanged) create_extension_module.\n\n* Avoid dynamic allocation and non-trivial destruction\n\n... by using an std::array for the slots.\n\n* Oops, stray cut and paste character\n\n* Remove assignment from placement new, change size fo slots array\n\n* style: pre-commit fixes\n\n---------\n\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>",
             "commit_timestamp": 1742569414.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1742613311.330735,
+            "elapsed_time": 166.45894765853882,
+            "x64": true,
+            "actual_files_count": 432,
+            "expected_files_count": 197,
+            "memory_traffic": 20019.40951538086,
+            "repo_url": "https://github.com/pybind/pybind11",
+            "commit_ref": "974eba77a5a984ea3d1be7fa53574c9d9f00efc2",
+            "commit_message": "Change PYBIND11_MODULE to use multi-phase init (PEP 489) (#5574)\n\n* Change PYBIND11_MODULE to use multi-phase init\n\nUse slots to specify advanced init options (currently just Py_GIL_NOT_USED).\nAdds a new function `initialize_multiphase_module_def` to module_, similar to the existing (unchanged) create_extension_module.\n\n* Avoid dynamic allocation and non-trivial destruction\n\n... by using an std::array for the slots.\n\n* Oops, stray cut and paste character\n\n* Remove assignment from placement new, change size fo slots array\n\n* style: pre-commit fixes\n\n---------\n\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>",
+            "commit_timestamp": 1742569414.0
         }
     ]
 }
