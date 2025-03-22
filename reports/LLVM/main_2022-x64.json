@@ -26754,6 +26754,23 @@
             "commit_ref": "3840f787a21a66686f5d8bf61877d41f3a65f205",
             "commit_message": "[RISCV] Add Qualcomm uC Xqcisync (Sync Delay) extension (#132184)\n\nThis extension adds nine instructions, eight for non-memory-mapped\ndevices synchronization and delay instruction.\n\nThe current spec can be found at:\nhttps://github.com/quic/riscv-unified-db/releases/tag/Xqci-0.7.0\n\nThis patch adds assembler only support.\n\nCo-authored-by: Sudharsan Veeravalli <quic_svs@quicinc.com>",
             "commit_timestamp": 1742610427.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1742656789.888776,
+            "elapsed_time": 1553.484483718872,
+            "x64": true,
+            "actual_files_count": 2925,
+            "expected_files_count": 1661,
+            "memory_traffic": 258357.50106048584,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "c5d4dfb291af1f9c099c25b78dd2ea0a6496a45f",
+            "commit_message": "[Clang][NFC] Use MarkUsedTemplateParameters in building alias CTAD guides (#132369)\n\nIt turns out that TemplateParamsReferencedInTemplateArgumentList() and\nMarkUsedTemplateParameters() have the similar goal, so let's drop the\nhand-written ASTVisitor.",
+            "commit_timestamp": 1742655886.0
         }
     ]
 }
