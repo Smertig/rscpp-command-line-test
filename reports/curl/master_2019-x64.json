@@ -22361,6 +22361,21 @@
             "commit_ref": "58881058ad4ea74ecd6e5beb16310fd4d20ed755",
             "commit_message": "cmake: fix typo in ECH config error msg\n\nJust a small typo I noticed while working on wiring up rustls-ffi vTLS\nECH support.\n\nCloses #16786\n",
             "commit_timestamp": 1742568923.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1742700508.346721,
+            "elapsed_time": 268.1822466850281,
+            "x64": true,
+            "actual_files_count": 3580,
+            "expected_files_count": 2323,
+            "memory_traffic": 79568.08158874512,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "dd0c9feb54b1194751eea192769e9c3d75832978",
+            "commit_message": "cmake: replace CMAKE_COMPILER_IS_GNUCC with CMAKE_C_COMPILER_ID\n\nVariable `CMAKE_COMPILER_IS_GNUCC` is deprecated and\n`CMAKE_C_COMPILER_ID` should be used instead.\n\nCloses #16797\n",
+            "commit_timestamp": 1742684785.0
         }
     ]
 }

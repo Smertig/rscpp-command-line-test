@@ -21521,6 +21521,21 @@
             "commit_ref": "996246994341c91308364f3ed018cf9b7fec9bc8",
             "commit_message": "gh-131296: fix clang-cl warning in tracemalloc.c (#131514)\n\nAlways set MAX_NFRAME to UINT16_MAX.\n\nAvoid the complicated code which emitted a compiler warning.",
             "commit_timestamp": 1742636327.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1742700157.246357,
+            "elapsed_time": 1166.9100253582,
+            "x64": true,
+            "actual_files_count": 1123,
+            "expected_files_count": null,
+            "memory_traffic": 49619.59258270264,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "bc26f95e8ff60ccca9818ca8522d2d0cde1b55fb",
+            "commit_message": "GH-131296: fix clang-cl warning on Windows in semaphore.c (GH-131595)\n\nfix clangcl warning",
+            "commit_timestamp": 1742683496.0
         }
     ]
 }

@@ -26771,6 +26771,23 @@
             "commit_ref": "c5d4dfb291af1f9c099c25b78dd2ea0a6496a45f",
             "commit_message": "[Clang][NFC] Use MarkUsedTemplateParameters in building alias CTAD guides (#132369)\n\nIt turns out that TemplateParamsReferencedInTemplateArgumentList() and\nMarkUsedTemplateParameters() have the similar goal, so let's drop the\nhand-written ASTVisitor.",
             "commit_timestamp": 1742655886.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1742700850.579621,
+            "elapsed_time": 1575.5431838035583,
+            "x64": true,
+            "actual_files_count": 2925,
+            "expected_files_count": 1661,
+            "memory_traffic": 258344.2155456543,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "8553fafff0f3ee9576fe6ff02d63f6e3197ca010",
+            "commit_message": "[MC] Remove ELFObjectWriter::fixSymbolsInTLSFixups\n\nFinish the migration started by\neea7d32bd262bb5f61790c42ebaa147aa26c3979.\nSTT_TLS setting has been moved to backend getRelocType.\n75f5a4f0dc7d96134cca86543ef3f86ef218ce77 migrated the last target, VE.\n",
+            "commit_timestamp": 1742699431.0
         }
     ]
 }

@@ -24211,6 +24211,21 @@
             "commit_ref": "386fccd02c286c3a08ac7e16a4c069bf57f11710",
             "commit_message": "[SHELL32][SHELL32_APITEST][SDK] Implement PathMakeUniqueName (#7805)\n\nSideproduct of #7804. Implementing missing features.\nJIRA issue: CORE-19278\n- Implement PathMakeUniqueName function.\n- Add PathMakeUniqueName prototype to <shlobj.h>.\n- Add PathMakeUniqueName testcase to shell32_apitest.",
             "commit_timestamp": 1742599404.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1742699978.840923,
+            "elapsed_time": 92.6273033618927,
+            "x64": true,
+            "actual_files_count": 268,
+            "expected_files_count": 266,
+            "memory_traffic": 7465.474395751953,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "cfcc8d85b2b3065d895925eb32837a83019eed98",
+            "commit_message": "[NEWDEV] Fix `HardwareId` match logic in `UpdateDriverForPlugAndPlayDevicesW` (#7808)\n\nMatch Hardware ID correctly. This fix is required to install the latest (7.1.6) Virtual Box Guest Additions drivers.\n\n- Add Compatible IDs match, call SetupDiGetDeviceRegistryPropertyW twice, once for SPDRP_HARDWAREID and once for SPDRP_COMPATIBLEIDS.\n- Use case-insensitive comparison (wcscmp -> _wcsicmp)\n- Convert code file to UTF-8 encoding ",
+            "commit_timestamp": 1742693112.0
         }
     ]
 }
