@@ -22391,6 +22391,21 @@
             "commit_ref": "dd0c9feb54b1194751eea192769e9c3d75832978",
             "commit_message": "cmake: replace CMAKE_COMPILER_IS_GNUCC with CMAKE_C_COMPILER_ID\n\nVariable `CMAKE_COMPILER_IS_GNUCC` is deprecated and\n`CMAKE_C_COMPILER_ID` should be used instead.\n\nCloses #16797\n",
             "commit_timestamp": 1742684785.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1742786834.37276,
+            "elapsed_time": 267.0282232761383,
+            "x64": true,
+            "actual_files_count": 3580,
+            "expected_files_count": 2323,
+            "memory_traffic": 78357.03545379639,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "7d64601a8cd305dd3634622c771bbb5c53b32e42",
+            "commit_message": "sshserver.pl: adjust `AuthorizedKeysFile2` cutoff version\n\nTo avoid in `ssh_server.log`:\n```\nreprocess config line 6: Deprecated option AuthorizedKeysFile2\n```\nwith openssh 7.1\n\nCloses #16787\n",
+            "commit_timestamp": 1742758001.0
         }
     ]
 }
