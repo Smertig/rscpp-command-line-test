@@ -25813,6 +25813,21 @@
             "commit_ref": "566894d5f138f3b4f5c14e48a29236537bca91cd",
             "commit_message": "Fix null pointer dereference in `attr_with_type_hint` (#5576)\n\n* Fix regression\n\nSigned-off-by: Michael Carlstrom <rmc@carlstrom.com>\n\n* style: pre-commit fixes\n\n* Request changes and fix for func_rec nullptr\n\nSigned-off-by: Michael Carlstrom <rmc@carlstrom.com>\n\n* style: pre-commit fixes\n\n* Fix function_record call\n\nSigned-off-by: Michael Carlstrom <rmc@carlstrom.com>\n\n* style: pre-commit fixes\n\n* try typedef forward declaration\n\nSigned-off-by: Michael Carlstrom <rmc@carlstrom.com>\n\n* refactor\n\nSigned-off-by: Michael Carlstrom <rmc@carlstrom.com>\n\n* style: pre-commit fixes\n\n* remove from .py file\n\nSigned-off-by: Michael Carlstrom <rmc@carlstrom.com>\n\n* address feedback\n\nSigned-off-by: Michael Carlstrom <rmc@carlstrom.com>\n\n* style: pre-commit fixes\n\n* Fix `e.j.` \u2192 `e.g.` typo.\n\n---------\n\nSigned-off-by: Michael Carlstrom <rmc@carlstrom.com>\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>\nCo-authored-by: Ralf W. Grosse-Kunstleve <rgrossekunst@nvidia.com>",
             "commit_timestamp": 1742749786.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1742828818.143008,
+            "elapsed_time": 170.73484778404236,
+            "x64": true,
+            "actual_files_count": 432,
+            "expected_files_count": 197,
+            "memory_traffic": 20068.08267211914,
+            "repo_url": "https://github.com/pybind/pybind11",
+            "commit_ref": "48eb5ad9b993f535957f2d690b92b54e115ea018",
+            "commit_message": "Remove PyPy 3.8 and 3.9 testing. Make a pass through the entire repo to remove obviously obsolete workarounds for PyPy < 3.10. (#5578)\n\n",
+            "commit_timestamp": 1742787314.0
         }
     ]
 }

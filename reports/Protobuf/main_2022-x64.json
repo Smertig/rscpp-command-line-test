@@ -5774,6 +5774,21 @@
             "commit_ref": "e8edc5d5e72fa091b0086b4a6d12af0bb66d664b",
             "commit_message": "Restore JDK8 compatibility in Bazel for libraries with dependencies from Maven (e.g. //java/util)\n\nAdds lock_files to MODULE.bazel for maven dependencies to bypass rules_jvm_external's use of coursier to resolve dependency which is no longer JDK 8 compatible.\n\n```\nERROR: An error occurred during the fetch of repository 'rules_jvm_external~~maven~protobuf_maven':\n   Traceback (most recent call last):\n\tFile \"/workspace/_build/out/external/rules_jvm_external~/private/rules/coursier.bzl\", line 993, column 38, in _coursier_fetch_impl\n\t\tdep_tree = make_coursier_dep_tree(\n\tFile \"/workspace/_build/out/external/rules_jvm_external~/private/rules/coursier.bzl\", line 926, column 13, in make_coursier_dep_tree\n\t\tfail(\"Error while fetching artifact with coursier: \" + exec_result.stderr)\nError in fail: Error while fetching artifact with coursier: Error: Could not find or load main class @.workspace._build.out.external.rules_jvm_external~~maven~protobuf_maven.java_argsfile\nERROR: <builtin>: fetching coursier_fetch rule //:rules_jvm_external~~maven~protobuf_maven: Traceback (most recent call last):\n\tFile \"/workspace/_build/out/external/rules_jvm_external~/private/rules/coursier.bzl\", line 993, column 38, in _coursier_fetch_impl\n\t\tdep_tree = make_coursier_dep_tree(\n\tFile \"/workspace/_build/out/external/rules_jvm_external~/private/rules/coursier.bzl\", line 926, column 13, in make_coursier_dep_tree\n\t\tfail(\"Error while fetching artifact with coursier: \" + exec_result.stderr)\nError in fail: Error while fetching artifact with coursier: Error: Could not find or load main class @.workspace._build.out.external.rules_jvm_external~~maven~protobuf_maven.java_argsfile\nERROR: no such package '@@rules_jvm_external~~maven~protobuf_maven//': Error while fetching artifact with coursier: Error: Could not find or load main class @.workspace._build.out.external.rules_jvm_external~~maven~protobuf_maven.java_argsfile\nERROR: /workspace/java/util/BUILD.bazel:9:13: //java/util:util depends on @@rules_jvm_external~~maven~protobuf_maven//:com_google_j2objc_j2objc_annotations in repository @@rules_jvm_external~~maven~protobuf_maven which failed to fetch. no such package '@@rules_jvm_external~~maven~protobuf_maven//': Error while fetching artifact with coursier: Error: Could not find or load main class @.workspace._build.out.external.rules_jvm_external~~maven~protobuf_maven.java_argsfile\nERROR: Analysis of target '//java/util:util' failed; build aborted: Analysis failed\n```\nPiperOrigin-RevId: 739323125\n",
             "commit_timestamp": 1742597671.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1742828868.772147,
+            "elapsed_time": 451.32841420173645,
+            "x64": true,
+            "actual_files_count": 1427,
+            "expected_files_count": 818,
+            "memory_traffic": 59910.095848083496,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "76fae675cfa50b623ad6c72b5a571901db44b387",
+            "commit_message": "Add Clang nullability annotations to descriptor_database.h APIs\n\nPiperOrigin-RevId: 739934953\n",
+            "commit_timestamp": 1742827725.0
         }
     ]
 }
