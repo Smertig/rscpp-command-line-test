@@ -26839,6 +26839,23 @@
             "commit_ref": "5c02f1a5afcf4a7444f680f3f6ef32042e3d28bd",
             "commit_message": "[OpenMP][IRBuilder] De-duplicate code that emit task dependencies (#132340)\n\nA small clean-up following up on #131795. Seems like we had 2 quite\nsimilar implementations for the same thing: emit task dependencies\nstruct and filling it. This PR unifies the 2 versions into one. This is\nbetter since we had to fix a bug in one of them in #131795 so this\napplies the fix for both.",
             "commit_timestamp": 1742828660.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1742873604.385029,
+            "elapsed_time": 1641.2352571487427,
+            "x64": true,
+            "actual_files_count": 2927,
+            "expected_files_count": 1661,
+            "memory_traffic": 258409.6217956543,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "eeb4132b8dc7059f8f2b45a045ecee4948e08204",
+            "commit_message": "[NFC] Fix macro redefinition warning in NewPMDriver.cpp (#132854)\n\n",
+            "commit_timestamp": 1742872608.0
         }
     ]
 }

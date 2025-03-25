@@ -24663,6 +24663,21 @@
             "commit_ref": "5f42e63a735a2352862be88431f84d29c1849512",
             "commit_message": "Sync to upstream/release/666 (#1747)\n\nAnother week, another release. Happy spring! \ud83c\udf37 \n\n## New Type Solver\n\n- Add typechecking and autocomplete support for user-defined type\nfunctions!\n- Improve the display of type paths, making type mismatch errors far\nmore human-readable.\n- Enhance various aspects of the `index` type function: support function\ntype metamethods, fix crashes involving cyclic metatables, and forward\n`any` types through the type function.\n- Fix incorrect subtyping results involving the `buffer` type.\n- Fix crashes related to typechecking anonymous functions in nonstrict\nmode.\n\n## AST\n\n- Retain source information for type packs, functions, and type\nfunctions.\n- Introduce `AstTypeOptional` to differentiate `T?` from `T | nil` in\nthe AST.\n- Prevent the transpiler from advancing before tokens when the AST has\nerrors.\n\n## Autocomplete\n\n- Introduce demand-based cloning and better module isolation for\nfragment autocomplete, leading to a substantial speedup in performance.\n- Guard against recursive unions in `autocompleteProps`.\n\n## Miscellaneous\n\n- #1720 (thank you!)\n\n## Internal Contributors\n\nCo-authored-by: Andy Friesen <afriesen@roblox.com>\nCo-authored-by: Ariel Weiss <aaronweiss@roblox.com>\nCo-authored-by: Hunter Goldstein <hgoldstein@roblox.com>\nCo-authored-by: Talha Pathan <tpathan@roblox.com>\nCo-authored-by: Vighnesh Vijay <vvijay@roblox.com>\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>",
             "commit_timestamp": 1742593380.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1742872674.121775,
+            "elapsed_time": 298.05882573127747,
+            "x64": true,
+            "actual_files_count": 482,
+            "expected_files_count": 379,
+            "memory_traffic": 35277.6764831543,
+            "repo_url": "https://github.com/luau-lang/luau",
+            "commit_ref": "2621488abea019bb1c22a84e784aadd3f1bc4cad",
+            "commit_message": "Fix singleton parameters in overloaded functions (#1694)\n\n- Fixes #1691 \n- Fixes #1589\n\n---------\n\nCo-authored-by: Math <175355178+maffeus@users.noreply.github.com>\nCo-authored-by: ariel <aaronweiss@roblox.com>\nCo-authored-by: Matheus <175355178+m4fh@users.noreply.github.com>\nCo-authored-by: ariel <aweiss@hey.com>",
+            "commit_timestamp": 1742833633.0
         }
     ]
 }
