@@ -26856,6 +26856,23 @@
             "commit_ref": "eeb4132b8dc7059f8f2b45a045ecee4948e08204",
             "commit_message": "[NFC] Fix macro redefinition warning in NewPMDriver.cpp (#132854)\n\n",
             "commit_timestamp": 1742872608.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1742915975.864915,
+            "elapsed_time": 1600.9060201644897,
+            "x64": true,
+            "actual_files_count": 2927,
+            "expected_files_count": 1661,
+            "memory_traffic": 258298.10134124756,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "629ff2d7ba382cc9a584658d94a81818a06c34f2",
+            "commit_message": "[RISCV][Xqcili] Implement Load Immediate Support (#132496)\n\nThis is required to support `li`, but the code is also shared with\nCodeGen so the compiler will now emit instructions from Xqcili when that\nextension is enabled during compilation.\n\nAlso implemented some missed verifiers in\n`RISCVInstrInfo::verifyInstruction`, some of which are required for this\nchange.",
+            "commit_timestamp": 1742914784.0
         }
     ]
 }
