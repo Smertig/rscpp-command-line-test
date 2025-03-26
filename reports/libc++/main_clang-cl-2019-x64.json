@@ -6765,6 +6765,23 @@
             "commit_ref": "629ff2d7ba382cc9a584658d94a81818a06c34f2",
             "commit_message": "[RISCV][Xqcili] Implement Load Immediate Support (#132496)\n\nThis is required to support `li`, but the code is also shared with\nCodeGen so the compiler will now emit instructions from Xqcili when that\nextension is enabled during compilation.\n\nAlso implemented some missed verifiers in\n`RISCVInstrInfo::verifyInstruction`, some of which are required for this\nchange.",
             "commit_timestamp": 1742914784.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1742959166.299421,
+            "elapsed_time": 67.09210968017578,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5024.738342285156,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "aae37a29688a3f0f9908c8e119c620e9242a3e0b",
+            "commit_message": "[LoongArch] Allow recognition of `b{lt,gt,le,ge}z` in disassembly (#132620)\n\nThis behavior is implemented for GNU Binutils since 2.41, and benefits\nthe readability of the disassembly output. Do the same for LLVM by\nremoving the zero weight from the alias definitions respectively.",
+            "commit_timestamp": 1742958251.0
         }
     ]
 }

@@ -22451,6 +22451,21 @@
             "commit_ref": "9a7baa34cce052a4e996ddbb50ba96b3b23a1b3d",
             "commit_message": "mqtt: cleanups\n\n- make a variable const\n- use calloc instead of malloc + memset\n- fix comment language\n- improve error messages\n\nCloses #16826\n",
             "commit_timestamp": 1742890688.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1742959625.684419,
+            "elapsed_time": 275.0109417438507,
+            "x64": true,
+            "actual_files_count": 3580,
+            "expected_files_count": 2323,
+            "memory_traffic": 80048.15061187744,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "4af9d75783ee322265713d27dc9a7bb520deeabd",
+            "commit_message": "GHA/non-native: revert to bare builds for Android 21\n\nvcpkg requires Android 28 by default after a recent update that's being\ndeployed onto CI runs (with `libiconv:arm64-android@1.18#1`).\n\nRevert to bare, no-ssl, no-psl configuration for Android 21 jobs to make\nthem work again.\n\nBug: https://github.com/curl/curl/pull/16824#issuecomment-2750912507\nRef: https://github.com/microsoft/vcpkg/pull/44424#issuecomment-2753027630\n\nCloses #16832\n",
+            "commit_timestamp": 1742956270.0
         }
     ]
 }

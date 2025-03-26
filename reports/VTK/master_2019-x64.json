@@ -23430,6 +23430,21 @@
             "commit_ref": "14271a3ded3003098875547fe60af8fe93544f8e",
             "commit_message": "Merge branch 'release' into master",
             "commit_timestamp": 1742914797.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "vtkCommonCoreCxxTests",
+            "timestamp": 1742959193.932456,
+            "elapsed_time": 175.76653742790222,
+            "x64": true,
+            "actual_files_count": 82,
+            "expected_files_count": 68,
+            "memory_traffic": 23757.250518798828,
+            "repo_url": "https://gitlab.kitware.com/vtk/vtk.git",
+            "commit_ref": "f316cf0d6ecc6ab1dff19ec754423bccac9ff056",
+            "commit_message": "Merge topic 'object-manager-invoke-functions'\n\nbccd5790a19 install serdes library header\na3b27a2b404 docs: update marshalling sections\n9fcfc545a9e ci: remove VTK::WebAssemblyJavaScript from exclusions on windows host\nde22cd15bfc wasm: optionally skip class properties from (de)serialization\n706f375a330 Directly register json states in vtkObjectManager\n6e7f244f91f serdes: export predictable library serdes registrar function\n3e288372b5f serdes: allow calling methods by strings\n\nAcked-by: Kitware Robot <kwrobot@kitware.com>\nAcked-by: buildbot <buildbot@kitware.com>\nMerge-request: !11977\n",
+            "commit_timestamp": 1742930275.0
         }
     ]
 }

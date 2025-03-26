@@ -5819,6 +5819,21 @@
             "commit_ref": "384fabf35a9b5d1f1502edaf9a139b1f51551a01",
             "commit_message": "Deprecate `proto2::util::MessageDifferencer::AddIgnoreCriteria(IgnoreCriteria*)`\n\nPiperOrigin-RevId: 740196709\n",
             "commit_timestamp": 1742879875.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1742959137.748818,
+            "elapsed_time": 444.53369069099426,
+            "x64": true,
+            "actual_files_count": 1428,
+            "expected_files_count": 818,
+            "memory_traffic": 60124.454429626465,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "4cd769bf0d1f361c915dc0f4697025f0a07ad0d1",
+            "commit_message": "[ObjC] Introduce a new generated file format.\n\nThe new format won't set `GPBFieldOptional` any more.\n\nAdd the needed constants and updated the library internals to do the\ncorrect validations.\n\nThe generator will be updated in the future to generate the new format.\n\nPiperOrigin-RevId: 740506565\n",
+            "commit_timestamp": 1742942084.0
         }
     ]
 }

@@ -24693,6 +24693,21 @@
             "commit_ref": "2621488abea019bb1c22a84e784aadd3f1bc4cad",
             "commit_message": "Fix singleton parameters in overloaded functions (#1694)\n\n- Fixes #1691 \n- Fixes #1589\n\n---------\n\nCo-authored-by: Math <175355178+maffeus@users.noreply.github.com>\nCo-authored-by: ariel <aaronweiss@roblox.com>\nCo-authored-by: Matheus <175355178+m4fh@users.noreply.github.com>\nCo-authored-by: ariel <aweiss@hey.com>",
             "commit_timestamp": 1742833633.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1742959024.160004,
+            "elapsed_time": 346.27753138542175,
+            "x64": true,
+            "actual_files_count": 482,
+            "expected_files_count": 379,
+            "memory_traffic": 35366.28096008301,
+            "repo_url": "https://github.com/luau-lang/luau",
+            "commit_ref": "12dac2f1f4f48aa587f4162a0a7ec34f4a37ee87",
+            "commit_message": "fix parsing string union indexers (#1750)\n\nToday this code results in a syntax error: `type foo = { [\"bar\" |\n\"baz\"]: number }`. This is odd and I believe it is a bug. I have fixed\nthis so that it is now parsed as an indexer field with a union type.\nThis change should not affect the way any code is parsed today, and\nallow types in indexers to begin with string literals.\n\n---------\n\nCo-authored-by: ariel <aweiss@hey.com>",
+            "commit_timestamp": 1742944702.0
         }
     ]
 }
