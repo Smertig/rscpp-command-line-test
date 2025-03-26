@@ -6782,6 +6782,23 @@
             "commit_ref": "aae37a29688a3f0f9908c8e119c620e9242a3e0b",
             "commit_message": "[LoongArch] Allow recognition of `b{lt,gt,le,ge}z` in disassembly (#132620)\n\nThis behavior is implemented for GNU Binutils since 2.41, and benefits\nthe readability of the disassembly output. Do the same for LLVM by\nremoving the zero weight from the alias definitions respectively.",
             "commit_timestamp": 1742958251.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1743001753.749599,
+            "elapsed_time": 61.957306146621704,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5028.010711669922,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "b55dd8f607dab5b122e09836022a37ef10c8c653",
+            "commit_message": "[clang][analyzer] Correctly handle structured bindings captured by lambda (#132579)\n\nthis PR fixes #91835.\n\nFor `DeclRefExpr` in lambda's function body, it will references to\noriginal variable declaration in AST rather than `FieldDecl` for lambda\nclass, so it's needed to find the corresponding `FieldDecl` and bind\n`DeclRefExpr`'s value to it.\n\nThis is already implemented for variables that are not in a structured\nbinding structure, so I extracted that part of the code so that it can\nbe used in the structured binding case.",
+            "commit_timestamp": 1743001423.0
         }
     ]
 }
