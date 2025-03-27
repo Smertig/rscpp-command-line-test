@@ -5849,6 +5849,21 @@
             "commit_ref": "4d983ea7fb61ddb48f650f6c08270d6ee65e142a",
             "commit_message": "Fix lite classes in the protobuf-java Maven release to be JDK8 compatible.\n\nAdds LITE_SRCS to core_bundle which seems to be sufficient to ensure these are compiled targeting Java 8 in //java/core:core_mvn Bazel 7. Note this changes the output of `//java/core:core_bundle`, which should only be used for `//java/core:core_mvn` anyways.\n\nThis seems to have been broken originally by commit (https://github.com/protocolbuffers/protobuf/commit/c820dd0ca69b19b142fc9d8a6635530b5a5fc93b) when using bazel 7 image.\n\nFixes https://github.com/protocolbuffers/protobuf/issues/20580\n\nPiperOrigin-RevId: 740760724\n",
             "commit_timestamp": 1742999813.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1743045488.133178,
+            "elapsed_time": 434.89272689819336,
+            "x64": true,
+            "actual_files_count": 1428,
+            "expected_files_count": 818,
+            "memory_traffic": 60043.21977996826,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "57fc031601b01a64475e908e2c5b4d2888c92e30",
+            "commit_message": "Make Rust crates add a `-release` suffix for all non-RC versions\n\nThe idea behind this is that Cargo's lexicographic ordering will understand\nthat `4.31.0-release` is newer than all release candidate versions such as\n`4.31.0-rc.1`. Hopefully it's also intuitive for humans that the `-release`\nversion is the \"real\" release, but we need to keep some kind of hyphen suffix\non the end to indicate that we are not committing to a stable API yet.\n\nPiperOrigin-RevId: 740928112\n",
+            "commit_timestamp": 1743029059.0
         }
     ]
 }
