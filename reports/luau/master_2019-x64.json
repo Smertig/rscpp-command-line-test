@@ -24738,6 +24738,21 @@
             "commit_ref": "12dac2f1f4f48aa587f4162a0a7ec34f4a37ee87",
             "commit_message": "fix parsing string union indexers (#1750)\n\nToday this code results in a syntax error: `type foo = { [\"bar\" |\n\"baz\"]: number }`. This is odd and I believe it is a bug. I have fixed\nthis so that it is now parsed as an indexer field with a union type.\nThis change should not affect the way any code is parsed today, and\nallow types in indexers to begin with string literals.\n\n---------\n\nCo-authored-by: ariel <aweiss@hey.com>",
             "commit_timestamp": 1742944702.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1743087997.852817,
+            "elapsed_time": 289.31820797920227,
+            "x64": true,
+            "actual_files_count": 482,
+            "expected_files_count": 379,
+            "memory_traffic": 35372.67386627197,
+            "repo_url": "https://github.com/luau-lang/luau",
+            "commit_ref": "12dac2f1f4f48aa587f4162a0a7ec34f4a37ee87",
+            "commit_message": "fix parsing string union indexers (#1750)\n\nToday this code results in a syntax error: `type foo = { [\"bar\" |\n\"baz\"]: number }`. This is odd and I believe it is a bug. I have fixed\nthis so that it is now parsed as an indexer field with a union type.\nThis change should not affect the way any code is parsed today, and\nallow types in indexers to begin with string literals.\n\n---------\n\nCo-authored-by: ariel <aweiss@hey.com>",
+            "commit_timestamp": 1742944702.0
         }
     ]
 }

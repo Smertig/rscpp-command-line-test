@@ -21656,6 +21656,21 @@
             "commit_ref": "151d1bfd1bb7ca9a36bb0f2bd6df53d64a1ba2f2",
             "commit_message": "gh-131763: Replace the redundant check with assert in remove_tools (#131765)\n\n",
             "commit_timestamp": 1743028564.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1743088250.332224,
+            "elapsed_time": 1184.801101922989,
+            "x64": true,
+            "actual_files_count": 1123,
+            "expected_files_count": null,
+            "memory_traffic": 49843.65285491943,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "8614f86b7163b1c39798b481902dbb511292a537",
+            "commit_message": "gh-131525: Cache the result of tuple_hash (#131529)\n\n* gh-131525: Cache the result of tuple_hash\n\n* Fix debug builds\n\n* Add blurb\n\n* Fix formatting\n\n* Pre-compute empty tuple singleton\n\n* Mostly set the cache within tuple_alloc\n\n* Fixes for TSAN\n\n* Pre-compute empty tuple singleton\n\n* Fix for 32-bit platforms\n\n* Assert that op != NULL in _PyTuple_RESET_HASH_CACHE\n\n* Use FT_ATOMIC_STORE_SSIZE_RELAXED macro\n\n* Update Include/internal/pycore_tuple.h\n\nCo-authored-by: B\u00e9n\u00e9dikt Tran <10796600+picnixz@users.noreply.github.com>\n\n* Fix alignment\n\n* atomic load\n\n* Update Objects/tupleobject.c\n\nCo-authored-by: Chris Eibl <138194463+chris-eibl@users.noreply.github.com>\n\n---------\n\nCo-authored-by: B\u00e9n\u00e9dikt Tran <10796600+picnixz@users.noreply.github.com>\nCo-authored-by: Chris Eibl <138194463+chris-eibl@users.noreply.github.com>",
+            "commit_timestamp": 1743083826.0
         }
     ]
 }
