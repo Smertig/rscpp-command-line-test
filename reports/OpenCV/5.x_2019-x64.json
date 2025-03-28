@@ -24550,6 +24550,21 @@
             "commit_ref": "a674ae1bcee60e12dea0c973081b8b2c776f7a68",
             "commit_message": "Merge pull request #27102 from nklskyoy:test_gemm_3inputs\n\nTest gemm 3inputs #27102\n\nMerge with test data: https://github.com/opencv/opencv_extra/pull/1245\n\n### Pull Request Readiness Checklist\n\nSee details at https://github.com/opencv/opencv/wiki/How_to_contribute#making-a-good-pull-request\n\n- [x] I agree to contribute to the project under Apache 2 License.\n- [x] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\n- [x] The PR is proposed to the proper branch\n- [x] There is a reference to the original bug report and related work\n- [x] There is accuracy test, performance test and test data in opencv_extra repository, if applicable\n      Patch to opencv_extra has the same branch name.\n- [x] The feature is well documented and sample code can be built with the project CMake\n",
             "commit_timestamp": 1742803589.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1743174426.735225,
+            "elapsed_time": 285.9824450016022,
+            "x64": true,
+            "actual_files_count": 362,
+            "expected_files_count": 480,
+            "memory_traffic": 33361.261795043945,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "69b91cabb4574ec1ee32370b6b2a78675b2832d3",
+            "commit_message": "Adding macbeth chart detector to objdetect module from opencv_contrib (#26906)\n\n* Added mcc to opencv modules\n\n* Removed color correction module\n\n* Updated parameters return type\n\n* Added python sample for macbeth_chart_detection\n\n* Added models.yml support to samples\n\n* Removed unnecessary headers and classes\n\n* fixed datatype conversion\n\n* fixed datatype conversion\n\n* Cleaned headers and added reference/actual colors to samples\n\n* Added mcc tutorial\n\n* fixed datatype and header\n\n* replaced unsigned with int\n\n* Aligned actual and reference color function, added imread\n\n* Fixed shadow variable\n\n* Updated samples\n\n* Added last frame colors prints\n\n* updated detector class\n\n* Added getter functions and useNet function\n\n* Refactoring\n\n* Fixes in test\n\n* fixed infinite divison issue",
+            "commit_timestamp": 1743149610.0
         }
     ]
 }

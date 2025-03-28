@@ -26958,6 +26958,23 @@
             "commit_ref": "cb80b26e3731e7b10ff516d66761a3cfbc55bd20",
             "commit_message": "[clang] Use *Set::insert_range (NFC) (#133357)\n\nWe can use *Set::insert_range to collapse:\n\n  for (auto Elem : Range)\n    Set.insert(E);\n\ndown to:\n\n  Set.insert_range(Range);\n\nIn some cases, we can further fold that into the set declaration.",
             "commit_timestamp": 1743131665.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1743175285.500352,
+            "elapsed_time": 1631.2445256710052,
+            "x64": true,
+            "actual_files_count": 2928,
+            "expected_files_count": 1661,
+            "memory_traffic": 259120.0848083496,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "2218587b5b131bb8ed57c3e6c7a5c0c589493300",
+            "commit_message": "MIPS: Support isLegalICmpImmediate and isLegalAddImmediate (#133400)\n\nSet it to true only if isInt<16>.\nBy default implemention defines them to true always. For most cases,\nMIPS uses 16bit IMM, and for microMIPS, ICMP and ADDiu have 16bit IMM\nflavors.",
+            "commit_timestamp": 1743174232.0
         }
     ]
 }

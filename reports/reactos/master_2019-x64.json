@@ -24376,6 +24376,21 @@
             "commit_ref": "b6562a664bef4418d39dd5801dd2adc7d1d0f1f6",
             "commit_message": "[SHELL32] DefView statusbar item file size fix in recycler and UNC (#7732)\n\n- Display item sizes inside \\\\ UNC paths.\n- Don't display anything in the location pane inside the Recycle Bin (CORE-20005).\n- Don't display the size and location panes in My Computer\n- Don't update the location pane on simple item selection changes.\n\nCORE-20005",
             "commit_timestamp": 1743096584.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1743174443.66296,
+            "elapsed_time": 119.6249029636383,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7285.461334228516,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "177cbd81af2be1f5c50bcd26a2b5d860d72e7948",
+            "commit_message": "Revert \"[FREELDR] Pass the correct ACPI table for Windows (#7486)\"\n\nSorry this is something I had to do, I should have investigated deeper\nbefore approving it and that's on me so ill take this over and get this\ndone. and credit you once again. Thank you @ILauncherDev\nThis reverts commit 185225a5fc63384319d05f35c39053ad03986475.\n",
+            "commit_timestamp": 1743142845.0
         }
     ]
 }
