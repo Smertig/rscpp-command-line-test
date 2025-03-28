@@ -25608,6 +25608,21 @@
             "commit_ref": "cb4239f398b6d833476e4320b5aaecedbd7512eb",
             "commit_message": "Use the top-level ::benchmark namespace to resolve `make_unique` (#1960)\n\nFixes #1959",
             "commit_timestamp": 1743052945.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1743131938.245091,
+            "elapsed_time": 87.01355028152466,
+            "x64": true,
+            "actual_files_count": 90,
+            "expected_files_count": 86,
+            "memory_traffic": 5125.118110656738,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "2918a094b0068f28e4a6723406252855d57527b3",
+            "commit_message": "Refactor threading run (#1961)\n\n* ThreadManager::WaitForAllThreads removed\n\n* WaitForAllThreads was only called either in single threaded\n  environments or just before all threads are joined anyway. As this\n  doesn't add a useful synchronization point, it's removed.\n\n* Formatting issue\n\n* Thread Sanitizer satisfied\n\n* More formatting issues",
+            "commit_timestamp": 1743088205.0
         }
     ]
 }

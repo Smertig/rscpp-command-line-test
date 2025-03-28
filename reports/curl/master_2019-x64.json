@@ -22511,6 +22511,21 @@
             "commit_ref": "0c1ad21f978c8f5acf3d0c1708d83a93635d9df3",
             "commit_message": "tests/makefile: add dependency on build-certs\n\nCloses #16845\n",
             "commit_timestamp": 1743078201.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1743132429.099476,
+            "elapsed_time": 271.0053231716156,
+            "x64": true,
+            "actual_files_count": 3580,
+            "expected_files_count": 2323,
+            "memory_traffic": 78988.69368743896,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "3b6c7142f6e86dc575a97fb9c9f678e5e5e1db5c",
+            "commit_message": "GHA/linux: move pytests to non-valgrind job variants, drop 2 redundant runs\n\n- move pytest from the valgrind variant of the mbedTLS and Rustls jobs\n  to their non-valgrind counterpart (they different in C compiler and\n  build tool respectively). To parallelize more and finish the workflow\n  faster.\n\n- drop pytest from the valgrind variant of the two identical (other than\n  the build tool) 'libressl heimdal' jobs. Saves 1.5 minutes CI time.\n\n- drop pytest from the longest valgrind job to make the workflow finish\n  almost 2 minutes faster. `sync-resolver` is its unique build propery.\n  It wasn't pytested on Azure.\n\n- explicitly install `libnghttp2-dev` and `libldap-dev` to keep them in\n  jobs where pytest deps were installing them implicitly before this\n  patch.\n\nBefore: https://github.com/curl/curl/actions/runs/14118080563\nAfter: https://github.com/curl/curl/actions/runs/14118903372?pr=16851\n\nCloses #16851\n",
+            "commit_timestamp": 1743121548.0
         }
     ]
 }
