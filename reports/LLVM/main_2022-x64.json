@@ -26975,6 +26975,23 @@
             "commit_ref": "2218587b5b131bb8ed57c3e6c7a5c0c589493300",
             "commit_message": "MIPS: Support isLegalICmpImmediate and isLegalAddImmediate (#133400)\n\nSet it to true only if isInt<16>.\nBy default implemention defines them to true always. For most cases,\nMIPS uses 16bit IMM, and for microMIPS, ICMP and ADDiu have 16bit IMM\nflavors.",
             "commit_timestamp": 1743174232.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1743219016.558911,
+            "elapsed_time": 1629.2546923160553,
+            "x64": true,
+            "actual_files_count": 2928,
+            "expected_files_count": 1661,
+            "memory_traffic": 259079.4711074829,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "63bb0078f824143f580225ad92464b21186f646e",
+            "commit_message": "[ctxprof] Auto root detection: trie for stack samples (#133106)\n\nAn initial patch for supporting automated root detection. The auto-detector is introduced subsequently, but this patch introduces a datastructure for capturing sampled stacks, per thread, in a trie, and inferring from such samples which functions are reasonable roots.",
+            "commit_timestamp": 1743217685.0
         }
     ]
 }

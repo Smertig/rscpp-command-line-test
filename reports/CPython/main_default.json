@@ -21701,6 +21701,21 @@
             "commit_ref": "ce77da5871334bffea722984cb705fd20a763a1f",
             "commit_message": "GH-131678: fix Windows tail-call CI does not run the test cases (GH-131690)\n\n",
             "commit_timestamp": 1743174036.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1743218356.310285,
+            "elapsed_time": 1279.9459993839264,
+            "x64": true,
+            "actual_files_count": 1122,
+            "expected_files_count": null,
+            "memory_traffic": 49845.31458282471,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "9c1e85fd64cf6a85f7c96390d7b2dfad03a76944",
+            "commit_message": "gh-131740: minor readability fix in PyUnstable_GC_VisitObjects (gh-131786)\n\nMinor readability fix in PyUnstable_GC_VisitObjects\n\nReplaces `if (visit_generation())` with `if (visit_generation() < 0)`,\nsince we are checking for the failure case, and it's confusing to have\nthat be implicitly `true`.\n\nAlso fixes a misspelt variable name.",
+            "commit_timestamp": 1743206297.0
         }
     ]
 }

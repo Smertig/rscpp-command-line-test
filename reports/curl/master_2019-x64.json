@@ -22541,6 +22541,21 @@
             "commit_ref": "c8b0f0c9ad78eafc6c8f0005113de346ee797c21",
             "commit_message": "cmake: add shell completion support\n\nAdd the last (*) missing bit for feature parity with autotools.\n\nAlso test in CI. Add a new `cmake install` step to GHA/macos.\n\n(*) AFAIK. Let us know if there's something else missing.\n\nCloses #16833\n",
             "commit_timestamp": 1743166298.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1743218604.028417,
+            "elapsed_time": 302.8196294307709,
+            "x64": true,
+            "actual_files_count": 3580,
+            "expected_files_count": 2323,
+            "memory_traffic": 80403.58043670654,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "7cb079ad1bcb90b8f6c8f3735a2694d21af08ab9",
+            "commit_message": "c-ares httpsrr: fix ifdef\n\nFix the ifdef const when enabling HTTPSRR with c-ares.\n\nReported-by: Pavel Kropachev\nRef: #16855\nCloses #16861\n",
+            "commit_timestamp": 1743201888.0
         }
     ]
 }
