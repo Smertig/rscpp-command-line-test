@@ -22103,6 +22103,21 @@
             "commit_ref": "dbc4af819a2cd462f0b844784be7b52c46584845",
             "commit_message": "Fix compilation error on windows (#2118)\n\nafunix.h uses types declared in winsock2.h, and so has to be included\nafter it. Including afunix.h first will result in a somewhat unhelpful\ncompilation error:\n\nerror C3646: 'sun_family': unknown override specifier\n\nSigned-off-by: Piotr Stankiewicz <piotr.stankiewicz@docker.com>",
             "commit_timestamp": 1742906180.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1743260882.252436,
+            "elapsed_time": 82.80690908432007,
+            "x64": true,
+            "actual_files_count": 7,
+            "expected_files_count": 3,
+            "memory_traffic": 3117.1736068725586,
+            "repo_url": "https://github.com/yhirose/cpp-httplib",
+            "commit_ref": "dbc4af819a2cd462f0b844784be7b52c46584845",
+            "commit_message": "Fix compilation error on windows (#2118)\n\nafunix.h uses types declared in winsock2.h, and so has to be included\nafter it. Including afunix.h first will result in a somewhat unhelpful\ncompilation error:\n\nerror C3646: 'sun_family': unknown override specifier\n\nSigned-off-by: Piotr Stankiewicz <piotr.stankiewicz@docker.com>",
+            "commit_timestamp": 1742906180.0
         }
     ]
 }

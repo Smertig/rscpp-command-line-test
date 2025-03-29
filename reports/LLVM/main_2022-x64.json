@@ -26992,6 +26992,23 @@
             "commit_ref": "63bb0078f824143f580225ad92464b21186f646e",
             "commit_message": "[ctxprof] Auto root detection: trie for stack samples (#133106)\n\nAn initial patch for supporting automated root detection. The auto-detector is introduced subsequently, but this patch introduces a datastructure for capturing sampled stacks, per thread, in a trie, and inferring from such samples which functions are reasonable roots.",
             "commit_timestamp": 1743217685.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1743261705.152163,
+            "elapsed_time": 1664.3001670837402,
+            "x64": true,
+            "actual_files_count": 2928,
+            "expected_files_count": 1661,
+            "memory_traffic": 259096.16710662842,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "374a5bea522f97f0879f30dacd5079297bdcfb39",
+            "commit_message": "[Flang][OpenMP] Add PointerAssociateScalar to Cray Pointer used in the DSA (#133232)\n\nIssue: Cray Pointer is not associated to Cray Pointee, leading to\nSegmentation fault\n\nFix: GetUltimate, retrieves the base symbol in the current scope, which\ngets passed all the references and returns the original symbol\n\n---------\n\nCo-authored-by: Michael Klemm <michael.klemm@amd.com>",
+            "commit_timestamp": 1743259152.0
         }
     ]
 }

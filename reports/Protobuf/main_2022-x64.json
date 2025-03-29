@@ -5924,6 +5924,21 @@
             "commit_ref": "5596f6d8afc72e99c19d2c72e8d39e6d2e88acf4",
             "commit_message": "[Ruby]Implement `#to_hash` for message classes (#20866)\n\nIn Ruby, `#to_hash` is used for implicit conversion. https://bugs.ruby-lang.org/issues/10180\n\nFor example, Active Support uses `#to_hash` when converting an object to JSON. https://github.com/rails/rails/blob/621aa49cefce3313fbc672e2f3681103da686a0e/activesupport/lib/active_support/core_ext/object/json.rb#L60\n\nThis PR adds `#to_hash` as the alias of `#to_h`. This allows message objects to convert implicitly to other formats correctly.\n\nFixes #17037\n\nCloses #20866\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/20866 from y-yagi:fixes_17037 e0422bb573910ac0374981810d3e991737f1e033\nPiperOrigin-RevId: 741713385\n",
             "commit_timestamp": 1743214696.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1743260824.859783,
+            "elapsed_time": 466.3726007938385,
+            "x64": true,
+            "actual_files_count": 1428,
+            "expected_files_count": 818,
+            "memory_traffic": 60007.67434692383,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "5c91ab67f549d7901f60126aa542b111ad94ab8c",
+            "commit_message": "Internal change\n\nPiperOrigin-RevId: 741769703\n",
+            "commit_timestamp": 1743234844.0
         }
     ]
 }
