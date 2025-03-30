@@ -22118,6 +22118,21 @@
             "commit_ref": "dbc4af819a2cd462f0b844784be7b52c46584845",
             "commit_message": "Fix compilation error on windows (#2118)\n\nafunix.h uses types declared in winsock2.h, and so has to be included\nafter it. Including afunix.h first will result in a somewhat unhelpful\ncompilation error:\n\nerror C3646: 'sun_family': unknown override specifier\n\nSigned-off-by: Piotr Stankiewicz <piotr.stankiewicz@docker.com>",
             "commit_timestamp": 1742906180.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1743304922.342455,
+            "elapsed_time": 71.15055727958679,
+            "x64": true,
+            "actual_files_count": 7,
+            "expected_files_count": 3,
+            "memory_traffic": 3114.5704956054688,
+            "repo_url": "https://github.com/yhirose/cpp-httplib",
+            "commit_ref": "0dbe8ba1446d714f94fcc3202db765754f6ca987",
+            "commit_message": "Support zstd also via pkg-config (#2121)\n\n* Support zstd also via pkg-config\n\nIt doesn't always provide cmake config\n\n* Find zstd with pkg-config also in non-required case\n\nCode by @sum01, slightly modified",
+            "commit_timestamp": 1743263182.0
         }
     ]
 }
