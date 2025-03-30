@@ -21746,6 +21746,21 @@
             "commit_ref": "425f60b9eb253c57bc32b453a02f1cf09963f85a",
             "commit_message": "gh-130924: Do not create cells for usages of names in local annotations (#131843)\n\n",
             "commit_timestamp": 1743282948.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1743347315.108088,
+            "elapsed_time": 1186.8278241157532,
+            "x64": true,
+            "actual_files_count": 1122,
+            "expected_files_count": null,
+            "memory_traffic": 49858.91394805908,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "c432d0147bdf1a66604e7a3d6a71660ae79b5f45",
+            "commit_message": "gh-127794: Validate email header names according to RFC 5322 (#127820)\n\n`email.message.Message` objects now validate header names specified via `__setitem__`\nor `add_header` according to RFC 5322, \u00a72.2 [1].\n\nIn particular, callers should expect a ValueError to be raised for invalid header names.\n\n[1]: https://datatracker.ietf.org/doc/html/rfc5322#section-2.2\n\n---------\n\nCo-authored-by: B\u00e9n\u00e9dikt Tran <10796600+picnixz@users.noreply.github.com>\nCo-authored-by: R. David Murray <rdmurray@bitdance.com>",
+            "commit_timestamp": 1743337769.0
         }
     ]
 }

@@ -24610,6 +24610,21 @@
             "commit_ref": "42a132088cfc2060e9ae816bbcf7ebfcab4f1de8",
             "commit_message": "Merge pull request #27138 from vrabaud:lzw\n\nFix heap buffer overflow and use after free in imgcodecs #27138\n\nThis fixes:\n- https://g-issues.oss-fuzz.com/issues/405243132\n- https://g-issues.oss-fuzz.com/issues/405456349\n\n### Pull Request Readiness Checklist\n\nSee details at https://github.com/opencv/opencv/wiki/How_to_contribute#making-a-good-pull-request\n\n- [x] I agree to contribute to the project under Apache 2 License.\n- [x] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\n- [x] The PR is proposed to the proper branch\n- [x] There is a reference to the original bug report and related work\n- [ ] There is accuracy test, performance test and test data in opencv_extra repository, if applicable\n      Patch to opencv_extra has the same branch name.\n- [ ] The feature is well documented and sample code can be built with the project CMake\n",
             "commit_timestamp": 1742998490.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1743347215.444053,
+            "elapsed_time": 377.60145139694214,
+            "x64": true,
+            "actual_files_count": 480,
+            "expected_files_count": 459,
+            "memory_traffic": 41285.22959899902,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "afc7c0a89c75968a6d32d14a22a9a62b2fb2d21c",
+            "commit_message": "Merge pull request #27154 from kinchungwong:logging_callback_simple_c\n\nUser-defined logger callback, C-style. #27154\n\nThis is a competing PR, an alternative to #27140 \n\nBoth functions accept C-style pointer to static functions. Both functions allow restoring the OpenCV built-in implementation by passing in a nullptr.\n- replaceWriteLogMessage\n- replaceWriteLogMessageEx\n\nThis implementation is not compatible with C++ log handler objects.\n\nThis implementation has minimal thread safety, in the sense that the function pointer are stored and read atomically. But otherwise, the user-defined static functions must accept calls at all times, even after having been deregistered, because some log calls may have started before deregistering.\n\n### Pull Request Readiness Checklist\n\nSee details at https://github.com/opencv/opencv/wiki/How_to_contribute#making-a-good-pull-request\n\n- [x] I agree to contribute to the project under Apache 2 License.\n- [x] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\n- [ ] The PR is proposed to the proper branch\n- [ ] There is a reference to the original bug report and related work\n- [ ] There is accuracy test, performance test and test data in opencv_extra repository, if applicable\n      Patch to opencv_extra has the same branch name.\n- [ ] The feature is well documented and sample code can be built with the project CMake\n",
+            "commit_timestamp": 1743340627.0
         }
     ]
 }
