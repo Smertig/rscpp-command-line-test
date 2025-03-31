@@ -27043,6 +27043,23 @@
             "commit_ref": "9a913a39442d986cf8315f88666f8f5ebd6a4a94",
             "commit_message": "InlineCostAnnotationPrinter: Fix constructing random TargetTransformInfo (#133637)\n\nQuery the correct TTI for the current target instead of constructing\nsome random default one. Also query the pass manager for\nProfileSummaryInfo.\nThis should only change the printing, not the actual result.",
             "commit_timestamp": 1743347099.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1743392121.042329,
+            "elapsed_time": 1576.5958914756775,
+            "x64": true,
+            "actual_files_count": 2928,
+            "expected_files_count": 1661,
+            "memory_traffic": 258934.53436279297,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "dad86f5931453ff3d14ba5adb93855ee780298b2",
+            "commit_message": "[ORC] MapperJITLinkMemoryManager should deinitialize on abandon, not deallocate.\n\nThe JITLinkMemoryManager::InFlightAlloc::abandon method should only abandon\nmemory for the current allocation, not any other allocations. In\nMapperJITLinkMemoryManager this corresponds to the deinitialize operation, not\nthe deallocate operation (which releases whole slabs of memory that may be\nshared by many allocations).\n\nNo testcase: This was spotted by inspection. The failing program was linking\nconcurrently when one linker instance raised an error. Through the call to\nabandon an entire underlying slab was deallocated, resulting in segfaults in\nother concurrent links that were sharing that slab.\n",
+            "commit_timestamp": 1743390522.0
         }
     ]
 }

@@ -21761,6 +21761,21 @@
             "commit_ref": "c432d0147bdf1a66604e7a3d6a71660ae79b5f45",
             "commit_message": "gh-127794: Validate email header names according to RFC 5322 (#127820)\n\n`email.message.Message` objects now validate header names specified via `__setitem__`\nor `add_header` according to RFC 5322, \u00a72.2 [1].\n\nIn particular, callers should expect a ValueError to be raised for invalid header names.\n\n[1]: https://datatracker.ietf.org/doc/html/rfc5322#section-2.2\n\n---------\n\nCo-authored-by: B\u00e9n\u00e9dikt Tran <10796600+picnixz@users.noreply.github.com>\nCo-authored-by: R. David Murray <rdmurray@bitdance.com>",
             "commit_timestamp": 1743337769.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1743391504.64365,
+            "elapsed_time": 1212.1535940170288,
+            "x64": true,
+            "actual_files_count": 1122,
+            "expected_files_count": null,
+            "memory_traffic": 49832.13388824463,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "6aa88a2cb36240fe2b587f2e82043873270a27cf",
+            "commit_message": "gh-130167: Optimise ``textwrap.dedent()`` (#131919)\n\nCo-authored-by: Marius Juston <marius.juston@hotmail.fr>\nCo-authored-by: Pieter Eendebak <pieter.eendebak@gmail.com>\nCo-authored-by: B\u00e9n\u00e9dikt Tran <10796600+picnixz@users.noreply.github.com>\n",
+            "commit_timestamp": 1743381312.0
         }
     ]
 }

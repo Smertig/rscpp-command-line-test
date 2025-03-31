@@ -26008,6 +26008,21 @@
             "commit_ref": "e7e5d6e5bb0af543a2ded6d34163176c3e6ab745",
             "commit_message": "Make wrapped C++ functions pickleable (#5580)\n\n* Backport of https://github.com/google/pybind11clif/pull/30099\n\n* Add back `PYBIND11_WARNING_DISABLE_CLANG(\"-Wcast-function-type-mismatch\")`\n\nmacos-13 \u2022 brew install llvm\n\n```\n/Users/runner/work/pybind11/pybind11/include/pybind11/detail/function_record_pyobject.h:40:26: error: cast from 'PyObject *(*)(PyObject *, PyObject *, PyObject *)' (aka '_object *(*)(_object *, _object *, _object *)') to 'PyCFunction' (aka '_object *(*)(_object *, _object *)') converts to incompatible function type [-Werror,-Wcast-function-type-mismatch]\n   40 |     = {{\"__reduce_ex__\", (PyCFunction) reduce_ex_impl, METH_VARARGS | METH_KEYWORDS, nullptr},\n      |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~\n```\n\n* Remove obsolete `PY_VERSION_HEX >= 0x03080000` (discovered by gh-henryiii)",
             "commit_timestamp": 1743187837.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1743391275.508735,
+            "elapsed_time": 152.67984127998352,
+            "x64": true,
+            "actual_files_count": 457,
+            "expected_files_count": 197,
+            "memory_traffic": 20764.592414855957,
+            "repo_url": "https://github.com/pybind/pybind11",
+            "commit_ref": "a34fcdc48da2a2092075d98eeea96aad2bb81f96",
+            "commit_message": "[ci skip] Response to question by gh-henryiii (https://github.com/pybind/pybind11/pull/5580#discussion_r2019137216) (#5591)\n\n",
+            "commit_timestamp": 1743389767.0
         }
     ]
 }
