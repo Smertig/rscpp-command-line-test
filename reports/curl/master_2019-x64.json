@@ -22616,6 +22616,21 @@
             "commit_ref": "3978bd449858b75db263aba8756d704eb98297cc",
             "commit_message": "aws_sigv4: merge repeated headers in canonical request\n\nWhen multiple headers share the same name, AWS SigV4 expects them to be\nmerged into a single header line, with values comma-delimited in the\norder they appeared.\n\nAdd libtest 1978 to verify.\n\nCloses #16743\n",
             "commit_timestamp": 1743372115.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1743434136.749972,
+            "elapsed_time": 283.3837389945984,
+            "x64": true,
+            "actual_files_count": 3590,
+            "expected_files_count": 2323,
+            "memory_traffic": 81280.20648956299,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "b4dc529fc43bf3b2a21e54f10c5db46b8120df0d",
+            "commit_message": "prox/preproxy.md: document argument within <brackets>\n\n... as the argument is mandatory and we use that symbol for all other\noptions.\n\nCloses #16883\n",
+            "commit_timestamp": 1743421349.0
         }
     ]
 }

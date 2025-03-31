@@ -6952,6 +6952,23 @@
             "commit_ref": "dad86f5931453ff3d14ba5adb93855ee780298b2",
             "commit_message": "[ORC] MapperJITLinkMemoryManager should deinitialize on abandon, not deallocate.\n\nThe JITLinkMemoryManager::InFlightAlloc::abandon method should only abandon\nmemory for the current allocation, not any other allocations. In\nMapperJITLinkMemoryManager this corresponds to the deinitialize operation, not\nthe deallocate operation (which releases whole slabs of memory that may be\nshared by many allocations).\n\nNo testcase: This was spotted by inspection. The failing program was linking\nconcurrently when one linker instance raised an error. Through the call to\nabandon an entire underlying slab was deallocated, resulting in segfaults in\nother concurrent links that were sharing that slab.\n",
             "commit_timestamp": 1743390522.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1743433913.021431,
+            "elapsed_time": 74.50233507156372,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5031.91780090332,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "68947342b75cc71f3ac9041d11db086d8d074336",
+            "commit_message": "Add support for fixed-point types (#129596)\n\nThis adds DWARF generation for fixed-point types. This feature is needed\nby Ada.\n\nNote that a pre-existing GNU extension is used in one case. This has\nbeen emitted by GCC for years, and is needed because standard DWARF is\notherwise incapable of representing these types.",
+            "commit_timestamp": 1743432141.0
         }
     ]
 }
