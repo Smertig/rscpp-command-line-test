@@ -22631,6 +22631,21 @@
             "commit_ref": "b4dc529fc43bf3b2a21e54f10c5db46b8120df0d",
             "commit_message": "prox/preproxy.md: document argument within <brackets>\n\n... as the argument is mandatory and we use that symbol for all other\noptions.\n\nCloses #16883\n",
             "commit_timestamp": 1743421349.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1743478335.285449,
+            "elapsed_time": 293.39708065986633,
+            "x64": true,
+            "actual_files_count": 3590,
+            "expected_files_count": 2323,
+            "memory_traffic": 82583.80334472656,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "1dd361cde8b2b89617ac612506c04fab9e8a0338",
+            "commit_message": "libssh2: show crypto backend in the verbose connect log\n\nWith libssh2 1.11.0 or newer.\n\nDifferent crypto backends may offer different features, e.g. in the keys\nand algos they support.\n\nExamples:\n```\n*   Trying 127.0.0.1:22...\n* Connected to localhost (127.0.0.1) port 22\n* libssh2 crypto backend: openssl compatible\n[or]\n* libssh2 crypto backend: WinCNG\n```\n\nAlso fix indentation and drop redundant curly braces.\n\nCloses #16790\n",
+            "commit_timestamp": 1743454158.0
         }
     ]
 }

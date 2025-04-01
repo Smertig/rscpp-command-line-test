@@ -27077,6 +27077,23 @@
             "commit_ref": "68947342b75cc71f3ac9041d11db086d8d074336",
             "commit_message": "Add support for fixed-point types (#129596)\n\nThis adds DWARF generation for fixed-point types. This feature is needed\nby Ada.\n\nNote that a pre-existing GNU extension is used in one case. This has\nbeen emitted by GCC for years, and is needed because standard DWARF is\notherwise incapable of representing these types.",
             "commit_timestamp": 1743432141.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1743478756.765292,
+            "elapsed_time": 1679.4721825122833,
+            "x64": true,
+            "actual_files_count": 2928,
+            "expected_files_count": 1661,
+            "memory_traffic": 259247.7791671753,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "71cf59219162be67392b435dfcb9b280e1ff8681",
+            "commit_message": "[IR] Fix -Wunused-but-set-variable\n",
+            "commit_timestamp": 1743477814.0
         }
     ]
 }
