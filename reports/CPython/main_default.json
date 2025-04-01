@@ -21806,6 +21806,21 @@
             "commit_ref": "fe5c4c53e7bc6d780686013eaab17de2237b2176",
             "commit_message": "gh-131531: Add `android.py package` command (#131532)\n\nAdds a `package` entry point to the `android.py` build script to support\ncreating an Android distribution artefact.\n",
             "commit_timestamp": 1743468389.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1743520189.394083,
+            "elapsed_time": 1192.7630424499512,
+            "x64": true,
+            "actual_files_count": 1122,
+            "expected_files_count": null,
+            "memory_traffic": 49964.67778778076,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "8cd29c2b533e5a1a262238695d05f2a7c44d6455",
+            "commit_message": "gh-111178: Fix getsockaddrarg() undefined behavior (#131668)\n\nDon't pass direct references to sockaddr members since their type may\nnot match PyArg_ParseTuple() types. Instead, use temporary 'int' and\n'unsigned char' variables, and update sockaddr members afterwards.\n\nOn FreeBSD, treat BTPROTO_HCI node name as a bytes string,\nnot as an integer.",
+            "commit_timestamp": 1743515667.0
         }
     ]
 }

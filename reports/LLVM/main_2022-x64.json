@@ -27094,6 +27094,23 @@
             "commit_ref": "71cf59219162be67392b435dfcb9b280e1ff8681",
             "commit_message": "[IR] Fix -Wunused-but-set-variable\n",
             "commit_timestamp": 1743477814.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1743520844.60038,
+            "elapsed_time": 1605.86909532547,
+            "x64": true,
+            "actual_files_count": 2928,
+            "expected_files_count": 1661,
+            "memory_traffic": 259078.55184173584,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "1ab3a4f234e38904f9935d02a696a52d1e5dff71",
+            "commit_message": "[flang-rt][NFC] Work around CTK12.8 compilation failure. (#133833)\n\nIt happened in https://lab.llvm.org/buildbot/#/builders/152/builds/1131\nwhen the buildbot was switched from CTK12.3 to CTK12.8.\nThe logs are gone by now, so the above link is useless.\n\nThe error was:\nerror: \u2018auto\u2019 not permitted in template argument\n\nThis workaround helps, but I also reported the issue to NVCC devs.",
+            "commit_timestamp": 1743519885.0
         }
     ]
 }
