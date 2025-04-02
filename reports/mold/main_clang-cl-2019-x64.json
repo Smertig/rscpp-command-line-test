@@ -22341,6 +22341,21 @@
             "commit_ref": "b74a771886e5c4ad2a8743efbc1087e19972558c",
             "commit_message": "Take r_delta into account when computing distance\n",
             "commit_timestamp": 1743494181.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1743563961.922771,
+            "elapsed_time": 141.1884286403656,
+            "x64": true,
+            "actual_files_count": 626,
+            "expected_files_count": null,
+            "memory_traffic": 16472.021209716797,
+            "repo_url": "https://github.com/rui314/mold",
+            "commit_ref": "aeec8baee54cc50f6b1a93011947041ca44f8b4d",
+            "commit_message": "Revert \"Take r_delta into account when computing distance\"\n\nThis reverts commit b74a771886e5c4ad2a8743efbc1087e19972558c\nbecause it broke buildbots.\n",
+            "commit_timestamp": 1743558537.0
         }
     ]
 }

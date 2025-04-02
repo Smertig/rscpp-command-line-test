@@ -6029,6 +6029,21 @@
             "commit_ref": "000e31a72506ac776302def92bcef45804db27a9",
             "commit_message": "Internal changes\n\nPiperOrigin-RevId: 742617583\n",
             "commit_timestamp": 1743502401.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1743564005.64298,
+            "elapsed_time": 446.4856963157654,
+            "x64": true,
+            "actual_files_count": 1428,
+            "expected_files_count": 818,
+            "memory_traffic": 60095.03909301758,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "0be8144ed33fce333dbda530f90d10e06479046b",
+            "commit_message": "Replace `ABSL_ATTRIBUTE_UNUSED`  with `[[maybe_unused]]` (#20840)\n\nCurrently `ABSL_ATTRIBUTE_UNUSED` is not set for a least MSVC 19.29.30158.0, leading to warnings or error in some case.\n\n`[[maybe_unused]]` is now part of the standard and widely adopted. Using this attribute makes the compilation portable, resolving issues for this version of MSVC.\n\nSee [the deprecation notice of `ABSL_ATTRIBUTE_UNUSED` in `abseil/abseil-cpp`](https://github.com/abseil/abseil-cpp/blame/master/absl/base/attributes.h#L552-L566).\n\nCloses #20840\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/20840 from jjerphan:replace-ABSL_ATTRIBUTE_UNUSED-with-maybe_unused b7a4a798140a19254a7eabb830849efa999f42bf\nPiperOrigin-RevId: 742849686\n",
+            "commit_timestamp": 1743544440.0
         }
     ]
 }
