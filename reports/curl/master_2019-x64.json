@@ -22676,6 +22676,21 @@
             "commit_ref": "5ad32b05d5fb5b489528b91554cf35c3ba8753e9",
             "commit_message": "GHA/windows: move libssh job from vcpkg to MSYS2\n\nTo avoid upstream issue where libssh no longer builds with vcpkg:\n```\nerror: building libssh:x64-windows failed with: BUILD_FAILED\n```\nRef: https://github.com/curl/curl/actions/runs/14206672441/job/39805869213?pr=16909#step:5:64\n\nBug: https://github.com/curl/curl/pull/16909#issuecomment-2770792320\n\nCloses #16910\n",
             "commit_timestamp": 1743550692.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1743606887.534706,
+            "elapsed_time": 273.27187609672546,
+            "x64": true,
+            "actual_files_count": 3590,
+            "expected_files_count": 2323,
+            "memory_traffic": 79940.836769104,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "8a45c2851aeb6f3ec18ad5c39c4042ab516891dd",
+            "commit_message": "lib1960: revert the use of libcurl's inet_pton\n\nSince it now uses hex conversion code from strparse as well.\n\nCloses #16888\n",
+            "commit_timestamp": 1743596276.0
         }
     ]
 }
