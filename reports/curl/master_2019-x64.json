@@ -22691,6 +22691,21 @@
             "commit_ref": "8a45c2851aeb6f3ec18ad5c39c4042ab516891dd",
             "commit_message": "lib1960: revert the use of libcurl's inet_pton\n\nSince it now uses hex conversion code from strparse as well.\n\nCloses #16888\n",
             "commit_timestamp": 1743596276.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1743650991.505394,
+            "elapsed_time": 293.3794367313385,
+            "x64": true,
+            "actual_files_count": 3590,
+            "expected_files_count": 2323,
+            "memory_traffic": 81995.38246917725,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "87168807b215b83141220b34ebb30a3e51e61770",
+            "commit_message": "eventfd: fix feature guards\n\nEnable eventfd code consistently when both `HAVE_EVENTFD` and\n`HAVE_SYS_EVENTFD_H` macros are defined.\n\nBefore this patch `HAVE_EVENTFD` guarded it alone, though the code\nalso required the header, which was guarded by `HAVE_SYS_EVENTFD_H`.\n\nThese should normally be detected in pairs. When they aren't, omit using\n`eventfd()` to avoid calling it without a known matching header.\n\nIf this disables valid cases (e.g. some system declares this function\nvia a different header), feature detection and the code may be extended\nfor those cases. If these are known to come in pairs, always, another\noption is detect them both at build stage, and forward a single macro\nto C.\n\nReported-by: Abhinav Singhal\nBug: https://curl.se/mail/lib-2025-04/0000.html\nCloses #16909\n",
+            "commit_timestamp": 1743635539.0
         }
     ]
 }
