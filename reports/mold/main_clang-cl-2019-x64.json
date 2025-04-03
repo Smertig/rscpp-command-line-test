@@ -22386,6 +22386,21 @@
             "commit_ref": "a2ee7371d50c47bf2417dacf8135b5f47bce2be4",
             "commit_message": "Handle -mllvm as a synonym for -plugin-opt\n\nRelated to https://github.com/rui314/mold/pull/1437\n",
             "commit_timestamp": 1743639977.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1743692801.258628,
+            "elapsed_time": 122.32562565803528,
+            "x64": true,
+            "actual_files_count": 626,
+            "expected_files_count": null,
+            "memory_traffic": 16501.965118408203,
+            "repo_url": "https://github.com/rui314/mold",
+            "commit_ref": "b7c8a843b28dc103489fc69cb32afb65e02d933c",
+            "commit_message": "Ignore --mmap-output-file\n\nFor the sake of completeness, --mmap-output-file is ignored just like\n--no-mmap-output-file is.\n",
+            "commit_timestamp": 1743667057.0
         }
     ]
 }

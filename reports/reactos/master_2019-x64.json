@@ -24556,6 +24556,21 @@
             "commit_ref": "91fadeb6c339d5aaf6b13276671b3d61dde510a7",
             "commit_message": "[STOBJECT] Explicitly tell the user the battery is fully charged\n\nShort answer: our UI sucks bolas rojas.\n\nLong answer: when the NT kernel informs the user-mode part of the system that the battery is no longer charging, the machine is directly powered up by the AC adapter.\nThis is understood by determining the presence of AC_LINE_ONLINE status bit in ACLineStatus member field, which is a Windows API construct.\nIn the NT world this is understood by checking the power state returned by the BATTERY_STATUS structure.\n\nWhat's happening right now is that when the battery is fully charged, ROS UI simply displays \"100% remaining\" implying the battery is about to discharge, which is not the case.\nThis is extremely confusing to the user. AND WORST PART IS THAT IT'S XP/2003 DESIGN, AND I HATE IT UGGGHHH.\nWith this patch we're leaning towards Windows 10/11 way of informing the user the battery is fully charged. VIVA LA NT6!\n\nCORE-18969\nCORE-19452\n",
             "commit_timestamp": 1743628607.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1743692886.754753,
+            "elapsed_time": 104.6587073802948,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7228.199249267578,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "91fadeb6c339d5aaf6b13276671b3d61dde510a7",
+            "commit_message": "[STOBJECT] Explicitly tell the user the battery is fully charged\n\nShort answer: our UI sucks bolas rojas.\n\nLong answer: when the NT kernel informs the user-mode part of the system that the battery is no longer charging, the machine is directly powered up by the AC adapter.\nThis is understood by determining the presence of AC_LINE_ONLINE status bit in ACLineStatus member field, which is a Windows API construct.\nIn the NT world this is understood by checking the power state returned by the BATTERY_STATUS structure.\n\nWhat's happening right now is that when the battery is fully charged, ROS UI simply displays \"100% remaining\" implying the battery is about to discharge, which is not the case.\nThis is extremely confusing to the user. AND WORST PART IS THAT IT'S XP/2003 DESIGN, AND I HATE IT UGGGHHH.\nWith this patch we're leaning towards Windows 10/11 way of informing the user the battery is fully charged. VIVA LA NT6!\n\nCORE-18969\nCORE-19452\n",
+            "commit_timestamp": 1743628607.0
         }
     ]
 }
