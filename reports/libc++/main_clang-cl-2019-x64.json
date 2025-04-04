@@ -7088,6 +7088,23 @@
             "commit_ref": "c9f6d26e049849a8d8d31deaf6c710894a361b0e",
             "commit_message": "[MC] Merge MCAsmLexer.{h,cpp} into AsmLexer.{h,cpp} (#134207)\n\n2b11c7de4ae182496438e166cb6758d41b6e1740 introduced\n`llvm/include/llvm/MC/MCAsmLexer.h` and made `AsmLexer` inherit from\n`MCAsmLexer`, likely to allow target-specific parsers to depend solely\non `MCAsmLexer`. However, this separation now seems unnecessary and\nconfusing.\n\n`MCAsmLexer` defines virtual functions with `AsmLexer` as its only\nimplementation, and `AsmLexer` itself has few extra public methods.\n\nTo simplify the codebase, this change merges MCAsmLexer.{h,cpp} into\nAsmLexer.{h,cpp}. MCAsmLexer.h is temporarily kept as a forwarder.\n\nNote: I doubt that a downstream lexer handling an assembly syntax\nsignificantly different from the standard GNU Assembler syntax would\nwant to inherit from `MCAsmLexer`. Instead, it's more likely they'd\nextend `AsmLexer` by adding new states and modifying its internal logic,\nas seen with variables for MASM, M68k, and HLASM.",
             "commit_timestamp": 1743733365.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1743779351.567531,
+            "elapsed_time": 66.76521348953247,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5023.872840881348,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "5fbd0658a02bd91cf36419f2f425732a06315432",
+            "commit_message": "[VPlan] Add initial CFG simplification, removing BranchOnCond true. (#106748)\n\nAdd an initial CFG simplification transform, which removes the dead\nedges for blocks terminated with BranchOnCond true.\n\nAt the moment, this removes the edge between middle block and scalar\npreheader when folding the tail.\n\nPR: https://github.com/llvm/llvm-project/pull/106748",
+            "commit_timestamp": 1743777866.0
         }
     ]
 }

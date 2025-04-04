@@ -22736,6 +22736,21 @@
             "commit_ref": "b809629f8c04f5cc8bcaf26cbf8e961fd9f2487d",
             "commit_message": "cmake: use absolute paths for completion targets\n\nFixing potential:\n```\nCMake Error at scripts/CMakeLists.txt:72 (install):\n  install FILES given directory \"/usr/ports/ftp/curl/work/.build/scripts/\" to\n  install.\n```\n\nReported-by: Daniel Engberg\nFixes #16946\nFollow-up to c8b0f0c9ad78eafc6c8f0005113de346ee797c21 #16833\nCloses #16954\n",
             "commit_timestamp": 1743726892.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1743779719.303914,
+            "elapsed_time": 298.98635816574097,
+            "x64": true,
+            "actual_files_count": 3590,
+            "expected_files_count": 2323,
+            "memory_traffic": 79624.73908233643,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "db3e7a24b5339860fb91cf0d932e8ae13a01e472",
+            "commit_message": "hostip: show the correct name on proxy resolve error\n\nRegression, probably from 8ded8e5f3f4b6586399 (#16451)\n\nFixes #16958\nReported-by: Jean-Christophe Amiel\nCloses #16961\n",
+            "commit_timestamp": 1743769381.0
         }
     ]
 }
