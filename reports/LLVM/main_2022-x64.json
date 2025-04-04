@@ -27179,6 +27179,23 @@
             "commit_ref": "61ef28650626dd4f651a250005c77255d8086f69",
             "commit_message": "Fix signed/unsigned mismatch warning (#134255)\n\n",
             "commit_timestamp": 1743692193.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1743737548.330742,
+            "elapsed_time": 1547.274100780487,
+            "x64": true,
+            "actual_files_count": 2931,
+            "expected_files_count": 1661,
+            "memory_traffic": 259301.22564697266,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "c9f6d26e049849a8d8d31deaf6c710894a361b0e",
+            "commit_message": "[MC] Merge MCAsmLexer.{h,cpp} into AsmLexer.{h,cpp} (#134207)\n\n2b11c7de4ae182496438e166cb6758d41b6e1740 introduced\n`llvm/include/llvm/MC/MCAsmLexer.h` and made `AsmLexer` inherit from\n`MCAsmLexer`, likely to allow target-specific parsers to depend solely\non `MCAsmLexer`. However, this separation now seems unnecessary and\nconfusing.\n\n`MCAsmLexer` defines virtual functions with `AsmLexer` as its only\nimplementation, and `AsmLexer` itself has few extra public methods.\n\nTo simplify the codebase, this change merges MCAsmLexer.{h,cpp} into\nAsmLexer.{h,cpp}. MCAsmLexer.h is temporarily kept as a forwarder.\n\nNote: I doubt that a downstream lexer handling an assembly syntax\nsignificantly different from the standard GNU Assembler syntax would\nwant to inherit from `MCAsmLexer`. Instead, it's more likely they'd\nextend `AsmLexer` by adding new states and modifying its internal logic,\nas seen with variables for MASM, M68k, and HLASM.",
+            "commit_timestamp": 1743733365.0
         }
     ]
 }
