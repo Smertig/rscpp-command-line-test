@@ -22766,6 +22766,21 @@
             "commit_ref": "dac78ae638048a212f446f28f1f5731e594dce94",
             "commit_message": "tests: remove some unused test case sections\n",
             "commit_timestamp": 1743798211.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1743865986.865024,
+            "elapsed_time": 272.67107915878296,
+            "x64": true,
+            "actual_files_count": 3590,
+            "expected_files_count": 2323,
+            "memory_traffic": 82864.13018035889,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "f3527ed443249784e1bb36531c47c1d843c5304d",
+            "commit_message": "randdisable: build randomizer\n\nThis script makes a \"random\" build using configure and verifies that it\nbuilds curl correctly. It randomly adds a number of the available\n--disable-* flags to configure. When it detects a problem the script\nstops, otherwise it continues trying more combinations.\n\nCloses #16962\n",
+            "commit_timestamp": 1743857957.0
         }
     ]
 }
