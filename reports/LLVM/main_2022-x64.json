@@ -27213,6 +27213,23 @@
             "commit_ref": "5fbd0658a02bd91cf36419f2f425732a06315432",
             "commit_message": "[VPlan] Add initial CFG simplification, removing BranchOnCond true. (#106748)\n\nAdd an initial CFG simplification transform, which removes the dead\nedges for blocks terminated with BranchOnCond true.\n\nAt the moment, this removes the edge between middle block and scalar\npreheader when folding the tail.\n\nPR: https://github.com/llvm/llvm-project/pull/106748",
             "commit_timestamp": 1743777866.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1743823886.68216,
+            "elapsed_time": 1715.6717841625214,
+            "x64": true,
+            "actual_files_count": 2933,
+            "expected_files_count": 1661,
+            "memory_traffic": 259386.65648651123,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "71884b63a413c7803fce8ec7bf2857938765f4e2",
+            "commit_message": "[AArch64] Transition from MCSymbolRefExpr::VariantKind constants\n\nShift ELF `@plt` and `@gotpcrel` references in data directives, as well as\nMach-O `@specifier` notations, to use `AArch64MCExpr::Specifier` constants.\nThis is a follow-up to #132595. COFF-specific specifiers are not moved\nyet.\n\nIn addition, partition @-specifiers into COFF, ELF, and Mach-O, so that\nmix-and-match is rejected at parse time.\n\nELF and Mach-O specifiers are distinct, with `None` being the only\nshared value. For Mach-O-specific specifiers, we adopt the `M_xxx` naming\nconvention.\n\nPull Request: https://github.com/llvm/llvm-project/pull/133214\n",
+            "commit_timestamp": 1743821844.0
         }
     ]
 }
