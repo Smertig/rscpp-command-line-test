@@ -22781,6 +22781,21 @@
             "commit_ref": "f3527ed443249784e1bb36531c47c1d843c5304d",
             "commit_message": "randdisable: build randomizer\n\nThis script makes a \"random\" build using configure and verifies that it\nbuilds curl correctly. It randomly adds a number of the available\n--disable-* flags to configure. When it detects a problem the script\nstops, otherwise it continues trying more combinations.\n\nCloses #16962\n",
             "commit_timestamp": 1743857957.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1743910035.836225,
+            "elapsed_time": 292.0915882587433,
+            "x64": true,
+            "actual_files_count": 3594,
+            "expected_files_count": 2323,
+            "memory_traffic": 88008.76901245117,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "213115bd7ea88d541bacb76211178d02202521f9",
+            "commit_message": "GHA/configure-vs-cmake: dump generated configs to log\n\nSometimes it's useful to have a look at the generated `libcurl.pc` and\n`curl-config` files.\n\n`cmp-config.pl` normalizes them before diffing, thus doesn't show their\noriginal content.\n\nCloses #16981\n",
+            "commit_timestamp": 1743886995.0
         }
     ]
 }
