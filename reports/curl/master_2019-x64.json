@@ -22796,6 +22796,21 @@
             "commit_ref": "213115bd7ea88d541bacb76211178d02202521f9",
             "commit_message": "GHA/configure-vs-cmake: dump generated configs to log\n\nSometimes it's useful to have a look at the generated `libcurl.pc` and\n`curl-config` files.\n\n`cmp-config.pl` normalizes them before diffing, thus doesn't show their\noriginal content.\n\nCloses #16981\n",
             "commit_timestamp": 1743886995.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1743952396.553754,
+            "elapsed_time": 278.71479415893555,
+            "x64": true,
+            "actual_files_count": 3594,
+            "expected_files_count": 2323,
+            "memory_traffic": 82660.34774780273,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "fd395792410a4360f32382c913a1eddbe7d27d76",
+            "commit_message": "KNOWN_BUGS: wolfssh: all tests fail\n\nCloses #16794\n",
+            "commit_timestamp": 1743938370.0
         }
     ]
 }

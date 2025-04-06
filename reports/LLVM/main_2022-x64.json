@@ -27264,6 +27264,23 @@
             "commit_ref": "4182d2dcb5ecbfc34d41a6cd11810cd36844eddb",
             "commit_message": "[ARM,PowerPC] shouldForceRelocation: check MCValue::Specifier\n\nFollow-up to 38c3ad36be1facbe6db2dede7e93c0f12fb4e1dc\n\nRemoves reliance on a MCAssembler::evaluateFixup hack\n`if (Target.SymSpecifier || SA.isUndefined()) {` (previosuly\n`if (A->getKind() != MCSymbolRefExpr::VK_None || SA.isUndefined()) {`)\n\nTarget.SymSpecifier will soon go away when MCValue replaces\nMCSymbolRefExpr members with MCSymbol and removes the temporary\n`SymSpecifier` workaround.\n",
             "commit_timestamp": 1743908647.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1743952846.482083,
+            "elapsed_time": 1635.736471414566,
+            "x64": true,
+            "actual_files_count": 2933,
+            "expected_files_count": 1661,
+            "memory_traffic": 259428.32447052002,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "449e2f5d66d9d99f58611a8778d688e14d051ca0",
+            "commit_message": "[LV] Remove more DT updates from legacy code path (NFCI).\n\nRemove some legacy DT updates. Those should already be handled when\nupdating the DT during VPlan execution.\n",
+            "commit_timestamp": 1743946521.0
         }
     ]
 }
