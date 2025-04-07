@@ -27298,6 +27298,23 @@
             "commit_ref": "6ce0fd7f74502a75120bef43f12f56e3a5d80dfd",
             "commit_message": "[clang] NFC: clean trailing whitespaces in clang/test/CXX/drs/cwg15xx.cpp\n",
             "commit_timestamp": 1743993747.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1744039482.154324,
+            "elapsed_time": 1667.277822971344,
+            "x64": true,
+            "actual_files_count": 2933,
+            "expected_files_count": 1661,
+            "memory_traffic": 259400.44786834717,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "48bad5bbcdd2afa140e1fca075d46feebcf1bb18",
+            "commit_message": "[HLSL] Include SPIRV in LLVM_TARGETS_TO_BUILD in the HLSL cmake cache (#133287)\n\nSince SPIRV is no longer an experimental target this wasn't actually\nenabling it any more.",
+            "commit_timestamp": 1744038435.0
         }
     ]
 }

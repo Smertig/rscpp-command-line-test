@@ -6194,6 +6194,21 @@
             "commit_ref": "0b2fae3d4f40865c9c97a0e277964f8b37c176f9",
             "commit_message": "Automated Code Change\n\nPiperOrigin-RevId: 744523249\n",
             "commit_timestamp": 1743978822.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1744038486.409249,
+            "elapsed_time": 460.87031054496765,
+            "x64": true,
+            "actual_files_count": 1428,
+            "expected_files_count": 818,
+            "memory_traffic": 60420.95277404785,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "59e1f0f6bdb85e93b60f7d9e36985be2c290578b",
+            "commit_message": "Ruby | Add support for a protobuf debug build (#21060)\n\nThis PR makes a small change to `extconf.rb` so we can easily build the `protobuf_c` Ruby bindings with all debug symbols included.  We used [grpc](https://github.com/grpc/grpc/blob/master/src/ruby/ext/grpc/extconf.rb) as a guide, which will produce a debug build if `rake` is run with `GRPC_CONFIG=dbg`.  Unlike `grpc`, the `protobuf_c` build doesn't explicitly strip symbols from the resulting library, but values will be optimized out when stepping through with `gdb`.\n\nThis change also reconciles an oversight that `-fvisibility=hidden` was not set when building on non-Darwin/Linux/Freebsd platforms.\n\nCloses #21060\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/21060 from Shopify:ruby-debug-build 353b272e9bf3b690004dd0153c33316a07bd35f7\nPiperOrigin-RevId: 744718927\n",
+            "commit_timestamp": 1744037361.0
         }
     ]
 }

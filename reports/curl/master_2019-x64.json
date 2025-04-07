@@ -22826,6 +22826,21 @@
             "commit_ref": "fd395792410a4360f32382c913a1eddbe7d27d76",
             "commit_message": "KNOWN_BUGS: wolfssh: all tests fail\n\nCloses #16794\n",
             "commit_timestamp": 1743938370.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1744038910.382856,
+            "elapsed_time": 303.3762722015381,
+            "x64": true,
+            "actual_files_count": 3594,
+            "expected_files_count": 2323,
+            "memory_traffic": 78935.16970825195,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "131a2fd5aaa1a809211695d2ef8151ffadbebc0c",
+            "commit_message": "socketpair: support pipe2 where available\n\nBy replacing pipe with pipe2, it would save us 4 extra system calls of\nsetting O_NONBLOCK and O_CLOEXEC. This system call is widely supported\nacross UNIX-like OS's: Linux, *BSD, and SunOS derivatives - Solaris,\nillumos, etc.\n\nRef:\nhttps://man7.org/linux/man-pages/man2/pipe.2.html\nhttps://man.freebsd.org/cgi/man.cgi?query=pipe\nhttps://man.dragonflybsd.org/?command=pipe2\nhttps://man.netbsd.org/pipe.2\nhttps://man.openbsd.org/pipe.2\nhttps://docs.oracle.com/cd/E88353_01/html/E37841/pipe2-2.html\nhttps://illumos.org/man/2/pipe2\nhttps://www.gnu.org/software/gnulib/manual/html_node/pipe2.html\n\nCloses #16987\n",
+            "commit_timestamp": 1744022117.0
         }
     ]
 }
