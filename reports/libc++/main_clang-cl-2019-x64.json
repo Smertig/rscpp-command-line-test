@@ -7224,6 +7224,23 @@
             "commit_ref": "ac42b083f104442e12393ff09929a1add881010d",
             "commit_message": "[clang][modules] Guard against bad -fmodule-file mappings (#132059) (#133462)\n\nFix https://github.com/llvm/llvm-project/issues/132059.\n\nProviding incorrect mappings via `-fmodule-file=<name>=<path/to/bmi>`\ncan crash the compiler when loading a module that imports an\nincorrectly mapped module.\n\nThe crash occurs during AST body deserialization, when the compiler\nattempts to resolve remappings using the `ModuleFile` from the\nincorrectly mapped module's BMI file.\nThe cause is an invalid access into an incorrectly loaded\n`ModuleFile`.\n\nThis commit fixes the issue by verifying the identity of the imported\nmodule.",
             "commit_timestamp": 1744081377.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1744124971.622989,
+            "elapsed_time": 92.49981021881104,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4992.095909118652,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "561506144531cf0a760bb437fd74c683931c60ae",
+            "commit_message": "[dsymutil] Avoid copying binary swiftmodules built from textual (#134719)\n\n.swiftinterface files into the dSYM bundle. These typically come only\nfrom the SDK (since textual interfaces require library evolution) and\nthus are a waste of space to copy into the bundle.\n\nThe information about this is being parsed out of the control block,\nwhich means duplicating 5 constants from the Swift frontend. If a file\ncannot be parsed, dsymutil errs on the side of copying the file anyway.\n\nrdar://138186524",
+            "commit_timestamp": 1744124612.0
         }
     ]
 }

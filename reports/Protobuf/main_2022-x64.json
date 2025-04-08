@@ -6224,6 +6224,21 @@
             "commit_ref": "ced134aaf9b26bde956ffbdbe75aadfff1020b02",
             "commit_message": "Split the `TailCallTableInfo` constructor into two methods for internal use.\n\nThis CL splits the constructor into two methods: one to build the `FieldOptions` list from ordered fields, and one to build the `FieldEntryInfo` list from field options.\n\nThis is in preparation for fast-parse table awareness in the layout optimizers.\n\nPiperOrigin-RevId: 744927520\n",
             "commit_timestamp": 1744077152.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1744124835.33441,
+            "elapsed_time": 454.54297280311584,
+            "x64": true,
+            "actual_files_count": 1428,
+            "expected_files_count": 818,
+            "memory_traffic": 60435.68140411377,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "5c9406bc1cf11192c5223d99e095b99b31bf076a",
+            "commit_message": "Automated Code Change\n\nPiperOrigin-RevId: 745041320\n",
+            "commit_timestamp": 1744103160.0
         }
     ]
 }
