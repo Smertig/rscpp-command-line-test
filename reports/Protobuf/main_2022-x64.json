@@ -6209,6 +6209,21 @@
             "commit_ref": "59e1f0f6bdb85e93b60f7d9e36985be2c290578b",
             "commit_message": "Ruby | Add support for a protobuf debug build (#21060)\n\nThis PR makes a small change to `extconf.rb` so we can easily build the `protobuf_c` Ruby bindings with all debug symbols included.  We used [grpc](https://github.com/grpc/grpc/blob/master/src/ruby/ext/grpc/extconf.rb) as a guide, which will produce a debug build if `rake` is run with `GRPC_CONFIG=dbg`.  Unlike `grpc`, the `protobuf_c` build doesn't explicitly strip symbols from the resulting library, but values will be optimized out when stepping through with `gdb`.\n\nThis change also reconciles an oversight that `-fvisibility=hidden` was not set when building on non-Darwin/Linux/Freebsd platforms.\n\nCloses #21060\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/21060 from Shopify:ruby-debug-build 353b272e9bf3b690004dd0153c33316a07bd35f7\nPiperOrigin-RevId: 744718927\n",
             "commit_timestamp": 1744037361.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1744082294.069622,
+            "elapsed_time": 423.93041610717773,
+            "x64": true,
+            "actual_files_count": 1428,
+            "expected_files_count": 818,
+            "memory_traffic": 60583.37377166748,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "ced134aaf9b26bde956ffbdbe75aadfff1020b02",
+            "commit_message": "Split the `TailCallTableInfo` constructor into two methods for internal use.\n\nThis CL splits the constructor into two methods: one to build the `FieldOptions` list from ordered fields, and one to build the `FieldEntryInfo` list from field options.\n\nThis is in preparation for fast-parse table awareness in the layout optimizers.\n\nPiperOrigin-RevId: 744927520\n",
+            "commit_timestamp": 1744077152.0
         }
     ]
 }
