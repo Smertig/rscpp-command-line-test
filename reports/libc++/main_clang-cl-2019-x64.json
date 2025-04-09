@@ -7258,6 +7258,23 @@
             "commit_ref": "1c09dd54d9be9470729130008bf82ee61a8bee63",
             "commit_message": "[LoongArch] Pre-commit test for vector byte rotate & vector shift (lasx only) (#134839)\n\n",
             "commit_timestamp": 1744168198.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1744211463.540222,
+            "elapsed_time": 65.76733422279358,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4962.2662353515625,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "b0338c3d6c6d9787232e07ceff56ef161c357602",
+            "commit_message": "[libclc] Move shuffle/shuffle2 to the CLC library (#135000)\n\nThis commit moves the shuffle and shuffle2 builtins to the CLC library.\nIn so doing it makes the headers simpler and re-usable for other builtin\nlayers to hook into the CLC functions, if they wish.\n\nAn additional gentype utility has been made available, which provides a\nconsistent vector-size-or-1 macro for use.\n\nThe existing __CLC_VECSIZE is defined but empty which is useful in\ncertain applications, such as in concatenation with a type to make a\ncorrectly sized scalar or vector type. However, this isn't usable in the\nsame preprocessor lines when wanting to check for specific vector sizes,\nas e.g., '__CLC_VECSIZE == 2' resolves to '== 2' which is invalid. In\nlocal testing this is also useful for the geometric builtins which are\nonly available for scalar types and vector types of 2, 3, or 4 elements.\n\nNo codegen changes are observed, except the internal shuffle/shuffle2\nutility functions are no longer made publicly available.",
+            "commit_timestamp": 1744210345.0
         }
     ]
 }

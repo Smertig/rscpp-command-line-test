@@ -26293,6 +26293,21 @@
             "commit_ref": "b70b8eb332fadf55d7e22b492da0e954c1a4fcb7",
             "commit_message": "chore: require pytest 6 consistently (#5599)\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>",
             "commit_timestamp": 1743795355.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1744211309.851199,
+            "elapsed_time": 178.95649790763855,
+            "x64": true,
+            "actual_files_count": 457,
+            "expected_files_count": 197,
+            "memory_traffic": 20641.572799682617,
+            "repo_url": "https://github.com/pybind/pybind11",
+            "commit_ref": "a28ea8ccc5b98af73a2306ca0e43bcf0c82d39d8",
+            "commit_message": "Eliminate `pybindit` namespace (#5607)\n\n* Factor out pybind11/detail/pybind11_namespace_macros.h from pybind11/detail/common.h\n\n* Eliminate `pybindit` namespace, use pybind11/detail/pybind11_namespace_macros.h instead.\n\n* Fix oversight: add pybind11_namespace_macros.h in tests/extra_python_package/test_files.py\n\n* [skip ci] Add copyright notice.",
+            "commit_timestamp": 1744170384.0
         }
     ]
 }
