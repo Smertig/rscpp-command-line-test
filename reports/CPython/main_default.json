@@ -22031,6 +22031,21 @@
             "commit_ref": "c5e856a5dc8eed4813ecb8fbf4120411af9a6130",
             "commit_message": "Merge branch 'main' of https://github.com/python/cpython\n",
             "commit_timestamp": 1744121301.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1744168996.929372,
+            "elapsed_time": 1309.8669514656067,
+            "x64": true,
+            "actual_files_count": 1128,
+            "expected_files_count": null,
+            "memory_traffic": 50200.46603393555,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "16dcb576f7623e19f22be631bbc0e565335da969",
+            "commit_message": "gh-131507: Add a way to recreate the `Misc/mypy` symlinks if missing (#132274)\n\nThey will be removed in source tarballs so they don't appear\nin the SBOM.\n\nCo-authored-by: Stan Ulbrych <89152624+StanFromIreland@users.noreply.github.com>\n",
+            "commit_timestamp": 1744153296.0
         }
     ]
 }

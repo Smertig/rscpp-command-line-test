@@ -20232,6 +20232,21 @@
             "commit_ref": "a3648b0b163a0c8d92c5cf4581f72b1f0c04eee0",
             "commit_message": "Add spatial index for objects (#14631)\n\n",
             "commit_timestamp": 1744094693.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1744170409.63303,
+            "elapsed_time": 171.15450191497803,
+            "x64": true,
+            "actual_files_count": 424,
+            "expected_files_count": 105,
+            "memory_traffic": 23612.284454345703,
+            "repo_url": "https://github.com/minetest/minetest",
+            "commit_ref": "a00b9cab36fa116e8af97df6036ad0e634775447",
+            "commit_message": "Fix operator[] for vector2d and vector3d being potentially UB (#15977)\n\nWe don't have a C++ expert on hand, but taking a pointer to one member\nand expecting to access another by an offset is very fishy:\n- for one, there could theoretically be padding\n- the compiler might assume that we are only writing to that first member\n\nThe new code has shown to be free for constant parameter values.\nNon-constant ones cause the assembly to have branches (why?), but we don't\nuse that much.",
+            "commit_timestamp": 1744143945.0
         }
     ]
 }

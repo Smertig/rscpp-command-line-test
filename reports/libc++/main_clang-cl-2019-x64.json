@@ -7241,6 +7241,23 @@
             "commit_ref": "561506144531cf0a760bb437fd74c683931c60ae",
             "commit_message": "[dsymutil] Avoid copying binary swiftmodules built from textual (#134719)\n\n.swiftinterface files into the dSYM bundle. These typically come only\nfrom the SDK (since textual interfaces require library evolution) and\nthus are a waste of space to copy into the bundle.\n\nThe information about this is being parsed out of the control block,\nwhich means duplicating 5 constants from the Swift frontend. If a file\ncannot be parsed, dsymutil errs on the side of copying the file anyway.\n\nrdar://138186524",
             "commit_timestamp": 1744124612.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1744168953.704302,
+            "elapsed_time": 67.65600299835205,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5004.496185302734,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "1c09dd54d9be9470729130008bf82ee61a8bee63",
+            "commit_message": "[LoongArch] Pre-commit test for vector byte rotate & vector shift (lasx only) (#134839)\n\n",
+            "commit_timestamp": 1744168198.0
         }
     ]
 }
