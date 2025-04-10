@@ -22901,6 +22901,21 @@
             "commit_ref": "2ade14b6668892e42cf0c5a293bed4bc09d83805",
             "commit_message": "build: check required rustls-ffi version\n\nTry to enforce that the Rustls vTLS backend is only used with\nrustls-ffi 0.15 - the documentation already describes this as\nthe required version.\n\nFollow-up from https://github.com/curl/curl/issues/16890\n\nCloses #16922\n",
             "commit_timestamp": 1744183760.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1744255865.635889,
+            "elapsed_time": 277.2976186275482,
+            "x64": true,
+            "actual_files_count": 3586,
+            "expected_files_count": 2323,
+            "memory_traffic": 79506.54152679443,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "6af7ab3b39194b93aa1310fe5cd189d1f375336c",
+            "commit_message": "cmake: quotes, whitespace, use `VERSION_GREATER_EQUAL`\n\n- `NOT` + `VERSION_LESS` -> `VERSION_GREATER_EQUAL`\n  Available since 3.7, which is the minimum required for curl:\n  https://cmake.org/cmake/help/latest/command/if.html#version-greater-equal\n- make `CMAKE_REQUIRED_*` argument quotes consistent.\n- make `CMAKE_REQUIRED_*` space alignment consistent.\n- drop quote from version value for consistency with other cases.\n- formatting\n\nCloses #17002\n",
+            "commit_timestamp": 1744242179.0
         }
     ]
 }

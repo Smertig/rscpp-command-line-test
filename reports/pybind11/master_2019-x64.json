@@ -26308,6 +26308,21 @@
             "commit_ref": "a28ea8ccc5b98af73a2306ca0e43bcf0c82d39d8",
             "commit_message": "Eliminate `pybindit` namespace (#5607)\n\n* Factor out pybind11/detail/pybind11_namespace_macros.h from pybind11/detail/common.h\n\n* Eliminate `pybindit` namespace, use pybind11/detail/pybind11_namespace_macros.h instead.\n\n* Fix oversight: add pybind11_namespace_macros.h in tests/extra_python_package/test_files.py\n\n* [skip ci] Add copyright notice.",
             "commit_timestamp": 1744170384.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1744255237.608752,
+            "elapsed_time": 176.72174763679504,
+            "x64": true,
+            "actual_files_count": 457,
+            "expected_files_count": 197,
+            "memory_traffic": 20633.098068237305,
+            "repo_url": "https://github.com/pybind/pybind11",
+            "commit_ref": "708ce4d9c7bf55075608eb3cfcb5fa0dc43e070f",
+            "commit_message": "Fix GraalPy version parsing on dev builds (#5609)\n\n* Fix GraalPy version parsing on dev builds\n\n* Unskip test on GraalPy",
+            "commit_timestamp": 1744214955.0
         }
     ]
 }

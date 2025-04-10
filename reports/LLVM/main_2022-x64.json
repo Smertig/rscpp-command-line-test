@@ -27383,6 +27383,23 @@
             "commit_ref": "b0338c3d6c6d9787232e07ceff56ef161c357602",
             "commit_message": "[libclc] Move shuffle/shuffle2 to the CLC library (#135000)\n\nThis commit moves the shuffle and shuffle2 builtins to the CLC library.\nIn so doing it makes the headers simpler and re-usable for other builtin\nlayers to hook into the CLC functions, if they wish.\n\nAn additional gentype utility has been made available, which provides a\nconsistent vector-size-or-1 macro for use.\n\nThe existing __CLC_VECSIZE is defined but empty which is useful in\ncertain applications, such as in concatenation with a type to make a\ncorrectly sized scalar or vector type. However, this isn't usable in the\nsame preprocessor lines when wanting to check for specific vector sizes,\nas e.g., '__CLC_VECSIZE == 2' resolves to '== 2' which is invalid. In\nlocal testing this is also useful for the geometric builtins which are\nonly available for scalar types and vector types of 2, 3, or 4 elements.\n\nNo codegen changes are observed, except the internal shuffle/shuffle2\nutility functions are no longer made publicly available.",
             "commit_timestamp": 1744210345.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1744256110.419126,
+            "elapsed_time": 1616.579573392868,
+            "x64": true,
+            "actual_files_count": 2936,
+            "expected_files_count": 1661,
+            "memory_traffic": 259938.2061767578,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "0283bb3afcc5dc521f6b2e7d541a830a9546ed80",
+            "commit_message": "[Clang][CodeGen][UBSan] Add more precise attributes to recoverable ubsan handlers (#130990)\n\nThis patch adds `memory(argmem: read, inaccessiblemem: readwrite)\nmustprogress` to **recoverable** ubsan handlers in order to unblock some\nmemory/loop optimizations. It provides an average of 3% performance\nimprovement on llvm-test-suite (except for 49 test failures due to ubsan\ndiagnostics).\n\nCloses https://github.com/llvm/llvm-project/issues/130093.",
+            "commit_timestamp": 1744254585.0
         }
     ]
 }
