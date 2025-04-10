@@ -27400,6 +27400,23 @@
             "commit_ref": "0283bb3afcc5dc521f6b2e7d541a830a9546ed80",
             "commit_message": "[Clang][CodeGen][UBSan] Add more precise attributes to recoverable ubsan handlers (#130990)\n\nThis patch adds `memory(argmem: read, inaccessiblemem: readwrite)\nmustprogress` to **recoverable** ubsan handlers in order to unblock some\nmemory/loop optimizations. It provides an average of 3% performance\nimprovement on llvm-test-suite (except for 49 test failures due to ubsan\ndiagnostics).\n\nCloses https://github.com/llvm/llvm-project/issues/130093.",
             "commit_timestamp": 1744254585.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1744298564.92325,
+            "elapsed_time": 1689.1491355895996,
+            "x64": true,
+            "actual_files_count": 2936,
+            "expected_files_count": 1661,
+            "memory_traffic": 259842.06790161133,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "85614e160ba569d719452ec80b842a0edc5ab930",
+            "commit_message": "[CIR] Upstream initial function call support (#134673)\n\nThis patch upstreams initial support for making function calls in CIR.\nFunction arguments and return values are not included to keep the patch\nsmall for review.\n\nRelated to #132487",
+            "commit_timestamp": 1744296060.0
         }
     ]
 }
