@@ -22931,6 +22931,21 @@
             "commit_ref": "0e8bf75b5c98476d145c0466e29edb5865c1b4f0",
             "commit_message": "tests: require IPv6 for 1265, 1324, 2086\n\nAnd also require HTTP. Also add `IPv6` to the keywords.\n\nFixing:\n\nLinux AM openssl !ipv6 !--libcurl:\n```\nFAIL 1265: 'NO_PROXY with IPv6 numerical address' HTTP, HTTP proxy, http_proxy, NO_PROXY, noproxy\nFAIL 1324: 'HTTP with --resolve and [ipv6address]' HTTP, HTTP GET, --resolve\nFAIL 2086: 'Pre-request callback for HTTP IPv6' HTTP, IPv6\n```\nRef: https://github.com/curl/curl/actions/runs/14378524385/job/40318328714?pr=17012#step:41:3789\n\nFollow-up to a09e49168aae63640868b4fb9fa55eb384ff41c7 #17005\n\nCloses #17014\n",
             "commit_timestamp": 1744295092.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1744342123.856838,
+            "elapsed_time": 296.73777437210083,
+            "x64": true,
+            "actual_files_count": 3586,
+            "expected_files_count": 2323,
+            "memory_traffic": 87119.50354766846,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "4646976f3b6ee2a73e68809a8104db1fea1743a4",
+            "commit_message": "GHA/macos: re-generate gcc-13 hacklayer on macos-15\n\nAdd workaround for an issue related to the gcc \"hacklayer\" after the\nGitHub macos-15-arm64 runner bumped to 20250408.1231.\n\nFixes:\n```\nconfigure:5175: gcc-13 -o conftest  --sysroot=/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk  -w conftest.c  >&5\nIn file included from /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/_stdio.h:71,\n                 from /opt/homebrew/Cellar/gcc@13/13.3.0/lib/gcc/13/gcc/aarch64-apple-darwin24/13/include-fixed/stdio.h:75,\n                 from conftest.c:9:\n/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/_stdio.h: In function 'fmemopen':\n/Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/_stdio.h:457:107: error: expected declaration specifiers before '__API_AVAILABLE_GET_MACRO_93585900'\n  457 | FILE *fmemopen(void * __restrict __buf _LIBC_SIZE(__size), size_t __size, const char * __restrict __mode) __API_AVAILABLE(macos(10.13), ios(11.0), tvos(11.0), watchos(4.0));\n      |                                                                                                           ^~~~~~~~~~~~~~~\n```\nRef: https://github.com/curl/curl/actions/runs/14378524390/job/40316589059?pr=17012#step:7:169\n\nAssisted-by: Bo Anderson\nBug: https://github.com/curl/curl/pull/17012#issuecomment-2792572344\nBug: https://github.com/Homebrew/homebrew-core/issues/194778#issuecomment-2792601570\n\nCloses #17017\n",
+            "commit_timestamp": 1744315217.0
         }
     ]
 }

@@ -7309,6 +7309,23 @@
             "commit_ref": "85614e160ba569d719452ec80b842a0edc5ab930",
             "commit_message": "[CIR] Upstream initial function call support (#134673)\n\nThis patch upstreams initial support for making function calls in CIR.\nFunction arguments and return values are not included to keep the patch\nsmall for review.\n\nRelated to #132487",
             "commit_timestamp": 1744296060.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1744341749.677933,
+            "elapsed_time": 77.01811838150024,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5013.281929016113,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "04c38981a9ce3e6225669c0e41cab947e3e7989f",
+            "commit_message": "[Clang][CodeGen] Do not set inbounds flag in `EmitMemberDataPointerAddress` when the base pointer is null (#130952)\n\nSee also https://github.com/llvm/llvm-project/pull/130734 for the\noriginal motivation.\n\nThis pattern (`container_of`) is also widely used by real-world\nprograms.\nExamples:\n\nhttps://github.com/llvm/llvm-project/blob/1d89d7d5d76e391b035f50343e2a4890506c6f2b/llvm/include/llvm/IR/SymbolTableListTraits.h#L77-L87\n\nhttps://github.com/nodejs/node/blob/a2a53cb728ec5f776ac16879ce0f480a8e838320/src/util-inl.h#L134-L137\nhttps://github.com/search?q=*%29nullptr-%3E*&type=code",
+            "commit_timestamp": 1744339868.0
         }
     ]
 }
