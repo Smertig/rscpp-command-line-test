@@ -27468,6 +27468,23 @@
             "commit_ref": "336b290923151d02fd6b3050ccbaf74f0aa08339",
             "commit_message": "[RISCV] Use a DAG combine to prune pointless vrgather.vi (#135392)\n\nIf the vrgather.vi is preceeded by a vmv.v.x which writes a superset of\nthe lanes writen by the vrgather, and the vrgather has no passthru, then\nthe vrgather has no semantic effect.\n\nThis is the start of a mini-series of patches around rewriting\nvrgather.vi/vx preceeded by vmv.v.x, vfmf.v.f, vmv.s.x, etc... Starting\nwith the simplest, but also lowest impact.\n\nOne point I'd like a second oppinion on is the out of bounds semenatic\nchange. As far as I can tell, all the indices are in bounds by\nconstruction. The doc change is as much as I couldn't figure out how to\ntest the alternative as anything else.",
             "commit_timestamp": 1744426973.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1744471308.343966,
+            "elapsed_time": 1618.8210761547089,
+            "x64": true,
+            "actual_files_count": 2938,
+            "expected_files_count": 1661,
+            "memory_traffic": 260209.2166442871,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "33e5305c598be9b4f57feba330b963c2142d15cc",
+            "commit_message": "[RISCV] Further explain vfmerge.vfm/vmerge.vxm varuat coverage\n",
+            "commit_timestamp": 1744468711.0
         }
     ]
 }
