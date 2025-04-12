@@ -6329,6 +6329,21 @@
             "commit_ref": "85039a7438c3163ba4962d7359f0f1463b391975",
             "commit_message": "Automated Code Change\n\nPiperOrigin-RevId: 746364401\n",
             "commit_timestamp": 1744361501.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1744427799.865613,
+            "elapsed_time": 421.4966826438904,
+            "x64": true,
+            "actual_files_count": 1428,
+            "expected_files_count": 818,
+            "memory_traffic": 60626.27323150635,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "fd3316097932596cd9a2a6d112dd6242f38e26cc",
+            "commit_message": "Fix an eagerly evaluated preconditions string\n\nThis avoids calling `String.format` eagerly, and only formats the error message if the preconditions check fails.\n\nPiperOrigin-RevId: 746652266\n",
+            "commit_timestamp": 1744420963.0
         }
     ]
 }

@@ -22961,6 +22961,21 @@
             "commit_ref": "d364f1347f05c53eea5d25a15b4ad8a62ecc85b8",
             "commit_message": "configure: catch asking for double resolver without https-rr\n\nIt is probably an unintentionally bad setup.\n\nFound-by: Stefan Eissing\nCloses #17025\n",
             "commit_timestamp": 1744378031.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1744428320.193075,
+            "elapsed_time": 287.1202063560486,
+            "x64": true,
+            "actual_files_count": 3586,
+            "expected_files_count": 2323,
+            "memory_traffic": 81322.96360015869,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "ff37657e4d94cf4db80ab9652ae8e6acb84f3019",
+            "commit_message": "cpool/cshutdown: force close connections under pressure\n\nwhen CURLMOPT_MAX_HOST_CONNECTIONS or CURLMOPT_MAX_TOTAL_CONNECTIONS\nlimits are reached, force close connections in shutdown to go below\nlimit when possible.\n\nFixes #17020\nReported-by: Fujii Hironori\nCloses #17022\n",
+            "commit_timestamp": 1744404416.0
         }
     ]
 }
