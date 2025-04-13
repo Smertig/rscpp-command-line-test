@@ -6359,6 +6359,21 @@
             "commit_ref": "fd3316097932596cd9a2a6d112dd6242f38e26cc",
             "commit_message": "Fix an eagerly evaluated preconditions string\n\nThis avoids calling `String.format` eagerly, and only formats the error message if the preconditions check fails.\n\nPiperOrigin-RevId: 746652266\n",
             "commit_timestamp": 1744420963.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1744516453.361282,
+            "elapsed_time": 439.03143286705017,
+            "x64": true,
+            "actual_files_count": 1428,
+            "expected_files_count": 818,
+            "memory_traffic": 60668.37230682373,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "20a975647ad082f9f7dd202c8664c66b81abff61",
+            "commit_message": "Fully qualify java.lang.Override\n\nPiperOrigin-RevId: 746863891\n",
+            "commit_timestamp": 1744484882.0
         }
     ]
 }

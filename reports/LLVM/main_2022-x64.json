@@ -27485,6 +27485,23 @@
             "commit_ref": "33e5305c598be9b4f57feba330b963c2142d15cc",
             "commit_message": "[RISCV] Further explain vfmerge.vfm/vmerge.vxm varuat coverage\n",
             "commit_timestamp": 1744468711.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1744517309.804514,
+            "elapsed_time": 1615.2421827316284,
+            "x64": true,
+            "actual_files_count": 2938,
+            "expected_files_count": 1661,
+            "memory_traffic": 260211.81426239014,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "3e7be494f84e51d5f4245d6f39e380a500f226a6",
+            "commit_message": "[libc++][test] Test `nasty_string` in C++20 (#135338)\n\nIt seems that we can only rely on C++20 features and make `nasty_string`\nalso tested for MSVC STL.",
+            "commit_timestamp": 1744514593.0
         }
     ]
 }
