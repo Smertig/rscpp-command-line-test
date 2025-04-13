@@ -23006,6 +23006,21 @@
             "commit_ref": "d163c7cbd1b567f6981a30d6a89cb04fcf5653fc",
             "commit_message": "GHA/windows: bump Cygwin action, move package store to `D:`\n\n- to benefit from the new download retry mechanism.\n  https://github.com/cygwin/cygwin-install-action/pull/26\n\n- to use a new setting that not only moves the Cygwin install target\n  directory to the faster `D:` drive, but also the package download\n  directory. Expecting a little performance improvement from this for\n  the Cygwin install step.\n  https://github.com/cygwin/cygwin-install-action/commit/d3a7464b92425a95438e794ec49927871dde78d2\n  https://github.com/cygwin/cygwin-install-action/pull/27\n\nCloses #17040\n",
             "commit_timestamp": 1744484384.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1744557277.674165,
+            "elapsed_time": 303.02861285209656,
+            "x64": true,
+            "actual_files_count": 3586,
+            "expected_files_count": 2323,
+            "memory_traffic": 83849.69118499756,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "d163c7cbd1b567f6981a30d6a89cb04fcf5653fc",
+            "commit_message": "GHA/windows: bump Cygwin action, move package store to `D:`\n\n- to benefit from the new download retry mechanism.\n  https://github.com/cygwin/cygwin-install-action/pull/26\n\n- to use a new setting that not only moves the Cygwin install target\n  directory to the faster `D:` drive, but also the package download\n  directory. Expecting a little performance improvement from this for\n  the Cygwin install step.\n  https://github.com/cygwin/cygwin-install-action/commit/d3a7464b92425a95438e794ec49927871dde78d2\n  https://github.com/cygwin/cygwin-install-action/pull/27\n\nCloses #17040\n",
+            "commit_timestamp": 1744484384.0
         }
     ]
 }
