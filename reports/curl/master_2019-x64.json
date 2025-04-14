@@ -23036,6 +23036,21 @@
             "commit_ref": "ae1a861bd62339b34cfd433e5941904e7d6878a1",
             "commit_message": "cmake: revert `CURL_LTO` behavior for multi-config generators\n\nTo avoid having LTO enabled for Debug configurations with multi-config\ngenerators (e.g. MSVC.)\n\nReported-by: PleaseJustDont\nFixes #17042\nRef: ##17034\nFollow-up to a1eaa12a8397026aa34e04d6ed4280ddfe6c4c93 #15829\nCloses #17043\n",
             "commit_timestamp": 1744589304.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1744643645.993526,
+            "elapsed_time": 261.93775844573975,
+            "x64": true,
+            "actual_files_count": 3586,
+            "expected_files_count": 2323,
+            "memory_traffic": 79181.81230163574,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "d9ca7ad5cb036c429faca2af81be8c8cbc332236",
+            "commit_message": "tests: add git ignores for tests/tunit generated files\n\nCloses #17049\n",
+            "commit_timestamp": 1744632905.0
         }
     ]
 }

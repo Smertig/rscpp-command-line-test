@@ -7428,6 +7428,23 @@
             "commit_ref": "e038c5401c99ca1f19a873a5c88ad7db4645a26a",
             "commit_message": "[LTO][Pipelines] Add 0 hot-caller threshold for SamplePGO + FullLTO (#135152)\n\nIf a hot callsite function is not inlined in the 1st build, inlining the\nhot callsite in pre-link stage of SPGO 2nd build may lead to Function\nSample not found in profile file in link stage. It will miss some\nprofile info.\nThinLTO has already considered and dealed with it by setting\nHotCallSiteThreshold to 0 to stop the inline. This patch just adds the\nsame processing for FullLTO.",
             "commit_timestamp": 1744600868.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1744643427.306271,
+            "elapsed_time": 109.15722465515137,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4980.726699829102,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "a485abbddda7997177b1b56f4dc8e9c069ae4d9a",
+            "commit_message": "[flang] Fix Driver/do_concurrent_to_omp_cli.f90 test not to use runtime (#135485)\n\nFix Flang invocation in `Driver/do_concurrent_to_omp_cli.f90` test to\nrun compilation step only, to fix testing when building with\n`-DFLANG_INCLUDE_RUNTIME=OFF`. The test is only concerned with warning\nbeing emitted by the compiler, so there is no need to link the resulting\nexecutable.",
+            "commit_timestamp": 1744642609.0
         }
     ]
 }
