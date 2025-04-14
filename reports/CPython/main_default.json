@@ -22181,6 +22181,21 @@
             "commit_ref": "c7f6535e4a3b447fbd67bf98eea82fd243e780be",
             "commit_message": "gh-131624: Fix posix_spawn tests failing on NetBSD with stack limit assertions (GH-131625)\n\nFix recursive limit assertions on NetBSD for posix_spawn.\n",
             "commit_timestamp": 1744542398.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1744601137.523427,
+            "elapsed_time": 1314.1775109767914,
+            "x64": true,
+            "actual_files_count": 1128,
+            "expected_files_count": null,
+            "memory_traffic": 50207.183837890625,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "ccad61e35d240972d14f993507566706fbf419f1",
+            "commit_message": "GH-125866: Support complete \"file:\" URLs in urllib (#132378)\n\nAdd optional *add_scheme* argument to `urllib.request.pathname2url()`; when\nset to true, a complete URL is returned. Likewise add optional\n*require_scheme* argument to `url2pathname()`; when set to true, a complete\nURL is accepted.\n\nCo-authored-by: B\u00e9n\u00e9dikt Tran <10796600+picnixz@users.noreply.github.com>",
+            "commit_timestamp": 1744591742.0
         }
     ]
 }
