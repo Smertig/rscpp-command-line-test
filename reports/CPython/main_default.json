@@ -22211,6 +22211,21 @@
             "commit_ref": "4865c09cf3055de2f69abda27c9e971b0fcf98bd",
             "commit_message": "Docs: fix some typos in `Doc/library` (#132511)\n\n",
             "commit_timestamp": 1744637086.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1744687542.662096,
+            "elapsed_time": 1264.48379445076,
+            "x64": true,
+            "actual_files_count": 1128,
+            "expected_files_count": null,
+            "memory_traffic": 50240.89049530029,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "0879ebc953fa7372a4d99f3f79889093f04cac67",
+            "commit_message": "GH-123599: Match `file:` URL hostname against machine hostname in urllib (#132523)\n\nIn `_is_local_authority()`, return early if the authority matches the\nmachine hostname from `socket.gethostname()`, rather than resolving the\nnames and matching IP addresses.",
+            "commit_timestamp": 1744675506.0
         }
     ]
 }

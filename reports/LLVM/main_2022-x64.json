@@ -27553,6 +27553,23 @@
             "commit_ref": "a485abbddda7997177b1b56f4dc8e9c069ae4d9a",
             "commit_message": "[flang] Fix Driver/do_concurrent_to_omp_cli.f90 test not to use runtime (#135485)\n\nFix Flang invocation in `Driver/do_concurrent_to_omp_cli.f90` test to\nrun compilation step only, to fix testing when building with\n`-DFLANG_INCLUDE_RUNTIME=OFF`. The test is only concerned with warning\nbeing emitted by the compiler, so there is no need to link the resulting\nexecutable.",
             "commit_timestamp": 1744642609.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1744688215.629016,
+            "elapsed_time": 1590.0332171916962,
+            "x64": true,
+            "actual_files_count": 2938,
+            "expected_files_count": 1661,
+            "memory_traffic": 259664.82382202148,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "1cf9f764ac41fb3492e10c78640dd50e616388db",
+            "commit_message": "[clang][frontend] Make `CompilerInstance::FailedModules` thread-safe (#135473)\n\nThis PR makes some progress towards making it possible to create clones\nof `CompilerInstance` that are independent of each other and can be used\nin a multi-threaded setting. This PR tackles\n`CompilerInstance::FailedModules`, makes it a value-type instead of a\nmutable shared pointer, and adds explicit copies & moves where\nappropriate.\n\nBesides that change, this PR also turns two previously free functions\nwith internal linkage into member functions of `CompilerInstance`, which\nmakes it possible to reduce the public API of that class that relates to\n`FailedModules`. This reduces some API churn that was necessary for each\nnew member of `CompilerInstance` that needs to be cloned.",
+            "commit_timestamp": 1744686066.0
         }
     ]
 }
