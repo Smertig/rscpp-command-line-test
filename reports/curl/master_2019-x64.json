@@ -23066,6 +23066,21 @@
             "commit_ref": "3fbabec53cda14fb095a366f59e5b8b7a3d193e6",
             "commit_message": "tests/server: fix typo in comment [ci skip]\n",
             "commit_timestamp": 1744676698.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1744730116.514958,
+            "elapsed_time": 303.44142866134644,
+            "x64": true,
+            "actual_files_count": 3590,
+            "expected_files_count": 2323,
+            "memory_traffic": 92887.77017974854,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "01c429c4a8096f98507dc4ef43be1ef9b81ea086",
+            "commit_message": "cmake: merge `CURL_WERROR` logic into `PickyWarnings.cmake`\n\nSafe to do this now, as the code no longer relies on setting these\noptions after feature detection.\n\nAlso: Tidy up the way we handle options not to be passed to feature\nchecks, and make sure to show them in the configure log.\n\nFollow-up to e86542038dda88dadf8959584e803895f979310c #17047\nCloses #17062\n",
+            "commit_timestamp": 1744721328.0
         }
     ]
 }

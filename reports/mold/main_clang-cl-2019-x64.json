@@ -22746,6 +22746,21 @@
             "commit_ref": "a97a628ee84c021340fccad64f2b35d2d66de278",
             "commit_message": "Resolve versioned symbols early\n\nFixes https://github.com/rui314/mold/issues/1440\n",
             "commit_timestamp": 1744350387.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1744729576.873796,
+            "elapsed_time": 130.69443559646606,
+            "x64": true,
+            "actual_files_count": 626,
+            "expected_files_count": null,
+            "memory_traffic": 16498.506874084473,
+            "repo_url": "https://github.com/rui314/mold",
+            "commit_ref": "ac6f1ec18ebd2d295a93911b82e89733fe5b3ae0",
+            "commit_message": "Do not hide foo@@VER if both foo@@VER and foo are defined\n\nFixes https://github.com/rui314/mold/issues/1442\n",
+            "commit_timestamp": 1744687711.0
         }
     ]
 }
