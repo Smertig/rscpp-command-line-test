@@ -6449,6 +6449,21 @@
             "commit_ref": "6f4c49b5e71c7f19f16f9eb11b2b90bd483c98f3",
             "commit_message": "Use canonical names for death tests in repeated_ptr_field_unittest.cc\n\nDeath tests require special treatment from the test infra, but the test infra enables that treatment only if a test suite's name ends in \"DeathTest\".\n\nPiperOrigin-RevId: 747860573\n",
             "commit_timestamp": 1744726497.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1744773686.092752,
+            "elapsed_time": 472.7898817062378,
+            "x64": true,
+            "actual_files_count": 1428,
+            "expected_files_count": 818,
+            "memory_traffic": 60706.39457702637,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "635292aa4d2095caf2a285d88b21025ab5e00f32",
+            "commit_message": "Add file for use in staleness tests of the Ruby FFI bindings\n\nPiperOrigin-RevId: 748102069\n",
+            "commit_timestamp": 1744767928.0
         }
     ]
 }

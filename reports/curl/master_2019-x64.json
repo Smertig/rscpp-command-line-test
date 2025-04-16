@@ -23081,6 +23081,21 @@
             "commit_ref": "01c429c4a8096f98507dc4ef43be1ef9b81ea086",
             "commit_message": "cmake: merge `CURL_WERROR` logic into `PickyWarnings.cmake`\n\nSafe to do this now, as the code no longer relies on setting these\noptions after feature detection.\n\nAlso: Tidy up the way we handle options not to be passed to feature\nchecks, and make sure to show them in the configure log.\n\nFollow-up to e86542038dda88dadf8959584e803895f979310c #17047\nCloses #17062\n",
             "commit_timestamp": 1744721328.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1744774209.185252,
+            "elapsed_time": 283.55971336364746,
+            "x64": true,
+            "actual_files_count": 3590,
+            "expected_files_count": 2323,
+            "memory_traffic": 84282.20878601074,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "be718daf995b620dd8bf89d725d1c4c031b3840a",
+            "commit_message": "GHA/windows: switch a job to ARM64 on native runner\n\nSwitch a build-only MSYS2/mingw-w64 job to ARM64 using the ARM64 Windows\nrunner. This avoids most downsides of native ARM64 builds. Side-effect\nis switching this job from GCC to clang. This adds speed, which offsets\nthe slower MSYS2 install step.\n\nThe new ARM64 runner hits a bunch of corner cases and inefficiencies:\n- MSYS2/Cygwin misses native ARM64 support and this isn't expected to\n  change. It means GH action installs x64 binaries on ARM64. vcpkg does\n  the same. It runs, but not native, so slower. It affects runtests and\n  possibly vcpkg build performance.\n  https://github.com/msys2/MSYS2-packages/discussions/2889\n  https://cygwin.com/pipermail/cygwin/2021-December/250156.html\n- MSYS2 diffutils package missing for CLANGARM64.\n- vcpkg boringssl build broken for ARM64.\n\nAlso:\n- bump the vcpkg build time limit, as it seems the native x86_64 jobs\n  also can't fit into 35 minutes.\n- prepare MSVC jobs for the ARM64 runner.\n\nRef: https://github.com/github/roadmap/issues/1098#issuecomment-2806476117\nRef: https://github.blog/changelog/2025-04-14-windows-arm64-hosted-runners-now-available-in-public-preview/\n\nCloses #17067\n",
+            "commit_timestamp": 1744769123.0
         }
     ]
 }
