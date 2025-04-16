@@ -22776,6 +22776,21 @@
             "commit_ref": "ac6f1ec18ebd2d295a93911b82e89733fe5b3ae0",
             "commit_message": "Do not hide foo@@VER if both foo@@VER and foo are defined\n\nFixes https://github.com/rui314/mold/issues/1442\n",
             "commit_timestamp": 1744687711.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1744816191.160397,
+            "elapsed_time": 176.19995164871216,
+            "x64": true,
+            "actual_files_count": 626,
+            "expected_files_count": null,
+            "memory_traffic": 16525.60025024414,
+            "repo_url": "https://github.com/rui314/mold",
+            "commit_ref": "f7b1920f849cf6bc8120ce60f474e6580bdbdeb4",
+            "commit_message": "Make dist.sh reproducible again\n\nmimalloc 2.2.2 started using __DATE__ and __TIME__ macros which make\nthe output non-reproducible. We can set the SOURCE_DATE_EPOCH environment\nvariable to fix the \"current\" timestamp.\n",
+            "commit_timestamp": 1744787848.0
         }
     ]
 }

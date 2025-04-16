@@ -25293,6 +25293,21 @@
             "commit_ref": "d110c812bb754d47ecc37b87db0d4e20a12aacc9",
             "commit_message": "Disable `LuauNonReentrantGeneralization` for some tests (#1775)\n\nFor now, this flag causes a stack overflow for some tests on\nWindows: we end up minting a massive recursive intersection during\ngeneralization. Let's flip it off until a fix arrives.",
             "commit_timestamp": 1744674931.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1744815974.130367,
+            "elapsed_time": 318.7413194179535,
+            "x64": true,
+            "actual_files_count": 503,
+            "expected_files_count": 379,
+            "memory_traffic": 35874.664878845215,
+            "repo_url": "https://github.com/luau-lang/luau",
+            "commit_ref": "d110c812bb754d47ecc37b87db0d4e20a12aacc9",
+            "commit_message": "Disable `LuauNonReentrantGeneralization` for some tests (#1775)\n\nFor now, this flag causes a stack overflow for some tests on\nWindows: we end up minting a massive recursive intersection during\ngeneralization. Let's flip it off until a fix arrives.",
+            "commit_timestamp": 1744674931.0
         }
     ]
 }

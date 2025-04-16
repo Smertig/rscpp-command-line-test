@@ -27604,6 +27604,23 @@
             "commit_ref": "71d091699f956c89135bc165165e815ab7876359",
             "commit_message": "[libc][bazel] Fold \"libc_function_deps\" into \"deps\" for libc_tests. (#135835)\n\nlibc_function_deps and deps are now identical, as we no longer need or\nhave special treatment for libc_function targets. Merge these attributes\npassed to the libc_test macro, and fix all relevant libc_test macro\ninvocations. This change is a no-op.\n\nThis concludes cleanup started in\n9b13d345303d819bb83de7ebbeb826d704add0bc.",
             "commit_timestamp": 1744773137.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1744817094.585946,
+            "elapsed_time": 1651.1057090759277,
+            "x64": true,
+            "actual_files_count": 2938,
+            "expected_files_count": 1661,
+            "memory_traffic": 259444.88900756836,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "99c08ff1cb96fc4f471aca0dd253060b3f32e8bc",
+            "commit_message": "Revert \"[clang] Unify `SourceLocation` and `IdentifierInfo*` pair-like data structures to `IdentifierLoc`\" (#135974)\n\nReverts llvm/llvm-project#135808\n\nExample from the LLDB macOS CI:\nhttps://green.lab.llvm.org/job/llvm.org/view/LLDB/job/as-lldb-cmake/24084/execution/node/54/log/?consoleFull\n```\n/Users/ec2-user/jenkins/workspace/llvm.org/as-lldb-cmake/llvm-project/lldb/source/Plugins/ExpressionParser/Clang/ClangModulesDeclVendor.cpp:360:49: error: no viable conversion from 'std::pair<clang::IdentifierInfo *, clang::SourceLocation>' to 'clang::ModuleIdPath' (aka 'ArrayRef<IdentifierLoc>')\n  clang::Module *top_level_module = DoGetModule(clang_path.front(), false);\n                                                ^~~~~~~~~~~~~~~~~~\n/Users/ec2-user/jenkins/workspace/llvm.org/as-lldb-cmake/llvm-project/llvm/include/llvm/ADT/ArrayRef.h:41:40: note: candidate constructor (the implicit copy constructor) not viable: no known conversion from 'std::pair<clang::IdentifierInfo *, clang::SourceLocation>' to 'const llvm::ArrayRef<clang::IdentifierLoc> &' for 1st argument\n  class LLVM_GSL_POINTER [[nodiscard]] ArrayRef {\n                                       ^\n/Users/ec2-user/jenkins/workspace/llvm.org/as-lldb-cmake/llvm-project/llvm/include/llvm/ADT/ArrayRef.h:41:40: note: candidate constructor (the implicit move constructor) not viable: no known conversion from 'std::pair<clang::IdentifierInfo *, clang::SourceLocation>' to 'llvm::ArrayRef<clang::IdentifierLoc> &&' for 1st argument\n/Users/ec2-user/jenkins/workspace/llvm.org/as-lldb-cmake/llvm-project/llvm/include/llvm/ADT/ArrayRef.h:70:18: note: candidate constructor not viable: no known conversion from 'std::pair<clang::IdentifierInfo *, clang::SourceLocation>' to 'std::nullopt_t' for 1st argument\n    /*implicit*/ ArrayRef(std::nullopt_t) {}\n```",
+            "commit_timestamp": 1744815953.0
         }
     ]
 }
