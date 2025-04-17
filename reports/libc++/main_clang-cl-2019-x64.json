@@ -7513,6 +7513,23 @@
             "commit_ref": "99c08ff1cb96fc4f471aca0dd253060b3f32e8bc",
             "commit_message": "Revert \"[clang] Unify `SourceLocation` and `IdentifierInfo*` pair-like data structures to `IdentifierLoc`\" (#135974)\n\nReverts llvm/llvm-project#135808\n\nExample from the LLDB macOS CI:\nhttps://green.lab.llvm.org/job/llvm.org/view/LLDB/job/as-lldb-cmake/24084/execution/node/54/log/?consoleFull\n```\n/Users/ec2-user/jenkins/workspace/llvm.org/as-lldb-cmake/llvm-project/lldb/source/Plugins/ExpressionParser/Clang/ClangModulesDeclVendor.cpp:360:49: error: no viable conversion from 'std::pair<clang::IdentifierInfo *, clang::SourceLocation>' to 'clang::ModuleIdPath' (aka 'ArrayRef<IdentifierLoc>')\n  clang::Module *top_level_module = DoGetModule(clang_path.front(), false);\n                                                ^~~~~~~~~~~~~~~~~~\n/Users/ec2-user/jenkins/workspace/llvm.org/as-lldb-cmake/llvm-project/llvm/include/llvm/ADT/ArrayRef.h:41:40: note: candidate constructor (the implicit copy constructor) not viable: no known conversion from 'std::pair<clang::IdentifierInfo *, clang::SourceLocation>' to 'const llvm::ArrayRef<clang::IdentifierLoc> &' for 1st argument\n  class LLVM_GSL_POINTER [[nodiscard]] ArrayRef {\n                                       ^\n/Users/ec2-user/jenkins/workspace/llvm.org/as-lldb-cmake/llvm-project/llvm/include/llvm/ADT/ArrayRef.h:41:40: note: candidate constructor (the implicit move constructor) not viable: no known conversion from 'std::pair<clang::IdentifierInfo *, clang::SourceLocation>' to 'llvm::ArrayRef<clang::IdentifierLoc> &&' for 1st argument\n/Users/ec2-user/jenkins/workspace/llvm.org/as-lldb-cmake/llvm-project/llvm/include/llvm/ADT/ArrayRef.h:70:18: note: candidate constructor not viable: no known conversion from 'std::pair<clang::IdentifierInfo *, clang::SourceLocation>' to 'std::nullopt_t' for 1st argument\n    /*implicit*/ ArrayRef(std::nullopt_t) {}\n```",
             "commit_timestamp": 1744815953.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1744860297.693113,
+            "elapsed_time": 87.87617135047913,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4989.0887451171875,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "bf7f602e7d549d9933a8a5f073e65917e7c877de",
+            "commit_message": "[gn build] Port b07c88563feb\n",
+            "commit_timestamp": 1744859359.0
         }
     ]
 }

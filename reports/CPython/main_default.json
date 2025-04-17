@@ -22271,6 +22271,21 @@
             "commit_ref": "014c7f90478780b18d0e33d456483178c8dcc665",
             "commit_message": "gh-130052: Fix search_map_for_section() error handling (#132594)\n\n* Don't call close() if the file descriptor is negative.\n* If close() fails, chain the existing exception.",
             "commit_timestamp": 1744811818.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1744860317.829995,
+            "elapsed_time": 1232.6153213977814,
+            "x64": true,
+            "actual_files_count": 1128,
+            "expected_files_count": null,
+            "memory_traffic": 50208.453186035156,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "b530e174a3f870f0795200fee197a46e8bbfd0e8",
+            "commit_message": "GH-131296: Remove unused variable from overlapped.c (GH-131590)\n\n",
+            "commit_timestamp": 1744839897.0
         }
     ]
 }

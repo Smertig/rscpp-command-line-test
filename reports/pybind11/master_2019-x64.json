@@ -26518,6 +26518,21 @@
             "commit_ref": "5c498583cc0107778ef2d217ecccc2fb5343f253",
             "commit_message": "fix: upgrade 20.04 runners to 22.04 (fix for ICC, NVHPC) (#5621)\n\n* Upgrade the deprecated 20.04 runners to 22.04 (ICC, NVHPC)\n\n* fix ICC compile error\n\n---------\n\nCo-authored-by: Bryn Lloyd <12702862+dyollb@users.noreply.github.com>",
             "commit_timestamp": 1744805603.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1744860107.858771,
+            "elapsed_time": 204.20258355140686,
+            "x64": true,
+            "actual_files_count": 473,
+            "expected_files_count": 197,
+            "memory_traffic": 20815.334587097168,
+            "repo_url": "https://github.com/pybind/pybind11",
+            "commit_ref": "bc4a66dff0464d0c87291b00a3688999fea5bedc",
+            "commit_message": "fix: provide useful behavior of default `py::slice` (#5620)\n\n* Change behavior of default py::slice\n\n* make clang-tidy happy\n\n* Update tests/test_pytypes.py\n\n---------\n\nCo-authored-by: Bryn Lloyd <12702862+dyollb@users.noreply.github.com>\nCo-authored-by: Henry Schreiner <HenrySchreinerIII@gmail.com>",
+            "commit_timestamp": 1744843354.0
         }
     ]
 }
