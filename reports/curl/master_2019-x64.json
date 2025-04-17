@@ -23126,6 +23126,21 @@
             "commit_ref": "9cb73d5031c85e35bba5b71e03440ef40b3245bd",
             "commit_message": "GHA: update ngtcp2/nghttp3 to v1.9.0\n\nCloses #17073\n",
             "commit_timestamp": 1744838948.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1744902987.362113,
+            "elapsed_time": 287.0028989315033,
+            "x64": true,
+            "actual_files_count": 3625,
+            "expected_files_count": 2323,
+            "memory_traffic": 78083.50144195557,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "02e9690c3ee2feb7c78c93c1c544c898df733383",
+            "commit_message": "tests/server/dnsd: basic DNS server for test suite\n\nCurrently the DNS server only responds to A and AAAA queries. It always\nresponds with a fixed response: the localhost address. Three times.\n\nIt should work fine over either IPv4 or IPv6, but I don't think it\nmatters much for curl testing.\n\nThe idea is to allow curl tests to use \"normal\" DNS hostnames (using the\nnormal name resolving code paths) and still use the local test servers.\n\nThis setup currently only works if curl is built with c-ares because\nredirecting DNS requests to our test server when using getaddrinfo() is\nnot easy.\n\nThis should be extended to respond to HTTPS queries as well to allow\nmore testing there, as c-ares is always used for that.\n\nTest 2102 is the first test using this.\n\nCloses #17015\n",
+            "commit_timestamp": 1744874004.0
         }
     ]
 }
