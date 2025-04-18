@@ -23141,6 +23141,21 @@
             "commit_ref": "02e9690c3ee2feb7c78c93c1c544c898df733383",
             "commit_message": "tests/server/dnsd: basic DNS server for test suite\n\nCurrently the DNS server only responds to A and AAAA queries. It always\nresponds with a fixed response: the localhost address. Three times.\n\nIt should work fine over either IPv4 or IPv6, but I don't think it\nmatters much for curl testing.\n\nThe idea is to allow curl tests to use \"normal\" DNS hostnames (using the\nnormal name resolving code paths) and still use the local test servers.\n\nThis setup currently only works if curl is built with c-ares because\nredirecting DNS requests to our test server when using getaddrinfo() is\nnot easy.\n\nThis should be extended to respond to HTTPS queries as well to allow\nmore testing there, as c-ares is always used for that.\n\nTest 2102 is the first test using this.\n\nCloses #17015\n",
             "commit_timestamp": 1744874004.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1744946858.269206,
+            "elapsed_time": 288.89175152778625,
+            "x64": true,
+            "actual_files_count": 3649,
+            "expected_files_count": 2323,
+            "memory_traffic": 80852.07957458496,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "cd0ec4784c1c0f873939f33ec1a73c8739f276b9",
+            "commit_message": "GHA/windows: add 2 basic MSVC jobs to restore some CI coverage\n\nTo keep testing these with MSVC:\n- UWP !ssl\n- arm64 build on the `windows-11-arm` runner\n- examples\n- OpenSSH-Windows (fix install on `windows-11-arm`)\n- `windows-2025` runner\n- cmake pre-fill checker\n\nSurprise: UWP doesn't support SSPI, which is required by curl's Schannel\nbackend. Thus, no TLS support for this UWP build. It also suggests\nthe Schannel UWP mingw-w64 binaries may be broken and just a happy build\naccident thanks to mingw-w64 headers being inaccurate.\n\nBuilding zlib + libssh2 might actually take up to 2+ minutes with vcpkg,\ninstead of the previously estimated <1.5 minutes.\n\nFollow-up to e3912f0f9fac06d37cd1ab93cef4f01f33809f0b #17086\nFollow-up to 15fb1dc7f86ad1832e0386ec7d92542f44ee9c44 #17069\n\nCloses #17089\n",
+            "commit_timestamp": 1744920954.0
         }
     ]
 }
