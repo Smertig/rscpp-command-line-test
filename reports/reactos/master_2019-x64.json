@@ -24961,6 +24961,21 @@
             "commit_ref": "67e5343dafc24626038f8b32cec9d5c82443288f",
             "commit_message": "[IMM32] Make IMM32 non-Wine module (#7890)\n\nRelated to #7870. IMM32 uses NDK.\nSo, we have to remove Wine\ndependency.\nJIRA issue: CORE-5743\n- Add dll/win32/imm32/debug.h.\n- Remove Wine dependency.\n- Update the documentation\n  (media/doc/WINESYNC.txt).",
             "commit_timestamp": 1744897822.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1744988868.548121,
+            "elapsed_time": 94.65232348442078,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7379.744239807129,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "2e85425c5330661dcc4fef68904e6675cafc0a6a",
+            "commit_message": "[NTOS:MM] Remove one more instance of MmLocateMemoryAreaByAddress\n",
+            "commit_timestamp": 1744928528.0
         }
     ]
 }
