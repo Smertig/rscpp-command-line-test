@@ -7581,6 +7581,23 @@
             "commit_ref": "f2ecd86e34ed5323f2a8ec2259f11e9f5e9bb078",
             "commit_message": "[Analysis] Remove implicit LocationSize conversion from uint64_t (#133342)\n\nThis change removes the uint64_t constructor on LocationSize\npreventing implicit conversion, and fixes up the using APIs to adapt to\nthe change. Note that I'm adding a couple of explicit conversion points\non routines where passing in a fixed offset as an integer seems likely\nto have well understood semantics.\n\nWe had an unfortunate case which arose if you tried to pass a TypeSize\nvalue to a parameter of LocationSize type. We'd find the implicit\nconversion path through TypeSize -> uint64_t -> LocationSize which works\njust fine for fixed values, but looses information and fails assertions\nif the TypeSize was scalable. This change breaks the first link in that\nimplicit conversion chain since that seemed to be the easier one.",
             "commit_timestamp": 1744987591.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1745032902.337802,
+            "elapsed_time": 116.94889736175537,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4984.12735748291,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "dca0ccff4f2e6e5df6345352a0392f7230c6bd57",
+            "commit_message": "LoongArch: Remove unreachable TLS fixup from adjustFixupValue\n",
+            "commit_timestamp": 1745031777.0
         }
     ]
 }
