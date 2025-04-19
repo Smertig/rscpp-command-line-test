@@ -23186,6 +23186,21 @@
             "commit_ref": "3192eeabaeb04fd3afa5591c424bc906a3916f89",
             "commit_message": "RELEASE-NOTES: synced\n",
             "commit_timestamp": 1745013937.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1745075544.169732,
+            "elapsed_time": 275.17668294906616,
+            "x64": true,
+            "actual_files_count": 3661,
+            "expected_files_count": 2323,
+            "memory_traffic": 83770.86022949219,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "3f297f1ecc9aae8875835427ab0256f98bee20ad",
+            "commit_message": "runtests: add retry option to reduce flakiness\n\nAdd `--retry=<num>` option to tell runtests to retry the first `<num>`\ntests that failed. Retries aren't run right away, but added to the end\nof the test queue. Once all retry slots are used, test fail as normal.\n\nIn CI, typically a single test fails for flakiness, and rarely over 5.\n\nMake the `ci-test` targets default to `--retry=5`.\n\nCloses #17091\n",
+            "commit_timestamp": 1745052118.0
         }
     ]
 }

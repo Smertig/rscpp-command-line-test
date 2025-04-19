@@ -7598,6 +7598,23 @@
             "commit_ref": "dca0ccff4f2e6e5df6345352a0392f7230c6bd57",
             "commit_message": "LoongArch: Remove unreachable TLS fixup from adjustFixupValue\n",
             "commit_timestamp": 1745031777.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1745075312.716501,
+            "elapsed_time": 79.19233202934265,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5004.843811035156,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "6196b4ee8c47dc4a2267b7c704d1811e68c7f1c1",
+            "commit_message": "[clang][bytecode] Don't set OnePastEnd bit for array elements (#136422)\n\nIf we refer to arr[N], don't set the OnePastEnd bit of the APValue,\nsince that is already encoded in the array index.",
+            "commit_timestamp": 1745074129.0
         }
     ]
 }
