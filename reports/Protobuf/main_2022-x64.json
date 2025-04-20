@@ -6569,6 +6569,21 @@
             "commit_ref": "676666ef57f3feb0032650212e518123addb0cac",
             "commit_message": "Fix PHP 8.4 deprecation in GPBDecodeException (#21232)\n\nPHP 8.4 deprecates implicitly nullable parameter declarations. This patch addresses an issue in `Google\\Protobuf\\Internal\\GPBDecodeException` which triggers a deprecation warning.\n\nThe deprecation warning that's fixed is:\n\n```\nvendor/google/protobuf/src/Google/Protobuf/Internal/GPBDecodeException.php:14\nGoogle\\Protobuf\\Internal\\GPBDecodeException::__construct(): Implicitly marking parameter $previous as nullable is deprecated, the explicit nullable type must be used instead\n```\n\nSee also: https://php.watch/versions/8.4/implicitly-marking-parameter-type-nullable-deprecated\n\nThere are no automated tests to be added here since it simply fixes the deprecation warning.\n\nCloses #21232\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/21232 from TomA-R:php84_nullable_gpbdecodeexception 7cdcb75126d2f2443ce5142c04a740e7e6ef963b\nPiperOrigin-RevId: 749265866\n",
             "commit_timestamp": 1745044452.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1745119342.39372,
+            "elapsed_time": 430.5062789916992,
+            "x64": true,
+            "actual_files_count": 1427,
+            "expected_files_count": 818,
+            "memory_traffic": 60731.114837646484,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "676666ef57f3feb0032650212e518123addb0cac",
+            "commit_message": "Fix PHP 8.4 deprecation in GPBDecodeException (#21232)\n\nPHP 8.4 deprecates implicitly nullable parameter declarations. This patch addresses an issue in `Google\\Protobuf\\Internal\\GPBDecodeException` which triggers a deprecation warning.\n\nThe deprecation warning that's fixed is:\n\n```\nvendor/google/protobuf/src/Google/Protobuf/Internal/GPBDecodeException.php:14\nGoogle\\Protobuf\\Internal\\GPBDecodeException::__construct(): Implicitly marking parameter $previous as nullable is deprecated, the explicit nullable type must be used instead\n```\n\nSee also: https://php.watch/versions/8.4/implicitly-marking-parameter-type-nullable-deprecated\n\nThere are no automated tests to be added here since it simply fixes the deprecation warning.\n\nCloses #21232\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/21232 from TomA-R:php84_nullable_gpbdecodeexception 7cdcb75126d2f2443ce5142c04a740e7e6ef963b\nPiperOrigin-RevId: 749265866\n",
+            "commit_timestamp": 1745044452.0
         }
     ]
 }

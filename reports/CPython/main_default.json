@@ -22361,6 +22361,21 @@
             "commit_ref": "c821b715b31f03da1639b549b5ffeed13195410c",
             "commit_message": "Update entry for Willow Chargin in `.mailmap` and `ACKS` (#132714)\n\n",
             "commit_timestamp": 1745074259.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1745119588.45637,
+            "elapsed_time": 1313.8894901275635,
+            "x64": true,
+            "actual_files_count": 1128,
+            "expected_files_count": null,
+            "memory_traffic": 50168.485748291016,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "a16586c9e7a9accfe26489191b5b1ee39657ee5b",
+            "commit_message": "gh-129327: revise hashlib documentation to account for FIPS removing sha1 (GH-132729)\n\n* gh-129327: revise hashlib documentation to account for FIPS removing sha1\n\nMore generally, the current documentation is a bit scattered, talking\nabout what terms are \"equal\" despite those terms not being very\ninteresting and given the term \"secure hash\", probably wrong (because\nmd5 and sha1 are not secure anymore).\n\nLet's talk about cryptographically secure instead, and note that two of\nthem aren't. And then we can also link to the source for NIST going\nthrough the removal process for SHA1.\n\n* Add Gregors Suggestion\n\n* Clean up\n\n---------\n\nCo-authored-by: Eli Schwartz <eschwartz@gentoo.org>",
+            "commit_timestamp": 1745111184.0
         }
     ]
 }
