@@ -24991,6 +24991,21 @@
             "commit_ref": "3fe4b41f201c2d3c10a10c5e45d989be4930b2f2",
             "commit_message": "[IPHLPAPI] Retrieve DHCP information from the registry\n",
             "commit_timestamp": 1744998743.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1745161576.935062,
+            "elapsed_time": 116.25835490226746,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7261.185577392578,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "2c2cdfddd3c7189cd9639b92f2204427d0aa1f8a",
+            "commit_message": "[DHCPCSVC] Move the public header rosdhcp_public.h\n\nThis header is not to be used outside of dhcpcsvc because it contains the data structures for the communication between the client and the server part within dhcpcsvc. That is why it is moved inside of dhcpcsvc and renamed to rosdhcp_pipe.h.\n",
+            "commit_timestamp": 1745096152.0
         }
     ]
 }

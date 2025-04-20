@@ -22376,6 +22376,21 @@
             "commit_ref": "a16586c9e7a9accfe26489191b5b1ee39657ee5b",
             "commit_message": "gh-129327: revise hashlib documentation to account for FIPS removing sha1 (GH-132729)\n\n* gh-129327: revise hashlib documentation to account for FIPS removing sha1\n\nMore generally, the current documentation is a bit scattered, talking\nabout what terms are \"equal\" despite those terms not being very\ninteresting and given the term \"secure hash\", probably wrong (because\nmd5 and sha1 are not secure anymore).\n\nLet's talk about cryptographically secure instead, and note that two of\nthem aren't. And then we can also link to the source for NIST going\nthrough the removal process for SHA1.\n\n* Add Gregors Suggestion\n\n* Clean up\n\n---------\n\nCo-authored-by: Eli Schwartz <eschwartz@gentoo.org>",
             "commit_timestamp": 1745111184.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1745161687.607108,
+            "elapsed_time": 1193.3497676849365,
+            "x64": true,
+            "actual_files_count": 1128,
+            "expected_files_count": null,
+            "memory_traffic": 50255.88966369629,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "5d8e432d9ffa8285ca67833a54a07c52c58d79f3",
+            "commit_message": "gh-132390: Apply Ruff linting to `Tools/build` (#132391)\n\n---------\n\nCo-authored-by: Adam Turner <9087854+aa-turner@users.noreply.github.com>",
+            "commit_timestamp": 1745140901.0
         }
     ]
 }

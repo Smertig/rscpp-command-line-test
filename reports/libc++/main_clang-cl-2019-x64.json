@@ -7632,6 +7632,23 @@
             "commit_ref": "eb78b9b42f56c59a7fec7fae8f14b570e0a94646",
             "commit_message": "[mlir] Clean up prints with `llvm::interleaved`. NFC. (#136468)\n\n",
             "commit_timestamp": 1745117997.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1745161719.933752,
+            "elapsed_time": 92.04348421096802,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4982.538619995117,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "060f9556a2f6ef4669f1c2cd8c4a4d76748a440f",
+            "commit_message": "[clang][analyzer] Fix error path of builtin overflow (#136345)\n\nAccording to\nhttps://clang.llvm.org/docs/LanguageExtensions.html#checked-arithmetic-builtins,\nresult of builtin_*_overflow functions will be initialized even in case\nof overflow. Align analyzer logic to docs and always initialize 3rd\nargument of such builtins.\n\nCloses #136292",
+            "commit_timestamp": 1745158481.0
         }
     ]
 }

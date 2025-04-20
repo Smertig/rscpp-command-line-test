@@ -23216,6 +23216,21 @@
             "commit_ref": "3f297f1ecc9aae8875835427ab0256f98bee20ad",
             "commit_message": "runtests: add retry option to reduce flakiness\n\nAdd `--retry=<num>` option to tell runtests to retry the first `<num>`\ntests that failed. Retries aren't run right away, but added to the end\nof the test queue. Once all retry slots are used, test fail as normal.\n\nIn CI, typically a single test fails for flakiness, and rarely over 5.\n\nMake the `ci-test` targets default to `--retry=5`.\n\nCloses #17091\n",
             "commit_timestamp": 1745052118.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1745162023.537272,
+            "elapsed_time": 312.36552596092224,
+            "x64": true,
+            "actual_files_count": 3661,
+            "expected_files_count": 2323,
+            "memory_traffic": 82911.1134185791,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "929c9a7ef7d84a7d71a624d830ba891e61b2266f",
+            "commit_message": "openssl-quic: fix printf mask\n\nFixes:\n```\nlib/vquic/curl_osslq.c:835:25: error: format '%zd' expects argument of type 'signed size_t', but argument 6 has type 'curl_off_t' {aka 'long long int'} [-Werror=format=]\n  835 |   CURL_TRC_CF(data, cf, \"[%\" FMT_PRId64 \"] DATA len=%zu, total=%zd\",\n      |                         ^~~~\n  836 |               stream->s.id, buflen, stream->download_recvd);\n      |                                     ~~~~~~~~~~~~~~~~~~~~~~\n      |                                           |\n      |                                           curl_off_t {aka long long int}\n```\n\nCloses #17106\n",
+            "commit_timestamp": 1745149857.0
         }
     ]
 }
