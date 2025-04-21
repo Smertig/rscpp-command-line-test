@@ -23231,6 +23231,21 @@
             "commit_ref": "929c9a7ef7d84a7d71a624d830ba891e61b2266f",
             "commit_message": "openssl-quic: fix printf mask\n\nFixes:\n```\nlib/vquic/curl_osslq.c:835:25: error: format '%zd' expects argument of type 'signed size_t', but argument 6 has type 'curl_off_t' {aka 'long long int'} [-Werror=format=]\n  835 |   CURL_TRC_CF(data, cf, \"[%\" FMT_PRId64 \"] DATA len=%zu, total=%zd\",\n      |                         ^~~~\n  836 |               stream->s.id, buflen, stream->download_recvd);\n      |                                     ~~~~~~~~~~~~~~~~~~~~~~\n      |                                           |\n      |                                           curl_off_t {aka long long int}\n```\n\nCloses #17106\n",
             "commit_timestamp": 1745149857.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1745206267.823242,
+            "elapsed_time": 290.89790391921997,
+            "x64": true,
+            "actual_files_count": 3661,
+            "expected_files_count": 2323,
+            "memory_traffic": 83843.57247161865,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "da9494eef043aca89ebdb5e4e14fcceef52c98e7",
+            "commit_message": "tool_getparam: clear argument only when needed\n\nTest 699 verifies\n\nReported-by: bsr13 on hackerone\nCloses #17112\n",
+            "commit_timestamp": 1745183291.0
         }
     ]
 }

@@ -27757,6 +27757,23 @@
             "commit_ref": "060f9556a2f6ef4669f1c2cd8c4a4d76748a440f",
             "commit_message": "[clang][analyzer] Fix error path of builtin overflow (#136345)\n\nAccording to\nhttps://clang.llvm.org/docs/LanguageExtensions.html#checked-arithmetic-builtins,\nresult of builtin_*_overflow functions will be initialized even in case\nof overflow. Align analyzer logic to docs and always initialize 3rd\nargument of such builtins.\n\nCloses #136292",
             "commit_timestamp": 1745158481.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1745206717.731198,
+            "elapsed_time": 1617.9385907649994,
+            "x64": true,
+            "actual_files_count": 2940,
+            "expected_files_count": 1661,
+            "memory_traffic": 259629.93279266357,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "f024aab844ab89ab6455ddf1e2232a957c72328e",
+            "commit_message": "[RISCV] Remove the TODO that lbu and lhu should be selected to avoid the unnecessary masking. NFC.\n\nRISCVTargetLowering::isZExtFree has been implemented in\nhttps://github.com/llvm/llvm-project/commit/15e894baeeb96612ae471fa83d1729a2d3388fc8.\n",
+            "commit_timestamp": 1745204524.0
         }
     ]
 }

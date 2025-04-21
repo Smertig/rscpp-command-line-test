@@ -25006,6 +25006,21 @@
             "commit_ref": "2c2cdfddd3c7189cd9639b92f2204427d0aa1f8a",
             "commit_message": "[DHCPCSVC] Move the public header rosdhcp_public.h\n\nThis header is not to be used outside of dhcpcsvc because it contains the data structures for the communication between the client and the server part within dhcpcsvc. That is why it is moved inside of dhcpcsvc and renamed to rosdhcp_pipe.h.\n",
             "commit_timestamp": 1745096152.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1745205774.805281,
+            "elapsed_time": 79.76876211166382,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7397.887565612793,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "f135cab83eda3eccacb5835a7637e22ac09d3c53",
+            "commit_message": "[SETUPLIB] Add a setuplib_static library, used for the dll and the unit-tests.\n\nSince the setuplib.dll isn't available after installing ReactOS, build\ninstead a static library that is then used for the dll, and linked into\nthe setuplib_unittest, so that it can be run in our test-suite.\n\nAddendum to commit d7c1d220.\n",
+            "commit_timestamp": 1745169508.0
         }
     ]
 }
