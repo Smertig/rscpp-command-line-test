@@ -23246,6 +23246,21 @@
             "commit_ref": "da9494eef043aca89ebdb5e4e14fcceef52c98e7",
             "commit_message": "tool_getparam: clear argument only when needed\n\nTest 699 verifies\n\nReported-by: bsr13 on hackerone\nCloses #17112\n",
             "commit_timestamp": 1745183291.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1745248404.945679,
+            "elapsed_time": 284.3489818572998,
+            "x64": true,
+            "actual_files_count": 3661,
+            "expected_files_count": 2323,
+            "memory_traffic": 93568.14308166504,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "23bed347b38922779382599f8b72c4d762add7bd",
+            "commit_message": "wcurl: import v2025.04.20 script + docs\n\nBuild/install the man page. Install the script.\n\nThis an \"import\" rather than just adding the script into the release tarball\nwith maketgz to make sure the tarball build is completely reproducible.\n\nwcurl development, issues etc is still to be done at\nhttps://github.com/curl/wcurl\n\nAssisted-by: Viktor Szakats\nAssisted-by: Samuel Henrique\n\nCloses #17035\n",
+            "commit_timestamp": 1745226404.0
         }
     ]
 }
