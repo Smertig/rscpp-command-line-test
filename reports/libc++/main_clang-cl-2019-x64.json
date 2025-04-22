@@ -7700,6 +7700,23 @@
             "commit_ref": "b144258b0c0cc63dffba00a911d6539f00ed07bb",
             "commit_message": "[Clang] Improve error recovery for invalid calls (#136295)\n\nIt doesn't make sense that we only build a RecoveryExpr for expressions\nwith invalid trailing commas. This patch extends it so that we now\nalways build up a RecoveryExpr whenever the call contains anything\ninvalid. As a result, we can back out HasTrailingComma.\n\nThere is only one diagnostic change as to concepts, where a RecoveryExpr\nthan an ExprError is now used to model an invalid requires clause, for\nwhich we suggest adding parentheses around it. (This looks like what GCC\ndiagnoses)",
             "commit_timestamp": 1745289676.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1745334600.209587,
+            "elapsed_time": 81.97032451629639,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5028.552223205566,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "c5a5f4330a0014b9beafef1c75cc66dba917fa09",
+            "commit_message": "Reapply [ValueTracking] Drop ucmp/scmp from getIntrinsicRange() (NFCI)\n\nReapply after d51b2785abf77978d9218a7b6fb5b8ec6c770c31, which should\nfix optimization regressions.\n\nAfter #135642 we have a range attribute on the intrinsic declaration,\nso we should not need the special handling here.\n",
+            "commit_timestamp": 1745333742.0
         }
     ]
 }

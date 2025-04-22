@@ -23276,6 +23276,21 @@
             "commit_ref": "23bed347b38922779382599f8b72c4d762add7bd",
             "commit_message": "wcurl: import v2025.04.20 script + docs\n\nBuild/install the man page. Install the script.\n\nThis an \"import\" rather than just adding the script into the release tarball\nwith maketgz to make sure the tarball build is completely reproducible.\n\nwcurl development, issues etc is still to be done at\nhttps://github.com/curl/wcurl\n\nAssisted-by: Viktor Szakats\nAssisted-by: Samuel Henrique\n\nCloses #17035\n",
             "commit_timestamp": 1745226404.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1745334883.193795,
+            "elapsed_time": 289.86494517326355,
+            "x64": true,
+            "actual_files_count": 3661,
+            "expected_files_count": 2323,
+            "memory_traffic": 83614.47290802002,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "d60c9aec420704ce31dbb9905d3188eab9bd2cbe",
+            "commit_message": "openssl-quic: avoid potential `-Wnull-dereference`, add assert\n\nSeen with curl-for-win, OpenSSL QUIC, gcc 14.2.0, cmake unity mode.\n\nSilences:\n```\nIn file included from _x86-win-ucrt-bld/lib/CMakeFiles/libcurl_object.dir/Unity/unity_5_c.c:55:\nIn function 'cf_osslq_check_and_unblock',\n    inlined from 'cf_progress_egress' at lib/vquic/curl_osslq.c:1730:12:\nlib/vquic/curl_osslq.c:1581:11: error: potential null pointer dereference [-Werror=null-dereference]\n 1581 |           nghttp3_conn_unblock_stream(ctx->h3.conn, stream->s.id);\n      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nlib/vquic/curl_osslq.c:1582:34: error: potential null pointer dereference [-Werror=null-dereference]\n 1582 |           stream->s.send_blocked = FALSE;\n      |                                  ^\n```\n\nCo-authored-by: Daniel Stenberg\nCo-authored-by: Stefan Eissing\n\nCloses #17107\n",
+            "commit_timestamp": 1745333412.0
         }
     ]
 }

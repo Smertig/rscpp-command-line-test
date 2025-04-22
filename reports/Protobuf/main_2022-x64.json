@@ -6644,6 +6644,21 @@
             "commit_ref": "ff160aa8454916fd261c5531d8814b614fc435ad",
             "commit_message": "Add \"fast-parse\" hotness category to message layout optimizers.\n\nAll highest-likelihood fields which can fit in the fast parse table will be placed at the top of the message (after repeated fields) to guarantee low enough hasbit assignment for fast-parse eligibility.\n\nPiperOrigin-RevId: 749952009\n",
             "commit_timestamp": 1745277402.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1745334469.171961,
+            "elapsed_time": 440.9721658229828,
+            "x64": true,
+            "actual_files_count": 1428,
+            "expected_files_count": 818,
+            "memory_traffic": 60653.39225769043,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "8b31e986a1e4a2fb904aacebddca11746afd4476",
+            "commit_message": "hpb: Introduce HPB_INTERNAL_BACKEND and backend/cpp/cpp.h\n\nThis abrogates HPB_BACKEND_UPB and HPB_BACKEND_CPP. The backend is now controlled by a string_flag, which defaults to upb.\n\nNote that INTERNAL was also added -- clarifying that this macro is for internal use only.\n\nThis continues the multibackend work by stubbing the second backend in cpp.h.\n\nPiperOrigin-RevId: 750172782\n",
+            "commit_timestamp": 1745329792.0
         }
     ]
 }
