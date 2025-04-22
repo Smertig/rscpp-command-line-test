@@ -27791,6 +27791,23 @@
             "commit_ref": "1cb82ff9cd95c216f6d8da18637ee47a15bd41f6",
             "commit_message": "[clang][CIR] Fix various warnings. NFC\n\n- Fix various warnings including '-Wparentheses', '-Wunused-variable',\n  and '-Wreturn-type'.\n",
             "commit_timestamp": 1745247143.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1745292979.682056,
+            "elapsed_time": 1620.8447806835175,
+            "x64": true,
+            "actual_files_count": 2940,
+            "expected_files_count": 1661,
+            "memory_traffic": 259788.8268661499,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "b144258b0c0cc63dffba00a911d6539f00ed07bb",
+            "commit_message": "[Clang] Improve error recovery for invalid calls (#136295)\n\nIt doesn't make sense that we only build a RecoveryExpr for expressions\nwith invalid trailing commas. This patch extends it so that we now\nalways build up a RecoveryExpr whenever the call contains anything\ninvalid. As a result, we can back out HasTrailingComma.\n\nThere is only one diagnostic change as to concepts, where a RecoveryExpr\nthan an ExprError is now used to model an invalid requires clause, for\nwhich we suggest adding parentheses around it. (This looks like what GCC\ndiagnoses)",
+            "commit_timestamp": 1745289676.0
         }
     ]
 }

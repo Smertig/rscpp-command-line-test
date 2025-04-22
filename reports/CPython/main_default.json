@@ -22421,6 +22421,21 @@
             "commit_ref": "09b624b80f54e1f97812981cfff9fa374bd5360f",
             "commit_message": "gh-132639: Adds PyLong_AsNativeBytes, PyLong_FromNativeBytes and PyLong_FromUnsignedNativeBytes to the limited API (GH-132640)\n\n",
             "commit_timestamp": 1745247543.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1745292274.240063,
+            "elapsed_time": 1196.9279398918152,
+            "x64": true,
+            "actual_files_count": 1128,
+            "expected_files_count": null,
+            "memory_traffic": 50288.688568115234,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "3cfab449ab1e3c1472d2a33dc3fae3dc06c39f7b",
+            "commit_message": "gh-132578: Rename the `threading.Thread._handle` field (#132696)\n\nCommit `0e9c364f` introduced the `_handle` field on instances of\n`threading.Thread`. Unfortunately it's fairly common for subclasses\nof `threading.Thread` to define a `_handle()` method, which is shadowed\nby the new field.",
+            "commit_timestamp": 1745276874.0
         }
     ]
 }
