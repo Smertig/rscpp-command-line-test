@@ -25286,6 +25286,21 @@
             "commit_ref": "f8acc2cd4985322938e52954ae459340b79f0fef",
             "commit_message": "DOC: Add MetaIO documentation from the ITK Wiki\n\nThis adds the MetaIO documentation from the ITK MediaWiki wiki, which is\nno longer available online.\n\nThe content is generated from the March 25th, 2025 Internet Archive\nWayback Machine Archive:\n\n  https://web.archive.org/web/20250324151047/https://itk.org/Wiki/ITK/MetaIO/Documentation\n\nWith Perplexity.ai, Gemini 2.5 Pro model:\n\n  https://www.perplexity.ai/search/convert-the-attached-mediawiki-JJ7Shb.OQkar6ClwXC_puA\n\nAnd wordwrapping, a few updates for supported compilers, etc.\n",
             "commit_timestamp": 1745329361.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1745378742.247496,
+            "elapsed_time": 219.3536491394043,
+            "x64": true,
+            "actual_files_count": 101,
+            "expected_files_count": null,
+            "memory_traffic": 23880.249084472656,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "bffff060e6082f30aa65697e41455323cb953bdd",
+            "commit_message": "STYLE: Remove redundant input check from ExtractImageFilter\n\n`ExtractImageFilter::GenerateOutputInformation()` has returned already when\nthe input is null. So the \"cannot cast input\" exception at the end of the\nmember function will never occur anymore.\n\nFollow-up to pull request https://github.com/InsightSoftwareConsortium/ITK/pull/4608\ncommit 6650d2ce9036f4173f41322e01a905079f9bdab8\n\"STYLE: Simplify code to remove unneeded dynamic_cast\", Hans Johnson, May 1, 2024\n",
+            "commit_timestamp": 1745350553.0
         }
     ]
 }

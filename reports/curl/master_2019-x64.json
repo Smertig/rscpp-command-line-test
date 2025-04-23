@@ -23291,6 +23291,21 @@
             "commit_ref": "d60c9aec420704ce31dbb9905d3188eab9bd2cbe",
             "commit_message": "openssl-quic: avoid potential `-Wnull-dereference`, add assert\n\nSeen with curl-for-win, OpenSSL QUIC, gcc 14.2.0, cmake unity mode.\n\nSilences:\n```\nIn file included from _x86-win-ucrt-bld/lib/CMakeFiles/libcurl_object.dir/Unity/unity_5_c.c:55:\nIn function 'cf_osslq_check_and_unblock',\n    inlined from 'cf_progress_egress' at lib/vquic/curl_osslq.c:1730:12:\nlib/vquic/curl_osslq.c:1581:11: error: potential null pointer dereference [-Werror=null-dereference]\n 1581 |           nghttp3_conn_unblock_stream(ctx->h3.conn, stream->s.id);\n      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nlib/vquic/curl_osslq.c:1582:34: error: potential null pointer dereference [-Werror=null-dereference]\n 1582 |           stream->s.send_blocked = FALSE;\n      |                                  ^\n```\n\nCo-authored-by: Daniel Stenberg\nCo-authored-by: Stefan Eissing\n\nCloses #17107\n",
             "commit_timestamp": 1745333412.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1745379001.981723,
+            "elapsed_time": 306.59687542915344,
+            "x64": true,
+            "actual_files_count": 3661,
+            "expected_files_count": 2323,
+            "memory_traffic": 79479.14127349854,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "339464432555b9bd71a5e4a4c4e55337cb07118d",
+            "commit_message": "runtests: fix indentation [ci skip]\n\nCherry-picked from #16840\n",
+            "commit_timestamp": 1745349097.0
         }
     ]
 }

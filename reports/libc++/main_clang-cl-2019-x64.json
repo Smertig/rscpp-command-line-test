@@ -7717,6 +7717,23 @@
             "commit_ref": "c5a5f4330a0014b9beafef1c75cc66dba917fa09",
             "commit_message": "Reapply [ValueTracking] Drop ucmp/scmp from getIntrinsicRange() (NFCI)\n\nReapply after d51b2785abf77978d9218a7b6fb5b8ec6c770c31, which should\nfix optimization regressions.\n\nAfter #135642 we have a range attribute on the intrinsic declaration,\nso we should not need the special handling here.\n",
             "commit_timestamp": 1745333742.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1745378621.884439,
+            "elapsed_time": 85.29689455032349,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4983.577423095703,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "122e5151ba84560de824d46f7b636502d41f2aa0",
+            "commit_message": "gn build: Port d1cce66469d0 more\n",
+            "commit_timestamp": 1745376781.0
         }
     ]
 }

@@ -22451,6 +22451,21 @@
             "commit_ref": "3b4b56f46dbfc0c336a1f70704f127593ec1f4ce",
             "commit_message": "gh-132470: Prevent crash in ctypes.CField when `byte_size` is incorrect (#132475)\n\nFix: Prevent crash in ctypes.CField when byte_size does not match type size  (gh-132470)\n\nWhen creating a ctypes.CField with an incorrect byte_size (e.g., using `byte_size=2` for `ctypes.c_byte`), the code would previously abort due to the failed assertion `byte_size == info->size`.\n\nThis commit replaces the assertion with a proper error handling mechanism that raises a `ValueError` when `byte_size` does not match the expected type size. This prevents the crash and provides a more informative error message to the us\n\nCo-authored-by: sobolevn <mail@sobolevn.me>",
             "commit_timestamp": 1745327580.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1745378668.047408,
+            "elapsed_time": 1214.8136503696442,
+            "x64": true,
+            "actual_files_count": 1129,
+            "expected_files_count": null,
+            "memory_traffic": 50199.31677246094,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "b5bf8c80a921679b23548453565f6fd1f79901f2",
+            "commit_message": "gh-132776: Minor Fixes for XIBufferViewType (gh-132779)\n\nThis change covers the following:\n\n* dealloc: no cleanup if no buffer set\n* dealloc: handle already-destroyed interpreter correctly\n* handle errors in _memoryview_from_xid() correctly\n* clean up the buffer if the xidata is never used",
+            "commit_timestamp": 1745365040.0
         }
     ]
 }
