@@ -23306,6 +23306,21 @@
             "commit_ref": "339464432555b9bd71a5e4a4c4e55337cb07118d",
             "commit_message": "runtests: fix indentation [ci skip]\n\nCherry-picked from #16840\n",
             "commit_timestamp": 1745349097.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1745421294.385844,
+            "elapsed_time": 278.93054461479187,
+            "x64": true,
+            "actual_files_count": 3661,
+            "expected_files_count": 2323,
+            "memory_traffic": 81261.23690032959,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "5852a0bedf16813369349699aac1d650274c5e53",
+            "commit_message": "GHA: use more Ninja\n\nUse it for AmigaOS, Android, dl-mingw 7.3.0 and 6.4.0 Windows builds.\n\nAlso drop explicit ninja installs.\n\ndl-mingw:\nBefore:\n7.3.0: https://github.com/curl/curl/actions/runs/14617346216/job/41008536465\n6.4.0: https://github.com/curl/curl/actions/runs/14617346216/job/41008540878\nAfter:\n7.3.0: https://github.com/curl/curl/actions/runs/14617983032/job/41010584040?pr=17153\n6.4.0: https://github.com/curl/curl/actions/runs/14617983032/job/41010586490?pr=17153\n\nFollow-up to a36655224356c10d70bcc566ce60f82af795ca90 #17115\nRef: https://github.com/actions/runner-images/issues/11391\n\nCloses #17153\n",
+            "commit_timestamp": 1745413942.0
         }
     ]
 }

@@ -27842,6 +27842,23 @@
             "commit_ref": "122e5151ba84560de824d46f7b636502d41f2aa0",
             "commit_message": "gn build: Port d1cce66469d0 more\n",
             "commit_timestamp": 1745376781.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1745421819.200315,
+            "elapsed_time": 1671.4302043914795,
+            "x64": true,
+            "actual_files_count": 2940,
+            "expected_files_count": 1661,
+            "memory_traffic": 259916.70212554932,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "6c561604336497cbeebc90f9066a9f474458a38d",
+            "commit_message": "[libclc] Re-enable compiler warning (#136872)\n\nlibclc is now clean of code that triggers the\nbitwise-conditional-parentheses warning, so we can finally remove the\nworkaround.",
+            "commit_timestamp": 1745420355.0
         }
     ]
 }

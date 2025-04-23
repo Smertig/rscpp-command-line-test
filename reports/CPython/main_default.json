@@ -22466,6 +22466,21 @@
             "commit_ref": "b5bf8c80a921679b23548453565f6fd1f79901f2",
             "commit_message": "gh-132776: Minor Fixes for XIBufferViewType (gh-132779)\n\nThis change covers the following:\n\n* dealloc: no cleanup if no buffer set\n* dealloc: handle already-destroyed interpreter correctly\n* handle errors in _memoryview_from_xid() correctly\n* clean up the buffer if the xidata is never used",
             "commit_timestamp": 1745365040.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1745421090.465517,
+            "elapsed_time": 1299.2060477733612,
+            "x64": true,
+            "actual_files_count": 1129,
+            "expected_files_count": null,
+            "memory_traffic": 50365.104888916016,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "b2e666f30aa66b3f5e7ccbcf4e5f21e2d89e39a8",
+            "commit_message": "gh-132719: Skip multiprocessing test if missing ctypes (#132842)\n\nSkip test_lock_locked_2processes() if multiprocessing.sharedctypes is\nmissing (need ctypes).",
+            "commit_timestamp": 1745418985.0
         }
     ]
 }

@@ -25301,6 +25301,21 @@
             "commit_ref": "bffff060e6082f30aa65697e41455323cb953bdd",
             "commit_message": "STYLE: Remove redundant input check from ExtractImageFilter\n\n`ExtractImageFilter::GenerateOutputInformation()` has returned already when\nthe input is null. So the \"cannot cast input\" exception at the end of the\nmember function will never occur anymore.\n\nFollow-up to pull request https://github.com/InsightSoftwareConsortium/ITK/pull/4608\ncommit 6650d2ce9036f4173f41322e01a905079f9bdab8\n\"STYLE: Simplify code to remove unneeded dynamic_cast\", Hans Johnson, May 1, 2024\n",
             "commit_timestamp": 1745350553.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1745421034.729697,
+            "elapsed_time": 201.8659529685974,
+            "x64": true,
+            "actual_files_count": 101,
+            "expected_files_count": null,
+            "memory_traffic": 23870.955078125,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "bffff060e6082f30aa65697e41455323cb953bdd",
+            "commit_message": "STYLE: Remove redundant input check from ExtractImageFilter\n\n`ExtractImageFilter::GenerateOutputInformation()` has returned already when\nthe input is null. So the \"cannot cast input\" exception at the end of the\nmember function will never occur anymore.\n\nFollow-up to pull request https://github.com/InsightSoftwareConsortium/ITK/pull/4608\ncommit 6650d2ce9036f4173f41322e01a905079f9bdab8\n\"STYLE: Simplify code to remove unneeded dynamic_cast\", Hans Johnson, May 1, 2024\n",
+            "commit_timestamp": 1745350553.0
         }
     ]
 }
