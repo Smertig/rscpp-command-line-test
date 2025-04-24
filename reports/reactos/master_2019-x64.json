@@ -25096,6 +25096,21 @@
             "commit_ref": "d3456f5060a2bb833cf9b023f148161aedb42004",
             "commit_message": "[SHELL32] Implement IShellFolder2::GetDetailsEx (#7880)\n\n",
             "commit_timestamp": 1745270504.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1745464943.814481,
+            "elapsed_time": 90.15570783615112,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7405.282974243164,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "860262952dae38ff2346584eb84246c9caf40a2b",
+            "commit_message": "[SHELL32] Fix Deselect highlighted item in shell menus on close (#7904)\n\nCORE-18855\n\nAdd a call to _ChangeHotItem(NULL, -1, 0) in CMenuBand::OnSelect(MPOS_CANCELLEVEL) which causes to deselect currently selected item the moment the menu bands (including start menu) are closing.\nStart Menu is not destroyed when it's closed so its allocated resources can be re-used next time user wants to open it, so to keep this behavior and still not having an item selected every time you open the start menu, you have to deselect the currently selected item.\n",
+            "commit_timestamp": 1745442608.0
         }
     ]
 }

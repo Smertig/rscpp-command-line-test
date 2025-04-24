@@ -22481,6 +22481,21 @@
             "commit_ref": "b2e666f30aa66b3f5e7ccbcf4e5f21e2d89e39a8",
             "commit_message": "gh-132719: Skip multiprocessing test if missing ctypes (#132842)\n\nSkip test_lock_locked_2processes() if multiprocessing.sharedctypes is\nmissing (need ctypes).",
             "commit_timestamp": 1745418985.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1745465104.269971,
+            "elapsed_time": 1226.4247374534607,
+            "x64": true,
+            "actual_files_count": 1129,
+            "expected_files_count": null,
+            "memory_traffic": 50242.122077941895,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "a94c7528b596e9ec234f12ebeeb45fc731412b18",
+            "commit_message": "gh-132859: Run debugger scripts in their own namespaces (#132860)\n\nRun debugger scripts in their own namespaces\n\nPreviously scripts injected by `sys.remote_exec` were run with the\nglobals of the `__main__` module. Instead, run each injected script\nwith an empty set of globals. If someone really wants to use the\n`__main__` module's namespace, they can always `import __main__`.",
+            "commit_timestamp": 1745451624.0
         }
     ]
 }
