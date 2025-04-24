@@ -23336,6 +23336,21 @@
             "commit_ref": "f9f1a15699ea703da75c1e4c4f159cbbdaa325a4",
             "commit_message": "lib/src/docs/test: improve curl_easy_setopt() calls\n\nFix invokes where the argument was not the correct type.\n\nCloses #17160\n",
             "commit_timestamp": 1745444695.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1745507840.109918,
+            "elapsed_time": 324.8149194717407,
+            "x64": true,
+            "actual_files_count": 3661,
+            "expected_files_count": 2323,
+            "memory_traffic": 88372.14171600342,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "7bf576064c21fe0bb03a67c382d692ebbb9e3426",
+            "commit_message": "c-ares: really lazy init channel\n\nOnly initialize the c-ares channel when we start resolving and not\nalreads when the application sets `CURLOPT_DNS_SERVERS` and friends.\n\nCreating an ares channel takes considerable time and when we have the\nDNS information for a transfer already cached, we do not need it.\n\nCloses #17167\n",
+            "commit_timestamp": 1745496421.0
         }
     ]
 }

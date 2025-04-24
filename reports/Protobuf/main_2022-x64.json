@@ -6704,6 +6704,21 @@
             "commit_ref": "34bbd11b9a6e98a6e80acbe3ddee523d2cc5c135",
             "commit_message": "Add fast parsers for MicroString fields.\n\nMicroString is still disabled by default.\n\nPiperOrigin-RevId: 750749429\n",
             "commit_timestamp": 1745448368.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1745507169.573173,
+            "elapsed_time": 426.67824244499207,
+            "x64": true,
+            "actual_files_count": 1434,
+            "expected_files_count": 818,
+            "memory_traffic": 60831.98486328125,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "bf34ebee2801d089083977b087a2f6e65f3c7022",
+            "commit_message": "get rid of warning in zero_copy_stream_impl_lite.cc (#21414)\n\n```c\nwarning: 'return' will never be executed [-Wunreachable-code-return]\n```\n\nFixes #10154\nre #21205\n\n**EDIT:** hopefully it's obvious why it's not marked \"on behalf of\" ... guess can't really be anon if wanting to contribute to random projects, eventually. (dang it)\n\nCloses #21414\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/21414 from correabuscar:patch-1 0eace4ee7d1f0d2d1001bb0477b2e613c5286358\nPiperOrigin-RevId: 750892121\n",
+            "commit_timestamp": 1745482892.0
         }
     ]
 }
