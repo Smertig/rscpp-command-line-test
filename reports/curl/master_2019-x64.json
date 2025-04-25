@@ -23351,6 +23351,21 @@
             "commit_ref": "7bf576064c21fe0bb03a67c382d692ebbb9e3426",
             "commit_message": "c-ares: really lazy init channel\n\nOnly initialize the c-ares channel when we start resolving and not\nalreads when the application sets `CURLOPT_DNS_SERVERS` and friends.\n\nCreating an ares channel takes considerable time and when we have the\nDNS information for a transfer already cached, we do not need it.\n\nCloses #17167\n",
             "commit_timestamp": 1745496421.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1745551745.098441,
+            "elapsed_time": 267.65721893310547,
+            "x64": true,
+            "actual_files_count": 3661,
+            "expected_files_count": 2323,
+            "memory_traffic": 80532.31951141357,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "ae0ff69f7ace2b26286f3cfa8402e8ca54ccc63d",
+            "commit_message": "build: tidy up internal feature detection variables for wolfSSL\n\nSync them with the function name they detect, and sync them between\ncmake and autotools.\n\n- rename `HAVE_WOLFSSL_BIO` to `HAVE_WOLFSSL_BIO_NEW`.\n- rename `HAVE_WOLFSSL_FULL_BIO` to `HAVE_WOLFSSL_BIO_SET_SHUTDOWN`.\n- autotools: rename `WOLFSSL_NTLM` to `HAVE_WOLFSSL_DES_ECB_ENCRYPT`\n  (to sync with cmake).\n- autotools: rename `WOLFSSL_BIO` to `HAVE_WOLFSSL_BIO_NEW`\n  (to sync with cmake).\n- autotools: simplify `HAVE_WOLFSSL_DES_ECB_ENCRYPT` detection.\n\nCherry-picked from #17082\n\nCloses #17175\n",
+            "commit_timestamp": 1745531073.0
         }
     ]
 }

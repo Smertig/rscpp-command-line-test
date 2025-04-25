@@ -26823,6 +26823,21 @@
             "commit_ref": "c81cbed2b7442b04bbdcf967f1ee23286cf282f7",
             "commit_message": "Simplify test\n",
             "commit_timestamp": 1745436746.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1745551321.943112,
+            "elapsed_time": 114.46970820426941,
+            "x64": true,
+            "actual_files_count": 74,
+            "expected_files_count": 66,
+            "memory_traffic": 7879.8413009643555,
+            "repo_url": "https://github.com/fmtlib/fmt.git",
+            "commit_ref": "2d0518b5f7513ed68130d008cd92c774e617ee50",
+            "commit_message": "Fix cmake error in pedantic mode (#4426)\n\nSuppresses error:\nCMake Error (dev) at build/coverage/_deps/fmt-src/CMakeLists.txt:208 (set):\n  uninitialized variable 'CMAKE_MODULE_PATH'\nThis error is for project developers. Use -Wno-error=dev to suppress it.",
+            "commit_timestamp": 1745520093.0
         }
     ]
 }

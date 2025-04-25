@@ -25126,6 +25126,21 @@
             "commit_ref": "78e04c07b89a4913b85c48a18757941efeebbc39",
             "commit_message": "[USER32] Read the CoolSwitch settings from the registry (#7920)\n\n",
             "commit_timestamp": 1745500963.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1745551257.919936,
+            "elapsed_time": 74.24786925315857,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7297.738441467285,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "85afe48c3e44c294d08c4a8b838099f8f2fb1c97",
+            "commit_message": "[GDI32] Fix MSVC warning in SetDIBitsToDevice and simplify code. (#7919)\n\nThis is a very small revert of PR #5227 to simplify the code and eliminate an MSVC warning.\nIt was pointed out by Timo Kreuzer as probably not doing what I intended and he was correct.\nI added this code in PR #5227 to try and correct some return values from SetDIBitsToDevice.\nAfter testing with this new PR, there was no difference in the regression tests for either\n1) gdi32:bitmap or 2) gdi32:SetDIBitsToDevice after deleting the code here and the MSVC warning was fixed.",
+            "commit_timestamp": 1745546676.0
         }
     ]
 }
