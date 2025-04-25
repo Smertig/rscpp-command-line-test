@@ -23366,6 +23366,21 @@
             "commit_ref": "ae0ff69f7ace2b26286f3cfa8402e8ca54ccc63d",
             "commit_message": "build: tidy up internal feature detection variables for wolfSSL\n\nSync them with the function name they detect, and sync them between\ncmake and autotools.\n\n- rename `HAVE_WOLFSSL_BIO` to `HAVE_WOLFSSL_BIO_NEW`.\n- rename `HAVE_WOLFSSL_FULL_BIO` to `HAVE_WOLFSSL_BIO_SET_SHUTDOWN`.\n- autotools: rename `WOLFSSL_NTLM` to `HAVE_WOLFSSL_DES_ECB_ENCRYPT`\n  (to sync with cmake).\n- autotools: rename `WOLFSSL_BIO` to `HAVE_WOLFSSL_BIO_NEW`\n  (to sync with cmake).\n- autotools: simplify `HAVE_WOLFSSL_DES_ECB_ENCRYPT` detection.\n\nCherry-picked from #17082\n\nCloses #17175\n",
             "commit_timestamp": 1745531073.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1745594085.554954,
+            "elapsed_time": 287.08372616767883,
+            "x64": true,
+            "actual_files_count": 3661,
+            "expected_files_count": 2323,
+            "memory_traffic": 81118.93715667725,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "c3aa22272df5389c76cf4ed42d22a71d637ce924",
+            "commit_message": "cmake: use `CMAKE_COMPILE_WARNING_AS_ERROR` if available\n\nIt's available in CMake >= 3.24.\n\nRef: https://cmake.org/cmake/help/latest/variable/CMAKE_COMPILE_WARNING_AS_ERROR.html\n\nCloses #17183\n",
+            "commit_timestamp": 1745574144.0
         }
     ]
 }
