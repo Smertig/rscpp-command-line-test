@@ -27927,6 +27927,23 @@
             "commit_ref": "9062a38d5d15d74f8019a30b8a0012747dfad6a8",
             "commit_message": "[RISCV] Add codegen support for ri.vinsert.v.x and ri.vextract.x.v (#136708)\n\nThese instructions are included in XRivosVisni. They perform a scalar\ninsert into a vector (with a potentially non-zero index) and a scalar\nextract from a vector (with a potentially non-zero index) respectively.\nThey're very analogous to vmv.s.x and vmv.x.s respectively.\n\nThe instructions do have a couple restrictions:\n1) Only constant indices are supported w/a uimm5 format.\n2) There are no FP variants.\n\nOne important property of these instructions is that their throughput\nand latency are expected to be LMUL independent.",
             "commit_timestamp": 1745593180.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1745638391.363678,
+            "elapsed_time": 1592.904508113861,
+            "x64": true,
+            "actual_files_count": 2942,
+            "expected_files_count": 1661,
+            "memory_traffic": 260230.80587768555,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "58d60a4df92d57941f6d47d46bd5025fe6298c93",
+            "commit_message": "[clang][bytecode] Diagnose destroying already dead locals (#137357)\n\n",
+            "commit_timestamp": 1745636608.0
         }
     ]
 }

@@ -22541,6 +22541,21 @@
             "commit_ref": "17718b0503e5d1c987253641893cab98e01f4535",
             "commit_message": "gh-91048: Fix _testexternalinspection.c on FreeBSD (#132945)\n\n",
             "commit_timestamp": 1745593021.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1745637739.485735,
+            "elapsed_time": 1187.7013249397278,
+            "x64": true,
+            "actual_files_count": 1130,
+            "expected_files_count": null,
+            "memory_traffic": 50328.646797180176,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "8a4d4f37abb9fa639fdc5d7003c4067904cdcc6b",
+            "commit_message": "gh-132781: Make NotShareableError a TypeError Subclass (gh-132973)\n\nIt was a subclass of ValueError. However, shareability is a feature of types, not values.",
+            "commit_timestamp": 1745615443.0
         }
     ]
 }

@@ -23381,6 +23381,21 @@
             "commit_ref": "c3aa22272df5389c76cf4ed42d22a71d637ce924",
             "commit_message": "cmake: use `CMAKE_COMPILE_WARNING_AS_ERROR` if available\n\nIt's available in CMake >= 3.24.\n\nRef: https://cmake.org/cmake/help/latest/variable/CMAKE_COMPILE_WARNING_AS_ERROR.html\n\nCloses #17183\n",
             "commit_timestamp": 1745574144.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1745637953.690824,
+            "elapsed_time": 282.4267404079437,
+            "x64": true,
+            "actual_files_count": 3661,
+            "expected_files_count": 2323,
+            "memory_traffic": 83526.73415374756,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "15839450be1640580df1c3bf449f0b7e73684419",
+            "commit_message": "urlapi: redirecting to \"\" is considered fine\n\nIf the CURLU handle already holds a proper URL, otherwise it is an\nerror.\n\nVerified by test 1560\n\nFixes #17188\nReported-by: zopsicle on github\nCloses #17189\n",
+            "commit_timestamp": 1745613484.0
         }
     ]
 }
