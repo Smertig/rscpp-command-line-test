@@ -23396,6 +23396,21 @@
             "commit_ref": "15839450be1640580df1c3bf449f0b7e73684419",
             "commit_message": "urlapi: redirecting to \"\" is considered fine\n\nIf the CURLU handle already holds a proper URL, otherwise it is an\nerror.\n\nVerified by test 1560\n\nFixes #17188\nReported-by: zopsicle on github\nCloses #17189\n",
             "commit_timestamp": 1745613484.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1745680338.896313,
+            "elapsed_time": 269.55270075798035,
+            "x64": true,
+            "actual_files_count": 3661,
+            "expected_files_count": 2323,
+            "memory_traffic": 81305.61237335205,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "c5d63c6b4c13186669e3dbc6d437a797ec2a419f",
+            "commit_message": "GHA/windows: add gcc-15 job\n\nIt's taking 2.5 minutes and planned for removal when MSYS2 gcc-15 gets\ndeployed in CI.\n\n15.0.1 builds significantly faster than 9.5.0. (But still slower than\n7.3.0 and 6.4.0)\n\nRef: https://github.com/msys2/MINGW-packages/commit/f59921184b35858d4ceb91679578de0d62475cbf\nRef: https://github.com/msys2/MINGW-packages/pull/24037\n\nCloses #17190\n",
+            "commit_timestamp": 1745674670.0
         }
     ]
 }
