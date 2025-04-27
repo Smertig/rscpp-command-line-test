@@ -27961,6 +27961,23 @@
             "commit_ref": "d59163092dfa7ec94391121ffdcb7b9b0e58f3b4",
             "commit_message": "[CIR] Upstream initial support for fixed size VectorType (#136488)\n\nThis change adds the initial support for VectorType\n\nIssue #136487",
             "commit_timestamp": 1745676703.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1745725025.081055,
+            "elapsed_time": 1589.6284453868866,
+            "x64": true,
+            "actual_files_count": 2942,
+            "expected_files_count": 1661,
+            "memory_traffic": 259678.67002105713,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "6c3373534305a2ce23dd939344dd0a387a09fe88",
+            "commit_message": "[RISCV] Allow `Zicsr`/`Zifencei` to duplicate with `g` (#136842)\n\nThis matches GCC and we supported it in LLVM 17/18.\n\nFixes #136803",
+            "commit_timestamp": 1745723567.0
         }
     ]
 }

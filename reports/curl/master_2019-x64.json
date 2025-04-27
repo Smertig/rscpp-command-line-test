@@ -23411,6 +23411,21 @@
             "commit_ref": "c5d63c6b4c13186669e3dbc6d437a797ec2a419f",
             "commit_message": "GHA/windows: add gcc-15 job\n\nIt's taking 2.5 minutes and planned for removal when MSYS2 gcc-15 gets\ndeployed in CI.\n\n15.0.1 builds significantly faster than 9.5.0. (But still slower than\n7.3.0 and 6.4.0)\n\nRef: https://github.com/msys2/MINGW-packages/commit/f59921184b35858d4ceb91679578de0d62475cbf\nRef: https://github.com/msys2/MINGW-packages/pull/24037\n\nCloses #17190\n",
             "commit_timestamp": 1745674670.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1745724584.609544,
+            "elapsed_time": 310.6463270187378,
+            "x64": true,
+            "actual_files_count": 3661,
+            "expected_files_count": 2323,
+            "memory_traffic": 86678.41728210449,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "e9a35ded8a3057bd3135aef61bbfec6f7296886b",
+            "commit_message": "curl_osslq: remove a leftover debug fprintf() call\n\nReported-by: xiadnoring on github\nFixes #17198\nCloses #17202\n",
+            "commit_timestamp": 1745703787.0
         }
     ]
 }
