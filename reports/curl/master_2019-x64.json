@@ -23426,6 +23426,21 @@
             "commit_ref": "e9a35ded8a3057bd3135aef61bbfec6f7296886b",
             "commit_message": "curl_osslq: remove a leftover debug fprintf() call\n\nReported-by: xiadnoring on github\nFixes #17198\nCloses #17202\n",
             "commit_timestamp": 1745703787.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1745766918.814557,
+            "elapsed_time": 289.86498761177063,
+            "x64": true,
+            "actual_files_count": 3661,
+            "expected_files_count": 2323,
+            "memory_traffic": 80246.31192779541,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "e2a23d5d0d566105237acec37a2c22a6f79cee3e",
+            "commit_message": "cmake: extend integration tests\n\n- GHA: add cmake integration tests for Windows.\n- make them run faster with prefill, unity, Ninja, omitting curl tool.\n- also test static libcurl.\n- add old-cmake support with auto-detection.\n- auto-detect Ninja.\n- run consumer test apps to see if they work.\n- add support for Windows.\n- make it more verbose.\n- re-add `ExternalProject` cmake consumer test. It's broken.\n- tidy up terminology.\n\nCherry-picked from #16973\nCloses #17203\n",
+            "commit_timestamp": 1745752959.0
         }
     ]
 }
