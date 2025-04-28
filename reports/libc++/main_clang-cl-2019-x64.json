@@ -7904,6 +7904,23 @@
             "commit_ref": "c21531895a5d5e6ffc349d6e229d71dd1463860a",
             "commit_message": "[clang] Fix and test triviality of __ptrauth types (#137474)\n\nAddress-discriminated __ptrauth types do not have unique object\nrepresentations so they are not trivially comparable. Test all other\ntrivialities too even though they are not incorrect.\n\nFixes #137473",
             "commit_timestamp": 1745809669.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1745853032.152246,
+            "elapsed_time": 72.11646389961243,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4971.186050415039,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "258e1438c23c20cfe5c4908633401ab0adf4a364",
+            "commit_message": "[OpenACC][CIR][NFC] Refactor to move 'loop' emit into its own file\n\nThe 'loop' emit for OpenACC is particularly complicated/involved, so it\nmakes sense to be in its own file. This patch splits it out into its own\nfile, as well as the clause emitter code (as loop is going to require\n    that).\n",
+            "commit_timestamp": 1745852352.0
         }
     ]
 }

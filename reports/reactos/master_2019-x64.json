@@ -25231,6 +25231,21 @@
             "commit_ref": "378a335468a6e27fc0e4d7fc4b3fda2957bc4c74",
             "commit_message": "[SHELL32] Don't pass menu band hwnd to InvokeCommand (#7945)\n\nThe menu band window is about to go away, don't pass it to InvokeCommand because it's invalid as an owner window for any dialogs the callee might display.",
             "commit_timestamp": 1745792655.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1745852830.664556,
+            "elapsed_time": 99.65093660354614,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7232.863174438477,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "f19c62c80ea2fa5990ed9f0cf1688c5a3d3f39fc",
+            "commit_message": "[EXPLORER][SHELL32][SHELL32_APITEST][SDK] AppBar: Initial support (#7778)\n\nSupporting AppBars.\nJIRA issue: CORE-7237\n- Rewrite shell32!SHAppBarMessage\n  function.\n- Introduce CAppBarManager class in\n  base/shell/explorer/appbar.cpp.\n- Add support of ABM_NEW,\n  ABM_REMOVE, ABM_QUERYPOS,\n  and ABM_SETPOS messages for\n  AppBar in Tray Window.",
+            "commit_timestamp": 1745834893.0
         }
     ]
 }
