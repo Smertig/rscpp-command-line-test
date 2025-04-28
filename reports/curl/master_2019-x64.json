@@ -23441,6 +23441,21 @@
             "commit_ref": "e2a23d5d0d566105237acec37a2c22a6f79cee3e",
             "commit_message": "cmake: extend integration tests\n\n- GHA: add cmake integration tests for Windows.\n- make them run faster with prefill, unity, Ninja, omitting curl tool.\n- also test static libcurl.\n- add old-cmake support with auto-detection.\n- auto-detect Ninja.\n- run consumer test apps to see if they work.\n- add support for Windows.\n- make it more verbose.\n- re-add `ExternalProject` cmake consumer test. It's broken.\n- tidy up terminology.\n\nCherry-picked from #16973\nCloses #17203\n",
             "commit_timestamp": 1745752959.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1745811272.585648,
+            "elapsed_time": 294.5252158641815,
+            "x64": true,
+            "actual_files_count": 3661,
+            "expected_files_count": 2323,
+            "memory_traffic": 81245.41514587402,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "460ead61b6feec048a66914fe9281676fef21018",
+            "commit_message": "tests: add basic ECH tests\n\nTest 4000 and 4001\n\nCloses #17192\n",
+            "commit_timestamp": 1745768307.0
         }
     ]
 }

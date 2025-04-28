@@ -25216,6 +25216,21 @@
             "commit_ref": "d1aa59982d8d4cefb349e2b68b8491212461e7dd",
             "commit_message": "[EVENTVWR] Fix \"Bytes\" and \"Word\" buttons enabled with empty entry (#7921)\n\nCORE-20037",
             "commit_timestamp": 1745764285.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1745810653.890625,
+            "elapsed_time": 119.53935360908508,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7267.57332611084,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "378a335468a6e27fc0e4d7fc4b3fda2957bc4c74",
+            "commit_message": "[SHELL32] Don't pass menu band hwnd to InvokeCommand (#7945)\n\nThe menu band window is about to go away, don't pass it to InvokeCommand because it's invalid as an owner window for any dialogs the callee might display.",
+            "commit_timestamp": 1745792655.0
         }
     ]
 }
