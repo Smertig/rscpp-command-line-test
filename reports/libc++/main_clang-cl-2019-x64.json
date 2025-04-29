@@ -7938,6 +7938,23 @@
             "commit_ref": "a37e475efc223bae903dc80373b0e36317f4bc7e",
             "commit_message": "[lldb] Rely on operator== for std::vector (NFC)\n\nRely on operator== for std::vector instead of comparing the elements in\nthe vector element by element,\n",
             "commit_timestamp": 1745896256.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1745939458.70574,
+            "elapsed_time": 98.64348721504211,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4997.40803527832,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "cf7301aeb808a13fe882a4b0bf7f1bfe4051c301",
+            "commit_message": "[lldb] Disable the process architecture test on macOS as well\n\nFails on the x86_64 bot.\n",
+            "commit_timestamp": 1745938763.0
         }
     ]
 }

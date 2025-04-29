@@ -25261,6 +25261,21 @@
             "commit_ref": "be87e0099f59bed2842d3b64db6d112d57cf332b",
             "commit_message": "[SHELL32] Return correct CSIDL for \"Network Connections\" menu item (#7938)\n\nFixes erroneous addition of \"Properties\" item into its context menu.\n\n- Addendum to 0241b5c4e93 and 5aaead3fdb1. CORE-20152\n- Also remove FIXME for CORE-19477 which is fixed now. CORE-20151",
             "commit_timestamp": 1745869498.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1745939238.096747,
+            "elapsed_time": 77.77369904518127,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7416.759971618652,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "b1cf981c52f5d01774eca1b0dde77ee3fa3322a3",
+            "commit_message": "[PSDK] Add missing hMonitor member in union with hIcon in SHELLEXECUTEINFOA/W\n\nAs documented in the official MS PSDK and MSDN.\n",
+            "commit_timestamp": 1745936723.0
         }
     ]
 }

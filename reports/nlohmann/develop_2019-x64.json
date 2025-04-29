@@ -26953,6 +26953,21 @@
             "commit_ref": "eef76c200e1d5b88a2cf0b5264756c4a020a88db",
             "commit_message": "Make library work with C++20 modules (#4764)\n\n* :white_check_mark: add test for C++20 modules\n\nSigned-off-by: Niels Lohmann <mail@nlohmann.me>\n\n* :rotating_light: fix warning\n\nSigned-off-by: Niels Lohmann <mail@nlohmann.me>\n\n* Add missing header (#4763)\n\n* :bug: add missing header\n\nSigned-off-by: Niels Lohmann <mail@nlohmann.me>\n\n* :rotating_light: fix warning\n\nSigned-off-by: Niels Lohmann <mail@nlohmann.me>\n\n* :rotating_light: fix warning\n\nSigned-off-by: Niels Lohmann <mail@nlohmann.me>\n\n---------\n\nSigned-off-by: Niels Lohmann <mail@nlohmann.me>\n\n---------\n\nSigned-off-by: Niels Lohmann <mail@nlohmann.me>",
             "commit_timestamp": 1745869946.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1745939211.224383,
+            "elapsed_time": 236.3242769241333,
+            "x64": true,
+            "actual_files_count": 93,
+            "expected_files_count": 85,
+            "memory_traffic": 22143.575592041016,
+            "repo_url": "https://github.com/nlohmann/json",
+            "commit_ref": "dff2b4756cedca462721dc9666a2fbc05d47b486",
+            "commit_message": "fix: BJData size calculation overflow (#4765)\n\nAdds pre-multiplication overflow detection to catch cases where dimension\nproducts would exceed size_t max. The previous check only detected when\noverflow resulted in exactly 0 or SIZE_MAX, missing other cases.\n\nRetains the original post-multiplication check for backward compatibility.\nAdds tests verifying overflow detection with dimensions (2^32+1)\u00d7(2^32),\nwhich previously overflowed silently to 2^32.\n\nThis prevents custom SAX handlers from receiving incorrect array sizes\nthat could lead to buffer overflows.\n\nSigned-off-by: Ville Vesilehto <ville@vesilehto.fi>",
+            "commit_timestamp": 1745914670.0
         }
     ]
 }

@@ -23486,6 +23486,21 @@
             "commit_ref": "da33c1e349d3289d6af3d0458cf4ae9eeba52b38",
             "commit_message": "cfilters: remove assert\n\nThe OSS-fuzz probe reaches this, so it can apparently in run-time. There\nis already a run-time handling of the situation.\n\nCloses #17211\n",
             "commit_timestamp": 1745873141.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1745939813.37956,
+            "elapsed_time": 316.1570601463318,
+            "x64": true,
+            "actual_files_count": 3665,
+            "expected_files_count": 2323,
+            "memory_traffic": 93864.05160522461,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "ea897fddfce5ee0cb665f79d033005ecf92084b7",
+            "commit_message": "openssl: set the cipher string before doing private cert\n\n... as this allows a set string to affect how OpenSSL deals with the\nprivate keys/certs.\n\nCloses #17227\n",
+            "commit_timestamp": 1745936268.0
         }
     ]
 }

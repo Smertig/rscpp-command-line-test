@@ -22646,6 +22646,21 @@
             "commit_ref": "219d8d24b5c06efe0f002de38b8a476f69da0813",
             "commit_message": "gh-87859: Track Code Object Local Kinds For Arguments (gh-132980)\n\nDoing this was always the intention. I was finally motivated to find the time to do it.\n\nSee #87859 (comment).",
             "commit_timestamp": 1745893307.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1745939435.053225,
+            "elapsed_time": 1227.9238319396973,
+            "x64": true,
+            "actual_files_count": 1130,
+            "expected_files_count": null,
+            "memory_traffic": 50376.33736419678,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "02cd6d709709e28c7a8fa62ce3620ea000b524d3",
+            "commit_message": "gh-130317: Fix strict aliasing in PyFloat_Pack8() (#133150)\n\n* Fix strict aliasing in PyFloat_Pack8() and PyFloat_Pack4().\n* Fix _testcapi.float_set_snan() on x86 (32-bit).",
+            "commit_timestamp": 1745936870.0
         }
     ]
 }
