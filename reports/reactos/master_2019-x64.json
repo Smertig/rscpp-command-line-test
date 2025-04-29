@@ -25246,6 +25246,21 @@
             "commit_ref": "f19c62c80ea2fa5990ed9f0cf1688c5a3d3f39fc",
             "commit_message": "[EXPLORER][SHELL32][SHELL32_APITEST][SDK] AppBar: Initial support (#7778)\n\nSupporting AppBars.\nJIRA issue: CORE-7237\n- Rewrite shell32!SHAppBarMessage\n  function.\n- Introduce CAppBarManager class in\n  base/shell/explorer/appbar.cpp.\n- Add support of ABM_NEW,\n  ABM_REMOVE, ABM_QUERYPOS,\n  and ABM_SETPOS messages for\n  AppBar in Tray Window.",
             "commit_timestamp": 1745834893.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1745896948.360726,
+            "elapsed_time": 117.27123069763184,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7365.889595031738,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "be87e0099f59bed2842d3b64db6d112d57cf332b",
+            "commit_message": "[SHELL32] Return correct CSIDL for \"Network Connections\" menu item (#7938)\n\nFixes erroneous addition of \"Properties\" item into its context menu.\n\n- Addendum to 0241b5c4e93 and 5aaead3fdb1. CORE-20152\n- Also remove FIXME for CORE-19477 which is fixed now. CORE-20151",
+            "commit_timestamp": 1745869498.0
         }
     ]
 }

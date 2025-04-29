@@ -25668,6 +25668,21 @@
             "commit_ref": "c51743268bcbe5c5af1bd78bcacaefe7f6fe3391",
             "commit_message": "Sync to upstream/release/671 (#1787)\n\n# General\n\n* Internally rename `ClassType` to `ExternType`. In definition files,\nthe syntax to define these types has changed to `declare extern type Foo\nwith prop: type end`\n* Add `luarequire_registermodule` to Luau.Require\n* Support yieldable Luau C functions calling other functions\n* Store return types as `AstTypePack*` on Ast nodes\n\n## New Solver\n\n* Improve the logic that determines constraint dispatch ordering\n* Fix a crash in the type solver that arose when using multi-return\nfunctions with `string.format`\n* Fix https://github.com/luau-lang/luau/issues/1736\n* Initial steps toward rethinking function generalization:\n* Instead of generalizing every type in a function all at once, we will\ninstead generalize individual type variables once their bounds have been\nfully resolved. This will make it possible to properly interleave type\nfunction reduction and generalization.\n* Magic functions are no longer considered magical in cases where they\nare not explicitly called by the code.\n* The most prominent example of this is in `for..in` loops where the\nfunction call is part of the desugaring process.\n* Almost all magic functions work by directly inspecting the AST, so\nthey can't work without an AST fragment anyway.\n* Further, none of the magic functions we have are usefully used in this\nway.\n\nCo-authored-by: Andy Friesen <afriesen@roblox.com>\nCo-authored-by: Ariel Weiss <aaronweiss@roblox.com>\nCo-authored-by: Hunter Goldstein <hgoldstein@roblox.com>\nCo-authored-by: Sora Kanosue <skanosue@roblox.com>\nCo-authored-by: Talha Pathan <tpathan@roblox.com>\nCo-authored-by: Varun Saini <vsaini@roblox.com>\nCo-authored-by: Vighnesh Vijay <vvijay@roblox.com>\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>",
             "commit_timestamp": 1745615967.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1745896903.10131,
+            "elapsed_time": 289.09157705307007,
+            "x64": true,
+            "actual_files_count": 504,
+            "expected_files_count": 379,
+            "memory_traffic": 36198.220542907715,
+            "repo_url": "https://github.com/luau-lang/luau",
+            "commit_ref": "d9aa88e772a7a460272e3efc79f029b64ac18022",
+            "commit_message": "Fix crash when `require` is called from root VM stack (#1788)\n\nCopied from #1785:\n> If require is called from the root interpreter stack (e.g. using C\nAPI) then lua_getinfo call will not succeed, leaving garbage in\nlua_Debug ar struct.\n> Accessing later ar.source as null-terminated string is unsafe and can\ncause a crash.\n> \n> This PR adds a check to ensure that lua_getinfo call is successful.\n\nCo-authored-by: Alex Orlenko <zxteam@protonmail.com>",
+            "commit_timestamp": 1745864143.0
         }
     ]
 }

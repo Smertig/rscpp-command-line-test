@@ -22631,6 +22631,21 @@
             "commit_ref": "c2eaeee3dc3306ca486b0377b07b1a957584b691",
             "commit_message": "gh-132915: Try to detect a buffer overflow in fcntl() and ioctl() (GH-132919)\n\nSystemError is raised when buffer overflow is detected.\nThe stack and memory can already be corrupted, so treat this error as fatal.\n",
             "commit_timestamp": 1745852170.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1745897116.301703,
+            "elapsed_time": 1695.9742214679718,
+            "x64": true,
+            "actual_files_count": 1130,
+            "expected_files_count": null,
+            "memory_traffic": 50460.755126953125,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "219d8d24b5c06efe0f002de38b8a476f69da0813",
+            "commit_message": "gh-87859: Track Code Object Local Kinds For Arguments (gh-132980)\n\nDoing this was always the intention. I was finally motivated to find the time to do it.\n\nSee #87859 (comment).",
+            "commit_timestamp": 1745893307.0
         }
     ]
 }

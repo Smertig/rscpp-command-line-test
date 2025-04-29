@@ -23471,6 +23471,21 @@
             "commit_ref": "69ce9a7feb0ef854940daec75fc91d13bcd68400",
             "commit_message": "progress: avoid integer overflow when gathering total transfer size\n\nReported by OSS-fuzz\n\nCloses #17207\n",
             "commit_timestamp": 1745847090.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1745897465.975193,
+            "elapsed_time": 280.8605360984802,
+            "x64": true,
+            "actual_files_count": 3661,
+            "expected_files_count": 2323,
+            "memory_traffic": 81715.91854095459,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "da33c1e349d3289d6af3d0458cf4ae9eeba52b38",
+            "commit_message": "cfilters: remove assert\n\nThe OSS-fuzz probe reaches this, so it can apparently in run-time. There\nis already a run-time handling of the situation.\n\nCloses #17211\n",
+            "commit_timestamp": 1745873141.0
         }
     ]
 }
