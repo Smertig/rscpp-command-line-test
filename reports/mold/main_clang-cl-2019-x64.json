@@ -23196,6 +23196,21 @@
             "commit_ref": "41079c64f5379a67ab2015539120c193e3e6cda3",
             "commit_message": "[arm32be] Report error if --be8 is missing\n",
             "commit_timestamp": 1745969089.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1746025772.70061,
+            "elapsed_time": 155.78527855873108,
+            "x64": true,
+            "actual_files_count": 668,
+            "expected_files_count": null,
+            "memory_traffic": 16852.359855651855,
+            "repo_url": "https://github.com/rui314/mold",
+            "commit_ref": "8bae43b842f1ded33830a95b8fc7ba8b0a53086f",
+            "commit_message": "Make --default-symver work with version scripts\n\nPreviously, symbols specified with the `global:` label were unversioned\neven if --default-symver was given. Now, such symbols are versioned with\nthe output file's soname.\n\nFixes https://github.com/rui314/mold/issues/1448\n",
+            "commit_timestamp": 1746013509.0
         }
     ]
 }
