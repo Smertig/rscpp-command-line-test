@@ -26598,6 +26598,21 @@
             "commit_ref": "c19058b4e5ebab2f3cfe79c5267c28e1654e6c6a",
             "commit_message": "deps: Update nanobind_bazel to v2.7.0 (#1970)\n\nBuilds bindings with nanobind v2.7.0, which contains a few bug fixes and improvements.",
             "commit_timestamp": 1745333791.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1745983292.429288,
+            "elapsed_time": 77.15223336219788,
+            "x64": true,
+            "actual_files_count": 94,
+            "expected_files_count": 86,
+            "memory_traffic": 5249.012145996094,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "0e08459200b79c9e91dda70e1eebd7a5dcace763",
+            "commit_message": "Fix error handling of getloadavg (#1974)\n\ngetloadavg returns with -1 if cannot obtain load average, but the\ncurrent source casts the return value to size_t right away. The cast\nresult for such a case is probably maximum unsigned long int, so the\nresizing of the res vector is certainly going to fail.\n\nThis change keeps the original return type of getloadavg and casts it\njust before the resizing of the res vector.",
+            "commit_timestamp": 1745947031.0
         }
     ]
 }

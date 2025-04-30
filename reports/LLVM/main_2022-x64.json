@@ -28063,6 +28063,23 @@
             "commit_ref": "cf7301aeb808a13fe882a4b0bf7f1bfe4051c301",
             "commit_message": "[lldb] Disable the process architecture test on macOS as well\n\nFails on the x86_64 bot.\n",
             "commit_timestamp": 1745938763.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1745984246.492354,
+            "elapsed_time": 1618.0170452594757,
+            "x64": true,
+            "actual_files_count": 2942,
+            "expected_files_count": 1661,
+            "memory_traffic": 259677.8223876953,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "23c3c4e40304f7c05fd77e45d26c846779b37ed5",
+            "commit_message": "[clang][NFC] Convert `Parser::ObjCTypeQual` to scoped enum\n",
+            "commit_timestamp": 1745983173.0
         }
     ]
 }
