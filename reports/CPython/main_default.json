@@ -22706,6 +22706,21 @@
             "commit_ref": "ecbc16a9158f6b6e127cf64ad2dc598d6ee2bd6f",
             "commit_message": "Bump the HACL* revision. (#133226)\n\nBump the HACL* revision to include iOS platform identification.",
             "commit_timestamp": 1746068269.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1746112260.167689,
+            "elapsed_time": 1229.841307401657,
+            "x64": true,
+            "actual_files_count": 1136,
+            "expected_files_count": null,
+            "memory_traffic": 50757.13227844238,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "ad2f0884b16e6af4087ba078d2255d4c81ae8e96",
+            "commit_message": "gh-130317: Fix test_pack_unpack_roundtrip() and add docs (#133204)\n\n* Skip sNaN's testing in 32-bit mode.\n* Drop float_set_snan() helper.\n* Use memcpy() workaround for sNaN's in PyFloat_Unpack4().\n* Document, that sNaN's may not be preserved by PyFloat_Pack/Unpack API.",
+            "commit_timestamp": 1746109236.0
         }
     ]
 }

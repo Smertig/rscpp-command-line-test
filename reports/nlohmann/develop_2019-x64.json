@@ -27013,6 +27013,21 @@
             "commit_ref": "dff2b4756cedca462721dc9666a2fbc05d47b486",
             "commit_message": "fix: BJData size calculation overflow (#4765)\n\nAdds pre-multiplication overflow detection to catch cases where dimension\nproducts would exceed size_t max. The previous check only detected when\noverflow resulted in exactly 0 or SIZE_MAX, missing other cases.\n\nRetains the original post-multiplication check for backward compatibility.\nAdds tests verifying overflow detection with dimensions (2^32+1)\u00d7(2^32),\nwhich previously overflowed silently to 2^32.\n\nThis prevents custom SAX handlers from receiving incorrect array sizes\nthat could lead to buffer overflows.\n\nSigned-off-by: Ville Vesilehto <ville@vesilehto.fi>",
             "commit_timestamp": 1745914670.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1746112090.848738,
+            "elapsed_time": 303.4662308692932,
+            "x64": true,
+            "actual_files_count": 93,
+            "expected_files_count": 85,
+            "memory_traffic": 22138.961463928223,
+            "repo_url": "https://github.com/nlohmann/json",
+            "commit_ref": "dff2b4756cedca462721dc9666a2fbc05d47b486",
+            "commit_message": "fix: BJData size calculation overflow (#4765)\n\nAdds pre-multiplication overflow detection to catch cases where dimension\nproducts would exceed size_t max. The previous check only detected when\noverflow resulted in exactly 0 or SIZE_MAX, missing other cases.\n\nRetains the original post-multiplication check for backward compatibility.\nAdds tests verifying overflow detection with dimensions (2^32+1)\u00d7(2^32),\nwhich previously overflowed silently to 2^32.\n\nThis prevents custom SAX handlers from receiving incorrect array sizes\nthat could lead to buffer overflows.\n\nSigned-off-by: Ville Vesilehto <ville@vesilehto.fi>",
+            "commit_timestamp": 1745914670.0
         }
     ]
 }

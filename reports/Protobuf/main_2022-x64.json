@@ -6914,6 +6914,21 @@
             "commit_ref": "653fa8ad7cf6cee7a34e93bfa86b5ab58ebf8564",
             "commit_message": "Auto-generate files after cl/753369172\n",
             "commit_timestamp": 1746058816.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1746112016.221281,
+            "elapsed_time": 441.2398211956024,
+            "x64": true,
+            "actual_files_count": 1432,
+            "expected_files_count": 818,
+            "memory_traffic": 60844.96334075928,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "ede412500433f7f26c9afb988f78c89d48fe2d22",
+            "commit_message": "hpb: push strip_nonfunction_codegen to Context and remove fasttable_enabled\n\nWe're going to bifurcate betwixt hpb(cpp) and hpb(upb) soon, but let's do some helper func cleanup so that we don't propagate these extra args when we can just add them to Context easily.\n\nPiperOrigin-RevId: 753582596\n",
+            "commit_timestamp": 1746109868.0
         }
     ]
 }

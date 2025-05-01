@@ -25743,6 +25743,21 @@
             "commit_ref": "d9aa88e772a7a460272e3efc79f029b64ac18022",
             "commit_message": "Fix crash when `require` is called from root VM stack (#1788)\n\nCopied from #1785:\n> If require is called from the root interpreter stack (e.g. using C\nAPI) then lua_getinfo call will not succeed, leaving garbage in\nlua_Debug ar struct.\n> Accessing later ar.source as null-terminated string is unsafe and can\ncause a crash.\n> \n> This PR adds a check to ensure that lua_getinfo call is successful.\n\nCo-authored-by: Alex Orlenko <zxteam@protonmail.com>",
             "commit_timestamp": 1745864143.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1746112017.195997,
+            "elapsed_time": 309.86510133743286,
+            "x64": true,
+            "actual_files_count": 504,
+            "expected_files_count": 379,
+            "memory_traffic": 36216.637756347656,
+            "repo_url": "https://github.com/luau-lang/luau",
+            "commit_ref": "d9aa88e772a7a460272e3efc79f029b64ac18022",
+            "commit_message": "Fix crash when `require` is called from root VM stack (#1788)\n\nCopied from #1785:\n> If require is called from the root interpreter stack (e.g. using C\nAPI) then lua_getinfo call will not succeed, leaving garbage in\nlua_Debug ar struct.\n> Accessing later ar.source as null-terminated string is unsafe and can\ncause a crash.\n> \n> This PR adds a check to ensure that lua_getinfo call is successful.\n\nCo-authored-by: Alex Orlenko <zxteam@protonmail.com>",
+            "commit_timestamp": 1745864143.0
         }
     ]
 }

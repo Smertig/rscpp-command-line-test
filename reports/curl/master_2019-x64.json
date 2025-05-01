@@ -23546,6 +23546,21 @@
             "commit_ref": "68369a3198d22acfd5e50bb9054c1c533fdd1cad",
             "commit_message": "mkhelp: fix to not generate a line-ending space in some cases\n\nFixing gcc-15:\n```\nbld/src/tool_hugehelp.c:11739:1: error: trailing whitespace [-Werror=trailing-whitespace=]\n```\nRef: https://github.com/curl/curl/actions/runs/14758743743/job/41433794102?pr=17239#step:10:32\n\nCloses #17240\n",
             "commit_timestamp": 1746044065.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1746112480.348001,
+            "elapsed_time": 286.48541355133057,
+            "x64": true,
+            "actual_files_count": 3665,
+            "expected_files_count": 2323,
+            "memory_traffic": 83479.2142944336,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "c27ba7aa9386e9da4da3c41e1a2a01026da54fcd",
+            "commit_message": "GHA: Update libressl-portable/portable to v4.1.0\n\nCloses #17234\n",
+            "commit_timestamp": 1746094399.0
         }
     ]
 }

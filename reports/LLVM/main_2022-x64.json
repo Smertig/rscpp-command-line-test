@@ -28114,6 +28114,23 @@
             "commit_ref": "e6d7f46ce9a6ffdfc206802131e0d79afb624b3f",
             "commit_message": "[clang-format] Correctly annotate user-defined conversion function call (#137914)\n\nFix #137770",
             "commit_timestamp": 1746068880.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1746113006.034961,
+            "elapsed_time": 1639.2984561920166,
+            "x64": true,
+            "actual_files_count": 2942,
+            "expected_files_count": 1661,
+            "memory_traffic": 260367.2745666504,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "7ffaaf47528ff42d4c037e1b003d940e51347db5",
+            "commit_message": "[Clang] Warning as error for fold expressions over comparison operators (#136836)\n\nWe made chained comparisons an error.\nFold-expressions over a comparison operator produce chained comparisons,\nso we should be consistent there too.\n\nWe only emit the warning when instantiating the fold expression so as\nnot to warn on types with user-defined comparisons.\n\nPartially addresses #129570",
+            "commit_timestamp": 1746111603.0
         }
     ]
 }

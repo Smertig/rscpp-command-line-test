@@ -26643,6 +26643,21 @@
             "commit_ref": "0e08459200b79c9e91dda70e1eebd7a5dcace763",
             "commit_message": "Fix error handling of getloadavg (#1974)\n\ngetloadavg returns with -1 if cannot obtain load average, but the\ncurrent source casts the return value to size_t right away. The cast\nresult for such a case is probably maximum unsigned long int, so the\nresizing of the res vector is certainly going to fail.\n\nThis change keeps the original return type of getloadavg and casts it\njust before the resizing of the res vector.",
             "commit_timestamp": 1745947031.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1746112168.533384,
+            "elapsed_time": 193.96450233459473,
+            "x64": true,
+            "actual_files_count": 94,
+            "expected_files_count": 86,
+            "memory_traffic": 5268.638053894043,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "bc0989adee868d44c1e3c8ea91e11119c47c6007",
+            "commit_message": "Detect and report ASLR status (#1977)\n\n* Detect and report ASLR status\n\nTheoretically, we could just disable ASLR in `main()`,\nbut that seems to be disallowed by default\nby some other security features.\n\nRefs. https://github.com/google/benchmark/issues/461\n\n* Add a note about ASLR on other OS.",
+            "commit_timestamp": 1746109936.0
         }
     ]
 }
