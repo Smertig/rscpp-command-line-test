@@ -7989,6 +7989,23 @@
             "commit_ref": "41647412c6a4091080fd47b0f554adc5c54b4b54",
             "commit_message": "[PowerPC] Fix an LowerADDSUBO_CARRY error when converting carry bit for usubo_carry (#137809)\n\nIn PowerPC, if a borrow occurs during a subtraction, the carry bit is\nzero (unset). The carry bit is set if no borrow occurs.\n\nFor ISD::USUBO_CARRY, the nodes produce two results: the normal result\nof the addition or subtraction, and a boolean value that is 1 if and\nonly if there is an outgoing carry or borrow.\n\nTherefore, we need to convert a 1 (which indicates a borrow in\nISD::USUBO_CARRY) to 0 to match PowerPC's definition of borrow.\nSimilarly, we need to convert a 0 (no borrow in ISD::USUBO_CARRY) to 1\nfor PowerPC.\n\nTo perform this conversion, we use XOR 1 instead of XOR\nDAG.getAllOnesConstant(DL, CarryOp.getValueType()).\n\n`",
             "commit_timestamp": 1746023949.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1746070197.268961,
+            "elapsed_time": 82.30688881874084,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5008.62043762207,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "e6d7f46ce9a6ffdfc206802131e0d79afb624b3f",
+            "commit_message": "[clang-format] Correctly annotate user-defined conversion function call (#137914)\n\nFix #137770",
+            "commit_timestamp": 1746068880.0
         }
     ]
 }

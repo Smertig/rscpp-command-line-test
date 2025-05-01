@@ -25306,6 +25306,21 @@
             "commit_ref": "e40e5f572fd92b2f0752a44e8bf9de877bac7c09",
             "commit_message": "Revert \"[COMCTL32] Pager: Fix PGM_RECALCSIZE behaviour (#7875)\" (#7910)\n\nReverts #7875.\nJIRA issue: CORE-20121",
             "commit_timestamp": 1746013102.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1746069991.616784,
+            "elapsed_time": 71.52047228813171,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7321.340751647949,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "d722e7081796692dc2fb225517d2d9fb6283d64b",
+            "commit_message": "[SDK][USER32] Implement WM_IME_SYSTEM.IMS_SOFTKBDONOFF (#7950)\n\nSupporting soft keyboard will improve IME\nusability.\nJIRA issue: CORE-19268\n- Define IMS_SOFTKBDONOFF constant as\n  0x13 in <immdev.h>.\n- Implement\n  WM_IME_SYSTEM.IMS_SOFTKBDONOFF\n  message handling in ImeWnd_OnImeSystem.",
+            "commit_timestamp": 1746066018.0
         }
     ]
 }

@@ -23531,6 +23531,21 @@
             "commit_ref": "f9daa75a3b86cf3b7a0f4f14a7b1315ca8a012fc",
             "commit_message": "TODO: remove \"nicer lacking perl message\"\n\nThe document has been updated by removing point 20.2 as it was done\nsome time ago.\n\nCloses #17233\n",
             "commit_timestamp": 1745994314.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1746070461.167189,
+            "elapsed_time": 283.86935925483704,
+            "x64": true,
+            "actual_files_count": 3665,
+            "expected_files_count": 2323,
+            "memory_traffic": 81717.88704681396,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "68369a3198d22acfd5e50bb9054c1c533fdd1cad",
+            "commit_message": "mkhelp: fix to not generate a line-ending space in some cases\n\nFixing gcc-15:\n```\nbld/src/tool_hugehelp.c:11739:1: error: trailing whitespace [-Werror=trailing-whitespace=]\n```\nRef: https://github.com/curl/curl/actions/runs/14758743743/job/41433794102?pr=17239#step:10:32\n\nCloses #17240\n",
+            "commit_timestamp": 1746044065.0
         }
     ]
 }

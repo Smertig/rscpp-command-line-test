@@ -25526,6 +25526,21 @@
             "commit_ref": "7370ffd1f07c9f455f1dedad8d0dbc41c71bb7d5",
             "commit_message": "BUG: GDCM destroy JPEG2000 structures on error\n\nWhen an unsupported JPEG2000 encoding was encountered, resources need\nto be release. This addresses issue with repeated reading problematic\nfiles allocated threads until system limits were reached resulting in\ndeadlock.\n",
             "commit_timestamp": 1746017648.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1746070259.033793,
+            "elapsed_time": 214.80591869354248,
+            "x64": true,
+            "actual_files_count": 101,
+            "expected_files_count": null,
+            "memory_traffic": 23736.20436859131,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "7370ffd1f07c9f455f1dedad8d0dbc41c71bb7d5",
+            "commit_message": "BUG: GDCM destroy JPEG2000 structures on error\n\nWhen an unsupported JPEG2000 encoding was encountered, resources need\nto be release. This addresses issue with repeated reading problematic\nfiles allocated threads until system limits were reached resulting in\ndeadlock.\n",
+            "commit_timestamp": 1746017648.0
         }
     ]
 }
