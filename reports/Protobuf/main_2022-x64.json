@@ -6929,6 +6929,21 @@
             "commit_ref": "ede412500433f7f26c9afb988f78c89d48fe2d22",
             "commit_message": "hpb: push strip_nonfunction_codegen to Context and remove fasttable_enabled\n\nWe're going to bifurcate betwixt hpb(cpp) and hpb(upb) soon, but let's do some helper func cleanup so that we don't propagate these extra args when we can just add them to Context easily.\n\nPiperOrigin-RevId: 753582596\n",
             "commit_timestamp": 1746109868.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1746156183.312962,
+            "elapsed_time": 442.1007664203644,
+            "x64": true,
+            "actual_files_count": 1434,
+            "expected_files_count": 818,
+            "memory_traffic": 60841.441749572754,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "fc1d46db6431ba1dd6b025a39ca57392a9cc92b4",
+            "commit_message": "hpb: elide hpb:: prefixes in interop.h\n\nPiperOrigin-RevId: 753714746\n",
+            "commit_timestamp": 1746132766.0
         }
     ]
 }

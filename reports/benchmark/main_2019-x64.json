@@ -26658,6 +26658,21 @@
             "commit_ref": "bc0989adee868d44c1e3c8ea91e11119c47c6007",
             "commit_message": "Detect and report ASLR status (#1977)\n\n* Detect and report ASLR status\n\nTheoretically, we could just disable ASLR in `main()`,\nbut that seems to be disallowed by default\nby some other security features.\n\nRefs. https://github.com/google/benchmark/issues/461\n\n* Add a note about ASLR on other OS.",
             "commit_timestamp": 1746109936.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1746156176.188804,
+            "elapsed_time": 82.38431453704834,
+            "x64": true,
+            "actual_files_count": 94,
+            "expected_files_count": 86,
+            "memory_traffic": 5253.016242980957,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "f02794a8bda1295ed7a6c99615f8b79e6188d7f8",
+            "commit_message": "Automatic ASLR disablement (#1978)\n\nWhile ASLR is a useful security hardening feature,\nit introduces unreproducible noise into benchmarks,\nand we really really really don't want any noise,\nespecially easily avoidable one.\n\nUnless prevented by some other security hardening,\nwe can disable ASLR for the current process,\nand restart it, thus eliminating this noise.\n\nFixes https://github.com/google/benchmark/issues/461",
+            "commit_timestamp": 1746117249.0
         }
     ]
 }

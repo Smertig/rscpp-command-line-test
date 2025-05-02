@@ -25336,6 +25336,21 @@
             "commit_ref": "21810f11e43fe9db93af3727bb05824deb4048a8",
             "commit_message": "[REGEDIT] Update Russian (ru-RU) translation\n\nAddendum to eb91f91569b. CORE-19886\n",
             "commit_timestamp": 1746106571.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1746156143.652474,
+            "elapsed_time": 69.10053730010986,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7262.779823303223,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "e98bba2535eaa049ee2ce03c5f3b38e9627633be",
+            "commit_message": "[NTGDI:FREETYPE] Fix Fonts broken by opening VLC About (Retry of PR #4579) (#7952)\n\n* Check is FontGDI->OriginalWeight > FontGDI->RequestWeight and if so, then return original weight.\n* Do not handle FontGDI->OriginalWeight as a boolean. Use 'FontGDI->OriginalWeight = FW_DONTCARE;'.\n\nCORE-17011",
+            "commit_timestamp": 1746139450.0
         }
     ]
 }
