@@ -28148,6 +28148,23 @@
             "commit_ref": "099a0fa3f2cf1a434e20b2fa97b6251088321467",
             "commit_message": "[MemProf] Add v4 which contains CalleeGuids to CallSiteInfo. (#137394)\n\nThis patch adds CalleeGuids to the serialized format and increments the version number to 4. The unit tests are updated to include a new test for v4 and the YAML format is also updated to be able to roundtrip the v4 format.",
             "commit_timestamp": 1746155841.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1746199397.732006,
+            "elapsed_time": 1658.5234842300415,
+            "x64": true,
+            "actual_files_count": 2942,
+            "expected_files_count": 1661,
+            "memory_traffic": 260625.1739654541,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "ee3610efb511ec0a8d5ebd2016ce23b4b4344cd1",
+            "commit_message": "Remove unused function; NFC\n",
+            "commit_timestamp": 1746197155.0
         }
     ]
 }

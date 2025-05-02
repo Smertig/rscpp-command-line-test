@@ -22736,6 +22736,21 @@
             "commit_ref": "b8633f9aca9b198e5592106b649389d638cbc620",
             "commit_message": "gh-119605: Respect `follow_wrapped` for `__init__` and `__new__` when getting class signature with `inspect.signature` (#132055)\n\n",
             "commit_timestamp": 1746139304.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1746198661.575828,
+            "elapsed_time": 1227.1539719104767,
+            "x64": true,
+            "actual_files_count": 1136,
+            "expected_files_count": null,
+            "memory_traffic": 50867.58728027344,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "f2379535fe2d2219b71653782d5e31defd9b5556",
+            "commit_message": "gh-133164: Add `PyUnstable_Object_IsUniqueReferencedTemporary` C API (gh-133170)\n\nAfter gh-130704, the interpreter replaces some uses of `LOAD_FAST` with\n`LOAD_FAST_BORROW` which avoid incref/decrefs by \"borrowing\" references\non the interpreter stack when the bytecode compiler can determine that\nit's safe.\n\nThis change broke some checks in C API extensions that relied on\n`Py_REFCNT()` of `1` to determine if it's safe to modify an object\nin-place. Objects may have a reference count of one, but still be\nreferenced further up the interpreter stack due to borrowing of\nreferences.\n\nThis provides a replacement function for those checks.\n`PyUnstable_Object_IsUniqueReferencedTemporary` is more conservative:\nit checks that the object has a reference count of one and that it exists as a\nunique strong reference in the interpreter's stack of temporary\nvariables in the top most frame.\n\nSee also:\n\n* https://github.com/numpy/numpy/issues/28681\n\nCo-authored-by: Pieter Eendebak <pieter.eendebak@gmail.com>\nCo-authored-by: T. Wouters <thomas@python.org>\nCo-authored-by: mpage <mpage@cs.stanford.edu>\nCo-authored-by: Mark Shannon <mark@hotpy.org>\nCo-authored-by: Victor Stinner <vstinner@python.org>",
+            "commit_timestamp": 1746192297.0
         }
     ]
 }
