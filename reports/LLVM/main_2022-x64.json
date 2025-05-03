@@ -28165,6 +28165,23 @@
             "commit_ref": "ee3610efb511ec0a8d5ebd2016ce23b4b4344cd1",
             "commit_message": "Remove unused function; NFC\n",
             "commit_timestamp": 1746197155.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1746243361.739126,
+            "elapsed_time": 1605.6664490699768,
+            "x64": true,
+            "actual_files_count": 2942,
+            "expected_files_count": 1661,
+            "memory_traffic": 260367.60348510742,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "79210feb2993ff9a79ef11f8a7016a527d4fcf22",
+            "commit_message": "[clang-format] Fix a crash on formatting missing r_paren/r_brace (#138230)\n\nFix #138097",
+            "commit_timestamp": 1746238842.0
         }
     ]
 }
