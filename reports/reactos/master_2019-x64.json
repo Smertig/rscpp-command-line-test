@@ -25411,6 +25411,21 @@
             "commit_ref": "21d3e290b79bbc830f92b8109f9051e88964c2ce",
             "commit_message": "[WINESYNC][COMCTL32] Don't delete font when destroying the control (#7941)\n\nThe font object `infoPtr->Font` is not owned by the `syslink` control, therefore freeing it would make the whole system use a different font. The fix provided by Wine removes the code that deletes this font object.\n\nImports Wine commit https://github.com/wine-mirror/wine/commit/480598680ceb86661bd269b7a64bd90e38a40f98\n\nFixes deleting system font object when destroying syslink. CORE-20127",
             "commit_timestamp": 1746314064.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1746371191.947161,
+            "elapsed_time": 98.12620568275452,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7377.448295593262,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "3e342246d46b3c384a8094077ae4b54ad5df39e9",
+            "commit_message": "[WINESYNC][COMCTL32] Fix large height for ComboBox when CBS_NOINTEGRALHEIGHT is specified (#7940)\n\nCORE-19833\n\nwine commit id https://github.com/wine-mirror/wine/commit/d551564f1b626b508583149be515b2111ec020b0 by Orin Varley <ovarley@codeweavers.com>\n\ncomctl32: Make CBS_NOINTEGRALHEIGHT only set minimum combobox height.\n\nWhen the combobox height is to be set by the application (as the CBS_NOINTEGRALHEIGHT style is on),\nand when a large size is specified but only a small number of items in the list, the height of the\ncombobox should be set by the number of items rather than the size specified to avoid empty lines.\n\nWine-Bug: https://bugs.winehq.org/show_bug.cgi?id=57360\n",
+            "commit_timestamp": 1746370794.0
         }
     ]
 }
