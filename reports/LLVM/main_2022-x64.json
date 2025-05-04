@@ -28199,6 +28199,23 @@
             "commit_ref": "b4fac94181c4cf17dbb7ecc2ae975712b0e4a6d1",
             "commit_message": "[llvm] Remove unused using decls (NFC) (#138386)\n\n",
             "commit_timestamp": 1746281102.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1746330168.668812,
+            "elapsed_time": 1613.8195052146912,
+            "x64": true,
+            "actual_files_count": 2942,
+            "expected_files_count": 1661,
+            "memory_traffic": 260364.23484802246,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "c34d2fb59974dbad07a41987896dff7da8ec8a67",
+            "commit_message": "[SPARC] Mark Niagara3 as VIS3-capable\n\nFrom SPARC T3 Supplement to the UltraSPARC Architecture 2007 Specification:\n> T3 SPARC core has a new 9 stage floating point pipeline and added Fused\n> Multiply-Add (FMADD) instruction and VIS 3.0 Instructions compared to\n> UltraSPARC T2/T2+.\n\nReviewers: rorth, s-barannikov, brad0\n\nReviewed By: s-barannikov\n\nPull Request: https://github.com/llvm/llvm-project/pull/138399\n",
+            "commit_timestamp": 1746326348.0
         }
     ]
 }
