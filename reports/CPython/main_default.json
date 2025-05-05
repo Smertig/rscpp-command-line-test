@@ -22811,6 +22811,21 @@
             "commit_ref": "7cb86c5defa17147c67b56c4227e74e4c5968686",
             "commit_message": "gh-132426: Add get_annotate_from_class_namespace replacing get_annotate_function (#132490)\n\nAs noted on the issue, making get_annotate_function() support both types and\nmappings is problematic because one object may be both. So let's add a new one\nthat works with any mapping.\n\nThis leaves get_annotate_function() not very useful, so remove it.\n",
             "commit_timestamp": 1746368802.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1746415652.672997,
+            "elapsed_time": 1217.6882863044739,
+            "x64": true,
+            "actual_files_count": 1136,
+            "expected_files_count": null,
+            "memory_traffic": 50913.42295837402,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "2bbcaedb75942389dacb51866948f40de5951c9c",
+            "commit_message": "gh-133089: Use original timeout value for `TimeoutExpired` when the func `subprocess.run` is called with a timeout (GH-133103)\n\nSigned-off-by: Manjusaka <me@manjusaka.me>\nCo-authored-by: Gregory P. Smith <greg@krypto.org>",
+            "commit_timestamp": 1746407731.0
         }
     ]
 }
