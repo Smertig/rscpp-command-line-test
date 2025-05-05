@@ -22826,6 +22826,21 @@
             "commit_ref": "2bbcaedb75942389dacb51866948f40de5951c9c",
             "commit_message": "gh-133089: Use original timeout value for `TimeoutExpired` when the func `subprocess.run` is called with a timeout (GH-133103)\n\nSigned-off-by: Manjusaka <me@manjusaka.me>\nCo-authored-by: Gregory P. Smith <greg@krypto.org>",
             "commit_timestamp": 1746407731.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1746457842.72949,
+            "elapsed_time": 1227.3220381736755,
+            "x64": true,
+            "actual_files_count": 1136,
+            "expected_files_count": null,
+            "memory_traffic": 50824.55500793457,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "c336f1c3126203fd6c38050df94e9fe8c0d7f2e2",
+            "commit_message": "Revert \"gh-124715: Fix method_dealloc(): use PyObject_GC_UnTrack() (#133199)\" (#133434)\n\nThis reverts commit 662dd294563ce86980c640ad67e3d460a72c9cb9.\n\nThe root issue was fixed by the\ncommit f554237b8ef6c60df651ac17eb0ef0c095cef185.",
+            "commit_timestamp": 1746457483.0
         }
     ]
 }
