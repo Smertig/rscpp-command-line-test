@@ -26778,6 +26778,21 @@
             "commit_ref": "f02794a8bda1295ed7a6c99615f8b79e6188d7f8",
             "commit_message": "Automatic ASLR disablement (#1978)\n\nWhile ASLR is a useful security hardening feature,\nit introduces unreproducible noise into benchmarks,\nand we really really really don't want any noise,\nespecially easily avoidable one.\n\nUnless prevented by some other security hardening,\nwe can disable ASLR for the current process,\nand restart it, thus eliminating this noise.\n\nFixes https://github.com/google/benchmark/issues/461",
             "commit_timestamp": 1746117249.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1746501751.054155,
+            "elapsed_time": 65.43218159675598,
+            "x64": true,
+            "actual_files_count": 94,
+            "expected_files_count": 86,
+            "memory_traffic": 5271.480659484863,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "f02794a8bda1295ed7a6c99615f8b79e6188d7f8",
+            "commit_message": "Automatic ASLR disablement (#1978)\n\nWhile ASLR is a useful security hardening feature,\nit introduces unreproducible noise into benchmarks,\nand we really really really don't want any noise,\nespecially easily avoidable one.\n\nUnless prevented by some other security hardening,\nwe can disable ASLR for the current process,\nand restart it, thus eliminating this noise.\n\nFixes https://github.com/google/benchmark/issues/461",
+            "commit_timestamp": 1746117249.0
         }
     ]
 }

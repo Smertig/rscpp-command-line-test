@@ -27088,6 +27088,21 @@
             "commit_ref": "c630e22c1cb90251ac5316e508dde38545a4bdd2",
             "commit_message": "Add `static_assert`s to enforce that `py::smart_holder` is combined with `py::trampoline_self_life_support` (#5633)\n\n* Strictly enforce: trampoline must inherit from trampoline_self_life_support when used in combination with smart_holder\n\n* Simplify test_class_sh_trampoline_basic.cpp,py (only one Abase is needed now)\n\n* Replace obsolete sophisticated `throw value_error()` with a simple `assert()`\n\n* Strictly enforce: trampoline should inherit from trampoline_self_life_support only if used in combination with smart_holder\n\n* Resolve clang-tidy error\n\n```\n/__w/pybind11/pybind11/tests/test_class_sh_trampoline_basic.cpp:35:46: error: the parameter 'obj' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param,-warnings-as-errors]\n   35 | int AddInCppSharedPtr(std::shared_ptr<Abase> obj, int other_val) {\n      |                                              ^\n      |                       const                 &\n```\n\n* Disable new static_assert if PYBIND11_RUN_TESTING_WITH_SMART_HOLDER_AS_DEFAULT_BUT_NEVER_USE_IN_PRODUCTION_PLEASE is defined.",
             "commit_timestamp": 1746076333.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1746501723.423024,
+            "elapsed_time": 160.30881643295288,
+            "x64": true,
+            "actual_files_count": 473,
+            "expected_files_count": 197,
+            "memory_traffic": 20861.419639587402,
+            "repo_url": "https://github.com/pybind/pybind11",
+            "commit_ref": "c630e22c1cb90251ac5316e508dde38545a4bdd2",
+            "commit_message": "Add `static_assert`s to enforce that `py::smart_holder` is combined with `py::trampoline_self_life_support` (#5633)\n\n* Strictly enforce: trampoline must inherit from trampoline_self_life_support when used in combination with smart_holder\n\n* Simplify test_class_sh_trampoline_basic.cpp,py (only one Abase is needed now)\n\n* Replace obsolete sophisticated `throw value_error()` with a simple `assert()`\n\n* Strictly enforce: trampoline should inherit from trampoline_self_life_support only if used in combination with smart_holder\n\n* Resolve clang-tidy error\n\n```\n/__w/pybind11/pybind11/tests/test_class_sh_trampoline_basic.cpp:35:46: error: the parameter 'obj' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param,-warnings-as-errors]\n   35 | int AddInCppSharedPtr(std::shared_ptr<Abase> obj, int other_val) {\n      |                                              ^\n      |                       const                 &\n```\n\n* Disable new static_assert if PYBIND11_RUN_TESTING_WITH_SMART_HOLDER_AS_DEFAULT_BUT_NEVER_USE_IN_PRODUCTION_PLEASE is defined.",
+            "commit_timestamp": 1746076333.0
         }
     ]
 }
