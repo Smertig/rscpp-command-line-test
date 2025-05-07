@@ -23711,6 +23711,21 @@
             "commit_ref": "a30830db78e7ed3e1b02f0f666415f8ce0a72c95",
             "commit_message": "ftp: fix bug in failed init\n\ntorture tests revealed that memory was not released correctly when FTP's\nconnection setup failed an allocation.\n\nFollow-up from a2d90d4ba5076643b5af9978c4\n\nCloses #17258\n",
             "commit_timestamp": 1746530532.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1746588725.797606,
+            "elapsed_time": 302.1726529598236,
+            "x64": true,
+            "actual_files_count": 3663,
+            "expected_files_count": 2323,
+            "memory_traffic": 84002.96922302246,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "220eda34cdfdcc4316845d2e2bbe5bd8b10305e0",
+            "commit_message": "tests: separate tunit tests from unit tests more\n\n- unit tests need no tool code as they are libcurl unit tests\n- unit test 1621 is now tunit test 1621 instead, as it tests tool code\n- build unit tests with BUILDING_LIBCURL as they pretent to be libcurl\n\nCloses #17259\n",
+            "commit_timestamp": 1746545122.0
         }
     ]
 }

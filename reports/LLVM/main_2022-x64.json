@@ -28284,6 +28284,23 @@
             "commit_ref": "cd6c4b61034850fffcb221a449a8ee1fdd8ada8a",
             "commit_message": "[AMDGPU][True16][CodeGen] optimize codegen for mad-mix in true16 (#124995)\n\nremove unnecessary COPY for SDAG for mad-mix pattern",
             "commit_timestamp": 1746500883.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1746589152.09192,
+            "elapsed_time": 1589.6374850273132,
+            "x64": true,
+            "actual_files_count": 2942,
+            "expected_files_count": 1661,
+            "memory_traffic": 260576.3522796631,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "5d305b618f3f58a7bbe8340ba882233338591d07",
+            "commit_message": "[clang-tools-extra] Remove redundant calls to std::unique_ptr<T>::get (NFC) (#138774)\n\n",
+            "commit_timestamp": 1746587814.0
         }
     ]
 }
