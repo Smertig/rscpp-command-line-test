@@ -23726,6 +23726,21 @@
             "commit_ref": "220eda34cdfdcc4316845d2e2bbe5bd8b10305e0",
             "commit_message": "tests: separate tunit tests from unit tests more\n\n- unit tests need no tool code as they are libcurl unit tests\n- unit test 1621 is now tunit test 1621 instead, as it tests tool code\n- build unit tests with BUILDING_LIBCURL as they pretent to be libcurl\n\nCloses #17259\n",
             "commit_timestamp": 1746545122.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1746630945.125305,
+            "elapsed_time": 317.6745021343231,
+            "x64": true,
+            "actual_files_count": 3661,
+            "expected_files_count": 2323,
+            "memory_traffic": 81771.70157623291,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "7b928446399aa2310b92ed60c3daa4e3935c3c82",
+            "commit_message": "smtp: use easy handle/connectin meta for proto structs\n\nMove `struct smtp_conn` and `struct STMP` into the meta data at easy\nhandle/connection. Remove it from the unions at connectdata and request.\n\nCloses #17257\n",
+            "commit_timestamp": 1746626465.0
         }
     ]
 }
