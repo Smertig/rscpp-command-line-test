@@ -7109,6 +7109,21 @@
             "commit_ref": "8a23b980633ca4d54c76f00201b4ffc5f0d3a519",
             "commit_message": "Automated Code Change\n\nPiperOrigin-RevId: 755853361\n",
             "commit_timestamp": 1746629891.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1746674691.70984,
+            "elapsed_time": 459.66925597190857,
+            "x64": true,
+            "actual_files_count": 1437,
+            "expected_files_count": 818,
+            "memory_traffic": 60937.94725036621,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "73a5afe278170c1771993cedea6694a2700569b8",
+            "commit_message": "Let ParseContext APIs fail on negative size.\n\nReadSize() returns int that is [0, INT_MAX - slop), so negative int won't happen\nin practice. This CL still hardens APIs against negative size by casting size\nto uint32_t, then int64_t. This is useful when comparing against potentially negative\nBytesUntilLimt().\n\nAfter this CL, we won't have to check boundaries in ReadSize() and let incorrectly\nlarge size can fail naturally.\n\nPiperOrigin-RevId: 756035993\n",
+            "commit_timestamp": 1746658026.0
         }
     ]
 }
