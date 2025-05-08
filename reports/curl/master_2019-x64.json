@@ -23756,6 +23756,21 @@
             "commit_ref": "e522f47986bb72f194636e155191d7dccdc2d4fc",
             "commit_message": "GHA/checksrc: check GHA rules with zizmor\n\nThe pedantic level is experimental. If it causes issues, we may just\ndisable it alongside the ignore comments.\n\nAlso:\n- silence error:\n  ```\n   INFO audit: zizmor: completed label.yml\n  error[dangerous-triggers]: use of fundamentally insecure workflow trigger\n    --> label.yml:13:1\n     |\n  13 | 'on': [pull_request_target]\n     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^ pull_request_target is almost always used insecurely\n     |\n     = note: audit confidence -> Medium\n  ```\n- fix pedantic warning:\n  ```\n   INFO audit: zizmor: completed label.yml\n  warning[excessive-permissions]: overly broad permissions\n    --> label.yml:1:1\n  ...  |\n  24 | |         with:\n  25 | |           repo-token: '${{ secrets.GITHUB_TOKEN }}'\n     | |____________________________________________________- default permissions used due to no permissions: block\n     |\n     = note: audit confidence -> Medium\n  ```\n- silence `template-injection` false positives like:\n  ```\n  - note: ${{ matrix.build.torture && 'test-torture' || 'test-ci' }} may expand into attacker-controllable code\n  - note: ${{ contains(matrix.build.install_steps, 'pytest') && 'caddy httpd vsftpd' || '' }} may expand into attacker-controllable code\n  ```\n  It doesn't seem like these could be controlled by an attacker.\n  Let me know if I'm missing something.\n\nCloses #17278\n",
             "commit_timestamp": 1746652269.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1746717369.05256,
+            "elapsed_time": 328.60886907577515,
+            "x64": true,
+            "actual_files_count": 3644,
+            "expected_files_count": 2323,
+            "memory_traffic": 86844.33709716797,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "5b454bae0cab77dfbeb4e52f156d13ce8e0437b9",
+            "commit_message": "cmake: test integration with old cmake (v3.11.4 2018-03-28)\n\nTests with old cmake are slow. (no Ninja, no unity, and running slower\nthan recent versions.)\n\nIt also revealed that 3.7.2 2017-01-13 is too old to consume curl via\n`find_package()` due to:\n```\nCMake Error at bld-curl/_pkg/lib/cmake/CURL/CURLConfig.cmake:69 (add_library):\n  add_library cannot create ALIAS target \"CURL::libcurl\" because target\n  \"CURL::libcurl_shared\" is IMPORTED.\nCall Stack (most recent call first):\n  CMakeLists.txt:48 (find_package)\n\nCMake Error at bld-curl/_pkg/lib/cmake/CURL/CURLConfig.cmake:69 (add_library):\n  add_library cannot create ALIAS target \"CURL::libcurl\" because target\n  \"CURL::libcurl_shared\" is IMPORTED.\nCall Stack (most recent call first):\n  CMakeLists.txt:49 (find_package)\n```\nThe mitigation for this issue requires 3.11.\n\nAlso:\n- rename a few existing envs to use the `TEST_` prefix.\n- make the `find_package` test provider stage verbose.\n- fix issue when consuming with cmake 3.7.2 (all platforms):\n  ```\n  CMake Error at /home/runner/cmake-3.7.2-Linux-x86_64/share/cmake-3.7/Modules/CMakeFindDependencyMacro.cmake:25 (message):\n    Invalid arguments to find_dependency.  VERSION is empty\n  Call Stack (most recent call first):\n    bld-curl/_pkg/lib/cmake/CURL/CURLConfig.cmake:52 (find_dependency)\n    CMakeLists.txt:48 (find_package)\n  ```\n  Ref: https://github.com/curl/curl/actions/runs/14906066962/job/41868621979?pr=17293#step:9:1199\n\nCloses #17293\n",
+            "commit_timestamp": 1746709884.0
         }
     ]
 }
