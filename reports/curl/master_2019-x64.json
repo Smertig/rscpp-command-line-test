@@ -23771,6 +23771,21 @@
             "commit_ref": "5b454bae0cab77dfbeb4e52f156d13ce8e0437b9",
             "commit_message": "cmake: test integration with old cmake (v3.11.4 2018-03-28)\n\nTests with old cmake are slow. (no Ninja, no unity, and running slower\nthan recent versions.)\n\nIt also revealed that 3.7.2 2017-01-13 is too old to consume curl via\n`find_package()` due to:\n```\nCMake Error at bld-curl/_pkg/lib/cmake/CURL/CURLConfig.cmake:69 (add_library):\n  add_library cannot create ALIAS target \"CURL::libcurl\" because target\n  \"CURL::libcurl_shared\" is IMPORTED.\nCall Stack (most recent call first):\n  CMakeLists.txt:48 (find_package)\n\nCMake Error at bld-curl/_pkg/lib/cmake/CURL/CURLConfig.cmake:69 (add_library):\n  add_library cannot create ALIAS target \"CURL::libcurl\" because target\n  \"CURL::libcurl_shared\" is IMPORTED.\nCall Stack (most recent call first):\n  CMakeLists.txt:49 (find_package)\n```\nThe mitigation for this issue requires 3.11.\n\nAlso:\n- rename a few existing envs to use the `TEST_` prefix.\n- make the `find_package` test provider stage verbose.\n- fix issue when consuming with cmake 3.7.2 (all platforms):\n  ```\n  CMake Error at /home/runner/cmake-3.7.2-Linux-x86_64/share/cmake-3.7/Modules/CMakeFindDependencyMacro.cmake:25 (message):\n    Invalid arguments to find_dependency.  VERSION is empty\n  Call Stack (most recent call first):\n    bld-curl/_pkg/lib/cmake/CURL/CURLConfig.cmake:52 (find_dependency)\n    CMakeLists.txt:48 (find_package)\n  ```\n  Ref: https://github.com/curl/curl/actions/runs/14906066962/job/41868621979?pr=17293#step:9:1199\n\nCloses #17293\n",
             "commit_timestamp": 1746709884.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1746761508.979685,
+            "elapsed_time": 290.38203048706055,
+            "x64": true,
+            "actual_files_count": 3644,
+            "expected_files_count": 2323,
+            "memory_traffic": 83930.17016601562,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "5fef848037809878e6e3a77e8376994c43a4d60a",
+            "commit_message": "RELEASE-NOTES: synced\n",
+            "commit_timestamp": 1746736381.0
         }
     ]
 }
