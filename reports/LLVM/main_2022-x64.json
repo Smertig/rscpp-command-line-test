@@ -28403,6 +28403,23 @@
             "commit_ref": "fef1456331964a114bd4e45b4cd1e48de07c208a",
             "commit_message": "[RISCV] Add 2^N + 2^M expanding pattern for mul (#137954)\n\n",
             "commit_timestamp": 1746846999.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1746890436.667908,
+            "elapsed_time": 1576.772224664688,
+            "x64": true,
+            "actual_files_count": 2943,
+            "expected_files_count": 1661,
+            "memory_traffic": 261871.09455871582,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "6a2a8ebe27c1941f5b952313239fc6d155f58e9d",
+            "commit_message": "Revert \"[SLP][NFC]Extract values state/operands analysis into separate class\"\n\nThis reverts commit 512a5d0b8aa82749995204f4852e93757192288a.\n\nIt broke RISC-V vector code generation on some inputs (oggenc.c from\nllvm-test-suite), as found by our CI. Reduced test case and more\ninformation posted in #138274.\n",
+            "commit_timestamp": 1746889367.0
         }
     ]
 }

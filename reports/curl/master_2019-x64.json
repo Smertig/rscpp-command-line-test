@@ -23816,6 +23816,21 @@
             "commit_ref": "cd7904f5a970ef14e84993a3bb9d72638c760cf8",
             "commit_message": "CURLMOPT_TIMERFUNCTION.md: correct the example\n\nFixes #17301\nReported-by: Dirk Feytons\nCloses #17303\n",
             "commit_timestamp": 1746803080.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1746890022.462288,
+            "elapsed_time": 289.78812861442566,
+            "x64": true,
+            "actual_files_count": 3632,
+            "expected_files_count": 2323,
+            "memory_traffic": 87320.37775421143,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "13032ff75cdcdf34009f9adcb7da769e4d162d04",
+            "commit_message": "curl: fix memory leak when -h is used in config file\n\nReported-by: antypanty on hackerone\n\nAdd test 748 to reproduce and verify fix\n\nCloses #17306\n",
+            "commit_timestamp": 1746868567.0
         }
     ]
 }
