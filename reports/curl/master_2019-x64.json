@@ -23846,6 +23846,21 @@
             "commit_ref": "38865c8282d8d91e60ed8661043052723e80e9e1",
             "commit_message": "test1621: Improve stripcredentials tests\n\n- add more unusual input cases\n- add a valid non-http protocol\n- fix tests so an input that should be stripped but isn't is a failure\n- fix detection of when stripcredentials() would be available to test\n- avoid using a NULL pointer\n\nCloses #17304\n",
             "commit_timestamp": 1746914873.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1746976331.665822,
+            "elapsed_time": 266.59925389289856,
+            "x64": true,
+            "actual_files_count": 3632,
+            "expected_files_count": 2323,
+            "memory_traffic": 80017.30918121338,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "3b3d6a46bacd658651e164f0b6450c4eec6efa99",
+            "commit_message": "timeval.c: #include fix\n",
+            "commit_timestamp": 1746959050.0
         }
     ]
 }
