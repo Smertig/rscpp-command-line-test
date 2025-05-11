@@ -23831,6 +23831,21 @@
             "commit_ref": "13032ff75cdcdf34009f9adcb7da769e4d162d04",
             "commit_message": "curl: fix memory leak when -h is used in config file\n\nReported-by: antypanty on hackerone\n\nAdd test 748 to reproduce and verify fix\n\nCloses #17306\n",
             "commit_timestamp": 1746868567.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1746934297.9771,
+            "elapsed_time": 275.4510359764099,
+            "x64": true,
+            "actual_files_count": 3632,
+            "expected_files_count": 2323,
+            "memory_traffic": 81479.72261810303,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "38865c8282d8d91e60ed8661043052723e80e9e1",
+            "commit_message": "test1621: Improve stripcredentials tests\n\n- add more unusual input cases\n- add a valid non-http protocol\n- fix tests so an input that should be stripped but isn't is a failure\n- fix detection of when stripcredentials() would be available to test\n- avoid using a NULL pointer\n\nCloses #17304\n",
+            "commit_timestamp": 1746914873.0
         }
     ]
 }
