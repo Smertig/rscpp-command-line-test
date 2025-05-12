@@ -25871,6 +25871,21 @@
             "commit_ref": "b3f104ddae4061de221dd5dfb23d51a98d4b2092",
             "commit_message": "Merge pull request #5340 from N-Dekker/Add-table-to-describe-MetaIO-MetaImage-ElementType\n\nDOC: Add table to describe MetaIO/MetaImage ElementType tag",
             "commit_timestamp": 1746625553.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1747062634.263948,
+            "elapsed_time": 202.17689561843872,
+            "x64": true,
+            "actual_files_count": 101,
+            "expected_files_count": null,
+            "memory_traffic": 24022.82452392578,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "84cb6e8b5fc7784fff149ee2e27911c9dc80f7a2",
+            "commit_message": "STYLE: Replace `static_cast<T>(X)` with `T{ X }` for any \"all caps\" `X`\n\nReplaced `static_cast<(\\w+)>\\(([A-Z_][A-Z_]+)\\)` with `$1{ $2 }`, using regular\nexpressions. According to common C++ naming conventions, these all \"all caps\"\nidentifiers refer to constants, specified by preprocessor macro's, so these\nconversions are evaluated at compile-time.\n\nExcluded replacing `static_cast<float>(RAND_MAX)` (as encountered in\n\"itkComplexConjugateImageAdaptorTest.cxx\") because this conversion is narrowing\non some platforms. Specifically, on GCC `RAND_MAX` may be 2147483647, while it\nis only 32767 on MSVC2022.\n\n- Follow-up to pull request https://github.com/InsightSoftwareConsortium/ITK/pull/5324\ncommit 31859d3eb25b95f52eef5ff1ca16c01058579edb\n\"STYLE: Replace `static_cast<T>(Dimension)` with `T{ Dimension }`\"\n",
+            "commit_timestamp": 1747058145.0
         }
     ]
 }

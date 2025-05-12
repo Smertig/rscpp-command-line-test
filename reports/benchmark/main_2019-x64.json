@@ -26973,6 +26973,21 @@
             "commit_ref": "afd9c342fb8a840117c9a3e3e85c1ecff036bc8f",
             "commit_message": "Update build instructions for Visual Studio (#1980)\n\n",
             "commit_timestamp": 1746764350.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1747062385.0162,
+            "elapsed_time": 57.042683362960815,
+            "x64": true,
+            "actual_files_count": 94,
+            "expected_files_count": 86,
+            "memory_traffic": 5248.151763916016,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "f921cfb4af82aa9dac72a909b764153789499d6b",
+            "commit_message": "`MaybeReenterWithoutASLR()`: be more cautious about argument types (#1983)\n\nIt seems, on android the argument is narrower than on linux.\nLet's try to support that while not introducing any explicit lossy casts.\n\nFixes https://github.com/google/benchmark/issues/1982",
+            "commit_timestamp": 1747044605.0
         }
     ]
 }

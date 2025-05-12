@@ -28471,6 +28471,23 @@
             "commit_ref": "a788a1abd9c881aa113f5932d100e1a2e3898e14",
             "commit_message": "[RISCV] Implement codegen for XAndesPerf lea instructions (#137925)\n\nThis patch add the patterns for generating XAndesPerf lea instructions.\n\nThe operation of LEA family instructions is:\n\n  rd = rs1 + rs2 * (the number of bytes)\n\nThe variants with *.ze suffix are RV64 only and its operation is:\n\n  rd = rs1 + ZE32(rs2[31:0]) * (the number of bytes)",
             "commit_timestamp": 1747017713.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1747063391.435629,
+            "elapsed_time": 1599.7775025367737,
+            "x64": true,
+            "actual_files_count": 2943,
+            "expected_files_count": 1661,
+            "memory_traffic": 261454.3581161499,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "386f2ca03bdbcf5d08e5ec417bdad6c3de01acb6",
+            "commit_message": "Allow multi-member variants in DWARF (#139300)\n\nCurrently, each variant in the variant part of a structure type can only\ncontain a single member. This was sufficient for Rust, where each\nvariant is represented as its own type.\n\nHowever, this isn't really enough for Ada, where a variant can have\nmultiple members.\n\nThis patch adds support for this scenario. This is done by allowing the\nuse of DW_TAG_variant by DICompositeType, and then changing the DWARF\ngenerator to recognize when a DIDerivedType representing a variant holds\none of these. In this case, the fields from the DW_TAG_variant are\ninlined into the variant, like so:\n```\n <4><7d>: Abbrev Number: 9 (DW_TAG_variant)\n    <7e>   DW_AT_discr_value : 74\n <5><7f>: Abbrev Number: 7 (DW_TAG_member)\n    <80>   DW_AT_name        : (indirect string, offset: 0x43): field0\n    <84>   DW_AT_type        : <0xa7>\n    <88>   DW_AT_alignment   : 8\n    <89>   DW_AT_data_member_location: 0\n <5><8a>: Abbrev Number: 7 (DW_TAG_member)\n    <8b>   DW_AT_name        : (indirect string, offset: 0x4a): field1\n    <8f>   DW_AT_type        : <0xa7>\n    <93>   DW_AT_alignment   : 8\n    <94>   DW_AT_data_member_location: 8\n```\nNote that the intermediate DIDerivedType is still needed in this\nsituation, because that is where the discriminants are stored.",
+            "commit_timestamp": 1747061738.0
         }
     ]
 }

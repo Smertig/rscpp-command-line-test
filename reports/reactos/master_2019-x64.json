@@ -25651,6 +25651,21 @@
             "commit_ref": "d06d9f3e8f63e5a4b610e9605b40da20990e23a2",
             "commit_message": "[SYSDM] Improve Japanese (ja-JP) translation (#7976)\n\nJIRA issue: CORE-18706\nUpdate dll/cpl/sysdm/lang/ja-JP.rc.",
             "commit_timestamp": 1746968275.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1747062481.347144,
+            "elapsed_time": 115.22970962524414,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7383.629898071289,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "6df1cc63b6d8c5761e07fa0b91961ad4c82677c1",
+            "commit_message": "[BROWSEUI] Fix 'bad window handle' on CShellBrowser::RepositionBars (#7980)\n\nSilence \"NtUserSetWindowPos bad window\nhandle!\" error at win32k!NtUserSetWindowPos\nfunction when Desktop has started up.\nJIRA issue: CORE-19663\nAdd null check of window handle before\nSetWindowPos call in\nCShellBrowser::RepositionBars method.",
+            "commit_timestamp": 1747056472.0
         }
     ]
 }
