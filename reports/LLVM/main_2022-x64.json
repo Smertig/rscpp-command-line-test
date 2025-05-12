@@ -28454,6 +28454,23 @@
             "commit_ref": "95335fefd8664ca76823928698570c741ebe9c72",
             "commit_message": "[clang] Use std::tie to implement operator< (NFC) (#139438)\n\n",
             "commit_timestamp": 1746972821.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1747021312.657901,
+            "elapsed_time": 1598.3855497837067,
+            "x64": true,
+            "actual_files_count": 2943,
+            "expected_files_count": 1661,
+            "memory_traffic": 261723.79711151123,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "a788a1abd9c881aa113f5932d100e1a2e3898e14",
+            "commit_message": "[RISCV] Implement codegen for XAndesPerf lea instructions (#137925)\n\nThis patch add the patterns for generating XAndesPerf lea instructions.\n\nThe operation of LEA family instructions is:\n\n  rd = rs1 + rs2 * (the number of bytes)\n\nThe variants with *.ze suffix are RV64 only and its operation is:\n\n  rd = rs1 + ZE32(rs2[31:0]) * (the number of bytes)",
+            "commit_timestamp": 1747017713.0
         }
     ]
 }
