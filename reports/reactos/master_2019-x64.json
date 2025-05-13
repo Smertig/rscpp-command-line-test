@@ -25666,6 +25666,21 @@
             "commit_ref": "6df1cc63b6d8c5761e07fa0b91961ad4c82677c1",
             "commit_message": "[BROWSEUI] Fix 'bad window handle' on CShellBrowser::RepositionBars (#7980)\n\nSilence \"NtUserSetWindowPos bad window\nhandle!\" error at win32k!NtUserSetWindowPos\nfunction when Desktop has started up.\nJIRA issue: CORE-19663\nAdd null check of window handle before\nSetWindowPos call in\nCShellBrowser::RepositionBars method.",
             "commit_timestamp": 1747056472.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1747106626.419771,
+            "elapsed_time": 70.29200601577759,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7279.670013427734,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "99ecbf5e5689dd1b77ea8366f79befbf86da0bbd",
+            "commit_message": "[KBSWITCH][SDK] Add indicml.h and change window class (#7970)\n\nSupporting the IME System Pen icon.\nJIRA issue: CORE-19268\n- Change kbswitch window class to \"Indicator\"\n  from \"kbswitcher\".\n- Add <ime/indicml.h> from DDK.",
+            "commit_timestamp": 1747088057.0
         }
     ]
 }
