@@ -28505,6 +28505,23 @@
             "commit_ref": "9011c1eccb8652342b4e8fed7c646fbcd2bb76d5",
             "commit_message": "[AIX] Disable debug-names-asm-label.ll due to missing DWARF sections\n\nSee older commit 8037481cb2d729ae3d782c3fed930f69d740fa23.",
             "commit_timestamp": 1747106273.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1747149806.379391,
+            "elapsed_time": 1652.0638802051544,
+            "x64": true,
+            "actual_files_count": 2943,
+            "expected_files_count": 1661,
+            "memory_traffic": 261909.99351501465,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "4b794c8aff3ba01d95bd29973f45ff776aaee3ed",
+            "commit_message": "[ObjC] Support objc_claimAutoreleasedReturnValue (#139720)\n\nThis adds basic support for objc_claimAutoreleasedReturnValue, which is\nmostly equivalent to objc_retainAutoreleasedReturnValue, with the\ndifference that it doesn't require the marker nop to be emitted between\nit and the call it was attached to.\n\nTo achieve that, this also teaches the AArch64 attachedcall bundle\nlowering to pick whether the marker should be emitted or not based on\nwhether the attachedcall target is claimARV or retainARV.\n\nCo-authored-by: Ahmed Bougacha <ahmed@bougacha.org>",
+            "commit_timestamp": 1747148689.0
         }
     ]
 }

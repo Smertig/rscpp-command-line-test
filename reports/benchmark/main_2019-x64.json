@@ -27003,6 +27003,21 @@
             "commit_ref": "f921cfb4af82aa9dac72a909b764153789499d6b",
             "commit_message": "`MaybeReenterWithoutASLR()`: be more cautious about argument types (#1983)\n\nIt seems, on android the argument is narrower than on linux.\nLet's try to support that while not introducing any explicit lossy casts.\n\nFixes https://github.com/google/benchmark/issues/1982",
             "commit_timestamp": 1747044605.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1747148865.913687,
+            "elapsed_time": 98.47309827804565,
+            "x64": true,
+            "actual_files_count": 94,
+            "expected_files_count": 86,
+            "memory_traffic": 5312.008155822754,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "f921cfb4af82aa9dac72a909b764153789499d6b",
+            "commit_message": "`MaybeReenterWithoutASLR()`: be more cautious about argument types (#1983)\n\nIt seems, on android the argument is narrower than on linux.\nLet's try to support that while not introducing any explicit lossy casts.\n\nFixes https://github.com/google/benchmark/issues/1982",
+            "commit_timestamp": 1747044605.0
         }
     ]
 }

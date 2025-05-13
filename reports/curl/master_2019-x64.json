@@ -23906,6 +23906,21 @@
             "commit_ref": "fca1fdc988bd5d8573c4d38aaeae09f22e93ea5d",
             "commit_message": "docs: update distros links\n",
             "commit_timestamp": 1747083098.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1747149372.911805,
+            "elapsed_time": 301.8022027015686,
+            "x64": true,
+            "actual_files_count": 3576,
+            "expected_files_count": 2323,
+            "memory_traffic": 82313.90464782715,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "828f9984937f2494d3bc44690d11ce9e4b9500ef",
+            "commit_message": "spacecheck.pl: drop more exceptions\n\n- replace \u00df (scharfes S) with links.\n- replace \u00a7 (section sign) with links.\n- replace \ud83d\ude4f emoji with `:pray:`.\n Supported by GitHub, Forgejo/Gitea and most likely GitLab.\n- docs/libcurl/curl_mprintf.md: replace Unicode \u00b1 with `{+|-}`.\n- docs/CIPHERS.md: URL encode Unicode in URLs.\n- lib1560: use hex encoding in `r\u00e4ksm\u00f6rg\u00e5s.se`.\n- unit1307: use hex encoding in `Lindm\u00e4tarv`.\n- drop LATIN SMALL LETTER A WITH ACUTE exception.\n  No longer appears in tests.\n\nThis leaves the single character exception: `\u00f6`\nAnd file exceptions holding contributor names.\n\nFollow-up to 9243ed59b387a90940fa4a16ebfd99ad7d6c2f63 #17329\nFollow-up to 838dc53bb7bf52039b23af0e9ccffa51cf9ad7d0 #17247\n\nCloses #17335\n",
+            "commit_timestamp": 1747144867.0
         }
     ]
 }
