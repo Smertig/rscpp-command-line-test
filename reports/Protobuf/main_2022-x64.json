@@ -7289,6 +7289,21 @@
             "commit_ref": "09985f879787153e14b1f9daa918cd48da0c027f",
             "commit_message": "hpb: migrate generator.cc from .EmitLegacy to .Emit\n\nPiperOrigin-RevId: 758202304\n",
             "commit_timestamp": 1747145454.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1747193077.647391,
+            "elapsed_time": 468.7543284893036,
+            "x64": true,
+            "actual_files_count": 1437,
+            "expected_files_count": 818,
+            "memory_traffic": 60950.69352722168,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "4f74764bf3860f76e64f20b8bf359a7bad844876",
+            "commit_message": "Fix silent failure of `rb_test` rules to run test (#21733)\n\nAdditional details discussed in https://github.com/bazel-contrib/rules_ruby/issues/233 and https://github.com/bazel-contrib/rules_ruby/issues/223\n\nRestoring tests revealed latent bug in JRuby's `RubyMessage#convert` that was exposed by the introduction `test_to_hash` while tests were not running; fix included.\n\nCloses #21733\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/21733 from protocolbuffers:fix_rb_test 3f8418f2f4471d78b980b658ca04d534e2ce9dc6\nPiperOrigin-RevId: 758470283\n",
+            "commit_timestamp": 1747190021.0
         }
     ]
 }

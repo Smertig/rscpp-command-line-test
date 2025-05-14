@@ -8431,6 +8431,23 @@
             "commit_ref": "4b794c8aff3ba01d95bd29973f45ff776aaee3ed",
             "commit_message": "[ObjC] Support objc_claimAutoreleasedReturnValue (#139720)\n\nThis adds basic support for objc_claimAutoreleasedReturnValue, which is\nmostly equivalent to objc_retainAutoreleasedReturnValue, with the\ndifference that it doesn't require the marker nop to be emitted between\nit and the call it was attached to.\n\nTo achieve that, this also teaches the AArch64 attachedcall bundle\nlowering to pick whether the marker should be emitted or not based on\nwhether the attachedcall target is claimARV or retainARV.\n\nCo-authored-by: Ahmed Bougacha <ahmed@bougacha.org>",
             "commit_timestamp": 1747148689.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1747193228.142704,
+            "elapsed_time": 67.77926921844482,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4995.514801025391,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "c5331276cb24209f3e13a232d7b81c4e62c3fbd6",
+            "commit_message": "AMDGPU: Add sgpr bit convert tests (#136112)\n\nAdd inreg test for sgpr purpose\n\nThis is the second PR after\nhttps://github.com/llvm/llvm-project/pull/135729.\n\nTo test sgpr inputs and outputs, using inreg cases for bit-conversions\n\n---------\n\nCo-authored-by: Matt Arsenault <Matthew.Arsenault@amd.com>",
+            "commit_timestamp": 1747187737.0
         }
     ]
 }
