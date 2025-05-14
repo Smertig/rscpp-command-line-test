@@ -23096,6 +23096,21 @@
             "commit_ref": "9ad0c7b0f14c5fcda6bfae6692c88abb95502d38",
             "commit_message": "gh-132641: fix race in `lru_cache` under free-threading (#133787)\n\nFix race in `lru_cache` by acquiring critical section on the cache object itself and call the lock held variant of dict functions to modify the underlying dict.",
             "commit_timestamp": 1747157937.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1747235485.601005,
+            "elapsed_time": 1269.3342869281769,
+            "x64": true,
+            "actual_files_count": 1196,
+            "expected_files_count": null,
+            "memory_traffic": 52453.29080963135,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "0afbd4e42ac28240b484cabe1710fdb6c572fb1f",
+            "commit_message": "Docs: remove link elements in builders other than HTML (#133720)\n\nFixes epub build",
+            "commit_timestamp": 1747231387.0
         }
     ]
 }
