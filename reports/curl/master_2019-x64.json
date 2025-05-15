@@ -23966,6 +23966,21 @@
             "commit_ref": "f5b7eb27f04b806433c7f592a6a26f21a35dcdcc",
             "commit_message": "netrc: deal with null token better\n\nIf there is no length of the token, assign a blank string to avoid\nrisking it being NULL.\n\nPointed out by Coverity\n\nCloses #17351\n",
             "commit_timestamp": 1747262890.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1747322136.324557,
+            "elapsed_time": 284.50109481811523,
+            "x64": true,
+            "actual_files_count": 3580,
+            "expected_files_count": 2323,
+            "memory_traffic": 79597.00637054443,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "f97d372703a08d2690b75e5f016fb7b19f109e86",
+            "commit_message": "tool_operate: move config2setopts to separate file, split into subs\n\nTo decrease size and complexity. Complexity taken down from 190 to 80.\n\nBonus:\n\n- remove leftover HTTP/0.9 warning never triggered since hyper was dropped\n- remove the ftp-skip-ip option unless FTP is used\n- only set HTTP options if HTTP(S) is used\n- remove use of the pointless SETOPT_CHECK macro\n\nSide-effect:\n\n- The order of the options in --libcurl is modified\n\nCloses #17352\n",
+            "commit_timestamp": 1747312365.0
         }
     ]
 }

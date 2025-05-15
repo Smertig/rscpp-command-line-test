@@ -8482,6 +8482,23 @@
             "commit_ref": "99e8d22d6944428d6e6632e9537bd338a650c453",
             "commit_message": "[RISCV][Scheduler] Add scheduler definitions for the Q extension (#139495)\n\n",
             "commit_timestamp": 1747277893.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1747321836.51688,
+            "elapsed_time": 94.53536033630371,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5027.409942626953,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "3d6d5dfed2b303e9fba74586993df3fa85058991",
+            "commit_message": "[mlir][vector] Address linearization comments (post commit) (#138075)\n\nThis PR adds some documentation to address comments in\nhttps://github.com/llvm/llvm-project/pull/136581 \n\nThis PR adds a test for linearization across scf.for. This new test\nmight be considered redundant by more experienced MLIRers, but might\nhelp newer users understand how to linearize scf/cf/func operations\neasily\n\nThe documentation added in this PR also tightens our definition of\nlinearization, to now exclude unrolling (which creates multiple ops from\n1 op). We hadn't really specified what linearization meant before.",
+            "commit_timestamp": 1747320773.0
         }
     ]
 }
