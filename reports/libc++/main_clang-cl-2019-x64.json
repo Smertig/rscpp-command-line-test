@@ -8516,6 +8516,23 @@
             "commit_ref": "ca6398c79e43ea1289bfec8c623a55f47ed3f992",
             "commit_message": "[COFF][Mips] Set PrivateGlobalPrefix to .L (#140033)\n\nWhen calling external functions which start with `L`, would generate\nerror: assembler label 'LeaveFoo' can not be undefined. This pr would\nfix this issue.\n\nFix #134914.",
             "commit_timestamp": 1747365764.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1747408150.18139,
+            "elapsed_time": 69.12518334388733,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5009.463424682617,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "36290b7289adc3fe696c5e9111c91cd95ccc2772",
+            "commit_message": "[gn build] Port 9c3ab1cfc829\n",
+            "commit_timestamp": 1747406335.0
         }
     ]
 }

@@ -25756,6 +25756,21 @@
             "commit_ref": "53685ada35fe4ee2b372084bd63e8f505b37cd08",
             "commit_message": "[SHELL32][SHDOCVW] Only forward menu messages to the correct shell extension (#7968)\n\nFolder Marker 1.4 fails if it gets a WM_INITPOPUPMENU it does not expect.\n\nCORE-17811",
             "commit_timestamp": 1747304482.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1747408012.568542,
+            "elapsed_time": 103.25549626350403,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7370.588684082031,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "9e1f2b035ff68781d62e1ab14d31168a957e37bb",
+            "commit_message": "[NTUSER][USER32] Rewrite GetAncestor (#7978)\n\nJIRA issue: N/A\n- Set the last error.\n- Check message window.\n- Modify user32.spec.",
+            "commit_timestamp": 1747392061.0
         }
     ]
 }

@@ -7364,6 +7364,21 @@
             "commit_ref": "a7eb8cc20f1525dc505e4bd70fdb109b8b5a070b",
             "commit_message": "Auto-generate files after cl/759264980\n",
             "commit_timestamp": 1747340029.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1747408098.44002,
+            "elapsed_time": 461.7625114917755,
+            "x64": true,
+            "actual_files_count": 1437,
+            "expected_files_count": 818,
+            "memory_traffic": 60951.89321899414,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "e34bb0dd09485741852291adac788216bceb2b93",
+            "commit_message": "Add load statements for the shell rules where they are missing.\n\nsh_binary, sh_library, and sh_test will no longer be packaged with Bazel\nand will need to be explicitly loaded like other rules.\n\nPiperOrigin-RevId: 759574131\n",
+            "commit_timestamp": 1747399102.0
         }
     ]
 }
