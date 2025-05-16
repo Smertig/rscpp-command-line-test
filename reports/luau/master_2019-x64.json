@@ -26178,6 +26178,21 @@
             "commit_ref": "3eb0c1367889e37fb0b3f0ab6d21b6a8cce10eae",
             "commit_message": "Sync to upstream/release/673 (#1812)\n\n# General Changes\n\n* Remove a `static_assert` that prevented Luau from building on 32-bit\ntargets.\n* Fix `proxyrequire` (see https://github.com/luau-lang/luau/pull/1804)\n* Replace contents API with new `loadname` API in Luau.Require\n* Store the positions of `:` symbols in the CST.\n* Fix a minor bug in the new incremental autocomplete engine: Properly\nsuggest `else` and `elseif` if the cursor is currently within an `if`\nblock.\n\n# New Type Solver\n\n* Allow generics to be substituted for negation types when performing\nsubtype tests\n* Crash fixes\n* Surface subtyping errors more consistently.\n* Avoid creating double-negation types (like `~~(false?)`) when\ngenerating constraints.\n\n# Internal Contributors\n\nCo-authored-by: Andy Friesen <afriesen@roblox.com>\nCo-authored-by: Ariel Weiss <aaronweiss@roblox.com>\nCo-authored-by: Aviral Goel <agoel@roblox.com>\nCo-authored-by: Hunter Goldstein <hgoldstein@roblox.com>\nCo-authored-by: Sora Kanosue <skanosue@roblox.com>\nCo-authored-by: Talha Pathan <tpathan@roblox.com>\nCo-authored-by: Varun Saini <vsaini@roblox.com>\nCo-authored-by: Vighnesh Vijay <vvijay@roblox.com>\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>\n\n---------\n\nCo-authored-by: Hunter Goldstein <hgoldstein@roblox.com>\nCo-authored-by: Varun Saini <61795485+vrn-sn@users.noreply.github.com>\nCo-authored-by: Alexander Youngblood <ayoungblood@roblox.com>\nCo-authored-by: Menarul Alam <malam@roblox.com>\nCo-authored-by: Aviral Goel <agoel@roblox.com>\nCo-authored-by: Vighnesh <vvijay@roblox.com>\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>\nCo-authored-by: Ariel Weiss <aaronweiss@roblox.com>",
             "commit_timestamp": 1746833747.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1747365859.934329,
+            "elapsed_time": 289.96456694602966,
+            "x64": true,
+            "actual_files_count": 504,
+            "expected_files_count": 379,
+            "memory_traffic": 36219.56211853027,
+            "repo_url": "https://github.com/luau-lang/luau",
+            "commit_ref": "3eb0c1367889e37fb0b3f0ab6d21b6a8cce10eae",
+            "commit_message": "Sync to upstream/release/673 (#1812)\n\n# General Changes\n\n* Remove a `static_assert` that prevented Luau from building on 32-bit\ntargets.\n* Fix `proxyrequire` (see https://github.com/luau-lang/luau/pull/1804)\n* Replace contents API with new `loadname` API in Luau.Require\n* Store the positions of `:` symbols in the CST.\n* Fix a minor bug in the new incremental autocomplete engine: Properly\nsuggest `else` and `elseif` if the cursor is currently within an `if`\nblock.\n\n# New Type Solver\n\n* Allow generics to be substituted for negation types when performing\nsubtype tests\n* Crash fixes\n* Surface subtyping errors more consistently.\n* Avoid creating double-negation types (like `~~(false?)`) when\ngenerating constraints.\n\n# Internal Contributors\n\nCo-authored-by: Andy Friesen <afriesen@roblox.com>\nCo-authored-by: Ariel Weiss <aaronweiss@roblox.com>\nCo-authored-by: Aviral Goel <agoel@roblox.com>\nCo-authored-by: Hunter Goldstein <hgoldstein@roblox.com>\nCo-authored-by: Sora Kanosue <skanosue@roblox.com>\nCo-authored-by: Talha Pathan <tpathan@roblox.com>\nCo-authored-by: Varun Saini <vsaini@roblox.com>\nCo-authored-by: Vighnesh Vijay <vvijay@roblox.com>\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>\n\n---------\n\nCo-authored-by: Hunter Goldstein <hgoldstein@roblox.com>\nCo-authored-by: Varun Saini <61795485+vrn-sn@users.noreply.github.com>\nCo-authored-by: Alexander Youngblood <ayoungblood@roblox.com>\nCo-authored-by: Menarul Alam <malam@roblox.com>\nCo-authored-by: Aviral Goel <agoel@roblox.com>\nCo-authored-by: Vighnesh <vvijay@roblox.com>\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>\nCo-authored-by: Ariel Weiss <aaronweiss@roblox.com>",
+            "commit_timestamp": 1746833747.0
         }
     ]
 }

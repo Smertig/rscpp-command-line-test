@@ -27388,6 +27388,21 @@
             "commit_ref": "6aa3b335f4205c7c7efd9faeb1f39adfcf0f1389",
             "commit_message": "fix(types): Buffer type hint (#5662)\n\n* Fix Buffer type hint\n\ncollections.abc.Buffer was added in Python 3.12.\nThe previous behaviour should be used prior to this version.\n\n* Fix comment\n\n* Fix indentation\n\n* style: pre-commit fixes\n\n* Fix test\n\n* Add missing import\n\n* style: pre-commit fixes\n\n---------\n\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>",
             "commit_timestamp": 1747233668.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1747365881.574704,
+            "elapsed_time": 193.6955690383911,
+            "x64": true,
+            "actual_files_count": 476,
+            "expected_files_count": 197,
+            "memory_traffic": 21030.181190490723,
+            "repo_url": "https://github.com/pybind/pybind11",
+            "commit_ref": "af231a6054669bcf8b0c6c8d023506497ef91c1a",
+            "commit_message": "chore: use scikit-build-core for the build (#5598)\n\n* chore: use scikit-build-core for the build\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n* fix: support tests job\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n* refactor: use tomlkit instead of manual parsing\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n* tests: add tests for output\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n* chore: remove more unused files\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n* fix: restore global pin\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n* fix: test and fix pinning\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n---------\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>",
+            "commit_timestamp": 1747334363.0
         }
     ]
 }

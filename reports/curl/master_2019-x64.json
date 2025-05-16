@@ -23981,6 +23981,21 @@
             "commit_ref": "f97d372703a08d2690b75e5f016fb7b19f109e86",
             "commit_message": "tool_operate: move config2setopts to separate file, split into subs\n\nTo decrease size and complexity. Complexity taken down from 190 to 80.\n\nBonus:\n\n- remove leftover HTTP/0.9 warning never triggered since hyper was dropped\n- remove the ftp-skip-ip option unless FTP is used\n- only set HTTP options if HTTP(S) is used\n- remove use of the pointless SETOPT_CHECK macro\n\nSide-effect:\n\n- The order of the options in --libcurl is modified\n\nCloses #17352\n",
             "commit_timestamp": 1747312365.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1747366401.229785,
+            "elapsed_time": 286.08580899238586,
+            "x64": true,
+            "actual_files_count": 3580,
+            "expected_files_count": 2323,
+            "memory_traffic": 84583.57643890381,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "96726af95a3882a4745e3e5b16372e76091c6ab1",
+            "commit_message": "libssh: add NULL check for Curl_meta_get()\n\nIt really cannot return NULL in a working condition, but ...\n\nPointed out by Coverity.\n\nCloses #17359\n",
+            "commit_timestamp": 1747343077.0
         }
     ]
 }
