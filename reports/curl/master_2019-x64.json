@@ -24011,6 +24011,21 @@
             "commit_ref": "f5a4d3c9160dbf4b2b64d9024be7c90fbf8764a3",
             "commit_message": "formdata: split up FormAdd\n\nTo reduce complexity of FormAdd, split the checking part into a separate\nfunction.\n\nCloses #17366\n",
             "commit_timestamp": 1747404869.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1747494845.915486,
+            "elapsed_time": 300.1213309764862,
+            "x64": true,
+            "actual_files_count": 3580,
+            "expected_files_count": 2323,
+            "memory_traffic": 86845.09883117676,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "0013bbdfb8c865bab1602050f8b2bd3a00c0448a",
+            "commit_message": "libtests: define CURL_DISABLE_DEPRECATION first\n\nInstead of using the kludgey ignore macros inline. They make setting\nbreak-points in a debugger and single-stepping code impossible.\n\nCloses #17373\n",
+            "commit_timestamp": 1747429843.0
         }
     ]
 }
