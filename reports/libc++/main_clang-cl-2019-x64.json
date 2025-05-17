@@ -8533,6 +8533,23 @@
             "commit_ref": "36290b7289adc3fe696c5e9111c91cd95ccc2772",
             "commit_message": "[gn build] Port 9c3ab1cfc829\n",
             "commit_timestamp": 1747406335.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1747452248.482763,
+            "elapsed_time": 57.97015714645386,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4999.999694824219,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "6d9ce6767d259a5231ae312a19459f8fea3bd0ca",
+            "commit_message": "[mlir][bufferization] implement BufferizableOpInterface for concat op (#140171)\n\nLowers `tensor.concat` to an alloc with a series of `memref.copy` ops to\ncopy the operands to the alloc.\n\nExample:\n\n```mlir\nfunc.func @tensor.concat(%f: tensor<8xf32>) -> tensor<16xf32> {\n  %t = tensor.concat dim(0) %f, %f : (tensor<8xf32>, tensor<8xf32>) -> tensor<16xf32>\n  return %t : tensor<16xf32>\n}\n```\n\nProduces\n\n```mlir\nmodule {\n  func.func @tensor.concat(%arg0: tensor<8xf32>) -> tensor<16xf32> {\n    // initialization\n    %0 = bufferization.to_memref %arg0 : tensor<8xf32> to memref<8xf32>\n    %alloc = memref.alloc() {alignment = 64 : i64} : memref<8xf32>\n    memref.copy %0, %alloc : memref<8xf32> to memref<8xf32>\n    %alloc_0 = memref.alloc() {alignment = 64 : i64} : memref<8xf32>\n    memref.copy %0, %alloc_0 : memref<8xf32> to memref<8xf32>\n    %alloc_1 = memref.alloc() {alignment = 64 : i64} : memref<16xf32>\n\n    // one copy for each operand\n    %subview = memref.subview %alloc_1[0] [8] [1] : memref<16xf32> to memref<8xf32, strided<[1]>>\n    memref.copy %alloc, %subview : memref<8xf32> to memref<8xf32, strided<[1]>>\n    %subview_2 = memref.subview %alloc_1[8] [8] [1] : memref<16xf32> to memref<8xf32, strided<[1], offset: 8>>\n    memref.copy %alloc_0, %subview_2 : memref<8xf32> to memref<8xf32, strided<[1], offset: 8>>\n    %1 = bufferization.to_tensor %alloc_1 : memref<16xf32> to tensor<16xf32>\n    return %1 : tensor<16xf32>\n  }\n}\n```\n\nThis is my first time implementing BufferizableOpInterface, so I'm\nlooking for some advice on how I can:\n\n1. Clean up my implementation.\n2. Avoid duplicate `memref.copy` ops in the `// initialization` section\nabove when handling duplicate `tensor.concat` operands.\n\n---------\n\nCo-authored-by: Jeremy Kun <j2kun@users.noreply.github.com>",
+            "commit_timestamp": 1747451622.0
         }
     ]
 }

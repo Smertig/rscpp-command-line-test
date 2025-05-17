@@ -27418,6 +27418,21 @@
             "commit_ref": "af231a6054669bcf8b0c6c8d023506497ef91c1a",
             "commit_message": "chore: use scikit-build-core for the build (#5598)\n\n* chore: use scikit-build-core for the build\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n* fix: support tests job\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n* refactor: use tomlkit instead of manual parsing\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n* tests: add tests for output\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n* chore: remove more unused files\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n* fix: restore global pin\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n* fix: test and fix pinning\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n---------\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>",
             "commit_timestamp": 1747334363.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1747452158.338888,
+            "elapsed_time": 169.44796299934387,
+            "x64": true,
+            "actual_files_count": 476,
+            "expected_files_count": 197,
+            "memory_traffic": 21044.716987609863,
+            "repo_url": "https://github.com/pybind/pybind11",
+            "commit_ref": "094343c74a485d784823a51d2b8707d33ae8ad63",
+            "commit_message": "fix: support Python 3.14 (#5646)\n\n* ci: support Python 3.14\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n* fix: Python 3.14 name change\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n* tests: fix expected output to handle Python 3.14\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n* fix: tighten CLI and add color on 3.14+\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n* tests: ignore failure on 3.14.0b1\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n* fix: support Python 3.14.0b1 with interperters\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n* Update test_multiple_interpreters.py\n\n* Update test_multiple_interpreters.py\n\n* fix: new breakage for 3.14 fixed\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n* fix: handle empty annotations 3.14\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n* fix: Python 3.14 may not create the annotations dict\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n* fix: use PyUnstable_IsImmortal\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n* fix: use sys._is_immortal\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n* tests: ignore large values for refcount too\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n* style: pre-commit fixes\n\n* ci: enable all free-threaded builds\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n* fix: patch for embed\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n* Revert \"fix: patch for embed\"\n\nThis reverts commit c4226a06712c203d8f76debcb325e4910fb5e4ac.\n\n* ci: drop new 3.xt additions\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n* fix: logic issue, also add some comments\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n* Update include/pybind11/pytypes.h\n\n---------\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>",
+            "commit_timestamp": 1747447123.0
         }
     ]
 }

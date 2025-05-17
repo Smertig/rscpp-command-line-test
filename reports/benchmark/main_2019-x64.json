@@ -27108,6 +27108,21 @@
             "commit_ref": "f921cfb4af82aa9dac72a909b764153789499d6b",
             "commit_message": "`MaybeReenterWithoutASLR()`: be more cautious about argument types (#1983)\n\nIt seems, on android the argument is narrower than on linux.\nLet's try to support that while not introducing any explicit lossy casts.\n\nFixes https://github.com/google/benchmark/issues/1982",
             "commit_timestamp": 1747044605.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1747452117.775104,
+            "elapsed_time": 62.25453972816467,
+            "x64": true,
+            "actual_files_count": 94,
+            "expected_files_count": 86,
+            "memory_traffic": 5242.924606323242,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "4995099c4f6bd751432ebb167a6709b455a3dc93",
+            "commit_message": "Fix `MaybeReenterWithoutASLR()` in docker (#1985)\n\nIn some docker configurations the `personality()` function may return\ninconsistent results. Double check if the persona has been updated\nbefore reentering, otherwise we risk infinite loop.\n\nFixes https://github.com/google/benchmark/issues/1984.",
+            "commit_timestamp": 1747422937.0
         }
     ]
 }

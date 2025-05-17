@@ -7379,6 +7379,21 @@
             "commit_ref": "e34bb0dd09485741852291adac788216bceb2b93",
             "commit_message": "Add load statements for the shell rules where they are missing.\n\nsh_binary, sh_library, and sh_test will no longer be packaged with Bazel\nand will need to be explicitly loaded like other rules.\n\nPiperOrigin-RevId: 759574131\n",
             "commit_timestamp": 1747399102.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1747452149.700685,
+            "elapsed_time": 439.88626980781555,
+            "x64": true,
+            "actual_files_count": 1437,
+            "expected_files_count": 818,
+            "memory_traffic": 60931.92817687988,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "a811dc69435d3e73c2b47652deb8dafab228521c",
+            "commit_message": "Correct deprecation of has_optional_keyword()\n\nPiperOrigin-RevId: 759837789\n",
+            "commit_timestamp": 1747447772.0
         }
     ]
 }
