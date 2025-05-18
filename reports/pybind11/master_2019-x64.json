@@ -27463,6 +27463,21 @@
             "commit_ref": "094343c74a485d784823a51d2b8707d33ae8ad63",
             "commit_message": "fix: support Python 3.14 (#5646)\n\n* ci: support Python 3.14\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n* fix: Python 3.14 name change\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n* tests: fix expected output to handle Python 3.14\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n* fix: tighten CLI and add color on 3.14+\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n* tests: ignore failure on 3.14.0b1\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n* fix: support Python 3.14.0b1 with interperters\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n* Update test_multiple_interpreters.py\n\n* Update test_multiple_interpreters.py\n\n* fix: new breakage for 3.14 fixed\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n* fix: handle empty annotations 3.14\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n* fix: Python 3.14 may not create the annotations dict\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n* fix: use PyUnstable_IsImmortal\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n* fix: use sys._is_immortal\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n* tests: ignore large values for refcount too\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n* style: pre-commit fixes\n\n* ci: enable all free-threaded builds\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n* fix: patch for embed\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n* Revert \"fix: patch for embed\"\n\nThis reverts commit c4226a06712c203d8f76debcb325e4910fb5e4ac.\n\n* ci: drop new 3.xt additions\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n* fix: logic issue, also add some comments\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n* Update include/pybind11/pytypes.h\n\n---------\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>",
             "commit_timestamp": 1747447123.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1747580771.964261,
+            "elapsed_time": 161.23849248886108,
+            "x64": true,
+            "actual_files_count": 476,
+            "expected_files_count": 197,
+            "memory_traffic": 20987.152893066406,
+            "repo_url": "https://github.com/pybind/pybind11",
+            "commit_ref": "9afc9c4ffbe10102421b942775098556a3c5037f",
+            "commit_message": "feat: change PYBIND11_EMBEDDED_MODULE to multiphase init (#5665)\n\n* Move embedded modules to multiphase init\n\nSo that they too can support multi-interpreter and nogil tags\n\n* Update the multiple interpreter test for embedded module changes\n\n* Add a note to embedded module docs about the new tags\n\n* Oops, missed a warning pop\n\n* Remove unused variable\n\n* Update ci.yml\n\n* Fix this embedded GIL test for free-threading\n\n* Oops, need to use ptr() here\n\n* This test created a subinterpreter when PYBIND11_SUBINTERPRETER_SUPPORT was off\n\nSo the fix is really this test should not be run in these older versions at all.\n\nThe hang was a GIL issue between the subinterpreters during pybind11::exception::what().\n\n* fix: standard mutex for 3.13t\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n---------\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\nCo-authored-by: Henry Schreiner <HenrySchreinerIII@gmail.com>",
+            "commit_timestamp": 1747575566.0
         }
     ]
 }

@@ -27153,6 +27153,21 @@
             "commit_ref": "4995099c4f6bd751432ebb167a6709b455a3dc93",
             "commit_message": "Fix `MaybeReenterWithoutASLR()` in docker (#1985)\n\nIn some docker configurations the `personality()` function may return\ninconsistent results. Double check if the persona has been updated\nbefore reentering, otherwise we risk infinite loop.\n\nFixes https://github.com/google/benchmark/issues/1984.",
             "commit_timestamp": 1747422937.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1747580747.351884,
+            "elapsed_time": 64.81446194648743,
+            "x64": true,
+            "actual_files_count": 94,
+            "expected_files_count": 86,
+            "memory_traffic": 5259.2959060668945,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "4995099c4f6bd751432ebb167a6709b455a3dc93",
+            "commit_message": "Fix `MaybeReenterWithoutASLR()` in docker (#1985)\n\nIn some docker configurations the `personality()` function may return\ninconsistent results. Double check if the persona has been updated\nbefore reentering, otherwise we risk infinite loop.\n\nFixes https://github.com/google/benchmark/issues/1984.",
+            "commit_timestamp": 1747422937.0
         }
     ]
 }
