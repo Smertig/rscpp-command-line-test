@@ -8567,6 +8567,23 @@
             "commit_ref": "bf1d4a0710a6e1d2c99e579bcf435b92ab5d0506",
             "commit_message": "[LICM] Preserve Disjoint flag on OR when hoisting. (#140266)\n\nUpdate hoistBOAssociation to preserve Disjoint flags on the newly\ncreated instructions if both ORs are disjoint.\n\nFixes https://github.com/llvm/llvm-project/issues/139625.\n\nPR: https://github.com/llvm/llvm-project/pull/140266",
             "commit_timestamp": 1747489719.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1747538956.03343,
+            "elapsed_time": 59.568073749542236,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4999.04719543457,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "465e0daa6c6b0ddd010bc1c5f316c6be0d8b17b6",
+            "commit_message": "[BOLT] Avoid repeated hash lookups (NFC) (#140426)\n\nWe can use try_emplace to succinctly implement GetOrCreateFuncEntry\nand GetOrCreateFuncMemEntry.  Since it's a bit mouthful to say\nFuncBasicSampleData::ContainerTy(), this patch changes the second\nparameters to default ones.",
+            "commit_timestamp": 1747536235.0
         }
     ]
 }
