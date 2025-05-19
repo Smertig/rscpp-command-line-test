@@ -27493,6 +27493,21 @@
             "commit_ref": "cc86e8b2a6c68580f23c433479e2815aefa4d880",
             "commit_message": "fix(cmake): better --fresh support (#5668)\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>",
             "commit_timestamp": 1747617132.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1747667204.483649,
+            "elapsed_time": 179.77522015571594,
+            "x64": true,
+            "actual_files_count": 476,
+            "expected_files_count": 197,
+            "memory_traffic": 21061.485313415527,
+            "repo_url": "https://github.com/pybind/pybind11",
+            "commit_ref": "4587d33cf9d18c8d1fa9c6ad18e0d0727affa866",
+            "commit_message": "docs: prepare for v3.0.0rc1 (#5589)\n\n* Squashed prepv300/manuscript \u2014 30b9c268aeb98308ea42aaccfd5fe454e173c6fc \u2014 2025-03-30 14:56:03 -0700 [skip ci]\n\n[Browse prepv300/manuscript tree](https://github.com/rwgk/pybind11/tree/30b9c268aeb98308ea42aaccfd5fe454e173c6fc)\n\n[Browse prepv300/manuscript commits](https://github.com/rwgk/pybind11/commits/30b9c268aeb98308ea42aaccfd5fe454e173c6fc/)\n\n* docs: update changelog\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n* docs: upgrade guide CMake suggestions\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n* Explain type_caster_enum_type_enabled, copyable_holder_caster_shared_ptr_with_smart_holder_support_enabled, move_only_holder_caster_unique_ptr_with_smart_holder_support_enabled in Upgrade guide.\n\n* Add a small section for py::bind_vector, py::bind_map & py::smart_holder\n\n* Fix tiny oversight: Reference back to the current release v2.13 (not v2.12)\n\n* Remove sentence: Using self._pybind11_conduit_v1_() ... should keep extension compatibility.\n\nThis isn't true, because we also modernized `PYBIND11_PLATFORM_ABI_ID`\n(which I believe was absolutely necessary). I think it'll be too complicated\nto explain that here, and there is a mention in the Upgrade guide.\n\n* Changelog: combine #4953 and #5439\n\n* Trivial whitespace/formatting fixes/enhancements.\n\n* chore: add more to deprecation page\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n* docs: update for recent additions\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n* docs: fixes and set rc1 version\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n* fix: support rc versions\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n* Undo erroneous copilot change: We need to use `detail::enable_if_t`, for compatibility with C++11 and C++14.\n\n* Empty lines cleanup.\n\n* Rewording of \"CMake support now defaults to ...\" paragraph.\n\n* Add missing backticks in upgrade guide.\n\n* Try :ref:deprecated instead of :doc:deprecated\n\n* docs: last bit of polish\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n* Piggy-back trivial whitespace cleanup that was missed in PR #5669\n\n---------\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\nCo-authored-by: Henry Schreiner <henryschreineriii@gmail.com>",
+            "commit_timestamp": 1747659731.0
         }
     ]
 }

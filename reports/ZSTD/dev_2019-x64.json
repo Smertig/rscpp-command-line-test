@@ -27563,6 +27563,21 @@
             "commit_ref": "f9938c217da17ec3e9dcd2a2d99c5cf39536aeb9",
             "commit_message": "lz4: Remove ancient test helpers\n\nBuilding lz4 as root was causing `make clean` to fail with permission\nerrors.\n\nWe used to have to install lz4 from source back in Ubuntu 14.04, but\nnowadays the installed lz4 is fine. Get rid of ancient helpers and\ncruft!\n",
             "commit_timestamp": 1746680509.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1747667216.471332,
+            "elapsed_time": 89.40291333198547,
+            "x64": true,
+            "actual_files_count": 209,
+            "expected_files_count": null,
+            "memory_traffic": 7487.7730712890625,
+            "repo_url": "https://github.com/facebook/zstd.git",
+            "commit_ref": "f9938c217da17ec3e9dcd2a2d99c5cf39536aeb9",
+            "commit_message": "lz4: Remove ancient test helpers\n\nBuilding lz4 as root was causing `make clean` to fail with permission\nerrors.\n\nWe used to have to install lz4 from source back in Ubuntu 14.04, but\nnowadays the installed lz4 is fine. Get rid of ancient helpers and\ncruft!\n",
+            "commit_timestamp": 1746680509.0
         }
     ]
 }
