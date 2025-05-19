@@ -25831,6 +25831,21 @@
             "commit_ref": "6b222fb08462a1383320bc218de5fc6916fe2ddc",
             "commit_message": "[SHELL32_APITEST] Comment out OpenAs_RunDLL test\n\nThis test hangs on Windows 2003 and breaks testing on Windows 2003 x64.\n",
             "commit_timestamp": 1747569266.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1747625319.850431,
+            "elapsed_time": 89.41220307350159,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7286.0274658203125,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "c477928b0e5483564e36c13449d0212eba244ecb",
+            "commit_message": "[HIDCLASS] Override hid device capabilities\n\n- Disable the Removable capability\n- Enable the SilentInstall and SurpriseRemovalOK capabilities\n\nThis keeps the remove device icon from showing in the notification area whenever you plug in a mouse or a keyboard.\n",
+            "commit_timestamp": 1747607350.0
         }
     ]
 }
