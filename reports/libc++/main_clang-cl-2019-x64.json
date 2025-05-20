@@ -8652,6 +8652,23 @@
             "commit_ref": "e264cff6fd676784adf1e436747259548ba708f8",
             "commit_message": "[NFC][AMDGPU] Update tests to use autogened CHECKs (#140648)\n\n",
             "commit_timestamp": 1747709260.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1747753810.859577,
+            "elapsed_time": 68.99589705467224,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5087.17219543457,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "621a5a976e2364677e57f1b3ab37417f2ed38fba",
+            "commit_message": "[X86] combineAdd - use SDPatternMatch to simplify \"(add (zext (vXi1 X)), Y) -> (sub Y, (sext (vXi1 X)))\" matching. (#140731)\n\n",
+            "commit_timestamp": 1747753196.0
         }
     ]
 }
