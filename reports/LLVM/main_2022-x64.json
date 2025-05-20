@@ -28726,6 +28726,23 @@
             "commit_ref": "dc25ab389c2d441ba378d4db56a4a61e3eedb889",
             "commit_message": "[lldb]Make `list` command work with  headers when possible. (#139002)\n\nGiven this simple test case:\n\n```\n// foo.h\nextern int* ptr;\ninline void g(int x) {\n  *ptr = x; // should raise a SIGILL\n}\n//--------------\n// foo.cc\n#include \"foo.h\"\nint* ptr;\n\n//--------------\n// main.cc\n\n#include \"foo.h\"\n\nint main() {\n  g(123); // Call the inlined function and crash\n  return 0;\n}\n\n$ clang -g main.cc foo.cc -o main.out\n$ lldb main.out\n```\n\nWhen you run `main.out` under lldb, it'd stop inside `void g(int)`\nbecause of the crash.\nThe stack trace would show that it had crashed in `foo.h`, but if you do\n`list foo.h:2`, lldb would complain that it could not find the source\nfile, which is confusing.\n\nThis patch make `list` work with headers.",
             "commit_timestamp": 1747667041.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1747712482.126763,
+            "elapsed_time": 1630.7489264011383,
+            "x64": true,
+            "actual_files_count": 2943,
+            "expected_files_count": 1661,
+            "memory_traffic": 262521.4236907959,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "e264cff6fd676784adf1e436747259548ba708f8",
+            "commit_message": "[NFC][AMDGPU] Update tests to use autogened CHECKs (#140648)\n\n",
+            "commit_timestamp": 1747709260.0
         }
     ]
 }

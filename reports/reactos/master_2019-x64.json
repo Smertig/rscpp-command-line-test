@@ -25861,6 +25861,21 @@
             "commit_ref": "c477928b0e5483564e36c13449d0212eba244ecb",
             "commit_message": "[HIDCLASS] Override hid device capabilities\n\n- Disable the Removable capability\n- Enable the SilentInstall and SurpriseRemovalOK capabilities\n\nThis keeps the remove device icon from showing in the notification area whenever you plug in a mouse or a keyboard.\n",
             "commit_timestamp": 1747607350.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1747711458.454492,
+            "elapsed_time": 77.49796485900879,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7289.748153686523,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "3842b59f75e0793188fc94fb2c670930a04d7fbe",
+            "commit_message": "[TCPIP] Retrieve the interface medium type from NDIS\n\nSend OID_GEN_PHYSICAL_MEDIUM and OID_GEN_MEDIA_SUPPORTED query requests to NDIS.\n\nThis will enable us to distinguish wired and wireless ethernet adapters.\n",
+            "commit_timestamp": 1747694846.0
         }
     ]
 }
