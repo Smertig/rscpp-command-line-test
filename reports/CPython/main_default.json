@@ -23291,6 +23291,21 @@
             "commit_ref": "f3acbb72ff125172522545ec6f6c676f5108b109",
             "commit_message": "gh-101100: Fix Sphinx warnings in `library/decimal.rst` (#134303)\n\n",
             "commit_timestamp": 1747752373.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1747798116.544112,
+            "elapsed_time": 1321.6723296642303,
+            "x64": true,
+            "actual_files_count": 1198,
+            "expected_files_count": null,
+            "memory_traffic": 52457.35082244873,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "1298511b41ec0f9be925c12f3830e94fe8f7e7dc",
+            "commit_message": "gh-72680: Fix false positives when using zipfile.is_zipfile() (GH-134250)\n\nbpo-28494: Improve zipfile.is_zipfile reliability\n\nThe zipfile.is_zipfile function would only search for the EndOfZipfile\nsection header. This failed to correctly identify non-zipfiles that\ncontained this header. Now the zipfile.is_zipfile function verifies\nthe first central directory entry.\n\nChanges:\n* Extended zipfile.is_zipfile to verify zipfile catalog\n* Added tests to validate failure of binary non-zipfiles\n* Reuse 'concat' handling for is_zipfile\n\nCo-authored-by: John Jolly <john.jolly@gmail.com>",
+            "commit_timestamp": 1747791161.0
         }
     ]
 }

@@ -8669,6 +8669,23 @@
             "commit_ref": "621a5a976e2364677e57f1b3ab37417f2ed38fba",
             "commit_message": "[X86] combineAdd - use SDPatternMatch to simplify \"(add (zext (vXi1 X)), Y) -> (sub Y, (sext (vXi1 X)))\" matching. (#140731)\n\n",
             "commit_timestamp": 1747753196.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1747798018.717747,
+            "elapsed_time": 80.3788902759552,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5057.774269104004,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "9a553d3766aacb69e884823da92dedff264e3f0f",
+            "commit_message": "[MLIR][NVVM] Add NVVMRequiresSM op traits (#126886)\n\nMotivation:\nCurrently, the NVVMOps are not verified against the supported SM\narchitectures. This can manifest as an ISel failure in the NVPTX LLVM\nbackend during CodeGen to PTX ISA. This PR addresses this issue by\nadding verifier checks for Target-SM architectures in the NVVM Dialect\nitself, thereby catching the errors early on.\n\nSummary:\n* Parametric traits named `NVVMRequiresSM` and `NVVMRequiresSMa` are\nadded to facilitate the version checks for typical and arch-accelerated\nversions respectively.\n* These traits can be attached to any NVVM Op to enable the checks for\nthe particular Op. (example shown below)\n* An attribute interface called named `TargetAttrVerifyInterface` is\nadded to the GPU dialect which any target attribute seeking to perform\ntarget-verification on the module can implement.\n* The checks are performed by the `NVVMTargetAttr` (implementing the\n`TargetAttrVerifyInterface` interface) when called from the GPU module\nverifier where it walks through the module and performs the checks for\nOps with the `NVVMRequiresSM` traits.\n* A few Ops in `NVVMOps.td` have been updated to serve as examples.\n\nExample Usage:\n```\n       def NVVM_ReduxOp : NVVM_Op<\"redux.sync\"> {...} \n ----> def NVVM_ReduxOp : NVVM_Op<\"redux.sync\", [NVVMRequiresSM<80>]> {...}\n\n       def NVVM_WgmmaFenceAlignedOp : NVVM_Op<\"wgmma.fence.aligned\"> {...}\n ----> def NVVM_WgmmaFenceAlignedOp : NVVM_Op<\"wgmma.fence.aligned\", [NVVMRequiresSMa<[90]>]> {...}\n```\n\n---------\n\nCo-authored-by: Guray Ozen <guray.ozen@gmail.com>",
+            "commit_timestamp": 1747797780.0
         }
     ]
 }

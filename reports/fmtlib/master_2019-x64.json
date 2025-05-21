@@ -27588,6 +27588,21 @@
             "commit_ref": "3ba3c390fba51053e385ba729505ca60869d8a95",
             "commit_message": "Clarify that formatting of pointers is disallowed\n",
             "commit_timestamp": 1747502218.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1747797796.854346,
+            "elapsed_time": 79.54679536819458,
+            "x64": true,
+            "actual_files_count": 74,
+            "expected_files_count": 66,
+            "memory_traffic": 7846.359153747559,
+            "repo_url": "https://github.com/fmtlib/fmt.git",
+            "commit_ref": "b723c021dfd521ca528925ae20472bac81089faa",
+            "commit_message": "Give useful error when misusing fmt::ptr. (#4453)\n\nstatic_assert(bla, \"\") prints an empty message but not the condition with at least MSVC. Add an informative message.",
+            "commit_timestamp": 1747768866.0
         }
     ]
 }
