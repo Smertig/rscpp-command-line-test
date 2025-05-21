@@ -23306,6 +23306,21 @@
             "commit_ref": "1298511b41ec0f9be925c12f3830e94fe8f7e7dc",
             "commit_message": "gh-72680: Fix false positives when using zipfile.is_zipfile() (GH-134250)\n\nbpo-28494: Improve zipfile.is_zipfile reliability\n\nThe zipfile.is_zipfile function would only search for the EndOfZipfile\nsection header. This failed to correctly identify non-zipfiles that\ncontained this header. Now the zipfile.is_zipfile function verifies\nthe first central directory entry.\n\nChanges:\n* Extended zipfile.is_zipfile to verify zipfile catalog\n* Added tests to validate failure of binary non-zipfiles\n* Reuse 'concat' handling for is_zipfile\n\nCo-authored-by: John Jolly <john.jolly@gmail.com>",
             "commit_timestamp": 1747791161.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1747840159.583983,
+            "elapsed_time": 1265.0519950389862,
+            "x64": true,
+            "actual_files_count": 1198,
+            "expected_files_count": null,
+            "memory_traffic": 52516.98058319092,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "5b0e82752120a5dc66ce6ee778751d71ba2c33b2",
+            "commit_message": "gh-133982: Run unclosed file test on all io implementations (gh-134165)\n\nUpdate `test_io` `_check_warn_on_dealloc` to use `self.` to dispatch to\ndifferent I/O implementations.\n\nUpdate the `_pyio` implementation to match expected behavior, using the\nsame `_dealloc_warn` design as the C implementation uses to report the\ntopmost `__del__` object.\n\nThe FileIO one now matches all the others, so can use IOBase. There was\na missing check on closing (self._fd must be valid), add that check",
+            "commit_timestamp": 1747839116.0
         }
     ]
 }

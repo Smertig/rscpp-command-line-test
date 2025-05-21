@@ -21462,6 +21462,21 @@
             "commit_ref": "7ac5502fdf23263ad6b424c2da6c18ffff122df0",
             "commit_message": "Fix handling of skinned meshes for nodes\n\nSecond try after the revert in 8a28339 due to an unexpected regression.\n\n- Rigidly animated models (e.g. the glTF frog node) were not working correctly,\n  since cloning the mesh ignored the transformation matrices.\n  Note that scaling the mesh needs to occur *after* transforming the vertices.\n- Visual scale did not apply to skinned models,\n  as resetting the animation overwrote scaled vertex data with static positions & normals.\n  For backwards compatibility, we now apply a 10x scale to static, non-glTF models.\n\nWe now do scale static meshes, as the bug that caused meshes not to be scaled was limited to skeletally animated meshes,\nhence we ought not to reproduce it for skinned meshes that do not take advantage of skeletal animations (e.g. current MTG doors).\n\nHowever, glTF models (e.g. Wuzzy's eyeballs) up until recently were always affected due to technical reasons\n(using skeletal animation for rigid animation).\n\nThus, to preserve behavior, we:\n\n1. Do not apply 10x scale to glTF models.\n2. Apply 10x scale to obj models.\n3. Apply 10x scale to static x or b3d models, but not to animated ones.\n\nSee also: #16141",
             "commit_timestamp": 1747759053.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1747842954.679152,
+            "elapsed_time": 192.77500462532043,
+            "x64": true,
+            "actual_files_count": 423,
+            "expected_files_count": 105,
+            "memory_traffic": 23622.0892868042,
+            "repo_url": "https://github.com/minetest/minetest",
+            "commit_ref": "7ac5502fdf23263ad6b424c2da6c18ffff122df0",
+            "commit_message": "Fix handling of skinned meshes for nodes\n\nSecond try after the revert in 8a28339 due to an unexpected regression.\n\n- Rigidly animated models (e.g. the glTF frog node) were not working correctly,\n  since cloning the mesh ignored the transformation matrices.\n  Note that scaling the mesh needs to occur *after* transforming the vertices.\n- Visual scale did not apply to skinned models,\n  as resetting the animation overwrote scaled vertex data with static positions & normals.\n  For backwards compatibility, we now apply a 10x scale to static, non-glTF models.\n\nWe now do scale static meshes, as the bug that caused meshes not to be scaled was limited to skeletally animated meshes,\nhence we ought not to reproduce it for skinned meshes that do not take advantage of skeletal animations (e.g. current MTG doors).\n\nHowever, glTF models (e.g. Wuzzy's eyeballs) up until recently were always affected due to technical reasons\n(using skeletal animation for rigid animation).\n\nThus, to preserve behavior, we:\n\n1. Do not apply 10x scale to glTF models.\n2. Apply 10x scale to obj models.\n3. Apply 10x scale to static x or b3d models, but not to animated ones.\n\nSee also: #16141",
+            "commit_timestamp": 1747759053.0
         }
     ]
 }
