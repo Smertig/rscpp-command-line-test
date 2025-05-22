@@ -7529,6 +7529,21 @@
             "commit_ref": "167c4d0fd400eccff3ffbd9ea587cfa702d2a516",
             "commit_message": "Optimize upb's encoding of the packed status of packable repeated fields\n\nUpb minidescriptors encode a default packed status for each message, and then\neach packable repeated field within it can indicate if it deviates from the\ndefault. Currently the default is determined by the `repeated_field_encoding`\nfeature, which means that an upgrade from proto2 to editions will always change\nthe minidescriptor. This makes it difficult to output minidescriptors in Rust\ngenerated code, because we have tests that verify that an editions upgrade does\nnot result in generated code changes.\n\nThis CL fixes the problem by determining the default packed status in a way\nthat does not depend on editions. Instead we just consider packed the default\nif there are more packed fields than unpacked among packable repeated fields.\nThis has the side benefit of somewhat reducing the size of minidescriptors for\nmany messages.\n\nPiperOrigin-RevId: 761524104\n",
             "commit_timestamp": 1747839830.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1747884327.319866,
+            "elapsed_time": 351.74633526802063,
+            "x64": true,
+            "actual_files_count": 1169,
+            "expected_files_count": 818,
+            "memory_traffic": 43287.17353057861,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "8543a716690c03102d3dfcfd98c579001a799a77",
+            "commit_message": "Remove mutable-specific code from open-source.\n\nThese functions are only used for the \"mutable\" variant of the Java API, which is not open-source.\n\nPiperOrigin-RevId: 761739969\n",
+            "commit_timestamp": 1747875374.0
         }
     ]
 }

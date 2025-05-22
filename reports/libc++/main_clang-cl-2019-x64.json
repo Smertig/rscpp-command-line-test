@@ -8703,6 +8703,23 @@
             "commit_ref": "a28d753e9645f62bff4d65c5ddce17e11e8fd078",
             "commit_message": "[Vectorize] Fix a warning\n\nThis patch fixes:\n\n  llvm/lib/Transforms/Vectorize/LoopVectorize.cpp:8564:20: error:\n  unused variable 'LoopRegionOf' [-Werror,-Wunused-variable]\n",
             "commit_timestamp": 1747839796.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1747884375.009916,
+            "elapsed_time": 61.34908676147461,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5078.526275634766,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "94fdeb76864c5c46ee5503ebf34d5778f4c948b8",
+            "commit_message": "[clang] Mark some language options as benign. (#131569)\n\nI'm fairly certain that the options in this CL are benign, as I don't\nbelieve they affect the AST.\n* RTTI - shouldn't affect the AST, should only affect codegen\n* Trivial var init - also should only affect codegen\n* Stack protector - also codegen\n* Exceptions - Since exceptions do allow new things in the AST, but I'm\npretty sure that they can differ in parent and child safely, I marked it\nas compatible instead.\n\nI welcome any input from someone more familiar with this than me, as I\nmight be wrong.",
+            "commit_timestamp": 1747884132.0
         }
     ]
 }

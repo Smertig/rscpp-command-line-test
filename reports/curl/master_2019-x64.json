@@ -24146,6 +24146,21 @@
             "commit_ref": "2dfe421a645a7c5358ad7fee0ec9623594e6fac6",
             "commit_message": "build: fix OS400 build after curlx move\n\nFixes #17410\nCloses #17411\n",
             "commit_timestamp": 1747832597.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1747884821.65819,
+            "elapsed_time": 302.3205027580261,
+            "x64": true,
+            "actual_files_count": 3588,
+            "expected_files_count": 2323,
+            "memory_traffic": 81836.91281890869,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "203b4349af3e1bfd06226ebb574af524b0a37276",
+            "commit_message": "GHA: add a job to check function complexity\n\n- Done with the new top-complexity script which uses the pmccabe tool.\n\n- Any function scoring over 100 makes the test fail\n\n- The script outputs all functions scoring over 70\n\n- Two >100 functions are whitelisted by name, but they are not allowed\n  to increase their scores.\n\nCloses #17398\n",
+            "commit_timestamp": 1747861153.0
         }
     ]
 }
