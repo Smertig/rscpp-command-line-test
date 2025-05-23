@@ -24176,6 +24176,21 @@
             "commit_ref": "4331e7087bcf10b1d54fa17b0ef879417d270596",
             "commit_message": "windows: fix builds targeting WinXP, test it in CI\n\n- appveyor: make a job target Windows XP.\n\n- examples/block_ip: force this specific example to target Vista to make\n  it compile when building curl for Windows XP. Fixing:\n  ```\n  docs\\examples\\block_ip.c(157): warning C4013: 'inet_pton' undefined; assuming extern returning int\n  docs\\examples\\block_ip.c(272): warning C4013: 'inet_ntop' undefined; assuming extern returning int\n  ```\n  Ref: https://ci.appveyor.com/project/curlorg/curl/builds/52102142/job/2ajdluhc20r4gmmw#L530\n\nCherry-picked from #17413\nCloses #17415\n",
             "commit_timestamp": 1747911868.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1748013242.385855,
+            "elapsed_time": 302.56263637542725,
+            "x64": true,
+            "actual_files_count": 3588,
+            "expected_files_count": 2323,
+            "memory_traffic": 83017.58563995361,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "a0a1df5af9b3f11125d1a995c01b7c04cfec54e4",
+            "commit_message": "lib3026: drop DLL pre-load perf mitigation for old mingw\n\ncurl no longer supports old/legacy/classic mingw.\n\nThis mitigation was addressing slow perf seen in CI with old mingw.\nThe slow perf is not seen in current CI with supported compilers.\n\nRemove the duplicate DLL load function from libtest. It's no longer\nused after this patch.\n\nCurrent CI run times for test3026 on GHA/windows:\n```\ntest 3026...[curl_global_init thread-safety]\n # mingw, CM clang-x86_64 gnutls libssh\n -------e--- OK (1715 out of 1738, remaining: 00:02, took 0.196s, duration: 02:55)\n # dl-mingw, CM 9.5.0-x86_64 schannel\n -------e--- OK (1554 out of 1577, remaining: 00:02, took 0.217s, duration: 02:29)\n # msvc, CM x64-windows schannel +examples\n -------e--- OK (1578 out of 1601, remaining: 00:02, took 0.205s, duration: 02:50)\n```\n\nFollow-up to 38029101e2d78ba125732b3bab6ec267b80a0e72 #11625\nFollow-up to 856b133f5d62475d4cc12624c4cccb4170134712 #9412\nRef: #17413\n\nCloses #17414\n",
+            "commit_timestamp": 1747994343.0
         }
     ]
 }
