@@ -28845,6 +28845,23 @@
             "commit_ref": "bbca78fbcbc42c4e0c2618077dbbc01d43aa5358",
             "commit_message": "[PowerPC] vector shift word/double by element size - 1 use all ones (#139794)\n\nVector shift word or double requires a shift amount vector of 31 or 63\nwhich is too big for splat immediate and requires a multi-instruction\nsequence. However the PPC instructions only use 5 or 6 bits of the shift\namount vector elements so an all ones mask, which we can generate\nefficiently, works.",
             "commit_timestamp": 1748011777.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1748057869.590805,
+            "elapsed_time": 1612.4438345432281,
+            "x64": true,
+            "actual_files_count": 2949,
+            "expected_files_count": 1661,
+            "memory_traffic": 262898.0685195923,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "dddcbc26d6bcbc3361f7c56e8168ddd76d0dfc0f",
+            "commit_message": "[Driver][LTO] Move common code for LTO to addLTOOptions() (#74178)\n\n",
+            "commit_timestamp": 1748055817.0
         }
     ]
 }
