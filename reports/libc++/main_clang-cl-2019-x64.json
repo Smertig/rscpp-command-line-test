@@ -8771,6 +8771,23 @@
             "commit_ref": "dddcbc26d6bcbc3361f7c56e8168ddd76d0dfc0f",
             "commit_message": "[Driver][LTO] Move common code for LTO to addLTOOptions() (#74178)\n\n",
             "commit_timestamp": 1748055817.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1748099296.065042,
+            "elapsed_time": 67.45597910881042,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5033.057762145996,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "aa452b65fc7ebfee6f7e5b9d08aa418d532c7b88",
+            "commit_message": "[SLP]Restore insertion points after gathers vectorization\n\nRestore insertion points after gathers vectorization to avoid a crash in\na root node vectorization.\n\nFixes #141265\n",
+            "commit_timestamp": 1748096720.0
         }
     ]
 }

@@ -27678,6 +27678,21 @@
             "commit_ref": "f7033da09e8ca2932ee2f5c40ae8277cad3e1958",
             "commit_message": "Avoid include locale inline if C++20 modules are enabled (#4451)\n\nMSVC hints with:\n```\nfmt\\include\\fmt\\format-inl.h(26): warning C5244: '#include <locale>' in the purview of module 'fmt' appears erroneous.  Consider moving that directive before the module declaration, or replace the textual inclusion with 'import <locale>;'.\n```\n\nThen fails the build with `type redefinition`.",
             "commit_timestamp": 1747873098.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1748099110.912392,
+            "elapsed_time": 85.8720064163208,
+            "x64": true,
+            "actual_files_count": 74,
+            "expected_files_count": 66,
+            "memory_traffic": 7879.155899047852,
+            "repo_url": "https://github.com/fmtlib/fmt.git",
+            "commit_ref": "f7033da09e8ca2932ee2f5c40ae8277cad3e1958",
+            "commit_message": "Avoid include locale inline if C++20 modules are enabled (#4451)\n\nMSVC hints with:\n```\nfmt\\include\\fmt\\format-inl.h(26): warning C5244: '#include <locale>' in the purview of module 'fmt' appears erroneous.  Consider moving that directive before the module declaration, or replace the textual inclusion with 'import <locale>;'.\n```\n\nThen fails the build with `type redefinition`.",
+            "commit_timestamp": 1747873098.0
         }
     ]
 }
