@@ -28879,23 +28879,6 @@
             "commit_ref": "aa452b65fc7ebfee6f7e5b9d08aa418d532c7b88",
             "commit_message": "[SLP]Restore insertion points after gathers vectorization\n\nRestore insertion points after gathers vectorization to avoid a crash in\na root node vectorization.\n\nFixes #141265\n",
             "commit_timestamp": 1748096720.0
-        },
-        {
-            "tool_version": "243.0.20241111.161023",
-            "error_mismatch": true,
-            "project": [
-                "clang*"
-            ],
-            "timestamp": 1748144734.636066,
-            "elapsed_time": 1651.96994638443,
-            "x64": true,
-            "actual_files_count": 2949,
-            "expected_files_count": 1661,
-            "memory_traffic": 262893.6502685547,
-            "repo_url": "https://github.com/llvm/llvm-project",
-            "commit_ref": "768726163730dda5bb490a5e88d4463ab5d3d231",
-            "commit_message": "ELFObjectWriter: Remove MCAssembler * arguments\n",
-            "commit_timestamp": 1748142060.0
         }
     ]
 }
