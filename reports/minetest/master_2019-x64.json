@@ -21552,6 +21552,21 @@
             "commit_ref": "d17f22f536cf5a94dda88d4f36b1faf0bb44958e",
             "commit_message": "Fix texture coordinates of cuboid drawtypes (#16091)\n\nFixes issues related to combining animated and world-aligned textures.\nChanges texture coordinates of cuboid drawtypes to stay in the [0,1] range, instead of carrying the mapblock alignment and becoming negative after transformations.",
             "commit_timestamp": 1748095172.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1748188234.293499,
+            "elapsed_time": 168.5837688446045,
+            "x64": true,
+            "actual_files_count": 423,
+            "expected_files_count": 105,
+            "memory_traffic": 23580.944122314453,
+            "repo_url": "https://github.com/minetest/minetest",
+            "commit_ref": "fa0c09d202537acbd267a38958f16c883359baca",
+            "commit_message": "Do not modify peer timeout on shutdown\n\nShortening the peer timeout was supposedly necessary at some point\nto work around an unknown bug. I was not able to reproduce the bug\nrunning a headless Luanti server on WSL Tumbleweed and connecting with\na client on the Windows host. That is not enough to say the issue no\nlonger exists. This commit may cause a regression.\n\nThe access to change the peer timeout was unsynchronized and done by a\ndifferent thread than the sending thread, so it was detected by TSan to\nbe a data race. Since this patch deletes the code performing the write,\nthe data race is no longer a concern and no synchronization must be\nadded.\n",
+            "commit_timestamp": 1748119789.0
         }
     ]
 }

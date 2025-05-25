@@ -8788,6 +8788,23 @@
             "commit_ref": "aa452b65fc7ebfee6f7e5b9d08aa418d532c7b88",
             "commit_message": "[SLP]Restore insertion points after gathers vectorization\n\nRestore insertion points after gathers vectorization to avoid a crash in\na root node vectorization.\n\nFixes #141265\n",
             "commit_timestamp": 1748096720.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1748185697.99218,
+            "elapsed_time": 78.56480360031128,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5057.138076782227,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "c76e2800e3d78fa6e8618431a6893f66f2fd3496",
+            "commit_message": "[MLIR][IRDL] Added IRDL to C++ Translation (#141248)\n\nThis PR introduces a new tool, mlir-irdl-to-cpp, that converts IRDL to\nC++ definitions.\n\nThe C++ definitions allow use of the IRDL-defined dialect in MLIR C++\ninfrastructure, enabling the use of conversion patterns with IRDL\ndialects for example. This PR also adds CMake utilities to easily\nintegrate the IRDL dialects into MLIR projects.\n\nNote that most IRDL features are not supported. In general, we are only\nable to define simple types and operations.\n\n- The only type constraint supported is irdl.any.\n- Variadic operands and results are not supported.\n- Verifiers for the IRDL constraints are not generated.\n- Attributes are not supported.\n\n---------\n\nCo-authored-by: Th\u00e9o Degioanni <theo.degioanni.llvm.deluge062@simplelogin.fr>\nCo-authored-by: Fehr Mathieu <mathieu.fehr@gmail.com>",
+            "commit_timestamp": 1748184150.0
         }
     ]
 }

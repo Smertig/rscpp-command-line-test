@@ -24221,6 +24221,21 @@
             "commit_ref": "ed07f59841b6398f8bafe51ec8dafedddf9c1177",
             "commit_message": "tool_operate: split up single_transfer\n\nComplexity reduced from 124 to 83\n\nRemove whitelisting of this function from the complexity script.\n\nCloses #17437\n",
             "commit_timestamp": 1748094188.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1748186029.976696,
+            "elapsed_time": 291.4446930885315,
+            "x64": true,
+            "actual_files_count": 3588,
+            "expected_files_count": 2323,
+            "memory_traffic": 85632.27101135254,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "745c3519a5942853cb96817d6545ba8aaf1cb3f0",
+            "commit_message": "ftp: fix race in upload handling\n\nWhen TYPE was skipped for an immediate STORE command and the server\nreplied fast and the EPRT data connection was not ready, the transfer\nwas not initated, leading to no upload.\n\nFixes #17394\nCloses #17428\nReported-by: JoelAtWisetech on github\n",
+            "commit_timestamp": 1748166976.0
         }
     ]
 }
