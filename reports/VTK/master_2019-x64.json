@@ -25140,6 +25140,21 @@
             "commit_ref": "464bbdd03790f0c36bd1f299d02e7e9733cc2949",
             "commit_message": "VTK Nightly Date Stamp\n",
             "commit_timestamp": 1748145673.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "vtkCommonCoreCxxTests",
+            "timestamp": 1748272195.094396,
+            "elapsed_time": 185.65566205978394,
+            "x64": true,
+            "actual_files_count": 83,
+            "expected_files_count": 68,
+            "memory_traffic": 23949.850593566895,
+            "repo_url": "https://gitlab.kitware.com/vtk/vtk.git",
+            "commit_ref": "b262cb1888bdf16a0784d7a4ae1d491eddf264d6",
+            "commit_message": "Merge topic 'explore-js-bindings'\n\ndca772aeac2 JavaScript wrapping exclusions\n18b46995bb1 Fixed sizeof on memory access\nd5e6943ba24 Remove deprecated DEMANGLE_SUPPORT emscripten link option\n7d175badaae Add option to wrap additional js binding sources\nbb4f9627940 Install required wasm target files\n6cf9a76c64b Wrap functions returning double* with size hint\ncdb4c2f7902 Fix vtkType enum types in emscripten bindings\n36f2e7b0c8d Define __EMSCRIPTEN__ when wrapping javascript headers\n...\n\nAcked-by: Kitware Robot <kwrobot@kitware.com>\nAcked-by: buildbot <buildbot@kitware.com>\nAcked-by: Louis Gombert <louis.gombert@kitware.com>\nAcked-by: Jens Munk Hansen <jens.munk.hansen@gmail.com>\nMerge-request: !12066\n",
+            "commit_timestamp": 1748241426.0
         }
     ]
 }
