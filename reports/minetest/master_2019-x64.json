@@ -21597,6 +21597,21 @@
             "commit_ref": "fa0c09d202537acbd267a38958f16c883359baca",
             "commit_message": "Do not modify peer timeout on shutdown\n\nShortening the peer timeout was supposedly necessary at some point\nto work around an unknown bug. I was not able to reproduce the bug\nrunning a headless Luanti server on WSL Tumbleweed and connecting with\na client on the Windows host. That is not enough to say the issue no\nlonger exists. This commit may cause a regression.\n\nThe access to change the peer timeout was unsynchronized and done by a\ndifferent thread than the sending thread, so it was detected by TSan to\nbe a data race. Since this patch deletes the code performing the write,\nthe data race is no longer a concern and no synchronization must be\nadded.\n",
             "commit_timestamp": 1748119789.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1748318851.591524,
+            "elapsed_time": 177.6895613670349,
+            "x64": true,
+            "actual_files_count": 423,
+            "expected_files_count": 105,
+            "memory_traffic": 23534.547859191895,
+            "repo_url": "https://github.com/minetest/minetest",
+            "commit_ref": "fa0c09d202537acbd267a38958f16c883359baca",
+            "commit_message": "Do not modify peer timeout on shutdown\n\nShortening the peer timeout was supposedly necessary at some point\nto work around an unknown bug. I was not able to reproduce the bug\nrunning a headless Luanti server on WSL Tumbleweed and connecting with\na client on the Windows host. That is not enough to say the issue no\nlonger exists. This commit may cause a regression.\n\nThe access to change the peer timeout was unsynchronized and done by a\ndifferent thread than the sending thread, so it was detected by TSan to\nbe a data race. Since this patch deletes the code performing the write,\nthe data race is no longer a concern and no synchronization must be\nadded.\n",
+            "commit_timestamp": 1748119789.0
         }
     ]
 }

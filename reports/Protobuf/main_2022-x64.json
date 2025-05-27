@@ -7649,6 +7649,21 @@
             "commit_ref": "5803b241c1df7a897d704103a88f1bb884d2b0c0",
             "commit_message": "#PDProto analyze_profile_proto_main: Reduce noisiness of logging\n\n- Added a new --error_file flag.\n   - If not empty, the noisy errors from `DescriptorBuilder` are redirected to it.\n- Restricted reporting of \"not found C++ message\" errors to --v=1 or higher (but still kept the WARNING logging level, so these can easily be found).\n\nPiperOrigin-RevId: 763430114\n",
             "commit_timestamp": 1748271907.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1748316311.531389,
+            "elapsed_time": 342.79902744293213,
+            "x64": true,
+            "actual_files_count": 1169,
+            "expected_files_count": 818,
+            "memory_traffic": 43272.173820495605,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "5803b241c1df7a897d704103a88f1bb884d2b0c0",
+            "commit_message": "#PDProto analyze_profile_proto_main: Reduce noisiness of logging\n\n- Added a new --error_file flag.\n   - If not empty, the noisy errors from `DescriptorBuilder` are redirected to it.\n- Restricted reporting of \"not found C++ message\" errors to --v=1 or higher (but still kept the WARNING logging level, so these can easily be found).\n\nPiperOrigin-RevId: 763430114\n",
+            "commit_timestamp": 1748271907.0
         }
     ]
 }
