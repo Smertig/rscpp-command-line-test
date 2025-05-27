@@ -26305,6 +26305,21 @@
             "commit_ref": "575e3adc0197914c1b10b3b02d6033f341c7bc25",
             "commit_message": "Merge pull request #27345 from asmorkalov:as/android_sdk_fastcv\n\nFixed FastCV linkage in OpenCV4AndroidSDK",
             "commit_timestamp": 1748157180.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1748358510.115738,
+            "elapsed_time": 428.4861423969269,
+            "x64": true,
+            "actual_files_count": 480,
+            "expected_files_count": 459,
+            "memory_traffic": 41583.364669799805,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "344f8c640034cb509930d1c92ff1a73a04101ebc",
+            "commit_message": "Merge pull request #27363 from MRo47:openvino-npu-support\n\nFeature: Add OpenVINO NPU support #27363\n\n## Why\n- OpenVINO now supports inference on integrated NPU devices in intel's Core Ultra series processors.\n- Sometimes as fast as GPU, but should use considerably less power.\n\n## How\n- The NPU plugin is now available as \"NPU\" in openvino `ov::Core::get_available_devices()`.\n- Removed the guards and checks for NPU in available targets for Inference Engine backend.\n\n## Test example\n\n### Pre-requisites\n- Intel [Core Ultra series processor](https://www.intel.com/content/www/us/en/products/details/processors/core-ultra/edge.html#tab-blade-1-0)\n- [Intel NPU driver](https://github.com/intel/linux-npu-driver/releases)\n- OpenVINO 2023.3.0+ (Tested on 2025.1.0)\n\n### Example\n```cpp\n#include <opencv2/dnn.hpp>\n#include <iostream>\n\nint main(){\n    cv::dnn::Net net = cv::dnn::readNet(\"../yolov8s-openvino/yolov8s.xml\", \"../yolov8s-openvino/yolov8s.bin\");\n    cv::Size net_input_shape = cv::Size(640, 480);\n    std::cout << \"Setting backend to DNN_BACKEND_INFERENCE_ENGINE and target to DNN_TARGET_NPU\" << std::endl;\n    net.setPreferableBackend(cv::dnn::DNN_BACKEND_INFERENCE_ENGINE);\n    net.setPreferableTarget(cv::dnn::DNN_TARGET_NPU);\n\n    cv::Mat image(net_input_shape, CV_8UC3);\n    cv::randu(image, cv::Scalar(0, 0, 0), cv::Scalar(255, 255, 255));\n    cv::Mat blob = cv::dnn::blobFromImage(\n        image, 1, net_input_shape, cv::Scalar(0, 0, 0), true, false, CV_32F);\n    net.setInput(blob);\n    std::cout << \"Running forward\" << std::endl;\n    cv::Mat result = net.forward();\n    std::cout << \"Output shape: \" << result.size << std::endl; // Output shape: 1 x 84 x 6300\n}\n```\n\nmodel files [here](https://limewire.com/d/bPgiA#BhUeSTBnMc)\n\ndocker image used to build opencv: [ghcr.io/mro47/opencv-builder](https://github.com/MRo47/opencv-builder/blob/main/Dockerfile)\n\nCloses #26240\n\n### Pull Request Readiness Checklist\n\nSee details at https://github.com/opencv/opencv/wiki/How_to_contribute#making-a-good-pull-request\n\n- [x] I agree to contribute to the project under Apache 2 License.\n- [x] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\n- [x] The PR is proposed to the proper branch\n- [x] There is a reference to the original bug report and related work\n- [ ] There is accuracy test, performance test and test data in opencv_extra repository, if applicable\n      Patch to opencv_extra has the same branch name.\n- [ ] The feature is well documented and sample code can be built with the project CMake\n",
+            "commit_timestamp": 1748344429.0
         }
     ]
 }

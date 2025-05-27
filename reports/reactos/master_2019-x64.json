@@ -26056,6 +26056,21 @@
             "commit_ref": "c03d7794b8a378001d8f15873a61ee108ba18a4b",
             "commit_message": "[SHELL32_APITEST] Fixed SimpleIDListFromPath and SHGetFileInfo tests on NT5 (#8038)\n\n",
             "commit_timestamp": 1748297453.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1748358392.971395,
+            "elapsed_time": 68.64515328407288,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7320.329292297363,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "17577d2581e13800aef0e19f02c844a2ee1432c3",
+            "commit_message": "[IMM32][SDK] Support ImmIMPQueryIMEA/W and ImmIMPSetIMEA/W (#8033)\n\nImplementing missing features...\nThese functions are given for IME\nprogram handling.\nJIRA issue: CORE-19268\n- Implement ImmIMPQueryIMEA\n  and ImmIMPQueryIMEW functions.\n- Implement ImmIMPSetIMEA and\n  ImmIMPSetIMEW functions.\n- Add prototypes to <imm32_undoc.h>.",
+            "commit_timestamp": 1748344225.0
         }
     ]
 }
