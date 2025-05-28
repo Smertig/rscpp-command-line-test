@@ -26071,6 +26071,21 @@
             "commit_ref": "17577d2581e13800aef0e19f02c844a2ee1432c3",
             "commit_message": "[IMM32][SDK] Support ImmIMPQueryIMEA/W and ImmIMPSetIMEA/W (#8033)\n\nImplementing missing features...\nThese functions are given for IME\nprogram handling.\nJIRA issue: CORE-19268\n- Implement ImmIMPQueryIMEA\n  and ImmIMPQueryIMEW functions.\n- Implement ImmIMPSetIMEA and\n  ImmIMPSetIMEW functions.\n- Add prototypes to <imm32_undoc.h>.",
             "commit_timestamp": 1748344225.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1748402724.415344,
+            "elapsed_time": 79.89050817489624,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7268.978446960449,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "b627a4289888c4f1e6370dfe193ae32dfecb0c3a",
+            "commit_message": "[APPSHIM_APITEST] Fix test for x86 Vista and 7 (#8042)\n\nOn x86 builds, accept the sentinel hmodule instead of the 111 hmodule and 0 hmodule for Vista and 7.",
+            "commit_timestamp": 1748383902.0
         }
     ]
 }

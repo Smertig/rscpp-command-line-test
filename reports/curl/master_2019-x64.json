@@ -24296,6 +24296,21 @@
             "commit_ref": "d3a3d7afb6bd9e242031baa9f39ece74c5eb5099",
             "commit_message": "wcurl: update to v2025.05.26\n\nThis release fixes a small issue with the retry strategy:\n\n * Increase number of retries to 5 (32 sec total time), fixing the\n   problem with misleading output. Previously, it was showing a higher\n   number of retries than what would be done and it always did only 3.\n\nCloses #17461\n",
             "commit_timestamp": 1748330983.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1748403256.580986,
+            "elapsed_time": 297.74388694763184,
+            "x64": true,
+            "actual_files_count": 3588,
+            "expected_files_count": 2323,
+            "memory_traffic": 83930.60091400146,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "a71ea39a331c0cb11dcccd91eb9c42a4c0075273",
+            "commit_message": "GHA: Update ngtcp2/nghttp3 to v1.10.1\n\nCloses #17466\n",
+            "commit_timestamp": 1748358653.0
         }
     ]
 }

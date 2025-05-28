@@ -23471,6 +23471,21 @@
             "commit_ref": "f6f4e8a6622d556641799b02aed7ac018d878cdc",
             "commit_message": "GH-132554: \"Virtual\" iterators (GH-132555)\n\n* FOR_ITER now pushes either the iterator and NULL or leaves the iterable and pushes tagged zero\n\n* NEXT_ITER uses the tagged int as the index into the sequence or, if TOS is NULL, iterates as before.\n",
             "commit_timestamp": 1748357985.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1748403051.763465,
+            "elapsed_time": 1496.077831029892,
+            "x64": true,
+            "actual_files_count": 1198,
+            "expected_files_count": null,
+            "memory_traffic": 52698.38179779053,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "fbbbc10055e0ee0011cf683132be706815480839",
+            "commit_message": "gh-127266: avoid data races when updating type slots (gh-133177)\n\nIn the free-threaded build, avoid data races caused by updating type\nslots or type flags after the type was initially created.  For those\n(typically rare) cases, use the stop-the-world mechanism.  Remove the\nuse of atomics when reading or writing type flags.",
+            "commit_timestamp": 1748395661.0
         }
     ]
 }
