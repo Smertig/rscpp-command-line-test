@@ -28981,6 +28981,23 @@
             "commit_ref": "54ef0e0d8670245ec2ceffc65ef7949e7d6b5a87",
             "commit_message": "[LoongArch] Fix out-of-range assert in DAG constant getting (#141586)\n\nFixes #141583",
             "commit_timestamp": 1748401568.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1748445768.292705,
+            "elapsed_time": 1622.9452517032623,
+            "x64": true,
+            "actual_files_count": 2957,
+            "expected_files_count": 1661,
+            "memory_traffic": 263258.8162307739,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "fb923e98d13e80d0d1cf878ba5b10da4e81b5cd5",
+            "commit_message": "[Local] Verify opcodes match for all insts passed to mergeFlags (NFC). (#141231)\n\nThe logic for tracking flags relies on all instructions having the same\nopcode. Add an assert to check, as suggested in\nhttps://github.com/llvm/llvm-project/pull/140406.\n\nPR: https://github.com/llvm/llvm-project/pull/141231",
+            "commit_timestamp": 1748444604.0
         }
     ]
 }
