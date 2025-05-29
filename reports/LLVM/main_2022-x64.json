@@ -29015,6 +29015,23 @@
             "commit_ref": "332fe08f1dfd41a245616bbcc9e636571aac708a",
             "commit_message": "[VPlan] Implement VPlan-based cost model for VPReduction, VPExtendedReduction and VPMulAccumulateReduction.  (#113903)\n\nThis patch implement the VPlan-based cost model for VPReduction,\nVPExtendedReduction and VPMulAccumulateReduction.\n\nWith this patch, we can calculate the reduction cost by the VPlan-based\ncost model so remove the reduction costs in `precomputeCost()`.\n\nRef: Original instruction based implementation:\nhttps://reviews.llvm.org/D93476",
             "commit_timestamp": 1748488516.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1748532163.192488,
+            "elapsed_time": 1594.9765241146088,
+            "x64": true,
+            "actual_files_count": 2961,
+            "expected_files_count": 1661,
+            "memory_traffic": 263542.5982513428,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "a78a37ff8373d7cfd637fe06dd2714f7df038312",
+            "commit_message": "[BOLT] Add AArch64 backend maintainer (#141597)\n\nSummary: Add Paschalis as an AArch64 backend maintainer.",
+            "commit_timestamp": 1748531129.0
         }
     ]
 }

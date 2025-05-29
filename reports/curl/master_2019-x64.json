@@ -24341,6 +24341,21 @@
             "commit_ref": "54d04e2536d82d4f859f0e3dd63163f584e3061b",
             "commit_message": "misc: fix spelling\n\nCloses #17478\n",
             "commit_timestamp": 1748465232.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1748531685.409426,
+            "elapsed_time": 269.18464708328247,
+            "x64": true,
+            "actual_files_count": 3598,
+            "expected_files_count": 2323,
+            "memory_traffic": 83133.72994995117,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "12d13b84fa40aa657b83d5458944dbd9b978fb7e",
+            "commit_message": "tool_getparam: remove two nextarg NULL checks\n\nBecause by checking for NULL when the argument can never be NULL, they\nmislead the static analyzers into thinking it *can* be NULL and then the\nanalyzers tend to warn about other places in the code *without* the\ncheck!\n\nCloses #17483\n",
+            "commit_timestamp": 1748512489.0
         }
     ]
 }
