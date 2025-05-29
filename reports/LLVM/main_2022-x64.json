@@ -28998,6 +28998,23 @@
             "commit_ref": "fb923e98d13e80d0d1cf878ba5b10da4e81b5cd5",
             "commit_message": "[Local] Verify opcodes match for all insts passed to mergeFlags (NFC). (#141231)\n\nThe logic for tracking flags relies on all instructions having the same\nopcode. Add an assert to check, as suggested in\nhttps://github.com/llvm/llvm-project/pull/140406.\n\nPR: https://github.com/llvm/llvm-project/pull/141231",
             "commit_timestamp": 1748444604.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1748490099.209728,
+            "elapsed_time": 1632.6342976093292,
+            "x64": true,
+            "actual_files_count": 2957,
+            "expected_files_count": 1661,
+            "memory_traffic": 263776.55085754395,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "332fe08f1dfd41a245616bbcc9e636571aac708a",
+            "commit_message": "[VPlan] Implement VPlan-based cost model for VPReduction, VPExtendedReduction and VPMulAccumulateReduction.  (#113903)\n\nThis patch implement the VPlan-based cost model for VPReduction,\nVPExtendedReduction and VPMulAccumulateReduction.\n\nWith this patch, we can calculate the reduction cost by the VPlan-based\ncost model so remove the reduction costs in `precomputeCost()`.\n\nRef: Original instruction based implementation:\nhttps://reviews.llvm.org/D93476",
+            "commit_timestamp": 1748488516.0
         }
     ]
 }

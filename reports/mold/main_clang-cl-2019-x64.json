@@ -24021,6 +24021,21 @@
             "commit_ref": "b53197300b5bf9f02daccae536f65dda2d1431c5",
             "commit_message": "Bump mold version to 2.40.0\n",
             "commit_timestamp": 1748226600.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1748489141.374629,
+            "elapsed_time": 124.75232863426208,
+            "x64": true,
+            "actual_files_count": 667,
+            "expected_files_count": null,
+            "memory_traffic": 16821.699920654297,
+            "repo_url": "https://github.com/rui314/mold",
+            "commit_ref": "0a550580426db343ca42f3365a2eabff11e12c0e",
+            "commit_message": "Do not link with the bundled TBB if BLAKE3_USE_TBB is ON\n\nRecent versions of BLAKE3 library can be built with OneTBB for parallelization.\nIf that is enabled, we don't want to build and link our bundled OneTBB to avoid\nconflict.\n\nFixes https://github.com/rui314/mold/issues/1466\n",
+            "commit_timestamp": 1748487148.0
         }
     ]
 }
