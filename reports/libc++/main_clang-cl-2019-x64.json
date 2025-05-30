@@ -8958,6 +8958,23 @@
             "commit_ref": "fbbae9ea2bd1c89e39deb62c8a2f549a33e51fae",
             "commit_message": "[LoongArch] Only report the first range error if there is actually more than one for __builtin_loongarch_cacop_[wd]\n\nOther builtins do the same. Align with them.\n",
             "commit_timestamp": 1748572140.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1748617778.787464,
+            "elapsed_time": 67.68570566177368,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4984.319641113281,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "5301f4c469de1cd410dbc2fc953ead14296d4eb0",
+            "commit_message": "[Sanitizer] Use % patterns in report paths (#141820)\n\nSupport `%` patterns in sanitizer report paths, similar to the patterns\nsupported in IRPGO\n\nhttps://github.com/llvm/llvm-project/blob/4bf67cdf026478c4bc3e708153c02f82e2c22524/compiler-rt/lib/profile/InstrProfilingFile.c#L999-L1017\n\n* `%%` becomes `%`\n* `%H` expands to the environment variable `HOME`\n* `%t` expands to the environment variable `TMPDIR`\n* `%p` expands to the process ID (PID)\n\nIn particular, the `%H` pattern is useful to resolve the home directory\nat runtime, which is not possible before this PR.\n\nAlso, avoid using `Report()` before the report path has been set.",
+            "commit_timestamp": 1748617071.0
         }
     ]
 }
