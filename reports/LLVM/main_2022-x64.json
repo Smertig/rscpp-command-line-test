@@ -29032,6 +29032,23 @@
             "commit_ref": "a78a37ff8373d7cfd637fe06dd2714f7df038312",
             "commit_message": "[BOLT] Add AArch64 backend maintainer (#141597)\n\nSummary: Add Paschalis as an AArch64 backend maintainer.",
             "commit_timestamp": 1748531129.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1748576394.162679,
+            "elapsed_time": 1609.8861496448517,
+            "x64": true,
+            "actual_files_count": 2961,
+            "expected_files_count": 1661,
+            "memory_traffic": 263357.9833831787,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "fbbae9ea2bd1c89e39deb62c8a2f549a33e51fae",
+            "commit_message": "[LoongArch] Only report the first range error if there is actually more than one for __builtin_loongarch_cacop_[wd]\n\nOther builtins do the same. Align with them.\n",
+            "commit_timestamp": 1748572140.0
         }
     ]
 }

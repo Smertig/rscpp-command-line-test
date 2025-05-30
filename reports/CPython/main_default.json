@@ -23531,6 +23531,21 @@
             "commit_ref": "f49a07b531543dd8a42d90f5b1c89c0312fbf806",
             "commit_message": "gh-133968: Add PyUnicodeWriter_WriteASCII() function (#133973)\n\nReplace most PyUnicodeWriter_WriteUTF8() calls with\nPyUnicodeWriter_WriteASCII().\n\nUnrelated change to please the linter: remove an unused\nimport in test_ctypes.\n\nCo-authored-by: Peter Bierma <zintensitydev@gmail.com>\nCo-authored-by: B\u00e9n\u00e9dikt Tran <10796600+picnixz@users.noreply.github.com>",
             "commit_timestamp": 1748530470.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1748575716.616117,
+            "elapsed_time": 1525.5675179958344,
+            "x64": true,
+            "actual_files_count": 1198,
+            "expected_files_count": null,
+            "memory_traffic": 52778.32006072998,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "cb8a72b301f47e76d93a7fe5b259e9a5758792e1",
+            "commit_message": "gh-134857: Improve error report for doctests run with unittest (GH-134858)\n\nRemove doctest module frames from tracebacks and redundant newline\ncharacter from a failure message.\n",
+            "commit_timestamp": 1748554364.0
         }
     ]
 }

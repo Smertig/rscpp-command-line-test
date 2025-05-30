@@ -8941,6 +8941,23 @@
             "commit_ref": "69c30f73a4d010ac45877aeb1138f3632834680a",
             "commit_message": "[DirectX] Use resource names when generating DXIL metadata (#140635)\n\nUse resource names gathered during the DXIL resource analysis when creating DXIL resources metadata.\n\nPart 4/4 of https://github.com/llvm/llvm-project/issues/105059\n\nCloses #105059",
             "commit_timestamp": 1748530488.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1748575667.788068,
+            "elapsed_time": 67.87587141990662,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5005.665428161621,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "fbbae9ea2bd1c89e39deb62c8a2f549a33e51fae",
+            "commit_message": "[LoongArch] Only report the first range error if there is actually more than one for __builtin_loongarch_cacop_[wd]\n\nOther builtins do the same. Align with them.\n",
+            "commit_timestamp": 1748572140.0
         }
     ]
 }
