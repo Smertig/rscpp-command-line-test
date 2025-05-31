@@ -8992,6 +8992,23 @@
             "commit_ref": "418c1d8a44c4e0188448713a86825a798d460fcb",
             "commit_message": "[MIPS] Reland Add FeatureMSA to i6400 and i6500 cores (#134985) (#141730)\n\nNote: This relands #134985 with a fix. Original PR resulted in test fail\nfor msan builds.\nFix: Initialize MipsSubtarget::ProcImpl to ProcImpl::CPU::Others\n\n\n[MIPS] Reland Add FeatureMSA to i6400 and i6500 cores (#134985)\n\n- Enable 'FeatureMSA' for MIPS i6400 and i6500 cpu.\n- Enable -mmsa option if mcpu is set to either i6400 or i6500\n- added clang driver test to validate msa feature\n- added llvm codegen test to validate msa instructions for cpu i6500 and\ni6400\n\nMIPS i6400 and i6500 cores implements and enables MSA (MIPS SIMD\nARCHITECTURE) by default.",
             "commit_timestamp": 1748658814.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1748704136.169277,
+            "elapsed_time": 66.04007911682129,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5022.88330078125,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "81602769d830e6791200e8cc7dd10a3afc32570b",
+            "commit_message": "[lldb-dap] Synchronously wait for breakpoints resolves in tests (#140470)\n\nAttempt to improve tests by synchronously waiting for breakpoints to\nresolve. Not sure if it will fix all the tests but I think it should\nmake the tests more stable",
+            "commit_timestamp": 1748703586.0
         }
     ]
 }

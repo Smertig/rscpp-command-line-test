@@ -24401,6 +24401,21 @@
             "commit_ref": "fe81a80ae72caedd1403769fc4c350e2f1afec43",
             "commit_message": "spelling: call it null-terminate consistently\n\nWith a dash, using two Ls. Also for different forms of the word.\n\nUse NULL in all uppercase if it means a zero pointer.\n\nFollow-up to 307b7543ea1e73ab04e062bdbe4b\n\nCloses #17489\n",
             "commit_timestamp": 1748618985.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1748704346.206199,
+            "elapsed_time": 268.41591000556946,
+            "x64": true,
+            "actual_files_count": 3598,
+            "expected_files_count": 2323,
+            "memory_traffic": 81673.7010421753,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "2cf19c245eff8ff84e53d6edc27d36bf25439d1b",
+            "commit_message": "tests: test mtls also w/ clientAuth EKU only\n\nThe google chrome root program will stop allowing roots that have both\nclientAuth and ServerAuth [1].\n\nIn one of the mtls tests, use a certificate with only the clientAuth\nEKU.\n\n[1] https://googlechrome.github.io/chromerootprogram/#322-pki-hierarchies-included-in-the-chrome-root-store\n\nCloses #17493\n",
+            "commit_timestamp": 1748697625.0
         }
     ]
 }
