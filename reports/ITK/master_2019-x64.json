@@ -26396,6 +26396,21 @@
             "commit_ref": "d94e77ff6ae98f46792a3ef5e8c2a265dc048cf4",
             "commit_message": "COMP: Use modern itkOverrideGetNameOfClassMacro\n\nWhen preparing for the future with ITK by setting\nITK_FUTURE_LEGACY_REMOVE:BOOL=ON\nITK_LEGACY_REMOVEBOOL=ON\n\nThe future preferred macro should be used\n\u2502 -  itkTypeMacro\n\u2502 +  itkOverrideGetNameOfClassMacro\n\nRemove unnecessary \",\" for single argument macro.\n\nCo-authored-by: D\u017eenan Zuki\u0107 <dzenan.zukic@kitware.com>\n",
             "commit_timestamp": 1748539203.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1748662010.939,
+            "elapsed_time": 194.90373754501343,
+            "x64": true,
+            "actual_files_count": 101,
+            "expected_files_count": null,
+            "memory_traffic": 23851.178916931152,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "2d0f612742a36259362bf22be754f75d331e9be2",
+            "commit_message": "ENH: Add test for libtiff with AdobeDeflate compression\n",
+            "commit_timestamp": 1748636610.0
         }
     ]
 }

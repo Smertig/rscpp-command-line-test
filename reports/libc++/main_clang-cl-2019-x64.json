@@ -8975,6 +8975,23 @@
             "commit_ref": "5301f4c469de1cd410dbc2fc953ead14296d4eb0",
             "commit_message": "[Sanitizer] Use % patterns in report paths (#141820)\n\nSupport `%` patterns in sanitizer report paths, similar to the patterns\nsupported in IRPGO\n\nhttps://github.com/llvm/llvm-project/blob/4bf67cdf026478c4bc3e708153c02f82e2c22524/compiler-rt/lib/profile/InstrProfilingFile.c#L999-L1017\n\n* `%%` becomes `%`\n* `%H` expands to the environment variable `HOME`\n* `%t` expands to the environment variable `TMPDIR`\n* `%p` expands to the process ID (PID)\n\nIn particular, the `%H` pattern is useful to resolve the home directory\nat runtime, which is not possible before this PR.\n\nAlso, avoid using `Report()` before the report path has been set.",
             "commit_timestamp": 1748617071.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1748661948.15758,
+            "elapsed_time": 59.149449825286865,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5003.822204589844,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "418c1d8a44c4e0188448713a86825a798d460fcb",
+            "commit_message": "[MIPS] Reland Add FeatureMSA to i6400 and i6500 cores (#134985) (#141730)\n\nNote: This relands #134985 with a fix. Original PR resulted in test fail\nfor msan builds.\nFix: Initialize MipsSubtarget::ProcImpl to ProcImpl::CPU::Others\n\n\n[MIPS] Reland Add FeatureMSA to i6400 and i6500 cores (#134985)\n\n- Enable 'FeatureMSA' for MIPS i6400 and i6500 cpu.\n- Enable -mmsa option if mcpu is set to either i6400 or i6500\n- added clang driver test to validate msa feature\n- added llvm codegen test to validate msa instructions for cpu i6500 and\ni6400\n\nMIPS i6400 and i6500 cores implements and enables MSA (MIPS SIMD\nARCHITECTURE) by default.",
+            "commit_timestamp": 1748658814.0
         }
     ]
 }

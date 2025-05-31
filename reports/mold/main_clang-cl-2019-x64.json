@@ -24081,6 +24081,21 @@
             "commit_ref": "0d8334e5a26c34b7b2142dd6b6af2751eb9391e3",
             "commit_message": "Report an error if .dynsym refers to a section whose index is >65280\n\nUnlike .symtab, .dynsym cannot have an extended symbol table, so a\nsection index that is larger than 65279 is not representable in an\noutput.\n\nFixes https://github.com/rui314/mold/issues/1468\n",
             "commit_timestamp": 1748573299.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1748661813.031549,
+            "elapsed_time": 122.63708782196045,
+            "x64": true,
+            "actual_files_count": 667,
+            "expected_files_count": null,
+            "memory_traffic": 16695.578155517578,
+            "repo_url": "https://github.com/rui314/mold",
+            "commit_ref": "5e19601a17835fead0638225616b5e37d3cf6c24",
+            "commit_message": "Fix debug section prefix\n",
+            "commit_timestamp": 1748658770.0
         }
     ]
 }

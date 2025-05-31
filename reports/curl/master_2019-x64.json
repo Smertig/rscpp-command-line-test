@@ -24386,6 +24386,21 @@
             "commit_ref": "54834b4ad338b37df4f3744fb9fdf2a539a1bada",
             "commit_message": "wolfssl: fix sending of early data\n\nEarly data was reported as being sent, but was not. While everything was\naligned with the Gods and early data was reported as accepted, the\nactual sending required another call to wolfSSL.\n\nFixes #17481\nReported-by: Ethan Everett\nCloses #17488\n",
             "commit_timestamp": 1748598260.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1748662333.991549,
+            "elapsed_time": 285.09189534187317,
+            "x64": true,
+            "actual_files_count": 3598,
+            "expected_files_count": 2323,
+            "memory_traffic": 85337.86852264404,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "fe81a80ae72caedd1403769fc4c350e2f1afec43",
+            "commit_message": "spelling: call it null-terminate consistently\n\nWith a dash, using two Ls. Also for different forms of the word.\n\nUse NULL in all uppercase if it means a zero pointer.\n\nFollow-up to 307b7543ea1e73ab04e062bdbe4b\n\nCloses #17489\n",
+            "commit_timestamp": 1748618985.0
         }
     ]
 }
