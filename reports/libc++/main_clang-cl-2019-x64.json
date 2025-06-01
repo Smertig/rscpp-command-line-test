@@ -9009,6 +9009,23 @@
             "commit_ref": "81602769d830e6791200e8cc7dd10a3afc32570b",
             "commit_message": "[lldb-dap] Synchronously wait for breakpoints resolves in tests (#140470)\n\nAttempt to improve tests by synchronously waiting for breakpoints to\nresolve. Not sure if it will fix all the tests but I think it should\nmake the tests more stable",
             "commit_timestamp": 1748703586.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1748749040.491135,
+            "elapsed_time": 57.45372676849365,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4990.472114562988,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "dfaa66281a1a44065e24857f2f97dccc4860639a",
+            "commit_message": "[Format] Remove unused includes (NFC) (#142296)\n\nThese are identified by misc-include-cleaner.  I've filtered out those\nthat break builds.  Also, I'm staying away from llvm-config.h,\nconfig.h, and Compiler.h, which likely cause platform- or\ncompiler-specific build failures.",
+            "commit_timestamp": 1748743234.0
         }
     ]
 }

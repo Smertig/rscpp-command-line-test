@@ -23591,6 +23591,21 @@
             "commit_ref": "f58873e4b2b7aad8e3a08a6188c6eb08d0a3001b",
             "commit_message": "gh-134954: Hard-cap max file descriptors in subprocess test fd_status (#134955)\n\n* Hard-cap max file descriptors in subprocess test fd_status\n\nOn some systems, `SC_OPEN_MAX` may return a very large value (i.e. 10**30), leading to the subprocess test timing out (or run forever).\r\nPrevent this situation by applying a hard cap on how many file descriptors are checked.\n\n* Fix typo in usage docstring\n\ns/fd_stats/fd_status/",
             "commit_timestamp": 1748701743.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1748749113.251042,
+            "elapsed_time": 1501.0005328655243,
+            "x64": true,
+            "actual_files_count": 1198,
+            "expected_files_count": null,
+            "memory_traffic": 52606.03978729248,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "cebae977a63f32c3c03d14c040df3cea55b8f585",
+            "commit_message": "gh-133891: Add missing error check to `SET_COUNT` macro in `_testinternalcapi.c` (#133892)\n\n",
+            "commit_timestamp": 1748727182.0
         }
     ]
 }

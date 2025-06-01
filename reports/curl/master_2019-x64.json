@@ -24416,6 +24416,21 @@
             "commit_ref": "2cf19c245eff8ff84e53d6edc27d36bf25439d1b",
             "commit_message": "tests: test mtls also w/ clientAuth EKU only\n\nThe google chrome root program will stop allowing roots that have both\nclientAuth and ServerAuth [1].\n\nIn one of the mtls tests, use a certificate with only the clientAuth\nEKU.\n\n[1] https://googlechrome.github.io/chromerootprogram/#322-pki-hierarchies-included-in-the-chrome-root-store\n\nCloses #17493\n",
             "commit_timestamp": 1748697625.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1748749401.910376,
+            "elapsed_time": 307.4225740432739,
+            "x64": true,
+            "actual_files_count": 3598,
+            "expected_files_count": 2323,
+            "memory_traffic": 85161.71363067627,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "83c90e50472f32b74e388f6e524d8584945cc866",
+            "commit_message": "VULN-DISCLOSURE-POLICY.md: the distros list wants <= 7 days embargo\n\nCloses #17497\n",
+            "commit_timestamp": 1748707258.0
         }
     ]
 }

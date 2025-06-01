@@ -24111,6 +24111,21 @@
             "commit_ref": "5e19601a17835fead0638225616b5e37d3cf6c24",
             "commit_message": "Fix debug section prefix\n",
             "commit_timestamp": 1748658770.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1748748978.525381,
+            "elapsed_time": 157.1045491695404,
+            "x64": true,
+            "actual_files_count": 667,
+            "expected_files_count": null,
+            "memory_traffic": 16680.37629699707,
+            "repo_url": "https://github.com/rui314/mold",
+            "commit_ref": "bcd77395d415e66466d63bc202084748bf5699d6",
+            "commit_message": "Use & instead of \\0 in sed\n\n\\0 is not a portable way to represent the entire match; & is.\n",
+            "commit_timestamp": 1748742775.0
         }
     ]
 }
