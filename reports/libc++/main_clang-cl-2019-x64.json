@@ -9060,6 +9060,23 @@
             "commit_ref": "4425b513f3f6d1abb82635309d4eafd2aac6ded5",
             "commit_message": "X86AsmBackend: Remove some computeFragmentSize calls\n\nThe function was brittle as it performed only one iteration, which might\nnot converge. The reverted be5a845e4c29aadb513ae6e5e2879dccf37efdbb\nmentioned that !NDEBUG and NDEBUG builds evaluated fragment offsets at\ndifferent times.\n\n    * X86AsmBackend::finishLayout performed only one iteration, which might\n      not converge. In addition, the removed `#ifndef NDEBUG` code (disabled\n      by default) in X86AsmBackend::finishLayout was problematic, as !NDEBUG\n      and NDEBUG builds evaluated fragment offsets at different times before\n      this patch.\n",
             "commit_timestamp": 1748828222.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1748877017.754985,
+            "elapsed_time": 93.99874758720398,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5019.869079589844,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "f50fe748b3de42051b5dbf22448bb55aefcbe39c",
+            "commit_message": "[flang] Propagate volatile on openmp reduction vars (#142182)\n\nIn the openmp reduction clause lowering, reduction variables' reference\ntypes were not propagating the volatility of the original variable's\ntype. Add a test and address cases of this in ReductionProcessor.",
+            "commit_timestamp": 1748876651.0
         }
     ]
 }
