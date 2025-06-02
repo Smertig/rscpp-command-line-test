@@ -9043,6 +9043,23 @@
             "commit_ref": "de7f2fbc0c6640241c04ce846760edf3893b8671",
             "commit_message": "[RelLookupTableConverter] Fix test cases\n",
             "commit_timestamp": 1748788580.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1748835274.656389,
+            "elapsed_time": 70.78460788726807,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4997.418724060059,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "4425b513f3f6d1abb82635309d4eafd2aac6ded5",
+            "commit_message": "X86AsmBackend: Remove some computeFragmentSize calls\n\nThe function was brittle as it performed only one iteration, which might\nnot converge. The reverted be5a845e4c29aadb513ae6e5e2879dccf37efdbb\nmentioned that !NDEBUG and NDEBUG builds evaluated fragment offsets at\ndifferent times.\n\n    * X86AsmBackend::finishLayout performed only one iteration, which might\n      not converge. In addition, the removed `#ifndef NDEBUG` code (disabled\n      by default) in X86AsmBackend::finishLayout was problematic, as !NDEBUG\n      and NDEBUG builds evaluated fragment offsets at different times before\n      this patch.\n",
+            "commit_timestamp": 1748828222.0
         }
     ]
 }

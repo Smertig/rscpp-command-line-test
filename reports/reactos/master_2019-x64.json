@@ -26221,6 +26221,21 @@
             "commit_ref": "ddcd5f70830209b7ca20fe71308e2eb14f82510d",
             "commit_message": "[SHELL32] Don't assert on broken ShellExecuteEx error reporting (#8065)\n\n",
             "commit_timestamp": 1748753378.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1748835019.598502,
+            "elapsed_time": 67.3902542591095,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7380.806411743164,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "1286711ac46f3213f84db1652258805c54ea1e86",
+            "commit_message": "[SDK][CICERO] Replace msctf_undoc.h with msctf_undoc.idl (#8060)\n\nFollow-up of #8057. Generally, the IDL\nfile is a higher level than the header file.\nJIRA issue: CORE-19361\n- Modify CMakeLists.txt.\n- Add sdk/include/reactos/CMakeLists.txt.\n- Add reactos_idls CMake target in\n- sdk/include/reactos/CMakeLists.txt\n  to process IDL files.\n- Add reactos_idls dependency to cicero.\n- Delete msctf_undoc.h and add\n  msctf_undoc.idl.",
+            "commit_timestamp": 1748814822.0
         }
     ]
 }
