@@ -29185,6 +29185,23 @@
             "commit_ref": "208e3b09564ea7ab2b10004742e553938a2dc60f",
             "commit_message": "[Clang] Properly deprecate `__reference_binds_to_temporary` (#141909)\n\nAt the time `__reference_constructs_from_temporary` got implemented,\n`__reference_binds_to_temporary` was mentioned as deprecated in\n`LanguageExtensions.rst`, but no deprecation warning was emitted. This\nPR adds the previously missing warning.",
             "commit_timestamp": 1748921107.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1748964247.473274,
+            "elapsed_time": 1604.5045382976532,
+            "x64": true,
+            "actual_files_count": 2962,
+            "expected_files_count": 1661,
+            "memory_traffic": 263246.29262542725,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "986254ee0702cee4effccc2e818ea32455aae9a0",
+            "commit_message": "[Clang] Implement LWG3819 for `__reference_meows_from_temporary` (#142554)\n\nAlso fix use cases for function reference binding\n(`__reference_binds_to_temporary` is also affected despite being\ndeprecated).",
+            "commit_timestamp": 1748962694.0
         }
     ]
 }
