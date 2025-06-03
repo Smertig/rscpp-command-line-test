@@ -24476,6 +24476,21 @@
             "commit_ref": "700b5445b2023d4da348b56a982079d8d23231a0",
             "commit_message": "test1498: verify \"-T .\"\n\nCloses #17519\n",
             "commit_timestamp": 1748864000.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1748921760.64847,
+            "elapsed_time": 271.7015826702118,
+            "x64": true,
+            "actual_files_count": 3562,
+            "expected_files_count": 2323,
+            "memory_traffic": 80171.99424743652,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "f6ab4c8b75bed890b63e28fb26b819bbe2bd2073",
+            "commit_message": "cmdline-docs: mention HTTP resumed uploads to be shaky\n\nIn the documentation for the --continue-at and --range options.\n\nA future version could implement support for the new standard HTTP resumed\nuploads mechanism.\n\nRef: #17510\nCloses #17521\n",
+            "commit_timestamp": 1748899430.0
         }
     ]
 }

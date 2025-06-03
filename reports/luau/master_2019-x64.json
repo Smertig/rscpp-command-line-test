@@ -26688,6 +26688,21 @@
             "commit_ref": "92b03384000710fd9e12ad74a211792717af4296",
             "commit_message": "Sync to upstream/release/676 (#1856)\n\nWe're back on track after the long weekend!\n\n## General \n- `clang-format`ed new code. Keep your code tidy!\n- Disable some Luau tests that are broken currently.\n- Enable fragment autocomplete to do tagged union completion for modules\ntypechecked in the old solver.\n\n## New Type Solver\n- Fix false positives on generic type packs in non-strict mode.\n- Update type signature of `setmetatable` to be `<T, MT>(T, MT) ->\nsetmetatable<T, MT>`.\n- Make local type aliases available in type functions. For example:\n```\ntype Foo = number\ntype Array<T> = {T}\n\ntype function Bar(t)\n  return types.unionof(Foo, Array(t))\nend\n```\n\n## VM/Runtime\n- Make sure `lua_unref` doesn't accept refs which did not exist in the\ntable.\n\n---\n\nCo-authored-by: Andy Friesen <afriesen@roblox.com>\nCo-authored-by: Ariel Weiss <aaronweiss@roblox.com>\nCo-authored-by: Hunter Goldstein <hgoldstein@roblox.com>\nCo-authored-by: Sora Kanosue <skanosue@roblox.com>\nCo-authored-by: Talha Pathan <tpathan@roblox.com>\nCo-authored-by: Vighnesh Vijay <vvijay@roblox.com>\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>\n\n---------\n\nCo-authored-by: Hunter Goldstein <hgoldstein@roblox.com>\nCo-authored-by: Varun Saini <61795485+vrn-sn@users.noreply.github.com>\nCo-authored-by: Menarul Alam <malam@roblox.com>\nCo-authored-by: Aviral Goel <agoel@roblox.com>\nCo-authored-by: Vighnesh <vvijay@roblox.com>\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>\nCo-authored-by: Ariel Weiss <aaronweiss@roblox.com>\nCo-authored-by: Andy Friesen <afriesen@roblox.com>",
             "commit_timestamp": 1748629069.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1748921170.08614,
+            "elapsed_time": 279.5436260700226,
+            "x64": true,
+            "actual_files_count": 504,
+            "expected_files_count": 379,
+            "memory_traffic": 36614.96708679199,
+            "repo_url": "https://github.com/luau-lang/luau",
+            "commit_ref": "92b03384000710fd9e12ad74a211792717af4296",
+            "commit_message": "Sync to upstream/release/676 (#1856)\n\nWe're back on track after the long weekend!\n\n## General \n- `clang-format`ed new code. Keep your code tidy!\n- Disable some Luau tests that are broken currently.\n- Enable fragment autocomplete to do tagged union completion for modules\ntypechecked in the old solver.\n\n## New Type Solver\n- Fix false positives on generic type packs in non-strict mode.\n- Update type signature of `setmetatable` to be `<T, MT>(T, MT) ->\nsetmetatable<T, MT>`.\n- Make local type aliases available in type functions. For example:\n```\ntype Foo = number\ntype Array<T> = {T}\n\ntype function Bar(t)\n  return types.unionof(Foo, Array(t))\nend\n```\n\n## VM/Runtime\n- Make sure `lua_unref` doesn't accept refs which did not exist in the\ntable.\n\n---\n\nCo-authored-by: Andy Friesen <afriesen@roblox.com>\nCo-authored-by: Ariel Weiss <aaronweiss@roblox.com>\nCo-authored-by: Hunter Goldstein <hgoldstein@roblox.com>\nCo-authored-by: Sora Kanosue <skanosue@roblox.com>\nCo-authored-by: Talha Pathan <tpathan@roblox.com>\nCo-authored-by: Vighnesh Vijay <vvijay@roblox.com>\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>\n\n---------\n\nCo-authored-by: Hunter Goldstein <hgoldstein@roblox.com>\nCo-authored-by: Varun Saini <61795485+vrn-sn@users.noreply.github.com>\nCo-authored-by: Menarul Alam <malam@roblox.com>\nCo-authored-by: Aviral Goel <agoel@roblox.com>\nCo-authored-by: Vighnesh <vvijay@roblox.com>\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>\nCo-authored-by: Ariel Weiss <aaronweiss@roblox.com>\nCo-authored-by: Andy Friesen <afriesen@roblox.com>",
+            "commit_timestamp": 1748629069.0
         }
     ]
 }

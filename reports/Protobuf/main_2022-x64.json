@@ -7859,6 +7859,21 @@
             "commit_ref": "33d0cd03571aca25adf11d3a62add1d52d1cc27d",
             "commit_message": "Remove dead nonpublic `is android64` method.\n\nPiperOrigin-RevId: 766181969\n",
             "commit_timestamp": 1748874464.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1748921181.054062,
+            "elapsed_time": 318.9537672996521,
+            "x64": true,
+            "actual_files_count": 1198,
+            "expected_files_count": 818,
+            "memory_traffic": 44259.7413482666,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "4096ffb44b1ce848703a0b65bb0386be470eab68",
+            "commit_message": "Changed `message_benchmark` to `cc_binary()`.\n\nThis fixes the following warning:\n\n```\nWARNING: This test program does NOT link in any test case. Please make sure this is intended.\n```\nPiperOrigin-RevId: 766443781\n",
+            "commit_timestamp": 1748919262.0
         }
     ]
 }
