@@ -23696,6 +23696,21 @@
             "commit_ref": "dba9de731b231ca0c079205f496d1e3d178b4fd3",
             "commit_message": "gh-135101: When choosing the default simulator device, don't use `simctl --set testing` (#135102)\n\nOn a fresh Xcode install (including some CI provider configurations), there is\nno pre-existing testing set that can be used to identify simulator models. Use\nthe default device set to detect available models instead. Live testing \nsimulators are still created in the testing set.",
             "commit_timestamp": 1748997103.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1749050548.014061,
+            "elapsed_time": 1613.5185301303864,
+            "x64": true,
+            "actual_files_count": 1198,
+            "expected_files_count": null,
+            "memory_traffic": 52690.9382019043,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "c21113072cd1f0da83729f99d3576647db85d816",
+            "commit_message": "gh-134989: Implement PyObject_DelAttr() as a macro in the limited C API (GH-135021)\n\n",
+            "commit_timestamp": 1749042472.0
         }
     ]
 }

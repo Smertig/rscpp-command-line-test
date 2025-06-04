@@ -24506,6 +24506,21 @@
             "commit_ref": "80f9dd0eb853c3afe13ad036396cf3facc1c74be",
             "commit_message": "cmake: enable `-std=gnu99` for Windows CE CeGCC\n\nTo sync with autotools, which auto-detects this option and enables it by\ndefault.\n\nIt also makes it possible to compile unsuffixed long long integer\nliterals correctly, allowing to drop some legacy macros without bumping\ninto build errors like:\n```\nlib/vtls/schannel.c: In function 'schannel_send':\nlib/vtls/schannel.c:1815: error: integer constant is too large for 'long' type\n```\nRef: https://github.com/curl/curl/actions/runs/15374705821/job/43286736583?pr=17498#step:9:20\n\nBug: https://github.com/curl/curl/pull/17498#issuecomment-2925507481\nReported-by: Daniel Stenberg\n\nCloses #17523\n",
             "commit_timestamp": 1748986618.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1749050718.361042,
+            "elapsed_time": 288.69369649887085,
+            "x64": true,
+            "actual_files_count": 3562,
+            "expected_files_count": 2323,
+            "memory_traffic": 87178.68288421631,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "e67a500841c019f8ab8102f4f8525a302f425cdb",
+            "commit_message": "test1117: reduce write delays\n\nTest1117 seems to verify that a response, incoming slowly, is read\ncompletely before sending another request on the same connection.\n\nThe previsou write delay of 1000ms made the test last 23+ seconds.\nA delay of 100ms seems to achieve the same test on modern machines, but\nthe overall run time is less than 3 seconds.\n\nCloses #17530\n",
+            "commit_timestamp": 1749045257.0
         }
     ]
 }

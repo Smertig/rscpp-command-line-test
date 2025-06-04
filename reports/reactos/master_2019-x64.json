@@ -26281,6 +26281,21 @@
             "commit_ref": "7d8d8a6e52926f835309af769374262e6f8ad72c",
             "commit_message": "[USER32_APITEST] Add MenuUI testcase (#8066)\n\nVerifying menu behavior.\nJIRA issue: CORE-5065\nJIRA issue: CORE-10829\nJIRA issue: CORE-11756\n- Add user32_apitest_menuui sub\n  program for MenuUI testcase.\n- Add MenuUI testcase.",
             "commit_timestamp": 1748984161.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1749050301.314265,
+            "elapsed_time": 107.44898319244385,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7266.97403717041,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "fbd676f4c9f94c33af351a0e2cc7f1f69e2a1784",
+            "commit_message": "[WINLOGON] Register hotkeys for 'Lock Workstation' and 'Accessibility' (UtilMan) (#8083)\n\n- The hotkeys are respectively: Win+L and Win+U .\n- Use instead the hotkey IDs in the WM_HOTKEY handler.\n",
+            "commit_timestamp": 1749048284.0
         }
     ]
 }
