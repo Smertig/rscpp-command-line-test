@@ -24491,6 +24491,21 @@
             "commit_ref": "f6ab4c8b75bed890b63e28fb26b819bbe2bd2073",
             "commit_message": "cmdline-docs: mention HTTP resumed uploads to be shaky\n\nIn the documentation for the --continue-at and --range options.\n\nA future version could implement support for the new standard HTTP resumed\nuploads mechanism.\n\nRef: #17510\nCloses #17521\n",
             "commit_timestamp": 1748899430.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1749008041.908229,
+            "elapsed_time": 272.90985655784607,
+            "x64": true,
+            "actual_files_count": 3562,
+            "expected_files_count": 2323,
+            "memory_traffic": 80369.84410095215,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "80f9dd0eb853c3afe13ad036396cf3facc1c74be",
+            "commit_message": "cmake: enable `-std=gnu99` for Windows CE CeGCC\n\nTo sync with autotools, which auto-detects this option and enables it by\ndefault.\n\nIt also makes it possible to compile unsuffixed long long integer\nliterals correctly, allowing to drop some legacy macros without bumping\ninto build errors like:\n```\nlib/vtls/schannel.c: In function 'schannel_send':\nlib/vtls/schannel.c:1815: error: integer constant is too large for 'long' type\n```\nRef: https://github.com/curl/curl/actions/runs/15374705821/job/43286736583?pr=17498#step:9:20\n\nBug: https://github.com/curl/curl/pull/17498#issuecomment-2925507481\nReported-by: Daniel Stenberg\n\nCloses #17523\n",
+            "commit_timestamp": 1748986618.0
         }
     ]
 }

@@ -26266,6 +26266,21 @@
             "commit_ref": "d80fdbe146ae46cbb335062d8b0393127b8b35d7",
             "commit_message": "[IMM32][SDK] Refactor IMM32 and fix annotations (#8071)\n\nFix annotations' mistakes. Improve debug output.\nJIRA issue: CORE-19268\n- Fix some SAL annotations.\n- Use debugstr_a and debugstr_w for tracing\n  strings.\n- Add static to some functions.\n- Remove APIENTRY of some functions.\n- Fix code formatting.",
             "commit_timestamp": 1748916576.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1749007651.87261,
+            "elapsed_time": 77.2837986946106,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7230.509178161621,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "7d8d8a6e52926f835309af769374262e6f8ad72c",
+            "commit_message": "[USER32_APITEST] Add MenuUI testcase (#8066)\n\nVerifying menu behavior.\nJIRA issue: CORE-5065\nJIRA issue: CORE-10829\nJIRA issue: CORE-11756\n- Add user32_apitest_menuui sub\n  program for MenuUI testcase.\n- Add MenuUI testcase.",
+            "commit_timestamp": 1748984161.0
         }
     ]
 }

@@ -9094,6 +9094,23 @@
             "commit_ref": "208e3b09564ea7ab2b10004742e553938a2dc60f",
             "commit_message": "[Clang] Properly deprecate `__reference_binds_to_temporary` (#141909)\n\nAt the time `__reference_constructs_from_temporary` got implemented,\n`__reference_binds_to_temporary` was mentioned as deprecated in\n`LanguageExtensions.rst`, but no deprecation warning was emitted. This\nPR adds the previously missing warning.",
             "commit_timestamp": 1748921107.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1749007785.729241,
+            "elapsed_time": 67.93220067024231,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5020.013114929199,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "88738a74f05ba4002f38b8bdeebd944762c8ae7b",
+            "commit_message": "[RISCV] Optimize two source deinterleave2 via ri.vunzip2{a,b} (#142667)\n\nAs done for the existing vnsrl cases, we can split a two source\ndeinterleave2 into two single source deinterleave2 and a slideup.  \nWe can also use a concat-then-deinterleave2 tactic. Both are equally\nvalid (except in the m8 source type case), and the \nconcat-then-deinterleave2 saves one instruction for fractional LMUL cases.\n\nAdditionally, if we happen to know the exact VLEN and our fixed vectors\nare an even number of vector registers, we can avoid the need to split or\nconcat entirely and just use both registers sources.",
+            "commit_timestamp": 1749007135.0
         }
     ]
 }

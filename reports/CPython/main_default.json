@@ -23681,6 +23681,21 @@
             "commit_ref": "3612d8f51741b11f36f8fb0494d79086bac9390a",
             "commit_message": "gh-135034: Normalize link targets in tarfile, add `os.path.realpath(strict='allow_missing')` (#135037)\n\nAddresses CVEs 2024-12718, 2025-4138, 2025-4330, and 2025-4517.\n\nSigned-off-by: \u0141ukasz Langa <lukasz@langa.pl>\nCo-authored-by: Petr Viktorin <encukou@gmail.com>\nCo-authored-by: Seth Michael Larson <seth@python.org>\nCo-authored-by: Adam Turner <9087854+AA-Turner@users.noreply.github.com>\nCo-authored-by: Serhiy Storchaka <storchaka@gmail.com>",
             "commit_timestamp": 1748947331.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1749007882.931507,
+            "elapsed_time": 1471.8712561130524,
+            "x64": true,
+            "actual_files_count": 1198,
+            "expected_files_count": null,
+            "memory_traffic": 52769.63105010986,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "dba9de731b231ca0c079205f496d1e3d178b4fd3",
+            "commit_message": "gh-135101: When choosing the default simulator device, don't use `simctl --set testing` (#135102)\n\nOn a fresh Xcode install (including some CI provider configurations), there is\nno pre-existing testing set that can be used to identify simulator models. Use\nthe default device set to detect available models instead. Live testing \nsimulators are still created in the testing set.",
+            "commit_timestamp": 1748997103.0
         }
     ]
 }
