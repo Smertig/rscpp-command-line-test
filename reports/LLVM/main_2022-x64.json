@@ -29236,6 +29236,23 @@
             "commit_ref": "54d544b83141dc0b20727673f68793728ed54793",
             "commit_message": "[KeyInstr][Clang] Ret atom (#134652)\n\nThis patch is part of a stack that teaches Clang to generate Key Instructions\nmetadata for C and C++.\n\nWhen returning a value, stores to the `retval` allocas and branches to `return`\nblock are put in the same atom group. They are both rank 1, which could in\ntheory introduce an extra step in some optimized code. This low risk currently\nfeels an acceptable for keeping the code a bit simpler (as opposed to adding\nscaffolding to make the store rank 2).\n\nIn the case of a single return (no control flow) the return instruction inherits\nthe atom group of the branch to the return block when the blocks get folded\ntogather.\n\nRFC:\nhttps://discourse.llvm.org/t/rfc-improving-is-stmt-placement-for-better-interactive-debugging/82668\n\nThe feature is only functional in LLVM if LLVM is built with CMake flag\nLLVM_EXPERIMENTAL_KEY_INSTRUCTIONs. Eventually that flag will be removed.",
             "commit_timestamp": 1749048229.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1749095012.102268,
+            "elapsed_time": 1604.4164111614227,
+            "x64": true,
+            "actual_files_count": 2962,
+            "expected_files_count": 1661,
+            "memory_traffic": 263602.47649383545,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "29170406429cbfd10567f787a8350c7e8f3be343",
+            "commit_message": "[bazel] Port #141332 (#142890)\n\nCommit e4c8ff94e7a30589ab6dc6dbb6151e1424ce3432",
+            "commit_timestamp": 1749093649.0
         }
     ]
 }

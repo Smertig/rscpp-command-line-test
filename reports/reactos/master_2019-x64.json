@@ -26296,6 +26296,21 @@
             "commit_ref": "fbd676f4c9f94c33af351a0e2cc7f1f69e2a1784",
             "commit_message": "[WINLOGON] Register hotkeys for 'Lock Workstation' and 'Accessibility' (UtilMan) (#8083)\n\n- The hotkeys are respectively: Win+L and Win+U .\n- Use instead the hotkey IDs in the WM_HOTKEY handler.\n",
             "commit_timestamp": 1749048284.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1749094006.093407,
+            "elapsed_time": 67.34672570228577,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7256.335372924805,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "6dd04063ba344689701d3f8c6d320e6779af9319",
+            "commit_message": "[KBSWITCH] Rename kbsdll.dll as indicdll.dll (#8087)\n\nSplitted from #8080. We have confirmed usage of the\nname of \"indicdll.dll\" in user32.dll, in #8080. So, we\nhave to rename kbsdll.dll as \"indicdll.dll\".\nJIRA issue: CORE-20142",
+            "commit_timestamp": 1749075859.0
         }
     ]
 }

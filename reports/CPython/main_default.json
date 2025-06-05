@@ -23711,6 +23711,21 @@
             "commit_ref": "c21113072cd1f0da83729f99d3576647db85d816",
             "commit_message": "gh-134989: Implement PyObject_DelAttr() as a macro in the limited C API (GH-135021)\n\n",
             "commit_timestamp": 1749042472.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1749094309.419517,
+            "elapsed_time": 1499.899092912674,
+            "x64": true,
+            "actual_files_count": 1198,
+            "expected_files_count": null,
+            "memory_traffic": 52605.92625427246,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "6b77af257c25d31f1f137e477cb23e63692ddf29",
+            "commit_message": "gh-134889: Fix handling of a few opcodes when optimizing `LOAD_FAST` (#134958)\n\nWe were incorrectly handling a few opcodes that leave their operands on the stack. Treat all of these conservatively; assume that they always leave operands on the stack.",
+            "commit_timestamp": 1749078478.0
         }
     ]
 }

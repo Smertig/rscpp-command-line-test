@@ -24521,6 +24521,21 @@
             "commit_ref": "e67a500841c019f8ab8102f4f8525a302f425cdb",
             "commit_message": "test1117: reduce write delays\n\nTest1117 seems to verify that a response, incoming slowly, is read\ncompletely before sending another request on the same connection.\n\nThe previsou write delay of 1000ms made the test last 23+ seconds.\nA delay of 100ms seems to achieve the same test on modern machines, but\nthe overall run time is less than 3 seconds.\n\nCloses #17530\n",
             "commit_timestamp": 1749045257.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1749094537.426819,
+            "elapsed_time": 292.95839047431946,
+            "x64": true,
+            "actual_files_count": 3562,
+            "expected_files_count": 2323,
+            "memory_traffic": 86365.29153442383,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "e67a500841c019f8ab8102f4f8525a302f425cdb",
+            "commit_message": "test1117: reduce write delays\n\nTest1117 seems to verify that a response, incoming slowly, is read\ncompletely before sending another request on the same connection.\n\nThe previsou write delay of 1000ms made the test last 23+ seconds.\nA delay of 100ms seems to achieve the same test on modern machines, but\nthe overall run time is less than 3 seconds.\n\nCloses #17530\n",
+            "commit_timestamp": 1749045257.0
         }
     ]
 }
