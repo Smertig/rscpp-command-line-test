@@ -26546,6 +26546,21 @@
             "commit_ref": "565d4e3f30fcb7ffbb4d17d25a3e317e3f2c320d",
             "commit_message": "BUG:  itkNiftiReadWriteDirectionTest is unstable\n\nThe following tests to be unstable in passing/failing:\n   itkNiftiReadWriteDirectionTest\n   itkNiftiReadWriteDirectionSmallVoxelTest\n\nThe following error occurs occasionally that causes the test to fail.\nIt is very hard to replicate consistently.\n\n ```\nTrying itk::WriteImage(inputImageNoSform, testFilename)\nITK test driver caught an ITK exception:\n\nitk::ImageFileReaderException (000000CF6E0FF570)\nLocation: \"unknown\"\nFile: T:\\Dashboard\\ITK\\Modules\\IO\\ImageBase\\include\\itkImageFileReader.hxx\nLine: 137\nDescription:  Could not create IO object for reading file T:/Dashboard/ITK-build/Testing/Temporary/ITKIONIFTI/test_filled_sform.nii.gz\n  Tried to create one of the following:\n    MetaImageIO\n    GDCMImageIO\n    JPEGImageIO\n    VTKImageIO\n    PNGImageIO\n    TIFFImageIO\n    BMPImageIO\n    NrrdImageIO\n    GiplImageIO\n    NiftiImageIO\n  You probably failed to set a file suffix, or\n    set the suffix to an unsupported type.\n```\n\n- Renamed `ReadImage` to `NiftiTestReadImageOverride` for clarity.\n- Parameterized test filenames to include the current test name.\n- Adjusted argument parsing logic to handle an additional parameter.\n- Updated `CMakeLists.txt` to reflect test filename changes.\n- Pin the readers and writers to only use the NiftiIO reader that is being tested.\n- Remove redundant `const` for pointer-to-const declarations\n   itkNiftiImageIO.cxx:50:21: warning: 'const' type qualifier on return type has no effect [-Wignored-qualifiers]\n- Added `itksys::SystemTools::UnPutEnv(\"ITK_NIFTI_SFORM_PERMISSIVE\")`\n  calls to clean up the environment variable after specific test cases in\n  `itkNiftiReadWriteDirectionTest.cxx`.\n",
             "commit_timestamp": 1749068095.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1749136252.538893,
+            "elapsed_time": 204.6682834625244,
+            "x64": true,
+            "actual_files_count": 101,
+            "expected_files_count": null,
+            "memory_traffic": 23584.940551757812,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "565d4e3f30fcb7ffbb4d17d25a3e317e3f2c320d",
+            "commit_message": "BUG:  itkNiftiReadWriteDirectionTest is unstable\n\nThe following tests to be unstable in passing/failing:\n   itkNiftiReadWriteDirectionTest\n   itkNiftiReadWriteDirectionSmallVoxelTest\n\nThe following error occurs occasionally that causes the test to fail.\nIt is very hard to replicate consistently.\n\n ```\nTrying itk::WriteImage(inputImageNoSform, testFilename)\nITK test driver caught an ITK exception:\n\nitk::ImageFileReaderException (000000CF6E0FF570)\nLocation: \"unknown\"\nFile: T:\\Dashboard\\ITK\\Modules\\IO\\ImageBase\\include\\itkImageFileReader.hxx\nLine: 137\nDescription:  Could not create IO object for reading file T:/Dashboard/ITK-build/Testing/Temporary/ITKIONIFTI/test_filled_sform.nii.gz\n  Tried to create one of the following:\n    MetaImageIO\n    GDCMImageIO\n    JPEGImageIO\n    VTKImageIO\n    PNGImageIO\n    TIFFImageIO\n    BMPImageIO\n    NrrdImageIO\n    GiplImageIO\n    NiftiImageIO\n  You probably failed to set a file suffix, or\n    set the suffix to an unsupported type.\n```\n\n- Renamed `ReadImage` to `NiftiTestReadImageOverride` for clarity.\n- Parameterized test filenames to include the current test name.\n- Adjusted argument parsing logic to handle an additional parameter.\n- Updated `CMakeLists.txt` to reflect test filename changes.\n- Pin the readers and writers to only use the NiftiIO reader that is being tested.\n- Remove redundant `const` for pointer-to-const declarations\n   itkNiftiImageIO.cxx:50:21: warning: 'const' type qualifier on return type has no effect [-Wignored-qualifiers]\n- Added `itksys::SystemTools::UnPutEnv(\"ITK_NIFTI_SFORM_PERMISSIVE\")`\n  calls to clean up the environment variable after specific test cases in\n  `itkNiftiReadWriteDirectionTest.cxx`.\n",
+            "commit_timestamp": 1749068095.0
         }
     ]
 }
