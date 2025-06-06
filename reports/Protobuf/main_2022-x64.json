@@ -7964,6 +7964,21 @@
             "commit_ref": "6ee71fbfef90c66ae64c6dcdc795cb73a2253a17",
             "commit_message": "Auto-generate files after cl/767814597\n",
             "commit_timestamp": 1749167454.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1749222403.016515,
+            "elapsed_time": 349.02906608581543,
+            "x64": true,
+            "actual_files_count": 1199,
+            "expected_files_count": 818,
+            "memory_traffic": 44249.572036743164,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "5070fc577fdf674b695dd5ec6010fe6bbd8959a5",
+            "commit_message": "CppGenerator::Generate: null-check FileDescriptor*\n\nBootstrapTest.OptionNotExist passed a null FileDescriptor* to Generate. This worked because Generate error'ed out before ever accessing the FileDescriptor*. I add a null check and fix BootstrapTest.OptionNotExist, which was calling with a null pointer.\n\nPiperOrigin-RevId: 768073403\n",
+            "commit_timestamp": 1749221781.0
         }
     ]
 }
