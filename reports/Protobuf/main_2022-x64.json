@@ -7949,6 +7949,21 @@
             "commit_ref": "dc32d987d95ff32cab0ab6fe320a37b195e7fec7",
             "commit_message": "Rust: implement ProxiedInRepeated with a blanket implementation for upb\n\nMost of the method implementations ended up being identical to the gencode\nimplementations. The only ones that had to be significantly different were\n`repeated_get_unchecked` and `repeated_get_mut_unchecked`. I had to make them\nrely on the `UpbTypeConversions` trait instead of using methods on the\ngenerated view and mut proxies.\n\nThe motivation for this is to try to implement as much as possible in the\nruntime instead of in generated code. That should help mitigate the downsides\nof needing to accommodate stale gencode, because it will allow us to add\nfeatures or modify behavior in a way that takes effect even if the gencode is\nnot updated.\n\nPiperOrigin-RevId: 767596134\n",
             "commit_timestamp": 1749133847.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1749180402.173989,
+            "elapsed_time": 314.5960795879364,
+            "x64": true,
+            "actual_files_count": 1199,
+            "expected_files_count": 818,
+            "memory_traffic": 44133.6471786499,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "6ee71fbfef90c66ae64c6dcdc795cb73a2253a17",
+            "commit_message": "Auto-generate files after cl/767814597\n",
+            "commit_timestamp": 1749167454.0
         }
     ]
 }

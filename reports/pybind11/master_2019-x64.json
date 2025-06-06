@@ -27973,6 +27973,21 @@
             "commit_ref": "c786d34f609749b024c7837c25984723796b5ac0",
             "commit_message": "fix: handle null `py::handle` and add tests for `py::scoped_critical_section` (#5706)\n\n* chore: handle null for `py::scoped_critical_section`\n\n* test: add tests for `py::scoped_critical_section`\n\n* test: use assert instead of REQUIRE\n\n* feat: enable faulthandler for pytest\n\n* chore: use `__has_include(<barrier>)`\n\n* fix: fix segmentation fault in test\n\n* fix: test critical_section for no-gil only\n\n* test: run new tests only\n\n* test: ensure non-empty test selection\n\n* fix: fix test critical_section\n\n* fix: change Python 3.14.0b1/2 xfail tests to non-strict\n\n* test: trigger gc manually\n\n* test: mark xfail to `DynamicClass`\n\n* Use `namespace test_scoped_critical_section_ns` (standard approach to guard against name clashes).\n\n* Simplify changes in pybind11/critical_section.h and add test_nullptr_combinations()\n\n* test: disable Python devmode in pytest\n\n* test: add comprehensive comments for the tests\n\n* test: add a summary comment for tests\n\n* refactor: simpler impl\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n---------\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\nCo-authored-by: Ralf W. Grosse-Kunstleve <rgrossekunst@nvidia.com>\nCo-authored-by: Henry Schreiner <henryschreineriii@gmail.com>",
             "commit_timestamp": 1749051926.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1749180412.468344,
+            "elapsed_time": 168.19775652885437,
+            "x64": true,
+            "actual_files_count": 499,
+            "expected_files_count": 197,
+            "memory_traffic": 21352.181785583496,
+            "repo_url": "https://github.com/pybind/pybind11",
+            "commit_ref": "5d32ed76c0ea53d689f9cec3d4c152d1b0738e8e",
+            "commit_message": "docs: prepare for RC 3 (#5713)\n\n* docs: prepare for RC 3\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n* docs: one more rc 3 update\n\n* chore: bump to 3.0.0rc3\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>\n\n---------\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>",
+            "commit_timestamp": 1749136473.0
         }
     ]
 }
