@@ -26591,6 +26591,21 @@
             "commit_ref": "dc9bbe8a552abc88880799d9843e53e05a694dab",
             "commit_message": "COMP: fixed some clang -Wformat-nonliteral warnings\n\nAdded an ITK_FORMAT_PRINTF macro to wrap the gcc/clang `__attribute__((format(printf)))`.\n\nUse it to decorate some functions that call vsnprintf().\n",
             "commit_timestamp": 1749221231.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1749266979.509068,
+            "elapsed_time": 197.35034251213074,
+            "x64": true,
+            "actual_files_count": 101,
+            "expected_files_count": null,
+            "memory_traffic": 24057.740882873535,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "ceca9699ec05acab6974dc8a42cd67d056d06bad",
+            "commit_message": "Merge branch 'release'\n",
+            "commit_timestamp": 1749245375.0
         }
     ]
 }

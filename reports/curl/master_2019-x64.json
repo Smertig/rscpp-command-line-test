@@ -24581,6 +24581,21 @@
             "commit_ref": "ba407ee43d609cb7ea88c0fc51728168da4e7da6",
             "commit_message": "RELEASE-NOTES: synced\n\nBump to 8.14.2 - a tentative version we probably will not release.\n",
             "commit_timestamp": 1749124493.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1749267245.753732,
+            "elapsed_time": 283.07876420021057,
+            "x64": true,
+            "actual_files_count": 3563,
+            "expected_files_count": 2323,
+            "memory_traffic": 79229.58955383301,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "5f805eec1149c218145097ec2a24ac7fb7d46f25",
+            "commit_message": "tool_getparam: fix --ftp-pasv\n\nThis boolean option was moved to the wrong handling function. Make it\nan ARG_NONE and move it to the correct handler and add a test to\nverify that the option works.\n\nFollow-up to 698491f44\n\nReported-by: fjaell on github\nFixes #17545\nCloses #17547\n",
+            "commit_timestamp": 1749246014.0
         }
     ]
 }
