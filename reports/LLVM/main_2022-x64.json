@@ -29321,6 +29321,23 @@
             "commit_ref": "eed98e1493414ae9c30596b1eeb8f4a9b260e42a",
             "commit_message": "[OpenACC][CIR] 'attach' clause lowering for combined/compute\n\nAttach is identical to 'present', except it generates an acc.attach and\nacc.detach.  This patch implements these, just like the preivous handful\nof clauses.\n",
             "commit_timestamp": 1749254809.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1749309706.734778,
+            "elapsed_time": 1612.6186368465424,
+            "x64": true,
+            "actual_files_count": 2963,
+            "expected_files_count": 1661,
+            "memory_traffic": 263595.79636383057,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "d5704097fcc2128bb8c97867e090543024a936d0",
+            "commit_message": "Refactor clang doc comment structure (#142273)\n\nThis patch refactors CommentKind handling in clang-doc by introducing a\nstrongly typed enum class for better type safety and clarity. It updates\nall relevant places, including YAML traits and serialization, to work\nwith the new enum. Additionally, it enhances the Mustache-based HTML\ngeneration by fully supporting all comment kinds, ensuring accurate\nstructured rendering of comment blocks. The changes simplify future\nmaintenance, improve robustness by eliminating unchecked defaults, and\nensure consistency between generators.\n\nFixes https://github.com/llvm/llvm-project/issues/142083",
+            "commit_timestamp": 1749308696.0
         }
     ]
 }
