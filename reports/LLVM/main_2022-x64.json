@@ -29338,6 +29338,23 @@
             "commit_ref": "d5704097fcc2128bb8c97867e090543024a936d0",
             "commit_message": "Refactor clang doc comment structure (#142273)\n\nThis patch refactors CommentKind handling in clang-doc by introducing a\nstrongly typed enum class for better type safety and clarity. It updates\nall relevant places, including YAML traits and serialization, to work\nwith the new enum. Additionally, it enhances the Mustache-based HTML\ngeneration by fully supporting all comment kinds, ensuring accurate\nstructured rendering of comment blocks. The changes simplify future\nmaintenance, improve robustness by eliminating unchecked defaults, and\nensure consistency between generators.\n\nFixes https://github.com/llvm/llvm-project/issues/142083",
             "commit_timestamp": 1749308696.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1749354553.484816,
+            "elapsed_time": 1662.6020050048828,
+            "x64": true,
+            "actual_files_count": 2963,
+            "expected_files_count": 1661,
+            "memory_traffic": 263535.54961395264,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "7730853fa1b955680478dc9cab69287897519765",
+            "commit_message": "[SelectionDAG] Use DAG.getSelect (NFC) (#143276)\n\n",
+            "commit_timestamp": 1749346030.0
         }
     ]
 }
