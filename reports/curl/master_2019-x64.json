@@ -24656,6 +24656,21 @@
             "commit_ref": "128c5ddc6b5b08926af5cb5c0263e2fc77d7e844",
             "commit_message": "GHA: enclose `if` expressions in `${{ }}` where missing\n\nEnclosing expressions in `${{ }}` is optional, but sometimes required.\nIt seems more straighforward to use it always rather than decide on\na case-by-case basis. Before this patch 71 `if`s were enclosed and 49\nwere not. Enclosing these makes it easy to grep and recognize these\nwhereever used.\n\nhttps://docs.github.com/actions/writing-workflows/choosing-when-your-workflow-runs/using-conditions-to-control-job-execution\n\nCloses #17550\n",
             "commit_timestamp": 1749380484.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1749482135.114143,
+            "elapsed_time": 281.75361728668213,
+            "x64": true,
+            "actual_files_count": 3563,
+            "expected_files_count": 2323,
+            "memory_traffic": 82508.05072021484,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "1886260a95f442d947b4d1fc01be95ee55e5f5a1",
+            "commit_message": "lib: make curlx_inet_ntop()\n\nmove function to curlx/, change all callers\n\nCloses #17560\n",
+            "commit_timestamp": 1749467761.0
         }
     ]
 }
