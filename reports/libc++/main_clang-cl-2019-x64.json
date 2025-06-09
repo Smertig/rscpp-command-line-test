@@ -9264,6 +9264,23 @@
             "commit_ref": "8a5c8eb0be699db1c9b891e6fe6adf068299b9fc",
             "commit_message": "[NFC][Clang] Adopt simplified `getTrailingObjects` in AST/Type (#143258)\n\n",
             "commit_timestamp": 1749393720.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1749440038.176221,
+            "elapsed_time": 62.968915939331055,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5010.555450439453,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "0ed5d9aff6e72bdaf3f12bc71dbf83a5c116e8fd",
+            "commit_message": "[LoongArch][BF16] Add support for the __bf16 type (#142548)\n\nThe LoongArch psABI recently added __bf16 type support. Now we can\nenable this new type in clang.\n\nCurrently, bf16 operations are automatically supported by promoting to\nfloat. This patch adds bf16 support by ensuring that load extension /\ntruncate store operations are properly expanded.\n\nAnd this commit implements support for bf16 truncate/extend on hard FP\ntargets. The extend operation is implemented by a shift just as in the\nstandard legalization. This requires custom lowering of the truncate\nlibcall on hard float ABIs (the normal libcall code path is used on soft\nABIs).",
+            "commit_timestamp": 1749438941.0
         }
     ]
 }
