@@ -29423,6 +29423,23 @@
             "commit_ref": "e30cba54641d593fdc0e870cb589c7ae265703fe",
             "commit_message": "[llvm][ADT] Add wrappers to `std::includes` (#143297)\n\nAdd `llvm::includes` that accepts a range instead of start/end iterator.",
             "commit_timestamp": 1749525322.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1749568976.954408,
+            "elapsed_time": 1642.2802686691284,
+            "x64": true,
+            "actual_files_count": 2963,
+            "expected_files_count": 1661,
+            "memory_traffic": 263061.97103118896,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "3cb104e98b9afbac1ab29aa9ce07c67ae04e77c6",
+            "commit_message": "[gn] Unbreak build after b62488f8326c61f\n\nThis is wrong -- it needs to put in the right value for\nPython3_ROOT_DIR. But for now, this unbreaks the build.\n",
+            "commit_timestamp": 1749567818.0
         }
     ]
 }
