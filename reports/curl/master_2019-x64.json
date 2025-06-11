@@ -24701,6 +24701,21 @@
             "commit_ref": "c129d0b1a8769b352a3cf906fa0d3919b4a8ea3d",
             "commit_message": "GHA/windows: make MSVC jobs use MSYS2 libraries: psl, OpenSSL, H2, libssh2\n\nExtend MSVC jobs with the option to use MSYS2 binary package as DLL\ndependencies. Allow to use them alone (without vcpkg) or combined with\nvcpkg packages. This saves the trouble of building these packages from\nsource and cache them manually.\n\nThis solution requires two tricks:\n- workaround for zlib which installs a target-specific `zconf.h` that's\n  not portable between platforms and C compilers.\n- manual dependency configuration in CMake to ensure linking against\n  the MSYS2 DLLs (and not it static libs). Static libs aren't portable\n  to MSVC due to missing symbols `__chkstk_ms`, `_stack_chk_fail`,\n  `_memcpy_chk`, `_stack_chk_guard`, and potentially other issues. CMake\n  in MSVC mode, `linker.exe` and `pkg-config` pick the static libs by\n  default. To pick `.dll.a` in favour of `.a`, these tools would have\n  to be taught about this convention. An alternative is deleting static\n  libs and see if `.dll.a` are picked-up automatically.\n\nUsing MSYS2 packages adds an install step taking 15-45 seconds per job.\n\nIt allowed to:\n- re-enable libpsl for all MSVC jobs.\n- convert the Intel 64-bit job to use MSYS2 without vcpkg, enabling\n  brotli, zstd, OpenSSL 3.5.0, libssh2 (with OpenSSL cryprography) and\n  nghttp2.\n\nUsing the same technique it's possible to re-enable more features\nin MSVC builds, e.g. GnuTLS (also with H3), LibreSSL, mbedTLS, nghttp3,\nngtcp2, libssh, c-ares, gsasl, and replace vcpkg zlib, for faster runs.\nWhat's missing compared to vcpkg is BoringSSL and wolfSSL\n(the MSYS2-supplied build doesn't fit curl's requirements IIRC). These\ncould be built and cached manually.\n\nAlso:\n- add workaround for zlib (classic) which uses a generated `zconf.h`,\n  rendering the MSYS2 zlib header incompatible with MSVC.\n- set the correct `msystem` for arm64.\n- allow using MSVC without vcpkg.\n\nFollow-up to cd0ec4784c1c0f873939f33ec1a73c8739f276b9 #17089\n\nCloses #17561\n",
             "commit_timestamp": 1749595864.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1749654811.24133,
+            "elapsed_time": 254.92800617218018,
+            "x64": true,
+            "actual_files_count": 3525,
+            "expected_files_count": 2323,
+            "memory_traffic": 73826.10850524902,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "02dd471bbf8e04fc595ad0f28c965c278ffcefd0",
+            "commit_message": "libtests: make test 1503,1504,1505 use the 1502 binary\n\nAdjust the differences at runtime instead of build-time, to avoid\nextra buillds.\n\nSet the `CURL_TESTNUM` env variable to pass test numbers to tests.\n\nMake libtest/first.c use that env variable to set the `testnum` global\nvariable to allow tests to differ based on which test that runs it.\n\nCloses #17591\n",
+            "commit_timestamp": 1749644754.0
         }
     ]
 }

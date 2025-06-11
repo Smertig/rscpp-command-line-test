@@ -29457,6 +29457,23 @@
             "commit_ref": "28a4ed945dc101c9a7dbdc93d9461da67225f7dc",
             "commit_message": "[AMDGPU][True16] remove AsmVOP3OpSel (#143465)\n\nThis is NFC. Clean up the AsmVOP3OpSel field, and use Vop3Base instead.",
             "commit_timestamp": 1749610149.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1749655371.543259,
+            "elapsed_time": 1597.1360063552856,
+            "x64": true,
+            "actual_files_count": 2963,
+            "expected_files_count": 1661,
+            "memory_traffic": 262986.6343154907,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "141d390dcb6cd174b07ca663e58f37ab24eee08a",
+            "commit_message": "[flang][OpenMP] Overhaul implementation of ATOMIC construct (#137852)\n\nThe parser will accept a wide variety of illegal attempts at forming an\nATOMIC construct, leaving it to the semantic analysis to diagnose any\nissues. This consolidates the analysis into one place and allows us to\nproduce more informative diagnostics.\n\nThe parser's outcome will be parser::OpenMPAtomicConstruct object\nholding the directive, parser::Body, and an optional end-directive. The\nprior variety of OmpAtomicXyz classes, as well as OmpAtomicClause have\nbeen removed. READ, WRITE, etc. are now proper clauses.\n\nThe semantic analysis consistently operates on \"evaluation\"\nrepresentations, mainly evaluate::Expr (as SomeExpr) and\nevaluate::Assignment. The results of the semantic analysis are stored in\na mutable member of the OpenMPAtomicConstruct node. This follows a\nprecedent of having `typedExpr` member in parser::Expr, for example.\nThis allows the lowering code to avoid duplicated handling of AST nodes.\n\nUsing a BLOCK construct containing multiple statements for an ATOMIC\nconstruct that requires multiple statements is now allowed. In fact, any\nnesting of such BLOCK constructs is allowed.\n\nThis implementation will parse, and perform semantic checks for both\nconditional-update and conditional-update-capture, although no MLIR will\nbe generated for those. Instead, a TODO error will be issues prior to\nlowering.\n\nThe allowed forms of the ATOMIC construct were based on the OpenMP 6.0\nspec.",
+            "commit_timestamp": 1749654334.0
         }
     ]
 }
