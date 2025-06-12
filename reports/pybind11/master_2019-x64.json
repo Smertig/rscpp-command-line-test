@@ -28138,6 +28138,21 @@
             "commit_ref": "513d1f962e7a1ca156594bb4b58d2ddf106b74e5",
             "commit_message": "ci: check iOS update (#5717)\n\n",
             "commit_timestamp": 1749591369.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1749698804.875131,
+            "elapsed_time": 167.18404054641724,
+            "x64": true,
+            "actual_files_count": 499,
+            "expected_files_count": 197,
+            "memory_traffic": 21390.819564819336,
+            "repo_url": "https://github.com/pybind/pybind11",
+            "commit_ref": "7ed76e2d5055b0b6f7263e24374f7119dd58cff2",
+            "commit_message": "fix: add support for const-only smart pointers (#5718)\n\n* add support for const pointers in smart pointers\n\n* use c++11 compatible code\n\n* add template parameter in test\n\n* Make the const-removal clearly visible. This simplifies the production code changes significantly.\n\nFor background see: https://claude.ai/share/4085d9ab-a859-44cc-bb56-450e472f817a\n\n* test without leaks\n\n* add namespace for test\n\n* rename test\n\n* fix test compilation\n\n* using namespace test_const_only_smart_ptr;\n\n* fix smartptr in test\n\n* smaller test body\n\n* move test\n\n* style: pre-commit fixes\n\n---------\n\nCo-authored-by: Ralf W. Grosse-Kunstleve <rgrossekunst@nvidia.com>\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>",
+            "commit_timestamp": 1749659546.0
         }
     ]
 }

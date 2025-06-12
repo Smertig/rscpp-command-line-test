@@ -24716,6 +24716,21 @@
             "commit_ref": "02dd471bbf8e04fc595ad0f28c965c278ffcefd0",
             "commit_message": "libtests: make test 1503,1504,1505 use the 1502 binary\n\nAdjust the differences at runtime instead of build-time, to avoid\nextra buillds.\n\nSet the `CURL_TESTNUM` env variable to pass test numbers to tests.\n\nMake libtest/first.c use that env variable to set the `testnum` global\nvariable to allow tests to differ based on which test that runs it.\n\nCloses #17591\n",
             "commit_timestamp": 1749644754.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1749699295.327248,
+            "elapsed_time": 249.83747053146362,
+            "x64": true,
+            "actual_files_count": 3377,
+            "expected_files_count": 2323,
+            "memory_traffic": 64333.415924072266,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "220c5d8f491ee5848ae913582df69e2218338614",
+            "commit_message": "tests/libtest: simplify Makefile.inc\n\nRemove all custom LDADD lines\n\nPlus: a few minor tidy-ups in libtest code.\n\nCloses #17594\n",
+            "commit_timestamp": 1749677199.0
         }
     ]
 }

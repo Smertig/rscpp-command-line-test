@@ -26491,6 +26491,21 @@
             "commit_ref": "70732b0ca4b8f9e7355639800110f3b7054b8ce0",
             "commit_message": "[TASKMGR] Work around memory leak in performance tab of taskmgr (#8017)\n\n* [TASKMGR] Work around Taskmgr memory leak by changing heap allocation methodology.\nCORE-18014\n",
             "commit_timestamp": 1749596651.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1749698836.508769,
+            "elapsed_time": 87.89928317070007,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7281.112907409668,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "474212939dacaeb639733d6737a92b313e44f51e",
+            "commit_message": "[KBSWITCH] Handle IME Menu default items (#8101)\n\nFinishing IME menu work. The IME menu of the system\npen icon has to append the default items if DMI_LEFT and\nRDMI_RIGHT are not specified.\nJIRA issue: CORE-20142\n- Add IsRegImeToolbarShown and ShowImeToolbar\n  helper functions.\n- Add more code into KbSwitch_OnPenIconMsg function\n  to handle IME menu default items.\n- Add some resource strings.",
+            "commit_timestamp": 1749688403.0
         }
     ]
 }
