@@ -9366,6 +9366,23 @@
             "commit_ref": "a71210e5abdbae80363cb5956a24a2004f625ca6",
             "commit_message": "Revert \"[libc] Fix stdio tests after #143802\" (#143824)\n\nReverts llvm/llvm-project#143810 \n\nThis PR breaks our buildbot:\nhttps://lab.llvm.org/buildbot/#/builders/10/builds/7159 revert to\nunblock downstream merge.",
             "commit_timestamp": 1749698696.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1749740972.125217,
+            "elapsed_time": 69.08345985412598,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5021.414993286133,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "4f60321ca183ebf132e97e54d8d560643c5c3340",
+            "commit_message": "[Offload] Add `ol_dimensions_t` and convert ranges from size_t -> uint32_t (#143901)\n\nThis is a three element x, y, z size_t vector that can be used any place\nwhere a 3D vector is required. This ensures that all vectors across\nliboffload are the same and don't require any resizing/reordering\ndances.",
+            "commit_timestamp": 1749740399.0
         }
     ]
 }
