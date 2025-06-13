@@ -29525,6 +29525,23 @@
             "commit_ref": "07dad4ecba43bcd92453a0cd4c351025126db683",
             "commit_message": "[ELF] Implement -z dynamic-undefined-weak\n\nThe behavior of an undefined weak reference is implementation defined.\nFor static -no-pie linking, dynamic relocations are generally avoided (except\nIRELATIVE). -shared linking generally emits dynamic relocations.\n\nDynamic -no-pie linking and -pie allow flexibility. Changes adjust the\nbehavior for better consistency and simpler internal representation,\ne.g. https://reviews.llvm.org/D63003 https://reviews.llvm.org/D105164\n(generalized to undefined non-weak in\n2fcaa00d1e2317a90c9071b735eb0e758b5dd58b).\n\nGNU ld introduced -z [no]dynamic-undefined-weak option to fine-tune the\nbehavior. (The option is not very effective with -no-pie, e.g. on\nx86-64, `ld.bfd a.o s.so -z dynamic-undefined-weak` generates\nR_X86_64_NONE relocations instead of GLOB_DAT/JUMP_SLOT)\n\nThis patch implements -z [no]dynamic-undefined-weak option.\nThe effects are summarized as follows:\n\n* Static -no-pie: no-op\n* Dynamic -no-pie: nodynamic-undefined-weak suppresses GLOB_DAT/JUMP_SLOT\n* Static -pie: dynamic-undefined-weak generates ABS/GLOB_DAT/JUMP_SLOT.\n  https://discourse.llvm.org/t/lld-weak-undefined-symbols-in-vdso-only/86749\n* Dynamic -pie: nodynamic-undefined-weak suppresses ABS/GLOB_DAT/JUMP_SLOT\n\nThe -pie behavior likely stays stable while -no-pie (`!ctx.arg.isPic` in\n`isStaticLinkTimeConstant`) behavior will likely change in the future.\nThe current default value of ctx.arg.zDynamicUndefined is selected to\nprevent behavior changes.\n\nPull Request: https://github.com/llvm/llvm-project/pull/143831\n",
             "commit_timestamp": 1749783041.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1749828152.204186,
+            "elapsed_time": 1583.2470786571503,
+            "x64": true,
+            "actual_files_count": 2963,
+            "expected_files_count": 1661,
+            "memory_traffic": 262733.429649353,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "ebd7f7539b1c2bc7d5e391bbb00cb56dc245b2dd",
+            "commit_message": "[KeyInstr][NFC] Fix incorrect atomGroup/rank uint size in computeKeyInstructions\n",
+            "commit_timestamp": 1749827043.0
         }
     ]
 }
