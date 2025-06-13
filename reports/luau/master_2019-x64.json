@@ -26958,6 +26958,21 @@
             "commit_ref": "68cdcc4a3a5f3ed23186c4f7f6b8a5aacf835bee",
             "commit_message": "Sync to upstream/release/677 (#1872)\n\n# What's Changed?\n\nThis week comes with many improvements to the new type solver and an important fix to the garbage collection to make it more robust in memory constrained scenarios.\n\n# Runtime\n- Garbage collection will no longer run out of memory itself, which could have happened when resizing arrays to a smaller size\n\n# New Type Solver\n- Type refinements on external types should now work and should no longer normalize the type into `never`\n- Improved error reporting when `string.format` is used with a dynamic format string\n- Updated type signature of `getmetatable` library function to use the corresponding type function and produce better type inference\n- Restored a type mismatch error when converting function types with different number of generic parameters, like `() -> ()` into `<T>() -> ()`\n- Types resulting from compound assignments have been simplified, reducing cyclic type introduction and inference failures\n- Fixed function generic types leaking into tables during bidirectional type inference (Fixes #1808 and #1821 )\n- Stability and performance improvements (Fixes #1860 )\n\n# Internal Contributors\n\nCo-authored-by: Andy Friesen <afriesen@roblox.com>\nCo-authored-by: Ariel Weiss <aaronweiss@roblox.com>\nCo-authored-by: Hunter Goldstein <hgoldstein@roblox.com>\nCo-authored-by: Sora Kanosue <skanosue@roblox.com>\nCo-authored-by: Varun Saini <vsaini@roblox.com>\nCo-authored-by: Vighnesh Vijay <vvijay@roblox.com>\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>\n",
             "commit_timestamp": 1749235967.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1749785311.437329,
+            "elapsed_time": 317.72306060791016,
+            "x64": true,
+            "actual_files_count": 499,
+            "expected_files_count": 379,
+            "memory_traffic": 36301.287437438965,
+            "repo_url": "https://github.com/luau-lang/luau",
+            "commit_ref": "68cdcc4a3a5f3ed23186c4f7f6b8a5aacf835bee",
+            "commit_message": "Sync to upstream/release/677 (#1872)\n\n# What's Changed?\n\nThis week comes with many improvements to the new type solver and an important fix to the garbage collection to make it more robust in memory constrained scenarios.\n\n# Runtime\n- Garbage collection will no longer run out of memory itself, which could have happened when resizing arrays to a smaller size\n\n# New Type Solver\n- Type refinements on external types should now work and should no longer normalize the type into `never`\n- Improved error reporting when `string.format` is used with a dynamic format string\n- Updated type signature of `getmetatable` library function to use the corresponding type function and produce better type inference\n- Restored a type mismatch error when converting function types with different number of generic parameters, like `() -> ()` into `<T>() -> ()`\n- Types resulting from compound assignments have been simplified, reducing cyclic type introduction and inference failures\n- Fixed function generic types leaking into tables during bidirectional type inference (Fixes #1808 and #1821 )\n- Stability and performance improvements (Fixes #1860 )\n\n# Internal Contributors\n\nCo-authored-by: Andy Friesen <afriesen@roblox.com>\nCo-authored-by: Ariel Weiss <aaronweiss@roblox.com>\nCo-authored-by: Hunter Goldstein <hgoldstein@roblox.com>\nCo-authored-by: Sora Kanosue <skanosue@roblox.com>\nCo-authored-by: Varun Saini <vsaini@roblox.com>\nCo-authored-by: Vighnesh Vijay <vvijay@roblox.com>\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>\n",
+            "commit_timestamp": 1749235967.0
         }
     ]
 }

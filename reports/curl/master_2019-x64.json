@@ -24746,6 +24746,21 @@
             "commit_ref": "cbc062a7b82ce3f58617290b579a526176dd3932",
             "commit_message": "http: split http_header into sub functions\n\nCloses #17603\n",
             "commit_timestamp": 1749726826.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1749785678.699779,
+            "elapsed_time": 248.7176115512848,
+            "x64": true,
+            "actual_files_count": 3377,
+            "expected_files_count": 2323,
+            "memory_traffic": 66447.3080291748,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "1cdac95e2e1022c298c1e4e551c7e8b5bd8fd5df",
+            "commit_message": "openssl: fix handling of buffered data\n\n`SSL_pending()` only checks if the *current* TLS packet has more data.\nThere might be more data in SSL's buffers.\n\n`SSL_has_pending()` only checks if there is data in buffers, but does\n*not* check if there is a complete TLS packet that can be decoded.\n\nIf we only check the first, we will poll on socket events without having\nprocessed all data and may stall. If we only check the second, we would\nbusy loop without SSL_read() ever giving something.\n\nAdd the flag `connssl->input_pending` that is set on incoming data in\nthe BIO receive. Clear the flag when encountering a CURLE_AGAIN on\nthe filters receive (via SSL_read()) or see an EOF.\n\nRef: #17596\nCloses #17601\n",
+            "commit_timestamp": 1749767526.0
         }
     ]
 }
