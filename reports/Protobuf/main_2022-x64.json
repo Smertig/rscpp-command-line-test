@@ -8204,6 +8204,21 @@
             "commit_ref": "b926dd82d15355f3b8c2f2bc48a9783ca921c476",
             "commit_message": "Resolve testing python library deprecation warnings (#22200)\n\n## Description\nThis small PR migrates from `unittest.assertEquals` to `unittest.assertEqual` which is deprecated from Python2.7:\n```python\n/tmp/protobuf/python/google/protobuf/internal/reflection_test.py:3147: DeprecationWarning: Please use assertEqual instead.\n```\n\nCloses #22200\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/22200 from emmanuel-ferdman:main 126ddc1825c2792b3436086e054aef3bdea7128a\nPiperOrigin-RevId: 771314609\n",
             "commit_timestamp": 1749870348.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1749913567.693533,
+            "elapsed_time": 337.1103296279907,
+            "x64": true,
+            "actual_files_count": 1200,
+            "expected_files_count": 818,
+            "memory_traffic": 44213.72492980957,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "b926dd82d15355f3b8c2f2bc48a9783ca921c476",
+            "commit_message": "Resolve testing python library deprecation warnings (#22200)\n\n## Description\nThis small PR migrates from `unittest.assertEquals` to `unittest.assertEqual` which is deprecated from Python2.7:\n```python\n/tmp/protobuf/python/google/protobuf/internal/reflection_test.py:3147: DeprecationWarning: Please use assertEqual instead.\n```\n\nCloses #22200\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/22200 from emmanuel-ferdman:main 126ddc1825c2792b3436086e054aef3bdea7128a\nPiperOrigin-RevId: 771314609\n",
+            "commit_timestamp": 1749870348.0
         }
     ]
 }
