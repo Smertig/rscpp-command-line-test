@@ -29542,6 +29542,23 @@
             "commit_ref": "ebd7f7539b1c2bc7d5e391bbb00cb56dc245b2dd",
             "commit_message": "[KeyInstr][NFC] Fix incorrect atomGroup/rank uint size in computeKeyInstructions\n",
             "commit_timestamp": 1749827043.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1749872520.432904,
+            "elapsed_time": 1646.763253211975,
+            "x64": true,
+            "actual_files_count": 2963,
+            "expected_files_count": 1661,
+            "memory_traffic": 262779.09770965576,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "d4c7d0be1f5235555393313bb1f8e46c97f76766",
+            "commit_message": "MCObjectStreamer: Replace getAssemblerPtr with getAssembler\n\nIn general getAssemblerPtr should only be called by MCParse.\nRevert some changes from https://reviews.llvm.org/D45164?id=143128\n",
+            "commit_timestamp": 1749867132.0
         }
     ]
 }
