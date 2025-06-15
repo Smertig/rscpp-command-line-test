@@ -9468,6 +9468,23 @@
             "commit_ref": "4ed10db85919d3d87bf0b3353340b58354a75994",
             "commit_message": "[clang][cmake] Don't pass -fno-strict-aliasing for GCC\n\nThis was added a long time ago..\n* to the Makefiles in 40fee6313df688d43d1f8bbe85bc35161689afca;\n* first to CMake in b3ce035c7155644d5bced46c45ae5ac865b7aedc;\n* then moved to only apply when building Clang with GCC in\n  c5635a6af7c643169f81145bfae8c895f2207792.\n\nThis shouldn't be needed these days. If an issue does arise, it really\nought to be documented better and the cause will certainly be different\nthan it was back then.\n\nThe two GCC bugs cited in 40fee6313df688d43d1f8bbe85bc35161689afca were:\n* https://gcc.gnu.org/PR41874\n* https://gcc.gnu.org/PR41838\nand both are long-fixed. Not only that, if those issues did come up again,\nwe'd be better off doing -Wno-strict-aliasing where appropriate if there\nweren't a real code issue or some suppression that was tighter in scope\nwasn't appropriate.\n",
             "commit_timestamp": 1749951282.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1750000150.085358,
+            "elapsed_time": 64.95935153961182,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5006.444427490234,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "567647888ea3dd292827bbac445d316d6a6b0ecb",
+            "commit_message": "[clang][bytecode] Avoid revisiting decomposition decl in visitDeclRef (#144226)\n\nThis simple patch removes the code to revisit `DecompositionDecl` in\n`visitDeclRef`. The revisit will try to emit the initializer of the\n`DecompositionDecl`, which could result in evaluation errors if the\n`DecompositionDecl` is not within a constexpr context.",
+            "commit_timestamp": 1749999616.0
         }
     ]
 }

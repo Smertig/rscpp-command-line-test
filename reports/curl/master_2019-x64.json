@@ -24821,6 +24821,21 @@
             "commit_ref": "17f2a220a99db30bacd66df4df677dfb0a18b405",
             "commit_message": "openssl: Fix openssl engines\n\n- Return CURLE_OK if the engine successfully loaded.\n\nPrior to this change:\n\nWhen loading an openssl engine, the result code is initialized to\nCURLE_SSL_ENGINE_NOTFOUND, but is never set to CURLE_OK when the engine\nwas successfully loaded. This causes curl to error out, falsely stating\nengine not found when it actually was.\n\nBroken since f2ce6c46 (precedes 8.14.0) which added support for using\nengines and providers at the same time.\n\nFixes https://github.com/curl/curl/issues/17617\nCloses https://github.com/curl/curl/pull/17618\n",
             "commit_timestamp": 1749957304.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1750000484.437428,
+            "elapsed_time": 126.96321058273315,
+            "x64": true,
+            "actual_files_count": 1049,
+            "expected_files_count": 2323,
+            "memory_traffic": 17811.548149108887,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "639d5e0f5e943885d053e266c342379dcfa83563",
+            "commit_message": "tests: tidy up server main function, whitespace and README\n\nFollow-up to 2c27a67daa1b76859c18d63e4e1f528db05b5e13 #17590\n\nCloses #17625\n",
+            "commit_timestamp": 1749989481.0
         }
     ]
 }
