@@ -29576,6 +29576,23 @@
             "commit_ref": "ff295d2f3429a5a2a93b2c86099af40544f467d4",
             "commit_message": "[OpenMP][clang] declare mapper: fix handling of nested types (#143504)\n\nFix a crash that happened during parsing of a \"declare mapper\" construct\nfor a struct that contains an element for which we also declared a\ncustom default mapper.",
             "commit_timestamp": 1749910628.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1749959319.489137,
+            "elapsed_time": 1609.4250075817108,
+            "x64": true,
+            "actual_files_count": 2964,
+            "expected_files_count": 1661,
+            "memory_traffic": 262845.9358139038,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "4ed10db85919d3d87bf0b3353340b58354a75994",
+            "commit_message": "[clang][cmake] Don't pass -fno-strict-aliasing for GCC\n\nThis was added a long time ago..\n* to the Makefiles in 40fee6313df688d43d1f8bbe85bc35161689afca;\n* first to CMake in b3ce035c7155644d5bced46c45ae5ac865b7aedc;\n* then moved to only apply when building Clang with GCC in\n  c5635a6af7c643169f81145bfae8c895f2207792.\n\nThis shouldn't be needed these days. If an issue does arise, it really\nought to be documented better and the cause will certainly be different\nthan it was back then.\n\nThe two GCC bugs cited in 40fee6313df688d43d1f8bbe85bc35161689afca were:\n* https://gcc.gnu.org/PR41874\n* https://gcc.gnu.org/PR41838\nand both are long-fixed. Not only that, if those issues did come up again,\nwe'd be better off doing -Wno-strict-aliasing where appropriate if there\nweren't a real code issue or some suppression that was tighter in scope\nwasn't appropriate.\n",
+            "commit_timestamp": 1749951282.0
         }
     ]
 }
