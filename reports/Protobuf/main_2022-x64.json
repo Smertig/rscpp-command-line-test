@@ -8249,6 +8249,21 @@
             "commit_ref": "b339f136b2d60427a076e98ad9eb982bf8228def",
             "commit_message": "Remove redundant `break` (#22218)\n\n`Py_RETURN_NONE` returns, so the `break` is unreachable.\n\nIdentified with `-Wunreachable-code-break` in LLVM.\n\nCloses #22218\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/22218 from r-barnes:patch-1 544a86ba019ddc40ee3e975deef64bac092338a5\nPiperOrigin-RevId: 771565868\n",
             "commit_timestamp": 1749954744.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1750044679.340902,
+            "elapsed_time": 335.7668294906616,
+            "x64": true,
+            "actual_files_count": 1200,
+            "expected_files_count": 818,
+            "memory_traffic": 44350.34566497803,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "b339f136b2d60427a076e98ad9eb982bf8228def",
+            "commit_message": "Remove redundant `break` (#22218)\n\n`Py_RETURN_NONE` returns, so the `break` is unreachable.\n\nIdentified with `-Wunreachable-code-break` in LLVM.\n\nCloses #22218\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/22218 from r-barnes:patch-1 544a86ba019ddc40ee3e975deef64bac092338a5\nPiperOrigin-RevId: 771565868\n",
+            "commit_timestamp": 1749954744.0
         }
     ]
 }

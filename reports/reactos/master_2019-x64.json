@@ -26611,6 +26611,21 @@
             "commit_ref": "42aaad43db98690fc59df7178231b6e3de155ccb",
             "commit_message": "[OLEAUT32][OLEAUT32_WINETEST] Import LPSAFEARRAY user marshal interface marshaling support from Wine (#8121)\n\nImport the following Wine commits:\noleaut32: Implement LPSAFEARRAY user marshal interface marshaling.\nhttps://gitlab.winehq.org/wine/wine/-/commit/a1f2b44a1bf9ecbcf772aa8509f87c2be1ccc415\noleaut32/tests: Add tests for LPSAFEARRAY user marshal interface marshaling.\nhttps://gitlab.winehq.org/wine/wine/-/commit/b2574278f7ab6709b920f562bb03f23073827327\ncontaining the implementation itself and a test for it.\nFixes:\n1) improperly displayed comboboxes with OS type and version selection,\n2) failure to save/load virtual machine settings in/from XML file\nin VirtualBox 3.0.0 - 4.0.36 versions and\n3) improperly displayed comboboxes in 3DMark2001.\nAs result, this also allows to create and start a virtual machine(s) in VirtualBox up to 3.0.8 version. For newer VirtualBox versions, another fix is required.\nCORE-8418, CORE-11254, CORE-14507, CORE-17980, CORE-18496, CORE-20015",
             "commit_timestamp": 1749996531.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1750044670.247141,
+            "elapsed_time": 70.2890305519104,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7330.573692321777,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "1ece13917839eed60c60d1780366a37e922df1a8",
+            "commit_message": "[SHLWAPI][SHLWAPI_APITEST][SDK] Support MayExecForward + MayQSForward (#8125)\n\nFollow-up of #8124. Implementing missing features...\nJIRA issue: CORE-19278\n- Implement MayExecForward and MayQSForward\n  functions.\n- Modify these prototypes in <shlwapi_undoc.h>.\n- Add tests to shlwapi_apitest IsQSForward.",
+            "commit_timestamp": 1750026707.0
         }
     ]
 }

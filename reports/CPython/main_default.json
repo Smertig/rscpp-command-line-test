@@ -24041,6 +24041,21 @@
             "commit_ref": "2bd3895fcabb2dfdae5c0c72e60483e3d3267f0f",
             "commit_message": "gh-127319: Disable port reuse on HTTP, XMLRPC, and logging TCP servers (GH-135405)\n\nPrior to issue #120485 these servers did not allow port reuse, which\nmakes sense as the behavior of port reuse is surprising if you're not\nexpecting it. It's unclear to me why these services were switched to\nallow port reuse, but I believe the desired behavior (unless subclasses\nopt in) is to not allow port reuse.\n\nSee also: https://bugzilla.redhat.com/show_bug.cgi?id=2323170",
             "commit_timestamp": 1749965669.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1750044992.430925,
+            "elapsed_time": 1581.9042739868164,
+            "x64": true,
+            "actual_files_count": 1198,
+            "expected_files_count": null,
+            "memory_traffic": 52813.749908447266,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "60181f4ed0e48ff35dc296da6b51473bfc553d16",
+            "commit_message": "gh-67022: Document bytes/str inconsistency in email.header.decode_header() and suggest email.headerregistry.HeaderRegistry as a sane alternative (#92900)\n\n* gh-67022: Document bytes/str inconsistency in email.header.decode_header()\n\nThis function's possible return types have been surprising and error-prone\nfor the entirety of its Python 3.x history. It can return either:\n\n1. `typing.List[typing.Tuple[bytes, typing.Optional[str]]]` of length >1\n2. or `typing.List[typing.Tuple[str, None]]`, of length exactly 1\n\nThis means that any user of this function must be prepared to accept either\n`bytes` or `str` for the first member of the 2-tuples it returns, which is a\nvery surprising behavior in Python 3.x, particularly given that the second\nmember of the tuple is supposed to represent the charset/encoding of the\nfirst member.\n\nThis patch documents the behavior of this function, and adds test cases\nto demonstrate it.\n\nAs discussed in bpo-22833, this cannot be changed in a backwards-compatible\nway, and some users of this function depend precisely on the existing\nbehavior.\n\nAdd warnings about obsolescence of 'email.header.decode_header' and 'email.header.make_header' functions.\n\nRecommend use of `email.headerregistry.HeaderRegistry` instead, as suggested\nin https://github.com/python/cpython/pull/92900#discussion_r1112472177",
+            "commit_timestamp": 1750015778.0
         }
     ]
 }

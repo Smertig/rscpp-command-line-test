@@ -29610,6 +29610,23 @@
             "commit_ref": "567647888ea3dd292827bbac445d316d6a6b0ecb",
             "commit_message": "[clang][bytecode] Avoid revisiting decomposition decl in visitDeclRef (#144226)\n\nThis simple patch removes the code to revisit `DecompositionDecl` in\n`visitDeclRef`. The revisit will try to emit the initializer of the\n`DecompositionDecl`, which could result in evaluation errors if the\n`DecompositionDecl` is not within a constexpr context.",
             "commit_timestamp": 1749999616.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1750045624.84943,
+            "elapsed_time": 1549.9585673809052,
+            "x64": true,
+            "actual_files_count": 2964,
+            "expected_files_count": 1661,
+            "memory_traffic": 263179.92517852783,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "9adde28df784f5c0cc960bdabd413ac131a5852e",
+            "commit_message": "[LLD][ELF][RISCV][Zicfilp][Zicfiss] Support `-z zicfilp=` and `-z zicfiss=` to force enable/disable features (#143114)\n\n+ If `-z zicfilp=implicit` or option not specified, the output would\nhave the ZICFILP feature enabled/disabled based on input objects\n+ If `-z zicfilp=<never|unlabeled|func-sig>`, the output would have\nZICFILP feature forced <off|on to the \"unlabeled\" scheme|on to the\n\"func-sig\" scheme>\n+ If `-z zicfiss=implicit` or option not specified, the output would\nhave the ZICFISS feature enabled/disabled based on input objects\n+ If `-z zicfiss=<never|always>`, the output would have the ZICFISS\nfeature forced <off|on>",
+            "commit_timestamp": 1750043921.0
         }
     ]
 }
