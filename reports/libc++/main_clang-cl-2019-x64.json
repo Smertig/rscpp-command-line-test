@@ -9502,6 +9502,23 @@
             "commit_ref": "9adde28df784f5c0cc960bdabd413ac131a5852e",
             "commit_message": "[LLD][ELF][RISCV][Zicfilp][Zicfiss] Support `-z zicfilp=` and `-z zicfiss=` to force enable/disable features (#143114)\n\n+ If `-z zicfilp=implicit` or option not specified, the output would\nhave the ZICFILP feature enabled/disabled based on input objects\n+ If `-z zicfilp=<never|unlabeled|func-sig>`, the output would have\nZICFILP feature forced <off|on to the \"unlabeled\" scheme|on to the\n\"func-sig\" scheme>\n+ If `-z zicfiss=implicit` or option not specified, the output would\nhave the ZICFISS feature enabled/disabled based on input objects\n+ If `-z zicfiss=<never|always>`, the output would have the ZICFISS\nfeature forced <off|on>",
             "commit_timestamp": 1750043921.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1750086540.546185,
+            "elapsed_time": 59.25887989997864,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4981.926696777344,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "f2734aa25e808e8c1967f7125fdea6c8b2dab9e1",
+            "commit_message": "[InstCombine] fold icmp with add/sub instructions having the same operands (#143241)\n\nCloses #143211.",
+            "commit_timestamp": 1750086330.0
         }
     ]
 }
