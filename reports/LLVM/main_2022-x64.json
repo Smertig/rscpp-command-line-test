@@ -29661,6 +29661,23 @@
             "commit_ref": "602c3089f749ec3b61b93652ea9eb5947a61bcf2",
             "commit_message": "[TargetParser] Increase MAX_SUBTARGET_FEATURES to 384 (#144326)\n\nThere are 314 features in RISC-V backend, which is about to exceed\nthe maxinum 320 as there are some ongoing new extensions.\n\nWe increase the `MAX_SUBTARGET_FEATURES` to 384 so that we won't\nsurprise anyone.",
             "commit_timestamp": 1750130257.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1750173698.100866,
+            "elapsed_time": 1598.9775216579437,
+            "x64": true,
+            "actual_files_count": 2968,
+            "expected_files_count": 1661,
+            "memory_traffic": 262732.71757507324,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "9eb0020555fc643582b2802abb8c1bc92059c248",
+            "commit_message": "[DebugInfo][RemoveDIs] Remove a swathe of debug-intrinsic code (#144389)\n\nSeeing how we can't generate any debug intrinsics any more: delete a\nvariety of codepaths where they're handled. For the most part these are\nplain deletions, in others I've tweaked comments to remain coherent, or\nadded a type to (what was) type-generic-lambdas.\n\nThis isn't all the DbgInfoIntrinsic call sites but it's most of the\nsimple scenarios.\n\nCo-authored-by: Nikita Popov <github@npopov.com>",
+            "commit_timestamp": 1750172114.0
         }
     ]
 }

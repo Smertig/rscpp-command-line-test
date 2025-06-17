@@ -8294,6 +8294,21 @@
             "commit_ref": "f1f222ef13fb074328958c50bac03ec9630c3c4f",
             "commit_message": "Auto-generate files after cl/772201578\n",
             "commit_timestamp": 1750114891.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1750172986.108917,
+            "elapsed_time": 378.49269556999207,
+            "x64": true,
+            "actual_files_count": 1200,
+            "expected_files_count": 818,
+            "memory_traffic": 44171.6967086792,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "5ff0eb6835b30a384a6d2ea2efd58f91d8fc7d38",
+            "commit_message": "[ObjC] Mark the generator final.\n\nNever has supported subclassing, so mark it as such.\n\nFix up a signed/unsigned warning while here.\n\nPiperOrigin-RevId: 772467781\n",
+            "commit_timestamp": 1750171360.0
         }
     ]
 }
