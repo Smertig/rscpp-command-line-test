@@ -24866,6 +24866,21 @@
             "commit_ref": "6d00b06e167c4a19a561731ca4210fe2d625f312",
             "commit_message": "GHA/windows: avoid libtool wrapper for `tunits`\n\nTo sync it with other test binaries.\n\nCloses #17640\n",
             "commit_timestamp": 1750076020.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1750131275.392673,
+            "elapsed_time": 103.25151300430298,
+            "x64": true,
+            "actual_files_count": 1010,
+            "expected_files_count": 2323,
+            "memory_traffic": 17235.17130279541,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "539d11297d36cff0bca7dda1f217186f060d577d",
+            "commit_message": "tests/http/clients: drop hack and use `curl_setup.h` again\n\nSync build properties with libtests.\n\nThis allows accessing macros from `curl_config.h`, for feature flags.\nSmoothens out platform bumps, allowing to drop local replicas from\nclient sources. It enables using Windows wrappers, e.g. for `fopen()`.\n\nAlso fix client sources to use `curl_mfprintf()` where curl format\nstrings are used. (To avoid build failure with older mingw-w64, e.g.\n6.4.0 in CI.)\n\nFollow-up to 739c09c8a4111b3ee00b0004f5a3f67e00ba3aeb #17627\n\nCloses #17642\n",
+            "commit_timestamp": 1750105557.0
         }
     ]
 }

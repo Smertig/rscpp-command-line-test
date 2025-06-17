@@ -26641,6 +26641,21 @@
             "commit_ref": "82a57e41e18320d3b6579c07a87527262ee84eea",
             "commit_message": "[WINLOGON] Correctly reset LogonState in case logon or shutdown fails (#8133)\n\nCORE-18351 CORE-18237 CORE-17137 CORE-16567\nCORE-15360 CORE-5071 CORE-3804\n\nReset `LogonState` back to `STATE_LOGGED_OFF` before invoking\n`WlxDisplaySASNotice()` when:\n- in `STATE_LOGGED_OFF_SAS` state, `HandleLogon()` failed;\n- or when an attempted shutdown operation failed.\n\nThis fixes the resulting inconsistent `LogonState` that happened if\nany of these operations failed due to legitimate reasons. For example,\na corrupted user profile that caused the login attempt to abort, or,\nan ongoing shutdown attempt being aborted as well.\n\nOne of the user-visible effects of this inconsistency, was the inability\nto access the familiar Logged-Out SAS dialog by pressing Ctrl-Alt-Del at\nthe invite (SAS notice) dialog, because the `LogonState` was incorrectly\nleft into the `STATE_LOGGED_OFF_SAS` state, instead of being reset to\n`STATE_LOGGED_OFF`.\n\n----\n\nTypical scenario:\nThe \"Administrator\" user, who is auto-logged-in by default after the\ninstallation, gets a corrupted ntuser.dat profile registry hive if the\n2nd-stage installation is aborted at the end by force-restarting ReactOS.\nAfter reboot, ReactOS tries to log into the account, but fails, and goes\nback to the Ctrl-Alt-Del invite dialog.\nBefore this fix, the user couldn't go into the Logged-Out SAS dialog to\nenter new login credentials and attempt login to another account.\nThis is now fixed.\n",
             "commit_timestamp": 1750076207.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1750130859.756182,
+            "elapsed_time": 71.3307991027832,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7320.085250854492,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "e26ad0de129d7e06cc2decab1525d532e34ccb9b",
+            "commit_message": "[MSCTF] Translate ITfDocumentMgr into C++ (#8120)\n\nImplementing missing features...\nJIRA issue: CORE-19361\n- Delete documentmgr.c and add\n  documentmgr.cpp.\n- Make ITfDocumentMgr and\n  IEnumTfContexts C++ code.",
+            "commit_timestamp": 1750111722.0
         }
     ]
 }

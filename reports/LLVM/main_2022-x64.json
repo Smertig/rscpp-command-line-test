@@ -29644,6 +29644,23 @@
             "commit_ref": "f2734aa25e808e8c1967f7125fdea6c8b2dab9e1",
             "commit_message": "[InstCombine] fold icmp with add/sub instructions having the same operands (#143241)\n\nCloses #143211.",
             "commit_timestamp": 1750086330.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1750131825.530917,
+            "elapsed_time": 1640.0874173641205,
+            "x64": true,
+            "actual_files_count": 2964,
+            "expected_files_count": 1661,
+            "memory_traffic": 262960.08950805664,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "602c3089f749ec3b61b93652ea9eb5947a61bcf2",
+            "commit_message": "[TargetParser] Increase MAX_SUBTARGET_FEATURES to 384 (#144326)\n\nThere are 314 features in RISC-V backend, which is about to exceed\nthe maxinum 320 as there are some ongoing new extensions.\n\nWe increase the `MAX_SUBTARGET_FEATURES` to 384 so that we won't\nsurprise anyone.",
+            "commit_timestamp": 1750130257.0
         }
     ]
 }
