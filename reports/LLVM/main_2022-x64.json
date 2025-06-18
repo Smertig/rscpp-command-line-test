@@ -29678,6 +29678,23 @@
             "commit_ref": "9eb0020555fc643582b2802abb8c1bc92059c248",
             "commit_message": "[DebugInfo][RemoveDIs] Remove a swathe of debug-intrinsic code (#144389)\n\nSeeing how we can't generate any debug intrinsics any more: delete a\nvariety of codepaths where they're handled. For the most part these are\nplain deletions, in others I've tweaked comments to remain coherent, or\nadded a type to (what was) type-generic-lambdas.\n\nThis isn't all the DbgInfoIntrinsic call sites but it's most of the\nsimple scenarios.\n\nCo-authored-by: Nikita Popov <github@npopov.com>",
             "commit_timestamp": 1750172114.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1750218193.39401,
+            "elapsed_time": 1610.8648121356964,
+            "x64": true,
+            "actual_files_count": 2968,
+            "expected_files_count": 1661,
+            "memory_traffic": 262854.3535308838,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "a2ad65661ad560b04952d4d992248d2db3be36c8",
+            "commit_message": "[RISCV] Add patterns for generating QC_CTO and QC_CLO (#144532)\n\nThese instructions count leading/trailing ones in the register.\n\nCurrently these are only generated when we have `Zbb` enabled (along\nwith `Xqcibm`) since it contains the `CTTZ/CTLZ` instructions.",
+            "commit_timestamp": 1750213448.0
         }
     ]
 }
