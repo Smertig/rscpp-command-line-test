@@ -26906,6 +26906,21 @@
             "commit_ref": "ab873233d41a1899972c16315640910e82f84e28",
             "commit_message": "ENH: Fixed width type enums (INT8, UINT64, FLOAT64, ...) for IOComponent\n\nAdded enumerators to `IOComponent` that explicitly specify the number of bits\nof the types they refer to:\n\n    UINT8, INT8, UINT16, INT16, UINT32, INT32, UINT64, INT64, FLOAT32, FLOAT64\n\nTested that `MapPixelType<TPixel>::CType` maps to the expected enumerator.\n\n`INT8` is clearer than `CHAR`, because the C++ type `char` may be either signed\nor unsigned. (`INT8` corresponds with `std::int8_t`, which is always signed, by\ndefinition.) `INT32` and `INT64` are clearer than `LONG`, because `long` may be\neither 32 bits or 64 bits, depending on the platform and the compiler. `FLOAT32`\nis clearer than `FLOAT`, because on other languages (notably Python), the\nstandard `float` type may be 64 bits.\n",
             "commit_timestamp": 1750210410.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1750259550.314511,
+            "elapsed_time": 208.9789719581604,
+            "x64": true,
+            "actual_files_count": 101,
+            "expected_files_count": null,
+            "memory_traffic": 23982.591423034668,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "c4112c01536e1e21c745fa2097d9149a23482bf9",
+            "commit_message": "STYLE: ITK_LEGACY_REMOVE/deprecate `ImageIOBase::GetComponentTypeInfo()`\n\nThis member function was already deprecated according to its documentation, as\nwas committed by 6ff5fc7f01148bd11070c5ecfe0d56f643f62565, Kent Williams, Feb 9,\n2011.\n",
+            "commit_timestamp": 1750244258.0
         }
     ]
 }

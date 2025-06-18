@@ -9553,6 +9553,23 @@
             "commit_ref": "a2ad65661ad560b04952d4d992248d2db3be36c8",
             "commit_message": "[RISCV] Add patterns for generating QC_CTO and QC_CLO (#144532)\n\nThese instructions count leading/trailing ones in the register.\n\nCurrently these are only generated when we have `Zbb` enabled (along\nwith `Xqcibm`) since it contains the `CTTZ/CTLZ` instructions.",
             "commit_timestamp": 1750213448.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1750259337.866838,
+            "elapsed_time": 58.600991010665894,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4990.611763000488,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "36038a1048b2aab87ed18f982e960c044ad97670",
+            "commit_message": "[RemoveDIs][NFC] Remove dbg intrinsic handling code from SelectionDAG ISel (#144702)\n\n",
+            "commit_timestamp": 1750259058.0
         }
     ]
 }
