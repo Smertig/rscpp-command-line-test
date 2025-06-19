@@ -26701,6 +26701,21 @@
             "commit_ref": "81a4d8344baf29e18ae21735fde3384c334491a4",
             "commit_message": "[NTOS:SE] SeValidSecurityDescriptor: Use relative security descriptor header size for length calculation (#8127)\n\nFixes Win2k3 ntfs.sys on x64",
             "commit_timestamp": 1750283727.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1750345615.6889,
+            "elapsed_time": 83.6870698928833,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7230.612899780273,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "b8c5e9c209447d877a2e41057724d5be172d8a03",
+            "commit_message": "[WINLOGON] Check whether error popups should be shown if loading user profile fails (#8139)\n\nRespect the `\"NoPopupsOnBoot\"` REG_DWORD value in `HKLM\\System\\CurrentControlSet\\Control\\Windows`\nhttps://www.visualautomation.com/comprod/secure6/nopopups.htm\n",
+            "commit_timestamp": 1750342171.0
         }
     ]
 }
