@@ -26686,6 +26686,21 @@
             "commit_ref": "bf734eb002e966cca22beba1391a9be9670dae1a",
             "commit_message": "[APPHELP_APITEST] Fix test failures on Vista, 7, 8.1 x86 and x64 (#8122)\n\n* Disable most apphelp:env and some apphelp:db tests on x64 due to structure differences breaking these tests.\n* Add new tag lists for Windows 8.1 and Windows 10 in apphelp:apphelp test.\n* Make a few changes to accept either Windows 10 or Windows 8.1 and older behavior in apphelp:apphelp test.\n* Create new shimdata structures for Windows 8 and Windows Vista.\n* Add attribute size definitions for Vista, 8.1, and 10.\n* Create new shim data validation functions for Vista and 8.1.\n* Use local time instead of UTC time for shim db version. This fixes test failures when the day in local time and the day in UTC are different.",
             "commit_timestamp": 1750180712.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1750303685.168818,
+            "elapsed_time": 88.70260334014893,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7312.207061767578,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "81a4d8344baf29e18ae21735fde3384c334491a4",
+            "commit_message": "[NTOS:SE] SeValidSecurityDescriptor: Use relative security descriptor header size for length calculation (#8127)\n\nFixes Win2k3 ntfs.sys on x64",
+            "commit_timestamp": 1750283727.0
         }
     ]
 }

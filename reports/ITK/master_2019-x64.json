@@ -26921,6 +26921,21 @@
             "commit_ref": "c4112c01536e1e21c745fa2097d9149a23482bf9",
             "commit_message": "STYLE: ITK_LEGACY_REMOVE/deprecate `ImageIOBase::GetComponentTypeInfo()`\n\nThis member function was already deprecated according to its documentation, as\nwas committed by 6ff5fc7f01148bd11070c5ecfe0d56f643f62565, Kent Williams, Feb 9,\n2011.\n",
             "commit_timestamp": 1750244258.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "ITKCommon",
+            "timestamp": 1750304055.650757,
+            "elapsed_time": 209.8693609237671,
+            "x64": true,
+            "actual_files_count": 101,
+            "expected_files_count": null,
+            "memory_traffic": 24143.046768188477,
+            "repo_url": "https://github.com/InsightSoftwareConsortium/ITK.git",
+            "commit_ref": "b72bb6e237c4f9da19249deb3a2851baee5bef26",
+            "commit_message": "BUG: Add `nullptr` check and fix cast in `MultiStageImageRegistration2`\n\nIntroduced `nullptr` validation for `object` to prevent potential\ncrashes. Replaced `static_cast` with `reinterpret_cast` for correct type\ncasting.\n",
+            "commit_timestamp": 1750268552.0
         }
     ]
 }
