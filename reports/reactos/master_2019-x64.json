@@ -26716,6 +26716,21 @@
             "commit_ref": "b8c5e9c209447d877a2e41057724d5be172d8a03",
             "commit_message": "[WINLOGON] Check whether error popups should be shown if loading user profile fails (#8139)\n\nRespect the `\"NoPopupsOnBoot\"` REG_DWORD value in `HKLM\\System\\CurrentControlSet\\Control\\Windows`\nhttps://www.visualautomation.com/comprod/secure6/nopopups.htm\n",
             "commit_timestamp": 1750342171.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1750390026.046701,
+            "elapsed_time": 78.73625469207764,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7320.309455871582,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "15e69dbf34146f832ead8f7e1879b98195a173c3",
+            "commit_message": "[DEVMGR] Fix the device manager\n\n- Revert changes to the wine debug macros.\n- Enable grayed the Resource By Type menu items.\n",
+            "commit_timestamp": 1750367305.0
         }
     ]
 }
