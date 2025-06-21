@@ -8399,6 +8399,21 @@
             "commit_ref": "7a30cd9d4aa1f14fff03bad7b795931991430986",
             "commit_message": "Automated Code Change\n\nPiperOrigin-RevId: 773614493\n",
             "commit_timestamp": 1750413612.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1750518351.56055,
+            "elapsed_time": 310.4626531600952,
+            "x64": true,
+            "actual_files_count": 1192,
+            "expected_files_count": 818,
+            "memory_traffic": 45396.51431274414,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "c02a5fcbd5718380caa942994f6e7cb1455ce405",
+            "commit_message": "Make randomized tests reproducible + IWYU\n\nThe updated tests will now log something like:\n\n```\nTagged seed sequence (ABSL_RANDOM_SALT_OVERRIDE=fBAY_g): SEED_MultiThreaded=XVKmv...\n```\n\nTo rerun the test with exactly the same random sequence, e.g. to reproduce a failure, do this:\n\n```\n$ export SEED_MultiThreaded=XVKmv... blaze test <this test>\n```\n\nPiperOrigin-RevId: 773951818\n",
+            "commit_timestamp": 1750475823.0
         }
     ]
 }

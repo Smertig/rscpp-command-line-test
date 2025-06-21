@@ -24971,6 +24971,21 @@
             "commit_ref": "b2eb44492206ca1a2abf2cef35425804ecfb5542",
             "commit_message": "RELEASE-NOTES: synced\n",
             "commit_timestamp": 1750417735.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1750518752.310899,
+            "elapsed_time": 109.47489714622498,
+            "x64": true,
+            "actual_files_count": 1011,
+            "expected_files_count": 2323,
+            "memory_traffic": 17263.960189819336,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "7aa8d1eea1fe60b26e88abe2c672f70bf30f63cc",
+            "commit_message": "build: tidy up `Makefile.inc` use in lib and src\n\n- cmake: use `CURL_RCFILES` instead of literal.\n- cmake: use `LIB_RCFILES` instead of literal.\n- cmake: fix comments.\n- autotools: use `CURL_RCFILES` in `EXTRA_DIST`.\n- autotools: use `LIB_RCFILES` in `EXTRA_DIST`.\n- autotools: fix comments.\n- autotools: fix indentation.\n\nCloses #17694\n",
+            "commit_timestamp": 1750499461.0
         }
     ]
 }
