@@ -29814,6 +29814,23 @@
             "commit_ref": "b7d0c9b9d8e2b5c5d6677e368e3cdaf438df294e",
             "commit_message": "[SelectionDAG][RISCV] Treat zext nneg as sext in PromoteIntOp_ZERO_EXTEND if the promoted input is sign extended. (#145120)\n\nIf the zext has the nneg flag and we can prove the promoted input\nis sign extended, we can avoid generating an AND that we might not\nbe able to remove. RISC-V emits a lot of sext_inreg operations during\ni32->i64 promotion that makes this likely.\n\nI've restricted this to the case where the promoted type is the same\nas the result type so we don't need to create an additional extend.\n\nI've also restricted it to cases where the target has stated a\npreference for sext like i32->i64 on RV64. This is largely to avoid\nwasting time in computeNumSignBits until we have a test case that\nbenefits.",
             "commit_timestamp": 1750557360.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1750605689.404664,
+            "elapsed_time": 1657.0939526557922,
+            "x64": true,
+            "actual_files_count": 2965,
+            "expected_files_count": 1661,
+            "memory_traffic": 263149.06617736816,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "f2eb5d416ed1e539b215aa0bab46b8e8a98f1eec",
+            "commit_message": "[SelectionDAG] Handle `fneg`/`fabs`/`fcopysign` in `SimplifyDemandedBits` (#139239)\n\n",
+            "commit_timestamp": 1750603739.0
         }
     ]
 }

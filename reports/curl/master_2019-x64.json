@@ -25001,6 +25001,21 @@
             "commit_ref": "bbadbd77953236ce7f292c896c0c3c8306e78a9a",
             "commit_message": "docs: mention that the netrc file works without port numbers\n\nCloses #17698\n",
             "commit_timestamp": 1750542374.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1750605261.261509,
+            "elapsed_time": 106.87228989601135,
+            "x64": true,
+            "actual_files_count": 1011,
+            "expected_files_count": 2323,
+            "memory_traffic": 17272.991271972656,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "6a0cd4feb7c337f840493e2cab1a6ce5a89a9540",
+            "commit_message": "tests: make individual test sources compile cleanly\n\nTidy up headers and includes to ensure all individual test source\ncompile cleanly (but not link). To allow running clang-tidy (and\npossibly other static analyzers) on them. It also improves readability\nand allows to verify them locally, without the bundle logic.\n\nclang-tidy ignores #included C files, so it's blind to bundle C files\nthe include these tests. The current workaround of embedding has\na couple of downsides:. meaningless filenames and line numbers,\nmissing issues, messing up self header paths. Thus, running it on\nindividual sources would be beneficial.\n\nAlso:\n- de-duplicate includes.\n- untangle some includes.\n- formatting/indentation fixes.\n- merge `getpart.h` into `first.h`.\n\nRef: https://github.com/curl/curl/pull/17680#issuecomment-2991730158\n\nCloses #17703\n",
+            "commit_timestamp": 1750600695.0
         }
     ]
 }
