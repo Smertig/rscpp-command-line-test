@@ -29797,6 +29797,23 @@
             "commit_ref": "99af99c6657db0ad76bc348fe075c873a10da031",
             "commit_message": "[TSan] Fix p == end == ShadowMem::end in ShadowSet (#144994)\n\nIn `ShadowSet`, when `p == end == ShadowMem::end`, it triggered an\nassertion fail previously.\n\nNow we do not allow `p == end` anymore in `ShadowSet`.",
             "commit_timestamp": 1750518161.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1750564212.867466,
+            "elapsed_time": 1660.5101909637451,
+            "x64": true,
+            "actual_files_count": 2965,
+            "expected_files_count": 1661,
+            "memory_traffic": 263094.4034881592,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "b7d0c9b9d8e2b5c5d6677e368e3cdaf438df294e",
+            "commit_message": "[SelectionDAG][RISCV] Treat zext nneg as sext in PromoteIntOp_ZERO_EXTEND if the promoted input is sign extended. (#145120)\n\nIf the zext has the nneg flag and we can prove the promoted input\nis sign extended, we can avoid generating an AND that we might not\nbe able to remove. RISC-V emits a lot of sext_inreg operations during\ni32->i64 promotion that makes this likely.\n\nI've restricted this to the case where the promoted type is the same\nas the result type so we don't need to create an additional extend.\n\nI've also restricted it to cases where the target has stated a\npreference for sext like i32->i64 on RV64. This is largely to avoid\nwasting time in computeNumSignBits until we have a test case that\nbenefits.",
+            "commit_timestamp": 1750557360.0
         }
     ]
 }

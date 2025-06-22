@@ -26761,6 +26761,21 @@
             "commit_ref": "99b99bda0f07d2e3bf51d054b5fe48b858a61db3",
             "commit_message": "[BROWSEUI][SHELL32] Fixed FindFiles rename operation (#8151)\n\nDefView will now map its internal (FCIDM) commands (when sent from the toolbar and accelerators) to canonical verb strings so clients outside shell32 can detect the verb. This is critical for \"rename\" and handy for \"properties\".\n\nCORE-18326",
             "commit_timestamp": 1750517568.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1750563177.078478,
+            "elapsed_time": 78.53074765205383,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7381.073265075684,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "66b782da3ceab207f470dfa97df63d0eaf549a4f",
+            "commit_message": "[KBSWITCH][INDICDLL] Fix initialization bug (#8135)\n\nThere was a bug that hKbSwitchWnd was not correctly initialized.\nJIRA issue: N/A\n- Check if hKbSwitchWnd is initialized or not.\n- When hKbSwitchWnd was not initialized, initialize it on DllMain.\n- Enable trace in indicdll.dll.",
+            "commit_timestamp": 1750557178.0
         }
     ]
 }

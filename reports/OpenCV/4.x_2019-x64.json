@@ -27010,6 +27010,21 @@
             "commit_ref": "1950c4dbb993c60f11ddc8adf3c4eeab998fc175",
             "commit_message": "Merge pull request #27379 from cudawarped:fix_cuda_convertTo\n\ncuda: Fix GpuMat::convertTo issues described in 27373 #27379\n\nFix https://github.com/opencv/opencv/issues/27373.\n\n1. `GpuMat::convertTo` uses `convertToScale` due to incorrect overload.\n2. There are no runtime checks to prevent the use of `CV_16U` data types in Release builds.\n\n### Pull Request Readiness Checklist\n\nSee details at https://github.com/opencv/opencv/wiki/How_to_contribute#making-a-good-pull-request\n\n- [x] I agree to contribute to the project under Apache 2 License.\n- [x] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\n- [x] The PR is proposed to the proper branch\n- [x] There is a reference to the original bug report and related work\n- [x] There is accuracy test, performance test and test data in opencv_extra repository, if applicable\n      Patch to opencv_extra has the same branch name.\n- [x] The feature is well documented and sample code can be built with the project CMake\n",
             "commit_timestamp": 1750512751.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1750563225.587461,
+            "elapsed_time": 383.55596470832825,
+            "x64": true,
+            "actual_files_count": 481,
+            "expected_files_count": 459,
+            "memory_traffic": 41759.37673950195,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "1950c4dbb993c60f11ddc8adf3c4eeab998fc175",
+            "commit_message": "Merge pull request #27379 from cudawarped:fix_cuda_convertTo\n\ncuda: Fix GpuMat::convertTo issues described in 27373 #27379\n\nFix https://github.com/opencv/opencv/issues/27373.\n\n1. `GpuMat::convertTo` uses `convertToScale` due to incorrect overload.\n2. There are no runtime checks to prevent the use of `CV_16U` data types in Release builds.\n\n### Pull Request Readiness Checklist\n\nSee details at https://github.com/opencv/opencv/wiki/How_to_contribute#making-a-good-pull-request\n\n- [x] I agree to contribute to the project under Apache 2 License.\n- [x] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\n- [x] The PR is proposed to the proper branch\n- [x] There is a reference to the original bug report and related work\n- [x] There is accuracy test, performance test and test data in opencv_extra repository, if applicable\n      Patch to opencv_extra has the same branch name.\n- [x] The feature is well documented and sample code can be built with the project CMake\n",
+            "commit_timestamp": 1750512751.0
         }
     ]
 }
