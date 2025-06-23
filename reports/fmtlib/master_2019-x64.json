@@ -28503,6 +28503,21 @@
             "commit_ref": "f4345467fce7edbc6b36c3fa1cf197a67be617e2",
             "commit_message": "Fix compilation on clang-21 / libc++-21 (#4477)\n\n`<cstdlib>` was not being included, so malloc and free were only declared\nvia transitive includes. Some includes changed in the latest libc++-21\nbuild which broke fmt.\n\nAlso changed `malloc`/`free` to `std::malloc` and `std::free`, as\nputting those symbols in the global namespace is optional for the\nimplementation when including `<cstdlib>`.",
             "commit_timestamp": 1750516094.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1750691251.499177,
+            "elapsed_time": 103.31419658660889,
+            "x64": true,
+            "actual_files_count": 74,
+            "expected_files_count": 66,
+            "memory_traffic": 7878.280570983887,
+            "repo_url": "https://github.com/fmtlib/fmt.git",
+            "commit_ref": "f4345467fce7edbc6b36c3fa1cf197a67be617e2",
+            "commit_message": "Fix compilation on clang-21 / libc++-21 (#4477)\n\n`<cstdlib>` was not being included, so malloc and free were only declared\nvia transitive includes. Some includes changed in the latest libc++-21\nbuild which broke fmt.\n\nAlso changed `malloc`/`free` to `std::malloc` and `std::free`, as\nputting those symbols in the global namespace is optional for the\nimplementation when including `<cstdlib>`.",
+            "commit_timestamp": 1750516094.0
         }
     ]
 }
