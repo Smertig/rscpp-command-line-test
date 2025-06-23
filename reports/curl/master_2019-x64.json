@@ -25016,6 +25016,21 @@
             "commit_ref": "6a0cd4feb7c337f840493e2cab1a6ce5a89a9540",
             "commit_message": "tests: make individual test sources compile cleanly\n\nTidy up headers and includes to ensure all individual test source\ncompile cleanly (but not link). To allow running clang-tidy (and\npossibly other static analyzers) on them. It also improves readability\nand allows to verify them locally, without the bundle logic.\n\nclang-tidy ignores #included C files, so it's blind to bundle C files\nthe include these tests. The current workaround of embedding has\na couple of downsides:. meaningless filenames and line numbers,\nmissing issues, messing up self header paths. Thus, running it on\nindividual sources would be beneficial.\n\nAlso:\n- de-duplicate includes.\n- untangle some includes.\n- formatting/indentation fixes.\n- merge `getpart.h` into `first.h`.\n\nRef: https://github.com/curl/curl/pull/17680#issuecomment-2991730158\n\nCloses #17703\n",
             "commit_timestamp": 1750600695.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1750650062.471016,
+            "elapsed_time": 111.44229817390442,
+            "x64": true,
+            "actual_files_count": 1009,
+            "expected_files_count": 2323,
+            "memory_traffic": 17262.55930328369,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "85bf8b19acd9a346c239e3c8c853f0dbe440070e",
+            "commit_message": "cmake: sync tests scripts with each other and autotools (more)\n\nCloses #17711\n",
+            "commit_timestamp": 1750628534.0
         }
     ]
 }
