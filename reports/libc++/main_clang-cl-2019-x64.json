@@ -9723,6 +9723,23 @@
             "commit_ref": "44936c8d13f904a68647d83bdcdbbeefb4670d3e",
             "commit_message": "[CUDA][HIP] add options `--[no-]offload-inc` (#140106)\n\nCurrently there is only option -nogpuinc for disabling\nthe default CUDA/HIP wrapper headers. However, there\nare situations where -nogpuinc needs to be overriden\nfor enabling CUDA/HIP wrapper headers. This patch\nadds --[no-]offload-inc for that purpose. When both\nexist, the last wins. -nogpuinc and -nocudainc are\nnow alias to --no-offload-inc.",
             "commit_timestamp": 1750690926.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1750735846.93153,
+            "elapsed_time": 70.41438364982605,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 5011.564834594727,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "37eb465710b45e0e56e6e7f662fd6b252bf0d309",
+            "commit_message": "Reland \"[Modules] Record whether VarDecl initializers contain side effects\" (#145447)\n\nThis reverts commit 329ae86 and adds an early exit for EvaluateInPlace when the expression's type is null.",
+            "commit_timestamp": 1750735215.0
         }
     ]
 }
