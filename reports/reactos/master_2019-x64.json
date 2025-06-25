@@ -26851,6 +26851,21 @@
             "commit_ref": "aaed9f77d996b35d0dddfe143308f8c66c9f26ee",
             "commit_message": "[SHELL32_APITEST] Enhance SHAppBarMessage testcase (#8149)\n\nSHAppBarMessage testcase has to\ncover the auto-hide feature. Make the\ntestcase more stable.\nJIRA issue: CORE-7237\nAdd more tests.",
             "commit_timestamp": 1750808910.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1750864007.19356,
+            "elapsed_time": 72.06092524528503,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7405.860420227051,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "4164b8a053a3a7be51bf5d4428e1a7d7415c454c",
+            "commit_message": "[NTUSER] menu.c: Tiny optimizations (#8111)\n\nA bit clearer code. A bit faster execution.\n- NtUserGetTitleBarInfo(): Add/Use early returns.\n  Addendum to\nhttps://github.com/reactos/reactos/commit/3b4c9ded4254241287caebb702bc59b82f05d591 (r33657).\n- NtUserTrackPopupMenuEx():\n  Check flags a bit earlier.\n  Addendum to\nhttps://github.com/reactos/reactos/commit/3c35117f97485c6c39c877a112ff2d5b0605a724\n  (0.4.16-dev-1275).\n- NtUserThunkedMenuItemInfo():\n  Sort out code and comments\n- menu.c: Move UserLeave() a bit earlier.",
+            "commit_timestamp": 1750853728.0
         }
     ]
 }

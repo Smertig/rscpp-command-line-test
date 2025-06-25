@@ -27100,6 +27100,21 @@
             "commit_ref": "e392b3843ed4a66104da3ba2bb99e986dfc9a6c2",
             "commit_message": "Merge pull request #27476 from s-trinh:LSD_drawSegments_avoid_exception_empty_vec\n\nCheck for empty vector to avoid throwing an exception in LineSegmentDetectorImpl::drawSegments() ",
             "commit_timestamp": 1750756967.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1750864125.944555,
+            "elapsed_time": 398.992112159729,
+            "x64": true,
+            "actual_files_count": 481,
+            "expected_files_count": 459,
+            "memory_traffic": 41914.37148284912,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "e9f1da7e8e977a65b8bf8fe7ea8b92eef9171f19",
+            "commit_message": "Merge pull request #27463 from asmorkalov:as/new_atomics\n\nSwitch to standard C11 atomics on android and with nvcc.",
+            "commit_timestamp": 1750853468.0
         }
     ]
 }
