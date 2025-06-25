@@ -27085,6 +27085,21 @@
             "commit_ref": "6ed29bdd3937d77b5e540797e69b100ab387544e",
             "commit_message": "Merge pull request #27472 from asmorkalov:as/norm_table_asan\n\nFixed out-of-bound access to function table in cv::norm for HORM_HAMING",
             "commit_timestamp": 1750696006.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1750822259.711969,
+            "elapsed_time": 391.0269317626953,
+            "x64": true,
+            "actual_files_count": 481,
+            "expected_files_count": 459,
+            "memory_traffic": 41714.48972320557,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "e392b3843ed4a66104da3ba2bb99e986dfc9a6c2",
+            "commit_message": "Merge pull request #27476 from s-trinh:LSD_drawSegments_avoid_exception_empty_vec\n\nCheck for empty vector to avoid throwing an exception in LineSegmentDetectorImpl::drawSegments() ",
+            "commit_timestamp": 1750756967.0
         }
     ]
 }

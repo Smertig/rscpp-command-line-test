@@ -9740,6 +9740,23 @@
             "commit_ref": "37eb465710b45e0e56e6e7f662fd6b252bf0d309",
             "commit_message": "Reland \"[Modules] Record whether VarDecl initializers contain side effects\" (#145447)\n\nThis reverts commit 329ae86 and adds an early exit for EvaluateInPlace when the expression's type is null.",
             "commit_timestamp": 1750735215.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1750822389.745855,
+            "elapsed_time": 92.8967216014862,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4977.168769836426,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "3de2af3ef56c66de2f20695fc8854684095f5d50",
+            "commit_message": "AMDGPU: Remove export and related instructions from gfx1250 support (#145624)\n\n",
+            "commit_timestamp": 1750820366.0
         }
     ]
 }

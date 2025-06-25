@@ -29899,6 +29899,23 @@
             "commit_ref": "b581f9d056babadf55098b9d5d100271621b90db",
             "commit_message": "[HLSL] Add option for VK layouts (#145327)\n\nWe add the options to the driver, so that the one option that is being\nimplemented at this time can be used. Issue an error for the other\noptions.\n\nWhen we start to implement the other options, we will have to figure out\nhow to pass which  option is active to clang.\n\nPart of but does not complete:\n\nhttps://github.com/llvm/llvm-project/issues/136956\nhttps://github.com/llvm/llvm-project/issues/136959\nhttps://github.com/llvm/llvm-project/issues/136958",
             "commit_timestamp": 1750776682.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1750823136.066085,
+            "elapsed_time": 1610.9900946617126,
+            "x64": true,
+            "actual_files_count": 2969,
+            "expected_files_count": 1661,
+            "memory_traffic": 264055.4804916382,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "3de2af3ef56c66de2f20695fc8854684095f5d50",
+            "commit_message": "AMDGPU: Remove export and related instructions from gfx1250 support (#145624)\n\n",
+            "commit_timestamp": 1750820366.0
         }
     ]
 }

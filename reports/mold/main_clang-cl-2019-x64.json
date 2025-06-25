@@ -24756,6 +24756,21 @@
             "commit_ref": "c9fa7111a2c16c9a130e7362a120300f3e246da4",
             "commit_message": "Ensure that our Integer types are compiled to single load/store instructions\n\nIt turns out that at least clang-18 fails to compile our code to load\na 32-bit native-endian value from memory using shift + bitwise OR into\na single instruction when compiled with `-march=native`. It instead\ncompiles the code to complicated vector instructions.\n\nIt seems that the good old bswap and memcpy are the best option to\nprevent the compiler from overthinking.\n",
             "commit_timestamp": 1750658990.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1750822195.69098,
+            "elapsed_time": 132.76662254333496,
+            "x64": true,
+            "actual_files_count": 706,
+            "expected_files_count": null,
+            "memory_traffic": 17774.97703552246,
+            "repo_url": "https://github.com/rui314/mold",
+            "commit_ref": "949e72307f389dbe29852d5cba0520cd96606d3a",
+            "commit_message": "Check certificates when downloading source archives\n\nPointed out at https://github.com/rui314/mold/discussions/1477\n",
+            "commit_timestamp": 1750815329.0
         }
     ]
 }
