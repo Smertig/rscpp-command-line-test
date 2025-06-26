@@ -25091,6 +25091,21 @@
             "commit_ref": "6c85579c84cad3ff7d3d729c248cb23dfd7e2520",
             "commit_message": "cmake: enable soversion by default for OpenHarmony OS\n\nCloses #17743\n",
             "commit_timestamp": 1750859357.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1750908965.207715,
+            "elapsed_time": 109.75523090362549,
+            "x64": true,
+            "actual_files_count": 1041,
+            "expected_files_count": 2323,
+            "memory_traffic": 17621.50547027588,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "83baac43a861e8b2d939e7a0a00456a4fbc5311c",
+            "commit_message": "curl: improve non-blocking STDIN performance\n\nUsing a select() call on supported platforms to check for data with a\ngiven timeout\n\nCloses #17566\n",
+            "commit_timestamp": 1750885133.0
         }
     ]
 }
