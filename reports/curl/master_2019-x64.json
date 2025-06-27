@@ -25121,6 +25121,21 @@
             "commit_ref": "2a9dfe275d87c78ae8d8b70d88e37fa7c26376da",
             "commit_message": "http: fix build with cookies and HSTS disabled\n\nAll arguments and local variables in `http_header_s` were unused when\nboth `CURL_DISABLE_COOKIES` and `CURL_DISABLE_HSTS` were defined.\n\nCloses https://github.com/curl/curl/pull/17753\n",
             "commit_timestamp": 1750933156.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1750995640.545813,
+            "elapsed_time": 150.62558460235596,
+            "x64": true,
+            "actual_files_count": 1041,
+            "expected_files_count": 2323,
+            "memory_traffic": 17662.899047851562,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "cf8c0e9cbd756b6dc71f24821f59d2b9f1f80511",
+            "commit_message": "curl-config: fix whitespace in usage text\n\nCloses #17758\n",
+            "commit_timestamp": 1750978988.0
         }
     ]
 }

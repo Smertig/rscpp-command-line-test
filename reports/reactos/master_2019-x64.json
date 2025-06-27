@@ -26896,6 +26896,21 @@
             "commit_ref": "f7c36c6d942ec3821b10ca6d5009e3df0f0bc63a",
             "commit_message": "[SHELL32_APITEST] Certainly close newly-opened windows (#8171)\n\nIt's frustrating when windows open\nduring a test and remain after the test\nis over.\nJIRA issue: ROSTESTS-402\n- Delete closewnd.cpp. Enhance\n  closewnd.h.\n- Modify ShellExecCmdLine,\n  ShellExec_RunDLL, ShellExecuteEx,\n  and ShellExecuteW testcases.\n- Certainly close the newly-opened\n  windows.",
             "commit_timestamp": 1750929649.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1750994943.536919,
+            "elapsed_time": 70.62354779243469,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7382.36222076416,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "c14a14e3b4e05b3c7d3330bad49f0042f4b3327c",
+            "commit_message": "[BROWSEUI] Find files must compare the entire path when the view asks about the name (#8174)\n\nCORE-20256",
+            "commit_timestamp": 1750971724.0
         }
     ]
 }

@@ -24356,6 +24356,21 @@
             "commit_ref": "a4625d597f9fc2d083fbb9c22d3ffcec73b2061a",
             "commit_message": "gh-91555: add warning to docs about possibility of deadlock/infinite recursion (GH-135954)\n\n* gh-91555: add warning to docs about possibility of deadlock/infinite recursion\n\nAttempt to clarify in the documentation that care must be taken when using\nmultiprocessing classes to implement logging since they have builtin internal\nlogging, and hence may cause deadlock/infinite recursion.\n\n* Update Doc/library/logging.handlers.rst\n\nCo-authored-by: Vinay Sajip <vinay_sajip@yahoo.co.uk>\n\n* Change whitespace.\n\n---------\n\nCo-authored-by: Vinay Sajip <vinay_sajip@yahoo.co.uk>",
             "commit_timestamp": 1750947512.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1750995257.647641,
+            "elapsed_time": 1465.1402943134308,
+            "x64": true,
+            "actual_files_count": 1198,
+            "expected_files_count": null,
+            "memory_traffic": 52958.17185211182,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "34ce1920ca33c11ca2c379ed0ef30a91010bef4f",
+            "commit_message": "Docs: Fix duplicate word typos (GH-135958)\n\n",
+            "commit_timestamp": 1750982419.0
         }
     ]
 }

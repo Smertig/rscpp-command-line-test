@@ -9808,6 +9808,23 @@
             "commit_ref": "5bbe1536dfa6f1dce8737e466c209c553d614e50",
             "commit_message": "Cap IntRange::Width to MaxWidth (#145356)\n\nThis commit addresses a fallout introduced by #126846.\n\nPreviously, TryGetExprRange would return an IntRange that has an active\nrange exceeding the maximum representable range for the expression's\nunderlying type. This led to clang erroneously issuing warnings about\nimplicit conversions losing integer precision.\n\nThis commit fixes the bug by capping IntRange::Width to MaxWidth.\n\nrdar://149444029",
             "commit_timestamp": 1750950212.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1750995216.814468,
+            "elapsed_time": 92.26875281333923,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4993.453559875488,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "569fcac4584ad555b9b57d09e3535260a8634429",
+            "commit_message": "[LoongArch] Pre-commit tests for optimizing insert extracted fp elements\n",
+            "commit_timestamp": 1750994346.0
         }
     ]
 }

@@ -8564,6 +8564,21 @@
             "commit_ref": "080801bd7567b54c52452206905c891b5f477909",
             "commit_message": "Automated rollback of commit 2471bd804afe3f2e190dd0f92464d69a9f2e6d4f.\n\nPiperOrigin-RevId: 776010222\n",
             "commit_timestamp": 1750921921.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1750995077.460833,
+            "elapsed_time": 370.9897756576538,
+            "x64": true,
+            "actual_files_count": 1192,
+            "expected_files_count": 818,
+            "memory_traffic": 45367.54209136963,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "4ba97331411293082632039c670c2af82a9f0415",
+            "commit_message": "Removed `wrap_memcpy.c` compatibility shim for pre-2.14 glibc\n\nThis shim was added in 2017 to make binary gems compatible with pre-2.14 glibc: https://github.com/protocolbuffers/protobuf/pull/2804\n\nglibc 2.14 was released in 2011.  Our Python wheels build for manylinux 2014, which requires glibc 2.17 or later: https://github.com/pypa/manylinux?tab=readme-ov-file#manylinux2014-centos-7-based-glibc-217\n\nWe should no longer need binary compatibility with a 14-year-old glibc.\n\nFixes: https://github.com/protocolbuffers/protobuf/issues/11935\nPiperOrigin-RevId: 776288819\n",
+            "commit_timestamp": 1750974373.0
         }
     ]
 }
