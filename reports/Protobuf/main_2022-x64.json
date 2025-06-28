@@ -8594,6 +8594,21 @@
             "commit_ref": "1af7fd407c85c9c1f34b6ca8441cfb3a72d4f5ea",
             "commit_message": "Extend gencode compatibility support back to 3.20.0\n\n#test-continuous\n\nThis adds 2 shims for some previous breakages, and compatibility tests to avoid further accidents.  This will be backported to 25.x and 29.x.\n\nPiperOrigin-RevId: 776414924\n",
             "commit_timestamp": 1750999683.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1751081188.686048,
+            "elapsed_time": 343.3769919872284,
+            "x64": true,
+            "actual_files_count": 1192,
+            "expected_files_count": 818,
+            "memory_traffic": 45474.5997467041,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "26843b3c6064ca7114af971eb46bd6fe6cc9d200",
+            "commit_message": "Enable edition 2024 support in protoc and language generators for cpp, hpb, java, kotlin, objectivec, php, python, pyi, rust.\n\nPiperOrigin-RevId: 776765229\n",
+            "commit_timestamp": 1751068551.0
         }
     ]
 }

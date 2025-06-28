@@ -26926,6 +26926,21 @@
             "commit_ref": "f60be66d1f73154470fdb8de49b577e2c83dc93f",
             "commit_message": "[MSGINA][WINLOGON] Carefully zero password memory buffers before freeing them (#8172)\n\nIncluding variables containing pointers to a password buffer and its lengths.\n",
             "commit_timestamp": 1751035512.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1751081173.623206,
+            "elapsed_time": 81.21353459358215,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7389.147659301758,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "bc64f3aee1c517acc783d6c7c1895beac01eadd1",
+            "commit_message": "[INDICDLL] Don't use user32 in DLL_PROCESS_ATTACH (#8179)\n\nRelated to #8145. We shouldn't use\nuser32 functions in\nDllMain.DLL_PROCESS_ATTACH.\nThis bug affects Global Hook. See\nDllMain and \"Dynamic-Link Library\nBest Practices\" on MS Learn.\nJIRA issue: CORE-20242\nDon't use user32!FindWindow in\nDllMain.DLL_PROCESS_ATTACH,\nbut in KbSwitchSetHooks function.",
+            "commit_timestamp": 1751054348.0
         }
     ]
 }

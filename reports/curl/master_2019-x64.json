@@ -25151,6 +25151,21 @@
             "commit_ref": "3f36e1e502105deb513fadac02d60b13ac68b16f",
             "commit_message": "lib2082: drop `typedef struct`\n\nTo not need the checksrc exception `disable TYPEDEFSTRUCT`.\n\nFollow-up to a517378de58358a85b7cfe9efecb56051268f629 #7477\n\nCloses #17763\n",
             "commit_timestamp": 1751026590.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1751081553.166899,
+            "elapsed_time": 109.09415745735168,
+            "x64": true,
+            "actual_files_count": 1041,
+            "expected_files_count": 2323,
+            "memory_traffic": 17635.443939208984,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "d2a408587a1ab72e12049836f82f279464947f1f",
+            "commit_message": "cmake: fix generator expression in docs/examples\n\nTo pass the MSVC-specific macro to MSVC only.\n\nCloses #17767\n",
+            "commit_timestamp": 1751068809.0
         }
     ]
 }

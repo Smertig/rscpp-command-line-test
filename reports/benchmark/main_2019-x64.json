@@ -28263,6 +28263,21 @@
             "commit_ref": "7f727750846552fb507d778b2b125dd6d32061bf",
             "commit_message": "python: Update to cibuildwheel 3.0 (#1999)\n\nIncludes an implicit update to manylinux_2_28 (i.e., for systems with a glibc version >=2.28).\n\nWe now set the MacOS deployment target dynamically based on the runner image to avoid a warning on the MacOS Intel runner.",
             "commit_timestamp": 1749740061.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1751081214.035992,
+            "elapsed_time": 87.15472054481506,
+            "x64": true,
+            "actual_files_count": 94,
+            "expected_files_count": 86,
+            "memory_traffic": 5256.662666320801,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "b20cea674170b2ba45da0dfaf03953cdea473d0d",
+            "commit_message": "Guard adding intel compiler flag behind check for intel compiler. (#2004)\n\n* Guard adding intel compiler flag behind check for intel compiler.\n\nFor reasons I don't yet fully understand, failing to guard the check\nfor flag -wd654 will cause it to be added to certain clang\nconfigurations, and then cause compilation to fail.\n\nWhile exactly why this happens needs investigation, the fix\nproposed in this patch seems direct and simple enough to\napply regardless.\n\n* Update CMakeLists.txt\n\nAddress review comments by reusing intel compiler block.",
+            "commit_timestamp": 1751052388.0
         }
     ]
 }
