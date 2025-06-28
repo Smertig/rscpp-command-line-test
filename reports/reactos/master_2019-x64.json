@@ -26941,6 +26941,21 @@
             "commit_ref": "bc64f3aee1c517acc783d6c7c1895beac01eadd1",
             "commit_message": "[INDICDLL] Don't use user32 in DLL_PROCESS_ATTACH (#8179)\n\nRelated to #8145. We shouldn't use\nuser32 functions in\nDllMain.DLL_PROCESS_ATTACH.\nThis bug affects Global Hook. See\nDllMain and \"Dynamic-Link Library\nBest Practices\" on MS Learn.\nJIRA issue: CORE-20242\nDon't use user32!FindWindow in\nDllMain.DLL_PROCESS_ATTACH,\nbut in KbSwitchSetHooks function.",
             "commit_timestamp": 1751054348.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1751123180.112715,
+            "elapsed_time": 87.96131658554077,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7374.127479553223,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "71b6fab74b854789cfe3014d2610138e6595dd9c",
+            "commit_message": "[UMPNPMGR] PNP_AddEmptyLogConf: Add resource list to an existing requirements list\n",
+            "commit_timestamp": 1751119091.0
         }
     ]
 }
