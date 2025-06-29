@@ -8624,6 +8624,21 @@
             "commit_ref": "26843b3c6064ca7114af971eb46bd6fe6cc9d200",
             "commit_message": "Enable edition 2024 support in protoc and language generators for cpp, hpb, java, kotlin, objectivec, php, python, pyi, rust.\n\nPiperOrigin-RevId: 776765229\n",
             "commit_timestamp": 1751068551.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1751168097.626566,
+            "elapsed_time": 354.0950117111206,
+            "x64": true,
+            "actual_files_count": 1192,
+            "expected_files_count": 818,
+            "memory_traffic": 45281.47152709961,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "e937f75fb0e2b513643b6cefaccea1d89b0faf84",
+            "commit_message": "Newer and better prefetching in `Arena::CopyConstruct()`\n\nBefore: Prefetch 1 cache line from 1 cache line offset.\nAfter: Prefetch the rest of the `from` object or half of it, whichever is smaller, from 1 cache line offset.\nPiperOrigin-RevId: 777048606\n",
+            "commit_timestamp": 1751153672.0
         }
     ]
 }
