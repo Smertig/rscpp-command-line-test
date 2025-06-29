@@ -30052,6 +30052,23 @@
             "commit_ref": "68d83fae70b2fa136b6c4a8c91af9e615eeedf95",
             "commit_message": "[llvm-profdata] Resolve tilde for weighted input filenames (#146206)\n\nWhen specifying a weighted input file, the shell does not automatically\nexpand the tilde (`~`) character in the filename because the argument\nis passed as a single string in the format `<weight>,<filename>`.\n\nThis commit fixes the issue by using `llvm::sys::fs::expand_tilde` to\nexplicitly resolve the tilde in the filename, ensuring that paths\nlike `~/path/to/file` are correctly handled.",
             "commit_timestamp": 1751164632.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1751210483.484062,
+            "elapsed_time": 1615.7725577354431,
+            "x64": true,
+            "actual_files_count": 2971,
+            "expected_files_count": 1661,
+            "memory_traffic": 264356.81493377686,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "d2d5203bf48af9b55b8e379c1c152fec97349340",
+            "commit_message": "[clangd] Consistent precedence between `--header-insertion` and `HeaderInsertion` (#146235)\n\nIn PR #128503, the CLI option would take precedence over the config option\nonly if it was set to `never`. This commit ensures the CLI option always takes\nprecedence over the config option.",
+            "commit_timestamp": 1751208469.0
         }
     ]
 }

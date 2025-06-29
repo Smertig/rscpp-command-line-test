@@ -28308,6 +28308,21 @@
             "commit_ref": "b20cea674170b2ba45da0dfaf03953cdea473d0d",
             "commit_message": "Guard adding intel compiler flag behind check for intel compiler. (#2004)\n\n* Guard adding intel compiler flag behind check for intel compiler.\n\nFor reasons I don't yet fully understand, failing to guard the check\nfor flag -wd654 will cause it to be added to certain clang\nconfigurations, and then cause compilation to fail.\n\nWhile exactly why this happens needs investigation, the fix\nproposed in this patch seems direct and simple enough to\napply regardless.\n\n* Update CMakeLists.txt\n\nAddress review comments by reusing intel compiler block.",
             "commit_timestamp": 1751052388.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1751209512.131148,
+            "elapsed_time": 55.19091868400574,
+            "x64": true,
+            "actual_files_count": 94,
+            "expected_files_count": 86,
+            "memory_traffic": 5286.665672302246,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "b20cea674170b2ba45da0dfaf03953cdea473d0d",
+            "commit_message": "Guard adding intel compiler flag behind check for intel compiler. (#2004)\n\n* Guard adding intel compiler flag behind check for intel compiler.\n\nFor reasons I don't yet fully understand, failing to guard the check\nfor flag -wd654 will cause it to be added to certain clang\nconfigurations, and then cause compilation to fail.\n\nWhile exactly why this happens needs investigation, the fix\nproposed in this patch seems direct and simple enough to\napply regardless.\n\n* Update CMakeLists.txt\n\nAddress review comments by reusing intel compiler block.",
+            "commit_timestamp": 1751052388.0
         }
     ]
 }
