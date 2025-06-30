@@ -9910,6 +9910,23 @@
             "commit_ref": "d2d5203bf48af9b55b8e379c1c152fec97349340",
             "commit_message": "[clangd] Consistent precedence between `--header-insertion` and `HeaderInsertion` (#146235)\n\nIn PR #128503, the CLI option would take precedence over the config option\nonly if it was set to `never`. This commit ensures the CLI option always takes\nprecedence over the config option.",
             "commit_timestamp": 1751208469.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1751254551.975376,
+            "elapsed_time": 68.00947523117065,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4992.665061950684,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "a17f63590ac077a5705c9bed8d4e025b3ef4b299",
+            "commit_message": "Reland  [Driver] Fix link order of BareMetal toolchain object (#146291)\n\nThe linker job in BareMetal toolchain object will be used by GNU ld and\nlld both.\nHowever, gnuld process the arguments in the order in which they appear\non command\nline, whereas there is no such restriction with lld.\n\nThe previous order was:\nLibraryPaths -> Libraries -> LTOOptions -> LinkerInputs The new order\nis:\nLibraryPaths -> LTOOptions -> LinkerInputs -> Libraries\n\nLTO options need to be added before adding any linker inputs because\nfile format\nafter compile stage during LTO is bitcode which gnuld natively cannot\nprocess.\nHence will need to pass appropriate plugins before adding any bitcode\nfile on the\ncommand line.\n\nObject files that are getting linked need to be passed before processing\nany\nlibraries so that gnuld can appropriately do symbol resolution for the\nsymbols\nfor which no definition is provided through user code.\n\nSimilar link order is also followed by other linker jobs for gnuld such\nas in\ngnutools::Linker in Gnu.cpp\n\nThis is the 3rd patch in the series of patches of merging RISCVToolchain\ninto\nBareMetal toolchain object.\n\nRFC:\nhttps:\n//discourse.llvm.org/t/merging-riscvtoolchain-and-baremetal-toolchains/75524",
+            "commit_timestamp": 1751253457.0
         }
     ]
 }
