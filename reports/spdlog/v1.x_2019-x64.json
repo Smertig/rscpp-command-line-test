@@ -28673,6 +28673,21 @@
             "commit_ref": "ad725d34cc438c9eee83dd7411bedd9ff9e3bdd5",
             "commit_message": "Use std::getenv #3414 (#3415)\n\n",
             "commit_timestamp": 1749413794.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1751295966.435902,
+            "elapsed_time": 49.745272159576416,
+            "x64": true,
+            "actual_files_count": 108,
+            "expected_files_count": 107,
+            "memory_traffic": 3842.8058853149414,
+            "repo_url": "https://github.com/gabime/spdlog.git",
+            "commit_ref": "287333ee00555aaece5a5cf6acc9040563c6f642",
+            "commit_message": "Remove unnecessary and inconsistent \"final\" from color sinks (#3430)\n\nThe use of \"final\" differed between ansicolor_sink and wincolor_sink,\nresulting in the code inheriting from std{err,out}_color_sink classes,\nwhich are defined as one or the other on different platforms, being able\nto override most of the functions under non-Windows platforms, but not\nunder Windows.\n\nThis seems gratuitously inconsistent, so just remove all \"final\"\nkeywords from both classes, especially because there doesn't seem any\ngood reason to use it and the other sink classes don't use it (with the\nexception of base_sink, which is special).\n\nThis also incidentally fixes using \"final override\" in most places but\n\"override final\" in wincolor_sink.h.\n\nFixes #3429.",
+            "commit_timestamp": 1751258372.0
         }
     ]
 }

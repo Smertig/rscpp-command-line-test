@@ -27250,6 +27250,21 @@
             "commit_ref": "43112409ef0b711b18c2dc12433ad5e2403aea71",
             "commit_message": "Merge pull request #26974 from klosteraner:Fix-IntersectConvexConvex\n\nIssue 26972: Proper treatment of float values in intersectConvexConvex #26974\n\nAs outlined in https://github.com/opencv/opencv/issues/26972 the function `intersectConvexConvex()` may not work as expected in the corner case, where two polygons intersect at a corner. A concrete example is given that I added as unit test. The unit test would fail without the proposed bug fix. I recommend porting the fix to all versions.\n\nNow concerning the fix: When digging into the implementation I found, that when the line intersections are computed, openCV currently does not apply floating point comparison syntax, but pretends that line end points are exact. Instead I replaced the formulation using the eps that is already used in another component of the function in line.277: `epx=1e-5`. IMO that is solid enough, definitely better than assuming an exact floating point comparison is possible.\n\nAs a follow up I would suggest to use a scalable eps, s.t. also cases with high floating point numbers would be less error prone. However that would need to be done in all relevant sub steps, not just the line intersection code. So for me outside the scope of this fix.\n\n\n\n### Pull Request Readiness Checklist\n\nSee details at https://github.com/opencv/opencv/wiki/How_to_contribute#making-a-good-pull-request\n\n- [x] I agree to contribute to the project under Apache 2 License.\n- [x] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\n- [x] The PR is proposed to the proper branch\n- [ ] There is a reference to the original bug report and related work\n- [ ] There is accuracy test, performance test and test data in opencv_extra repository, if applicable\n      Patch to opencv_extra has the same branch name.\n- [ ] The feature is well documented and sample code can be built with the project CMake\n",
             "commit_timestamp": 1751137602.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1751296185.569117,
+            "elapsed_time": 409.0688624382019,
+            "x64": true,
+            "actual_files_count": 482,
+            "expected_files_count": 459,
+            "memory_traffic": 41871.61538696289,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "677c4ee42ff429d898f51555ed308f4bc3a43f30",
+            "commit_message": "Merge pull request #27492 from krikera:4.x\n\nAdd MORPH_DIAMOND support to samples and tutorials",
+            "commit_timestamp": 1751272695.0
         }
     ]
 }

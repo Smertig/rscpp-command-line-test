@@ -9927,6 +9927,23 @@
             "commit_ref": "a17f63590ac077a5705c9bed8d4e025b3ef4b299",
             "commit_message": "Reland  [Driver] Fix link order of BareMetal toolchain object (#146291)\n\nThe linker job in BareMetal toolchain object will be used by GNU ld and\nlld both.\nHowever, gnuld process the arguments in the order in which they appear\non command\nline, whereas there is no such restriction with lld.\n\nThe previous order was:\nLibraryPaths -> Libraries -> LTOOptions -> LinkerInputs The new order\nis:\nLibraryPaths -> LTOOptions -> LinkerInputs -> Libraries\n\nLTO options need to be added before adding any linker inputs because\nfile format\nafter compile stage during LTO is bitcode which gnuld natively cannot\nprocess.\nHence will need to pass appropriate plugins before adding any bitcode\nfile on the\ncommand line.\n\nObject files that are getting linked need to be passed before processing\nany\nlibraries so that gnuld can appropriately do symbol resolution for the\nsymbols\nfor which no definition is provided through user code.\n\nSimilar link order is also followed by other linker jobs for gnuld such\nas in\ngnutools::Linker in Gnu.cpp\n\nThis is the 3rd patch in the series of patches of merging RISCVToolchain\ninto\nBareMetal toolchain object.\n\nRFC:\nhttps:\n//discourse.llvm.org/t/merging-riscvtoolchain-and-baremetal-toolchains/75524",
             "commit_timestamp": 1751253457.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": [
+                "cxx_shared"
+            ],
+            "timestamp": 1751296152.657191,
+            "elapsed_time": 60.106252670288086,
+            "x64": true,
+            "actual_files_count": 89,
+            "expected_files_count": null,
+            "memory_traffic": 4980.699844360352,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "00cdaa5c395c122f8ede2a4b0587bf9a0dfecc2a",
+            "commit_message": "[clang][bytecode] Add `Descriptor::hasTrivialDtor()` (#146286)\n\nWe sometimes used to have a long list of \n\n```\n  GetLocalPtr\n  PopPtr\n  [...]\n```\n\nops at the end of scopes, because we first got a pointer to a local\nvariable and only then did we figure out that we didn't actually want to\ncall the destructor for it. Add a new function that allows us to just\nask the `Descriptor` whether we need to call its destructor.",
+            "commit_timestamp": 1751295597.0
         }
     ]
 }

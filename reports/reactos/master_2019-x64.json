@@ -27001,6 +27001,21 @@
             "commit_ref": "4866a25a8f58eb11d21139d29deee8d6eafc3373",
             "commit_message": "[EXPLORER] Fix Taskbar context menu Z-order bug (#8186)\n\nTaskbar task button context menu was wrongly\noverlapped by Taskbar. #8105 introduced this bug.\nJIRA issue: CORE-20260\n- Don't bring the taskbar to top on no rude app.\n- Check the target window by FindTaskItem in\n  OnWindowActivated and OnWindowDestroyed.",
             "commit_timestamp": 1751248515.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1751296134.322279,
+            "elapsed_time": 121.13491654396057,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7370.729156494141,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "671935f24bf5d86aa929c75d617b211099a3b236",
+            "commit_message": "[KERNEL32] _dump_context(): Fix ARM case (#8185)\n\nMatch DbgPrint() parameters.\nAddendum to commit 369786f126 (r67736).",
+            "commit_timestamp": 1751285112.0
         }
     ]
 }
