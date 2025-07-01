@@ -8684,6 +8684,21 @@
             "commit_ref": "e937f75fb0e2b513643b6cefaccea1d89b0faf84",
             "commit_message": "Newer and better prefetching in `Arena::CopyConstruct()`\n\nBefore: Prefetch 1 cache line from 1 cache line offset.\nAfter: Prefetch the rest of the `from` object or half of it, whichever is smaller, from 1 cache line offset.\nPiperOrigin-RevId: 777048606\n",
             "commit_timestamp": 1751153672.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1751340895.154492,
+            "elapsed_time": 320.01561069488525,
+            "x64": true,
+            "actual_files_count": 1192,
+            "expected_files_count": 818,
+            "memory_traffic": 45345.38042449951,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "7655b1f6138e5ea3ad39eacad85f26d4cc4e2950",
+            "commit_message": "Fix benign error in calculation of cache prefetch amount in `Arena::CopyConstruct()`\n\nGiven the enclosing `if` condition, the subtraction could cause a wrap-around for `T`s smaller than a cache line, but the `std::min()` around it made it a no-op, selecting `sizeof(T) / 2` in that case.\n\nThe fix also fixes a discontinuity at `sizeof(T) == ABSL_CACHELINE_SIZE`, where the prefetched amount would suddenly drop to 0, so there is a performance improvement as well (not measured yet).\n\nPiperOrigin-RevId: 777684230\n",
+            "commit_timestamp": 1751313851.0
         }
     ]
 }

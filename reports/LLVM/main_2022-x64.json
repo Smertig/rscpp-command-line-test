@@ -30103,6 +30103,23 @@
             "commit_ref": "00cdaa5c395c122f8ede2a4b0587bf9a0dfecc2a",
             "commit_message": "[clang][bytecode] Add `Descriptor::hasTrivialDtor()` (#146286)\n\nWe sometimes used to have a long list of \n\n```\n  GetLocalPtr\n  PopPtr\n  [...]\n```\n\nops at the end of scopes, because we first got a pointer to a local\nvariable and only then did we figure out that we didn't actually want to\ncall the destructor for it. Add a new function that allows us to just\nask the `Descriptor` whether we need to call its destructor.",
             "commit_timestamp": 1751295597.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1751341820.923364,
+            "elapsed_time": 1663.2206497192383,
+            "x64": true,
+            "actual_files_count": 2970,
+            "expected_files_count": 1661,
+            "memory_traffic": 264304.5113296509,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "0a69c83421ac69c60eb0122201569f36272312b0",
+            "commit_message": "[NFC][IR2Vec] Remove unreachable code and simplify invalid mode test (#146459)\n\nThe code following `llvm_unreachable`  is optimized out in Release builds. In this case, `Embedder::create` do not seem to return `nullptr` causing `CreateInvalidMode` test to break. Hence removing `llvm_unreachable`.",
+            "commit_timestamp": 1751340707.0
         }
     ]
 }
