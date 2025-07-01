@@ -8699,6 +8699,21 @@
             "commit_ref": "7655b1f6138e5ea3ad39eacad85f26d4cc4e2950",
             "commit_message": "Fix benign error in calculation of cache prefetch amount in `Arena::CopyConstruct()`\n\nGiven the enclosing `if` condition, the subtraction could cause a wrap-around for `T`s smaller than a cache line, but the `std::min()` around it made it a no-op, selecting `sizeof(T) / 2` in that case.\n\nThe fix also fixes a discontinuity at `sizeof(T) == ABSL_CACHELINE_SIZE`, where the prefetched amount would suddenly drop to 0, so there is a performance improvement as well (not measured yet).\n\nPiperOrigin-RevId: 777684230\n",
             "commit_timestamp": 1751313851.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1751382417.273634,
+            "elapsed_time": 332.55786967277527,
+            "x64": true,
+            "actual_files_count": 1192,
+            "expected_files_count": 818,
+            "memory_traffic": 45467.12730407715,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "ae0129fcd0128b411c968d9a21eb93a5d0253ddf",
+            "commit_message": "Ignore files for doc (#22449)\n\nCurrently, when I run the rake task, I get diffs under `lib/stubs/`. Those files are for the doc that was added by #21212.\n\n```\n$ git status\nHEAD detached at upstream/main\n  (use \"git add <file>...\" to include in what will be committed)\n        lib/stubs/abstract_message.rb\n        lib/stubs/descriptor.rb\n        lib/stubs/descriptor_pool.rb\n        lib/stubs/enum.rb\n        lib/stubs/enum_descriptor.rb\n        lib/stubs/field_descriptor.rb\n        lib/stubs/file_descriptor.rb\n        lib/stubs/map.rb\n        lib/stubs/method_descriptor.rb\n        lib/stubs/oneof_descriptor.rb\n        lib/stubs/repeated_field.rb\n        lib/stubs/service_descriptor.rb\nnothing added to commit but untracked files present (use \"git add\" to track)\n```\n\nI assume those files are not needed to commit to the repository. So I updated settings to ignore those.\n\nCloses #22449\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/22449 from y-yagi:ignore_files_for_doc 1df51d7d8f6e5b31c992f13cb03a0e5d74a66431\nPiperOrigin-RevId: 777902367\n",
+            "commit_timestamp": 1751354448.0
         }
     ]
 }
