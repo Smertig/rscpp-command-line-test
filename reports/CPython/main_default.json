@@ -24521,6 +24521,21 @@
             "commit_ref": "f41e9c750e6971c165e055374a1014d6afd2d50e",
             "commit_message": "gh-134009: Expose `PyMutex_IsLocked` in the public C API (gh-134365)\n\nThe `PyMutex_IsLocked()` function is useful in assertions for verifying\nthat code maintains certain locking invariants.\n",
             "commit_timestamp": 1751390773.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1751469062.7157,
+            "elapsed_time": 1558.9854555130005,
+            "x64": true,
+            "actual_files_count": 1198,
+            "expected_files_count": null,
+            "memory_traffic": 53014.315856933594,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "fa43a1e0f8caf00a15898fa719e31767c866bd90",
+            "commit_message": "gh-127705: Move Py_INCREF_MORTAL() to the internal C API (GH-136178)\n\nRename Py_INCREF_MORTAL() to _Py_INCREF_MORTAL() and move it to\npycore_object.h internal header.",
+            "commit_timestamp": 1751463641.0
         }
     ]
 }
