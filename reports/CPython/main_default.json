@@ -24506,6 +24506,21 @@
             "commit_ref": "12ce16bc134a602d2ac8acde86ae69f70183cb9f",
             "commit_message": "gh-87298: Add tests for find_in_strong_cache() bug in _zoneinfo (GH-24829)\n\nCo-authored-by: Paul Ganssle <p.ganssle@gmail.com>\nCo-authored-by: Serhiy Storchaka <storchaka@gmail.com>",
             "commit_timestamp": 1751381724.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1751427183.838974,
+            "elapsed_time": 1537.1563329696655,
+            "x64": true,
+            "actual_files_count": 1198,
+            "expected_files_count": null,
+            "memory_traffic": 52967.230323791504,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "f41e9c750e6971c165e055374a1014d6afd2d50e",
+            "commit_message": "gh-134009: Expose `PyMutex_IsLocked` in the public C API (gh-134365)\n\nThe `PyMutex_IsLocked()` function is useful in assertions for verifying\nthat code maintains certain locking invariants.\n",
+            "commit_timestamp": 1751390773.0
         }
     ]
 }

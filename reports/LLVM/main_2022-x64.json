@@ -30137,6 +30137,23 @@
             "commit_ref": "86077c41a7899fb3a3ce4654bdb373e7cd954f49",
             "commit_message": "[flang][OpenMP] Rewrite min/max with more than 2 arguments (#146423)\n\nGiven an atomic operation `w = max(w, x1, x2, ...)` rewrite it as `w =\nmax(w, max(x1, x2, ...))`. This will avoid unnecessary non-atomic\ncomparisons inside of the atomic operation (min/max are expanded\ninline).\n\nIn particular, if some of the x_i's are optional dummy parameters in the\ncontaining function, this will avoid any presence tests within the\natomic operation.\n\nFixes https://github.com/llvm/llvm-project/issues/144838",
             "commit_timestamp": 1751381698.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1751427991.441004,
+            "elapsed_time": 1610.3621139526367,
+            "x64": true,
+            "actual_files_count": 2970,
+            "expected_files_count": 1661,
+            "memory_traffic": 264171.58291625977,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "a8a9a7f95a695c02bdf3d5821d1c62cc8e08c2ff",
+            "commit_message": "[WebAssembly] Fix inline assembly with vector types (#146574)\n\nThis commit fixes using inline assembly with v128 results. Previously\nthis failed with an internal assertion about a failure to legalize a\n`CopyFromReg` where the source register was typed `v8f16`. It looks like\nthe type used for the destination register was whatever was listed first\nin the `def V128 : WebAssemblyRegClass` listing, so the types were\nshuffled around to have a default-supported type.\n\nA small test was added as well which failed to generate previously and\nshould now pass in generation. This test passed on LLVM 18 additionally\nand regressed by accident in #93228 which was first included in LLVM 19.",
+            "commit_timestamp": 1751426790.0
         }
     ]
 }

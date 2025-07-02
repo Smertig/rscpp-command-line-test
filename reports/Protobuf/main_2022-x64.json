@@ -8714,6 +8714,21 @@
             "commit_ref": "ae0129fcd0128b411c968d9a21eb93a5d0253ddf",
             "commit_message": "Ignore files for doc (#22449)\n\nCurrently, when I run the rake task, I get diffs under `lib/stubs/`. Those files are for the doc that was added by #21212.\n\n```\n$ git status\nHEAD detached at upstream/main\n  (use \"git add <file>...\" to include in what will be committed)\n        lib/stubs/abstract_message.rb\n        lib/stubs/descriptor.rb\n        lib/stubs/descriptor_pool.rb\n        lib/stubs/enum.rb\n        lib/stubs/enum_descriptor.rb\n        lib/stubs/field_descriptor.rb\n        lib/stubs/file_descriptor.rb\n        lib/stubs/map.rb\n        lib/stubs/method_descriptor.rb\n        lib/stubs/oneof_descriptor.rb\n        lib/stubs/repeated_field.rb\n        lib/stubs/service_descriptor.rb\nnothing added to commit but untracked files present (use \"git add\" to track)\n```\n\nI assume those files are not needed to commit to the repository. So I updated settings to ignore those.\n\nCloses #22449\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/22449 from y-yagi:ignore_files_for_doc 1df51d7d8f6e5b31c992f13cb03a0e5d74a66431\nPiperOrigin-RevId: 777902367\n",
             "commit_timestamp": 1751354448.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1751427003.258259,
+            "elapsed_time": 337.9747667312622,
+            "x64": true,
+            "actual_files_count": 1192,
+            "expected_files_count": 818,
+            "memory_traffic": 45397.953926086426,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "54c0ec5f5679a9dcbd1c3bbe99fbad92fd056de0",
+            "commit_message": "Internal change\n\nPiperOrigin-RevId: 778190014\n",
+            "commit_timestamp": 1751405179.0
         }
     ]
 }
