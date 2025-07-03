@@ -30188,6 +30188,23 @@
             "commit_ref": "4cf53cd266b9e336b0dbaa52ef264a22b74e2242",
             "commit_message": "[msan] Fix \"Add optional flag to improve instrumentation of disjoint OR (#145990)\" (#146799)\n\nThe \"V1\" and \"V2\" values were already NOT'ed, hence the calculation of disjoint OR in #145990 was incorrect. This patch fixes the issue, with some refactoring and renaming of variables.",
             "commit_timestamp": 1751512558.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1751556173.162661,
+            "elapsed_time": 1653.7685356140137,
+            "x64": true,
+            "actual_files_count": 2970,
+            "expected_files_count": 1661,
+            "memory_traffic": 264137.41400909424,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "f019c890087a044cef031002e76e7626ff912deb",
+            "commit_message": "[X86] foldXorTruncShiftIntoCmp - pull out repeated SDLoc. NFC.\n",
+            "commit_timestamp": 1751554994.0
         }
     ]
 }
