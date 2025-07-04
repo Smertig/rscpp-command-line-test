@@ -24566,6 +24566,21 @@
             "commit_ref": "da79ac9d26860db62500762c95b7ae534638f9a7",
             "commit_message": "gh-135075: Make PyObject_SetAttr() fail with NULL value and exception (#136180)\n\nMake PyObject_SetAttr() and PyObject_SetAttrString() fail if called\nwith NULL value and an exception set.",
             "commit_timestamp": 1751547104.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1751599844.728084,
+            "elapsed_time": 1502.6133649349213,
+            "x64": true,
+            "actual_files_count": 1198,
+            "expected_files_count": null,
+            "memory_traffic": 52888.81800842285,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "48cb9b61121f2ad58c2754faa1e92a20c47524e4",
+            "commit_message": "gh-133982: Test _pyio.BytesIO in free-threaded tests (gh-136218)\n\n",
+            "commit_timestamp": 1751596041.0
         }
     ]
 }

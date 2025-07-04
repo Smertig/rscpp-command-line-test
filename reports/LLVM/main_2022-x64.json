@@ -30205,6 +30205,23 @@
             "commit_ref": "f019c890087a044cef031002e76e7626ff912deb",
             "commit_message": "[X86] foldXorTruncShiftIntoCmp - pull out repeated SDLoc. NFC.\n",
             "commit_timestamp": 1751554994.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1751600653.077839,
+            "elapsed_time": 1646.695925951004,
+            "x64": true,
+            "actual_files_count": 2970,
+            "expected_files_count": 1661,
+            "memory_traffic": 264534.7748031616,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "61529d9e36fa86782a2458e6bdeedf7f376ef4b5",
+            "commit_message": "[RISCV] Remove implied extension Zvfhmin for XAndesVPackFPH (#146861)\n\nXAndesVPackFPH can actually be used independently without requiring\nZvfhmin. Therefore, we remove the implicitly required Zvfhmin extension\nfrom XAndesVPackFPH and imply that the f extension is sufficient.",
+            "commit_timestamp": 1751595380.0
         }
     ]
 }
