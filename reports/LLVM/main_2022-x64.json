@@ -30222,6 +30222,23 @@
             "commit_ref": "61529d9e36fa86782a2458e6bdeedf7f376ef4b5",
             "commit_message": "[RISCV] Remove implied extension Zvfhmin for XAndesVPackFPH (#146861)\n\nXAndesVPackFPH can actually be used independently without requiring\nZvfhmin. Therefore, we remove the implicitly required Zvfhmin extension\nfrom XAndesVPackFPH and imply that the f extension is sufficient.",
             "commit_timestamp": 1751595380.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1751686920.392704,
+            "elapsed_time": 1635.7932896614075,
+            "x64": true,
+            "actual_files_count": 2970,
+            "expected_files_count": 1661,
+            "memory_traffic": 264401.93492126465,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "09372335c51b6d96c7112de63a38645ae5422732",
+            "commit_message": "X86: Test fixup/relocation with -filetype=obj\n\nThe fixup output is a debug aid and should not be used to test\ntarget-specific relocation generation implementation. The llvm-mc\n-filetype=obj output is what truly matters.\n\nAdd a \"Relocations\" directory, similar to other targets, to test fixups\nand relocations.\n",
+            "commit_timestamp": 1751681897.0
         }
     ]
 }
