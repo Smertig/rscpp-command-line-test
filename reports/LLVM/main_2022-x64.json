@@ -30239,6 +30239,23 @@
             "commit_ref": "09372335c51b6d96c7112de63a38645ae5422732",
             "commit_message": "X86: Test fixup/relocation with -filetype=obj\n\nThe fixup output is a debug aid and should not be used to test\ntarget-specific relocation generation implementation. The llvm-mc\n-filetype=obj output is what truly matters.\n\nAdd a \"Relocations\" directory, similar to other targets, to test fixups\nand relocations.\n",
             "commit_timestamp": 1751681897.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1751728886.58005,
+            "elapsed_time": 1698.2638320922852,
+            "x64": true,
+            "actual_files_count": 2970,
+            "expected_files_count": 1661,
+            "memory_traffic": 264353.72872924805,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "e64289baa00f822746a7051687c5c5002368880f",
+            "commit_message": "[clang][Sema] Unify getPrototypeLoc helpers in SemaCodeComplete and clangd (#143345)\n\nHeuristicResolver houses the unified implementation.\n\nFixes https://github.com/llvm/llvm-project/issues/143240",
+            "commit_timestamp": 1751727556.0
         }
     ]
 }
