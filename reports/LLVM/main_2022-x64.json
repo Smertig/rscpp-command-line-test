@@ -30273,6 +30273,23 @@
             "commit_ref": "9f66ebe427158a75a6392a94a66a0c50d21552bf",
             "commit_message": "MC: Eliminate redundant fragment relaxation\n\nThe relaxOnce function now returns the index of the last modified section,\nallowing subsequent calls to skip already stable sections.\n\nThis optimization can often save redundant iteration for trailing\n.debug_ sections, leading to minor instructions:u decrease.\nhttps://llvm-compile-time-tracker.com/compare.php?from=aec88832df5e8c1dcbe259a6cb3d82d44b89ff23&to=8012fb16eff93cba48e5f08166762c5333bd1d42&stat=instructions:u\n",
             "commit_timestamp": 1751766883.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1751815340.49816,
+            "elapsed_time": 1647.7596366405487,
+            "x64": true,
+            "actual_files_count": 2970,
+            "expected_files_count": 1661,
+            "memory_traffic": 264224.7208480835,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "ec9eefcef560e4ea5b5d8ee6ed9cc6ef8c1f274c",
+            "commit_message": "[clang][bytecode] Fix a crash in overflow builtins (#147189)\n\nOnly initialize pointers that can be initialized.",
+            "commit_timestamp": 1751812926.0
         }
     ]
 }
