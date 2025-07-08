@@ -30324,23 +30324,6 @@
             "commit_ref": "6aa33ee971f6e561269c65dcee74cca2185627c0",
             "commit_message": "[AArch64] arm64-bitfield-extract.ll - regenerate test checks\n",
             "commit_timestamp": 1751900697.0
-        },
-        {
-            "tool_version": "243.0.20241111.161023",
-            "error_mismatch": true,
-            "project": [
-                "clang*"
-            ],
-            "timestamp": 1751946291.817645,
-            "elapsed_time": 1649.4156847000122,
-            "x64": true,
-            "actual_files_count": 2970,
-            "expected_files_count": 1661,
-            "memory_traffic": 264892.98804473877,
-            "repo_url": "https://github.com/llvm/llvm-project",
-            "commit_ref": "0b533f2d9f0551aaffb13dcac8e0fd0a952185b5",
-            "commit_message": "[IPO] Fix a warning\n\nThis patch fixes:\n\n  llvm/include/llvm/Transforms/IPO/Attributor.h:1233:3: error:\n  'llvm::InformationCache' has virtual functions but non-virtual\n  destructor [-Werror,-Wnon-virtual-dtor]\n",
-            "commit_timestamp": 1751941069.0
         }
     ]
 }
