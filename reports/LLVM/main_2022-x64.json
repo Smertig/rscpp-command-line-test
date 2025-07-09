@@ -30341,6 +30341,23 @@
             "commit_ref": "67076dd79fb4387ab0663154b7b82e4f8f2a5377",
             "commit_message": "AMDGPU: Fix atomic expand tests accidentally underaligning (#147299)\n\n",
             "commit_timestamp": 1751986731.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1752032970.248813,
+            "elapsed_time": 1637.6407461166382,
+            "x64": true,
+            "actual_files_count": 2970,
+            "expected_files_count": 1661,
+            "memory_traffic": 265368.8006820679,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "0819fec61a4e6189bae11d1dbbd0a8794321c746",
+            "commit_message": "[RISCV] Add back -verify-machineinstrs to some tests. NFC\n\nThese were accidentally removed in 7c812ea01a2d11545033bbed8f5094c4a4763124\n",
+            "commit_timestamp": 1752031337.0
         }
     ]
 }
