@@ -30375,6 +30375,23 @@
             "commit_ref": "cd193f4c057ee5005197219df1c646b939a85711",
             "commit_message": "[analyzer] Remove redundant bug type DoubleDelete (#147542)\n\nThis commit removes the DoubleDelete bug type from `MallocChecker.cpp`\nbecause it's completely redundant with the `DoubleFree` bug (which is\nalready used for all allocator families, including new/delete).\n\nThis simplifies the code of the checker and prevents the potential\nconfusion caused by two semantically equivalent and very similar, but\nnot identical bug report messages.",
             "commit_timestamp": 1752073468.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1752119220.471376,
+            "elapsed_time": 1621.258323431015,
+            "x64": true,
+            "actual_files_count": 2970,
+            "expected_files_count": 1661,
+            "memory_traffic": 265060.7242050171,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "378e9bb7e06c67d8235a8cb5bfb325b63d2ba319",
+            "commit_message": "[cir-translate] Fix crash issue where the data layout string is missing (#147209)\n\n- Targets like 'aarch64' or 'arm' only populate the data layout string\nafter the constructor. Need to call 'CreateTargetInfo' to setup them\nproperly.",
+            "commit_timestamp": 1752117975.0
         }
     ]
 }
