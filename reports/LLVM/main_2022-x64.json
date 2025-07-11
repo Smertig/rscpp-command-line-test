@@ -30409,6 +30409,23 @@
             "commit_ref": "86320e0a8f2d88877775ca685ae3d70ac954faf3",
             "commit_message": "[mlir] Fix warnings\n\nThis patch fixes:\n\n  mlir/lib/Dialect/OpenMP/IR/OpenMPDialect.cpp:3047:16: error: unused\n  variable 'ctx' [-Werror,-Wunused-variable]\n\n  mlir/lib/Dialect/OpenMP/IR/OpenMPDialect.cpp:3171:16: error: unused\n  variable 'ctx' [-Werror,-Wunused-variable]\n",
             "commit_timestamp": 1752159532.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1752205864.11945,
+            "elapsed_time": 1674.2396922111511,
+            "x64": true,
+            "actual_files_count": 2972,
+            "expected_files_count": 1661,
+            "memory_traffic": 265334.3645324707,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "aa9902691db5cbb9db77270902f615f3c0877deb",
+            "commit_message": "[NFC] [clangd] [Modules] Logging more if compilation failed\n\nComing from internal using experience.\n\nThe original log is just confusing... Users can't understand it unless\nhe reads the code.\n\nThis patch tries to make this more understandable.\n\nNote that the mentioned module files in the logs might be removed\nintentionally. We need another option to allow users to remain these\nmodule files. Let's done this in another patch.\n",
+            "commit_timestamp": 1752203901.0
         }
     ]
 }

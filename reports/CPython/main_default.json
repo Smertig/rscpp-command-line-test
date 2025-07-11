@@ -24746,6 +24746,21 @@
             "commit_ref": "f1b8d01c802165b9807172965b7097b6aaf6fcd3",
             "commit_message": "gh-132661: Add default value (of `\"\"`) for `Interpolation.expression` (#136441)\n\n",
             "commit_timestamp": 1752157661.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1752205012.99868,
+            "elapsed_time": 1503.621059179306,
+            "x64": true,
+            "actual_files_count": 1198,
+            "expected_files_count": null,
+            "memory_traffic": 52996.145568847656,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "49365bd110a254a6a304d2f880482bfeb2e4490d",
+            "commit_message": "gh-107538: [Enum] fix handling of inverted/negative values (GH-132273)\n\n* Fix flag mask inversion when unnamed flags exist.\n\nFor example:\n\n    class Flag(enum.Flag):\n        A = 0x01\n        B = 0x02\n        MASK = 0xff\n\n    ~Flag.MASK is Flag(0)\n\n* EJECT and KEEP flags (IntEnum is KEEP) use direct value.\n\n* correct Flag inversion to only flip flag bits\n\nIntFlag will flip all bits -- this only makes a difference in flag sets with\nmissing values.\n\n* correct negative assigned values in flags\n\nnegative values are no longer used as-is, but become inverted; i.e.\n\n    class Y(self.enum_type):\n        A = auto()\n        B = auto()\n        C = ~A        # aka ~1 aka 0b1 110 (from enum.bin()) aka 6\n        D = auto()\n\n    assert Y.C. is Y.B|Y.D",
+            "commit_timestamp": 1752191349.0
         }
     ]
 }
