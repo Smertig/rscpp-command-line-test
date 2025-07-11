@@ -30426,6 +30426,23 @@
             "commit_ref": "aa9902691db5cbb9db77270902f615f3c0877deb",
             "commit_message": "[NFC] [clangd] [Modules] Logging more if compilation failed\n\nComing from internal using experience.\n\nThe original log is just confusing... Users can't understand it unless\nhe reads the code.\n\nThis patch tries to make this more understandable.\n\nNote that the mentioned module files in the logs might be removed\nintentionally. We need another option to allow users to remain these\nmodule files. Let's done this in another patch.\n",
             "commit_timestamp": 1752203901.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1752247369.447697,
+            "elapsed_time": 1687.0186967849731,
+            "x64": true,
+            "actual_files_count": 2972,
+            "expected_files_count": 1661,
+            "memory_traffic": 265293.05770111084,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "2c0d563a76fcda85d655f39a8fd287bbf0e547ca",
+            "commit_message": "Add debuginfo C support for a SetType, Subrangetype,  dynamic array type and replace arrays (#135607)\n\nThis change adds some support to the C DebugInfo capability to create set types,\nsubrange types, dynamic array types and the ability to replace arrays.",
+            "commit_timestamp": 1752245754.0
         }
     ]
 }
