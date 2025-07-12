@@ -30460,6 +30460,23 @@
             "commit_ref": "af6500d14c9c01bf1d01f13a9004ee2709cebd78",
             "commit_message": "[libc][math] Refactor frexpf128 implementation to header-only in src/\u2026 (#147822)\n\nPart of #147386 \n\nin preparation for:\nhttps://discourse.llvm.org/t/rfc-make-clang-builtin-math-functions-constexpr-with-llvm-libc-to-support-c-23-constexpr-math-functions/86450\n",
             "commit_timestamp": 1752289149.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1752333694.659588,
+            "elapsed_time": 1655.6939628124237,
+            "x64": true,
+            "actual_files_count": 2972,
+            "expected_files_count": 1661,
+            "memory_traffic": 265279.9173965454,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "67db34863cefb4ddb71babbe22416c89cf743564",
+            "commit_message": "[mlir][Transforms][NFC] Dialect Conversion: Earlier `isIgnored` check (#148360)\n\nWhen legalizing an operation, the conversion driver skips \"ignored\" ops.\nOps are ignored if they are inside of a recursively legal operation or\nif they were erased.\n\nThis commit moves the \"is ignored\" check a bit earlier: it is now\nchecked before checking if the op is recursively legal. This is in\npreparation of the One-Shot Dialect Conversion refactoring: erased ops\nshould not be accessed, not even for checking recursive legality.\n\nThis commit is NFC: When an op is erased, it is added to the set of\nignored ops and we don't want to process it, regardless of legality.\nNested ops are also added to the set of ignored ops when erasing an\nenclosing op.",
+            "commit_timestamp": 1752331602.0
         }
     ]
 }
