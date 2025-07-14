@@ -30528,6 +30528,23 @@
             "commit_ref": "e08833443256f8dde2f864853fa9491ffa7112d5",
             "commit_message": "[BOLT][NFC] Add const qualifier to certain pointers to read-only objects (#148543)\n\n",
             "commit_timestamp": 1752459440.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1752506606.007472,
+            "elapsed_time": 1637.5862770080566,
+            "x64": true,
+            "actual_files_count": 2972,
+            "expected_files_count": 1661,
+            "memory_traffic": 265433.47469329834,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "074218dd1071722ab0dea2a1acb71079ff212bb4",
+            "commit_message": "[libc][math] Refactor ldexpf16 implementation to header-only in src/__support/math folder. (#147901)\n\nPart of #147386\n\nin preparation for:\nhttps://discourse.llvm.org/t/rfc-make-clang-builtin-math-functions-constexpr-with-llvm-libc-to-support-c-23-constexpr-math-functions/86450\n\nPlease merge #147895 first\n",
+            "commit_timestamp": 1752505201.0
         }
     ]
 }
