@@ -24881,6 +24881,21 @@
             "commit_ref": "db2032407a0c4928f3bdff63bba0456bf99e257e",
             "commit_message": "Fix a minor indentation error (#136661)\n\n",
             "commit_timestamp": 1752537716.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1752592214.253141,
+            "elapsed_time": 1680.4269042015076,
+            "x64": true,
+            "actual_files_count": 1198,
+            "expected_files_count": null,
+            "memory_traffic": 53110.95411682129,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "be02e68158aee4d70f15baa1d8329df2c35a57f2",
+            "commit_message": "gh-72327: Suggest using system terminal for pip install in PyREPL (#136328)\n\nUsers new to Python packaging often try to use pip from the REPL only to\nbe met with a confusing SyntaxError. If this happens, guide the user to\nuse a system terminal instead to invoke pip.\n\nCloses #72327\n\n---------\n\nCo-authored-by: Tom Viner <tom@viner.tv>\nCo-authored-by: Brian Schubert <brianm.schubert@gmail.com>\nCo-authored-by: Hugo van Kemenade <1324225+hugovk@users.noreply.github.com>\nCo-authored-by: Alyssa Coghlan <ncoghlan@gmail.com>",
+            "commit_timestamp": 1752589507.0
         }
     ]
 }

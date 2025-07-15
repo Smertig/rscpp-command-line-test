@@ -30562,6 +30562,23 @@
             "commit_ref": "96148f92146e5211685246722664e51ec730e7ba",
             "commit_message": "[RISCV] Use cond_code instead for PseudoCCNDS_BFOS and PseudoCCNDS_BFOZ.\n",
             "commit_timestamp": 1752549549.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1752593039.499037,
+            "elapsed_time": 1711.05171251297,
+            "x64": true,
+            "actual_files_count": 2972,
+            "expected_files_count": 1661,
+            "memory_traffic": 265447.3394622803,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "e282cdb0a2f80a2eb3b6bab40b16b538f202ac3a",
+            "commit_message": "[RISCV][IA] Avoid use of redundant variables which differ solely by type [nfc]\n\nInstead of using dyn_cast, just use isa combined with accessors on the base\nVectotType class.  Working towards being able to merge code from some of\nthese routines.\n",
+            "commit_timestamp": 1752591843.0
         }
     ]
 }
