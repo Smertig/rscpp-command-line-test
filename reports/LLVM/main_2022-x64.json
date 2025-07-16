@@ -30579,6 +30579,23 @@
             "commit_ref": "e282cdb0a2f80a2eb3b6bab40b16b538f202ac3a",
             "commit_message": "[RISCV][IA] Avoid use of redundant variables which differ solely by type [nfc]\n\nInstead of using dyn_cast, just use isa combined with accessors on the base\nVectotType class.  Working towards being able to merge code from some of\nthese routines.\n",
             "commit_timestamp": 1752591843.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1752637784.595371,
+            "elapsed_time": 1668.9727234840393,
+            "x64": true,
+            "actual_files_count": 2973,
+            "expected_files_count": 1661,
+            "memory_traffic": 266113.0242462158,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "8ec03f49dc417897a9ecffb3c5bc63c8e3e43ab7",
+            "commit_message": "Clarify semantics for overflowing constrained lrint etc. (#148979)\n\nThis fixes llvm.experimental.constrained.lrint and friends to use the\nsame semantics as llvm.lrint and friends, as defined in\nba5c26da7ce85dbdcee3d964282e5f0981792702.",
+            "commit_timestamp": 1752636736.0
         }
     ]
 }

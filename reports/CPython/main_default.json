@@ -24896,6 +24896,21 @@
             "commit_ref": "be02e68158aee4d70f15baa1d8329df2c35a57f2",
             "commit_message": "gh-72327: Suggest using system terminal for pip install in PyREPL (#136328)\n\nUsers new to Python packaging often try to use pip from the REPL only to\nbe met with a confusing SyntaxError. If this happens, guide the user to\nuse a system terminal instead to invoke pip.\n\nCloses #72327\n\n---------\n\nCo-authored-by: Tom Viner <tom@viner.tv>\nCo-authored-by: Brian Schubert <brianm.schubert@gmail.com>\nCo-authored-by: Hugo van Kemenade <1324225+hugovk@users.noreply.github.com>\nCo-authored-by: Alyssa Coghlan <ncoghlan@gmail.com>",
             "commit_timestamp": 1752589507.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1752636981.574843,
+            "elapsed_time": 1487.751622915268,
+            "x64": true,
+            "actual_files_count": 1198,
+            "expected_files_count": null,
+            "memory_traffic": 53037.566078186035,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "cb59eaefeda5ff44ac0c742bff2b8afc023be313",
+            "commit_message": "Fix the doctest.testmod() docstring (GH-136675)\n\n__test__ = None is not supported since Python 2.4.",
+            "commit_timestamp": 1752597722.0
         }
     ]
 }
