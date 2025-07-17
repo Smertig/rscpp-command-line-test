@@ -30613,6 +30613,23 @@
             "commit_ref": "a13712ed88cf6fc37d3789d4c3b54ffdd1a05a1d",
             "commit_message": "[lldb] Fix a crash in lldb-server during RemoveSoftwareBreakpoint() (#148738)\n\n# Lldb-server crash\n\nWe have seen stacks like the following in lldb-server core dumps:\n```\n[\n  \"__GI___pthread_kill at pthread_kill.c:46\",\n  \"__GI_raise at raise.c:26\",\n  \"__GI_abort at abort.c:100\",\n  \"__assert_fail_base at assert.c:92\",\n  \"__GI___assert_fail at assert.c:101\",\n  \"lldb_private::NativeProcessProtocol::RemoveSoftwareBreakpoint(unsigned long) at /redacted/lldb-server:0\"\n]\n```\n\n# Hypothesis of root cause\n\nIn `NativeProcessProtocol::RemoveSoftwareBreakpoint()`\n([code](https://github.com/llvm/llvm-project/blob/19b2dd9d798c124406b0124a1b8debb711675281/lldb/source/Host/common/NativeProcessProtocol.cpp#L359-L423)),\na `ref_count` is asserted and reduced. If it becomes zero, the code\nfirst go through a series of memory reads and writes to remove the\nbreakpoint trap opcode and to restore the original process code, then,\nif everything goes fine, removes the entry from the map\n`m_software_breakpoints` at the end of the function.\n\nHowever, if any of the validations for the above reads and writes goes\nwrong, the code returns an error early, skipping the removal of the\nentry. This leaves the entry behind with a `ref_count` of zero.\n\nThe next call to `NativeProcessProtocol::RemoveSoftwareBreakpoint()` for\nthe same breakpoint[*] would violate the assertion about `ref_count > 0`\n([here](https://github.com/llvm/llvm-project/blob/19b2dd9d798c124406b0124a1b8debb711675281/lldb/source/Host/common/NativeProcessProtocol.cpp#L365)),\nwhich would cause a crash.\n\n[*] We haven't found a *regular* way to repro such a next call in lldb\nor lldb-dap. This is because both of them remove the breakpoint from\ntheir internal list when they get any response from the lldb-server (OK\nor error). Asking the client to delete the breakpoint a second time\ndoesn't trigger the client to send the `$z` gdb packet to lldb-server.\nWe are able to trigger the crash by sending the `$z` packet directly,\nsee \"Manual test\" below.\n\n# Fix\n\nLift the removal of the map entry to be immediately after the decrement\nof `ref_count`, before the early returns. This ensures that the asserted\ncase will never happen. The validation errors can still happen, and\nwhether they happen or not, the breakpoint has been removed from the\nperspective of the lldb-server (same as that of lldb and lldb-dap).\n\n\n# Manual test & unit test\n\nSee PR.",
             "commit_timestamp": 1752677833.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1752724187.784179,
+            "elapsed_time": 1709.3226175308228,
+            "x64": true,
+            "actual_files_count": 2978,
+            "expected_files_count": 1661,
+            "memory_traffic": 266133.72270202637,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "1c541aa9f9a2453324724bfb9d661bc672778d10",
+            "commit_message": "[Apple][NFC] Update macOS aligned version for lit config (#143576)\n\nThis updates the aligned version for version 26.\n\nNote: This change is for correctness only and has no functional impact\ncurrently. `get_macos_aligned_version` is currently only consumed when\nsubstituting flags based on min version.\n\nrdar://152851947",
+            "commit_timestamp": 1752722257.0
         }
     ]
 }
