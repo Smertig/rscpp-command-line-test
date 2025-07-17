@@ -9149,6 +9149,21 @@
             "commit_ref": "045486256a5e8f194710ab9126b89b86a2545041",
             "commit_message": "Auto-generate files after cl/783855798\n",
             "commit_timestamp": 1752695533.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1752764787.616006,
+            "elapsed_time": 327.2673349380493,
+            "x64": true,
+            "actual_files_count": 1192,
+            "expected_files_count": 818,
+            "memory_traffic": 45442.291915893555,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "e942b76f6fd2118d5a1be03146419df8cf751a82",
+            "commit_message": "hpb: move all hpb::internal{...} bits from hpb/extension.h to hpb/backend/upb/extension.h\n\nhpb::extension.h's public interface is now cleaner and contains: {ExtensionRegistry, HasExtension, ClearExtension, SetExtension, GetExtension, SetAliasExtension, ExtensionNumber}.\nPiperOrigin-RevId: 784154156\n",
+            "commit_timestamp": 1752758467.0
         }
     ]
 }
