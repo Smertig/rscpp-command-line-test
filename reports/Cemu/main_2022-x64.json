@@ -12464,6 +12464,21 @@
             "commit_ref": "42ff3ad4683647cf82b616e1990a0df855282c59",
             "commit_message": "Fix debug assert that'd occur when closing the debug menu\n\nClosing the settings window will immediately flush a temporary 0, 0 value it writes for the size which gets overwritten by the MainWindow a few seconds later.\n\nIn the code, -1 is considered the \"off\" state, and 0 is considered a \"it should be saved, but only whenever the value is available\". The save gamepad size/pos option already worked like this new behavior, since you might enable the option but not (previously) have it open yet. When encountering a 0 as the size, it'll just use the default window size of Cemu.\n",
             "commit_timestamp": 1752675295.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1752811016.243285,
+            "elapsed_time": 481.97481751441956,
+            "x64": true,
+            "actual_files_count": 1082,
+            "expected_files_count": 1013,
+            "memory_traffic": 77155.23307800293,
+            "repo_url": "https://github.com/cemu-project/Cemu",
+            "commit_ref": "42ff3ad4683647cf82b616e1990a0df855282c59",
+            "commit_message": "Fix debug assert that'd occur when closing the debug menu\n\nClosing the settings window will immediately flush a temporary 0, 0 value it writes for the size which gets overwritten by the MainWindow a few seconds later.\n\nIn the code, -1 is considered the \"off\" state, and 0 is considered a \"it should be saved, but only whenever the value is available\". The save gamepad size/pos option already worked like this new behavior, since you might enable the option but not (previously) have it open yet. When encountering a 0 as the size, it'll just use the default window size of Cemu.\n",
+            "commit_timestamp": 1752675295.0
         }
     ]
 }
