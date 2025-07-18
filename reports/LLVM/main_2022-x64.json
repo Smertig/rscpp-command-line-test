@@ -30664,6 +30664,23 @@
             "commit_ref": "52a9c493e62c8af8f1299cae0babb92f2693065b",
             "commit_message": " Reland \"[RISCV] AddEdge between mask producer and user of V0 (#146855)\" (#148566)\n\nThe defmask vector cannot contain instructions that use V0. \n\nfor `MultiSource/Benchmarks/DOE-ProxyApps-C++/CLAMR/mesh.cpp`\nSave `%173:vrm2nov0 = PseudoVMERGE_VVM_M2 undef %173:vrm2nov0(tied-def\n0), %116:vrm2, %173:vrm2nov0, killed $v0, -1, 5 `to def mask caused crash.\n",
             "commit_timestamp": 1752807367.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1752852121.937537,
+            "elapsed_time": 1649.8096086978912,
+            "x64": true,
+            "actual_files_count": 2978,
+            "expected_files_count": 1661,
+            "memory_traffic": 266352.49474334717,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "724cfce5801829340b240ba62e82a7e7199e971d",
+            "commit_message": "[Clang] Do not assume a perfect match is a better match than a non-template non-perfect match (#149504)\n\nThis fixes a regression introduced by the \"perfect match\" overload\nresolution mechanism introduced in 8c5a307.\n\n[This does regress the performance noticeably (-0.7% for a stage 2\nbuild)](https://llvm-compile-time-tracker.com/compare.php?from=42d2ae1034b287eb60563c370dbf52c59b66db20&to=82303bbc3e003c937ded498ac9f94f49a3fc3d90&stat=instructions:u),\nhowever, the original patch had a +4% performance impact, so we are only\nlosing some of the gain, and this has\nthe benefit of being correct and more robust.\n\nFixes #147374",
+            "commit_timestamp": 1752851118.0
         }
     ]
 }
