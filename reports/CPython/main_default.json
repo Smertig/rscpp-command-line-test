@@ -25001,6 +25001,21 @@
             "commit_ref": "03017a8cc2242d881a3042b1eb9084c9bae9f85d",
             "commit_message": "gh-136438: Make sure `test_ast` pass with all optimization levels (#136596)\n\nExplicitly pass an `optimizer` parameter to the calls of `ast.parse/compile`, because if it is not provided, the interpreter will use its internal state, which can be modified using the `-O` or `-OO` flags.\n\nCo-authored-by: Kirill Podoprigora <kirill.bast9@mail.ru>\n\n",
             "commit_timestamp": 1752854866.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1752937693.490692,
+            "elapsed_time": 1472.3978176116943,
+            "x64": true,
+            "actual_files_count": 1198,
+            "expected_files_count": null,
+            "memory_traffic": 52988.46314239502,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "1ba23244f3306aa8d19eb4b98cfee6ad4cf514c9",
+            "commit_message": "gh-136793: Update the sampling rate in the documentation (#136829)\n\n",
+            "commit_timestamp": 1752937246.0
         }
     ]
 }
