@@ -30715,6 +30715,23 @@
             "commit_ref": "167c695cece8e4fa78b7e9c5fc94bae3821ade52",
             "commit_message": "[libc++] Add and empty skeleton for LLVM 22 release notes (#149535)\n\n",
             "commit_timestamp": 1752931974.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1752983556.200802,
+            "elapsed_time": 1674.635132074356,
+            "x64": true,
+            "actual_files_count": 2978,
+            "expected_files_count": 1661,
+            "memory_traffic": 266125.4891586304,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "58c3affdaa732fd6f8c7e6640396e7c6366bac9d",
+            "commit_message": "[libclc] Expose `prepare_builtins_*` variables in top-level CMakeLists (#149657)\n\nFix `libclc/utils/CMakeLists.txt` to expose `prepare_builtins_*`\nvariables in parent scope. This was a regression introduced in #148815\nwhere the code was moved into subdirectory, and the variables would no\nlonger be accessible to calls in top-level CMakeLists, resulting in\nattempting to build targets with empty command:\n\n```\n[1566/1676] cd /var/tmp/portage/llvm-core/libclc-22.0.0.9999/work/libclc_build && -o /var/tmp/portage/llvm-core/libclc-22.0.0.9999/work/libclc_build/clspv--.bc /var/tmp/portage/llvm-core/libclc-22.0.0.9999/work/libclc_build/obj.libclc.dir/clspv--/builtins.opt.clspv--.bc\nFAILED: clspv--.bc /var/tmp/portage/llvm-core/libclc-22.0.0.9999/work/libclc_build/clspv--.bc\ncd /var/tmp/portage/llvm-core/libclc-22.0.0.9999/work/libclc_build && -o /var/tmp/portage/llvm-core/libclc-22.0.0.9999/work/libclc_build/clspv--.bc /var/tmp/portage/llvm-core/libclc-22.0.0.9999/work/libclc_build/obj.libclc.dir/clspv--/builtins.opt.clspv--.bc\n/bin/sh: line 1: -o: command not found\n```",
+            "commit_timestamp": 1752982011.0
         }
     ]
 }
