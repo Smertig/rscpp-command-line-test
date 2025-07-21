@@ -30766,6 +30766,23 @@
             "commit_ref": "f3a3270dbca3649b7d56aaa42cb8481fb34e2d67",
             "commit_message": "[clang-format][NFC] Delete redundant type names after FormatStyle::\n",
             "commit_timestamp": 1753068457.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1753111368.701868,
+            "elapsed_time": 1689.8335344791412,
+            "x64": true,
+            "actual_files_count": 2978,
+            "expected_files_count": 1661,
+            "memory_traffic": 266491.34339141846,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "e801a10b44ee96acb70b994662616a66fca0be21",
+            "commit_message": "[AMDGPU] Add the code generation support for `llvm.[sin/cos].bf16` (#149631)\n\nThis is a partial support because some other instructions have not been upstreamed yet.",
+            "commit_timestamp": 1753110119.0
         }
     ]
 }
