@@ -30800,6 +30800,23 @@
             "commit_ref": "4d48996ff05305d4a5774f3e232c2ee4a06c3d2a",
             "commit_message": "[clang-format][NFC] Clean up around StringRef initializations (#149765)\n\nConsistently use `constexpr StringRef Code(\"string literal\");`.",
             "commit_timestamp": 1753150277.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1753197803.463939,
+            "elapsed_time": 1756.8862459659576,
+            "x64": true,
+            "actual_files_count": 2978,
+            "expected_files_count": 1661,
+            "memory_traffic": 266510.5470123291,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "d5099722e8ae0972a4a95927cb8ed415eda17298",
+            "commit_message": "[SPIRVPrepareFunctions] Report change when removing lifetime intrinsics\n\nShould hopefully fix EXPENSIVE_CHECKS build.\n",
+            "commit_timestamp": 1753196660.0
         }
     ]
 }
