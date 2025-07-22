@@ -25076,6 +25076,21 @@
             "commit_ref": "58d305cf387816c559602a95ba850856dc9b8129",
             "commit_message": "gh-136438: Make sure `test_generated_cases` pass with all optimization levels (#136594)\n\nFix the `test_generated_cases` to work with `-O` or `-OO` flags.\nPreviously, `test_generated_cases` was catching an `AssertionError` while `Tools/cases_generator/optimizer_generator.py` used an `assert` statement.  This approach semantically incorrect, no one should trying to catch an `AssertionError`!\nNow the `assert` statement has been replaced with an explicit `raise ValueError(...)` and the corresponding `self.assertRaisesRegex(AssertionError, ...)` has been updated to catch a `ValueError` instead.",
             "commit_timestamp": 1753100725.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1753155476.035566,
+            "elapsed_time": 1483.2114334106445,
+            "x64": true,
+            "actual_files_count": 1199,
+            "expected_files_count": null,
+            "memory_traffic": 53247.347717285156,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "bbe589f93ccaf32eb95fd9d1f8f3dc9a536e8db1",
+            "commit_message": "gh-133600: Move config.site-wasm32-emscripten into the emscripten folder (#136934)\n\nReorganises the large Emscripten-specific file into the Emscripten folder.",
+            "commit_timestamp": 1753142311.0
         }
     ]
 }
