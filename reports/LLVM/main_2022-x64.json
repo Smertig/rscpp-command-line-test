@@ -30817,6 +30817,23 @@
             "commit_ref": "d5099722e8ae0972a4a95927cb8ed415eda17298",
             "commit_message": "[SPIRVPrepareFunctions] Report change when removing lifetime intrinsics\n\nShould hopefully fix EXPENSIVE_CHECKS build.\n",
             "commit_timestamp": 1753196660.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1753242609.948304,
+            "elapsed_time": 1652.7861597537994,
+            "x64": true,
+            "actual_files_count": 2978,
+            "expected_files_count": 1661,
+            "memory_traffic": 266806.00566101074,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "01b47eb86c991f88d3117f494ebd1826fd3ab41e",
+            "commit_message": "[clang][bytecode] Only implicitly start lifetime of trivially-default-constructible union members (#149835)\n\nSee\nhttps://github.com/llvm/llvm-project/commit/faee39baa87e43f4b746dd77e479268391163658",
+            "commit_timestamp": 1753241317.0
         }
     ]
 }
