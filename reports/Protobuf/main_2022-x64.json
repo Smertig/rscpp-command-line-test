@@ -9329,6 +9329,21 @@
             "commit_ref": "aa71c3a53d6920e48fb4572ac11f58e14bd34c0e",
             "commit_message": "Add 32.x to list of release branches to test\n\nI also removed 30.x since that branch is no longer supported. We can soon\nremove 31.x but not until 32.0 has been released.\n\nPiperOrigin-RevId: 786088688\n",
             "commit_timestamp": 1753237351.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1753283213.90917,
+            "elapsed_time": 327.94557452201843,
+            "x64": true,
+            "actual_files_count": 1192,
+            "expected_files_count": 818,
+            "memory_traffic": 45481.26103973389,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "c81a0c246779128ef8256afdec2e8722351cc4c3",
+            "commit_message": "hpb/oss: rm unused dep base from protoc-gen-hpb\n\nPiperOrigin-RevId: 786267415\n",
+            "commit_timestamp": 1753279811.0
         }
     ]
 }
