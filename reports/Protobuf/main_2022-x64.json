@@ -9374,6 +9374,21 @@
             "commit_ref": "6588ef124c86d011d95bcb359bbe3eeca867bbb2",
             "commit_message": "hpb: move out upb related chunks to hpb/backend/upb/repeated_field.h\n\nPiperOrigin-RevId: 786697963\n",
             "commit_timestamp": 1753367791.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1753414453.707139,
+            "elapsed_time": 318.39806270599365,
+            "x64": true,
+            "actual_files_count": 1192,
+            "expected_files_count": 818,
+            "memory_traffic": 45481.199142456055,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "b25d39eee2b2a3425f0f108a4cb9f76315b5e54b",
+            "commit_message": "Expose an iterator for `GeneratedMessage.ExtendableMessage.extensions`\n\nThis iterates over the wrapper class `GeneratedMessage.ExtendableMessage.FieldValue` to keep the mutable underlying structure of the extensions FieldSet hidden. The entries' values exposed here are a subset of the values exposed by `GeneratedMessage.getallFields`. This iterator has less overhead than calling allFields and does not create a new map object.\n\nPiperOrigin-RevId: 786884890\n",
+            "commit_timestamp": 1753402016.0
         }
     ]
 }
