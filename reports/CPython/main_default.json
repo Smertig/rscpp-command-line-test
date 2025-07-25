@@ -25181,6 +25181,21 @@
             "commit_ref": "d5e75c07682864e9d265e11f5e4730147e7d4842",
             "commit_message": "Exclude _testclinic_depr.c.h from c-analyzer (GH-137086)\n\n_testclinic.c mocks out PY_VERSION_HEX to 3.8 before including\n_testclinic_depr.c.h to avoid the errors the preprocessor would\notherwise throw due to the deprecation feature it is testing.\n\nAlso partially revert 74e2acddf68b31ce16e8e0067b1df8c7b67bd6c8:\nthis restores Modules/_testclinic.c to match the same file in the 3.14\nbranch.",
             "commit_timestamp": 1753390201.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1753456158.545463,
+            "elapsed_time": 1537.964555978775,
+            "x64": true,
+            "actual_files_count": 1199,
+            "expected_files_count": null,
+            "memory_traffic": 53214.8989944458,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "cb93b6fc5ea525f8075cb53ec373356fec63903a",
+            "commit_message": "gh-130522: Fix unraisable TypeError in threading at interpreter shutdown (#131537)\n\nCo-authored-by: Peter Bierma <zintensitydev@gmail.com>",
+            "commit_timestamp": 1753455090.0
         }
     ]
 }
