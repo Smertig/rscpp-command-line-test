@@ -30936,6 +30936,23 @@
             "commit_ref": "cb37916a2596e0936c76bbd9927f8353faac9fa8",
             "commit_message": "Revert \"MC: Allocate initial fragment and define section symbol in changeSection\" (#150736)\n\nReverts llvm/llvm-project#150574\n\nThis is causing a test failure on AArch64 MacOS bots:\nhttps://lab.llvm.org/buildbot/#/builders/190/builds/24187",
             "commit_timestamp": 1753500119.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1753543612.817549,
+            "elapsed_time": 1676.30570602417,
+            "x64": true,
+            "actual_files_count": 2978,
+            "expected_files_count": 1661,
+            "memory_traffic": 267154.07706451416,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "662bede01e6d8515a1a2c3eb125c322711f23037",
+            "commit_message": "[LV] Handle known-false mem runtime checks in GeneratedRTChecks.\n\nHandle mem checks known to be false in getMemRuntimeChecks the same way\nas SCEV checks known to be false in getSCEVChecks. This ensures such\nredundant check blocks are not added in the first place.\n",
+            "commit_timestamp": 1753540761.0
         }
     ]
 }

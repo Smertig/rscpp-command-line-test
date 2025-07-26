@@ -9419,6 +9419,21 @@
             "commit_ref": "95b1763938b8e9719b26cea65c4d0e6557b831a9",
             "commit_message": "Add a DCHECK that ArenaStringPtr::Set(char*, Arena*) is not called with\na null char* argument.\n\nThis is already undefined behavior since the argument is immediately\nused to construct a string_view, and passing a null argument to the\nsingle-arg string_view constructor is undefined behavior. Adding the\ncheck will prevent introduction of new bugs when using standard\nlibrary implementations that do not detect this case.\n\nPiperOrigin-RevId: 787178436\n",
             "commit_timestamp": 1753468028.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1753542369.804257,
+            "elapsed_time": 357.6679368019104,
+            "x64": true,
+            "actual_files_count": 1192,
+            "expected_files_count": 818,
+            "memory_traffic": 45465.891677856445,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "460c6dfa1c73d963acf2afdb9f814591e51fa16d",
+            "commit_message": "Remove special case for message-valued maps in CloneFromOther.\n\nThis code was needlessly invoking CopyFrom on message values when MergeFrom would suffice. CopyFrom clears the message before calling MergeFrom, but here we know the messages are default-valued.\n\nPiperOrigin-RevId: 787379430\n",
+            "commit_timestamp": 1753513555.0
         }
     ]
 }

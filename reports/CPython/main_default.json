@@ -25211,6 +25211,21 @@
             "commit_ref": "f7c380ef67d1d729a4c9168660a8249cfd984482",
             "commit_message": "GH-132732: Use pure op machinery to optimize `COMPARE_OP_INT/FLOAT/STR` (#137062)\n\nCo-authored-by: Ken Jin <kenjin4096@gmail.com>",
             "commit_timestamp": 1753495324.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1753542504.429755,
+            "elapsed_time": 1556.8005340099335,
+            "x64": true,
+            "actual_files_count": 1199,
+            "expected_files_count": null,
+            "memory_traffic": 53299.05857086182,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "d658b9053beaacaae80e318f59a5ddd672aa757a",
+            "commit_message": "gh-136912: fix handling of `OverflowError` in `hmac.digest` (#136917)\n\nThe OpenSSL and HACL* implementations of HMAC single-shot\ndigest computation reject keys whose length exceeds `INT_MAX`\nand `UINT32_MAX` respectively. The OpenSSL implementation\nalso rejects messages whose length exceed `INT_MAX`.\n\nUsing such keys in `hmac.digest` previously raised an `OverflowError`\nwhich was propagated to the caller. This commit mitigates this case by\nmaking `hmac.digest` fall back to HMAC's pure Python implementation\nwhich accepts arbitrary large keys or messages.\n\nThis change only affects the top-level entrypoint `hmac.digest`, leaving\n`_hashopenssl.hmac_digest` and `_hmac.compute_digest` untouched.",
+            "commit_timestamp": 1753518126.0
         }
     ]
 }
