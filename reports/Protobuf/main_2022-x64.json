@@ -9404,6 +9404,21 @@
             "commit_ref": "b25d39eee2b2a3425f0f108a4cb9f76315b5e54b",
             "commit_message": "Expose an iterator for `GeneratedMessage.ExtendableMessage.extensions`\n\nThis iterates over the wrapper class `GeneratedMessage.ExtendableMessage.FieldValue` to keep the mutable underlying structure of the extensions FieldSet hidden. The entries' values exposed here are a subset of the values exposed by `GeneratedMessage.getallFields`. This iterator has less overhead than calling allFields and does not create a new map object.\n\nPiperOrigin-RevId: 786884890\n",
             "commit_timestamp": 1753402016.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1753500809.494614,
+            "elapsed_time": 320.8389675617218,
+            "x64": true,
+            "actual_files_count": 1192,
+            "expected_files_count": 818,
+            "memory_traffic": 45482.15744781494,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "95b1763938b8e9719b26cea65c4d0e6557b831a9",
+            "commit_message": "Add a DCHECK that ArenaStringPtr::Set(char*, Arena*) is not called with\na null char* argument.\n\nThis is already undefined behavior since the argument is immediately\nused to construct a string_view, and passing a null argument to the\nsingle-arg string_view constructor is undefined behavior. Adding the\ncheck will prevent introduction of new bugs when using standard\nlibrary implementations that do not detect this case.\n\nPiperOrigin-RevId: 787178436\n",
+            "commit_timestamp": 1753468028.0
         }
     ]
 }
