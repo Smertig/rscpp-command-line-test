@@ -25241,6 +25241,21 @@
             "commit_ref": "9cbf46d9920c269fe736ed689236d00223545f73",
             "commit_message": "Link to plaintext for \"show source\" links (#137131)\n\n",
             "commit_timestamp": 1753580936.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1753628914.554037,
+            "elapsed_time": 1632.419765472412,
+            "x64": true,
+            "actual_files_count": 1199,
+            "expected_files_count": null,
+            "memory_traffic": 53157.750579833984,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "2bd4ff07001038fada17b6dbcb5ab5aabd27c26e",
+            "commit_message": "GH-128520: pathlib ABCs: tweak protocol for virtual path strings (#134104)\n\nAdjust `pathlib._os.vfspath()` so that it doesn't try `os.fsdecode()`. I\ndon't know that supporting `os.PathLike` arguments is a good idea, so\nit's best to leave it out for now.",
+            "commit_timestamp": 1753616835.0
         }
     ]
 }
