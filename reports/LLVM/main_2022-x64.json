@@ -30987,6 +30987,23 @@
             "commit_ref": "f3c750f14951266f89148fe1647d04a1f0fadf63",
             "commit_message": "[llvm] Proofread ProgrammersManual.rst (#150787)\n\nThis patch only adds double backticks around code-related terms to\nfacilitate the review process.",
             "commit_timestamp": 1753626379.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1753675027.443967,
+            "elapsed_time": 1692.8922371864319,
+            "x64": true,
+            "actual_files_count": 2978,
+            "expected_files_count": 1661,
+            "memory_traffic": 267317.84368133545,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "a100f6367205c6a909d68027af6a8675a8091bd9",
+            "commit_message": "[RISCV] Add FP cost model tests for no zfhmin/zfbfmin. NFC\n\nVector costs without zvfhmin/zvfbfmin and zfhmin/zfbfmin are somehow\ncheaper than with zvfhmin/zvfbfmin at smaller vector sizes, despite the\nfact that the former are scalarized to libcalls. This adds a RUN line to\nshowcase this, splitting out the bfloat tests into their own functions\nso we don't have duplicate lines for the regular float/double costs.\n",
+            "commit_timestamp": 1753673250.0
         }
     ]
 }
