@@ -25301,6 +25301,21 @@
             "commit_ref": "d7e12a362a2a4a4b7d52a343ab5940be2cbcc909",
             "commit_message": "Add a What's New entry for Emscripten (#137035)\n\nCo-authored-by: Adam Turner <9087854+AA-Turner@users.noreply.github.com>\nCo-authored-by: Hugo van Kemenade <1324225+hugovk@users.noreply.github.com>\nCo-authored-by: Stan Ulbrych <89152624+StanFromIreland@users.noreply.github.com>\n\n",
             "commit_timestamp": 1753749727.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1753801907.31522,
+            "elapsed_time": 1550.6937427520752,
+            "x64": true,
+            "actual_files_count": 1206,
+            "expected_files_count": null,
+            "memory_traffic": 53248.76776885986,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "11a8652e25341e696b06d8dc7a18e8c3ee8059e4",
+            "commit_message": "gh-137185: Fix `_Py_DumpStack()` async signal safety (gh-137187)\n\nCall backtrace() once when installing the signal handler to ensure that\nlibgcc is dynamically loaded outside the signal handler.\n\nThis fixes a \"signal-unsafe call inside of a signal\" TSan error from\ntest_faulthandler.test_enable_fd.\n",
+            "commit_timestamp": 1753799132.0
         }
     ]
 }
