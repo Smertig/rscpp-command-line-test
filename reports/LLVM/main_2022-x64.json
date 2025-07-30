@@ -31055,6 +31055,23 @@
             "commit_ref": "73245b06b3da19ef70e04cf0f0a0d0df1ba82a57",
             "commit_message": "[RISCV] Rewrite deinterleave load as vlse optimization as DAG combine (#150049)\n\nThis reworks an existing optimization on the fixed vector (shuffle\nbased) deinterleave lowering into a DAG combine. This has the effect of\nmaking it kick in much more widely - in particular on the deinterleave\nintrinsic (i.e. scalable) path, deinterleaveN (without load) lowering,\nbut also the intrinsic lowering paths.",
             "commit_timestamp": 1753800759.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1753847857.67774,
+            "elapsed_time": 1768.0637362003326,
+            "x64": true,
+            "actual_files_count": 2978,
+            "expected_files_count": 1661,
+            "memory_traffic": 267291.3767776489,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "b663e563cce2bcf6cf7e15799f0ab1cfc56a8361",
+            "commit_message": "[VPlan] Fix header masks in EVL tail folding (#150202)\n\nWith EVL tail folding, the EVL may not always be VF on the\nsecond-to-last iteration.\n\nRecipes that have been converted to VP intrinsics via optimizeMaskToEVL\naccount for this, but recipes that are left behind will still use the\nold header mask which may end up having a different vector length.\n\nThis is effectively the same as #95368, and fixes this by converting\nheader masks from icmp ule wide-canonical-iv, backedge-trip-count ->\nicmp ult step-vector, evl. Without it, recipes that fall through\noptimizeMaskToEVL may use the wrong vector length, e.g. in #150074 and\n#149981.\n\nWe really need to split off optimizeMaskToEVL into\nVPlanTransforms::optimize and move transformRecipestoEVLRecipes into\ntryToBuildVPlanWithVPRecipes, so we don't mix up what is needed for\ncorrectness and what is needed to optimize away the mask computations.\nWe should be able to still generate a correct albeit suboptimal VPlan\nwithout running optimizeMaskToEVL. I've added a TODO for this, which I\nthink we can do after #148274\n\nFixes #150197",
+            "commit_timestamp": 1753846264.0
         }
     ]
 }

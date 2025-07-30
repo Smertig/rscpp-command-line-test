@@ -25316,6 +25316,21 @@
             "commit_ref": "11a8652e25341e696b06d8dc7a18e8c3ee8059e4",
             "commit_message": "gh-137185: Fix `_Py_DumpStack()` async signal safety (gh-137187)\n\nCall backtrace() once when installing the signal handler to ensure that\nlibgcc is dynamically loaded outside the signal handler.\n\nThis fixes a \"signal-unsafe call inside of a signal\" TSan error from\ntest_faulthandler.test_enable_fd.\n",
             "commit_timestamp": 1753799132.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1753846675.286221,
+            "elapsed_time": 1553.8923089504242,
+            "x64": true,
+            "actual_files_count": 1206,
+            "expected_files_count": null,
+            "memory_traffic": 53260.92539978027,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "5236b0281b91a874b14cf15f3fdef9b7beffb22f",
+            "commit_message": "GH-116738: document thread-safety of bisect (GH-136555)\n\n",
+            "commit_timestamp": 1753843450.0
         }
     ]
 }
