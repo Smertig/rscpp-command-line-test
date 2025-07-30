@@ -9539,6 +9539,21 @@
             "commit_ref": "b488719a032ca579490fc3b877e47548042e5b04",
             "commit_message": "Internal change\n\nPiperOrigin-RevId: 788641904\n",
             "commit_timestamp": 1753830269.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1753888042.845594,
+            "elapsed_time": 345.8606824874878,
+            "x64": true,
+            "actual_files_count": 1192,
+            "expected_files_count": 818,
+            "memory_traffic": 45498.24021911621,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "97f8bb89c17996fd03f6689d461160e8f5c59ec0",
+            "commit_message": "hpb: lock down message direct access in terra cpp\n\nonly friends can access ._msg and .msg() now -- basically reserved for hpb::internal::PrivateAccess\n\nIf one needs access to the underlying proto2::cpp message, they must go through the interop apis: `hpb::interop::cpp::GetMessage`.\n\nPiperOrigin-RevId: 788890521\n",
+            "commit_timestamp": 1753885146.0
         }
     ]
 }
