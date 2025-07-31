@@ -9554,6 +9554,21 @@
             "commit_ref": "97f8bb89c17996fd03f6689d461160e8f5c59ec0",
             "commit_message": "hpb: lock down message direct access in terra cpp\n\nonly friends can access ._msg and .msg() now -- basically reserved for hpb::internal::PrivateAccess\n\nIf one needs access to the underlying proto2::cpp message, they must go through the interop apis: `hpb::interop::cpp::GetMessage`.\n\nPiperOrigin-RevId: 788890521\n",
             "commit_timestamp": 1753885146.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1753932910.868492,
+            "elapsed_time": 326.08854389190674,
+            "x64": true,
+            "actual_files_count": 1192,
+            "expected_files_count": 818,
+            "memory_traffic": 45486.957275390625,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "12c17274f8a6c3e21a088d7cc6432ea6b4b52ae5",
+            "commit_message": "This change updates the third_party/protobuf/port_def.inc to disable the\nprotobuf weak messages feature when compiling for the WASM/emscripten environments.\n\nPiperOrigin-RevId: 789013144\n",
+            "commit_timestamp": 1753906246.0
         }
     ]
 }
