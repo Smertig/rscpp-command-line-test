@@ -9569,6 +9569,21 @@
             "commit_ref": "12c17274f8a6c3e21a088d7cc6432ea6b4b52ae5",
             "commit_message": "This change updates the third_party/protobuf/port_def.inc to disable the\nprotobuf weak messages feature when compiling for the WASM/emscripten environments.\n\nPiperOrigin-RevId: 789013144\n",
             "commit_timestamp": 1753906246.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1753974433.516973,
+            "elapsed_time": 325.0228970050812,
+            "x64": true,
+            "actual_files_count": 1192,
+            "expected_files_count": 818,
+            "memory_traffic": 45520.07466125488,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "5acc4899205ca70eea650c9b40f0bbbeaa901596",
+            "commit_message": "Remove HasBits<> ctor with empty initializer list expectation.\n\nThis results in a nullptr dereference which is UB.\n\nPiperOrigin-RevId: 789334889\n",
+            "commit_timestamp": 1753974051.0
         }
     ]
 }
