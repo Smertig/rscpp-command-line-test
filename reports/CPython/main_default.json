@@ -25391,6 +25391,21 @@
             "commit_ref": "2a87af062b79d914ce0120f1f1763213c1ebe8c4",
             "commit_message": "gh-137282: Fix `TypeError` in tab completion and `dir()` of `concurrent.futures` (GH-137214)\n\nSigned-off-by: Henry Schreiner <henryschreineriii@gmail.com>",
             "commit_timestamp": 1753978647.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1754060972.966492,
+            "elapsed_time": 1400.0668075084686,
+            "x64": true,
+            "actual_files_count": 1206,
+            "expected_files_count": null,
+            "memory_traffic": 53324.02696228027,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "718e0c89ba0610bba048245028ac133bbf2d44c2",
+            "commit_message": "gh-137273: Fix debug assertion failure in locale.setlocale() on Windows (GH-137300)\n\nIt happened when there were at least 16 characters after dot in the\nlocale name.\n",
+            "commit_timestamp": 1754059433.0
         }
     ]
 }
