@@ -31106,6 +31106,23 @@
             "commit_ref": "e2bd92e56b98b15595f2d36a17aad2fe419bd39c",
             "commit_message": "[AMDGPU] Regenerate test checks (NFC)\n",
             "commit_timestamp": 1753974168.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1754020801.351031,
+            "elapsed_time": 1674.302853345871,
+            "x64": true,
+            "actual_files_count": 2982,
+            "expected_files_count": 1661,
+            "memory_traffic": 267079.51387786865,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "8dfc07cad297c6cc63ed836536ce7395efe1a571",
+            "commit_message": "[RISCV][LV] Merge check lines in bf16/f16 tests. NFC\n\nNow that we fall back to scalar epilogues in #150908 the\nnon-zvfhmin/zvfbfmin lines should be the same.\n",
+            "commit_timestamp": 1754018776.0
         }
     ]
 }

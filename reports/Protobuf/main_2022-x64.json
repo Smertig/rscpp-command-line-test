@@ -9584,6 +9584,21 @@
             "commit_ref": "5acc4899205ca70eea650c9b40f0bbbeaa901596",
             "commit_message": "Remove HasBits<> ctor with empty initializer list expectation.\n\nThis results in a nullptr dereference which is UB.\n\nPiperOrigin-RevId: 789334889\n",
             "commit_timestamp": 1753974051.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1754019760.10189,
+            "elapsed_time": 349.20918369293213,
+            "x64": true,
+            "actual_files_count": 1192,
+            "expected_files_count": 818,
+            "memory_traffic": 45582.760009765625,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "d9950d41dbe8b5e80e13ac4ed9fe597af06432fd",
+            "commit_message": "Internal change\n\nPiperOrigin-RevId: 789534316\n",
+            "commit_timestamp": 1754009718.0
         }
     ]
 }
