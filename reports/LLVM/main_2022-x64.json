@@ -31157,6 +31157,23 @@
             "commit_ref": "0988510ad436e3fc9e9526dda505c02a53d497a1",
             "commit_message": "[AMDGPU] gfx1250 v_perm_pk16_* instructions (#151773)\n\n",
             "commit_timestamp": 1754104355.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1754148109.933026,
+            "elapsed_time": 1649.2900195121765,
+            "x64": true,
+            "actual_files_count": 2982,
+            "expected_files_count": 1661,
+            "memory_traffic": 267178.3363876343,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "7e9927127f47c9576f273329a7f7dcc718ad622b",
+            "commit_message": "[CIR] Fix outdated bitfield iteration logic in accumulateFields (#151741)\n\nThis PR fixes the outdated logic for accumulating bitfields in\n`accumulateFields`. The old approach remained after the algorithm was\nupdated. A non-bitfield member would act as a barrier, causing\n`accumulateBitFields` to receive an incomplete range of fields. As a\nresult, it failed to accumulate them properly when clipping was\nnecessary.\n\nFor reference, in ClangIR we already handle this correctly:\n\n[https://github.com/llvm/clangir/blob/b647f4b97b1f936fd7700ec0fd0d896a12fe581b/clang/lib/CIR/CodeGen/CIRRecordLayoutBuilder.cpp#L711-L714](https://github.com/llvm/clangir/blob/b647f4b97b1f936fd7700ec0fd0d896a12fe581b/clang/lib/CIR/CodeGen/CIRRecordLayoutBuilder.cpp#L711-L714)",
+            "commit_timestamp": 1754145591.0
         }
     ]
 }
