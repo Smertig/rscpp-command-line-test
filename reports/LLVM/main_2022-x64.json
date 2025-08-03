@@ -31174,6 +31174,23 @@
             "commit_ref": "7e9927127f47c9576f273329a7f7dcc718ad622b",
             "commit_message": "[CIR] Fix outdated bitfield iteration logic in accumulateFields (#151741)\n\nThis PR fixes the outdated logic for accumulating bitfields in\n`accumulateFields`. The old approach remained after the algorithm was\nupdated. A non-bitfield member would act as a barrier, causing\n`accumulateBitFields` to receive an incomplete range of fields. As a\nresult, it failed to accumulate them properly when clipping was\nnecessary.\n\nFor reference, in ClangIR we already handle this correctly:\n\n[https://github.com/llvm/clangir/blob/b647f4b97b1f936fd7700ec0fd0d896a12fe581b/clang/lib/CIR/CodeGen/CIRRecordLayoutBuilder.cpp#L711-L714](https://github.com/llvm/clangir/blob/b647f4b97b1f936fd7700ec0fd0d896a12fe581b/clang/lib/CIR/CodeGen/CIRRecordLayoutBuilder.cpp#L711-L714)",
             "commit_timestamp": 1754145591.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1754193476.622978,
+            "elapsed_time": 1715.2224471569061,
+            "x64": true,
+            "actual_files_count": 2982,
+            "expected_files_count": 1661,
+            "memory_traffic": 266985.3106536865,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "cd19fbad093f2834bfafa6ee1535a48c8d453077",
+            "commit_message": "[libc] Enable float math functions on the GPU (#151841)\n\nThis patch adds the `tanpif` math functions to the GPU build. It also\nadds the `cospif` and `sinpif` math functions to the `math.h` header.",
+            "commit_timestamp": 1754190784.0
         }
     ]
 }
