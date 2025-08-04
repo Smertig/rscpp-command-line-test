@@ -31208,6 +31208,23 @@
             "commit_ref": "8b7f81f2de1faceaa29b2c148d99b663d23f7110",
             "commit_message": "[NFC] Fix `assignment` typo. (#151864)\n\n",
             "commit_timestamp": 1754231520.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1754279955.837483,
+            "elapsed_time": 1654.0283324718475,
+            "x64": true,
+            "actual_files_count": 2982,
+            "expected_files_count": 1661,
+            "memory_traffic": 266936.0742111206,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "781e5f0b5dc78305e5726d2118c1304f0229f36b",
+            "commit_message": "PowerPC: Avoid MCSymbol::isUnset\n\n\"unset\" is not a meaningful separae state and it will be merged into\n\"undefined\".\n\nhttps://reviews.llvm.org/D72570 ported a GAS hack that moves the label\nwhen a prefixed instruction on the same source line needs automatic\nalignment. However, we can used isDefined instead of isUnset.\n",
+            "commit_timestamp": 1754277451.0
         }
     ]
 }
