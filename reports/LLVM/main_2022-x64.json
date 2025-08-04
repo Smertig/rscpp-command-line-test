@@ -31225,6 +31225,23 @@
             "commit_ref": "781e5f0b5dc78305e5726d2118c1304f0229f36b",
             "commit_message": "PowerPC: Avoid MCSymbol::isUnset\n\n\"unset\" is not a meaningful separae state and it will be merged into\n\"undefined\".\n\nhttps://reviews.llvm.org/D72570 ported a GAS hack that moves the label\nwhen a prefixed instruction on the same source line needs automatic\nalignment. However, we can used isDefined instead of isUnset.\n",
             "commit_timestamp": 1754277451.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1754320951.676491,
+            "elapsed_time": 1642.800020456314,
+            "x64": true,
+            "actual_files_count": 2983,
+            "expected_files_count": 1661,
+            "memory_traffic": 266853.97663116455,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "105963ad5e6b05214318874aef93d02e10ce6c43",
+            "commit_message": "[clang][bytecode] Use SmallVector for Function::Code (#151821)\n\nThis way we can use resize_for_overwrite, which is slightly more\nefficient:\n\nhttps://llvm-compile-time-tracker.com/compare.php?from=7bdab76350970a3ac471da6a30035dd5b7ef14f3&to=b55bd2c74f230e2150e54b0523db6a8426eab54d&stat=instructions:u",
+            "commit_timestamp": 1754319838.0
         }
     ]
 }
