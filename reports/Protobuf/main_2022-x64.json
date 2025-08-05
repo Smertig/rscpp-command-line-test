@@ -9719,6 +9719,21 @@
             "commit_ref": "b032fef2bde3446234ff5cee9e3237c4ff6e0775",
             "commit_message": "Print message name on CreateTcParseTable consistency CHECK.\n\nPiperOrigin-RevId: 790896889\n",
             "commit_timestamp": 1754343559.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1754406565.877808,
+            "elapsed_time": 351.00331139564514,
+            "x64": true,
+            "actual_files_count": 1192,
+            "expected_files_count": 818,
+            "memory_traffic": 45603.5828704834,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "a6bdd0a7b23d5d6e141f3592c13062e3785fc2fa",
+            "commit_message": "Add conformance test cases for malformed nanos fields on Durations and Timestamps.\n\nDurations have a validity restriction on `nanos` that:\n- The range allowed is (-1s..1s) exclusive\n- The sign must match the sign of `secs` (for 0 secs both positive and negative values of nanos are allowed)\n\nTimestamps have a validity restriction on `nanos` that:\n- The range allowed is [0..1s)\n\nThese cases have always been commented as only being valid under these constraints, and other validity constraints are already checked to be handled as ProtoJSON serialize-failures, but this particular condition was not covered by the conformance suite.\n\nPiperOrigin-RevId: 791194939\n",
+            "commit_timestamp": 1754402260.0
         }
     ]
 }
