@@ -31276,6 +31276,23 @@
             "commit_ref": "f6c2a357e71ac2a4ce4137a0cf24b169aff9b42b",
             "commit_message": "[AArch64] Add Apple assembly syntax for recent instructions (#152111)\n\nSome vector instructions override AsmString in the tablegen description,\nbut did not include the Apple syntax variant, so were printed without\noperands.\n\nFixes #151330",
             "commit_timestamp": 1754406265.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1754452334.46539,
+            "elapsed_time": 1646.162204027176,
+            "x64": true,
+            "actual_files_count": 2983,
+            "expected_files_count": 1661,
+            "memory_traffic": 266905.640045166,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "e797c716091b41af7901aa88c4739bed97661436",
+            "commit_message": "Reland \"[libc] make integration test malloc work properly when threaded\" (#152236)\n\nReverts llvm/llvm-project#152096",
+            "commit_timestamp": 1754449939.0
         }
     ]
 }

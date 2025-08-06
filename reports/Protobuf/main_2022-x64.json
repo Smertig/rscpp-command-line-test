@@ -9734,6 +9734,21 @@
             "commit_ref": "a6bdd0a7b23d5d6e141f3592c13062e3785fc2fa",
             "commit_message": "Add conformance test cases for malformed nanos fields on Durations and Timestamps.\n\nDurations have a validity restriction on `nanos` that:\n- The range allowed is (-1s..1s) exclusive\n- The sign must match the sign of `secs` (for 0 secs both positive and negative values of nanos are allowed)\n\nTimestamps have a validity restriction on `nanos` that:\n- The range allowed is [0..1s)\n\nThese cases have always been commented as only being valid under these constraints, and other validity constraints are already checked to be handled as ProtoJSON serialize-failures, but this particular condition was not covered by the conformance suite.\n\nPiperOrigin-RevId: 791194939\n",
             "commit_timestamp": 1754402260.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1754451331.471021,
+            "elapsed_time": 320.33488392829895,
+            "x64": true,
+            "actual_files_count": 1192,
+            "expected_files_count": 818,
+            "memory_traffic": 45686.41397857666,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "c7030f4f24a9d58f9da8ab772c6b41d8e8df865e",
+            "commit_message": "Preserve features in type resolver\n\nWhile we previously preserved unresolved features set directly on message and enum types and the edition specified in the file, and features set at the file or nesting scopes were discarded.  This throws away important semantic information, resulting in incorrect Type and Enum objects under editions.\n\nThis change solves the problem by partially resolving features down to the scope returned.  Users will still need to figure out the defaults for each edition on their own, but these can now be converted back into descriptors and built correctly.\n\nPiperOrigin-RevId: 791393429\n",
+            "commit_timestamp": 1754433173.0
         }
     ]
 }
