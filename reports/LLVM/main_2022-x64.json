@@ -31327,6 +31327,23 @@
             "commit_ref": "44af26ea2e0b0fedb74276f9678eba4df5f83aab",
             "commit_message": "[LV] Fix EVL test after merge. NFC\n\nTest was modified in both 25d1285eecbab731eaf418c8aab44e4eb5f9e538 and\ndf8da2ff8370fda479b5c118704af4f50e0d3536\n",
             "commit_timestamp": 1754536363.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1754580258.194803,
+            "elapsed_time": 1622.2101566791534,
+            "x64": true,
+            "actual_files_count": 2983,
+            "expected_files_count": 1661,
+            "memory_traffic": 267628.901763916,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "3b5cc2dc6374a5785741aedb28ad80b7e941b70c",
+            "commit_message": "[clang][bytecode][NFC] Refactor DynamicAllocator a bit (#152510)\n\nUse empty()-style functions instead of exposing the size if we don't\nneed it.",
+            "commit_timestamp": 1754579033.0
         }
     ]
 }
