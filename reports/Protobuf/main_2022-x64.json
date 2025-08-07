@@ -9764,6 +9764,21 @@
             "commit_ref": "0676d16362c3fa482c821d9c0cc95fe9add3b499",
             "commit_message": "generated_message_tctable_decl: improve portability: avoid ambiguous bool type, use uint8_t (#21815)\n\nFixes the failure on 32-bit powerpc:\n```\nIn file included from /opt/local/var/macports/build/_opt_local_ppcports_devel_protobuf/protobuf/work/protobuf-30.2/upb/message/internal/accessors.h:22,\n                 from /opt/local/var/macports/build/_opt_local_ppcports_devel_protobuf/protobuf/work/protobuf-30.2/upb/message/accessors.h:16,\n                 from /opt/local/var/macports/build/_opt_local_ppcports_devel_protobuf/protobuf/work/protobuf-30.2/upb/generated_code_support.h:13,\n                 from /opt/local/var/macports/build/_opt_local_ppcports_devel_protobuf/protobuf/work/protobuf-30.2/upb/reflection/cmake/google/protobuf/descriptor.upb.h:12,\n                 from /opt/local/var/macports/build/_opt_local_ppcports_devel_protobuf/protobuf/work/protobuf-30.2/upb/reflection/descriptor_bootstrap.h:14,\n                 from /opt/local/var/macports/build/_opt_local_ppcports_devel_protobuf/protobuf/work/protobuf-30.2/upb/reflection/common.h:15,\n                 from /opt/local/var/macports/build/_opt_local_ppcports_devel_protobuf/protobuf/work/protobuf-30.2/upb/reflection/enum_def.h:14,\n                 from /opt/local/var/macports/build/_opt_local_ppcports_devel_protobuf/protobuf/work/protobuf-30.2/upb/reflection/message_reserved_range.c:8:\n/opt/local/var/macports/build/_opt_local_ppcports_devel_protobuf/protobuf/work/protobuf-30.2/upb/message/internal/message.h: In function 'upb_TaggedAuxPtr_Extension':\n/opt/local/var/macports/build/_opt_local_ppcports_devel_protobuf/protobuf/work/protobuf-30.2/upb/message/internal/message.h:61:10: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]\n   61 |   return (upb_Extension*)(ptr.ptr & ~1ULL);\n      |          ^\nIn file included from /opt/local/var/macports/build/_opt_local_ppcports_devel_protobuf/protobuf/work/protobuf-30.2/src/google/protobuf/field_mask.pb.h:23,\n                 from /opt/local/var/macports/build/_opt_local_ppcports_devel_protobuf/protobuf/work/protobuf-30.2/src/google/protobuf/[field_mask.pb.cc:6](http://field_mask.pb.cc:6/):\n/opt/local/var/macports/build/_opt_local_ppcports_devel_protobuf/protobuf/work/protobuf-30.2/src/google/protobuf/generated_message_tctable_decl.h:260:34: error: static assertion failed\n  260 | static_assert(sizeof(MapAuxInfo) <= 8, \"\");\n      |               ~~~~~~~~~~~~~~~~~~~^~~~\n/opt/local/var/macports/build/_opt_local_ppcports_devel_protobuf/protobuf/work/protobuf-30.2/src/google/protobuf/generated_message_tctable_decl.h:260:34: note: the comparison reduces to '(12 <= 8)'\n```\n\nCloses #21815\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/21815 from barracuda156:generated_message_tctable_decl 320ed68af8915fe0463bd7ddcbe60f658b485c44\nPiperOrigin-RevId: 791676537\n",
             "commit_timestamp": 1754490360.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1754537732.659731,
+            "elapsed_time": 317.3834054470062,
+            "x64": true,
+            "actual_files_count": 1192,
+            "expected_files_count": 818,
+            "memory_traffic": 45569.38831329346,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "db04666145bf704d3b4aeadce2f7d80b228eb4f1",
+            "commit_message": "Auto-generate files after cl/791897325\n",
+            "commit_timestamp": 1754525068.0
         }
     ]
 }
