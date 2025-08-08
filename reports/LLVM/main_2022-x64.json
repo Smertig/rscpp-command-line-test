@@ -31344,6 +31344,23 @@
             "commit_ref": "3b5cc2dc6374a5785741aedb28ad80b7e941b70c",
             "commit_message": "[clang][bytecode][NFC] Refactor DynamicAllocator a bit (#152510)\n\nUse empty()-style functions instead of exposing the size if we don't\nneed it.",
             "commit_timestamp": 1754579033.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1754625130.759745,
+            "elapsed_time": 1693.3116166591644,
+            "x64": true,
+            "actual_files_count": 2983,
+            "expected_files_count": 1661,
+            "memory_traffic": 266975.38511657715,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "ffdaf85a95026945c654f981b09267ce9f81ae80",
+            "commit_message": "[lld][ELF] filter out section symbols when use BP reorder (#151685)\n\nWhen using Temporal Profiling with the BP algorithm, we encounter an\nissue with the internal function reorder. In cases where the symbol\ntable contains entries like:\n```\nSymbol table '.symtab' contains 45 entries:\n   Num:    Value          Size Type    Bind   Vis       Ndx Name\n    10: 0000000000000000     0 SECTION LOCAL  DEFAULT    18 .text.L1\n    11: 0000000000000000    24 FUNC    LOCAL  DEFAULT    18 L1\n````\nThe zero-sized section symbol .text.L1 gets stored in the secToSym map\nfirst. However, when the function lookup searches for L1 (as seen in\n[BPSectionOrdererBase.inc:191](https://github.com/llvm/llvm-project/blob/main/lld/include/lld/Common/BPSectionOrdererBase.inc#L191)),\nit fails to find the correct entry in rootSymbolToSectionIdxs because\nthe section symbol has already claimed that slot.\nThis patch fixes the issue by skipping zero-sized symbols during the\naddSections process, ensuring that function symbols are properly\nregistered for lookup.",
+            "commit_timestamp": 1754623536.0
         }
     ]
 }
