@@ -31378,6 +31378,23 @@
             "commit_ref": "478b415181ee1637e95e3e7969f21d20e15e4c64",
             "commit_message": "[AArch64] Enable svcompact intrinsic in streaming mode with SME2.2 (#151703)\n\nWhen the target enables +sme2p2, the svcompact intrinsic is now\navailable in streaming SVE mode, through updating the guards in\narm_sve.td. Included Sema test acle_sve_compact.cpp.",
             "commit_timestamp": 1754665494.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1754711206.408702,
+            "elapsed_time": 1661.2504584789276,
+            "x64": true,
+            "actual_files_count": 2983,
+            "expected_files_count": 1661,
+            "memory_traffic": 267126.25469207764,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "6f53f1c8d2bdd13e30da7d1b85ed6a3ae4c4a856",
+            "commit_message": "[ELF] -r: Synthesize R_RISCV_ALIGN at input section start\n\nWithout linker relaxation enabled for a particular relocatable file or\nsection (e.g., using .option norelax), the assembler will not generate\nR_RISCV_ALIGN relocations for alignment directives. This becomes\nproblematic in a two-stage linking process:\n\n```\nld -r a.o b.o -o ab.o\n// b.o is norelax. Its alignment information is lost in ab.o.\nld ab.o -o ab\n```\n\nWhen ab.o is linked into an executable, the preceding relaxed section\n(a.o's content) might shrink. Since there's no R_RISCV_ALIGN relocation\nin b.o for the linker to act upon, the `.word 0x3a393837` data in b.o\nmay end up unaligned in the final executable.\n\nTo address the issue, this patch inserts NOP bytes and synthesizes an\nR_RISCV_ALIGN relocation at the beginning of a text section when the\nalignment >= 4.\n\nFor simplicity, when RVC is disabled, we synthesize an ALIGN relocation\n(addend: 2) for a 4-byte aligned section, allowing the linker to trim\nthe excess 2 bytes.\n\nSee also https://sourceware.org/bugzilla/show_bug.cgi?id=33236\n\nPull Request: https://github.com/llvm/llvm-project/pull/151639\n",
+            "commit_timestamp": 1754703640.0
         }
     ]
 }
