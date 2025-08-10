@@ -25661,6 +25661,21 @@
             "commit_ref": "046a4e39b3f8ac5cb13ea292418c9c3767b0074d",
             "commit_message": "gh-136571: Convert more code in datetime to Argument Clinic (GH-136573)\n\nThis adds signatures for some classes and methods.\n\ndate.fromisocalendar() can now raise OverflowError for arguments that\ndon't fit in the C int.\n",
             "commit_timestamp": 1754763949.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1754838536.928373,
+            "elapsed_time": 1567.1129863262177,
+            "x64": true,
+            "actual_files_count": 1199,
+            "expected_files_count": null,
+            "memory_traffic": 53234.68503570557,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "55788a90967e82a9ea05b45c06a293b46ec53d72",
+            "commit_message": "gh-137583: Only lock the SSL context, not the SSL socket (GH-137588)\n\nFixes a deadlock in 3.13.6.",
+            "commit_timestamp": 1754837231.0
         }
     ]
 }
