@@ -31412,6 +31412,23 @@
             "commit_ref": "7fb8630e71c4b5028f9ad7d413144f48b13eb857",
             "commit_message": "[RISCV] Add another packh+packw pattern. (#152744)\n\nIf the upper 32 bits are demanded, we might have a sext_inreg in\nthe pattern on the byte shifted by 24. We can also match this case\nsince packw sign extends from bit 31.",
             "commit_timestamp": 1754749424.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1754797931.007371,
+            "elapsed_time": 1661.7449278831482,
+            "x64": true,
+            "actual_files_count": 2984,
+            "expected_files_count": 1661,
+            "memory_traffic": 267644.74659729004,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "72a1fd1b43ac4d267d986c87c4e38f91b5bd872d",
+            "commit_message": "[AVR][NFC] Add a test for fp16 support (#152708)\n\n",
+            "commit_timestamp": 1754792507.0
         }
     ]
 }

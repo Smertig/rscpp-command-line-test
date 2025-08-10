@@ -25646,6 +25646,21 @@
             "commit_ref": "af15e1d13ea26575afbb94b814e541586547a706",
             "commit_message": "GH-132532: Add new DSL macros to better declare semantics of exits at ends of instructions/uops. (GH-137098)\n\n",
             "commit_timestamp": 1754750488.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1754797262.179846,
+            "elapsed_time": 1594.786024570465,
+            "x64": true,
+            "actual_files_count": 1199,
+            "expected_files_count": null,
+            "memory_traffic": 53317.837142944336,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "046a4e39b3f8ac5cb13ea292418c9c3767b0074d",
+            "commit_message": "gh-136571: Convert more code in datetime to Argument Clinic (GH-136573)\n\nThis adds signatures for some classes and methods.\n\ndate.fromisocalendar() can now raise OverflowError for arguments that\ndon't fit in the C int.\n",
+            "commit_timestamp": 1754763949.0
         }
     ]
 }
