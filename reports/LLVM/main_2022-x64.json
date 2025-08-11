@@ -31463,6 +31463,23 @@
             "commit_ref": "6db3776f9bdb38046f9d04c86388d815bb732094",
             "commit_message": "[LV][EVL] Simplify EVL recipe transformation by using a single EVL mask. nfc (#152479)\n\nThe EVL mask is always defined as `icmp ult (step-vector, EVL)`, so we\nonly need to generate it once per plan in the header. Then, we replace\nall uses of the header mask with the EVL mask, and recursively optimize\nthe users of EVL mask into EVL recipes. This way, the transformation to\nEVL recipes can be done with just a single loop.",
             "commit_timestamp": 1754881741.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1754925941.613331,
+            "elapsed_time": 1739.7987279891968,
+            "x64": true,
+            "actual_files_count": 2984,
+            "expected_files_count": 1661,
+            "memory_traffic": 267641.3180770874,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "26a0962ce297da443ed556fdd547a11fc6a55f0a",
+            "commit_message": "[Headers][X86] Allow AVX512 _mm512_set* intrinsics to be used in constexpr (#152910)\n\nThis PR adds constexpr support for the following AVX512F/BW/FP16 set\nintrinsics:\n\n  - _mm512_set4_pd\n  - _mm512_set4_ps\n  - _mm512_set4_epi32\n  - _mm512_set4_epi64\n\n  - _mm512_set_pd\n  - _mm512_set_ps\n  - _mm512_set_epi8\n  - _mm512_set_epi16\n  - _mm512_set_epi32\n  - _mm512_set_epi64\n\n  - _mm512_setr_pd\n  - _mm512_setr_ps\n  - _mm512_setr_epi32\n  - _mm512_setr_epi64\n\n  - _mm512_set1_ph\n  - _mm512_set_ph\n  - _mm512_setr_ph\n\n  - _mm_setzero_ph\n  - _mm256_setzero_ph\n  - _mm512_setzero_ph\n\nCloses https://github.com/llvm/llvm-project/issues/152288.\nPart of https://github.com/llvm/llvm-project/issues/30794.",
+            "commit_timestamp": 1754923670.0
         }
     ]
 }
