@@ -31497,6 +31497,23 @@
             "commit_ref": "3a682864d90e701f7a999d7e65ecb009786e87f3",
             "commit_message": "Revert \"[LLDB][NativePDB] Find functions by basename\" (#153131)\n\nReverts llvm/llvm-project#152295",
             "commit_timestamp": 1754969000.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1755012165.387215,
+            "elapsed_time": 1693.117194890976,
+            "x64": true,
+            "actual_files_count": 2986,
+            "expected_files_count": 1661,
+            "memory_traffic": 267491.9829711914,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "d455d45654e8c0ffc53e3965316e411db595c4a9",
+            "commit_message": "[RISCV][VLOPT] Added support for several vector crypto instructions (#153071)\n\nThis PR adds support for the following instructions to the RISC-V\nVLOptimizer: vandn.vx, vandn.vv, vbrev.v, vclz.v, vcpop.v, vctz.v,\nvror.vi, vror.vx, vror.vv, vrol.vx, vrol.vv.\n",
+            "commit_timestamp": 1755011103.0
         }
     ]
 }
