@@ -31548,6 +31548,23 @@
             "commit_ref": "768eae72cde5f39f2302e197c079a7ecc55941df",
             "commit_message": "[Clang] Honor -flax-vector-conversions=none on some tests (#153433)\n\nAs in title. This is done as a step towards enabling the\n`-flax-vector-conversions=none` globally as a default",
             "commit_timestamp": 1755183772.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1755229646.789125,
+            "elapsed_time": 1717.7524690628052,
+            "x64": true,
+            "actual_files_count": 2986,
+            "expected_files_count": 1661,
+            "memory_traffic": 268979.8080749512,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "93d24b6b7b148c47a2fa228a4ef31524fa1d9f3f",
+            "commit_message": "[NFC][PGO] Drop unused `Module` parameter in `setProfMetadata` (#153733)\n\n",
+            "commit_timestamp": 1755226539.0
         }
     ]
 }

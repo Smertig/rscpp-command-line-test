@@ -9989,6 +9989,21 @@
             "commit_ref": "740c19a76e3955cc5ef9050de0f6d9cbeb120f66",
             "commit_message": "Fix a typo in ruby ffi backend (#22740)\n\nFix a typo that would cause crash when converting hash-like object to hash.\n\nCloses #22740\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/22740 from ntkme:fix-ruby-ffi-typo 2a368063b3b2e8f54b88ce8cb8fa72b388c9ee27\nPiperOrigin-RevId: 795016407\n",
             "commit_timestamp": 1755179585.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1755228656.990837,
+            "elapsed_time": 318.95012068748474,
+            "x64": true,
+            "actual_files_count": 1192,
+            "expected_files_count": 818,
+            "memory_traffic": 45533.60468292236,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "02f799632ea7b5c5880e5937dd7943d4731610da",
+            "commit_message": "Break dependency on python/dist from python/BUILD.bazel (#22633)\n\n#test-continuous\n\nThis package referenced things in python/dist, which is not loadable\nfrom other projects since pip deps are marked as `dev_dependency=True`.\nThis resulted in this error downstream:\n\n```\nERROR: Evaluation of query \"deps(//...)\" failed: preloading transitive closure failed: error loading package '@@protobuf+//python/dist': Unable to find package for @@[unknown repo 'protobuf_pip_deps' requested from @@protobuf+]//:requirements.bzl: The repository '@@[unknown repo 'protobuf_pip_deps' requested from @@protobuf+]' could not be resolved: No repository visible as '@protobuf_pip_deps' from repository '@@protobuf+'.\n```\n\nSince this was only used to determine if the target is macOS, we can use\nthe platforms definition directly instead.\n\nFixes https://github.com/protocolbuffers/protobuf/issues/22386\n\nCloses #22633\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/22633 from keith:ks/break-dependency-on-python-dist-from-python-build.bazel d06d17ccbe8af7e824e14b8b7bf74bac78f6462c\nPiperOrigin-RevId: 795236704\n",
+            "commit_timestamp": 1755213037.0
         }
     ]
 }
