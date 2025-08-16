@@ -31599,6 +31599,23 @@
             "commit_ref": "a44bd1568c24e998472239e5ead6784bffdd3956",
             "commit_message": "[clang-repl][AIX][zOS] Disable clang/test/Interpreter tests on AIX and zOS (NFC) (#153587)\n\n",
             "commit_timestamp": 1755314298.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1755357754.118982,
+            "elapsed_time": 1741.9161694049835,
+            "x64": true,
+            "actual_files_count": 2986,
+            "expected_files_count": 1661,
+            "memory_traffic": 273182.8634262085,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "0b1b567d9f84e67124c58d69b5aa375357d68c9e",
+            "commit_message": "RuntimeLibcalls: Temporarily disable benchmark depending on llvm-nm\n\nBreaks some builds\n",
+            "commit_timestamp": 1755354578.0
         }
     ]
 }

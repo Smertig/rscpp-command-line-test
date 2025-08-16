@@ -25826,6 +25826,21 @@
             "commit_ref": "ec4021c6d73407fd4d22ee1a4f49d68835ef0770",
             "commit_message": "gh-120492: Sync importlib_metadata 8.2.0 (#124033)\n\n* Sync with importlib_metadata 8.2.0\n\nRemoves deprecated behaviors, including support for `PackageMetadata.__getitem__` returning None for missing keys and Distribution subclasses not implementing abstract methods.\nPrioritizes valid dists to invalid dists when retrieving by name (python/cpython/#120492). Adds SimplePath to `importlib.metadata.__all__`.\n\n* Add blurb",
             "commit_timestamp": 1755292763.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1755356894.500796,
+            "elapsed_time": 1571.994019985199,
+            "x64": true,
+            "actual_files_count": 1199,
+            "expected_files_count": null,
+            "memory_traffic": 53326.176597595215,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "3663b2ad54c9e15775a605facf69da8f5ee8d335",
+            "commit_message": "gh-137846: Add missing 'be' to profile doc. (#137856)\n\nInsert 'be' into 'will interpreted'.",
+            "commit_timestamp": 1755354587.0
         }
     ]
 }
