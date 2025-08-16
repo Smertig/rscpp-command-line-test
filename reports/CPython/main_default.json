@@ -25811,6 +25811,21 @@
             "commit_ref": "dc53a3e52a54beef450e4bf451e09b65e0df8043",
             "commit_message": "GH-123299: Copyedit 3.14 What's New: Removed (#137794)\n\nCo-authored-by: Hugo van Kemenade <1324225+hugovk@users.noreply.github.com>\n",
             "commit_timestamp": 1755269773.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1755314929.327417,
+            "elapsed_time": 1494.328902721405,
+            "x64": true,
+            "actual_files_count": 1199,
+            "expected_files_count": null,
+            "memory_traffic": 53300.3125,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "ec4021c6d73407fd4d22ee1a4f49d68835ef0770",
+            "commit_message": "gh-120492: Sync importlib_metadata 8.2.0 (#124033)\n\n* Sync with importlib_metadata 8.2.0\n\nRemoves deprecated behaviors, including support for `PackageMetadata.__getitem__` returning None for missing keys and Distribution subclasses not implementing abstract methods.\nPrioritizes valid dists to invalid dists when retrieving by name (python/cpython/#120492). Adds SimplePath to `importlib.metadata.__all__`.\n\n* Add blurb",
+            "commit_timestamp": 1755292763.0
         }
     ]
 }

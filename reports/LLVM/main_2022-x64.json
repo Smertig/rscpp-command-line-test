@@ -31582,6 +31582,23 @@
             "commit_ref": "606937474e552f0a5d620f67f19947c96cfa9d2a",
             "commit_message": "[SDAG] Remove IndexType manipulation in getUniformBase and callers (#151578)\n\nAll paths set it to the same value, just propagate that value to the\nconsumer.",
             "commit_timestamp": 1755270047.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1755315745.540119,
+            "elapsed_time": 1720.7568957805634,
+            "x64": true,
+            "actual_files_count": 2986,
+            "expected_files_count": 1661,
+            "memory_traffic": 273171.72777557373,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "a44bd1568c24e998472239e5ead6784bffdd3956",
+            "commit_message": "[clang-repl][AIX][zOS] Disable clang/test/Interpreter tests on AIX and zOS (NFC) (#153587)\n\n",
+            "commit_timestamp": 1755314298.0
         }
     ]
 }
