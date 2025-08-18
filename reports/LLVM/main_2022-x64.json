@@ -31650,6 +31650,23 @@
             "commit_ref": "65ffa53cb70909be4dbedacd9de9de0725161592",
             "commit_message": "[Clang] unrecognized html tag causing undesirable comment lexing (#152944)\n\nSimple fix for this particular html tag. A more complete solution should\nbe implemented.\n\n1. Add all html tags to table so they are recognized. Some input on what\nis desirable/safe would be appreciated\n2. Change the lex strategy to deal with this in a different manner\n\nFixes #32680\n\n---------\n\nCo-authored-by: Brock Denson <brock.denson@virscient.com>",
             "commit_timestamp": 1755439187.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1755489146.446796,
+            "elapsed_time": 1741.0111060142517,
+            "x64": true,
+            "actual_files_count": 2986,
+            "expected_files_count": 1661,
+            "memory_traffic": 273252.7907028198,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "9ddc043538329a0a1386d12e191de7b4c43051e9",
+            "commit_message": "[TableGen] Use structured binding in one more place (NFC)\n",
+            "commit_timestamp": 1755486944.0
         }
     ]
 }
