@@ -25886,6 +25886,21 @@
             "commit_ref": "bc2872445b2aee4bb4e001d4171489d7123b1daf",
             "commit_message": "gh-127146: Emscripten: Add test_sample_profiler skips where needed (#137815)\n\nEmscripten doesn't have the `socket.SO_REUSEADDR` constant; skip tests that\nrequire that symbol to exist.",
             "commit_timestamp": 1755475035.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1755529758.936753,
+            "elapsed_time": 1523.2930476665497,
+            "x64": true,
+            "actual_files_count": 1199,
+            "expected_files_count": null,
+            "memory_traffic": 53436.580741882324,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "138ed6db9f89171983dc32af4e7ad2e73d46a940",
+            "commit_message": "gh-44538: Mention nested classes/functions in doctest docs (GH-137870)\n\n",
+            "commit_timestamp": 1755529103.0
         }
     ]
 }
