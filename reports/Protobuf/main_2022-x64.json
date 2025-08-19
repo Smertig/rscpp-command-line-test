@@ -10124,6 +10124,21 @@
             "commit_ref": "aa1f665cdc44878724aa783ad64f371e227fa619",
             "commit_message": "Convert list to string for COMMENT argument (#22316)\n\nThe issue occurs because CMake expects a single string for the COMMENT argument, but when a list is passed, it tries to expand the list into multiple arguments. To resolve this convert lists to strings using string(REPLACE ...) to join list items into a single string.\n\n```\nCMake Warning (dev) at <path>/protobuf-generate.cmake:150 (add_custom_command):\n  COMMENT requires exactly one argument, but multiple values or COMMENT\n  keywords have been given.\n```\n\nCloses #22316\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/22316 from stima:cmake_generate_comment 09e9eda1066934bd3baab123715d483f382f200b\nPiperOrigin-RevId: 796637787\n",
             "commit_timestamp": 1755562733.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1755616065.228192,
+            "elapsed_time": 335.95223569869995,
+            "x64": true,
+            "actual_files_count": 1192,
+            "expected_files_count": 818,
+            "memory_traffic": 45694.16156768799,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "ce5eea2a905f3c4349f2edd5bcc1890ebdfd0da5",
+            "commit_message": "Add @com.google.protobuf.Generated annotation to generated Kotlin code\n\nPiperOrigin-RevId: 796855901\n",
+            "commit_timestamp": 1755612404.0
         }
     ]
 }

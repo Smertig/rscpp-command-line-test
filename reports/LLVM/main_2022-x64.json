@@ -31701,6 +31701,23 @@
             "commit_ref": "c8c2218c001e488dffee7ac840762c0cefaac742",
             "commit_message": "[TableGen][DecoderEmitter] Synthesize decoder table name in emitTable (#154255)\n\nPreviously, HW mode name was appended to decoder namespace name when\nenumerating encodings, and then emitTable appended the bit width to it\nto form the final table name. Let's do this all in one place.\nA nice side effect is that this allows us to avoid having to deal with\nstd::string.\n\nThe changes in the tests are caused by the different order of tables.",
             "commit_timestamp": 1755573594.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1755616965.960269,
+            "elapsed_time": 1698.3542580604553,
+            "x64": true,
+            "actual_files_count": 2990,
+            "expected_files_count": 1661,
+            "memory_traffic": 273608.1116409302,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "d0dc3799b70bb6b51ed2e90b93f8ea5d4f30cef1",
+            "commit_message": "[OpenACC][NFCI] Add AST Infrastructure for reduction recipes\n\nThis patch does the bare minimum to start setting up the reduction\nrecipe support, including adding a type to the AST to store it. No real\nadditional work is done, and a bunch of static_asserts are left around\nto allow us to do this properly.\n",
+            "commit_timestamp": 1755615491.0
         }
     ]
 }
