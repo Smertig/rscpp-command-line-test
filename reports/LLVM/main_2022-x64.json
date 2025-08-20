@@ -31718,6 +31718,23 @@
             "commit_ref": "d0dc3799b70bb6b51ed2e90b93f8ea5d4f30cef1",
             "commit_message": "[OpenACC][NFCI] Add AST Infrastructure for reduction recipes\n\nThis patch does the bare minimum to start setting up the reduction\nrecipe support, including adding a type to the AST to store it. No real\nadditional work is done, and a bunch of static_asserts are left around\nto allow us to do this properly.\n",
             "commit_timestamp": 1755615491.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1755703359.00237,
+            "elapsed_time": 1725.9792156219482,
+            "x64": true,
+            "actual_files_count": 2990,
+            "expected_files_count": 1661,
+            "memory_traffic": 273587.0729598999,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "35be64a416813c91bd267cfe11f31ef024c7143b",
+            "commit_message": "[VPlan] Factor out logic to common compute costs to helper (NFCI). (#153361)\n\nA number of recipes compute costs for the same opcodes for scalars or\nvectors, depending on the recipe.\n\nMove the common logic out to a helper in VPRecipeWithIRFlags, that is\nthen used by VPReplicateRecipe, VPWidenRecipe and VPInstruction.\n\nThis makes it easier to cover all relevant opcodes, without duplication.\n\nPR: https://github.com/llvm/llvm-project/pull/153361",
+            "commit_timestamp": 1755702320.0
         }
     ]
 }
