@@ -10154,6 +10154,21 @@
             "commit_ref": "628d5e578ea633ff8f1226f2108bbc3436596e24",
             "commit_message": "Handle conflicting macros for OpenBSD (#23190)\n\n```\n[ 54%] Building CXX object CMakeFiles/libtest_common.dir/google/protobuf/unittest_proto3_bad_macros.pb.cc.o\nIn file included from /home/brad/tmp/protobuf/build/google/protobuf/unittest_proto3_bad_macros.pb.cc:6:\n/home/brad/tmp/protobuf/build/google/protobuf/unittest_proto3_bad_macros.pb.h:87:22: error: expected unqualified-id\n   87 | inline constexpr GID GID_MAX =\n      |                      ^\n/usr/include/sys/limits.h:84:18: note: expanded from macro 'GID_MAX'\n   84 | # define GID_MAX        UINT_MAX        /* max value for a gid_t */\n      |                         ^\n/usr/include/sys/limits.h:56:18: note: expanded from macro 'UINT_MAX'\n   56 | #define UINT_MAX        0xffffffffU     /* max value for an unsigned int */\n      |                         ^\nIn file included from /home/brad/tmp/protobuf/build/google/protobuf/unittest_proto3_bad_macros.pb.cc:6:\n/home/brad/tmp/protobuf/build/google/protobuf/unittest_proto3_bad_macros.pb.h:122:22: error: expected unqualified-id\n  122 | inline constexpr UID UID_MAX =\n      |                      ^\n/usr/include/sys/limits.h:83:18: note: expanded from macro 'UID_MAX'\n   83 | # define UID_MAX        UINT_MAX        /* max value for a uid_t */\n      |                         ^\n/usr/include/sys/limits.h:56:18: note: expanded from macro 'UINT_MAX'\n   56 | #define UINT_MAX        0xffffffffU     /* max value for an unsigned int */\n      |                         ^\n2 errors generated.\n```\n\nCloses #23190\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/23190 from brad0:openbsd_macro_fix a71176f6d61684ad54ac818df204d957913529f3\nPiperOrigin-RevId: 797280171\n",
             "commit_timestamp": 1755694951.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1755746546.342596,
+            "elapsed_time": 325.7262465953827,
+            "x64": true,
+            "actual_files_count": 1192,
+            "expected_files_count": 818,
+            "memory_traffic": 45751.467948913574,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "b6f4c926f2437660550bde6ced733d612e99b34f",
+            "commit_message": "Auto-generate files after cl/797571979\n",
+            "commit_timestamp": 1755746164.0
         }
     ]
 }

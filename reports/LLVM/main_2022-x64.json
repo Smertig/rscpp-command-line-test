@@ -31735,6 +31735,23 @@
             "commit_ref": "35be64a416813c91bd267cfe11f31ef024c7143b",
             "commit_message": "[VPlan] Factor out logic to common compute costs to helper (NFCI). (#153361)\n\nA number of recipes compute costs for the same opcodes for scalars or\nvectors, depending on the recipe.\n\nMove the common logic out to a helper in VPRecipeWithIRFlags, that is\nthen used by VPReplicateRecipe, VPWidenRecipe and VPInstruction.\n\nThis makes it easier to cover all relevant opcodes, without duplication.\n\nPR: https://github.com/llvm/llvm-project/pull/153361",
             "commit_timestamp": 1755702320.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1755747599.785855,
+            "elapsed_time": 1843.2689456939697,
+            "x64": true,
+            "actual_files_count": 2990,
+            "expected_files_count": 1661,
+            "memory_traffic": 273367.22186279297,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "d6679d5a5f8cda18f2bdb90ed7f79d7d57f25f89",
+            "commit_message": "[Target] Remove SoftFail field on targets that don't use it (NFC) (#154659)\n\nThat is, on all targets except ARM and AArch64.\nThis field used to be required due to a bug, it was fixed long ago\nby 23423c0ea8d414e56081cb6a13bd8b2cc91513a9.",
+            "commit_timestamp": 1755742902.0
         }
     ]
 }
