@@ -31752,6 +31752,23 @@
             "commit_ref": "d6679d5a5f8cda18f2bdb90ed7f79d7d57f25f89",
             "commit_message": "[Target] Remove SoftFail field on targets that don't use it (NFC) (#154659)\n\nThat is, on all targets except ARM and AArch64.\nThis field used to be required due to a bug, it was fixed long ago\nby 23423c0ea8d414e56081cb6a13bd8b2cc91513a9.",
             "commit_timestamp": 1755742902.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1755789773.519913,
+            "elapsed_time": 1652.3721618652344,
+            "x64": true,
+            "actual_files_count": 2990,
+            "expected_files_count": 1661,
+            "memory_traffic": 273390.4303894043,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "68d68664280c2d2620ba09c09caba93bfe0a67ce",
+            "commit_message": "[mlir][XeGPU] add WgToSg distribution pattern for load_matrix and store_matrix.  (#154403)\n\n",
+            "commit_timestamp": 1755788565.0
         }
     ]
 }
