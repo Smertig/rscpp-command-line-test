@@ -31803,6 +31803,23 @@
             "commit_ref": "db63c57c59e67c65f487b2d88cbc9ac89dfdd01b",
             "commit_message": "[flang][NFC] Fix copy-and-paste error in atand testcase. (#154956)\n\nFix failure in https://lab.llvm.org/buildbot/#/builders/53/builds/19265.",
             "commit_timestamp": 1755874149.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1755920189.864662,
+            "elapsed_time": 1729.9433040618896,
+            "x64": true,
+            "actual_files_count": 2990,
+            "expected_files_count": 1661,
+            "memory_traffic": 273408.1481399536,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "9dc66a631e962d85df0db43784028388f77d3fef",
+            "commit_message": "[libc] Add half-precision math functions to the math header (#155060)\n\nThis patch adds the `exp10f16`, `exp2f16`, `expf16`, and `expm1f16` math\nfunctions to the `math.h` header.",
+            "commit_timestamp": 1755918372.0
         }
     ]
 }

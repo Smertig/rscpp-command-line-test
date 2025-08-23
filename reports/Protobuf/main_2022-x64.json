@@ -10214,6 +10214,21 @@
             "commit_ref": "e25e267dea8762e077b4ee76eb247c3e272bb64c",
             "commit_message": "Fix a bug in the main C++ JSON parser/serializer camelcasing of certain non-style-compliant names incorrectly, in a way that would prevent it from interoperating with any other implementation on those fields.\n\nBefore this fix, the camelcasing that it would use under certain non-style compliant names like `_field` are mutually incompatible with any other implementation.\n\nThis case was already covered by the conformance test suite but was not hooked up to this implementation and instead used a lesser-used path in the same JSON package which is based on type.proto instead of Descriptor. A subsequent CL will switch the cc conformance testee to use this implementation as it is the primary one that our customers.\n\nPiperOrigin-RevId: 798047846\n",
             "commit_timestamp": 1755839025.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1755919221.603953,
+            "elapsed_time": 315.96821331977844,
+            "x64": true,
+            "actual_files_count": 1192,
+            "expected_files_count": 818,
+            "memory_traffic": 45710.36111450195,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "623e36daecc4d7bfcb7954774ecbe5c04e60806c",
+            "commit_message": "Auto-generate files after cl/798404536\n",
+            "commit_timestamp": 1755910665.0
         }
     ]
 }
