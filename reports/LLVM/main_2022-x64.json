@@ -31837,6 +31837,23 @@
             "commit_ref": "d13f40f386b4c4db15f232c5cfb105d362b84fe2",
             "commit_message": "[MLIR] Apply clang-tidy fixes for performance-unnecessary-value-param in DialectLLVM.cpp (NFC)\n",
             "commit_timestamp": 1755960975.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1756007170.621136,
+            "elapsed_time": 1852.122111082077,
+            "x64": true,
+            "actual_files_count": 2990,
+            "expected_files_count": 1661,
+            "memory_traffic": 273486.8016433716,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "b1d58f025e834386acd9a338fcd9ba47d244c67a",
+            "commit_message": "MCAssembler: Simplify fragment relaxation\n\n* FT_Data: skip relaxFragment\n* Others: Call relaxFragment, which computes the old size, calls the\n  relevant relaxXXX function, then compares the size.\n",
+            "commit_timestamp": 1756005177.0
         }
     ]
 }
