@@ -26051,6 +26051,21 @@
             "commit_ref": "6fcac09401e336b25833dcef2610d498e73b27a1",
             "commit_message": "Improve readability by adding whitespace between code paragraphs (gh-138090)\n\nImprove readability by adding whitespace between code paragraphs.",
             "commit_timestamp": 1755962326.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1756048068.526511,
+            "elapsed_time": 1581.1486134529114,
+            "x64": true,
+            "actual_files_count": 1199,
+            "expected_files_count": null,
+            "memory_traffic": 53495.171783447266,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "96b7a2eba423b42320f15fd4974740e3e930bb8b",
+            "commit_message": "gh-135261: bring back CI job for testing OpenSSL 1.1.1w (#135262)\n\nThis partially reverts commit d83e30caddcbf9482273743d287577517ec735b7\nby bringing back the CI job for testing OpenSSL 1.1.1w. Despite this\nversion being upstream EOL, the rationale for keeping it as follows:\n\n- It most resembles other 1.1.1-work-a-like ssl APIs supported by important vendors.\n- Python officially requires OpenSSL 1.1.1 or later, although OpenSSL 3.0 or later\n  is recommended for cryptographic modules. Since changing the build requirements\n  requires a transition period, we need to keep testing the allowed versions.\n- The code base still contains calls to OpenSSL functions that are deprecated since\n  OpenSSL 3.0 as well as `ifdef` blocks constrained to OpenSSL 1.1.1.",
+            "commit_timestamp": 1756026097.0
         }
     ]
 }
