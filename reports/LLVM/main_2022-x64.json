@@ -31871,6 +31871,23 @@
             "commit_ref": "a7a1781741922a09042cfc54d6b42bdf7f98fe5d",
             "commit_message": "[gn build] Port bc278d00726f\n",
             "commit_timestamp": 1756047202.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1756093469.370917,
+            "elapsed_time": 1733.396915435791,
+            "x64": true,
+            "actual_files_count": 2990,
+            "expected_files_count": 1661,
+            "memory_traffic": 272965.71297454834,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "b54628f1747733d19f3eb590e2d5c0a83e471b08",
+            "commit_message": "[M68k] Fix encoding of CAS instructions (#154481)\n\nThe immediate part of memory operands was not encoded.",
+            "commit_timestamp": 1756089375.0
         }
     ]
 }

@@ -26066,6 +26066,21 @@
             "commit_ref": "96b7a2eba423b42320f15fd4974740e3e930bb8b",
             "commit_message": "gh-135261: bring back CI job for testing OpenSSL 1.1.1w (#135262)\n\nThis partially reverts commit d83e30caddcbf9482273743d287577517ec735b7\nby bringing back the CI job for testing OpenSSL 1.1.1w. Despite this\nversion being upstream EOL, the rationale for keeping it as follows:\n\n- It most resembles other 1.1.1-work-a-like ssl APIs supported by important vendors.\n- Python officially requires OpenSSL 1.1.1 or later, although OpenSSL 3.0 or later\n  is recommended for cryptographic modules. Since changing the build requirements\n  requires a transition period, we need to keep testing the allowed versions.\n- The code base still contains calls to OpenSSL functions that are deprecated since\n  OpenSSL 3.0 as well as `ifdef` blocks constrained to OpenSSL 1.1.1.",
             "commit_timestamp": 1756026097.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1756092559.573289,
+            "elapsed_time": 1566.8403158187866,
+            "x64": true,
+            "actual_files_count": 1199,
+            "expected_files_count": null,
+            "memory_traffic": 53413.49153137207,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "be24ff0b5738365bdc5921689feee9c2c68eebc3",
+            "commit_message": "gh-138081: Fix/remove incorrect links in `idlelib/HISTORY.txt` (#138091)\n\n",
+            "commit_timestamp": 1756086509.0
         }
     ]
 }
