@@ -10289,6 +10289,21 @@
             "commit_ref": "22e2409e53183b10d4ea34879a7f0ec913830498",
             "commit_message": "Added tests of existing buggy upb behavior when parsing closed enum extensions.\n\nPiperOrigin-RevId: 798849381\n",
             "commit_timestamp": 1756060267.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1756178569.959537,
+            "elapsed_time": 324.7403337955475,
+            "x64": true,
+            "actual_files_count": 1192,
+            "expected_files_count": 818,
+            "memory_traffic": 45856.245544433594,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "13b133424222e9fb584cf57144d222be79e709f3",
+            "commit_message": "Added support for new symbol visibility fields in descriptor.proto.\n\nThis adds the code to successfully round-trip this information.\n\nPiperOrigin-RevId: 799375762\n",
+            "commit_timestamp": 1756178450.0
         }
     ]
 }

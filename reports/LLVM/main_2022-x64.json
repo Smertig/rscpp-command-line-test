@@ -31905,6 +31905,23 @@
             "commit_ref": "6dc188d4eb15cbe9bdece3d940f03d93b926328c",
             "commit_message": "[clang] Implement -Walloc-size diagnostic option (#150028)\n\nWarns about calls to functions decorated with attribute `alloc_size`\nthat specify insufficient size for the type they are cast to. Matches\nthe behavior of the GCC option of the same name.\n\nCloses #138973\n\n---------\n\nCo-authored-by: Vladimir Vuksanovic <vvuksano@cisco.com>",
             "commit_timestamp": 1756133168.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1756179590.82443,
+            "elapsed_time": 1745.8501236438751,
+            "x64": true,
+            "actual_files_count": 2990,
+            "expected_files_count": 1661,
+            "memory_traffic": 271676.5190963745,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "89ce8718be80ead58ef5942d2d5052a528e79fee",
+            "commit_message": "[clang] fix TemplateName Subst* nodes transform (#155342)\n\nThis makes sure NestedNameSpecifierLocs don't apply to the replacement\nTemplateName of SubstTemplate* nodes.\n\nAlso removes improper name qualification over these Subst Nodes, causing\nsome canonical TemplateNames to not be fully qualified when printed.\n\nSince this is a regression introduced in #147835, which was never\nreleased, there are no release notes.\n\nFixes #155281",
+            "commit_timestamp": 1756177721.0
         }
     ]
 }
