@@ -31956,6 +31956,23 @@
             "commit_ref": "fe78a9a75d726e253b45923f5d4000e0c17e15da",
             "commit_message": "[NFC] [clangd] [C++20 Modules] Add a warning if clangd detected multiple\nsource declares the same module\n\nNow clangd assumes no duplicated module declared by different source\nfile in a sinlge project. But in practice, it may not be the case.\n\nAlthough we can't fix it now, emitting a warning is helpful for users to\nunderstand what's going on.\n",
             "commit_timestamp": 1756262086.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1756308188.254936,
+            "elapsed_time": 1699.629503250122,
+            "x64": true,
+            "actual_files_count": 2992,
+            "expected_files_count": 1661,
+            "memory_traffic": 271975.17306518555,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "b70fc3bbe562e0db956d8ee8fc7091c8d5667572",
+            "commit_message": "[MLIR] Fix MSVC build: long != int64_t on some platforms (NFC)\n",
+            "commit_timestamp": 1756307023.0
         }
     ]
 }

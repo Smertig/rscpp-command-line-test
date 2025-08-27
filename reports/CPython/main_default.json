@@ -26126,6 +26126,21 @@
             "commit_ref": "ffaec6e2a11fb7b41facfec7d99e41b29d9d7967",
             "commit_message": "gh-128042: Emit a ``configure`` warning when ``-O0`` and ``--enable-optimizations`` are combined (#137975)\n\nCo-authored-by: Adam Turner <9087854+AA-Turner@users.noreply.github.com>",
             "commit_timestamp": 1756249243.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1756307397.558452,
+            "elapsed_time": 1526.3062024116516,
+            "x64": true,
+            "actual_files_count": 1199,
+            "expected_files_count": null,
+            "memory_traffic": 53411.64726257324,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "0dbbf61cc2550428ff99daee367364c688031e1a",
+            "commit_message": "gh-71679: Improve tests for repr() of bytes and bytearray (GH-138180)\n\n* Merge existing tests test_repr_str and test_to_str.\n* Add more tests for non-printable and non-ASCII bytes.\n* Add tests for special escape sequences ('\\t\\n\\r').\n* Add tests for slashes.\n* Add more tests for quotes.\n* Add tests for subclasses.\n* Add test for non-ASCII class name.\n* Only apply @check_bytes_warnings for str() tests.",
+            "commit_timestamp": 1756290268.0
         }
     ]
 }
