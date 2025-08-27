@@ -26111,6 +26111,21 @@
             "commit_ref": "fd8f42d3d1038a812340c3ec3cbfc995a80c4e13",
             "commit_message": "gh-135427: Fix DeprecationWarning for os.fork when run in threads with -Werror (GH-136796)\n\nDon't ignore errors raised by `PyErr_WarnFormat` in `warn_about_fork_with_threads`\nInstead, ignore the warnings in all test code that forks. (That's a lot of functions.)\n\nIn `test_support`, make `ignore_warnings` a context manager (as well as decorator),\nand add a `message` argument to it.\nAlso add a `ignore_fork_in_thread_deprecation_warnings` helper for the deadlock-in-fork\nwarning.",
             "commit_timestamp": 1756215201.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1756265028.537662,
+            "elapsed_time": 1509.1514947414398,
+            "x64": true,
+            "actual_files_count": 1199,
+            "expected_files_count": null,
+            "memory_traffic": 53430.12422943115,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "ffaec6e2a11fb7b41facfec7d99e41b29d9d7967",
+            "commit_message": "gh-128042: Emit a ``configure`` warning when ``-O0`` and ``--enable-optimizations`` are combined (#137975)\n\nCo-authored-by: Adam Turner <9087854+AA-Turner@users.noreply.github.com>",
+            "commit_timestamp": 1756249243.0
         }
     ]
 }

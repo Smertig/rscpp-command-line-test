@@ -10319,6 +10319,21 @@
             "commit_ref": "4b4e405491be99630e3c69b78834d33b83dfc5fa",
             "commit_message": "Use the 'better' JSON parser on the conformance suite harness.\n\nThis switches it to use the Descriptor-based path instead of the type.proto-based path, which also unlocks the ability to test for handling of extensions.\n\nPiperOrigin-RevId: 799542063\n",
             "commit_timestamp": 1756216046.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1756264821.246257,
+            "elapsed_time": 318.87705850601196,
+            "x64": true,
+            "actual_files_count": 1192,
+            "expected_files_count": 818,
+            "memory_traffic": 45765.17412567139,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "894039e7512e9940095a0bf04214adcba7a37adb",
+            "commit_message": "Automated rollback of commit 493f2fa8a0d477c94d92ba0f631763d769357348.\n\nPiperOrigin-RevId: 799769468\n",
+            "commit_timestamp": 1756251845.0
         }
     ]
 }
