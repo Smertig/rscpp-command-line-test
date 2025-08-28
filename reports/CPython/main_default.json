@@ -26156,6 +26156,21 @@
             "commit_ref": "d910b93f786982a11d7d6b7562716c2f50513f00",
             "commit_message": "Drop explicit tool installation in the dev container (GH-138211)\n\nThis is now handled upstream in the dev container image itself.",
             "commit_timestamp": 1756338091.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1756393726.534391,
+            "elapsed_time": 1743.4630334377289,
+            "x64": true,
+            "actual_files_count": 1198,
+            "expected_files_count": null,
+            "memory_traffic": 53479.68478393555,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "025a2135eff848abf24f9dc52c81386eea9da397",
+            "commit_message": "gh-137317: Fix inspect.signature() for class with wrapped __init__ or __new__ (GH-137862)\n\nFixed several cases where __init__, __new__ or metaclass` __call__ is a descriptor\nthat returns a wrapped function.",
+            "commit_timestamp": 1756393073.0
         }
     ]
 }

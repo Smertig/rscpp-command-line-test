@@ -10364,6 +10364,21 @@
             "commit_ref": "eb03944f5826bdf880c911f08a8dca276dd2d0b8",
             "commit_message": "include sha256 in rules_proto http_archive (#23237)\n\nDEBUG messages about integrity were showing up in builds because we were previously forgetting to check that the contents of the rules_proto http_archive were what we we expected them to be.\n\nCloses #23237\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/23237 from jmhodges:patch-2 f3603d6bfa629364a50a6839541aa6292e192139\nPiperOrigin-RevId: 800261549\n",
             "commit_timestamp": 1756347692.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1756393566.78869,
+            "elapsed_time": 320.2077543735504,
+            "x64": true,
+            "actual_files_count": 1192,
+            "expected_files_count": 818,
+            "memory_traffic": 45828.184257507324,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "f105753bd8e1eef1426f1c58574ffeadcae04b00",
+            "commit_message": "Add alias for `timestamp_upb_proto`.\n\nPiperOrigin-RevId: 800299829\n",
+            "commit_timestamp": 1756357014.0
         }
     ]
 }
