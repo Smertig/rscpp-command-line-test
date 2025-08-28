@@ -26141,6 +26141,21 @@
             "commit_ref": "0dbbf61cc2550428ff99daee367364c688031e1a",
             "commit_message": "gh-71679: Improve tests for repr() of bytes and bytearray (GH-138180)\n\n* Merge existing tests test_repr_str and test_to_str.\n* Add more tests for non-printable and non-ASCII bytes.\n* Add tests for special escape sequences ('\\t\\n\\r').\n* Add tests for slashes.\n* Add more tests for quotes.\n* Add tests for subclasses.\n* Add test for non-ASCII class name.\n* Only apply @check_bytes_warnings for str() tests.",
             "commit_timestamp": 1756290268.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1756351379.814716,
+            "elapsed_time": 1474.7455093860626,
+            "x64": true,
+            "actual_files_count": 1199,
+            "expected_files_count": null,
+            "memory_traffic": 53456.8483505249,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "d910b93f786982a11d7d6b7562716c2f50513f00",
+            "commit_message": "Drop explicit tool installation in the dev container (GH-138211)\n\nThis is now handled upstream in the dev container image itself.",
+            "commit_timestamp": 1756338091.0
         }
     ]
 }

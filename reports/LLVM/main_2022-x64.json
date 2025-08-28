@@ -31973,6 +31973,23 @@
             "commit_ref": "b70fc3bbe562e0db956d8ee8fc7091c8d5667572",
             "commit_message": "[MLIR] Fix MSVC build: long != int64_t on some platforms (NFC)\n",
             "commit_timestamp": 1756307023.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1756352235.656279,
+            "elapsed_time": 1805.2863337993622,
+            "x64": true,
+            "actual_files_count": 2996,
+            "expected_files_count": 1661,
+            "memory_traffic": 271923.23165893555,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "c957df070931035cb47b2c7384a738adb034ee4c",
+            "commit_message": "[RISCV] Improve some debug messages from RISCVVLOptimizer. NFC (#155524)\n\nAdd a MI instruction to the unsupported message. Add message for VL not\ndominating. Make identation more consistent for the abort messages in\nthis function. Remove new line since printing a MachineInstr already\nadds a new line.",
+            "commit_timestamp": 1756350671.0
         }
     ]
 }
