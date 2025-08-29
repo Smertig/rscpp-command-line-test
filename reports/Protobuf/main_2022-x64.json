@@ -10394,6 +10394,21 @@
             "commit_ref": "ad7d4e6aecea1e27f9a5f6c5712a9b708da975dc",
             "commit_message": "Add ReadMicroStringWithSize helper.\n\nSometimes it can be useful to decouple the reading of a string from the\nreading of its size. Used for other internal changes.\n\nPiperOrigin-RevId: 800710237\n",
             "commit_timestamp": 1756435986.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1756479944.615416,
+            "elapsed_time": 335.23886275291443,
+            "x64": true,
+            "actual_files_count": 1192,
+            "expected_files_count": 818,
+            "memory_traffic": 45904.381828308105,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "9d8c3c7e929502df9d040da63297f443d1f09f47",
+            "commit_message": "Resolve different signedness warning (#21944)\n\nThe size() by default returns an unsigned integer datatype. In other places in this code a C cast style is used. Follow the same resolution, and cast the unsigned integer type to signed integer.\n\nCloses #21944\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/21944 from iksrandeb:v31.0-warn-different-signedness 2349d76dfd3a7b80c8ed41248ca997b072d67a02\nPiperOrigin-RevId: 800806715\n",
+            "commit_timestamp": 1756458578.0
         }
     ]
 }
