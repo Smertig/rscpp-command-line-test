@@ -32058,6 +32058,23 @@
             "commit_ref": "c168ce20f51cbc6b094aa1c75dc01efd42c4031f",
             "commit_message": "[mlgo] Fix bad merge of #156120 with 0082cf41de11 (#156134)\n\n",
             "commit_timestamp": 1756521348.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1756567273.773143,
+            "elapsed_time": 1718.9305574893951,
+            "x64": true,
+            "actual_files_count": 2996,
+            "expected_files_count": 1661,
+            "memory_traffic": 271901.22367858887,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "62ff9ac4c68f48c089528105259c68943ab176de",
+            "commit_message": "[OpenMP] Use Clang resource dir only in bootstrapping build (#156018)\n\nIn an LLVM_ENABLE_PROJECTS=openmp build, the LLVM build tree in which\njust-built Clang is available, but in contrast to an\nLLVM_ENABLE_RUNTIMES=openmp build, is not the compiler that openmp is\nbuilt with (CMAKE_CXX_COMPILER). The latter compiler (which might also\nbe gcc) will not look into the resource directory of just-built Clang,\nwhere the OpenMP headers are installed. There may not even be a\njust-built Clang without LLVM_ENABLE_PROJECTS=clang.\n\nWe cannot add the OpenMP header output directory to the search path\nwhich also include's Clang's internal headers that will conflict with\nCMAKE_CXX_COMPILER's internal headers. The only choice left is to use\nwhat the OpenMP standalone build does: Use CMAKE_CURRENT_BINARY_DIR\nwhich is added unconditionally to the header search path to compile\nopenmp itself.",
+            "commit_timestamp": 1756564111.0
         }
     ]
 }

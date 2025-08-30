@@ -26216,6 +26216,21 @@
             "commit_ref": "5c6937ad204d009085e016c3dc9e9ba75eef34c5",
             "commit_message": "gh-133656: Remove deprecated `zipimport.zipimporter.load_module` (GH-133662)\n\nRemove deprecated `zipimport.zipimporter.load_module`.",
             "commit_timestamp": 1756517298.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1756566491.53401,
+            "elapsed_time": 1554.128975868225,
+            "x64": true,
+            "actual_files_count": 1198,
+            "expected_files_count": null,
+            "memory_traffic": 53309.35781097412,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "31d3836f26096f9503ca68f4e89d927bc1e060cd",
+            "commit_message": "gh-138158: Use the `\"data\"` tarfile extraction filter in `Tools/ssl/multissltests.py` (#138147)\n\nThe `Tools/ssl/multissltests.py` script may extract a possibly untrusted tarball.\nSince the script does not necessarily use Python 3.14 or later (where the `\"data\"`\nfilter became the default `tarfile` extraction filter), the user may theoretically\nsuffer from a path traversal attack.\n\nAlthough the script should not be used in production and usually relies on downloading\ntrusted sources, the `\"data\"` extraction filter is now explicitly used wherever relevant.",
+            "commit_timestamp": 1756549652.0
         }
     ]
 }
