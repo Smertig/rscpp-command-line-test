@@ -32041,6 +32041,23 @@
             "commit_ref": "f9e16fa6ab63230146bf9360af6c373ef8abe279",
             "commit_message": "[Headers][X86] VisitCallExpr constexpr immediate shifts (#154293) (#155542)\n\nFixes #154293 \n\nImplement VectorExprEvaluator::VisitCallExpr constexpr support for left, right, arithmetic shift for MMX/SSE/AVX2/AVX512 intrinsics\n\n_mm*_slli_epi*\n_mm*_srli_epi*\n_mm*_srai_epi*\n_mm*_mask_slli_epi*\n_mm*_maskz_slli_epi*\n\nNOTE: not all intrinsics have all widths i.e. _mm_srli_pi32 doesn't have pi64 etc.\n",
             "commit_timestamp": 1756479711.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1756524721.090835,
+            "elapsed_time": 1675.9082899093628,
+            "x64": true,
+            "actual_files_count": 2996,
+            "expected_files_count": 1661,
+            "memory_traffic": 271621.47079467773,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "c168ce20f51cbc6b094aa1c75dc01efd42c4031f",
+            "commit_message": "[mlgo] Fix bad merge of #156120 with 0082cf41de11 (#156134)\n\n",
+            "commit_timestamp": 1756521348.0
         }
     ]
 }
