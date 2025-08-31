@@ -32092,6 +32092,23 @@
             "commit_ref": "1d8fdda7b0a9f47c443600bca6af2bc141e4abf7",
             "commit_message": "[openmp] Fix missing include directory in omptest tool (#156194)\n\nAdd missing `LIBOMP_INCLUDE_DIR` include directory to fix build failures\nin omptest, as reported\nin\nhttps://github.com/llvm/llvm-project/pull/154786#issuecomment-3223481804.\nThanks fo @jprotze for the suggested fix.\n\nSigned-off-by: Micha\u0142 G\u00f3rny <mgorny@gentoo.org>",
             "commit_timestamp": 1756608885.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1756653729.949945,
+            "elapsed_time": 1742.5088820457458,
+            "x64": true,
+            "actual_files_count": 2996,
+            "expected_files_count": 1661,
+            "memory_traffic": 271734.68687438965,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "2259a80c7d6d27879f4ecac31bafaf2cff778430",
+            "commit_message": "[ARM] Simplify LowerCMP (NFC) (#156198)\n\nPass the opcode directly.",
+            "commit_timestamp": 1756651512.0
         }
     ]
 }
