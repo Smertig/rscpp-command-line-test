@@ -32109,6 +32109,23 @@
             "commit_ref": "2259a80c7d6d27879f4ecac31bafaf2cff778430",
             "commit_message": "[ARM] Simplify LowerCMP (NFC) (#156198)\n\nPass the opcode directly.",
             "commit_timestamp": 1756651512.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1756698483.161186,
+            "elapsed_time": 1700.0105288028717,
+            "x64": true,
+            "actual_files_count": 2996,
+            "expected_files_count": 1661,
+            "memory_traffic": 271974.6173171997,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "a247da4f9363116c54b91a37755edd994c56dbf8",
+            "commit_message": "[libclc] update __clc_mem_fence: add MemorySemantic arg and use __builtin_amdgcn_fence for AMDGPU (#152275)\n\nIt is necessary to add MemorySemantic argument for AMDGPU which means\nthe memory or address space to which the memory ordering is applied.\n\nThe MemorySemantic is also necessary for implementing the SPIR-V\nMemoryBarrier instruction. Additionally, the implementation of\n__clc_mem_fence on Intel GPUs requires the MemorySemantic argument.\n\nUsing __builtin_amdgcn_fence for AMDGPU is follow-up of\nhttps://github.com/llvm/llvm-project/pull/151446#discussion_r2254006508\n\nllvm-diff shows no change to nvptx64--nvidiacl.bc.",
+            "commit_timestamp": 1756695825.0
         }
     ]
 }
