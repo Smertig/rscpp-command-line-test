@@ -10529,6 +10529,21 @@
             "commit_ref": "abaa7deca33a1977c6f7baa966fdb6095470d1b5",
             "commit_message": "Remove de-optimization in C++JSON parser based on trying to skip ahead based on UTF8 multibyte sequences.\n\nRemoving this speeds up our benchmark 40% faster. Note that the benchmark has no (non-escaped) unicode characters in it, so the true net win in production is something less than that, but non-ascii strings sufficiently uncommon and -40% sufficiently large that I'm confident this is a significant net win even when there are unicode sequences.\n\nThis behavior is not needed for correctness; without it the scanner will just continue to advance bytes until it finds the closing quote and then perform the SIMD optimized `utf8_range::IsStructurallyValid` check at the end (which is needed anyway; this skip ahead didn't validate that the extra bytes it tries to skip over were well-formed either).\n\nI believe this was simply presumed to be a good optimization where if you saw a codepoint for many bytes it would be better to try to fast skip that many ahead assume that it is wellformed, but it seems empirically not beneficial to have a branch conditional on the high bits of every single byte in the string just to try to use that information to potentially skip 1-3 characters ahead in the loop.\n\nPiperOrigin-RevId: 802117040\n",
             "commit_timestamp": 1756819621.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1756869242.254526,
+            "elapsed_time": 335.4025356769562,
+            "x64": true,
+            "actual_files_count": 1192,
+            "expected_files_count": 818,
+            "memory_traffic": 45744.606842041016,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "65e1331d74b86002ac7dd4a149d6c96ecb76c5b1",
+            "commit_message": "Add python tests for import option\n\nPiperOrigin-RevId: 802323611\n",
+            "commit_timestamp": 1756855253.0
         }
     ]
 }

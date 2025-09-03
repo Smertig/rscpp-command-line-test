@@ -32177,6 +32177,23 @@
             "commit_ref": "6d902b67cdae224c0a5f4e13097a82d3148c8198",
             "commit_message": "Revert \"[SLP]Improved/fixed FMAD support in reductions\"\n\nThis reverts commit 74230ff2791384fb3285c9e9ab202056959aa095 to fix the\nbugs found during local testing.\n",
             "commit_timestamp": 1756825109.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1756870405.298801,
+            "elapsed_time": 1703.5453255176544,
+            "x64": true,
+            "actual_files_count": 2996,
+            "expected_files_count": 1661,
+            "memory_traffic": 271801.95098114014,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "4aeb2900837ce750af821e1f0dba6d53ccd4870a",
+            "commit_message": "[libc] Add more elementwise wrapper functions (#156515)\n\nSummary:\nFills out some of the missing fundamental floating point operations.\nThese just wrap the elementwise builtin of the same name.",
+            "commit_timestamp": 1756867983.0
         }
     ]
 }
