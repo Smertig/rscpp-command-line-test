@@ -32194,6 +32194,23 @@
             "commit_ref": "4aeb2900837ce750af821e1f0dba6d53ccd4870a",
             "commit_message": "[libc] Add more elementwise wrapper functions (#156515)\n\nSummary:\nFills out some of the missing fundamental floating point operations.\nThese just wrap the elementwise builtin of the same name.",
             "commit_timestamp": 1756867983.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1756912975.756815,
+            "elapsed_time": 1739.7646887302399,
+            "x64": true,
+            "actual_files_count": 2995,
+            "expected_files_count": 1661,
+            "memory_traffic": 271695.7699661255,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "53fce759fb35f2a162bc7bcc1e56911643b0e7a8",
+            "commit_message": "[clang-tidy] Fix `readability-uppercase-literal-suffix` warning with hex literals (#156584)\n\nThis is a regression I introduced in #148275 and was [noticed\nby](https://github.com/llvm/llvm-project/pull/148275#issuecomment-3246670841)\nnettle. The check incorrectly fires on hex literals containing the\nletter `b`.\n\n(I felt a revert was unnecessary in this case. Maybe others disagree?)",
+            "commit_timestamp": 1756911648.0
         }
     ]
 }

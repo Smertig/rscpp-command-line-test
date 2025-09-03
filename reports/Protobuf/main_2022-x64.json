@@ -10544,6 +10544,21 @@
             "commit_ref": "65e1331d74b86002ac7dd4a149d6c96ecb76c5b1",
             "commit_message": "Add python tests for import option\n\nPiperOrigin-RevId: 802323611\n",
             "commit_timestamp": 1756855253.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1756911965.623181,
+            "elapsed_time": 321.0472481250763,
+            "x64": true,
+            "actual_files_count": 1192,
+            "expected_files_count": 818,
+            "memory_traffic": 45830.316566467285,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "ed1496fcde9320a3d3d241dfbf157cb54ad524de",
+            "commit_message": "Refactor field descriptors by using a single field for the resolved `type_name` reference\n\nThis is just a cleanup which more closely enforces the fact that a field descriptor can either reference a message type or enum type, never both.\n\nPiperOrigin-RevId: 802550883\n",
+            "commit_timestamp": 1756911035.0
         }
     ]
 }
