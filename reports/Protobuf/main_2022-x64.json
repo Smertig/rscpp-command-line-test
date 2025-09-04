@@ -10559,6 +10559,21 @@
             "commit_ref": "ed1496fcde9320a3d3d241dfbf157cb54ad524de",
             "commit_message": "Refactor field descriptors by using a single field for the resolved `type_name` reference\n\nThis is just a cleanup which more closely enforces the fact that a field descriptor can either reference a message type or enum type, never both.\n\nPiperOrigin-RevId: 802550883\n",
             "commit_timestamp": 1756911035.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1756955776.630594,
+            "elapsed_time": 416.5268623828888,
+            "x64": true,
+            "actual_files_count": 1192,
+            "expected_files_count": 818,
+            "memory_traffic": 45766.8458404541,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "8bff944735fb21873675af19bf74ae084109e2a7",
+            "commit_message": "Make message Muts `Send`\n\nThis was previously held back due to concerns about difficulty in supporting `mut splitting` apis, where an API could hand out simultaneous muts to 'disjoint' submessages, which is problematic.\n\nWe don't have mut splitting APIs today but now believe we could find a way to safely support it when we add it while allowing Muts to be Send, and so this does so now.\n\nPiperOrigin-RevId: 802712451\n",
+            "commit_timestamp": 1756935616.0
         }
     ]
 }
