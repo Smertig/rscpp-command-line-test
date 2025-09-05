@@ -10589,6 +10589,21 @@
             "commit_ref": "e02cf1e24d85099cfaa94b1eba9bee9a78a3cbce",
             "commit_message": "Auto-generate files after cl/803009438\n",
             "commit_timestamp": 1756995618.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1757042225.943467,
+            "elapsed_time": 318.4983994960785,
+            "x64": true,
+            "actual_files_count": 1192,
+            "expected_files_count": 818,
+            "memory_traffic": 45749.91938781738,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "cb873c8987dd33282125ecbbae378b74be5f4707",
+            "commit_message": "Fold `hasInferredLegacyProtoFeatures()` into `inferLegacyProtoFeatures()`\n\nThe logic is duplicated across both. Rather than have both, we just optimize `inferLegacyProtoFeatures()` to only return a new instance when the features would be set. This ensures there is only one source of truth and we do not need to worry about the two functions coming out of sync.\n\nPiperOrigin-RevId: 803146647\n",
+            "commit_timestamp": 1757017164.0
         }
     ]
 }
