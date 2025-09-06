@@ -10634,6 +10634,21 @@
             "commit_ref": "df7f12a35b48f9e74d37f12d36aa44fdf7cbba2a",
             "commit_message": "Introduce edition 2024 transform\n\nThis just sets up the transform and implements one piece of it.  Specifically, it updates the edition to 2024 and migrates feature dependencies to `import option`.  Further transforms will be added in later changes.\n\nPiperOrigin-RevId: 803656952\n",
             "commit_timestamp": 1757117760.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1757171139.437829,
+            "elapsed_time": 335.1850128173828,
+            "x64": true,
+            "actual_files_count": 1192,
+            "expected_files_count": 818,
+            "memory_traffic": 45713.09259033203,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "2be4a2d70e47227007ddf7d0fbcdaa3eb989f525",
+            "commit_message": "Migrate callers of the RepeatedPtrField(Arena*) constructor to `ArenaSafeUniquePtr`.\n\nPiperOrigin-RevId: 803757833\n",
+            "commit_timestamp": 1757143903.0
         }
     ]
 }

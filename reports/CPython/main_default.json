@@ -26426,6 +26426,21 @@
             "commit_ref": "bde12919522b0c40fd9eaa2b2681695166497aba",
             "commit_message": "GH-95952: Require setting `HOSTRUNNER` when cross compiling for WASI (#138203)\n\nmacOS by default doesn't have the requisite CLI tools to make a default value easy. Plus Tools/wasm/wasi takes care of setting HOSTRUNNER.",
             "commit_timestamp": 1757112496.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1757171338.501481,
+            "elapsed_time": 1500.9979536533356,
+            "x64": true,
+            "actual_files_count": 1199,
+            "expected_files_count": null,
+            "memory_traffic": 53372.71977233887,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "c919d02edecfe9d75fe374756fb8aa1db8d95f55",
+            "commit_message": "gh-138205: Remove the `resize` method on `mmap` object on platforms don't support it (#138276)\n\nCo-authored-by: Serhiy Storchaka <storchaka@gmail.com>\nCo-authored-by: Victor Stinner <vstinner@python.org>",
+            "commit_timestamp": 1757148004.0
         }
     ]
 }

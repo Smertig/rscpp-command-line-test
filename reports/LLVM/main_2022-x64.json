@@ -32296,6 +32296,23 @@
             "commit_ref": "bd2649ad481096d383173691b1e38dff2f373f3c",
             "commit_message": "[Clang] Convert ConstraintRefersToContainingTemplateChecker to using RAV (#157062)\n\nWe previously employed a TreeTransform to perform a task that should\nhave been achieved by RAV. The TreeTransform approach was a bit\nwasteful, as we discarded the transform result and incurred some\nincorrect semantic analysis.\n\nFixes https://github.com/llvm/llvm-project/issues/156225",
             "commit_timestamp": 1757126623.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1757172202.965848,
+            "elapsed_time": 1918.187537908554,
+            "x64": true,
+            "actual_files_count": 2995,
+            "expected_files_count": 1661,
+            "memory_traffic": 271840.5686340332,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "86ac4a02aa2609521d87e603132c04e2eda78751",
+            "commit_message": "[MLIR] Apply clang-tidy fixes for modernize-use-bool-literals in Transport.cpp (NFC)\n",
+            "commit_timestamp": 1757169078.0
         }
     ]
 }
