@@ -26411,6 +26411,21 @@
             "commit_ref": "0c74fc8af0eba51d6817f8d377a82db39f120688",
             "commit_message": "gh-137210: Add a struct, slot & function for checking an extension's ABI (GH-137212)\n\n\nCo-authored-by: Steve Dower <steve.dower@microsoft.com>",
             "commit_timestamp": 1757082198.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1757128598.555115,
+            "elapsed_time": 1568.7421000003815,
+            "x64": true,
+            "actual_files_count": 1199,
+            "expected_files_count": null,
+            "memory_traffic": 53398.78175354004,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "bde12919522b0c40fd9eaa2b2681695166497aba",
+            "commit_message": "GH-95952: Require setting `HOSTRUNNER` when cross compiling for WASI (#138203)\n\nmacOS by default doesn't have the requisite CLI tools to make a default value easy. Plus Tools/wasm/wasi takes care of setting HOSTRUNNER.",
+            "commit_timestamp": 1757112496.0
         }
     ]
 }
