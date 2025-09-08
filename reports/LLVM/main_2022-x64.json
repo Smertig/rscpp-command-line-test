@@ -32347,6 +32347,23 @@
             "commit_ref": "fa59e61e65a3f26b0f7e36e8c4c31612c3bcfb5d",
             "commit_message": "[CSKY] Decode CARRY / GPRSP operands not encoded into instruction (NFCI) (#157338)\n\nThe generated decoder can now decode these operands. All we need to do\nis to add `bits<0>` for these operands to instruction records and\nprovide operand decoders.\n\nWhile here, reformat adjacent lines.",
             "commit_timestamp": 1757252843.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1757302743.253636,
+            "elapsed_time": 1726.224574804306,
+            "x64": true,
+            "actual_files_count": 2993,
+            "expected_files_count": 1661,
+            "memory_traffic": 271878.5006637573,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "727e9f5ea5b2bb9d2fa37619ad2f19b21af7ce4d",
+            "commit_message": "CodeGen: Pass SubtargetInfo to TargetGenInstrInfo constructors (#157337)\n\nThis will make it possible for tablegen to make subtarget\ndependent decisions without adding new arguments to every\ntarget.\n\n---------\n\nCo-authored-by: Sergei Barannikov <barannikov88@gmail.com>",
+            "commit_timestamp": 1757301139.0
         }
     ]
 }
