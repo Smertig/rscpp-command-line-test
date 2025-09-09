@@ -10709,6 +10709,21 @@
             "commit_ref": "2be4a2d70e47227007ddf7d0fbcdaa3eb989f525",
             "commit_message": "Migrate callers of the RepeatedPtrField(Arena*) constructor to `ArenaSafeUniquePtr`.\n\nPiperOrigin-RevId: 803757833\n",
             "commit_timestamp": 1757143903.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1757387988.221958,
+            "elapsed_time": 321.5549056529999,
+            "x64": true,
+            "actual_files_count": 1196,
+            "expected_files_count": 818,
+            "memory_traffic": 45870.77071380615,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "2f270c49a2886945fc405dbdaa5fe9467d3d31fa",
+            "commit_message": "Refactor `RuntimeAssertInBounds` to remove repeated logic and make `Get`/`Mutable` easier to read.\n\nPiperOrigin-RevId: 804640388\n",
+            "commit_timestamp": 1757375943.0
         }
     ]
 }
