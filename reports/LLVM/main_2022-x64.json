@@ -32432,6 +32432,23 @@
             "commit_ref": "55906374f88f4f47767f1800ddfdcb3fa4e2e9c6",
             "commit_message": "[orc-rt] Add const support to move_only_function. (#157781)\n\nAdds support for both const move_only_functions, and const callees.",
             "commit_timestamp": 1757471963.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1757517790.22454,
+            "elapsed_time": 1719.889033794403,
+            "x64": true,
+            "actual_files_count": 2993,
+            "expected_files_count": 1661,
+            "memory_traffic": 272187.62950897217,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "fa0bb6a20e97ee23587f583e1a15212d6735467e",
+            "commit_message": "[X86] Fix throughput typo in XMM/YMM PACK/PALIGNR schedule classes (#157867)\n\nOnly the ZMM PACK/PALIGNR instructions are half-rate on znver4 -\nconfirmed with AMD SOG, uops.info and Agner\n\nNoticed because comparing costs table shuffle costs vs llvm-mca costs\nkept giving weird numbers if I tested it on znver4 vs any other\navx2/avx512 target\n\nIt looks like there's other znver4 overrides that make this mistake but\nmany of these need cleaning up properly to use the (currently unused)\ndefault classes",
+            "commit_timestamp": 1757516665.0
         }
     ]
 }
