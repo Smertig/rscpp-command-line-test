@@ -32449,6 +32449,23 @@
             "commit_ref": "fa0bb6a20e97ee23587f583e1a15212d6735467e",
             "commit_message": "[X86] Fix throughput typo in XMM/YMM PACK/PALIGNR schedule classes (#157867)\n\nOnly the ZMM PACK/PALIGNR instructions are half-rate on znver4 -\nconfirmed with AMD SOG, uops.info and Agner\n\nNoticed because comparing costs table shuffle costs vs llvm-mca costs\nkept giving weird numbers if I tested it on znver4 vs any other\navx2/avx512 target\n\nIt looks like there's other znver4 overrides that make this mistake but\nmany of these need cleaning up properly to use the (currently unused)\ndefault classes",
             "commit_timestamp": 1757516665.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1757561702.713689,
+            "elapsed_time": 1693.3703582286835,
+            "x64": true,
+            "actual_files_count": 2993,
+            "expected_files_count": 1661,
+            "memory_traffic": 271872.51287841797,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "fc0f1fc6952e424fb14b60cc6ab5bfab53680a69",
+            "commit_message": "ARM: Move remaining half convert libcall config into tablegen (#153408)\n\nThe __truncdfhf2 handling is kind of convoluted, but reproduces\nthe existing, likely wrong, handling.",
+            "commit_timestamp": 1757560306.0
         }
     ]
 }

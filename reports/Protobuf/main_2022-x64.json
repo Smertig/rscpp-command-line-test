@@ -10769,6 +10769,21 @@
             "commit_ref": "b7b0d79813660e045024781b6576fdfb7f19473e",
             "commit_message": "Fix signedness comparison warning (#23354)\n\nAfter we are sure `n` is greater than zero, it is safe to cast to unsigned.\n\nCloses #23354\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/23354 from tempoz:tempoz-fix-signedness-error-in-upb-io-string-header 4d323c37d44acf33b06c855917fc323980edb5b4\nPiperOrigin-RevId: 805351826\n",
             "commit_timestamp": 1757514814.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1757560715.469683,
+            "elapsed_time": 322.1091170310974,
+            "x64": true,
+            "actual_files_count": 1196,
+            "expected_files_count": 818,
+            "memory_traffic": 45889.044921875,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "20e494b4219a411685ce19e61861bdb2d3f61978",
+            "commit_message": "Move as much as possible of mini table generation into the runtime\n\nI tried to move `AssociatedMiniTable` and `AssociatedMiniTableEnum` completely\nout of the gencode and into the runtime, but this turned out to be impractical\nbecause a trait blanket implementation cannot create a per-monomorphization\nstatic variable. Messages are also especially complicated because of the need\nto handle cycles when linking. So instead, I kept the trait implementations in\nthe gencode but set them up to call helper functions such as\n`build_mini_table()` that are at a higher level than the raw upb functions.\n\nI did remove the implementations of `AssociatedMiniTable` on view and mut\nproxies, because I realized that these were not necessary. Any code that needs\nthe mini table can easily get it from `Self::Proxied::mini_table()`. This is\nnot super important but does cut down on the generated code size a little bit.\n\nPiperOrigin-RevId: 805592273\n",
+            "commit_timestamp": 1757553033.0
         }
     ]
 }
