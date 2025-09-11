@@ -10784,6 +10784,21 @@
             "commit_ref": "20e494b4219a411685ce19e61861bdb2d3f61978",
             "commit_message": "Move as much as possible of mini table generation into the runtime\n\nI tried to move `AssociatedMiniTable` and `AssociatedMiniTableEnum` completely\nout of the gencode and into the runtime, but this turned out to be impractical\nbecause a trait blanket implementation cannot create a per-monomorphization\nstatic variable. Messages are also especially complicated because of the need\nto handle cycles when linking. So instead, I kept the trait implementations in\nthe gencode but set them up to call helper functions such as\n`build_mini_table()` that are at a higher level than the raw upb functions.\n\nI did remove the implementations of `AssociatedMiniTable` on view and mut\nproxies, because I realized that these were not necessary. Any code that needs\nthe mini table can easily get it from `Self::Proxied::mini_table()`. This is\nnot super important but does cut down on the generated code size a little bit.\n\nPiperOrigin-RevId: 805592273\n",
             "commit_timestamp": 1757553033.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1757603252.17256,
+            "elapsed_time": 338.42868185043335,
+            "x64": true,
+            "actual_files_count": 1196,
+            "expected_files_count": 818,
+            "memory_traffic": 45981.19567871094,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "10252236141617ba27083b49323796f97bc8f036",
+            "commit_message": "Internal change.\n\nPiperOrigin-RevId: 805668250\n",
+            "commit_timestamp": 1757569077.0
         }
     ]
 }
