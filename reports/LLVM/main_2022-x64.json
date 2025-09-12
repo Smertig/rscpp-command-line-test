@@ -32500,6 +32500,23 @@
             "commit_ref": "2508851798d727517f60d8b5a76c3001cabb7c59",
             "commit_message": "[InstCombine] Fold `min(X+1, Y) - min(X, Y) --> zext X < Y` (#157782)\n\nThis PR closes #157524.\n\nalive2: https://alive2.llvm.org/ce/z/xe_vb2\ngodbolt: https://alive2.llvm.org/ce/z/7A8PxK\n\nThis fold is invalid for `@llvm.smin.i1` since `smin(-1, 0) == -1`. I\nalso avoided i1 in general since this uses zext, but it seems like those\nchecks for width might not be necessary, since other folds get to it\nfirst.\n\nThe alive2 proof in #157524 used a select for the fold, but it seems\nlike `select X < Y, 1, 0` should be canonicalized to `zext X < Y` if the\nbit width is correct.\n",
             "commit_timestamp": 1757644817.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1757690645.833015,
+            "elapsed_time": 1721.8278336524963,
+            "x64": true,
+            "actual_files_count": 2995,
+            "expected_files_count": 1661,
+            "memory_traffic": 271941.99266052246,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "04320c0d24350d2e76e2ea4c94f05ca2bad9c736",
+            "commit_message": "[mlir][Transforms][NFC] Remove `reconcileUnrealizedCasts` forward-declaration (#158291)\n\nThis is a follow-up to\nhttps://github.com/llvm/llvm-project/pull/158067/files#r2343711946.",
+            "commit_timestamp": 1757689031.0
         }
     ]
 }
