@@ -26651,6 +26651,21 @@
             "commit_ref": "805e3368d6d07e58430654d1365283924fdf4143",
             "commit_message": "GH-128520: pathlib ABCs: improve protocol for 'openable' objects (#134101)\n\nRename `pathlib._os.magic_open()` to `vfsopen()`. The new name is a bit\nless abstract, and it aligns with the `vfspath()` method added in 5dbd27d.\n\nPer discussion on discourse[^1], adjust `vfsopen()` so that the following\nmethods may be called:\n\n- `__open_reader__()`\n- `__open_writer__(mode)`\n- `__open_updater__(mode)`\n\nThese three methods return readable, writable, and full duplex file objects\nrespectively. In the 'writer' method, *mode* is either 'a', 'w' or 'x'. In\nthe 'updater' method, *mode* is either 'r' or 'w'.\n\nIn the pathlib ABCs, replace `ReadablePath.__open_rb__()` with\n`__open_reader__()`, and replace `WritablePath.__open_wb__()` with\n`__open_writer__()`.\n\n[^1]: https://discuss.python.org/t/open-able-objects/90238\n\nCo-authored-by: Petr Viktorin <encukou@gmail.com>",
             "commit_timestamp": 1757712318.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1757820174.271815,
+            "elapsed_time": 1605.771329164505,
+            "x64": true,
+            "actual_files_count": 1199,
+            "expected_files_count": null,
+            "memory_traffic": 53514.18879699707,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "7168e98c80d28ab71f3927c6a60bf7154691f965",
+            "commit_message": "gh-129813, PEP 782: Use PyBytesWriter in lzma and zlib (#138832)\n\nReplace PyBytes_FromStringAndSize(NULL, size) with the new public\nPyBytesWriter API.",
+            "commit_timestamp": 1757784424.0
         }
     ]
 }
