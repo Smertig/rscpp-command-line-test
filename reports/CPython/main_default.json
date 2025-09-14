@@ -26666,6 +26666,21 @@
             "commit_ref": "7168e98c80d28ab71f3927c6a60bf7154691f965",
             "commit_message": "gh-129813, PEP 782: Use PyBytesWriter in lzma and zlib (#138832)\n\nReplace PyBytes_FromStringAndSize(NULL, size) with the new public\nPyBytesWriter API.",
             "commit_timestamp": 1757784424.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1757862527.01097,
+            "elapsed_time": 1629.123214006424,
+            "x64": true,
+            "actual_files_count": 1199,
+            "expected_files_count": null,
+            "memory_traffic": 53546.04598236084,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "8b5ce31c2b44d9bf82e6119e90a52dd530bfd1db",
+            "commit_message": "gh-71810: Fix _PyLong_AsByteArray() undefined behavior (#138873)\n\nDon't read p[-1] when p is an empty string: when n==0.",
+            "commit_timestamp": 1757841953.0
         }
     ]
 }
