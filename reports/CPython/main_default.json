@@ -26696,6 +26696,21 @@
             "commit_ref": "3e06cfcaeee31c2a6e9befe5ea54d9beaa2c0434",
             "commit_message": "gh-135953: Reduce memory usage of stack collectors (#138875)\n\nThe stack collector base class keeps all frames until export() is\ncalled, which causes significant unnecessary memory usage. Instead, we\ncan process the frames on the fly in the collect call by dispatching the\naggregation logic to the subclass through the process_frames method.\n\nCo-authored-by: Pablo Galindo Salgado <pablogsal@gmail.com>",
             "commit_timestamp": 1757890034.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1757949000.595156,
+            "elapsed_time": 1480.5588731765747,
+            "x64": true,
+            "actual_files_count": 1199,
+            "expected_files_count": null,
+            "memory_traffic": 53454.86441040039,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "5c4bb9b7f6a779351afcdd76f390c572b3c1dc06",
+            "commit_message": "gh-137992: fix `PyRefTracer_SetTracer` to start world before returning  (#138925)\n\nfix deadlock in PyRefTracer_SetTracer",
+            "commit_timestamp": 1757947155.0
         }
     ]
 }
