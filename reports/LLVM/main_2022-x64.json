@@ -32653,6 +32653,23 @@
             "commit_ref": "a57c583861d209f440ffa937a29979e116b4716e",
             "commit_message": "llvm-ml: Error on MCSubtargetInfo construction failure (#159221)\n\nReplace assert with an error.",
             "commit_timestamp": 1758078614.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1758122759.491681,
+            "elapsed_time": 1746.9664690494537,
+            "x64": true,
+            "actual_files_count": 2995,
+            "expected_files_count": 1661,
+            "memory_traffic": 272633.7618179321,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "51a840e762f506c2473f9f0cbc01b6336f99e6d1",
+            "commit_message": "[sanitizer_common][tsan][Darwin] Improve message for unsupported vm config on Apple platforms (#158665)\n\nAn existing log message is triggered in InitializePlatformEarly if the\naddress space max is not as sufficient for TSAN.\n\nSome Apple platforms expand the address space limit, but reserve much of\nthe space TSAN needs. Therefore, we now check that the kernel has not\nmapped over the address space that we intend to use.\n\nIsAddressInMappedRegion is added to sanitizer_common. This introduces a\nnew dependency on mach_vm_region_recurse during TSAN startup, so this\nintentionally fails softly (to avoid breaking current users who may be\nin a sandbox that doesn't allow this).\n\nrdar://135265279",
+            "commit_timestamp": 1758121455.0
         }
     ]
 }
