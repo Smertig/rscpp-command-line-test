@@ -10979,6 +10979,21 @@
             "commit_ref": "73a75ff992d068c5af2bf07280f998c4f466865f",
             "commit_message": "hpb/oss: replace trigraph test with escaped string test\n\nThis allows us to remove trigraph enabling in hpb ci as well :)\n\nPiperOrigin-RevId: 808144179\n",
             "commit_timestamp": 1758119318.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1758165356.792689,
+            "elapsed_time": 323.07601594924927,
+            "x64": true,
+            "actual_files_count": 1196,
+            "expected_files_count": 818,
+            "memory_traffic": 45816.5403213501,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "6af119088affa46e1d03c4bf228d2e030d53b3aa",
+            "commit_message": "Removed the final member variable from `ClassNameResolver`.\n\nThis is now an empty class that there is no reason to instantiate.  We can remove all instances of it and begin moving its implementation into `names.cc`.\n\nPiperOrigin-RevId: 808359217\n",
+            "commit_timestamp": 1758163692.0
         }
     ]
 }
