@@ -32704,6 +32704,23 @@
             "commit_ref": "5399aa1f6aa9548ae5f097db2369cfea50bd7987",
             "commit_message": "[gn build] Port 902ddda120a5\n",
             "commit_timestamp": 1758207191.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1758252952.607148,
+            "elapsed_time": 1705.8349936008453,
+            "x64": true,
+            "actual_files_count": 2998,
+            "expected_files_count": 1661,
+            "memory_traffic": 272799.41469573975,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "f8b7f64ad2d94bbda169023f933f18b31c9b4492",
+            "commit_message": "[TTI][ASan][RISCV] Move InterestingMemoryOperand to Analysis and embed in MemIntrinsicInfo (#157863)\n\nPreviously asan considers target intrinsics as black boxes, so asan\ncould not instrument accurate check. This patch make\nSmallVector<InterestingMemoryOperand> a member of MemIntrinsicInfo so\nthat TTI can make targets describe their intrinsic informations to asan.\n\nNote,\n1. This patch move InterestingMemoryOperand from Transforms to Analysis.\n2. Extend MemIntrinsicInfo by adding a\nSmallVector<InterestingMemoryOperand> member.\n3. This patch does not support RVV indexed/segment load/store.",
+            "commit_timestamp": 1758251381.0
         }
     ]
 }

@@ -26801,6 +26801,21 @@
             "commit_ref": "9b35f7cdfedc1835f36b87662617fb60d06fe412",
             "commit_message": "gh-129813, PEP 782: Use PyBytesWriter in bufferedio.c (#139121)\n\nReplace PyBytes_FromStringAndSize(NULL, size) and _PyBytes_Resize()\nwith the new public PyBytesWriter API.",
             "commit_timestamp": 1758207610.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1758252070.31409,
+            "elapsed_time": 1647.7009799480438,
+            "x64": true,
+            "actual_files_count": 1199,
+            "expected_files_count": null,
+            "memory_traffic": 53516.22187805176,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "ac5c5d42a2e542b3d036cdee80c6449157c03e96",
+            "commit_message": "gh-119494: Fix error messages for deleting/setting type attributes (#119495)\n\n",
+            "commit_timestamp": 1758229729.0
         }
     ]
 }
