@@ -32738,6 +32738,23 @@
             "commit_ref": "b21dd44dbc00a60b787dcfa90ca0e8b677c5211f",
             "commit_message": "[lldb][test] Enable non-address bit WritePointerToMemory test on Linux (#157435)\n\nFirst added in #153585 for Darwin only. All Linux AArch64 systems also\nhave Top Byte Ignore enabled in userspace so the test \"just works\"\nthere.\n\nFreeBSD has very recently gained Top Byte Ignore support:\nhttps://github.com/freebsd/freebsd-src/commit/4c6c27d3fb4ad15931aae2eaf8e624aed99a3fd9\n\nHowever it's so recent, I don't want to assume it'll be available on any\nrandom FreeBSD system out there.\n\nThere isn't really a good place to put this test, so I put it in the top\nlevel of API, next to the other non-address bit test that didn't have a\ngood home either.",
             "commit_timestamp": 1758294033.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1758339134.763122,
+            "elapsed_time": 1701.5517394542694,
+            "x64": true,
+            "actual_files_count": 3002,
+            "expected_files_count": 1661,
+            "memory_traffic": 273082.9849700928,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "3e57a0d01c90c09b1e40d8edfe48f8e5a63e2de6",
+            "commit_message": "[lldb][MachO] Local structs for larger VA offsets (#159849)\n\nThe Mach-O file format has several load commands which specify the\nlocation of data in the file in UInt32 offsets. lldb uses these same\nstructures to track the offsets of the binary in virtual address space\nwhen it is running. Normally a binary is loaded in memory contiguously,\nso this is fine, but on Darwin systems there is a \"system shared cache\"\nwhere all system libraries are combined into one region of memory and\npre-linked. The shared cache has the TEXT segments for every binary\nloaded contiguously, then the DATA segments, and finally a shared common\nLINKEDIT segment for all binaries. The virtual address offset from the\nTEXT segment for a libray to the LINKEDIT may exceed 4GB of virtual\naddress space depending on the structure of the shared cache, so this\nuse of a UInt32 offset will not work.\n\nThere was an initial instance of this issue that I fixed last November\nin https://github.com/llvm/llvm-project/pull/117832 where I fixed this\nissue for the LC_SYMTAB / `symtab_command` structure. But we have the\nsame issue now with three additional structures;\n`linkedit_data_command`, `dyld_info_command`, and `dysymtab_command`.\nFor all of these we can see the pattern of `dyld_info.export_off +=\nlinkedit_slide` applied to the offset fields in ObjectFileMachO.\n\nThis defines local structures that mirror the Mach-O structures, except\nthat it uses UInt64 offset fields so we can reuse the same field for a\nlarge virtual address offset at runtime. I defined ctor's from the\ngenuine structures, as well as operator= methods so the structures can\nbe read from the Mach-O binary into the standard object, then copied\ninto our local expanded versions of them. These structures are ABI in\nMach-O and cannot change their layout.\n\nThe alternative is to create local variables alongside these Mach-O load\ncommand objects for the offsets that we care about, adjust those by the\ncorrect VA offsets, and only use those local variables instead of the\nfields in the objects. I took the approach of the local enhanced\nstructure in November and I think it is the cleaner approach.\n\nrdar://160384968\n",
+            "commit_timestamp": 1758336806.0
         }
     ]
 }

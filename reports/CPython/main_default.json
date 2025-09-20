@@ -26831,6 +26831,21 @@
             "commit_ref": "d06113c7a7cac76a28847702685e601b79f71bf8",
             "commit_message": "gh-112729: Correctly fail when the process is out of memory during interpreter creation (GH-139164)\n\n",
             "commit_timestamp": 1758292869.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1758338275.974155,
+            "elapsed_time": 1521.2304153442383,
+            "x64": true,
+            "actual_files_count": 1199,
+            "expected_files_count": null,
+            "memory_traffic": 53717.09864807129,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "69c6b438e84ef2bb94a587e49946a2a4b6454fb3",
+            "commit_message": "gh-138013: Split SignalsTest from test_io.test_general (#139079)\n\nIncrease parallelism by splitting out `SignalsTest` from test_general.\n`SignalsTest` takes 24.2 seconds on my dev machine when fully enabled\nmaking it the largest part of `test_io`. Code move done via copy/paste\nthen tweak imports.\n\nAfter splitting `test_io.test_general` is down to 10.1 seconds on my dev\nbox with all parts enabled.",
+            "commit_timestamp": 1758306110.0
         }
     ]
 }
