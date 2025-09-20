@@ -32755,6 +32755,23 @@
             "commit_ref": "3e57a0d01c90c09b1e40d8edfe48f8e5a63e2de6",
             "commit_message": "[lldb][MachO] Local structs for larger VA offsets (#159849)\n\nThe Mach-O file format has several load commands which specify the\nlocation of data in the file in UInt32 offsets. lldb uses these same\nstructures to track the offsets of the binary in virtual address space\nwhen it is running. Normally a binary is loaded in memory contiguously,\nso this is fine, but on Darwin systems there is a \"system shared cache\"\nwhere all system libraries are combined into one region of memory and\npre-linked. The shared cache has the TEXT segments for every binary\nloaded contiguously, then the DATA segments, and finally a shared common\nLINKEDIT segment for all binaries. The virtual address offset from the\nTEXT segment for a libray to the LINKEDIT may exceed 4GB of virtual\naddress space depending on the structure of the shared cache, so this\nuse of a UInt32 offset will not work.\n\nThere was an initial instance of this issue that I fixed last November\nin https://github.com/llvm/llvm-project/pull/117832 where I fixed this\nissue for the LC_SYMTAB / `symtab_command` structure. But we have the\nsame issue now with three additional structures;\n`linkedit_data_command`, `dyld_info_command`, and `dysymtab_command`.\nFor all of these we can see the pattern of `dyld_info.export_off +=\nlinkedit_slide` applied to the offset fields in ObjectFileMachO.\n\nThis defines local structures that mirror the Mach-O structures, except\nthat it uses UInt64 offset fields so we can reuse the same field for a\nlarge virtual address offset at runtime. I defined ctor's from the\ngenuine structures, as well as operator= methods so the structures can\nbe read from the Mach-O binary into the standard object, then copied\ninto our local expanded versions of them. These structures are ABI in\nMach-O and cannot change their layout.\n\nThe alternative is to create local variables alongside these Mach-O load\ncommand objects for the offsets that we care about, adjust those by the\ncorrect VA offsets, and only use those local variables instead of the\nfields in the objects. I took the approach of the local enhanced\nstructure in November and I think it is the cleaner approach.\n\nrdar://160384968\n",
             "commit_timestamp": 1758336806.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1758381772.635211,
+            "elapsed_time": 1739.4433681964874,
+            "x64": true,
+            "actual_files_count": 3002,
+            "expected_files_count": 1661,
+            "memory_traffic": 272793.41817474365,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "941ea28f3f4f12e49b5e511299a2bf7214795630",
+            "commit_message": "[NFC][clang] Refactor no-stable-modtime.m test use split-file (#159924)\n\nThis PR refactor no-stable-modtime.m to use split-file\n\nSigned-off-by: yicuixi <qin_17914@126.com>",
+            "commit_timestamp": 1758378706.0
         }
     ]
 }
