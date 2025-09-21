@@ -32789,6 +32789,23 @@
             "commit_ref": "e8e0108a873c1efd7f614251f22de67b16a05c8c",
             "commit_message": "[BPF] Avoid generating .comment section (#159958)\n\nThe kernel libbpf does not need .comment section. If not filtering out\nin llvm, the section will be filtered out in libbpf. So let us filter it\nout as early as possible which is in llvm.\n\nThe following is an example.\n\n  $ cat t.c\n  int test() { return 5; }\n\nWithout this change:\n\n  $ llvm-readelf -S t.o\n  [Nr] Name              Type            Address          Off    Size   ES Flg Lk Inf Al\n  [ 0]                   NULL            0000000000000000 000000 000000 00      0   0  0\n  [ 1] .strtab           STRTAB          0000000000000000 000110 000047 00      0   0  1\n  [ 2] .text             PROGBITS        0000000000000000 000040 000010 00  AX  0   0  8\n  [ 3] .comment          PROGBITS        0000000000000000 000050 000072 01  MS  0   0  1\n  [ 4] .note.GNU-stack   PROGBITS        0000000000000000 0000c2 000000 00      0   0  1\n  [ 5] .llvm_addrsig     LLVM_ADDRSIG    0000000000000000 000110 000000 00   E  6   0  1\n  [ 6] .symtab           SYMTAB          0000000000000000 0000c8 000048 18      1   2  8\n\nWith this change:\n\n  $ llvm-readelf -S t.o\n  [Nr] Name              Type            Address          Off    Size   ES Flg Lk Inf Al\n  [ 0]                   NULL            0000000000000000 000000 000000 00      0   0  0\n  [ 1] .strtab           STRTAB          0000000000000000 000098 00003e 00      0   0  1\n  [ 2] .text             PROGBITS        0000000000000000 000040 000010 00  AX  0   0  8\n  [ 3] .note.GNU-stack   PROGBITS        0000000000000000 000050 000000 00      0   0  1\n  [ 4] .llvm_addrsig     LLVM_ADDRSIG    0000000000000000 000098 000000 00   E  5   0  1\n  [ 5] .symtab           SYMTAB          0000000000000000 000050 000048 18      1   2  8",
             "commit_timestamp": 1758419090.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1758468170.024306,
+            "elapsed_time": 1724.9748208522797,
+            "x64": true,
+            "actual_files_count": 3002,
+            "expected_files_count": 1661,
+            "memory_traffic": 272851.15396118164,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "addfdb5273170901ed4fec5dac421e0559466ffb",
+            "commit_message": "[LV] Skip select cost for invariant divisors in legacy cost model.\n\nFor UDiv/SDiv with invariant divisors, the created selects will be\nhoisted out. Don't compute their cost for each iteration, to match the\nmore accurate VPlan-based cost modeling.\n\nFixes https://github.com/llvm/llvm-project/issues/159402.\n",
+            "commit_timestamp": 1758463730.0
         }
     ]
 }
