@@ -11114,6 +11114,21 @@
             "commit_ref": "cd2a8206cbcb25ff93a82875d46053ecaba24705",
             "commit_message": "Use `InternalVisibility` overloaded constructors when constructing `RepeatedPtrField` in `Arena::Create`.\n\nThis change modifies `Arena::Create` to use the `InternalVisibility` overloads for `RepeatedPtrField` types, avoiding triggering deprecation warnings for calling the deleted `RepeatedPtrField(Arena*)` constructor.\n\nA new move constructor with `InternalVisibility` is also added to `RepeatedPtrField`.\n\nPiperOrigin-RevId: 809798057\n",
             "commit_timestamp": 1758500859.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1758553638.474646,
+            "elapsed_time": 322.66991543769836,
+            "x64": true,
+            "actual_files_count": 1196,
+            "expected_files_count": 818,
+            "memory_traffic": 45864.97077178955,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "cd2a8206cbcb25ff93a82875d46053ecaba24705",
+            "commit_message": "Use `InternalVisibility` overloaded constructors when constructing `RepeatedPtrField` in `Arena::Create`.\n\nThis change modifies `Arena::Create` to use the `InternalVisibility` overloads for `RepeatedPtrField` types, avoiding triggering deprecation warnings for calling the deleted `RepeatedPtrField(Arena*)` constructor.\n\nA new move constructor with `InternalVisibility` is also added to `RepeatedPtrField`.\n\nPiperOrigin-RevId: 809798057\n",
+            "commit_timestamp": 1758500859.0
         }
     ]
 }

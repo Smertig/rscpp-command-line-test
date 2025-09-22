@@ -32823,6 +32823,23 @@
             "commit_ref": "84a796d7dd09a4a6d64a30d47405cf60e59534c1",
             "commit_message": "[ExecutionEngine] Use std::tie for a lexicographical comparison (NFC) (#160007)\n\n",
             "commit_timestamp": 1758507425.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1758554754.263414,
+            "elapsed_time": 1788.8756494522095,
+            "x64": true,
+            "actual_files_count": 3002,
+            "expected_files_count": 1661,
+            "memory_traffic": 272821.08837890625,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "d0e6e5ac16c220b6c5abf3345e4cffc543a12871",
+            "commit_message": "[libc++] Allow appending or overwriting existing benchmark data\n\nAppending to or overwriting existing data can be useful when we notice\nsignificant spikes or anomalies in the benchmarks as a quick way to\neliminate noisy entries.\n",
+            "commit_timestamp": 1758553260.0
         }
     ]
 }
