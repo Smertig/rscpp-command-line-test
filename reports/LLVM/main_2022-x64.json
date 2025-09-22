@@ -32806,6 +32806,23 @@
             "commit_ref": "addfdb5273170901ed4fec5dac421e0559466ffb",
             "commit_message": "[LV] Skip select cost for invariant divisors in legacy cost model.\n\nFor UDiv/SDiv with invariant divisors, the created selects will be\nhoisted out. Don't compute their cost for each iteration, to match the\nmore accurate VPlan-based cost modeling.\n\nFixes https://github.com/llvm/llvm-project/issues/159402.\n",
             "commit_timestamp": 1758463730.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1758512330.273718,
+            "elapsed_time": 1714.2596123218536,
+            "x64": true,
+            "actual_files_count": 3002,
+            "expected_files_count": 1661,
+            "memory_traffic": 272633.2006225586,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "84a796d7dd09a4a6d64a30d47405cf60e59534c1",
+            "commit_message": "[ExecutionEngine] Use std::tie for a lexicographical comparison (NFC) (#160007)\n\n",
+            "commit_timestamp": 1758507425.0
         }
     ]
 }
