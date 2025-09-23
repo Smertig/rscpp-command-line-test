@@ -26921,6 +26921,21 @@
             "commit_ref": "04c4628345b841ae9792ea007d7beffd2846f017",
             "commit_message": "gh-136744: Remove unnecessary chmod from pydoc.apropos() test. (GH-136746)\n\nRemove unnecessary chmod from pydoc.apropos() test.",
             "commit_timestamp": 1758551173.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1758597591.260922,
+            "elapsed_time": 1652.1099166870117,
+            "x64": true,
+            "actual_files_count": 1199,
+            "expected_files_count": null,
+            "memory_traffic": 53626.65466308594,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "49e83e31bd45e513a3caaa39b5789e95caa78ac1",
+            "commit_message": "gh-139156: Use PyBytesWriter in PyUnicode_AsRawUnicodeEscapeString() (#139250)\n\nReplace PyBytes_FromStringAndSize() and _PyBytes_Resize() with the\nPyBytesWriter API.",
+            "commit_timestamp": 1758577579.0
         }
     ]
 }

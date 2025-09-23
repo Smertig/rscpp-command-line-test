@@ -32840,6 +32840,23 @@
             "commit_ref": "d0e6e5ac16c220b6c5abf3345e4cffc543a12871",
             "commit_message": "[libc++] Allow appending or overwriting existing benchmark data\n\nAppending to or overwriting existing data can be useful when we notice\nsignificant spikes or anomalies in the benchmarks as a quick way to\neliminate noisy entries.\n",
             "commit_timestamp": 1758553260.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1758598390.73734,
+            "elapsed_time": 1715.8038623332977,
+            "x64": true,
+            "actual_files_count": 3002,
+            "expected_files_count": 1661,
+            "memory_traffic": 272696.00982666016,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "4f33d7b7a9f39d733b7572f9afbf178bca8da127",
+            "commit_message": "Revert \"[ControlHeightReduction] Drop lifetime annotations where necessary (#159686)\"\n\nThis reverts commit a00450944d2a91aba302954556c1c23ae049dfc7.\n\nLooks like this one is actually breaking the buildbots. Reverting the switch back\nto IRPGO did not fix things.\n",
+            "commit_timestamp": 1758596506.0
         }
     ]
 }
