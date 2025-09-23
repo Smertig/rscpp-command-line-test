@@ -32857,6 +32857,23 @@
             "commit_ref": "4f33d7b7a9f39d733b7572f9afbf178bca8da127",
             "commit_message": "Revert \"[ControlHeightReduction] Drop lifetime annotations where necessary (#159686)\"\n\nThis reverts commit a00450944d2a91aba302954556c1c23ae049dfc7.\n\nLooks like this one is actually breaking the buildbots. Reverting the switch back\nto IRPGO did not fix things.\n",
             "commit_timestamp": 1758596506.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1758641077.710824,
+            "elapsed_time": 1721.209498167038,
+            "x64": true,
+            "actual_files_count": 3002,
+            "expected_files_count": 1661,
+            "memory_traffic": 272849.23121643066,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "a3ab7191a73412d5bfe85d416158999b8d5d6e19",
+            "commit_message": "[NFC][MC][ARM] Reorder decoder functions N/N (#158767)\n\nMove `DecodeT2AddrModeImm8` and `DecodeT2Imm8` definition before its\nfirst use and eliminate the last remaining forward declarations of\ndecode functions.\n\nWork on https://github.com/llvm/llvm-project/issues/156560 : Reorder ARM\ndisassembler decode functions to eliminate forward declarations",
+            "commit_timestamp": 1758639865.0
         }
     ]
 }

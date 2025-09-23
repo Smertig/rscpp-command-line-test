@@ -26936,6 +26936,21 @@
             "commit_ref": "49e83e31bd45e513a3caaa39b5789e95caa78ac1",
             "commit_message": "gh-139156: Use PyBytesWriter in PyUnicode_AsRawUnicodeEscapeString() (#139250)\n\nReplace PyBytes_FromStringAndSize() and _PyBytes_Resize() with the\nPyBytesWriter API.",
             "commit_timestamp": 1758577579.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1758640410.513572,
+            "elapsed_time": 1598.526932001114,
+            "x64": true,
+            "actual_files_count": 1199,
+            "expected_files_count": null,
+            "memory_traffic": 53610.66604614258,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "6b4e3fe9d42708ca6e8cfb7407c22647787a6b29",
+            "commit_message": "gh-126016: Fix flaky test by allowing the SIGINT return code (GH-139219)\n\n",
+            "commit_timestamp": 1758636559.0
         }
     ]
 }
