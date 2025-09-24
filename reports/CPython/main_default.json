@@ -26951,6 +26951,21 @@
             "commit_ref": "6b4e3fe9d42708ca6e8cfb7407c22647787a6b29",
             "commit_message": "gh-126016: Fix flaky test by allowing the SIGINT return code (GH-139219)\n\n",
             "commit_timestamp": 1758636559.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1758684017.250561,
+            "elapsed_time": 1522.6102826595306,
+            "x64": true,
+            "actual_files_count": 1199,
+            "expected_files_count": null,
+            "memory_traffic": 53425.82344818115,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "9e6493849ec2389460a8933314fcc8b7be01c221",
+            "commit_message": "GH-139174: Prepare `pathlib.Path.info` for new methods (#139175)\n\nMerge `_WindowsPathInfo` and `_PosixPathInfo` classes into a new\n`_StatResultInfo` class. On Windows, this means relying on `os.stat()`\nrather than `os.path.isfile()` and friends, which is a little slower. But\nthere's value in making the code easier to maintain, and we're going to\nneed the stat result for implementing `size()`, `mode()` etc.\n\nAlso move the classes from `pathlib._os` to `pathlib` proper.",
+            "commit_timestamp": 1758678744.0
         }
     ]
 }

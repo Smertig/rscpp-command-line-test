@@ -11159,6 +11159,21 @@
             "commit_ref": "2ec06a53ed10f16efd120ecfc77440f83cdb99e5",
             "commit_message": "Don't swap arena pointers in `UntypedMapBase::InternalSwap`.\n\nThe arenas should be equal in `InternalSwap`, since it is only called from other swap methods if the arenas match.\n\nPiperOrigin-RevId: 810141319\n",
             "commit_timestamp": 1758574390.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1758683849.197323,
+            "elapsed_time": 321.9691343307495,
+            "x64": true,
+            "actual_files_count": 1196,
+            "expected_files_count": 818,
+            "memory_traffic": 45916.388832092285,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "810272f3c44bce4133cb4b22a38f52d36425c557",
+            "commit_message": "Avoid boxing/unboxing `varint`, `fixed32`, and `fixed64` fields in `UnknownFieldSet.Field`\n\nPiperOrigin-RevId: 810678393\n",
+            "commit_timestamp": 1758683219.0
         }
     ]
 }
