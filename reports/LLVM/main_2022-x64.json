@@ -32891,6 +32891,23 @@
             "commit_ref": "816970ba740085031058e6f5b8046e08953e6843",
             "commit_message": "[bazel][mlir][Python] Port #159926: move PDLPatternMatch.h.inc (#160432)\n\n```\nexternal/llvm-project/mlir/lib/CAPI/Transforms/Rewrite.cpp:17:10: error: use of private header from outside its module: 'mlir/IR/PDLPatternMatch.h.inc' [-Wprivate-header]\n   17 | #include \"mlir/IR/PDLPatternMatch.h.inc\"\n      |          ^\n```",
             "commit_timestamp": 1758683646.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1758727616.119298,
+            "elapsed_time": 1836.530826330185,
+            "x64": true,
+            "actual_files_count": 3002,
+            "expected_files_count": 1661,
+            "memory_traffic": 272751.76094818115,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "92e5060e4c2a5ddd422173204d33359009b2232c",
+            "commit_message": "[AST] Fix a warning\n\nThis patch fixes:\n\n  clang/lib/AST/ByteCode/InterpBuiltin.cpp:2603:15: error: unused\n  variable 'VT1' [-Werror,-Wunused-variable]\n",
+            "commit_timestamp": 1758726407.0
         }
     ]
 }

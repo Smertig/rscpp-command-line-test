@@ -26966,6 +26966,21 @@
             "commit_ref": "9e6493849ec2389460a8933314fcc8b7be01c221",
             "commit_message": "GH-139174: Prepare `pathlib.Path.info` for new methods (#139175)\n\nMerge `_WindowsPathInfo` and `_PosixPathInfo` classes into a new\n`_StatResultInfo` class. On Windows, this means relying on `os.stat()`\nrather than `os.path.isfile()` and friends, which is a little slower. But\nthere's value in making the code easier to maintain, and we're going to\nneed the stat result for implementing `size()`, `mode()` etc.\n\nAlso move the classes from `pathlib._os` to `pathlib` proper.",
             "commit_timestamp": 1758678744.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1758726561.757122,
+            "elapsed_time": 1518.5109791755676,
+            "x64": true,
+            "actual_files_count": 1199,
+            "expected_files_count": null,
+            "memory_traffic": 53532.98719787598,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "c7b11b754653241a826382ae2321ef5b09b0bc1e",
+            "commit_message": "gh-139156: Use PyBytesWriter in PyUnicode_EncodeCodePage() (#139259)\n\nReplace PyBytes_FromStringAndSize() and _PyBytes_Resize() with the\nPyBytesWriter API.",
+            "commit_timestamp": 1758724780.0
         }
     ]
 }

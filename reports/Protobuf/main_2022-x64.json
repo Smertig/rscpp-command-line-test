@@ -11174,6 +11174,21 @@
             "commit_ref": "810272f3c44bce4133cb4b22a38f52d36425c557",
             "commit_message": "Avoid boxing/unboxing `varint`, `fixed32`, and `fixed64` fields in `UnknownFieldSet.Field`\n\nPiperOrigin-RevId: 810678393\n",
             "commit_timestamp": 1758683219.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1758726406.537619,
+            "elapsed_time": 331.2685182094574,
+            "x64": true,
+            "actual_files_count": 1196,
+            "expected_files_count": 818,
+            "memory_traffic": 45906.23426818848,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "1a48acef567ca393592e2579bd08dd7763890fe7",
+            "commit_message": "Refactor `MapFieldBase::ReflectionPayload` to be a class.\n\nThis abstracts away the representation of members of this class and provides access to them via accessors/mutators. In a future cl, we will have to wrap the `RepeatedPtrField` member of this class, and having an accessor to the field rather than exposing it directly contains the blast radius of that change to just this class.\n\nPiperOrigin-RevId: 810699795\n",
+            "commit_timestamp": 1758687565.0
         }
     ]
 }
