@@ -11204,6 +11204,21 @@
             "commit_ref": "6fee29b26704b3838bced6bfadd4c3cc0efd2574",
             "commit_message": "fix(php): phpstan errors on repeated field (#23372)\n\nShould fix https://github.com/googleapis/google-cloud-php/issues/8372 (phpstan typehinting issues) by having the old `RepeatedField` class extend the new one.\n\nCloses #23372\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/23372 from bshaffer:fix-phpstan-error-in-deprecated-field eaaba2f2a11898a1affaaa3de31276d06dd932a1\nPiperOrigin-RevId: 811039337\n",
             "commit_timestamp": 1758750021.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1758812853.074663,
+            "elapsed_time": 330.3998668193817,
+            "x64": true,
+            "actual_files_count": 1196,
+            "expected_files_count": 818,
+            "memory_traffic": 45998.08399963379,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "6d9ebe8f4d163a43a85b8ee37e724a2904207395",
+            "commit_message": "Split `Arena::Construct` into two methods, one which assumes we are using arenas.\n\nThis allows us to avoid a conditional in `DoCreateMessage`, which is only called when we are using arenas.\n\nNote that we also remove the logic for constructing a wrapper type around the allocated `T`, as this logic was erroneous (and also never triggered). If a `T` was allocated, we only allocated enough memory for `T`, so constructing a `typename internal::FieldArenaRep<T>::Type` is UB. This never triggers because all callers of `Construct` would have already translated `T` to its arena rep, and the arena rep of an arena rep is always itself.\n\nPiperOrigin-RevId: 811233885\n",
+            "commit_timestamp": 1758788422.0
         }
     ]
 }

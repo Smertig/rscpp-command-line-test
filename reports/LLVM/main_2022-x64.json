@@ -32925,6 +32925,23 @@
             "commit_ref": "157b81a910efadf7fa08f6958ca7f7e2200c0ca8",
             "commit_message": "[ADT] clang-format SmallPtrSet.h (NFC)\n\nI'm planning to modify this file.\n",
             "commit_timestamp": 1758767805.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1758813839.348486,
+            "elapsed_time": 1716.0823862552643,
+            "x64": true,
+            "actual_files_count": 3002,
+            "expected_files_count": 1661,
+            "memory_traffic": 273245.5644302368,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "d127d00c19578ae7c227b94a70e39d626bf125cf",
+            "commit_message": "[Support] Include <utility> in AllocatorBase.h\n\nThis should fix the build breakage reported in:\n\nhttps://green.lab.llvm.org/job/llvm.org/job/clang-stage2-Rthinlto/1200/\n",
+            "commit_timestamp": 1758812082.0
         }
     ]
 }
