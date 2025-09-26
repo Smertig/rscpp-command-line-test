@@ -11219,6 +11219,21 @@
             "commit_ref": "6d9ebe8f4d163a43a85b8ee37e724a2904207395",
             "commit_message": "Split `Arena::Construct` into two methods, one which assumes we are using arenas.\n\nThis allows us to avoid a conditional in `DoCreateMessage`, which is only called when we are using arenas.\n\nNote that we also remove the logic for constructing a wrapper type around the allocated `T`, as this logic was erroneous (and also never triggered). If a `T` was allocated, we only allocated enough memory for `T`, so constructing a `typename internal::FieldArenaRep<T>::Type` is UB. This never triggers because all callers of `Construct` would have already translated `T` to its arena rep, and the arena rep of an arena rep is always itself.\n\nPiperOrigin-RevId: 811233885\n",
             "commit_timestamp": 1758788422.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1758856792.588218,
+            "elapsed_time": 325.5149233341217,
+            "x64": true,
+            "actual_files_count": 1197,
+            "expected_files_count": 818,
+            "memory_traffic": 46107.064361572266,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "b4262af656bd3971cd2b2c9e51797982a8e9d91c",
+            "commit_message": "Add bzlmod support for python release\n\n#test-continuous\n\nPiperOrigin-RevId: 811607661\n",
+            "commit_timestamp": 1758855797.0
         }
     ]
 }

@@ -32942,6 +32942,23 @@
             "commit_ref": "d127d00c19578ae7c227b94a70e39d626bf125cf",
             "commit_message": "[Support] Include <utility> in AllocatorBase.h\n\nThis should fix the build breakage reported in:\n\nhttps://green.lab.llvm.org/job/llvm.org/job/clang-stage2-Rthinlto/1200/\n",
             "commit_timestamp": 1758812082.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1758857675.435779,
+            "elapsed_time": 1694.0496678352356,
+            "x64": true,
+            "actual_files_count": 3005,
+            "expected_files_count": 1661,
+            "memory_traffic": 272840.2370223999,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "c4a134f59108c8a5e41d9f2539b0ee96f5cbccec",
+            "commit_message": "[profcheck] Add unknown branch weights for inlined strcmp/strncmp (#160455)\n\nThe strcmp/strncmp inliner creates new conditional branches but was\nfailing to add profile metadata. This caused the ProfileVerifierPass to\nfail when profcheck is enabled.\n\nThis patch fixes the issue by explicitly adding unknown branch weights\nto these branches.\n\nIssue #147390",
+            "commit_timestamp": 1758856290.0
         }
     ]
 }
