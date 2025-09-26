@@ -32959,6 +32959,23 @@
             "commit_ref": "c4a134f59108c8a5e41d9f2539b0ee96f5cbccec",
             "commit_message": "[profcheck] Add unknown branch weights for inlined strcmp/strncmp (#160455)\n\nThe strcmp/strncmp inliner creates new conditional branches but was\nfailing to add profile metadata. This caused the ProfileVerifierPass to\nfail when profcheck is enabled.\n\nThis patch fixes the issue by explicitly adding unknown branch weights\nto these branches.\n\nIssue #147390",
             "commit_timestamp": 1758856290.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1758900391.604823,
+            "elapsed_time": 1734.6286511421204,
+            "x64": true,
+            "actual_files_count": 3005,
+            "expected_files_count": 1661,
+            "memory_traffic": 273018.44289398193,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "23473247c2aad142b8259ed70e569e932357c962",
+            "commit_message": "[clang][bytecode][NFC] Use switches for pointer type distinction (#160879)\n\nIn the important places. They are all fully covered switch statements so\nwe know where to add code when adding a new pointer type.",
+            "commit_timestamp": 1758898756.0
         }
     ]
 }
