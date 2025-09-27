@@ -32976,6 +32976,23 @@
             "commit_ref": "23473247c2aad142b8259ed70e569e932357c962",
             "commit_message": "[clang][bytecode][NFC] Use switches for pointer type distinction (#160879)\n\nIn the important places. They are all fully covered switch statements so\nwe know where to add code when adding a new pointer type.",
             "commit_timestamp": 1758898756.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1758943891.021799,
+            "elapsed_time": 1762.448101758957,
+            "x64": true,
+            "actual_files_count": 3007,
+            "expected_files_count": 1661,
+            "memory_traffic": 273119.3728027344,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "7ff6973f1ae91985bb6b5faa8658e81dbaadbd25",
+            "commit_message": "[lit] Remove support for %T\n\nThis patch removes support for %T from llvm-lit. For now we mark the\ntest unresolved and add an error message noting the substitution is\ndeprecated. This is exactly the same as the error handling for other\nsubstitution failures. We intend to remove support for the nice error\nmessage once 22 branches as users should have moved over by the they are\nupgrading to v23.\n\nReviewers: petrhosek, jh7370, ilovepi, pogo59, cmtice\n\nReviewed By: cmtice, jh7370, ilovepi\n\nPull Request: https://github.com/llvm/llvm-project/pull/160028\n",
+            "commit_timestamp": 1758938769.0
         }
     ]
 }
