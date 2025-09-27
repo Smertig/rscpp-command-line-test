@@ -32993,6 +32993,23 @@
             "commit_ref": "7ff6973f1ae91985bb6b5faa8658e81dbaadbd25",
             "commit_message": "[lit] Remove support for %T\n\nThis patch removes support for %T from llvm-lit. For now we mark the\ntest unresolved and add an error message noting the substitution is\ndeprecated. This is exactly the same as the error handling for other\nsubstitution failures. We intend to remove support for the nice error\nmessage once 22 branches as users should have moved over by the they are\nupgrading to v23.\n\nReviewers: petrhosek, jh7370, ilovepi, pogo59, cmtice\n\nReviewed By: cmtice, jh7370, ilovepi\n\nPull Request: https://github.com/llvm/llvm-project/pull/160028\n",
             "commit_timestamp": 1758938769.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1758986607.663683,
+            "elapsed_time": 1778.9576070308685,
+            "x64": true,
+            "actual_files_count": 3007,
+            "expected_files_count": 1661,
+            "memory_traffic": 273095.1482772827,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "d1b5607dc113016b74d0a58e95fed00ea9ad7950",
+            "commit_message": "[libc++][ranges] Fix `ranges::join_view` segmented iterator trait (#158347)\n\nThe outer iterator needs to move to the next segment when calling\n__compose.\n\nWithout this change, `find_segment_if` would never reach the end of the\njoin_view which caused erroneous result when calling `ranges::find` on a\njoin_view of bidirectional ranges.\n\nOther specializations using the segmented iterator trait were likely to\nbe affected as well.\n\nFixes #158279\nFixes #93180",
+            "commit_timestamp": 1758984594.0
         }
     ]
 }
