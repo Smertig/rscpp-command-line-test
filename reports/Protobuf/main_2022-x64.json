@@ -11279,6 +11279,21 @@
             "commit_ref": "db7317baee15e92316ef8482d6901dc55cd3b5e8",
             "commit_message": "Internal change\n\nPiperOrigin-RevId: 812118005\n",
             "commit_timestamp": 1758959051.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1759029738.035373,
+            "elapsed_time": 332.7536561489105,
+            "x64": true,
+            "actual_files_count": 1197,
+            "expected_files_count": 818,
+            "memory_traffic": 46130.39414215088,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "4c49bdbd54d3ac2bdc0c3f079047fd1c01674570",
+            "commit_message": "Optimize `proto2::util::MessageDifferencer::RetrieveFields`.\n\n`tmp_message_fields_` was added to reduce repeated allocations of vectors. However, we are copying from `tmp_message_fields_` to another local vector `message_fields` and then returning this local vector. So, might as well just use `message_fields` directly.\n\nPiperOrigin-RevId: 812231145\n",
+            "commit_timestamp": 1758996190.0
         }
     ]
 }
