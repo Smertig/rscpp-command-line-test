@@ -11324,6 +11324,21 @@
             "commit_ref": "bce55fb1747b45a25cb4ef9e720382d9827de850",
             "commit_message": "Automated Code Change\n\nPiperOrigin-RevId: 812584266\n",
             "commit_timestamp": 1759111540.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1759158467.146319,
+            "elapsed_time": 324.35231471061707,
+            "x64": true,
+            "actual_files_count": 1197,
+            "expected_files_count": 818,
+            "memory_traffic": 46251.44787597656,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "f00f6652924b1d635b82eee91d2c445fad10d2dd",
+            "commit_message": "Fix potential null-termination issue in `FindFileContainingSymbol`.\n\nReplace `c_str()` with `data()` when calling `PyObject_CallMethod` and `PyObject_CallFunction` to avoid potential issues.\n\nPiperOrigin-RevId: 812768308\n",
+            "commit_timestamp": 1759154448.0
         }
     ]
 }
