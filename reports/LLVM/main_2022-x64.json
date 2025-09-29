@@ -33044,6 +33044,23 @@
             "commit_ref": "c05c90949245a5beb15d425caf60020813423e72",
             "commit_message": "[MLIR] Apply clang-tidy fixes for llvm-qualified-auto in MemRefUtils.cpp (NFC)\n",
             "commit_timestamp": 1759067068.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1759117132.528679,
+            "elapsed_time": 1727.8128969669342,
+            "x64": true,
+            "actual_files_count": 3007,
+            "expected_files_count": 1661,
+            "memory_traffic": 273357.0516281128,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "cac0635ee9e947b5f90130df2f471aa4b722e04b",
+            "commit_message": "[LoongArch] Add option for merge base offset pass\n\nAdd `loongarch-enable-merge-offset` option to allow disabling the\n`MergeBaseOffset` pass when using optimization.\n\nReviewers: SixWeining, heiher\n\nReviewed By: SixWeining, heiher\n\nPull Request: https://github.com/llvm/llvm-project/pull/161063\n",
+            "commit_timestamp": 1759107755.0
         }
     ]
 }

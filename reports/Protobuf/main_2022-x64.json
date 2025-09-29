@@ -11309,6 +11309,21 @@
             "commit_ref": "9112627cb190282ab743044467ce7627a5312ed6",
             "commit_message": "Fix Arena representation logic in `Arena::CreateArenaCompatible` methods.\n\nThese methods are responsible for translating an allocation request on an arena to an allocation of a wrapper type, if the field references arenas with an offset.\n\nThese specializations are only trivial right now, which is why the incorrect `CreateArenaCompatible(Arena*)` method didn't cause erroneous code.\n\nPiperOrigin-RevId: 812360821\n",
             "commit_timestamp": 1759037220.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1759116113.398752,
+            "elapsed_time": 327.18379402160645,
+            "x64": true,
+            "actual_files_count": 1197,
+            "expected_files_count": 818,
+            "memory_traffic": 45975.14067840576,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "bce55fb1747b45a25cb4ef9e720382d9827de850",
+            "commit_message": "Automated Code Change\n\nPiperOrigin-RevId: 812584266\n",
+            "commit_timestamp": 1759111540.0
         }
     ]
 }
