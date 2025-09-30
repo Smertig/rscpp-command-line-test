@@ -33095,6 +33095,23 @@
             "commit_ref": "d96c32cdaf588903917a9e7db172729759e34c9d",
             "commit_message": "[CUDA] Enable variadic argument support in front-end (#161305)\n\nVariadice argument for NVPTX as been support in\n\nhttps://github.com/llvm/llvm-project/commit/486d00eca6b6ab470e8324b52cdf9f32023c1c9a\nWe can enable it in front-end.\n\nCo-authored-by: Yuanke Luo <ykluo@birentech.com>",
             "commit_timestamp": 1759200494.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1759245792.709782,
+            "elapsed_time": 1704.285138130188,
+            "x64": true,
+            "actual_files_count": 3007,
+            "expected_files_count": 1661,
+            "memory_traffic": 273282.20935058594,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "ebcf025e2e84da7557350e46891125f6f34fbbfe",
+            "commit_message": "[SPIR-V] Implement SPV_KHR_float_controls2 (#146941)\n\nImplementation of\n[SPV_KHR_float_controls2](https://github.khronos.org/SPIRV-Registry/extensions/KHR/SPV_KHR_float_controls2.html)\nextension, and corresponding tests.\n\nSome of the tests make use of `!spirv.ExecutionMode` LLVM named\nmetadata. This is because some SPIR-V instructions don't have a direct\nequivalent in LLVM IR, so the SPIR-V Target uses different LLVM named\nmetadata to convey the necessary information. Below, you will find an\nexample from one of the newly added tests:\n```\n!spirv.ExecutionMode = !{!19, !20, !21, !22, !23, !24, !25, !26, !27}\n!19 = !{ptr @k_float_controls_float, i32 6028, float poison, i32 131079}\n!20 = !{ptr @k_float_controls_all, i32 6028, float poison, i32 131079}\n!21 = !{ptr @k_float_controls_float, i32 31}\n!22 = !{ptr @k_float_controls_all, i32 31}\n!23 = !{ptr @k_float_controls_float, i32 4461, i32 32}\n!24 = !{ptr @k_float_controls_all, i32 4461, i32 16}\n!25 = !{ptr @k_float_controls_all, i32 4461, i32 32}\n!26 = !{ptr @k_float_controls_all, i32 4461, i32 64}\n!27 = !{ptr @k_float_controls_all, i32 4461, i32 128}\n```\n`!spirv.ExecutionMode` contains a list of metadata nodes, and each of\nthem specifies the required operands for expressing a particular\n`OpExecutionMode` instruction in SPIR-V. For example, `!19 = !{ptr\n@k_float_controls_float, i32 6028, float poison, i32 131079}` will be\nlowered to `OpExecutionMode [[k_float_controls_float_ID]]\nFPFastMathDefault [[float_type_ID]] 131079`.\n\n---------\n\nCo-authored-by: Dmitry Sidorov <dmitry.sidorov@intel.com>",
+            "commit_timestamp": 1759244490.0
         }
     ]
 }

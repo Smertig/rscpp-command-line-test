@@ -27146,6 +27146,21 @@
             "commit_ref": "6b5f15698a436591f7c305c576a2d366c38d9997",
             "commit_message": "Remove link to the PDF downloads (#139142)\n\n",
             "commit_timestamp": 1759168765.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1759244947.272978,
+            "elapsed_time": 3918.2287645339966,
+            "x64": true,
+            "actual_files_count": 1199,
+            "expected_files_count": null,
+            "memory_traffic": 54834.48371887207,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "01157e0cdff1321a065b0a00c5a97460f52af07e",
+            "commit_message": "gh-139116: tracemalloc: Detach thread state when acquiring tables_lock (GH-139449)\n\n* gh-139116: tracemalloc: Detach thread state when acquiring tables_lock\n\nThis prevents a deadlock when:\n\n- One thread is in `_PyTraceMalloc_Stop`, with `TABLES_LOCK` held, calling\n  `PyRefTracer_SetTracer` which wants to stop the world\n- Another is thread in `PyTraceMalloc_Track`, just attached thread state, waiting\n  for `TABLES_LOCK`\n\nDetaching the thread state while waiting for `TABLES_LOCK` allows\n`PyRefTracer_SetTracer` to stop the world.\n\n\nCo-authored-by: Peter Bierma <zintensitydev@gmail.com>",
+            "commit_timestamp": 1759243429.0
         }
     ]
 }

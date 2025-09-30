@@ -11354,6 +11354,21 @@
             "commit_ref": "1449d4760bed71e6ec532742277ae6ec584bf4d4",
             "commit_message": "Add gencode smoke tests (#23547)\n\nThis creates a new //compatability/smoke directory which has a simple unit test and checked-in gencode which was produced by a given protoc version.\n\nIncluded is a script that you can run with a protoc release number, which will fetch the released protoc linux-x64 binary, run it on the test proto, add the code to a subdirectory and hook up the unit test to that generated code.\n\nIf this setup looks good we can quickly add a number of additional versions; I have already validated it works with a wider range but this PR only includes one version to show the setup and focus the initial review on the core things that aren't about the (naming, directory structure, etc)\n\nCloses #23547\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/23547 from protocolbuffers:esrauch-stalegencodetest 7b89e900cc375614214afcc7b8efe25cc47a472c\nPiperOrigin-RevId: 812933488\n",
             "commit_timestamp": 1759179993.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1759244768.249439,
+            "elapsed_time": 324.0254735946655,
+            "x64": true,
+            "actual_files_count": 1197,
+            "expected_files_count": 818,
+            "memory_traffic": 46047.89525604248,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "fc0eda1fd4eff075f1fb2e9249fa4209f0227e33",
+            "commit_message": "Automated Code Change\n\nPiperOrigin-RevId: 813115385\n",
+            "commit_timestamp": 1759215313.0
         }
     ]
 }
