@@ -33078,6 +33078,23 @@
             "commit_ref": "27fa1d0cf96469c268c46684ced2fbb7663c7713",
             "commit_message": "[AMDGPU] Add a new builtin type for image descriptor rsrc (#160258)\n\nAdding a new builtin type for AMDGPU's image descriptor rsrc data type\n\nThis requires for https://github.com/llvm/llvm-project/pull/140210",
             "commit_timestamp": 1759157699.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1759203247.797828,
+            "elapsed_time": 1693.8015518188477,
+            "x64": true,
+            "actual_files_count": 3007,
+            "expected_files_count": 1661,
+            "memory_traffic": 272457.63469696045,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "d96c32cdaf588903917a9e7db172729759e34c9d",
+            "commit_message": "[CUDA] Enable variadic argument support in front-end (#161305)\n\nVariadice argument for NVPTX as been support in\n\nhttps://github.com/llvm/llvm-project/commit/486d00eca6b6ab470e8324b52cdf9f32023c1c9a\nWe can enable it in front-end.\n\nCo-authored-by: Yuanke Luo <ykluo@birentech.com>",
+            "commit_timestamp": 1759200494.0
         }
     ]
 }

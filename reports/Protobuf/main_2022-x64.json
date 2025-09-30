@@ -11339,6 +11339,21 @@
             "commit_ref": "f00f6652924b1d635b82eee91d2c445fad10d2dd",
             "commit_message": "Fix potential null-termination issue in `FindFileContainingSymbol`.\n\nReplace `c_str()` with `data()` when calling `PyObject_CallMethod` and `PyObject_CallFunction` to avoid potential issues.\n\nPiperOrigin-RevId: 812768308\n",
             "commit_timestamp": 1759154448.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1759202233.799489,
+            "elapsed_time": 330.36775946617126,
+            "x64": true,
+            "actual_files_count": 1197,
+            "expected_files_count": 818,
+            "memory_traffic": 46117.87107086182,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "1449d4760bed71e6ec532742277ae6ec584bf4d4",
+            "commit_message": "Add gencode smoke tests (#23547)\n\nThis creates a new //compatability/smoke directory which has a simple unit test and checked-in gencode which was produced by a given protoc version.\n\nIncluded is a script that you can run with a protoc release number, which will fetch the released protoc linux-x64 binary, run it on the test proto, add the code to a subdirectory and hook up the unit test to that generated code.\n\nIf this setup looks good we can quickly add a number of additional versions; I have already validated it works with a wider range but this PR only includes one version to show the setup and focus the initial review on the core things that aren't about the (naming, directory structure, etc)\n\nCloses #23547\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/23547 from protocolbuffers:esrauch-stalegencodetest 7b89e900cc375614214afcc7b8efe25cc47a472c\nPiperOrigin-RevId: 812933488\n",
+            "commit_timestamp": 1759179993.0
         }
     ]
 }
