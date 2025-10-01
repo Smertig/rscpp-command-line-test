@@ -33129,6 +33129,23 @@
             "commit_ref": "89ed5255b9ee88119e409a6d986eb1ad0e8f08e3",
             "commit_message": "[RISCV] Rename BFloatVectors -> BF16Vectors in tablegen. NFC (#161469)\n\nPart of this rename is taken from #161158, but applies it more\nconsistently to more variables.\n\nI think using BF16 makes it easier to not confuse BFloat and Float when\nreading.",
             "commit_timestamp": 1759287201.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1759332243.415346,
+            "elapsed_time": 1594.5567290782928,
+            "x64": true,
+            "actual_files_count": 3008,
+            "expected_files_count": 1661,
+            "memory_traffic": 272614.870010376,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "664b227089a2d3a72b15018018c5e8e4e639f944",
+            "commit_message": "[LV] Keep duplicate recipes in VPExpressionRecipe (#156976)\n\nThe VPExpressionRecipe class uses a set to store its bundled recipes. If\nrepeated recipes are bundled then the duplicates will be lost, causing\nthe following recipes to not be at the expected place in the set.\n\nWhen printing a reduce.add(mul(ext, ext)) bundle, for example, if the\nextends are the same then the 3rd element of the set will be the\nreduction, rather than the expected mul, causing a cast error. With this\nchange, the recipes are at the expected index in the set.\n\nFixes #156464",
+            "commit_timestamp": 1759330914.0
         }
     ]
 }

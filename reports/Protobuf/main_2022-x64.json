@@ -11384,6 +11384,21 @@
             "commit_ref": "3ce5838cff50734e28b51f880cfa5472539e6a8d",
             "commit_message": "Change back to using String instead of Class as the argument on the Poison Pill.\n\nThe reason to change this back is that one purpose of this method to provide a good message when e.g. someone tries to use 4.33.0 gencode against 4.30 runtime. The 4.30 runtime only has the `String` argument method, so by having new gencode try to call the `Class` one it will result in ABI behavior of a NoSuchMethodError instead of getting the clean message when that 'bad direction skew' happens.\n\nThis partial-rollback tries to retain the benefit of avoiding the small cost of the .class.getName() call by having new gencode simply emit the name as a string literal like `\"MyMessageProto\"` instead of  `MyMessageProto.class.getName()` when calling the poison pill.\n\nBecause we didn't do any open source releases with this change quite yet, we can remove the `Class` overload here instead of it having to linger forever.\n\nPiperOrigin-RevId: 813433985\n",
             "commit_timestamp": 1759268555.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1759331211.863357,
+            "elapsed_time": 325.4462432861328,
+            "x64": true,
+            "actual_files_count": 1197,
+            "expected_files_count": 818,
+            "memory_traffic": 46200.90498352051,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "6f78e7e01108c8c3047730ffe44994b0a6eecee5",
+            "commit_message": "hpb: add MakeHandle support that double-checks matching minitables\n\nPiperOrigin-RevId: 813755110\n",
+            "commit_timestamp": 1759330985.0
         }
     ]
 }
