@@ -11369,6 +11369,21 @@
             "commit_ref": "fc0eda1fd4eff075f1fb2e9249fa4209f0227e33",
             "commit_message": "Automated Code Change\n\nPiperOrigin-RevId: 813115385\n",
             "commit_timestamp": 1759215313.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1759289116.803379,
+            "elapsed_time": 335.0121557712555,
+            "x64": true,
+            "actual_files_count": 1197,
+            "expected_files_count": 818,
+            "memory_traffic": 46050.90092468262,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "3ce5838cff50734e28b51f880cfa5472539e6a8d",
+            "commit_message": "Change back to using String instead of Class as the argument on the Poison Pill.\n\nThe reason to change this back is that one purpose of this method to provide a good message when e.g. someone tries to use 4.33.0 gencode against 4.30 runtime. The 4.30 runtime only has the `String` argument method, so by having new gencode try to call the `Class` one it will result in ABI behavior of a NoSuchMethodError instead of getting the clean message when that 'bad direction skew' happens.\n\nThis partial-rollback tries to retain the benefit of avoiding the small cost of the .class.getName() call by having new gencode simply emit the name as a string literal like `\"MyMessageProto\"` instead of  `MyMessageProto.class.getName()` when calling the poison pill.\n\nBecause we didn't do any open source releases with this change quite yet, we can remove the `Class` overload here instead of it having to linger forever.\n\nPiperOrigin-RevId: 813433985\n",
+            "commit_timestamp": 1759268555.0
         }
     ]
 }
