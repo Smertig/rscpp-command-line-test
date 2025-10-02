@@ -33163,6 +33163,23 @@
             "commit_ref": "ac0e99e19124ab720e8837d1500f0c000559a0ef",
             "commit_message": "[Analysis] Fix a warning\n\nThis patch fixes:\n\n  llvm/lib/Analysis/IR2Vec.cpp:289:14: error: unused variable\n  'allSameDim' [-Werror,-Wunused-variable]\n",
             "commit_timestamp": 1759374375.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1759418656.576973,
+            "elapsed_time": 1739.34219288826,
+            "x64": true,
+            "actual_files_count": 3008,
+            "expected_files_count": 1661,
+            "memory_traffic": 272977.42880249023,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "c242aff2452fb662a7ea23954abe654b51182b8e",
+            "commit_message": "[flang][cuda][openacc] Create new symbol in host_data region for CUDA Fortran interop (#161613)\n\n",
+            "commit_timestamp": 1759416225.0
         }
     ]
 }

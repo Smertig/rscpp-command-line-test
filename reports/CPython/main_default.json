@@ -27206,6 +27206,21 @@
             "commit_ref": "75b1afe562c02962393cbbbf3dce9a8d7be1e19e",
             "commit_message": "gh-135953: Add Gecko reporter to sampling profiler (#139364)\n\nSigned-off-by: Pablo Galindo Salgado <pablogsal@gmail.com>\nCo-authored-by: Pablo Galindo Salgado <pablogsal@gmail.com>",
             "commit_timestamp": 1759349934.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1759417776.737314,
+            "elapsed_time": 3947.958562850952,
+            "x64": true,
+            "actual_files_count": 1199,
+            "expected_files_count": null,
+            "memory_traffic": 54755.67321777344,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "6826ebf9866b860367e4763b3e4651950614c5aa",
+            "commit_message": "gh-89745: Remove test_embed.test_init_read_set() (#139500)\n\nSince Python 3.11, it's no longer possible to call PyConfig_Read() to\nget the path configuration, and then modify the path configuration.",
+            "commit_timestamp": 1759416730.0
         }
     ]
 }
