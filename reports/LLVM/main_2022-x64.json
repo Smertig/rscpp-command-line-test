@@ -33146,6 +33146,23 @@
             "commit_ref": "664b227089a2d3a72b15018018c5e8e4e639f944",
             "commit_message": "[LV] Keep duplicate recipes in VPExpressionRecipe (#156976)\n\nThe VPExpressionRecipe class uses a set to store its bundled recipes. If\nrepeated recipes are bundled then the duplicates will be lost, causing\nthe following recipes to not be at the expected place in the set.\n\nWhen printing a reduce.add(mul(ext, ext)) bundle, for example, if the\nextends are the same then the 3rd element of the set will be the\nreduction, rather than the expected mul, causing a cast error. With this\nchange, the recipes are at the expected index in the set.\n\nFixes #156464",
             "commit_timestamp": 1759330914.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1759376006.752235,
+            "elapsed_time": 1749.9325037002563,
+            "x64": true,
+            "actual_files_count": 3008,
+            "expected_files_count": 1661,
+            "memory_traffic": 273052.2320175171,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "ac0e99e19124ab720e8837d1500f0c000559a0ef",
+            "commit_message": "[Analysis] Fix a warning\n\nThis patch fixes:\n\n  llvm/lib/Analysis/IR2Vec.cpp:289:14: error: unused variable\n  'allSameDim' [-Werror,-Wunused-variable]\n",
+            "commit_timestamp": 1759374375.0
         }
     ]
 }
