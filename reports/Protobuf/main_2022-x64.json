@@ -11444,6 +11444,21 @@
             "commit_ref": "cdb39db306bb40de46d75573e85bc0434e73f0af",
             "commit_message": "Clarify the public APIs of GeneratorNames helpers.\n\n* FileJavaPackage - matches C++, no ambiguity\n* FileClassName - matches C++ and our new style\n* BytecodeClassName - returns the fully qualified java names using '$' separators for inner classes.  C++ will be similarly renamed from JavaClassName\n* QualifiedClassName - returns the fully qualified java names using '.' sepators for inner classes.  C++ will be similarly renamed from ClassName\n\nPiperOrigin-RevId: 814414729\n",
             "commit_timestamp": 1759445261.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1759503974.530296,
+            "elapsed_time": 324.5037364959717,
+            "x64": true,
+            "actual_files_count": 1197,
+            "expected_files_count": 818,
+            "memory_traffic": 46038.58423614502,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "71e600c2ed4034ff218a06d3bbf73c4dcb1bfb0f",
+            "commit_message": "go_features: prepare Go-specific optimize_mode\n\nPiperOrigin-RevId: 814584528\n",
+            "commit_timestamp": 1759479749.0
         }
     ]
 }
