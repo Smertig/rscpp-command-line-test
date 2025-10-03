@@ -27221,6 +27221,21 @@
             "commit_ref": "6826ebf9866b860367e4763b3e4651950614c5aa",
             "commit_message": "gh-89745: Remove test_embed.test_init_read_set() (#139500)\n\nSince Python 3.11, it's no longer possible to call PyConfig_Read() to\nget the path configuration, and then modify the path configuration.",
             "commit_timestamp": 1759416730.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1759461511.793192,
+            "elapsed_time": 2751.4463634490967,
+            "x64": true,
+            "actual_files_count": 1199,
+            "expected_files_count": null,
+            "memory_traffic": 54390.54425048828,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "4e7e2dd043c1da85b0c157d3ed24866b77e83a4f",
+            "commit_message": "gh-139322: Reenable test_os.test_getlogin() (#139498)\n\nFix also getlogin() errno.",
+            "commit_timestamp": 1759438317.0
         }
     ]
 }

@@ -33180,6 +33180,23 @@
             "commit_ref": "c242aff2452fb662a7ea23954abe654b51182b8e",
             "commit_message": "[flang][cuda][openacc] Create new symbol in host_data region for CUDA Fortran interop (#161613)\n\n",
             "commit_timestamp": 1759416225.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1759462304.404847,
+            "elapsed_time": 1717.7165677547455,
+            "x64": true,
+            "actual_files_count": 3008,
+            "expected_files_count": 1661,
+            "memory_traffic": 273136.3337249756,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "c64d4cee657020a65723604ff4f0f81dbcb620e3",
+            "commit_message": "[clang] fix lambda dependency issue with late parse attributes (#161765)\n\nThis fixes a regression introduced in #147835\n\nWhen parsing a lambda where the call operator has a late parsed\nattribute, we would try to build a 'this' type for the lambda, but in a\nlambda 'this' never refers to the lambda class itself.\n\nThis late parsed attribute can be added implicitly by the\n-ftrapping-math flag.\n\nThis patch patch makes it so CXXThisScopeRAII ignores lambdas.\n\nThis became observable in #147835 because that made clang lazily create\ntag types, and it removed a workaround for a lambda dependency bug where\nany previously created tag type for the lambda is discarded after its\ndependency is recalculated.\n\nBut the 'this' scope created above would defeat this laziness and create\nthe lambda type too soon, before its dependency was updated.\n\nSince this regression was never released, there are no release notes.\n\nFixes #161657",
+            "commit_timestamp": 1759459629.0
         }
     ]
 }
