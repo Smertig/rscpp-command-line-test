@@ -2,16 +2,12 @@ import json
 import os.path
 import sys
 
-DEFAULT_GENERATOR = "2019-x64"
+DEFAULT_GENERATOR = "2022-x64"
 
 GENERATOR_TO_CONFIG = {
     "2013-x64": None,
     "2017-x64": None,
-    "2019-x64": {
-        "os": "windows-2019",
-        "VsInstallRoot": r"C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise",
-        "VCTargetsPath": r"C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\\",
-    },
+    "2019-x64": None,
     "2022-x64": {
         "os": "windows-2022",
     }
