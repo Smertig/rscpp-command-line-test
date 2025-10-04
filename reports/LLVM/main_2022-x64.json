@@ -33214,6 +33214,23 @@
             "commit_ref": "0efc083c4a59bf10aaaf82d81c645fefeb15843d",
             "commit_message": "[RISCV] Support scalar llvm.fmodf intrinsic. (#161743)\n\n",
             "commit_timestamp": 1759503924.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1759548665.558064,
+            "elapsed_time": 1814.9799337387085,
+            "x64": true,
+            "actual_files_count": 3008,
+            "expected_files_count": 1661,
+            "memory_traffic": 273824.3547668457,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "910e536fb09f39493906005b9a8d7d1fbcc20e28",
+            "commit_message": "[SimplifyCFG][profcheck] Synthesize profile for `br (X == 0 | X == 1), T, F1 -> switch` (#161549)\n\nWe cannot calculate the weights of the switch precisely, but we do know the probability of the default branch. We then split equally the remaining probability over the rest of the cases. If we did nothing, the static estimation could be considerably poorer.\n\n\n\nIssue #147390",
+            "commit_timestamp": 1759546858.0
         }
     ]
 }

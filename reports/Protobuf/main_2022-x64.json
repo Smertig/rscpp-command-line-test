@@ -11459,6 +11459,21 @@
             "commit_ref": "71e600c2ed4034ff218a06d3bbf73c4dcb1bfb0f",
             "commit_message": "go_features: prepare Go-specific optimize_mode\n\nPiperOrigin-RevId: 814584528\n",
             "commit_timestamp": 1759479749.0
+        },
+        {
+            "tool_version": "243.0.20241111.161023",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1759547610.45166,
+            "elapsed_time": 320.6722195148468,
+            "x64": true,
+            "actual_files_count": 1199,
+            "expected_files_count": 818,
+            "memory_traffic": 46070.47170257568,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "ff7ac005d7efeb385a7e73c2655224615cafa07f",
+            "commit_message": "Allocate `FieldArenaRep` type in `Arena::DefaultConstruct` when using arenas.\n\nThis change is prerequisite to supporting split fields with removed arena pointers. Split field types which have removed arena pointers have a larger representation on the arena which holds a copy of `InternalMetadata` from the parent message, since they need to be able to find a nearby `InternalMetadata` within a 32-bit offset. This is exactly how directly arena-allocated field types with arena offsets will work, but this logic is currently only implemented in `DoCreateMessage`. We will do the same trick here to construct this larger type when allocating in `Arena::DefaultConstruct`, which is the API split fields use.\n\nPiperOrigin-RevId: 814896561\n",
+            "commit_timestamp": 1759539546.0
         }
     ]
 }
