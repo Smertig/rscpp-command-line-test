@@ -1,0 +1,19 @@
+{
+    "v1": [
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1759559009.029646,
+            "elapsed_time": 118.78739833831787,
+            "x64": true,
+            "actual_files_count": 1164,
+            "expected_files_count": 2323,
+            "memory_traffic": 18791.211402893066,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "4deea9396bc7dd25c6362fa746a57bf309c74ada",
+            "commit_message": "tests: stop overriding system printf symbols\n\nTo make the source code match the functions called at runtime.\nAnd to avoid the preprocessor trick that may introduces build issues.\n\nBefore this patch, libtests, tunits and units were calling a mixture\nof curl and system printf calls, then transformed them all to curl\nprintf calls by including `curl_printf.h`.\n\nChanges made:\n- tests: stop including `curl_printf.h`.\n- libtest: switch a couple of outlier system printf calls to curl\n  printf.\n- unit: use more curl printf to avoid casts and show whole values.\n- unit: switch remaining calls to curl printf explicitly.\n- tunit: switch to call curl printf explicitly.\n- libtest, tunit, unit: ban system printf.\n- unit1307, unit1607, unit1609, unit1652, unit1655, unit3214: bump\n  types/masks to avoid casts.\n\nAfter this patch:\n- libtests, tunits, units: use exclusively curl printf.\n  (as before, but explicitly, without relying on redefinitions.)\n- servers: is unchanged (it can only use system printf).\n\nCloses #18814\n",
+            "commit_timestamp": 1759531866.0
+        }
+    ]
+}

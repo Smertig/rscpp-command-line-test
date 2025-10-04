@@ -1,0 +1,19 @@
+{
+    "v1": [
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1759558525.822499,
+            "elapsed_time": 107.7341558933258,
+            "x64": true,
+            "actual_files_count": 286,
+            "expected_files_count": 272,
+            "memory_traffic": 4697.91194152832,
+            "repo_url": "https://github.com/catchorg/Catch2.git",
+            "commit_ref": "8e4ab5dd8f5a9b6fed373c58a9aa07a82e528827",
+            "commit_message": "Annotate matcher combinators with CATCH_ATTR_LIFETIMEBOUND\n\nThe matcher combinators do not take ownership of the matchers\nbeing combined, which can catch the users off-guard, when code like\nthis\n\n```cpp\nusing Catch::Matchers::EndsWith;\nusing Catch::Matchers::ContainsSubstring;\n\nauto combinedMatcher = EndsWith(\"as a service\")\n                       && ContainsSubstring(\"web scale\");\n\nREQUIRE_THAT( getSomeString(), combinedMatcher );\n```\n\nleads to use-after-free, as the `combinedMatcher` refers to matcher\ntemporaries that no longer exists. With this commit, users of Clang,\nMSVC or other compiler that understands the `lifetimebound` attribute,\nshould get a warning.\n",
+            "commit_timestamp": 1759523249.0
+        }
+    ]
+}
