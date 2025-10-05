@@ -29,6 +29,21 @@
             "commit_ref": "4535532ed36d2129b107ab357262072f82c2b34a",
             "commit_message": "examples: fix two build issues surfaced with WinCE\n\nBoth may apply to rare non-WinCE Windows builds too.\n\n- fix gcc 4.4.0 preprocessor error:\n  ```\n  docs/examples/http2-upload.c:43:8: error: \"_MSC_VER\" is not defined\n  ```\n  Ref: https://github.com/curl/curl/actions/runs/18238150607/job/51935502616\n\n- fix wrong header order:\n  Inlcude `windows.h` after `winsock2.h` via `curl/curl.h`.\n\nRegressions from 45438c8d6f8e70385d66c029568524e9e803c539 #18823\n\nCloses #18843\n",
             "commit_timestamp": 1759570544.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1759634991.883547,
+            "elapsed_time": 115.88046526908875,
+            "x64": true,
+            "actual_files_count": 1164,
+            "expected_files_count": 2323,
+            "memory_traffic": 18755.327758789062,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "c7fb5858a59dfc433d5eefa08be3db249738fd28",
+            "commit_message": "checksrc: fix possible endless loops/errors in the banned function logic\n\nBy quoting the search expression to be replaced. This avoid the issue\nwhen the code leading up to a banned function contained regex characters\nthat the script did not explicitly handle, e.g. `+`.\n\nAssisted-by: Daniel Stenberg\n\nRef: https://perldoc.perl.org/functions/quotemeta\nFollow-up to dd37d6970cfd8b4cf47ebd469f03772813b92c23 #18775\n\nCloses #18845\n",
+            "commit_timestamp": 1759592961.0
         }
     ]
 }

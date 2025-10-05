@@ -29,6 +29,21 @@
             "commit_ref": "bb3956547affc1af7b7d196f96756895255dd05d",
             "commit_message": "Sync to upstream/release/694 (#2033)\n\n## What's Changed?\n\nThis week we have improvements in new type solver inference, performance\noptimizations for the new type solver as well as fixes for optimization\npasses in native code generation.\n\n- Fixed the order of errors returned by `Frontend::getCheckResult` with\n`accumulateNested` flag\n- Typechecker now uses `userdata` instead of `class` as the extern type\nname\n\n## New Type Solver\n- When a string is passed to a function expecting an argument that might\nbe a string singleton, bidirectional type inference will choose the\nlower bound (string literal) for that argument (Fixes #2010)\n- Fixed incorrect definition of `vector.lerp` (Fixes #2024)\n- Added error suppression in type path traversal. Without it, errors\nwith `*error-type*` were sometimes visible (Fixes #1840)\n- Fixed another case of combinatorial explosion in union type\nnormalization which could have caused a hang\n- Fixed a crash on out-of-bounds access during `for..in` statement\ntypechecking\n\n## Runtime\n- Fixed an assertion in native code generation in a sequence of `nil`\nand `boolean` stores to a local\n- Fixed incorrect lowering in rare cases when LuauCodegenDirectCompare\nwas enabled\n\n## Internal Contributors\n\nCo-authored-by: Andy Friesen <afriesen@roblox.com>\nCo-authored-by: Annie Tang <annietang@roblox.com>\nCo-authored-by: Ariel Weiss <aaronweiss@roblox.com>\nCo-authored-by: Hunter Goldstein <hgoldstein@roblox.com>\nCo-authored-by: Ilya Rezvov <irezvov@roblox.com>\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>\n",
             "commit_timestamp": 1759508016.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1759634445.763634,
+            "elapsed_time": 316.88305854797363,
+            "x64": true,
+            "actual_files_count": 508,
+            "expected_files_count": 379,
+            "memory_traffic": 41093.89547729492,
+            "repo_url": "https://github.com/luau-lang/luau",
+            "commit_ref": "bb3956547affc1af7b7d196f96756895255dd05d",
+            "commit_message": "Sync to upstream/release/694 (#2033)\n\n## What's Changed?\n\nThis week we have improvements in new type solver inference, performance\noptimizations for the new type solver as well as fixes for optimization\npasses in native code generation.\n\n- Fixed the order of errors returned by `Frontend::getCheckResult` with\n`accumulateNested` flag\n- Typechecker now uses `userdata` instead of `class` as the extern type\nname\n\n## New Type Solver\n- When a string is passed to a function expecting an argument that might\nbe a string singleton, bidirectional type inference will choose the\nlower bound (string literal) for that argument (Fixes #2010)\n- Fixed incorrect definition of `vector.lerp` (Fixes #2024)\n- Added error suppression in type path traversal. Without it, errors\nwith `*error-type*` were sometimes visible (Fixes #1840)\n- Fixed another case of combinatorial explosion in union type\nnormalization which could have caused a hang\n- Fixed a crash on out-of-bounds access during `for..in` statement\ntypechecking\n\n## Runtime\n- Fixed an assertion in native code generation in a sequence of `nil`\nand `boolean` stores to a local\n- Fixed incorrect lowering in rare cases when LuauCodegenDirectCompare\nwas enabled\n\n## Internal Contributors\n\nCo-authored-by: Andy Friesen <afriesen@roblox.com>\nCo-authored-by: Annie Tang <annietang@roblox.com>\nCo-authored-by: Ariel Weiss <aaronweiss@roblox.com>\nCo-authored-by: Hunter Goldstein <hgoldstein@roblox.com>\nCo-authored-by: Ilya Rezvov <irezvov@roblox.com>\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>\n",
+            "commit_timestamp": 1759508016.0
         }
     ]
 }
