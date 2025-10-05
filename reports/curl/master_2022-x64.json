@@ -44,6 +44,21 @@
             "commit_ref": "c7fb5858a59dfc433d5eefa08be3db249738fd28",
             "commit_message": "checksrc: fix possible endless loops/errors in the banned function logic\n\nBy quoting the search expression to be replaced. This avoid the issue\nwhen the code leading up to a banned function contained regex characters\nthat the script did not explicitly handle, e.g. `+`.\n\nAssisted-by: Daniel Stenberg\n\nRef: https://perldoc.perl.org/functions/quotemeta\nFollow-up to dd37d6970cfd8b4cf47ebd469f03772813b92c23 #18775\n\nCloses #18845\n",
             "commit_timestamp": 1759592961.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1759677311.227476,
+            "elapsed_time": 114.16880822181702,
+            "x64": true,
+            "actual_files_count": 1164,
+            "expected_files_count": 2323,
+            "memory_traffic": 18754.901893615723,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "08331213055abac4417bc4a470f350a41d1a7659",
+            "commit_message": "GHA/http3-linux: cleanup cache entry name after prev\n\nTo avoid duplicate `no-deprecated` in the cache entry name.\n\nFollow-up to c96bf36557ea2302e4cb838ee1e4bb9827fecee7 #18833\n\nCloses #18853\n",
+            "commit_timestamp": 1759666062.0
         }
     ]
 }

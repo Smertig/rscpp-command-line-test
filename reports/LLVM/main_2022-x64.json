@@ -33282,6 +33282,23 @@
             "commit_ref": "8181c3deae482769937bdcee68f381df4141eb24",
             "commit_message": "[MLIR][Python] Expose the insertion point of pattern rewriter (#161001)\n\nIn [#160520](https://github.com/llvm/llvm-project/pull/160520), we\ndiscussed the current limitations of PDL rewriting in Python (see [this\ncomment](https://github.com/llvm/llvm-project/pull/160520#issuecomment-3332326184)).\nAt the moment, we cannot create new operations in PDL native (python)\nrewrite functions because the `PatternRewriter` APIs are not exposed.\n\nThis PR introduces bindings to retrieve the insertion point of the\n`PatternRewriter`, enabling users to create new operations within Python\nrewrite functions. With this capability, more complex rewrites e.g. with\nbranching and loops that involve op creations become possible.\n\n---------\n\nCo-authored-by: Maksim Levental <maksim.levental@gmail.com>",
             "commit_timestamp": 1759633931.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1759677740.195623,
+            "elapsed_time": 2472.7915120124817,
+            "x64": true,
+            "actual_files_count": 3008,
+            "expected_files_count": 1661,
+            "memory_traffic": 469701.2519607544,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "3149a7720f714c14f7e6320745d9e35f49dba62b",
+            "commit_message": "[CIR] Implement DesignatedInitUpdateExpr for AggregateExpr (#161897)\n\nImplement the DesignatedInitUpdateExpr support for AggregateExpr",
+            "commit_timestamp": 1759664307.0
         }
     ]
 }
