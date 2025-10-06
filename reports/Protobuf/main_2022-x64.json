@@ -11549,6 +11549,21 @@
             "commit_ref": "8984ea82f3a0712eb9272041260d603e56bd6486",
             "commit_message": "Use `Arena::Create` for `RepeatedField` in arena_unittest.\n\nPiperOrigin-RevId: 815467757\n",
             "commit_timestamp": 1759702521.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1759763213.423395,
+            "elapsed_time": 317.54470658302307,
+            "x64": true,
+            "actual_files_count": 1199,
+            "expected_files_count": 818,
+            "memory_traffic": 45959.61046600342,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "3354a3c7ed6362010a00523ed11af258e8ef1049",
+            "commit_message": "Fix bugs in Java Large Enums that have aliased values.\n\nThe old implementation tried to emit only the canonical values in the 'chunked' ranges and then emit aliases separately at the top level, which led to a number of problems including:\n\n- On reflective lookup, it indexed into the values() array based on the all-value-index but that array only contained canonical-values. This is fixed to match the non-Large implementation where the public values() still returns only canonicals, but there's a second private array which contains all values for index-based indexing.\n\n- The static init dependency graph potentially had cycles which could leave values as null if they were touched in the 'wrong' order.\n\nThis changes switches it to instead chunk up all enum values based on the original index range, unrelated to if they the value is an aliases or not. The non-aliases remain constructed as normal, the aliases are declared in their index-order but name the corresponding canonical value directly by its chunk (eg the SomeEnum2 chunk could have something like `public static final SomeEnum X_ALIAS = SomeEnum0.X`).\n\nSince the definition of alias is \"the lowest index of a given value is the canonical one and any higher index with same value are aliases\", this should avoid init cycles since the aliases will only point to some chunk which is <= its own chunk.\n\nPiperOrigin-RevId: 815717989\n",
+            "commit_timestamp": 1759761292.0
         }
     ]
 }
