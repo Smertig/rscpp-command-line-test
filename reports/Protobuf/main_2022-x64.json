@@ -11579,6 +11579,21 @@
             "commit_ref": "531d5c7f333aad084da4b416a11dd0ad6a3601c5",
             "commit_message": "Remove redundant arena check in UnknownFieldSet destructor.\n\nThis constructor is only called when `UnknownFieldSet` is constructed without an arena.\n\nPiperOrigin-RevId: 815944569\n",
             "commit_timestamp": 1759796140.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1759849624.626983,
+            "elapsed_time": 339.4277181625366,
+            "x64": true,
+            "actual_files_count": 1199,
+            "expected_files_count": 818,
+            "memory_traffic": 45982.844398498535,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "1d51a3ea1d3455832f5490403108003b89b48830",
+            "commit_message": "Remove vestigial registerSchemaOverride call from AbstractSchemaTest\n\nPiperOrigin-RevId: 816194012\n",
+            "commit_timestamp": 1759846723.0
         }
     ]
 }

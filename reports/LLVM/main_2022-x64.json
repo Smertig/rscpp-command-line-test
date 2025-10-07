@@ -33350,6 +33350,23 @@
             "commit_ref": "08078fb359b68d88ee3edbb01a910af7b8cde548",
             "commit_message": "[RISCV] Fix copy/paste mistake in Sh3Add_UWPat. (#161923)\n\nThis pattern is a copy of the pattern in Sh3AddPat but using\nsh3add.uw instead of sh3add. This is a mistake and the pattern\nshould be the equivalent of the first pattern from Sh1Add_UWPat and\nSh2Add_UWPat.\n\nThese classes were created to share with Andes in a788a1abd9c88, but\nthere was so many test changes in there that we must have overlooked the\nchanges to Zba codegen.",
             "commit_timestamp": 1759804495.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1759850684.246832,
+            "elapsed_time": 2472.598002910614,
+            "x64": true,
+            "actual_files_count": 3008,
+            "expected_files_count": 1661,
+            "memory_traffic": 470326.9604034424,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "b256d0a7aa00079e7ff0e64d52b8055ed6440682",
+            "commit_message": "[NFC][LLVM] Cleanup namespace usage in DFAJumpThreading.cpp (#162179)\n\n",
+            "commit_timestamp": 1759849054.0
         }
     ]
 }

@@ -104,6 +104,21 @@
             "commit_ref": "752090b9638dcec16d9a773eaa62651681f093b2",
             "commit_message": "examples/synctime: make the sscanf not overflow the local buffer\n\nIf the incoming Date: header has a funky format.\n\nBonus: remove bad null terminator assumptions for header\n\nReported-by: Stanislav Fort\n\nCloses #18890\n",
             "commit_timestamp": 1759789434.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1759850137.885666,
+            "elapsed_time": 119.47488594055176,
+            "x64": true,
+            "actual_files_count": 1180,
+            "expected_files_count": 2323,
+            "memory_traffic": 18986.543174743652,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "53be8166b2b16d9682a173f505188a79ca30fb11",
+            "commit_message": "multi: notify rename, remove the last stragglers\n\nin the public API.\n\nFollow-up to 357808f4addef44c2c48f17d\n\nCloses #18910\n",
+            "commit_timestamp": 1759841689.0
         }
     ]
 }
