@@ -89,6 +89,21 @@
             "commit_ref": "6e269f9a056518bb70831201123b4603f1aac093",
             "commit_message": "[NETSH] Replace the command line interpreter\n\n- Replace the recursive command line interpreter by a state machine.\n- Simplify the help functions.\n\nThis enables us to run 'interface ip' or 'interface ip show config' in a single command.\n",
             "commit_timestamp": 1759744144.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1759807023.207604,
+            "elapsed_time": 73.01738691329956,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7313.0440673828125,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "54b9b41e84e6642515a5a803d5930bbd9825b505",
+            "commit_message": "[NTDLL][WINE][NTOS:MM] MmFlushVirtualMemory(): Pretend success (#8290)\n\n* [NTDLL][WINE] Fix *FlushVirtualMemory() parameter types\n* [NTOS:MM] MmFlushVirtualMemory(): Pretend success\n\nYet, set IoStatusBlock's actual data.\nBased on Jira hack patch by KRosUser.\nAddendum to b445005c70 (0.4.15-dev-2306).\nCORE-19589",
+            "commit_timestamp": 1759786119.0
         }
     ]
 }
