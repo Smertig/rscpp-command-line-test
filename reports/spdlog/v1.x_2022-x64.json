@@ -119,6 +119,21 @@
             "commit_ref": "f1d748e5e3edfa4b1778edea003bac94781bc7b7",
             "commit_message": "Remove the fileapi.h include in os-inl.h (#3444)\n\n* Replaced fileapi.h include with windows.h, as instructed in https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-flushfilebuffers\nOtherwise this causes compilation error on older sdks.\n\n* Removed the fileapi.h include entirely, since windows.h is already included before\n\n---------\n\nCo-authored-by: MasonAngelio <MasonAngelio>",
             "commit_timestamp": 1754599631.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1759893375.131237,
+            "elapsed_time": 49.5490779876709,
+            "x64": true,
+            "actual_files_count": 108,
+            "expected_files_count": 107,
+            "memory_traffic": 3679.0529174804688,
+            "repo_url": "https://github.com/gabime/spdlog.git",
+            "commit_ref": "f1d748e5e3edfa4b1778edea003bac94781bc7b7",
+            "commit_message": "Remove the fileapi.h include in os-inl.h (#3444)\n\n* Replaced fileapi.h include with windows.h, as instructed in https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-flushfilebuffers\nOtherwise this causes compilation error on older sdks.\n\n* Removed the fileapi.h include entirely, since windows.h is already included before\n\n---------\n\nCo-authored-by: MasonAngelio <MasonAngelio>",
+            "commit_timestamp": 1754599631.0
         }
     ]
 }

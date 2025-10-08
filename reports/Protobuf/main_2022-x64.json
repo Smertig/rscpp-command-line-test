@@ -11594,6 +11594,21 @@
             "commit_ref": "1d51a3ea1d3455832f5490403108003b89b48830",
             "commit_message": "Remove vestigial registerSchemaOverride call from AbstractSchemaTest\n\nPiperOrigin-RevId: 816194012\n",
             "commit_timestamp": 1759846723.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1759893414.081248,
+            "elapsed_time": 323.24464988708496,
+            "x64": true,
+            "actual_files_count": 1201,
+            "expected_files_count": 818,
+            "memory_traffic": 46005.68475341797,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "04cdaeb9070cfba395997a3128f6bbac98b769b5",
+            "commit_message": "Add types `RepeatedPtrFieldWithArena` and `RepeatedPtrFieldWithArenaBase`, and update the proto runtime to use them when the feature is enabled.\n\nNote: this is an incomplete change, and will not compile with `PROTOBUF_INTERNAL_REMOVE_ARENA_PTRS_REPEATED_PTR_FIELD` enabled. It is being split to minimize code review burden.\n\nThis change is a no-op and is protected by the `PROTOBUF_INTERNAL_REMOVE_ARENA_PTRS_REPEATED_PTR_FIELD` feature flag.\n\nPiperOrigin-RevId: 816497157\n",
+            "commit_timestamp": 1759893137.0
         }
     ]
 }
