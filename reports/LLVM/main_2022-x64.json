@@ -33418,6 +33418,23 @@
             "commit_ref": "bf34b2e2df2ec55483ee678fc7c5c0fbfda35e98",
             "commit_message": "[profcheck] Add heuristical profile metadata for lowering table-based cttz. (#161898)\n\nWhen lowering a `table-based cttz` calculation to the `llvm.cttz`\nintrinsic, `AggressiveInstCombine` was not attaching profile metadata to\nthe newly generated `select` instruction.\n\nThis PR adds heuristic branch weights to the `select`. It uses a strong\n100-to-1 probability favoring the `cttz` path over the zero-input case.\nThis allows later passes to optimize code layout and branch prediction.",
             "commit_timestamp": 1759978228.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1760024645.646131,
+            "elapsed_time": 2583.9959678649902,
+            "x64": true,
+            "actual_files_count": 3007,
+            "expected_files_count": 1661,
+            "memory_traffic": 470134.80696105957,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "5ba3b523069f92e2d2f0971cd75b056cb8d2a928",
+            "commit_message": "[libc++] Skip AIX build jobs until #162516 has been resolved (#162664)\n\n",
+            "commit_timestamp": 1760023439.0
         }
     ]
 }

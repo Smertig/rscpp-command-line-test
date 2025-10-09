@@ -164,6 +164,21 @@
             "commit_ref": "8be9a26451d466571864a608bc48cc77746ff00d",
             "commit_message": "build: drop Heimdal support, update docs, replace with MIT Kerberos in CI\n\nThe kerberos5 library Heimdal is one of three GSS libraries curl support.\nIt has a memory leak triggered by the new test in #18917 and the project\nseems mostly abandoned.\n\nDrop support and steer users to the MIT krb5 or GNU GSS libraries.\n\nCo-authored-by: Daniel Stenberg\n\nRef: #18928\nCloses #18928\nCloses #18932\n",
             "commit_timestamp": 1759969649.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1760024108.908212,
+            "elapsed_time": 116.7604033946991,
+            "x64": true,
+            "actual_files_count": 1180,
+            "expected_files_count": 2323,
+            "memory_traffic": 19055.96849822998,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "d1d5855689a29ee0ebc3ee5abd34959cfc8530d4",
+            "commit_message": "openssl: add comments regarding OCSP verification\n\nTo allow future reviewers of \"security\" reports to more easily find out\nwhy code is this way.\n\nCloses #18962\n",
+            "commit_timestamp": 1760013868.0
         }
     ]
 }
