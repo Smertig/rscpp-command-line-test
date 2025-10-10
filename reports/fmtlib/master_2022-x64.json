@@ -194,6 +194,21 @@
             "commit_ref": "03c7e28965684f3faa62c704d1ef6000230e94e5",
             "commit_message": "write_demangled_name supports libc++ + clang-cl (#4560)\n\nThe current implementation assumes whenever we're on an FMT_MSC_VERSION\ncompiler, the standard library is MSVC's STL. However, with clang-cl we\nhave the possibility of using LLVM libc++ instead of MSVC STL. In that\nscenario, the previous implementation produced the wrong demangled names\nfor RTTI types.\n\nThis patch detects the different combinations, and combines the existing\ndemangling implementations to produce the correct names and make all\ntests pass on libc++ + clang-cl.",
             "commit_timestamp": 1759951437.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1760108802.510417,
+            "elapsed_time": 84.22836780548096,
+            "x64": true,
+            "actual_files_count": 74,
+            "expected_files_count": 66,
+            "memory_traffic": 7993.677192687988,
+            "repo_url": "https://github.com/fmtlib/fmt.git",
+            "commit_ref": "8db24c0ea973cfd6b897286240c68423937f46bf",
+            "commit_message": "restore 'inline' for normalize_libcxx_inline_namespaces (#4571)\n\n",
+            "commit_timestamp": 1760107793.0
         }
     ]
 }

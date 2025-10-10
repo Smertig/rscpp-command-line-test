@@ -33452,6 +33452,23 @@
             "commit_ref": "f9498048cc48ce7bf8604d07dfdef35ba076c363",
             "commit_message": "AMDGPU/GlobalISel: Fix using wrong regbank for smfmac (#162762)\n\nMake sure to apply the option+number of register logic from\nthe selection pattrn.",
             "commit_timestamp": 1760066253.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1760109804.077508,
+            "elapsed_time": 2512.243428468704,
+            "x64": true,
+            "actual_files_count": 3021,
+            "expected_files_count": 1661,
+            "memory_traffic": 470912.04263305664,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "fca40b3b6fdc621e25166cd4b287a9b36b6f46a8",
+            "commit_message": "[lldb][docs] State that the extension packets doc should be alphabetised\n\nI did this when I converted it but never stated so. Adding a comment\nstating so. We'll probably forget at some point but might as well.\n\nAlso moved the x packet to the last place, after wasm which was\nadded to the end recently.\n",
+            "commit_timestamp": 1760108634.0
         }
     ]
 }

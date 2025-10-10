@@ -194,6 +194,21 @@
             "commit_ref": "0d560d00faaa6fa3ff3918d82c8fbd551452d17e",
             "commit_message": "kerberos: drop logic for MIT Kerberos <1.2.3 (pre-2002) versions\n\ncurl requires 1.2.4 or newer.\n\nAlso:\n- vms: stop defining `gss_nt_service_name`. Added in\n  f9cf3de70b3a494f627eda6cccf6607616eaf449, symbol not used in curl code\n  since 355bf01c828af16c47ab52bccb9ade769f8bf158.\n\nCloses #18978\n",
             "commit_timestamp": 1760054865.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1760109434.155534,
+            "elapsed_time": 121.17940521240234,
+            "x64": true,
+            "actual_files_count": 1182,
+            "expected_files_count": 2323,
+            "memory_traffic": 19041.33455657959,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "e5950b2d372ac4f15f6b348227f462d4c3c4d37a",
+            "commit_message": "kerberos: stop including `gssapi/gssapi_generic.h`\n\nIt's a legacy MIT Kerberos header that's no longer used by curl since:\n355bf01c828af16c47ab52bccb9ade769f8bf158 (2015-01-09)\n\nThere were still mentions of it after this patch, when using versions\n<1.2.3, but those versions aren't supported since:\n99185417952da30c8ddd82ab962fb58da96260b2 (2008-06-12)\n\nThis header remains in use by autotools and cmake to detect MIT Kerberos\n(vs. Heimdal, which doesn't have it.)\n\nRef: https://github.com/curl/curl/pull/18978#issuecomment-3387414995\n\nCloses #18990\n",
+            "commit_timestamp": 1760097559.0
         }
     ]
 }
