@@ -11654,6 +11654,21 @@
             "commit_ref": "d4bef77490bd91d4e8c973735bf2486605461bdc",
             "commit_message": "[ObjC] Fix some tests to not violate GPBCodedOutputStream invariants.\n\nIf the class is writing to an NSOutputStream, the buffer must always\nbe used to batch things up. The tests were accidentally making a zero\nlength buffer which isn't valid.\n\nFix the tests to not do this.\n\nMake the core code assert in debug to ensure the invariant can't be\nbroken.\n\nPiperOrigin-RevId: 817153199\n",
             "commit_timestamp": 1760015855.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1760066359.66854,
+            "elapsed_time": 324.84317803382874,
+            "x64": true,
+            "actual_files_count": 1201,
+            "expected_files_count": 818,
+            "memory_traffic": 46176.10865020752,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "818b8efbaa200bcdbac329930fef4cc3ec70441a",
+            "commit_message": "Add has_default_instance() to ImplicitWeakTypeHandler\n\nPiperOrigin-RevId: 817364660\n",
+            "commit_timestamp": 1760049979.0
         }
     ]
 }

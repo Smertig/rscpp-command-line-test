@@ -179,6 +179,21 @@
             "commit_ref": "d1d5855689a29ee0ebc3ee5abd34959cfc8530d4",
             "commit_message": "openssl: add comments regarding OCSP verification\n\nTo allow future reviewers of \"security\" reports to more easily find out\nwhy code is this way.\n\nCloses #18962\n",
             "commit_timestamp": 1760013868.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1760066870.580374,
+            "elapsed_time": 116.26582551002502,
+            "x64": true,
+            "actual_files_count": 1182,
+            "expected_files_count": 2323,
+            "memory_traffic": 19035.073272705078,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "0d560d00faaa6fa3ff3918d82c8fbd551452d17e",
+            "commit_message": "kerberos: drop logic for MIT Kerberos <1.2.3 (pre-2002) versions\n\ncurl requires 1.2.4 or newer.\n\nAlso:\n- vms: stop defining `gss_nt_service_name`. Added in\n  f9cf3de70b3a494f627eda6cccf6607616eaf449, symbol not used in curl code\n  since 355bf01c828af16c47ab52bccb9ade769f8bf158.\n\nCloses #18978\n",
+            "commit_timestamp": 1760054865.0
         }
     ]
 }

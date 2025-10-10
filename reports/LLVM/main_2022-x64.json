@@ -33435,6 +33435,23 @@
             "commit_ref": "5ba3b523069f92e2d2f0971cd75b056cb8d2a928",
             "commit_message": "[libc++] Skip AIX build jobs until #162516 has been resolved (#162664)\n\n",
             "commit_timestamp": 1760023439.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1760067379.834631,
+            "elapsed_time": 2580.0694286823273,
+            "x64": true,
+            "actual_files_count": 3005,
+            "expected_files_count": 1661,
+            "memory_traffic": 470068.6030960083,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "f9498048cc48ce7bf8604d07dfdef35ba076c363",
+            "commit_message": "AMDGPU/GlobalISel: Fix using wrong regbank for smfmac (#162762)\n\nMake sure to apply the option+number of register logic from\nthe selection pattrn.",
+            "commit_timestamp": 1760066253.0
         }
     ]
 }
