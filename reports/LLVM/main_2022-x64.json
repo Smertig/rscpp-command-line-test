@@ -33486,6 +33486,23 @@
             "commit_ref": "0b462f6f8363cc09494d3df102bdd9c114d4558a",
             "commit_message": "[ConstantFPRange] Add support for cast operations (#162686)\n\nThis patch adds support for fpext/fptrunc operations.\n\nI noticed that finite-only semantics are not supported by the current\nrepresentation of constant FP ranges. It should be okay for now, as we\ndon't expose these types in the IR.",
             "commit_timestamp": 1760150831.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1760196147.673928,
+            "elapsed_time": 2525.826549768448,
+            "x64": true,
+            "actual_files_count": 3005,
+            "expected_files_count": 1661,
+            "memory_traffic": 470118.58881378174,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "7eee67202378932d03331ad04e7d07ed4d988381",
+            "commit_message": "[flang] Fix build breakage with FLANG_ENABLE_WERROR on (NFC) (#162894)\n\n",
+            "commit_timestamp": 1760190482.0
         }
     ]
 }

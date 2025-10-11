@@ -11699,6 +11699,21 @@
             "commit_ref": "668c52a5390bd250f37766b7832492ae562b400b",
             "commit_message": "Remove arena check from `RepeatedPtrField` destructor.\n\nPiperOrigin-RevId: 817875863\n",
             "commit_timestamp": 1760148749.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1760195186.975557,
+            "elapsed_time": 329.6964943408966,
+            "x64": true,
+            "actual_files_count": 1201,
+            "expected_files_count": 818,
+            "memory_traffic": 46050.54764556885,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "47d3012d1074c85784dee54bfa13dfbca4ed846c",
+            "commit_message": "Add private variants of `AddAllocated`/`ReleaseLast`/`ExtractSubrange` that take the arena pointer as an argument.\n\nThis is an optimization for the future when `RepeatedPtrField`'s `GetArena()` method is more expensive, and it is cheaper for messages to pass these values down from above.\n\nPiperOrigin-RevId: 817906966\n",
+            "commit_timestamp": 1760156314.0
         }
     ]
 }
