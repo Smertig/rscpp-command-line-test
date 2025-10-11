@@ -27476,6 +27476,21 @@
             "commit_ref": "1c598e04361dbfc9cf465f3a02f83715c11b028c",
             "commit_message": "gh-139065: Fix trailing space before long word in textwrap (GH-139070)\n\nFix trailing space before a wrapped long word if the line length with\na space is exactly \"width\".",
             "commit_timestamp": 1760102958.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1760152608.60392,
+            "elapsed_time": 4054.7083525657654,
+            "x64": true,
+            "actual_files_count": 1204,
+            "expected_files_count": null,
+            "memory_traffic": 56097.02896118164,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "d4e5802588db3459f04d4b8013cc571a8988e203",
+            "commit_message": "gh-96491: Deduplicate version in IDLE shell title (#139841)\n\nSaving to a file added both the filename and repeated the version.\n---------\n\nCo-authored-by: Terry Jan Reedy <tjreedy@udel.edu>",
+            "commit_timestamp": 1760146668.0
         }
     ]
 }

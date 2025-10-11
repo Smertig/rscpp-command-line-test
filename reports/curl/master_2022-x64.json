@@ -209,6 +209,21 @@
             "commit_ref": "e5950b2d372ac4f15f6b348227f462d4c3c4d37a",
             "commit_message": "kerberos: stop including `gssapi/gssapi_generic.h`\n\nIt's a legacy MIT Kerberos header that's no longer used by curl since:\n355bf01c828af16c47ab52bccb9ade769f8bf158 (2015-01-09)\n\nThere were still mentions of it after this patch, when using versions\n<1.2.3, but those versions aren't supported since:\n99185417952da30c8ddd82ab962fb58da96260b2 (2008-06-12)\n\nThis header remains in use by autotools and cmake to detect MIT Kerberos\n(vs. Heimdal, which doesn't have it.)\n\nRef: https://github.com/curl/curl/pull/18978#issuecomment-3387414995\n\nCloses #18990\n",
             "commit_timestamp": 1760097559.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1760152991.466876,
+            "elapsed_time": 117.58369994163513,
+            "x64": true,
+            "actual_files_count": 1182,
+            "expected_files_count": 2323,
+            "memory_traffic": 19059.319229125977,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "b419f1fd8779277e7bf8c97f58708cf466c3ffe0",
+            "commit_message": "examples/log_failed_transfers: make it build for WinCE\n\n- include `windows.h` after `winsock2.h` via `curl/curl.h`.\n- avoid `errno` for WinCE.\n- avoid `_vscprintf` for WinCE.\n\nRef: 4535532ed36d2129b107ab357262072f82c2b34a #18843\nFollow-up to 0780de2625bf8bb3bcb0f88bbbc401b2750ec1bb #18668\nCloses #19016\n",
+            "commit_timestamp": 1760137464.0
         }
     ]
 }
