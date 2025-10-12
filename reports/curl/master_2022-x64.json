@@ -239,6 +239,21 @@
             "commit_ref": "b419f1fd8779277e7bf8c97f58708cf466c3ffe0",
             "commit_message": "examples/log_failed_transfers: make it build for WinCE\n\n- include `windows.h` after `winsock2.h` via `curl/curl.h`.\n- avoid `errno` for WinCE.\n- avoid `_vscprintf` for WinCE.\n\nRef: 4535532ed36d2129b107ab357262072f82c2b34a #18843\nFollow-up to 0780de2625bf8bb3bcb0f88bbbc401b2750ec1bb #18668\nCloses #19016\n",
             "commit_timestamp": 1760137464.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1760239751.996885,
+            "elapsed_time": 120.18745875358582,
+            "x64": true,
+            "actual_files_count": 1182,
+            "expected_files_count": 2323,
+            "memory_traffic": 19047.375411987305,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "66753bc1203167c2a07737963149e83d93e3788c",
+            "commit_message": "RELEASE-NOTES: synced\n",
+            "commit_timestamp": 1760190250.0
         }
     ]
 }
