@@ -269,6 +269,21 @@
             "commit_ref": "aa4259b4f835177cdd1da81ca1221f77cd84d5c8",
             "commit_message": "chore(deps): update pre-commit hooks (#5820)\n\n* chore(deps): update pre-commit hooks\n\nupdates:\n- [github.com/pre-commit/mirrors-clang-format: v20.1.8 \u2192 v21.1.2](https://github.com/pre-commit/mirrors-clang-format/compare/v20.1.8...v21.1.2)\n- [github.com/astral-sh/ruff-pre-commit: v0.12.7 \u2192 v0.13.3](https://github.com/astral-sh/ruff-pre-commit/compare/v0.12.7...v0.13.3)\n- [github.com/pre-commit/mirrors-mypy: v1.17.1 \u2192 v1.18.2](https://github.com/pre-commit/mirrors-mypy/compare/v1.17.1...v1.18.2)\n- [github.com/pre-commit/pre-commit-hooks: v5.0.0 \u2192 v6.0.0](https://github.com/pre-commit/pre-commit-hooks/compare/v5.0.0...v6.0.0)\n- [github.com/adamchainz/blacken-docs: 1.19.1 \u2192 1.20.0](https://github.com/adamchainz/blacken-docs/compare/1.19.1...1.20.0)\n- [github.com/shellcheck-py/shellcheck-py: v0.10.0.1 \u2192 v0.11.0.1](https://github.com/shellcheck-py/shellcheck-py/compare/v0.10.0.1...v0.11.0.1)\n- [github.com/PyCQA/pylint: v3.3.7 \u2192 v3.3.9](https://github.com/PyCQA/pylint/compare/v3.3.7...v3.3.9)\n- [github.com/python-jsonschema/check-jsonschema: 0.33.2 \u2192 0.34.0](https://github.com/python-jsonschema/check-jsonschema/compare/0.33.2...0.34.0)\n\n* style: pre-commit fixes\n\n---------\n\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>",
             "commit_timestamp": 1760203430.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1760325864.452,
+            "elapsed_time": 177.7280945777893,
+            "x64": true,
+            "actual_files_count": 510,
+            "expected_files_count": 197,
+            "memory_traffic": 24239.579078674316,
+            "repo_url": "https://github.com/pybind/pybind11",
+            "commit_ref": "9f75202191c0b8ed55a14935cd5b7a667926f8cf",
+            "commit_message": "Fix thread-safety in `get_local_type_info()` (#5856)\n\nFixes potential thread-safety issues if types are concurrently\nregistered while `get_local_type_info()` is called in free threaded\nPython.\n\nUse the `internals` mutex to also protect `local_internals`. This\nkeeps the locking strategy simpler, and we already follow this pattern\nin some places, such as `pybind11_meta_dealloc`.",
+            "commit_timestamp": 1760305068.0
         }
     ]
 }
