@@ -284,6 +284,21 @@
             "commit_ref": "9f75202191c0b8ed55a14935cd5b7a667926f8cf",
             "commit_message": "Fix thread-safety in `get_local_type_info()` (#5856)\n\nFixes potential thread-safety issues if types are concurrently\nregistered while `get_local_type_info()` is called in free threaded\nPython.\n\nUse the `internals` mutex to also protect `local_internals`. This\nkeeps the locking strategy simpler, and we already follow this pattern\nin some places, such as `pybind11_meta_dealloc`.",
             "commit_timestamp": 1760305068.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1760368061.247525,
+            "elapsed_time": 180.71377539634705,
+            "x64": true,
+            "actual_files_count": 510,
+            "expected_files_count": 197,
+            "memory_traffic": 24302.79958343506,
+            "repo_url": "https://github.com/pybind/pybind11",
+            "commit_ref": "9f75202191c0b8ed55a14935cd5b7a667926f8cf",
+            "commit_message": "Fix thread-safety in `get_local_type_info()` (#5856)\n\nFixes potential thread-safety issues if types are concurrently\nregistered while `get_local_type_info()` is called in free threaded\nPython.\n\nUse the `internals` mutex to also protect `local_internals`. This\nkeeps the locking strategy simpler, and we already follow this pattern\nin some places, such as `pybind11_meta_dealloc`.",
+            "commit_timestamp": 1760305068.0
         }
     ]
 }

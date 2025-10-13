@@ -11759,6 +11759,21 @@
             "commit_ref": "47d3012d1074c85784dee54bfa13dfbca4ed846c",
             "commit_message": "Add private variants of `AddAllocated`/`ReleaseLast`/`ExtractSubrange` that take the arena pointer as an argument.\n\nThis is an optimization for the future when `RepeatedPtrField`'s `GetArena()` method is more expensive, and it is cheaper for messages to pass these values down from above.\n\nPiperOrigin-RevId: 817906966\n",
             "commit_timestamp": 1760156314.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1760368091.80235,
+            "elapsed_time": 345.64158964157104,
+            "x64": true,
+            "actual_files_count": 1201,
+            "expected_files_count": 818,
+            "memory_traffic": 46254.91751098633,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "0d03515fe1549d3c74c5ab194020d4af3aa286c4",
+            "commit_message": "Pass Arena pointer to `ExtensionSet::IsInitialized`.\n\nPiperOrigin-RevId: 818547975\n",
+            "commit_timestamp": 1760345889.0
         }
     ]
 }

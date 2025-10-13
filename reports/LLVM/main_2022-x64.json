@@ -33537,6 +33537,23 @@
             "commit_ref": "853760bca6aa7a960b154cef8c61f87271870b8a",
             "commit_message": "AMDGPU: Use ELF mangling in data layout (#163011)\n\nCloses #95219",
             "commit_timestamp": 1760324505.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1760369084.738265,
+            "elapsed_time": 2597.7215213775635,
+            "x64": true,
+            "actual_files_count": 3021,
+            "expected_files_count": 1661,
+            "memory_traffic": 470399.93965911865,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "1d89844bd4152af93f5dbf475996d6bd66c74bd5",
+            "commit_message": "Reapply \"[OpenACC] Sema changes for +*&|^ reduction combiner recipes \u2026 (#163205)\n\n\u2026(\u2026 (#162920)\n\nThis reverts commit 8d9aecce064776a9a890f3c898165f99e8eaa13e.\n\nThat was reverted because of an ASAN failure that I believe this fixes.\nThe std::uninitialized_copy of an array of a type that contained a\nllvm::vector using operator= instead of the copy constructor, so it made\nASan think it was overwriting existing data? However, it also probably\nwould have tried to do some sort of deallocation if had the 'right'\namount of wrong data.\n\nSo this version switches over to using placement-new instead.",
+            "commit_timestamp": 1760367753.0
         }
     ]
 }
