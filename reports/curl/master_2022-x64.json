@@ -314,6 +314,21 @@
             "commit_ref": "4c7507daf913c2e7f3ff96b1ff92e467a3d2ece5",
             "commit_message": "examples: improve global init, error checks and returning errors\n\n- add `curl_global_init()` and `curl_global_cleanup()` where missing.\n- check the result of `curl_global_init()` where missing.\n- return the last curl error from `main()`.\n- drop Win32-specific socket initialization in favor of `curl_global_init()`.\n- rename some outliers to `res` for curl result code.\n- fix cleanup in some error cases.\n\nInspired by Joshua's report on examples.\n\nCloses #19053\n",
             "commit_timestamp": 1760389325.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1760454944.726296,
+            "elapsed_time": 116.74996542930603,
+            "x64": true,
+            "actual_files_count": 1182,
+            "expected_files_count": 2323,
+            "memory_traffic": 19053.053718566895,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "64ed2ea1968e912439442dd3ad6addd8a2acfb84",
+            "commit_message": "examples: check more errors, fix cleanups, scope variables\n\nInspired by Joshua's report on examples.\n\nCloses #19055\n",
+            "commit_timestamp": 1760452380.0
         }
     ]
 }

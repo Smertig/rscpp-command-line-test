@@ -27581,6 +27581,21 @@
             "commit_ref": "be60e4b4f34a097d999d337446786ae14e35c964",
             "commit_message": "gh-140000: Traverse `name` attribute for `TypeVar`, `TypeVarTuple`, `TypeAliasType`, `ParamSpec` (#140016)\n\n",
             "commit_timestamp": 1760386239.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1760454601.483212,
+            "elapsed_time": 3850.1470680236816,
+            "x64": true,
+            "actual_files_count": 1204,
+            "expected_files_count": null,
+            "memory_traffic": 56033.70218658447,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "279db6bede30be3a1b86803585eb4404d27800da",
+            "commit_message": "gh-139640: Fix swallowing syntax warnings in different modules (GH-139755)\n\nRevert GH-131993.\n\nFix swallowing some syntax warnings in different modules if they accidentally\nhave the same message and are emitted from the same line.",
+            "commit_timestamp": 1760453289.0
         }
     ]
 }

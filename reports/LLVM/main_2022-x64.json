@@ -33571,6 +33571,23 @@
             "commit_ref": "27d8441f8282c740903529d8a6b73401fc6c17fa",
             "commit_message": "Revert \"[sanitizer] Add cloak_sanitizer_signal_handlers runtime option\" (#163308)\n\nReverts llvm/llvm-project#162746\n\nReason: buildbot breakage\n(https://lab.llvm.org/buildbot/#/builders/51/builds/25195)",
             "commit_timestamp": 1760409551.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1760455394.166214,
+            "elapsed_time": 2473.606719493866,
+            "x64": true,
+            "actual_files_count": 3021,
+            "expected_files_count": 1661,
+            "memory_traffic": 470864.90857696533,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "f973d77f9cf26d736b24f7c83895dc08aa92edd4",
+            "commit_message": "[NFC][LLVM] Namespace cleanup in FlattenCFGPass.cpp (#163304)\n\n",
+            "commit_timestamp": 1760453829.0
         }
     ]
 }

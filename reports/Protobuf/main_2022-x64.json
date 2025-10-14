@@ -11789,6 +11789,21 @@
             "commit_ref": "3c062d5a84b8af33232e7c0da0729fa01052d0c1",
             "commit_message": "Remove `arena_` from `ExtensionSet`.\n\n`ExtensionSet` has been refactored to take an arena pointer as an argument to all methods that need one. This leaves the arena pointer field unused.\n\nPiperOrigin-RevId: 818900740\n",
             "commit_timestamp": 1760401770.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1760454443.634141,
+            "elapsed_time": 332.30494928359985,
+            "x64": true,
+            "actual_files_count": 1201,
+            "expected_files_count": 818,
+            "memory_traffic": 46176.62993621826,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "be2d06dd93926c061af283f901ad95b3152880a6",
+            "commit_message": "Pass arenas down to map methods, and avoid accessing `arena_` directly in map field implementation.\n\nNote that we can't change any public-facing API's that need an arena pointer, as this would be a breaking change. Additionally, assignment operators need the arena pointer, but can't take additional arguments.\n\nThis is in preparation for removing the arena_ member from maps.\n\nPiperOrigin-RevId: 818979467\n",
+            "commit_timestamp": 1760415618.0
         }
     ]
 }
