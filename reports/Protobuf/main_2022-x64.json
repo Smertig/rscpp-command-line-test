@@ -11774,6 +11774,21 @@
             "commit_ref": "0d03515fe1549d3c74c5ab194020d4af3aa286c4",
             "commit_message": "Pass Arena pointer to `ExtensionSet::IsInitialized`.\n\nPiperOrigin-RevId: 818547975\n",
             "commit_timestamp": 1760345889.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1760411994.870725,
+            "elapsed_time": 330.3608763217926,
+            "x64": true,
+            "actual_files_count": 1201,
+            "expected_files_count": 818,
+            "memory_traffic": 46120.50959777832,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "3c062d5a84b8af33232e7c0da0729fa01052d0c1",
+            "commit_message": "Remove `arena_` from `ExtensionSet`.\n\n`ExtensionSet` has been refactored to take an arena pointer as an argument to all methods that need one. This leaves the arena pointer field unused.\n\nPiperOrigin-RevId: 818900740\n",
+            "commit_timestamp": 1760401770.0
         }
     ]
 }

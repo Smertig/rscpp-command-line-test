@@ -299,6 +299,21 @@
             "commit_ref": "061d28347e520ee53e6b7e853e084292f3005ed7",
             "commit_message": "Merge topic 'fix-redistribute-dataset'\n\ne5f2c1a142b changelog: add a note about vtkRedistributeDataSetFilter missing cell\n805191a5f99 RedistributeDataSet : fix missing cells in ASSIGN_TO_ONE_REGION mode\n\nAcked-by: Kitware Robot <kwrobot@kitware.com>\nAcked-by: buildbot <buildbot@kitware.com>\nReviewed-by: Mathieu Westphal (Kitware) <mathieu.westphal@kitware.com>\nReviewed-by: Nicolas Vuaille <nicolas.vuaille@kitware.com>\nMerge-request: !12500\n",
             "commit_timestamp": 1760337095.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": "vtkCommonCoreCxxTests",
+            "timestamp": 1760412112.973302,
+            "elapsed_time": 197.90949177742004,
+            "x64": true,
+            "actual_files_count": 86,
+            "expected_files_count": 68,
+            "memory_traffic": 23853.232223510742,
+            "repo_url": "https://gitlab.kitware.com/vtk/vtk.git",
+            "commit_ref": "9b972fb6034c321724c059e1077e09450be426e7",
+            "commit_message": "Merge topic 'improve-get-range-performance'\n\n643cb35fc54 Add changelog\n24261a09750 vtkDataArray: Dispatch by AllArrays to compute range\n4c803559984 vtkDataArrayPrivate: Use Finite check only when needed\n7ecc01d85a1 vtkDataArrayPrivate: Improve performance\n\nAcked-by: Kitware Robot <kwrobot@kitware.com>\nTested-by: buildbot <buildbot@kitware.com>\nMerge-request: !12504\n",
+            "commit_timestamp": 1760372152.0
         }
     ]
 }
