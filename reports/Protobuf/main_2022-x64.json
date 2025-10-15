@@ -11819,6 +11819,21 @@
             "commit_ref": "6643af3a5961ff968305c2ab0edb1dbb0b769293",
             "commit_message": "Access `fields_` via helper in `UnknownFieldSet`.\n\nThis is in preparation for a change that will conditionally use a different container type for `fields_` in `UnknownFieldSet`.\n\nPiperOrigin-RevId: 819441394\n",
             "commit_timestamp": 1760483619.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1760541351.565867,
+            "elapsed_time": 325.982958316803,
+            "x64": true,
+            "actual_files_count": 1201,
+            "expected_files_count": 818,
+            "memory_traffic": 46296.762268066406,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "143e3eadeef8928750cd9fcb62c6d4cac79e8435",
+            "commit_message": "Use arena offsets instead of holding an arena pointer in `RepeatedField`.\n\nThis does not reduce the size of `RepeatedField`, but does greatly simplify the SOO logic, and makes `size()` branchless. Additionally, `RepeatedField`s now need `memcpy` in `MessageCreator::PlacementNew`, but don't require arena seeding.\n\nAll behavior changes introduced by this cl are flag-gated with `PROTOBUF_INTERNAL_REMOVE_ARENA_PTRS_REPEATED_FIELD`, which is currently off.\n\nPiperOrigin-RevId: 819581961\n",
+            "commit_timestamp": 1760508107.0
         }
     ]
 }

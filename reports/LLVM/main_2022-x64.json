@@ -33605,6 +33605,23 @@
             "commit_ref": "9a46060aedc6bde26e939999de36442a23c07783",
             "commit_message": "[mlir][linalg] Fix crash caused by nullptr dereference (#163132)\n\nThis PR fixes a crash caused by nullptr dereference in\n`isContractionBody` if reductionOp is nullptr. Fixes #162772.",
             "commit_timestamp": 1760497562.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1760542186.138647,
+            "elapsed_time": 2640.5314559936523,
+            "x64": true,
+            "actual_files_count": 3021,
+            "expected_files_count": 1661,
+            "memory_traffic": 470876.2203063965,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "e91786a84967e006b21f2eb0eb59a56b2f925eac",
+            "commit_message": "[gdbremote] Document MultiMemRead packet in protocol extensions (#162675)\n\nThis adds a specification for the new packet discussed in the RFC [1].\n\n[1]:\nhttps://discourse.llvm.org/t/rfc-a-new-vectorized-memory-read-packet/88441/12",
+            "commit_timestamp": 1760540559.0
         }
     ]
 }
