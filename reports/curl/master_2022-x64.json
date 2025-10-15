@@ -329,6 +329,21 @@
             "commit_ref": "64ed2ea1968e912439442dd3ad6addd8a2acfb84",
             "commit_message": "examples: check more errors, fix cleanups, scope variables\n\nInspired by Joshua's report on examples.\n\nCloses #19055\n",
             "commit_timestamp": 1760452380.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1760499019.924594,
+            "elapsed_time": 115.92268371582031,
+            "x64": true,
+            "actual_files_count": 1182,
+            "expected_files_count": 2323,
+            "memory_traffic": 19087.158042907715,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "97ae9ec8efe05bd0d82bbf9ee127c46bfae40c8c",
+            "commit_message": "ws: fix type conversion check\n\n- Fix logic that checks whether a size_t will fit in a curl_off_t.\n\nReported-by: Viktor Szakats\n\nFixes https://github.com/curl/curl/issues/19017\nCloses https://github.com/curl/curl/pull/19036\n",
+            "commit_timestamp": 1760454409.0
         }
     ]
 }

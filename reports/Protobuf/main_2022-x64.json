@@ -11804,6 +11804,21 @@
             "commit_ref": "be2d06dd93926c061af283f901ad95b3152880a6",
             "commit_message": "Pass arenas down to map methods, and avoid accessing `arena_` directly in map field implementation.\n\nNote that we can't change any public-facing API's that need an arena pointer, as this would be a breaking change. Additionally, assignment operators need the arena pointer, but can't take additional arguments.\n\nThis is in preparation for removing the arena_ member from maps.\n\nPiperOrigin-RevId: 818979467\n",
             "commit_timestamp": 1760415618.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1760498529.426094,
+            "elapsed_time": 326.9653902053833,
+            "x64": true,
+            "actual_files_count": 1201,
+            "expected_files_count": 818,
+            "memory_traffic": 46249.45592498779,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "6643af3a5961ff968305c2ab0edb1dbb0b769293",
+            "commit_message": "Access `fields_` via helper in `UnknownFieldSet`.\n\nThis is in preparation for a change that will conditionally use a different container type for `fields_` in `UnknownFieldSet`.\n\nPiperOrigin-RevId: 819441394\n",
+            "commit_timestamp": 1760483619.0
         }
     ]
 }
