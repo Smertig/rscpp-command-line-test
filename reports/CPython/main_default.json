@@ -27626,6 +27626,21 @@
             "commit_ref": "1624c646b045df15ba41d17ff03231978b80c3ff",
             "commit_message": "gh-140065: Lexical analysis: Correct note about leading zeros in floating point numbers (GH-140066)\n\n",
             "commit_timestamp": 1760541345.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1760585073.790447,
+            "elapsed_time": 4488.803915023804,
+            "x64": true,
+            "actual_files_count": 1204,
+            "expected_files_count": null,
+            "memory_traffic": 56263.20486450195,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "7f371ed84ba471bb1b11e79b502f244a9c17ac84",
+            "commit_message": "gh-140041: Fix import of `ctypes` on Android and Cygwin when ABI flags are present (#140178)\n\nUse sysconfig to determine the full name of libpython, rather than hardcoding\na library name that doesn't have ABI flags.",
+            "commit_timestamp": 1760564439.0
         }
     ]
 }

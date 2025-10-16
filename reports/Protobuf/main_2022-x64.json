@@ -11834,6 +11834,21 @@
             "commit_ref": "143e3eadeef8928750cd9fcb62c6d4cac79e8435",
             "commit_message": "Use arena offsets instead of holding an arena pointer in `RepeatedField`.\n\nThis does not reduce the size of `RepeatedField`, but does greatly simplify the SOO logic, and makes `size()` branchless. Additionally, `RepeatedField`s now need `memcpy` in `MessageCreator::PlacementNew`, but don't require arena seeding.\n\nAll behavior changes introduced by this cl are flag-gated with `PROTOBUF_INTERNAL_REMOVE_ARENA_PTRS_REPEATED_FIELD`, which is currently off.\n\nPiperOrigin-RevId: 819581961\n",
             "commit_timestamp": 1760508107.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1760584874.159883,
+            "elapsed_time": 330.7195658683777,
+            "x64": true,
+            "actual_files_count": 1201,
+            "expected_files_count": 818,
+            "memory_traffic": 46249.313720703125,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "3cc5e078e4989b70922d4f6f930e4ae2a645e1b7",
+            "commit_message": "Internal change only.\n\nPiperOrigin-RevId: 819969994\n",
+            "commit_timestamp": 1760573169.0
         }
     ]
 }

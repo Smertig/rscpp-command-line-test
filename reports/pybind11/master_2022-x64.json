@@ -359,6 +359,21 @@
             "commit_ref": "a2c59711b20707d64b7ad61d488e002611369780",
             "commit_message": "type_caster_generic: add cast_sources abstraction (#5866)\n\n* type_caster_generic: add cast_sources abstraction\n\n* Respond to code review comments\n\n* style: pre-commit fixes\n\n---------\n\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>",
             "commit_timestamp": 1760488924.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1760584875.24946,
+            "elapsed_time": 180.8804371356964,
+            "x64": true,
+            "actual_files_count": 519,
+            "expected_files_count": 197,
+            "memory_traffic": 24518.092498779297,
+            "repo_url": "https://github.com/pybind/pybind11",
+            "commit_ref": "cc36ac51a0e46486e5dc714d22a6c6f718283e56",
+            "commit_message": "type_caster_generic: fix compiler error when casting a T that is implicitly convertible from T* (#5873)\n\n* type_caster_generic: fix compiler error when casting a T that is implicitly convertible from T*\n\n* style: pre-commit fixes\n\n* Placate clang-tidy\n\n* Expand NOLINT to specify Clang-Tidy check names\n\n---------\n\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>\nCo-authored-by: Ralf W. Grosse-Kunstleve <rgrossekunst@nvidia.com>",
+            "commit_timestamp": 1760544650.0
         }
     ]
 }
