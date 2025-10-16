@@ -27641,6 +27641,21 @@
             "commit_ref": "7f371ed84ba471bb1b11e79b502f244a9c17ac84",
             "commit_message": "gh-140041: Fix import of `ctypes` on Android and Cygwin when ABI flags are present (#140178)\n\nUse sysconfig to determine the full name of libpython, rather than hardcoding\na library name that doesn't have ABI flags.",
             "commit_timestamp": 1760564439.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1760627442.285221,
+            "elapsed_time": 4183.7632048130035,
+            "x64": true,
+            "actual_files_count": 1204,
+            "expected_files_count": null,
+            "memory_traffic": 56205.61769866943,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "5f357f3b0de0d937afb0154d0df7e0298c2523cf",
+            "commit_message": "gh-140078: fix typo in tkinter docs (#140081)\n\nRemove extraneous word.",
+            "commit_timestamp": 1760626958.0
         }
     ]
 }

@@ -374,6 +374,21 @@
             "commit_ref": "cc36ac51a0e46486e5dc714d22a6c6f718283e56",
             "commit_message": "type_caster_generic: fix compiler error when casting a T that is implicitly convertible from T* (#5873)\n\n* type_caster_generic: fix compiler error when casting a T that is implicitly convertible from T*\n\n* style: pre-commit fixes\n\n* Placate clang-tidy\n\n* Expand NOLINT to specify Clang-Tidy check names\n\n---------\n\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>\nCo-authored-by: Ralf W. Grosse-Kunstleve <rgrossekunst@nvidia.com>",
             "commit_timestamp": 1760544650.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1760627260.762293,
+            "elapsed_time": 201.6592309474945,
+            "x64": true,
+            "actual_files_count": 519,
+            "expected_files_count": 197,
+            "memory_traffic": 24519.583457946777,
+            "repo_url": "https://github.com/pybind/pybind11",
+            "commit_ref": "1e5bc66e3835749d0ec942acfd261d5139692b20",
+            "commit_message": "Factor out readable function signatures to avoid duplication (#5857)\n\n* Centralize readable function signatures to avoid duplication\n\nThis seems to reduce size costs of adding enum_-specific implementations of dunder methods, but also should provide a nice to have size optimization for programs that use pybind11 in general.\n\n* gate disabling of -Wdeprecated-redundant-constexpr-static-def to clang 17+\n\n* fix gating to include Apple Clang 15\n\n* Make GCC happy with types\n\n* fix apple clang gating again. suppress -Wdeprecated for GCC\n\n* Gate warning suppressions to C++17. Suppress -Wdeprecated for clang as well.\n\n* hopefully fix last straggler CI job\n\n* attempt to address readability review feedback from @rwgk\n\n* drop warning suppressions and instead just gate compilation the pre-C++17 compat code",
+            "commit_timestamp": 1760587964.0
         }
     ]
 }

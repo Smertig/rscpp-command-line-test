@@ -33639,6 +33639,23 @@
             "commit_ref": "d43581aaee8aa60f93f884d7161169435c40dc0a",
             "commit_message": "Revert \"[MLIR][XeGPU] XeVM lowering support for load_matrix/store_matrix\" (#163684)\n\nReverts llvm/llvm-project#162780\n\nBreaks build bots, see #162780.",
             "commit_timestamp": 1760584302.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1760628298.278038,
+            "elapsed_time": 2650.8125858306885,
+            "x64": true,
+            "actual_files_count": 3021,
+            "expected_files_count": 1661,
+            "memory_traffic": 470953.0369796753,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "893b1d4187e435a1fe12902a3aad0f6cdc7123be",
+            "commit_message": "[WebAssembly] [Codegen] Add patterns for relaxed dot (#163266)\n\nThe pattern I added for `relaxed dot` similar to normal dot @\nhttps://github.com/llvm/llvm-project/pull/151775.\n\nFor `relaxed dot add`, i noticed that in the proposal the portion of dot\nimplementation is similar to `relaxed dot`, so I think we can add a\npattern where after we do relaxed dot and do extadd pairwise, we can do\n`relaxed dot add`.\n\nOne current obstacles is I don't think there is any pattern to singly\ncreate a extadd pairwise from other instructions so the `relaxed dot\nadd` pattern would not cover a wide range of instructions.\n\nrelated to https://github.com/llvm/llvm-project/issues/55932",
+            "commit_timestamp": 1760626917.0
         }
     ]
 }

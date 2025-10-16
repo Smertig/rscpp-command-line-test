@@ -374,6 +374,21 @@
             "commit_ref": "33e6fd217aee285eca97bef175df716264088b8a",
             "commit_message": "Remove recursion when stringifying std::tuple\n",
             "commit_timestamp": 1759608636.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1760627202.504405,
+            "elapsed_time": 54.13990569114685,
+            "x64": true,
+            "actual_files_count": 286,
+            "expected_files_count": 272,
+            "memory_traffic": 4752.0773849487305,
+            "repo_url": "https://github.com/catchorg/Catch2.git",
+            "commit_ref": "49d79e9e9c40e644304945dd5a8e4e78d0c61d10",
+            "commit_message": "Fix section filtering to make sense\n\nSpecifically, this commit makes the `-c`/`--section` parameter\nstrictly ordered and hierarchical, unlike how it behaved before,\nwhich was a huge mess -- see #3038 for details.\n\nCloses #3038\n",
+            "commit_timestamp": 1760599016.0
         }
     ]
 }
