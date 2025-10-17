@@ -404,6 +404,21 @@
             "commit_ref": "f91be14bfb79021e3b9ba769955c1f2c4351e9bf",
             "commit_message": "openldap: limit max incoming size\n\nSet the maximum allowed size of an incoming LDAP message, which to\nOpenLDAP means that it allows malloc() up to this size. If not set,\nthere is no limit and we instead risk a malloc() failure.\n\nThe limit is arbitrarily set to 256K as I can't figure out what a\nreasonable value should be.\n\nOpenLDAP docs: https://openldap.org/software/man.cgi?query=lber-sockbuf&apropos=0&sektion=0&manpath=OpenLDAP+2.6-Release&arch=default&format=html\n\nBug: https://issues.oss-fuzz.com/issues/432441303\nCloses #19087\n",
             "commit_timestamp": 1760646217.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1760714126.586993,
+            "elapsed_time": 116.97996664047241,
+            "x64": true,
+            "actual_files_count": 1182,
+            "expected_files_count": 2323,
+            "memory_traffic": 19112.282035827637,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "1d01d4975f540f3a363b38e1296aead62130fc6d",
+            "commit_message": "socks_sspi: use the correct free function\n\nWhen freeing buffers allocated by SSPI, use its own function, not free().\n\nReported-by: Joshua Rogers\nCloses #19046\n",
+            "commit_timestamp": 1760713151.0
         }
     ]
 }

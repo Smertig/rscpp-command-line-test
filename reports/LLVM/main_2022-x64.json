@@ -33673,6 +33673,23 @@
             "commit_ref": "e501a1f15ead52bca1c4a4d2fb69505f7cf4c20e",
             "commit_message": "[RISCV] Make Zalrsc+Zaamo imply A. (#163890)\n\n",
             "commit_timestamp": 1760666843.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1760714619.214613,
+            "elapsed_time": 2547.4461581707,
+            "x64": true,
+            "actual_files_count": 3021,
+            "expected_files_count": 1661,
+            "memory_traffic": 471097.3239517212,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "9ab16778c6e37e3d34e28b990bdb8839e5961805",
+            "commit_message": "[flang][acc] Implement PointerLikeType API gen[Allocate/Free/Copy] (#163660)\n\nImplements genAllocate, genFree, and genCopy for FIR pointer types\n(fir.ref, fir.ptr, fir.heap, fir.llvm_ptr) in the OpenACC\nPointerLikeType interface.\n\n- genAllocate: Uses fir.alloca for stack types, fir.allocmem for heap\ntypes. Returns null for dynamic/unknown types (unlimited polymorphic,\ndynamic arrays, dynamic character lengths, box types).\n- genFree: Generates fir.freemem for heap allocations. Returns false if\noriginal allocation cannot be found.\n- genCopy: Uses fir.load+fir.store for trivial types (scalars),\nhlfir.assign for non-trivial types (arrays, derived types, characters).\nReturns false for unsupported dynamic types and box types.\n\nAdds comprehensive MLIR tests covering various FIR types and edge cases.",
+            "commit_timestamp": 1760712684.0
         }
     ]
 }

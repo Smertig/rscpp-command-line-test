@@ -11879,6 +11879,21 @@
             "commit_ref": "79ab761999ac7f87f084899c538b30e2cdd3f0fc",
             "commit_message": "Fix: Use `data()` instead of `c_str()` for `StringViewArg`.\n\nPiperOrigin-RevId: 820483131\n",
             "commit_timestamp": 1760667275.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1760713688.197479,
+            "elapsed_time": 349.4059453010559,
+            "x64": true,
+            "actual_files_count": 1201,
+            "expected_files_count": 818,
+            "memory_traffic": 46260.26486206055,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "45b1297fdaad5a9436d0e207422168c38dc45ac4",
+            "commit_message": "[ObjC] Remove `generate_minimal_imports` generation option warning\n\nSince protobuf now has `import option` the original idea around this\nis reduced; but more importantly, using the option can run into\nproblems if a build system wants to do layering checks on the\ngenerated code. So...\n\n- Document the problem\n- Remove the warning\n\nIt may make sense to flip the default on this option back in the future and even deprecated/eventually remove it. The other choice would be to figure out how to make the generation work with the\ntransitive `import public` problem.\n\nPiperOrigin-RevId: 820681829\n",
+            "commit_timestamp": 1760711357.0
         }
     ]
 }
