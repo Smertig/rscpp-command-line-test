@@ -33656,6 +33656,23 @@
             "commit_ref": "893b1d4187e435a1fe12902a3aad0f6cdc7123be",
             "commit_message": "[WebAssembly] [Codegen] Add patterns for relaxed dot (#163266)\n\nThe pattern I added for `relaxed dot` similar to normal dot @\nhttps://github.com/llvm/llvm-project/pull/151775.\n\nFor `relaxed dot add`, i noticed that in the proposal the portion of dot\nimplementation is similar to `relaxed dot`, so I think we can add a\npattern where after we do relaxed dot and do extadd pairwise, we can do\n`relaxed dot add`.\n\nOne current obstacles is I don't think there is any pattern to singly\ncreate a extadd pairwise from other instructions so the `relaxed dot\nadd` pattern would not cover a wide range of instructions.\n\nrelated to https://github.com/llvm/llvm-project/issues/55932",
             "commit_timestamp": 1760626917.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1760672233.103939,
+            "elapsed_time": 2482.724340200424,
+            "x64": true,
+            "actual_files_count": 3021,
+            "expected_files_count": 1661,
+            "memory_traffic": 471022.935546875,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "e501a1f15ead52bca1c4a4d2fb69505f7cf4c20e",
+            "commit_message": "[RISCV] Make Zalrsc+Zaamo imply A. (#163890)\n\n",
+            "commit_timestamp": 1760666843.0
         }
     ]
 }

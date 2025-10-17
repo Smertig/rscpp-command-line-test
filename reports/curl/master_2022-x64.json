@@ -389,6 +389,21 @@
             "commit_ref": "800b0bec18e9c77e35912fac8321c791d7b57863",
             "commit_message": "GHA: bump LibreSSL to 4.2.0\n\nAlso move back URLs to GitHub, sources are available there again.\n\nRef: https://github.com/libressl/portable/releases/tag/v4.2.0\nRef: https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-4.2.0-relnotes.txt\nRef: #19050\nRef: #19081\n\nCloses #19082\n",
             "commit_timestamp": 1760626268.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1760671757.527198,
+            "elapsed_time": 110.32324576377869,
+            "x64": true,
+            "actual_files_count": 1182,
+            "expected_files_count": 2323,
+            "memory_traffic": 19186.549278259277,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "f91be14bfb79021e3b9ba769955c1f2c4351e9bf",
+            "commit_message": "openldap: limit max incoming size\n\nSet the maximum allowed size of an incoming LDAP message, which to\nOpenLDAP means that it allows malloc() up to this size. If not set,\nthere is no limit and we instead risk a malloc() failure.\n\nThe limit is arbitrarily set to 256K as I can't figure out what a\nreasonable value should be.\n\nOpenLDAP docs: https://openldap.org/software/man.cgi?query=lber-sockbuf&apropos=0&sektion=0&manpath=OpenLDAP+2.6-Release&arch=default&format=html\n\nBug: https://issues.oss-fuzz.com/issues/432441303\nCloses #19087\n",
+            "commit_timestamp": 1760646217.0
         }
     ]
 }
