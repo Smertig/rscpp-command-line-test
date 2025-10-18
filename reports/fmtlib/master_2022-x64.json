@@ -419,6 +419,21 @@
             "commit_ref": "656d14db8bea59bb9a6d9321530df1f14a9e2ab4",
             "commit_message": "docs: format two unescaped printf references with backticks (#4578)\n\n",
             "commit_timestamp": 1760639271.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1760757245.829167,
+            "elapsed_time": 86.45985245704651,
+            "x64": true,
+            "actual_files_count": 74,
+            "expected_files_count": 66,
+            "memory_traffic": 7994.121788024902,
+            "repo_url": "https://github.com/fmtlib/fmt.git",
+            "commit_ref": "378a5ab3c1fbb16873596de5215db5aa55bd5b09",
+            "commit_message": "value-initialise the buffer array member of detail::ansi_color_escape so that it can be used in a constexpr context in MSVC; compiler rejects as non-constant due to 'uninitialized symbol' otherwise (#4581)\n\nCo-authored-by: Harry Denholm <ishani@users.noreply.github.com>",
+            "commit_timestamp": 1760713856.0
         }
     ]
 }

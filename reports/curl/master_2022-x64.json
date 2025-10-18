@@ -419,6 +419,21 @@
             "commit_ref": "1d01d4975f540f3a363b38e1296aead62130fc6d",
             "commit_message": "socks_sspi: use the correct free function\n\nWhen freeing buffers allocated by SSPI, use its own function, not free().\n\nReported-by: Joshua Rogers\nCloses #19046\n",
             "commit_timestamp": 1760713151.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1760757846.529723,
+            "elapsed_time": 115.29546189308167,
+            "x64": true,
+            "actual_files_count": 1182,
+            "expected_files_count": 2323,
+            "memory_traffic": 19084.653060913086,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "f32451c12bb7fa4738d8c9cf6d7cd09ee876434b",
+            "commit_message": "curlx: promote `Curl_fseeko()` to `curlx_fseek()`, use it in `src`\n\n- tool_formparse: replace truncated `fseek` with `curlx_fseek`.\n- tool_operate: replace truncated `fseek` with `curlx_fseek`.\n- tool_paramhlp: replace local duplicate `myfseek`, with `curlx_fseek`.\n\nFollow-up to 4fb12f289189e8113967e9c9da09958fd8bfa4cb #19100\n\nCloses #19107\n",
+            "commit_timestamp": 1760747110.0
         }
     ]
 }

@@ -33690,6 +33690,23 @@
             "commit_ref": "9ab16778c6e37e3d34e28b990bdb8839e5961805",
             "commit_message": "[flang][acc] Implement PointerLikeType API gen[Allocate/Free/Copy] (#163660)\n\nImplements genAllocate, genFree, and genCopy for FIR pointer types\n(fir.ref, fir.ptr, fir.heap, fir.llvm_ptr) in the OpenACC\nPointerLikeType interface.\n\n- genAllocate: Uses fir.alloca for stack types, fir.allocmem for heap\ntypes. Returns null for dynamic/unknown types (unlimited polymorphic,\ndynamic arrays, dynamic character lengths, box types).\n- genFree: Generates fir.freemem for heap allocations. Returns false if\noriginal allocation cannot be found.\n- genCopy: Uses fir.load+fir.store for trivial types (scalars),\nhlfir.assign for non-trivial types (arrays, derived types, characters).\nReturns false for unsupported dynamic types and box types.\n\nAdds comprehensive MLIR tests covering various FIR types and edge cases.",
             "commit_timestamp": 1760712684.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1760758345.724319,
+            "elapsed_time": 2468.987365961075,
+            "x64": true,
+            "actual_files_count": 3021,
+            "expected_files_count": 1661,
+            "memory_traffic": 470921.97927856445,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "f4fe7145df9f952808884f653b5bb4bb992b7b06",
+            "commit_message": "[Flang][OpenMP] Implement workdistribute construct lowering (#140523)\n\nThis PR introduces a new pass \"lower-workdistribute\"\nFortran array statements are lowered to fir as fir.do_loop unordered.\n\"lower-workdistribute\" pass works mainly on identifying \"fir.do_loop\nunordered\" that is nested in target{teams{workdistribute{fir.do_loop\nunordered}}} and lowers it to\ntarget{teams{parallel{wsloop{loop_nest}}}}. It hoists all the other ops\noutside target region. Relaces heap allocation on target with\nomp.target_allocmem and deallocation with omp.target_freemem from host.\nAlso replaces runtime function \"Assign\" with omp.target_memcpy from\nhost.\n\nThis pass implements following rewrites and optimisations:\n\n- **FissionWorkdistribute**: finds the parallelizable ops within teams\n{workdistribute} region and moves them to their own\nteams{workdistribute} region.\n- **WorkdistributeRuntimeCallLower**: finds the FortranAAssign calls\nnested in teams {workdistribute{}} and lowers it to unordered do loop if\nsrc is scalar and dest is array. Other runtime calls are not handled\ncurrently.\n- **WorkdistributeDoLower**: finds the fir.do_loop unoredered nested in\nteams {workdistribute{fir.do_loop unoredered}} and lowers it to teams\n{parallel { distribute {wsloop {loop_nest}}}}.\n- **TeamsWorkdistributeToSingle**: hoists all the ops inside teams\n{workdistribute{}} before teams op.\n\nThe work in this PR is C-P and updated from @ivanradanov commits from\ncoexecute implementation:\n\n[flang_workdistribute_iwomp_2024](https://github.com/ivanradanov/llvm-project/commits/flang_workdistribute_iwomp_2024)\n\nPaper related to this work by @ivanradanov [\"Automatic Parallelization\nand OpenMP Offloadingof Fortran Array\nNotation\"](https://www.osti.gov/servlets/purl/[2449728](https://www.osti.gov/servlets/purl/2449728))",
+            "commit_timestamp": 1760754392.0
         }
     ]
 }

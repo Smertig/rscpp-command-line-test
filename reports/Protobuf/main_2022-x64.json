@@ -11894,6 +11894,21 @@
             "commit_ref": "45b1297fdaad5a9436d0e207422168c38dc45ac4",
             "commit_message": "[ObjC] Remove `generate_minimal_imports` generation option warning\n\nSince protobuf now has `import option` the original idea around this\nis reduced; but more importantly, using the option can run into\nproblems if a build system wants to do layering checks on the\ngenerated code. So...\n\n- Document the problem\n- Remove the warning\n\nIt may make sense to flip the default on this option back in the future and even deprecated/eventually remove it. The other choice would be to figure out how to make the generation work with the\ntransitive `import public` problem.\n\nPiperOrigin-RevId: 820681829\n",
             "commit_timestamp": 1760711357.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1760757326.998246,
+            "elapsed_time": 310.2656834125519,
+            "x64": true,
+            "actual_files_count": 1201,
+            "expected_files_count": 818,
+            "memory_traffic": 46265.04399108887,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "69efbc67c5a7aac7b2d66d88796895319af799d3",
+            "commit_message": "Implement hasPresence helper in PHP, remove broken hasOptionalKeyword.\n\nhasOptionalKeyword has been broken for 3 years since https://github.com/protocolbuffers/protobuf/commit/b27dd18676054c3dcb5cbcff39e5c2c581feaaeb deleted the internal implementation.  hasPresence uses the better semantics we've rolled out in other languages, which will work well under editions.\n\nPiperOrigin-RevId: 820920132\n",
+            "commit_timestamp": 1760756385.0
         }
     ]
 }
