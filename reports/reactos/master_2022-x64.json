@@ -434,6 +434,21 @@
             "commit_ref": "4df8fbf9c250ef103267bc8b401b620b4ba3e86c",
             "commit_message": "[NETSH] Add a special code path to execute commands that follow the pushd command\n\nThis enables the execution of commands like 'pushd interface ip' which is emitted by the dump command of WinXPs ifmon.dll.\n",
             "commit_timestamp": 1760744271.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1760799935.794653,
+            "elapsed_time": 75.62376260757446,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7305.7617111206055,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "03f4387231047624dd708e71469dcdcf89395b10",
+            "commit_message": "[KMTEST] ExHardError and RtlCaptureContextKM fixes (#8342)\n\n- Adjust expected values according to NT version and architecture",
+            "commit_timestamp": 1760797739.0
         }
     ]
 }

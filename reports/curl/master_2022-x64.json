@@ -434,6 +434,21 @@
             "commit_ref": "f32451c12bb7fa4738d8c9cf6d7cd09ee876434b",
             "commit_message": "curlx: promote `Curl_fseeko()` to `curlx_fseek()`, use it in `src`\n\n- tool_formparse: replace truncated `fseek` with `curlx_fseek`.\n- tool_operate: replace truncated `fseek` with `curlx_fseek`.\n- tool_paramhlp: replace local duplicate `myfseek`, with `curlx_fseek`.\n\nFollow-up to 4fb12f289189e8113967e9c9da09958fd8bfa4cb #19100\n\nCloses #19107\n",
             "commit_timestamp": 1760747110.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1760800493.758206,
+            "elapsed_time": 118.19226908683777,
+            "x64": true,
+            "actual_files_count": 1182,
+            "expected_files_count": 2323,
+            "memory_traffic": 19057.89818572998,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "a000444cb0917b490a7a1635e51be3ac5bf61b3e",
+            "commit_message": "cmake: fix Linux pre-fill `HAVE_POSIX_STRERROR_R` (when `_CURL_PREFILL=ON`)\n\nIt depends on C library.\n\nFollow-up to f30f1307c1d9d70a96557359f039ba7ef9b077fb #19116\n",
+            "commit_timestamp": 1760790643.0
         }
     ]
 }

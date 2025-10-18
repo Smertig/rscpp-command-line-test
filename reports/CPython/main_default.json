@@ -27701,6 +27701,21 @@
             "commit_ref": "1bfe86caaaaca3ec16351d69fa778f1212f1dd84",
             "commit_message": "GH-139174: Prepare `pathlib.Path.info` for new methods (part 2) (#140155)\n\nMerge `_Info`, `_StatResultInfo` and `_DirEntryInfo` into a single `_Info`\nclass. No other changes.\n\nThis will allow us to use a cached `os.stat()` result from our upcoming\n`_Info.stat()` method even when we have a backing `os.DirEntry`.",
             "commit_timestamp": 1760750005.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1760800128.744465,
+            "elapsed_time": 4112.351719617844,
+            "x64": true,
+            "actual_files_count": 1204,
+            "expected_files_count": null,
+            "memory_traffic": 56239.51332092285,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "d86ad870cc112d4bd36165398368826746555730",
+            "commit_message": "gh-140251: colorize import statement formatting in asyncio console (#140252)\n\n",
+            "commit_timestamp": 1760798124.0
         }
     ]
 }

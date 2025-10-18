@@ -11909,6 +11909,21 @@
             "commit_ref": "69efbc67c5a7aac7b2d66d88796895319af799d3",
             "commit_message": "Implement hasPresence helper in PHP, remove broken hasOptionalKeyword.\n\nhasOptionalKeyword has been broken for 3 years since https://github.com/protocolbuffers/protobuf/commit/b27dd18676054c3dcb5cbcff39e5c2c581feaaeb deleted the internal implementation.  hasPresence uses the better semantics we've rolled out in other languages, which will work well under editions.\n\nPiperOrigin-RevId: 820920132\n",
             "commit_timestamp": 1760756385.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1760799975.581202,
+            "elapsed_time": 333.5954978466034,
+            "x64": true,
+            "actual_files_count": 1201,
+            "expected_files_count": 818,
+            "memory_traffic": 46273.26039123535,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "d90aae82bfa7fb02a42d5660b20a43d8ed50b33c",
+            "commit_message": "Add `AddWithArena`/`ReserveWithArena` variants to `RepeatedField` and call them internally.\n\nPiperOrigin-RevId: 821011979\n",
+            "commit_timestamp": 1760781962.0
         }
     ]
 }

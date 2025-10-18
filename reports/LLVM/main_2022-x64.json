@@ -33707,6 +33707,23 @@
             "commit_ref": "f4fe7145df9f952808884f653b5bb4bb992b7b06",
             "commit_message": "[Flang][OpenMP] Implement workdistribute construct lowering (#140523)\n\nThis PR introduces a new pass \"lower-workdistribute\"\nFortran array statements are lowered to fir as fir.do_loop unordered.\n\"lower-workdistribute\" pass works mainly on identifying \"fir.do_loop\nunordered\" that is nested in target{teams{workdistribute{fir.do_loop\nunordered}}} and lowers it to\ntarget{teams{parallel{wsloop{loop_nest}}}}. It hoists all the other ops\noutside target region. Relaces heap allocation on target with\nomp.target_allocmem and deallocation with omp.target_freemem from host.\nAlso replaces runtime function \"Assign\" with omp.target_memcpy from\nhost.\n\nThis pass implements following rewrites and optimisations:\n\n- **FissionWorkdistribute**: finds the parallelizable ops within teams\n{workdistribute} region and moves them to their own\nteams{workdistribute} region.\n- **WorkdistributeRuntimeCallLower**: finds the FortranAAssign calls\nnested in teams {workdistribute{}} and lowers it to unordered do loop if\nsrc is scalar and dest is array. Other runtime calls are not handled\ncurrently.\n- **WorkdistributeDoLower**: finds the fir.do_loop unoredered nested in\nteams {workdistribute{fir.do_loop unoredered}} and lowers it to teams\n{parallel { distribute {wsloop {loop_nest}}}}.\n- **TeamsWorkdistributeToSingle**: hoists all the ops inside teams\n{workdistribute{}} before teams op.\n\nThe work in this PR is C-P and updated from @ivanradanov commits from\ncoexecute implementation:\n\n[flang_workdistribute_iwomp_2024](https://github.com/ivanradanov/llvm-project/commits/flang_workdistribute_iwomp_2024)\n\nPaper related to this work by @ivanradanov [\"Automatic Parallelization\nand OpenMP Offloadingof Fortran Array\nNotation\"](https://www.osti.gov/servlets/purl/[2449728](https://www.osti.gov/servlets/purl/2449728))",
             "commit_timestamp": 1760754392.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1760800939.525131,
+            "elapsed_time": 2379.674792766571,
+            "x64": true,
+            "actual_files_count": 3021,
+            "expected_files_count": 1661,
+            "memory_traffic": 470245.41466522217,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "035f81138888f30aab67ee12ce09982cd03370cb",
+            "commit_message": "[APFloat] Outline special member functions (#164073)\n\nAs discussed in\nhttps://github.com/llvm/llvm-project/pull/111544#issuecomment-3405281695,\nlarge special member functions in APFloat prevent function inlining and\ncause compile-time regression. This patch moves them into the cpp file.\n\nCompile-time improvement (-0.1%):\nhttps://llvm-compile-time-tracker.com/compare.php?from=0f68dc6cffd93954188f73bff8aced93aab63687&to=d3105c0860920651a7e939346e67c040776b2278&stat=instructions:u",
+            "commit_timestamp": 1760798885.0
         }
     ]
 }
