@@ -464,6 +464,21 @@
             "commit_ref": "e779650a86c74166954eac22ad995bbad8fd7dc6",
             "commit_message": "GHA/curl-for-win: update container image envs\n\nFollow-up to https://github.com/curl/curl-for-win/commit/1f31ff06ad389f48059641ffb995af8261ba0233\n\nCloses #19129\n",
             "commit_timestamp": 1760830219.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1760886919.981628,
+            "elapsed_time": 121.09355902671814,
+            "x64": true,
+            "actual_files_count": 1182,
+            "expected_files_count": 2323,
+            "memory_traffic": 19042.162551879883,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "976333dd4052855c22369e89e60a80a9cf925161",
+            "commit_message": "curl_path: make sure just whitespace is illegal\n\nThis function could previously accidentally return true and a NULL path\nif only whitespace was provided as argument.\n\nAlso, make it stricter and do not allow CR or LF within the string.\n\nUse more strparse parsing.\n\nDrop the comment saying this is from OpenSSH as it has now been\nrewritten since then.\n\nCloses #19141\n",
+            "commit_timestamp": 1760883961.0
         }
     ]
 }

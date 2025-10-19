@@ -11939,6 +11939,21 @@
             "commit_ref": "f39612a057665a4134f9bdeeb9f239ec51de1b31",
             "commit_message": "Avoid calling `GetArena()` in `~RepeatedField` when the element is arena-skippable.\n\nThe destructor of `RepeatedField` will never be called if allocated on an arena with a destructor-skippable element type. In this case, we know the arena pointer is null, and we avoid a call to `RepeatedField::GetArena()`.\n\n`InternalDeallocate` does not actually use the arena pointer when `in_destructor` is set. However, as the current implementation stands, checking whether the arena pointer is `nullptr` from a field with an arena offset requires reading the arena pointer from the `InternalMetadata`, since it is possible to have a non-sentinel offset and a `nullptr` arena. I will later be experimenting with an optimization that will reduce this cost when we only care about whether an arena is present.\n\nPiperOrigin-RevId: 821140022\n",
             "commit_timestamp": 1760826105.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1760886390.247813,
+            "elapsed_time": 328.66576766967773,
+            "x64": true,
+            "actual_files_count": 1201,
+            "expected_files_count": 818,
+            "memory_traffic": 46255.655601501465,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "673ecd23baa50e4fe860240fe63ab2496c16da4a",
+            "commit_message": "Automated rollback of commit 94e62c6bd3396d0e690881492173499dcc1f146a.\n\nPiperOrigin-RevId: 821225222\n",
+            "commit_timestamp": 1760853528.0
         }
     ]
 }
