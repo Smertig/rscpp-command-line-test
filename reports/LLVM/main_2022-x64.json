@@ -33724,6 +33724,23 @@
             "commit_ref": "035f81138888f30aab67ee12ce09982cd03370cb",
             "commit_message": "[APFloat] Outline special member functions (#164073)\n\nAs discussed in\nhttps://github.com/llvm/llvm-project/pull/111544#issuecomment-3405281695,\nlarge special member functions in APFloat prevent function inlining and\ncause compile-time regression. This patch moves them into the cpp file.\n\nCompile-time improvement (-0.1%):\nhttps://llvm-compile-time-tracker.com/compare.php?from=0f68dc6cffd93954188f73bff8aced93aab63687&to=d3105c0860920651a7e939346e67c040776b2278&stat=instructions:u",
             "commit_timestamp": 1760798885.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1760845410.116557,
+            "elapsed_time": 2547.9681661129,
+            "x64": true,
+            "actual_files_count": 3021,
+            "expected_files_count": 1661,
+            "memory_traffic": 484767.29693603516,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "d5ce81dc8143eed18a7342093b991a63b025e2d9",
+            "commit_message": "[NFC][GlobMatcher] Add benchmark for globs at both sides and in the middle. (#164139)\n\n",
+            "commit_timestamp": 1760842666.0
         }
     ]
 }

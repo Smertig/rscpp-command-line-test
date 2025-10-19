@@ -449,6 +449,21 @@
             "commit_ref": "378a5ab3c1fbb16873596de5215db5aa55bd5b09",
             "commit_message": "value-initialise the buffer array member of detail::ansi_color_escape so that it can be used in a constexpr context in MSVC; compiler rejects as non-constant due to 'uninitialized symbol' otherwise (#4581)\n\nCo-authored-by: Harry Denholm <ishani@users.noreply.github.com>",
             "commit_timestamp": 1760713856.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1760844442.45833,
+            "elapsed_time": 86.94309759140015,
+            "x64": true,
+            "actual_files_count": 74,
+            "expected_files_count": 66,
+            "memory_traffic": 7997.461074829102,
+            "repo_url": "https://github.com/fmtlib/fmt.git",
+            "commit_ref": "85f6ecc7a01dcd9428dd365cbabc568b96c4815e",
+            "commit_message": "Add format_as support for std::variant and std::expected formatters (#4575)\n\nSigned-off-by: Vladislav Shchapov <vladislav@shchapov.ru>",
+            "commit_timestamp": 1760821521.0
         }
     ]
 }
