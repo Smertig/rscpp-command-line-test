@@ -494,6 +494,21 @@
             "commit_ref": "3986149c0405d9d4f33fe1dc9c485e0f362c0a05",
             "commit_message": "GHA/windows: delete remains of Perl `Win32-Process*` caching\n\nFollow-up to c8d6643df212791edee705a94c890335dac8762b #19083\n",
             "commit_timestamp": 1760912723.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1760973336.954902,
+            "elapsed_time": 118.36298775672913,
+            "x64": true,
+            "actual_files_count": 1182,
+            "expected_files_count": 2323,
+            "memory_traffic": 19074.662979125977,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "dbff3eec456d86386be4cebb89cbe4dfc21a06b6",
+            "commit_message": "cf-socket: give information when unable to open socket\n\nGive ERRNO explanation in a failf() when unable to open a socket.\nHelps in finding out what the issue preventing your curl to work\nreally is. Just had a wrong ulimit after a sys update.\n\nCloses #19158\n",
+            "commit_timestamp": 1760966507.0
         }
     ]
 }
