@@ -479,6 +479,21 @@
             "commit_ref": "976333dd4052855c22369e89e60a80a9cf925161",
             "commit_message": "curl_path: make sure just whitespace is illegal\n\nThis function could previously accidentally return true and a NULL path\nif only whitespace was provided as argument.\n\nAlso, make it stricter and do not allow CR or LF within the string.\n\nUse more strparse parsing.\n\nDrop the comment saying this is from OpenSSH as it has now been\nrewritten since then.\n\nCloses #19141\n",
             "commit_timestamp": 1760883961.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1760931405.585896,
+            "elapsed_time": 116.99245524406433,
+            "x64": true,
+            "actual_files_count": 1182,
+            "expected_files_count": 2323,
+            "memory_traffic": 19074.89507293701,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "3986149c0405d9d4f33fe1dc9c485e0f362c0a05",
+            "commit_message": "GHA/windows: delete remains of Perl `Win32-Process*` caching\n\nFollow-up to c8d6643df212791edee705a94c890335dac8762b #19083\n",
+            "commit_timestamp": 1760912723.0
         }
     ]
 }

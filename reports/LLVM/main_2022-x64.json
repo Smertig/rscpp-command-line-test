@@ -33758,6 +33758,23 @@
             "commit_ref": "a0a840a83c19418ed897bcc9a0f3f1605fcc16aa",
             "commit_message": "[X86][GlobalISel] Precommit tests for fcmov (NFC)\n\nTests are for #157377\n",
             "commit_timestamp": 1760885871.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1760931867.913126,
+            "elapsed_time": 2528.7120587825775,
+            "x64": true,
+            "actual_files_count": 3021,
+            "expected_files_count": 1661,
+            "memory_traffic": 485066.97664642334,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "04fc1aee564373e72048333a789c7b277e68f25a",
+            "commit_message": "[Clang] Explicitly invoke bash to run shell scripts\n\nOtherwise these tests run into an exec format error when attempting to run\nthem with the internal shell. This is similar to other patches that have\ndone the same for similar tests.\n",
+            "commit_timestamp": 1760929779.0
         }
     ]
 }

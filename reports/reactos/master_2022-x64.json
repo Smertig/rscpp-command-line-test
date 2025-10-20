@@ -479,6 +479,21 @@
             "commit_ref": "03f4387231047624dd708e71469dcdcf89395b10",
             "commit_message": "[KMTEST] ExHardError and RtlCaptureContextKM fixes (#8342)\n\n- Adjust expected values according to NT version and architecture",
             "commit_timestamp": 1760797739.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1760930894.911854,
+            "elapsed_time": 74.63242220878601,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7416.612442016602,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "c7d4040767f35913a25ebc520a96849c5dc92635",
+            "commit_message": "[FREELDR] ArcGetFileInformation(): Set Information->FileName, Length, and Attributes for filesystems (#8420)\n\nCORE-9023\n\nAdd support for all the supported filesystems: FAT/FATX, NTFS,\nISO, EXT, BTRFS, as well as for files loaded via PXE.\n\narc.h:\n- Add `FILEATTRIBUTES` enumeration;\n- Remove non-existing `CreateReadOnly` and `SupersedeReadOnly`\n  `OPENMODE` values; add missing `CreateReadWrite`.\n",
+            "commit_timestamp": 1760906310.0
         }
     ]
 }
