@@ -509,6 +509,21 @@
             "commit_ref": "f5907c593040dd5fa1d0c5a7b08b60dba19465e7",
             "commit_message": "Fix commit references in changelog.\n",
             "commit_timestamp": 1760831310.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": "cxx11_*",
+            "timestamp": 1761017069.348646,
+            "elapsed_time": 138.0475718975067,
+            "x64": true,
+            "actual_files_count": 110,
+            "expected_files_count": null,
+            "memory_traffic": 14896.872848510742,
+            "repo_url": "https://gitlab.com/libeigen/eigen.git",
+            "commit_ref": "8e60d4173c6d8d5ee216c13ffd6142639be2bcc8",
+            "commit_message": "Support AVX for i686.\n\n<!-- \nThanks for contributing a merge request!\n\nWe recommend that first-time contributors read our [contribution guidelines](https://eigen.tuxfamily.org/index.php?title=Contributing_to_Eigen).\n\nBefore submitting the MR, please complete the following checks:\n- Create one PR per feature or bugfix,\n- Run the test suite to verify your changes.\n  See our [test guidelines](https://eigen.tuxfamily.org/index.php?title=Tests).\n- Add tests to cover the bug addressed or any new feature.\n- Document new features.  If it is a substantial change, add it to the [Changelog](https://gitlab.com/libeigen/eigen/-/blob/master/CHANGELOG.md).\n- Leave the following box checked when submitting: `Allow commits from members who can merge to the target branch`.\n  This allows us to rebase and merge your change.\n\nNote that we are a team of volunteers; we appreciate your patience during the review process.\n-->\n\n### Description\n<!--Please explain your changes.-->\n\nSupport AVX for i686.\n\nThere was an existing work-around for windows.  Added the more generic\narchitecture comparison to also apply for linux.\n\n### Reference issue\n<!--\nYou can link to a specific issue using the gitlab syntax #<issue number>. \nIf the MR fixes an issue, write \"Fixes #<issue number>\" to have the issue automatically closed on merge.\n-->\n\nFixes #2991.\n\nCloses #2991\n\nSee merge request libeigen/eigen!2037\n",
+            "commit_timestamp": 1760996862.0
         }
     ]
 }
