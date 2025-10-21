@@ -524,6 +524,21 @@
             "commit_ref": "b4f57c804573016ac7eb0a43e6af0f427a556571",
             "commit_message": "cmake: inline linter instructions\n\nTo avoid it applying to all the rest of the script.\n\nFollow-up to b761eb5addb9e29b2ee0e5841633c09d1fd77704 #17576\n\nCloses #19172\n",
             "commit_timestamp": 1761004415.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1761059769.221892,
+            "elapsed_time": 114.33038544654846,
+            "x64": true,
+            "actual_files_count": 1182,
+            "expected_files_count": 2323,
+            "memory_traffic": 19085.299156188965,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "48df7b29d905314c2c0c3b4b3f949569a490d3aa",
+            "commit_message": "cookie: only count accepted cookies in Curl_cookie_add\n\nThe counter used to stop accepting cookies after a certain amount has\nbeen received in a single response would previously also count some\ncookies that were not actually accepted as they were discarded after the\ncounter was increased.\n\nStarting now, the counter is increased only for cookies that were\naccepted.\n\nPointed out by ZeroPath\nCloses #19157\n",
+            "commit_timestamp": 1761057212.0
         }
     ]
 }

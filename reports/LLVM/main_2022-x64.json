@@ -33809,6 +33809,23 @@
             "commit_ref": "d10af9d39805fb05d7e36cc815ce19014f6b4dae",
             "commit_message": "[OpenMP][AArch64] Enable BTI and PAC support on OpenBSD (#164337)\n\n",
             "commit_timestamp": 1761016190.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1761060225.021966,
+            "elapsed_time": 2513.0043001174927,
+            "x64": true,
+            "actual_files_count": 3025,
+            "expected_files_count": 1661,
+            "memory_traffic": 485607.01498413086,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "abf80b54bc752dc44f821da1fa9d2d3117a3c8c0",
+            "commit_message": "[libc++][IWYU] Remove `std::move` header in `std::for_each` (#164272)\n\nIt seems this was accidentally included; there's no use of std::move in\nthis header.",
+            "commit_timestamp": 1761058989.0
         }
     ]
 }

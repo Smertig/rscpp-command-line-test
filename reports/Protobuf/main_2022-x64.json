@@ -11999,6 +11999,21 @@
             "commit_ref": "eb083c44033973cfd849a0c9eb0ed8b4b9eb73b7",
             "commit_message": "Auto-generate files after cl/821777650\n",
             "commit_timestamp": 1760992516.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1761059508.677996,
+            "elapsed_time": 362.0937156677246,
+            "x64": true,
+            "actual_files_count": 1203,
+            "expected_files_count": 818,
+            "memory_traffic": 46322.85294342041,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "adb1957e315c3187fe844b7b31189d0dbd035b96",
+            "commit_message": "Adapt for rules_rust 0.66.0.\n\nhttps://github.com/bazelbuild/rules_rust/pull/3634, which updates the deps and proc_macro_deps of rustc_compile_action and collect_deps to list.\n\nPiperOrigin-RevId: 822050008\n",
+            "commit_timestamp": 1761045550.0
         }
     ]
 }
