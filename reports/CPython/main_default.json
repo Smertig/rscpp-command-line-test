@@ -27806,6 +27806,21 @@
             "commit_ref": "0c01090ad957de4625f504ce4f29df0a05d09fba",
             "commit_message": "GH-139951: Fix major GC performance regression (GH-140262)\n\n* Count number of actually tracked objects, instead of trackable objects. This ensures that untracking tuples has the desired effect of reducing GC overhead\n\n* Do not track most untrackable tuples during creation. This prevents large numbers of small tuples causing execessive GCs.",
             "commit_timestamp": 1761056535.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1761103623.298886,
+            "elapsed_time": 4016.9282722473145,
+            "x64": true,
+            "actual_files_count": 1204,
+            "expected_files_count": null,
+            "memory_traffic": 56244.46885681152,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "b3a38438d83245e52dff80f348c7fde539333cea",
+            "commit_message": "gh-116738: Make _suggestions module thread-safe (gh-140321)\n\n",
+            "commit_timestamp": 1761092088.0
         }
     ]
 }

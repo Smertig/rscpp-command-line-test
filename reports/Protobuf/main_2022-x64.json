@@ -12014,6 +12014,21 @@
             "commit_ref": "adb1957e315c3187fe844b7b31189d0dbd035b96",
             "commit_message": "Adapt for rules_rust 0.66.0.\n\nhttps://github.com/bazelbuild/rules_rust/pull/3634, which updates the deps and proc_macro_deps of rustc_compile_action and collect_deps to list.\n\nPiperOrigin-RevId: 822050008\n",
             "commit_timestamp": 1761045550.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1761103498.535915,
+            "elapsed_time": 326.0959646701813,
+            "x64": true,
+            "actual_files_count": 1203,
+            "expected_files_count": 818,
+            "memory_traffic": 46395.961418151855,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "adb9f33d1c7602c5fd963ebabc36d48ba6c86fef",
+            "commit_message": "Don't store placeholders in descriptor tables.\n\nThis is consistent with the C++ implementation, and avoids conflicting definitions when our enum/message heuristics don't match between fields of the same type.\n\nPiperOrigin-RevId: 822313252\n",
+            "commit_timestamp": 1761088050.0
         }
     ]
 }

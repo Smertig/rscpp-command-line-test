@@ -539,6 +539,21 @@
             "commit_ref": "6169fa15d85c766c108c90eb68289021b5eee705",
             "commit_message": "Sync to upstream/release/696 (#2050)\n\nHey everyone. In preparation for the next phase of the New Type Solver\nrollout, we have another round of important bugfixes.\n\nWe've also got a few improvements to the new require alias machinery and\na little optimization to native codegen.\n\n## New Type Solver\n\n* Fix a case where Luau would erroneously simplify `{} & { p: number |\nstring }` to `number`.\n* Fix a crash that could occur within generic substitution. TODO: Sora\nto help word this.\n* Fix a case where Luau would infer a spurious union type as the result\nof a `setmetatable` call.\n* Fix https://github.com/luau-lang/luau/issues/1803\n* Improve bidirectional inference of table literals in the case that the\nexpected type has an indexer.\n\n## Luau.Require\n\n* Zero-initialize `luarequire_Configuration` function pointers before\nuser initialization\n* Error if ambiguity is detected during alias discovery\n\n## Native Codegen\n\n* Do not replace known constant value with a load propagation in\nSTORE_TVALUE\n\n---------\n\nCo-authored-by: Annie Tang <annietang@roblox.com>\nCo-authored-by: Hunter Goldstein <hgoldstein@roblox.com>\nCo-authored-by: Sora Kanosue <skanosue@roblox.com>\nCo-authored-by: Varun Saini <vsaini@roblox.com>\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>",
             "commit_timestamp": 1760721951.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1761103444.042186,
+            "elapsed_time": 307.22396779060364,
+            "x64": true,
+            "actual_files_count": 508,
+            "expected_files_count": 379,
+            "memory_traffic": 41077.569274902344,
+            "repo_url": "https://github.com/luau-lang/luau",
+            "commit_ref": "6169fa15d85c766c108c90eb68289021b5eee705",
+            "commit_message": "Sync to upstream/release/696 (#2050)\n\nHey everyone. In preparation for the next phase of the New Type Solver\nrollout, we have another round of important bugfixes.\n\nWe've also got a few improvements to the new require alias machinery and\na little optimization to native codegen.\n\n## New Type Solver\n\n* Fix a case where Luau would erroneously simplify `{} & { p: number |\nstring }` to `number`.\n* Fix a crash that could occur within generic substitution. TODO: Sora\nto help word this.\n* Fix a case where Luau would infer a spurious union type as the result\nof a `setmetatable` call.\n* Fix https://github.com/luau-lang/luau/issues/1803\n* Improve bidirectional inference of table literals in the case that the\nexpected type has an indexer.\n\n## Luau.Require\n\n* Zero-initialize `luarequire_Configuration` function pointers before\nuser initialization\n* Error if ambiguity is detected during alias discovery\n\n## Native Codegen\n\n* Do not replace known constant value with a load propagation in\nSTORE_TVALUE\n\n---------\n\nCo-authored-by: Annie Tang <annietang@roblox.com>\nCo-authored-by: Hunter Goldstein <hgoldstein@roblox.com>\nCo-authored-by: Sora Kanosue <skanosue@roblox.com>\nCo-authored-by: Varun Saini <vsaini@roblox.com>\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>",
+            "commit_timestamp": 1760721951.0
         }
     ]
 }
