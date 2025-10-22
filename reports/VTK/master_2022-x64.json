@@ -554,6 +554,21 @@
             "commit_ref": "e87e8ef249de2a0760e6b7bb51e5a6b41a4cd947",
             "commit_message": "Merge topic 'vtkCellArray-vtkUnstructuredGrid-update-documentation'\n\n7deb5a315e8 vtkCellArray: Update SetData documentation\n41623b1c8ba vtkUnstructuredGrid: Update SetCells documentation\n\nAcked-by: Kitware Robot <kwrobot@kitware.com>\nAcked-by: buildbot <buildbot@kitware.com>\nReviewed-by: Mathieu Westphal (Kitware) <mathieu.westphal@kitware.com>\nMerge-request: !12546\n",
             "commit_timestamp": 1761072716.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": "vtkCommonCoreCxxTests",
+            "timestamp": 1761145773.354178,
+            "elapsed_time": 224.9135456085205,
+            "x64": true,
+            "actual_files_count": 86,
+            "expected_files_count": 68,
+            "memory_traffic": 23959.84312438965,
+            "repo_url": "https://gitlab.kitware.com/vtk/vtk.git",
+            "commit_ref": "89ab5dd450eed47be9d81a707ce9682f8368a9e0",
+            "commit_message": "Merge topic 'fix-xcursor-compilation'\n\nafdb70ffb57 ci: disable relocatable builds for mindeps\nc393e55abde vtkXOpenGLRenderWindow: handle Xcursor missing at runtime\nedae6621ac0 Utilities/X11: use all of the compile interface of X11\nc8bcbb14544 vtkX11Functions: move `VTK_HAVE_XCURSOR` into the header file\n\nAcked-by: Kitware Robot <kwrobot@kitware.com>\nAcked-by: buildbot <buildbot@kitware.com>\nReviewed-by: Jaswant Panchumarti (Kitware) <jaswant.panchumarti@kitware.com>\nMerge-request: !12521\n",
+            "commit_timestamp": 1761141367.0
         }
     ]
 }

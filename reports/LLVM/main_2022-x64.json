@@ -33843,6 +33843,23 @@
             "commit_ref": "41204960c089d45d5bfcece809ddac95f0726cc6",
             "commit_message": "[libc++][C++03] Cherry pick #164272 (#164447)\n\n",
             "commit_timestamp": 1761102837.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1761146629.686689,
+            "elapsed_time": 2547.317327260971,
+            "x64": true,
+            "actual_files_count": 3025,
+            "expected_files_count": 1661,
+            "memory_traffic": 485945.2780609131,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "a321ce3d72ebe28f7a3bfb209f2f27d3ab057e77",
+            "commit_message": "[SCEV] Expose getGEPExpr without needing to pass GEPOperator* (NFC) (#164487)\n\nAdd a new getGEPExpr variant which is independent of GEPOperator*.\n\nTo be used to construct SCEVs for VPlan recipes in\nhttps://github.com/llvm/llvm-project/pull/161276.\n\nPR: https://github.com/llvm/llvm-project/pull/164487",
+            "commit_timestamp": 1761145317.0
         }
     ]
 }

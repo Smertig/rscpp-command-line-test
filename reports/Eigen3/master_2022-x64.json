@@ -554,6 +554,21 @@
             "commit_ref": "8e60d4173c6d8d5ee216c13ffd6142639be2bcc8",
             "commit_message": "Support AVX for i686.\n\n<!-- \nThanks for contributing a merge request!\n\nWe recommend that first-time contributors read our [contribution guidelines](https://eigen.tuxfamily.org/index.php?title=Contributing_to_Eigen).\n\nBefore submitting the MR, please complete the following checks:\n- Create one PR per feature or bugfix,\n- Run the test suite to verify your changes.\n  See our [test guidelines](https://eigen.tuxfamily.org/index.php?title=Tests).\n- Add tests to cover the bug addressed or any new feature.\n- Document new features.  If it is a substantial change, add it to the [Changelog](https://gitlab.com/libeigen/eigen/-/blob/master/CHANGELOG.md).\n- Leave the following box checked when submitting: `Allow commits from members who can merge to the target branch`.\n  This allows us to rebase and merge your change.\n\nNote that we are a team of volunteers; we appreciate your patience during the review process.\n-->\n\n### Description\n<!--Please explain your changes.-->\n\nSupport AVX for i686.\n\nThere was an existing work-around for windows.  Added the more generic\narchitecture comparison to also apply for linux.\n\n### Reference issue\n<!--\nYou can link to a specific issue using the gitlab syntax #<issue number>. \nIf the MR fixes an issue, write \"Fixes #<issue number>\" to have the issue automatically closed on merge.\n-->\n\nFixes #2991.\n\nCloses #2991\n\nSee merge request libeigen/eigen!2037\n",
             "commit_timestamp": 1760996862.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": "cxx11_*",
+            "timestamp": 1761145641.917324,
+            "elapsed_time": 138.09177565574646,
+            "x64": true,
+            "actual_files_count": 110,
+            "expected_files_count": null,
+            "memory_traffic": 14897.579147338867,
+            "repo_url": "https://gitlab.com/libeigen/eigen.git",
+            "commit_ref": "40da5b64ce8db35e09f90733f67932c278808e24",
+            "commit_message": "CI enhancements: visual indication of flaky tests\n\n<!-- \nThanks for contributing a merge request! Please name and fully describe your MR as you would for a commit message.\nIf the MR fixes an issue, please include \"Fixes #issue\" in the commit message and the MR description.\n\nIn addition, we recommend that first-time contributors read our [contribution guidelines](https://eigen.tuxfamily.org/index.php?title=Contributing_to_Eigen) and [git page](https://eigen.tuxfamily.org/index.php?title=Git), which will help you submit a more standardized MR.\n\nBefore submitting the MR, you also need to complete the following checks:\n- Make one PR per feature/bugfix (don't mix multiple changes into one PR). Avoid committing unrelated changes.\n- Rebase before committing\n- For code changes, run the test suite (at least the tests that are likely affected by the change).\n  See our [test guidelines](https://eigen.tuxfamily.org/index.php?title=Tests).\n- If possible, add a test (both for bug-fixes as well as new features)\n- Make sure new features are documented\n\nNote that we are a team of volunteers; we appreciate your patience during the review process.\n\nAgain, thanks for contributing! -->\n\n### Reference issue\n<!-- You can link to a specific issue using the gitlab syntax #<issue number>  -->\n\n### What does this implement/fix?\n<!--Please explain your changes.-->\n\nCurrently, we run each test 3 times to account for flaky tests. Sometimes, the test fails so quickly that the random seed is the same for the subsequent test, which fails the exact same way. \n\nThis MR uses a nanosecond seed which resolves the issue described above. Now, if the test does not pass on the first attempt but passes on the retries, the gitlab job status will be yellow but still be treated as a pass in the ci/cd pipeline. Hopefully, this means we will get more passes and help us identify room for improvement.\n\n### Additional information\n<!--Any additional information you think is important.-->\n\nSee merge request libeigen/eigen!2025\n",
+            "commit_timestamp": 1761108711.0
         }
     ]
 }

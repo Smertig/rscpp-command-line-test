@@ -12029,6 +12029,21 @@
             "commit_ref": "adb9f33d1c7602c5fd963ebabc36d48ba6c86fef",
             "commit_message": "Don't store placeholders in descriptor tables.\n\nThis is consistent with the C++ implementation, and avoids conflicting definitions when our enum/message heuristics don't match between fields of the same type.\n\nPiperOrigin-RevId: 822313252\n",
             "commit_timestamp": 1761088050.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1761145586.720332,
+            "elapsed_time": 332.13842964172363,
+            "x64": true,
+            "actual_files_count": 1203,
+            "expected_files_count": 818,
+            "memory_traffic": 46400.46154785156,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "793dbb91b6504f0934d14007a9b66f7d38187a3d",
+            "commit_message": "Expose unstable message descriptor getter to Rust.\n\nPiperOrigin-RevId: 822582353\n",
+            "commit_timestamp": 1761144186.0
         }
     ]
 }
