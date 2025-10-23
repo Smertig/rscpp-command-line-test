@@ -33860,6 +33860,23 @@
             "commit_ref": "a321ce3d72ebe28f7a3bfb209f2f27d3ab057e77",
             "commit_message": "[SCEV] Expose getGEPExpr without needing to pass GEPOperator* (NFC) (#164487)\n\nAdd a new getGEPExpr variant which is independent of GEPOperator*.\n\nTo be used to construct SCEVs for VPlan recipes in\nhttps://github.com/llvm/llvm-project/pull/161276.\n\nPR: https://github.com/llvm/llvm-project/pull/164487",
             "commit_timestamp": 1761145317.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1761190645.124864,
+            "elapsed_time": 2561.8186235427856,
+            "x64": true,
+            "actual_files_count": 3025,
+            "expected_files_count": 1661,
+            "memory_traffic": 485525.9897842407,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "6f147445f7cfa8b5f09f154b63ef8073ed6243a1",
+            "commit_message": "[RegAlloc] Constrain rematted regclass to use (#164386)\n\nWhen rematting we create a new virtual register with the original def's\nregister class. However the use may have a different register class if\nthe interval is split, which means we end up with an invalid register\nclass.\n\nThis fixes #164181 by constraining the newly created register to the\nuse's register class.\n\nThe test case is reduced as far as it goes. Because this test requires\nus to reach a certain amount of register pressure in certain conditions\nI'm not sure if there's an easy way to handwrite this scenario.",
+            "commit_timestamp": 1761188739.0
         }
     ]
 }

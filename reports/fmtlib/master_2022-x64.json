@@ -569,6 +569,21 @@
             "commit_ref": "d6bdb69c62da37f13f5593cec10142f17d8e190f",
             "commit_message": "Move FMT_API from ostream class to members (#4584)\n\nPutting FMT_API on the class definition propagates it to the base class\ndetail::buffer<char>'s members. However, MSVC not emit definitions for\ninline members unless it sees the symbols as FMT_API when compiling.\n\nThis fix removes the FMT_API declaration from the class itself and marks\nindividual non-inline members as FMT_API to address the issue.\n\nFixes https://github.com/fmtlib/fmt/issues/4576",
             "commit_timestamp": 1760971763.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1761189672.341073,
+            "elapsed_time": 84.7724096775055,
+            "x64": true,
+            "actual_files_count": 74,
+            "expected_files_count": 66,
+            "memory_traffic": 8022.8743896484375,
+            "repo_url": "https://github.com/fmtlib/fmt.git",
+            "commit_ref": "9395ef5fcb817c6145c7f0d274be87629c360bf2",
+            "commit_message": "Don't include std::locale::collate value in the symbol\n",
+            "commit_timestamp": 1761166093.0
         }
     ]
 }

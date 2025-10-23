@@ -12044,6 +12044,21 @@
             "commit_ref": "793dbb91b6504f0934d14007a9b66f7d38187a3d",
             "commit_message": "Expose unstable message descriptor getter to Rust.\n\nPiperOrigin-RevId: 822582353\n",
             "commit_timestamp": 1761144186.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1761189691.020806,
+            "elapsed_time": 327.32164669036865,
+            "x64": true,
+            "actual_files_count": 1203,
+            "expected_files_count": 818,
+            "memory_traffic": 46288.81944274902,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "1f3fe2eeb79f79fe16d6e8f870acddbf19a4d8ee",
+            "commit_message": "Enable removed arena pointers from all fields.\n\nThis enables an optimization that removes the arena pointer from `RepeatedField`, `RepeatedPtrField`, `Map`, `ExtensionSet` (internal), and `StringPieceField` (internal).\n\nThis change significantly reduces the size of Protobuf messages. It should also come with a decent speedup, since Protobuf will use less memory and `RepeatedField`s have been simplified.\n\nThese fields still need to recover the arena when doing memory allocation (e.g. in `RepeatedField::Add`). In most places, when possible, the arena pointer is passed down from the containing message. However, this is not always possible, for example if you do something like `message->mutable_repeated_int32()->Add(10)`.\n\nThese fields (with the exception of `ExtensionSet`) now hold an `int32_t` offset, relative to the start address of the field, where an `InternalMetadata` object can be found. For fields in a message body, this offset is determined at compile time, simply by doing `offsetof(MyMessage, _internal_metadata_) - offsetof(MyMessage, field_)`.\n\nFor split fields, or fields which are allocated directly on an arena, we allocate them as the newly-created internal wrapper `FieldWithArena<T>`, which holds the field type `T` alongside an `InternalMetadata` object. This `InternalMetadata` object is initialized with the arena pointer.\n\nFor 64-bit architectures the size of `RepeatedPtrField`, `Map`, and `ExtensionSet` all reduced by 8 bytes, taking advantage of this offset being smaller than a pointer. This means that these fields take up less space in a message than they used to, and messages on average will be significantly smaller. When these types are allocated on an arena, they are allocated alongside a copy of the arena pointer, and their size is unchanged from before.\n\n`RepeatedField` is an exception, as its size was already reduced down to 16 bytes by a previous optimization. However, this size reduction came at a cost of more complex SOO logic, as the arena pointer took up 8 of the 16 bytes available in SOO mode. By using an arena offset instead, the SOO logic for `RepeatedField` was greatly simplified, eliminating branching in methods like `size`, and reducing the cost of switching from the SOO state to the heap/arena-allocated state. Additionally, the SOO capacity of `RepeatedField<bool>`s has increased from 3 to 8.\n\nThe size of `RepeatedField`s when allocated on an arena have now increased from 16 bytes to 24 bytes. We have determined this to be a worthwhile tradeoff, as individually allocated `RepeatedField`s on an arena are much rarer than `RepeatedField`s in messages.\n\nPiperOrigin-RevId: 822759952\n",
+            "commit_timestamp": 1761171878.0
         }
     ]
 }
