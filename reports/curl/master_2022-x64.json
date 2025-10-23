@@ -584,6 +584,21 @@
             "commit_ref": "d51d19bd06529207aedc87ecde154ef57427f655",
             "commit_message": "ftp: remove the retr_size_saved struct field\n\nIt was basically a duplicate of data->req.size already\n\nCloses #19194\n",
             "commit_timestamp": 1761169419.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1761232562.29058,
+            "elapsed_time": 112.51537466049194,
+            "x64": true,
+            "actual_files_count": 1182,
+            "expected_files_count": 2323,
+            "memory_traffic": 19116.119033813477,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "3ac38a6b80e16f5885e629b35cb5a36a006ea8a5",
+            "commit_message": "md4: drop mbedtls implementation (not available in mbedtls v3+)\n\nFollow-up to 01a2308236ffd4a13a45c3d9850a66a602839af6 #18254\n\nCloses #19202\n",
+            "commit_timestamp": 1761230839.0
         }
     ]
 }

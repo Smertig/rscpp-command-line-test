@@ -584,6 +584,21 @@
             "commit_ref": "40da5b64ce8db35e09f90733f67932c278808e24",
             "commit_message": "CI enhancements: visual indication of flaky tests\n\n<!-- \nThanks for contributing a merge request! Please name and fully describe your MR as you would for a commit message.\nIf the MR fixes an issue, please include \"Fixes #issue\" in the commit message and the MR description.\n\nIn addition, we recommend that first-time contributors read our [contribution guidelines](https://eigen.tuxfamily.org/index.php?title=Contributing_to_Eigen) and [git page](https://eigen.tuxfamily.org/index.php?title=Git), which will help you submit a more standardized MR.\n\nBefore submitting the MR, you also need to complete the following checks:\n- Make one PR per feature/bugfix (don't mix multiple changes into one PR). Avoid committing unrelated changes.\n- Rebase before committing\n- For code changes, run the test suite (at least the tests that are likely affected by the change).\n  See our [test guidelines](https://eigen.tuxfamily.org/index.php?title=Tests).\n- If possible, add a test (both for bug-fixes as well as new features)\n- Make sure new features are documented\n\nNote that we are a team of volunteers; we appreciate your patience during the review process.\n\nAgain, thanks for contributing! -->\n\n### Reference issue\n<!-- You can link to a specific issue using the gitlab syntax #<issue number>  -->\n\n### What does this implement/fix?\n<!--Please explain your changes.-->\n\nCurrently, we run each test 3 times to account for flaky tests. Sometimes, the test fails so quickly that the random seed is the same for the subsequent test, which fails the exact same way. \n\nThis MR uses a nanosecond seed which resolves the issue described above. Now, if the test does not pass on the first attempt but passes on the retries, the gitlab job status will be yellow but still be treated as a pass in the ci/cd pipeline. Hopefully, this means we will get more passes and help us identify room for improvement.\n\n### Additional information\n<!--Any additional information you think is important.-->\n\nSee merge request libeigen/eigen!2025\n",
             "commit_timestamp": 1761108711.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": "cxx11_*",
+            "timestamp": 1761232020.971237,
+            "elapsed_time": 129.36307191848755,
+            "x64": true,
+            "actual_files_count": 110,
+            "expected_files_count": null,
+            "memory_traffic": 14873.316009521484,
+            "repo_url": "https://gitlab.com/libeigen/eigen.git",
+            "commit_ref": "ac3ef16f30b7708a3c6c39b964e1f294dd16b8a3",
+            "commit_message": "Fix SparseVector::insertBack() with custom scalar types\n\nIt fixes this compiler error:\n```\n/home/tav/git/Sleipnir/build/_deps/eigen3-src/Eigen/src/SparseCore/SparseVector.h:143:19: error: cannot convert \u2018int\u2019 to \u2018const Eigen::internal::CompressedStorage<boost::decimal::decimal64_t, int>::Scalar&\u2019 {aka \u2018const boost::decimal::decimal64_t&\u2019}\n  143 |     m_data.append(0, i);\n      |                   ^\n      |                   |\n      |                   int\n```\n\nThis change matches what SparseMatrix does:\nhttps://gitlab.com/libeigen/eigen/-/blob/master/Eigen/src/SparseCore/SparseMatrix.h#L430-L438\n\nSee merge request libeigen/eigen!2040\n",
+            "commit_timestamp": 1761203017.0
         }
     ]
 }

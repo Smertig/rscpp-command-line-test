@@ -27851,6 +27851,21 @@
             "commit_ref": "bd2c7e8c8b10f4d31eab971781de13844bcd07fe",
             "commit_message": "GH-140472: Create a WASI devcontainer configuration (GH-140473)\n\n",
             "commit_timestamp": 1761174708.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1761232181.02392,
+            "elapsed_time": 3963.6599547863007,
+            "x64": true,
+            "actual_files_count": 1204,
+            "expected_files_count": null,
+            "memory_traffic": 56185.777000427246,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "574405c19e9b5de0504be46a3925027ded4495ae",
+            "commit_message": "gh-140431: Fix GC crash due to partially initialized coroutines (gh-140470)\n\nThe `make_gen()` function creates and tracks generator/coro objects, but\ndoesn't fully initialize all the fields. At a minimum, we need to\ninitialize all the fields that may be accessed by gen_traverse because\nthe call to `compute_cr_origin()` can trigger a GC.",
+            "commit_timestamp": 1761229093.0
         }
     ]
 }
