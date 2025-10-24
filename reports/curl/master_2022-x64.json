@@ -599,6 +599,21 @@
             "commit_ref": "3ac38a6b80e16f5885e629b35cb5a36a006ea8a5",
             "commit_message": "md4: drop mbedtls implementation (not available in mbedtls v3+)\n\nFollow-up to 01a2308236ffd4a13a45c3d9850a66a602839af6 #18254\n\nCloses #19202\n",
             "commit_timestamp": 1761230839.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1761276655.706156,
+            "elapsed_time": 134.3529634475708,
+            "x64": true,
+            "actual_files_count": 1182,
+            "expected_files_count": 2323,
+            "memory_traffic": 19104.71290588379,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "48d314f262f865d645004f345e1e4b3bb7f6b738",
+            "commit_message": "connect: for CONNECT_ONLY, CURLOPT_TIMEOUT does not apply\n\nSince using CONNECT_ONLY is by defintion only a connect, we make the\ntimeleft function return 0 after the connection is done so that it does\nnot - surprisingly - timeout later.\n\nFixes #18991\nReported-by: Pavel P\nCloses #19204\n",
+            "commit_timestamp": 1761252795.0
         }
     ]
 }

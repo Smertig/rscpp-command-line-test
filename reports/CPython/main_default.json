@@ -27866,6 +27866,21 @@
             "commit_ref": "574405c19e9b5de0504be46a3925027ded4495ae",
             "commit_message": "gh-140431: Fix GC crash due to partially initialized coroutines (gh-140470)\n\nThe `make_gen()` function creates and tracks generator/coro objects, but\ndoesn't fully initialize all the fields. At a minimum, we need to\ninitialize all the fields that may be accessed by gen_traverse because\nthe call to `compute_cr_origin()` can trigger a GC.",
             "commit_timestamp": 1761229093.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1761276172.313255,
+            "elapsed_time": 4066.9847905635834,
+            "x64": true,
+            "actual_files_count": 1204,
+            "expected_files_count": null,
+            "memory_traffic": 56207.15701293945,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "5d2edf72d25c2616f0e13d10646460a8e69344fa",
+            "commit_message": "gh-83714: Set os.statx().stx_mode to None if missing from stx_mask (#140484)\n\n* Set stx_mode to None if STATX_TYPE|STATX_MODE is missing from\n  stx_mask.\n* Enhance os.statx() tests.\n* statx_result structure: remove atime_sec, btime_sec, ctime_sec and\n  mtime_sec members. Compute them on demand when stx_atime,\n  stx_btime, stx_ctime and stx_mtime are read.\n* Doc: fix statx members sorting.",
+            "commit_timestamp": 1761251717.0
         }
     ]
 }
