@@ -614,6 +614,21 @@
             "commit_ref": "54be9b04f0ec65d0bcfe0da54e7f01ea86fbfc3e",
             "commit_message": ":page_facing_up: update REUSE (#4960)\n\n",
             "commit_timestamp": 1761195396.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1761318398.211954,
+            "elapsed_time": 239.95809149742126,
+            "x64": true,
+            "actual_files_count": 93,
+            "expected_files_count": 85,
+            "memory_traffic": 24155.749725341797,
+            "repo_url": "https://github.com/nlohmann/json",
+            "commit_ref": "11cc676142d9ca85cc40a60330ed1b081c3afc6d",
+            "commit_message": "Improve MSVC C++ modules compatibility for nlohmann_json (#4952)\n\n* Improve MSVC C++ modules compatibility for nlohmann_json\n\n- Keep complete module interface with all exports\n- Export all standard types: json, basic_json, adl_serializer, json_pointer, ordered_json, ordered_map\n- Export detail namespace symbols for advanced usage\n- Ensure compatibility with MSVC C++20/23 modules\n- Maintain full functionality without breaking changes\n\nSigned-off-by: yudaichen <250074249@qq.com>\n\n* Add C++20 module Windows CI test and fix file ending\n\n- Add ci_module_cpp20 job to Windows workflow to verify module support with MSVC\n\n- Add missing newline at end of json.cppm file\n\nSigned-off-by: yudaichen <250074249@qq.com>\n\n---------\n\nSigned-off-by: yudaichen <250074249@qq.com>",
+            "commit_timestamp": 1761298451.0
         }
     ]
 }

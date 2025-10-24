@@ -33911,6 +33911,23 @@
             "commit_ref": "0341fb63f2abe2ce98434c45fef8826718f9198c",
             "commit_message": "[ThinLTO] Avoid creating map entries on lookup (NFCI) (#164873)\n\nWe could inadvertently create new entries in the PrevailingModuleForGUID\nmap during lookup, which was always using operator[]. In most cases we\nwill have one for external symbols, but not in cases where the\nprevailing copy is in a native object. Or if this happened to be looked\nup for a local.\n\nMake the map private and create and use accessors.",
             "commit_timestamp": 1761273642.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1761319504.588364,
+            "elapsed_time": 2640.3646466732025,
+            "x64": true,
+            "actual_files_count": 3039,
+            "expected_files_count": 1661,
+            "memory_traffic": 486198.73152160645,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "c18c3ccd0b48c4055dfdcdc2ff7514ca8ab3dfae",
+            "commit_message": "Fix unused variable warning in release build\n",
+            "commit_timestamp": 1761318303.0
         }
     ]
 }

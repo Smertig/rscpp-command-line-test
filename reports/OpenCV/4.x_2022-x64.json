@@ -614,6 +614,21 @@
             "commit_ref": "12b64b0e2abd91f235cf3cc49df0f0f985aa0fee",
             "commit_message": "Merge pull request #27927 from tailsu:tailsu/tiff-error-handler\n\ntiff: use a per-TIFF error handler #27927\n\nlibtiff 4.5 introduced [per-TIFF error handlers](https://libtiff.gitlab.io/libtiff/functions/TIFFOpenOptions.html). This PR removes the global OpenCV error handlers and uses per-handle error handlers. This reduces any risks associated with modifying global state, e.g. if another library also tries to set the global error handlers and OpenCV clobbers them.\n\n### Pull Request Readiness Checklist\n\nSee details at https://github.com/opencv/opencv/wiki/How_to_contribute#making-a-good-pull-request\n\n- [x] I agree to contribute to the project under Apache 2 License.\n- [x] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\n- [x] The PR is proposed to the proper branch\n- [x] There is a reference to the original bug report and related work\n- [x] There is accuracy test, performance test and test data in opencv_extra repository, if applicable\n      Patch to opencv_extra has the same branch name.\n- [x] The feature is well documented and sample code can be built with the project CMake\n",
             "commit_timestamp": 1761215890.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1761318461.775125,
+            "elapsed_time": 407.80509853363037,
+            "x64": true,
+            "actual_files_count": 484,
+            "expected_files_count": 459,
+            "memory_traffic": 43934.26779937744,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "52393156c8bbc1155a65cd1a7a12b4c7084e9f1e",
+            "commit_message": "Merge pull request #27524 from DDmytro:multichannel_ecc\n\nExtend findTransformECC and computeECC to support multichannel input (1 or 3 channels)",
+            "commit_timestamp": 1761294255.0
         }
     ]
 }

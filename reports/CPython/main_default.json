@@ -27881,6 +27881,21 @@
             "commit_ref": "5d2edf72d25c2616f0e13d10646460a8e69344fa",
             "commit_message": "gh-83714: Set os.statx().stx_mode to None if missing from stx_mask (#140484)\n\n* Set stx_mode to None if STATX_TYPE|STATX_MODE is missing from\n  stx_mask.\n* Enhance os.statx() tests.\n* statx_result structure: remove atime_sec, btime_sec, ctime_sec and\n  mtime_sec members. Compute them on demand when stx_atime,\n  stx_btime, stx_ctime and stx_mtime are read.\n* Doc: fix statx members sorting.",
             "commit_timestamp": 1761251717.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1761318585.874694,
+            "elapsed_time": 3867.064460039139,
+            "x64": true,
+            "actual_files_count": 1204,
+            "expected_files_count": null,
+            "memory_traffic": 56265.87452697754,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "95e5d596308620acbd860ec25a40ef95c2b62eaa",
+            "commit_message": "gh-140414: add fastpath for current running loop in `asyncio.all_tasks` (#140542)\n\nOptimize `asyncio.all_tasks()` for the common case where the event loop is running in the current thread by avoiding stop-the-world pauses and locking.\n\nThis optimization is already present for `asyncio.current_task()` so we do the same for `asyncio.all_tasks()`.\n\n",
+            "commit_timestamp": 1761316337.0
         }
     ]
 }
