@@ -27896,6 +27896,21 @@
             "commit_ref": "95e5d596308620acbd860ec25a40ef95c2b62eaa",
             "commit_message": "gh-140414: add fastpath for current running loop in `asyncio.all_tasks` (#140542)\n\nOptimize `asyncio.all_tasks()` for the common case where the event loop is running in the current thread by avoiding stop-the-world pauses and locking.\n\nThis optimization is already present for `asyncio.current_task()` so we do the same for `asyncio.all_tasks()`.\n\n",
             "commit_timestamp": 1761316337.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1761362626.668778,
+            "elapsed_time": 3778.9563794136047,
+            "x64": true,
+            "actual_files_count": 1204,
+            "expected_files_count": null,
+            "memory_traffic": 56188.973960876465,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "d78d7a50b06c4ea10d13fc2dcb42607a97f9260c",
+            "commit_message": "Add missing NEWS entry for gh-140517 (GH-140560)\n\n",
+            "commit_timestamp": 1761335580.0
         }
     ]
 }

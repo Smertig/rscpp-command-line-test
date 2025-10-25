@@ -629,6 +629,21 @@
             "commit_ref": "ac3ef16f30b7708a3c6c39b964e1f294dd16b8a3",
             "commit_message": "Fix SparseVector::insertBack() with custom scalar types\n\nIt fixes this compiler error:\n```\n/home/tav/git/Sleipnir/build/_deps/eigen3-src/Eigen/src/SparseCore/SparseVector.h:143:19: error: cannot convert \u2018int\u2019 to \u2018const Eigen::internal::CompressedStorage<boost::decimal::decimal64_t, int>::Scalar&\u2019 {aka \u2018const boost::decimal::decimal64_t&\u2019}\n  143 |     m_data.append(0, i);\n      |                   ^\n      |                   |\n      |                   int\n```\n\nThis change matches what SparseMatrix does:\nhttps://gitlab.com/libeigen/eigen/-/blob/master/Eigen/src/SparseCore/SparseMatrix.h#L430-L438\n\nSee merge request libeigen/eigen!2040\n",
             "commit_timestamp": 1761203017.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": "cxx11_*",
+            "timestamp": 1761362506.447421,
+            "elapsed_time": 132.3757040500641,
+            "x64": true,
+            "actual_files_count": 110,
+            "expected_files_count": null,
+            "memory_traffic": 14852.327896118164,
+            "repo_url": "https://gitlab.com/libeigen/eigen.git",
+            "commit_ref": "2e91853adfe1560a5bd1f4c80af7a73d37093b44",
+            "commit_message": "Fix a benign bug in ComplexQZ\n\nComplexQZ would try to apply a Jacobi rotation to an empty block, which triggers a warning in static analyzers, since the corresponding `Eigen::Map` object will contain a `nullptr`.\n\nSee merge request libeigen/eigen!2043\n",
+            "commit_timestamp": 1761339294.0
         }
     ]
 }
