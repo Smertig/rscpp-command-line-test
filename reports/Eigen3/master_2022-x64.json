@@ -644,6 +644,21 @@
             "commit_ref": "2e91853adfe1560a5bd1f4c80af7a73d37093b44",
             "commit_message": "Fix a benign bug in ComplexQZ\n\nComplexQZ would try to apply a Jacobi rotation to an empty block, which triggers a warning in static analyzers, since the corresponding `Eigen::Map` object will contain a `nullptr`.\n\nSee merge request libeigen/eigen!2043\n",
             "commit_timestamp": 1761339294.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": "cxx11_*",
+            "timestamp": 1761404854.861173,
+            "elapsed_time": 131.1053683757782,
+            "x64": true,
+            "actual_files_count": 110,
+            "expected_files_count": null,
+            "memory_traffic": 14818.758689880371,
+            "repo_url": "https://gitlab.com/libeigen/eigen.git",
+            "commit_ref": "2e91853adfe1560a5bd1f4c80af7a73d37093b44",
+            "commit_message": "Fix a benign bug in ComplexQZ\n\nComplexQZ would try to apply a Jacobi rotation to an empty block, which triggers a warning in static analyzers, since the corresponding `Eigen::Map` object will contain a `nullptr`.\n\nSee merge request libeigen/eigen!2043\n",
+            "commit_timestamp": 1761339294.0
         }
     ]
 }

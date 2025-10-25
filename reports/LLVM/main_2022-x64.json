@@ -33928,6 +33928,23 @@
             "commit_ref": "c18c3ccd0b48c4055dfdcdc2ff7514ca8ab3dfae",
             "commit_message": "Fix unused variable warning in release build\n",
             "commit_timestamp": 1761318303.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1761405824.432028,
+            "elapsed_time": 2690.0473980903625,
+            "x64": true,
+            "actual_files_count": 3039,
+            "expected_files_count": 1661,
+            "memory_traffic": 486367.5220794678,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "09eea2256e5305e7527df61b2fc35f16410b63be",
+            "commit_message": "[Attributor] Check range size before constant fold load (#151359)\n\nIf the range size doesn't match the type size, it might read wrong data.",
+            "commit_timestamp": 1761402991.0
         }
     ]
 }
