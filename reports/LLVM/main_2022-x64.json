@@ -33945,6 +33945,23 @@
             "commit_ref": "09eea2256e5305e7527df61b2fc35f16410b63be",
             "commit_message": "[Attributor] Check range size before constant fold load (#151359)\n\nIf the range size doesn't match the type size, it might read wrong data.",
             "commit_timestamp": 1761402991.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1761450050.568618,
+            "elapsed_time": 2620.8818740844727,
+            "x64": true,
+            "actual_files_count": 3039,
+            "expected_files_count": 1661,
+            "memory_traffic": 486397.3768463135,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "c05ce9b0057c9b1413bee964bb2d400ffbddede5",
+            "commit_message": "[MLIR][Python] fix getOwner to return (typed) nb::object instead of abstract PyOpView (#165053)\n\nhttps://github.com/llvm/llvm-project/pull/157930 changed `nb::object\ngetOwner()` to `PyOpView getOwner()` which implicitly constructs the\ngeneric OpView against from a (possibly) concrete OpView. This PR fixes\nthat.",
+            "commit_timestamp": 1761443326.0
         }
     ]
 }
