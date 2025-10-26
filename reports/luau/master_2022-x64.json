@@ -674,6 +674,21 @@
             "commit_ref": "5836a9cf3e9e14ba4e7a6529340ff0e94c56ef39",
             "commit_message": "Sync to upstream/release/697 (#2058)\n\nAnother somewhat small release as we work our way up to the next stage\nof the new type solver!\n\n# General\n\n* Implement configuration extraction as per the [Luau-syntax\nconfiguration files\nRFC](https://github.com/luau-lang/rfcs/blob/master/docs/config-luauconfig.md):\nwe now expose a low-level `extractConfig` API and a higher level\n`extractLuauConfig` API for extracting configurations from these files.\nThe runtime and analysis integrations with `require`, for this feature,\nare coming in a later release.\n\n# Analysis\n\n* Implemented native stack guards: on Windows and MacOS spots where we\nattempt to guard against stack overflows by using a counter now _also_\ncheck whether we are close to hitting the runtime stack limit via OS\nspecific APIs.\n* Fix a performance issue that could occur when trying to reduce type\nfunctions for math operations in the new solver, causing the new solver\nto fail to solve all constraints and take a disproportionate amount of\ntime to finish solving.\n* Improve the new solver's non-strict checking performance when checking\nexceptionally large function calls and function definitions.\n\n---------\n\nCo-authored-by: Varun Saini <61795485+vrn-sn@users.noreply.github.com>\nCo-authored-by: Alexander Youngblood <ayoungblood@roblox.com>\nCo-authored-by: Menarul Alam <malam@roblox.com>\nCo-authored-by: Aviral Goel <agoel@roblox.com>\nCo-authored-by: Vighnesh <vvijay@roblox.com>\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>\nCo-authored-by: Ariel Weiss <aaronweiss@roblox.com>\nCo-authored-by: Andy Friesen <afriesen@roblox.com>",
             "commit_timestamp": 1761337022.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1761491124.820841,
+            "elapsed_time": 299.34147119522095,
+            "x64": true,
+            "actual_files_count": 513,
+            "expected_files_count": 379,
+            "memory_traffic": 41248.21309661865,
+            "repo_url": "https://github.com/luau-lang/luau",
+            "commit_ref": "5836a9cf3e9e14ba4e7a6529340ff0e94c56ef39",
+            "commit_message": "Sync to upstream/release/697 (#2058)\n\nAnother somewhat small release as we work our way up to the next stage\nof the new type solver!\n\n# General\n\n* Implement configuration extraction as per the [Luau-syntax\nconfiguration files\nRFC](https://github.com/luau-lang/rfcs/blob/master/docs/config-luauconfig.md):\nwe now expose a low-level `extractConfig` API and a higher level\n`extractLuauConfig` API for extracting configurations from these files.\nThe runtime and analysis integrations with `require`, for this feature,\nare coming in a later release.\n\n# Analysis\n\n* Implemented native stack guards: on Windows and MacOS spots where we\nattempt to guard against stack overflows by using a counter now _also_\ncheck whether we are close to hitting the runtime stack limit via OS\nspecific APIs.\n* Fix a performance issue that could occur when trying to reduce type\nfunctions for math operations in the new solver, causing the new solver\nto fail to solve all constraints and take a disproportionate amount of\ntime to finish solving.\n* Improve the new solver's non-strict checking performance when checking\nexceptionally large function calls and function definitions.\n\n---------\n\nCo-authored-by: Varun Saini <61795485+vrn-sn@users.noreply.github.com>\nCo-authored-by: Alexander Youngblood <ayoungblood@roblox.com>\nCo-authored-by: Menarul Alam <malam@roblox.com>\nCo-authored-by: Aviral Goel <agoel@roblox.com>\nCo-authored-by: Vighnesh <vvijay@roblox.com>\nCo-authored-by: Vyacheslav Egorov <vegorov@roblox.com>\nCo-authored-by: Ariel Weiss <aaronweiss@roblox.com>\nCo-authored-by: Andy Friesen <afriesen@roblox.com>",
+            "commit_timestamp": 1761337022.0
         }
     ]
 }

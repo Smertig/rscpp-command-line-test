@@ -674,6 +674,21 @@
             "commit_ref": "4f03e3fcbd2857be1821fbac4875592c2a81feff",
             "commit_message": "socks_gssapi: also reset buffer length after free\n\nTo mimic this behavior of the previously used `gss_release_buffer()`.\n\nSome or all of these zero assignments may be redundant.\n\nFollow-up to e7818999dbeff5acb00c032860d2259a1c5f9c5b #19018\n\nCloses #19167\n",
             "commit_timestamp": 1761436361.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1761491637.923384,
+            "elapsed_time": 110.60888886451721,
+            "x64": true,
+            "actual_files_count": 1178,
+            "expected_files_count": 2323,
+            "memory_traffic": 19088.83773803711,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "a49e4e3d16991465144558f405b2d7972824abb0",
+            "commit_message": "pop3: fix CAPA response termination detection\n\nThe code was checking if a line starts with '.', which would\nincorrectly match capability names starting with dots. Per RFC 2449,\nthe terminator must be a line containing only a single dot.\n\nRFC 2449 also explicitly excludes '.' from valid capability name\nstarting characters, so this is purely theoretical, but the code\nshould match the spec.\n\nChanged to check for exact match: line length of 3 with '.\\r' or\nlength 2 with '.\\n' to handle both CRLF and LF-only servers.\n\n(Mistake detected with ZeroPath)\n\nFixes #19228\nReported-by: Joshua Rogers\nCloses #19245\n",
+            "commit_timestamp": 1761472760.0
         }
     ]
 }
