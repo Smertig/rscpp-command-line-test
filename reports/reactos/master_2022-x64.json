@@ -689,6 +689,21 @@
             "commit_ref": "d6db7fb4090a16589a31a719646f62d135e175d6",
             "commit_message": "[RPCRT4] Fix buffer size calculation bug when unions of pointers are used in RPC interfaces\n\nThe size of the transfer buffer was always too small when a parameter of a\nfunction was a pointer to a union of pointers. The buffer size calculation\nfunction for the union only returned the size of the data the the pointer\nin the union pointed to, omitting the size of the data for the union itself.\nThis caused a buffer overrun in the following marshal step which makes the\nRPC call fail.\n\nThis fix will enable us to remove some workarounds in our RPC interfaces.\n",
             "commit_timestamp": 1761476134.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1761535847.205767,
+            "elapsed_time": 73.62871098518372,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7461.069709777832,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "69ddd4e74b80038cbc72727d10cecd617c63bdbb",
+            "commit_message": "[WINESYNC][COMCTL32] Fix Exception in PROPSHEET_DoCommand (#7943)\n\nCORE-20036\n\nImport Wine commit:\ncomctl32: Avoid segfault in PROPSHEET_DoCommand when psInfo is NULL.\nwine commit id affd5177bba907a015d1c6fc8ac9970731125268 by Yuri H\u00e9rouard <yuri.herouard@gmail.com>\n",
+            "commit_timestamp": 1761501239.0
         }
     ]
 }
