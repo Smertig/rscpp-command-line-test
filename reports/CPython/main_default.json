@@ -27971,6 +27971,21 @@
             "commit_ref": "3dab11f888fda34c02734e4468d1acd4c36927fe",
             "commit_message": "gh-138944: Fix `SyntaxError` message for invalid syntax following valid import-as statement (#138945)\n\n\n",
             "commit_timestamp": 1761518121.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1761577849.70057,
+            "elapsed_time": 4225.351020812988,
+            "x64": true,
+            "actual_files_count": 1204,
+            "expected_files_count": null,
+            "memory_traffic": 56159.145164489746,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "9479a62a51e6fbcb3372f5ac07b3ab861e7d17e3",
+            "commit_message": "gh-116738: Use PyMutex for bz2 module (gh-140555)\n\nThe methods are already wrapped with a lock, which makes them thread-safe in\nfree-threaded build. This replaces `PyThread_acquire_lock` with `PyMutex` and\nremoves some macros and allocation handling code.\n\nAlso add a test for free-threading to ensure we aren't getting data races and\nthat the locking is working.",
+            "commit_timestamp": 1761573150.0
         }
     ]
 }

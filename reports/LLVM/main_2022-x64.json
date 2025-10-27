@@ -33996,6 +33996,23 @@
             "commit_ref": "279a81e240cb1f1633c1d800eb3705a5ba203dc7",
             "commit_message": "[RISCV][GISel] Support select vector load intrinsics (#160720)\n\nInclude unit-stride, strided and mask vector load intrinsics.",
             "commit_timestamp": 1761533486.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1761578829.275029,
+            "elapsed_time": 2708.674525976181,
+            "x64": true,
+            "actual_files_count": 3039,
+            "expected_files_count": 1661,
+            "memory_traffic": 486513.32290649414,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "6bf6babb30488df340337923573c562553128706",
+            "commit_message": "[Clang][ARM][Sema] Check validity of ldrexd/strexd builtin calls (#164919)\n\nThis change enables validation checks against the following two ARM\natomic builtins:\n```\n__builtin_arm_ldrexd\n__builtin_arm_strexd\n```\n\nPreviously, no checks existed for these builtins, so under a release\ncompiler, it would be possible to emit `ldrexd`/`strexd` under ARM\ntargets which set the LDREX mask (returned via `getARMLDREXMask`) to\nsignify these as unsupported instructions.\n\nFor example, the following would compile with errors:\n```c\n> type atomics.c\nlong long func(void) {\n    long long num = 0;\n    __builtin_arm_strex(42, &num);\n    return __builtin_arm_ldrex(&num);\n}\n```\n```\n> clang --target=armv7m-linux-gnueabi -S atomics.c -o -\natomics.c:3:5: error: address argument to load or store exclusive builtin must be a pointer to 1,2\n      or 4 byte type ('volatile long long *' invalid)\n    3 |     __builtin_arm_strex(42, &num);\n      |     ^\natomics.c:4:12: error: address argument to load or store exclusive builtin must be a pointer to 1,2\n      or 4 byte type ('const volatile long long *' invalid)\n    4 |     return __builtin_arm_ldrex(&num);\n      |            ^\n2 errors generated.\n```\n\nHowever, a similar program would compile without errors:\n```c\n> type atomics.c\nlong long func(void) {\n    long long num = 0;\n    __builtin_arm_strexd(42, &num);\n    return __builtin_arm_ldrexd(&num);\n}\n```\n```\n> clang --target=armv7m-linux-gnueabi -S atomics.c -o -\n...\n        strexd  r1, r2, r3, [r0]\n        ldrexd  r0, r1, [r0]\n...\n```\n\nWith this change, we now have appropriate compile-time errors:\n```\n> clang --target=armv7m-linux-gnueabi -S atomics.c -o -\natomics.c:3:5: error: load and store exclusive builtins are not available on this architecture\n    3 |     __builtin_arm_strexd(42, &num);\n      |     ^                        ~~~~\natomics.c:4:12: error: load and store exclusive builtins are not available on this architecture\n    4 |     return __builtin_arm_ldrexd(&num);\n      |            ^                    ~~~~\n2 errors generated.\n```",
+            "commit_timestamp": 1761577413.0
         }
     ]
 }

@@ -704,6 +704,21 @@
             "commit_ref": "a49e4e3d16991465144558f405b2d7972824abb0",
             "commit_message": "pop3: fix CAPA response termination detection\n\nThe code was checking if a line starts with '.', which would\nincorrectly match capability names starting with dots. Per RFC 2449,\nthe terminator must be a line containing only a single dot.\n\nRFC 2449 also explicitly excludes '.' from valid capability name\nstarting characters, so this is purely theoretical, but the code\nshould match the spec.\n\nChanged to check for exact match: line length of 3 with '.\\r' or\nlength 2 with '.\\n' to handle both CRLF and LF-only servers.\n\n(Mistake detected with ZeroPath)\n\nFixes #19228\nReported-by: Joshua Rogers\nCloses #19245\n",
             "commit_timestamp": 1761472760.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1761578195.133219,
+            "elapsed_time": 114.76249861717224,
+            "x64": true,
+            "actual_files_count": 1178,
+            "expected_files_count": 2323,
+            "memory_traffic": 19049.372688293457,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "f9dfabb42a79616d00fac48ac3deae28d797a856",
+            "commit_message": "test1802: test --proxy-headers and --headers setting user-agent\n",
+            "commit_timestamp": 1761555125.0
         }
     ]
 }
