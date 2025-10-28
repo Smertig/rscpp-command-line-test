@@ -719,6 +719,21 @@
             "commit_ref": "69ddd4e74b80038cbc72727d10cecd617c63bdbb",
             "commit_message": "[WINESYNC][COMCTL32] Fix Exception in PROPSHEET_DoCommand (#7943)\n\nCORE-20036\n\nImport Wine commit:\ncomctl32: Avoid segfault in PROPSHEET_DoCommand when psInfo is NULL.\nwine commit id affd5177bba907a015d1c6fc8ac9970731125268 by Yuri H\u00e9rouard <yuri.herouard@gmail.com>\n",
             "commit_timestamp": 1761501239.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1761621807.001234,
+            "elapsed_time": 68.81928324699402,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7343.768005371094,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "5b5b1a2bbfe320837e140e5d8dbb425deb5c60c3",
+            "commit_message": "[NETAPI32][WKSSVC][IDL] Revert workaround for union _WKSTA_INFO\n\nAfter fixing the union issue in the RPC runtime, revert all workarounds one by one.\n\nReturn to the original declaration of union _WKSTA_INFO and fix NetrWkstaGetInfo\nand NetrWkstaSetInfo.\n",
+            "commit_timestamp": 1761601599.0
         }
     ]
 }

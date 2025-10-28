@@ -27986,6 +27986,21 @@
             "commit_ref": "9479a62a51e6fbcb3372f5ac07b3ab861e7d17e3",
             "commit_message": "gh-116738: Use PyMutex for bz2 module (gh-140555)\n\nThe methods are already wrapped with a lock, which makes them thread-safe in\nfree-threaded build. This replaces `PyThread_acquire_lock` with `PyMutex` and\nremoves some macros and allocation handling code.\n\nAlso add a test for free-threading to ensure we aren't getting data races and\nthat the locking is working.",
             "commit_timestamp": 1761573150.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1761621993.956538,
+            "elapsed_time": 3951.933498620987,
+            "x64": true,
+            "actual_files_count": 1204,
+            "expected_files_count": null,
+            "memory_traffic": 56225.621170043945,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "f5394c257ce4118394fe5ff561a2b0ad238a8d65",
+            "commit_message": "gh-140544: fix build for including `pycore_pystate.h` when `HAVE_THREAD_LOCAL` is not defined (#140623)\n\n",
+            "commit_timestamp": 1761595841.0
         }
     ]
 }

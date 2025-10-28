@@ -719,6 +719,21 @@
             "commit_ref": "8498a2a03946c311ee448289676e7006d89eed16",
             "commit_message": "Fix warnings from Clang (#2062)\n\n* Fix warnings from Clang\n\nThis patch addresses a few issues:\n- Wformat-nonliteral from colour printing functions\n- Wmissing-prototypes from a few internal functions\n\nSigned-off-by: Xiangfei Ding <dingxiangfei2009@protonmail.ch>\n\n* Wrap tests in anonymous namespaces\n\nTechnically tests should be using internal linkage.\n\nSigned-off-by: Xiangfei Ding <dingxiangfei2009@protonmail.ch>\n\n---------\n\nSigned-off-by: Xiangfei Ding <dingxiangfei2009@protonmail.ch>",
             "commit_timestamp": 1761209918.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1761621819.374765,
+            "elapsed_time": 55.119505643844604,
+            "x64": true,
+            "actual_files_count": 96,
+            "expected_files_count": 86,
+            "memory_traffic": 5199.689300537109,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "8ece01661a8f67b69458e4738602248aa10960b1",
+            "commit_message": "Bump actions/download-artifact from 5.0.0 to 6.0.0 (#2064)\n\nBumps [actions/download-artifact](https://github.com/actions/download-artifact) from 5.0.0 to 6.0.0.\n- [Release notes](https://github.com/actions/download-artifact/releases)\n- [Commits](https://github.com/actions/download-artifact/compare/634f93cb2916e3fdff6788551b99b062d0335ce0...018cc2cf5baa6db3ef3c5f8a56943fffe632ef53)\n\n---\nupdated-dependencies:\n- dependency-name: actions/download-artifact\n  dependency-version: 6.0.0\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>\nCo-authored-by: dominic <510002+dmah42@users.noreply.github.com>",
+            "commit_timestamp": 1761581068.0
         }
     ]
 }

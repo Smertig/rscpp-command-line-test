@@ -719,6 +719,21 @@
             "commit_ref": "be56fff1ff288f83296a78d63314a3eeac3397ae",
             "commit_message": "Fix ambiguous sqrt() overload caused by ADL\n\nHere's the compiler error:\n```\n/home/tav/git/Sleipnir/build/_deps/eigen3-src/Eigen/src/Householder/Householder.h:82:16: error: call of overloaded \u2018sqrt(boost::decimal::decimal64_t)\u2019 is ambiguous\n   82 |     beta = sqrt(numext::abs2(c0) + tailSqNorm);\n      |            ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n/home/tav/git/Sleipnir/build/_deps/eigen3-src/Eigen/src/Householder/Householder.h:82:16: note: there are 2 candidates\nIn file included from /home/tav/git/Sleipnir/build/_deps/eigen3-src/Eigen/Core:198,\n                 from /home/tav/git/Sleipnir/test/src/optimization/cart_pole_problem_test.cpp:8:\n/home/tav/git/Sleipnir/build/_deps/eigen3-src/Eigen/src/Core/MathFunctions.h:1384:75: note: candidate 1: \u2018typename Eigen::internal::sqrt_retval<typename Eigen::internal::global_math_functions_filtering_base<Scalar>::type>::type Eigen::numext::sqrt(const Scalar&) [with Scalar = boost::decimal::decimal64_t; typename Eigen::internal::sqrt_retval<typename Eigen::internal::global_math_functions_filtering_base<Scalar>::type>::type = boost::decimal::decimal64_t; typename Eigen::internal::global_math_functions_filtering_base<Scalar>::type = boost::decimal::decimal64_t]\u2019\n 1384 | EIGEN_DEVICE_FUNC EIGEN_ALWAYS_INLINE EIGEN_MATHFUNC_RETVAL(sqrt, Scalar) sqrt(const Scalar& x) {\n      |                                                                           ^~~~\nIn file included from /home/tav/git/Sleipnir/build/_deps/decimal-src/include/boost/decimal/detail/cmath/ellint_1.hpp:16,\n                 from /home/tav/git/Sleipnir/build/_deps/decimal-src/include/boost/decimal/cmath.hpp:18,\n                 from /home/tav/git/Sleipnir/build/_deps/decimal-src/include/boost/decimal.hpp:33,\n                 from /home/tav/git/Sleipnir/test/include/scalar_types_under_test.hpp:6,\n                 from /home/tav/git/Sleipnir/test/src/optimization/cart_pole_problem_test.cpp:19:\n/home/tav/git/Sleipnir/build/_deps/decimal-src/include/boost/decimal/detail/cmath/sqrt.hpp:167:16: note: candidate 2: \u2018constexpr T boost::decimal::sqrt(T) requires  is_decimal_floating_point_v<T> [with T = decimal64_t]\u2019\n  167 | constexpr auto sqrt(const T val) noexcept\n      |                ^~~~\n```\n\nCalling a function via its unqualified name invokes argument-dependent lookup. In this case, since `using numext::sqrt;` was used, both `numext::sqrt()` and `boost::decimal::sqrt()` participated in overload resolution. Since only `numext::sqrt()` was intended, the fix is to call that overload directly instead.\n\nSee merge request libeigen/eigen!2044\n",
             "commit_timestamp": 1761444202.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": "cxx11_*",
+            "timestamp": 1761621925.376213,
+            "elapsed_time": 133.73793387413025,
+            "x64": true,
+            "actual_files_count": 110,
+            "expected_files_count": null,
+            "memory_traffic": 14900.923973083496,
+            "repo_url": "https://gitlab.com/libeigen/eigen.git",
+            "commit_ref": "9234883914cc84dd412a3f600d3bfc09e364388c",
+            "commit_message": "Fix SparseVector::insert(Index) assigning int to Scalar\n\nScalar doesn't necessarily support implicit construction from int or\nassignment from int.\n\nHere's the error message I got without this fix:\n```\n/home/tav/git/Sleipnir/build/_deps/eigen3-src/Eigen/src/SparseCore/SparseVector.h:180:25: error: no match for \u2018operator=\u2019 (operand types are \u2018Eigen::internal::CompressedStorage<ExplicitDouble, int>::Scalar\u2019 {aka \u2018ExplicitDouble\u2019} and \u2018int\u2019)\n  180 |     m_data.value(p + 1) = 0;\n      |     ~~~~~~~~~~~~~~~~~~~~^~~\n```\n\nSee merge request libeigen/eigen!2046\n",
+            "commit_timestamp": 1761602819.0
         }
     ]
 }
