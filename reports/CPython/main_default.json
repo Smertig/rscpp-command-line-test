@@ -28001,6 +28001,21 @@
             "commit_ref": "f5394c257ce4118394fe5ff561a2b0ad238a8d65",
             "commit_message": "gh-140544: fix build for including `pycore_pystate.h` when `HAVE_THREAD_LOCAL` is not defined (#140623)\n\n",
             "commit_timestamp": 1761595841.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1761664259.52875,
+            "elapsed_time": 3925.2895345687866,
+            "x64": true,
+            "actual_files_count": 1204,
+            "expected_files_count": null,
+            "memory_traffic": 56122.063804626465,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "80f20f58b2b8368ed8451a0161036dda94d8d33a",
+            "commit_message": "gh-125434: Fix non-ASCII thread names in faulthandler on Windows (#140700)\n\nAdd _Py_DumpWideString() function to dump a wide string as ASCII. It\nsupports surrogate pairs.\n\nReplace _Py_EncodeLocaleRaw() with _Py_DumpWideString()\nin write_thread_name().",
+            "commit_timestamp": 1761658911.0
         }
     ]
 }

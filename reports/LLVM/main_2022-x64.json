@@ -34030,6 +34030,23 @@
             "commit_ref": "7de1a17cc64bfcd1f0de055682d562dfb6476fb2",
             "commit_message": "[clang-tidy] Fix `modernize-use-scoped-lock` crash on malformed code (#165127)\n\nThis code:\n\n```cpp\nvoid f() {\n  std::lock_guard<std::mutex> dont_crash {some_nonexistant_variable};\n}\n```\n\nGenerates an AST like this:\n\n```txt\nTranslationUnitDecl\n`-FunctionDecl <line:3:1, line:5:1> line:3:6 f 'void ()'\n  `-CompoundStmt <col:10, line:5:1>\n    `-DeclStmt <line:4:3, col:69>\n      `-VarDecl <col:3, col:31> col:31 dont_crash 'std::lock_guard<std::mutex>' destroyed\n```\n\nWhere the `VarDecl` has no initializer. The check doesn't expect this\nand crashes.",
             "commit_timestamp": 1761620640.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1761665098.304025,
+            "elapsed_time": 2640.3547279834747,
+            "x64": true,
+            "actual_files_count": 3039,
+            "expected_files_count": 1661,
+            "memory_traffic": 487427.7983703613,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "3172970bbed69f07913f46727d24930f1f60f4e7",
+            "commit_message": "[Fuzzer][Test-Only] Re-enable fuzzer-ubsan.test on Darwin (#165403)\n\nThis test is now XPASSing due to a linker update on the platform.\n\nThis patch removes the XFAIL from the test.\n\nrdar://163149345",
+            "commit_timestamp": 1761663621.0
         }
     ]
 }

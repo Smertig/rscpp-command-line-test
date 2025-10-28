@@ -12209,6 +12209,21 @@
             "commit_ref": "00aaca1b4d98954bc2933d7c8a5379ba6088124c",
             "commit_message": "Breaking change: raise TypeError when convert non-timedelta to Duration, or convert non-datetime to Timestamp in python proto. (Original code may raise ArributeError)\n\nhttps://protobuf.dev/news/2025-09-19/#python-type-error-timestamp-duration\n\nPiperOrigin-RevId: 824803296\n",
             "commit_timestamp": 1761621757.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1761664053.615718,
+            "elapsed_time": 337.9532473087311,
+            "x64": true,
+            "actual_files_count": 1203,
+            "expected_files_count": 818,
+            "memory_traffic": 46421.64175415039,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "eb8d34e4d244d7a3ee274874dd55159840281212",
+            "commit_message": "protobuf-rust: adapt for rules_rust 0.67\n\nNo functional changes intended.\n\nAdapts the aspect for the srcs change from https://github.com/bazelbuild/rules_rust/commit/3f392091ae2aaf124af204eb940a51e67d3692e1.\n\nPiperOrigin-RevId: 825007268\n",
+            "commit_timestamp": 1761658407.0
         }
     ]
 }
