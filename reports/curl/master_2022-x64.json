@@ -764,6 +764,21 @@
             "commit_ref": "ba85f9d60579d38cd588ecdd3e0e6e306e6c4380",
             "commit_message": "RELEASE-NOTES: synced\n",
             "commit_timestamp": 1761690796.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1761750935.362079,
+            "elapsed_time": 112.43077635765076,
+            "x64": true,
+            "actual_files_count": 1178,
+            "expected_files_count": 2323,
+            "memory_traffic": 19014.34161376953,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "446dae5bfe3277d9458321f6888d7e214f832a21",
+            "commit_message": "ngtcp2: overwrite rate-limits defaults\n\nIn pytests test_08 with the Caddy server, the new rate-limiting in\nngtcp2 did close the connection because it found \"too many\" stream data\npacket repeats.\n\nIt is unclear if this is some Caddy issue or if the ngtcp2 implementaton\nis wrong. Or if curl can do anything here.\n\nReported as https://github.com/ngtcp2/ngtcp2/issues/1850\n\nThis PR overwrites the ratelimit defaults in ngtcp2 with ten times\nincreased values. This makes the errors disappear on macOS.\n\nEnable test_08_04/05 in CI again to see if there are any issues\nto be found there. (We had those disabled before having parallel\npytests.)\n\nCloses #19274\n",
+            "commit_timestamp": 1761741267.0
         }
     ]
 }
