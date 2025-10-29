@@ -28016,6 +28016,21 @@
             "commit_ref": "80f20f58b2b8368ed8451a0161036dda94d8d33a",
             "commit_message": "gh-125434: Fix non-ASCII thread names in faulthandler on Windows (#140700)\n\nAdd _Py_DumpWideString() function to dump a wide string as ASCII. It\nsupports surrogate pairs.\n\nReplace _Py_EncodeLocaleRaw() with _Py_DumpWideString()\nin write_thread_name().",
             "commit_timestamp": 1761658911.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1761708660.272069,
+            "elapsed_time": 4162.127496957779,
+            "x64": true,
+            "actual_files_count": 1204,
+            "expected_files_count": null,
+            "memory_traffic": 56087.75473022461,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "ce4b0ede16aea62ee7b1e02df7e1538102a356da",
+            "commit_message": "gh-139588: Increase maximum LaTeX list depth (#140709)\n\nCo-authored-by: Adam Turner <9087854+AA-Turner@users.noreply.github.com>\n",
+            "commit_timestamp": 1761681383.0
         }
     ]
 }

@@ -12224,6 +12224,21 @@
             "commit_ref": "eb8d34e4d244d7a3ee274874dd55159840281212",
             "commit_message": "protobuf-rust: adapt for rules_rust 0.67\n\nNo functional changes intended.\n\nAdapts the aspect for the srcs change from https://github.com/bazelbuild/rules_rust/commit/3f392091ae2aaf124af204eb940a51e67d3692e1.\n\nPiperOrigin-RevId: 825007268\n",
             "commit_timestamp": 1761658407.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1761708493.042867,
+            "elapsed_time": 330.3436164855957,
+            "x64": true,
+            "actual_files_count": 1203,
+            "expected_files_count": 818,
+            "memory_traffic": 46363.757736206055,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "2e7ac71b8821745bff857a0e991690aa4fb54148",
+            "commit_message": "Tag the api_implementation Python extension module as Python 3.13 no-GIL compatible.\n\nThis module has no global state, so concurrency should be fine.\n\nPiperOrigin-RevId: 825299491\n",
+            "commit_timestamp": 1761702521.0
         }
     ]
 }

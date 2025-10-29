@@ -749,6 +749,21 @@
             "commit_ref": "5b5b1a2bbfe320837e140e5d8dbb425deb5c60c3",
             "commit_message": "[NETAPI32][WKSSVC][IDL] Revert workaround for union _WKSTA_INFO\n\nAfter fixing the union issue in the RPC runtime, revert all workarounds one by one.\n\nReturn to the original declaration of union _WKSTA_INFO and fix NetrWkstaGetInfo\nand NetrWkstaSetInfo.\n",
             "commit_timestamp": 1761601599.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1761708452.301162,
+            "elapsed_time": 72.44546055793762,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7372.15470123291,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "3e3f58324beb182817ee27d4679db92cbf74c982",
+            "commit_message": "[NETAPI32] Revert workaround for union _WKSTA_USER_INFO\n\nAddendum to f2f057c0a1413aa2a26c47296df828e6ad1cb53f\n",
+            "commit_timestamp": 1761684768.0
         }
     ]
 }
