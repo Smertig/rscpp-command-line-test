@@ -794,6 +794,21 @@
             "commit_ref": "25aee8648ab1c8c5db03db0d3494523491511772",
             "commit_message": "http: fix `-Wunused-variable` in !alt-svc !proxy !ws builds\n\n```\nlib/http.c:2783:23: error: unused variable 'conn' [-Werror,-Wunused-variable]\n 2783 |   struct connectdata *conn = data->conn;\n      |                       ^~~~\n1 error generated.\n```\n\nCloses #19276\n",
             "commit_timestamp": 1761751055.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1761837682.213491,
+            "elapsed_time": 128.83160090446472,
+            "x64": true,
+            "actual_files_count": 1178,
+            "expected_files_count": 2323,
+            "memory_traffic": 19084.50779724121,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "c5de083bcc92e8edecbb4214b0ca5107496a80f6",
+            "commit_message": "base64: make base64_encode() error on too long input\n\nThe maximum size is set to 16MB.\n\nIt should not possible to call this function with this large input, but\nthis is a precaution to catch mistakes and replaces the earlier check on\narchitectures with small size_t.\n\nCloses #19280\n",
+            "commit_timestamp": 1761835288.0
         }
     ]
 }

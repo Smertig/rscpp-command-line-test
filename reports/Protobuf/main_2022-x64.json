@@ -12269,6 +12269,21 @@
             "commit_ref": "90de3d1a949e9fa4ff32856666302bc66133f780",
             "commit_message": "Add edition 2024 support to kotlin native.\n\nThe only thing missing was handling of java_multiple_files, which can reuse our java helpers.\n\nPiperOrigin-RevId: 825813542\n",
             "commit_timestamp": 1761792012.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1761836863.564636,
+            "elapsed_time": 352.4069302082062,
+            "x64": true,
+            "actual_files_count": 1203,
+            "expected_files_count": 818,
+            "memory_traffic": 46459.75581359863,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "ec86098c7661fbf3b21ebe1418dd695f1b88c48f",
+            "commit_message": "Change UnsafeProcessor.encodeUtf8(ByteBuffer out) to use the 'naive' strategy that we already used for the (byte[] out) case as a performance improvement.\n\nPiperOrigin-RevId: 826012827\n",
+            "commit_timestamp": 1761833001.0
         }
     ]
 }

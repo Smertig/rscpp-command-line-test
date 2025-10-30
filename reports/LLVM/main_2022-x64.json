@@ -34098,6 +34098,23 @@
             "commit_ref": "ca84e9e8260983d17f02a76de8b1ee51cd3ed896",
             "commit_message": "[mlir][CF] Add structural type conversion patterns (#165629)\n\nAdd structural type conversion patterns for CF dialect ops. These\npatterns are similar to the SCF structural type conversion patterns.\n\nThis commit adds missing functionality and is in preparation of #165180,\nwhich changes the way blocks are converted. (Only entry blocks are\nconverted.)",
             "commit_timestamp": 1761786760.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1761837939.17841,
+            "elapsed_time": 2601.5508251190186,
+            "x64": true,
+            "actual_files_count": 3039,
+            "expected_files_count": 1661,
+            "memory_traffic": 486746.3432235718,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "d09b50596d27d48d0a0cbf9bfe5f121e85de7313",
+            "commit_message": "[bazel] Add missing dependency for 9d5c35408e7a38b3062667bbebb3c0953fa2fae4\n",
+            "commit_timestamp": 1761836506.0
         }
     ]
 }
