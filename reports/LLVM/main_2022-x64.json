@@ -34081,6 +34081,23 @@
             "commit_ref": "e65b36c640b781be724f587085056c2819c7ad00",
             "commit_message": "[clang-tidy] Allow thread-local variables in avoid-non-const-global-variables (#164442)\n\nThis patch adds an option named `AllowThreadLocal` to the\n`cppcoreguidelines-avoid-non-const-global-variables` check. When set to\ntrue, the option suppresses warnings generated for non-const global\nvariables with thread-local storage duration. By default, the option is\nset to false.",
             "commit_timestamp": 1761750266.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1761795741.050881,
+            "elapsed_time": 2583.215412378311,
+            "x64": true,
+            "actual_files_count": 3039,
+            "expected_files_count": 1661,
+            "memory_traffic": 487013.81189727783,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "ca84e9e8260983d17f02a76de8b1ee51cd3ed896",
+            "commit_message": "[mlir][CF] Add structural type conversion patterns (#165629)\n\nAdd structural type conversion patterns for CF dialect ops. These\npatterns are similar to the SCF structural type conversion patterns.\n\nThis commit adds missing functionality and is in preparation of #165180,\nwhich changes the way blocks are converted. (Only entry blocks are\nconverted.)",
+            "commit_timestamp": 1761786760.0
         }
     ]
 }

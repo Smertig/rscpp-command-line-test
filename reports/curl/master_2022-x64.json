@@ -779,6 +779,21 @@
             "commit_ref": "446dae5bfe3277d9458321f6888d7e214f832a21",
             "commit_message": "ngtcp2: overwrite rate-limits defaults\n\nIn pytests test_08 with the Caddy server, the new rate-limiting in\nngtcp2 did close the connection because it found \"too many\" stream data\npacket repeats.\n\nIt is unclear if this is some Caddy issue or if the ngtcp2 implementaton\nis wrong. Or if curl can do anything here.\n\nReported as https://github.com/ngtcp2/ngtcp2/issues/1850\n\nThis PR overwrites the ratelimit defaults in ngtcp2 with ten times\nincreased values. This makes the errors disappear on macOS.\n\nEnable test_08_04/05 in CI again to see if there are any issues\nto be found there. (We had those disabled before having parallel\npytests.)\n\nCloses #19274\n",
             "commit_timestamp": 1761741267.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1761795235.13413,
+            "elapsed_time": 115.19754409790039,
+            "x64": true,
+            "actual_files_count": 1178,
+            "expected_files_count": 2323,
+            "memory_traffic": 19047.360244750977,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "25aee8648ab1c8c5db03db0d3494523491511772",
+            "commit_message": "http: fix `-Wunused-variable` in !alt-svc !proxy !ws builds\n\n```\nlib/http.c:2783:23: error: unused variable 'conn' [-Werror,-Wunused-variable]\n 2783 |   struct connectdata *conn = data->conn;\n      |                       ^~~~\n1 error generated.\n```\n\nCloses #19276\n",
+            "commit_timestamp": 1761751055.0
         }
     ]
 }
