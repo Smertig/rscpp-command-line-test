@@ -12299,6 +12299,21 @@
             "commit_ref": "f027f1fcd52b9d080b7ee79f4024f53cf54e0dc5",
             "commit_message": "Breaking change: Remove float_precision from python proto json_format\n\nPiperOrigin-RevId: 826158770\n",
             "commit_timestamp": 1761855637.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1761923201.904953,
+            "elapsed_time": 350.4570879936218,
+            "x64": true,
+            "actual_files_count": 1203,
+            "expected_files_count": 818,
+            "memory_traffic": 46502.00351715088,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "9181b5842275867c210d05dc86521a4047ff4c9d",
+            "commit_message": "Use `RepeatedPtrField::AddInternal` when syncing map->repeated field payload.\n\nWith a new contiguous `RepeatedPtrField` layout, `AddAllocated` will become more expensive.\n\nPiperOrigin-RevId: 826349869\n",
+            "commit_timestamp": 1761893990.0
         }
     ]
 }

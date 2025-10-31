@@ -824,6 +824,21 @@
             "commit_ref": "1afc4bb76890e24266aca5d86c2c083ac3666adf",
             "commit_message": "tool/var: explain how the null termination byte is there\n\nCloses #19287\n",
             "commit_timestamp": 1761852157.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1761923832.931994,
+            "elapsed_time": 120.65909719467163,
+            "x64": true,
+            "actual_files_count": 1178,
+            "expected_files_count": 2323,
+            "memory_traffic": 19025.8233795166,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "1e85cb4b7b88c2b2a21ff425eee071128106b085",
+            "commit_message": "scp/sftp: fix disconnect\n\nWhen a SCP/SFTP connection calls the protocol handler disconnect, it\nrequired the connections *and* the easy handles SSH meta data to be\npresent. When the disconnect is called with an admin handle, the easy\nmeta data is not present, which prevented the shutdown to run.\n\nThe easy meta data is however not necessary to run the shutdown state\nmachine. Calling it with a NULL `sshp` is fine. To avoid any mixups,\ncheck `sshp` in state operations that need it.\n\nFixes #19293\nReported-by: And-yW on github\nCloses #19295\n",
+            "commit_timestamp": 1761922618.0
         }
     ]
 }

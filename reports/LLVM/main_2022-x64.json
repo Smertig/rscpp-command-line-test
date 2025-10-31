@@ -34132,6 +34132,23 @@
             "commit_ref": "067e20506901d10166235b20f70344310bf716e8",
             "commit_message": "[clang][transformer] Change `name` range-selector to return `Error` instead of an invalid range. (#164715)\n\nPreviously, when the text in selected range was different from the\ndecl's name, `name` returned an invalid range, which could cause crashes\nif `name` was nested in other range selectors that assumed always valid\nranges. With this change, `name` returns an `Error` if it can't get the\nrange.",
             "commit_timestamp": 1761880688.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1761924215.646396,
+            "elapsed_time": 2608.840636253357,
+            "x64": true,
+            "actual_files_count": 3015,
+            "expected_files_count": 1661,
+            "memory_traffic": 486477.80979156494,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "cc8ff73fbab875e33071b23ff6e4b512d5adf64e",
+            "commit_message": "[LoopUnroll] Fix block frequencies for epilogue (#159163)\n\nAs another step in issue #135812, this patch fixes block frequencies for\npartial loop unrolling with an epilogue remainder loop. It does not\nfully handle the case when the epilogue loop itself is unrolled. That\nwill be handled in the next patch.\n\nFor the guard and latch of each of the unrolled loop and epilogue loop,\nthis patch sets branch weights derived directly from the original loop\nlatch branch weights. The total frequency of the original loop body,\nsummed across all its occurrences in the unrolled loop and epilogue\nloop, is the same as in the original loop. This patch also sets\n`llvm.loop.estimated_trip_count` for the epilogue loop instead of\nrelying on the epilogue's latch branch weights to imply it.\n\nThis patch fixes branch weights in tests that PR #157754 adversely\naffected.",
+            "commit_timestamp": 1761922902.0
         }
     ]
 }
