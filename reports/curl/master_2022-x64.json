@@ -809,6 +809,21 @@
             "commit_ref": "c5de083bcc92e8edecbb4214b0ca5107496a80f6",
             "commit_message": "base64: make base64_encode() error on too long input\n\nThe maximum size is set to 16MB.\n\nIt should not possible to call this function with this large input, but\nthis is a precaution to catch mistakes and replaces the earlier check on\narchitectures with small size_t.\n\nCloses #19280\n",
             "commit_timestamp": 1761835288.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1761881592.78806,
+            "elapsed_time": 113.60266637802124,
+            "x64": true,
+            "actual_files_count": 1178,
+            "expected_files_count": 2323,
+            "memory_traffic": 19031.71548461914,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "1afc4bb76890e24266aca5d86c2c083ac3666adf",
+            "commit_message": "tool/var: explain how the null termination byte is there\n\nCloses #19287\n",
+            "commit_timestamp": 1761852157.0
         }
     ]
 }

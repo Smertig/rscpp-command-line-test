@@ -809,6 +809,21 @@
             "commit_ref": "c906d5926190fe60bc2a08e31883d73fbaa836c4",
             "commit_message": "Remove NBSP from Require.h (#2067)\n\nWell this is a pretty small thing. There is one NBSP in the document in\nthe file that I removed\ud83d\ude05",
             "commit_timestamp": 1761763909.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1761881057.962404,
+            "elapsed_time": 304.119731426239,
+            "x64": true,
+            "actual_files_count": 513,
+            "expected_files_count": 379,
+            "memory_traffic": 41283.64242553711,
+            "repo_url": "https://github.com/luau-lang/luau",
+            "commit_ref": "ff6d381e57bcd1799d850d7fabe543c0f0980a5d",
+            "commit_message": "Sync to upstream/release/698 (#2070)\n\n# General\n\nAnother week, another release. Happy Halloween! \ud83c\udf83\n\n## Require\n- Integrate support for `.config.luau` files into `Luau.Require` as part\nof the [Luau-syntax configuration files\nRFC](https://rfcs.luau.org/config-luauconfig.html).\n  - `is_config_present` has been replaced with `get_config_status`.\n- `get_luau_config_timeout` has been added to configure extraction\ntimeouts at runtime.\n- Enable support for `.config.luau` files in `luau` and `luau-analyze`.\n- Merge the `Luau.RequireNavigator` static library into `Luau.Require`.\n\n## Analysis\n- Add fuel-based limits for normalization: normalization will now take a\nset number of steps (the \"fuel\") and stop when we hit a certain number\nof steps (\"run out of fuel\"). This is in lieu of trying to check static\nlimits on the size of its inputs. This may result in seeing more \"code\ntoo complex\" errors but should dramatically reduce the number of cases\nwhere Luau becomes unresponsive and uses several gigabytes of memory. We\nplan to tune this limit over time to find the right balance between\nresponsiveness and completeness.\n- Fix a case where refining a variable with the type `any` would cause\nit to become `unknown` instead due to normalization not preserving `any`\nin the top type position.\n- Improve the wording of type errors in the new non-strict mode.\n- Fix #1910.\n- Fix #2065.\n- Fix #1483.\n- Fix #2018.\n\n## Miscellaneous\n- Introduce `Luau::overloaded` to facilitate interacting with\n`Luau::Variant`.\n- Add type checking support to the [Luau demo](https://luau.org/demo)!\n\n---\n\nCo-authored-by: Annie Tang <annietang@roblox.com>\nCo-authored-by: Ariel Weiss <arielweiss@roblox.com>\nCo-authored-by: Hunter Goldstein <hgoldstein@roblox.com>\nCo-authored-by: Ilya Rezvov <irezvov@roblox.com>\nCo-authored-by: Sora Kanosue <skanosue@roblox.com>\nCo-authored-by: Varun Saini <vsaini@roblox.com>",
+            "commit_timestamp": 1761880726.0
         }
     ]
 }
