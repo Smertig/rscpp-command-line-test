@@ -34149,6 +34149,23 @@
             "commit_ref": "cc8ff73fbab875e33071b23ff6e4b512d5adf64e",
             "commit_message": "[LoopUnroll] Fix block frequencies for epilogue (#159163)\n\nAs another step in issue #135812, this patch fixes block frequencies for\npartial loop unrolling with an epilogue remainder loop. It does not\nfully handle the case when the epilogue loop itself is unrolled. That\nwill be handled in the next patch.\n\nFor the guard and latch of each of the unrolled loop and epilogue loop,\nthis patch sets branch weights derived directly from the original loop\nlatch branch weights. The total frequency of the original loop body,\nsummed across all its occurrences in the unrolled loop and epilogue\nloop, is the same as in the original loop. This patch also sets\n`llvm.loop.estimated_trip_count` for the epilogue loop instead of\nrelying on the epilogue's latch branch weights to imply it.\n\nThis patch fixes branch weights in tests that PR #157754 adversely\naffected.",
             "commit_timestamp": 1761922902.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1761968638.418177,
+            "elapsed_time": 2597.4744567871094,
+            "x64": true,
+            "actual_files_count": 3015,
+            "expected_files_count": 1661,
+            "memory_traffic": 486728.27812957764,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "a9431327615118afe84ee17444019c0ba99c744a",
+            "commit_message": "[VPlan] Add VPRegionBlock::getCanonicalIVType (NFC). (#164127)\n\nSplit off from https://github.com/llvm/llvm-project/pull/156262.\n\nSimilar to VPRegionBlock::getCanonicalIV, add helper to get the type of\nthe canonical IV, in preparation for removing VPCanonicalIVPHIRecipe.\n\nPR: https://github.com/llvm/llvm-project/pull/164127",
+            "commit_timestamp": 1761966302.0
         }
     ]
 }

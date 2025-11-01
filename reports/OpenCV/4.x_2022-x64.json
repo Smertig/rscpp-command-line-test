@@ -839,6 +839,21 @@
             "commit_ref": "3516c57c81abe7b606fdca3335fe96b2f14de2bc",
             "commit_message": "Merge pull request #27944 from DDmytro:ecc-sanity-update\n\nperf(video): add sanity checks and update ECC baselines for grayscale and color inputs.",
             "commit_timestamp": 1761851787.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1761967535.325771,
+            "elapsed_time": 391.99423813819885,
+            "x64": true,
+            "actual_files_count": 484,
+            "expected_files_count": 459,
+            "memory_traffic": 43914.23713684082,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "01f9bdae4c729b72debc6dd1140250eeed8e7c62",
+            "commit_message": "Merge pull request #27723 from fanchenkong1:fastconv-wasm-scalar-opt\n\nDNN: Add large scalar fastconv kernel for WASM/no-SIMD build",
+            "commit_timestamp": 1761940241.0
         }
     ]
 }

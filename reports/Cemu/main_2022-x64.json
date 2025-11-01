@@ -15554,6 +15554,21 @@
             "commit_ref": "4fa0df6dcff636736a2ee8b9fcefe7236d36d522",
             "commit_message": "nn_boss: Reimplementation\n\nThis is a full rewrite of our nn_boss (SpotPass) implementation. The previous code was based on a lot of incorrect guesswork so rather than updating that it made more sense to redo it all.\n\nIn short what changed:\n- More API implemented than before, but nn_boss is very complex so we are still missing stuff (e.g. PlayReports and Task scheduling)\n- Avoids redownloading nbdl files if they are already present locally (matches IOSU behavior)\n- The API should be more robust in general and file hashes are now verified\n- Emulated IOSU interface is compatible with nn_boss.rpl\n- Added an UI option to clear the SpotPass cache\n",
             "commit_timestamp": 1761837849.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1761968848.929364,
+            "elapsed_time": 501.52141761779785,
+            "x64": true,
+            "actual_files_count": 1071,
+            "expected_files_count": 1013,
+            "memory_traffic": 77301.48919677734,
+            "repo_url": "https://github.com/cemu-project/Cemu",
+            "commit_ref": "4fa0df6dcff636736a2ee8b9fcefe7236d36d522",
+            "commit_message": "nn_boss: Reimplementation\n\nThis is a full rewrite of our nn_boss (SpotPass) implementation. The previous code was based on a lot of incorrect guesswork so rather than updating that it made more sense to redo it all.\n\nIn short what changed:\n- More API implemented than before, but nn_boss is very complex so we are still missing stuff (e.g. PlayReports and Task scheduling)\n- Avoids redownloading nbdl files if they are already present locally (matches IOSU behavior)\n- The API should be more robust in general and file hashes are now verified\n- Emulated IOSU interface is compatible with nn_boss.rpl\n- Added an UI option to clear the SpotPass cache\n",
+            "commit_timestamp": 1761837849.0
         }
     ]
 }

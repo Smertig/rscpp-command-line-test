@@ -12314,6 +12314,21 @@
             "commit_ref": "9181b5842275867c210d05dc86521a4047ff4c9d",
             "commit_message": "Use `RepeatedPtrField::AddInternal` when syncing map->repeated field payload.\n\nWith a new contiguous `RepeatedPtrField` layout, `AddAllocated` will become more expensive.\n\nPiperOrigin-RevId: 826349869\n",
             "commit_timestamp": 1761893990.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1761967534.014694,
+            "elapsed_time": 307.4452049732208,
+            "x64": true,
+            "actual_files_count": 1203,
+            "expected_files_count": 818,
+            "memory_traffic": 46424.00459289551,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "b56a463eae67d67a7dc49313d5ceb5614e94a39e",
+            "commit_message": "Use `FindNestedSymbol` to lookup default enum values\n\nPiperOrigin-RevId: 826701708\n",
+            "commit_timestamp": 1761961232.0
         }
     ]
 }

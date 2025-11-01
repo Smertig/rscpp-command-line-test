@@ -839,6 +839,21 @@
             "commit_ref": "1e85cb4b7b88c2b2a21ff425eee071128106b085",
             "commit_message": "scp/sftp: fix disconnect\n\nWhen a SCP/SFTP connection calls the protocol handler disconnect, it\nrequired the connections *and* the easy handles SSH meta data to be\npresent. When the disconnect is called with an admin handle, the easy\nmeta data is not present, which prevented the shutdown to run.\n\nThe easy meta data is however not necessary to run the shutdown state\nmachine. Calling it with a NULL `sshp` is fine. To avoid any mixups,\ncheck `sshp` in state operations that need it.\n\nFixes #19293\nReported-by: And-yW on github\nCloses #19295\n",
             "commit_timestamp": 1761922618.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1761968059.978947,
+            "elapsed_time": 119.04387283325195,
+            "x64": true,
+            "actual_files_count": 1178,
+            "expected_files_count": 2323,
+            "memory_traffic": 19013.02188873291,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "cf4a62725d641ff0879f6a145e6131665f6761e4",
+            "commit_message": "CI: two display name tweaks\n\n- use `AM`/`CM` where missing.\n  In GHA/linux-old and AppVeyor CI.\n  To denote autotools and CMake, and to align with rest of the jobs.\n\n- rename `Old Linux` to `Linux Old` to align with the rest of Linux\n  jobs on GitHub web views sorted by name.\n\nCloses #19316\n",
+            "commit_timestamp": 1761960257.0
         }
     ]
 }
