@@ -34166,6 +34166,23 @@
             "commit_ref": "a9431327615118afe84ee17444019c0ba99c744a",
             "commit_message": "[VPlan] Add VPRegionBlock::getCanonicalIVType (NFC). (#164127)\n\nSplit off from https://github.com/llvm/llvm-project/pull/156262.\n\nSimilar to VPRegionBlock::getCanonicalIV, add helper to get the type of\nthe canonical IV, in preparation for removing VPCanonicalIVPHIRecipe.\n\nPR: https://github.com/llvm/llvm-project/pull/164127",
             "commit_timestamp": 1761966302.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1762010523.901048,
+            "elapsed_time": 2421.4140231609344,
+            "x64": true,
+            "actual_files_count": 3015,
+            "expected_files_count": 1661,
+            "memory_traffic": 485883.60387420654,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "fe1491b7258aaf821cda89d5ed5f5c5248007136",
+            "commit_message": "[Support] Fix memory leak induced by `sys::RemoveFileOnSignal` (#159984)\n\nBefore this PR, `FilesToRemove` was constructed but never deleted.",
+            "commit_timestamp": 1762008934.0
         }
     ]
 }

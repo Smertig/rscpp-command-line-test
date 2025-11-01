@@ -854,6 +854,21 @@
             "commit_ref": "ce70a507c0ae50d7e15e16dd86eac7e4c61042a8",
             "commit_message": "Enable more generic packet ops for double.\n\n\nSee merge request libeigen/eigen!2050\n",
             "commit_timestamp": 1761851683.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": "cxx11_*",
+            "timestamp": 1762009591.08153,
+            "elapsed_time": 127.92719769477844,
+            "x64": true,
+            "actual_files_count": 110,
+            "expected_files_count": null,
+            "memory_traffic": 14772.127136230469,
+            "repo_url": "https://gitlab.com/libeigen/eigen.git",
+            "commit_ref": "8716f109e465d4122e61be9087b17a48bf58ca45",
+            "commit_message": "Implement assume_aligned using the standard API\n\nThis implements `Eigen::internal::assume_aligned` to match the API for C++20 standard as best as possible using either `std::assume_aligned` or `__builtin_assume_aligned` if available. If neither is available, the function is a no-op.\n\nThe override macro `EIGEN_ASSUME_ALIGNED` was changed to a `EIGEN_DONT_ASSUME_ALIGNED`, which now forces the function to be a no-op.\n\nSee merge request libeigen/eigen!2052\n",
+            "commit_timestamp": 1761998659.0
         }
     ]
 }
