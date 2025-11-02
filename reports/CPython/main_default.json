@@ -28151,6 +28151,21 @@
             "commit_ref": "2f60b8f02fe7cb83dd589d9664460082c13e85ef",
             "commit_message": "gh-140513: Fail to compile if `_Py_TAIL_CALL_INTERP` is set but `preserve_none` and `musttail` do not exist. (GH-140548)\n\nCo-authored-by: Chris Eibl <138194463+chris-eibl@users.noreply.github.com>",
             "commit_timestamp": 1762015283.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1762096086.8818,
+            "elapsed_time": 4045.7934346199036,
+            "x64": true,
+            "actual_files_count": 1208,
+            "expected_files_count": null,
+            "memory_traffic": 56257.578552246094,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "6d45cd8dbb07ae020ec07f2c3375dd06e52377f6",
+            "commit_message": "gh-135307: Fix email error when policy max_line_length is set to 0 or None (#135367)\n\nRDM: Like the change made in a earlier PR to the folder, we can/must use 'maxlen' as a stand in for 'unlimited' when computing line lengths when max_line_length is 0 or None; otherwise the computation results in a traceback.",
+            "commit_timestamp": 1762093934.0
         }
     ]
 }

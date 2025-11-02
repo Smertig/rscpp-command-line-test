@@ -884,6 +884,21 @@
             "commit_ref": "6cf3d7b1b161bc45501d17b401225befe3c43943",
             "commit_message": "tests: avoid more hard-coded CRLFs in `protocol` sections\n\n- fix regex to not catch CR (from CRLF), in `PORT`, `EPRT`\n  commands, allowing to use `crlf=\"yes\"` more.\n- add `crlf=\"headers\"` mode for `protocol` sections.\n  To call `subnewlines()` without its force option.\n  This is the mode used in `data` sections when `crlf=\"yes\"`.\n  (This confusion may be subject to a future commit.)\n- subnewlines: apply CRLF to `HEAD` and `CONNECT` HTTP requests.\n- subnewlines: apply CRLF to RTSP requests.\n- delete remaining empty `protocol` sections.\n\nReducing the number of `tests/data/test*`:\n- CRLF newlines from 11325 to 10295. (119984 lines total)\n- files with mixed newlines from 707 to 656. (1890 files total)\n\nFollow-up to 4d2a05d3fe8ba4db9168b03057029ea5ce7dab77 #19284\n\nCloses #19318\n",
             "commit_timestamp": 1762037575.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1762096419.175272,
+            "elapsed_time": 110.15019655227661,
+            "x64": true,
+            "actual_files_count": 1178,
+            "expected_files_count": 2323,
+            "memory_traffic": 19080.605911254883,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "986ef778332e0faec74fabc92a622ba5f68e8d4b",
+            "commit_message": "runtests: fix Perl warning after recent patch\n\n```\nUse of uninitialized value $hash{\"crlf\"} in string eq at tests/runtests.pl line 1406.\n```\n\nFollow-up to 6cf3d7b1b161bc45501d17b401225befe3c43943 #19318\nCloses #19327\n",
+            "commit_timestamp": 1762085356.0
         }
     ]
 }
