@@ -869,6 +869,21 @@
             "commit_ref": "6a97bc2c97b54dc981f9a5d5ab542c30ea0acaad",
             "commit_message": "tests/data: delete stray CRLFs in markup lines\n\nCloses #19317\n",
             "commit_timestamp": 1761968169.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1762054574.052686,
+            "elapsed_time": 119.14851307868958,
+            "x64": true,
+            "actual_files_count": 1178,
+            "expected_files_count": 2323,
+            "memory_traffic": 19038.9349899292,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "6cf3d7b1b161bc45501d17b401225befe3c43943",
+            "commit_message": "tests: avoid more hard-coded CRLFs in `protocol` sections\n\n- fix regex to not catch CR (from CRLF), in `PORT`, `EPRT`\n  commands, allowing to use `crlf=\"yes\"` more.\n- add `crlf=\"headers\"` mode for `protocol` sections.\n  To call `subnewlines()` without its force option.\n  This is the mode used in `data` sections when `crlf=\"yes\"`.\n  (This confusion may be subject to a future commit.)\n- subnewlines: apply CRLF to `HEAD` and `CONNECT` HTTP requests.\n- subnewlines: apply CRLF to RTSP requests.\n- delete remaining empty `protocol` sections.\n\nReducing the number of `tests/data/test*`:\n- CRLF newlines from 11325 to 10295. (119984 lines total)\n- files with mixed newlines from 707 to 656. (1890 files total)\n\nFollow-up to 4d2a05d3fe8ba4db9168b03057029ea5ce7dab77 #19284\n\nCloses #19318\n",
+            "commit_timestamp": 1762037575.0
         }
     ]
 }
