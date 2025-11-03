@@ -34217,6 +34217,23 @@
             "commit_ref": "d3fe1df1945a6761e042ea02b7a80154d648601a",
             "commit_message": "[SCEV] Improve handling of divisibility information from loop guards. (#163021)\n\nAt the moment, the effectivness of guards that contain divisibility\ninformation (A % B == 0 ) depends on the order of the conditions.\n\nThis patch makes using divisibility information independent of the\norder, by collecting and applying the divisibility information\nseparately.\n\nWe first collect all conditions in a vector, then collect the\ndivisibility information from all guards.\n\nWhen processing other guards, we apply divisibility info collected\nearlier.\n\nAfter all guards have been processed, we add the divisibility info,\nrewriting the existing rewrite. This ensures we apply the divisibility\ninfo to the largest rewrite expression.\n\nThis helps to improve results in a few cases, one in\nhttps://github.com/dtcxzyw/llvm-opt-benchmark/pull/2921 and another one\nin a different large C/C++ based IR corpus.\n\nPR: https://github.com/llvm/llvm-project/pull/163021",
             "commit_timestamp": 1762092984.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1762141546.617313,
+            "elapsed_time": 2578.6782145500183,
+            "x64": true,
+            "actual_files_count": 3015,
+            "expected_files_count": 1661,
+            "memory_traffic": 486566.33824157715,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "9ed6be8483e91286a62d9a52f0faae6f8c4cd8c6",
+            "commit_message": "[CI] Add Timeout to Premerge Advisor Requests\n\nThe premerge advisor should return quickly. If it does not, time out\nrather than waiting as it indicates there is probably something wrong\nwith the advisor instance we are trying to connect to.\n",
+            "commit_timestamp": 1762139700.0
         }
     ]
 }

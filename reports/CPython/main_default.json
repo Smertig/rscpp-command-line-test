@@ -28166,6 +28166,21 @@
             "commit_ref": "6d45cd8dbb07ae020ec07f2c3375dd06e52377f6",
             "commit_message": "gh-135307: Fix email error when policy max_line_length is set to 0 or None (#135367)\n\nRDM: Like the change made in a earlier PR to the folder, we can/must use 'maxlen' as a stand in for 'unlimited' when computing line lengths when max_line_length is 0 or None; otherwise the computation results in a traceback.",
             "commit_timestamp": 1762093934.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1762140753.567519,
+            "elapsed_time": 3661.7965099811554,
+            "x64": true,
+            "actual_files_count": 1208,
+            "expected_files_count": null,
+            "memory_traffic": 56067.08655548096,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "121c219e302365e63eef0aef81b94a3de7a37fec",
+            "commit_message": "Remove redundant `sys.exit(2)` call in `pdb` CLI (#139948)\n\n",
+            "commit_timestamp": 1762138038.0
         }
     ]
 }
