@@ -914,6 +914,21 @@
             "commit_ref": "420799228d8e4e2d9dcd588110f2bde77a2cd837",
             "commit_message": "[NETSH] Implement the -r (remote) option and set machine command\n\nAlso:\n- Start all usage texts with a newline.\n- Add some error messages.\n- Fix a bug in the command interpreter.\n",
             "commit_timestamp": 1762119436.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1762182412.269088,
+            "elapsed_time": 74.88310670852661,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7414.801979064941,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "3fe5b8b0bb4617e6b804a464c1a35ce676f83c1e",
+            "commit_message": "[SDK][WDF][USBDEX][NTOSKRNL_VISTA] Fully enable KMDF (#8396)\n\n[SDK][WDFLDR] Add kmdf loader driver\n[SDK][WDF] Add kmdf drver init static library\n[SDK][WDF] Modify kmdf driver for working with wdfldr driver\n[SDK][CDROM] Cdrom driver dynamically linking with kmdf\n[SDK][WDF] Add kmdfdriver module type\n[SDK][WDF][USBDEX][NTOSKRNL_VISTA] Fully enable KMDF\n[KMDF][WDFLDR][WDF01000] Fix Windows 10 Compatibility WDFLDR and WDF01000\n[WDF01000] NO_KERNEL_LIST_ENTRY_CHECKS for wdf01000 3rd party code\n\nThis PR is an accumulation of three peoples work, with the goal of the trying to get WDF to work like it should.\nThis has been tested in combination with some extra NT6+ ntoskrnl against multiple drivers.\n\n---------\n\nCo-authored-by: Max Korostil <mrmks04@yandex.ru>\nCo-authored-by: Victor Perevertkin <victor.perevertkin@reactos.org>\nCo-authored-by: Adam S\u0142abo\u0144 <asaillen@protonmail.com>\nCo-authored-by: Herm\u00e8s B\u00c9LUSCA - MA\u00cfTO <hermes.belusca-maito@reactos.org>",
+            "commit_timestamp": 1762180732.0
         }
     ]
 }

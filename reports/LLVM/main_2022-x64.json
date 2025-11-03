@@ -34234,6 +34234,23 @@
             "commit_ref": "9ed6be8483e91286a62d9a52f0faae6f8c4cd8c6",
             "commit_message": "[CI] Add Timeout to Premerge Advisor Requests\n\nThe premerge advisor should return quickly. If it does not, time out\nrather than waiting as it indicates there is probably something wrong\nwith the advisor instance we are trying to connect to.\n",
             "commit_timestamp": 1762139700.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1762183406.801893,
+            "elapsed_time": 2427.2257018089294,
+            "x64": true,
+            "actual_files_count": 3015,
+            "expected_files_count": 1661,
+            "memory_traffic": 485814.89053344727,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "1c094a1ce2ef15b5855b11aa85dbb2f1eea54f13",
+            "commit_message": "[TSan][Test-Only] Account for race in cxa_guard_acquire.cpp test (#165853)\n\nIt is possible for \"Enter potentially blocking region\" to come before\n\"Enter constructor\" in this test - if the thread that acquires the guard\nfails to reach its printf before the other thread that enters the\nblocking region reaches its own printf. Note that for the exit logs this\ninversion is not possible.\n\nThis patch addresses this by allowing those two log lines to come in\neither order.\n\nrdar://163375661",
+            "commit_timestamp": 1762181989.0
         }
     ]
 }
