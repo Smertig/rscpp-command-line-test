@@ -929,6 +929,21 @@
             "commit_ref": "3fe5b8b0bb4617e6b804a464c1a35ce676f83c1e",
             "commit_message": "[SDK][WDF][USBDEX][NTOSKRNL_VISTA] Fully enable KMDF (#8396)\n\n[SDK][WDFLDR] Add kmdf loader driver\n[SDK][WDF] Add kmdf drver init static library\n[SDK][WDF] Modify kmdf driver for working with wdfldr driver\n[SDK][CDROM] Cdrom driver dynamically linking with kmdf\n[SDK][WDF] Add kmdfdriver module type\n[SDK][WDF][USBDEX][NTOSKRNL_VISTA] Fully enable KMDF\n[KMDF][WDFLDR][WDF01000] Fix Windows 10 Compatibility WDFLDR and WDF01000\n[WDF01000] NO_KERNEL_LIST_ENTRY_CHECKS for wdf01000 3rd party code\n\nThis PR is an accumulation of three peoples work, with the goal of the trying to get WDF to work like it should.\nThis has been tested in combination with some extra NT6+ ntoskrnl against multiple drivers.\n\n---------\n\nCo-authored-by: Max Korostil <mrmks04@yandex.ru>\nCo-authored-by: Victor Perevertkin <victor.perevertkin@reactos.org>\nCo-authored-by: Adam S\u0142abo\u0144 <asaillen@protonmail.com>\nCo-authored-by: Herm\u00e8s B\u00c9LUSCA - MA\u00cfTO <hermes.belusca-maito@reactos.org>",
             "commit_timestamp": 1762180732.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1762226668.826022,
+            "elapsed_time": 81.22833442687988,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7367.9895095825195,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "106dbed40db59ab30b416a80b31995c3fb6fec67",
+            "commit_message": "[BOOT] Actually add the remastering scripts in the ISOs\n\nAddendum to commit fdc4272b1a (#4988)\nCORE-8872\n",
+            "commit_timestamp": 1762197762.0
         }
     ]
 }

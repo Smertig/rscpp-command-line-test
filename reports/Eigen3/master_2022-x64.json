@@ -929,6 +929,21 @@
             "commit_ref": "bfdbc031c2c6d6fabeea45dd9d1d6eb6b31c9d39",
             "commit_message": "Fixes #2998.",
             "commit_timestamp": 1762127896.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": "cxx11_*",
+            "timestamp": 1762226767.861703,
+            "elapsed_time": 130.72041273117065,
+            "x64": true,
+            "actual_files_count": 110,
+            "expected_files_count": null,
+            "memory_traffic": 14799.349700927734,
+            "repo_url": "https://gitlab.com/libeigen/eigen.git",
+            "commit_ref": "b6fcddccfcf0d627a7309bee20d92363548ac07c",
+            "commit_message": "Get rid of pblend packet op.\n\nThere was only a single code path left in TensorEvaluator using pblend. We can replace that with a call to the more general TernarySelectOp and get rid of pblend entirely from Core.\n\nCloses #2998\n\nSee merge request libeigen/eigen!2056\n\nCo-authored-by: Rasmus Munk Larsen <rmlarsen@google.com>\n",
+            "commit_timestamp": 1762212470.0
         }
     ]
 }

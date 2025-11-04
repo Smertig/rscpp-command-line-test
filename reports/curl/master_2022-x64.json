@@ -929,6 +929,21 @@
             "commit_ref": "254e04b702e96b637b647241e4edea7ee4c24b70",
             "commit_message": "ftpserver.pl: fix newlines in 227/229 replies, adjust tests\n\nThe test FTP server returned LF newlines for 227/229 replies, instead of\nthe CRLF used for the rest.\n\nTest data added later were explicitly made to expect an LF in these\nresponse lines.\n\nAfter this patch the FTP server returns CRLF newlines, allowing\nto delete this special case in test data.\n\nFollow-up to 3bfff57e1f604ef0b2bc84243014eb9c9a1e6acc\nFollow-up to a7937ed49c8f201444323b8a721e1d04e0306105\n\nCloses #19330\n",
             "commit_timestamp": 1762168743.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1762227128.6365,
+            "elapsed_time": 110.34377861022949,
+            "x64": true,
+            "actual_files_count": 1178,
+            "expected_files_count": 2323,
+            "memory_traffic": 19059.469619750977,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "e5299a1b878807d58f7ae0f829f0c2992c3aa2e1",
+            "commit_message": "README.md: use the first paragraph from the man page\n\nWhich also mentions all protocols\n\nCloses #19335\n",
+            "commit_timestamp": 1762208006.0
         }
     ]
 }
