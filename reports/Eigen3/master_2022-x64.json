@@ -944,6 +944,21 @@
             "commit_ref": "b6fcddccfcf0d627a7309bee20d92363548ac07c",
             "commit_message": "Get rid of pblend packet op.\n\nThere was only a single code path left in TensorEvaluator using pblend. We can replace that with a call to the more general TernarySelectOp and get rid of pblend entirely from Core.\n\nCloses #2998\n\nSee merge request libeigen/eigen!2056\n\nCo-authored-by: Rasmus Munk Larsen <rmlarsen@google.com>\n",
             "commit_timestamp": 1762212470.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": "cxx11_*",
+            "timestamp": 1762268929.570363,
+            "elapsed_time": 137.2950804233551,
+            "x64": true,
+            "actual_files_count": 110,
+            "expected_files_count": null,
+            "memory_traffic": 14771.349243164062,
+            "repo_url": "https://gitlab.com/libeigen/eigen.git",
+            "commit_ref": "f95b4698fceeac7ca6d74faa77af9f2f1f6b3425",
+            "commit_message": "Add support for C++23 multidimensional subscript operator\n\nI'm not sure where to put tests for this, assuming they're needed. They also wouldn't run in CI anyway since CI only exercises the C++17 codepaths.\n\nSee merge request libeigen/eigen!2053\n",
+            "commit_timestamp": 1762239784.0
         }
     ]
 }
