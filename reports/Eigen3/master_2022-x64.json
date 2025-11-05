@@ -959,6 +959,21 @@
             "commit_ref": "f95b4698fceeac7ca6d74faa77af9f2f1f6b3425",
             "commit_message": "Add support for C++23 multidimensional subscript operator\n\nI'm not sure where to put tests for this, assuming they're needed. They also wouldn't run in CI anyway since CI only exercises the C++17 codepaths.\n\nSee merge request libeigen/eigen!2053\n",
             "commit_timestamp": 1762239784.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": "cxx11_*",
+            "timestamp": 1762313150.617799,
+            "elapsed_time": 133.65097498893738,
+            "x64": true,
+            "actual_files_count": 110,
+            "expected_files_count": null,
+            "memory_traffic": 14878.504600524902,
+            "repo_url": "https://gitlab.com/libeigen/eigen.git",
+            "commit_ref": "06f5cb4878f01cd5acbf7285df79f96ab2d68ac0",
+            "commit_message": "Use wrapper macro for multidimensional subscript feature test\n\n\nSee merge request libeigen/eigen!2059\n",
+            "commit_timestamp": 1762295187.0
         }
     ]
 }

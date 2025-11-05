@@ -34285,6 +34285,23 @@
             "commit_ref": "3170345e20b77a917a61d02119986a53cbe08486",
             "commit_message": "[X86] Fix LEA compression on 64 bit (#166334)\n\nNDD ADD is only supported on 64 bit, but `LEA32` has\n`Requires<[Not64BitMode]>`. The reason it doesnt fail upstream is that\nthe predicates check is commented out on `X86MCInstLower.cpp`:\n\n```\n  // FIXME: Enable feature predicate checks once all the test pass.\n  // X86_MC::verifyInstructionPredicates(MI->getOpcode(),\n  //                                     Subtarget->getFeatureBits());\n\n```\n\nIntroduced by: https://github.com/llvm/llvm-project/pull/158254",
             "commit_timestamp": 1762268758.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1762314273.887976,
+            "elapsed_time": 2587.458704471588,
+            "x64": true,
+            "actual_files_count": 3015,
+            "expected_files_count": 1661,
+            "memory_traffic": 486868.13832092285,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "0c73009236384033fc65be4fefb3c3b9b0d19c77",
+            "commit_message": "[WebAssembly] TableGen-erate SDNode descriptions (#166259)\n\nThis allows SDNodes to be validated against their expected type profiles\nand reduces the number of changes required to add a new node.\n\nCALL and RET_CALL do not have a description in td files, and it is not\ncurrently possible to add one as these nodes have both variable operands\nand variable results.\n\nThis also fixes a subtle bug detected by the enabled verification\nfunctionality. `LOCAL_GET` is declared with `SDNPHasChain` property, and\nthus should have both a chain operand and a chain result. The original\ncode created a node without a chain result, which caused a check in\n`SDNodeInfo::verifyNode()` to fail.\n\nPart of #119709.\n\nPull Request: https://github.com/llvm/llvm-project/pull/166259",
+            "commit_timestamp": 1762313093.0
         }
     ]
 }
