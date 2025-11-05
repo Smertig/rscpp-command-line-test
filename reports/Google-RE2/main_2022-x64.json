@@ -974,6 +974,21 @@
             "commit_ref": "dcd1f647983a809cb7d32b15617cca25187de03f",
             "commit_message": "BUILD: fix for Bazel 9.0.0rc1\n\nError at https://buildkite.com/bazel/bcr-bazel-compatibility-test/builds/589/steps/canvas?jid=019a4bac-6015-4fed-a853-d187ee2e87fc\n\nChange-Id: Ief0ef43cd23ca8e9fc5e63de8d0ea59460415f9f\n",
             "commit_timestamp": 1762310593.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1762355559.796482,
+            "elapsed_time": 93.40729999542236,
+            "x64": true,
+            "actual_files_count": 22,
+            "expected_files_count": null,
+            "memory_traffic": 2874.8247604370117,
+            "repo_url": "https://github.com/google/re2.git",
+            "commit_ref": "e7aec5985072c1dbe735add802653ef4b36c231a",
+            "commit_message": "python: update minimum version in packaging metadata\n\nWe stopped generating the 3.9 wheel but forgot to update the\nsetup.py minimum.\n\nAlso, generate wheels for macOS 26.\n",
+            "commit_timestamp": 1762354967.0
         }
     ]
 }

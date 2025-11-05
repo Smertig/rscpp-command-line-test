@@ -12449,6 +12449,21 @@
             "commit_ref": "4986a7722460e3163f37c98da1cb47f52c6406e1",
             "commit_message": "bazel: Remove hardcoded dependency on `//:protoc` from language runtimes (#19679)\n\nWithout this change, language runtimes still result in a build of `//:protoc` even with a prebuilt `proto_toolchain` registered or `--proto_compiler` set to a precompiled protoc. Removing this hardcoded dependency allows a (fast) build of `java_proto_library` targets without a C++ toolchain assuming a prebuilt protoc.\n\nWork towards #19558\n\nCloses #19679\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/19679 from fmeum:19558-dont-hardcode-protoc 2d67e8263144da0c8d0cdeae889ae6067fb2f219\nPiperOrigin-RevId: 828014596\n",
             "commit_timestamp": 1762278446.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1762355286.887856,
+            "elapsed_time": 340.18485379219055,
+            "x64": true,
+            "actual_files_count": 1203,
+            "expected_files_count": 818,
+            "memory_traffic": 46325.397216796875,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "0ac5264dbf3af972abff6af49ba1ce5039e72137",
+            "commit_message": "Automated rollback of commit 75204a27e4c42b64214f1e7ed94570bb3a52a87d.\n\nPiperOrigin-RevId: 828355313\n",
+            "commit_timestamp": 1762335263.0
         }
     ]
 }

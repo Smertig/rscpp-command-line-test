@@ -974,6 +974,21 @@
             "commit_ref": "c3b890b2c005401e18b54dacf9e63d33412e2b4f",
             "commit_message": "GHA/non-native: bump to OpenBSD 7.8\n\nFollow-up to e5cc5640b37672bd18d7561bc45c5dd91271753a #19367\n\nCloses #19368\n",
             "commit_timestamp": 1762295458.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1762355792.901398,
+            "elapsed_time": 117.43394780158997,
+            "x64": true,
+            "actual_files_count": 1178,
+            "expected_files_count": 2323,
+            "memory_traffic": 19090.088333129883,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "60dd72b1be7b06110922f5f0690de0b88592667c",
+            "commit_message": "GHA/checksrc: add actionlint, fix or silence issues found\n\nIt also does shellcheck on `run:` elements, overlapping with\nthe homegrown `shellcheck-ci.sh` with the same purpose. But it also does\nmore and perhaps could replace the script too, especially in curl\nsub-repos.\n\nAlso:\n- GHA/macos: delete potentially useful, but commented, and ultimately\n  unused, non-default Xcode-testing logic. It's causing unused matrix\n  exceptions, upsetting actionlint.\n\nRef: https://github.com/rhysd/actionlint\n\nCloses #19373\n",
+            "commit_timestamp": 1762354783.0
         }
     ]
 }
