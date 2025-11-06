@@ -1004,6 +1004,21 @@
             "commit_ref": "58023ba52273b05deb36ec1d395df18ba29b3bde",
             "commit_message": "docs: fix checksrc `EQUALSPACE` warnings\n\n```\ndocs/libcurl/opts/CURLOPT_SSL_CTX_DATA.md:86:16\ndocs/libcurl/opts/CURLOPT_SSL_CTX_FUNCTION.md:139:16\n```\n\nAlso sync `CURL *` and result variable names with rest of docs.\n\nFollow-up to 6d7e924e80096a7e2cebad16235674fd3d3012af #19375\n\nCloses #19379\n",
             "commit_timestamp": 1762383855.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1762442623.726042,
+            "elapsed_time": 160.8499686717987,
+            "x64": true,
+            "actual_files_count": 1178,
+            "expected_files_count": 2323,
+            "memory_traffic": 18976.489837646484,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "672886f734fc205f92e0cba3c6dcd5c43abb2b11",
+            "commit_message": "wolfSSL: able to differentiate between IP and DNS in alt names\n\nFix implemented in https://github.com/wolfSSL/wolfssl/pull/9380\n\nCloses #19364\n",
+            "commit_timestamp": 1762440302.0
         }
     ]
 }
