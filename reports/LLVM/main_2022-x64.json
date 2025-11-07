@@ -34353,6 +34353,23 @@
             "commit_ref": "e0736c0b4338bb10c8345c2c6854fc4cbb1d44e5",
             "commit_message": "[MLIR] Add missing namespace qualifier in BufferizableOpInterface.td (#166781)\n\n",
             "commit_timestamp": 1762441281.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1762486932.327111,
+            "elapsed_time": 2603.60076546669,
+            "x64": true,
+            "actual_files_count": 3015,
+            "expected_files_count": 1661,
+            "memory_traffic": 486794.1354370117,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "fca5d45d32de66c63f3583b1d1280bf5b3f1502a",
+            "commit_message": "[SelectionDAG] Make SelectionDAG::dump(true) usable from debugger (#166722)\n\nWhen called from DAGCombiner, there may be a HandleSDNode allocated\non the stack. Since the node is not part of a DAG, we don't allocate\nan entry for it in the operand counting map and should not attempt to\ndecrement its operand count.",
+            "commit_timestamp": 1762485722.0
         }
     ]
 }

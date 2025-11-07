@@ -1019,6 +1019,21 @@
             "commit_ref": "672886f734fc205f92e0cba3c6dcd5c43abb2b11",
             "commit_message": "wolfSSL: able to differentiate between IP and DNS in alt names\n\nFix implemented in https://github.com/wolfSSL/wolfssl/pull/9380\n\nCloses #19364\n",
             "commit_timestamp": 1762440302.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1762486452.747613,
+            "elapsed_time": 119.5730791091919,
+            "x64": true,
+            "actual_files_count": 1178,
+            "expected_files_count": 2323,
+            "memory_traffic": 19015.209312438965,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "8e93a74a731714767e2414e1a5687aa0ef31d9ea",
+            "commit_message": "tool_paramhlp: refuse --proto remove all protocols\n\ncurl is for transfers so disabling all protocols has to be a mistake.\nPreviously it would allow this to get set (even if curl_easy_setopt()\nreturns an error for it) and then let libcurl return error instead.\n\nUpdated 1474 accordingly.\n\nCloses #19388\n",
+            "commit_timestamp": 1762468967.0
         }
     ]
 }

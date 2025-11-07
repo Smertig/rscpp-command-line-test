@@ -1019,6 +1019,21 @@
             "commit_ref": "3000d45250ed50faf7dc3f827a1b1c2fbb8bbaff",
             "commit_message": "[NETKVM] Reduce log level and default to 10 Gbit/s connection (#8448)\n\nReduces debug spam and maybe improves network throughput a bit.\n\nCORE-15841",
             "commit_timestamp": 1762338036.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1762485879.24983,
+            "elapsed_time": 73.90462875366211,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7335.7465896606445,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "24e88af9723dfb28e80a062358b4b3e35b0db6d8",
+            "commit_message": "[VIDEOPRT][DDK] services.c: Reformat; update/fix SAL annotations (#8450)\n\nNOTA: 2nd parameter `AgpServices` of `VideoPortGetAgpServices()` is\ndocumented as \"In\", but should be \"Out\" as it receives information.\n",
+            "commit_timestamp": 1762465002.0
         }
     ]
 }
