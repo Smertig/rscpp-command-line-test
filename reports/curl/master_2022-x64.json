@@ -1034,6 +1034,21 @@
             "commit_ref": "8e93a74a731714767e2414e1a5687aa0ef31d9ea",
             "commit_message": "tool_paramhlp: refuse --proto remove all protocols\n\ncurl is for transfers so disabling all protocols has to be a mistake.\nPreviously it would allow this to get set (even if curl_easy_setopt()\nreturns an error for it) and then let libcurl return error instead.\n\nUpdated 1474 accordingly.\n\nCloses #19388\n",
             "commit_timestamp": 1762468967.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1762528449.684253,
+            "elapsed_time": 109.61949181556702,
+            "x64": true,
+            "actual_files_count": 1178,
+            "expected_files_count": 2323,
+            "memory_traffic": 19038.807929992676,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "9d1acd048c75b24d56d5131cc12f907e37f0bd8f",
+            "commit_message": "gtls: skip session resumption when verifystatus is set\n\nResumed TLS sessions skip OCSP stapled-response verification. Force a\nfull handshake so verifystatus() runs.\n\nFollow-up to 4bfd7a961521e1fd6aab7610e931d82a342781\n\nPointed out by ZeroPath\n",
+            "commit_timestamp": 1762521294.0
         }
     ]
 }
