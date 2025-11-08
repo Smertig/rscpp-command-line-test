@@ -1049,6 +1049,21 @@
             "commit_ref": "9d1acd048c75b24d56d5131cc12f907e37f0bd8f",
             "commit_message": "gtls: skip session resumption when verifystatus is set\n\nResumed TLS sessions skip OCSP stapled-response verification. Force a\nfull handshake so verifystatus() runs.\n\nFollow-up to 4bfd7a961521e1fd6aab7610e931d82a342781\n\nPointed out by ZeroPath\n",
             "commit_timestamp": 1762521294.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1762572532.63216,
+            "elapsed_time": 114.47428441047668,
+            "x64": true,
+            "actual_files_count": 1178,
+            "expected_files_count": 2323,
+            "memory_traffic": 19062.20668029785,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "9d1acd048c75b24d56d5131cc12f907e37f0bd8f",
+            "commit_message": "gtls: skip session resumption when verifystatus is set\n\nResumed TLS sessions skip OCSP stapled-response verification. Force a\nfull handshake so verifystatus() runs.\n\nFollow-up to 4bfd7a961521e1fd6aab7610e931d82a342781\n\nPointed out by ZeroPath\n",
+            "commit_timestamp": 1762521294.0
         }
     ]
 }
