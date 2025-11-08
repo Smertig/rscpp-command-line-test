@@ -12539,6 +12539,21 @@
             "commit_ref": "3159b1b84fea5221307fba343287ffc0b2575b58",
             "commit_message": "Change RopeByteString's Utf8 validity behavior to avoid needing to have our Utf8 validation library handle validation in the face of straddling surrogate sequences (where it has to handle cases where a given byte sequence is invalid UTF8 but _could_ be valid when concatenated with another byte sequence).\n\nPiperOrigin-RevId: 829490247\n",
             "commit_timestamp": 1762540294.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1762614353.787936,
+            "elapsed_time": 324.77729868888855,
+            "x64": true,
+            "actual_files_count": 1208,
+            "expected_files_count": 818,
+            "memory_traffic": 46404.57451629639,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "c657b59bf68529e88d7f38200f14c57df27cfbed",
+            "commit_message": "Auto-generate files after cl/829733308\n",
+            "commit_timestamp": 1762590639.0
         }
     ]
 }
