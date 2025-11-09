@@ -1079,6 +1079,21 @@
             "commit_ref": "16c6ea36cca6684aacbcb33578af61b28e3fee0d",
             "commit_message": "GHA/linux: add minimal Fil-C build with tests\n\nRequirements for Fil-C:\n- not to accidentally pick up system headers. E.g. from `/usr/include`\n  on Linux. It can happen when any dependency is auto-detected on this\n  header path. This makes Fil-C find the wrong system headers, which\n  in turn breaks the configuration step in subtle ways (with CMake) and\n  less subtle ways (autotools). Then CMake ends up running into an error\n  while compiling.\n- build all dependencies with Fil-C too.\n  (this patch doesn't build any dependencies yet.)\n- \"unity\" mode disabled. It should work, but needs a lot of memory and\n  slower than a standard compiler, or a Fil-C non-unity build.\n- x86_64 Linux host platform when using the pre-built toolchain.\n\nObservations on a minimal, static build made with no dependencies and\nFil-C 0.674 (based on clang 20.1.8).\n- curl tool sizes:\n  - cmake, default, w/o -O: 30 MB (gcc 14.2.0: 1.7 MB)\n  - cmake, default, w/o -O, stripped: 29.6 MB (gcc: 1.4 MB)\n  - cmake, Release, -O3: 7.2 MB (gcc: 1 MB)\n  - cmake, Release, -O3, stripped: 6.8 MB (gcc: 0.93 MB)\n  - autotools, default, -O2: 7 MB\n- libcurl.a size is 32 MB (cmake, default, w/o -O) (gcc: 2.7 MB)\n- build times 3-3.5x longer (compared to system gcc 14.2.0):\n- all runtests available pass OK.\n- all pytests skipped due to missing features/dependencies.\n- shared libcurl builds also work (cmake, default: 25 MB libcurl.so and\n  5.75 MB (5.6 stripped) curl tool)\n- autotools works fine too, with dependencies disabled or set to avoid\n  `/usr/include`.\n\nCloses #19391\n",
             "commit_timestamp": 1762605723.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1762659216.706248,
+            "elapsed_time": 112.92849898338318,
+            "x64": true,
+            "actual_files_count": 1178,
+            "expected_files_count": 2323,
+            "memory_traffic": 19056.564750671387,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "019874f1971332d3b988803feafd829a6b570fef",
+            "commit_message": "GHA/linux: stop disabling TLS-SRP tests in event-based & duphandle jobs\n\nThey were disabled since these jobs ran in Zuul. The tests are 320, 321,\n322, 323, 324. Of which, 323 runs in CI, the rest needs `gnutls-serv`\nwith SRP enabled, which is not available in current jobs and no longer\noffered by Ubuntu's `gnutls-bin` package. 324 doesn't appear as\na skipped test, 323 seems to be running fine, the rest are logged as\nskipped. This suggests it's safe to drop the exceptions.\n\nCloses #19413\n",
+            "commit_timestamp": 1762646002.0
         }
     ]
 }
