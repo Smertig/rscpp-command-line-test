@@ -1094,6 +1094,21 @@
             "commit_ref": "019874f1971332d3b988803feafd829a6b570fef",
             "commit_message": "GHA/linux: stop disabling TLS-SRP tests in event-based & duphandle jobs\n\nThey were disabled since these jobs ran in Zuul. The tests are 320, 321,\n322, 323, 324. Of which, 323 runs in CI, the rest needs `gnutls-serv`\nwith SRP enabled, which is not available in current jobs and no longer\noffered by Ubuntu's `gnutls-bin` package. 324 doesn't appear as\na skipped test, 323 seems to be running fine, the rest are logged as\nskipped. This suggests it's safe to drop the exceptions.\n\nCloses #19413\n",
             "commit_timestamp": 1762646002.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1762701273.080062,
+            "elapsed_time": 112.88836812973022,
+            "x64": true,
+            "actual_files_count": 1178,
+            "expected_files_count": 2323,
+            "memory_traffic": 19107.818244934082,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "d35c880a75fb31166b3e2e9f7c45bd0b3645fa44",
+            "commit_message": "INSTALL-CMAKE.md: document static option defaults more\n\nCloses #19419\n",
+            "commit_timestamp": 1762690562.0
         }
     ]
 }
