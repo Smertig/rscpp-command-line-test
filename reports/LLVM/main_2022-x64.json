@@ -34455,6 +34455,23 @@
             "commit_ref": "0367711f3f3a69f1507d59db4fb685c3d0412ec2",
             "commit_message": "[gn build] Port 8d950d27d686\n",
             "commit_timestamp": 1762699244.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1762746315.590946,
+            "elapsed_time": 2385.2395288944244,
+            "x64": true,
+            "actual_files_count": 3015,
+            "expected_files_count": 1661,
+            "memory_traffic": 487341.7480392456,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "b3d62645158cd6f463f2e1c878f6d63b9dc4b164",
+            "commit_message": "Revert \"[Github] Update PR labeller to v6.0.1 (#167246)\"\n\nThis reverts commit 10da6ab5362158c1f63e0c8eaa893c55b49dc3f4.\n\nThis also caused workflow failures.\n1. https://github.com/llvm/llvm-project/actions/runs/19218607216\n",
+            "commit_timestamp": 1762741499.0
         }
     ]
 }

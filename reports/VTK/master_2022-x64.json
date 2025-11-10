@@ -1079,6 +1079,21 @@
             "commit_ref": "f1e5c2bb7979d933406812adb63ef12be0ed3664",
             "commit_message": "VTK Nightly Date Stamp\n",
             "commit_timestamp": 1762664476.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": "vtkCommonCoreCxxTests",
+            "timestamp": 1762745571.730872,
+            "elapsed_time": 196.22392177581787,
+            "x64": true,
+            "actual_files_count": 87,
+            "expected_files_count": 68,
+            "memory_traffic": 23908.31616973877,
+            "repo_url": "https://gitlab.kitware.com/vtk/vtk.git",
+            "commit_ref": "5f5e0e87e649db5632b49ed5ef6dfbaf49c5b79b",
+            "commit_message": "Merge topic 'export-objectmanager-to-bytes'\n\n247006e5929 Add changelog for import/export bytes in object manager\nee48004b6e6 Add unit test for export/import datasets\n88ea144d98b Add ImportFromJSON method to vtkObjectManager for JSON state and blob import\n8e1ec10e346 Add ImportFromBytes method to vtkObjectManager\n8521f3709b8 Add ExportToBytes method to vtkObjectManager\nc052312c9f2 refactor vtkObjectManager::Import to use get_binary for blob values\n\nAcked-by: Kitware Robot <kwrobot@kitware.com>\nAcked-by: buildbot <buildbot@kitware.com>\nReviewed-by: Quinn Powell <quinn.powell@kitware.com>\nMerge-request: !12594\n",
+            "commit_timestamp": 1762713147.0
         }
     ]
 }

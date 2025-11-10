@@ -1109,6 +1109,21 @@
             "commit_ref": "d35c880a75fb31166b3e2e9f7c45bd0b3645fa44",
             "commit_message": "INSTALL-CMAKE.md: document static option defaults more\n\nCloses #19419\n",
             "commit_timestamp": 1762690562.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1762745966.122183,
+            "elapsed_time": 113.74961614608765,
+            "x64": true,
+            "actual_files_count": 1178,
+            "expected_files_count": 2323,
+            "memory_traffic": 19048.948432922363,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "2701ac6a4d16a62130dad05be1c484903b8545c7",
+            "commit_message": "processhelp.pm: log taskkill pid info, add debug envs, enable in CI\n\nTo debug the Windows CI fails further. Acting on the suspicions that\n`taskkill` may sometimes be applied to the wrong process.\n\n- log task info, and task child info before calling `taskkill` on a PID.\n  (on native Windows.)\n  One of the calls needs PowerShell.\n\n- add env `CURL_TEST_NO_TASKKILL` to disable using `taskkill`.\n\n- add env `CURL_TEST_NO_TASKKILL_TREE` to use `taskkill` without\n  `-t`, meaning to kill the process, but not child processes.\n\n- GHA/windows: disable `taskkill` calls, to see what happens.\n  I'll revert or tweak this in a future commit depending on results.\n\nRef: https://github.com/curl/curl/discussions/14854#discussioncomment-13062859\nRef: https://github.com/curl/curl/discussions/14854#discussioncomment-14913014\n\nCloses #19421\n",
+            "commit_timestamp": 1762736417.0
         }
     ]
 }
