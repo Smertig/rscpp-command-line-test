@@ -1124,6 +1124,21 @@
             "commit_ref": "2701ac6a4d16a62130dad05be1c484903b8545c7",
             "commit_message": "processhelp.pm: log taskkill pid info, add debug envs, enable in CI\n\nTo debug the Windows CI fails further. Acting on the suspicions that\n`taskkill` may sometimes be applied to the wrong process.\n\n- log task info, and task child info before calling `taskkill` on a PID.\n  (on native Windows.)\n  One of the calls needs PowerShell.\n\n- add env `CURL_TEST_NO_TASKKILL` to disable using `taskkill`.\n\n- add env `CURL_TEST_NO_TASKKILL_TREE` to use `taskkill` without\n  `-t`, meaning to kill the process, but not child processes.\n\n- GHA/windows: disable `taskkill` calls, to see what happens.\n  I'll revert or tweak this in a future commit depending on results.\n\nRef: https://github.com/curl/curl/discussions/14854#discussioncomment-13062859\nRef: https://github.com/curl/curl/discussions/14854#discussioncomment-14913014\n\nCloses #19421\n",
             "commit_timestamp": 1762736417.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1762787729.784234,
+            "elapsed_time": 118.29508852958679,
+            "x64": true,
+            "actual_files_count": 1178,
+            "expected_files_count": 2323,
+            "memory_traffic": 19120.40407562256,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "77be4a7ab2b5a0c633b9107fd286bda1f57e4725",
+            "commit_message": "mdlinkcheck: pass curl arguments to `open()` as list\n\nTo prevent misinterpreting quotes or other special characters.\n\nRequires Perl 5.22+ (2015-Jun-01) on Windows.\n\nRef: https://perldoc.perl.org/functions/open\n\nCloses #19437\n",
+            "commit_timestamp": 1762780895.0
         }
     ]
 }

@@ -34472,6 +34472,23 @@
             "commit_ref": "b3d62645158cd6f463f2e1c878f6d63b9dc4b164",
             "commit_message": "Revert \"[Github] Update PR labeller to v6.0.1 (#167246)\"\n\nThis reverts commit 10da6ab5362158c1f63e0c8eaa893c55b49dc3f4.\n\nThis also caused workflow failures.\n1. https://github.com/llvm/llvm-project/actions/runs/19218607216\n",
             "commit_timestamp": 1762741499.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1762788231.114995,
+            "elapsed_time": 2662.4282624721527,
+            "x64": true,
+            "actual_files_count": 3015,
+            "expected_files_count": 1661,
+            "memory_traffic": 486993.9263381958,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "71cdd40eec9a1aa055e1491cf7e45817c9b67c15",
+            "commit_message": "Allow avx512 bw masked intrinsics to be used in constexpr (#162871)\n\nAdded CONSTEXPR macro and test for the following intrinsics:\n\n-- _mm_mask_adds_epi16 _mm_maskz_adds_epi16\n-- _mm_mask_adds_epi8 _mm_maskz_adds_epi8\n-- _mm_mask_adds_epu16 _mm_maskz_adds_epu16\n-- _mm_mask_adds_epu8 _mm_maskz_adds_epu8\n-- _mm_mask_broadcastb_epi8 _mm_maskz_broadcastb_epi8\n-- _mm_mask_broadcastw_epi16 _mm_maskz_broadcastw_epi16\n-- _mm_mask_cvtepi8_epi16 _mm_maskz_cvtepi8_epi16\n-- _mm_mask_cvtepu8_epi16 _mm_maskz_cvtepu8_epi16\n-- _mm_mask_packs_epi16 _mm_maskz_packs_epi16\n-- _mm_mask_packs_epi32 _mm_maskz_packs_epi32\n-- _mm_mask_packus_epi16 _mm_maskz_packus_epi16\n-- _mm_mask_packus_epi32 _mm_maskz_packus_epi32\n-- _mm_mask_set1_epi16 _mm_maskz_set1_epi16\n-- _mm_mask_set1_epi8 _mm_maskz_set1_epi8\n-- _mm_mask_slli_epi16 _mm_mask_slli_epi16\n-- _mm_mask_subs_epi16 _mm_maskz_subs_epi16\n-- _mm_mask_subs_epi8 _mm_maskz_subs_epi8\n-- _mm_mask_subs_epu16 _mm_maskz_subs_epu16\n-- _mm_mask_subs_epu8 _mm_maskz_subs_epu8\n-- _mm_mask_unpackhi_epi16 _mm_maskz_unpackhi_epi16\n-- _mm_mask_unpackhi_epi8 _mm_maskz_unpackhi_epi8\n-- _mm_mask_unpacklo_epi16 _mm_maskz_unpacklo_epi16\n-- _mm_mask_unpacklo_epi8 _mm_maskz_unpacklo_epi8\n\n-- _mm256_mask_adds_epi16 _mm256_maskz_adds_epi16\n-- _mm256_mask_adds_epi8 _mm256_maskz_adds_epi8\n-- _mm256_mask_adds_epu16 _mm256_maskz_adds_epu16\n-- _mm256_mask_adds_epu8 _mm256_maskz_adds_epu8\n-- _mm256_mask_broadcastb_epi8 _mm256_maskz_broadcastb_epi8\n-- _mm256_mask_broadcastw_epi16 _mm256_maskz_broadcastw_epi16\n-- _mm256_mask_cvtepi8_epi16 _mm256_maskz_cvtepi8_epi16\n-- _mm256_mask_cvtepu8_epi16 _mm256_maskz_cvtepu8_epi16\n-- _mm256_mask_packs_epi16 _mm256_maskz_packs_epi16\n-- _mm256_mask_packs_epi32 _mm256_maskz_packs_epi32\n-- _mm256_mask_packus_epi16 _mm256_maskz_packus_epi16\n-- _mm256_mask_packus_epi32 _mm256_maskz_packus_epi32\n-- _mm256_mask_set1_epi16 _mm256_maskz_set1_epi16\n-- _mm256_mask_set1_epi8 _mm256_maskz_set1_epi8\n-- _mm256_mask_slli_epi16 _mm256_mask_slli_epi16\n-- _mm256_mask_subs_epi16 _mm256_maskz_subs_epi16\n-- _mm256_mask_subs_epi8 _mm256_maskz_subs_epi8\n-- _mm256_mask_subs_epu16 _mm256_maskz_subs_epu16\n-- _mm256_mask_subs_epu8 _mm256_maskz_subs_epu8\n-- _mm256_mask_unpackhi_epi16 _mm256_maskz_unpackhi_epi16\n-- _mm256_mask_unpackhi_epi8 _mm256_maskz_unpackhi_epi8\n-- _mm256_mask_unpacklo_epi16 _mm256_maskz_unpacklo_epi16\n-- _mm256_mask_unpacklo_epi8 _mm256_maskz_unpacklo_epi8\n\n-- _mm512_mask_adds_epi16 _mm512_maskz_adds_epi16\n-- _mm512_mask_adds_epi8 _mm512_maskz_adds_epi8\n-- _mm512_mask_adds_epu16 _mm512_maskz_adds_epu16\n-- _mm512_mask_adds_epu8 _mm512_maskz_adds_epu8\n-- _mm512_mask_broadcastb_epi8 _mm512_maskz_broadcastb_epi8\n-- _mm512_mask_broadcastw_epi16 _mm512_maskz_broadcastw_epi16\n-- _mm512_mask_mov_epi16 _mm512_maskz_mov_epi16\n-- _mm512_mask_mov_epi8 _mm512_maskz_mov_epi8\n-- _mm512_mask_packs_epi16 _mm512_maskz_packs_epi16\n-- _mm512_mask_packs_epi32 _mm512_maskz_packs_epi32\n-- _mm512_mask_packus_epi16 _mm512_maskz_packus_epi16\n-- _mm512_mask_packus_epi32 _mm512_maskz_packus_epi32\n-- _mm512_mask_set1_epi16 _mm512_maskz_set1_epi16\n-- _mm512_mask_set1_epi8 _mm512_maskz_set1_epi8\n-- _mm512_mask_subs_epi16 _mm512_maskz_subs_epi16\n-- _mm512_mask_subs_epi8 _mm512_maskz_subs_epi8\n-- _mm512_mask_subs_epu16 _mm512_maskz_subs_epu16\n-- _mm512_mask_subs_epu8 _mm512_maskz_subs_epu8\n-- _mm512_mask_unpackhi_epi16 _mm512_maskz_unpackhi_epi16\n-- _mm512_mask_unpackhi_epi8 _mm512_maskz_unpackhi_epi8\n-- _mm512_mask_unpacklo_epi16 _mm512_maskz_unpacklo_epi16\n-- _mm512_mask_unpacklo_epi8 _mm512_maskz_unpacklo_epi8\n\ncloses #162070",
+            "commit_timestamp": 1762787075.0
         }
     ]
 }
