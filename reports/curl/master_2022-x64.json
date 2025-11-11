@@ -1154,6 +1154,21 @@
             "commit_ref": "67ef4a34f2e11aa45f0965909d0dd542643deede",
             "commit_message": "GHA/linux: build and enable nghttp2 for Fil-C job\n\npytests after: 527 passed, 286 skipped\npytests before: 392 passed, 423 skipped\n\nruntests after: TESTDONE: 1646 tests out of 1646 reported OK: 100%\nruntests before: TESTDONE: 1643 tests out of 1643 reported OK: 100%\n\nRef: b81d30ade314af7c3197dfcef2d978428b96b009 #19458\n\nCloses #19457\n",
             "commit_timestamp": 1762816547.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1762874196.274429,
+            "elapsed_time": 113.95774340629578,
+            "x64": true,
+            "actual_files_count": 1178,
+            "expected_files_count": 2323,
+            "memory_traffic": 19015.06000518799,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "c545e10fa75c04b4ded093573a0c15077937c51b",
+            "commit_message": "sftp: fix range downloads in both SSH backends\n\nWhen asking for the last N bytes of a file, and that size was larger\nthan the file size, it would miss the first byte due to a logic error.\n\nThe fixed range parser is now made a common function in the file now\nrenamed to vssh.c (from curl_path.c) - used by both backends.\n\nUnit test 2605 verifies the parser.\n\nReported-by: Stanislav Fort (Aisle Research)\nCloses #19460\n",
+            "commit_timestamp": 1762869082.0
         }
     ]
 }
