@@ -1169,6 +1169,21 @@
             "commit_ref": "c545e10fa75c04b4ded093573a0c15077937c51b",
             "commit_message": "sftp: fix range downloads in both SSH backends\n\nWhen asking for the last N bytes of a file, and that size was larger\nthan the file size, it would miss the first byte due to a logic error.\n\nThe fixed range parser is now made a common function in the file now\nrenamed to vssh.c (from curl_path.c) - used by both backends.\n\nUnit test 2605 verifies the parser.\n\nReported-by: Stanislav Fort (Aisle Research)\nCloses #19460\n",
             "commit_timestamp": 1762869082.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1762918410.301934,
+            "elapsed_time": 113.15058994293213,
+            "x64": true,
+            "actual_files_count": 1178,
+            "expected_files_count": 2323,
+            "memory_traffic": 19057.53611755371,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "4841e4290dfca768328401522f319225e819824c",
+            "commit_message": "badwords: re-sync with curl-www, fix issues found\n\nAlso:\n- replace `manpage` with `man page`, add to `badwords.txt`.\n- badwords.pl: import `-w` feature from curl-www, syncing the two\n  scripts fully.\n- badwords.txt: import missing items from curl-www, syncing the two\n  files fully.\n- pyspelling.words: drop `cURL` allowed word.\n\nCloses #19468\n",
+            "commit_timestamp": 1762905224.0
         }
     ]
 }

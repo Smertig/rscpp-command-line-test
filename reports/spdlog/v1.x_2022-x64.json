@@ -1169,6 +1169,21 @@
             "commit_ref": "88a0e07ad5bb3e2651cd5613530b3f06a15fc400",
             "commit_message": "Change access scope for ANSI target_file_ from private to protected (#3486)\n\nThis change allows for a custom minimal ANSI color sink implementation\nthat supports, for example, splitting between `stdout` and `stderr` file\nstreams depending on the log level.  An example application specific\ncustom sink that realizes this behavior would look like:\n\n```cpp\ntemplate <typename ConsoleMutex>\nclass SplitSink : public sinks::ansicolor_sink<ConsoleMutex>\n{\n    using Base = sinks::ansicolor_sink<ConsoleMutex>;\n\npublic:\n    SplitSink(color_mode mode = color_mode::automatic) : Base(stdout, mode) {}\n\n    void log(const details::log_msg &msg) override\n    {\n        if (msg.level <= SPDLOG_LEVEL_WARN) {\n            this->target_file_ = stdout;\n        } else {\n            this->target_file_ = stderr;\n        }\n        Base::log(msg);\n    }\n};\n```\n\nInspired by https://github.com/gabime/spdlog/issues/345 and\nhttps://github.com/eic/EICrecon/issues/456.  This commit aims at reusing\nall of the `ansicolor_sink` code with the exception of dynamic target\nfile selection that can be implemented in application code based on\nexample above.\n\nCo-authored-by: Fabian Wermelinger <info@0xfab.ch>",
             "commit_timestamp": 1762709908.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1762917937.360611,
+            "elapsed_time": 48.56816244125366,
+            "x64": true,
+            "actual_files_count": 108,
+            "expected_files_count": 107,
+            "memory_traffic": 3728.635711669922,
+            "repo_url": "https://github.com/gabime/spdlog.git",
+            "commit_ref": "88a0e07ad5bb3e2651cd5613530b3f06a15fc400",
+            "commit_message": "Change access scope for ANSI target_file_ from private to protected (#3486)\n\nThis change allows for a custom minimal ANSI color sink implementation\nthat supports, for example, splitting between `stdout` and `stderr` file\nstreams depending on the log level.  An example application specific\ncustom sink that realizes this behavior would look like:\n\n```cpp\ntemplate <typename ConsoleMutex>\nclass SplitSink : public sinks::ansicolor_sink<ConsoleMutex>\n{\n    using Base = sinks::ansicolor_sink<ConsoleMutex>;\n\npublic:\n    SplitSink(color_mode mode = color_mode::automatic) : Base(stdout, mode) {}\n\n    void log(const details::log_msg &msg) override\n    {\n        if (msg.level <= SPDLOG_LEVEL_WARN) {\n            this->target_file_ = stdout;\n        } else {\n            this->target_file_ = stderr;\n        }\n        Base::log(msg);\n    }\n};\n```\n\nInspired by https://github.com/gabime/spdlog/issues/345 and\nhttps://github.com/eic/EICrecon/issues/456.  This commit aims at reusing\nall of the `ansicolor_sink` code with the exception of dynamic target\nfile selection that can be implemented in application code based on\nexample above.\n\nCo-authored-by: Fabian Wermelinger <info@0xfab.ch>",
+            "commit_timestamp": 1762709908.0
         }
     ]
 }
