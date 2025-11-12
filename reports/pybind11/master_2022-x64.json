@@ -1184,6 +1184,21 @@
             "commit_ref": "3370fe14b7079df143eec4781e6e5c1d293e7eec",
             "commit_message": "Enhance: edit doc py::native_enum feature in upgrade.rst (#5885)\n\n* Enhance: edit doc py::native_enum feature in upgrade.rst\n\nAdded information about the inclusion requirement for py::native_enum feature.\n\n* [skip ci] Polish wording\n\n---------\n\nCo-authored-by: Ralf W. Grosse-Kunstleve <rgrossekunst@nvidia.com>",
             "commit_timestamp": 1762835303.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1762960009.184187,
+            "elapsed_time": 179.39973711967468,
+            "x64": true,
+            "actual_files_count": 519,
+            "expected_files_count": 197,
+            "memory_traffic": 24579.106002807617,
+            "repo_url": "https://github.com/pybind/pybind11",
+            "commit_ref": "b30e72c6f6185e87d11bfe9b092d5271f14b7851",
+            "commit_message": "Replace env.deprecated_call() with pytest.deprecated_call() (#5893)\n\nSince we already require pytest>=6 (see tests/requirements.txt), the\nold compatibility function is obsolete and pytest.deprecated_call() can\nbe used directly.\n\nExtracted from PR #5879\n\nCo-authored-by: Michael Carlstrom <rmc@carlstrom.com>\nCo-authored-by: gentlegiantJGC <gentlegiantJGC@users.noreply.github.com>",
+            "commit_timestamp": 1762918073.0
         }
     ]
 }

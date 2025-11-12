@@ -1184,6 +1184,21 @@
             "commit_ref": "96905553082a9135a56d94db58f67e32ef091cca",
             "commit_message": "[FREELDR] Remove some messages to free some code space on amd64.S (#8439)\n",
             "commit_timestamp": 1762895970.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1762960003.03005,
+            "elapsed_time": 72.37045383453369,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7346.526756286621,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "7cee8479556d058754f20c33a282ecca0f454f68",
+            "commit_message": "[CONFIGURE] Add support for MSVC 2026 (#8457)\n\nVisual Studio 2026 is now generally available, read https://devblogs.microsoft.com/visualstudio/visual-studio-2026-is-here-faster-smarter-and-a-hit-with-early-adopters/ for more information.\n\nIt seems MSVC 2026 still support setting the subsystem 5.1/5.2, although they remove the Windows 8.1 and earlier support for VCRuntime and STL in MSVC 2026.",
+            "commit_timestamp": 1762947891.0
         }
     ]
 }

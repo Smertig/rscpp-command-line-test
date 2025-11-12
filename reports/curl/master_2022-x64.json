@@ -1184,6 +1184,21 @@
             "commit_ref": "4841e4290dfca768328401522f319225e819824c",
             "commit_message": "badwords: re-sync with curl-www, fix issues found\n\nAlso:\n- replace `manpage` with `man page`, add to `badwords.txt`.\n- badwords.pl: import `-w` feature from curl-www, syncing the two\n  scripts fully.\n- badwords.txt: import missing items from curl-www, syncing the two\n  files fully.\n- pyspelling.words: drop `cURL` allowed word.\n\nCloses #19468\n",
             "commit_timestamp": 1762905224.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1762960521.311293,
+            "elapsed_time": 116.85923147201538,
+            "x64": true,
+            "actual_files_count": 1178,
+            "expected_files_count": 2323,
+            "memory_traffic": 19086.25464630127,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "2c7e1792a06b81b2bf41c9d348d374a83621340b",
+            "commit_message": "test2405: split off H2 tests to new test 2407, fix callback prototype\n\nTo untangle the different curl/server requirements of these tests.\nAlso to make this test run for non-H2 builds. Searching the cause of\nthe flakiness documented in #19481.\n\nAlso:\n- fix the callback function prototype. Detected by ASAN with this patch,\n  though the issue was pre-existing.\n  ```\n  lib/cw-out.c:211:14: runtime error: call to function emptyWriteFunc\n    through pointer to incorrect function type\n    'unsigned long (*)(char *, unsigned long, unsigned long, void *)'\n  tests/libtest/lib2405.c:72: note: emptyWriteFunc defined here\n  SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior lib/cw-out.c:211:14\n  ```\n  Ref: https://github.com/curl/curl/actions/runs/19296686908/job/55180334364?pr=19487#step:44:3768\n\nFollow-up to 96a5ce5a82eb0f08650649ffafb7bb4e51fc4444 #19481\n\nCloses #19487\n",
+            "commit_timestamp": 1762952162.0
         }
     ]
 }
