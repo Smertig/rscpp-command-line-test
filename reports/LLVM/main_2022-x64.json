@@ -34574,6 +34574,23 @@
             "commit_ref": "622d52d63bdd049abcfd359881819f1f4105f1bc",
             "commit_message": "clang: Only prevent hip driver test from running on windows (#167623)\n\n",
             "commit_timestamp": 1763002827.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1763047456.055974,
+            "elapsed_time": 2398.409405708313,
+            "x64": true,
+            "actual_files_count": 3015,
+            "expected_files_count": 1661,
+            "memory_traffic": 486649.23892974854,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "55aff64d2c6ef50d2ed725d7dd1fb34080486237",
+            "commit_message": "[PowerPC] fold i128 equality/inequality compares of two loads into a vectorized compare using vcmpequb.p when Altivec is available (#158657)\n\nThe patch add 16 bytes load size for function\nPPCTTIImpl::enableMemCmpExpansion and fold i128 equality/inequality\ncompares of two loads into a vectorized compare using vcmpequb.p when\nAltivec is available.\n\nRationale:\nA scalar i128 SETCC (eq/ne) normally lowers to multiple scalar ops. On\nVSX-capable subtargets, we can instead reinterpret the i128 loads as\nv16i8 vectors and use the Altive vcmpequb.p instruction to perform a\nfull 128-bit equality check in a single vector compare.\n\nExample Result:\nThis transformation replaces memcmp(a, b, 16) with two vector loads and\none vector compare instruction.",
+            "commit_timestamp": 1763046396.0
         }
     ]
 }

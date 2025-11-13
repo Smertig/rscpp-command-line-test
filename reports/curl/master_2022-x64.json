@@ -1214,6 +1214,21 @@
             "commit_ref": "3d42510118a9eba12a0d3cd4e23b84a1bccd9f2a",
             "commit_message": "runtests: allow `client/command` to span multiple lines, and use it\n\nSome curl command-lines are long, often repetitive, and difficult\nto read or write:\n\nBefore this patch (1 test == 1 line):\n- <=78 characters: 1099 tests\n- 79-132 characters: 500 tests\n- 133+ characters: 217 tests: patch meant to help with some of these.\n\nAfter this patch:\n- <=78 characters: 1288 lines\n- 79-132 characters: 526 lines\n- 133+ characters: 190 lines\n\nAfter this patch it's possible to fold long lines into multiple ones.\nFolding can reduce greppability, thus this is primarily useful for cases\nwhen the options are repetitive, e.g. a list of form options, headers,\nmail parameters and the like.\n\nCloses #19500\n",
             "commit_timestamp": 1762992301.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1763047143.222311,
+            "elapsed_time": 144.80371475219727,
+            "x64": true,
+            "actual_files_count": 1178,
+            "expected_files_count": 2323,
+            "memory_traffic": 19078.99845123291,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "6384e2aca0045e72d7d81c9fbdca1d284ed704b6",
+            "commit_message": "checksrc: disallow `atoi` and `atol` globally\n\nNo longer used in core and test code.\n\nAlso: allowlist in docs/examples.\n\nCloses #19508\n",
+            "commit_timestamp": 1763040505.0
         }
     ]
 }

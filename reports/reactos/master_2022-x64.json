@@ -1214,6 +1214,21 @@
             "commit_ref": "fa92d9580010070405d4b0e7abd8d387bd66f294",
             "commit_message": "[FREELDR] Use the new volume size mechanism when loading a storage volume as a RamDisk (#8423)\n\nCORE-14603\n\nThe differentiation between a regular file loaded as a RamDisk and a\nstorage device volume, is done by invoking `ArcGetFileInformation()`\nand looking at the `Information.Type` value.\n",
             "commit_timestamp": 1762969268.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1763046413.942795,
+            "elapsed_time": 74.40050745010376,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7447.863258361816,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "fa92d9580010070405d4b0e7abd8d387bd66f294",
+            "commit_message": "[FREELDR] Use the new volume size mechanism when loading a storage volume as a RamDisk (#8423)\n\nCORE-14603\n\nThe differentiation between a regular file loaded as a RamDisk and a\nstorage device volume, is done by invoking `ArcGetFileInformation()`\nand looking at the `Information.Type` value.\n",
+            "commit_timestamp": 1762969268.0
         }
     ]
 }
