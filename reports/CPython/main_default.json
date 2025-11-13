@@ -28466,6 +28466,21 @@
             "commit_ref": "88aeff8eabefdc13b6fb29edb3cde618f743a034",
             "commit_message": "gh-87710: Update mime type for ``.ai`` (#141239)\n\n",
             "commit_timestamp": 1762957321.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1763004593.162882,
+            "elapsed_time": 4210.669171333313,
+            "x64": true,
+            "actual_files_count": 1210,
+            "expected_files_count": null,
+            "memory_traffic": 56741.70362854004,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "781cc68c3c814e46e6a74c3a6a32e0f9f8f7eb11",
+            "commit_message": "gh-137109: refactor warning about threads when forking (#141438)\n\n* gh-137109: refactor warning about threads when forking\n\nThis splits the OS API specific functionality to get the number of threads out\nfrom the fallback Python method and warning raising code itself.  This way the\nOS APIs can be queried before we've run\n`os.register_at_fork(after_in_parent=...)` registered functions which\nthemselves may (re)start threads that would otherwise be detected.\n\nThis is best effort.  If the OS APIs are either unavailable or fail, the\nwarning generating code still falls back to looking at the Python threading\nstate after the CPython interpreter world has been restarted and the\nafter_in_parent calls have been made.  The common case for most Linux and macOS\nenvironments should work today.\n\nThis also lines up with the existing TODO refactoring, we may choose to expose\nthis API to get the number of OS threads in the `os` module in the future.\n\n* NEWS entry\n\n* avoid \"function-prototype\" compiler warning?",
+            "commit_timestamp": 1763000116.0
         }
     ]
 }

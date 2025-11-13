@@ -1199,6 +1199,21 @@
             "commit_ref": "2c7e1792a06b81b2bf41c9d348d374a83621340b",
             "commit_message": "test2405: split off H2 tests to new test 2407, fix callback prototype\n\nTo untangle the different curl/server requirements of these tests.\nAlso to make this test run for non-H2 builds. Searching the cause of\nthe flakiness documented in #19481.\n\nAlso:\n- fix the callback function prototype. Detected by ASAN with this patch,\n  though the issue was pre-existing.\n  ```\n  lib/cw-out.c:211:14: runtime error: call to function emptyWriteFunc\n    through pointer to incorrect function type\n    'unsigned long (*)(char *, unsigned long, unsigned long, void *)'\n  tests/libtest/lib2405.c:72: note: emptyWriteFunc defined here\n  SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior lib/cw-out.c:211:14\n  ```\n  Ref: https://github.com/curl/curl/actions/runs/19296686908/job/55180334364?pr=19487#step:44:3768\n\nFollow-up to 96a5ce5a82eb0f08650649ffafb7bb4e51fc4444 #19481\n\nCloses #19487\n",
             "commit_timestamp": 1762952162.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1763004953.849143,
+            "elapsed_time": 124.89057660102844,
+            "x64": true,
+            "actual_files_count": 1178,
+            "expected_files_count": 2323,
+            "memory_traffic": 19098.511833190918,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "3d42510118a9eba12a0d3cd4e23b84a1bccd9f2a",
+            "commit_message": "runtests: allow `client/command` to span multiple lines, and use it\n\nSome curl command-lines are long, often repetitive, and difficult\nto read or write:\n\nBefore this patch (1 test == 1 line):\n- <=78 characters: 1099 tests\n- 79-132 characters: 500 tests\n- 133+ characters: 217 tests: patch meant to help with some of these.\n\nAfter this patch:\n- <=78 characters: 1288 lines\n- 79-132 characters: 526 lines\n- 133+ characters: 190 lines\n\nAfter this patch it's possible to fold long lines into multiple ones.\nFolding can reduce greppability, thus this is primarily useful for cases\nwhen the options are repetitive, e.g. a list of form options, headers,\nmail parameters and the like.\n\nCloses #19500\n",
+            "commit_timestamp": 1762992301.0
         }
     ]
 }

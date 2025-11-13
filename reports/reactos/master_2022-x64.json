@@ -1199,6 +1199,21 @@
             "commit_ref": "7cee8479556d058754f20c33a282ecca0f454f68",
             "commit_message": "[CONFIGURE] Add support for MSVC 2026 (#8457)\n\nVisual Studio 2026 is now generally available, read https://devblogs.microsoft.com/visualstudio/visual-studio-2026-is-here-faster-smarter-and-a-hit-with-early-adopters/ for more information.\n\nIt seems MSVC 2026 still support setting the subsystem 5.1/5.2, although they remove the Windows 8.1 and earlier support for VCRuntime and STL in MSVC 2026.",
             "commit_timestamp": 1762947891.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1763004405.947716,
+            "elapsed_time": 71.41995000839233,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7371.76921081543,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "fa92d9580010070405d4b0e7abd8d387bd66f294",
+            "commit_message": "[FREELDR] Use the new volume size mechanism when loading a storage volume as a RamDisk (#8423)\n\nCORE-14603\n\nThe differentiation between a regular file loaded as a RamDisk and a\nstorage device volume, is done by invoking `ArcGetFileInformation()`\nand looking at the `Information.Type` value.\n",
+            "commit_timestamp": 1762969268.0
         }
     ]
 }
