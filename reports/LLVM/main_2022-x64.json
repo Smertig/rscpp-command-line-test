@@ -34608,6 +34608,23 @@
             "commit_ref": "182c41526a691a610da6edfb2222cd86d5593649",
             "commit_message": "AMDGPU: Remove getProperlyAlignedRC (#167993)\n\nThis is unused.",
             "commit_timestamp": 1763084260.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1763133838.123295,
+            "elapsed_time": 2566.8682537078857,
+            "x64": true,
+            "actual_files_count": 3015,
+            "expected_files_count": 1661,
+            "memory_traffic": 487285.75257110596,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "3d4156700ef2ea678c3dabf796bc8622ac0d7ecb",
+            "commit_message": "[AMDGPU][True16][CodeGen] lower flat_d16_saddr_t16 to saddr inst (#166603)\n\nIn true16 mode, D16 insts are lowered to a pseudo t16 first, and then\nlowered to hi/lo inst in MC lowering using D16T16 table.\n\nHowever, the D16T16 table selects both `flat_load_d16_t16 /\nflat_load_d16_t16_saddr` to `flat_load_d16_(hi)_b16` which is wrong.\nsaddr pseudo inst `flat_load_d16_t16_saddr` should be selected to saddr\nhi/lo inst\n\nThe global/scratch are correct while the flat seems to be the only one\nwith this issue.",
+            "commit_timestamp": 1763131625.0
         }
     ]
 }

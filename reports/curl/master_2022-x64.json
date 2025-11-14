@@ -1244,6 +1244,21 @@
             "commit_ref": "ae7b4eeade0e4903e97fe2a9bac013efc034221f",
             "commit_message": "curl_setup.h: drop stray `#undef stat` (Windows)\n\nFollow-up to 9678ff5b1bfea1c847aee4f9edf023e8f01c9293 #18776\n\nCloses #19519\n",
             "commit_timestamp": 1763081232.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1763133346.694191,
+            "elapsed_time": 113.32245588302612,
+            "x64": true,
+            "actual_files_count": 1178,
+            "expected_files_count": 2323,
+            "memory_traffic": 19034.249519348145,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "9a633ec04f3a7f5e9260ff73c08f0140fa6668de",
+            "commit_message": "connect: reshuffle Curl_timeleft_ms to avoid 'redundant condition'\n\nLine 143: \"if(duringconnect)\" would always equal true. While this is\nharmless, I believe this minor tweak makes the flow slightly more\nobvious to the reader and avoids the redundant condition.\n\nPointed out by CodeSonar\n\nCloses #19523\n",
+            "commit_timestamp": 1763129578.0
         }
     ]
 }

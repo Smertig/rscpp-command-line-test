@@ -1244,6 +1244,21 @@
             "commit_ref": "1acf18876fdbd1a4f3ff91f43cf21495af357850",
             "commit_message": "CMake: Add HTTPLIB_SHARED option, don't define BUILD_SHARED_LIBS (#2266)\n\nTo avoid surprises in the projects consuming the library, don't define\nBUILD_SHARED_LIBS option ourselves but just use its value, if provided,\nto define HTTPLIB_SHARED option which can be also set directly to\nspecify whether we should build static or shared library.\n\nCloses #2263.",
             "commit_timestamp": 1762831063.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1763132854.48284,
+            "elapsed_time": 64.79294109344482,
+            "x64": true,
+            "actual_files_count": 7,
+            "expected_files_count": 3,
+            "memory_traffic": 3619.9542388916016,
+            "repo_url": "https://github.com/yhirose/cpp-httplib",
+            "commit_ref": "1acf18876fdbd1a4f3ff91f43cf21495af357850",
+            "commit_message": "CMake: Add HTTPLIB_SHARED option, don't define BUILD_SHARED_LIBS (#2266)\n\nTo avoid surprises in the projects consuming the library, don't define\nBUILD_SHARED_LIBS option ourselves but just use its value, if provided,\nto define HTTPLIB_SHARED option which can be also set directly to\nspecify whether we should build static or shared library.\n\nCloses #2263.",
+            "commit_timestamp": 1762831063.0
         }
     ]
 }

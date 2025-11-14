@@ -1229,6 +1229,21 @@
             "commit_ref": "8ecf10e8cc19f8d2f24e612e3f04386f07f3e6b3",
             "commit_message": "Fix crash in `gil_scoped_acquire` (#5828)\n\n* Add a test reproducing the #5827 crash\n\nSigned-off-by: Rostan Tabet <rtabet@nvidia.com>\n\n* Fix #5827\n\nSigned-off-by: Rostan Tabet <rtabet@nvidia.com>\n\n* Rename PYBIND11_HAS_BARRIER and move it to common.h\n\nSigned-off-by: Rostan Tabet <rtabet@nvidia.com>\n\n* In test_thread.{cpp,py}, rename has_barrier\n\nSigned-off-by: Rostan Tabet <rtabet@nvidia.com>\n\n---------\n\nSigned-off-by: Rostan Tabet <rtabet@nvidia.com>",
             "commit_timestamp": 1763080142.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1763132818.156475,
+            "elapsed_time": 200.18071222305298,
+            "x64": true,
+            "actual_files_count": 519,
+            "expected_files_count": 197,
+            "memory_traffic": 24579.564292907715,
+            "repo_url": "https://github.com/pybind/pybind11",
+            "commit_ref": "42cda7570e658beadc036be7848b60e64c374597",
+            "commit_message": "Fix `*args/**kwargs` return types. Add type hinting to `py::make_tuple`  (#5881)\n\n* Type hint make_tuple / fix *args/**kwargs return type\n\nSigned-off-by: Michael Carlstrom <rmc@carlstrom.com>\n\n* add back commented out panic\n\n* ignore return std move clang\n\nSigned-off-by: Michael Carlstrom <rmc@carlstrom.com>\n\n* fix for mingmw\n\nSigned-off-by: Michael Carlstrom <rmc@carlstrom.com>\n\n* added missing case\n\nSigned-off-by: Michael Carlstrom <rmc@carlstrom.com>\n\n---------\n\nSigned-off-by: Michael Carlstrom <rmc@carlstrom.com>",
+            "commit_timestamp": 1763096633.0
         }
     ]
 }
