@@ -1229,6 +1229,21 @@
             "commit_ref": "fa92d9580010070405d4b0e7abd8d387bd66f294",
             "commit_message": "[FREELDR] Use the new volume size mechanism when loading a storage volume as a RamDisk (#8423)\n\nCORE-14603\n\nThe differentiation between a regular file loaded as a RamDisk and a\nstorage device volume, is done by invoking `ArcGetFileInformation()`\nand looking at the `Information.Type` value.\n",
             "commit_timestamp": 1762969268.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1763090770.850559,
+            "elapsed_time": 73.1244478225708,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7342.718994140625,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "ff87209e7cab103d9407d38fb1a2e3116232c3ae",
+            "commit_message": "[REACTOS] Delay-load the setuplib DLL and control the path it's loaded from.\n\nThe setuplib DLL, used also by the text-mode USETUP, isn't placed in the\nstandard DLL search paths list. It isn't in the \"current\" directory nor\nin the one where reactos.exe is, nor in the running OS' SystemRoot or\nSystem32 directories.\nThe DLL is instead placed in the System32 sub-directory of the ReactOS\ninstallation source. Note that this isn't a problem for USETUP, because\nit is already started from that directory.\n\nTo control its loading, delay-load the DLL and use a delay-load hook,\nfollowing the technique explained in:\n  https://stackoverflow.com/a/75325443\n  https://devblogs.microsoft.com/oldnewthing/20170126-00/?p=95265\n\nThe hook is also invoked in case of loading failure, showing a more\nuser-friendly hard-error popup and killing the installer, instead of\nthrowing a debugger exception.\n",
+            "commit_timestamp": 1763049646.0
         }
     ]
 }

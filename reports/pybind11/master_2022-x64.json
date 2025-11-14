@@ -1214,6 +1214,21 @@
             "commit_ref": "b30e72c6f6185e87d11bfe9b092d5271f14b7851",
             "commit_message": "Replace env.deprecated_call() with pytest.deprecated_call() (#5893)\n\nSince we already require pytest>=6 (see tests/requirements.txt), the\nold compatibility function is obsolete and pytest.deprecated_call() can\nbe used directly.\n\nExtracted from PR #5879\n\nCo-authored-by: Michael Carlstrom <rmc@carlstrom.com>\nCo-authored-by: gentlegiantJGC <gentlegiantJGC@users.noreply.github.com>",
             "commit_timestamp": 1762918073.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1763090754.964452,
+            "elapsed_time": 180.89179158210754,
+            "x64": true,
+            "actual_files_count": 519,
+            "expected_files_count": 197,
+            "memory_traffic": 24537.194778442383,
+            "repo_url": "https://github.com/pybind/pybind11",
+            "commit_ref": "8ecf10e8cc19f8d2f24e612e3f04386f07f3e6b3",
+            "commit_message": "Fix crash in `gil_scoped_acquire` (#5828)\n\n* Add a test reproducing the #5827 crash\n\nSigned-off-by: Rostan Tabet <rtabet@nvidia.com>\n\n* Fix #5827\n\nSigned-off-by: Rostan Tabet <rtabet@nvidia.com>\n\n* Rename PYBIND11_HAS_BARRIER and move it to common.h\n\nSigned-off-by: Rostan Tabet <rtabet@nvidia.com>\n\n* In test_thread.{cpp,py}, rename has_barrier\n\nSigned-off-by: Rostan Tabet <rtabet@nvidia.com>\n\n---------\n\nSigned-off-by: Rostan Tabet <rtabet@nvidia.com>",
+            "commit_timestamp": 1763080142.0
         }
     ]
 }

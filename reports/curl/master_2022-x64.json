@@ -1229,6 +1229,21 @@
             "commit_ref": "6384e2aca0045e72d7d81c9fbdca1d284ed704b6",
             "commit_message": "checksrc: disallow `atoi` and `atol` globally\n\nNo longer used in core and test code.\n\nAlso: allowlist in docs/examples.\n\nCloses #19508\n",
             "commit_timestamp": 1763040505.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1763091286.501068,
+            "elapsed_time": 115.67844867706299,
+            "x64": true,
+            "actual_files_count": 1178,
+            "expected_files_count": 2323,
+            "memory_traffic": 19085.790267944336,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "ae7b4eeade0e4903e97fe2a9bac013efc034221f",
+            "commit_message": "curl_setup.h: drop stray `#undef stat` (Windows)\n\nFollow-up to 9678ff5b1bfea1c847aee4f9edf023e8f01c9293 #18776\n\nCloses #19519\n",
+            "commit_timestamp": 1763081232.0
         }
     ]
 }

@@ -1229,6 +1229,21 @@
             "commit_ref": "88a0e07ad5bb3e2651cd5613530b3f06a15fc400",
             "commit_message": "Change access scope for ANSI target_file_ from private to protected (#3486)\n\nThis change allows for a custom minimal ANSI color sink implementation\nthat supports, for example, splitting between `stdout` and `stderr` file\nstreams depending on the log level.  An example application specific\ncustom sink that realizes this behavior would look like:\n\n```cpp\ntemplate <typename ConsoleMutex>\nclass SplitSink : public sinks::ansicolor_sink<ConsoleMutex>\n{\n    using Base = sinks::ansicolor_sink<ConsoleMutex>;\n\npublic:\n    SplitSink(color_mode mode = color_mode::automatic) : Base(stdout, mode) {}\n\n    void log(const details::log_msg &msg) override\n    {\n        if (msg.level <= SPDLOG_LEVEL_WARN) {\n            this->target_file_ = stdout;\n        } else {\n            this->target_file_ = stderr;\n        }\n        Base::log(msg);\n    }\n};\n```\n\nInspired by https://github.com/gabime/spdlog/issues/345 and\nhttps://github.com/eic/EICrecon/issues/456.  This commit aims at reusing\nall of the `ansicolor_sink` code with the exception of dynamic target\nfile selection that can be implemented in application code based on\nexample above.\n\nCo-authored-by: Fabian Wermelinger <info@0xfab.ch>",
             "commit_timestamp": 1762709908.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1763090743.687639,
+            "elapsed_time": 48.01901817321777,
+            "x64": true,
+            "actual_files_count": 108,
+            "expected_files_count": 107,
+            "memory_traffic": 3758.692398071289,
+            "repo_url": "https://github.com/gabime/spdlog.git",
+            "commit_ref": "cdbd64e2305a712ec9a360e5a1e05aa1dcab85e7",
+            "commit_message": "Fix sign conversion warnings in qt_sinks.h (#3487)\n\nAdd static_cast to fix compiler warnings when building with\n-Werror=sign-conversion and -Werror=shorten-64-to-32:\n\n1. Cast msg.color_range_start/end to qsizetype when passing to\n   QString::fromUtf8(), since QString expects signed qsizetype but\n   the message fields are size_t (unsigned).\n\n2. Cast msg.level to size_t when indexing into colors_ array, since\n   level_enum is a signed int but array indexing expects size_t.\n\nThese casts are safe because:\n- qsizetype is guaranteed to be the same size as size_t per Qt docs\n- color_range values come from valid string positions\n- level values are from a small enum range\n\nFixes #3321",
+            "commit_timestamp": 1763077483.0
         }
     ]
 }

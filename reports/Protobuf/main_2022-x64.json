@@ -12704,6 +12704,21 @@
             "commit_ref": "1bf47797fbe591392269c50cd83e153938450462",
             "commit_message": "[ObjC] Adapt the varint size calculation from C++\n\nThe C++ has a version that is mostly branchless and also very short, so just use\nthat.\n\nHowever, don't bother with also doing the Intel version as that won't likely\nmatter for Apple platforms for much longer.\n\nWe've seen cases where folks use clang flags to aggressively inline things and\nso this could actual shrink things depending on how many times it gets inlined\nwithin CodedOutputStream.\n\nPiperOrigin-RevId: 831826052\n",
             "commit_timestamp": 1763042820.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1763090788.981356,
+            "elapsed_time": 333.30921816825867,
+            "x64": true,
+            "actual_files_count": 1203,
+            "expected_files_count": 818,
+            "memory_traffic": 46345.95909118652,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "65579e48f6c79a9f9993c2bfa82a8f00dd1d2ae4",
+            "commit_message": "Internal change\n\nPiperOrigin-RevId: 832102149\n",
+            "commit_timestamp": 1763089891.0
         }
     ]
 }
