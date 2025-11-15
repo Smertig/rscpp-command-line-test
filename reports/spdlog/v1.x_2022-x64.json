@@ -1259,6 +1259,21 @@
             "commit_ref": "cdbd64e2305a712ec9a360e5a1e05aa1dcab85e7",
             "commit_message": "Fix sign conversion warnings in qt_sinks.h (#3487)\n\nAdd static_cast to fix compiler warnings when building with\n-Werror=sign-conversion and -Werror=shorten-64-to-32:\n\n1. Cast msg.color_range_start/end to qsizetype when passing to\n   QString::fromUtf8(), since QString expects signed qsizetype but\n   the message fields are size_t (unsigned).\n\n2. Cast msg.level to size_t when indexing into colors_ array, since\n   level_enum is a signed int but array indexing expects size_t.\n\nThese casts are safe because:\n- qsizetype is guaranteed to be the same size as size_t per Qt docs\n- color_range values come from valid string positions\n- level values are from a small enum range\n\nFixes #3321",
             "commit_timestamp": 1763077483.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1763176940.622106,
+            "elapsed_time": 47.98721528053284,
+            "x64": true,
+            "actual_files_count": 108,
+            "expected_files_count": 107,
+            "memory_traffic": 3747.7396697998047,
+            "repo_url": "https://github.com/gabime/spdlog.git",
+            "commit_ref": "cdbd64e2305a712ec9a360e5a1e05aa1dcab85e7",
+            "commit_message": "Fix sign conversion warnings in qt_sinks.h (#3487)\n\nAdd static_cast to fix compiler warnings when building with\n-Werror=sign-conversion and -Werror=shorten-64-to-32:\n\n1. Cast msg.color_range_start/end to qsizetype when passing to\n   QString::fromUtf8(), since QString expects signed qsizetype but\n   the message fields are size_t (unsigned).\n\n2. Cast msg.level to size_t when indexing into colors_ array, since\n   level_enum is a signed int but array indexing expects size_t.\n\nThese casts are safe because:\n- qsizetype is guaranteed to be the same size as size_t per Qt docs\n- color_range values come from valid string positions\n- level values are from a small enum range\n\nFixes #3321",
+            "commit_timestamp": 1763077483.0
         }
     ]
 }
