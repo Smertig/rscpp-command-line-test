@@ -12749,6 +12749,21 @@
             "commit_ref": "dc563204b980a863f0b9873153ca2fcb68214e56",
             "commit_message": "Automated rollback of commit 4af0b887a51639a94741e15e0f976a5dcf83b8fc.\n\nPiperOrigin-RevId: 832431649\n",
             "commit_timestamp": 1763155098.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1763219199.721853,
+            "elapsed_time": 331.05026626586914,
+            "x64": true,
+            "actual_files_count": 1203,
+            "expected_files_count": 818,
+            "memory_traffic": 46405.022689819336,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "dd3e82737b80d7de773b3cb733deccd9faf1374f",
+            "commit_message": "Embed annotations metadata for Kotlin proto as inline comments.\n\nAnnotations embed in a comment at the end of generated .kt file:\n\n```\n// kotlin-proto-inline-metadata: base_64_of_proto2.GeneratedCodeInfo\n```\n\nThis allows Kotlin Kythe indexer read and apply annotations.\n\nPiperOrigin-RevId: 832623059\n",
+            "commit_timestamp": 1763196533.0
         }
     ]
 }

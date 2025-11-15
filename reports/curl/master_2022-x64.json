@@ -1274,6 +1274,21 @@
             "commit_ref": "8a968095df066410f23861597c3f8a3b04239bb5",
             "commit_message": "mk-ca-bundle.pl: default to SHA256 fingerprints with `-t` option\n\nReplacing previous default: MD5.\n\nYou can use the existing `-s` option to override the default.\n\nAlso bump version to 1.30.\n\nCloses #19359\n",
             "commit_timestamp": 1763172393.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1763219672.898154,
+            "elapsed_time": 114.17658925056458,
+            "x64": true,
+            "actual_files_count": 1178,
+            "expected_files_count": 2323,
+            "memory_traffic": 19076.716400146484,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "69c89bf3d3137fcbb2b8bc57233182adcf1e2817",
+            "commit_message": "openssl: bump minimum OpenSSL version to 3.0.0\n\nIt also means that all supported OpenSSL versions and forks support\nTLSv1.3 after this patch.\n\nIt reduces `openssl.c` size by more than 10%, or 400 LOC.\n\nRef: #18822\nCloses #18330\n",
+            "commit_timestamp": 1763218591.0
         }
     ]
 }

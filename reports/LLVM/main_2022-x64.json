@@ -34642,6 +34642,23 @@
             "commit_ref": "1f3e2c6b11a1ffba503274bbb1f504adcdc65f94",
             "commit_message": "[gn] Let tablegen() add root_build_dir to include search path\n\nSee https://github.com/llvm/llvm-project/pull/167700#issuecomment-3535440851\n",
             "commit_timestamp": 1763174580.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1763220201.229507,
+            "elapsed_time": 2687.9913096427917,
+            "x64": true,
+            "actual_files_count": 3015,
+            "expected_files_count": 1661,
+            "memory_traffic": 487499.8758544922,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "8f6c7aa2b1f80afe58e2011cb457c5cb67337274",
+            "commit_message": "[X86] Remove vector length (256 vs 512) distinction of AVX10 (#167736)\n\nAs in title. AVX10.x doesn't distinguish between available vector\nlengths.\n\n-mattr=avx10.x-512 and defining of macros with _512 is kept for compatibility. \n\nBit-positions of avx10.1/2 features in compiler-rt and X86TargetParser\nare synced to match those in the gcc.",
+            "commit_timestamp": 1763218266.0
         }
     ]
 }
