@@ -34659,6 +34659,23 @@
             "commit_ref": "8f6c7aa2b1f80afe58e2011cb457c5cb67337274",
             "commit_message": "[X86] Remove vector length (256 vs 512) distinction of AVX10 (#167736)\n\nAs in title. AVX10.x doesn't distinguish between available vector\nlengths.\n\n-mattr=avx10.x-512 and defining of macros with _512 is kept for compatibility. \n\nBit-positions of avx10.1/2 features in compiler-rt and X86TargetParser\nare synced to match those in the gcc.",
             "commit_timestamp": 1763218266.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1763264872.890975,
+            "elapsed_time": 2639.074929714203,
+            "x64": true,
+            "actual_files_count": 3015,
+            "expected_files_count": 1661,
+            "memory_traffic": 487357.7294998169,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "5ed26ade0c585d2a081f23546902f64a0366de19",
+            "commit_message": "[gn build] Port 17408f70d1bf\n",
+            "commit_timestamp": 1763256487.0
         }
     ]
 }

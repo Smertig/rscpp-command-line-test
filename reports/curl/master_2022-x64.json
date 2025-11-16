@@ -1289,6 +1289,21 @@
             "commit_ref": "69c89bf3d3137fcbb2b8bc57233182adcf1e2817",
             "commit_message": "openssl: bump minimum OpenSSL version to 3.0.0\n\nIt also means that all supported OpenSSL versions and forks support\nTLSv1.3 after this patch.\n\nIt reduces `openssl.c` size by more than 10%, or 400 LOC.\n\nRef: #18822\nCloses #18330\n",
             "commit_timestamp": 1763218591.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1763264275.173992,
+            "elapsed_time": 116.68920350074768,
+            "x64": true,
+            "actual_files_count": 1178,
+            "expected_files_count": 2323,
+            "memory_traffic": 19037.480911254883,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "517a12922e8a02caf94b70877bf65328a842b87f",
+            "commit_message": "GHA/linux: add missing condition for nghttp2-filc cache step\n\nFollow-up to 67ef4a34f2e11aa45f0965909d0dd542643deede #19457\n\nCloses #19548\n",
+            "commit_timestamp": 1763250761.0
         }
     ]
 }

@@ -1274,6 +1274,21 @@
             "commit_ref": "42cda7570e658beadc036be7848b60e64c374597",
             "commit_message": "Fix `*args/**kwargs` return types. Add type hinting to `py::make_tuple`  (#5881)\n\n* Type hint make_tuple / fix *args/**kwargs return type\n\nSigned-off-by: Michael Carlstrom <rmc@carlstrom.com>\n\n* add back commented out panic\n\n* ignore return std move clang\n\nSigned-off-by: Michael Carlstrom <rmc@carlstrom.com>\n\n* fix for mingmw\n\nSigned-off-by: Michael Carlstrom <rmc@carlstrom.com>\n\n* added missing case\n\nSigned-off-by: Michael Carlstrom <rmc@carlstrom.com>\n\n---------\n\nSigned-off-by: Michael Carlstrom <rmc@carlstrom.com>",
             "commit_timestamp": 1763096633.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1763263747.423192,
+            "elapsed_time": 186.20989847183228,
+            "x64": true,
+            "actual_files_count": 519,
+            "expected_files_count": 197,
+            "memory_traffic": 24527.42269897461,
+            "repo_url": "https://github.com/pybind/pybind11",
+            "commit_ref": "af796d0a99f0cbd9aebb10591257c41a56811cf6",
+            "commit_message": "Don't allow keep_alive or call_guard on properties (#5533)\n\n* Don't allow keep_alive or call_guard on properties\n\nThe def_property family blindly ignore the keep_alive and call_guard arguments passed to them making them confusing to use.\nThis adds a static_assert if either is passed to make it clear it doesn't work.\nI would prefer this to be a compiler warning but I can't find a way to do that. Is that even possible?\n\n* style: pre-commit fixes\n\n* Re-run tests\n\n---------\n\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>",
+            "commit_timestamp": 1763225595.0
         }
     ]
 }
