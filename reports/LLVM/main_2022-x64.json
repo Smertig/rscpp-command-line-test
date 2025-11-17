@@ -34693,6 +34693,23 @@
             "commit_ref": "b8059e757fb95b1d3cd9b657e540bf2cd47dad82",
             "commit_message": "[X86] Avoid extra (PMADDUBSW(X,AND(Y)) in <X x i8> multiplication (#168262)\n\nOn SSSE3 targets we use PMADDUBSW of odd/even with suitable masking to\navoid having to extend/truncate with `<X x i16>` types and avoid\nadditional Port0/5 pressure.\n\nHowever, lower i8 elements in the pair can safely use PMULLW directly\nwithout any pre-masking as we will only use the lower i8 bits of the\nresult which is only affected by the lower i8 of the inputs.",
             "commit_timestamp": 1763304692.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1763351147.816489,
+            "elapsed_time": 2540.536907672882,
+            "x64": true,
+            "actual_files_count": 3015,
+            "expected_files_count": 1661,
+            "memory_traffic": 487742.99906921387,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "99630eb1bf752d93f31aae8f90bd3772a0566ad5",
+            "commit_message": "[NFC][Clang][Test] Drop calling convention check from address-space-conversions.cpp (#167261)\n\nCalling convention is irrelevant to address space verification and adds\ncomplixity for other target triples.",
+            "commit_timestamp": 1763341487.0
         }
     ]
 }

@@ -1289,6 +1289,21 @@
             "commit_ref": "38bcefca6dbac89b317dbbfbdcb0d543f840e7cb",
             "commit_message": "Merge topic 'increase-minimum-msvc-to-2019'\n\n9b1674a753d docs: increase minimum Microsoft Visual Studio\n\nAcked-by: Kitware Robot <kwrobot@kitware.com>\nAcked-by: buildbot <buildbot@kitware.com>\nReviewed-by: Cory Quammen <cory.quammen@kitware.com>\nMerge-request: !12612\n",
             "commit_timestamp": 1763270355.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": "vtkCommonCoreCxxTests",
+            "timestamp": 1763350295.266018,
+            "elapsed_time": 191.64191222190857,
+            "x64": true,
+            "actual_files_count": 87,
+            "expected_files_count": 68,
+            "memory_traffic": 24014.430908203125,
+            "repo_url": "https://gitlab.kitware.com/vtk/vtk.git",
+            "commit_ref": "72cc5841fa87d4db419ad28c97f3a6b14a92d14a",
+            "commit_message": "Merge topic 'fix-windows-wasm-ci'\n\ndf07d5c9e48 ci: Limit concurrent execution for wasm-windows test to 8 tests\n0d72c47c2cc ci: Set job pool link size to 1 on linux\naea14d720be Add variable to define size of job pool for wasm linking\n1e66c6c7dfc ci: increase verbosity level for test-ext jobs in linux and windows\n6c08cc14e32 ci: Increase timeout for wasm32 and wasm64 emscripten tests to 3 hours\n8d2ec6bd779 ci: Increase verbosity of ctest output for external WASM testing\nae67eb03f77 Remove unused emdawnwebgpu references\n7fd068bd978 ci: Remove unnecessary references to jinja2 and python venv\n\nAcked-by: Kitware Robot <kwrobot@kitware.com>\nAcked-by: buildbot <buildbot@kitware.com>\nMerge-request: !12605\n",
+            "commit_timestamp": 1763331387.0
         }
     ]
 }
