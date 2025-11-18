@@ -34744,6 +34744,23 @@
             "commit_ref": "0e3fba83da54ca9ff7ffa95942f39d223472e512",
             "commit_message": "[RISCV] Remove Match_InvalidXSfmmVType. NFC (#168465)\n\nIt's not reachable because the custom parser will accept or fail the\nwhole instruction.",
             "commit_timestamp": 1763435119.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1763479485.823384,
+            "elapsed_time": 2600.374960422516,
+            "x64": true,
+            "actual_files_count": 3015,
+            "expected_files_count": 1661,
+            "memory_traffic": 487566.8031234741,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "75792d60778b34f20cd350d717baeb4ec6fadbcf",
+            "commit_message": "[libc++] Fix header deprecations (#163356)\n\nCurrently, there are no diagnostics issued when including a deprecated\nheader, since the diagnostic is issued inside a system header. This\npatch fixes that by using `#warning` instead, which also simplifies the\nimplementation of the deprecation warnings.",
+            "commit_timestamp": 1763478353.0
         }
     ]
 }

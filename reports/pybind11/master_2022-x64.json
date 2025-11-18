@@ -1349,6 +1349,21 @@
             "commit_ref": "af796d0a99f0cbd9aebb10591257c41a56811cf6",
             "commit_message": "Don't allow keep_alive or call_guard on properties (#5533)\n\n* Don't allow keep_alive or call_guard on properties\n\nThe def_property family blindly ignore the keep_alive and call_guard arguments passed to them making them confusing to use.\nThis adds a static_assert if either is passed to make it clear it doesn't work.\nI would prefer this to be a compiler warning but I can't find a way to do that. Is that even possible?\n\n* style: pre-commit fixes\n\n* Re-run tests\n\n---------\n\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>",
             "commit_timestamp": 1763225595.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1763478387.416161,
+            "elapsed_time": 175.05617833137512,
+            "x64": true,
+            "actual_files_count": 519,
+            "expected_files_count": 197,
+            "memory_traffic": 24540.441329956055,
+            "repo_url": "https://github.com/pybind/pybind11",
+            "commit_ref": "af796d0a99f0cbd9aebb10591257c41a56811cf6",
+            "commit_message": "Don't allow keep_alive or call_guard on properties (#5533)\n\n* Don't allow keep_alive or call_guard on properties\n\nThe def_property family blindly ignore the keep_alive and call_guard arguments passed to them making them confusing to use.\nThis adds a static_assert if either is passed to make it clear it doesn't work.\nI would prefer this to be a compiler warning but I can't find a way to do that. Is that even possible?\n\n* style: pre-commit fixes\n\n* Re-run tests\n\n---------\n\nCo-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>",
+            "commit_timestamp": 1763225595.0
         }
     ]
 }
