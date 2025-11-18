@@ -1349,6 +1349,21 @@
             "commit_ref": "5a36dd6006a1ad4f4bf86c77771af5ef65a2969c",
             "commit_message": "[SDK] Small SDK fixes for ARM64 - Prepping for GCC work (#8458)\n\n* [SDK] add ARM64 entry to ioaccess.h\n* [SDK] Add arm64 target to win64 spec2def entry\n* [SDK] Implement NtCurrentTeb for ARM64\nCORE-18200\n\nCo-authored-by: Laura Konopinska <alula@tuta.io>\nCo-authored-by: Herm\u00e8s B\u00c9LUSCA - MA\u00cfTO <hermes.belusca-maito@reactos.org>",
             "commit_timestamp": 1763387273.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1763436354.270307,
+            "elapsed_time": 76.4711639881134,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7447.421714782715,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "c2a0cf1bfa27cee976120c7882a939771c9a6be5",
+            "commit_message": "[CRT] Fix Visual C++ MSDEV hang by fixing _ismbcspace (#8466)\n\nCORE-19396\n\nChange function _ismbcspace to match Microsoft's description.\n",
+            "commit_timestamp": 1763417813.0
         }
     ]
 }

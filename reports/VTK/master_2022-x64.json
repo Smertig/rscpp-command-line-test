@@ -1319,6 +1319,21 @@
             "commit_ref": "43a9fec7e39fbd827087aea6eeddb86e51c7238e",
             "commit_message": "Merge topic 'xml-reader-null-check'\n\nf75a0e2ccf7 Add test for null pointer check in xml reader\nf73196614ab Add null pointer check in xml reader\n\nAcked-by: Kitware Robot <kwrobot@kitware.com>\nAcked-by: buildbot <buildbot@kitware.com>\nReviewed-by: Nicolas Vuaille <nicolas.vuaille@kitware.com>\nReviewed-by: Mathieu Westphal (Kitware) <mathieu.westphal@kitware.com>\nMerge-request: !12589\n",
             "commit_timestamp": 1763377646.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": "vtkCommonCoreCxxTests",
+            "timestamp": 1763436546.213051,
+            "elapsed_time": 194.03249549865723,
+            "x64": true,
+            "actual_files_count": 87,
+            "expected_files_count": 68,
+            "memory_traffic": 23959.910278320312,
+            "repo_url": "https://gitlab.kitware.com/vtk/vtk.git",
+            "commit_ref": "9fd4d175fa3502fd7ac950dde3929380b3ee02aa",
+            "commit_message": "Merge topic 'polyhedron-repeated-vertices'\n\n0bd140fc990 Deprecate `vtkCellValidator::NoIntersectingFaces()`.\n6ef58d6c3e6 Add auto-tolerance computation for polyhedron validity.\nb4f6936e32a Fix a typo.\na4aaf93b570 Have cell-validator report extra coincident vertices\u2026\n7bd0b70753b Add `vtkCellStatus::CoincidentPoints`\u2026\nc969a278177 vtkCellValidator: don't report coincident vertices as self-intersections.\n\nAcked-by: Kitware Robot <kwrobot@kitware.com>\nAcked-by: buildbot <buildbot@kitware.com>\nReviewed-by: Cory Quammen <cory.quammen@kitware.com>\nMerge-request: !12607\n",
+            "commit_timestamp": 1763434755.0
         }
     ]
 }

@@ -1349,6 +1349,21 @@
             "commit_ref": "d1da626502dc8b0481245e4ba6725b412fbe32d3",
             "commit_message": "Merge pull request #28023 from ismailabouzeidx:feat/estimate-translation2d-5x\n\n[3d] Port estimateTranslation2D into 5.x #28023\n\nMerge with opencv_extra PR: opencv/opencv_extra#1290\n\nThis PR ports the newly added function `estimateTranslation2D` that was merged into 4.x under this PR: opencv/opencv#27950\n\nThe implementation is now adapted to the 5.x branch and integrates cleanly with the updated refinement API.\nSpecifically, this 5.x version makes use of the improved LevMarq interface to support optional non-linear refinement of the translation parameters.\n\nFunctionality, tests, and documentation follow the same design and behavior as the original 4.x PR.\nFurther details can be found in the linked PR above.\n\n### Pull Request Readiness Checklist\n\nSee details at https://github.com/opencv/opencv/wiki/How_to_contribute#making-a-good-pull-request\n\n- [x] I agree to contribute to the project under Apache 2 License.\n- [x] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\n- [x] The PR is proposed to the proper branch\n- [ ] There is a reference to the original bug report and related work\n- [x] There is accuracy test, performance test and test data in opencv_extra repository, if applicable\n      Patch to opencv_extra has the same branch name.\n- [x] The feature is well documented and sample code can be built with the project CMake\n",
             "commit_timestamp": 1763358718.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1763436395.141728,
+            "elapsed_time": 291.3589713573456,
+            "x64": true,
+            "actual_files_count": 371,
+            "expected_files_count": 480,
+            "memory_traffic": 35362.98243713379,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "d1da626502dc8b0481245e4ba6725b412fbe32d3",
+            "commit_message": "Merge pull request #28023 from ismailabouzeidx:feat/estimate-translation2d-5x\n\n[3d] Port estimateTranslation2D into 5.x #28023\n\nMerge with opencv_extra PR: opencv/opencv_extra#1290\n\nThis PR ports the newly added function `estimateTranslation2D` that was merged into 4.x under this PR: opencv/opencv#27950\n\nThe implementation is now adapted to the 5.x branch and integrates cleanly with the updated refinement API.\nSpecifically, this 5.x version makes use of the improved LevMarq interface to support optional non-linear refinement of the translation parameters.\n\nFunctionality, tests, and documentation follow the same design and behavior as the original 4.x PR.\nFurther details can be found in the linked PR above.\n\n### Pull Request Readiness Checklist\n\nSee details at https://github.com/opencv/opencv/wiki/How_to_contribute#making-a-good-pull-request\n\n- [x] I agree to contribute to the project under Apache 2 License.\n- [x] To the best of my knowledge, the proposed patch is not based on a code under GPL or another license that is incompatible with OpenCV\n- [x] The PR is proposed to the proper branch\n- [ ] There is a reference to the original bug report and related work\n- [x] There is accuracy test, performance test and test data in opencv_extra repository, if applicable\n      Patch to opencv_extra has the same branch name.\n- [x] The feature is well documented and sample code can be built with the project CMake\n",
+            "commit_timestamp": 1763358718.0
         }
     ]
 }
