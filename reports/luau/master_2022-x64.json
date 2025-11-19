@@ -1379,6 +1379,21 @@
             "commit_ref": "7aba73849f1a6f98e1bcf77aea2fdf86e1551ab8",
             "commit_message": "Infra: Improve create release step with regex matching (#2092)\n\nBash apparently support regex with the `=~` operator, so we can have a\nmore robust check here. This will only accept version strings that are\nin the format `0.<version>` where `<version>` is a number with 3 or more\ndigits.",
             "commit_timestamp": 1763162183.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1763522718.907787,
+            "elapsed_time": 316.30407977104187,
+            "x64": true,
+            "actual_files_count": 515,
+            "expected_files_count": 379,
+            "memory_traffic": 41880.84509277344,
+            "repo_url": "https://github.com/luau-lang/luau",
+            "commit_ref": "87133b6e6d6ea9828daa10b23db3473d79c542f9",
+            "commit_message": "Explicit type instantiations (`f<<T>>`) (#1980)\n\nThis adds in support for [Explicit type parameter\ninstantiation](https://rfcs.luau.org/explicit-type-parameter-instantiation.html).\n\nThis PR is still a work in progress, but some important notes:\n\n1. Metatables with `__call` are **not** supported. While `t<<A>>()` is\nobvious what it should do with `__call`, it's not obvious what `t<<A>>`\non its own would be.\n2. Intersection types are not supported at the moment either.\n\nBoth of these are possible to bring later.",
+            "commit_timestamp": 1763503463.0
         }
     ]
 }

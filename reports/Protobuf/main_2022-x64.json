@@ -12854,6 +12854,21 @@
             "commit_ref": "9fee97d609697c4f856dfeb60bee7e78ba21219c",
             "commit_message": "remove unnecessary clone() calls reported by Clippy\n\nPiperOrigin-RevId: 833544901\n",
             "commit_timestamp": 1763426234.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1763522745.366746,
+            "elapsed_time": 328.1511869430542,
+            "x64": true,
+            "actual_files_count": 1208,
+            "expected_files_count": 818,
+            "memory_traffic": 46295.84199523926,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "ea940efd2c20e4e8b6509153a703175a51e66749",
+            "commit_message": "Embed annotations metadata for Kotlin proto as inline comments.\n\nAnnotations embed in a comment at the end of generated .kt file:\n\n```\n// kotlin-proto-inline-metadata: base_64_of_proto2.GeneratedCodeInfo\n```\n\nThis allows Kotlin Kythe indexer read and apply annotations.\n\nPiperOrigin-RevId: 834031245\n",
+            "commit_timestamp": 1763515265.0
         }
     ]
 }
