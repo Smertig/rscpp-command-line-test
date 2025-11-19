@@ -1394,6 +1394,21 @@
             "commit_ref": "8bb8984e9d5882a9b3f92717441a9ab92f33ace5",
             "commit_message": "curl_setup.h: document more funcs flagged by `_CRT_SECURE_NO_WARNINGS`\n\nBased on these logs (non-Unicode, Unicode Schannel):\nhttps://github.com/curl/curl/actions/runs/19446115443/job/55640968722?pr=19175\nhttps://github.com/curl/curl/actions/runs/19446115443/job/55640968764?pr=19175\n\nFollow-up to 5fa2d8320c4196435c1d554b06dfdcca73824dec #19175\n\nCloses #19597\n",
             "commit_timestamp": 1763513300.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1763565324.754996,
+            "elapsed_time": 116.99270844459534,
+            "x64": true,
+            "actual_files_count": 1178,
+            "expected_files_count": 2323,
+            "memory_traffic": 19103.466018676758,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "47b8e1dbd3ad27d246409402081dcd554d4e13d7",
+            "commit_message": "tidy-up: move `CURL_UNCONST()` out from macro `curl_unicodefree()`\n\nTo stop applying it where not needed (most uses) and make it visible\nwhere it's actually used (5 uses).\n\nFollow-up to f4e23950c7b1c389cf0dde8b91353d85b8361b64 #16142\n\nCloses #19606\n",
+            "commit_timestamp": 1763563701.0
         }
     ]
 }

@@ -1364,6 +1364,21 @@
             "commit_ref": "929826806ba7346c4ae1fa133d8c7718d9a8cd36",
             "commit_message": "Merge topic 'webgpu-texture'\n\nf6505521272 fix documentation parse warning in vtkWebGPURenderTextureCache.h\nc549626d9a0 Add changelog for webgpu texturing support\n8137a972fdf Add unit test for texture scalar interpolation using webgpu\n1ac2afd1e53 Remove stray webgpu_cpp.h includes\n50a0301a65a Add basic texture support for vtkWebGPUPolyDataMapper\n7ee59822de3 webgpu: add object factory override for vtkTexture\n73b05b50c81 add vtkWebGPURenderTextureCache class to manage render textures\n5ff5d59737f webgpu: add implementation for filterable textures\n...\n\nAcked-by: Kitware Robot <kwrobot@kitware.com>\nAcked-by: buildbot <buildbot@kitware.com>\nMerge-request: !12587\n",
             "commit_timestamp": 1763515762.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": "vtkCommonCoreCxxTests",
+            "timestamp": 1763565021.943901,
+            "elapsed_time": 200.4205424785614,
+            "x64": true,
+            "actual_files_count": 87,
+            "expected_files_count": 68,
+            "memory_traffic": 23913.29207611084,
+            "repo_url": "https://gitlab.kitware.com/vtk/vtk.git",
+            "commit_ref": "2a4d53791f57440c6bf9d14231d948d211df33c4",
+            "commit_message": "Merge topic 'vao-instancing'\n\n60304dcc759 Add option to add a VBO group to VAO for instancing\n\nAcked-by: Kitware Robot <kwrobot@kitware.com>\nAcked-by: buildbot <buildbot@kitware.com>\nReviewed-by: Jaswant Panchumarti (Kitware) <jaswant.panchumarti@kitware.com>\nReviewed-by: Mathieu Westphal (Kitware) <mathieu.westphal@kitware.com>\nMerge-request: !12634\n",
+            "commit_timestamp": 1763557379.0
         }
     ]
 }

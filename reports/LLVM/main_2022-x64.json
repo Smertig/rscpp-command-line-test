@@ -34778,6 +34778,23 @@
             "commit_ref": "52a58a4193935f60df70eb45f8ec7c61f142ac3b",
             "commit_message": "[AMDGPU] Adding instruction specific features (#167809)\n\n",
             "commit_timestamp": 1763521560.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1763565998.458369,
+            "elapsed_time": 2781.180328607559,
+            "x64": true,
+            "actual_files_count": 3015,
+            "expected_files_count": 1661,
+            "memory_traffic": 487557.73892211914,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "86a82f27ee8cb7477c25561bc5697a6a6a8ff21d",
+            "commit_message": "[MLIR][Python] make sure stubs get installed with LLVM_DISTRIBUTION_COMPONENTS (#168407)\n\nFixes https://github.com/llvm/llvm-project/issues/168393. Also adds\ntop-level `MLIR_PYTHON_STUBGEN_ENABLED` CMake option.",
+            "commit_timestamp": 1763564848.0
         }
     ]
 }

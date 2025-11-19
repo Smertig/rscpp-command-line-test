@@ -12869,6 +12869,21 @@
             "commit_ref": "ea940efd2c20e4e8b6509153a703175a51e66749",
             "commit_message": "Embed annotations metadata for Kotlin proto as inline comments.\n\nAnnotations embed in a comment at the end of generated .kt file:\n\n```\n// kotlin-proto-inline-metadata: base_64_of_proto2.GeneratedCodeInfo\n```\n\nThis allows Kotlin Kythe indexer read and apply annotations.\n\nPiperOrigin-RevId: 834031245\n",
             "commit_timestamp": 1763515265.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1763564817.786224,
+            "elapsed_time": 349.5264391899109,
+            "x64": true,
+            "actual_files_count": 1208,
+            "expected_files_count": 818,
+            "memory_traffic": 46378.87717437744,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "9a98695003398ef186ca8a9c8ab0feba0595029c",
+            "commit_message": "hpb: remove unnecessary #if guards for hpb::Parse\n\nPiperOrigin-RevId: 834271064\n",
+            "commit_timestamp": 1763563644.0
         }
     ]
 }

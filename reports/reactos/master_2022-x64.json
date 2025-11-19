@@ -1394,6 +1394,21 @@
             "commit_ref": "89d5a3dbb85ffab09e0f84c7d1f24b2eddd21a0c",
             "commit_message": "[VIDEOPRT] Implement support for dynamically choosing V86 vs. X86 emulator on x86 32-bit builds (#8451)\n\nThe choice is done by looking for the presence or absence of the\n`HKLM\\System\\CurrentControlSet\\Control\\GraphicsDrivers\\DisableEmulator`\nregistry key. For more details, see:\nhttps://www.geoffchappell.com/studies/windows/km/hal/api/x86bios/call.htm\n\nBy default, use V86 in 32-bit Win2k3-compatible builds, otherwise\n(Vista+) check the presence of the registry key.\n\nThe X86 emulator routines are exported by the HAL.DLL. They are always\nexported by the non-x86 HAL. However, they may or may not be exported by\nthe x86 (32-bit) HAL: on NT 5.2 and below they are not exported, while\non NT 6.x (Vista+) they are.\n\nTherefore:\n\n- in our NT <= 5.2 x86 builds, we load the routines at runtime. If they\n  aren't found, we fail emulator support initialization and fall back to\n  VDM V86 support.\n\n- in our NT 6.x (x86 or not) builds, we always directly link with the HAL\n  routines, since they are guaranteed to be present there.\n",
             "commit_timestamp": 1763481686.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1763564798.108988,
+            "elapsed_time": 77.06982088088989,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7488.308746337891,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "1b89086baed3cd118018b8dd837d00ccd5d024ca",
+            "commit_message": "[HALX86] Re-enable HalpBiosDisplayReset() for x64: it actually supports display reset (#5513)\n\nCORE-18185\nAddendum to commit 215148267e7bad7\n\nEverything that's needed (the x86 emulator with x86BiosCall) is implemented.\nFixes screen cleaning when bootvid takes over the VGA display.\n",
+            "commit_timestamp": 1763562739.0
         }
     ]
 }

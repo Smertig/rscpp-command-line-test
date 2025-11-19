@@ -28661,6 +28661,21 @@
             "commit_ref": "7b0b70867586ef7109de60ccce94d13164dbb776",
             "commit_message": "gh-141692: Add a slice-specific lib folder to iOS XCframeworks. (#141693)\n\nModifies the iOS XCframework to include a lib folder for each slice that\ncontains a symlinked version of the libPython dynamic library.",
             "commit_timestamp": 1763516931.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1763564995.50781,
+            "elapsed_time": 3572.829397201538,
+            "x64": true,
+            "actual_files_count": 1210,
+            "expected_files_count": null,
+            "memory_traffic": 56621.316955566406,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "b3b63e8d6d296b879fddb5998b50f8c3842ca71c",
+            "commit_message": "gh-138072: Small clarifications and phrasing improvements to asyncio HOWTO (#138073)\n\n* - Small clarifications and phrasing improvements\n\n* nit\n\n* Apply suggestions from code review\n\nCo-authored-by: Peter Bierma <zintensitydev@gmail.com>\n\n* clarify event loops when multi threading.\n\n* nit\n\n* Update Doc/howto/a-conceptual-overview-of-asyncio.rst\n\nCo-authored-by: Peter Bierma <zintensitydev@gmail.com>\n\n* nit\n\n* nit\n\n* phrasing for threads & event loops.\n\n* revert changes to event-loop/thread discussion.\n\n* sentence case consistencty.\n\n* slight re-arrange.\n\n* Sentence case consistency.\n\n* tweak language. non-negligible\n\n---------\n\nCo-authored-by: Peter Bierma <zintensitydev@gmail.com>",
+            "commit_timestamp": 1763561763.0
         }
     ]
 }
