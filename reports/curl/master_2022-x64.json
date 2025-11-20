@@ -1409,6 +1409,21 @@
             "commit_ref": "47b8e1dbd3ad27d246409402081dcd554d4e13d7",
             "commit_message": "tidy-up: move `CURL_UNCONST()` out from macro `curl_unicodefree()`\n\nTo stop applying it where not needed (most uses) and make it visible\nwhere it's actually used (5 uses).\n\nFollow-up to f4e23950c7b1c389cf0dde8b91353d85b8361b64 #16142\n\nCloses #19606\n",
             "commit_timestamp": 1763563701.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1763609596.405689,
+            "elapsed_time": 112.43432664871216,
+            "x64": true,
+            "actual_files_count": 1178,
+            "expected_files_count": 2323,
+            "memory_traffic": 19102.171684265137,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "7e8f36bf8e56e632e4f8be54b584f758e3aaa086",
+            "commit_message": "cmake: honor `CURL_DISABLE_INSTALL` and `CURL_ENABLE_EXPORT_TARGET` in lib and src\n\nBased on existing code and commit history it appears\n`CURL_DISABLE_INSTALL` means to prevent calling `install()`;\n`CURL_ENABLE_EXPORT_TARGET` means to prevent calling `export()` and\n`install()`s with `EXPORT` in them.\n\nFix them to also apply to the lib and src directories in that vain:\n- lib: honor `CURL_DISABLE_INSTALL`\n- src: honor `CURL_DISABLE_INSTALL`\n- src: honor `CURL_ENABLE_EXPORT_TARGET`\n\nhttps://cmake.org/cmake/help/v4.2/command/install.html\nhttps://cmake.org/cmake/help/v4.2/command/export.html\n\n- `CURL_DISABLE_INSTALL` follow-up to:\n  aace27b0965c10394544d1dacc9c2cb2fe0de3d3 #12287\n- `CURL_ENABLE_EXPORT_TARGET` follow-up to:\n  8698825106f7a9987ab3924128eee885278f66bb #9638\n  643ec296456ba98c536857fce3ecfd021d44d913 #7060\n\nCloses #19144\n",
+            "commit_timestamp": 1763594588.0
         }
     ]
 }
