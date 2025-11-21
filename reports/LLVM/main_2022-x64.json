@@ -34829,6 +34829,23 @@
             "commit_ref": "0b6a74ced013fcbcc7e3d072efa9af39d33b4520",
             "commit_message": "VectorCombine/AMDGPU: Cleanup a test and add a new one (#168817)\n\nThe existing, recently added test contains a whole lot of noise in the\nform of dead instructions. Also, prefer named values.\n\nThe new test isolates a separate issue with concatenating i8 vectors.",
             "commit_timestamp": 1763650754.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1763696522.886717,
+            "elapsed_time": 2730.196807861328,
+            "x64": true,
+            "actual_files_count": 3015,
+            "expected_files_count": 1661,
+            "memory_traffic": 487821.0320968628,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "bf4dc96bc15464fc4af9dde3a5a686a129abfdbd",
+            "commit_message": "[mlir][linalg] Clean up op verifiers without custom checks(NFC) (#168712)\n\nThis PR removes op verifiers that do not implement any custom\nverification logic.",
+            "commit_timestamp": 1763690720.0
         }
     ]
 }

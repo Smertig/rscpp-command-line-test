@@ -1439,6 +1439,21 @@
             "commit_ref": "7e8f36bf8e56e632e4f8be54b584f758e3aaa086",
             "commit_message": "cmake: honor `CURL_DISABLE_INSTALL` and `CURL_ENABLE_EXPORT_TARGET` in lib and src\n\nBased on existing code and commit history it appears\n`CURL_DISABLE_INSTALL` means to prevent calling `install()`;\n`CURL_ENABLE_EXPORT_TARGET` means to prevent calling `export()` and\n`install()`s with `EXPORT` in them.\n\nFix them to also apply to the lib and src directories in that vain:\n- lib: honor `CURL_DISABLE_INSTALL`\n- src: honor `CURL_DISABLE_INSTALL`\n- src: honor `CURL_ENABLE_EXPORT_TARGET`\n\nhttps://cmake.org/cmake/help/v4.2/command/install.html\nhttps://cmake.org/cmake/help/v4.2/command/export.html\n\n- `CURL_DISABLE_INSTALL` follow-up to:\n  aace27b0965c10394544d1dacc9c2cb2fe0de3d3 #12287\n- `CURL_ENABLE_EXPORT_TARGET` follow-up to:\n  8698825106f7a9987ab3924128eee885278f66bb #9638\n  643ec296456ba98c536857fce3ecfd021d44d913 #7060\n\nCloses #19144\n",
             "commit_timestamp": 1763594588.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1763695990.534894,
+            "elapsed_time": 112.04241967201233,
+            "x64": true,
+            "actual_files_count": 1178,
+            "expected_files_count": 2323,
+            "memory_traffic": 19115.074417114258,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "b4220bde0ba79486c63e60de71037df912134dfb",
+            "commit_message": "GHA/checksrc: switch xmllint job to Linux (from macOS)\n\nmacOS was chosen because xmllint comes preinstalled, saving the prereq\ninstall step. But, macOS's xmllint jobs sometimes doesn't finish in 1m\n(instead of under 1 second) and gets cancelled, causing flaky failures.\nGo with Linux and an install phase (of 15s) instead.\n\nExamples:\nhttps://github.com/curl/curl/actions/runs/19558021722/job/56004334495\n\nCloses #19634\n",
+            "commit_timestamp": 1763694087.0
         }
     ]
 }

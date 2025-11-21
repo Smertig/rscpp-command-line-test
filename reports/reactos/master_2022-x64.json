@@ -1439,6 +1439,21 @@
             "commit_ref": "46fb20d4063b0e9ad7ade8f5dc8cebf3cb469524",
             "commit_message": "[VIDEOPRT] registry.c: Minor code enhancements\n\n- Add and use `CONST_STR_SIZE/LEN` macros to get the number of bytes and\n  characters for a static const string buffer, instead of invoking e.g.\n  `wcslen()`, which may or may NOT be optimized out (e.g. MSVC debug builds).\n\n- Use `UNICODE_NULL` instead of `0`.\n\n- Transform a `DPRINT` into an `INFO_(VIDEOPRT, ...)`\n\n- Fix an x64 warning\n  `registry.c(689): warning C4267: '=': conversion from 'size_t' to 'USHORT', possible loss of data`\n",
             "commit_timestamp": 1763566675.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1763695492.292777,
+            "elapsed_time": 71.0734794139862,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7520.777328491211,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "46fb20d4063b0e9ad7ade8f5dc8cebf3cb469524",
+            "commit_message": "[VIDEOPRT] registry.c: Minor code enhancements\n\n- Add and use `CONST_STR_SIZE/LEN` macros to get the number of bytes and\n  characters for a static const string buffer, instead of invoking e.g.\n  `wcslen()`, which may or may NOT be optimized out (e.g. MSVC debug builds).\n\n- Use `UNICODE_NULL` instead of `0`.\n\n- Transform a `DPRINT` into an `INFO_(VIDEOPRT, ...)`\n\n- Fix an x64 warning\n  `registry.c(689): warning C4267: '=': conversion from 'size_t' to 'USHORT', possible loss of data`\n",
+            "commit_timestamp": 1763566675.0
         }
     ]
 }

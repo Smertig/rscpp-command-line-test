@@ -1409,6 +1409,21 @@
             "commit_ref": "2eed3168c31bcfc1b36de58ca513e7d21cec6fc7",
             "commit_message": "Merge topic 'fix-windows-wasm-ci-2'\n\n0130eaa584d ci: increase timeout for wasm windows test-ext\nb11dbf8f61f ci: add back removed comment for wasm linux config\n\nAcked-by: Kitware Robot <kwrobot@kitware.com>\nAcked-by: buildbot <buildbot@kitware.com>\nReviewed-by: Ben Boeckel <ben.boeckel@kitware.com>\nMerge-request: !12622\n",
             "commit_timestamp": 1763649948.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": "vtkCommonCoreCxxTests",
+            "timestamp": 1763695676.183201,
+            "elapsed_time": 203.88522720336914,
+            "x64": true,
+            "actual_files_count": 87,
+            "expected_files_count": 68,
+            "memory_traffic": 24105.47191619873,
+            "repo_url": "https://gitlab.kitware.com/vtk/vtk.git",
+            "commit_ref": "716105172acf099ec576759db8ef4755c4b36e5c",
+            "commit_message": "Merge topic 'lic-scalar-color-texture-map'\n\n380cfffc5d6 add missing ex-blow_5.vtm to vtk_module_test_data\n3838a9d8bb4 Support InterpolateScalarsBeforeMapping in surface LIC mappers\n897eb6207a9 add unit test for InterpolateScalarsBeforeMapping in surface LIC\na30ff24a86c remove unused headers from TestSurfaceLIC.cxx\n746181917e2 refactor surface lic CXX tests CMake to use vtk_add_test_cxx\n\nAcked-by: Kitware Robot <kwrobot@kitware.com>\nAcked-by: buildbot <buildbot@kitware.com>\nMerge-request: !12626\n",
+            "commit_timestamp": 1763680091.0
         }
     ]
 }
