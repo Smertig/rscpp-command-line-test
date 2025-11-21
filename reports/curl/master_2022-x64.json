@@ -1454,6 +1454,21 @@
             "commit_ref": "b4220bde0ba79486c63e60de71037df912134dfb",
             "commit_message": "GHA/checksrc: switch xmllint job to Linux (from macOS)\n\nmacOS was chosen because xmllint comes preinstalled, saving the prereq\ninstall step. But, macOS's xmllint jobs sometimes doesn't finish in 1m\n(instead of under 1 second) and gets cancelled, causing flaky failures.\nGo with Linux and an install phase (of 15s) instead.\n\nExamples:\nhttps://github.com/curl/curl/actions/runs/19558021722/job/56004334495\n\nCloses #19634\n",
             "commit_timestamp": 1763694087.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1763738197.69361,
+            "elapsed_time": 120.58276772499084,
+            "x64": true,
+            "actual_files_count": 1178,
+            "expected_files_count": 2323,
+            "memory_traffic": 19113.107460021973,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "a439fc0e372c3de7df3b8ae3ca7752bc3cbca826",
+            "commit_message": "GHA: update gnutls/gnutls to 3.8.11 from 3.8.10\n\nCloses #19613\n",
+            "commit_timestamp": 1763737234.0
         }
     ]
 }
