@@ -34880,6 +34880,23 @@
             "commit_ref": "b6dadc7e4d263e9983418d5362653edd4575c1b2",
             "commit_message": "Revert \"[OpenMP] Fix firstprivate pointer handling in target regions\" (#169143)\n\nReverts llvm/llvm-project#167879\n\nThis PR is causing assertions in the check-offload tests:\n\nhttps://lab.llvm.org/staging/#/builders/105\nhttps://lab.llvm.org/staging/#/builders/105/builds/37057",
             "commit_timestamp": 1763780744.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1763824958.382369,
+            "elapsed_time": 2455.671370744705,
+            "x64": true,
+            "actual_files_count": 3015,
+            "expected_files_count": 1661,
+            "memory_traffic": 486982.00355529785,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "2e424deeb6180d112323f4df955c8034eb56780c",
+            "commit_message": " [Clang][X86] VectorExprEvaluator::VisitCallExpr / InterpretBuiltin - allow VPERMILPD/S variable mask intrinsics to be used in constexpr (#168861)\n\nAllowing VPERMILPD/S intrinsics to be used in constexpr\n\nCloses #167878",
+            "commit_timestamp": 1763822270.0
         }
     ]
 }

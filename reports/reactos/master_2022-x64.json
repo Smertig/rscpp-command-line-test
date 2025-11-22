@@ -1484,6 +1484,21 @@
             "commit_ref": "b18a46e315a42175174dbef972bab40474ad790f",
             "commit_message": "[NETIO] Implement an in-kernel BSD-style networking API driver\n\nThis patch adds the NETIO.SYS driver to ReactOS. NETIO.SYS\nis part of Windows since NT6 (Vista).\n\nThe driver is not feature complete (meaning some functionality is\nunimplemented) but does its job quite good for what it originally\nwas written for (which is getting WinDRBD working on\nReactOS/Windows Server 2003 SP2).\n\nThe driver re-uses parts of the AFD.SYS driver, namely those\nfunctions that ease communitating with the transport device\ninterface (TDI). Other than that, following features are implemented\nand should work:\n\n * TCP/IP networking: connect, listen, accept, read, write\n * UDP/IP networking: write\n\nSo in a nutshell TCP/IP support is completed, UDP support is\npartially complete and ICMP support does not exist yet.\nIn particular the listen/accept mechanism allows one to write\nkernel side TCP servers that one can connect to via the internet.\n\nThe netio driver is licensed under the MIT license, see the file\nnetio.c for more details.\n\nHave fun with it :)\n\nSigned-off-by: Johannes Khoshnazar-Thoma <johannes@johannesthoma.com>\n",
             "commit_timestamp": 1763752083.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1763823945.980909,
+            "elapsed_time": 76.2432370185852,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7510.739944458008,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "b18a46e315a42175174dbef972bab40474ad790f",
+            "commit_message": "[NETIO] Implement an in-kernel BSD-style networking API driver\n\nThis patch adds the NETIO.SYS driver to ReactOS. NETIO.SYS\nis part of Windows since NT6 (Vista).\n\nThe driver is not feature complete (meaning some functionality is\nunimplemented) but does its job quite good for what it originally\nwas written for (which is getting WinDRBD working on\nReactOS/Windows Server 2003 SP2).\n\nThe driver re-uses parts of the AFD.SYS driver, namely those\nfunctions that ease communitating with the transport device\ninterface (TDI). Other than that, following features are implemented\nand should work:\n\n * TCP/IP networking: connect, listen, accept, read, write\n * UDP/IP networking: write\n\nSo in a nutshell TCP/IP support is completed, UDP support is\npartially complete and ICMP support does not exist yet.\nIn particular the listen/accept mechanism allows one to write\nkernel side TCP servers that one can connect to via the internet.\n\nThe netio driver is licensed under the MIT license, see the file\nnetio.c for more details.\n\nHave fun with it :)\n\nSigned-off-by: Johannes Khoshnazar-Thoma <johannes@johannesthoma.com>\n",
+            "commit_timestamp": 1763752083.0
         }
     ]
 }
