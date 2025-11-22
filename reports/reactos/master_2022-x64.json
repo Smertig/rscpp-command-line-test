@@ -1469,6 +1469,21 @@
             "commit_ref": "46fb20d4063b0e9ad7ade8f5dc8cebf3cb469524",
             "commit_message": "[VIDEOPRT] registry.c: Minor code enhancements\n\n- Add and use `CONST_STR_SIZE/LEN` macros to get the number of bytes and\n  characters for a static const string buffer, instead of invoking e.g.\n  `wcslen()`, which may or may NOT be optimized out (e.g. MSVC debug builds).\n\n- Use `UNICODE_NULL` instead of `0`.\n\n- Transform a `DPRINT` into an `INFO_(VIDEOPRT, ...)`\n\n- Fix an x64 warning\n  `registry.c(689): warning C4267: '=': conversion from 'size_t' to 'USHORT', possible loss of data`\n",
             "commit_timestamp": 1763566675.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1763781700.381825,
+            "elapsed_time": 73.87016177177429,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7436.788330078125,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "b18a46e315a42175174dbef972bab40474ad790f",
+            "commit_message": "[NETIO] Implement an in-kernel BSD-style networking API driver\n\nThis patch adds the NETIO.SYS driver to ReactOS. NETIO.SYS\nis part of Windows since NT6 (Vista).\n\nThe driver is not feature complete (meaning some functionality is\nunimplemented) but does its job quite good for what it originally\nwas written for (which is getting WinDRBD working on\nReactOS/Windows Server 2003 SP2).\n\nThe driver re-uses parts of the AFD.SYS driver, namely those\nfunctions that ease communitating with the transport device\ninterface (TDI). Other than that, following features are implemented\nand should work:\n\n * TCP/IP networking: connect, listen, accept, read, write\n * UDP/IP networking: write\n\nSo in a nutshell TCP/IP support is completed, UDP support is\npartially complete and ICMP support does not exist yet.\nIn particular the listen/accept mechanism allows one to write\nkernel side TCP servers that one can connect to via the internet.\n\nThe netio driver is licensed under the MIT license, see the file\nnetio.c for more details.\n\nHave fun with it :)\n\nSigned-off-by: Johannes Khoshnazar-Thoma <johannes@johannesthoma.com>\n",
+            "commit_timestamp": 1763752083.0
         }
     ]
 }

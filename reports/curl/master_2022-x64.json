@@ -1469,6 +1469,21 @@
             "commit_ref": "a439fc0e372c3de7df3b8ae3ca7752bc3cbca826",
             "commit_message": "GHA: update gnutls/gnutls to 3.8.11 from 3.8.10\n\nCloses #19613\n",
             "commit_timestamp": 1763737234.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1763782290.6917,
+            "elapsed_time": 111.12989282608032,
+            "x64": true,
+            "actual_files_count": 1178,
+            "expected_files_count": 2323,
+            "memory_traffic": 19129.029891967773,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "905b718de3fb9287c7c0037b2737aa395f01ad3c",
+            "commit_message": "Revert \"GHA: update gnutls/gnutls to 3.8.11 from 3.8.10\"\n\nThis reverts commit a439fc0e372c3de7df3b8ae3ca7752bc3cbca826.\n\nIt requires a version of libnettle that is not included in these Ubuntu\nversions: \"Libnettle 3.10 was not found\"\n\nCloses #19642\n",
+            "commit_timestamp": 1763761179.0
         }
     ]
 }

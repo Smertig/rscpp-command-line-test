@@ -34863,6 +34863,23 @@
             "commit_ref": "77c329f54ca5cc884001e216afa47990aad27de4",
             "commit_message": "[mlir][ROCDL] Adds wmma scaled intrinsics for gfx1250 (#165915)\n\nSigned-off-by: Muzammiluddin Syed <muzasyed@amd.com>",
             "commit_timestamp": 1763737469.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1763782777.524821,
+            "elapsed_time": 2687.442276239395,
+            "x64": true,
+            "actual_files_count": 3015,
+            "expected_files_count": 1661,
+            "memory_traffic": 487774.11501312256,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "b6dadc7e4d263e9983418d5362653edd4575c1b2",
+            "commit_message": "Revert \"[OpenMP] Fix firstprivate pointer handling in target regions\" (#169143)\n\nReverts llvm/llvm-project#167879\n\nThis PR is causing assertions in the check-offload tests:\n\nhttps://lab.llvm.org/staging/#/builders/105\nhttps://lab.llvm.org/staging/#/builders/105/builds/37057",
+            "commit_timestamp": 1763780744.0
         }
     ]
 }
