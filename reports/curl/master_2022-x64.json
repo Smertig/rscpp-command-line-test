@@ -1499,6 +1499,21 @@
             "commit_ref": "7d75c728a65be961c63169fcf9f307c3324e440b",
             "commit_message": "KNOWN_RISKS: known risks when running and using curl and libcurl\n\nCloses #19631\n",
             "commit_timestamp": 1763813386.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1763869295.206781,
+            "elapsed_time": 108.11164045333862,
+            "x64": true,
+            "actual_files_count": 1178,
+            "expected_files_count": 2323,
+            "memory_traffic": 19068.499488830566,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "36b9987acbc42734b1dab0e3f96d64aba1350839",
+            "commit_message": "tool_operate: fix a case of ignoring return code in operate()\n\nIf get_args() returns error, do not overwrite the variable in the next\ncall.\n\nAlso, avoid allocating memory for the default user-agent.\n\nCloses #19650\n",
+            "commit_timestamp": 1763846561.0
         }
     ]
 }

@@ -34897,6 +34897,23 @@
             "commit_ref": "2e424deeb6180d112323f4df955c8034eb56780c",
             "commit_message": " [Clang][X86] VectorExprEvaluator::VisitCallExpr / InterpretBuiltin - allow VPERMILPD/S variable mask intrinsics to be used in constexpr (#168861)\n\nAllowing VPERMILPD/S intrinsics to be used in constexpr\n\nCloses #167878",
             "commit_timestamp": 1763822270.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1763869911.491099,
+            "elapsed_time": 2688.7158653736115,
+            "x64": true,
+            "actual_files_count": 3015,
+            "expected_files_count": 1661,
+            "memory_traffic": 487878.60202789307,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "525e68e9e9a44e88eb88ef2d6f058a482972c989",
+            "commit_message": "Don't mark lambda non-dependent if nested in a generic lambda. (#149121)\n\nFixes #118187\nFixes #156579\n\nAn instantiated `LambdaExpr` can currently be marked as\n`LDK_NeverDependent` if it's nested within a generic lambda. If that\n`LambdaExpr` in fact depends on template parameters introduced by the\nenclosing generic lambda, then its dependence will be misreported as\n\"never dependent\" and spurious diagnostics can result.\n\nThe fix here proposed is a bit ugly, but the condition that it's being\nbolted onto already seems like a bit of a hack, so this seems no worse\nfor wear.\n\nNote that #89702 surfaced this change because it caused the inner lambda\nexpression to (correctly) be considered in a constant-evaluated context.\nThe affected check for whether to mark the inner lambda as\n`LDK_NeverDependent` therefore started to apply, whereas it didn't\nbefore.\n\n**Tested**: `check-clang` and `check-cxx`.",
+            "commit_timestamp": 1763867518.0
         }
     ]
 }

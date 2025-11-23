@@ -1499,6 +1499,21 @@
             "commit_ref": "20b217246953268e1e2d68040f017ca61ced9026",
             "commit_message": "Implementation of ARC-AGI dataset loader (#3115)\n\n* Implementation of linear_ layer for neural networks. This layer provides an optimized linear transformation for multi-dimensional inputs.\n\n* Minor change\n\n* Update dlib/dnn/layers.h\n\nCo-authored-by: Copilot <175728472+Copilot@users.noreply.github.com>\n\n* Add reshape_to and flatten layers to Dlib's DNN module\n\n* Missing update to \"visitors.h\"\n\n* format fixing for reshape_to\n\n* Update dlib/test/dnn.cpp\n\n* Vocabulary size fixed for learning, and function added for transformation-free tokenization\n\n* Added a new example for learning a \u201ccomplex\u201d Transformer model.\n\n* Added a new example for learning a \u201ccomplex\u201d Transformer model.\n\n* Updated example for training a Transformer model.\n\n* fix for gcc/ffmpeg compilation\n\n* Fix a warning message for Ubuntu compilation.\n\n* Update for Linux environment.\n\n* Fix batch building\n\n* Slight improvement in model definition.\n\n* linear_ layer implementation improvement\n\n* finalizing the example\n\n* Fixing break condition in training method.\n\n* Fixing declaration order of variables.\n\n* bpe_tokenizer improvements.\n\n* Example updated.\n\n* bpe_tokenizer class refactoring.\n\n* Example updated.\n\n* bpe_tokenizer class updated.\n\n* Decoding part of the bpe_tokenizer updated.\n\n* Network definition update\n\n* Add Adaptive Computation Time (ACT) layer with CPU/CUDA support\n\n* Fixes\n\n* Update comments for params\n\n* Fixes and improvements\n\n* Disabling enable_depth_scaling, which obviously affects the result of test_layer\n\n* Implementation of ARC-AGI dataset loader\n\n---------\n\nCo-authored-by: Davis E. King <davis685@gmail.com>\nCo-authored-by: Copilot <175728472+Copilot@users.noreply.github.com>\nCo-authored-by: Aldric PIERRAIN <aldric.pierrain@atos.net>",
             "commit_timestamp": 1760209441.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1763868846.771065,
+            "elapsed_time": 71.26362609863281,
+            "x64": true,
+            "actual_files_count": 137,
+            "expected_files_count": null,
+            "memory_traffic": 7456.5666427612305,
+            "repo_url": "https://github.com/davisking/dlib.git",
+            "commit_ref": "23d73beb62b3673d13b60d13351d215b76c01456",
+            "commit_message": "Fix callable detection to support functools.partial and all callable objects (#3121)\n\n* Fix callable detection to support all callable objects (functools.partial, etc)\n\nFixes #2008\n\nThe old implementation checked for __code__ attribute directly, which\ndoesn't exist for callable objects like functools.partial. This caused\nan AttributeError when trying to use such objects with find_max_global\nand find_min_global functions.\n\nChanged to use Python's inspect.signature() which properly handles all\ncallable objects including:\n- Regular functions\n- Lambda functions\n- functools.partial objects\n- Class methods\n- Any object with __call__ method\n\nThe fix includes a fallback to the old __code__ method for backward\ncompatibility in case inspect.signature fails for any reason.\n\n* Update the code to loop through params.values() instead of params itself, since parameters is a dictionary-like object. The earlier code tried to access .second on the iterator, which isn\u2019t valid when working with dict values\n\nSigned-off-by: Samaresh Kumar Singh <ssam3003@gmail.com>\n\n* Fix parameter counting to exclude *args and **kwargs\n\nThe previous code was counting VAR_POSITIONAL (*args) and VAR_KEYWORD\n(**kwargs) parameters in the total count, which caused functions like\n'lambda a, b, c, *args' to be counted as having 4 parameters instead\nof 3. Now only regular parameters are counted, while still checking\nfor the presence of *args to allow variable argument functions.\n\nAlso removed test_callable_fix.py as it was causing pytest errors.\n\nSigned-off-by: Samaresh Kumar Singh <ssam3003@gmail.com>\n\n---------\n\nSigned-off-by: Samaresh Kumar Singh <ssam3003@gmail.com>",
+            "commit_timestamp": 1763825646.0
         }
     ]
 }
