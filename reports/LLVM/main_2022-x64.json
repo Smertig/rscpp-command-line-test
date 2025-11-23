@@ -34914,6 +34914,23 @@
             "commit_ref": "525e68e9e9a44e88eb88ef2d6f058a482972c989",
             "commit_message": "Don't mark lambda non-dependent if nested in a generic lambda. (#149121)\n\nFixes #118187\nFixes #156579\n\nAn instantiated `LambdaExpr` can currently be marked as\n`LDK_NeverDependent` if it's nested within a generic lambda. If that\n`LambdaExpr` in fact depends on template parameters introduced by the\nenclosing generic lambda, then its dependence will be misreported as\n\"never dependent\" and spurious diagnostics can result.\n\nThe fix here proposed is a bit ugly, but the condition that it's being\nbolted onto already seems like a bit of a hack, so this seems no worse\nfor wear.\n\nNote that #89702 surfaced this change because it caused the inner lambda\nexpression to (correctly) be considered in a constant-evaluated context.\nThe affected check for whether to mark the inner lambda as\n`LDK_NeverDependent` therefore started to apply, whereas it didn't\nbefore.\n\n**Tested**: `check-clang` and `check-cxx`.",
             "commit_timestamp": 1763867518.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1763911404.132508,
+            "elapsed_time": 2545.612046957016,
+            "x64": true,
+            "actual_files_count": 3015,
+            "expected_files_count": 1661,
+            "memory_traffic": 487838.82682800293,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "7485f34802f0ea1e00ac69499050e79692609b85",
+            "commit_message": "[X86] X86ISelDAGToDAG - don't let ADD/SUB(X,1) -> SUB/ADD(X,-1) constant fold (#169217)\n\nExtension to #168726 - ensure we peek through bitcasts to look for\nconstants (as constant folding will)\n\nDAG should have constant folded this, but we're still fighting the lack\nof proper topological sorting.\n\nFixes #169205",
+            "commit_timestamp": 1763910245.0
         }
     ]
 }
