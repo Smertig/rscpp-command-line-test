@@ -1529,6 +1529,21 @@
             "commit_ref": "74f7505974836f633c955dbce7514f12f78ddc5b",
             "commit_message": "asyn-ares: remove hostname free on OOM\n\nThe freeing of the already allocated hostname is done by\nCurl_async_shutdown(). This extra free in the RR code path made a\ndouble-free.\n\nPresumably not detected because the CI torture tests don't run HTTPS-RR\nenabled?\n\nFollow-up to 8d0bfe74fb\nCloses #19658\n",
             "commit_timestamp": 1763907234.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1763955754.810559,
+            "elapsed_time": 122.32415533065796,
+            "x64": true,
+            "actual_files_count": 1178,
+            "expected_files_count": 2323,
+            "memory_traffic": 19126.657035827637,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "4d04a0301629d1d37476e312202c0c62b5db309e",
+            "commit_message": "GHA: update ngtcp2/nghttp3 to v1.13.0 from v1.12.0\n\nCloses #19654\n",
+            "commit_timestamp": 1763938264.0
         }
     ]
 }

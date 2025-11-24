@@ -28796,6 +28796,21 @@
             "commit_ref": "614a28b3da1c898f29c34c14f59bf2d496dbd31d",
             "commit_message": "gh-98552: Revert (unneeded, already done elsewhere) \"flush std streams in the multiprocessing forkserver before fork (#141849)\" (#141871)\n\nRevert (unneeded, already done elsewhere) \"gh-98552: flush std streams in the multiprocessing forkserver before fork (#141849)\"\n\nThis reverts commit 58badb1711e12b6e8b5240ab96cdd01b95012de7.",
             "commit_timestamp": 1763891546.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1763955408.460343,
+            "elapsed_time": 4161.921254873276,
+            "x64": true,
+            "actual_files_count": 1210,
+            "expected_files_count": null,
+            "memory_traffic": 56643.78997039795,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "425f24e4fad672c211307a9f0018c8d39c4db9de",
+            "commit_message": "gh-135335: Simplify preload regression test using __main__ (GH-138686)\n\nSimplify preload regression test using `__main__`\n\nWith the fix for gh-126631 `__main__` modules can be preloaded and the regression\ntest for gh-135335 can be simplified to just use a self-contained script rather\nthan requiring a module.\n\nNote this assumes and implicitly tests that `__main__` is preloaded by default.",
+            "commit_timestamp": 1763941035.0
         }
     ]
 }
