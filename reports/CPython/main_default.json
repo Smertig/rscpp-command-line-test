@@ -28811,6 +28811,21 @@
             "commit_ref": "425f24e4fad672c211307a9f0018c8d39c4db9de",
             "commit_message": "gh-135335: Simplify preload regression test using __main__ (GH-138686)\n\nSimplify preload regression test using `__main__`\n\nWith the fix for gh-126631 `__main__` modules can be preloaded and the regression\ntest for gh-135335 can be simplified to just use a self-contained script rather\nthan requiring a module.\n\nNote this assumes and implicitly tests that `__main__` is preloaded by default.",
             "commit_timestamp": 1763941035.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1763996973.394729,
+            "elapsed_time": 4282.873469352722,
+            "x64": true,
+            "actual_files_count": 1210,
+            "expected_files_count": null,
+            "memory_traffic": 56801.22720336914,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "fb655527d8c0740c3aa5e816e8e37eea2f68d163",
+            "commit_message": "gh-106318: Add examples for str.join() (#140315)\n\nCo-authored-by: Stan Ulbrych <89152624+StanFromIreland@users.noreply.github.com>\n",
+            "commit_timestamp": 1763996005.0
         }
     ]
 }
