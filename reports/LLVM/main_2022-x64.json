@@ -34982,6 +34982,23 @@
             "commit_ref": "c6f433e880a01a29325f4d7d2b98c84feecf2297",
             "commit_message": "[bazel][libc] Remove target compatibility restrictions for float128 (#169292)\n\nThe restrictions here aren't nearly as much about the OS as the compiler\nand architecture, but the Bazel restriction was OS-based. Everything\nseems to work well on even Arm64 macOS, and I would expect most BSDs and\nother OSes to work well with Clang's support on x86-64.\n\nThe source code here already handles detecting when there is compiler\nsupport for the type. And the users of this don't `select` or do\nanything else to conditionally include the header, so it seems better to\nnot restrict access to the header from the build system, and instead\ncontinue making the source code compatible or a no-op on relevant\nconfigurations.",
             "commit_timestamp": 1764040766.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1764084284.853984,
+            "elapsed_time": 2562.913902282715,
+            "x64": true,
+            "actual_files_count": 3015,
+            "expected_files_count": 1661,
+            "memory_traffic": 487641.6327056885,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "3564870a9fbfe49b11b47136127b6f972fbac43b",
+            "commit_message": "[RISCV] Initialize AltFmt and TWiden in the VSETVLIInfo default constructor. (#169457)\n\n",
+            "commit_timestamp": 1764083151.0
         }
     ]
 }

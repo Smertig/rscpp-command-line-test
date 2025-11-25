@@ -1559,6 +1559,21 @@
             "commit_ref": "1e7d0bafc6d25d98ec72ff419df65fda3cf147a7",
             "commit_message": "curlx/fopen: replace open CRT functions their with `_s` counterparts (Windows)\n\n- `_wopen`        -> `_wsopen_s`\n- `_open`, `open` -> `_sopen_s`\n- `_wfopen`       -> `_wfopen_s`\n- `fopen`         -> `fopen_s`\n- `_wfreopen`     -> `_wfreopen_s`\n- `freopen`       -> `freopen_s`\n\nFor better error handling and for using the CRT functions recommended\nvia warnings suppressed by `_CRT_SECURE_NO_WARNINGS`.\n\nAlso:\n- add missing `freopen_s()` prototype when building with mingw-w64 <5.\n  https://sourceforge.net/p/mingw-w64/mingw-w64/ci/a5d824654cdc57f6eac1bb581b078986f3eb6856/\n- tests/server: replace `open()` in the signal handler with `_sopen_s()`\n  on Windows.\n- tests/server: reduce scope of a checksrc exception to a single line.\n- checksrc: ban replaced functions.\n\nRefs:\nhttps://learn.microsoft.com/cpp/c-runtime-library/reference/open-wopen\nhttps://learn.microsoft.com/cpp/c-runtime-library/reference/sopen-s-wsopen-s\nhttps://learn.microsoft.com/cpp/c-runtime-library/reference/freopen-wfreopen\nhttps://learn.microsoft.com/cpp/c-runtime-library/reference/fopen-wfopen\nhttps://learn.microsoft.com/cpp/c-runtime-library/reference/fopen-s-wfopen-s\nhttps://learn.microsoft.com/cpp/c-runtime-library/reference/freopen-s-wfreopen-s\n\nCloses #19643\n",
             "commit_timestamp": 1764038662.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1764083681.35078,
+            "elapsed_time": 108.17096447944641,
+            "x64": true,
+            "actual_files_count": 1182,
+            "expected_files_count": 2323,
+            "memory_traffic": 19146.91813659668,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "2b0ca15c49e2f437741603d6de29aaa7a7928d18",
+            "commit_message": "ratelimit: remove a debug mprintf\n\nFollow-up to 24b36fdd1585ea22e5e\n\nCloses #19694\n",
+            "commit_timestamp": 1764068501.0
         }
     ]
 }

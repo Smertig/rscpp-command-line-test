@@ -28841,6 +28841,21 @@
             "commit_ref": "da1d468bea2283032c491b894d3b38b2115ceb70",
             "commit_message": "gh-141781: Fix pdb.line_prefix binding (#141779)\n\n",
             "commit_timestamp": 1764038716.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1764083390.976155,
+            "elapsed_time": 3956.3276677131653,
+            "x64": true,
+            "actual_files_count": 1216,
+            "expected_files_count": null,
+            "memory_traffic": 56833.13851928711,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "202fce0dbde1da32d8abc2eb59ddfce6f6a3c9fa",
+            "commit_message": "gh-141909: Add `PyModuleDef_Slot` and earlier Py_mod_* constants to stable ABI manifest (#141910)\n\nThese were added to the limited API in 3.5.\nNot including them in `Misc/stable_abi.toml` was a bug.\n\n",
+            "commit_timestamp": 1764080209.0
         }
     ]
 }
