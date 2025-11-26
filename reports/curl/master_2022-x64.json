@@ -1589,6 +1589,21 @@
             "commit_ref": "4041eea61edd8cf66c6f85c47a430bb5774f017c",
             "commit_message": "GHA/http3-linux: build nettle manually for GnuTLS 3.8.11+\n\nGnuTLS 3.8.11 started requiring a nettle version new enough to be\nmissing from Ubuntu LTS released a year ago. To keep up testing it,\nbuild nettle from source. Besides the necessary one time effort this\nhas the downside that nettle updates now need to be done manually\na couple of times per year when renovate detects one. (if I got the\nrenovate formula correct to catch the tag format).\n\nAlso:\n- switch the local GnuTLS build to use the release tarball instead of\n  the Git repo and calling the script `bootstrap`. The script could\n  potentially download source code using the cleartext `git:` protocol.\n  It's also downloading lots of content, including a full OpenSSL repo.\n\nRef: https://github.com/gnutls/gnutls/blob/955f7a7fc223642d1ede6d55f094961cb97bfa68/NEWS#L41-L44\nFollow-up to 905b718de3fb9287c7c0037b2737aa395f01ad3c #19642\nFollow-up to a439fc0e372c3de7df3b8ae3ca7752bc3cbca826 #19613\n\nCloses #19680\n",
             "commit_timestamp": 1764119809.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1764170136.536325,
+            "elapsed_time": 115.30028247833252,
+            "x64": true,
+            "actual_files_count": 1182,
+            "expected_files_count": 2323,
+            "memory_traffic": 19140.32945251465,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "94ce87c39124d9845aa1e3ce170b9b227ddece89",
+            "commit_message": "types: remove curl_int64_t/curl_uint64_t\n\nThese types and the definitions surrounding them are no longer needed.\n\nCloses #19706\n",
+            "commit_timestamp": 1764161633.0
         }
     ]
 }

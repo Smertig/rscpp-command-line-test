@@ -35016,6 +35016,23 @@
             "commit_ref": "1ea4aa1b91553847ab155f7ed6c22d392d06b38e",
             "commit_message": "[libclc] Use __scoped_atomic_udec/uinc_wrap to implement _clc_atomic_dec/inc (#168327)\n\n",
             "commit_timestamp": 1764127367.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1764170645.401415,
+            "elapsed_time": 2599.8471570014954,
+            "x64": true,
+            "actual_files_count": 3020,
+            "expected_files_count": 1661,
+            "memory_traffic": 488870.29093933105,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "0c2701fe7fa002e1befc5f86c268a7964f96d286",
+            "commit_message": "CodeGen: Make all targets override pseudos with pointers (#159881)\n\nThis eliminates the need to have PointerLikeRegClass handling in\ncodegen.",
+            "commit_timestamp": 1764169034.0
         }
     ]
 }
