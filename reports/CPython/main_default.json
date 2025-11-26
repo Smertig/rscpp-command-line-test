@@ -28856,6 +28856,21 @@
             "commit_ref": "202fce0dbde1da32d8abc2eb59ddfce6f6a3c9fa",
             "commit_message": "gh-141909: Add `PyModuleDef_Slot` and earlier Py_mod_* constants to stable ABI manifest (#141910)\n\nThese were added to the limited API in 3.5.\nNot including them in `Misc/stable_abi.toml` was a bug.\n\n",
             "commit_timestamp": 1764080209.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1764127919.157076,
+            "elapsed_time": 4551.266413927078,
+            "x64": true,
+            "actual_files_count": 1216,
+            "expected_files_count": null,
+            "memory_traffic": 56783.045166015625,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "33efd7178e269cbd04233856261fd0aabbf35447",
+            "commit_message": "Remove ``Misc/ACKS`` check from patchcheck, documentation (#141960)\n\nCo-authored-by: Adam Turner <9087854+AA-Turner@users.noreply.github.com>\n",
+            "commit_timestamp": 1764115200.0
         }
     ]
 }

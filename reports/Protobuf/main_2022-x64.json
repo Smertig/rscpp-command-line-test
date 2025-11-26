@@ -13064,6 +13064,21 @@
             "commit_ref": "dd67a2a63d6fa044fbd7d41cf6d436f7237f4f8a",
             "commit_message": "Internal Change\n\nPiperOrigin-RevId: 836477077\n",
             "commit_timestamp": 1764046556.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1764127690.324934,
+            "elapsed_time": 330.55163526535034,
+            "x64": true,
+            "actual_files_count": 1209,
+            "expected_files_count": 818,
+            "memory_traffic": 46508.2657623291,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "35149013bfce328da702fee003fff9e69c9e3ba4",
+            "commit_message": "Add check if sun.misc.Unsafe is present but throws on use, to use the preexisting no-Unsafe paths if it does.\n\nJavaProto is already robust in the absence of sun.misc.Unsafe, and checks for its existence via reflection to use as a performance optimization.\n\nAs part of the planned removal of sun.misc.Unsafe, a future JDK will have Unsafe available but most of the methods will throw by default, which would break JavaProto. This creates an odd situation that if it was removed we wouldn't break, but the intermediate turndown state does break us. By adding a usage of one method to see if it throws an UnsupportedOperationException, we avoid breaking users if they use Protobuf in this intermediate turndown state of the API (which will become the default state in a future JDK release).\n\nIt is still TBD whether a future release of Protobuf may stop using sun.misc.Unsafe always, or if we may keep this code alive for users running old JDKs; that detail is still TBD depending on performance implications.\n\nhttps://github.com/protocolbuffers/protobuf/issues/20760\n\nPiperOrigin-RevId: 836715451\n",
+            "commit_timestamp": 1764094117.0
         }
     ]
 }
