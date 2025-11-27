@@ -28886,6 +28886,21 @@
             "commit_ref": "c359ea4c71ace06e4eeec6249660ebaecc1e8e27",
             "commit_message": "gh-141909: Correct version where Py_mod_gil was added (GH-141979)\n\n",
             "commit_timestamp": 1764168306.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1764214128.800311,
+            "elapsed_time": 4156.726545095444,
+            "x64": true,
+            "actual_files_count": 1216,
+            "expected_files_count": null,
+            "memory_traffic": 56851.33027648926,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "bc9e63dd9d2931771415cca1b0ed774471d523c0",
+            "commit_message": "gh-116738: Fix thread-safety issue in re module for free threading (gh-141923)\n\nAdded atomic operations to `scanner_begin()` and `scanner_end()` to prevent\nrace conditions on the `executing` flag in free-threaded builds. Also added\ntests for concurrent usage of the `re` module.\n\nWithout the atomic operations, `test_scanner_concurrent_access()` triggers\n`assert(self->executing)` failures, or a thread sanitizer run emits errors.",
+            "commit_timestamp": 1764189645.0
         }
     ]
 }
