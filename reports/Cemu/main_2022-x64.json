@@ -16364,6 +16364,21 @@
             "commit_ref": "5bf58c3d20aa7196042338bc0c55ef794c6d9535",
             "commit_message": "Vulkan: Added support for implementations which only expose host-visible buffers as device-local (#1737)\n\n",
             "commit_timestamp": 1764262203.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1764343723.415511,
+            "elapsed_time": 467.53132581710815,
+            "x64": true,
+            "actual_files_count": 1069,
+            "expected_files_count": 1013,
+            "memory_traffic": 77085.39338684082,
+            "repo_url": "https://github.com/cemu-project/Cemu",
+            "commit_ref": "47b8d911b960e9228fe6c29062aaa325b15e8779",
+            "commit_message": "Latte: Instance count minimum is 1\n\nPreviously we skipped drawcalls when the instance count was set to zero. But the hardware register enforces a minimum of 1.\n\nFixes black screen in \"Cubit The Hardcore Platformer Robot\" which does all it's drawcalls with an hardcoded instance count of 0.\n",
+            "commit_timestamp": 1764322492.0
         }
     ]
 }

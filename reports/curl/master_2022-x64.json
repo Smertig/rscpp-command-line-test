@@ -1649,6 +1649,21 @@
             "commit_ref": "48939a4575d5db6e875add0ccae93242f56fe581",
             "commit_message": "GHA/linux-old: add support for using custom CMake versions\n\nInstall CMake from the Kitware GitHub release archive. To allow choosing\nits version independently from the OS.\n\nSwitch to 3.7.0 (from 3.7.2) to test the earliest supported version.\nAlso tested OK with 3.18.4 and 3.7.2.\n\nThe download and install step takes 1-2 seconds.\n\nFollow-up to c9e50e9e393508c6a28c695abcf62980b3c1b023 #19737\n\nCloses #19738\n",
             "commit_timestamp": 1764295893.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1764342858.124714,
+            "elapsed_time": 112.42300939559937,
+            "x64": true,
+            "actual_files_count": 1176,
+            "expected_files_count": 2323,
+            "memory_traffic": 19140.08563232422,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "e25a3c6734458328412c55d236d3a2370593585c",
+            "commit_message": "GHA/curl-for-win: drop WINE install, do not run curl after build\n\nTo reduce to amount of Debian packages to install, which hopefully\nremoves some flakiness due to sometimes very slow Azure package\ndistro servers. Possible also making these jobs finish 20s faster.\n\nWindows from Debian | llvm               | gcc\n:------------------ | :----------------: | :----------------:\nbuild time          |  2m41s  ->  2m20s  |  3m19s  ->  2m57s\ninstalled packages  |  288    ->  142    |  247    ->  99\ndownloads           |  403 MB ->  240 MB |  297 MB -> 134 MB\ndisk space          | 2132 MB -> 1289 MB | 1582 MB -> 739 MB\n\nBefore: https://github.com/curl/curl/actions/runs/19765983026\nAfter: https://github.com/curl/curl/actions/runs/19766373960?pr=19749\n\nRef: https://github.com/curl/curl-for-win/commit/02149b7e364a1830d8fa2c947cfc713d925c186d\n\nCloses #19749\n",
+            "commit_timestamp": 1764340752.0
         }
     ]
 }

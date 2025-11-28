@@ -35084,6 +35084,23 @@
             "commit_ref": "b14291238a987675b1fb39938efc938afcab8446",
             "commit_message": "[mlir][arith] Fix `arith.cmpf` lowering with unsupported FP types (#166684)\n\nThe `arith.cmpf` lowering pattern used to generate invalid IR when an\nunsupported floating-point type was used.",
             "commit_timestamp": 1764298874.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1764343487.827125,
+            "elapsed_time": 2721.247522830963,
+            "x64": true,
+            "actual_files_count": 3020,
+            "expected_files_count": 1661,
+            "memory_traffic": 489217.2449569702,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "80e4a3f7a6c3cad5ca5c1ed259c6d6813834c13f",
+            "commit_message": "[libc] Add clock_gettime for Darwin (#167160)\n\nThis patch adds support for clock_gettime for Darwin. Darwin syscall\n'gettimeofday' is used to query the time from the system.\n\nMany headers in llvm-libc-types, namely clockid_t, struct_timespec,\nstruct_timeval, suseconds_t, time_t_32, time_t_64, are modified to\ninclude\nheader guards as Darwin has its own implementation of primitive types.",
+            "commit_timestamp": 1764341621.0
         }
     ]
 }

@@ -1664,6 +1664,21 @@
             "commit_ref": "f4436f549f5158d1a67acdbeba7fa1b27ca2363e",
             "commit_message": "[ACPICA][UDFS][BTRFS] Fix MSVC warning C4319\n\n\"warning C4319: '~': zero extending 'uint32_t' to 'uint64_t' of greater size\"\nFixes build with VS 2026.\n",
             "commit_timestamp": 1764185956.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1764342382.140276,
+            "elapsed_time": 75.55949211120605,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7627.515670776367,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "bb8c8eea4a503d3cde16aad4cef511a1a6b78a5a",
+            "commit_message": "[KERNEL32] Fix PAGE_EXECUTE_WRITECOPY section access in CreateFileMappingW\n\nWhen PAGE_EXECUTE_WRITECOPY is requested in CreateFileMappingW, give only SECTION_MAP_EXECUTE access, not SECTION_MAP_WRITE.\n",
+            "commit_timestamp": 1764320303.0
         }
     ]
 }
