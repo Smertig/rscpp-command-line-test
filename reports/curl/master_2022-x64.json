@@ -1634,6 +1634,21 @@
             "commit_ref": "56e88e7c14dd1a529f9a4f23db5f791302bba6e7",
             "commit_message": "cfilter: send uint8_t bytes\n\nChange the send parameter from `const void *` to `const uint8_t *` and\nadapt calling code. Several had already unsigned chars and were casting.\n\nCloses #19729\n",
             "commit_timestamp": 1764255801.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1764300866.312251,
+            "elapsed_time": 120.73281693458557,
+            "x64": true,
+            "actual_files_count": 1182,
+            "expected_files_count": 2323,
+            "memory_traffic": 19179.199905395508,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "48939a4575d5db6e875add0ccae93242f56fe581",
+            "commit_message": "GHA/linux-old: add support for using custom CMake versions\n\nInstall CMake from the Kitware GitHub release archive. To allow choosing\nits version independently from the OS.\n\nSwitch to 3.7.0 (from 3.7.2) to test the earliest supported version.\nAlso tested OK with 3.18.4 and 3.7.2.\n\nThe download and install step takes 1-2 seconds.\n\nFollow-up to c9e50e9e393508c6a28c695abcf62980b3c1b023 #19737\n\nCloses #19738\n",
+            "commit_timestamp": 1764295893.0
         }
     ]
 }

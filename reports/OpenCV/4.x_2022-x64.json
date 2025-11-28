@@ -1649,6 +1649,21 @@
             "commit_ref": "2cf9c68da04dd90e29304af78802000f4a0e4c01",
             "commit_message": "Merge pull request #28087 from Ghazi-raad:fix/tempfile-race-condition-19648\n\nFix tempfile race condition on Windows (issue #19648) #28087\n\nFix tempfile race condition on Windows\n\nAddresses issue #19648\n\nProblem\nThe cv::tempfile() function on Windows used GetTempFileNameA() followed by an immediate DeleteFileA() call. This created a race condition where multiple OpenCV processes running simultaneously could receive the same temporary filename, leading to name collisions.\n\nRoot Cause\nThe previous implementation:\n\nCalled GetTempFileNameA() to generate a temp filename\nImmediately deleted the file to free the name\nReturned just the filename string\nBetween steps 2 and 3, another process could call GetTempFileNameA() and receive the same filename, causing a collision.\n\nSolution\nReplaced GetTempFileNameA() with GUID-based filename generation using CoCreateGuid(), following the same approach already used in GetTempFileNameWinRT() and Microsoft's recommendations for scenarios requiring many temp files.\n\nChanges\nmodules/core/src/system.cpp:\n\nRemoved GetTempFileNameA() and DeleteFileA() calls\nAdded CoCreateGuid() to generate unique GUID-based filenames\nFormat: \"ocv{GUID}\" where GUID ensures uniqueness across processes\nBenefits\n\nEliminates race condition in multi-process scenarios\nNo file I/O overhead from creating and deleting placeholder files\nConsistent with WinRT implementation approach\nFollows Microsoft best practices\nTesting\nStandard OpenCV test suite. The change only affects Windows temp file naming and maintains the same String return type and usage pattern.",
             "commit_timestamp": 1764255462.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": "opencv_test_*",
+            "timestamp": 1764300373.804151,
+            "elapsed_time": 408.6625211238861,
+            "x64": true,
+            "actual_files_count": 485,
+            "expected_files_count": 459,
+            "memory_traffic": 44136.88790893555,
+            "repo_url": "https://github.com/opencv/opencv.git",
+            "commit_ref": "2cf9c68da04dd90e29304af78802000f4a0e4c01",
+            "commit_message": "Merge pull request #28087 from Ghazi-raad:fix/tempfile-race-condition-19648\n\nFix tempfile race condition on Windows (issue #19648) #28087\n\nFix tempfile race condition on Windows\n\nAddresses issue #19648\n\nProblem\nThe cv::tempfile() function on Windows used GetTempFileNameA() followed by an immediate DeleteFileA() call. This created a race condition where multiple OpenCV processes running simultaneously could receive the same temporary filename, leading to name collisions.\n\nRoot Cause\nThe previous implementation:\n\nCalled GetTempFileNameA() to generate a temp filename\nImmediately deleted the file to free the name\nReturned just the filename string\nBetween steps 2 and 3, another process could call GetTempFileNameA() and receive the same filename, causing a collision.\n\nSolution\nReplaced GetTempFileNameA() with GUID-based filename generation using CoCreateGuid(), following the same approach already used in GetTempFileNameWinRT() and Microsoft's recommendations for scenarios requiring many temp files.\n\nChanges\nmodules/core/src/system.cpp:\n\nRemoved GetTempFileNameA() and DeleteFileA() calls\nAdded CoCreateGuid() to generate unique GUID-based filenames\nFormat: \"ocv{GUID}\" where GUID ensures uniqueness across processes\nBenefits\n\nEliminates race condition in multi-process scenarios\nNo file I/O overhead from creating and deleting placeholder files\nConsistent with WinRT implementation approach\nFollows Microsoft best practices\nTesting\nStandard OpenCV test suite. The change only affects Windows temp file naming and maintains the same String return type and usage pattern.",
+            "commit_timestamp": 1764255462.0
         }
     ]
 }
