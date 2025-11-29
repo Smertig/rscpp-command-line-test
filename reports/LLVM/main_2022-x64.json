@@ -35101,6 +35101,23 @@
             "commit_ref": "80e4a3f7a6c3cad5ca5c1ed259c6d6813834c13f",
             "commit_message": "[libc] Add clock_gettime for Darwin (#167160)\n\nThis patch adds support for clock_gettime for Darwin. Darwin syscall\n'gettimeofday' is used to query the time from the system.\n\nMany headers in llvm-libc-types, namely clockid_t, struct_timespec,\nstruct_timeval, suseconds_t, time_t_32, time_t_64, are modified to\ninclude\nheader guards as Darwin has its own implementation of primitive types.",
             "commit_timestamp": 1764341621.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1764387793.175316,
+            "elapsed_time": 2571.7084505558014,
+            "x64": true,
+            "actual_files_count": 3020,
+            "expected_files_count": 1661,
+            "memory_traffic": 489044.2833633423,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "5dd2b06d60d3eb9b07c7513358ad8b04386f79bc",
+            "commit_message": "[clang-tidy] Fix OOB access in `FormatStringConverter` with signed chars (#169215)\n\n`FormatStringConverter::appendFormatText` incorrectly treated non-ASCII\ncharacters (e.g. UTF-8) as negative values when using signed chars. This\ncaused them to pass the `< 32` check for control characters.\n\nThe negative values were passed to `llvm::hexdigit`, resulting in an OOB\naccess and a crash.\n\nThis closes\n[#169198](https://github.com/llvm/llvm-project/issues/169198)",
+            "commit_timestamp": 1764383761.0
         }
     ]
 }

@@ -1679,6 +1679,21 @@
             "commit_ref": "bb8c8eea4a503d3cde16aad4cef511a1a6b78a5a",
             "commit_message": "[KERNEL32] Fix PAGE_EXECUTE_WRITECOPY section access in CreateFileMappingW\n\nWhen PAGE_EXECUTE_WRITECOPY is requested in CreateFileMappingW, give only SECTION_MAP_EXECUTE access, not SECTION_MAP_WRITE.\n",
             "commit_timestamp": 1764320303.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1764386718.283182,
+            "elapsed_time": 74.41234612464905,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7563.247886657715,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "17419ab4a2ff27e6e0d2d91c82990660329ff40b",
+            "commit_message": "[NDK][NTOS:PS] Add missing THREADINFOCLASS values\n",
+            "commit_timestamp": 1764364122.0
         }
     ]
 }

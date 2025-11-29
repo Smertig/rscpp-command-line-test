@@ -1664,6 +1664,21 @@
             "commit_ref": "e25a3c6734458328412c55d236d3a2370593585c",
             "commit_message": "GHA/curl-for-win: drop WINE install, do not run curl after build\n\nTo reduce to amount of Debian packages to install, which hopefully\nremoves some flakiness due to sometimes very slow Azure package\ndistro servers. Possible also making these jobs finish 20s faster.\n\nWindows from Debian | llvm               | gcc\n:------------------ | :----------------: | :----------------:\nbuild time          |  2m41s  ->  2m20s  |  3m19s  ->  2m57s\ninstalled packages  |  288    ->  142    |  247    ->  99\ndownloads           |  403 MB ->  240 MB |  297 MB -> 134 MB\ndisk space          | 2132 MB -> 1289 MB | 1582 MB -> 739 MB\n\nBefore: https://github.com/curl/curl/actions/runs/19765983026\nAfter: https://github.com/curl/curl/actions/runs/19766373960?pr=19749\n\nRef: https://github.com/curl/curl-for-win/commit/02149b7e364a1830d8fa2c947cfc713d925c186d\n\nCloses #19749\n",
             "commit_timestamp": 1764340752.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1764387231.503634,
+            "elapsed_time": 116.9991500377655,
+            "x64": true,
+            "actual_files_count": 1176,
+            "expected_files_count": 2323,
+            "memory_traffic": 19091.165313720703,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "16f073ef49f94412000218c9f6ad04e3fd7e4d01",
+            "commit_message": "cmake: define dependencies as `IMPORTED` interface targets\n\nRework the way curl's custom Find modules advertise their properties.\n\nBefore this patch, Find modules returned detected dependency properties\n(header dirs, libs, libdirs, C flags, etc.) via global variables. curl's\nmain `CMakeLists.txt` copied their values into global lists, which it\nlater applied to targets. This solution worked internally, but it was\nunsuited for the public, distributed `CURLConfig.cmake` and publishing\ncurl's Find modules with it, due to polluting the namespace of consumer\nprojects. It's also impractical to apply the many individual variables\nto every targets depending on libcurl.\n\nTo allow using Find modules in consumer projects, this patch makes them\ndefine as imported interface targets, named `CURL::<dependency>`. Then\nstore dependency information as target properties. It avoids namespace\npollution and makes the dependency information apply automatically\nto all targets using `CURL::libcurl_static`.\n\nFind modules continue to return `*_FOUND` and `*_VERSION` variables.\n\nFor dependencies detected via `pkg-config`, CMake 3.16+ is recommended.\nOlder CMake versions have a varying degree of support for\npropagating/handling library directories. This may cause issues in envs\nwhere dependencies reside in non-system locations and detected via\n`pkg-config` (e.g. macOS + Homebrew). Use `CURL_USE_PKGCONFIG=OFF`\nto fix these issues. Or upgrade to newer CMake, or link libcurl\ndynamically.\n\nAlso:\n- re-enable `pkg-config` for old cmake `find_library()` integration\n  tests.\n- make `curlinfo` build after these changes.\n- distribute local Find modules.\n- export the raw list of lib dependencies via `CURL_LIBRARIES_PRIVATE`.\n- `CURLconfig.cmake`: use curl's Find modules to detect dependencies in\n  the consumer env.\n- add custom property to target property debug function.\n- the curl build process no longer modifies `CMAKE_C_FLAGS`.\n  Follow-up to e86542038dda88dadf8959584e803895f979310c #17047\n\nRef: #14930\nRef: https://github.com/libssh2/libssh2/pull/1535\nRef: https://github.com/libssh2/libssh2/pull/1571\nRef: https://github.com/libssh2/libssh2/pull/1581\nRef: https://github.com/libssh2/libssh2/pull/1623\n\nCloses #16973\n",
+            "commit_timestamp": 1764376900.0
         }
     ]
 }
