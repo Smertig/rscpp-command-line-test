@@ -1679,6 +1679,21 @@
             "commit_ref": "16f073ef49f94412000218c9f6ad04e3fd7e4d01",
             "commit_message": "cmake: define dependencies as `IMPORTED` interface targets\n\nRework the way curl's custom Find modules advertise their properties.\n\nBefore this patch, Find modules returned detected dependency properties\n(header dirs, libs, libdirs, C flags, etc.) via global variables. curl's\nmain `CMakeLists.txt` copied their values into global lists, which it\nlater applied to targets. This solution worked internally, but it was\nunsuited for the public, distributed `CURLConfig.cmake` and publishing\ncurl's Find modules with it, due to polluting the namespace of consumer\nprojects. It's also impractical to apply the many individual variables\nto every targets depending on libcurl.\n\nTo allow using Find modules in consumer projects, this patch makes them\ndefine as imported interface targets, named `CURL::<dependency>`. Then\nstore dependency information as target properties. It avoids namespace\npollution and makes the dependency information apply automatically\nto all targets using `CURL::libcurl_static`.\n\nFind modules continue to return `*_FOUND` and `*_VERSION` variables.\n\nFor dependencies detected via `pkg-config`, CMake 3.16+ is recommended.\nOlder CMake versions have a varying degree of support for\npropagating/handling library directories. This may cause issues in envs\nwhere dependencies reside in non-system locations and detected via\n`pkg-config` (e.g. macOS + Homebrew). Use `CURL_USE_PKGCONFIG=OFF`\nto fix these issues. Or upgrade to newer CMake, or link libcurl\ndynamically.\n\nAlso:\n- re-enable `pkg-config` for old cmake `find_library()` integration\n  tests.\n- make `curlinfo` build after these changes.\n- distribute local Find modules.\n- export the raw list of lib dependencies via `CURL_LIBRARIES_PRIVATE`.\n- `CURLconfig.cmake`: use curl's Find modules to detect dependencies in\n  the consumer env.\n- add custom property to target property debug function.\n- the curl build process no longer modifies `CMAKE_C_FLAGS`.\n  Follow-up to e86542038dda88dadf8959584e803895f979310c #17047\n\nRef: #14930\nRef: https://github.com/libssh2/libssh2/pull/1535\nRef: https://github.com/libssh2/libssh2/pull/1571\nRef: https://github.com/libssh2/libssh2/pull/1581\nRef: https://github.com/libssh2/libssh2/pull/1623\n\nCloses #16973\n",
             "commit_timestamp": 1764376900.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1764429256.321715,
+            "elapsed_time": 112.39200353622437,
+            "x64": true,
+            "actual_files_count": 1176,
+            "expected_files_count": 2323,
+            "memory_traffic": 19097.52406311035,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "ed331cea80c607344a19b400ab9abf25af09dc36",
+            "commit_message": "cmake: save and restore `CMAKE_MODULE_PATH` in `curl-config.cmake`\n\nReported-by: Kai Pastor\nBug: https://github.com/curl/curl/pull/16973#discussion_r2572957270\nFollow-up to 16f073ef49f94412000218c9f6ad04e3fd7e4d01 #16973\n\nCloses #19758\n",
+            "commit_timestamp": 1764425442.0
         }
     ]
 }

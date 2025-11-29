@@ -1694,6 +1694,21 @@
             "commit_ref": "6a8dee95ae1151142fe4be94482cdfd11b7111bd",
             "commit_message": "Remove redundant feature checks on re-run of CMake config step (#2084)\n\n- On a config re-run, CMake will not check features again as it will read previously defined cache variables.\n- Logic was difficult to follow, so refactored `cxx_feature_check` for simplicity\n\nFixes https://github.com/google/benchmark/issues/2078.",
             "commit_timestamp": 1764376383.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1764428737.635624,
+            "elapsed_time": 52.35651206970215,
+            "x64": true,
+            "actual_files_count": 96,
+            "expected_files_count": 86,
+            "memory_traffic": 5212.123321533203,
+            "repo_url": "https://github.com/google/benchmark.git",
+            "commit_ref": "6a8dee95ae1151142fe4be94482cdfd11b7111bd",
+            "commit_message": "Remove redundant feature checks on re-run of CMake config step (#2084)\n\n- On a config re-run, CMake will not check features again as it will read previously defined cache variables.\n- Logic was difficult to follow, so refactored `cxx_feature_check` for simplicity\n\nFixes https://github.com/google/benchmark/issues/2078.",
+            "commit_timestamp": 1764376383.0
         }
     ]
 }
