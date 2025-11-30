@@ -35152,6 +35152,23 @@
             "commit_ref": "70970d0a5bc07f5614cfdb3c224b1ee8bbd58546",
             "commit_message": "[flang] Implement lowering for the PAUSE statement (Fixes #166821) (#167115)\n\nImplements lowering for the Fortran `PAUSE` statement.\n\n- Handles PAUSE with no operand.\n- Handles PAUSE with integer argument.\n- Handles PAUSE with character literal argument.\n- Adds a new lowering test: flang/test/Lower/pause-statement.f90.\n\nUnlike STOP, PAUSE does not unconditionally terminate control flow.\nThe lowering preserves labels and GOTOs, consistent with legacy Fortran\nbehavior.\n\nFixes: #166821\n\n---------\n\nCo-authored-by: aditya nath <adityanath5002@gmail.com>\nCo-authored-by: Eugene Epshteyn <eepshteyn@nvidia.com>",
             "commit_timestamp": 1764472034.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1764516226.265282,
+            "elapsed_time": 2573.482069015503,
+            "x64": true,
+            "actual_files_count": 3020,
+            "expected_files_count": 1661,
+            "memory_traffic": 489133.9134674072,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "0bd2f12753604cd072ae0935820ba9a23bb17ccc",
+            "commit_message": "[mlir][linalg] Restrict fill initial value type to output element type (#169567)\n\nDisallow implicit casting, which is surprising, and, IME, usually\nindicative of copy-paste errors.\n\nBecause the initial value must be a scalar, I don't expect this to\naffect any data movement.",
+            "commit_timestamp": 1764514297.0
         }
     ]
 }

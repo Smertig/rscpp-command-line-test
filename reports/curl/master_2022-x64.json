@@ -1709,6 +1709,21 @@
             "commit_ref": "c3add7130d7d81add205edbbb75fdfd1f38b3c68",
             "commit_message": "mbedtls: replace macro constant with `CURL_ARRAYSIZE()`\n\nAlso move from `int` to `size_t` for index variables.\n\nCloses #19762\n",
             "commit_timestamp": 1764458372.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1764515686.360796,
+            "elapsed_time": 115.97100281715393,
+            "x64": true,
+            "actual_files_count": 1176,
+            "expected_files_count": 2323,
+            "memory_traffic": 19106.908111572266,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "0180af248119d373b74b6906c5adac71d4b6cdfe",
+            "commit_message": "tests/data: add `%PERL` to postcheck commands where missing\n\nTo avoid potentially executing a different Perl than used by the rest\nof the build and tests.\n\nAlso to be more portable by not relying on shebang support, though these\nparticular tests require POSIX shell anyway.\n\nCloses #19767\n",
+            "commit_timestamp": 1764496910.0
         }
     ]
 }
