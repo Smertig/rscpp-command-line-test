@@ -1694,6 +1694,21 @@
             "commit_ref": "ed331cea80c607344a19b400ab9abf25af09dc36",
             "commit_message": "cmake: save and restore `CMAKE_MODULE_PATH` in `curl-config.cmake`\n\nReported-by: Kai Pastor\nBug: https://github.com/curl/curl/pull/16973#discussion_r2572957270\nFollow-up to 16f073ef49f94412000218c9f6ad04e3fd7e4d01 #16973\n\nCloses #19758\n",
             "commit_timestamp": 1764425442.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1764474098.025532,
+            "elapsed_time": 111.50439405441284,
+            "x64": true,
+            "actual_files_count": 1176,
+            "expected_files_count": 2323,
+            "memory_traffic": 19042.356872558594,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "c3add7130d7d81add205edbbb75fdfd1f38b3c68",
+            "commit_message": "mbedtls: replace macro constant with `CURL_ARRAYSIZE()`\n\nAlso move from `int` to `size_t` for index variables.\n\nCloses #19762\n",
+            "commit_timestamp": 1764458372.0
         }
     ]
 }
