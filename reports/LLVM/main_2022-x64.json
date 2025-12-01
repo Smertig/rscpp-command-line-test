@@ -35186,6 +35186,23 @@
             "commit_ref": "e2181400d70857bc5a212a4053d5d7940c84acaf",
             "commit_message": "[RISCV][llvm] Correct shamt in P extension EXTRACT_VECTOR_ELT lowering (#169823)\n\nDuring operation legalization, element type should have been turn into\nXLenVT which makes the SHL a no-op. We need to use exact vector element\ntype instead.",
             "commit_timestamp": 1764558230.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": [
+                "clang*"
+            ],
+            "timestamp": 1764602694.918232,
+            "elapsed_time": 2608.5225760936737,
+            "x64": true,
+            "actual_files_count": 3020,
+            "expected_files_count": 1661,
+            "memory_traffic": 489404.05114746094,
+            "repo_url": "https://github.com/llvm/llvm-project",
+            "commit_ref": "7b6bf8b060f74669d7027d33f488a35cfb448b29",
+            "commit_message": "[NFC][analyzer] const ptr param in AnalysisConsumer::getModeForDecl (#170145)\n\nThis is a tiny change that would make the function contract more clear\nand our work downstream easier.",
+            "commit_timestamp": 1764600539.0
         }
     ]
 }

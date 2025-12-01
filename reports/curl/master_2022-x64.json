@@ -1739,6 +1739,21 @@
             "commit_ref": "bf58ca6e8f5f518c1f4b4acab03acb1b60e25c00",
             "commit_message": "cmake: narrow scope of custom `CMAKE_MODULE_PATH` in `curl-config.cmake`\n\nSet it only while using local Find modules, leave it as-is while using\nsystem ones.\n\nFollow-up to 16f073ef49f94412000218c9f6ad04e3fd7e4d01 #16973\nCherry-picked from #19776\n",
             "commit_timestamp": 1764548904.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1764602205.880287,
+            "elapsed_time": 112.46915006637573,
+            "x64": true,
+            "actual_files_count": 1176,
+            "expected_files_count": 2323,
+            "memory_traffic": 19098.102600097656,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "c421c3e3251b33e78b1c98030d92e6ad23a82d03",
+            "commit_message": "cmake: verify minimum CMake version in `curl-config.cmake`\n\nShow a message if the CMake version is lower than that when consuming\nlibcurl via the CMake config.\n\nThe minimum CMake version on consumption is for now the same as\nthe minimum required (v3.7) to build curl itself.\n\nRef: https://cmake.org/cmake/help/v3.7/variable/CMAKE_MINIMUM_REQUIRED_VERSION.html\nRef: #18704 (discussion)\nFollow-up to 16f073ef49f94412000218c9f6ad04e3fd7e4d01 #16973\nCloses #19776\n",
+            "commit_timestamp": 1764596804.0
         }
     ]
 }
