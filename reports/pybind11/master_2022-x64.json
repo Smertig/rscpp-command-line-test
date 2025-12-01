@@ -1709,6 +1709,21 @@
             "commit_ref": "734c29b25ea81db06bf8bb8b5e28e59785969154",
             "commit_message": "Point main README.rst to CI for supported platforms and compilers (#5910)\n\n* [skip ci] Point main README.rst to CI for supported platforms and compilers\n\n- **Replace** the hard-coded \u201cSupported compilers\u201d and \u201cSupported platforms\u201d lists in `README.rst`.\n- **Point** readers to the current GitHub Actions matrix as the source of truth for tested platforms, compilers, and Python/C++ versions.\n- **Clarify** that the matrix evolves over time and that configurations users care about can be kept working via contributions.\n\n- **Avoid stale documentation**: Enumerating specific compiler and platform versions in the README is both burdensome and error-prone, and tends to drift out of sync with reality.\n- **Align \u201csupported\u201d with \u201ctested\u201d**: In practice, the CI configuration is the only place where we can say with confidence which combinations are exercised. Nearby versions (e.g., adjacent compiler minor releases) will often work, but we cannot test every variant.\n- **Reflect actual maintenance capacity**: pybind11 is maintained by a small, volunteer-based community, so support is necessarily best-effort. Pointing to CI and inviting contributions better matches how support is provided in practice.\n\n- **No behavior change**: This PR updates documentation only.\n- **Living source of truth**: As CI jobs are added or removed, the linked Actions view will automatically reflect the set of configurations we actively test. Keeping a configuration in CI is the best way to keep it \u201csupported\u201d.\n\n* [skip ci] Slight rewording: point out GitHub's limits on concurrent jobs under the free tier (rather than free minutes).",
             "commit_timestamp": 1764450999.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1764560237.444355,
+            "elapsed_time": 185.1807975769043,
+            "x64": true,
+            "actual_files_count": 519,
+            "expected_files_count": 197,
+            "memory_traffic": 24540.655921936035,
+            "repo_url": "https://github.com/pybind/pybind11",
+            "commit_ref": "55e4bb9135f9ab19cf9af5ae2178eebb9d9ef23e",
+            "commit_message": "Work around GCC -Warray-bounds false positive in argument_vector (#5908)\n\n",
+            "commit_timestamp": 1764525696.0
         }
     ]
 }

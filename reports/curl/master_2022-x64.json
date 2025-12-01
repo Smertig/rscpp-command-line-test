@@ -1724,6 +1724,21 @@
             "commit_ref": "0180af248119d373b74b6906c5adac71d4b6cdfe",
             "commit_message": "tests/data: add `%PERL` to postcheck commands where missing\n\nTo avoid potentially executing a different Perl than used by the rest\nof the build and tests.\n\nAlso to be more portable by not relying on shebang support, though these\nparticular tests require POSIX shell anyway.\n\nCloses #19767\n",
             "commit_timestamp": 1764496910.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1764560731.019944,
+            "elapsed_time": 114.64647102355957,
+            "x64": true,
+            "actual_files_count": 1176,
+            "expected_files_count": 2323,
+            "memory_traffic": 19083.362968444824,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "bf58ca6e8f5f518c1f4b4acab03acb1b60e25c00",
+            "commit_message": "cmake: narrow scope of custom `CMAKE_MODULE_PATH` in `curl-config.cmake`\n\nSet it only while using local Find modules, leave it as-is while using\nsystem ones.\n\nFollow-up to 16f073ef49f94412000218c9f6ad04e3fd7e4d01 #16973\nCherry-picked from #19776\n",
+            "commit_timestamp": 1764548904.0
         }
     ]
 }
