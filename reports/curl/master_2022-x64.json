@@ -1769,6 +1769,21 @@
             "commit_ref": "dc29590d6061931d054132cb701512a8b7305e7c",
             "commit_message": "memdebug: log socket close before closing\n\nTo not get a mixup in the memdebug log order.\n\nCloses #19793\n",
             "commit_timestamp": 1764633511.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1764688584.469755,
+            "elapsed_time": 119.88237285614014,
+            "x64": true,
+            "actual_files_count": 1176,
+            "expected_files_count": 2323,
+            "memory_traffic": 19052.691108703613,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "4f2374810ab50802c94400dad26c60771b3fa0ff",
+            "commit_message": "DEPRECATE.md: remove OpenSSL-QUIC in January 2026 instead\n\nMove it up two months. It was only ever experimental so this cannot\ninterfere with any production code so shorten the \"quarantine\".\n\nCloses #19805\n",
+            "commit_timestamp": 1764679297.0
         }
     ]
 }

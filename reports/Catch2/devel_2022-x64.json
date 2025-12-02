@@ -1784,6 +1784,21 @@
             "commit_ref": "e849735e11f23ce9ec819e053b107f2ec3c3c1c4",
             "commit_message": "Add tests for assertion thread safety\n",
             "commit_timestamp": 1764582307.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1764687999.023301,
+            "elapsed_time": 53.16446113586426,
+            "x64": true,
+            "actual_files_count": 287,
+            "expected_files_count": 272,
+            "memory_traffic": 4720.365852355957,
+            "repo_url": "https://github.com/catchorg/Catch2.git",
+            "commit_ref": "f80956a43a3e276686ed59531b41617282d75a0c",
+            "commit_message": "Use magic statics for non-trivial thread-local globals\n\nThis avoids calling the global's constructor on threads that will\nnever interact with them. Calling the constructor can have surprising\noverhead, as e.g. MSVC's Debug mode `std::vector` will allocate in\nthe default constructor.\n\nCloses #3050\n",
+            "commit_timestamp": 1764681561.0
         }
     ]
 }

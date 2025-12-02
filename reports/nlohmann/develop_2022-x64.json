@@ -1784,6 +1784,21 @@
             "commit_ref": "0422165315667f50835cf4507c8783a3b726b198",
             "commit_message": "Handle 'moved' events in serve_header.py (#4997)\n\nFixes #3659\n\nI was testing serve_header.py with my local development setup and noticed\nthat when I moved directories into or out of the monitored root, they\nweren't being picked up properly. The script would only detect create and\ndelete events but not move operations.\n\nThis was happening because the on_any_event handler only checked for\n'created' and 'deleted' events on directories. Move events have a\nseparate event type 'moved' that includes both the source and destination\npaths.\n\nThe fix treats a move event like a combination of delete (for the source)\nand create (for the destination) - we rescan to remove any trees that were\nmoved out, and add the destination directory to check for new trees that\nwere moved in.\n\nThis should make the development workflow smoother when reorganizing\nproject directories while the server is running.\n\nSigned-off-by: Samaresh Kumar Singh <ssam3003@gmail.com>",
             "commit_timestamp": 1764620485.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1764688000.781913,
+            "elapsed_time": 240.95892715454102,
+            "x64": true,
+            "actual_files_count": 94,
+            "expected_files_count": 85,
+            "memory_traffic": 24660.533363342285,
+            "repo_url": "https://github.com/nlohmann/json",
+            "commit_ref": "0422165315667f50835cf4507c8783a3b726b198",
+            "commit_message": "Handle 'moved' events in serve_header.py (#4997)\n\nFixes #3659\n\nI was testing serve_header.py with my local development setup and noticed\nthat when I moved directories into or out of the monitored root, they\nweren't being picked up properly. The script would only detect create and\ndelete events but not move operations.\n\nThis was happening because the on_any_event handler only checked for\n'created' and 'deleted' events on directories. Move events have a\nseparate event type 'moved' that includes both the source and destination\npaths.\n\nThe fix treats a move event like a combination of delete (for the source)\nand create (for the destination) - we rescan to remove any trees that were\nmoved out, and add the destination directory to check for new trees that\nwere moved in.\n\nThis should make the development workflow smoother when reorganizing\nproject directories while the server is running.\n\nSigned-off-by: Samaresh Kumar Singh <ssam3003@gmail.com>",
+            "commit_timestamp": 1764620485.0
         }
     ]
 }

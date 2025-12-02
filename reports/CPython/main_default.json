@@ -29051,6 +29051,21 @@
             "commit_ref": "eb892868b31322d7cf271bc25923e14b1f67ae38",
             "commit_message": "gh-142048: Fix quadratically increasing GC delays (gh-142051)\n\nThe GC for the free threaded build would get slower with each collection due\nto effectively double counting objects freed by the GC.",
             "commit_timestamp": 1764633887.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1764688200.652312,
+            "elapsed_time": 3938.069023370743,
+            "x64": true,
+            "actual_files_count": 1216,
+            "expected_files_count": null,
+            "memory_traffic": 56823.079933166504,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "d3c888b4ec15dbd7d6b6ef4f15b558af77c228af",
+            "commit_message": "gh-139707: Fix example for configure option (GH-142153)\n\nFix example for nre configure option",
+            "commit_timestamp": 1764681140.0
         }
     ]
 }
