@@ -1754,6 +1754,21 @@
             "commit_ref": "c421c3e3251b33e78b1c98030d92e6ad23a82d03",
             "commit_message": "cmake: verify minimum CMake version in `curl-config.cmake`\n\nShow a message if the CMake version is lower than that when consuming\nlibcurl via the CMake config.\n\nThe minimum CMake version on consumption is for now the same as\nthe minimum required (v3.7) to build curl itself.\n\nRef: https://cmake.org/cmake/help/v3.7/variable/CMAKE_MINIMUM_REQUIRED_VERSION.html\nRef: #18704 (discussion)\nFollow-up to 16f073ef49f94412000218c9f6ad04e3fd7e4d01 #16973\nCloses #19776\n",
             "commit_timestamp": 1764596804.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1764646741.199949,
+            "elapsed_time": 110.90681982040405,
+            "x64": true,
+            "actual_files_count": 1176,
+            "expected_files_count": 2323,
+            "memory_traffic": 19077.040153503418,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "dc29590d6061931d054132cb701512a8b7305e7c",
+            "commit_message": "memdebug: log socket close before closing\n\nTo not get a mixup in the memdebug log order.\n\nCloses #19793\n",
+            "commit_timestamp": 1764633511.0
         }
     ]
 }

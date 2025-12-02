@@ -1769,6 +1769,21 @@
             "commit_ref": "72b060f8e620da27eab0064e62963877617802e5",
             "commit_message": "[MSXML3_WINETEST] Workarounds to prevent reactos crashes\n\nMost of these will go away, once msxml3 is synced.\n",
             "commit_timestamp": 1764571317.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1764646240.966909,
+            "elapsed_time": 73.8703966140747,
+            "x64": true,
+            "actual_files_count": 254,
+            "expected_files_count": 266,
+            "memory_traffic": 7470.614555358887,
+            "repo_url": "https://github.com/reactos/reactos",
+            "commit_ref": "054b8e00d9d9bd631a789a9198f61acd81b8c609",
+            "commit_message": "[NTOS:PS] Remove deprecated code\n\nThere was some deprecated code in the ProcessSessionInformation class left to rot for oh god how so long.\nUnfabricate it.\n",
+            "commit_timestamp": 1764624132.0
         }
     ]
 }

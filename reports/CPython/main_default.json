@@ -29036,6 +29036,21 @@
             "commit_ref": "d4fa70706c95a5eec4cca340c6232c92168f6cff",
             "commit_message": "gh-139707: Add mechanism for distributors to supply error messages for missing stdlib modules (GH-140783)\n\n",
             "commit_timestamp": 1764596177.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1764646413.270034,
+            "elapsed_time": 3963.841735601425,
+            "x64": true,
+            "actual_files_count": 1216,
+            "expected_files_count": null,
+            "memory_traffic": 56850.64012145996,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "eb892868b31322d7cf271bc25923e14b1f67ae38",
+            "commit_message": "gh-142048: Fix quadratically increasing GC delays (gh-142051)\n\nThe GC for the free threaded build would get slower with each collection due\nto effectively double counting objects freed by the GC.",
+            "commit_timestamp": 1764633887.0
         }
     ]
 }

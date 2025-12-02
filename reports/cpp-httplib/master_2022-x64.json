@@ -1769,6 +1769,21 @@
             "commit_ref": "0a9102ff6b44f4b6382999b0141f2be69267a057",
             "commit_message": "Optimize ThreadPool and MatcherBase constructors (#2283)\n\nAdd a missing reserve and missing std::move to each ctor respectively. The latter should really be caught by a clang-tidy perf linter.",
             "commit_timestamp": 1764557363.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1764646288.28318,
+            "elapsed_time": 65.23342537879944,
+            "x64": true,
+            "actual_files_count": 7,
+            "expected_files_count": 3,
+            "memory_traffic": 3789.9045028686523,
+            "repo_url": "https://github.com/yhirose/cpp-httplib",
+            "commit_ref": "8bba34eebc384cc17989e0b018345962bfee299f",
+            "commit_message": "Add New Streaming API support (#2281)\n\n",
+            "commit_timestamp": 1764643213.0
         }
     ]
 }
