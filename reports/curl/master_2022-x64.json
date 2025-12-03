@@ -1784,6 +1784,21 @@
             "commit_ref": "4f2374810ab50802c94400dad26c60771b3fa0ff",
             "commit_message": "DEPRECATE.md: remove OpenSSL-QUIC in January 2026 instead\n\nMove it up two months. It was only ever experimental so this cannot\ninterfere with any production code so shorten the \"quarantine\".\n\nCloses #19805\n",
             "commit_timestamp": 1764679297.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": false,
+            "project": null,
+            "timestamp": 1764733064.497616,
+            "elapsed_time": 111.6393370628357,
+            "x64": true,
+            "actual_files_count": 1176,
+            "expected_files_count": 2323,
+            "memory_traffic": 19085.446701049805,
+            "repo_url": "https://github.com/curl/curl",
+            "commit_ref": "aba3c63ae8323e68149417d1a56ea7b43b842814",
+            "commit_message": "pytest: fix and improve reliability\n\nAddress issues listed in #19770:\n- allow for ngttpx to successfully shut down on last attempt that might\n  extend beyond the finish timestamp\n- timeline checks: allos `time_starttransfer` to appear anywhere in\n  the timeline as a slow client might seen response data before setting\n  the other counters\n- dump logs on test_05_02 as it was not reproduced locally\n\nFixes #19970\nCloses #19783\n",
+            "commit_timestamp": 1764692136.0
         }
     ]
 }
