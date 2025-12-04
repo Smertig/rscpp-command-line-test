@@ -13304,6 +13304,21 @@
             "commit_ref": "37347884d6823b1e510de7f6d138065910d38178",
             "commit_message": "Auto-generate files after cl/839467196\n",
             "commit_timestamp": 1764721845.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1764819099.676121,
+            "elapsed_time": 321.87217140197754,
+            "x64": true,
+            "actual_files_count": 1209,
+            "expected_files_count": 818,
+            "memory_traffic": 46555.988845825195,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "f66ad439e1ddab24f588da3df00daa7bbba3142c",
+            "commit_message": "refactor(protobuf): remove redundant typecast in Timestamps.normalizedTimestamp (#24671)\n\nRemoved unnecessary typecast in the normalizedTimestamp method.\n\nModified: java/util/src/main/java/com/google/protobuf/util/Timestamps.java\n\nCloses #24671\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/24671 from patricearruda84:remove_redundant_check 6491986c2fb94fcfd4182fd994ee87b648d698b5\nPiperOrigin-RevId: 839898550\n",
+            "commit_timestamp": 1764798455.0
         }
     ]
 }
