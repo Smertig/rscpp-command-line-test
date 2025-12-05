@@ -29126,6 +29126,21 @@
             "commit_ref": "2dac9e6016c81abbefa4256253ff5c59b29378a7",
             "commit_message": "gh-116738: Statically initialize special constants in cmath module (gh-142161)\n\nThe initialization during `mod_exec` wasn't thread-safe with multiple interpreters.",
             "commit_timestamp": 1764858111.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1764905654.527581,
+            "elapsed_time": 25.532808303833008,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 739.8156051635742,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "128d31637e8bf23f086d2a09081525adeeb1f65a",
+            "commit_message": "gh-141926: Do not unset `RUNSHARED` when cross-compiling (#141958)\n\n",
+            "commit_timestamp": 1764900904.0
         }
     ]
 }

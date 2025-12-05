@@ -13334,6 +13334,21 @@
             "commit_ref": "f66ad439e1ddab24f588da3df00daa7bbba3142c",
             "commit_message": "refactor(protobuf): remove redundant typecast in Timestamps.normalizedTimestamp (#24671)\n\nRemoved unnecessary typecast in the normalizedTimestamp method.\n\nModified: java/util/src/main/java/com/google/protobuf/util/Timestamps.java\n\nCloses #24671\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/24671 from patricearruda84:remove_redundant_check 6491986c2fb94fcfd4182fd994ee87b648d698b5\nPiperOrigin-RevId: 839898550\n",
             "commit_timestamp": 1764798455.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1764905494.084006,
+            "elapsed_time": 327.8179304599762,
+            "x64": true,
+            "actual_files_count": 1209,
+            "expected_files_count": 818,
+            "memory_traffic": 46590.40754699707,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "1109eee1772f1ed43e148ab12b735be017c3e7af",
+            "commit_message": "Avoid accessor collision issues between fields `x` and `clear_x`.\n\nThese fields can work side-by-side in C++Proto because the clear_x() clearer of the first field is non-const and the clear_x() getter of the second one is const-this. Const overloading with different return types is allowed in C++ and so the two methods coexist.\n\nRust Proto already avoids a large body of collisions by mangling getters with field names, including `clear_x_2()` here. But before this change, the C++ thunks having a accidentally attempted to call the field 1 clearer instead of the field 2 getter, by const-qualifying them this is avoided.\n\nPiperOrigin-RevId: 840489970\n",
+            "commit_timestamp": 1764903150.0
         }
     ]
 }
