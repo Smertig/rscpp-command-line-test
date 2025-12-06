@@ -13364,6 +13364,21 @@
             "commit_ref": "da6697b18dcdbc3aafeca78dd9bf96f1222b89f7",
             "commit_message": "Auto-generate files after cl/840516478\n",
             "commit_timestamp": 1764909083.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1764991486.128039,
+            "elapsed_time": 324.924423456192,
+            "x64": true,
+            "actual_files_count": 1209,
+            "expected_files_count": 818,
+            "memory_traffic": 46471.80224609375,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "2504a29b3d5741ee6cd9bd8928091271c4446846",
+            "commit_message": "Fixed several cases of implicit bool->pointer conversion.\n\nWe had several cases where we were returning `false` in a function that returns `PyObject*`.  These need to be `return NULL` instead.\n\nPiperOrigin-RevId: 840760349\n",
+            "commit_timestamp": 1764956137.0
         }
     ]
 }

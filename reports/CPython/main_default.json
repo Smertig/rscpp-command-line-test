@@ -29156,6 +29156,21 @@
             "commit_ref": "706fdda8b360120a25b272898df40c8913381723",
             "commit_message": "gh-141370: Fix undefined behavior when using Py_ABS() (GH-141548)\n\nCo-authored-by: Sergey B Kirpichev <skirpichev@gmail.com>",
             "commit_timestamp": 1764944675.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1764991651.108129,
+            "elapsed_time": 16.580379486083984,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 699.5937347412109,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "eba449a1989265a923174142dd67dee074f90967",
+            "commit_message": "GH-142234: Allow `--enable-wasm-dynamic-linking` under WASI (GH-142235)\n\nWhile CPython doesn't support `--enable-wasm-dynamic-linking`, external tools like componentize-py do and they have to patch around it. Since the flag is off by default, allowing the flag so external users can add/inject dynamic linking support seems acceptable.",
+            "commit_timestamp": 1764977236.0
         }
     ]
 }
