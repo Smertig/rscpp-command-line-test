@@ -29171,6 +29171,21 @@
             "commit_ref": "eba449a1989265a923174142dd67dee074f90967",
             "commit_message": "GH-142234: Allow `--enable-wasm-dynamic-linking` under WASI (GH-142235)\n\nWhile CPython doesn't support `--enable-wasm-dynamic-linking`, external tools like componentize-py do and they have to patch around it. Since the flag is off by default, allowing the flag so external users can add/inject dynamic linking support seems acceptable.",
             "commit_timestamp": 1764977236.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1765078598.819441,
+            "elapsed_time": 15.653198480606079,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 696.148323059082,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "c5b37228af6738d3688798d7b48a9f94b21ab028",
+            "commit_message": "gh-138122: Improve the profiling section in the 3.15 what's new document (#140156)\n\n",
+            "commit_timestamp": 1765075593.0
         }
     ]
 }
