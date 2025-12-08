@@ -13409,6 +13409,21 @@
             "commit_ref": "2504a29b3d5741ee6cd9bd8928091271c4446846",
             "commit_message": "Fixed several cases of implicit bool->pointer conversion.\n\nWe had several cases where we were returning `false` in a function that returns `PyObject*`.  These need to be `return NULL` instead.\n\nPiperOrigin-RevId: 840760349\n",
             "commit_timestamp": 1764956137.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1765164802.11023,
+            "elapsed_time": 327.05718898773193,
+            "x64": true,
+            "actual_files_count": 1209,
+            "expected_files_count": 818,
+            "memory_traffic": 46569.11633300781,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "2504a29b3d5741ee6cd9bd8928091271c4446846",
+            "commit_message": "Fixed several cases of implicit bool->pointer conversion.\n\nWe had several cases where we were returning `false` in a function that returns `PyObject*`.  These need to be `return NULL` instead.\n\nPiperOrigin-RevId: 840760349\n",
+            "commit_timestamp": 1764956137.0
         }
     ]
 }
