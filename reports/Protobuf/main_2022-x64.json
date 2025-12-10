@@ -13469,6 +13469,21 @@
             "commit_ref": "7b9fecae659e31dd75e46b38ba422b498f3e4b65",
             "commit_message": "protobuf: update php from macos-13 to macos-15-intel\n\nPiperOrigin-RevId: 842419205\n",
             "commit_timestamp": 1765322732.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1765379272.580311,
+            "elapsed_time": 297.03334164619446,
+            "x64": true,
+            "actual_files_count": 1209,
+            "expected_files_count": 818,
+            "memory_traffic": 46540.83322143555,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "59f2a6e145065b23ea72039e57a2c7d8a6b04246",
+            "commit_message": "Two new functions in PyProto_API to manage DescriptorPools\n\n`DescriptorPool_FromPool` has a new overload that takes ownership of the C++ instance.\n`DescriptorPool_AsPool` returns the C++ instance held by the Python object.\n\nPiperOrigin-RevId: 842651360\n",
+            "commit_timestamp": 1765367535.0
         }
     ]
 }

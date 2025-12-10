@@ -29261,6 +29261,21 @@
             "commit_ref": "d716e3b2dd33de27aaa31e8204723195c5ba706c",
             "commit_message": "gh-142315: Don't pass the \"real path\" of Pdb script target to system functions (#142371)\n\n* Pick target depending on preconditions\n\n* Clarify the news fragment\n\n* Add test capturing missed expectation.\n\n* Add more idiomatic safe realpath helper\n\n* Restore logic where existance and directoriness are checked on realpath.\n\n* Link GH issue to test.\n\n* Extract a function to check the target. Remove the _safe_realpath, now no longer needed.\n\n* Extract method for replacing sys_path, and isolate realpath usage there.\n\n* Revert \"Extract method for replacing sys_path, and isolate realpath usage there.\"\n\nThis reverts commit 855aac3d289dd096142ed9bd23d00c22ce6e1859.\n\n* Restore _safe_realpath.\n\n---------\n\nCo-authored-by: Jason R. Coombs <jaraco@jaraco.com>",
             "commit_timestamp": 1765328689.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1765379526.787219,
+            "elapsed_time": 31.8616726398468,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 739.2532958984375,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "2db9573e231e2589f44d50ede5c68c6360f028cd",
+            "commit_message": "Tachyon: Set favicon for heatmap pages (#142493)\n\n",
+            "commit_timestamp": 1765375823.0
         }
     ]
 }
