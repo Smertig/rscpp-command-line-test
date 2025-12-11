@@ -13484,6 +13484,21 @@
             "commit_ref": "59f2a6e145065b23ea72039e57a2c7d8a6b04246",
             "commit_message": "Two new functions in PyProto_API to manage DescriptorPools\n\n`DescriptorPool_FromPool` has a new overload that takes ownership of the C++ instance.\n`DescriptorPool_AsPool` returns the C++ instance held by the Python object.\n\nPiperOrigin-RevId: 842651360\n",
             "commit_timestamp": 1765367535.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1765424031.958137,
+            "elapsed_time": 330.8278601169586,
+            "x64": true,
+            "actual_files_count": 1209,
+            "expected_files_count": 818,
+            "memory_traffic": 46447.67916870117,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "837a2cd1d6c75402b2503ffe7cd8aeaf25868536",
+            "commit_message": "Breaking Change: Remove AddUnusedImportTrackFile() and ClearUnusedImportTrackFiles(). Remove PROTOBUF_FUTURE_RENAME_ADD_UNUSED_IMPORT\n\nhttps://protobuf.dev/news/2025-09-19/#cpp-remove-macros\n\nPiperOrigin-RevId: 842951980\n",
+            "commit_timestamp": 1765416406.0
         }
     ]
 }
