@@ -13529,6 +13529,21 @@
             "commit_ref": "a93c97116fefb530f3d1c6fbc43d1aec1d926ccb",
             "commit_message": "Auto-generate files after cl/843422118\n",
             "commit_timestamp": 1765500452.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1765552063.672062,
+            "elapsed_time": 308.2028443813324,
+            "x64": true,
+            "actual_files_count": 1210,
+            "expected_files_count": 818,
+            "memory_traffic": 46342.10161590576,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "62b7437c0e50a007dd48cc4acf36eabbb283904a",
+            "commit_message": "Ignore missing descriptors in Reflection::ListFields.\n\nThis will prevent UB and crashes when lite extensions exist on full messages, which is possible when implicit_weak (force-lite) is enabled.  Under normal situations we prevent such extensions.\n\nPiperOrigin-RevId: 843484856\n",
+            "commit_timestamp": 1765513544.0
         }
     ]
 }
