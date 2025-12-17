@@ -13649,6 +13649,21 @@
             "commit_ref": "bc517b9b92aa47fd2cf476ae0c246fdbca8e312e",
             "commit_message": "Mark MessageMut trait as `+ Send`\n\nPiperOrigin-RevId: 845249989\n",
             "commit_timestamp": 1765897105.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1765942332.985373,
+            "elapsed_time": 333.5641975402832,
+            "x64": true,
+            "actual_files_count": 1210,
+            "expected_files_count": 818,
+            "memory_traffic": 46503.075370788574,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "fa68f6b852139913c8624890de9bc016ab281441",
+            "commit_message": "Hot path size==0 to return \"\"\n\nToday when we let it ride it ends up allocating a new String() each timu which is equals but != the \"\" interned value.\n\nBy adding the trivial check up front we can avoid an arbitrary number of separate java.lang.String objects being created.\n\nPiperOrigin-RevId: 845499246\n",
+            "commit_timestamp": 1765935255.0
         }
     ]
 }
