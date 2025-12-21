@@ -29546,6 +29546,21 @@
             "commit_ref": "8d2d7bb2e754f8649a68ce4116271a4932f76907",
             "commit_message": "gh-142145: relax the no-longer-quadratic test timing (#143030)\n\n* gh-142145: relax the no-longer-quadratic test timing\n\n* require cpu resource",
             "commit_timestamp": 1766274126.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1766329736.109217,
+            "elapsed_time": 14.578163385391235,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 705.1961517333984,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "b8d3fddba6e96e693ced0d3b8f6ddbd61428fd32",
+            "commit_message": "gh-70647: Better promote how to safely parse yearless dates in datetime. (GH-116179)\n\n* gh-70647: Better promote how to safely parse yearless dates in datetime.\n\nEvery four years people encounter this because it just isn't obvious.\nThis moves the footnote up to a note with a code example.\n\nWe'd love to change the default year value for datetime but doing\nthat could have other consequences for existing code.  This documented\nworkaround *always* works.\n\n* doctest code within note is bad, dedent.\n\n* Update to match the error message.\n\n* remove no longer referenced footnote\n\n* ignore the warning in the doctest\n\n* use Petr's suggestion for the docs to hide the warning processing\n\n* cover date.strptime (3.14) as well",
+            "commit_timestamp": 1766299660.0
         }
     ]
 }
