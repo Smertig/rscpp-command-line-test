@@ -29561,6 +29561,21 @@
             "commit_ref": "b8d3fddba6e96e693ced0d3b8f6ddbd61428fd32",
             "commit_message": "gh-70647: Better promote how to safely parse yearless dates in datetime. (GH-116179)\n\n* gh-70647: Better promote how to safely parse yearless dates in datetime.\n\nEvery four years people encounter this because it just isn't obvious.\nThis moves the footnote up to a note with a code example.\n\nWe'd love to change the default year value for datetime but doing\nthat could have other consequences for existing code.  This documented\nworkaround *always* works.\n\n* doctest code within note is bad, dedent.\n\n* Update to match the error message.\n\n* remove no longer referenced footnote\n\n* ignore the warning in the doctest\n\n* use Petr's suggestion for the docs to hide the warning processing\n\n* cover date.strptime (3.14) as well",
             "commit_timestamp": 1766299660.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1766374695.964913,
+            "elapsed_time": 19.642876148223877,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 705.6303863525391,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "09044dd42b50e628b197afb2979afcbe49d4b83f",
+            "commit_message": "gh-80744: do not read .pdbrc twice when cwd == $home (#136816)\n\n",
+            "commit_timestamp": 1766336287.0
         }
     ]
 }
