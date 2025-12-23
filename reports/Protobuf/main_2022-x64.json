@@ -13784,6 +13784,21 @@
             "commit_ref": "bc7e2d20cf2b17d3e303f8da247a996471774af4",
             "commit_message": "Auto-generate files after cl/847099614\n",
             "commit_timestamp": 1766240490.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1766460858.690999,
+            "elapsed_time": 324.3948440551758,
+            "x64": true,
+            "actual_files_count": 1210,
+            "expected_files_count": 818,
+            "memory_traffic": 46420.86784362793,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "232f409e968d4fc3e17764e570ea262648caee9c",
+            "commit_message": "Avoid PyObject_CallMethod with pending errors, which always asserts.\n\nThis can happen from ignored errors during build (e.g. missing option dependencies).\n\nPiperOrigin-RevId: 847929958\n",
+            "commit_timestamp": 1766452201.0
         }
     ]
 }
