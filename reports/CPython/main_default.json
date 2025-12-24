@@ -29606,6 +29606,21 @@
             "commit_ref": "c4ab024530feb3a66d51bcef2e33b309ca0d543f",
             "commit_message": "gh-142448: Disable JIT tracing when monitoring is enabled (GH-142842)\n\n",
             "commit_timestamp": 1766489243.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1766547398.127842,
+            "elapsed_time": 21.594653367996216,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 722.0868988037109,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "50ecd6b880c4ce6765fcee28d1a0ce715800a21c",
+            "commit_message": "gh-143108: Don't instrument faulthandler.c for TSan (#143109)\n\nThe dumping of tracebacks has data races and that's okay (it's best\neffort).",
+            "commit_timestamp": 1766538775.0
         }
     ]
 }
