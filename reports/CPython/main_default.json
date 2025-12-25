@@ -29636,6 +29636,21 @@
             "commit_ref": "1e17ccd030a2285ad53db5952360fffa33a8a877",
             "commit_message": "Correctly fold unknown-8bit originating from encoded words. (#142517)\n\nThe unknown-8bit trick was designed to deal with unknown bytes in an\nASCII message, and it works fine for that.  However, I also tried to\nextend it to handle bytes that can't be decoded using the charset\nspecified in an encoded word, and there it fails because there can be\nother non-ASCII characters that were *successfully* decoded.  The fix is\nsimple: do the unknown-8bit encoding using the utf-8 codec.  This is\nespecially appropriate since anyone trying to do recovery on an unknown\nbyte string will probably attempt utf-8 first.",
             "commit_timestamp": 1766585679.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1766633813.839349,
+            "elapsed_time": 14.89206075668335,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 702.9219055175781,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "cf6758ff9ebd6df8ac2a87755cdbad674c49c9cb",
+            "commit_message": "gh-143092: Make CALL_LIST_APPEND and BINARY_OP_INPLACE_ADD_UNICODE normal instructions (GH-143124)\n\nThese super instructions need many special cases in the interpreter, specializer, and JIT. It's best we convert them to normal instructions.",
+            "commit_timestamp": 1766613780.0
         }
     ]
 }
