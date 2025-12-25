@@ -29651,6 +29651,21 @@
             "commit_ref": "cf6758ff9ebd6df8ac2a87755cdbad674c49c9cb",
             "commit_message": "gh-143092: Make CALL_LIST_APPEND and BINARY_OP_INPLACE_ADD_UNICODE normal instructions (GH-143124)\n\nThese super instructions need many special cases in the interpreter, specializer, and JIT. It's best we convert them to normal instructions.",
             "commit_timestamp": 1766613780.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1766675342.470692,
+            "elapsed_time": 17.681172132492065,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 703.0673294067383,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "579c5b496b467a2b175cb30caa4f6873cb13c9a1",
+            "commit_message": "gh-143145: Fix possible reference leak in ctypes _build_result() (GH-143131)\n\nThe result tuple was leaked if __ctypes_from_outparam__() failed for any item.\n\nSigned-off-by: Yongtao Huang <yongtaoh2022@gmail.com>\n",
+            "commit_timestamp": 1766672665.0
         }
     ]
 }
