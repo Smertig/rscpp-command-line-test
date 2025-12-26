@@ -29666,6 +29666,21 @@
             "commit_ref": "579c5b496b467a2b175cb30caa4f6873cb13c9a1",
             "commit_message": "gh-143145: Fix possible reference leak in ctypes _build_result() (GH-143131)\n\nThe result tuple was leaked if __ctypes_from_outparam__() failed for any item.\n\nSigned-off-by: Yongtao Huang <yongtaoh2022@gmail.com>\n",
             "commit_timestamp": 1766672665.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1766720257.800058,
+            "elapsed_time": 22.1565899848938,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 708.4641876220703,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "888d101445c72c7cf23923e99ed567732f42fb79",
+            "commit_message": "gh-138122: Remove default duration for statistical profiling (#143174)\n\nCo-authored-by: Pablo Galindo Salgado <pablogsal@gmail.com>\n",
+            "commit_timestamp": 1766690476.0
         }
     ]
 }
