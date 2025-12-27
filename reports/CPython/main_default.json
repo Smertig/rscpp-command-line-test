@@ -29696,6 +29696,21 @@
             "commit_ref": "de22e718bb5c57ec4178aa1787d7634cfc649261",
             "commit_message": "Remove redundant pycore_optimizer.h includes (#143184)\n\n`pycore_optimizer.h` was included redundantly in\nObjects/frameobject.c and Python/instrumentation.c.\nBoth includes are unnecessary and can be safely removed.\nNo functional change.\n\nSigned-off-by: Yongtao Huang <yongtaoh2022@gmail.com>",
             "commit_timestamp": 1766747471.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1766806533.187841,
+            "elapsed_time": 15.63030457496643,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 703.1942977905273,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "54362898f32bf195db898bfead15784d6ab5831b",
+            "commit_message": "gh-140739: Fix missing exception on allocation failure in BinaryWriter (#143204)\n\n",
+            "commit_timestamp": 1766799561.0
         }
     ]
 }
