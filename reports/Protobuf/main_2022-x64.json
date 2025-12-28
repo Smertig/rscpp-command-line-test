@@ -13919,6 +13919,21 @@
             "commit_ref": "93b519626a884e78bcae5dd592dc57898f0b0704",
             "commit_message": "Automated Code Change\n\nPiperOrigin-RevId: 849415544\n",
             "commit_timestamp": 1766831437.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1766892997.845914,
+            "elapsed_time": 315.73108649253845,
+            "x64": true,
+            "actual_files_count": 1210,
+            "expected_files_count": 818,
+            "memory_traffic": 46415.777252197266,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "92f39e0aec76026d309fd118b0d52ce287eabf21",
+            "commit_message": "Fix unnecessary required field checking on serialize of message-typed map fields.\n\nOn map fields the Serialize and SerializedLength create temporary instances of synthetic map entries and .build() on them: this change switches it to instead use buildPartial() in these cases.\n\nThis is a semantics observable change in a corner case, but in a bugfix direction: JavaProto's normal semantics is to only check required fields at .build() time, which allows for buildPartial() and then serialize if you want to intentionally serialize with required fields missing or as a microoptimization skip checking for required fields being set.\n\nOnly in the case of message-typed-values of map fields serialize may fail with missing required fields: it will happen if the user does buildPartial(), sets it on a map, and then serializes, since the build() on the synthetic map entry will recheck for required fields. After this change the behavior on that shape of flow is consistent with our standard serialize.\n\nPiperOrigin-RevId: 849485221\n",
+            "commit_timestamp": 1766853257.0
         }
     ]
 }
