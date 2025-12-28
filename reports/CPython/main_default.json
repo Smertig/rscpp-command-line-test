@@ -29741,6 +29741,21 @@
             "commit_ref": "61ee04834b096be00678c6819b4957f3f4413a5e",
             "commit_message": "gh-142557: fix UAF in `bytearray.__mod__` when object is mutated while formatting `%`-style arguments (#143213)\n\n",
             "commit_timestamp": 1766847433.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1766934542.142641,
+            "elapsed_time": 14.417662143707275,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 704.9294586181641,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "3ca1f2a370e44874d0dc8c82a01465e0171bec5c",
+            "commit_message": "gh-143241: Fix infinite loop in `zoneinfo._common.load_data` (#143243)\n\nCorrectly reject truncated TZif files in `ZoneInfo.from_file`.\n\n---------\n\nCo-authored-by: blurb-it[bot] <43283697+blurb-it[bot]@users.noreply.github.com>\nCo-authored-by: B\u00e9n\u00e9dikt Tran <10796600+picnixz@users.noreply.github.com>",
+            "commit_timestamp": 1766933323.0
         }
     ]
 }
