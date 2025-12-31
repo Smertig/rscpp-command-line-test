@@ -29801,6 +29801,21 @@
             "commit_ref": "aa8a43d179bad5cd9fbfce63b630e2ee0bd617e4",
             "commit_message": "gh-143237: Fix support of named pipes in the rotating logging handlers (GH-143259)\n\nThis fixes regression introduced in GH-105887.\n",
             "commit_timestamp": 1767106589.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1767152216.632793,
+            "elapsed_time": 14.663978099822998,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 687.6267852783203,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "96ab379dcaa93630a230402b8183a26ac99097bd",
+            "commit_message": "gh-140795: Keep 'err' in local variable in _ssl.c (gh-143275)\n\nThe error return code doesn't need to be mutable state on the SSLSocket.\nThis simplifes thread-safety and avoids potential reentrancy issues.",
+            "commit_timestamp": 1767141944.0
         }
     ]
 }
