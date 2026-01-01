@@ -29831,6 +29831,21 @@
             "commit_ref": "3c4429f65a894af2a0aea2aeed5f61bc399e5af5",
             "commit_message": "gh-135852: Remove out of tree pywin32 dependency for NTEventLogHandler (GH-137860)\n\nAdd RegisterEventSource(), DeregisterEventSource(), ReportEvent()\nand a number of EVENTLOG_* constants to _winapi.\n",
             "commit_timestamp": 1767178250.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1767238798.872236,
+            "elapsed_time": 14.641520261764526,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 685.2410202026367,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "c5215978ebfea9471f313d5baa70a4e68bfb798b",
+            "commit_message": "gh-140920: remove incorrect mentions to `concurrent.futures.interpreter.ExecutionFailed` (#141723)\n\nRemove documentation for inexistant `concurrent.futures.interpreter.ExecutionFailed`\nand replace its occurrences by `concurrent.interpreters.ExecutionFailed` since this\nis the documented exception.",
+            "commit_timestamp": 1767213941.0
         }
     ]
 }
