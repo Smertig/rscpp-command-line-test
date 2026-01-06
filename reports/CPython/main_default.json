@@ -29996,6 +29996,21 @@
             "commit_ref": "12d363bb66b32b0e245ab7ab3c917ddf97a7e34d",
             "commit_message": "gh-134740: Document distribution discovery in importlib.metadata (#134751)\n\nDocument the following items listed in `__all__` but missing from\ndocumentation:\n\n- `distributions()`: mentioned in doc strings as well\n- `DistributionFinder`: mentioned but didn't have it's own :class:\n  entry\n- `DistributionFinder.Context`: mentioned but didn't have it's own :class:\n  entry)\n- `Distribution.discover()`: mentioned in doc strings\n\nCloses #134740\nPartially addresses #110937\n\n---------\n\nCo-authored-by: Bartosz S\u0142awecki <bartosz@ilikepython.com>\nCo-authored-by: Alyssa Coghlan <ncoghlan@gmail.com>",
             "commit_timestamp": 1767662730.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1767712216.035607,
+            "elapsed_time": 16.76258397102356,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 705.5679626464844,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "841b7482dd3584545d43fbfa78a27b1b5a3dfea3",
+            "commit_message": "gh-143424: Fix assertion in _PyMutex_LockTimed (gh-143439)\n\nThe assertion doesn't necessarily hold for `threading.Lock`, so allow\nthe lock to be unlocked if `_PY_LOCK_PYTHONLOCK` is set on the flags.",
+            "commit_timestamp": 1767710414.0
         }
     ]
 }
