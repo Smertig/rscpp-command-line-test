@@ -29981,6 +29981,21 @@
             "commit_ref": "68fcb958eb0c023cb895217fdf384206b09d12e8",
             "commit_message": "gh-143082: Make readline work when sys.stdin is explicitly passed to pdb (#143083)\n\n",
             "commit_timestamp": 1767587951.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1767670721.840776,
+            "elapsed_time": 35.66496562957764,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 739.6621780395508,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "12d363bb66b32b0e245ab7ab3c917ddf97a7e34d",
+            "commit_message": "gh-134740: Document distribution discovery in importlib.metadata (#134751)\n\nDocument the following items listed in `__all__` but missing from\ndocumentation:\n\n- `distributions()`: mentioned in doc strings as well\n- `DistributionFinder`: mentioned but didn't have it's own :class:\n  entry\n- `DistributionFinder.Context`: mentioned but didn't have it's own :class:\n  entry)\n- `Distribution.discover()`: mentioned in doc strings\n\nCloses #134740\nPartially addresses #110937\n\n---------\n\nCo-authored-by: Bartosz S\u0142awecki <bartosz@ilikepython.com>\nCo-authored-by: Alyssa Coghlan <ncoghlan@gmail.com>",
+            "commit_timestamp": 1767662730.0
         }
     ]
 }
