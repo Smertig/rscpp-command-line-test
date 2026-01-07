@@ -30011,6 +30011,21 @@
             "commit_ref": "841b7482dd3584545d43fbfa78a27b1b5a3dfea3",
             "commit_message": "gh-143424: Fix assertion in _PyMutex_LockTimed (gh-143439)\n\nThe assertion doesn't necessarily hold for `threading.Lock`, so allow\nthe lock to be unlocked if `_PY_LOCK_PYTHONLOCK` is set on the flags.",
             "commit_timestamp": 1767710414.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1767757057.608494,
+            "elapsed_time": 16.79551863670349,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 686.9169921875,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "b866a1c73f81606475456dbe8a7620c225fdc718",
+            "commit_message": "gh-75572: Fix test_xpickle and disable it by default (GH-143503)\n\n",
+            "commit_timestamp": 1767743472.0
         }
     ]
 }
