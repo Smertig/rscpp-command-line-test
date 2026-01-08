@@ -14249,6 +14249,21 @@
             "commit_ref": "97c979be6e0907e1051bee62584dac4594e73fa7",
             "commit_message": "Breaking change: remove deprecated flag for enabling MSVC support\n\nWith the path length limitations from Bazel fixed, we ended up reversing course on this plan.  We will continue to support MSVC and this flag hasn't done anything for a few releases.\n\nPiperOrigin-RevId: 853482413\n",
             "commit_timestamp": 1767837446.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1767884925.800447,
+            "elapsed_time": 326.3465175628662,
+            "x64": true,
+            "actual_files_count": 1210,
+            "expected_files_count": 818,
+            "memory_traffic": 46651.26541900635,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "ce5ff11bc87cbd249c9a700bddbee62d94d72beb",
+            "commit_message": "Inline the generated Rust message Drop implementations\n\nThis allows the compiler to potentially optimize away unused message types more effectively, as demonstrated by the size reductions observed when unused messages are added in a test proto file.\n\nPiperOrigin-RevId: 853529287\n",
+            "commit_timestamp": 1767847499.0
         }
     ]
 }

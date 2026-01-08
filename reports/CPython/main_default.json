@@ -30056,6 +30056,21 @@
             "commit_ref": "67d3d0344f129d486540ab0a41c8c820ca835d18",
             "commit_message": "gh-143089: Fix ParamSpec default examples to use list instead of tuple (#143179)\n\n",
             "commit_timestamp": 1767843164.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1767885082.744393,
+            "elapsed_time": 15.855309963226318,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 708.4161224365234,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "8cf5c4d89a526e5370f1d094885021b4792d4fff",
+            "commit_message": "gh-142908: Don't use `DK_IS_UNICODE` in interpreter (gh-142909)\n\n`DK_IS_UNICODE()` includes split keys and we don't want to specialize on\nthose accesses..",
+            "commit_timestamp": 1767882740.0
         }
     ]
 }
