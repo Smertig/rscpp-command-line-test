@@ -30071,6 +30071,21 @@
             "commit_ref": "8cf5c4d89a526e5370f1d094885021b4792d4fff",
             "commit_message": "gh-142908: Don't use `DK_IS_UNICODE` in interpreter (gh-142909)\n\n`DK_IS_UNICODE()` includes split keys and we don't want to specialize on\nthose accesses..",
             "commit_timestamp": 1767882740.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1767971395.380062,
+            "elapsed_time": 16.383869886398315,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 678.6484985351562,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "a4086d7f89e5d388e4ffcdb13e4fba0255234286",
+            "commit_message": "gh-142829: Fix use-after-free in `Context.__eq__` via re-entrant `ContextVar.set` (#142905)\n\n",
+            "commit_timestamp": 1767961654.0
         }
     ]
 }
