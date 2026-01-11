@@ -30131,6 +30131,21 @@
             "commit_ref": "718c15fa9558efcdbe49aa729cfac8b796bc5968",
             "commit_message": "Add derangements() recipe (gh-143671)\n\n",
             "commit_timestamp": 1768096047.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1768144127.60054,
+            "elapsed_time": 14.93401026725769,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 697.8027191162109,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "d1282efb2b847bf9274d78c5f15ea00499b2c894",
+            "commit_message": "gh-143638: Forbid cuncurrent use of the Pickler and Unpickler objects in C implementation (GH-143664)\n\nPreviously, this could cause crash or data corruption, now concurrent calls\nof methods of the same object raise RuntimeError.\n",
+            "commit_timestamp": 1768132873.0
         }
     ]
 }
