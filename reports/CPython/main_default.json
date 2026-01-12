@@ -30146,6 +30146,21 @@
             "commit_ref": "d1282efb2b847bf9274d78c5f15ea00499b2c894",
             "commit_message": "gh-143638: Forbid cuncurrent use of the Pickler and Unpickler objects in C implementation (GH-143664)\n\nPreviously, this could cause crash or data corruption, now concurrent calls\nof methods of the same object raise RuntimeError.\n",
             "commit_timestamp": 1768132873.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1768189264.191471,
+            "elapsed_time": 16.151305198669434,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 697.0911712646484,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "548526bbbebd4e5034704a1945b35fdf5ed84a76",
+            "commit_message": "gh-134584: JIT: Remove redundant refcounting for UNARY_{INVERT|NEGATIVE} (GH-143704)\n\n",
+            "commit_timestamp": 1768164175.0
         }
     ]
 }
