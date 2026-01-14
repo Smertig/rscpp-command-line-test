@@ -30221,6 +30221,21 @@
             "commit_ref": "1857a40807daeae3a1bf5efb682de9c9ae6df845",
             "commit_message": "gh-143460: Correct unlimited stack size skip for Emscripten (#143765)\n\nModifies the test skip for unlimited stack size to add Emscripten to the\nexclusion list.",
             "commit_timestamp": 1768341784.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1768403478.803395,
+            "elapsed_time": 15.418061256408691,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 680.526985168457,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "bab1d7a561ab015dd6bb97e255fd12a8ce367edf",
+            "commit_message": "gh-74902: Add Unicode Grapheme Cluster Break algorithm (GH-143076)\n\nAdd the unicodedata.iter_graphemes() function to iterate over grapheme\nclusters according to rules defined in Unicode Standard Annex #29.\n\nAdd unicodedata.grapheme_cluster_break(), unicodedata.indic_conjunct_break()\nand unicodedata.extended_pictographic() functions to get the properties\nof the character which are related to the above algorithm.\n\nCo-authored-by: Guillaume \"Vermeille\" Sanchez <guillaume.v.sanchez@gmail.com>\n",
+            "commit_timestamp": 1768401477.0
         }
     ]
 }
