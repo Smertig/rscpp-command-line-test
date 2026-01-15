@@ -14414,6 +14414,21 @@
             "commit_ref": "05bcac988580984e5f5c1893fe3ced3484852d32",
             "commit_message": "Fix protos with multiple files with same basename\n\nUsing `src.basename` breaks when there are protos in the same target with the same basename, but different paths. Unfortunately this is relatively common. `src.short_path` seemed to fix this.\n\nPiperOrigin-RevId: 856159007\n",
             "commit_timestamp": 1768395249.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1768448122.12271,
+            "elapsed_time": 307.86974453926086,
+            "x64": true,
+            "actual_files_count": 1210,
+            "expected_files_count": 818,
+            "memory_traffic": 46426.364334106445,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "12d5002cc4073f90c1c86419635eb0ca02e58d5d",
+            "commit_message": "php: Fix that recursion limit is not enforced.\n\nhttps://github.com/protocolbuffers/protobuf/issues/25067\n\nPiperOrigin-RevId: 856286406\n",
+            "commit_timestamp": 1768417901.0
         }
     ]
 }
