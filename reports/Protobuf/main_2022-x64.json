@@ -14429,6 +14429,21 @@
             "commit_ref": "12d5002cc4073f90c1c86419635eb0ca02e58d5d",
             "commit_message": "php: Fix that recursion limit is not enforced.\n\nhttps://github.com/protocolbuffers/protobuf/issues/25067\n\nPiperOrigin-RevId: 856286406\n",
             "commit_timestamp": 1768417901.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1768489771.373789,
+            "elapsed_time": 335.8489532470703,
+            "x64": true,
+            "actual_files_count": 1210,
+            "expected_files_count": 818,
+            "memory_traffic": 46470.84599304199,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "46061cb99d68d8fc0c46833b0ea8cee410bebbb8",
+            "commit_message": "Prevent crashes when creating objects during interpreter shutdown\n\n(The crashes happen only since Python 3.13)\n\nIn particular:\n\n* Skip adding to the weak map if `Py_IsFinalizing()` is true. Calling `PyUpb_WeakMap_Add` may be caused by user code that creates protos inside `__del__`!\n\n* `PyUpb_DescriptorPool_Get` and subsequently `PyUpb_ObjCache_Get` may *also* be called if users cause `PyUpb_RepeatedContainer_GetOrCreateWrapper` to be called. So make it nullable and skip the assertion if currently shutting down.\n\nThis follows a prior attempted fix https://github.com/protocolbuffers/protobuf/commit/d57d2708b371bda5e7212b0eca63091fa2d7ab42 but expands the scope of it.\n\nPiperOrigin-RevId: 856589514\n",
+            "commit_timestamp": 1768477500.0
         }
     ]
 }
