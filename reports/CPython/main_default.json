@@ -30266,6 +30266,21 @@
             "commit_ref": "3514ba2175764e4d746e6862e2fcfc06b5fcd6c2",
             "commit_message": "gh-142434: Use ppoll() if available in select.poll (#143529)\n\n",
             "commit_timestamp": 1768481386.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1768534658.501425,
+            "elapsed_time": 15.860231876373291,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 702.3158264160156,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "c461aa99e2fabbaf5859c0a8a93e08306ee8115d",
+            "commit_message": "gh-143602: Fix duplicate buffer exports in io.BytesIO.write (#143629)\n\nFix an inconsistency issue in io.BytesIO.write() where the buffer was exported\ntwice, which could lead to unexpected data overwrites and position drift when\nthe buffer changes between exports.",
+            "commit_timestamp": 1768489735.0
         }
     ]
 }
