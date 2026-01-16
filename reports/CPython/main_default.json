@@ -30281,6 +30281,21 @@
             "commit_ref": "c461aa99e2fabbaf5859c0a8a93e08306ee8115d",
             "commit_message": "gh-143602: Fix duplicate buffer exports in io.BytesIO.write (#143629)\n\nFix an inconsistency issue in io.BytesIO.write() where the buffer was exported\ntwice, which could lead to unexpected data overwrites and position drift when\nthe buffer changes between exports.",
             "commit_timestamp": 1768489735.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1768576224.726366,
+            "elapsed_time": 15.153381824493408,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 699.0465774536133,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "19e64afddfc7efd282efd5bdea846ec93df9f4f9",
+            "commit_message": "gh-141070: Rename `PyUnstable_Object_Dump` to `PyObject_Dump` (GH-142848)\n\n",
+            "commit_timestamp": 1768573183.0
         }
     ]
 }

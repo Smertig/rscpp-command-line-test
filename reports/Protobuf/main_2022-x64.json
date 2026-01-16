@@ -14459,6 +14459,21 @@
             "commit_ref": "5687acc54cab007591b60d23e7f055209df03eac",
             "commit_message": "Add bounds checking to ExtractSubrange.\n\nPiperOrigin-RevId: 856826403\n",
             "commit_timestamp": 1768517188.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1768576071.266971,
+            "elapsed_time": 329.6324815750122,
+            "x64": true,
+            "actual_files_count": 1210,
+            "expected_files_count": 818,
+            "memory_traffic": 46667.500480651855,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "aee03b78929c02461a5f9d8e136a2a016359b0cd",
+            "commit_message": "feat(php): Add PHP typehints for setters and remove redundant GPBUtil checks (#25296)\n\nThis PR modifies `php_generator.cc` to:\n- Add PHP typehints to setter method signatures for all types (for 64-bit integers, the type hint is `int|string` to maintain compatibility with 32-bit systems)\n- Remove redundant `GPBUtil::check...` for primitive types and messages (the PHP type hint provides sufficient validation)\n- Retain `GPBUtil::check...` for 32 and 64-bit integers, strings (for UTF-8 validation), enums, maps, and repeated fields\n\nAdditionally makes the following changes:\n- Updates descriptor protos with generator changes\n- Suppresses float to int \"loss of precision\" warnings in tests which expect it\n- Removes compatibility in tests with PHPUnit 6, which is no longer needed\n- Proper casing in gencode for `true` and `false` (instead of `True` and `False`)\n\nCloses #25296\n\nPiperOrigin-RevId: 856990912\n",
+            "commit_timestamp": 1768549499.0
         }
     ]
 }
