@@ -30296,6 +30296,21 @@
             "commit_ref": "19e64afddfc7efd282efd5bdea846ec93df9f4f9",
             "commit_message": "gh-141070: Rename `PyUnstable_Object_Dump` to `PyObject_Dump` (GH-142848)\n\n",
             "commit_timestamp": 1768573183.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1768620968.378943,
+            "elapsed_time": 15.95054030418396,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 690.0972518920898,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "bb25f7280af30831fffa3345b4fc93798949c6c6",
+            "commit_message": "gh-132657: Add maybe_enable_deferred_ref_count() (gh-142843)\n\nIf we are specializing to `LOAD_GLOBAL_MODULE` or `LOAD_ATTR_MODULE`, try\nto enable deferred reference counting for the value, if the object is owned by\na different thread.  This applies to the free-threaded build only and should\nimprove scaling of multi-threaded programs.",
+            "commit_timestamp": 1768614883.0
         }
     ]
 }
