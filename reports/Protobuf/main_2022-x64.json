@@ -14504,6 +14504,21 @@
             "commit_ref": "272f68a6bbcc7ac8e34736e85b5a0e14fe135e20",
             "commit_message": "php: disable recursive tests for valgrind.\n\nPiperOrigin-RevId: 857306260\n",
             "commit_timestamp": 1768602913.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1768707376.1865,
+            "elapsed_time": 314.94404125213623,
+            "x64": true,
+            "actual_files_count": 1210,
+            "expected_files_count": 818,
+            "memory_traffic": 46442.36251068115,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "db63534335c6eceb01e1dafe0278daa40c251d34",
+            "commit_message": "Point our Cratesio dep to paste-complete instead of paste.\n\nThis is intended to be a stopgap where we would restore the 'paste' dep at a later date.\n\nThe situation is that the author of `paste` (dtolnay, who is a prolific Rust library author) declared it 'finished' and so archived the github repo to signal no intent to make further patches. Rustsec issued RUSTSEC-2024-0436 based on the fact that the github repo was archived:\nhttps://rustsec.org/advisories/RUSTSEC-2024-0436.html\n\nMany projects have tests that check for transitive deps on crates which have rustsecs published by default, and in this case its essentially entirely a false-positive where there's actually no security issue at all and there is essentially no chance of there being one going forward.\n\nThe underlying issue should be addressed at some point (potentially the `paste` crate on crates.io officially moving to some other owner so that rustsec will drop the notice).\n\nIf the official 'paste' crate situation is actually never resolved, some other long term solution may be more appropriate, but in the meantime the dep on paste-complete that \"we\" are officially on the hook for will avoid any consternation when the Protobuf crate sets of alarms from our Paste dep.\n\nPiperOrigin-RevId: 857652263\n",
+            "commit_timestamp": 1768696741.0
         }
     ]
 }
