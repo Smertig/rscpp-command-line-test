@@ -30401,6 +30401,21 @@
             "commit_ref": "e66597d6c84a8615340822b8da564e5ca3fba5cd",
             "commit_message": "gh-143874: Use self.message instead of raw print in `_exec_in_closure()`  (#143875)\n\n",
             "commit_timestamp": 1768867867.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1768922109.71503,
+            "elapsed_time": 32.092748403549194,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 740.4609680175781,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "795d5c5b44c5ac4b7d1619800f341ec2d0332430",
+            "commit_message": "gh-144054: shutdown fix for deferred ref counting (GH-144055)\n\nWhen shutting down, disable deferred refcounting for all GC objects. It\nis important to do this also for untracked objects, which before this\nchange were getting missed.\n\nSmall code cleanup:\nWe can remove the shutdown case disable_deferred_refcounting() call\ninside scan_heap_visitor() if we are careful about it.  The key is\nthat frame_disable_deferred_refcounting() might fail if the object\nis untracked.",
+            "commit_timestamp": 1768916712.0
         }
     ]
 }
