@@ -30461,6 +30461,21 @@
             "commit_ref": "6181b69970b93fc74d74c97ce6543c0d1b6a258c",
             "commit_message": "GH-143941: Move WASI-related files to Platforms/WASI (GH-143942)\n\nAlong the way, leave a deprecated Tools/wasm/wasi/__main__.py behind for backwards-compatibility.\n\nCo-authored-by: Zachary Ware <zachary.ware@gmail.com>",
             "commit_timestamp": 1769034718.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1769094849.781318,
+            "elapsed_time": 15.071355104446411,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 696.7931976318359,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "c5cfcdf16a98063530bdfe11a8894ab57aea3d92",
+            "commit_message": "gh-67041: Allow to distinguish between empty and not defined URI components (GH-123305)\n\nChanges in the urllib.parse module:\n\n* Add option missing_as_none in urlparse(), urlsplit() and urldefrag(). If\n  it is true, represent not defined components as None instead of an\n  empty string.\n* Add option keep_empty in urlunparse() and urlunsplit(). If it is\n  true, keep empty non-None components in the resulting string.\n",
+            "commit_timestamp": 1769084953.0
         }
     ]
 }
