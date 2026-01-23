@@ -30491,6 +30491,21 @@
             "commit_ref": "f8262b84f5b76e45cfea9d73b09657919926850f",
             "commit_message": "gh-143513: Remove importlib.abc documentation for removed ABCs (#143605)\n\nIn 3.11 ResourceReader, Traversable, & TraversableResources moved from importlib.abc to importlib.resources.abc (commit e712a5b277866a71c195f38c1b5d87d9126dba3e).\n\nIn 3.12 old import locations were deprecated (commit 71848c960927af801656026203371c41ad139b5a).\n\nIn 3.14 backwards-compat support was removed (commit 0751511d24295c39fdf2f5b2255e3fa3d796ce4d).\n\nCo-authored-by: Brett Cannon <brett@python.org>",
             "commit_timestamp": 1769119237.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1769181118.84364,
+            "elapsed_time": 14.544890642166138,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 708.0890121459961,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "052e55e7d44718fe46cbba0ca995cb8fcc359413",
+            "commit_message": "gh-144125: email: verify headers are sound in BytesGenerator\n\nCo-authored-by: Denis Ledoux <dle@odoo.com>\nCo-authored-by: Denis Ledoux <5822488+beledouxdenis@users.noreply.github.com>\nCo-authored-by: Petr Viktorin <302922+encukou@users.noreply.github.com>\nCo-authored-by: Bas Bloemsaat <1586868+basbloemsaat@users.noreply.github.com>",
+            "commit_timestamp": 1769180375.0
         }
     ]
 }
