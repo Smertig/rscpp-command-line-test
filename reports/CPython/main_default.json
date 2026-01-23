@@ -30476,6 +30476,21 @@
             "commit_ref": "c5cfcdf16a98063530bdfe11a8894ab57aea3d92",
             "commit_message": "gh-67041: Allow to distinguish between empty and not defined URI components (GH-123305)\n\nChanges in the urllib.parse module:\n\n* Add option missing_as_none in urlparse(), urlsplit() and urldefrag(). If\n  it is true, represent not defined components as None instead of an\n  empty string.\n* Add option keep_empty in urlunparse() and urlunsplit(). If it is\n  true, keep empty non-None components in the resulting string.\n",
             "commit_timestamp": 1769084953.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1769139624.959845,
+            "elapsed_time": 15.625706672668457,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 681.1351089477539,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "f8262b84f5b76e45cfea9d73b09657919926850f",
+            "commit_message": "gh-143513: Remove importlib.abc documentation for removed ABCs (#143605)\n\nIn 3.11 ResourceReader, Traversable, & TraversableResources moved from importlib.abc to importlib.resources.abc (commit e712a5b277866a71c195f38c1b5d87d9126dba3e).\n\nIn 3.12 old import locations were deprecated (commit 71848c960927af801656026203371c41ad139b5a).\n\nIn 3.14 backwards-compat support was removed (commit 0751511d24295c39fdf2f5b2255e3fa3d796ce4d).\n\nCo-authored-by: Brett Cannon <brett@python.org>",
+            "commit_timestamp": 1769119237.0
         }
     ]
 }
