@@ -30536,6 +30536,21 @@
             "commit_ref": "012c498035a9adfe9fd218907db1550ecb057f77",
             "commit_message": "gh-142037: Improve error messages for printf-style formatting (GH-142081)\n\nThis affects string formatting as well as bytes and bytearray formatting.\n\n* For errors in the format string, always include the position of the\n  start of the format unit.\n* For errors related to the formatted arguments, always include the number\n  or the name of the formatted argument.\n* Suggest more probable causes of errors in the format string (stray %,\n  unsupported format, unexpected character).\n* Provide more information when the number of arguments does not match\n  the number of format units.\n* Raise more specific errors when access of arguments by name is mixed with\n  sequential access and when * is used with a mapping.\n* Add tests for some uncovered cases.\n",
             "commit_timestamp": 1769253230.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1769312536.45043,
+            "elapsed_time": 14.5432870388031,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 708.7037582397461,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "979d92fefc0b6863c9783659f80d36cdfac90506",
+            "commit_message": "gh-144140: Optimize len for string constants in optimizer (GH-144142)\n\n",
+            "commit_timestamp": 1769270969.0
         }
     ]
 }
