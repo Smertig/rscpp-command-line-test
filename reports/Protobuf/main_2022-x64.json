@@ -14789,6 +14789,21 @@
             "commit_ref": "bc134f05568f24c615be15b82afe3cd1a30b559c",
             "commit_message": "Fix upb C generator to handle reserved name collisions.\n\nMangle field names that conflict with message-level functions (new, parse,\nserialize, etc.) by appending a trailing underscore. Also mangle fields\nstarting with 'mutable_' to avoid collisions with submessage mutable accessors.\n\nPiperOrigin-RevId: 861423462\n",
             "commit_timestamp": 1769477029.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1769526692.142011,
+            "elapsed_time": 297.41290187835693,
+            "x64": true,
+            "actual_files_count": 1212,
+            "expected_files_count": 818,
+            "memory_traffic": 46620.70070648193,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "09a505f198a76a3a7b00c94d913e4edb4aaedd3e",
+            "commit_message": "Large enums: For common conflicts, use `_<n>` suffix instead of just `<n>`.\n\nPiperOrigin-RevId: 861694623\n",
+            "commit_timestamp": 1769525071.0
         }
     ]
 }
