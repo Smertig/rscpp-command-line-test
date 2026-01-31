@@ -30701,6 +30701,21 @@
             "commit_ref": "5f57f6970bdea45cc2b192d612bfd8199f51491e",
             "commit_message": "gh-143423: Fix free-threaded build detection in sampling profiler (#143426)\n\n",
             "commit_timestamp": 1769733330.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1769831557.918201,
+            "elapsed_time": 32.10068917274475,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 708.2617950439453,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "96e4cd698a3000382f1796366e9c963902381382",
+            "commit_message": "gh-144319: Fix huge page safety in pymalloc arenas (#144331)\n\nThe pymalloc huge page support had two problems. First, on\narchitectures where the default huge page size exceeds the arena\nsize (e.g. 32 MiB on PPC, 512 MiB on ARM64 with 64 KB base\npages), mmap with MAP_HUGETLB silently allocates a full huge page\neven when the requested size is smaller. The subsequent munmap\nwith the original arena size then fails with EINVAL, permanently\nleaking the entire huge page. Second, huge pages were always\nattempted when compiled in, with no way to disable them at\nruntime. On Linux, if the huge page pool is exhausted, page\nfaults including copy-on-write faults after fork deliver SIGBUS\nand kill the process.\n\nThe arena allocator now queries the system huge page size from\n/proc/meminfo and skips MAP_HUGETLB when the arena size is not a\nmultiple of it. Huge pages also now require explicit opt-in at\nruntime via the PYTHON_PYMALLOC_HUGEPAGES environment variable,\nwhich is read through PyConfig and respects -E and -I flags.\nThe config field pymalloc_hugepages is propagated to the runtime\nallocators struct so the low-level arena allocator can check it\nwithout calling getenv directly.\n",
+            "commit_timestamp": 1769797136.0
         }
     ]
 }
