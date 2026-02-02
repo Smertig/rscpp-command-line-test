@@ -14924,6 +14924,21 @@
             "commit_ref": "7c59b3c88ebf93cb18dc60f7a20466a6bf506d63",
             "commit_message": "Memoize isInitialized result for DynamicMessage to improve parsing performance.\n\nPiperOrigin-RevId: 864068668\n",
             "commit_timestamp": 1769990293.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1770045504.671432,
+            "elapsed_time": 325.5765793323517,
+            "x64": true,
+            "actual_files_count": 1212,
+            "expected_files_count": 818,
+            "memory_traffic": 46760.52151489258,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "588fa9d5f862efde0b99e9272ee846f151de6839",
+            "commit_message": "Reorder repeated.rs and map.rs, and trivial cleanup on some trait bounds as a no-op.\n\nThe ordering of these files is chaotic, including impls above the struct definitions. Now the order is with the types in sequence:\n\nRepeated\nRepeatedView\nRepeatedMut\nRepeatedIter\n\nAnd the same for Map.\n\nPiperOrigin-RevId: 864319165\n",
+            "commit_timestamp": 1770041134.0
         }
     ]
 }
