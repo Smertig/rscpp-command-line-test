@@ -30761,6 +30761,21 @@
             "commit_ref": "a44782856562025ede013f897d42d0d6e4f085c1",
             "commit_message": "gh-144242: Note that issues aren't needed for typos in docs template (GH-144288)\n\n\n",
             "commit_timestamp": 1770044205.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1770090862.912044,
+            "elapsed_time": 16.982677221298218,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 702.235107421875,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "29acc08c8dad664cd5713cb392e5beba65724c10",
+            "commit_message": "gh-75572: Speed up test_xpickle (GH-144393)\n\nRun a long living subprocess which handles multiple requests instead of\nrunning a new subprocess for each request.\n",
+            "commit_timestamp": 1770055212.0
         }
     ]
 }
