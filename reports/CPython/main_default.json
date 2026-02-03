@@ -30776,6 +30776,21 @@
             "commit_ref": "29acc08c8dad664cd5713cb392e5beba65724c10",
             "commit_message": "gh-75572: Speed up test_xpickle (GH-144393)\n\nRun a long living subprocess which handles multiple requests instead of\nrunning a new subprocess for each request.\n",
             "commit_timestamp": 1770055212.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1770132141.42739,
+            "elapsed_time": 16.635901927947998,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 708.3935470581055,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "53fecbe6e116a4426058b7d0f6c451719c72cb5b",
+            "commit_message": "gh-127313: Use getLogger() without argument to get root logger in logging cookbook (GH-143683)\n\nUse getLogger() to get root logger in logging cookbook",
+            "commit_timestamp": 1770130152.0
         }
     ]
 }
