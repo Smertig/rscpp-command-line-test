@@ -15044,6 +15044,21 @@
             "commit_ref": "1263f14b99c1e5005a125ef52b2814b5ecdf3fd3",
             "commit_message": "Fix a -Wswitch-enum warning in map_field.h\n\nThe AbslHashValue function defined in map_field.h did not explicitly handle CPPTYPE_DOUBLE, CPPTYPE_FLOAT, CPPTYPE_ENUM, CPPTYPE_MESSAGE, instead using a default. This pedantic Clang warning is resolved by explicitly handling those cases.\n\nPiperOrigin-RevId: 866126334\n",
             "commit_timestamp": 1770332348.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1770391051.994167,
+            "elapsed_time": 321.8762147426605,
+            "x64": true,
+            "actual_files_count": 1212,
+            "expected_files_count": 818,
+            "memory_traffic": 46692.66226196289,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "46dfb310ffd1cfbd869f5b35c9dbbf7cf1d939aa",
+            "commit_message": "Add checks for transitive protobuf runtime jars in java_proto_library tests.\n\nThe tests now verify that the java_info provided by java_proto_library includes the source and compile-time jars for the core protobuf runtime libraries in its transitive closure.\n\nPiperOrigin-RevId: 866400040\n",
+            "commit_timestamp": 1770381279.0
         }
     ]
 }
