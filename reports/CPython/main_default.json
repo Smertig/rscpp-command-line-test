@@ -30881,6 +30881,21 @@
             "commit_ref": "0fdf6a9a71f9b3c9adc0406542902e028431e7ca",
             "commit_message": "gh-144513: Skip critical section locking during stop-the-world (gh-144524)\n\nWhen the interpreter is in a stop-the-world pause, critical sections\ndon't need to acquire locks since no other threads can be running.\nThis avoids a potential deadlock where lock fairness hands off ownership\nto a thread that has already suspended for stop-the-world.",
             "commit_timestamp": 1770390848.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1770436291.49653,
+            "elapsed_time": 14.212558269500732,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 703.3916168212891,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "a2495ff1e7b370c26128aa41298edb9ff06b5666",
+            "commit_message": "gh-144490: Fix C++ compatibility in pycore_cell.h (GH-144482)\n\n",
+            "commit_timestamp": 1770433918.0
         }
     ]
 }
