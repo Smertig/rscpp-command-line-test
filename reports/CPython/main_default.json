@@ -31076,6 +31076,21 @@
             "commit_ref": "945bf8ce1bf7ee3881752c2ecc129e35ab818477",
             "commit_message": "gh-144706: Warn against using synchronization primitives within signal handlers (GH-144736)\n\n",
             "commit_timestamp": 1770938123.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1771041141.875431,
+            "elapsed_time": 15.135093927383423,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 688.6952056884766,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "fdbc135f9cf57599cca8aeeed947d0b736fdb197",
+            "commit_message": "gh-144551: Update various CI jobs to OpenSSL 3.5 (GH-144808)\n\nAlso includes a fix to the address sanitizer build to build the `_ssl`\nmodule against the expected OpenSSL build.",
+            "commit_timestamp": 1771023731.0
         }
     ]
 }
