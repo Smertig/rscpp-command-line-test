@@ -15269,6 +15269,21 @@
             "commit_ref": "72e669d41305c961e7dd9695e1aa89e0b247c845",
             "commit_message": "Move default instance generation to MessageGenerator.\n\nRefactoring to make future changes simpler.\n\nPiperOrigin-RevId: 869901255\n",
             "commit_timestamp": 1771023744.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1771081727.118924,
+            "elapsed_time": 324.5908844470978,
+            "x64": true,
+            "actual_files_count": 1212,
+            "expected_files_count": 818,
+            "memory_traffic": 46831.79853820801,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "1ea2c4bab53d160172a0f0e68c09cd3a7f2516ec",
+            "commit_message": "Updated release builds to use Bazel 8 and platforms.\n\nBazel 8 no longer supports legacy toolchains, so all of our release toolchains have been updated to use platforms.\n\n#test-continuous\n\nPiperOrigin-RevId: 870017275\n",
+            "commit_timestamp": 1771048067.0
         }
     ]
 }

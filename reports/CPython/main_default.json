@@ -31091,6 +31091,21 @@
             "commit_ref": "fdbc135f9cf57599cca8aeeed947d0b736fdb197",
             "commit_message": "gh-144551: Update various CI jobs to OpenSSL 3.5 (GH-144808)\n\nAlso includes a fix to the address sanitizer build to build the `_ssl`\nmodule against the expected OpenSSL build.",
             "commit_timestamp": 1771023731.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1771081896.348741,
+            "elapsed_time": 15.906860113143921,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 683.4347991943359,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "14cbd0e6afa98355bdc6749b8230fed4c9b21bd6",
+            "commit_message": "remove unused _PyFunction_LookupByVersion (GH-144814)\n\n",
+            "commit_timestamp": 1771078141.0
         }
     ]
 }
