@@ -31136,6 +31136,21 @@
             "commit_ref": "50c479e613beccf38b6ac2e5fe4e03dab8bbcb28",
             "commit_message": "add whatsnew entry for `PyUnstable_SetImmortal` and `PyDatetime_IMPORT` (#144830)\n\n",
             "commit_timestamp": 1771167114.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1771214254.941416,
+            "elapsed_time": 14.393844366073608,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 697.315803527832,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "c91638ca0671b8038831f963ed44e66cdda006a2",
+            "commit_message": "gh-144833: Fix use-after-free in SSL module when SSL_new() fails (GH-144843)\n\nIn newPySSLSocket(), when SSL_new() returns NULL, Py_DECREF(self)\nwas called before _setSSLError(get_state_ctx(self), ...), causing\na use-after-free. Additionally, get_state_ctx() was called with\nself (PySSLSocket*) instead of sslctx (PySSLContext*), which is\na type confusion bug.\n\nFix by calling _setSSLError() before Py_DECREF() and using\nsslctx instead of self for get_state_ctx().",
+            "commit_timestamp": 1771209787.0
         }
     ]
 }
