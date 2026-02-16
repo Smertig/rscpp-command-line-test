@@ -31151,6 +31151,21 @@
             "commit_ref": "c91638ca0671b8038831f963ed44e66cdda006a2",
             "commit_message": "gh-144833: Fix use-after-free in SSL module when SSL_new() fails (GH-144843)\n\nIn newPySSLSocket(), when SSL_new() returns NULL, Py_DECREF(self)\nwas called before _setSSLError(get_state_ctx(self), ...), causing\na use-after-free. Additionally, get_state_ctx() was called with\nself (PySSLSocket*) instead of sslctx (PySSLContext*), which is\na type confusion bug.\n\nFix by calling _setSSLError() before Py_DECREF() and using\nsslctx instead of self for get_state_ctx().",
             "commit_timestamp": 1771209787.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1771255253.731458,
+            "elapsed_time": 14.616994619369507,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 685.3712768554688,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "837166f0999878ea83351f40726ef7a16cc692ba",
+            "commit_message": "bpo-32234: Allow mailbox instances as context managers (GH-4770)\n\n\nCo-authored-by: Petr Viktorin <encukou@gmail.com>\nCo-authored-by: R. David Murray <rdmurray@bitdance.com>",
+            "commit_timestamp": 1771247666.0
         }
     ]
 }
