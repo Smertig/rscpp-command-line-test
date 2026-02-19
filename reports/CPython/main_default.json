@@ -31226,6 +31226,21 @@
             "commit_ref": "1ddb41268997938d5f416e1ac98ae39cc3e81535",
             "commit_message": "gh-141510: Add can_modify_dict() in dictobject.c (#144955)\n\ncan_modify_dict() is stricter than ASSERT_DICT_LOCKED() for\nfrozendict. It uses PyUnstable_Object_IsUniquelyReferenced() which\nmatters for free-threaded builds.\n\nReplace anydict_setitem_take2() with setitem_take2_lock_held(). It's\nno longer useful to have two functions.",
             "commit_timestamp": 1771426069.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1771473291.204098,
+            "elapsed_time": 14.864506483078003,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 687.5688018798828,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "e84a2cc83c273329553377e99c9520d3f1225eda",
+            "commit_message": "gh-144888: Don't invalidate executors during function deallocation (#144974)\n\n",
+            "commit_timestamp": 1771472690.0
         }
     ]
 }
