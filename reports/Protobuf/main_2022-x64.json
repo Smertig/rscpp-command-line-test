@@ -15479,6 +15479,21 @@
             "commit_ref": "024118996df63e801bc030d1428316be2644ca44",
             "commit_message": "Add `resize` functions to repeated field containers.\n\nPiperOrigin-RevId: 873055920\n",
             "commit_timestamp": 1771623832.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1771686490.1609,
+            "elapsed_time": 318.8489570617676,
+            "x64": true,
+            "actual_files_count": 1212,
+            "expected_files_count": 818,
+            "memory_traffic": 47056.78488922119,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "efa2ab20af28d214e778cfe06ac5b3dea3d94ac0",
+            "commit_message": "refactor: remove zlib.h from public headers to reduce pollution\n\nIncluding zlib.h in public headers forces all users to\nhave zlib in their include path and leaks several macros (like Z_OK,\nMAX_WBITS) into the global namespace.\n\nThis change replaces `#include <zlib.h>` with a forward declaration of 'struct StreamContext'. Since all zlib related structs are only used within private members, this has no affect on any user.\n\nPiperOrigin-RevId: 873292523\n",
+            "commit_timestamp": 1771674430.0
         }
     ]
 }
