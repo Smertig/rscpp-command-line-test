@@ -31346,6 +31346,21 @@
             "commit_ref": "5944a539b91cc6bd140c64a3530d08015a4f8c30",
             "commit_message": "Fix warnings on main (GH-145104)\n\n",
             "commit_timestamp": 1771758135.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1771819024.825564,
+            "elapsed_time": 15.68294620513916,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 692.7835693359375,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "ad4ee7cb0f75d9c6615eaefe69692fc8e3ec553b",
+            "commit_message": "gh-144015: Add portable SIMD optimization for bytes.hex() et. al. (GH-143991)\n\nAdd SIMD optimization for `bytes.hex()`, `bytearray.hex()`, and `binascii.hexlify()` as well as `hashlib` `.hexdigest()` methods using platform-agnostic GCC/Clang vector extensions that compile to native SIMD instructions on our [PEP-11 Tier 1 Linux and macOS](https://peps.python.org/pep-0011/#tier-1) platforms.\n\n- 1.1-3x faster for common small data (16-64 bytes, covering md5 through sha512 digest sizes)\n- Up to 11x faster for large data (1KB+)\n- Retains the existing scalar code for short inputs (<16 bytes) or platforms lacking SIMD instructions, no observable performance regressions there.\n\n## Supported platforms:\n\n- x86-64: the compiler generates SSE2 - always available, no flags or CPU feature checks needed\n- ARM64: NEON is always available, always available, no flags or CPU feature checks needed\n- ARM32: Requires NEON support and that appropriate compiler flags enable that (e.g., `-march=native` on a Raspberry Pi 3+) - while we _could_ use runtime detection to allow neon when compiled without a recent enough `-march=` flag (`cortex-a53` and later IIRC), there are diminishing returns in doing so. Anyone using 32-bit ARM in a situation where performance matters will already be compiling with such flags. (as opposed to 32-bit Raspbian compilation that defaults to aiming primarily for compatibility with rpi1&0 armv6 arch=armhf which lacks neon)\n- Windows/MSVC: Not supported. MSVC lacks `__builtin_shufflevector`, so the existing scalar path is used. Leaving it as an opportunity for the future for someone to figure out how to express the intent to that compiler.\n\nThis is compile time detection of features that are always available on the target architectures. No need for runtime feature inspection.",
+            "commit_timestamp": 1771816743.0
         }
     ]
 }
