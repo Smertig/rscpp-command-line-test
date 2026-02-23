@@ -15539,6 +15539,21 @@
             "commit_ref": "e8f93acee8364cf05abc2311f6dbcb1a56a3eeeb",
             "commit_message": "Devirtualize calls to schemaFactory\n\nBy specifying the field as its final type\n\nThis might speed up schema construction. Schema constructions is the cold path, but it's important at app startup. This is probably not going to make a big difference to benchmarks, just an opportunistic improvement.\n\nPiperOrigin-RevId: 873770482\n",
             "commit_timestamp": 1771803532.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1771860043.02208,
+            "elapsed_time": 320.3435311317444,
+            "x64": true,
+            "actual_files_count": 1212,
+            "expected_files_count": 818,
+            "memory_traffic": 46936.63674926758,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "e8b31398244d99765db69369943605a385a52710",
+            "commit_message": "Internal change\n\nPiperOrigin-RevId: 873963381\n",
+            "commit_timestamp": 1771843665.0
         }
     ]
 }
