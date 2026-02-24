@@ -31376,6 +31376,21 @@
             "commit_ref": "8db8fc9b51060b61d14fbe6aa0f2e2591292279e",
             "commit_message": "gh-144777: Fix data races in IncrementalNewlineDecoder (gh-144971)\n\n",
             "commit_timestamp": 1771857136.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1771905254.615681,
+            "elapsed_time": 15.116524934768677,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 705.3945236206055,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "fd0400585eb957c7d10812d87a8cb9e1f3c72519",
+            "commit_message": "`_struct.c`: Fix UB from integer overflow in `prepare_s` (GH-145158)\n\nAvoid possible undefined behaviour from signed overflow in `struct` module\n\nAs discovered via oss-fuzz.",
+            "commit_timestamp": 1771894397.0
         }
     ]
 }
