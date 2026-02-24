@@ -31391,6 +31391,21 @@
             "commit_ref": "fd0400585eb957c7d10812d87a8cb9e1f3c72519",
             "commit_message": "`_struct.c`: Fix UB from integer overflow in `prepare_s` (GH-145158)\n\nAvoid possible undefined behaviour from signed overflow in `struct` module\n\nAs discovered via oss-fuzz.",
             "commit_timestamp": 1771894397.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1771946778.792148,
+            "elapsed_time": 16.2730495929718,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 694.7620697021484,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "4c95ad8e495646eae4130957e0a4c1cc5ef19120",
+            "commit_message": "Fix `inspect.Parameter` docstring on the `kind` attribute (GH-143541)\n\n",
+            "commit_timestamp": 1771935465.0
         }
     ]
 }
