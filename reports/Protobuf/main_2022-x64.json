@@ -15599,6 +15599,21 @@
             "commit_ref": "aadef52358e00fabe788a4aedd5c8a4597c2a949",
             "commit_message": "Fix type mismatch comparison for iteration (#23365)\n\nSwitches standard for-loops to for-each loops to prevent warnings regarding type mismatch during comparison.\n\nCloses #23365\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/23365 from tempoz:tempoz-fix-for-loop-comparison 13d6041ab454993dd3d4b9cdf3f11faa0e572c4e\nPiperOrigin-RevId: 874894787\n",
             "commit_timestamp": 1771989199.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1772033015.185413,
+            "elapsed_time": 328.7608082294464,
+            "x64": true,
+            "actual_files_count": 1212,
+            "expected_files_count": 818,
+            "memory_traffic": 47130.74020385742,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "d875ed69b6f8bc5a345317d9932b7a4f783080ec",
+            "commit_message": "Cleanup:\n* Remove unneeded \"google/protobuf/stubs/common.h\" includes\n* Migrate uses of kuint64max over to the C++ standard std::numeric_limits<uint64_t>::max()\n\nPiperOrigin-RevId: 875122434\n",
+            "commit_timestamp": 1772028594.0
         }
     ]
 }
