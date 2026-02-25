@@ -15584,6 +15584,21 @@
             "commit_ref": "2a45d14ddacb9e52499a9db794a4f93aa834d287",
             "commit_message": "Mark rules_rust as a non-dev dependency\n\nThis is a critical step towards public rust_proto_library() support.\n\nWe previously held this back due to concerns about bloat, but investigation has shown that rules_rust is set up sufficiently that the Rust toolchain will not be installed unless the user affirmatively uses rust_proto_library(), which makes the bloat concerns minimal.\n\nPiperOrigin-RevId: 874423531\n",
             "commit_timestamp": 1771920546.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1771991512.340276,
+            "elapsed_time": 335.05405378341675,
+            "x64": true,
+            "actual_files_count": 1212,
+            "expected_files_count": 818,
+            "memory_traffic": 46990.231788635254,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "aadef52358e00fabe788a4aedd5c8a4597c2a949",
+            "commit_message": "Fix type mismatch comparison for iteration (#23365)\n\nSwitches standard for-loops to for-each loops to prevent warnings regarding type mismatch during comparison.\n\nCloses #23365\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/23365 from tempoz:tempoz-fix-for-loop-comparison 13d6041ab454993dd3d4b9cdf3f11faa0e572c4e\nPiperOrigin-RevId: 874894787\n",
+            "commit_timestamp": 1771989199.0
         }
     ]
 }

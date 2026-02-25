@@ -31406,6 +31406,21 @@
             "commit_ref": "4c95ad8e495646eae4130957e0a4c1cc5ef19120",
             "commit_message": "Fix `inspect.Parameter` docstring on the `kind` attribute (GH-143541)\n\n",
             "commit_timestamp": 1771935465.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1771991662.60929,
+            "elapsed_time": 16.186380624771118,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 696.4961853027344,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "1ac9d138ae0563f2829ba91efe7989af507f47e0",
+            "commit_message": "GH-145006: add ModuleNotFoundError hints when a module for a differen\u2026 (#145007)\n\n* GH-145006: add ModuleNotFoundError hints when a module for a different ABI exists\n\nSigned-off-by: Filipe La\u00edns <lains@riseup.net>\n\n* Fix deprecation warnings\n\nSigned-off-by: Filipe La\u00edns <lains@riseup.net>\n\n* Use SHLIB_SUFFIX in test_find_incompatible_extension_modules when available\n\nSigned-off-by: Filipe La\u00edns <lains@riseup.net>\n\n* Add test_incompatible_extension_modules_hint\n\nSigned-off-by: Filipe La\u00edns <lains@riseup.net>\n\n* Fix Windows\n\nSigned-off-by: Filipe La\u00edns <lains@riseup.net>\n\n* Show the whole extension module file name in hint\n\nSigned-off-by: Filipe La\u00edns <lains@riseup.net>\n\n---------\n\nSigned-off-by: Filipe La\u00edns <lains@riseup.net>",
+            "commit_timestamp": 1771980781.0
         }
     ]
 }
