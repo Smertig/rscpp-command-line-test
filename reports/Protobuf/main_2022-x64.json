@@ -15629,6 +15629,21 @@
             "commit_ref": "079bddd6e6b187001c79e780e83b3c9176a3d107",
             "commit_message": "Tag GeneratedMessageLite.markImmutable as final\n\nThis method is effectively-final. Tagging it as actually final will help\noptimisers to devirtualize the call.\n\nPiperOrigin-RevId: 875406002\n",
             "commit_timestamp": 1772068584.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1772119232.913913,
+            "elapsed_time": 318.37921237945557,
+            "x64": true,
+            "actual_files_count": 1212,
+            "expected_files_count": 818,
+            "memory_traffic": 47003.92909240723,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "b1c987696e625bd07dbb51f283734b954e406190",
+            "commit_message": "Make the alias produced by the rust_proto_library macro adopt the specified tags.\n\nPiperOrigin-RevId: 875683533\n",
+            "commit_timestamp": 1772115137.0
         }
     ]
 }
