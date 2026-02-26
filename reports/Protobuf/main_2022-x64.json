@@ -15614,6 +15614,21 @@
             "commit_ref": "d875ed69b6f8bc5a345317d9932b7a4f783080ec",
             "commit_message": "Cleanup:\n* Remove unneeded \"google/protobuf/stubs/common.h\" includes\n* Migrate uses of kuint64max over to the C++ standard std::numeric_limits<uint64_t>::max()\n\nPiperOrigin-RevId: 875122434\n",
             "commit_timestamp": 1772028594.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1772077869.149386,
+            "elapsed_time": 314.61040353775024,
+            "x64": true,
+            "actual_files_count": 1212,
+            "expected_files_count": 818,
+            "memory_traffic": 46907.03623199463,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "079bddd6e6b187001c79e780e83b3c9176a3d107",
+            "commit_message": "Tag GeneratedMessageLite.markImmutable as final\n\nThis method is effectively-final. Tagging it as actually final will help\noptimisers to devirtualize the call.\n\nPiperOrigin-RevId: 875406002\n",
+            "commit_timestamp": 1772068584.0
         }
     ]
 }

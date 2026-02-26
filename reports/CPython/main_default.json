@@ -31436,6 +31436,21 @@
             "commit_ref": "12828e5f98a47864e3f6d25fdd99c062fae28b1c",
             "commit_message": "gh-85809: Ensure shutil.make_archive accepts path-like objects in all cases (GH-143668)\n\n",
             "commit_timestamp": 1772030657.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1772078075.615203,
+            "elapsed_time": 30.128769397735596,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 779.8990783691406,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "43fdb7037e76c18d9545ac11b2f1e3e398152ada",
+            "commit_message": "gh-145037: Fix Emscripten trampoline with emcc >= 4.0.19 (#145038)\n\nThis undoes a change made as a part of PR 137470, for compatibility with EMSDK\n4.0.19. It adds `emscripten_trampoline` field in `pycore_runtime_structs.h`\nand initializes it from JS initialization code with the wasm-gc based trampoline\nif possible. Otherwise we fall back to the JS trampoline.\n",
+            "commit_timestamp": 1772058065.0
         }
     ]
 }
