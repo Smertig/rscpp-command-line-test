@@ -15749,6 +15749,21 @@
             "commit_ref": "3d9471b823fa7ad97c3827c93d221e3057d01681",
             "commit_message": "Make GeneratedMessageLite.defaultInstanceMap final\n\nThis might help optimisers to inline it.\n\nPiperOrigin-RevId: 877153922\n",
             "commit_timestamp": 1772422035.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1772464692.732683,
+            "elapsed_time": 317.3364944458008,
+            "x64": true,
+            "actual_files_count": 1212,
+            "expected_files_count": 818,
+            "memory_traffic": 46993.9640045166,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "228aa1663aa20ff788b41e0f468cf7af01b65263",
+            "commit_message": "rust: clear the collect coverage attribute\n\nCollecting coverage for generated sources is generally not intended.\n\nPiperOrigin-RevId: 877328988\n",
+            "commit_timestamp": 1772453949.0
         }
     ]
 }
