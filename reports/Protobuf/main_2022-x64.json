@@ -15794,6 +15794,21 @@
             "commit_ref": "127b34f44525af283b1c23a7539be5395e167c16",
             "commit_message": "Automated Code Change\n\nPiperOrigin-RevId: 877789010\n",
             "commit_timestamp": 1772526472.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1772596150.209927,
+            "elapsed_time": 318.96053290367126,
+            "x64": true,
+            "actual_files_count": 1212,
+            "expected_files_count": 818,
+            "memory_traffic": 46949.24042510986,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "1a7f883dc00080c8c96dbb34d15f4227ccfe9a99",
+            "commit_message": "Remove rerun-if-changed on generated artifacts.\n\nThe idea of this was to ensure that the gencode is refreshed if the generated output is modified out-of-band. However, it causes protoc to run on every single build because every time it regenerates the outputs, which in turn updates the timestamps, which causes the next build to regenerate it again.\n\nFixes https://github.com/protocolbuffers/protobuf/issues/26190\n\nPiperOrigin-RevId: 878120672\n",
+            "commit_timestamp": 1772576267.0
         }
     ]
 }
