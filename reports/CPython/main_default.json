@@ -31646,6 +31646,21 @@
             "commit_ref": "6acaf659ef0fdee131bc02f0b58685da039b5855",
             "commit_message": "gh-145301: Fix double-free in hashlib and hmac module initialization (GH-145321)\n\ngh-145301: Fix double-free in hashlib and hmac initialization",
             "commit_timestamp": 1772682505.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1772724279.427863,
+            "elapsed_time": 16.186747550964355,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 694.9785003662109,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "0c29f83caa053c437131972147935c02e4e06630",
+            "commit_message": "gh-141510: No longer accept frozendict in PyDict_Copy() (#145542)\n\nRename _PyDict_Copy() to anydict_copy().\n\nReplace PyObject_IsInstance(op, &PyFrozenDict_Type) with\nPyFrozenDict_Check().",
+            "commit_timestamp": 1772720814.0
         }
     ]
 }
