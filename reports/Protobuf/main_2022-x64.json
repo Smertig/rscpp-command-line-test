@@ -15809,6 +15809,21 @@
             "commit_ref": "1a7f883dc00080c8c96dbb34d15f4227ccfe9a99",
             "commit_message": "Remove rerun-if-changed on generated artifacts.\n\nThe idea of this was to ensure that the gencode is refreshed if the generated output is modified out-of-band. However, it causes protoc to run on every single build because every time it regenerates the outputs, which in turn updates the timestamps, which causes the next build to regenerate it again.\n\nFixes https://github.com/protocolbuffers/protobuf/issues/26190\n\nPiperOrigin-RevId: 878120672\n",
             "commit_timestamp": 1772576267.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1772682589.779511,
+            "elapsed_time": 328.7610158920288,
+            "x64": true,
+            "actual_files_count": 1212,
+            "expected_files_count": 818,
+            "memory_traffic": 46970.05177307129,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "f88d2e5d47da6fd525dfad61c651aaaaa76aa740",
+            "commit_message": "Make is_supported_integral_type support both long and long long\n\nsize_t can be unsigned long while uint64_t is unsigned long long, preventing compilation of proto2::RepeatedField<size_t>\n\nPiperOrigin-RevId: 878784189\n",
+            "commit_timestamp": 1772682054.0
         }
     ]
 }
