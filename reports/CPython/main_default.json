@@ -31676,6 +31676,21 @@
             "commit_ref": "c3fb0d9d96902774c08b199dda0479a8d31398a5",
             "commit_message": "gh-145177: Support multiple Emscripten versions for Emscripten buildbot (#145180)\n\nAdds an `--emsdk-cache` argument to the Emscripten build script and an\nemscripten_version.txt file. If the `--emsdk-cache` argument is passed, the build script\nwill look in `emscripten_version.txt` to get the expected emsdk version is installed in\na folder called e.g., 4.0.12 in the directory indicated by the `--emsdk-cache` argument,\nand run the build with that Emscripten tooling activated.",
             "commit_timestamp": 1772757761.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1772810306.575333,
+            "elapsed_time": 15.666351318359375,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 703.6543884277344,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "d931725bc850cd096f6703bc285e885f1e015f05",
+            "commit_message": "gh-144370: Disallow usage of control characters in status in wsgiref.handlers for security (#144371)\n\nDisallow usage of control characters in status in wsgiref.handlers\nto prevent HTTP header injections.\n\nCo-authored-by: blurb-it[bot] <43283697+blurb-it[bot]@users.noreply.github.com>\nCo-authored-by: Victor Stinner <vstinner@python.org>",
+            "commit_timestamp": 1772799741.0
         }
     ]
 }
