@@ -31661,6 +31661,21 @@
             "commit_ref": "0c29f83caa053c437131972147935c02e4e06630",
             "commit_message": "gh-141510: No longer accept frozendict in PyDict_Copy() (#145542)\n\nRename _PyDict_Copy() to anydict_copy().\n\nReplace PyObject_IsInstance(op, &PyFrozenDict_Type) with\nPyFrozenDict_Check().",
             "commit_timestamp": 1772720814.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1772769157.002258,
+            "elapsed_time": 15.80712604522705,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 708.5625915527344,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "c3fb0d9d96902774c08b199dda0479a8d31398a5",
+            "commit_message": "gh-145177: Support multiple Emscripten versions for Emscripten buildbot (#145180)\n\nAdds an `--emsdk-cache` argument to the Emscripten build script and an\nemscripten_version.txt file. If the `--emsdk-cache` argument is passed, the build script\nwill look in `emscripten_version.txt` to get the expected emsdk version is installed in\na folder called e.g., 4.0.12 in the directory indicated by the `--emsdk-cache` argument,\nand run the build with that Emscripten tooling activated.",
+            "commit_timestamp": 1772757761.0
         }
     ]
 }

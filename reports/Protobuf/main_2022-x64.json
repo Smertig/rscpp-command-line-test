@@ -15839,6 +15839,21 @@
             "commit_ref": "f88d2e5d47da6fd525dfad61c651aaaaa76aa740",
             "commit_message": "Make is_supported_integral_type support both long and long long\n\nsize_t can be unsigned long while uint64_t is unsigned long long, preventing compilation of proto2::RepeatedField<size_t>\n\nPiperOrigin-RevId: 878784189\n",
             "commit_timestamp": 1772682054.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1772768952.488731,
+            "elapsed_time": 323.3964133262634,
+            "x64": true,
+            "actual_files_count": 1214,
+            "expected_files_count": 818,
+            "memory_traffic": 47083.58975982666,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "a2cf5bd70371512cdacdb126003d003383db83b4",
+            "commit_message": "Fix `ToStringLike` build failures.\n\nPiperOrigin-RevId: 879373016\n",
+            "commit_timestamp": 1772768197.0
         }
     ]
 }
