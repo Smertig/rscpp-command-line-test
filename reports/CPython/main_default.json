@@ -31691,6 +31691,21 @@
             "commit_ref": "d931725bc850cd096f6703bc285e885f1e015f05",
             "commit_message": "gh-144370: Disallow usage of control characters in status in wsgiref.handlers for security (#144371)\n\nDisallow usage of control characters in status in wsgiref.handlers\nto prevent HTTP header injections.\n\nCo-authored-by: blurb-it[bot] <43283697+blurb-it[bot]@users.noreply.github.com>\nCo-authored-by: Victor Stinner <vstinner@python.org>",
             "commit_timestamp": 1772799741.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1772855178.020966,
+            "elapsed_time": 15.028717279434204,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 708.0521011352539,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "9159287f58f7a5a7e59edffaf3094ea62e1633eb",
+            "commit_message": "gh-144175: Add PyArg_ParseArray() function (#144283)\n\nAdd PyArg_ParseArray() and PyArg_ParseArrayAndKeywords()\nfunctions to parse arguments of functions using the METH_FASTCALL\ncalling convention.\n\nCo-authored-by: B\u00e9n\u00e9dikt Tran <10796600+picnixz@users.noreply.github.com>",
+            "commit_timestamp": 1772834264.0
         }
     ]
 }
