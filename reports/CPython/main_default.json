@@ -31751,6 +31751,21 @@
             "commit_ref": "149c4657507d17f78dd0938419a5a24ed71dc07e",
             "commit_message": "Fix bug notifier for issues with no body text (#145603)",
             "commit_timestamp": 1772895193.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1773028432.024218,
+            "elapsed_time": 14.686143398284912,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 710.2196655273438,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "015613384fea7a00bb2077760e325e5baab6814b",
+            "commit_message": "gh-145219: Add Emscripten cross-build and clean configurability (#145581)\n\nModifies the Emscripten build script to allow for custom cross-build directory\nnames, and to only clean Emscripten-specific paths (optionally including the\nbuild python).\n\nCo-authored-by: Russell Keith-Magee <russell@keith-magee.com>",
+            "commit_timestamp": 1773023121.0
         }
     ]
 }
