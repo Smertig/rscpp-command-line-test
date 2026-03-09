@@ -31766,6 +31766,21 @@
             "commit_ref": "015613384fea7a00bb2077760e325e5baab6814b",
             "commit_message": "gh-145219: Add Emscripten cross-build and clean configurability (#145581)\n\nModifies the Emscripten build script to allow for custom cross-build directory\nnames, and to only clean Emscripten-specific paths (optionally including the\nbuild python).\n\nCo-authored-by: Russell Keith-Magee <russell@keith-magee.com>",
             "commit_timestamp": 1773023121.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1773069999.25574,
+            "elapsed_time": 15.351963758468628,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 706.916130065918,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "27c49707dfd13752791aacd33a3ecfbe780beca2",
+            "commit_message": "GH-144688: Fix refleaks in JIT when optimization fails (GH-145420)",
+            "commit_timestamp": 1773069693.0
         }
     ]
 }
