@@ -15989,6 +15989,21 @@
             "commit_ref": "ab531655c3d44602205d23f755683e9a826a407c",
             "commit_message": "Use `String#encodedLength` on JDK versions that support it\n\nSee https://bugs.openjdk.org/browse/JDK-8372353\n\nPiperOrigin-RevId: 881440323\n",
             "commit_timestamp": 1773155937.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1773242381.442517,
+            "elapsed_time": 326.091326713562,
+            "x64": true,
+            "actual_files_count": 1214,
+            "expected_files_count": 818,
+            "memory_traffic": 47005.29593658447,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "7252fb678696c406a4620197c9a399d6c764a677",
+            "commit_message": "Make ImplicitWeakMessage compatible for \"message globals\".\n\nRename instance and have DefaultType inherit MessageGlobalsBase.\n\nPiperOrigin-RevId: 881527398\n",
+            "commit_timestamp": 1773166303.0
         }
     ]
 }

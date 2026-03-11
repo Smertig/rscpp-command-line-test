@@ -31811,6 +31811,21 @@
             "commit_ref": "7990313afa3234d5145b32ead3ef3f6278735f4f",
             "commit_message": "Docs: Improve the C API documentation involving threads (GH-145520)\n\nCo-authored-by: Stan Ulbrych <89152624+StanFromIreland@users.noreply.github.com>",
             "commit_timestamp": 1773154633.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1773242556.068793,
+            "elapsed_time": 15.368919849395752,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 706.8359146118164,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "706fd4ec08acbf1b1def3630017ebe55d224adfa",
+            "commit_message": "gh-142183: Cache one datachunk per tstate to prevent alloc/dealloc thrashing (#145789)\n\nCache one datachunk per tstate to prevent alloc/dealloc thrashing when repeatedly hitting the same call depth at exactly the wrong boundary.\n\n---------\n\nCo-authored-by: blurb-it[bot] <43283697+blurb-it[bot]@users.noreply.github.com>",
+            "commit_timestamp": 1773240376.0
         }
     ]
 }
