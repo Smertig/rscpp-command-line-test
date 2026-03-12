@@ -31826,6 +31826,21 @@
             "commit_ref": "706fd4ec08acbf1b1def3630017ebe55d224adfa",
             "commit_message": "gh-142183: Cache one datachunk per tstate to prevent alloc/dealloc thrashing (#145789)\n\nCache one datachunk per tstate to prevent alloc/dealloc thrashing when repeatedly hitting the same call depth at exactly the wrong boundary.\n\n---------\n\nCo-authored-by: blurb-it[bot] <43283697+blurb-it[bot]@users.noreply.github.com>",
             "commit_timestamp": 1773240376.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1773287598.244897,
+            "elapsed_time": 14.678394079208374,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 689.6542892456055,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "d19de375a204c74ab5f3a28ec42335bae139033d",
+            "commit_message": "GH-145247: Use _PyTuple_FromPair in Parser and Python (#145842)\n\nUse _PyTuple_FromPair in Parser and Python",
+            "commit_timestamp": 1773263298.0
         }
     ]
 }
