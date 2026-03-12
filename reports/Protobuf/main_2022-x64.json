@@ -16019,6 +16019,21 @@
             "commit_ref": "325d8dca2ffdc658824aa6b05d825dcb86cca2cb",
             "commit_message": "Moved `protocopt` flag out of the `cc` dir, since it is not a c++-specific flag.\n\nPiperOrigin-RevId: 882346119\n",
             "commit_timestamp": 1773286936.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1773328953.895868,
+            "elapsed_time": 326.74789905548096,
+            "x64": true,
+            "actual_files_count": 1214,
+            "expected_files_count": 818,
+            "memory_traffic": 47120.05564880371,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "fbbc2b6acbfe563683d83d5fbfe3032fd8af2f08",
+            "commit_message": "Do the arena==nullptr check at a higher level instead of at each Delete call.\n\nPiperOrigin-RevId: 882558280\n",
+            "commit_timestamp": 1773323003.0
         }
     ]
 }
