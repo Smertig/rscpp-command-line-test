@@ -16034,6 +16034,21 @@
             "commit_ref": "fbbc2b6acbfe563683d83d5fbfe3032fd8af2f08",
             "commit_message": "Do the arena==nullptr check at a higher level instead of at each Delete call.\n\nPiperOrigin-RevId: 882558280\n",
             "commit_timestamp": 1773323003.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1773373814.949277,
+            "elapsed_time": 330.139404296875,
+            "x64": true,
+            "actual_files_count": 1214,
+            "expected_files_count": 818,
+            "memory_traffic": 47121.44145965576,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "eaec88fea0b95468f293f89bd08e5a0e5ab8490b",
+            "commit_message": "Pass a const reference to the user-provided lambda in `RepeatedField`'s `proto2::erase_if`.\n\nIt is an anti-pattern to mutate elements in a repeated field as part of this callback, which is meant to only determine whether to erase an element.\n\nPiperOrigin-RevId: 882806181\n",
+            "commit_timestamp": 1773354428.0
         }
     ]
 }

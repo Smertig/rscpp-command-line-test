@@ -31856,6 +31856,21 @@
             "commit_ref": "d4cc553294a558d632a2f69523eb04fa8c51f1a7",
             "commit_message": "gh-141510: Update PyDict C API doc for frozendict (#145533)\n\nMention frozendict support.",
             "commit_timestamp": 1773324276.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1773373976.53833,
+            "elapsed_time": 23.607269763946533,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 779.641227722168,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "0adc7289c3ab097b5608c0d288d91e1f5f236469",
+            "commit_message": "Revert \"gh-143050: Remove redundant decref in _PyLong_Negate (gh-143051)\" (#145891)\n\nOSS Fuzzer caught an assertion failure.\n\nThis reverts commit 5197ecb5e4df30ba0f6792d8bc0e36846154f58a.",
+            "commit_timestamp": 1773366809.0
         }
     ]
 }
