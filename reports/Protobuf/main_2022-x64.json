@@ -16049,6 +16049,21 @@
             "commit_ref": "eaec88fea0b95468f293f89bd08e5a0e5ab8490b",
             "commit_message": "Pass a const reference to the user-provided lambda in `RepeatedField`'s `proto2::erase_if`.\n\nIt is an anti-pattern to mutate elements in a repeated field as part of this callback, which is meant to only determine whether to erase an element.\n\nPiperOrigin-RevId: 882806181\n",
             "commit_timestamp": 1773354428.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1773415138.409133,
+            "elapsed_time": 324.04915165901184,
+            "x64": true,
+            "actual_files_count": 1214,
+            "expected_files_count": 818,
+            "memory_traffic": 47161.18888092041,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "62c75eabaa5e23c135c5ac1d6616df9d4374838f",
+            "commit_message": "Implement `clear` for `RepeatedFieldProxy`.\n\nPiperOrigin-RevId: 883170415\n",
+            "commit_timestamp": 1773414873.0
         }
     ]
 }
