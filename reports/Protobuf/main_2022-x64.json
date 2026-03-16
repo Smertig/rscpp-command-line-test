@@ -16109,6 +16109,21 @@
             "commit_ref": "9e7227dc75a0043e4b71455fffa8a5d5b6250522",
             "commit_message": "Implement `move_assign` for `RepeatedFieldProxy`.\n\nPiperOrigin-RevId: 884149214\n",
             "commit_timestamp": 1773623881.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1773674866.723774,
+            "elapsed_time": 327.8742444515228,
+            "x64": true,
+            "actual_files_count": 1214,
+            "expected_files_count": 818,
+            "memory_traffic": 47159.12668609619,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "7f31895c844c7d96f1ebfa0bc5a145adad91a7ee",
+            "commit_message": "Delete the experimental BinaryWriter class.\n\nThis was for the experimental runtime, which is now defunct and we don't have any immediate plan to resurrect.\n\nRemoving this will unlock the ability to remove FieldOrder.DESCENDING in a followup change, which will result in benefits to the in-real-use paths for Android which currently have paths for both ASCENDING and DESCENDING.\n\nPiperOrigin-RevId: 884389156\n",
+            "commit_timestamp": 1773665641.0
         }
     ]
 }

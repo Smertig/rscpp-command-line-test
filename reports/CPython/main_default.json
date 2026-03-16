@@ -31931,6 +31931,21 @@
             "commit_ref": "40095d526bd8ddbabee0603c2b502ed6807e5f4d",
             "commit_message": "Expand `fuzz_pycompile.dict` for new syntax",
             "commit_timestamp": 1773618860.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1773675023.416871,
+            "elapsed_time": 13.907011270523071,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 700.2297210693359,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "e18abc6a1f1b60434b529d4c1ff4855acde0fd13",
+            "commit_message": "gh-135329: Remove flaky test_repl_eio test (gh-145932)\n\nThe test doesn't actually test any pyrepl code (it runs Python with -S)\nand has a race condition that causes intermittent timeouts on CI.",
+            "commit_timestamp": 1773673687.0
         }
     ]
 }
