@@ -16124,6 +16124,21 @@
             "commit_ref": "7f31895c844c7d96f1ebfa0bc5a145adad91a7ee",
             "commit_message": "Delete the experimental BinaryWriter class.\n\nThis was for the experimental runtime, which is now defunct and we don't have any immediate plan to resurrect.\n\nRemoving this will unlock the ability to remove FieldOrder.DESCENDING in a followup change, which will result in benefits to the in-real-use paths for Android which currently have paths for both ASCENDING and DESCENDING.\n\nPiperOrigin-RevId: 884389156\n",
             "commit_timestamp": 1773665641.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1773719501.621517,
+            "elapsed_time": 343.67425870895386,
+            "x64": true,
+            "actual_files_count": 1215,
+            "expected_files_count": 818,
+            "memory_traffic": 47298.53701019287,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "748e5c73ba8dd6ca1732e50d6a22770c0a7aff18",
+            "commit_message": "rust generator: annotate singular scalar fields.\n\nThis CL also pulls out some common logic in generator_test\nfor checking annotations.\n\nPiperOrigin-RevId: 884744891\n",
+            "commit_timestamp": 1773713531.0
         }
     ]
 }
