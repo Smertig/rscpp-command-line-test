@@ -31961,6 +31961,21 @@
             "commit_ref": "1b118353bb0a9d816de6ef673f3b11775de5bec5",
             "commit_message": "gh-145176 Move Emscripten files into Platforms/emscripten (#145806)\n\nMoves Emscripten build files into Platforms/emscripten.",
             "commit_timestamp": 1773711585.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1773761437.329598,
+            "elapsed_time": 14.501657724380493,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 694.0037155151367,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "dc24b8a6d42231ebc821baeda662e1168b52aa26",
+            "commit_message": "gh-145966: Fix _csv DIALECT_GETATTR macro silently masking non-AttributeError exceptions (GH-145974)\n\nThe DIALECT_GETATTR macro in dialect_new() unconditionally called\nPyErr_Clear() when PyObject_GetAttrString() failed, which suppressed\nall exceptions including MemoryError, KeyboardInterrupt, and\nRuntimeError. Now only AttributeError is cleared; other exceptions\npropagate via the existing error handling path.\n\nCo-authored-by: B\u00e9n\u00e9dikt Tran <10796600+picnixz@users.noreply.github.com>",
+            "commit_timestamp": 1773760133.0
         }
     ]
 }

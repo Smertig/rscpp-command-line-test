@@ -16139,6 +16139,21 @@
             "commit_ref": "748e5c73ba8dd6ca1732e50d6a22770c0a7aff18",
             "commit_message": "rust generator: annotate singular scalar fields.\n\nThis CL also pulls out some common logic in generator_test\nfor checking annotations.\n\nPiperOrigin-RevId: 884744891\n",
             "commit_timestamp": 1773713531.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1773761236.882588,
+            "elapsed_time": 325.6663372516632,
+            "x64": true,
+            "actual_files_count": 1215,
+            "expected_files_count": 818,
+            "memory_traffic": 47156.848487854004,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "cbe6403761a4fa349c6612102f048ff584441f09",
+            "commit_message": "Add type hints to descriptor_database.py.\n\nThis change adds type annotations to the methods and instance variables within the DescriptorDatabase class, as well as to the helper function _ExtractSymbols. Forward references are used for types from descriptor_pb2.\n\nPiperOrigin-RevId: 884793323\n",
+            "commit_timestamp": 1773722591.0
         }
     ]
 }
