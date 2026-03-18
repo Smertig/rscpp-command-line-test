@@ -31991,6 +31991,21 @@
             "commit_ref": "e0f7c1097e19b6f5c2399e19f283c9fb373c243f",
             "commit_message": "gh-145779: Improve classmethod/staticmethod scaling in free-threaded build (#145826)\n\nAdd special cases for classmethod and staticmethod descriptors in\n_PyObject_GetMethodStackRef() to avoid calling tp_descr_get, which\navoids reference count contention on the bound method and underlying\ncallable. This improves scaling when calling classmethods and\nstaticmethods from multiple threads.\n\nAlso refactor method_vectorcall in classobject.c into a new _PyObject_VectorcallPrepend() helper so that it can be used by\nPyObject_VectorcallMethod as well.",
             "commit_timestamp": 1773771884.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1773848073.730584,
+            "elapsed_time": 19.676605701446533,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 704.1760025024414,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "70c7e040d4f50219bd2832391e1a98701281fc58",
+            "commit_message": "gh-66419: Make optional arguments with nargs=REMAINDER consume all arguments (GH-124509)\n\nIt no longer stops at the first '--'.",
+            "commit_timestamp": 1773846251.0
         }
     ]
 }
