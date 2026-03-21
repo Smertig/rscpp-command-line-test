@@ -16244,6 +16244,21 @@
             "commit_ref": "db1c40f3fd8bde2be8c246b9bc3fc394c11ad5a2",
             "commit_message": "fix: propagate prefer_prebuilt_protoc flag (#26428)\n\nfixes https://github.com/protocolbuffers/protobuf/issues/25561\n\nCloses #26428\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/26428 from protocolbuffers:alexeagle-patch-5 4ad1a383eb9b3446eec96faad0a92601b9fdb027\nPiperOrigin-RevId: 886252950\n",
             "commit_timestamp": 1773941873.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1774064803.670251,
+            "elapsed_time": 339.2716794013977,
+            "x64": true,
+            "actual_files_count": 1214,
+            "expected_files_count": 818,
+            "memory_traffic": 47261.64636230469,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "267de056242d958b6da2bc5603cb90c9d0431ee5",
+            "commit_message": "Implement `get(size_type index)` for `RepeatedFieldProxy`.\n\nThis can be more ergonomic than `operator[]` in cases where a repeated field proxy is wrapped and accessed through `operator->`, such as `std::optional`. Rather than writing `(*optional_proxy)[0]`, you can write `optional_proxy->get(0)`.\n\nPiperOrigin-RevId: 887054323\n",
+            "commit_timestamp": 1774053914.0
         }
     ]
 }
