@@ -16274,6 +16274,21 @@
             "commit_ref": "267de056242d958b6da2bc5603cb90c9d0431ee5",
             "commit_message": "Implement `get(size_type index)` for `RepeatedFieldProxy`.\n\nThis can be more ergonomic than `operator[]` in cases where a repeated field proxy is wrapped and accessed through `operator->`, such as `std::optional`. Rather than writing `(*optional_proxy)[0]`, you can write `optional_proxy->get(0)`.\n\nPiperOrigin-RevId: 887054323\n",
             "commit_timestamp": 1774053914.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1774151525.565602,
+            "elapsed_time": 319.4373035430908,
+            "x64": true,
+            "actual_files_count": 1214,
+            "expected_files_count": 818,
+            "memory_traffic": 47166.33618927002,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "267de056242d958b6da2bc5603cb90c9d0431ee5",
+            "commit_message": "Implement `get(size_type index)` for `RepeatedFieldProxy`.\n\nThis can be more ergonomic than `operator[]` in cases where a repeated field proxy is wrapped and accessed through `operator->`, such as `std::optional`. Rather than writing `(*optional_proxy)[0]`, you can write `optional_proxy->get(0)`.\n\nPiperOrigin-RevId: 887054323\n",
+            "commit_timestamp": 1774053914.0
         }
     ]
 }
