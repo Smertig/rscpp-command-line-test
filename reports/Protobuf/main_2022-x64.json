@@ -16304,6 +16304,21 @@
             "commit_ref": "267de056242d958b6da2bc5603cb90c9d0431ee5",
             "commit_message": "Implement `get(size_type index)` for `RepeatedFieldProxy`.\n\nThis can be more ergonomic than `operator[]` in cases where a repeated field proxy is wrapped and accessed through `operator->`, such as `std::optional`. Rather than writing `(*optional_proxy)[0]`, you can write `optional_proxy->get(0)`.\n\nPiperOrigin-RevId: 887054323\n",
             "commit_timestamp": 1774053914.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1774238218.753178,
+            "elapsed_time": 328.9403078556061,
+            "x64": true,
+            "actual_files_count": 1214,
+            "expected_files_count": 818,
+            "memory_traffic": 47299.66426849365,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "68bd6bed7923ddade82a57a6fb8274024a3cd5d8",
+            "commit_message": "Extract proto3 UNRECOGNIZED enum forNumber throwing into common method\n\nTo decrease gencode size.\n\nThere's a little trick where we return `int` instead of `void` in order to further save having to declare a constant and return it in the gencode.\n\nBefore: cat 'smali_classes116/com/google/protos/geostore/LandUseProto$LandUseCategory.smali':\n\n```\n.method public final getNumber()I\n    .locals 2\n\n    .line 103\n    sget-object v0, Lcom/google/protos/geostore/LandUseProto$LandUseCategory;->UNRECOGNIZED:Lcom/google/protos/geostore/LandUseProto$LandUseCategory;\n\n    if-eq p0, v0, :cond_0\n\n    .line 107\n    iget v0, p0, Lcom/google/protos/geostore/LandUseProto$LandUseCategory;->value:I\n\n    return v0\n\n    .line 104\n    :cond_0\n    new-instance v0, Ljava/lang/IllegalArgumentException;\n\n    const-string v1, \"Can\\'t get the number of an unknown enum value.\"\n\n    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V\n\n    throw v0\n.end method\n```\n\nAfter:\n\n```\n.method public final getNumber()I\n    .locals 1\n\n    .line 103\n    sget-object v0, Lcom/google/protos/geostore/LandUseProto$LandUseCategory;->UNRECOGNIZED:Lcom/google/protos/geostore/LandUseProto$LandUseCategory;\n\n    if-ne p0, v0, :cond_0\n\n    .line 104\n    invoke-static {}, Lcom/google/protobuf/Internal;->throwCannotGetNumberOfUnrecognized()I\n\n    move-result v0\n\n    return v0\n\n    .line 106\n    :cond_0\n    iget v0, p0, Lcom/google/protos/geostore/LandUseProto$LandUseCategory;->value:I\n\n    return v0\n.end method\n```\n\nPiperOrigin-RevId: 887845214\n",
+            "commit_timestamp": 1774236964.0
         }
     ]
 }
