@@ -16379,6 +16379,21 @@
             "commit_ref": "06f6808811dc4d9074702eea389a579973354531",
             "commit_message": "Extract throwing exception into @DoNotInline method\n\nException throwing is expensive: it increases inlining cost and\ngenerates lots of assembly. If we can hide it away in its own function,\nthat makes the other functions in here more tempting for Android's\ninliner; e.g. `set` might be small enough to inline now.\n\nPiperOrigin-RevId: 888897688\n",
             "commit_timestamp": 1774393038.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1774452595.057664,
+            "elapsed_time": 336.94919538497925,
+            "x64": true,
+            "actual_files_count": 1214,
+            "expected_files_count": 818,
+            "memory_traffic": 47215.28363800049,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "fe60daca5984d3feb89eeb068a24a0f4244c3761",
+            "commit_message": "Add a helper function to resolve labels relative to the current package.\n\nPiperOrigin-RevId: 889250507\n",
+            "commit_timestamp": 1774451603.0
         }
     ]
 }
