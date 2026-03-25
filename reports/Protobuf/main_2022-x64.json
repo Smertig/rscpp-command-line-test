@@ -16364,6 +16364,21 @@
             "commit_ref": "17b8d376e6f7a2573b61edb6906b9ff2bfb91166",
             "commit_message": "Internal change\n\nPiperOrigin-RevId: 888676884\n",
             "commit_timestamp": 1774365763.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1774410721.771519,
+            "elapsed_time": 331.76346349716187,
+            "x64": true,
+            "actual_files_count": 1214,
+            "expected_files_count": 818,
+            "memory_traffic": 47214.75895690918,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "06f6808811dc4d9074702eea389a579973354531",
+            "commit_message": "Extract throwing exception into @DoNotInline method\n\nException throwing is expensive: it increases inlining cost and\ngenerates lots of assembly. If we can hide it away in its own function,\nthat makes the other functions in here more tempting for Android's\ninliner; e.g. `set` might be small enough to inline now.\n\nPiperOrigin-RevId: 888897688\n",
+            "commit_timestamp": 1774393038.0
         }
     ]
 }
