@@ -16409,6 +16409,21 @@
             "commit_ref": "bb002180b59c957e6b2f0dddecf0e90ef5a26723",
             "commit_message": "Introduce `Arena::UniquePtr` and `Arena::Ptr` as smart pointers to better manage\nthe lifetime of objects created through the `Arena` API.\n\n`Arena::Ptr` is similar to `T*` but with the static invariants that it is never null and always arena owned.\n`Arena::UniquePtr` is similar to `std::unique_ptr<T>`, except that it keeps track of arena ownership and cleans objects as needed.\n\nThis change also introduces new APIs `Arena::Make<T>` and `Arena::MakeUnique<T>` that create objects returning the new smart pointers. They supercede `Arena::Create<T>` for better lifetime management.\n\nPiperOrigin-RevId: 889305258\n",
             "commit_timestamp": 1774458519.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1774539130.709933,
+            "elapsed_time": 346.7853424549103,
+            "x64": true,
+            "actual_files_count": 1214,
+            "expected_files_count": 818,
+            "memory_traffic": 47460.593910217285,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "727034dab54da89301a6131b5fea47f54a486d02",
+            "commit_message": "Harden `RepeatedField::Add` functions to abort when the container can't grow\nanymore.\n\nPiperOrigin-RevId: 889857337\n",
+            "commit_timestamp": 1774539056.0
         }
     ]
 }
