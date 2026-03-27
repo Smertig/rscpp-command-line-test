@@ -16439,6 +16439,21 @@
             "commit_ref": "63d6ef01b0e669333dda6fd91728862725c38968",
             "commit_message": "Mangle types named `XyzView` if there is any direct sibling named `Xyz`\n\nWe had already done this for one special case of an enum named XyzView with a sibling message named Xyz, but this change extends that to apply to all pairwise combination of message-or-enum XyzView and message Xyz.\n\nUnfortunately protobuf has no holistic strategy for avoiding collisions in gencode of pairwise names, and unfortunately Rust is maximally hostile situation to collision problems. This is an incomplete fix for potential collisions of this shape, but covers a significant portion of realistic/organic collisions.\n\nFixes https://github.com/protocolbuffers/protobuf/issues/25736\n\nPiperOrigin-RevId: 890070424\n",
             "commit_timestamp": 1774563322.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1774624877.629462,
+            "elapsed_time": 327.0489478111267,
+            "x64": true,
+            "actual_files_count": 1214,
+            "expected_files_count": 818,
+            "memory_traffic": 47406.95901489258,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "a19901d3c64acc175ed84451a2d24f480b74c526",
+            "commit_message": "Auto-generate files after cl/890289024\n",
+            "commit_timestamp": 1774598354.0
         }
     ]
 }
