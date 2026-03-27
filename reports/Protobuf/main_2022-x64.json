@@ -16424,6 +16424,21 @@
             "commit_ref": "727034dab54da89301a6131b5fea47f54a486d02",
             "commit_message": "Harden `RepeatedField::Add` functions to abort when the container can't grow\nanymore.\n\nPiperOrigin-RevId: 889857337\n",
             "commit_timestamp": 1774539056.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1774584021.207285,
+            "elapsed_time": 333.14875388145447,
+            "x64": true,
+            "actual_files_count": 1214,
+            "expected_files_count": 818,
+            "memory_traffic": 47435.71742248535,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "63d6ef01b0e669333dda6fd91728862725c38968",
+            "commit_message": "Mangle types named `XyzView` if there is any direct sibling named `Xyz`\n\nWe had already done this for one special case of an enum named XyzView with a sibling message named Xyz, but this change extends that to apply to all pairwise combination of message-or-enum XyzView and message Xyz.\n\nUnfortunately protobuf has no holistic strategy for avoiding collisions in gencode of pairwise names, and unfortunately Rust is maximally hostile situation to collision problems. This is an incomplete fix for potential collisions of this shape, but covers a significant portion of realistic/organic collisions.\n\nFixes https://github.com/protocolbuffers/protobuf/issues/25736\n\nPiperOrigin-RevId: 890070424\n",
+            "commit_timestamp": 1774563322.0
         }
     ]
 }
