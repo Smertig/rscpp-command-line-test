@@ -16529,6 +16529,21 @@
             "commit_ref": "f2221f893f9f4b2e811f033ed1924c9e12fe573e",
             "commit_message": "Post-Bazel 7 cleanups.\n\nPiperOrigin-RevId: 891019426\n",
             "commit_timestamp": 1774728130.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1774884720.475011,
+            "elapsed_time": 325.42830181121826,
+            "x64": true,
+            "actual_files_count": 1214,
+            "expected_files_count": 818,
+            "memory_traffic": 47426.359603881836,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "28e451233d38148856587c96bd8864b7e9767587",
+            "commit_message": "Fix data race in CMessage lazy initialization for Python freethreading.\n\nThis change introduces a `LazyUniquePtr` class to manage the lazy initialization of `composite_fields` and `child_submessages` within `CMessage`. When Python's GIL is disabled, `LazyUniquePtr` uses atomic operations to ensure thread-safe initialization of these maps, preventing data races when multiple threads concurrently access fields that trigger their creation. A new test case is added to reproduce and verify the fix for a race condition in `GetFieldValue`.\n\nWe are forced to use placement new and placement delete for the `LazyUniquePtr` members, because the `CMessage` struct is currently not properly constructed or destroyed.  This makes the code a bit awkward, but changing the construction/destruction of CMessage seemed like too much to bite off in this CL.\n\nPiperOrigin-RevId: 891703488\n",
+            "commit_timestamp": 1774880590.0
         }
     ]
 }
