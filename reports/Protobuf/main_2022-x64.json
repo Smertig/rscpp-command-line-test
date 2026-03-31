@@ -16559,6 +16559,21 @@
             "commit_ref": "b6e522885b3b69562677ba146be979d414f0b6c3",
             "commit_message": "Handle private access to `RepeatedFieldProxy` through `internal::RepeatedFieldProxyInternalPrivateAccessHelper`.\n\nThis is the more scalable solution than friending all methods that need internal access, but will hopefully ward off external users with its scary and long name.\n\nPiperOrigin-RevId: 892009363\n",
             "commit_timestamp": 1774918755.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1774970992.758553,
+            "elapsed_time": 308.8636031150818,
+            "x64": true,
+            "actual_files_count": 1214,
+            "expected_files_count": 818,
+            "memory_traffic": 47407.32181549072,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "49303f0604d071bad359a1d886b2a150cb8d8942",
+            "commit_message": "Introduce SourceCodePath alias for std::vector<int> in descriptor.cc and descriptor_unittest.cc.\n\nThis alias improves readability by clearly indicating that a std::vector<int> is being used to represent a path within a proto source code information. The alias is applied to function signatures, local variables, and map types. The unit tests are also updated to use this new alias.\n\nAdditionally migrate unit tests to use vector initialization directly instead of using a helper array.\n\nPiperOrigin-RevId: 892117564\n",
+            "commit_timestamp": 1774936872.0
         }
     ]
 }
