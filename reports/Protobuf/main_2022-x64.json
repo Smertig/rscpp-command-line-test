@@ -16574,6 +16574,21 @@
             "commit_ref": "49303f0604d071bad359a1d886b2a150cb8d8942",
             "commit_message": "Introduce SourceCodePath alias for std::vector<int> in descriptor.cc and descriptor_unittest.cc.\n\nThis alias improves readability by clearly indicating that a std::vector<int> is being used to represent a path within a proto source code information. The alias is applied to function signatures, local variables, and map types. The unit tests are also updated to use this new alias.\n\nAdditionally migrate unit tests to use vector initialization directly instead of using a helper array.\n\nPiperOrigin-RevId: 892117564\n",
             "commit_timestamp": 1774936872.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1775016419.445435,
+            "elapsed_time": 341.37914633750916,
+            "x64": true,
+            "actual_files_count": 1213,
+            "expected_files_count": 818,
+            "memory_traffic": 47388.60287475586,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "199a436fd29263eb0675856b9df9193c91f691da",
+            "commit_message": "Auto-generate files after PR #26622\n",
+            "commit_timestamp": 1775014876.0
         }
     ]
 }
