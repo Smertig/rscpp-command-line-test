@@ -16604,6 +16604,21 @@
             "commit_ref": "918ad5bff3f174a417dded6b58ceab4cf6720e65",
             "commit_message": "Gracefully handle payloads >2GB.\n\nPiperOrigin-RevId: 892926688\n",
             "commit_timestamp": 1775054911.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1775102277.619999,
+            "elapsed_time": 329.17698979377747,
+            "x64": true,
+            "actual_files_count": 1214,
+            "expected_files_count": 818,
+            "memory_traffic": 47486.85411834717,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "cb5fe976f319683934d8153bdedb21355ab2e008",
+            "commit_message": "Add integer overflow check to RepeatedPtrField::MergeFrom.\n\nCreate `proto2::internal::CheckedAdd` to use in `MergeFrom` to calculate the new required size and prevent integer overflows when the combined size of the fields exceeds `INT_MAX`.\n\nPiperOrigin-RevId: 893201969\n",
+            "commit_timestamp": 1775091573.0
         }
     ]
 }
