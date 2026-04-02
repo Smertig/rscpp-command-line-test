@@ -32441,6 +32441,21 @@
             "commit_ref": "7817651b21f4cc84541df02542292c2e20c762c8",
             "commit_message": "gh-146444: Remove legacy iOS folder (#147993)\n\nRemove legacy iOS folder.",
             "commit_timestamp": 1775101580.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1775143734.415609,
+            "elapsed_time": 17.76022958755493,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 709.5415954589844,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "9b08f8c56f8d41b71fbe9f127a910e9644ac64ac",
+            "commit_message": "GH-126910: Revert \"Make `_Py_get_machine_stack_pointer` return the stack pointer (#147945)\" (GH-147994)\n\nRevert \"GH-126910: Make `_Py_get_machine_stack_pointer` return the stack pointer (#147945)\"\n\nThis reverts commit 255026d9eea81719214c8e807d23df55b5f39b54,\nwhich broke a tier-1 buildbot.",
+            "commit_timestamp": 1775141589.0
         }
     ]
 }

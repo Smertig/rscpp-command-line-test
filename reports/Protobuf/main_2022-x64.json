@@ -16619,6 +16619,21 @@
             "commit_ref": "cb5fe976f319683934d8153bdedb21355ab2e008",
             "commit_message": "Add integer overflow check to RepeatedPtrField::MergeFrom.\n\nCreate `proto2::internal::CheckedAdd` to use in `MergeFrom` to calculate the new required size and prevent integer overflows when the combined size of the fields exceeds `INT_MAX`.\n\nPiperOrigin-RevId: 893201969\n",
             "commit_timestamp": 1775091573.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1775143544.688475,
+            "elapsed_time": 323.540643453598,
+            "x64": true,
+            "actual_files_count": 1214,
+            "expected_files_count": 818,
+            "memory_traffic": 47447.42826843262,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "de8f304583270b31ada28aa53614a7e7dbfe4db4",
+            "commit_message": "Prepare LazyField for refactoring of ExtensionSet.\n\nMove some methods into the lite version of the file. Use the DescriptorMethods vtable to jump back to the full runtime when needed.\nThe change has no effect on behavior.\n\nPiperOrigin-RevId: 893500971\n",
+            "commit_timestamp": 1775140424.0
         }
     ]
 }
