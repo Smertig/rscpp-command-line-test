@@ -16634,6 +16634,21 @@
             "commit_ref": "de8f304583270b31ada28aa53614a7e7dbfe4db4",
             "commit_message": "Prepare LazyField for refactoring of ExtensionSet.\n\nMove some methods into the lite version of the file. Use the DescriptorMethods vtable to jump back to the full runtime when needed.\nThe change has no effect on behavior.\n\nPiperOrigin-RevId: 893500971\n",
             "commit_timestamp": 1775140424.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1775188866.781825,
+            "elapsed_time": 362.2622592449188,
+            "x64": true,
+            "actual_files_count": 1214,
+            "expected_files_count": 818,
+            "memory_traffic": 47495.14504241943,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "1e6186a4675a79628ac6629da7a6aceef35e0230",
+            "commit_message": "Auto-generate files after cl/893766268\n",
+            "commit_timestamp": 1775173809.0
         }
     ]
 }
