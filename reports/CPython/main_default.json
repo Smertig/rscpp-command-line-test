@@ -32486,6 +32486,21 @@
             "commit_ref": "edab6860a7d6c49b5d5762e1c094aa0261245a9c",
             "commit_message": "gh-148022: Add threat model to remote debugging docs (#148024)\n\nThe remote debugging protocol has been generating spurious\nvulnerability reports from automated scanners that pattern-match\non \"remote access\" and \"memory operations\" without understanding\nthe privilege model. This section documents the security boundaries\nso reporters can self-triage before submitting.\n\nThe threat model clarifies three points: attaching requires the\nsame OS-level privileges as GDB (ptrace, task_for_pid, or\nSeDebugPrivilege), crashes caused by reading corrupted target\nprocess memory are not security issues, and a compromised target\nprocess is out of scope. A subsection explains when operators\nshould use PYTHON_DISABLE_REMOTE_DEBUG for defence-in-depth.",
             "commit_timestamp": 1775226050.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1775274831.795125,
+            "elapsed_time": 15.695558071136475,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 706.8294219970703,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "7e275d49658390fc788437b28dabef9f7fc65a27",
+            "commit_message": "gh-131798: JIT inline function addresses of builtin methods  (#146906)",
+            "commit_timestamp": 1775274133.0
         }
     ]
 }
