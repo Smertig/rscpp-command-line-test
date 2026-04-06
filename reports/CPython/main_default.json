@@ -32531,6 +32531,21 @@
             "commit_ref": "1c4408aeca4b532b5810f18c9fbc641397c88267",
             "commit_message": "gh-130472: Integrate fancycompleter with the new repl, to get colored tab completions (#130473)\n\nCo-authored-by: Pablo Galindo <pablogsal@gmail.com>",
             "commit_timestamp": 1775398987.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1775448493.949289,
+            "elapsed_time": 31.501110553741455,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 738.7303924560547,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "fbfc6ccb0abf362a0ecdc02cd0aa2d16c1a4ce44",
+            "commit_message": "gh-148144: Initialize visited on copied interpreter frames (#148143)\n\n_PyFrame_Copy() copied interpreter frames into generator and\nframe-object storage without initializing the visited byte. Incremental\nGC later reads frame->visited in mark_stacks() on non-start passes, so\ncopied frames could expose an uninitialized value once they became live\non a thread stack again.\n\nReset visited when copying a frame so copied frames start with defined\nGC bookkeeping state. Preserve lltrace in Py_DEBUG builds.",
+            "commit_timestamp": 1775431387.0
         }
     ]
 }
