@@ -32546,6 +32546,21 @@
             "commit_ref": "fbfc6ccb0abf362a0ecdc02cd0aa2d16c1a4ce44",
             "commit_message": "gh-148144: Initialize visited on copied interpreter frames (#148143)\n\n_PyFrame_Copy() copied interpreter frames into generator and\nframe-object storage without initializing the visited byte. Incremental\nGC later reads frame->visited in mark_stacks() on non-start passes, so\ncopied frames could expose an uninitialized value once they became live\non a thread stack again.\n\nReset visited when copying a frame so copied frames start with defined\nGC bookkeeping state. Preserve lltrace in Py_DEBUG builds.",
             "commit_timestamp": 1775431387.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1775488975.113698,
+            "elapsed_time": 16.853994846343994,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 710.5581436157227,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "f8293faf37971fd0d4d30c0c83df2ac654e610a1",
+            "commit_message": "gh-130472: Remove readline-only hacks from PyREPL completions (#148161)\n\nPyREPL was still carrying over two readline-specific tricks from the\nfancy completer: a synthetic CSI prefix to influence sorting and a fake\nblank completion entry to suppress readline's prefix insertion. Those\nworkarounds are not appropriate in PyREPL because the reader already\nowns completion ordering and menu rendering, so the fake entries leaked\ninto the UI as real terminal attributes and empty menu cells.\n\nSort completion candidates in ReadlineAlikeReader by their visible text\nwith stripcolor(), and let the fancy completer return only real matches.\nThat keeps colored completions stable without emitting bogus escape\nsequences, removes the empty completion slot, and adds regression tests\nfor both the low-level completer output and the reader integration.",
+            "commit_timestamp": 1775487445.0
         }
     ]
 }
