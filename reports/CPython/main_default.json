@@ -32561,6 +32561,21 @@
             "commit_ref": "f8293faf37971fd0d4d30c0c83df2ac654e610a1",
             "commit_message": "gh-130472: Remove readline-only hacks from PyREPL completions (#148161)\n\nPyREPL was still carrying over two readline-specific tricks from the\nfancy completer: a synthetic CSI prefix to influence sorting and a fake\nblank completion entry to suppress readline's prefix insertion. Those\nworkarounds are not appropriate in PyREPL because the reader already\nowns completion ordering and menu rendering, so the fake entries leaked\ninto the UI as real terminal attributes and empty menu cells.\n\nSort completion candidates in ReadlineAlikeReader by their visible text\nwith stripcolor(), and let the fancy completer return only real matches.\nThat keeps colored completions stable without emitting bogus escape\nsequences, removes the empty completion slot, and adds regression tests\nfor both the low-level completer output and the reader integration.",
             "commit_timestamp": 1775487445.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1775534693.656531,
+            "elapsed_time": 35.9753954410553,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 711.6659622192383,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "8a73478fedaee54a409f1933ff8f50c3a6fdf883",
+            "commit_message": "gh-145844: Update WASI SDK from 30 to 32 (#145859)\n\nCo-authored-by: blurb-it[bot] <43283697+blurb-it[bot]@users.noreply.github.com>\nCo-authored-by: Brett Cannon <brett@python.org>",
+            "commit_timestamp": 1775519318.0
         }
     ]
 }
