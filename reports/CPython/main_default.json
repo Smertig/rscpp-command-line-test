@@ -32576,6 +32576,21 @@
             "commit_ref": "8a73478fedaee54a409f1933ff8f50c3a6fdf883",
             "commit_message": "gh-145844: Update WASI SDK from 30 to 32 (#145859)\n\nCo-authored-by: blurb-it[bot] <43283697+blurb-it[bot]@users.noreply.github.com>\nCo-authored-by: Brett Cannon <brett@python.org>",
             "commit_timestamp": 1775519318.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1775576169.348273,
+            "elapsed_time": 17.900892972946167,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 635.8654708862305,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "7e0a0be4097f9d29d66fe23f5af86f18a34ed7dd",
+            "commit_message": "gh-146333: Fix quadratic regex backtracking in configparser option parsing (GH-146399)\n\nUse negative lookahead in option regex to prevent backtracking, and to avoid changing logic outside the regexes (since people could use the regex directly).",
+            "commit_timestamp": 1775571034.0
         }
     ]
 }
