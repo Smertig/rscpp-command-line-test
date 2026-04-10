@@ -32651,6 +32651,21 @@
             "commit_ref": "d8c56581560ed139d261dd14acd73597e40cf88b",
             "commit_message": "gh-148254: Use singular \"sec\" in timeit verbose output (#148290)",
             "commit_timestamp": 1775745439.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1775794042.040798,
+            "elapsed_time": 22.09727692604065,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 767.5458908081055,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "1a0edb1fa899c067f19b09598b45cdb6e733c4ee",
+            "commit_message": "gh-145831: email.quoprimime: `decode()` leaves stray `\\r` when `eol='\\r\\n'` (#145832)\n\ndecoded[:-1] only strips one character, leaving a stray \\r when eol\nis two characters. Fix: decoded[:-len(eol)].",
+            "commit_timestamp": 1775766109.0
         }
     ]
 }
