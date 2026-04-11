@@ -16859,6 +16859,21 @@
             "commit_ref": "48ce31daef690ea584a6d7e0e9bc34928013f2e2",
             "commit_message": "Optimize ExtensionSet::MergeFrom for flat map.\n\nAvoids a double iteration over the source ExtensionSet when merging into an empty flat map ExtensionSet. The flat array is now allocated on demand within the merge loop, and the size is adjusted for cleared extensions at the beginning.\n\nNotes:\n1. If all extensions cleared, no memory will be allocated.\n2. Cleared extentions that are at the beginning would be \"fully removed\". No memory for them will be allocated.\n3. Other cleared may get memory allocated. But we will return unnecessary memory in case of overallocation.\nPiperOrigin-RevId: 897615380\n",
             "commit_timestamp": 1775820350.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1775879564.388341,
+            "elapsed_time": 318.40634417533875,
+            "x64": true,
+            "actual_files_count": 1218,
+            "expected_files_count": 818,
+            "memory_traffic": 47502.10922241211,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "8abff6bb4b36575159bf247f3da62f4efa742bdd",
+            "commit_message": "fix Python text_format by adding an optional recursion depth limit (#26604)\n\n## Summary\n- fix Python `text_format` by adding an optional recursion depth limit\n- add `max_recursion_depth` to `Parse`, `Merge`, `ParseLines`, and `MergeLines`\n- keep the default behavior unchanged for compatibility\n- enforce the configured limit consistently across root parsing, nested submessages, and expanded `Any`\n- add regression tests for explicit opt-in depth enforcement and the default compatibility path\n\n## Context\nPython `text_format` parsing recursively descends through `_MergeField()` and `_MergeMessageField()`, and can also recurse through expanded `Any` payloads. Without a shared parser-side depth guard, deeply nested input can recurse until Python raises `RecursionError` instead of a controlled protobuf `ParseError`.\n\nFor applications that parse untrusted textproto, that makes deep nesting a denial-of-service primitive.\n\n## Fix\nThis change adds an optional `max_recursion_depth` parameter to the public Python text format parsing entry points.\n\nWhen the option is set, parsing tracks message depth through a shared helper and raises `ParseError` once the configured limit is exceeded. When the option is not set, parsing keeps the historical unbounded behavior so existing callers remain compatible.\n\n## Testing\n- `BAZEL_NO_APPLE_CPP_TOOLCHAIN=1 bazel test //python:text_format_test --test_output=errors`\n\nCloses #26604\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/26604 from Sakura-501:fix-python-text-format-unbounded-recursion 235abcd492afcb67761645ae5456d5cc23010784\nPiperOrigin-RevId: 898014428\n",
+            "commit_timestamp": 1775878439.0
         }
     ]
 }
