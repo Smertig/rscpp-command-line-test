@@ -32726,6 +32726,21 @@
             "commit_ref": "b3b0cef0c2aacdc616fa48674552ab1e34553835",
             "commit_message": "gh-100305: Deemphasize that `ast.literal_eval` is safe in `eval` documentation (#100326)\n\nCo-authored-by: \u00c9ric <merwok@netwok.org>",
             "commit_timestamp": 1775963262.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1776007138.183767,
+            "elapsed_time": 15.533594608306885,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 699.5491790771484,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "3ab94d684286b49144bf2e43cc1041f3e4c0cda8",
+            "commit_message": "gh-148393: Use atomic ops on _ma_watcher_tag in free threading build (gh-148397)\n\nFixes data races between dict mutation and watch/unwatch on the same dict.",
+            "commit_timestamp": 1776004841.0
         }
     ]
 }
