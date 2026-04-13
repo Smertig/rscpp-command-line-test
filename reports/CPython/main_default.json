@@ -32741,6 +32741,21 @@
             "commit_ref": "3ab94d684286b49144bf2e43cc1041f3e4c0cda8",
             "commit_message": "gh-148393: Use atomic ops on _ma_watcher_tag in free threading build (gh-148397)\n\nFixes data races between dict mutation and watch/unwatch on the same dict.",
             "commit_timestamp": 1776004841.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1776053539.689938,
+            "elapsed_time": 15.231860399246216,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 683.6869430541992,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "8fc66aef6d7b3ae58f43f5c66f9366cc8cbbfcd2",
+            "commit_message": "gh-148395: Fix a possible UAF in `{LZMA,BZ2,_Zlib}Decompressor` (GH-148396)\n\nFix dangling input pointer after `MemoryError` in _lzma/_bz2/_ZlibDecompressor.decompress",
+            "commit_timestamp": 1776042894.0
         }
     ]
 }
