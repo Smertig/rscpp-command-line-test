@@ -32756,6 +32756,21 @@
             "commit_ref": "8fc66aef6d7b3ae58f43f5c66f9366cc8cbbfcd2",
             "commit_message": "gh-148395: Fix a possible UAF in `{LZMA,BZ2,_Zlib}Decompressor` (GH-148396)\n\nFix dangling input pointer after `MemoryError` in _lzma/_bz2/_ZlibDecompressor.decompress",
             "commit_timestamp": 1776042894.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1776180767.707119,
+            "elapsed_time": 15.84824514389038,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 707.5605239868164,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "c88c27b0c1c09c125fe6a5ad78a4d42cf9c3fcd2",
+            "commit_message": "gh-133312: configure: add --enable-static-libpython-for-interpreter (#133313)\n\nThis option changes the behavior of --enable-shared to continue to build\nthe libpython3.x.so shared library, but not use it for linking the\npython3 interpreter executable. Instead, the executable is linked\ndirectly against the libpython .o files as it would be with\n--disable-shared.\n\nThere are two benefits of this change. First, libpython uses\nthread-local storage, which is noticeably slower when used in a loaded\nmodule instead of in the main program, because the main program can take\nadvantage of constant offsets from the thread state pointer but loaded\nmodules have to dynamically call a function __tls_get_addr() to\npotentially allocate their thread-local storage area. (There is another\nthread-local storage model for dynamic libraries which mitigates most of\nthis performance hit, but it comes at the cost of preventing\ndlopen(\"libpython3.x.so\"), which is a use case we want to preserve.)\n\nSecond, this improves the user experience around relocatable Python a\nlittle bit, in that we don't need to use an $ORIGIN-relative path to\nlocate libpython3.x.so, which has some mild benefits around musl (which\ndoes not support $ORIGIN-relative DT_NEEDED, only $ORIGIN-relative\nDT_RPATH/DT_RUNPATH), users who want to make the interpreter setuid or\nsetcap (which prevents processing $ORIGIN), etc.",
+            "commit_timestamp": 1776180379.0
         }
     ]
 }
