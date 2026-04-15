@@ -16964,6 +16964,21 @@
             "commit_ref": "ff961eb4dd1beb66892788e530c5f40349f00208",
             "commit_message": "Auto-generate files after cl/899769016\n",
             "commit_timestamp": 1776201921.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1776267063.470304,
+            "elapsed_time": 369.978333234787,
+            "x64": true,
+            "actual_files_count": 1218,
+            "expected_files_count": 818,
+            "memory_traffic": 47705.41181945801,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "5e0f68530ae6ad47b78714e60861321e1d1c04ae",
+            "commit_message": "Reserve grpc-gateway protoc-gen-openapiv3 extension (#26242)\n\nThe grpc-gateway project is considering adding a new protoc-gen-openapiv3 generator, with extensions for FileOptions, MethodOptions, MessageOptions, EnumOptions, ServiceOptions and FieldOptions, similar to protoc-gen-openapiv2 (nee protoc-gen-swagger).\n\nRelated: https://github.com/grpc-ecosystem/grpc-gateway/pull/6431\n\nCloses #26242\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/26242 from johanbrandhorst:patch-1 0b147a1d63b193006f80b1668b0c6afa08761792\nPiperOrigin-RevId: 900170646\n",
+            "commit_timestamp": 1776265738.0
         }
     ]
 }
