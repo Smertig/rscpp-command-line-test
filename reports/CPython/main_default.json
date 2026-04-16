@@ -32816,6 +32816,21 @@
             "commit_ref": "54607eec34b42d377a12fe16697e61a1663a1f42",
             "commit_message": "Add PyManager documentation for index signatures (GH-148631)",
             "commit_timestamp": 1776289694.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1776353956.269849,
+            "elapsed_time": 18.547780752182007,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 704.4085083007812,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "cecf564073f898809bf10d7e555d64fdd764f060",
+            "commit_message": "GH-146128: Fix AArch64 multi-instruction constants and relocations (GH-148598)\n\nFix AArch64 multi-instruction constants and relocations\n\n* Elimates rendundant orr xN, xN, 0xffff after 16 or 32 bit loads\n* Merges adrp (21rx) and ldr (12) relocations into single 33rx relocation, when safe to do so.",
+            "commit_timestamp": 1776349989.0
         }
     ]
 }
