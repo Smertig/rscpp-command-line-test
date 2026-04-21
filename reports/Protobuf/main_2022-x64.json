@@ -17114,6 +17114,21 @@
             "commit_ref": "e3370c2e26bbfaa63bc9f8e4ac0f8dc066ba3eeb",
             "commit_message": "Add a bit more unit test coverage for Edition 2024 defaults.\n\n(We also have some existing test coverage already in\ndescriptor_unittest.cc but these other edition-specific tests seem to be\nmissing edition 2024.)\n\nPiperOrigin-RevId: 902261564\n",
             "commit_timestamp": 1776629512.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1776744347.700004,
+            "elapsed_time": 355.114000082016,
+            "x64": true,
+            "actual_files_count": 1218,
+            "expected_files_count": 818,
+            "memory_traffic": 47629.01983642578,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "281fdbad2ea7305f3ee1c40cd1d98a6237a9c8a1",
+            "commit_message": "Fix DCHECK triggered when cpp string_type feature is explicitly set to UNKNOWN at the file level.\n\nPiperOrigin-RevId: 902929887\n",
+            "commit_timestamp": 1776736913.0
         }
     ]
 }
