@@ -17129,6 +17129,21 @@
             "commit_ref": "281fdbad2ea7305f3ee1c40cd1d98a6237a9c8a1",
             "commit_message": "Fix DCHECK triggered when cpp string_type feature is explicitly set to UNKNOWN at the file level.\n\nPiperOrigin-RevId: 902929887\n",
             "commit_timestamp": 1776736913.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1776785568.709786,
+            "elapsed_time": 326.780695438385,
+            "x64": true,
+            "actual_files_count": 1218,
+            "expected_files_count": 818,
+            "memory_traffic": 47613.4995803833,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "33e6ab172bcee4ea66285a223060af380481dee1",
+            "commit_message": "Add comments to TextFormat documenting that its intended for human-in-the-loop usecases (not wire format).\n\nIn the cases where we historically didn't enforce a depth limit (C++ and Python) document that the default behavior having no depth limit is an intentional decision.\n\nPiperOrigin-RevId: 903216142\n",
+            "commit_timestamp": 1776781363.0
         }
     ]
 }
