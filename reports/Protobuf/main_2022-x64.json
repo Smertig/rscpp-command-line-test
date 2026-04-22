@@ -17144,6 +17144,21 @@
             "commit_ref": "33e6ab172bcee4ea66285a223060af380481dee1",
             "commit_message": "Add comments to TextFormat documenting that its intended for human-in-the-loop usecases (not wire format).\n\nIn the cases where we historically didn't enforce a depth limit (C++ and Python) document that the default behavior having no depth limit is an intentional decision.\n\nPiperOrigin-RevId: 903216142\n",
             "commit_timestamp": 1776781363.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1776830662.674238,
+            "elapsed_time": 330.22213649749756,
+            "x64": true,
+            "actual_files_count": 1219,
+            "expected_files_count": 818,
+            "memory_traffic": 47641.65924835205,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "4a65fc9568a6e61d84a6cce319dae6cd6fd4e290",
+            "commit_message": "Restructure repeated field proxy class hierarchy.\n\nNotable changes are the introduction of new `internal` base classes, `MutableRepeatedFieldProxyImpl` and `ConstRepeatedFieldProxyImpl`. Both `RepeatedFieldProxy` and `RepeatedFieldOrProxy` inherit from these. These new bases define all relevant methods on repeated field proxies aside from `move`, `move_assign`, and `swap`, and non-default constructors.\n\nWith this change, `RepeatedFieldProxy` is `final` once again. This allows us to move many internal methods back to `protected` and remove some friend declarations.\n\nPiperOrigin-RevId: 903534097\n",
+            "commit_timestamp": 1776821194.0
         }
     ]
 }
