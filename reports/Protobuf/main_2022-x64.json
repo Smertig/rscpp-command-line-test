@@ -17174,6 +17174,21 @@
             "commit_ref": "a29828239fcef702b485dddae09e13306b23fcd1",
             "commit_message": "Fix `csharp` string interpolation in `Timestamp.ToDateTime()` exception message (#26341)\n\nChange a verbatim string literal `@\"\"` to an interpolated string `$\"\"` in `Timestamp.ToDateTime()` exception message.\nResolves #26006.\n\nCloses #26341\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/26341 from tyulpan:fix-csharp-timestamp-exception-message e102d1276acfa9fbeee3d49c90bb21b0f8d813b4\nPiperOrigin-RevId: 903792535\n",
             "commit_timestamp": 1776862339.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1776958749.184004,
+            "elapsed_time": 354.5172882080078,
+            "x64": true,
+            "actual_files_count": 1221,
+            "expected_files_count": 818,
+            "memory_traffic": 47842.21004486084,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "09707c5d95a41451abd65c6a21a9694070359cdd",
+            "commit_message": "Automated Code Change\n\nPiperOrigin-RevId: 904222841\n",
+            "commit_timestamp": 1776921087.0
         }
     ]
 }
