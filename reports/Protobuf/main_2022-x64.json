@@ -17174,21 +17174,6 @@
             "commit_ref": "a29828239fcef702b485dddae09e13306b23fcd1",
             "commit_message": "Fix `csharp` string interpolation in `Timestamp.ToDateTime()` exception message (#26341)\n\nChange a verbatim string literal `@\"\"` to an interpolated string `$\"\"` in `Timestamp.ToDateTime()` exception message.\nResolves #26006.\n\nCloses #26341\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/26341 from tyulpan:fix-csharp-timestamp-exception-message e102d1276acfa9fbeee3d49c90bb21b0f8d813b4\nPiperOrigin-RevId: 903792535\n",
             "commit_timestamp": 1776862339.0
-        },
-        {
-            "tool_version": "252.0.20250924.231041",
-            "error_mismatch": true,
-            "project": null,
-            "timestamp": 1776917215.101898,
-            "elapsed_time": 259.7361981868744,
-            "x64": true,
-            "actual_files_count": 1221,
-            "expected_files_count": 818,
-            "memory_traffic": 47640.5588760376,
-            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
-            "commit_ref": "26569defebedfd904fe20419045490c746f2cc31",
-            "commit_message": "Fix NPE when a message with parsed extension merges from bytes that contain extension data and when lazy mode is enabled.\n\nPiperOrigin-RevId: 904139856\n",
-            "commit_timestamp": 1776904921.0
         }
     ]
 }
