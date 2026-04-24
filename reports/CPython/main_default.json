@@ -33011,6 +33011,21 @@
             "commit_ref": "42d645a7e81e0a5e6e0d35e222a8520450ac28ef",
             "commit_message": "gh-132631: Fix \"I/O operation on closed file\" when parsing JSON Lines file (#132632)\n\nCo-authored-by: Brian Schubert <brianm.schubert@gmail.com>",
             "commit_timestamp": 1776958022.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1777003874.308283,
+            "elapsed_time": 15.442270994186401,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 709.1694030761719,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "448d7b96c181d13ca7f8977780e85b53b2716294",
+            "commit_message": "gh-145239: Accept unary plus literal pattern (#148566)\n\nAdd '+' alternatives to signed_number and signed_real_number grammar\nrules, mirroring how unary minus is already handled for pattern matching.\nUnary plus is a no-op on numbers so the value is returned directly without\nwrapping in a UnaryOp node.",
+            "commit_timestamp": 1776971248.0
         }
     ]
 }
