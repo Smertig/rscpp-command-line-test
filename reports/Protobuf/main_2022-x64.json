@@ -17219,6 +17219,21 @@
             "commit_ref": "25e7005814c4b2dd1cd21519c6cf116380a5ad21",
             "commit_message": "java: limit numeric string length before BigDecimal parsing (#26908)\n\n## Summary\n\n`BigDecimal(String)` has O(N\u00b2) time complexity for N-digit strings on JDK versions before 18 ([JDK-8291514](https://bugs.openjdk.org/browse/JDK-8291514)). Five JSON parser methods \u2014 `parseInt32`, `parseInt64`, `parseUint32`, `parseUint64`, and `parseDouble` \u2014 pass user-controlled strings directly to `new BigDecimal()` without length validation.\n\nA single JSON numeric value with 1,000,000 digits takes ~13 seconds to parse on JDK 17. This can be used to DoS any service that parses protobuf JSON messages with numeric fields from untrusted input.\n\n### Benchmark (JDK 17, x86-64 Linux)\n\n| Digits | BigDecimal construction time |\n|--------|-----|\n| 1,000 | 1.8 ms |\n| 10,000 | 6.3 ms |\n| 100,000 | 133 ms |\n| 1,000,000 | **13.1 seconds** |\n\n### Fix\n\nAdded a `parseBigDecimal()` helper that rejects strings longer than 1000 characters before constructing `BigDecimal`. This is generous \u2014 valid protobuf numeric values never exceed ~350 characters (Double.MAX_VALUE in non-scientific notation is ~309 digits).\n\n### Affected JDK versions\n\n- JDK 8, 11, 17 (all current LTS releases): **Vulnerable** \u2014 no built-in string length limit in BigDecimal\n- JDK 18+: JDK itself limits BigDecimal string input to 1100 characters by default (JDK-8291514), but the protobuf-level check is still worthwhile as defense-in-depth\n\n### Test\n\nAdded `testParserRejectOverlyLongNumericStrings` covering all 5 affected field types.\n\nCloses #26908\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/26908 from MindflareX:fix/java-bigdecimal-length-check a461d0edc6cebee452aa896b4a5d5a18323782f4\nPiperOrigin-RevId: 904988136\n",
             "commit_timestamp": 1777036370.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1777089657.189636,
+            "elapsed_time": 329.17219066619873,
+            "x64": true,
+            "actual_files_count": 1221,
+            "expected_files_count": 818,
+            "memory_traffic": 47621.64980316162,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "760418056a557866afc31860297b9034ef9ade1e",
+            "commit_message": "Let message parsing reads the in-memory data of CodedInputStream directly instead of parsing from `input.readBytes` which copies the data.\n\nPiperOrigin-RevId: 905202710\n",
+            "commit_timestamp": 1777063841.0
         }
     ]
 }
