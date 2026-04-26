@@ -33071,6 +33071,21 @@
             "commit_ref": "5ea3ae7c97f06cebcbbe81b142ee4a2b23d980e9",
             "commit_message": "gh-140287: Handle `PYTHONSTARTUP` script exceptions in the asyncio REPL (#140288)",
             "commit_timestamp": 1777127080.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1777176945.285144,
+            "elapsed_time": 14.903819561004639,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 702.1510467529297,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "e1384cfd25b4fba5e0f8f3e6b536930e2e6cf5cf",
+            "commit_message": "gh-141473: Speed up subprocess test_communicate_timeout_large_input long tail (#149003)\n\ngh-141473: Speed up test_communicate_timeout_large_input\n\nReplace the slow reader's 30s sleep with a parent-driven wake over a\nloopback socket so post-timeout communicate() doesn't block waiting\nfor the child to wake on its own. Worst-case runtime: ~30s -> <1s.",
+            "commit_timestamp": 1777176093.0
         }
     ]
 }
