@@ -33086,6 +33086,21 @@
             "commit_ref": "e1384cfd25b4fba5e0f8f3e6b536930e2e6cf5cf",
             "commit_message": "gh-141473: Speed up subprocess test_communicate_timeout_large_input long tail (#149003)\n\ngh-141473: Speed up test_communicate_timeout_large_input\n\nReplace the slow reader's 30s sleep with a parent-driven wake over a\nloopback socket so post-timeout communicate() doesn't block waiting\nfor the child to wake on its own. Worst-case runtime: ~30s -> <1s.",
             "commit_timestamp": 1777176093.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1777216896.913162,
+            "elapsed_time": 17.02460241317749,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 711.8575286865234,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "5d416324c56cd6f262fa123f41b97b48631bea79",
+            "commit_message": "gh-146455: Fix O(N\u00b2) in add_const() after constant folding moved to CFG (#146456)\n\nThe add_const() function in flowgraph.c uses a linear search over the\nconsts list to find the index of a constant. After gh-126835 moved\nconstant folding from the AST optimizer to the CFG optimizer, this\nfunction is now called N times for N inner tuple elements during\nfold_tuple_of_constants(), resulting in O(N\u00b2) total time.\n\nFix by maintaining an auxiliary _Py_hashtable_t that maps object\npointers to their indices in the consts list, providing O(1) lookup.\n\nFor a file with 100,000 constant 2-tuples:\n- Before: 10.38s (add_const occupies 83.76% of CPU time)\n- After:  1.48s",
+            "commit_timestamp": 1777205724.0
         }
     ]
 }
