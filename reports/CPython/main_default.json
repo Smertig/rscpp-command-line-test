@@ -33116,6 +33116,21 @@
             "commit_ref": "f27e91e37212f148b8fe72a3656a69b242625622",
             "commit_message": "Document that multiprocessing treats local same-user processes as trusted (GH-149001)\n\nClarify in the Authentication keys section that the authkey handshake\ncovers Listener/Client (addressable endpoints) only, not the anonymous\npipes behind Pipe() and Queue, and that isolation between same-user\nprocesses must be arranged at the OS level.",
             "commit_timestamp": 1777254133.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1777304557.388118,
+            "elapsed_time": 25.69315004348755,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 692.2692642211914,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "a386a52d8c093381792e39f93eb1df63d1584b9e",
+            "commit_message": "Un-skip previously-broken `test_get_type_hints_modules_forwardref` (#149048)",
+            "commit_timestamp": 1777303835.0
         }
     ]
 }
