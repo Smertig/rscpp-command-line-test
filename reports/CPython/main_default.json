@@ -33206,6 +33206,21 @@
             "commit_ref": "16952218d0535904236e8a39851133688c9ce1f0",
             "commit_message": "gh-149083: Convert dataclasses.MISSING and dataclasses.KW_ONLY to sentinels (#149086)\n\nThere were comments claiming these were implemented as custom classes to give a nicer\nrepr(), but the repr() wasn't all that nice:\n\n>>> repr(dataclasses.MISSING)\n'<dataclasses._MISSING_TYPE object at 0x1005e7e00>'\n>>> repr(dataclasses.KW_ONLY)\n'<dataclasses._KW_ONLY_TYPE object at 0x100884050>'\n\nSentinels are conceptually the right tool for these, so let's use them.\n\nThis does change the repr() of these two objects.",
             "commit_timestamp": 1777516769.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1777563688.358077,
+            "elapsed_time": 17.363713264465332,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 714.253791809082,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "cc5f8b5434c8b2a2d7858ef9a8d182344bc781b8",
+            "commit_message": "gh-113471: Add custom default Content-Type to http.server (#113475)\n\nCo-authored-by: Serhiy Storchaka <storchaka@gmail.com>\nCo-authored-by: B\u00e9n\u00e9dikt Tran <10796600+picnixz@users.noreply.github.com>\nCo-authored-by: donBarbos <donbarbos@proton.me>\nCo-authored-by: Hugo van Kemenade <1324225+hugovk@users.noreply.github.com>\nCo-authored-by: blurb-it[bot] <43283697+blurb-it[bot]@users.noreply.github.com>",
+            "commit_timestamp": 1777561248.0
         }
     ]
 }
