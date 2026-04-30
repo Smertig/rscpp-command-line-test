@@ -33191,6 +33191,21 @@
             "commit_ref": "8851a06e6e7ff23d91e5568df03a5ade570d4ab5",
             "commit_message": "gh-149026: Add colour to `pickletools` CLI output (#149027)\n\nCo-authored-by: B\u00e9n\u00e9dikt Tran <10796600+picnixz@users.noreply.github.com>",
             "commit_timestamp": 1777476785.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1777522894.523012,
+            "elapsed_time": 17.05819034576416,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 708.7959671020508,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "16952218d0535904236e8a39851133688c9ce1f0",
+            "commit_message": "gh-149083: Convert dataclasses.MISSING and dataclasses.KW_ONLY to sentinels (#149086)\n\nThere were comments claiming these were implemented as custom classes to give a nicer\nrepr(), but the repr() wasn't all that nice:\n\n>>> repr(dataclasses.MISSING)\n'<dataclasses._MISSING_TYPE object at 0x1005e7e00>'\n>>> repr(dataclasses.KW_ONLY)\n'<dataclasses._KW_ONLY_TYPE object at 0x100884050>'\n\nSentinels are conceptually the right tool for these, so let's use them.\n\nThis does change the repr() of these two objects.",
+            "commit_timestamp": 1777516769.0
         }
     ]
 }
