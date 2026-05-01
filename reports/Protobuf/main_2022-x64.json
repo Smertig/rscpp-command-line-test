@@ -17399,6 +17399,21 @@
             "commit_ref": "5be0a43cd6c6052fd3f56f2d7373670bb07f9c14",
             "commit_message": "Avoid NULL pointer dereference in PyUpb_PyToUpbEnum if run with a malformed UTF-8 str (e.g. \"\\ud800\")\n\nAdd test coverage of 'assign string to enum-typed field' in general (including this case). This appears to be accepted only Py-upb and not otherwise.\n\nFixes https://github.com/protocolbuffers/protobuf/issues/27106\n\nPiperOrigin-RevId: 908148411\n",
             "commit_timestamp": 1777557718.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1777609581.099965,
+            "elapsed_time": 340.02771186828613,
+            "x64": true,
+            "actual_files_count": 1221,
+            "expected_files_count": 818,
+            "memory_traffic": 47818.87722015381,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "a8896e84d6f375f179a14cb8b0f5efe3c8ae588f",
+            "commit_message": "Auto-generate files after cl/908404027\n",
+            "commit_timestamp": 1777588304.0
         }
     ]
 }
