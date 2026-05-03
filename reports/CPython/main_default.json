@@ -33281,6 +33281,21 @@
             "commit_ref": "e21432453211102bb807d9bb5ff16f4db07f6de0",
             "commit_message": "gh-146527: Remove private module entry from what's new (#149284)\n\nRemove private module entry from what's new",
             "commit_timestamp": 1777734998.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1777782311.64417,
+            "elapsed_time": 16.71421504020691,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 709.060302734375,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "1fc2b38d63170dd065efc2bc60e861f32c033b17",
+            "commit_message": "GH-148189: Fix miscalculation of  type-specific free list memory use (#148190)\n\n* Fix calculation of PyListObject size in allocator\n\n* Fix size calculation in _PyDict_DebugMallocStats\n\n* Fix memory size calculation in tupleobject.c\n\nAdjusted memory calculation for PyTupleObject freelist entries.\n\n* Revert in tupleobject.c\n\nRemoved unnecessary comment regarding memory calculation and the memory calculation itself.\n\n* \ud83d\udcdc\ud83e\udd16 Added by blurb_it.\n\n* Update tupleobject.c\n\n---------\n\nCo-authored-by: blurb-it[bot] <43283697+blurb-it[bot]@users.noreply.github.com>",
+            "commit_timestamp": 1777777393.0
         }
     ]
 }
