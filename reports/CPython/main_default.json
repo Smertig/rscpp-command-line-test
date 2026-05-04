@@ -33311,6 +33311,21 @@
             "commit_ref": "836fbdaaf32c355c7e8fb0af69f78fbbb28af8b1",
             "commit_message": "gh-135056: Add a `--header` CLI option to `http.server` (#135057)\n\nSupport custom headers in `python -m http.server` and `http.server.SimpleHTTPRequestHandler`.\n\nCo-authored-by: B\u00e9n\u00e9dikt Tran <10796600+picnixz@users.noreply.github.com>\nCo-authored-by: Hugo van Kemenade <1324225+hugovk@users.noreply.github.com>",
             "commit_timestamp": 1777806097.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1777868685.231317,
+            "elapsed_time": 13.595851421356201,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 660.3067626953125,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "3efd2f4db6de0990136a9503910cbb36343ec0af",
+            "commit_message": "gh-149296: Add `dump` subcommand to sampling profiler for one-shot stack snapshots (#149297)\n\nAdds `python -m profiling.sampling dump <pid>`, which prints a single\ntraceback-style snapshot of a running process's Python stack via the\nexisting `_remote_debugging` unwinder. Supports per-thread status,\nsource line highlighting, optional bytecode opcodes, and async-aware\ntask reconstruction (`--async-aware`, default `--async-mode=all`).",
+            "commit_timestamp": 1777852953.0
         }
     ]
 }
