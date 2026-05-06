@@ -33386,6 +33386,21 @@
             "commit_ref": "2140b14a9bbc6a2a6564e67425cab10854a26bf1",
             "commit_message": "gh-124111: Fix tclWin32Exe value in tcltk.props for Tcl 9 (GH-149441)",
             "commit_timestamp": 1778039280.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1778082699.464401,
+            "elapsed_time": 23.890960216522217,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 714.7746658325195,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "1dcc546d841a5e88675eb2af2c55b63f26930ccf",
+            "commit_message": "Rewrite RTD configuration to use build.jobs rather than build.commands (GH-149429)\n\nAs part of this conversion, we now ensure that we're comparing against the\nmerge-base of the PR branch and the base branch when checking whether an RTD\nbuild is worthwhile, deepening the history of the base branch by up to 500\ncommits if necessary.  If the merge-base can't be found or there are merge\nconflicts with the head of the base branch, the build is skipped since it would\ngive a warped perception of the actual changes anyway.\n\nThis unfortunately does nothing about RTD preview comments comparing against\nthe wrong base, other than skipping builds that shouldn't produce any diff at\nall thus avoiding the comment.\n\nCo-authored-by: \ud83c\uddfa\ud83c\udde6 Sviatoslav Sydorenko (\u0421\u0432\u044f\u0442\u043e\u0441\u043b\u0430\u0432 \u0421\u0438\u0434\u043e\u0440\u0435\u043d\u043a\u043e) <wk.cvs.github@sydorenko.org.ua>",
+            "commit_timestamp": 1778082287.0
         }
     ]
 }
