@@ -17579,6 +17579,21 @@
             "commit_ref": "32d75b6bbc6ff6cc50d29ee8140effa9f7d7e6b5",
             "commit_message": "[PHP] Fix locale-dependent JSON float encoding (#18808) (#25329)\n\nThis PR addresses issue #18808 regarding locale-dependent JSON serialization in PHP.\n\n### Problem\nWhen the system environment is set to a locale that uses a comma as a decimal separator (like `de_DE`), `float` and `double` values were being serialized into JSON as `3,14` instead of `3.14`. This produced invalid JSON that could not be parsed by other systems.\n\n### Solution\n- Updated php/src/Google/Protobuf/Internal/GPBJsonWire.php to use `sprintf(\"%.*h\", ...)` for formatting values. This ensures that the decimal separator is always a dot (`.`), making the output locale-independent.\n- Added a new test case testJsonEncodeFloatLocaleIndependent in php/tests/EncodeDecodeTest.php. This test explicitly sets the locale to `de_DE` to verify that the fix works correctly and produces valid JSON.\n\n### Verification\n- [x] Added new regression test.\n- [x] Verified that all PHP tests pass locally: `vendor/bin/phpunit php/tests/EncodeDecodeTest.php`\n\nFixes #18808\n\nCloses #25329\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/25329 from khdkkhdd:18808-php-float-fix 5de303962e25d43c3c5e99b8ae7295008f7527aa\nPiperOrigin-RevId: 911348844\n",
             "commit_timestamp": 1778080981.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1778127507.698167,
+            "elapsed_time": 331.7519118785858,
+            "x64": true,
+            "actual_files_count": 1221,
+            "expected_files_count": 818,
+            "memory_traffic": 47730.71701812744,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "71ecafda2fb7d41003e2d8a5d12900fb405885c4",
+            "commit_message": "Auto-generate files after cl/911649882\n",
+            "commit_timestamp": 1778115969.0
         }
     ]
 }
