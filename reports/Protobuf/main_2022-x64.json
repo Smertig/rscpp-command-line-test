@@ -17624,6 +17624,21 @@
             "commit_ref": "7bb6178325f4b4ff6f7ed8697c69d3f67e747034",
             "commit_message": "Auto-generate files after cl/912234452\n",
             "commit_timestamp": 1778200122.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1778299927.436818,
+            "elapsed_time": 331.734646320343,
+            "x64": true,
+            "actual_files_count": 1223,
+            "expected_files_count": 818,
+            "memory_traffic": 47721.75458526611,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "ac90873facd9d09d849c6617f49faaf7668c9f47",
+            "commit_message": "Add test for RepeatedCompositeContainer comparison with list.\n\nThis test highlights a behavioral difference where upb allows equality comparison between a RepeatedCompositeContainer and a Python list, while the cpp and python implementations raise a TypeError.\n\nPiperOrigin-RevId: 912754358\n",
+            "commit_timestamp": 1778283812.0
         }
     ]
 }
