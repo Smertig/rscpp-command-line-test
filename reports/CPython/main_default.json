@@ -33491,6 +33491,21 @@
             "commit_ref": "a2c1657cab8daed6cf6236d67967372de7442d8b",
             "commit_message": "gh-149436: Speed up inspect.getattr_static for the common-metaclass case (#149437)\n\nConsecutive MRO entries usually share their metaclass, so call\n_shadowed_dict at most once per distinct metaclass.",
             "commit_timestamp": 1778381572.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1778426841.081621,
+            "elapsed_time": 15.710850238800049,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 705.403190612793,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "bc1be4f6174086b4a46e3fe656552f5bb4e6e7b2",
+            "commit_message": "gh-148441: Avoid integer overflow in Expat's CharacterDataHandler (#148904)\n\nCo-authored-by: B\u00e9n\u00e9dikt Tran <10796600+picnixz@users.noreply.github.com>",
+            "commit_timestamp": 1778420524.0
         }
     ]
 }
