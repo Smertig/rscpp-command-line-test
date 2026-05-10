@@ -33476,6 +33476,21 @@
             "commit_ref": "7241f2739c4bbdf4519238689e5e4ea9268b411e",
             "commit_message": "gh-149388: Make asyncio `PipeHandle.close` idempotent (#149518)",
             "commit_timestamp": 1778336069.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1778387245.260047,
+            "elapsed_time": 16.584089756011963,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 640.8489532470703,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "a2c1657cab8daed6cf6236d67967372de7442d8b",
+            "commit_message": "gh-149436: Speed up inspect.getattr_static for the common-metaclass case (#149437)\n\nConsecutive MRO entries usually share their metaclass, so call\n_shadowed_dict at most once per distinct metaclass.",
+            "commit_timestamp": 1778381572.0
         }
     ]
 }
