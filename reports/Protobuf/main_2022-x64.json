@@ -17729,6 +17729,21 @@
             "commit_ref": "7174939dc20cace3bae0fe26bb4c1d1853fb743f",
             "commit_message": "Unroll the varint loops in CodedOutputStream\n\nThis change is in preparation for a subsequent change which will disable sun.misc.Unsafe usage. Simply turning off s.m.Unsafe would result in some small but measurably regressions; unrolling these loops by contrast provides a significant speedup, which should more than outweighs any regression we will get from the disabling Unsafe. This will make it easier for us to roll out the change to stop using Unsafe without problems from regression.\n\nPiperOrigin-RevId: 913906295\n",
             "commit_timestamp": 1778537992.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1778601162.010495,
+            "elapsed_time": 262.36176681518555,
+            "x64": true,
+            "actual_files_count": 1223,
+            "expected_files_count": 818,
+            "memory_traffic": 47638.45820617676,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "5f77738be4527edbc92f2f2461100b636cd26e91",
+            "commit_message": "Create an `enum_type_wrapper.pyi` stub with `DESCRIPTOR: EnumDescriptor`\n\nPiperOrigin-RevId: 914243299\n",
+            "commit_timestamp": 1778591641.0
         }
     ]
 }
