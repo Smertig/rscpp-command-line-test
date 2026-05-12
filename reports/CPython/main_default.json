@@ -33536,6 +33536,21 @@
             "commit_ref": "8a4895985f42282504d83b9bd0c77b129f95a5d5",
             "commit_message": "gh-145235: Make dict watcher API thread-safe for free-threaded builds (gh-145233)\n\nIn free-threaded builds, concurrent calls to PyDict_AddWatcher, PyDict_ClearWatcher, PyDict_Watch, and PyDict_Unwatch can race on the shared callback array and the per-dict watcher tags. This change adds a mutex to serialize watcher registration and removal, atomic operations for tag updates, and atomic acquire/release synchronization for callback dispatch in _PyDict_SendEvent.",
             "commit_timestamp": 1778513995.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1778559850.767696,
+            "elapsed_time": 28.832250356674194,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 731.658805847168,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "54a5fd4126df74f7b84d1f8a6a36ef79803f66f9",
+            "commit_message": "gh-148669: Clarify `__reduce__()` module lookup behavior (#148670)",
+            "commit_timestamp": 1778553951.0
         }
     ]
 }

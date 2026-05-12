@@ -17714,6 +17714,21 @@
             "commit_ref": "ac90873facd9d09d849c6617f49faaf7668c9f47",
             "commit_message": "Add test for RepeatedCompositeContainer comparison with list.\n\nThis test highlights a behavioral difference where upb allows equality comparison between a RepeatedCompositeContainer and a Python list, while the cpp and python implementations raise a TypeError.\n\nPiperOrigin-RevId: 912754358\n",
             "commit_timestamp": 1778283812.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1778559570.060006,
+            "elapsed_time": 339.24626326560974,
+            "x64": true,
+            "actual_files_count": 1223,
+            "expected_files_count": 818,
+            "memory_traffic": 47767.41284942627,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "7174939dc20cace3bae0fe26bb4c1d1853fb743f",
+            "commit_message": "Unroll the varint loops in CodedOutputStream\n\nThis change is in preparation for a subsequent change which will disable sun.misc.Unsafe usage. Simply turning off s.m.Unsafe would result in some small but measurably regressions; unrolling these loops by contrast provides a significant speedup, which should more than outweighs any regression we will get from the disabling Unsafe. This will make it easier for us to roll out the change to stop using Unsafe without problems from regression.\n\nPiperOrigin-RevId: 913906295\n",
+            "commit_timestamp": 1778537992.0
         }
     ]
 }
