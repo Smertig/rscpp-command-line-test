@@ -33566,6 +33566,21 @@
             "commit_ref": "da8477b25c6124c961306d4d7cd5ec7dafda6be4",
             "commit_message": "gh-139808: Add branch protections for aarch64 in asm_trampoline.S (#130864)\n\nApply protection against ROP/JOP attacks for aarch64 on asm_trampoline.S.\n\nThe BTI flag must be applied in assembler sources for this class\nof attacks to be mitigated on newer aarch64 processors.\n\nSee also:\nhttps://sourceware.org/annobin/annobin.html/Test-branch-protection.html\nand\nhttps://community.arm.com/arm-community-blogs/b/architectures-and-processors-blog/posts/enabling-pac-and-bti-on-aarch64\n\nCo-authored-by: Victor Stinner <vstinner@python.org>",
             "commit_timestamp": 1778600564.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1778646365.912359,
+            "elapsed_time": 15.727158784866333,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 700.7848205566406,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "a4e51c8dac9fdd49ae26ff8c6cd3c808fd8ba15e",
+            "commit_message": "gh-149574: Document that is_typeddict, is_protocol, is_dataclass, isclass return False for generic aliases (#149604)",
+            "commit_timestamp": 1778641201.0
         }
     ]
 }
