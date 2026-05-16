@@ -33671,6 +33671,21 @@
             "commit_ref": "e56ae817e5f3df37a603251641ada5bf182af152",
             "commit_message": "gh-149879: Fix test_resource on Cygwin (#149903)\n\nSetting RLIMIT_FSIZE or RLIMIT_CPU fails with EINVAL on Cygwin.",
             "commit_timestamp": 1778886576.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1778945315.063789,
+            "elapsed_time": 29.723447799682617,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 680.4106597900391,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "a7ed0c9e1dee1397e80e2e0d90d110155da2bc30",
+            "commit_message": "gh-149879: Fix test_socket on Cygwin (#149913)\n\nDisable SCM_RIGHTS, recvmsg(), sendmsg() and sethostname() on Cygwin.",
+            "commit_timestamp": 1778925739.0
         }
     ]
 }

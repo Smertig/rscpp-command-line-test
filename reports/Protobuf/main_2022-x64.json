@@ -17849,6 +17849,21 @@
             "commit_ref": "a37dbd643372b05de834190941671a1563d7e499",
             "commit_message": "Optimize GeneratedMessage.ExtendableBuilder to avoid temporary allocations when merging empty extendable messages.\n\nWhen toBuilder() is called on an immutable ExtendableMessage whose extensions field is the singleton FieldSet.emptySet(), generated code calls ExtendableBuilder.mergeExtensionFields(other).\n\nBecause other.extensions is FieldSet.emptySet() (which is not null), mergeExtensionFields previously invoked ensureExtensionsIsMutable(), which unnecessarily allocated a brand new temporary FieldSet.Builder and SmallSortedMap. Later, when build() executed, FieldSet.Builder.buildImpl recognized that the builder's map was empty and correctly returned the singleton FieldSet.emptySet().\n\nBy checking !other.extensions.isEmpty() before mutating the builder, we completely eliminate these wasted temporary allocations.\n\nPiperOrigin-RevId: 916174058\n",
             "commit_timestamp": 1778879301.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1778945161.707807,
+            "elapsed_time": 255.8317723274231,
+            "x64": true,
+            "actual_files_count": 1227,
+            "expected_files_count": 818,
+            "memory_traffic": 47807.18283843994,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "bb940d7a693cde22d666cb001a3d8f4e21a010a0",
+            "commit_message": "Stop normalization of aggregate_value\n\nBy default the parser converts an aggregate value in an option like `[(my_opt) = {  a:   \\n FOO  }]` into normallized value  `a : FOO`. This makes it impossible to know locations of the original `a` and `FOO` tokens later, when the aggregate value is parsed using TextFormat.\n\nPiperOrigin-RevId: 916396061\n",
+            "commit_timestamp": 1778924561.0
         }
     ]
 }
