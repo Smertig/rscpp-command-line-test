@@ -17834,6 +17834,21 @@
             "commit_ref": "c06e6b41d66d6d380427d29ef95ba59991866bf4",
             "commit_message": "Add conformance tests for JSON/binary depth limits.\n\nPiperOrigin-RevId: 916020811\n",
             "commit_timestamp": 1778859624.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1778904992.519347,
+            "elapsed_time": 333.6884677410126,
+            "x64": true,
+            "actual_files_count": 1227,
+            "expected_files_count": 818,
+            "memory_traffic": 47829.4270401001,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "a37dbd643372b05de834190941671a1563d7e499",
+            "commit_message": "Optimize GeneratedMessage.ExtendableBuilder to avoid temporary allocations when merging empty extendable messages.\n\nWhen toBuilder() is called on an immutable ExtendableMessage whose extensions field is the singleton FieldSet.emptySet(), generated code calls ExtendableBuilder.mergeExtensionFields(other).\n\nBecause other.extensions is FieldSet.emptySet() (which is not null), mergeExtensionFields previously invoked ensureExtensionsIsMutable(), which unnecessarily allocated a brand new temporary FieldSet.Builder and SmallSortedMap. Later, when build() executed, FieldSet.Builder.buildImpl recognized that the builder's map was empty and correctly returned the singleton FieldSet.emptySet().\n\nBy checking !other.extensions.isEmpty() before mutating the builder, we completely eliminate these wasted temporary allocations.\n\nPiperOrigin-RevId: 916174058\n",
+            "commit_timestamp": 1778879301.0
         }
     ]
 }
