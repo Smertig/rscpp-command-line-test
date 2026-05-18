@@ -17894,6 +17894,21 @@
             "commit_ref": "bb940d7a693cde22d666cb001a3d8f4e21a010a0",
             "commit_message": "Stop normalization of aggregate_value\n\nBy default the parser converts an aggregate value in an option like `[(my_opt) = {  a:   \\n FOO  }]` into normallized value  `a : FOO`. This makes it impossible to know locations of the original `a` and `FOO` tokens later, when the aggregate value is parsed using TextFormat.\n\nPiperOrigin-RevId: 916396061\n",
             "commit_timestamp": 1778924561.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1779078738.638347,
+            "elapsed_time": 317.2806067466736,
+            "x64": true,
+            "actual_files_count": 1227,
+            "expected_files_count": 818,
+            "memory_traffic": 47811.35876464844,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "bb940d7a693cde22d666cb001a3d8f4e21a010a0",
+            "commit_message": "Stop normalization of aggregate_value\n\nBy default the parser converts an aggregate value in an option like `[(my_opt) = {  a:   \\n FOO  }]` into normallized value  `a : FOO`. This makes it impossible to know locations of the original `a` and `FOO` tokens later, when the aggregate value is parsed using TextFormat.\n\nPiperOrigin-RevId: 916396061\n",
+            "commit_timestamp": 1778924561.0
         }
     ]
 }
