@@ -17924,6 +17924,21 @@
             "commit_ref": "6221a32e9b4316dfa2501209c2e5ba2649ffe956",
             "commit_message": "Delete defunct ExtensionSchemaFull paths.\n\nThese paths are 100% unreachable today via our public APIs (they're only reachable by our tests which pierce-the-veil of the package-protected api). The only entry point is via GeneratedMessageLite, and this code already checks for GeneratedMessageLite types and always uses the Lite types.\n\nThis behavior means that even if someone in OSS uses Lite gencode on Full runtime this path is never reachable today.\n\nPiperOrigin-RevId: 917409414\n",
             "commit_timestamp": 1779137752.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1779207014.686828,
+            "elapsed_time": 273.9472167491913,
+            "x64": true,
+            "actual_files_count": 1227,
+            "expected_files_count": 818,
+            "memory_traffic": 47833.3713760376,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "5f9586b3f69d984c8a105c065bcbdf8a38d9212f",
+            "commit_message": "fix: Mark prebuild_protoc_repo as reproducible (#25852)\n\nThis makes it possible to skip the download of the prebuilt toolchain when using remote execution and the new (as of Bazel 9) remote repo contents cache. Since a sha256 digest is always passed to `rctx.download_and_extract` the rule should always be reproducible. The check for `repo_metadata` can be removed when support for Bazel <8.3 is dropped.\n\nCloses #25852\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/25852 from mortenmj:mmj/reproducible 53cd920fd417a46577ed94f754550520b29237cc\nPiperOrigin-RevId: 917842253\n",
+            "commit_timestamp": 1779203779.0
         }
     ]
 }
