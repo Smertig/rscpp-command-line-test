@@ -17909,6 +17909,21 @@
             "commit_ref": "f04511c9c24f7bf36c0a2b9e573d82920f3679d4",
             "commit_message": "Ruby: clamp len in RepeatedField#[beg, len] to fix out-of-bounds read (#27191)\n\n## Bug\n\n`RepeatedField_subarray` (called from `RepeatedField_index` 2-arg form,\n`repeated_field.c:270`) loops `i` from `beg` to `beg + len` and calls\n`upb_Array_Get(arr, i)` for every value. `upb_Array_Get` only has a\ndebug-only `UPB_ASSERT` (ruby-upb.c:7182); release builds therefore\nperform `memcpy(&ret, data + (i << lg2), 1 << lg2)` for arbitrary `i`,\nreading the upb arena out of bounds.\n\nResult: silent heap info disclosure for numeric fields (`repeated int32`\nreturns adjacent arena bytes as Ruby integers), segfault for\n`repeated string`/`message`. Confirmed with ASAN (`use-after-poison`,\nREAD size 4 at `RepeatedField_subarray:188`).\n\n## Fix\n\nClamp `len` to `size - beg` in `RepeatedField_subarray`, matching Ruby\n`Array#[beg, len]` semantics. Also reject negative `len` and fix the\n`rb_ary_new2(size)` capacity hint to use the now-known `len`.\n\nCloses #27191\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/27191 from vhullto:fix/repeated-field-subarray-oob 876202835c41f29481743ded73c94627708dac7d\nPiperOrigin-RevId: 917251509\n",
             "commit_timestamp": 1779118857.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1779164911.684259,
+            "elapsed_time": 324.5038104057312,
+            "x64": true,
+            "actual_files_count": 1227,
+            "expected_files_count": 818,
+            "memory_traffic": 47935.27892303467,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "6221a32e9b4316dfa2501209c2e5ba2649ffe956",
+            "commit_message": "Delete defunct ExtensionSchemaFull paths.\n\nThese paths are 100% unreachable today via our public APIs (they're only reachable by our tests which pierce-the-veil of the package-protected api). The only entry point is via GeneratedMessageLite, and this code already checks for GeneratedMessageLite types and always uses the Lite types.\n\nThis behavior means that even if someone in OSS uses Lite gencode on Full runtime this path is never reachable today.\n\nPiperOrigin-RevId: 917409414\n",
+            "commit_timestamp": 1779137752.0
         }
     ]
 }

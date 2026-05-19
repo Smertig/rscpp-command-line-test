@@ -33731,6 +33731,21 @@
             "commit_ref": "169285470630b697c5e6e0e4c8091c31f25ffb04",
             "commit_message": "gh-149816: fix `dict.clear()` race on split-table dict with non-embedded values (#149914)",
             "commit_timestamp": 1779120585.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1779165103.739551,
+            "elapsed_time": 15.270450115203857,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 708.5130233764648,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "68ebc051fc8285a06352195c22abdc1e1c7ec37c",
+            "commit_message": "gh-86533: Make Path.mkdir parent_mode tests umask-independent (#150040)\n\ntest_mkdir_with_parent_mode, test_mkdir_parent_mode_deep_hierarchy and\ntest_mkdir_parent_mode_same_as_mode assert exact directory mode bits but\ndid not pin the process umask.  On buildbots running with a restrictive\numask (e.g. 0o077) the 0o755 leaf was masked down to 0o700, failing the\nassertions.  Wrap them in os_helper.temp_umask(0o022), matching the\nother umask-aware mkdir tests in this file.",
+            "commit_timestamp": 1779153546.0
         }
     ]
 }
