@@ -17984,6 +17984,21 @@
             "commit_ref": "382f6a7eaf00f120afbc800723af7d67dd06ab63",
             "commit_message": "Auto-generate files after cl/918559519\n",
             "commit_timestamp": 1779302556.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1779379659.107662,
+            "elapsed_time": 321.8926148414612,
+            "x64": true,
+            "actual_files_count": 1227,
+            "expected_files_count": 818,
+            "memory_traffic": 47947.36713409424,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "fc1cf1cda9786c5974af5fb70636c55c6334d58d",
+            "commit_message": "Preserve exact token locations in proto aggregate option values by computing coordinate gaps.\n\nWhen complex aggregate options e.g. `[(my_opt) = { a: 1 /* comment */ b: 2 }]` are parsed into uninterpreted option blocks, Tokenizer skips whitespace and comments. Simply appending consecutive tokens causes downstream location mapping (TextFormat) to incorrectly shift tokens to the left or upwards when comments or multiline gaps are present.\n\nThis CL updates ParseUninterpretedBlock() to compute exact line and column coordinate gaps between consecutive tokens (`cur_token` vs `last_token`) and automatically inserts precisely matching spaces and newlines into `aggregate_value`. This guarantees character-for-character location preservation for every token without requiring any changes to Tokenizer.\n\nPiperOrigin-RevId: 918944204\n",
+            "commit_timestamp": 1779358905.0
         }
     ]
 }
