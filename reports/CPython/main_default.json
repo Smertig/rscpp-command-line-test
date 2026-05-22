@@ -33821,6 +33821,21 @@
             "commit_ref": "0828782773bf6beb10e7671e58d0f7426b12d487",
             "commit_message": "gh-149358: Generating JIT recorder transformers and stabilizing family layouts (GH-149359)",
             "commit_timestamp": 1779379612.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1779424384.21142,
+            "elapsed_time": 16.907283782958984,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 715.3612213134766,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "f159419ae2ef1aebbd90ce9427b55e27738c960c",
+            "commit_message": "gh-149995: Update typing.py docstrings and documentation (#149996)\n\nSome of these docstrings read as if they were written when typing.py was\nfirst written, and things have evolved since then.\n\nA few motivations:\n- Call protocols protocols instead of ABCs. They are also ABCs, but the fact\n  they are protocols is more relevant to typing.\n- Avoid recommending direct use of .__annotations__ and steer users to\n  annotationlib instead.\n- For TypedDict, mention NotRequired before total=False since it is more\n  general and probably more frequently useful.\n- For overloads, mention runtime use first instead of stub use. I think early on\n  there was talk of allowing overload only in stubs, but it is now heavily used at\n  runtime too and that's more likely to be relevant to users.",
+            "commit_timestamp": 1779422802.0
         }
     ]
 }
