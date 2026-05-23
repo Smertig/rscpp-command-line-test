@@ -33851,6 +33851,21 @@
             "commit_ref": "a7d5a6cc179e2eabd780eec1cc4efd122b9daef9",
             "commit_message": "gh-150114: Log the memory usage in regrtest on Windows (#150267)\n\nAdd _winapi.GetProcessMemoryInfo() function.\n\nCo-authored-by: Cody Maloney <cmaloney@users.noreply.github.com>",
             "commit_timestamp": 1779487491.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1779550349.603699,
+            "elapsed_time": 37.86575984954834,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 714.5486755371094,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "fad06746051f6bd95a255d49e38ebf049e965109",
+            "commit_message": "gh-150258: Show relative percentage on Tachyon flamegraph (#150266)\n\nWhen running profiling, users rarely care about the global percentage of\nthe runtime. Often, they want to select a function and measure child\npercentages relative to that.\n\nThis PR updates the flamegraph tooltips to show both \"Percentage\" and\n\"Relative Percentage\" when the user clicks a specific function.",
+            "commit_timestamp": 1779539486.0
         }
     ]
 }
