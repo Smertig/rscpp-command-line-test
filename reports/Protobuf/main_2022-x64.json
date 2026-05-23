@@ -18014,6 +18014,21 @@
             "commit_ref": "b905136f9bdfea0f9bd67df16d03c5f6bc912570",
             "commit_message": "Suppress deprecated warnings for weak field options internally (#25305)\n\nSuppress deprecated warnings for weak field options in internal source code.\n\nThe `FieldOptions::weak` field was marked deprecated, but it is used in several places internally in reflection-related code. Since this must be supported for backward compatibility, I figured the only practical thing to do is to suppress deprecation warnings wherever that field is used.\n\nCloses #25305\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/25305 from mikael-s-persson:fix/ignore_deprecated_internally 6227aa9c4b547288f29469f4516d8dd1ca4283c9\nPiperOrigin-RevId: 919308499\n",
             "commit_timestamp": 1779405531.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1779509998.621358,
+            "elapsed_time": 323.2658669948578,
+            "x64": true,
+            "actual_files_count": 1229,
+            "expected_files_count": 818,
+            "memory_traffic": 47920.4997253418,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "b0dd45ee826b566e055ae3140bf92665e958c51b",
+            "commit_message": "Auto-generate files after cl/919984787\n",
+            "commit_timestamp": 1779506710.0
         }
     ]
 }
