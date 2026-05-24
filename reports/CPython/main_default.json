@@ -33881,6 +33881,21 @@
             "commit_ref": "fad06746051f6bd95a255d49e38ebf049e965109",
             "commit_message": "gh-150258: Show relative percentage on Tachyon flamegraph (#150266)\n\nWhen running profiling, users rarely care about the global percentage of\nthe runtime. Often, they want to select a function and measure child\npercentages relative to that.\n\nThis PR updates the flamegraph tooltips to show both \"Percentage\" and\n\"Relative Percentage\" when the user clicks a specific function.",
             "commit_timestamp": 1779539486.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1779636687.465346,
+            "elapsed_time": 17.260191202163696,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 714.3048095703125,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "cb72193c8c48a29c6f877863684b9f56f095c7c3",
+            "commit_message": "gh-150315: increase test coverage for `asyncio._FlowControlMixin.set_write_buffer_limits` (#150317)",
+            "commit_timestamp": 1779632455.0
         }
     ]
 }
