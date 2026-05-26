@@ -33941,6 +33941,21 @@
             "commit_ref": "629da5c914b4407e01c1dc06cbcbd8dce825fef3",
             "commit_message": "gh-150443: Exclude explicit dup3 and pipe2 checks on iOS builds. (#150444)\n\nExclude explicit dup3 and pipe2 checks on iOS builds.",
             "commit_timestamp": 1779766774.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1779812615.815084,
+            "elapsed_time": 15.543220520019531,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 715.0147171020508,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "1310d2c25242041f0a218012426fba14e756eef8",
+            "commit_message": "gh-148557: Use em-config to locate trampoline clang (#148556)\n\nWhen CC is wrapped by ccache, the Emscripten trampoline rule cannot derive the\nmatching clang path by treating CC as a single executable path. Query the active\nLLVM toolchain path with em-config instead.",
+            "commit_timestamp": 1779811028.0
         }
     ]
 }
