@@ -33956,6 +33956,21 @@
             "commit_ref": "1310d2c25242041f0a218012426fba14e756eef8",
             "commit_message": "gh-148557: Use em-config to locate trampoline clang (#148556)\n\nWhen CC is wrapped by ccache, the Emscripten trampoline rule cannot derive the\nmatching clang path by treating CC as a single executable path. Query the active\nLLVM toolchain path with em-config instead.",
             "commit_timestamp": 1779811028.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1779856569.927257,
+            "elapsed_time": 14.055460453033447,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 714.2720642089844,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "776573c9f08f70ae9cb2327a905a42f265b331a6",
+            "commit_message": "gh-149879: Fix test_grp on Cygwin (#150495)",
+            "commit_timestamp": 1779830176.0
         }
     ]
 }
