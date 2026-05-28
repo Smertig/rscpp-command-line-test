@@ -18179,6 +18179,21 @@
             "commit_ref": "7a4cd6e8e8ee936c66470fa7cce9ca3727acc869",
             "commit_message": "Refactor layout of LazyField to save memory in the expected unparsed case.\n\nThe new layout is enabled via a preprocessor check to allow for experimentation. In this CL it is currently turned off, keeping the preexisting layout and behavior.\n\nPiperOrigin-RevId: 922321286\n",
             "commit_timestamp": 1779914593.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1779985739.962286,
+            "elapsed_time": 315.1644413471222,
+            "x64": true,
+            "actual_files_count": 1231,
+            "expected_files_count": 818,
+            "memory_traffic": 48063.185050964355,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "9e51162c475f7da8e28b6c6952b90664a49506a1",
+            "commit_message": "Auto-generate files after cl/922801889\n",
+            "commit_timestamp": 1779984910.0
         }
     ]
 }
