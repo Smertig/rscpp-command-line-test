@@ -34166,6 +34166,21 @@
             "commit_ref": "494f2e3c92cc1b7774cca16fca5c7d1ff18c0de2",
             "commit_message": "gh-150723: Fix perf jitdump files on macOS (#150728)\n\nThe perf jitdump format defines the thread id field of the JR_CODE_LOAD\nrecord as a 32-bit value, but on macOS it was declared as a uint64_t\n(since pthread_threadid_np() returns a uint64_t). Those extra 8 bytes\nplus alignment padding shifted every following field, so parsers reading\nthe file by the spec misread code_size as the code address and failed to\nresolve any Python frames.\n\nDeclare thread_id as uint32_t on all platforms and truncate the macOS\nthread id when writing the record. The value is only informational.\nSymbols are resolved by address, and not thread ids so truncation is\nsafe here.\n\n* Use mach_absolute_time for macOS jitdump timestamps\n\nOn macOS the jitdump file is consumed by profilers such as samply, which\ntimestamp their samples using mach_absolute_time(). The jitdump events were\nstamped with clock_gettime(CLOCK_MONOTONIC), a different clock domain that\nkeeps advancing while the system is asleep, so the JIT code mappings could be\noff by days relative to the samples and no Python frame would resolve. Stamp\njitdump events with mach_absolute_time() on macOS so they share the sampler's\nclock domain. Linux continues to use CLOCK_MONOTONIC to stay aligned with perf.\n\nExercise the -Xperf_jit (jitdump) backend through samply and assert that\nPython frames resolve, exercising the binary jitdump path end to end.\nSkipped when samply is not installed.",
             "commit_timestamp": 1780445734.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1780504789.887695,
+            "elapsed_time": 25.18187189102173,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 738.0008697509766,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "7a468a101268d2b13105f94ae027df8b502d0c87",
+            "commit_message": "gh-150032: Tidy up 3.15 pending removals (#149594)\n\nCo-authored-by: Savannah Ostrowski <savannah@python.org>\nCo-authored-by: Jelle Zijlstra <jelle.zijlstra@gmail.com>\nCo-authored-by: Brett Cannon <brett@python.org>",
+            "commit_timestamp": 1780496953.0
         }
     ]
 }
