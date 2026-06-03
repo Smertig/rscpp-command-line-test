@@ -34151,6 +34151,21 @@
             "commit_ref": "f7e0fb60cfaf31373c0b78e6eb954a0351e92f09",
             "commit_message": "gh-101913: changed wording of docstring for _parsedate_tz (#134446)\n\nFixed incorrect word.\n\nCo-authored-by: Gustaf <79180496+GGyll@users.noreply.github.com>",
             "commit_timestamp": 1780412539.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1780461447.787882,
+            "elapsed_time": 16.067387342453003,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 698.5093154907227,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "494f2e3c92cc1b7774cca16fca5c7d1ff18c0de2",
+            "commit_message": "gh-150723: Fix perf jitdump files on macOS (#150728)\n\nThe perf jitdump format defines the thread id field of the JR_CODE_LOAD\nrecord as a 32-bit value, but on macOS it was declared as a uint64_t\n(since pthread_threadid_np() returns a uint64_t). Those extra 8 bytes\nplus alignment padding shifted every following field, so parsers reading\nthe file by the spec misread code_size as the code address and failed to\nresolve any Python frames.\n\nDeclare thread_id as uint32_t on all platforms and truncate the macOS\nthread id when writing the record. The value is only informational.\nSymbols are resolved by address, and not thread ids so truncation is\nsafe here.\n\n* Use mach_absolute_time for macOS jitdump timestamps\n\nOn macOS the jitdump file is consumed by profilers such as samply, which\ntimestamp their samples using mach_absolute_time(). The jitdump events were\nstamped with clock_gettime(CLOCK_MONOTONIC), a different clock domain that\nkeeps advancing while the system is asleep, so the JIT code mappings could be\noff by days relative to the samples and no Python frame would resolve. Stamp\njitdump events with mach_absolute_time() on macOS so they share the sampler's\nclock domain. Linux continues to use CLOCK_MONOTONIC to stay aligned with perf.\n\nExercise the -Xperf_jit (jitdump) backend through samply and assert that\nPython frames resolve, exercising the binary jitdump path end to end.\nSkipped when samply is not installed.",
+            "commit_timestamp": 1780445734.0
         }
     ]
 }
