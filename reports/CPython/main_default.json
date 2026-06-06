@@ -34256,6 +34256,21 @@
             "commit_ref": "785b6dcf71b08c34a1d0a1cff9dc4afe997ad283",
             "commit_message": "gh-150662: Stop unbounded memory growth in Tachyon `--gecko` collector (#150845)",
             "commit_timestamp": 1780712861.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1780760062.679612,
+            "elapsed_time": 15.951059818267822,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 711.8262634277344,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "884ac3e3ec02347301939ff1f124972d4973f015",
+            "commit_message": "gh-149083: Use sentinel for urllib.parse._UNSPECIFIED (#149612)\n\nThis was added in 3.15; let's use a real sentinel instead of an ad-hoc list object.",
+            "commit_timestamp": 1780750053.0
         }
     ]
 }
