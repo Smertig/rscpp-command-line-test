@@ -18449,6 +18449,21 @@
             "commit_ref": "908faf74e7bb33f6b24a64f9c2d8a57e4a09734d",
             "commit_message": "Use __restrict on MSVC (#26944)\n\n__restrict has been supported in MSVC for quite a while, at lesat VS 2015 according to the docs: https://learn.microsoft.com/en-us/cpp/cpp/extension-restrict?view=msvc-170\n\nThis also fixes a (somewhat bizarre I know) situation where you get linker errors when building a clang-cl built binary against a MSVC built protobuf.\n\nCloses #26944\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/26944 from russelltg:main 1496bd7c5c67e32d8adf8c1659bae90b9482cf5b\nPiperOrigin-RevId: 927777241\n",
             "commit_timestamp": 1780756973.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1780806908.693921,
+            "elapsed_time": 337.81016778945923,
+            "x64": true,
+            "actual_files_count": 1238,
+            "expected_files_count": 818,
+            "memory_traffic": 48370.67378234863,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "908faf74e7bb33f6b24a64f9c2d8a57e4a09734d",
+            "commit_message": "Use __restrict on MSVC (#26944)\n\n__restrict has been supported in MSVC for quite a while, at lesat VS 2015 according to the docs: https://learn.microsoft.com/en-us/cpp/cpp/extension-restrict?view=msvc-170\n\nThis also fixes a (somewhat bizarre I know) situation where you get linker errors when building a clang-cl built binary against a MSVC built protobuf.\n\nCloses #26944\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/26944 from russelltg:main 1496bd7c5c67e32d8adf8c1659bae90b9482cf5b\nPiperOrigin-RevId: 927777241\n",
+            "commit_timestamp": 1780756973.0
         }
     ]
 }
