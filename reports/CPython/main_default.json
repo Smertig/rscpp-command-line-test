@@ -34376,6 +34376,21 @@
             "commit_ref": "ce916dc50644bb1de940f5fb580bd9907cceb959",
             "commit_message": "gh-150700: Fix class-scope inline comprehensions when nested scopes reference `__class__` and friends (#150735)\n\n* Fix class-scope inline comprehensions when nested scopes reference `__class__` and friends\n\nIn `inline_comprehension()`, when `__class__` / `__classdict__` /\n`__conditional_annotations__` appears as `FREE` in a comprehension's\nsymbol table because a nested scope captured it (e.g. nested lambdas),\nthis name is still discarded from `comp_free` unconditionally.\n\nThis prevents `drop_class_free()` from seeing it, so the appropriate\n`ste_needs_(...)` flag is never set on the enclosing class.\nThat leads to `codegen_make_closure()` throwing `SystemError` when it\ncouldn't find `__class__` / `__classdict__` /\n`__conditional_annotations__` in the class's cellvars.\n\nFrom now on we just discard from `comp_free` when no child scope\n(e.g. a lambda) still needs the name as `FREE`. When a child scope does\nneed it, keep it in `comp_free` so `drop_class_free()` can set the\nappropriate flag and the class creates the implicit cell.\n\n* Fix tests\n\n* Fix typo\n\n* Fix formatting\n\n* Add test checking validity of `__class__` returned\n\n* Prefer 'used' to 'deferred'",
             "commit_timestamp": 1781043733.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1781108522.57128,
+            "elapsed_time": 15.73287844657898,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 698.5274963378906,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "9fd1a125bc0ebdc26eae684da6e48ef24ee23b34",
+            "commit_message": "gh-151126: Fix missing memory errors in `_interpchannelsmodule.c` (#151239)",
+            "commit_timestamp": 1781107151.0
         }
     ]
 }
