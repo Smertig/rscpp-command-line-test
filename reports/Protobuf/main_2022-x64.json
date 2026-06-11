@@ -18584,6 +18584,21 @@
             "commit_ref": "ea627e19bddbedad5bca0cd53817e59121f4fc95",
             "commit_message": "Add missing conversion constructor in `NonConstexprAllocator`.\n\nThis is a required part of the allocator interface that was missed on the first\ngo.\n\nPiperOrigin-RevId: 930113344\n",
             "commit_timestamp": 1781130759.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1781195156.0383,
+            "elapsed_time": 336.1379520893097,
+            "x64": true,
+            "actual_files_count": 1238,
+            "expected_files_count": 818,
+            "memory_traffic": 48072.71538543701,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "b721c4cad5c544ea500f2826d7563905f9e8519d",
+            "commit_message": "Improve handling on overlarge top-level messages\n\nPiperOrigin-RevId: 930501705\n",
+            "commit_timestamp": 1781186300.0
         }
     ]
 }
