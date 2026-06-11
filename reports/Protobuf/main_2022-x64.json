@@ -18569,6 +18569,21 @@
             "commit_ref": "f0ffd30e8e7dbb35fa72aa5a842b23c314d4e588",
             "commit_message": "Refactor `RepeatedFieldBase` to contain all data members of `RepeatedField`.\n\nThis allows us to remove the template parameter from `HeapRep`, and move some `reinterpret_cast`s sprinkled throughout the `RepeatedField` implementation to a common place.\n\nPiperOrigin-RevId: 929500516\n",
             "commit_timestamp": 1781052379.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1781152475.749566,
+            "elapsed_time": 326.35155844688416,
+            "x64": true,
+            "actual_files_count": 1238,
+            "expected_files_count": 818,
+            "memory_traffic": 47996.22032928467,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "ea627e19bddbedad5bca0cd53817e59121f4fc95",
+            "commit_message": "Add missing conversion constructor in `NonConstexprAllocator`.\n\nThis is a required part of the allocator interface that was missed on the first\ngo.\n\nPiperOrigin-RevId: 930113344\n",
+            "commit_timestamp": 1781130759.0
         }
     ]
 }
