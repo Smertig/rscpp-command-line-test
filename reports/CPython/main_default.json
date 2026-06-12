@@ -34421,6 +34421,21 @@
             "commit_ref": "6112d70abee2455bfa44a76a49a5a80472e21134",
             "commit_message": "gh-151228: fix data race on clearing embedded dict values (#151330)",
             "commit_timestamp": 1781194020.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1781238976.430537,
+            "elapsed_time": 13.916815042495728,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 667.031623840332,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "c37599200f688538efa34a49f262a9a4a899a953",
+            "commit_message": "gh-151297: Fix undefined behavior in `_PyObject_MiRealloc` (GH-151358)\n\nThe standard says that a call to `memcpy` must pass a valid source and\ndestination pointer even if the size is 0, so we must avoid calling\n`memcpy` when our source pointer is NULL. If we don't, an optimizing\ncompiler can decide that the pointer must be non-NULL based on the\npresence of UB, and optimize out checks for null pointers.\n\nSpecifically, note that the standard says:\n\n    Where an argument declared as size_t n specifies the length of the\n    array for a function, n can have the value zero on a call to that\n    function. Unless explicitly stated otherwise in the description of\n    a particular function in this subclause, pointer arguments on such\n    a call shall still have valid values, as described in 7.1.4.\n\nAnd section 7.1.4 says:\n\n    If an argument to a function has an invalid value (such as a value\n    outside the domain of the function, or a pointer outside the address\n    space of the program, or a null pointer, or a pointer to\n    non-modifiable storage when the corresponding parameter is not\n    const-qualified) or a type (after default argument promotion) not\n    expected by a function with a variable number of arguments, the\n    behavior is undefined.\n\nThe specification for `memcpy` doesn't state that it's allowed to be\ncalled with null pointers, and Linux's `/usr/include/string.h` declares\n`memcpy` as `__nonnull ((1, 2))`.",
+            "commit_timestamp": 1781227264.0
         }
     ]
 }
