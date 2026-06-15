@@ -18704,6 +18704,21 @@
             "commit_ref": "c886ab3701cbd4abf123d94217d621501e901008",
             "commit_message": "Automated Code Change\n\nPiperOrigin-RevId: 932197213\n",
             "commit_timestamp": 1781496009.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1781541593.905824,
+            "elapsed_time": 334.832106590271,
+            "x64": true,
+            "actual_files_count": 1238,
+            "expected_files_count": 818,
+            "memory_traffic": 48117.62511444092,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "357f3f0e1854e5303e0f24a36c54b72272a6c646",
+            "commit_message": "Add fast function stubs for Mp dispatchers.\n\nAfter filling the fast table with regular fast parsers, we attempt to fill\nempty slots with stubs that call into the Mp functions for one particular\nfield.\n\nOn hit, those will skip tag parsing and FindFieldEntry.\n\nPiperOrigin-RevId: 932504944\n",
+            "commit_timestamp": 1781541013.0
         }
     ]
 }
