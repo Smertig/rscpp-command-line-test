@@ -34541,6 +34541,21 @@
             "commit_ref": "585e14c7d3fbe773ff54b4038567ca1159fb295a",
             "commit_message": "gh-140145: Use repr of the key in `zoneinfo` \"No time zone found\" error (#140433)\n\nCo-authored-by: Stan Ulbrych <stan@python.org>",
             "commit_timestamp": 1781539870.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1781584790.15881,
+            "elapsed_time": 14.806193828582764,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 714.082878112793,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "8646385076ea4f6ef08682d8ef07a544d3b4ef30",
+            "commit_message": "gh-151422: Don't link libffi into _ctypes_test.so (#151423)\n\n_ctypes_test doesn't use libffi directly, and linking it into the module \ncauses emscripten tests to fail.",
+            "commit_timestamp": 1781561776.0
         }
     ]
 }
