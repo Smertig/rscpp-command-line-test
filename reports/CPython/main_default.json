@@ -34556,6 +34556,21 @@
             "commit_ref": "8646385076ea4f6ef08682d8ef07a544d3b4ef30",
             "commit_message": "gh-151422: Don't link libffi into _ctypes_test.so (#151423)\n\n_ctypes_test doesn't use libffi directly, and linking it into the module \ncauses emscripten tests to fail.",
             "commit_timestamp": 1781561776.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1781627878.044748,
+            "elapsed_time": 16.148401737213135,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 711.6333312988281,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "627adb517f71b16273845fa47acee72b2ea372a0",
+            "commit_message": "gh-151428: Remove unused imports from stdlib (#151478)",
+            "commit_timestamp": 1781627461.0
         }
     ]
 }
