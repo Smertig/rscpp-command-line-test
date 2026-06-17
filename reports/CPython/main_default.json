@@ -34586,6 +34586,21 @@
             "commit_ref": "9e863fab283eddca9c2a8f9d1ee30f4dc243e314",
             "commit_message": "gh-151544: Fixes CVE-2026-12003 by removing the fallback to %VPATH%/Modules/Setup.local for discovering sources in getpath.py (GH-151545)",
             "commit_timestamp": 1781651766.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1781713237.577496,
+            "elapsed_time": 17.04369282722473,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 677.9773788452148,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "16185e9fe2037d2171626f79c3d099bd7772b53e",
+            "commit_message": "gh-149044: Improve Py_tp_base[s] docs & error message for non-type bases (GH-151252)\n\nThe initial implementation of PEP 820 worsened the error message\nwhen non-types are given as base types in Py_tp_bases & Py_tp_base.\nBring back the 'bases must be types' wording and add a 'got' note for\neasier debugging.\n\nImprove slot ID documentation, and soft-deprecate Py_tp_base\n(as per the PEP).",
+            "commit_timestamp": 1781702822.0
         }
     ]
 }
