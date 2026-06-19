@@ -34631,6 +34631,21 @@
             "commit_ref": "d701f8edbe2884e3e039f3683deabd2d43fa3b2e",
             "commit_message": "gh-145177: Bump Emscripten to 6.0.0 (#151611)\n\nBumps Emscripten to 6.0.0, and fixes related issues in getentropy() and umask().",
             "commit_timestamp": 1781825373.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1781885188.225189,
+            "elapsed_time": 16.924415588378906,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 726.0069808959961,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "7d4a0aad7be3cfb367b8977a03a64e754577d5f0",
+            "commit_message": "gh-151678: Add tests for tkinter.ttk methods (GH-151736)\n\nCover previously-untested ttk methods:\n\n* Progressbar.step, start and stop;\n* Treeview.parent, next, prev, see and identify_element;\n* Style.theme_settings;\n* OptionMenu.set_menu.\n\nCo-authored-by: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+            "commit_timestamp": 1781883939.0
         }
     ]
 }
