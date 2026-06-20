@@ -34646,6 +34646,21 @@
             "commit_ref": "7d4a0aad7be3cfb367b8977a03a64e754577d5f0",
             "commit_message": "gh-151678: Add tests for tkinter.ttk methods (GH-151736)\n\nCover previously-untested ttk methods:\n\n* Progressbar.step, start and stop;\n* Treeview.parent, next, prev, see and identify_element;\n* Style.theme_settings;\n* OptionMenu.set_menu.\n\nCo-authored-by: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
             "commit_timestamp": 1781883939.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1781930173.532624,
+            "elapsed_time": 25.936413764953613,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 725.3374786376953,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "a9db5cb52fefffc8fcdddc8e1c5f23222970825a",
+            "commit_message": "gh-151678: Add tests for tkinter.scrolledtext (GH-151753)\n\nAdd a test for the ScrolledText widget, which had no tests: that it is\na Text widget held in a Frame with a Scrollbar, that Text methods work,\nthat the geometry manager methods are redirected to the frame while\nconfigure is not, and that the scrollbar tracks the text view.\n\nCo-authored-by: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+            "commit_timestamp": 1781912374.0
         }
     ]
 }
