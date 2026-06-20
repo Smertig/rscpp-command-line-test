@@ -34661,6 +34661,21 @@
             "commit_ref": "a9db5cb52fefffc8fcdddc8e1c5f23222970825a",
             "commit_message": "gh-151678: Add tests for tkinter.scrolledtext (GH-151753)\n\nAdd a test for the ScrolledText widget, which had no tests: that it is\na Text widget held in a Frame with a Scrollbar, that Text methods work,\nthat the geometry manager methods are redirected to the frame while\nconfigure is not, and that the scrollbar tracks the text view.\n\nCo-authored-by: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
             "commit_timestamp": 1781912374.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1781970013.480934,
+            "elapsed_time": 16.101608753204346,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 711.5934295654297,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "e51b616efff845ea2a7d312aa43d5f5100064d88",
+            "commit_message": "gh-151678: Add tests for tkinter widget virtual events (GH-151793)\n\nVerify the virtual events that widgets emit in response to user\ninteraction, driven by generated events: <<ListboxSelect>> (Listbox),\n<<Increment>> and <<Decrement>> (ttk Spinbox), and <<TreeviewSelect>>,\n<<TreeviewOpen>> and <<TreeviewClose>> (ttk Treeview).\n\nCo-authored-by: Claude Opus 4.8 <noreply@anthropic.com>",
+            "commit_timestamp": 1781965900.0
         }
     ]
 }
