@@ -34691,6 +34691,21 @@
             "commit_ref": "1b9fe5c7226eccc8b269a7443148033080399f43",
             "commit_message": "gh-84649: Fix unstable test_rollover_at_midnight (GH-151813)\n\nThe test forced a rollover by back-dating the file modification time, but\nthe rollover time is now based also on the creation time, which cannot be\nchanged.  Instead, set the rollover time one second after the file\ncreation time and wait until the clock reaches it.\n\nCo-authored-by: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
             "commit_timestamp": 1781994413.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1782056468.446859,
+            "elapsed_time": 16.54633593559265,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 718.9964065551758,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "8270ae560c632f2ee88ab6c6b33562227d0deaae",
+            "commit_message": "gh-86726: Document tkinter.simpledialog query options and Dialog.result (GH-151851)",
+            "commit_timestamp": 1782053703.0
         }
     ]
 }
