@@ -34676,6 +34676,21 @@
             "commit_ref": "e51b616efff845ea2a7d312aa43d5f5100064d88",
             "commit_message": "gh-151678: Add tests for tkinter widget virtual events (GH-151793)\n\nVerify the virtual events that widgets emit in response to user\ninteraction, driven by generated events: <<ListboxSelect>> (Listbox),\n<<Increment>> and <<Decrement>> (ttk Spinbox), and <<TreeviewSelect>>,\n<<TreeviewOpen>> and <<TreeviewClose>> (ttk Treeview).\n\nCo-authored-by: Claude Opus 4.8 <noreply@anthropic.com>",
             "commit_timestamp": 1781965900.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1782016714.080281,
+            "elapsed_time": 25.142804384231567,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 742.7951812744141,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "1b9fe5c7226eccc8b269a7443148033080399f43",
+            "commit_message": "gh-84649: Fix unstable test_rollover_at_midnight (GH-151813)\n\nThe test forced a rollover by back-dating the file modification time, but\nthe rollover time is now based also on the creation time, which cannot be\nchanged.  Instead, set the rollover time one second after the file\ncreation time and wait until the clock reaches it.\n\nCo-authored-by: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+            "commit_timestamp": 1781994413.0
         }
     ]
 }
