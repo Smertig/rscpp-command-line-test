@@ -34721,6 +34721,21 @@
             "commit_ref": "476b649728201e78c38cc165c2fba841e392cf82",
             "commit_message": "gh-151042: venv: Pass VIRTUAL_ENV through cygpath inside fish on Windows (GH-151043)",
             "commit_timestamp": 1782102060.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1782146508.088896,
+            "elapsed_time": 48.10084509849548,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 710.1384582519531,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "34eca5ac9dddbe215639e28841da1e3304973e92",
+            "commit_message": "gh-151890: Support more photo image options in tkinter.PhotoImage methods (GH-151891)\n\nAdd parameters mapping to Tk photo image options that previously had no\ntkinter equivalent:\n\n* the format parameter of PhotoImage.put() (Tk 8.6),\n* the metadata parameter of PhotoImage.put(), read(), write() and data()\n  (Tk 9.0),\n* the withalpha parameter of PhotoImage.get() (Tk 9.0).\n\nCo-authored-by: Claude Opus 4.8 <noreply@anthropic.com>",
+            "commit_timestamp": 1782146139.0
         }
     ]
 }
