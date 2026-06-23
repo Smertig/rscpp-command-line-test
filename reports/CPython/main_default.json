@@ -34751,6 +34751,21 @@
             "commit_ref": "3f09a175ad022ca7ccdbb8583a0c137d493533ef",
             "commit_message": "gh-75666: Fix a reference leak in tkinter event bindings (GH-151808)\n\nThe Tcl commands created for event callbacks are now deleted when a\nbinding is replaced or unbound, instead of being leaked.",
             "commit_timestamp": 1782187165.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1782230676.450599,
+            "elapsed_time": 14.88531756401062,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 703.7265930175781,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "7928a8b730b0334c9f97c2144ab00fe0d88f1e97",
+            "commit_message": "gh-151126: Add missing `PyErr_NoMemory()` in `type_from_slots_or_spec` (#151582)\n\nCo-authored-by: Stan Ulbrych <stan@python.org>",
+            "commit_timestamp": 1782226091.0
         }
     ]
 }
