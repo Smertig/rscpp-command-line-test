@@ -18944,6 +18944,21 @@
             "commit_ref": "bd34c349cd28d262a7b2f7c4ec9a6c6d59730d31",
             "commit_message": "Automated Code Change\n\nPiperOrigin-RevId: 936507154\n",
             "commit_timestamp": 1782204388.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1782275354.098188,
+            "elapsed_time": 333.1989071369171,
+            "x64": true,
+            "actual_files_count": 1241,
+            "expected_files_count": 818,
+            "memory_traffic": 48171.45497894287,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "ae496aa61c5d184f861711eff738e8c17febf509",
+            "commit_message": "util: document FieldMask JSON round-trip non-idempotency for non-canonical paths (#27442)\n\n## Summary\n\n- Adds a test case documenting that `FieldMask` JSON round-trip (`MessageToJsonString` \u2192 `JsonStringToMessage` \u2192 `MessageToJsonString`) is **not a fixed point** for paths containing leading underscores or uppercase letters.\n- The path `\"__Y\"` shifts across multiple round-trips: `\"__Y\"` \u2192 `\"__y\"` \u2192 `\"_y\"` before stabilizing after 2-3 hops.\n- **Root cause**: The snake\u2194camel converter in `WriteFieldMask` (unparser) and `ParseFieldMask` (parser) are not inverses. The unparser sometimes consumes underscores and sometimes emits them (legacy fallthrough), while the parser always prepends an underscore for each uppercase letter.\n\nThe test uses `EXPECT_NE` to document the current (broken) behavior. When the converter is fixed, the `EXPECT_NE` should become `EXPECT_EQ`.\n\n**Impact**: Systems using FieldMask as a permission/projection filter that transport it through JSON (gRPC gateways, API proxies) may see the mask match different fields after a JSON hop. Only affects non-canonical paths (`[A-Z]` or leading `_` in components); canonical `[a-z][a-z0-9_]*` paths are unaffected.\n\nFound by AFL++ property-check fuzzing (`pb_json_wkt_fuzzer` mode 2).\n\n## Test plan\n\n- [ ] Run `JsonTest.TestFieldMaskJsonRoundTripNonIdempotent` for both `kReflective` and `kResolver` codecs\n- [ ] Verify the test passes (documents the bug via EXPECT_NE)\n\nCloses #27442\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/27442 from jortles:fix/fieldmask-json-idempotent 8676fb9a144f8315d618d0244ddd1dcd3aaa519f\nPiperOrigin-RevId: 937025551\n",
+            "commit_timestamp": 1782266745.0
         }
     ]
 }
