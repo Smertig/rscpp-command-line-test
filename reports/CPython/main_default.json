@@ -34781,6 +34781,21 @@
             "commit_ref": "fcda96fbf399d069d11f7e874352ad03273cf0b7",
             "commit_message": "gh-150994: _colorize: modernize typing imports (#151018)",
             "commit_timestamp": 1782269880.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1782316303.581,
+            "elapsed_time": 16.85464096069336,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 722.4179534912109,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "b35c37910a4595f22458cf0291a9b0252b3c6c70",
+            "commit_message": "gh-151485: Fix command quoting in subprocess.CalledProcessError.__str__ (#151486)\n\nCalledProcessError previously formatted cmd as `\"... '%s' ...\"`. This lead to\nunbalanced quoting when cmd contains single-quotes or, more commonly, when cmd\nis a list. This change updates the relevant format strings to use %r instead.\n\nCo-authored-by: Benjy Wiener <benjywiener@gmail.com>\nCo-authored-by: blurb-it[bot] <43283697+blurb-it[bot]@users.noreply.github.com>",
+            "commit_timestamp": 1782310262.0
         }
     ]
 }
