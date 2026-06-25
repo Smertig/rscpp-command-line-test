@@ -18974,6 +18974,21 @@
             "commit_ref": "3245bdb028598e80cacb0ba11bbf79377ff732e8",
             "commit_message": "Small optimizations to Java JsonFormat.\n\n- Apply a fast path to Uint64 parse where we try to parse it directly before falling back to the BigDecimal path. This optimization is preexisting on int64 and int32 and uint32 but was missed on Uint64\n\n- Avoid doing out.append(value.subSequence(start, end)) which forces an intermediate copy the string, instead use the out.append(value, start, end)\n\nPiperOrigin-RevId: 937290790\n",
             "commit_timestamp": 1782306858.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1782361715.374191,
+            "elapsed_time": 350.29765820503235,
+            "x64": true,
+            "actual_files_count": 1241,
+            "expected_files_count": 818,
+            "memory_traffic": 48369.552795410156,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "00f300054230faf939de1072968224723c365ee3",
+            "commit_message": "Automated Code Change\n\nPiperOrigin-RevId: 937722736\n",
+            "commit_timestamp": 1782360113.0
         }
     ]
 }

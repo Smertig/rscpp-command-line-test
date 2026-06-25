@@ -34796,6 +34796,21 @@
             "commit_ref": "b35c37910a4595f22458cf0291a9b0252b3c6c70",
             "commit_message": "gh-151485: Fix command quoting in subprocess.CalledProcessError.__str__ (#151486)\n\nCalledProcessError previously formatted cmd as `\"... '%s' ...\"`. This lead to\nunbalanced quoting when cmd contains single-quotes or, more commonly, when cmd\nis a list. This change updates the relevant format strings to use %r instead.\n\nCo-authored-by: Benjy Wiener <benjywiener@gmail.com>\nCo-authored-by: blurb-it[bot] <43283697+blurb-it[bot]@users.noreply.github.com>",
             "commit_timestamp": 1782310262.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1782361905.742994,
+            "elapsed_time": 17.06483221054077,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 704.3248825073242,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "3db3bba4d1feb3a9fbfcd368d470db17b5336dc4",
+            "commit_message": "gh-151929: Get boot ID, machine ID and uptime in test.pythoninfo (#152127)\n\nGHA: Run test.pythoninfo on the \"Cross build Linux\" job.",
+            "commit_timestamp": 1782343851.0
         }
     ]
 }
