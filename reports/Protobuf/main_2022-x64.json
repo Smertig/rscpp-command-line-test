@@ -19004,6 +19004,21 @@
             "commit_ref": "089805f3aed0e8bc9e8de7e63c962007a8e8feca",
             "commit_message": "Harden `RepeatedField::Add` functions to abort when the container can't grow\nanymore.\n\nPiperOrigin-RevId: 937984582\n",
             "commit_timestamp": 1782399695.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1782448310.287604,
+            "elapsed_time": 348.3112328052521,
+            "x64": true,
+            "actual_files_count": 1239,
+            "expected_files_count": 818,
+            "memory_traffic": 48086.41416931152,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "9ac0b22526e8dba7c5a027b6f0287ae04661b022",
+            "commit_message": "Propagate non-AttributeError exceptions in PyUpb_MessageMeta_GetAttr\n\nWhen cpython_bits.type_getattro(self, name) returns NULL due to an exception raised in a descriptor (such as KeyboardInterrupt, MemoryError, or SystemExit), PyUpb_MessageMeta_GetAttr previously cleared the error and raised AttributeError.\n\nCheck PyErr_ExceptionMatches(PyExc_AttributeError) before clearing the error to ensure non-AttributeError exceptions are properly propagated.\n\nPiperOrigin-RevId: 938246969\n",
+            "commit_timestamp": 1782429225.0
         }
     ]
 }
