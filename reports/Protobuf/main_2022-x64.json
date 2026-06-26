@@ -19019,6 +19019,21 @@
             "commit_ref": "9ac0b22526e8dba7c5a027b6f0287ae04661b022",
             "commit_message": "Propagate non-AttributeError exceptions in PyUpb_MessageMeta_GetAttr\n\nWhen cpython_bits.type_getattro(self, name) returns NULL due to an exception raised in a descriptor (such as KeyboardInterrupt, MemoryError, or SystemExit), PyUpb_MessageMeta_GetAttr previously cleared the error and raised AttributeError.\n\nCheck PyErr_ExceptionMatches(PyExc_AttributeError) before clearing the error to ensure non-AttributeError exceptions are properly propagated.\n\nPiperOrigin-RevId: 938246969\n",
             "commit_timestamp": 1782429225.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1782488977.269678,
+            "elapsed_time": 334.6920118331909,
+            "x64": true,
+            "actual_files_count": 1239,
+            "expected_files_count": 818,
+            "memory_traffic": 48200.210289001465,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "a85fcbc0b51475218a6c50840abeb0b1552c726a",
+            "commit_message": "Internal change.\n\nPiperOrigin-RevId: 938591389\n",
+            "commit_timestamp": 1782485962.0
         }
     ]
 }
