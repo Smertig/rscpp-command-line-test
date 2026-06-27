@@ -19034,6 +19034,21 @@
             "commit_ref": "a85fcbc0b51475218a6c50840abeb0b1552c726a",
             "commit_message": "Internal change.\n\nPiperOrigin-RevId: 938591389\n",
             "commit_timestamp": 1782485962.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1782534323.175663,
+            "elapsed_time": 216.74938082695007,
+            "x64": true,
+            "actual_files_count": 1239,
+            "expected_files_count": 818,
+            "memory_traffic": 48141.005142211914,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "69f97e01f74d7c0bc7b429f3aa471a2c22855379",
+            "commit_message": "fix(cpp): suppress self-warning on deprecated enum value imports (#28012)\n\nFixes #18205.\n\nprotoc generates a class-scoped alias for each nested enum value (for example `static constexpr Status OK = Result_Status_OK;`). For a value marked `[deprecated = true]`, the alias is itself `[[deprecated]]` and initializes from the deprecated enumerator, so protoc's own generated header trips `-Wdeprecated-declarations`. That breaks downstream builds compiled with `-Werror`, even though the user does not control the generated code. This wraps the alias in the existing `PROTOBUF_IGNORE_DEPRECATION_START`/`PROTOBUF_IGNORE_DEPRECATION_STOP` macros, as suggested by a maintainer on the issue. Non-deprecated values are unchanged.\n\nTest: added two cases to `generator_unittest.cc` (one asserting the wrap is emitted for a deprecated value, one asserting no macro is emitted otherwise).\n\n  ./build/tests --gtest_filter='CppGeneratorTest.*'\n\nResult: all CppGeneratorTest cases pass (including the two new ones).\n\nCloses #28012\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/28012 from yashanil98:fix/issue-18205-enum-symbol-import-deprecation 2cad7bc5bc05a69a40ebc27b77afc4f7b24a7993\nPiperOrigin-RevId: 938705268\n",
+            "commit_timestamp": 1782500650.0
         }
     ]
 }
