@@ -19109,6 +19109,21 @@
             "commit_ref": "9e9dbae858f75c8b886f1aea642418150cb8aed0",
             "commit_message": "Python: fix heap-use-after-free in MapIterator after map.clear() (#27257)\n\n## Bug\n\n`Clear()` in `map_container.cc` (line 294-302) calls\n`reflection->ClearField()` which destroys all underlying map nodes via\n`ClearTable(reset=true)`, but does not increment `self->version`.\n\nAll other mutators (ScalarMapSetItem, MessageMapSetItem, MergeFrom, etc.)\nincrement `self->version` after mutation. `IterNext()` relies on version\nmismatch to detect concurrent modification and raise `RuntimeError`.\nWithout the version bump, a live iterator proceeds to dereference the\nfreed `NodeBase*` via `SetMapIteratorValue` \u2192 `UntypedMapIterator::PlusPlus`.\n\n**ASAN confirmed:** heap-use-after-free, READ size 8 at\n`UntypedMapIterator::PlusPlus` (map.h:599), freed by `ClearTable`\n(map.h:345), allocated by `ScalarMapSetItem` (map_container.cc:416).\n\n## Fix\n\nAdd `self->version++` after `ClearField` in `Clear()`, matching every\nother mutator in the same file.\n\n## Reproducer\n\n```python\nmsg = M()  # proto3 with map<string, int32> mp\nfor k in (\"a\",\"b\",\"c\",\"d\"): msg.mp[k] = 1\nit = iter(msg.mp)\nnext(it)\nmsg.mp.clear()   # frees nodes, version NOT bumped\nnext(it)         # heap-use-after-free\n```\n\nCloses #27257\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/27257 from vhullto:fix/python-map-clear-uaf fb352251107932570e8ec5ba293b18e8d74521b6\nPiperOrigin-RevId: 939482747\n",
             "commit_timestamp": 1782679389.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1782750009.54691,
+            "elapsed_time": 342.9954831600189,
+            "x64": true,
+            "actual_files_count": 1239,
+            "expected_files_count": 818,
+            "memory_traffic": 48105.36710357666,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "58f02be5e7976f0ed3d84aa9b30f89cb5e47eff6",
+            "commit_message": "Automated Code Change\n\nPiperOrigin-RevId: 939608120\n",
+            "commit_timestamp": 1782709513.0
         }
     ]
 }

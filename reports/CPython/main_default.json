@@ -34931,6 +34931,21 @@
             "commit_ref": "7d128e319f3730e776a9161a4b5e9de95c802eaf",
             "commit_message": "gh-148660: Fix use-after-free in OrderedDict.copy() on reentrant mutation (GH-151573)\n\n* gh-148660: Fix use-after-free in OrderedDict.copy() on reentrant mutation\n\nOrderedDict.copy() walks the internal linked list while building the new\ndict. The loop body can run arbitrary Python (a key's __eq__/__hash__, or\na subclass __getitem__/__setitem__) which can clear the source dict and\nfree the nodes being iterated.\n\nDetect this the same way OrderedDict.__eq__ already does (gh-119004):\nsnapshot od_state before the loop, hold a strong reference to the key and\nread the hash before any reentrant call, and raise RuntimeError if the\nstate changed before advancing to the next node.\n\n* gh-148660: fix NEWS nit, suppress undocumented OrderedDict.copy xref",
             "commit_timestamp": 1782698650.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1782750223.539749,
+            "elapsed_time": 34.41796135902405,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 743.5608062744141,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "7ccdbaba2c54250a70d7f25632152df7655a5e0a",
+            "commit_message": "gh-151987: Pass filter_function to TarFile._extract_one() during .extract() (GH-151988)\n\n\nCo-authored-by: Seth Michael Larson <seth@python.org>",
+            "commit_timestamp": 1782747686.0
         }
     ]
 }
