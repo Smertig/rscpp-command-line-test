@@ -34946,6 +34946,21 @@
             "commit_ref": "7ccdbaba2c54250a70d7f25632152df7655a5e0a",
             "commit_message": "gh-151987: Pass filter_function to TarFile._extract_one() during .extract() (GH-151988)\n\n\nCo-authored-by: Seth Michael Larson <seth@python.org>",
             "commit_timestamp": 1782747686.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1782793928.553298,
+            "elapsed_time": 15.9448401927948,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 702.7845840454102,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "5717518fb3ed6f34716683e08ec372267d871d21",
+            "commit_message": "gh-146219: Document reusing a thread state across repeated foreign-thread calls (GH-146221)\n\n* Document reusing a thread state across repeated foreign-thread calls\n\nAdd a subsection under \"Non-Python created threads\" explaining the\nperformance cost of creating/destroying a PyThreadState on every\nEnsure/Release cycle and showing how to keep one alive for the\nthread's lifetime instead.\n\n* add a comma\n\nCo-authored-by: Peter Bierma <zintensitydev@gmail.com>\n\n---------\n\nCo-authored-by: Peter Bierma <zintensitydev@gmail.com>",
+            "commit_timestamp": 1782777902.0
         }
     ]
 }
