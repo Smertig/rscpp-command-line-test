@@ -34991,6 +34991,21 @@
             "commit_ref": "fdcee4f5bd8d0dd852518ec9f092ac35ce9fd5d8",
             "commit_message": "gh-152711: Add pythoninfo-build command to Platforms/Android (#152713)\n\nAdd a pythoninfo-build command to Platforms/Android to display build\ninfo of the build Python. The command runs \"make pythoninfo\".\n\nci and build commands now also run pythoninfo-build",
             "commit_timestamp": 1782874803.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1782921508.287165,
+            "elapsed_time": 22.220226764678955,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 699.4024810791016,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "4e16b8d4eef162082c3d409f171802ceccb36521",
+            "commit_message": "gh-66331: Set correct WM_CLASS on X11 for IDLE windows (#152733)\n\nSet the WM_CLASS of IDLE's long-lived windows (window-list windows and\nthe stack viewers) to \"Idle\" instead of the default \"Toplevel\", so that\nwindow managers group and label them correctly.",
+            "commit_timestamp": 1782918649.0
         }
     ]
 }
