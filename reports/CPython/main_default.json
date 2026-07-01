@@ -34976,6 +34976,21 @@
             "commit_ref": "f1c536372199cfb9c2e7b360b7bf04208c9eee82",
             "commit_message": "gh-152680: Detect container/VM in test.pythoninfo (#152668)\n\nOn Apple, log the hardware model as \"system.hardware\".\n\n* Log the \"CI\", \"IMAGE_OS_VERSION\" and \"container\"\n  environment variables.\n* Add run_command() and first_line() functions.",
             "commit_timestamp": 1782832317.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1782880709.060952,
+            "elapsed_time": 20.403111934661865,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 711.6063842773438,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "fdcee4f5bd8d0dd852518ec9f092ac35ce9fd5d8",
+            "commit_message": "gh-152711: Add pythoninfo-build command to Platforms/Android (#152713)\n\nAdd a pythoninfo-build command to Platforms/Android to display build\ninfo of the build Python. The command runs \"make pythoninfo\".\n\nci and build commands now also run pythoninfo-build",
+            "commit_timestamp": 1782874803.0
         }
     ]
 }
