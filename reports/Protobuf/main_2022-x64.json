@@ -19244,6 +19244,21 @@
             "commit_ref": "e1b94ce8f9e7cf364b4758fd59fbaf40147244db",
             "commit_message": "Optimize MapEntry allocations during map serialization\n\nPiperOrigin-RevId: 941708409\n",
             "commit_timestamp": 1783005373.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1783138689.132689,
+            "elapsed_time": 352.5895013809204,
+            "x64": true,
+            "actual_files_count": 1250,
+            "expected_files_count": 818,
+            "memory_traffic": 48463.99723815918,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "3aa022a269f193025f8288cd89e96075c08fea2f",
+            "commit_message": "Configure extra compile args in setup.py (#28264)\n\nFixes https://github.com/protocolbuffers/protobuf/issues/28261 by setting symbol visibility in `setup.py`, similar to `py_extension.bzl`, using the existing branching logic to bypass the flag on MSVC.\n\nThis issue manifests in the [NixOS/nixpkgs](https://github.com/NixOS/nixpkgs) build of the `protobuf` python package, which contains upb symbols, and causes fatal failures when loaded in a process that separately links/loads libprotobuf. We'll supply a patch there as well, until this can be backported or released in future protobuf versions.\n\nCloses #28264\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/28264 from mitchallain:mallain/fix-python-upb-symbols 6e118a62bfd076fbf07b1a5fe3decfd969207c3b\nPiperOrigin-RevId: 942223178\n",
+            "commit_timestamp": 1783108025.0
         }
     ]
 }
