@@ -35126,6 +35126,21 @@
             "commit_ref": "ad54b91b9fa4c5d12f155bb09138dff21a2bdec3",
             "commit_message": "gh-82151: Update and improve urlsplit docstring (#152985)\n\n* gh-82151: Update and improve urlsplit docstring\n\nCo-authored-by: idomic <michael.ido@gmail.com>\n\n* Slightly improved wording for % escapes. Consistent with rest of the doc.\n\n---------\n\nCo-authored-by: idomic <michael.ido@gmail.com>\nCo-authored-by: Senthil Kumaran <senthil@python.org>",
             "commit_timestamp": 1783307957.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1783354354.739777,
+            "elapsed_time": 18.360059022903442,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 709.0476684570312,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "4c79929705eb31959a6f4071cc34583de0737a28",
+            "commit_message": "gh-152785: Upgrade Ubuntu from 24.04 to 26.04 in GitHub Actions (#152717)\n\n* Replace \"ubuntu-24.04\" with \"ubuntu-26.04\".\n* Replace \"ubuntu-latest\" with \"ubuntu-26.04\" for Cross build Linux.\n* Replace \"ubuntu-latest\" with \"ubuntu-slim\" for small workloads.\n* Update \".github/actionlint.yaml\" to allow \"ubuntu-26.04\"\n  and \"ubuntu-26.04-arm\" images.\n* Install Ubuntu libmpdec-dev package, rather than installing libmpdec\n  from source (tarball).\n* No longer run https://apt.llvm.org/llvm.sh, since ubuntu-26.04 provides\n  clang-21 by default.\n\nCo-authored-by: Hugo van Kemenade <1324225+hugovk@users.noreply.github.com>",
+            "commit_timestamp": 1783352661.0
         }
     ]
 }
