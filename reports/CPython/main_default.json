@@ -35141,6 +35141,21 @@
             "commit_ref": "4c79929705eb31959a6f4071cc34583de0737a28",
             "commit_message": "gh-152785: Upgrade Ubuntu from 24.04 to 26.04 in GitHub Actions (#152717)\n\n* Replace \"ubuntu-24.04\" with \"ubuntu-26.04\".\n* Replace \"ubuntu-latest\" with \"ubuntu-26.04\" for Cross build Linux.\n* Replace \"ubuntu-latest\" with \"ubuntu-slim\" for small workloads.\n* Update \".github/actionlint.yaml\" to allow \"ubuntu-26.04\"\n  and \"ubuntu-26.04-arm\" images.\n* Install Ubuntu libmpdec-dev package, rather than installing libmpdec\n  from source (tarball).\n* No longer run https://apt.llvm.org/llvm.sh, since ubuntu-26.04 provides\n  clang-21 by default.\n\nCo-authored-by: Hugo van Kemenade <1324225+hugovk@users.noreply.github.com>",
             "commit_timestamp": 1783352661.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1783398413.566385,
+            "elapsed_time": 14.913552284240723,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 711.8005218505859,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "35c6779c7b5c4c2e2d9723803996050b711da0dd",
+            "commit_message": "gh-145177: Update Emscripten to 6.0.2 (#153235)\n\nRemoves the patched `getentropy()` call since it has been included upstream.",
+            "commit_timestamp": 1783382056.0
         }
     ]
 }
