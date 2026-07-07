@@ -19334,6 +19334,21 @@
             "commit_ref": "06e205948b90198f57781a875b4b777f8aa01977",
             "commit_message": "Fail loudly if we try to use a prebuilt protoc with unreleased code (#28167)\n\nCurrently if you build with `--incompatible_enable_proto_toolchain_resolution`\n(on by default in Bazel 9) on main or any recent Git commit, you end up using\nan old v33.0 prebuilt protoc binary. The `authenticity_validation` rule does\nnot catch this, because it just checks that the `RELEASE_VERSION` prebuilt we\ndownloaded has version `RELEASE_VERSION`. This constant is never updated in\nGit, only in releases published to BCR. As a result, we get mysterious compiler\nerrors rather than a clear error about what is going wrong.\n\nThis commit fixes the problem by keeping `RELEASE_VERSION` up to date with the\nexisting `PROTOC_VERSION`. This will cause the build to fail loudly if you try\nto use a prebuilt protoc binary with a protobuf Git checkout. To make sure that\ndevelopers do not hit this issue, I updated .bazelrc to explicitly turn off use\nof the prebuilt protoc.\n\nI also removed `examples/example_without_cc_toolchain/`, because I don't think\nthis test is doing anything useful anymore. It attempts to exercise the\nprebuilt protoc, but that is something we do not expect to work correctly with\nunreleased protobuf code, and with my change it would result in a build error.\n\nCloses #28167\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/28167 from protocolbuffers:prebuilt d7c67c9ce7a808e13d488b2d0fef139da7f92571\nPiperOrigin-RevId: 943511369\n",
             "commit_timestamp": 1783375270.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1783439715.065544,
+            "elapsed_time": 344.0128262042999,
+            "x64": true,
+            "actual_files_count": 1252,
+            "expected_files_count": 818,
+            "memory_traffic": 48412.95389556885,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "35b5692dddcd82b92e31690e3e20b8a43078f866",
+            "commit_message": "Optimize C++ TextFormat printing by avoiding absl::CEscape allocation for clean strings.\n\nPiperOrigin-RevId: 943902079\n",
+            "commit_timestamp": 1783437427.0
         }
     ]
 }
