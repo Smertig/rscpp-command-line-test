@@ -35171,6 +35171,21 @@
             "commit_ref": "fd9d8c3c66fc147cac6024c63b8c109d65e3aec8",
             "commit_message": "gh-150191: Avoid data race in test_sni_callback_race (#150193)",
             "commit_timestamp": 1783439520.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1783483739.885745,
+            "elapsed_time": 16.354533195495605,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 712.2414932250977,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "45729033bff28f8abc36c42e802cb2853c205737",
+            "commit_message": "gh-153056: Fix a data race compiling the string.Template pattern in free-threading builds (#153057)\n\n* gh-153056: Fix a data race compiling the string.Template pattern in free-threading builds\n\nTemplate compiles its substitution pattern lazily and caches it on the class.  On the free-threaded build two concurrent first uses could race: a thread that observed the pattern another thread had just compiled would try to recompile it, and re.compile() rejects flags on an already-compiled pattern, raising a spurious ValueError.  Return the already-compiled pattern instead.\n\nAs a side effect, a subclass that supplies an already-compiled pattern now works too; previously it raised the same ValueError at class definition.\n\n* Trim test comments and NEWS wording\n\n* Document that the pattern attribute accepts a string or a compiled regex\n\n* Comment the three states of pattern and note the documented-behavior fix in NEWS\n\n* Update Doc/library/string.rst\n\n---------\n\nCo-authored-by: Barry Warsaw <barry@python.org>",
+            "commit_timestamp": 1783471254.0
         }
     ]
 }
