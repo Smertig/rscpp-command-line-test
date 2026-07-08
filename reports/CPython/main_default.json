@@ -35186,21 +35186,6 @@
             "commit_ref": "45729033bff28f8abc36c42e802cb2853c205737",
             "commit_message": "gh-153056: Fix a data race compiling the string.Template pattern in free-threading builds (#153057)\n\n* gh-153056: Fix a data race compiling the string.Template pattern in free-threading builds\n\nTemplate compiles its substitution pattern lazily and caches it on the class.  On the free-threaded build two concurrent first uses could race: a thread that observed the pattern another thread had just compiled would try to recompile it, and re.compile() rejects flags on an already-compiled pattern, raising a spurious ValueError.  Return the already-compiled pattern instead.\n\nAs a side effect, a subclass that supplies an already-compiled pattern now works too; previously it raised the same ValueError at class definition.\n\n* Trim test comments and NEWS wording\n\n* Document that the pattern attribute accepts a string or a compiled regex\n\n* Comment the three states of pattern and note the documented-behavior fix in NEWS\n\n* Update Doc/library/string.rst\n\n---------\n\nCo-authored-by: Barry Warsaw <barry@python.org>",
             "commit_timestamp": 1783471254.0
-        },
-        {
-            "tool_version": "252.0.20250924.231041",
-            "error_mismatch": true,
-            "project": null,
-            "timestamp": 1783525857.067447,
-            "elapsed_time": 15.625519752502441,
-            "x64": true,
-            "actual_files_count": 1,
-            "expected_files_count": null,
-            "memory_traffic": 712.2595138549805,
-            "repo_url": "https://github.com/python/cpython",
-            "commit_ref": "fc19ad7b8b08c43667c9087d89f32f08830544ce",
-            "commit_message": "gh-143750: Compile OpenSSL with TSan for TSan CI (#153316)\n\nCo-authored-by: Sam Gross <colesbury@gmail.com>",
-            "commit_timestamp": 1783523731.0
         }
     ]
 }
