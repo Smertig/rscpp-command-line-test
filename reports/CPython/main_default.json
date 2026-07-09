@@ -35201,6 +35201,21 @@
             "commit_ref": "6d386684ad69f42cb57c72fe0e0ffcec82ec7e12",
             "commit_message": "gh-47005: fix do_open() to let regular headers override unredirected \u2026 (#146506)\n\n* gh-47005: fix do_open() to let regular headers override unredirected headers\n\nAbstractHTTPHandler.do_open() was building the request header dict by\nstarting with unredirected_hdrs and only inserting regular headers that\nwere not already present, giving unredirected headers priority.  This\ncontradicts get_header() and header_items(), both of which give regular\nheaders the higher priority.\n\nFix by unconditionally updating with req.headers so that a header set\nvia add_header() always overrides one set via add_unredirected_header().\n\n---------\n\nCo-authored-by: Senthil Kumaran <senthil@python.org>",
             "commit_timestamp": 1783568418.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1783613130.109442,
+            "elapsed_time": 16.28053879737854,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 712.1415023803711,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "eacb85a2b2ee9212997ab451dc95ec3e7992afc8",
+            "commit_message": "gh-90092: Fix test_curses when stdin is write-only (e.g. under nohup) (GH-153420)\n\nnewterm() needs a readable input fd, but nohup can leave stdin write-only.\nFall back to the output fd, as already done when stdin has no fileno.\n\nCo-authored-by: Claude Opus 4.8 <noreply@anthropic.com>",
+            "commit_timestamp": 1783611806.0
         }
     ]
 }
