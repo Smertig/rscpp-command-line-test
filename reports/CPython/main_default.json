@@ -35216,6 +35216,21 @@
             "commit_ref": "eacb85a2b2ee9212997ab451dc95ec3e7992afc8",
             "commit_message": "gh-90092: Fix test_curses when stdin is write-only (e.g. under nohup) (GH-153420)\n\nnewterm() needs a readable input fd, but nohup can leave stdin write-only.\nFall back to the output fd, as already done when stdin has no fileno.\n\nCo-authored-by: Claude Opus 4.8 <noreply@anthropic.com>",
             "commit_timestamp": 1783611806.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1783657649.114527,
+            "elapsed_time": 16.361371755599976,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 710.0484466552734,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "6c389c446e487bcb9d09e85de30aa42052990f1c",
+            "commit_message": "gh-153062: Fix a crash iterating itertools.tee on the free-threaded build (gh-153063)\n\nitertools.tee branches share a linked list of teedataobject cells.  On the free-threaded build, iterating one branch from multiple threads, or iterating sibling branches concurrently, raced on the shared cells and each branch's position, corrupting refcounts and crashing.\n\nLock each teedataobject while reading, extending, or clearing it, and snapshot each branch's position under the tee object's own lock, revalidating before advancing, so the two locks are never nested.  Concurrent iteration of one tee is undefined and may raise RuntimeError as documented, but no longer crashes.\n\nThe free-threading snapshot and revalidation add per-element overhead on the default build, where the GIL already serializes access. Guard that path under Py_GIL_DISABLED so the default build keeps the original iteration and the free-threaded path is unchanged.\n\nCo-authored-by: Neil Schemenauer <nas-github@arctrix.com>",
+            "commit_timestamp": 1783651138.0
         }
     ]
 }
