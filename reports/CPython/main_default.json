@@ -35276,6 +35276,21 @@
             "commit_ref": "7671ee1eba3c7c13747761b35b4b9d4166a4670a",
             "commit_message": "gh-152431: update StreamReader transport after StreamWriter.start_tls() (#152432)\n\nCo-authored-by: Kumar Aditya <kumaraditya@python.org>",
             "commit_timestamp": 1783775003.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1783829831.724866,
+            "elapsed_time": 16.05856943130493,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 714.0093688964844,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "0023d5b23df09f18425fea9b9c54a37ba050d5cf",
+            "commit_message": "gh-152132: Close stderr_copy in test_api.test_run (#153591)\n\nPreviously, the test was leaking a file descriptor.",
+            "commit_timestamp": 1783806902.0
         }
     ]
 }
