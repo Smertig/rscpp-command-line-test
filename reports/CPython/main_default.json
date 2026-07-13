@@ -35321,6 +35321,21 @@
             "commit_ref": "ed716551e13d1e46a5cd17955657d64b8824626a",
             "commit_message": "gh-153037: Make ZstdFile.__next__ raise io.UnsupportedOperation on non-readable files (#153045)\n\nMake `ZstdFile.__next__` raise `io.UnsupportedOperation` on non-readable files, consistent with other compression modules.",
             "commit_timestamp": 1783908953.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1783958464.590024,
+            "elapsed_time": 39.461156129837036,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 649.6973495483398,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "1fece4457032382947c7c2a5c9e95dc106ca7a7d",
+            "commit_message": "gh-89696: Fix `loop.sock_connect` docs on address resolution (#153651)",
+            "commit_timestamp": 1783935984.0
         }
     ]
 }
