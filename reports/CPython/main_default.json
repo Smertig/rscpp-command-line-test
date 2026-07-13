@@ -35306,6 +35306,21 @@
             "commit_ref": "dd2faeb33d5fa0d2635b91ece6eaebd34c61408c",
             "commit_message": "gh-90431: Document cancellation behavior of asyncio.wait() and asyncio.as_completed() (#153616)",
             "commit_timestamp": 1783853682.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1783916395.064508,
+            "elapsed_time": 15.510505437850952,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 715.0775451660156,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "ed716551e13d1e46a5cd17955657d64b8824626a",
+            "commit_message": "gh-153037: Make ZstdFile.__next__ raise io.UnsupportedOperation on non-readable files (#153045)\n\nMake `ZstdFile.__next__` raise `io.UnsupportedOperation` on non-readable files, consistent with other compression modules.",
+            "commit_timestamp": 1783908953.0
         }
     ]
 }
