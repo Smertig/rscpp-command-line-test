@@ -35336,6 +35336,21 @@
             "commit_ref": "1fece4457032382947c7c2a5c9e95dc106ca7a7d",
             "commit_message": "gh-89696: Fix `loop.sock_connect` docs on address resolution (#153651)",
             "commit_timestamp": 1783935984.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1784001956.595623,
+            "elapsed_time": 16.506739139556885,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 715.1342086791992,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "2dc1a91af801ea896e21f6c6e6cc41f57e8268d9",
+            "commit_message": "gh-153631: Move to `macos-26` runner for iOS (#153632)\n\nSwitches iOS CI to use the macos-26 runner, and makes a small change to the iOS\nbuild script to improve build stability. xcodebuild doesn't guarantee that the\nCoreSimulatorService is running before starting a simulator. If the service\nisn't running, xcodebuild reports that no simulators are available, and fails to\nstart the test app. However, simctl blocks until the simulator is available, and\nsimctl is used to evaluate the default simulator. So - the iOS build script now\nunconditionally determines the default simulator, even if a specific simulator\nis requested. ",
+            "commit_timestamp": 1783982323.0
         }
     ]
 }
