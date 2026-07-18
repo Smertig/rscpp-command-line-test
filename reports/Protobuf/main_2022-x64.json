@@ -19619,6 +19619,21 @@
             "commit_ref": "baeb5723ee8ea9db3e1a88dee89e88309733b61c",
             "commit_message": "Make `MessageLite` + `Message` destructors `protected` when custom VTable is on.\n\nThe custom vtable experiment changes the `MessageLite` destructor from virtual to a no-op. Calling it directly outside of protobuf will not behave consistently before/after this experiment, so it should be hidden.\n\nThis will catch code that calls `~MessageLite()` directly on a buffer, which could cause memory leaks if custom VTable is enabled.\n\nCustom VTable is only available with destroying deletes, and destroying deletes forward `delete my_message_ptr` to the destroying delete operator. With VTable disabled, there is no destroying delete operator, and the `MessageLite` virtual destructor is called instead, so we can only hide these destructors with custom VTable on.\n\nNote that there is a \"bug\" in the C++ spec that allows compilers to require a visible normal destructor when calling the destroying delete operator. GCC does not implement this check, and Clang fixed this in [v20.1](https://releases.llvm.org/20.1.0/tools/clang/docs/ReleaseNotes.html#bug-fixes-in-this-version). I've conditionally made these constructors protected for compiler configurations we know don't have this bug.\n\nPiperOrigin-RevId: 949757854\n",
             "commit_timestamp": 1784323241.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1784388155.887141,
+            "elapsed_time": 335.0217583179474,
+            "x64": true,
+            "actual_files_count": 1256,
+            "expected_files_count": 818,
+            "memory_traffic": 48421.79772949219,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "c07d90c745f18d81f81f2cc8a14dff74a79d6f34",
+            "commit_message": "Auto-generate files after cl/949999958\n",
+            "commit_timestamp": 1784367182.0
         }
     ]
 }
