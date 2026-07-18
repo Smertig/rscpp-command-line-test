@@ -19604,6 +19604,21 @@
             "commit_ref": "927dead4c81d45644b1e4934cdbfd669ff35afe7",
             "commit_message": "Delete unused `refillCallback` and associated types.\n\nThey were introduced along with a Google-internal usage in cl/47874747. That usage was removed in cl/791705426.\n\nPiperOrigin-RevId: 949521950\n",
             "commit_timestamp": 1784293398.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1784347333.909622,
+            "elapsed_time": 335.4867916107178,
+            "x64": true,
+            "actual_files_count": 1254,
+            "expected_files_count": 818,
+            "memory_traffic": 48542.63151550293,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "baeb5723ee8ea9db3e1a88dee89e88309733b61c",
+            "commit_message": "Make `MessageLite` + `Message` destructors `protected` when custom VTable is on.\n\nThe custom vtable experiment changes the `MessageLite` destructor from virtual to a no-op. Calling it directly outside of protobuf will not behave consistently before/after this experiment, so it should be hidden.\n\nThis will catch code that calls `~MessageLite()` directly on a buffer, which could cause memory leaks if custom VTable is enabled.\n\nCustom VTable is only available with destroying deletes, and destroying deletes forward `delete my_message_ptr` to the destroying delete operator. With VTable disabled, there is no destroying delete operator, and the `MessageLite` virtual destructor is called instead, so we can only hide these destructors with custom VTable on.\n\nNote that there is a \"bug\" in the C++ spec that allows compilers to require a visible normal destructor when calling the destroying delete operator. GCC does not implement this check, and Clang fixed this in [v20.1](https://releases.llvm.org/20.1.0/tools/clang/docs/ReleaseNotes.html#bug-fixes-in-this-version). I've conditionally made these constructors protected for compiler configurations we know don't have this bug.\n\nPiperOrigin-RevId: 949757854\n",
+            "commit_timestamp": 1784323241.0
         }
     ]
 }
