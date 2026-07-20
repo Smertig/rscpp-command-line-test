@@ -35486,6 +35486,21 @@
             "commit_ref": "eb447081ed8182f825fa01953ec87cff41f3d585",
             "commit_message": "gh-139806: Mention pickle error changes in What's New in 3.14 (GH-154020)\n\nThe gh-122311 changes made pickle.dump() and pickle.dumps() raise\nPicklingError for some failures that previously raised AttributeError,\nImportError, ValueError or UnicodeEncodeError, depending on the\nimplementation.\nAdd an entry about this in the \"Porting to Python 3.14\" section.\n\nCo-authored-by: Claude Fable 5 <noreply@anthropic.com>",
             "commit_timestamp": 1784474435.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1784521354.898635,
+            "elapsed_time": 16.33463454246521,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 710.2958831787109,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "1f9d20bbd4fed601e7caf76a12e52d35c8ae2b14",
+            "commit_message": "gh-154137: Fix handle leak in test_winapi (#154201)\n\nMake sure that events handles are closed.",
+            "commit_timestamp": 1784499572.0
         }
     ]
 }

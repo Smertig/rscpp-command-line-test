@@ -19664,6 +19664,21 @@
             "commit_ref": "c07d90c745f18d81f81f2cc8a14dff74a79d6f34",
             "commit_message": "Auto-generate files after cl/949999958\n",
             "commit_timestamp": 1784367182.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1784521197.658278,
+            "elapsed_time": 292.15154457092285,
+            "x64": true,
+            "actual_files_count": 1256,
+            "expected_files_count": 818,
+            "memory_traffic": 48431.63780212402,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "26ae04feca8557d28d80b0b51294a725c80acdc1",
+            "commit_message": "Move proto identifier casing and naming helpers to naming_style.h\n\nExtract ToCamelCase, ToJsonName, EnumValueToPascalCase, and their\nassertion size helpers from descriptor.cc to naming_style.h and\nnaming_style.cc under proto2::internal namespace as a preparation\nstep for splitting DescriptorBuilder.\n\nPiperOrigin-RevId: 950488920\n",
+            "commit_timestamp": 1784497243.0
         }
     ]
 }
