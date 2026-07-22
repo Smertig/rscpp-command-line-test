@@ -35531,6 +35531,21 @@
             "commit_ref": "d333e5aa59f6cc20198502f4ff50b14eabde9b8b",
             "commit_message": "Test `object_hook` and pickleability of some JSON components (GH-154155)",
             "commit_timestamp": 1784646481.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1784693433.295386,
+            "elapsed_time": 16.464602947235107,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 703.0788803100586,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "4448705d879ea41ea97114ef6c8215590913811a",
+            "commit_message": "gh-154399: Fix venv activate.csh in a non-interactive shell (GH-154400)\n\nactivate.csh saved the prompt unconditionally, but the prompt variable\nonly exists in interactive shells, and csh fails on an undefined\nvariable.\n\nCo-authored-by: Claude Opus 4.8 <noreply@anthropic.com>",
+            "commit_timestamp": 1784693110.0
         }
     ]
 }
