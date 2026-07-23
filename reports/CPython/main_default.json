@@ -35576,6 +35576,21 @@
             "commit_ref": "206788a6dd23b79fc38fde9a7100293d7efcc37c",
             "commit_message": "gh-154502: Disable junk filling in the OpenBSD allocator in test_capi (GH-154503)\n\nCo-authored-by: Claude Opus 4.8 <noreply@anthropic.com>",
             "commit_timestamp": 1784761119.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1784821372.293428,
+            "elapsed_time": 12.340338230133057,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 453.05108642578125,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "22c797005d1eaa2b03bcd9d858c2525a1d1560c4",
+            "commit_message": "gh-154525: Skip ncurses find_pair()/alloc_pair() reuse checks before 6.3 (GH-154543)\n\nfind_pair() and reuse in alloc_pair() were fixed in ncurses 6.3 (patch\n20200411).  On earlier versions find_pair() returns -1 and alloc_pair()\nallocates a fresh pair instead of reusing an equal one, so\ntest_dynamic_color_pairs failed on ncurses 6.1 and 6.2.\n\nCo-authored-by: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
+            "commit_timestamp": 1784821063.0
         }
     ]
 }
