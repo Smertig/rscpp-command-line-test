@@ -19754,6 +19754,21 @@
             "commit_ref": "b67d62ecb4f54dc7b71c66b3a4eace7a6155f292",
             "commit_message": "internal change\n\nPiperOrigin-RevId: 952340336\n",
             "commit_timestamp": 1784756708.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1784865919.550197,
+            "elapsed_time": 345.43262362480164,
+            "x64": true,
+            "actual_files_count": 1256,
+            "expected_files_count": 818,
+            "memory_traffic": 48587.44312286377,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "e96bfb216958e455524eeffdd9657852205ee598",
+            "commit_message": "Reserve extension 1310 for the Teleport API module (#28769)\n\nThis adds an entry to the global extension registry (`docs/options.md`) reserving extension number 1310 for Teleport.\n\n* Project: Teleport\n* Website: https://goteleport.com\n* Extension number: 1310\n\nCloses #28769\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/28769 from espadolini:reserve-extension-teleport e0ee846d2a84bb2d969e33f3a46eb4c1479ae959\nPiperOrigin-RevId: 953095349\n",
+            "commit_timestamp": 1784862105.0
         }
     ]
 }
