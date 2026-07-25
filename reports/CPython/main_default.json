@@ -35621,6 +35621,21 @@
             "commit_ref": "d5c1b29658063d1ef9d66515d8e4cb9929126be7",
             "commit_message": "gh-153419: Fix several issues around bytearray __init__ (#153498)\n\nIntroduce a bytearray_new() function to ensure that\nob_bytes_object is always set on a bytearray.\n\nResizing a bytearray to 0 length now explicitly sets\nthe ob_bytes_object to the empty constant immortal.\n\nAdd a check in the 'bytearray init from string'\nfast path to ensure there are no active exports.\n\nThis fixes asserts/crashes on the following:\n - bytearray(1).__init__()\n - bytearray().__new__(bytearray).append(1)\n - a = bytearray(); b = memoryview(a); a.__init__('x', 'ascii')\n\nCo-authored-by: Cody Maloney <cmaloney@users.noreply.github.com>",
             "commit_timestamp": 1784906711.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1784952442.485431,
+            "elapsed_time": 15.920249462127686,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 704.8905868530273,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "506242706e43af85f841027b7bd7f022f8acd939",
+            "commit_message": "GH-153809: Untrack TaskObj from GC before calling unregister_task (#154563)",
+            "commit_timestamp": 1784950266.0
         }
     ]
 }
