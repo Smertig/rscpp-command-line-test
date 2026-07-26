@@ -35666,6 +35666,21 @@
             "commit_ref": "b86a41cbf631c959d274ad6180cf0a0ac6f6e180",
             "commit_message": "Fix a stale link to the `math.integer.isqrt()` correctness proof (#154685)",
             "commit_timestamp": 1784990564.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1785079771.006364,
+            "elapsed_time": 17.184617280960083,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 698.7378234863281,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "5afbb60e0283caaf34990bbe8437111ebaae04a4",
+            "commit_message": "gh-93251: Decode localized socket error messages from the locale encoding (GH-154683)\n\nThe gai_strerror() and hstrerror() messages were decoded as UTF-8, so\ngaierror and herror could be replaced with UnicodeDecodeError if the\nmessage is localized and the locale encoding is not UTF-8.\n\nCo-authored-by: Claude Fable 5 <noreply@anthropic.com>",
+            "commit_timestamp": 1785058286.0
         }
     ]
 }
