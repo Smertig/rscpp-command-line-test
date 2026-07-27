@@ -35681,6 +35681,21 @@
             "commit_ref": "5afbb60e0283caaf34990bbe8437111ebaae04a4",
             "commit_message": "gh-93251: Decode localized socket error messages from the locale encoding (GH-154683)\n\nThe gai_strerror() and hstrerror() messages were decoded as UTF-8, so\ngaierror and herror could be replaced with UnicodeDecodeError if the\nmessage is localized and the locale encoding is not UTF-8.\n\nCo-authored-by: Claude Fable 5 <noreply@anthropic.com>",
             "commit_timestamp": 1785058286.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1785126139.783781,
+            "elapsed_time": 14.936428785324097,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 706.8868103027344,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "993a0c65a7b1836aa2087dff197b2fffa62d5b4f",
+            "commit_message": "gh-145177: Upgrade to Emscripten 6.0.4 (#154743)\n\nBumps Emscripten version for builds to 6.0.4.",
+            "commit_timestamp": 1785105440.0
         }
     ]
 }
