@@ -19859,6 +19859,21 @@
             "commit_ref": "c4be7483cbb23b9836b2d9e599f37fa1f2c93bed",
             "commit_message": "Use ClassData instead of a prototype throughout lazy field / extensions when possible.\n\n`New` is more efficient on ClassData than on a prototype, as `New` on the prototype has to first load the class data through the prototype.\n\nThere's also a small optimization in `LazyField::MergeFromMessage` which avoids loading the class data twice. The redundancy was made more obvious by this refactor.\n\nPiperOrigin-RevId: 953889072\n",
             "commit_timestamp": 1784996531.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1785167656.906818,
+            "elapsed_time": 269.7304651737213,
+            "x64": true,
+            "actual_files_count": 1256,
+            "expected_files_count": 818,
+            "memory_traffic": 48640.42597198486,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "785d9889854d426ef1b9e7540abeb20f5011faf8",
+            "commit_message": "Use amortized growth when appending concatenated literals.\n\nPiperOrigin-RevId: 954649619\n",
+            "commit_timestamp": 1785167031.0
         }
     ]
 }
