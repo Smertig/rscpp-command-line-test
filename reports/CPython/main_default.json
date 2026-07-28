@@ -35711,6 +35711,21 @@
             "commit_ref": "b8862aeac3d7cc4ed661c232130cd51c8f691a95",
             "commit_message": "gh-154744: Improve detection of skipinitialspace in csv.Sniffer (GH-154745)\n\nDetect the padding by parsing the sample both with and without\nskipinitialspace and comparing the two readings, instead of testing\nwhether every field following a delimiter starts with a space.",
             "commit_timestamp": 1785164597.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1785211623.811401,
+            "elapsed_time": 15.541377544403076,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 706.1916732788086,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "22a123f1305bf45d5d35441e9164fb4528da493c",
+            "commit_message": "gh-154746: Update docstring for `collections.Counter` (GH-154792)\n\nAdded a note to `collections.Counter`'s docstring that initializing a `Counter` from a `Mapping` or `Counter` will have different behaviour than initializing from other `Iterable`s.\n\nThis behaviour was already documented in the canonical docs but is missing from the help() output.",
+            "commit_timestamp": 1785202877.0
         }
     ]
 }
