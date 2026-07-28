@@ -35711,6 +35711,21 @@
             "commit_ref": "b8862aeac3d7cc4ed661c232130cd51c8f691a95",
             "commit_message": "gh-154744: Improve detection of skipinitialspace in csv.Sniffer (GH-154745)\n\nDetect the padding by parsing the sample both with and without\nskipinitialspace and comparing the two readings, instead of testing\nwhether every field following a delimiter starts with a space.",
             "commit_timestamp": 1785164597.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1785253887.714351,
+            "elapsed_time": 16.664133071899414,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 704.6267547607422,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "2ffab083782968a4d732738f4f1dff6bbd69d2b0",
+            "commit_message": "gh-152674: Avoid quadratic behavior in xml.etree.ElementPath index predicates (GH-152676)\n\n\nCo-authored-by: Alexis <alexis.challande@trailofbits.com>\nCo-authored-by: B\u00e9n\u00e9dikt Tran <10796600+picnixz@users.noreply.github.com>",
+            "commit_timestamp": 1785238607.0
         }
     ]
 }
