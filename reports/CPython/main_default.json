@@ -35741,6 +35741,21 @@
             "commit_ref": "8b048eb35eb7f83dbff86dd11c7fdb37caab9e7a",
             "commit_message": "gh-154271: Enable socket ancillary data and forkserver on illumos (GH-154273)\n\nillumos declares the socket ancillary-data API (CMSG_*, sendmsg(),\nrecvmsg()) only under _XOPEN_SOURCE >= 600.  __EXTENSIONS__ keeps the\nother platform features.  This enables the forkserver start method.\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",
             "commit_timestamp": 1785260126.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1785339759.90114,
+            "elapsed_time": 15.777232885360718,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 712.7561492919922,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "bfc16a71cf18015c47c1b9cae9196e279d8f60d7",
+            "commit_message": "gh-131565: Implement ctypes.util.dllist() in the _ctypes extension (GH-154255)\n\nOn NetBSD dl_iterate_phdr() reports only the link-map group of the calling\nobject.  Called through ctypes, the caller is libffi's closure trampoline,\nwhich belongs to no object, so only the main executable was reported.\nCalling dl_iterate_phdr() from the _ctypes extension module makes _ctypes\nthe caller and reports all loaded shared libraries.\n\nCo-Authored-By: Claude Fable 5 <noreply@anthropic.com>",
+            "commit_timestamp": 1785336472.0
         }
     ]
 }
