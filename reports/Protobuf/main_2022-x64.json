@@ -19934,6 +19934,21 @@
             "commit_ref": "36389c23f249cb50943bca1eccff61e5179a74dc",
             "commit_message": "Internal change\n\nPiperOrigin-RevId: 956132585\n",
             "commit_timestamp": 1785365757.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1785426078.501232,
+            "elapsed_time": 362.88811779022217,
+            "x64": true,
+            "actual_files_count": 1263,
+            "expected_files_count": 818,
+            "memory_traffic": 48886.385108947754,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "706656afeb083d7da64ec1bde88b47274925681d",
+            "commit_message": "fix(cpp): take EpsCopyInputStream::PopLimit token by rvalue reference (#28619)\n\nEpsCopyInputStream::LimitToken guards its payload with ASan memory poisoning (poisoned when empty, unpoisoned while it holds a live token). PopLimit accepted the token by value:\n\n```cpp\n[[nodiscard]] bool PopLimit(LimitToken delta) { ... std::move(delta).token() ... }\n```\n\nWith a by-value parameter, the compiler can place the parameter in the same stack slot as the moved-from caller token. The move assignment then poisons the moved-from token, i.e. the very slot the parameter occupies, and PopLimit reads it via `token()`, which ASan reports as a use-after-poison abort. This reproduces before `main()` during static descriptor initialization when protobuf is built with `-fsanitize=address` (reported on aarch64 in #27298), e.g.:\n\n```\nERROR: AddressSanitizer: use-after-poison READ of size 4\n  #0 EpsCopyInputStream::PopLimit(EpsCopyInputStream::LimitToken)\n  #1 ParseContext::ParseLengthDelimitedInlined(...)\n  ...\n  Memory access is inside this variable: agg.tmp  (a LimitToken temporary)\n```\n\nTake the token by rvalue reference (`LimitToken&& delta`) instead. This removes the extra by-value copy and the shared-slot hazard: the token binds directly to the callers object, which is unpoisoned while live. All three callers (`ParseLengthDelimitedInlined`, `ParseWithLengthInlined`, `ParseContext::ParseMessage`) already pass `std::move(old)`, and the body already consumes the token as an rvalue, so behavior is unchanged.\n\nFixes #27298.\n\nTest plan: the bug reproduces only under ASan (poisoning is a no-op otherwise) and protobuf has no in-repo ASan-poisoning regression harness for the parser, so this is verified by (1) the change being a by-value to rvalue-reference signature refactor with no behavioral change, all callers already moving the token, and (2) a full CMake/Ninja build plus the parsing test suites staying green: `tests --gtest_filter=*TcTable*:*Parse*:*WireFormat*:*Reflection*:*ExtensionSet*:*DynamicMessage*:*Arena*` passes (~3000 tests, 0 failures). I do not have the reporters ASan+aarch64 toolchain to run the exact repro.\n\nCloses #28619\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/28619 from yashanil98:fix/issue-27298-limittoken-poison 93a3d332f32db4549def55a4226532799ada78e6\nPiperOrigin-RevId: 956314017\n",
+            "commit_timestamp": 1785394805.0
         }
     ]
 }
