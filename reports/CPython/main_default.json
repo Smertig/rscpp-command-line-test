@@ -35756,6 +35756,21 @@
             "commit_ref": "bfc16a71cf18015c47c1b9cae9196e279d8f60d7",
             "commit_message": "gh-131565: Implement ctypes.util.dllist() in the _ctypes extension (GH-154255)\n\nOn NetBSD dl_iterate_phdr() reports only the link-map group of the calling\nobject.  Called through ctypes, the caller is libffi's closure trampoline,\nwhich belongs to no object, so only the main executable was reported.\nCalling dl_iterate_phdr() from the _ctypes extension module makes _ctypes\nthe caller and reports all loaded shared libraries.\n\nCo-Authored-By: Claude Fable 5 <noreply@anthropic.com>",
             "commit_timestamp": 1785336472.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1785384414.047374,
+            "elapsed_time": 14.888342142105103,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 709.2558975219727,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "f4b1d3e891d0d2055e53df3ccb84030bcaa148b5",
+            "commit_message": "Minor fixes for Android (#154895)\n\nA collection of small cleanups for Android support:\n\n* Clarifies the documentation around version number handling for iOS and \n  Android in os.uname and platform.release\n* Ensures that automated NDK installs surface messages written to stderr\n* Makes the Android NDK check more robust for incomplete downloads\n* Corrects some linting errors in Android build scripts",
+            "commit_timestamp": 1785378700.0
         }
     ]
 }
