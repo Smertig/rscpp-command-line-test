@@ -35801,6 +35801,21 @@
             "commit_ref": "ac8ba0ca5a04cd7b27b44822d31df640e817fd78",
             "commit_message": "gh-152075: Avoid lock contention in _Py_Specialize_LoadGlobal under free threading (gh-153720)\n\nUnder high thread concurrency in free-threaded builds, `_Py_Specialize_LoadGlobal` suffers from lock contention when acquiring the critical section mutexes for the `globals` and `builtins` dictionaries during bytecode specialization.\n\nThis PR skips LOAD_GLOBAL bytecode specialization if acquiring the two object mutexes would block.",
             "commit_timestamp": 1785461300.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1785512855.024896,
+            "elapsed_time": 16.63929057121277,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 704.5980758666992,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "2ac8900056dcafade8d768a49aacf69e439b0838",
+            "commit_message": "Fix inconsistencies in `InternalDocs/parser.md` (GH-154917)",
+            "commit_timestamp": 1785510848.0
         }
     ]
 }
