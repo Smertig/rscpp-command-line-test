@@ -19979,6 +19979,21 @@
             "commit_ref": "ea6ec8d5b1601c6d4b43c512d36901856ff378e1",
             "commit_message": "Remove forward declarations of deleted `WeakFieldMap`.\n\nPiperOrigin-RevId: 956905765\n",
             "commit_timestamp": 1785472856.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1785557398.619393,
+            "elapsed_time": 355.81357622146606,
+            "x64": true,
+            "actual_files_count": 1268,
+            "expected_files_count": 818,
+            "memory_traffic": 48991.78663635254,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "ae3f25c964090cde6ed3bd8981c2b468e07948cc",
+            "commit_message": "ruby: make bigdecimal a development dependency (#28928)\n\nFixes #28927\n\nI ran into this while packaging the OpenTelemetry Ruby auto-instrumentation as a prebuilt gem bundle (see #28927 for the full write up). The tl;dr: `bigdecimal` is only used by the test suite, so it only needs to be a development dependency. The only references are:\n\nhttps://github.com/protocolbuffers/protobuf/blob/8baed752ce1781eee1e025585b60373fe27564c3/ruby/tests/common_tests.rb#L9\n\nhttps://github.com/protocolbuffers/protobuf/blob/8baed752ce1781eee1e025585b60373fe27564c3/ruby/tests/common_tests.rb#L1708\n\nAs a runtime dependency it causes pain for anyone vendoring the gem. `bigdecimal` is a native extension with no precompiled build, so it has to be compiled from source for each Ruby ABI, making it the one gem that stops a prebuilt bundle from working across Ruby versions, despite never being loaded at runtime.\n\nThis PR moves `bigdecimal` from a runtime to a development dependency. For consistency it also moves `bigdecimal` into the `test` group in the Gemfile, since that's the only environment that needs it.\n\nCloses #28928\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/28928 from mwear:ruby-bigdecimal-dev-dependency 6fb8ee4fad5592a1a48369a4d078ac0ab15617b8\nPiperOrigin-RevId: 957450742\n",
+            "commit_timestamp": 1785552428.0
         }
     ]
 }
