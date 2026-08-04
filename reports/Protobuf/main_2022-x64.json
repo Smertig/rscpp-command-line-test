@@ -20054,6 +20054,21 @@
             "commit_ref": "0e436a47e854982213b4c9a72ca7f48c29bd7b88",
             "commit_message": "Update conformance tests with updated relaxed duplicate key handling in ProtoJSON\n\nThe spec has been relaxed such that the preferred behavior is last-wins, and parse-failure if last-wins is not implementable. The conformance test is updated correspondingly to pass under either of those permissible behaviors.\n\nhttps://github.com/protocolbuffers/protobuf/issues/28791\n\nPiperOrigin-RevId: 957979215\n",
             "commit_timestamp": 1785689932.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1785816292.83213,
+            "elapsed_time": 341.64203333854675,
+            "x64": true,
+            "actual_files_count": 1272,
+            "expected_files_count": 818,
+            "memory_traffic": 48999.87435913086,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "81fcdf44c5b407373fa97fbb7c6db67a231cfd44",
+            "commit_message": "Change ExtensionSet flat capacity growth factor from 4x to 2x.\n\nThis reduces memory overhead when resizing the flat array in ExtensionSet by growing the capacity by a factor of 2 instead of 4.\n\nPiperOrigin-RevId: 958651834\n",
+            "commit_timestamp": 1785801529.0
         }
     ]
 }
