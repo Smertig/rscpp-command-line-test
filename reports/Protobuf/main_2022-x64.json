@@ -20084,6 +20084,21 @@
             "commit_ref": "dd9d2ad02d142a0ed744f09149e5b62fdcd0fd24",
             "commit_message": "[ObjC] Carry recursion depth across MessageSet item parsing (#27571)\n\n## Summary\n\n`GPBMessage::parseMessageSet:` reads each MessageSet item's payload bytes into\na separate buffer (because the type-id and payload tags can appear in any\norder), then allocates a fresh `GPBCodedInputStream` to decode that buffer. The\nfresh stream's `state_.recursionDepth` starts at `0` even when the parent\nstream is already several MessageSet items deep, so a chain of nested\nMessageSet items grows the native call stack without ever tripping the\ndocumented `kDefaultRecursionLimit` (100). Other parser entry points that\nrecurse on the same stream (`readGroup:`, `readMessage:`, `readMapEntry:`,\n`SkipToEndGroupInternal`) already increment and check `recursionDepth`; the\nMessageSet path was the only spot where depth tracking did not cross the stream\nboundary.\n\nThis change adds a package-private `-initWithData:parentRecursionDepth:`\ninitializer to `GPBCodedInputStream` that seeds the child stream's depth from\nthe parent's and runs `CheckRecursionLimit` before parsing begins. To prevent\nmemory leaks if `CheckRecursionLimit` raises an exception during\ninitialization, the check is wrapped in a `@try/@catch` block that releases\n`self`. `parseMessageSet:` uses that initializer, so depth tracking carries\nacross the fresh stream. This mirrors the depth-inheritance done by the C++\n`ParseContext` spawn helper.\n\nRegression coverage: `testParseMessageSetRecursionDepthCarriedFromParent` in\n`GPBWireFormatTests` builds MessageSet-of-MessageSet payloads (each layer is\n`MSetMessage -> MSetMessageExtension1.recursive -> MSetMessage -> ...`, adding\n2 to the recursion depth per layer). It verifies that 50 layers (depth 100,\n`kDefaultRecursionLimit`) parses successfully, while 51 layers (depth 101,\n`kDefaultRecursionLimit + 1`) fails with\n`GPBCodedInputStreamErrorRecursionDepthExceeded`. Existing\n`testErrorRecursionDepthReached` and the rest of `GPBWireFormatTests` continue\nto pass unchanged.\n\n## Test plan\n\n- Existing ObjC test suite passes (`GPBWireFormatTests`,\n  `GPBMessageTests+Serialization`, `GPBCodedInputStreamTests`,\n  `GPBUnknownFieldsTest`).\n- New `testParseMessageSetRecursionDepthCarriedFromParent` passes for both 50\n  layers (passing at kDefaultRecursionLimit) and 51 layers (failing at\n  kDefaultRecursionLimit + 1).\n\nCloses #27571\n\nPiperOrigin-RevId: 959041690\n",
             "commit_timestamp": 1785858084.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1785902634.895796,
+            "elapsed_time": 336.92878246307373,
+            "x64": true,
+            "actual_files_count": 1272,
+            "expected_files_count": 818,
+            "memory_traffic": 48965.10897064209,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "fc01f49b7210b5babce01b8d2ec1c54c302cc224",
+            "commit_message": "Internal Change.\n\nPiperOrigin-RevId: 959387407\n",
+            "commit_timestamp": 1785901626.0
         }
     ]
 }
