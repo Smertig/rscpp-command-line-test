@@ -35966,6 +35966,21 @@
             "commit_ref": "d2f464959287c91dd4365d69ab99022f20e3b64a",
             "commit_message": "gh-145685: Remove `_PySeqLock` that is not used anymore (gh-155243)",
             "commit_timestamp": 1785981568.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1786078635.19668,
+            "elapsed_time": 16.400997161865234,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 708.9574813842773,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "af930c13787a15c22187d5d526f74f35c95f8056",
+            "commit_message": "gh-74366: Fix the documentation of \"$\" in PyArg_ParseTupleAndKeywords() (GH-155301)\n\nThe keyword-only arguments are not always optional: they are required if\n\"|\" was not specified before \"$\".  Document also that \"|\" cannot be\nspecified after \"$\", and add examples for \"|\" and \"$\".",
+            "commit_timestamp": 1786075768.0
         }
     ]
 }
