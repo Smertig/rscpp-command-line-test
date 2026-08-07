@@ -35981,6 +35981,21 @@
             "commit_ref": "af930c13787a15c22187d5d526f74f35c95f8056",
             "commit_message": "gh-74366: Fix the documentation of \"$\" in PyArg_ParseTupleAndKeywords() (GH-155301)\n\nThe keyword-only arguments are not always optional: they are required if\n\"|\" was not specified before \"$\".  Document also that \"|\" cannot be\nspecified after \"$\", and add examples for \"|\" and \"$\".",
             "commit_timestamp": 1786075768.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1786118276.067028,
+            "elapsed_time": 15.403166770935059,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 686.5316848754883,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "52bed26b79cc0333f1b26fd144488e4b38ebd0b5",
+            "commit_message": "gh-151524: Make it clearer that `_PyInstrumentation_DISABLE` is immortal in the code (GH-151525)",
+            "commit_timestamp": 1786116850.0
         }
     ]
 }
