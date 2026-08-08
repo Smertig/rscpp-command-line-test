@@ -20159,6 +20159,21 @@
             "commit_ref": "620c9cf483a6525c33ad3a56ccce1dede3ebeec8",
             "commit_message": "Disable lazy parsing for extensions on descriptor.proto messages.\n\nPiperOrigin-RevId: 960920493\n",
             "commit_timestamp": 1786113405.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1786162234.497869,
+            "elapsed_time": 318.2055251598358,
+            "x64": true,
+            "actual_files_count": 1276,
+            "expected_files_count": 818,
+            "memory_traffic": 48949.758140563965,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "7d7d6ab836eb8d226f8dcd6ed91efa5ea2cb7fe1",
+            "commit_message": "Ruby: fix use-after-free of map keys aliasing a temporary String (#29026)\n\nFixes #29023.\n\n`Map#[]=` and `Message.new(map_field: {...})` build the map key as a `upb_StringView`\naliasing a Ruby String, then convert the value before `upb_Map_Set` copies the key. The\nvalue conversion allocates, so it can trigger GC inside that window.\n\nThe aliased String is frequently a **temporary**: `Convert_RubyToUpb` replaces the caller's\nobject when the key is a Symbol (via `to_s`) or a String not already tagged UTF-8 (via\n`Convert_CheckStringUtf8`), and nothing references the result once it returns. When GC\ncollects it, the freed block goes straight back to the next `upb_Arena_Malloc`, which\nmemcpys the *value* into it \u2014 leaving a silently corrupted key holding unrelated heap bytes,\ntagged UTF-8 while containing invalid UTF-8, which then propagates into `encode`/`to_json`.\n\n## The fix\n\nPass the arena at both insertion sites, so the key is copied before anything can allocate.\n\nThe lookup paths (`Map_index`, `Map_has_key`, `Map_delete`) keep the `NULL` fast path \u2014 they\nconsume the key immediately with no allocation in between, which is exactly the precondition\n`Convert_StringData`'s comment describes. I reworded that comment, since it read as though\nthe aliasing were unconditionally safe; it holds for three of its five callers and not for\nthe two that insert.\n\nCost is one arena allocation per insert for string-typed keys. Non-string keys don't reach\n`Convert_StringData` at all.\n\n## Trigger\n\nNeeds both:\n\n- a key that is a **Symbol**, or a String not already tagged UTF-8 \u2014 `ASCII-8BIT` is the\n  common case for anything read from a socket, a file, `Marshal`, or `String#pack`; and\n- a value whose conversion allocates (a Symbol, or a non-UTF-8 String).\n\nPlain UTF-8 keys are unaffected, which is presumably why this has gone unnoticed.\n\n## Verification\n\nReproduces under **ordinary GC**, no `GC.stress` required \u2014 one corrupted key across 150k\niterations (0/50k, 0/50k, 1/50k), versus 100/100 with stress. That second number is an\nexistence proof rather than a rate.\n\nAdded regression tests to `ruby/tests/gc_test.rb` covering string keys, Symbol keys, and the\nmap-field kwarg path. Verified red/green against the same tree:\n\n| ext build | new tests |\n|---|---|\n| unpatched `main` | 3 tests, **3 failures** |\n| with this change | 3 tests, 300 assertions, **0 failures** |\n\nFull Ruby suite green with the change on ruby 4.0.6 / arm64-darwin \u2014 `basic.rb` (133 tests,\n157,864 assertions), `basic_proto2.rb` (93), `repeated_field_test.rb` (40),\n`encode_decode_test.rb`, `memory_test.rb`, `object_cache_test.rb`, `well_known_types_test.rb`,\n`service_test.rb`, `oom_test.rb`, `multi_level_nesting_test.rb` \u2014 0 failures, 0 errors.\n\nReported separately via the channel in `SECURITY.md`, since this is a memory-safety issue in\nan OT0 repository.\n\nCloses #29026\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/29026 from jeremy:ruby-map-key-use-after-free e11cc7dfe2ec7e2b596eeab894079c6c4cdaa42e\nPiperOrigin-RevId: 961236703\n",
+            "commit_timestamp": 1786157084.0
         }
     ]
 }
