@@ -36026,6 +36026,21 @@
             "commit_ref": "998b89020456db591be41e6529b04f4bc8c8181f",
             "commit_message": "gh-111330: Fix GC of _pyio.BytesIO with exports (GH-152335)\n\nSwap out the buffer rather than using `.clear()` which will raise an\nexception if there are exports.",
             "commit_timestamp": 1786201883.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1786249250.38675,
+            "elapsed_time": 15.888734579086304,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 706.0606079101562,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "998b89020456db591be41e6529b04f4bc8c8181f",
+            "commit_message": "gh-111330: Fix GC of _pyio.BytesIO with exports (GH-152335)\n\nSwap out the buffer rather than using `.clear()` which will raise an\nexception if there are exports.",
+            "commit_timestamp": 1786201883.0
         }
     ]
 }
