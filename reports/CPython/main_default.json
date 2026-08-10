@@ -36071,6 +36071,21 @@
             "commit_ref": "87b120fdb58afd8f7cb79daa87122334e295b70c",
             "commit_message": "gh-118318: Remove outdated c14n references from ElementTree (GH-118319)\n\nSome references to a removed `c14n` serialization method remained in\nElementTree.py. Attempting to use `method='c14n'` in the `write()`\nmethod would result in `ValueError: unknown method 'c14n'`.\n\nRemoves the `write_c14n()` method that uses `method='c14n'` and also\nraises the same error.",
             "commit_timestamp": 1786309602.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1786377796.675146,
+            "elapsed_time": 23.7207350730896,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 671.0028762817383,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "e4b22adf24996d15366b8ff91ec0707ae0f606df",
+            "commit_message": "gh-154086: Fix flamegraph thread sample counts (#154104)",
+            "commit_timestamp": 1786376408.0
         }
     ]
 }
