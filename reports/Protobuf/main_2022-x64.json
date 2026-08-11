@@ -20249,6 +20249,21 @@
             "commit_ref": "c27007fc254b3af79dc9a139859cbede31669176",
             "commit_message": "Add custom option numbers for use by ProtoWire (#28919)\n\nReserves a contiguous block of custom option numbers \u2014 **1314\u20131363** \u2014 for **ProtoWire** (https://protowire.org), an open interchange stack (text/binary codecs, schema-extension compiler, validation engine) built on protobuf descriptors.\n\n> **2026-08-02 update:** originally requested as 1311\u20131360; rebased and shifted to **1314\u20131363** after #28790 (proto2mcp, 1311\u20131313) merged while this PR was awaiting merge post-approval. No other changes.\n\n### This re-files #27290\n\n#27290 was **approved** by @esrauchg and then closed automatically, not on the merits: its head fork was deleted during an account migration on my side, which GitHub treats as closing the PR. It cannot be reopened, because the head repository no longer exists. Apologies for the churn \u2014 this PR is the same one-line-per-entry change, rebased onto current `main`.\n\nThe content is unchanged from the approved state apart from the start number; `1314\u20131363` is free (the registry currently ends at `1313`, proto2mcp).\n\n### Why a block of 50\n\nPer @haberman's request on the original PR, the entry was moved off the contested number and starts after the ranges claimed in the meantime (1307\u20131313: proto2type, protoc-gen-openapi, Motif, Teleport, proto2mcp).\n\nSince the first version of the request (10 numbers for two annotation groups), the project's published option surface has grown to five orthogonal families, all currently parked in the internal 50000+ space and being migrated to registered numbers ahead of an IETF draft submission:\n\n| Family | Extendees | In use | Growth headroom |\n| --- | --- | --- | --- |\n| PXF text-format annotations (`pxf.*`) | FieldOptions | 3 | +2 |\n| SBE binary-format annotations (`sbe.*`) | File/Message/FieldOptions | 5 | +5 |\n| Schema-extension carriers (`protowire.schema.v1.*`) | all 8 Options messages (one shared number) + FileOptions | 5 | +5 |\n| Validation constraints (`protocheck.*`) | Field/Message/OneofOptions | 3 | +5 |\n| OpenAPI generation options | Method/ServiceOptions | 0 | +5 |\n\nThat's 16 numbers in active published use with a documented path to ~40, hence the request for 50.\n\nHappy to trim if that exceeds what you're comfortable granting in one row \u2014 same offer as on the original PR.\n\nCloses #28919\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/28919 from trendvidia:protowire-options-range a3d24a95ff89af77aa0e2e310fc8b061b3b9da58\nPiperOrigin-RevId: 961811298\n",
             "commit_timestamp": 1786303318.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1786421957.203636,
+            "elapsed_time": 328.32448744773865,
+            "x64": true,
+            "actual_files_count": 1276,
+            "expected_files_count": 818,
+            "memory_traffic": 49024.25099182129,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "45b99dc2a913bd2a20931089524b41587aa859f3",
+            "commit_message": "Automatically traverse proto_library exports for Kotlin code generation.\n\nAligns Kotlin proto rules with `java_proto_library`, letting Kotlin gencode resolve exported proto targets from `proto_library.exports`.\n\nPiperOrigin-RevId: 962536667\n",
+            "commit_timestamp": 1786421016.0
         }
     ]
 }
