@@ -20279,6 +20279,21 @@
             "commit_ref": "6d03e4f090d809c87a8274b56d609ccc067632f1",
             "commit_message": "Clean up varint encoder experiment, the 'new' arm has won for all cases.\n\nPiperOrigin-RevId: 962791052\n",
             "commit_timestamp": 1786461645.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1786510005.968003,
+            "elapsed_time": 355.95826292037964,
+            "x64": true,
+            "actual_files_count": 1276,
+            "expected_files_count": 818,
+            "memory_traffic": 49102.64066314697,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "3594d5ce74735d04091277787314bf3bd602ed36",
+            "commit_message": "Fix offset ptr test.\n\nThe pointer and the pointee can't be declared on their own because then there\nis no guarantee they are located close enough in memory.\n\nThis test was failing with hwasan.\n\nPiperOrigin-RevId: 963187392\n",
+            "commit_timestamp": 1786508692.0
         }
     ]
 }
