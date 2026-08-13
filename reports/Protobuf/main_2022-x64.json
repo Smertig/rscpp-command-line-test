@@ -20309,6 +20309,21 @@
             "commit_ref": "22677ce80de639c60e3ab3a8d746881ca87db77a",
             "commit_message": "upb/message/compare: Add support for partial equality comparisons\n\n... and add a fuzz test verifying that we see the same results as for\nthe cpp kernel.\n\nPiperOrigin-RevId: 963471731\n",
             "commit_timestamp": 1786550020.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1786596614.807372,
+            "elapsed_time": 332.8287658691406,
+            "x64": true,
+            "actual_files_count": 1276,
+            "expected_files_count": 818,
+            "memory_traffic": 49001.947410583496,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "d0be1f2cb09965b4df957a4fd824dcac44fb69c4",
+            "commit_message": "Change `Reflection::GetDefaultMessageInstance` to `Reflection::GetMessageClassData`.\n\n`Reflection::GetMessageClassData` now has to call `GetClassData` on the prototype returned from the message factory, as the `MessageFactory` interface only has a `GetPrototype` method. We could add a `GetClassData` method to the generated message factory, but we already cache the `ClassData` pointer in the `FieldDescriptor` for fields from the generated factory. We couldn't add a `GetClassData` to dynamic factories, as `ClassData` is `internal` and dynamic factories have a public interface that users can override.\n\nThis cl includes a refactor of `LazyField::InternalWrite` to accept `ClassData` instead of a `MessageLite` prototype, and changes the cached prototype to `ClassData` in `FieldDescriptor`.\n\nPiperOrigin-RevId: 963758127\n",
+            "commit_timestamp": 1786582231.0
         }
     ]
 }
