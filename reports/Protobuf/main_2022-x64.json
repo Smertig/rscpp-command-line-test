@@ -20324,6 +20324,21 @@
             "commit_ref": "d0be1f2cb09965b4df957a4fd824dcac44fb69c4",
             "commit_message": "Change `Reflection::GetDefaultMessageInstance` to `Reflection::GetMessageClassData`.\n\n`Reflection::GetMessageClassData` now has to call `GetClassData` on the prototype returned from the message factory, as the `MessageFactory` interface only has a `GetPrototype` method. We could add a `GetClassData` method to the generated message factory, but we already cache the `ClassData` pointer in the `FieldDescriptor` for fields from the generated factory. We couldn't add a `GetClassData` to dynamic factories, as `ClassData` is `internal` and dynamic factories have a public interface that users can override.\n\nThis cl includes a refactor of `LazyField::InternalWrite` to accept `ClassData` instead of a `MessageLite` prototype, and changes the cached prototype to `ClassData` in `FieldDescriptor`.\n\nPiperOrigin-RevId: 963758127\n",
             "commit_timestamp": 1786582231.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1786636708.6688,
+            "elapsed_time": 345.34649634361267,
+            "x64": true,
+            "actual_files_count": 1276,
+            "expected_files_count": 818,
+            "memory_traffic": 48927.484619140625,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "02a9c9dec80c8df4363a5c28db602444b0bff7a3",
+            "commit_message": "Fix messageset conformance for pure Python to match Py-C++ and Py-upb\n\nMessageSet is a legacy affordance holdover from pre-proto2 days. Unlike the rest of Protobuf, it has first-wins instead of last-wins semantic in the case of duplicate ids or values within the same message set entry.\n\nNo serializer would ever write such sequences, but the same hypothetical byte sequence being parsed differently by two implementations is undesirable.\n\nNote that other nonconformance fixes would commonly be held to breaking change releases to avoid any possible disruption of single-language users who may be relying on it as a load-bearing bug. However, the nature of this particular case is such that there is little reason to hold it back.\n\nPiperOrigin-RevId: 964043226\n",
+            "commit_timestamp": 1786627558.0
         }
     ]
 }

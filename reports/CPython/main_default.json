@@ -36161,6 +36161,21 @@
             "commit_ref": "ee4fe00a8f72ea84a421bb626d7c78335c5c9ea1",
             "commit_message": "gh-129752: Don't update adaptive counters when TLBC=0 in free-threading. (gh-155497)",
             "commit_timestamp": 1786579959.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1786636893.773678,
+            "elapsed_time": 17.035508155822754,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 697.1929016113281,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "dd1194e2fc2c08c36f4fe7ee71f7ab0b82c09570",
+            "commit_message": "gh-109817: Do not copy all test cases into the worker process (GH-155713)\n\nWith --single-process-per-case, tests and case_groups contain all test\ncases of the whole run.  Copying them for every test case was slow and\ncould produce a too long command line.  The worker needs neither.",
+            "commit_timestamp": 1786633725.0
         }
     ]
 }
