@@ -20339,6 +20339,21 @@
             "commit_ref": "02a9c9dec80c8df4363a5c28db602444b0bff7a3",
             "commit_message": "Fix messageset conformance for pure Python to match Py-C++ and Py-upb\n\nMessageSet is a legacy affordance holdover from pre-proto2 days. Unlike the rest of Protobuf, it has first-wins instead of last-wins semantic in the case of duplicate ids or values within the same message set entry.\n\nNo serializer would ever write such sequences, but the same hypothetical byte sequence being parsed differently by two implementations is undesirable.\n\nNote that other nonconformance fixes would commonly be held to breaking change releases to avoid any possible disruption of single-language users who may be relying on it as a load-bearing bug. However, the nature of this particular case is such that there is little reason to hold it back.\n\nPiperOrigin-RevId: 964043226\n",
             "commit_timestamp": 1786627558.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1786682846.057834,
+            "elapsed_time": 347.31391501426697,
+            "x64": true,
+            "actual_files_count": 1278,
+            "expected_files_count": 818,
+            "memory_traffic": 49069.79666900635,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "6ac0b13685e04b660c5df287228878dd104392f7",
+            "commit_message": "fix(cmake): do not override a parent-set CMAKE_MSVC_RUNTIME_LIBRARY (#28525)\n\nWhen protobuf is built as a static library through add_subdirectory or FetchContent, its top-level CMakeLists.txt set CMAKE_MSVC_RUNTIME_LIBRARY unconditionally, overriding a value the enclosing project had already set. A parent that forces /MD in every configuration (CMAKE_MSVC_RUNTIME_LIBRARY=MultiThreadedDLL) would still get /MDd for the protobuf and Abseil targets in Debug, causing LNK2038 runtime-library mismatches (MDd_DynamicDebug vs MD_DynamicRelease).\n\nThis guards the assignment with `if (NOT DEFINED CMAKE_MSVC_RUNTIME_LIBRARY)`, so protobuf only picks a runtime library when the parent has not. Standalone builds are unchanged: with no parent value set, the same default is chosen from protobuf_MSVC_STATIC_RUNTIME as before.\n\nFixes #23173.\n\nTest plan: the change is CMake logic, verified with cmake -P (no build needed). Modeling the guarded block, a pre-set CMAKE_MSVC_RUNTIME_LIBRARY is preserved (parent value wins), while an unset one still resolves to the static or DLL default per protobuf_MSVC_STATIC_RUNTIME. Reconfiguring the tree with cmake -S . -B build -G Ninja succeeds, confirming no syntax regression.\n\nCloses #28525\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/28525 from yashanil98:fix/issue-23173-msvc-runtime-override 13501be37c13359e11b0d9573bc24e407758cd2f\nPiperOrigin-RevId: 964437666\n",
+            "commit_timestamp": 1786676778.0
         }
     ]
 }

@@ -36176,6 +36176,21 @@
             "commit_ref": "dd1194e2fc2c08c36f4fe7ee71f7ab0b82c09570",
             "commit_message": "gh-109817: Do not copy all test cases into the worker process (GH-155713)\n\nWith --single-process-per-case, tests and case_groups contain all test\ncases of the whole run.  Copying them for every test case was slow and\ncould produce a too long command line.  The worker needs neither.",
             "commit_timestamp": 1786633725.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1786683032.454256,
+            "elapsed_time": 15.855125665664673,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 701.0986633300781,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "94c606652c4943cb57ec7858d723511559849aab",
+            "commit_message": "gh-155727: Ignore internal imports in test_attribute_completion (GH-155730)\n\nReader.run_hooks() imports _pyrepl._threading_handler lazily, and the\ntest counted it as a module imported by the completer.",
+            "commit_timestamp": 1786682401.0
         }
     ]
 }
