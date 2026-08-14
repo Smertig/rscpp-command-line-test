@@ -36191,6 +36191,21 @@
             "commit_ref": "94c606652c4943cb57ec7858d723511559849aab",
             "commit_message": "gh-155727: Ignore internal imports in test_attribute_completion (GH-155730)\n\nReader.run_hooks() imports _pyrepl._threading_handler lazily, and the\ntest counted it as a module imported by the completer.",
             "commit_timestamp": 1786682401.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1786722898.423955,
+            "elapsed_time": 52.98163914680481,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 634.4987335205078,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "e5556cdf71f7f5561fcaca21f6e680ebdd44cffb",
+            "commit_message": "gh-155621: Fix unrepresentable defaults in socket.sendmsg() signature (#155623)",
+            "commit_timestamp": 1786721622.0
         }
     ]
 }
