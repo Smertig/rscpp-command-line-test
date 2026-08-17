@@ -36281,6 +36281,21 @@
             "commit_ref": "7a845ce16548bf94e777984458ea534c5a65a2a8",
             "commit_message": "gh-154842: Reject repack() while a reading handle is open (GH-154843)\n\nZipFile.repack() moves member data, but a ZipExtFile from an earlier open()\nkeeps its own absolute position, so it silently returned data from the wrong\nplace and a full read failed with a misleading CRC error. Raise ValueError\nwhile _fileRefCnt shows an open reading handle, as the writing-handle case\nalready does.",
             "commit_timestamp": 1786901089.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1786981026.845104,
+            "elapsed_time": 15.464003562927246,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 684.183708190918,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "f40043e0953323675843a3c275511596f30c80e9",
+            "commit_message": "gh-153603: Fix out-of-bounds read in the ISO-2022 decoder for an unknown charset (GH-153604)\n\nThe designation-table scan compiled its terminator only under Py_DEBUG, so a\nrelease build walked off the table for an unknown charset set via setstate().\nMake the terminator unconditional and report the byte as undecodable.",
+            "commit_timestamp": 1786971773.0
         }
     ]
 }
