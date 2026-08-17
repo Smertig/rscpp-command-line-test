@@ -36266,6 +36266,21 @@
             "commit_ref": "70fdc966d0420e64e848eb09f7f695735f2a8b66",
             "commit_message": "gh-155477: Fix multiprocessing.Pool deadlock on close() with a buffersize imap (GH-155478)\n\nclose() did not release the buffersize semaphores that throttle the task\ngenerator, so a partially-consumed imap left the task handler blocked and\njoin() deadlocked. Release them in close() and stop the generator once the\npool leaves the RUN state.",
             "commit_timestamp": 1786887804.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1786938742.953675,
+            "elapsed_time": 15.833473205566406,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 692.5178909301758,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "7a845ce16548bf94e777984458ea534c5a65a2a8",
+            "commit_message": "gh-154842: Reject repack() while a reading handle is open (GH-154843)\n\nZipFile.repack() moves member data, but a ZipExtFile from an earlier open()\nkeeps its own absolute position, so it silently returned data from the wrong\nplace and a full read failed with a misleading CRC error. Raise ValueError\nwhile _fileRefCnt shows an open reading handle, as the writing-handle case\nalready does.",
+            "commit_timestamp": 1786901089.0
         }
     ]
 }
