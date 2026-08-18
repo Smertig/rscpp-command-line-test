@@ -36296,6 +36296,21 @@
             "commit_ref": "f40043e0953323675843a3c275511596f30c80e9",
             "commit_message": "gh-153603: Fix out-of-bounds read in the ISO-2022 decoder for an unknown charset (GH-153604)\n\nThe designation-table scan compiled its terminator only under Py_DEBUG, so a\nrelease build walked off the table for an unknown charset set via setstate().\nMake the terminator unconditional and report the byte as undecodable.",
             "commit_timestamp": 1786971773.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1787024779.19024,
+            "elapsed_time": 21.51646375656128,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 625.5845184326172,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "f381d1634c1eddedddcb8ea5d4ae5a4dd7564822",
+            "commit_message": "gh-155978: Fix leak in update_slot_after_setattr() (#155979)",
+            "commit_timestamp": 1787019908.0
         }
     ]
 }
