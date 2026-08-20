@@ -20534,6 +20534,21 @@
             "commit_ref": "bca6336df1256335e1366da5f043fc40c713f1c5",
             "commit_message": "Move internal message helper functions into the `Helpers_` struct.\n\nThis change moves internal helper methods (PlacementNew_, InternalNewImpl_, and InternalGenerateClassData_) from the main message class into a nested `Helpers_` struct.\n\nPiperOrigin-RevId: 967513868\n",
             "commit_timestamp": 1787189319.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1787239923.831829,
+            "elapsed_time": 317.8530914783478,
+            "x64": true,
+            "actual_files_count": 1279,
+            "expected_files_count": 818,
+            "memory_traffic": 49050.1784362793,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "f6cd30a44e18464a104f916d69bc0d4292a05a9e",
+            "commit_message": "Enable FastTable for non-opt builds.\n\nPiperOrigin-RevId: 967807696\n",
+            "commit_timestamp": 1787235936.0
         }
     ]
 }
