@@ -36386,6 +36386,21 @@
             "commit_ref": "228b1bf745836e5f2097ee273d2c3f731fd1c3d5",
             "commit_message": "gh-65961: Document __cached__ removal in What's New & clarify references to it (GH-156053)\n\n- Mention the change in What's New\n- Clarify references to ``__cached__`` now that the term it doesn't link to its docs.\n- Move the ``.. versionchanged`` from ``__file__`` docs to the top level.",
             "commit_timestamp": 1787238176.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1787284366.647667,
+            "elapsed_time": 17.273542165756226,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 707.6006240844727,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "04242c027feeff726acb15b6463422897b489bcf",
+            "commit_message": "Don't leak exceptions when a subprocess fails when run by Platforms/WASI (#156030)",
+            "commit_timestamp": 1787253885.0
         }
     ]
 }
