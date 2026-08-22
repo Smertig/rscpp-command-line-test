@@ -36416,6 +36416,21 @@
             "commit_ref": "65e149a15f31def0b7c44bf087b69428b615bcc3",
             "commit_message": "gh-155781: Hold strong references to sqlite3 converters (#155784)",
             "commit_timestamp": 1787325149.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1787370208.61807,
+            "elapsed_time": 14.481318473815918,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 672.6628723144531,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "d856402e7176e5a03c5c578f0efc1be968be3257",
+            "commit_message": "gh-156115: Use the simulator deployment-target flag for iOS simulator builds (#156116)\n\nEnsures that CFLAGS and LDFLAGS use -mios-simulator-version-min, rather\nthan the device-based -mios-version-min. This only matters if the CFLAGS\nand LDFLAGS are used in a bare call to clang without a -target; but that is\na legal usage, so it's worth catching.",
+            "commit_timestamp": 1787367920.0
         }
     ]
 }
