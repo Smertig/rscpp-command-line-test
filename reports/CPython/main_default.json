@@ -36461,6 +36461,21 @@
             "commit_ref": "b062727097e997bcb900e11503d3248daac903da",
             "commit_message": "gh-156180: Reject a negative `len2` in `zlib.{adler32,crc32}_combine()` (#156181)\n\nCo-authored-by: B\u00e9n\u00e9dikt Tran <10796600+picnixz@users.noreply.github.com>",
             "commit_timestamp": 1787424359.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1787498582.274731,
+            "elapsed_time": 15.88978385925293,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 662.567626953125,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "43a1869f7eea006f04647d4225d5fda80cb3fbd9",
+            "commit_message": "gh-154855: Ask non-ncurses curses for one more character (GH-154870)\n\nPassing n to the library is ncurses' reading of n: it stores n characters\nand adds a terminator.  NetBSD curses counts the terminator in n.\n\nAsk a library that is neither ncurses nor PDCurses for n + 1, and read\nagain if it stored more than asked; truncating could split a multibyte\ncharacter.  This is not possible for input, so getstr() and get_wstr() are\nleft as they are.\n\ninstr() now takes the length from the value returned by winnstr(), as\nX/Open specifies, instead of searching for a terminator which it does not.",
+            "commit_timestamp": 1787488311.0
         }
     ]
 }
