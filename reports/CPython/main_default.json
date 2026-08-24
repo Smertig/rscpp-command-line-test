@@ -36476,6 +36476,21 @@
             "commit_ref": "43a1869f7eea006f04647d4225d5fda80cb3fbd9",
             "commit_message": "gh-154855: Ask non-ncurses curses for one more character (GH-154870)\n\nPassing n to the library is ncurses' reading of n: it stores n characters\nand adds a terminator.  NetBSD curses counts the terminator in n.\n\nAsk a library that is neither ncurses nor PDCurses for n + 1, and read\nagain if it stored more than asked; truncating could split a multibyte\ncharacter.  This is not possible for input, so getstr() and get_wstr() are\nleft as they are.\n\ninstr() now takes the length from the value returned by winnstr(), as\nX/Open specifies, instead of searching for a terminator which it does not.",
             "commit_timestamp": 1787488311.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1787543801.856885,
+            "elapsed_time": 15.791417360305786,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 707.7849273681641,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "53d2e14a3081085a12c65cff14de77604da14670",
+            "commit_message": "gh-156244: Update `configure` for RISC-V support (#156277)\n\nCo-authored-by: Emma Smith <emma@emmatyping.dev>",
+            "commit_timestamp": 1787514778.0
         }
     ]
 }
