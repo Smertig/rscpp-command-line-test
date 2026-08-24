@@ -20654,6 +20654,21 @@
             "commit_ref": "a55c302e3f6683eba6f57a9672d19a9c8246e16c",
             "commit_message": "Automated Code Change\n\nPiperOrigin-RevId: 969413413\n",
             "commit_timestamp": 1787501214.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1787585869.473517,
+            "elapsed_time": 366.11265683174133,
+            "x64": true,
+            "actual_files_count": 1279,
+            "expected_files_count": 818,
+            "memory_traffic": 49105.41593170166,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "f1a2ca97f833a6cac89c72321bee81d0bb5a62d1",
+            "commit_message": "Avoid unchecked cast warning in Internal.getDefaultInstance\n\nUse Class.cast instead of an unchecked generic cast to avoid compiler warnings and ensure runtime type safety.\n\nNot a big deal but a nice opportunity to remove a warning.\n\nThis is only used in the full runtime AFAIK, where hotspot has an intrinsic for Class.cast so shouldn't be a performance issue.\n\nPiperOrigin-RevId: 969794451\n",
+            "commit_timestamp": 1787575220.0
         }
     ]
 }
