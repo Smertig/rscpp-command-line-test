@@ -20669,6 +20669,21 @@
             "commit_ref": "f1a2ca97f833a6cac89c72321bee81d0bb5a62d1",
             "commit_message": "Avoid unchecked cast warning in Internal.getDefaultInstance\n\nUse Class.cast instead of an unchecked generic cast to avoid compiler warnings and ensure runtime type safety.\n\nNot a big deal but a nice opportunity to remove a warning.\n\nThis is only used in the full runtime AFAIK, where hotspot has an intrinsic for Class.cast so shouldn't be a performance issue.\n\nPiperOrigin-RevId: 969794451\n",
             "commit_timestamp": 1787575220.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1787629652.855945,
+            "elapsed_time": 378.7742609977722,
+            "x64": true,
+            "actual_files_count": 1279,
+            "expected_files_count": 818,
+            "memory_traffic": 49198.750885009766,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "7f86060aae572ca1aab356712d3d3a433e13565a",
+            "commit_message": "Avoid unchecked cast warnings in TextFormat.parse\n\nUse Class.cast instead of unchecked casts to eliminate @SuppressWarnings(\"unchecked\") in TextFormat.parse overloads.\n\nShouldn't be a performance problem - this is only available in full runtime (not android) where hotspot has a class.cast intrinsic (and text proto parsing is relatively slow anyway, this won't be the bottleneck).\n\nPiperOrigin-RevId: 970171466\n",
+            "commit_timestamp": 1787616298.0
         }
     ]
 }

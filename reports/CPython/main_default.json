@@ -36506,6 +36506,21 @@
             "commit_ref": "ee1da7ec8e939a998d5ecf2c749d45eb8f7714e4",
             "commit_message": "gh-155648: Fix IDLE tests that cannot fail (#156257)\n\ntest_autocomplete.py:241 passes when proper because any([]) is True is true. It would also pass if small only had underscored words because the filter got reversed. Change logic and replace filter with generator expression\nusing slice instead of startswith. Change line 242 to match.\n\ntest_editor.py:236 and test_configdialog.py:55 have empty tests ('pass'); skip them for now.\nPR-#156260 add real tests.\n\ntemplate.py:25 tests True == True; skip it. With this, the bug scanner should be satisfied while allowing\nsetUpClass and tearDownClass to run and be verified.\n\nRemove duplicate and confusing fetch_completions call.",
             "commit_timestamp": 1787581449.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1787629829.090328,
+            "elapsed_time": 15.639222145080566,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 707.4461975097656,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "ee521e8ac19ad012ebc4e1b3e71b369988a9b9f8",
+            "commit_message": "gh-148750: Unfreeze encodings module to avoid import errors with zipped stdlib (GH-156183)\n\n(Reverts fixes applied as part of gh-145278)",
+            "commit_timestamp": 1787599170.0
         }
     ]
 }
