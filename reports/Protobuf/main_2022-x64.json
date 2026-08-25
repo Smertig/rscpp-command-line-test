@@ -20684,6 +20684,21 @@
             "commit_ref": "7f86060aae572ca1aab356712d3d3a433e13565a",
             "commit_message": "Avoid unchecked cast warnings in TextFormat.parse\n\nUse Class.cast instead of unchecked casts to eliminate @SuppressWarnings(\"unchecked\") in TextFormat.parse overloads.\n\nShouldn't be a performance problem - this is only available in full runtime (not android) where hotspot has a class.cast intrinsic (and text proto parsing is relatively slow anyway, this won't be the bottleneck).\n\nPiperOrigin-RevId: 970171466\n",
             "commit_timestamp": 1787616298.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1787672436.263038,
+            "elapsed_time": 344.7020106315613,
+            "x64": true,
+            "actual_files_count": 1279,
+            "expected_files_count": 818,
+            "memory_traffic": 49133.90409851074,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "d17cf6743414afca09d85ef6c55e1bf850ef8188",
+            "commit_message": "Use monomorphic static dispatch for Java Protobuf submessage parsing\n\nPiperOrigin-RevId: 970550003\n",
+            "commit_timestamp": 1787669475.0
         }
     ]
 }
