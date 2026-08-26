@@ -36536,6 +36536,21 @@
             "commit_ref": "5f31aeef60cd6397938e754e32530c25f59524ab",
             "commit_message": "gh-155193: Fix the *canonical* decoder lists in the 3.15 What's New and NEWS (#156302)",
             "commit_timestamp": 1787672009.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1787716551.914111,
+            "elapsed_time": 16.617443561553955,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 705.0067138671875,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "e2118b0ac21191bfeecdc97758a87d88ffdda154",
+            "commit_message": "gh-149985: Remove future annotations and if TYPE_CHECKING in pyrepl (#149992)\n\n`from __future__ import annotations` is soft-deprecated now that evaluation\nof annotations is always deferred. `if TYPE_CHECKING` can often be replaced\nwith lazy imports.",
+            "commit_timestamp": 1787701734.0
         }
     ]
 }
