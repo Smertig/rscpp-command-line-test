@@ -36551,6 +36551,21 @@
             "commit_ref": "e2118b0ac21191bfeecdc97758a87d88ffdda154",
             "commit_message": "gh-149985: Remove future annotations and if TYPE_CHECKING in pyrepl (#149992)\n\n`from __future__ import annotations` is soft-deprecated now that evaluation\nof annotations is always deferred. `if TYPE_CHECKING` can often be replaced\nwith lazy imports.",
             "commit_timestamp": 1787701734.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1787761300.252879,
+            "elapsed_time": 31.066043615341187,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 675.4967803955078,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "9036982ed73d17848d45b60b7550f097371214e4",
+            "commit_message": "gh-156395: Report frozen objects on free-threaded GC build (#156396)\n\nReport frozen objects on free-threaded GC build",
+            "commit_timestamp": 1787754549.0
         }
     ]
 }
