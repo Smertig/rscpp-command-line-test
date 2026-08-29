@@ -36641,6 +36641,21 @@
             "commit_ref": "b0c9fc37dd0ed60456313600e6a01478308f195e",
             "commit_message": "gh-156523: Fix asyncio.as_completed() not recording the awaiting task (#156527)",
             "commit_timestamp": 1787992747.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1788027277.425657,
+            "elapsed_time": 15.537029504776001,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 706.1889343261719,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "c922aa0ddd264395cd606fdfd20512fa54108cfb",
+            "commit_message": "gh-72353: Continue reading from the console after ignored Ctrl+C (GH-155434)\n\nIf the console cancels a read because of Ctrl+C, but the SIGINT handler\ndoes not raise an exception, restart the read instead of ending it as if\nat end of file.\n\nCo-authored-by: Valeriya Sinevich <valeriya.sinevich@phystech.edu>\nCo-authored-by: Zackery Spytz <zspytz@gmail.com>",
+            "commit_timestamp": 1788026733.0
         }
     ]
 }
