@@ -20789,6 +20789,21 @@
             "commit_ref": "5b1c20741838b8359193b97895cb0ff35b4ecf79",
             "commit_message": "Use negative UninterpretedOption field tags for interpreted option locations.\n\nThis allows us to extend improved SourceCodeInfo support to dot-notation options without breaking backwards compatibility. Dot-notation options like `(my_opt).a = 123` already emit SourceCodeInfo location in a form of `[..., 10101, 1]` where 1 is the tag of field `a`. That location spans the whole option. But these pre-existing locations are limited as they don't provide granular information about each part of the option (e.g. location of `a`) and don't provide location for value too.\n\nUsing negative values allows us to create non-overlapping set of locations. For example in the example above we will emit (in future CL):\n\n[..., 10101] - location of the whole `(my_opt).a = 123` option\n[..., 10101, 1] - legacy duplicate location of the whole `(my_opt).a = 123` option\n[..., 10101, -2] - location of `(my_opt)` part\n[..., 10101, -8, 1, -2] - location of `a` part\n[..., 10101, -8, 1, -4] - location of `123` part\n\nPiperOrigin-RevId: 972764591\n",
             "commit_timestamp": 1787949598.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1787996683.531366,
+            "elapsed_time": 314.06158208847046,
+            "x64": true,
+            "actual_files_count": 1279,
+            "expected_files_count": 818,
+            "memory_traffic": 49464.55881500244,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "5b1c20741838b8359193b97895cb0ff35b4ecf79",
+            "commit_message": "Use negative UninterpretedOption field tags for interpreted option locations.\n\nThis allows us to extend improved SourceCodeInfo support to dot-notation options without breaking backwards compatibility. Dot-notation options like `(my_opt).a = 123` already emit SourceCodeInfo location in a form of `[..., 10101, 1]` where 1 is the tag of field `a`. That location spans the whole option. But these pre-existing locations are limited as they don't provide granular information about each part of the option (e.g. location of `a`) and don't provide location for value too.\n\nUsing negative values allows us to create non-overlapping set of locations. For example in the example above we will emit (in future CL):\n\n[..., 10101] - location of the whole `(my_opt).a = 123` option\n[..., 10101, 1] - legacy duplicate location of the whole `(my_opt).a = 123` option\n[..., 10101, -2] - location of `(my_opt)` part\n[..., 10101, -8, 1, -2] - location of `a` part\n[..., 10101, -8, 1, -4] - location of `123` part\n\nPiperOrigin-RevId: 972764591\n",
+            "commit_timestamp": 1787949598.0
         }
     ]
 }
