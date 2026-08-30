@@ -36671,6 +36671,21 @@
             "commit_ref": "922c86628fac765bcfe198acdeea2268ef1eb9b2",
             "commit_message": "gh-151943: Document the CharacterData interface and other DOM members (GH-155632)\n\nCharacterData was not mentioned at all, although Text, Comment and\nCDATASection inherit from it.  Document also DocumentFragment, Entity\nand Notation, many implemented members which were omitted, the node type\nconstants and the exception code constants.\n\nAdd class directives for all documented interfaces, so that references\nto them resolve, and remove xml.dom.rst from the nit-picky mode\nexceptions.\n\nFix incorrect statements about nodeName, NodeList.item(), CDATASection\nand attribute nodes, and describe minidom specific differences in the\nminidom documentation.",
             "commit_timestamp": 1788077837.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1788114520.366413,
+            "elapsed_time": 19.45319700241089,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 709.554313659668,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "852381efeecdb5ddd9e77250d9467d0af0d0acea",
+            "commit_message": "gh-156614: Fix the parameter list grammar in the language reference (#156622)",
+            "commit_timestamp": 1788109715.0
         }
     ]
 }
