@@ -36656,6 +36656,21 @@
             "commit_ref": "c922aa0ddd264395cd606fdfd20512fa54108cfb",
             "commit_message": "gh-72353: Continue reading from the console after ignored Ctrl+C (GH-155434)\n\nIf the console cancels a read because of Ctrl+C, but the SIGINT handler\ndoes not raise an exception, restart the read instead of ending it as if\nat end of file.\n\nCo-authored-by: Valeriya Sinevich <valeriya.sinevich@phystech.edu>\nCo-authored-by: Zackery Spytz <zspytz@gmail.com>",
             "commit_timestamp": 1788026733.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1788080353.613542,
+            "elapsed_time": 15.045920133590698,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 650.1638488769531,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "922c86628fac765bcfe198acdeea2268ef1eb9b2",
+            "commit_message": "gh-151943: Document the CharacterData interface and other DOM members (GH-155632)\n\nCharacterData was not mentioned at all, although Text, Comment and\nCDATASection inherit from it.  Document also DocumentFragment, Entity\nand Notation, many implemented members which were omitted, the node type\nconstants and the exception code constants.\n\nAdd class directives for all documented interfaces, so that references\nto them resolve, and remove xml.dom.rst from the nit-picky mode\nexceptions.\n\nFix incorrect statements about nodeName, NodeList.item(), CDATASection\nand attribute nodes, and describe minidom specific differences in the\nminidom documentation.",
+            "commit_timestamp": 1788077837.0
         }
     ]
 }
