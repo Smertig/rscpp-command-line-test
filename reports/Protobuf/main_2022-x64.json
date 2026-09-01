@@ -20864,6 +20864,21 @@
             "commit_ref": "98fa2c5a4464be9c05f76cb627e31559b272ded6",
             "commit_message": "Fix InlinedStringField memory leak when string donation is disabled.\n\nWhen GOOGLE_PROTOBUF_INTERNAL_DONATE_STEAL_INLINE is disabled,\nInlinedStringField allocates std::string heap buffers for strings exceeding SSO\nsize. Since InlinedStringField declares DestructorSkippable_, proto2::Arena\nskips calling its destructor upon arena destruction, leaking heap buffers.\n\nEnsure all mutating methods that operate on an Arena register the underlying\nstring for destruction.\n\nPiperOrigin-RevId: 973560664\n",
             "commit_timestamp": 1788130434.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1788250740.384173,
+            "elapsed_time": 340.3057949542999,
+            "x64": true,
+            "actual_files_count": 1279,
+            "expected_files_count": 818,
+            "memory_traffic": 49215.97734069824,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "5a2f1f78d073e79703d086caf18e58422a812f2d",
+            "commit_message": "Auto-generate files after cl/974108015\n",
+            "commit_timestamp": 1788215692.0
         }
     ]
 }

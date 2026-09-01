@@ -36701,6 +36701,21 @@
             "commit_ref": "03503dccd0aa6d8895614e80ae9c78c03c813d45",
             "commit_message": "gh-156676: Skip `test_pyinit_function_raises_exception` for other implementations (GH-156684)\n\nSee also https://github.com/RustPython/RustPython/pull/8605",
             "commit_timestamp": 1788126218.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1788250929.351889,
+            "elapsed_time": 17.32357668876648,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 703.2339019775391,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "faf4e524356634ac95d9de3f7f115603f7440a9b",
+            "commit_message": "gh-156703: Set LD_LIBRARY_PATH in SystemTap trace commands (GH-156424)\n\nPrefix commands passed to stap -c with LD_LIBRARY_PATH via env, when\nprobes reside in libpython. This allows the interpreter to find\nlibpython when staprun does not preserve the loader path.",
+            "commit_timestamp": 1788243725.0
         }
     ]
 }
