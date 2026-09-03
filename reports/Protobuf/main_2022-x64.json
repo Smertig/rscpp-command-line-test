@@ -20924,6 +20924,21 @@
             "commit_ref": "9e7eb672747021867d42f27ab04ec9bbfa579fbc",
             "commit_message": "Check element type and descriptor in Ruby FFI RepeatedField#== if they aren't empty.\n\nIt is preexisting that the behavior when comparing of empty RepeatedField's of different types don't match between our different impls: this change adds tests which cover those behaviors.\n\nThe only case that is modified by this CL is one that was broken before: comparing two different, non-empty Repeated objects of different underling types on Ruby FFI.\n\nPiperOrigin-RevId: 974938849\n",
             "commit_timestamp": 1788332641.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1788459687.672245,
+            "elapsed_time": 356.7048168182373,
+            "x64": true,
+            "actual_files_count": 1293,
+            "expected_files_count": 818,
+            "memory_traffic": 49560.16044616699,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "065d6fabf7345bd469844f5ed472664602570bc5",
+            "commit_message": "Auto-generate files after cl/975486716\n",
+            "commit_timestamp": 1788409184.0
         }
     ]
 }
