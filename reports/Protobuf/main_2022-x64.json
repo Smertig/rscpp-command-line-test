@@ -20969,6 +20969,21 @@
             "commit_ref": "13e019f6da4e9e41d057d9d8b45adb942880724d",
             "commit_message": "Force test failure when requested Python protobuf implementations are unavailable\n\nPrior to this change, the upb tests could succeed even if the upb backend was failing to import properly.  This is because the API switching logic is currently designed to gracefully fall back to pure-Python.  This behavior can sometimes be helpful in prod (maybe going more slowly is better than crashing at startup), but is definitely not what we want in tests.\n\nThis change introduces a PROTOCOL_BUFFERS_PYTHON_INTERNAL_FORCE_IMPLEMENTATION environment variable to prevent falling back to the pure Python implementation when the requested 'cpp' or 'upb' implementation fails to import. The upb/cpp tests are updated to set this variable, ensuring tests fail explicitly if their expected backend is missing.\n\nThe new variable has \"INTERNAL\" in the name so that it is not subject to our breaking change policy.  I wonder if we should consider changing the PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION variable to have this behavior by default, so that users can be assured that their requested backend will be used, or will fail loudly if it is not available.\n\nPiperOrigin-RevId: 976377381\n",
             "commit_timestamp": 1788542539.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1788593186.156161,
+            "elapsed_time": 351.05987095832825,
+            "x64": true,
+            "actual_files_count": 1279,
+            "expected_files_count": 818,
+            "memory_traffic": 49381.282371520996,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "e816e3cbab18febb315ef4275c7a8edf7b7fd667",
+            "commit_message": "Auto-generate files after cl/976559091\n",
+            "commit_timestamp": 1788567161.0
         }
     ]
 }
