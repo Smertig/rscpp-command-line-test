@@ -36851,6 +36851,21 @@
             "commit_ref": "57594aae5e6155d30b9192a4cd85333584339445",
             "commit_message": "gh-154511: Consolidate IDLE's mouse wheel handling in util (GH-156974)\n\nMove wheel_event there from idlelib.tree and add x11_buttons(widget) and\nbind_wheel(widget, func), used by the editor, the tree and test_sidebar.\nwheel_event now reads the direction from the event, not the platform.\n\nMove its test from test_tree, and test the fix_ functions of util too.\n\nCo-authored-by: Claude Opus 5 <noreply@anthropic.com>",
             "commit_timestamp": 1788675308.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1788716079.730445,
+            "elapsed_time": 21.407440423965454,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 574.5893249511719,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "878b5e256aa40c45e12a0cd5c63f8a249f7c3704",
+            "commit_message": "gh-155835: fix `digest_size` data race on BLAKE-2 objects (#155839)",
+            "commit_timestamp": 1788713349.0
         }
     ]
 }
