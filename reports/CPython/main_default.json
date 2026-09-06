@@ -36836,6 +36836,21 @@
             "commit_ref": "7a918411a300ddeef06d7f984bd23de8f6438421",
             "commit_message": "gh-127296: Document that argparse count action starts from a non-zero default (#156908)\n\nCo-authored-by: Savannah Ostrowski <savannah@python.org>",
             "commit_timestamp": 1788627622.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1788680559.780227,
+            "elapsed_time": 15.746052742004395,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 677.4481887817383,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "57594aae5e6155d30b9192a4cd85333584339445",
+            "commit_message": "gh-154511: Consolidate IDLE's mouse wheel handling in util (GH-156974)\n\nMove wheel_event there from idlelib.tree and add x11_buttons(widget) and\nbind_wheel(widget, func), used by the editor, the tree and test_sidebar.\nwheel_event now reads the direction from the event, not the platform.\n\nMove its test from test_tree, and test the fix_ functions of util too.\n\nCo-authored-by: Claude Opus 5 <noreply@anthropic.com>",
+            "commit_timestamp": 1788675308.0
         }
     ]
 }
