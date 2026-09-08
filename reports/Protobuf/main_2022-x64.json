@@ -21074,6 +21074,21 @@
             "commit_ref": "b127c2ef8d4aa64315c29556930ca4a2d636ed0b",
             "commit_message": "Add diamond dependency regression test for Kotlin proto code generation.\n\nThis should catch java one-definition issues like what caused us to have to rollback in cl/962600951, where we were compiling kotlin protos twice with different debug metadata.\n\nAdding this local regression test first ahead of trying again to make kotlin proto exports work.\n\nAdd for both lite and full runtimes.\n\nPiperOrigin-RevId: 977194298\n",
             "commit_timestamp": 1788739501.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1788891564.342105,
+            "elapsed_time": 323.21338987350464,
+            "x64": true,
+            "actual_files_count": 1279,
+            "expected_files_count": 818,
+            "memory_traffic": 49223.06674194336,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "b127c2ef8d4aa64315c29556930ca4a2d636ed0b",
+            "commit_message": "Add diamond dependency regression test for Kotlin proto code generation.\n\nThis should catch java one-definition issues like what caused us to have to rollback in cl/962600951, where we were compiling kotlin protos twice with different debug metadata.\n\nAdding this local regression test first ahead of trying again to make kotlin proto exports work.\n\nAdd for both lite and full runtimes.\n\nPiperOrigin-RevId: 977194298\n",
+            "commit_timestamp": 1788739501.0
         }
     ]
 }
