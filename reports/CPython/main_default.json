@@ -37001,6 +37001,21 @@
             "commit_ref": "77dd973815a033895cf6e5ed9056472e830c03a8",
             "commit_message": "gh-152433: Windows: allow build socketmodule for UWP (#152601)",
             "commit_timestamp": 1789107280.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1789150494.500011,
+            "elapsed_time": 20.204198598861694,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 682.599250793457,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "d9565e54b1fc6d63c5be9afd58114499128fa57b",
+            "commit_message": "gh-157265: Adjust test for Windows (GH-157334)\n\ngh-157266: Adjust test for Windows\n\nOn Windows (no symlinks, no hardlinks), the behaviour is\nthe same as without the fix in GH-157266:\n- a/t/dummy is extracted\n- b/ is extracted\n- c/ is *not* created (the target, a/t, is not in the archive)\n- c/escape: c/ is created; escape is skipped (target,\n   c/../../link_here, is not in archive)\n- c is not recreated as a directory\n- boom is not created (target is c/escape, which falls back to\n  ..\\..\\link_here, which does not exist in archive)",
+            "commit_timestamp": 1789149281.0
         }
     ]
 }
