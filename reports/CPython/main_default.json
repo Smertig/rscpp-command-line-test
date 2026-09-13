@@ -37046,6 +37046,21 @@
             "commit_ref": "c947a4649a1fbadad1ca5423ed3bc5043d3cc4e4",
             "commit_message": "gh-155742: Use PyBytesWriter in winconsoleio.c (#157391)\n\nReplace soft deprecated _PyBytes_Resize() with PyBytesWriter.",
             "commit_timestamp": 1789276878.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1789322385.871871,
+            "elapsed_time": 16.212684392929077,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 689.2505187988281,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "da5a15571c29b73e072da8bb5366a9ecda802e97",
+            "commit_message": "gh-44376: Write missing namespace declarations in xml.dom.minidom (GH-156674)\n\nElement.writexml() now writes the xmlns declarations needed for the\nnamespaces of the element and its attributes, if they are not already\ndeclared for an ancestor.  A prefix in scope is reused for an attribute\nin a namespace without a prefix, or a new one is invented, because\nattributes cannot use the default namespace.  The document is not\nmodified by the serialization.",
+            "commit_timestamp": 1789320779.0
         }
     ]
 }
