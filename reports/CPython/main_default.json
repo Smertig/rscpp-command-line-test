@@ -37031,6 +37031,21 @@
             "commit_ref": "63d4398be879e346ef68f899115f86cdb9fa555c",
             "commit_message": "gh-157242: Add more PyBytesWriter tests (#157352)\n\n* Fix PyBytesWriter_Grow() check on the size argument.\n* Fix undefined behavior in _PyBytes_ResizeKeepOnError(): raise OverflowError\n  on integer overflow.\n* Add write(), grow() and get_data() methods to the _testcapi wrapper of\n  PyBytesWriter.\n* Remove the string argument from _testcapi.PyBytesWriter() and\n  resize() method.\n* Add tests on PyBytesWriter_Resize() invalid sizes.",
             "commit_timestamp": 1789191056.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1789286670.484464,
+            "elapsed_time": 15.591889142990112,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 690.3008651733398,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "c947a4649a1fbadad1ca5423ed3bc5043d3cc4e4",
+            "commit_message": "gh-155742: Use PyBytesWriter in winconsoleio.c (#157391)\n\nReplace soft deprecated _PyBytes_Resize() with PyBytesWriter.",
+            "commit_timestamp": 1789276878.0
         }
     ]
 }
