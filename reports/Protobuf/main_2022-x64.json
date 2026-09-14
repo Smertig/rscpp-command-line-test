@@ -21239,6 +21239,21 @@
             "commit_ref": "150b6136bd45b2878dc24e69ab2a9ec4a22202dd",
             "commit_message": "Automated Code Change\n\nPiperOrigin-RevId: 980138979\n",
             "commit_timestamp": 1789178513.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1789415110.326338,
+            "elapsed_time": 348.56152868270874,
+            "x64": true,
+            "actual_files_count": 1279,
+            "expected_files_count": 818,
+            "memory_traffic": 49452.4799118042,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "eaa64827bd55aa5ab45cf913e7227f9cb5731cd7",
+            "commit_message": "Small optimization on the face of empty MapFields.\n\n- Don't create small unmodifiable wrappers on every call if we're empty (we can return the singleton instead)\n\n- Don't bother transitioning the MapField to dual state when we're empty.\n\nThis doesn't matter that much, but (for example) getAllFields() reaches getList() and then isEmpty(), which will move unset map fields to dual repr for no real reason without this.\n\nPiperOrigin-RevId: 981242109\n",
+            "commit_timestamp": 1789408822.0
         }
     ]
 }

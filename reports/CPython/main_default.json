@@ -37076,6 +37076,21 @@
             "commit_ref": "a844747b07bbbe1019ee493afb2f3696b6bb41b5",
             "commit_message": "gh-117404: Add structured version info for compression modules (GH-150567)\n\nAdd constants which provide information about the version of the\ncompression library used for building the module and the version\nactually loaded:\n\n* zlib: ZLIB_VERSION_INFO, zlib_version_info, ZLIBNG_VERSION_INFO,\n  and zlib_version as an alias of ZLIB_RUNTIME_VERSION\n* bz2: bzlib_version, bzlib_version_info\n* lzma: LZMA_VERSION, lzma_version, LZMA_VERSION_INFO, lzma_version_info\n* compression.zstd: ZSTD_VERSION, ZSTD_VERSION_INFO\n\nMake compression.zstd.zstd_version_info a named tuple.\n\nCo-authored-by: Claude Opus 5 (1M context) <noreply@anthropic.com>",
             "commit_timestamp": 1789371551.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1789415284.075751,
+            "elapsed_time": 17.335784435272217,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 674.3302612304688,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "c2159199c5761f662f084a52c6d8ee704e7efdc7",
+            "commit_message": "gh-157377: Don't flush the thread-local allocation count in gc.get_count (#157381)\n\n* gh-157377: Don't flush the thread-local allocation count in gc.get_count()\n\n* gh-157377: clamp gc.get_count() return value at zero",
+            "commit_timestamp": 1789405013.0
         }
     ]
 }
