@@ -37106,6 +37106,21 @@
             "commit_ref": "df02e264c8b42e0351b36e1c6e25c1e63b7a6a02",
             "commit_message": "gh-156946: Unlink a curses panel before dropping its user pointer (GH-156947)\n\nA __del__ of the user pointer could get the panel being deallocated\nfrom top_panel() and crash the interpreter.",
             "commit_timestamp": 1789458711.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1789498051.35816,
+            "elapsed_time": 18.35640573501587,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 707.3256149291992,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "82952e3fe3ad36e481911a32790068d5df680ee7",
+            "commit_message": "gh-91398: Remove the border around the IDLE Shell sidebar (GH-32363)\n\nIt was drawn in the window background color and stood out with dark themes.\n\nCo-authored-by: Terry Jan Reedy <tjreedy@udel.edu>",
+            "commit_timestamp": 1789491188.0
         }
     ]
 }
