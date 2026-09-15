@@ -37091,6 +37091,21 @@
             "commit_ref": "c2159199c5761f662f084a52c6d8ee704e7efdc7",
             "commit_message": "gh-157377: Don't flush the thread-local allocation count in gc.get_count (#157381)\n\n* gh-157377: Don't flush the thread-local allocation count in gc.get_count()\n\n* gh-157377: clamp gc.get_count() return value at zero",
             "commit_timestamp": 1789405013.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1789460820.220628,
+            "elapsed_time": 15.66451358795166,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 661.1117553710938,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "df02e264c8b42e0351b36e1c6e25c1e63b7a6a02",
+            "commit_message": "gh-156946: Unlink a curses panel before dropping its user pointer (GH-156947)\n\nA __del__ of the user pointer could get the panel being deallocated\nfrom top_panel() and crash the interpreter.",
+            "commit_timestamp": 1789458711.0
         }
     ]
 }
