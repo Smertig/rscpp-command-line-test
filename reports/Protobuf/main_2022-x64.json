@@ -21329,6 +21329,21 @@
             "commit_ref": "77e87a76271820cf4c92e936a1e018397be1a926",
             "commit_message": "Auto-generate files after cl/982753900\n",
             "commit_timestamp": 1789598354.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1789671019.002603,
+            "elapsed_time": 267.3234658241272,
+            "x64": true,
+            "actual_files_count": 1279,
+            "expected_files_count": 818,
+            "memory_traffic": 49392.20832824707,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "c24e4c971ef26088bb8b1c0b82425ebc182f9376",
+            "commit_message": "Fix PyFileDescriptor creation data race under free-threading.\n\nUnder Python 3.14 free-threading (PYTHON_GIL=0), concurrent accesses to\n`descriptor.file` on un-cached descriptors race during\n`PyFileDescriptor_FromDescriptorWithSerializedPb` initialization, as\n`GetOrInsert` publishes the descriptor to the cache before `serialized_pb`\nis set by the calling thread.\n\nThis CL fixes the data race by passing an initialization callback to\n`NewInternedDescriptor` that runs safely before the newly created object\nis published to the `PyWeakValueMap` cache, and eliminates the now-unused\n`was_created` output parameter across all descriptor factory callers.\n\nPiperOrigin-RevId: 983273726\n",
+            "commit_timestamp": 1789665552.0
         }
     ]
 }

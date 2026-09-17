@@ -37166,6 +37166,21 @@
             "commit_ref": "c39a32983728f2398bb506c20e5c162d61805da3",
             "commit_message": "gh-156402: Modernize annotation usage in libregrtest (#156403)",
             "commit_timestamp": 1789613974.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1789671238.579947,
+            "elapsed_time": 27.49907922744751,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 737.9106063842773,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "0f00aef285f57231c5b9eb1cb52c6b2697bb5a8c",
+            "commit_message": "gh-152433: Fix ctypes import error on Windows UWP builds (GH-154700)\n\nThis defers a closure-related limitation to time of use, rather than import time.\nFurther work is necessary to offer full functionality on UWP builds.",
+            "commit_timestamp": 1789667265.0
         }
     ]
 }
