@@ -37196,6 +37196,21 @@
             "commit_ref": "7f7ff4c99d1f53424be8c323c50f3623c3488ba1",
             "commit_message": "gh-145856: Fix plistlib.dump() with skipkeys=True and sort_keys=True (GH-150109)\n\nA dict with non-string keys raised TypeError, because the keys were sorted\nbefore skipping non-string keys.\n\nCo-authored-by: VanshAgarwal24036 <vanshagbly6@gmail.com>\nCo-authored-by: Serhiy Storchaka <storchaka@gmail.com>\nCo-authored-by: Claude Opus 5 (1M context) <noreply@anthropic.com>",
             "commit_timestamp": 1789718190.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1789754988.090237,
+            "elapsed_time": 26.403913497924805,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 571.197380065918,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "b4067cd6e88f579e842e2b977d5bcbda69ba830c",
+            "commit_message": "gh-69365: Fix reference leak in IDLE search dialogs (GH-157754)\n\nRemove the variable trace that clears the error label when the label\nis destroyed, so that it does not keep the dialog alive.",
+            "commit_timestamp": 1789754627.0
         }
     ]
 }
