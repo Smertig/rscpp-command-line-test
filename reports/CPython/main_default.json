@@ -37211,6 +37211,21 @@
             "commit_ref": "b4067cd6e88f579e842e2b977d5bcbda69ba830c",
             "commit_message": "gh-69365: Fix reference leak in IDLE search dialogs (GH-157754)\n\nRemove the variable trace that clears the error label when the label\nis destroyed, so that it does not keep the dialog alive.",
             "commit_timestamp": 1789754627.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1789804393.762452,
+            "elapsed_time": 15.979217052459717,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 680.5228500366211,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "6dad8b88cc39d8f9f41c22502a0b52304b326dd9",
+            "commit_message": "gh-156114: Fix crash in perf trampoline with unencodable code names (#156300)",
+            "commit_timestamp": 1789765461.0
         }
     ]
 }
