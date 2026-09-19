@@ -37226,6 +37226,21 @@
             "commit_ref": "6dad8b88cc39d8f9f41c22502a0b52304b326dd9",
             "commit_message": "gh-156114: Fix crash in perf trampoline with unencodable code names (#156300)",
             "commit_timestamp": 1789765461.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1789840236.283982,
+            "elapsed_time": 16.03859543800354,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 699.2804870605469,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "9193375382fbfc871a8a1c14f918895081e219a1",
+            "commit_message": "gh-157549: Use sysconf() for the page size in remote_debug.h (#157800)\n\ngetpagesize() is not an ISO C or POSIX function. Darwin hides the prototype under -std=c11, so the _remote_debugging build fails with -Werror=implicit-function-declaration. That is the failure in the reported x86_64-apple-darwin \u2192 arm64-apple-darwin cross build.\n\nCall sysconf(_SC_PAGESIZE) instead, which is already how resource.getpagesize() works. Fall back to 4096 if sysconf() fails.\n\n--without-remote-debug is unchanged. That flag only disables the target-side attach protocol (Py_REMOTE_DEBUG); it does not exclude the _remote_debugging client module.",
+            "commit_timestamp": 1789834309.0
         }
     ]
 }
