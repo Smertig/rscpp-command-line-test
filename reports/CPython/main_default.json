@@ -37256,6 +37256,21 @@
             "commit_ref": "9ea05d4b8f8a007d57b2b33a4dec26408fe6836b",
             "commit_message": "gh-153668: Temporarily disable unicodectype.c optimization on WinARM64 due to compiler bug (#153669)\n\n* Only disable during Release (not PGO)\n\n* Update PCbuild/pyproject.props\n\n---------\n\nCo-authored-by: Chris Eibl <138194463+chris-eibl@users.noreply.github.com>",
             "commit_timestamp": 1789889477.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1789927303.560241,
+            "elapsed_time": 16.262439250946045,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 700.9894714355469,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "a64b7ecba4db5480504a1a83ae6e80c81472fe16",
+            "commit_message": "gh-157710: Avoid resize in PyUnicodeWriter_Finish() for singleton (#157862)\n\nPyBytesWriter_FinishWithSize() and PyUnicodeWriter_Finish() now\ndiscard the output string instead of resizing it if the single\nbyte/character singleton is used.",
+            "commit_timestamp": 1789914320.0
         }
     ]
 }
