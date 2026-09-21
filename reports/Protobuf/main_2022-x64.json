@@ -21449,6 +21449,21 @@
             "commit_ref": "6ec3b3b774aefa06fca54848bc430ee50833609c",
             "commit_message": "Remove non-ASCII literals from the conformance test suite\n\nThe suite had a handful of raw `\u8c37\u6b4c` / emoji characters in string literals and comments. These don't test anything a `\\xNN` escape doesn't (the bytes on the wire are identical), but they do make the test contents depend on the compiler's source and execution character sets. MSVC without `/utf-8` transcodes them to the system code page, which turns the C++ `\\uXXXX` universal character names into `??` and breaks the runner on Windows. Rather than require `/utf-8`, spell the values as explicit UTF-8 bytes.\n\nDetails:\n* `ValidDataScalar.STRING` / `ValidDataRepeated.STRING`: the `\"\\u8C37\\u6B4C\"` and `\"\\u8c37\\u6b4c\"` rows were C++ universal character names, which the compiler resolves to the same bytes as the `\"\u8c37\u6b4c\"` row, so they were byte-for-byte duplicates of it rather than tests of any escape handling. They are dropped; the `\"\u8c37\u6b4c\"` row stays, as explicit UTF-8 bytes.\n* `StringFieldUnicode` still feeds raw (unescaped) UTF-8 to the JSON parser, via `\\xNN` escapes in a non-raw literal, which is now called out in a comment since the raw-literal tests next to it deliberately do the opposite (their `\\u` escapes reach the testee verbatim).\n* `StringFieldUnicodeEscapeWithLowercaseHexLetters` is dropped: it only differed from `StringFieldUnicodeEscape` in the case of the hex digits.\n* `Int32FieldStringValuePartiallyNumericUnicode` and `FloatFieldStringValuePartiallyNumericUnicode` keep sending raw UTF-8 between the digits, via `\\xNN` escapes in a non-raw literal.\n* Expected text-format values use `\\xNN` escapes, as the surrogate-pair test already did.\n\nThe removed tests were only exercising the runner's own string handling, not the testee. The only failure list that mentioned them is the ESF one (`esf_conformance_failures.txt`); its `StringFieldUnicodeEscapeWithLowercaseHexLetters` entries are removed.\n\nPiperOrigin-RevId: 984948657\n",
             "commit_timestamp": 1789954847.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1790020383.151399,
+            "elapsed_time": 359.2031786441803,
+            "x64": true,
+            "actual_files_count": 1279,
+            "expected_files_count": 818,
+            "memory_traffic": 49463.67654418945,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "c88618f7670c51bc9e674e2abd4ecdec03601f1f",
+            "commit_message": "Auto-generate files after cl/985406973\n",
+            "commit_timestamp": 1790016779.0
         }
     ]
 }

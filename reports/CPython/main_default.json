@@ -37286,6 +37286,21 @@
             "commit_ref": "21223c9ff592d65c362ffa62a9592fe87d07610a",
             "commit_message": "gh-157710: Enable read-only optimization in PyUnicodeWriter (#157861)\n\nIf the first and only write to a PyUnicodeWriter is a Python str\nobject, PyUnicodeWriter_Finish() returns the object unchanged.\n\nPyUnicodeWriter_WriteChar() uses a singleton if no buffer was\nallocated yet.\n\nMove test_unicode_equal() to the correct test case (CAPITest).",
             "commit_timestamp": 1789979538.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1790020591.748661,
+            "elapsed_time": 16.8048255443573,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 683.1082000732422,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "a3e389d46d9ce9e60d2eb6fdf2f903b5f90b0f4e",
+            "commit_message": "gh-92347: Document pitfalls of `ctypes.pointer` iteration (GH-157801)",
+            "commit_timestamp": 1790013789.0
         }
     ]
 }
