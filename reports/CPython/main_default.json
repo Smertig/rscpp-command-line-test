@@ -37301,6 +37301,21 @@
             "commit_ref": "a3e389d46d9ce9e60d2eb6fdf2f903b5f90b0f4e",
             "commit_message": "gh-92347: Document pitfalls of `ctypes.pointer` iteration (GH-157801)",
             "commit_timestamp": 1790013789.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1790065110.896857,
+            "elapsed_time": 15.994249105453491,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 662.489501953125,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "a32139044a80b8973ff8e547448a2549a8f87ad9",
+            "commit_message": "gh-157695: Rename HAVE_ACOSPI to _Py_HAVE_ACOSPI (#157858)\n\nconfigure.ac: Add PY_CHECK_FUNC_PRIVATE() function, similar to\nPY_CHECK_FUNC() but defines macro _Py_HAVE_xxx instead of HAVE_xxx.\n\nUse PY_CHECK_FUNC_PRIVATE() for functions: acospi, asinpi, atanpi,\natan2pi, cospi, sinpi and tanpi. Update check_capi_macros_ignored.txt.",
+            "commit_timestamp": 1790056828.0
         }
     ]
 }
