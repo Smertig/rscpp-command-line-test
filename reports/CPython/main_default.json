@@ -37316,6 +37316,21 @@
             "commit_ref": "a32139044a80b8973ff8e547448a2549a8f87ad9",
             "commit_message": "gh-157695: Rename HAVE_ACOSPI to _Py_HAVE_ACOSPI (#157858)\n\nconfigure.ac: Add PY_CHECK_FUNC_PRIVATE() function, similar to\nPY_CHECK_FUNC() but defines macro _Py_HAVE_xxx instead of HAVE_xxx.\n\nUse PY_CHECK_FUNC_PRIVATE() for functions: acospi, asinpi, atanpi,\natan2pi, cospi, sinpi and tanpi. Update check_capi_macros_ignored.txt.",
             "commit_timestamp": 1790056828.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1790102029.705466,
+            "elapsed_time": 18.171265602111816,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 634.7745132446289,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "9777e8a67776ce225bfa594b4aedae0f18d2e3be",
+            "commit_message": "gh-119048: Use shutil._use_fd_functions directly in test (GH-157912)\n\nUse shutil._use_fd_functions in test_rmtree_uses_safe_fd_version_if_available",
+            "commit_timestamp": 1790077718.0
         }
     ]
 }
