@@ -37346,6 +37346,21 @@
             "commit_ref": "b0dda158aad00f0064e220f882792a5bd16ba0a0",
             "commit_message": "gh-89544: Fix IDLE hang after Restart Shell while receiving output (#157644)\n\nRPCClient.accept() reinitializes the SocketIO for the new connection,\nbut the receive buffer kept the partially received packet from the old\nconnection, so no message from the new user process was ever complete.",
             "commit_timestamp": 1790127145.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1790189710.850561,
+            "elapsed_time": 19.78735089302063,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 648.3573455810547,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "9232c21a1c1eb6a12b96acebbef6c86a698228e0",
+            "commit_message": "gh-74112: Make Ctrl-C in the IDLE Shell interrupt blocking calls (GH-157662)\n\nSend a real SIGINT to the main thread of the user process instead of\ncalling _thread.interrupt_main(), which only sets a flag checked\nbetween bytecodes.  The signal is sent while holding a new lock which\nprotects sending a message, so that the main thread is not interrupted\nin the middle of a message.  An interrupted wait for a response now\nreleases its lock, so that the socket thread does not deadlock.",
+            "commit_timestamp": 1790188176.0
         }
     ]
 }

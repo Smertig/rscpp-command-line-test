@@ -21509,6 +21509,21 @@
             "commit_ref": "53b7e8c3cd2cdaeb9fa83f8998472d0240632ca2",
             "commit_message": "Name every JSON conformance test with the regular <Level>.<Syntax>.<Input>.<Name>.<Output> scheme.\n\nConformanceRequestSetting::GetTestName() names a conformance test `<Level>.<Syntax>.<InputFormat>Input.<name>.<OutputFormat>Output`, and every test in the binary/JSON suite follows it except the ones run through two helpers that build their names by hand: RunValidJsonTestWithValidator() produced `<Level>.<Syntax>.JsonInput.<name>.Validator`, and ExpectSerializeFailureForJson() produced `<Level>.<Syntax>.<name>.JsonOutput`, without the input segment. Both now use GetTestName(), so the validator tests become `...JsonInput.<name>.JsonOutput` (which is what they are: a JSON-output test whose payload is checked by a validator instead of a round trip) and the serialize-failure tests become `...ProtobufInput.<name>.JsonOutput`. The parse-failure helpers keep their names, which omit only the output segment because there is no output. Consistent names make the upcoming migration of these suites to gtest a rename-free change for failure lists.\n\nThree validator tests would have collided with the round-trip test of the same name, since the runner rejects duplicate names: FieldNameWithNumbers, FieldNameWithMixedCases and FieldNameWithDoubleUnderscores. Their validator variants keep the old `Validator` marker as a name suffix instead of a segment: FieldNameWithNumbersValidator, FieldNameWithMixedCasesValidator and FieldNameWithDoubleUnderscoresValidator.\n\nEvery failure list that mentions one of the old names is rewritten mechanically (48 distinct names, 86 lines in 8 lists), keeping wildcards and comment alignment; the lines keep their order, except that the entries of the sorted ESF list (esf_conformance_failures.txt) are re-sorted where a rename changed their position. The lists that only run in the open-source CI (C#, PHP, JRuby) were rewritten the same way and are validated by the GitHub conformance jobs.\n\nPiperOrigin-RevId: 986423687\n",
             "commit_timestamp": 1790133372.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1790189514.852061,
+            "elapsed_time": 370.96909403800964,
+            "x64": true,
+            "actual_files_count": 1279,
+            "expected_files_count": 818,
+            "memory_traffic": 49401.91025543213,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "57c7fbf6679cbde32c5c746649ee4a49fdb410d6",
+            "commit_message": "Migrate CcProtoLibraryTest canBeUsedFromCcRules to Starlark.\n\nThis change moves canBeUsedFromCcRules from CcProtoLibraryTest.java to Starlark-based analysis tests in cc_proto_library_tests.\n\nPiperOrigin-RevId: 986881720\n",
+            "commit_timestamp": 1790187463.0
         }
     ]
 }
