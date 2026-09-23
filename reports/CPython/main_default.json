@@ -37331,6 +37331,21 @@
             "commit_ref": "9777e8a67776ce225bfa594b4aedae0f18d2e3be",
             "commit_message": "gh-119048: Use shutil._use_fd_functions directly in test (GH-157912)\n\nUse shutil._use_fd_functions in test_rmtree_uses_safe_fd_version_if_available",
             "commit_timestamp": 1790077718.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1790151638.504274,
+            "elapsed_time": 15.069656372070312,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 605.3481216430664,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "b0dda158aad00f0064e220f882792a5bd16ba0a0",
+            "commit_message": "gh-89544: Fix IDLE hang after Restart Shell while receiving output (#157644)\n\nRPCClient.accept() reinitializes the SocketIO for the new connection,\nbut the receive buffer kept the partially received packet from the old\nconnection, so no message from the new user process was ever complete.",
+            "commit_timestamp": 1790127145.0
         }
     ]
 }
