@@ -37361,6 +37361,21 @@
             "commit_ref": "9232c21a1c1eb6a12b96acebbef6c86a698228e0",
             "commit_message": "gh-74112: Make Ctrl-C in the IDLE Shell interrupt blocking calls (GH-157662)\n\nSend a real SIGINT to the main thread of the user process instead of\ncalling _thread.interrupt_main(), which only sets a flag checked\nbetween bytecodes.  The signal is sent while holding a new lock which\nprotects sending a message, so that the main thread is not interrupted\nin the middle of a message.  An interrupted wait for a response now\nreleases its lock, so that the socket thread does not deadlock.",
             "commit_timestamp": 1790188176.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1790237567.816768,
+            "elapsed_time": 16.512492656707764,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 706.5379104614258,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "a942c8c8334b72803ff4ee43ffcf9c02914d4116",
+            "commit_message": "Delete CLAUDE.md (GH-157799)\n\nClaude Code 2.1.277 now supports AGENTS.md:\n\n> Added AGENTS.md support: in a project with no CLAUDE.md, Claude Code reads AGENTS.md instead; change it under \u201cProject instructions\u201d in `/config` (not yet on Bedrock, Vertex or Foundry) \n\n\nhttps://code.claude.com/docs/en/changelog#2-1-277",
+            "commit_timestamp": 1790233527.0
         }
     ]
 }
