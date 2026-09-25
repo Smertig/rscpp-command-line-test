@@ -21554,6 +21554,21 @@
             "commit_ref": "68259eecb51b3523acea8338d322b1d43df0123b",
             "commit_message": "Add missing PROTOBUF_EXPORT_TEMPLATE_DEFINE to RepeatedPtrFieldBase::MergeFrom specializations.\n\nAdd `PROTOBUF_EXPORT_TEMPLATE_DEFINE` to the explicit specializations `RepeatedPtrFieldBase::MergeFrom<std::string>` and `RepeatedPtrFieldBase::MergeFrom<MessageLite>` in `repeated_ptr_field.cc`.\n\nBoth explicit specializations are already declared with `PROTOBUF_EXPORT_TEMPLATE_DECLARE` in `repeated_ptr_field.h`, so omitting `PROTOBUF_EXPORT_TEMPLATE_DEFINE` on their definitions causes unresolved external symbol link errors (`LNK2019`) on Windows DLL builds.\n\nPiperOrigin-RevId: 987595269\n",
             "commit_timestamp": 1790270893.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1790325202.434005,
+            "elapsed_time": 339.28647089004517,
+            "x64": true,
+            "actual_files_count": 1279,
+            "expected_files_count": 818,
+            "memory_traffic": 49361.49186706543,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "606b5f79d4443a7c261881534ae30b6c96f711c3",
+            "commit_message": "protobuf/rust: Return the map iterator through an out-param\n\nPiperOrigin-RevId: 988004689\n",
+            "commit_timestamp": 1790313512.0
         }
     ]
 }

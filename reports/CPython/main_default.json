@@ -37391,6 +37391,21 @@
             "commit_ref": "a5b03fa1d71925576892a82f1f12a86f11f69f35",
             "commit_message": "gh-155496: Use Argument Clinic for more functions of the _thread module (GH-155514)",
             "commit_timestamp": 1790273845.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1790325443.953603,
+            "elapsed_time": 24.345950841903687,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 313.2942123413086,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "b9546455ab0f65af65b0b69e86e7a2f65d287c16",
+            "commit_message": "gh-55646: Do not crash IDLE on an invalid key binding (#152747)\n\nA typo in a key binding, such as <Alt-Key-up> for <Alt-Key-Up>, crashed IDLE\nat startup.  It is now ignored with a warning.\n\nOn macOS an invalid binding such as <Alt-Key-up> is not parsed into a\nMultiCall triplet, so it falls back to Tk's event_add(), which was left\nunguarded and still crashed.  Guard the fallback too, and test both the\nparsed (bind()) and unparsed (event_add()) paths on every platform.\n\n---------\n\nCo-authored-by: Terry Jan Reedy <tjreedy@udel.edu>\nCo-authored-by: Claude Opus 4.8 <noreply@anthropic.com>",
+            "commit_timestamp": 1790301645.0
         }
     ]
 }
