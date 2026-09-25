@@ -37406,6 +37406,21 @@
             "commit_ref": "b9546455ab0f65af65b0b69e86e7a2f65d287c16",
             "commit_message": "gh-55646: Do not crash IDLE on an invalid key binding (#152747)\n\nA typo in a key binding, such as <Alt-Key-up> for <Alt-Key-Up>, crashed IDLE\nat startup.  It is now ignored with a warning.\n\nOn macOS an invalid binding such as <Alt-Key-up> is not parsed into a\nMultiCall triplet, so it falls back to Tk's event_add(), which was left\nunguarded and still crashed.  Guard the fallback too, and test both the\nparsed (bind()) and unparsed (event_add()) paths on every platform.\n\n---------\n\nCo-authored-by: Terry Jan Reedy <tjreedy@udel.edu>\nCo-authored-by: Claude Opus 4.8 <noreply@anthropic.com>",
             "commit_timestamp": 1790301645.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1790363515.072112,
+            "elapsed_time": 20.723690509796143,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 711.1686172485352,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "198bc7683641f6b44d23fe5dc228f732a7cf3df8",
+            "commit_message": "gh-151464: exclude '<>' token from tokenize output (#154854)\n\n* gh-151464: exclude '<>' token from tokenize output\n\nWas:\n```\n$ echo '1 <> 2' | python -m tokenize\n1,0-1,1:            NUMBER         '1'\n1,2-1,4:            OP             '<>'\n1,5-1,6:            NUMBER         '2'\n1,6-1,7:            NEWLINE        '\\n'\n2,0-2,0:            ENDMARKER      ''\n```\n\nNow (regardless on ``__future__.barry_as_FLUFL`` import):\n```\n$ echo '1 <> 2' | ./python -m tokenize\n1,0-1,1:            NUMBER         '1'\n1,2-1,3:            OP             '<'\n1,3-1,4:            OP             '>'\n1,5-1,6:            NUMBER         '2'\n1,6-1,7:            NEWLINE        '\\n'\n2,0-2,0:            ENDMARKER      ''\n```\nin accordance with the Grammar:\nhttps://docs.python.org/3.14/reference/lexical_analysis.html#operators-and-delimiters\n\nAlso adds a custom error message for ``<>`` (\"not equal\" in Pascal\nand Python 2).\n\n* +1\n\n* address review: lowercase and move invalid rule\n\n* address review: news\n\n* address review: move test_guido_as_bdfl_ineq_tokens()\n\n* address review: revert _PyTokenizer_From* changes\n\n* + revert unrelated change\n\n* address review: remove whatsnew entry",
+            "commit_timestamp": 1790362319.0
         }
     ]
 }
