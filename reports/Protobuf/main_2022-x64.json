@@ -21599,6 +21599,21 @@
             "commit_ref": "c64743979dbfa0ac3343d28e7af71a0e77825495",
             "commit_message": "Avoid depending on coreutils in bazel shell actions (NixOS compatibility) (#29510)\n\n- Bazel `run_shell`/genrule actions with no declared env/PATH inherit an empty action environment. On systems without an FHS-style `/bin:/usr/bin` (e.g. NixOS), bash's compiled-in fallback PATH doesn't resolve coreutils binaries like `grep`, `cat`, or `dirname`, even though bash itself is found via an explicit toolchain path.\n- `ProtocAuthenticityCheck`'s shell action used `grep`/`cat` for a version check; replaced with a single `read` plus bash `[[ ]]` pattern matching and `echo`, so it depends only on bash builtins.\n- `bootstrap_compiler.bzl`'s `_extra_proto_path` built a `-I` flag via `$$(dirname $(location ...))`; replaced with bash parameter expansion (`${var%/*}`) over a variable assigned earlier in the same command, again depending only on bash builtins.\n\nCloses #29510\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/29510 from nicdumz:avoid-coreutils-deps-bootstrap dd0362891ea980dafa1a2ec2f2d7ba088967eb8b\nPiperOrigin-RevId: 988569628\n",
             "commit_timestamp": 1790380353.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1790446832.946245,
+            "elapsed_time": 353.2557182312012,
+            "x64": true,
+            "actual_files_count": 1279,
+            "expected_files_count": 818,
+            "memory_traffic": 49352.9733505249,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "b4462c8385061587111af8d1da425c3b683724d4",
+            "commit_message": "Use ABSL_CHECK in OptionInterpreter::MaybeCollectAnyFieldInAggregateOption.\n\nAll the places where where currently short-circuit processing of malformed Any fields are not reachable and can be replaced with ABSL_CHECK for easier to understand code. These places are not reachable as Textformat would have failed to parse malformed options before reaching MaybeCollectAnyFieldInAggregateOption.\n\nPiperOrigin-RevId: 988834574\n",
+            "commit_timestamp": 1790431582.0
         }
     ]
 }

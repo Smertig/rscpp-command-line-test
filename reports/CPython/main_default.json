@@ -37436,6 +37436,21 @@
             "commit_ref": "ee1bbf037ff74ff3c5e7b95623d78aa34744cd49",
             "commit_message": "gh-71136: Fix IDLE Shell hang after KeyboardInterrupt under the debugger (#157566)\n\nDebugging 'raise KeyboardInterrupt' in debugged code no longer hangs IDLE forever.  The response is similar to without the debugger.\n\n---------\nCo-authored-by: Louie Lu <git@louie.lu>\nCo-authored-by: Claude Opus 5 (1M context) <noreply@anthropic.com>",
             "commit_timestamp": 1790388324.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1790447007.410895,
+            "elapsed_time": 13.704371690750122,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 638.4391632080078,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "109a192eb5c4b3ac3ed4c029b9032215bd079c6e",
+            "commit_message": "gh-151907: Reduce duplication in codegen comprehension functions (GH-154846)",
+            "commit_timestamp": 1790441378.0
         }
     ]
 }
