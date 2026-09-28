@@ -21644,6 +21644,21 @@
             "commit_ref": "b4462c8385061587111af8d1da425c3b683724d4",
             "commit_message": "Use ABSL_CHECK in OptionInterpreter::MaybeCollectAnyFieldInAggregateOption.\n\nAll the places where where currently short-circuit processing of malformed Any fields are not reachable and can be replaced with ABSL_CHECK for easier to understand code. These places are not reachable as Textformat would have failed to parse malformed options before reaching MaybeCollectAnyFieldInAggregateOption.\n\nPiperOrigin-RevId: 988834574\n",
             "commit_timestamp": 1790431582.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1790587395.368853,
+            "elapsed_time": 363.6034879684448,
+            "x64": true,
+            "actual_files_count": 1279,
+            "expected_files_count": 818,
+            "memory_traffic": 49323.82810211182,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "b1503a1ca4205a9f9e4f3a8be98890705f1e03e2",
+            "commit_message": "Build upb/message:convert with the default upb optimization features.\n\nPiperOrigin-RevId: 989429950\n",
+            "commit_timestamp": 1790577529.0
         }
     ]
 }

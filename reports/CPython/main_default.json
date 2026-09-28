@@ -37481,6 +37481,21 @@
             "commit_ref": "b6f9a50e654dd76394bece71e6a8240ef28107ab",
             "commit_message": "gh-156933: Widen narrow integer results in `ctypes` callbacks (GH-157045)\n\n_CallPythonObject() only wrote restype->size bytes into the closure's result buffer, leaving the unused high-order bits of the ffi_arg-sized register untouched. libffi's ffi_prep_closure_loc() documents that integral types narrower than a machine register must be widened to fill it, sign-extending signed types. On architectures that always read the full register for narrow return values (s390x), this leaves garbage in the high bits, which broke libclang callbacks used by cindex.py.",
             "commit_timestamp": 1790533938.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1790587540.213841,
+            "elapsed_time": 27.986238479614258,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 709.0941543579102,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "7352b6aaa99ed68b055cb3c063657a2e3ba82190",
+            "commit_message": "gh-158213: Don't return a str subclass from PyUnicodeWriter_Finish() (#158214)\n\nSince GH-157861, every writer uses the read-only optimization of\n_PyUnicodeWriter_WriteStr(), so the first write of a str subclass\ninstance into an empty writer kept that object as the buffer, and\nPyUnicodeWriter_Finish() returned it.  io.StringIO.getvalue() then\nreturned the written object itself, and the next write re-read it\nthrough its __str__() method, which changed the contents and could make\nread() read past the end of the buffer.\n\nOnly use the read-only optimization for exact str objects.  A subclass\nis copied into a new buffer, as before GH-157861.",
+            "commit_timestamp": 1790586506.0
         }
     ]
 }
