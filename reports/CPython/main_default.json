@@ -37496,6 +37496,21 @@
             "commit_ref": "7352b6aaa99ed68b055cb3c063657a2e3ba82190",
             "commit_message": "gh-158213: Don't return a str subclass from PyUnicodeWriter_Finish() (#158214)\n\nSince GH-157861, every writer uses the read-only optimization of\n_PyUnicodeWriter_WriteStr(), so the first write of a str subclass\ninstance into an empty writer kept that object as the buffer, and\nPyUnicodeWriter_Finish() returned it.  io.StringIO.getvalue() then\nreturned the written object itself, and the next write re-read it\nthrough its __str__() method, which changed the contents and could make\nread() read past the end of the buffer.\n\nOnly use the read-only optimization for exact str objects.  A subclass\nis copied into a new buffer, as before GH-157861.",
             "commit_timestamp": 1790586506.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1790629699.708402,
+            "elapsed_time": 16.365269660949707,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 702.6780853271484,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "333071231d3a46cccc32d7f44b99328c3299d0b1",
+            "commit_message": "gh-157649: Fix Py_CLEAR()/Py_SETREF() on C++ (#158070)\n\nOn C++, do not use decltype() in _Py_TYPEOF since it produces invalid\ncode in Py_CLEAR() and Py_SETREF(). Instead, implement Py_CLEAR(),\nPy_SETREF() and Py_XSETREF() using \"auto\" on C++11 and newer.\n\nAdd Py_CLEAR(), Py_SETREF() and Py_XSETREF() tests on an array.",
+            "commit_timestamp": 1790623108.0
         }
     ]
 }
