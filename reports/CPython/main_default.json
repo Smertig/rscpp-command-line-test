@@ -37511,6 +37511,21 @@
             "commit_ref": "333071231d3a46cccc32d7f44b99328c3299d0b1",
             "commit_message": "gh-157649: Fix Py_CLEAR()/Py_SETREF() on C++ (#158070)\n\nOn C++, do not use decltype() in _Py_TYPEOF since it produces invalid\ncode in Py_CLEAR() and Py_SETREF(). Instead, implement Py_CLEAR(),\nPy_SETREF() and Py_XSETREF() using \"auto\" on C++11 and newer.\n\nAdd Py_CLEAR(), Py_SETREF() and Py_XSETREF() tests on an array.",
             "commit_timestamp": 1790623108.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1790674359.205691,
+            "elapsed_time": 15.997808456420898,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 680.6749267578125,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "1407bb9ebc675619cb479415c573508ca773ef2f",
+            "commit_message": "Run Dependabot independently on each branch (#158361)\n\nCo-authored-by: Ezio Melotti <ezio.melotti@gmail.com>",
+            "commit_timestamp": 1790670204.0
         }
     ]
 }

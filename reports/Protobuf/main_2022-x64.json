@@ -21674,6 +21674,21 @@
             "commit_ref": "602da7a5aa9f45ebc1e26a74a0cbba8f66952f1f",
             "commit_message": "Internal Change\n\nPiperOrigin-RevId: 989819375\n",
             "commit_timestamp": 1790628389.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1790674157.647068,
+            "elapsed_time": 330.09494805336,
+            "x64": true,
+            "actual_files_count": 1279,
+            "expected_files_count": 818,
+            "memory_traffic": 49326.74690246582,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "6b1f0af624e5eef66009e3e247f08222234c1d3e",
+            "commit_message": "Deprecate `RepeatedPtrFieldBackInserter` in favor of `RepeatedFieldBackInserter`.\n\nThis is in preparation of repeated field proxy, which will only provide a `RepeatedFieldBackInserter` as we lose the distinction between `RepeatedField` and `RepeatedPtrField`.\n\nPiperOrigin-RevId: 990143576\n",
+            "commit_timestamp": 1790671750.0
         }
     ]
 }
