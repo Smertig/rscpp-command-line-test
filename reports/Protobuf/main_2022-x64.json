@@ -21704,6 +21704,21 @@
             "commit_ref": "86835328769c135746163f55022b554f79b77e4a",
             "commit_message": "[ObjC] Raise the Xcode project minimum iOS version to 15 (#30092)\n\nXcode 27 rejects the Objective-C iOS project's deployment target of iOS 12 because its supported deployment targets start at iOS 15. Raise the project's Debug and Release deployment targets to iOS 15, matching the minimum already declared in `Protobuf.podspec`.\n\nValidation:\n- Built the `ProtocolBuffers` scheme for the generic iOS Simulator destination in both Debug and Release using Xcode 27, with signing disabled and no deployment-target override.\n- Inspected compiled objects from both configurations and confirmed `minos 15.0`.\n- `git diff --check` passed. Runtime tests and physical-device builds were not run.\n\nCloses #30092\n\nCOPYBARA_INTEGRATE_REVIEW=https://github.com/protocolbuffers/protobuf/pull/30092 from Lickability:fix/ios-15-deployment-target d3bb9a2b787f3fd88fec4fc852bf7bde1472681e\nPiperOrigin-RevId: 990463904\n",
             "commit_timestamp": 1790711185.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1790760043.211989,
+            "elapsed_time": 360.46460342407227,
+            "x64": true,
+            "actual_files_count": 1279,
+            "expected_files_count": 818,
+            "memory_traffic": 49357.69454193115,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "8c24e80f5a472f9de12a248b6c1a2248d2032a15",
+            "commit_message": "Move the conformance runner's C++ into the proto2::conformance namespace.\n\nThe legacy runner, ForkPipeRunner, FailureListTrieNode and the legacy suites still live directly in namespace proto2, while the newer conformance code is in proto2::conformance. Once a translation unit sees both, an unqualified `conformance::` in the outer namespace finds the inner namespace instead of the conformance proto package, so the two halves cannot be mixed without ad-hoc `::` qualification. Move everything into proto2::conformance, spell the proto package `::conformance::` and the runtime's `proto2::internal` explicitly, and requalify the remaining global-namespace users (the main functions and json_conformance_unittest). No functional change.\n\nPiperOrigin-RevId: 990684109\n",
+            "commit_timestamp": 1790737176.0
         }
     ]
 }
