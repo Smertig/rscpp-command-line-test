@@ -37586,6 +37586,21 @@
             "commit_ref": "763b6edb0ec959bdfb78f098b76829365de36ca5",
             "commit_message": "gh-158536: Skip some Android logging tests on OS versions with aggressive \"chatty\" filtering (#158531)\n\nAddress a test suite failure when run on Android 26-30 (inclusive) due to the\nadb logger dropping lines with a \"chatty ... Identical 3 lines\" marker.",
             "commit_timestamp": 1790808514.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1790885442.063109,
+            "elapsed_time": 19.98544955253601,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 571.0378723144531,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "ab01d184746b3ea383f69317c16fc726d885c968",
+            "commit_message": "gh-142083: Document the 'w' type code in the array.array docstring (#158040)\n\nAdd a test asserting that the table lists exactly the supported type\ncodes and that the minimum size it gives for each of them is one the\nimplementation really meets.",
+            "commit_timestamp": 1790879803.0
         }
     ]
 }
