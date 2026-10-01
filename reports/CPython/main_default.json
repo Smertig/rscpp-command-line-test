@@ -37571,6 +37571,21 @@
             "commit_ref": "e580c888746411d3b576b5c3c2ce8b34293ddaf2",
             "commit_message": "Update `Doc/pylock.toml` (#158519)",
             "commit_timestamp": 1790785865.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1790848260.206801,
+            "elapsed_time": 17.90239906311035,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 697.4561309814453,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "763b6edb0ec959bdfb78f098b76829365de36ca5",
+            "commit_message": "gh-158536: Skip some Android logging tests on OS versions with aggressive \"chatty\" filtering (#158531)\n\nAddress a test suite failure when run on Android 26-30 (inclusive) due to the\nadb logger dropping lines with a \"chatty ... Identical 3 lines\" marker.",
+            "commit_timestamp": 1790808514.0
         }
     ]
 }
