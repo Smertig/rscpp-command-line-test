@@ -21779,6 +21779,21 @@
             "commit_ref": "4410315756395b70ef5ce5e406e6bba13067c32d",
             "commit_message": "Add the IsParseError() and IsSerializeError() conformance matchers.\n\nThey match a TestResult whose response is a parse or serialize error, respectively. Every other outcome fails with the legacy runner's message for it (\"Should have failed to parse, but didn't.\", \"..., but raised an error instead.\" and friends), so that the existing failure lists keep matching.\n\nMockTestRunner, the gMock mock of ConformanceTestRunner that testee_test.cc defined for itself, moves to mock_test_runner.h so that the matcher tests can drive a real Testee with it too.\n\nPiperOrigin-RevId: 992113559\n",
             "commit_timestamp": 1790919481.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1790970398.471423,
+            "elapsed_time": 263.9844448566437,
+            "x64": true,
+            "actual_files_count": 1279,
+            "expected_files_count": 818,
+            "memory_traffic": 49305.67289733887,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "799556e8df354bddec56ec049ab2b3b413089fcf",
+            "commit_message": "Align DynamicMessage.hashCode() with GeneratedMessage.hashCode()\n\nsomeDynamicMessage.equals(someGeneratedMessage) can return true if the DynamicMessage was created with SomeGeneratedMessage.getDesciptor() verbatim (by reference identity _not_ a second copy of the same descriptor parsed)\n\nHowever, the hashcodes don't necessarily always match. This breaks the hashcode/equals contract in Java and can result in broken collections if you e.g. insert both kinds of messages as keys in the same hashset.\n\nChanging gencode would cause skew oddities, so this changes the DynamicMessage hashcode to be aligned with the preexisting gencode hashcode structure. This has a small performance hit on DynamicMessage hashcode, but it is necessary for correctness.\n\nFixes https://github.com/protocolbuffers/protobuf/issues/19080\n\nPiperOrigin-RevId: 992456152\n",
+            "commit_timestamp": 1790967564.0
         }
     ]
 }
