@@ -21764,6 +21764,21 @@
             "commit_ref": "258cfc54dd852f50cf3f5b9276aaec224a3eaca9",
             "commit_message": "Migrate `blacklistedProtos` from `CcProtoLibraryTest` to Starlark\n\nPiperOrigin-RevId: 991843423\n",
             "commit_timestamp": 1790884383.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1790932957.238137,
+            "elapsed_time": 353.9369034767151,
+            "x64": true,
+            "actual_files_count": 1279,
+            "expected_files_count": 818,
+            "memory_traffic": 49456.72290802002,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "4410315756395b70ef5ce5e406e6bba13067c32d",
+            "commit_message": "Add the IsParseError() and IsSerializeError() conformance matchers.\n\nThey match a TestResult whose response is a parse or serialize error, respectively. Every other outcome fails with the legacy runner's message for it (\"Should have failed to parse, but didn't.\", \"..., but raised an error instead.\" and friends), so that the existing failure lists keep matching.\n\nMockTestRunner, the gMock mock of ConformanceTestRunner that testee_test.cc defined for itself, moves to mock_test_runner.h so that the matcher tests can drive a real Testee with it too.\n\nPiperOrigin-RevId: 992113559\n",
+            "commit_timestamp": 1790919481.0
         }
     ]
 }
