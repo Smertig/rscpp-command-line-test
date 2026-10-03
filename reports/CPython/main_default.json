@@ -37631,6 +37631,21 @@
             "commit_ref": "00a1c3a0c94401095510a7022002f12bad118fbb",
             "commit_message": "gh-158140: Resolve lazily imported sibling submodules independently (#158521)\n\n* gh-158140: Resolve lazy siblings through the pending-child registry\n\nCo-authored-by: Petr Viktorin <encukou@gmail.com>\nCo-authored-by: T. Wouters <thomas@python.org>",
             "commit_timestamp": 1790961604.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1791017811.196218,
+            "elapsed_time": 15.615588903427124,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 688.4875106811523,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "1a85213940896f180cbcf76921cd2d35a8aa50de",
+            "commit_message": "gh-158585: Adjust allocation in bytes_fromformat() (#158621)\n\nTake in account preallocated bytes when calling\nPyBytesWriter_GrowAndUpdatePointer().\n\nUse sprintf() return value instead of calling strlen().",
+            "commit_timestamp": 1790980478.0
         }
     ]
 }

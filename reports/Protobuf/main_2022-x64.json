@@ -21794,6 +21794,21 @@
             "commit_ref": "799556e8df354bddec56ec049ab2b3b413089fcf",
             "commit_message": "Align DynamicMessage.hashCode() with GeneratedMessage.hashCode()\n\nsomeDynamicMessage.equals(someGeneratedMessage) can return true if the DynamicMessage was created with SomeGeneratedMessage.getDesciptor() verbatim (by reference identity _not_ a second copy of the same descriptor parsed)\n\nHowever, the hashcodes don't necessarily always match. This breaks the hashcode/equals contract in Java and can result in broken collections if you e.g. insert both kinds of messages as keys in the same hashset.\n\nChanging gencode would cause skew oddities, so this changes the DynamicMessage hashcode to be aligned with the preexisting gencode hashcode structure. This has a small performance hit on DynamicMessage hashcode, but it is necessary for correctness.\n\nFixes https://github.com/protocolbuffers/protobuf/issues/19080\n\nPiperOrigin-RevId: 992456152\n",
             "commit_timestamp": 1790967564.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1791017658.566928,
+            "elapsed_time": 277.17298889160156,
+            "x64": true,
+            "actual_files_count": 1279,
+            "expected_files_count": 818,
+            "memory_traffic": 49470.8381729126,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "83099b460609e9f772b97c63d3338ef98d322c6f",
+            "commit_message": "Use absl::popcount instead of hand-rolling it.\n\nAlso un-yoda the checks these are used for.\n\nPiperOrigin-RevId: 992757182\n",
+            "commit_timestamp": 1791014721.0
         }
     ]
 }
