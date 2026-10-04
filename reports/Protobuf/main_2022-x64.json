@@ -21839,6 +21839,21 @@
             "commit_ref": "a9318d0fef5b2ac338d992ff967bcd6e9ec81c48",
             "commit_message": "Add the WhenParsedAs() conformance matcher.\n\nWhenParsedAs<T>(m) is WhenParsed(m) with the payload decoded as the generated type T instead of the message type the test ran against. The text-format unknown-field tests need it: the testee serializes fields its type doesn't know, and a \"shadow\" type such as UnknownToTestAllTypes gives them names again so the inner matcher can see them. Failure messages are the same as WhenParsed()'s; only the gtest description names the override type.\n\nPiperOrigin-RevId: 992943404\n",
             "commit_timestamp": 1791058307.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1791138791.337373,
+            "elapsed_time": 372.736958026886,
+            "x64": true,
+            "actual_files_count": 1279,
+            "expected_files_count": 818,
+            "memory_traffic": 49623.90235900879,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "a9318d0fef5b2ac338d992ff967bcd6e9ec81c48",
+            "commit_message": "Add the WhenParsedAs() conformance matcher.\n\nWhenParsedAs<T>(m) is WhenParsed(m) with the payload decoded as the generated type T instead of the message type the test ran against. The text-format unknown-field tests need it: the testee serializes fields its type doesn't know, and a \"shadow\" type such as UnknownToTestAllTypes gives them names again so the inner matcher can see them. Failure messages are the same as WhenParsed()'s; only the gtest description names the override type.\n\nPiperOrigin-RevId: 992943404\n",
+            "commit_timestamp": 1791058307.0
         }
     ]
 }
