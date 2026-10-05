@@ -21854,6 +21854,21 @@
             "commit_ref": "a9318d0fef5b2ac338d992ff967bcd6e9ec81c48",
             "commit_message": "Add the WhenParsedAs() conformance matcher.\n\nWhenParsedAs<T>(m) is WhenParsed(m) with the payload decoded as the generated type T instead of the message type the test ran against. The text-format unknown-field tests need it: the testee serializes fields its type doesn't know, and a \"shadow\" type such as UnknownToTestAllTypes gives them names again so the inner matcher can see them. Failure messages are the same as WhenParsed()'s; only the gtest description names the override type.\n\nPiperOrigin-RevId: 992943404\n",
             "commit_timestamp": 1791058307.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1791194531.539523,
+            "elapsed_time": 376.5334496498108,
+            "x64": true,
+            "actual_files_count": 1279,
+            "expected_files_count": 818,
+            "memory_traffic": 49535.05628204346,
+            "repo_url": "https://github.com/protocolbuffers/protobuf.git",
+            "commit_ref": "d99376110688a6530204b7ac8a00ab93804da589",
+            "commit_message": "Test power-of-2 roundtripping through closed and open enum accessors.\n\nForcibly cast 32-bit integer powers of 2 through C++ codegen and Reflection enum setters and getters for open, closed <=8-bit, and closed 32-bit enums.\n\nPiperOrigin-RevId: 993420616\n",
+            "commit_timestamp": 1791174661.0
         }
     ]
 }
