@@ -37721,6 +37721,21 @@
             "commit_ref": "114de198c0a05d8169cdbbd8f1e0976dc1319284",
             "commit_message": "gh-156545, gh-158539: Fix deep flamegraph export on small C stacks and macOS runtime lookup (#158874)",
             "commit_timestamp": 1791230184.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1791280224.77435,
+            "elapsed_time": 15.092288732528687,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 507.0038604736328,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "9028df36bb9e2942b19164f6708f9cf8a55c5ce9",
+            "commit_message": "gh-157789: Use compiler option ``-Og`` in case of clang-cl debug builds (#157791)\n\nUse compiler option ``-Og`` in case of clang-cl debug builds on Windows to reduce stack usage.",
+            "commit_timestamp": 1791268562.0
         }
     ]
 }
