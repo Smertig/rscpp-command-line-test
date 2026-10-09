@@ -37826,6 +37826,21 @@
             "commit_ref": "2adc8b5f36edbcaae3fdd43fe3369342eee757d5",
             "commit_message": "gh-157710: Move docs for mutating PyUnicode to new section (GH-159028)",
             "commit_timestamp": 1791540195.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1791576260.295296,
+            "elapsed_time": 15.974955081939697,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 649.7781372070312,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "5a22a62b96a68c2dd31784c5e3427ad7b365388a",
+            "commit_message": "gh-87720 Fix additional header refolding-quoting edge case (#134271)\n\nIn this case, the higher level syntactic unit fit on the remainder of\nthe line in un-encoded format, and that higher level unit was\nnot a ptext or vtext, so the encoding check failed.  To fix this, we\nlook inside the current unit to see if has anything that was\noriginally encoded.",
+            "commit_timestamp": 1791550449.0
         }
     ]
 }
