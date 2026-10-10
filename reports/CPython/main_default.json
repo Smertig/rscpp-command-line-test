@@ -37841,6 +37841,21 @@
             "commit_ref": "5a22a62b96a68c2dd31784c5e3427ad7b365388a",
             "commit_message": "gh-87720 Fix additional header refolding-quoting edge case (#134271)\n\nIn this case, the higher level syntactic unit fit on the remainder of\nthe line in un-encoded format, and that higher level unit was\nnot a ptext or vtext, so the encoding check failed.  To fix this, we\nlook inside the current unit to see if has anything that was\noriginally encoded.",
             "commit_timestamp": 1791550449.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1791624496.981956,
+            "elapsed_time": 16.343748569488525,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 688.1521987915039,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "7d5dce9b1f0da209d172885e26a5858208f15812",
+            "commit_message": "Remove Python 3.10 from GitHub and Dependabot config (#159075)",
+            "commit_timestamp": 1791621569.0
         }
     ]
 }
