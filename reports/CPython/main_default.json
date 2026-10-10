@@ -37856,6 +37856,21 @@
             "commit_ref": "7d5dce9b1f0da209d172885e26a5858208f15812",
             "commit_message": "Remove Python 3.10 from GitHub and Dependabot config (#159075)",
             "commit_timestamp": 1791621569.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1791659491.562281,
+            "elapsed_time": 15.601088047027588,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 700.6721420288086,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "5564790598b8bcc58c00df31a62ca56745961911",
+            "commit_message": "gh-159127: Fix tests depending on the layout of unmapped text widgets (GH-159128)\n\nA text widget which has not been mapped yet had size 1x1 and its content\nwas laid out in that area, putting every character on its own display\nline.  Tk no longer does this.",
+            "commit_timestamp": 1791651366.0
         }
     ]
 }
