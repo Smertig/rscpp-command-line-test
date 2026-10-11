@@ -37886,6 +37886,21 @@
             "commit_ref": "c6c060843b7635b5a1f82e0983d803eb0d185b5d",
             "commit_message": "gh-133998: Fix tarfile error on out-of-range mtime in streaming gzip mode (#151828)\n\ntarfile.open(..., \"w|gz\", mtime=...) packed mtime into the gzip header's\n32-bit field with no range check, so a value < 0 or >= 2**32 raised\nstruct.error. Mirror the merged gzip fix: substitute 0 for out-of-range\nvalues and coerce to int (RFC 1952), so floats and out-of-range system\nclocks behave the same as in gzip and the non-streaming \"w:gz\" path\n(which already delegates to GzipFile and was unaffected).\n\nCo-authored-by: Victor Stinner <vstinner@python.org>",
             "commit_timestamp": 1791673955.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1791746700.942203,
+            "elapsed_time": 16.587651252746582,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 632.8614349365234,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "e878e1e9688ebaafbfae700a872fa30a9f86a4c4",
+            "commit_message": "gh-159137: Untrack tuples and count survivors in move_unreachable() (#159154)",
+            "commit_timestamp": 1791734510.0
         }
     ]
 }
