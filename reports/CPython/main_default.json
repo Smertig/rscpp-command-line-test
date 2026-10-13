@@ -37931,6 +37931,21 @@
             "commit_ref": "48ddda1987a17fa96d74409b9eccb7379f61816f",
             "commit_message": "gh-155717: Determine multiprocessing's default start method lazily (GH-159254)\n\ngh-155827 made `import multiprocessing` check whether the temporary\ndirectory is writeable in order to choose between \"forkserver\" and\n\"spawn\" as the default start method. That check ran at import time and\npulled in `multiprocessing.util`, `subprocess`, `tempfile`, `shutil`\nand `random`, noticeably slowing down the import for every program,\nincluding ones that never start a process and every spawned child,\nthe fork server and the resource tracker.\n\nThe default start method is now determined the first time it is needed\ninstead: on the first `get_context()`, `get_start_method()`,\n`get_all_start_methods()` or default `Process` start.\n`multiprocessing.util` goes back to importing `tempfile` only where it\nis used.\n\nAlso include the fix from gh-158410 by Vyron Vasileiadis, along with a\ntest adapted from that PR: when `tempfile` finds no usable temporary\ndirectory at all, the check now reports that instead of raising\n`FileNotFoundError`, so that \"spawn\" is chosen.\n\nThe regression was reported, and the lazy approach suggested, by\nLeandro Damascena in\nhttps://github.com/python/cpython/issues/155717#issuecomment-6121012448\n\nCo-authored-by: Vyron Vasileiadis <hi@fedonman.com>",
             "commit_timestamp": 1791843231.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1791886264.210471,
+            "elapsed_time": 17.327430963516235,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 638.1581649780273,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "c04ad8ce36e35fba85468eec8a54f1688fa16972",
+            "commit_message": "build(deps): bump the pip group across 1 directory with 4 updates (#158387)\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+            "commit_timestamp": 1791877612.0
         }
     ]
 }
