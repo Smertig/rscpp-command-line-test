@@ -37976,6 +37976,21 @@
             "commit_ref": "d6f2129abdf14c2d653b8fc03a40d4a61674ec54",
             "commit_message": "gh-159385: Add support for free-threaded and debug builds for iOS (#159386)\n\nModify the iOS build tools to support the building free threaded, debug,\nand potentiall other abiflag variants of Python for iOS.",
             "commit_timestamp": 1791960530.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1792005265.78413,
+            "elapsed_time": 15.94108533859253,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 701.6391754150391,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "25883627946b7cbcf7286acfe2a2019382375325",
+            "commit_message": "gh-159288: Avoid segfault by adding missing recursion checks when walking lazy import chains (#159289)\n\nAdd missing recursion checks when walking lazy import chains\n\n`lazy import a.b.c as d` nests one placeholder per name component.\nlazy_import_path() and lazy_import_replay_from() recursed over that\nchain without a recursion check, so a very long dotted name could\noverflow the C stack. Raise RecursionError instead, as the rest of\nlazy import resolution does.",
+            "commit_timestamp": 1791985896.0
         }
     ]
 }
