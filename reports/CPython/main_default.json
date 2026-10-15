@@ -38006,6 +38006,21 @@
             "commit_ref": "637fb369c751efb0564e35757318e72874e21619",
             "commit_message": "gh-159440: Pass --work-tree to the git commands used for the version tag (#159442)\n\n`--git-dir` alone does not imply a work tree, so in an out-of-tree build\ngit checked the build directory, and every tracked file looked deleted:\n`sys.version` always carried a spurious \"-dirty\" suffix.",
             "commit_timestamp": 1792037872.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1792090630.118988,
+            "elapsed_time": 17.604557752609253,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 687.4856491088867,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "938144efad4659f7aa66bf9ef362fd3c602c4bbc",
+            "commit_message": "gh-158839: Normalize falsy `exc_info` values in `LogRecord` (GH-158840)\n\nCo-authored-by: Vinay Sajip <vinay_sajip@yahoo.co.uk>",
+            "commit_timestamp": 1792084786.0
         }
     ]
 }
