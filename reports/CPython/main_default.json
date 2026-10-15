@@ -37991,6 +37991,21 @@
             "commit_ref": "25883627946b7cbcf7286acfe2a2019382375325",
             "commit_message": "gh-159288: Avoid segfault by adding missing recursion checks when walking lazy import chains (#159289)\n\nAdd missing recursion checks when walking lazy import chains\n\n`lazy import a.b.c as d` nests one placeholder per name component.\nlazy_import_path() and lazy_import_replay_from() recursed over that\nchain without a recursion check, so a very long dotted name could\noverflow the C stack. Raise RecursionError instead, as the rest of\nlazy import resolution does.",
             "commit_timestamp": 1791985896.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1792051445.209342,
+            "elapsed_time": 21.417667150497437,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 724.9960403442383,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "637fb369c751efb0564e35757318e72874e21619",
+            "commit_message": "gh-159440: Pass --work-tree to the git commands used for the version tag (#159442)\n\n`--git-dir` alone does not imply a work tree, so in an out-of-tree build\ngit checked the build directory, and every tracked file looked deleted:\n`sys.version` always carried a spurious \"-dirty\" suffix.",
+            "commit_timestamp": 1792037872.0
         }
     ]
 }
