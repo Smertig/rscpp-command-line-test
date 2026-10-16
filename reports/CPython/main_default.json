@@ -38036,6 +38036,21 @@
             "commit_ref": "21a36aa79ca0b2af49995fa1b9216b01ef98f195",
             "commit_message": "gh-83731: Test that isinstance() ignores tuple subclass methods (#158000)\n\nAdd a regression test to make sure isinstance() reads the items of a\ntuple subclass directly, without calling its __iter__(), __getitem__()\nor __len__().",
             "commit_timestamp": 1792124171.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1792176023.47428,
+            "elapsed_time": 20.155532121658325,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 663.9654998779297,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "d3ada4509ea9f4d5c7a7a28566049c8891ee6d11",
+            "commit_message": "gh-157242: Use support.inject_memory_error_cm() in test_dict (#159543)",
+            "commit_timestamp": 1792165410.0
         }
     ]
 }
