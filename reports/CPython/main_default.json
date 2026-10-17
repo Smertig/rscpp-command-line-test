@@ -38051,6 +38051,21 @@
             "commit_ref": "d3ada4509ea9f4d5c7a7a28566049c8891ee6d11",
             "commit_message": "gh-157242: Use support.inject_memory_error_cm() in test_dict (#159543)",
             "commit_timestamp": 1792165410.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1792222566.72184,
+            "elapsed_time": 15.890355587005615,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 667.651985168457,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "010bebbf9fd12bba1e3f40bdbddacd51a9c2bf20",
+            "commit_message": "gh-159136: Avoid stop-the-world when setting function name attributes (gh-159269)\n\nSetting __name__, __qualname__, __doc__ or __module__ on a function\nstopped the world in the free-threaded build since gh-154826 and\ngh-154851, making functools.wraps() orders of magnitude slower with\nmultiple threads.\n\nUse the per-object critical section and _PyObject_XSetRefDelayed()\ninstead, as gen_set_name() already does.  Use acquire loads in the\nreaders and hold strong references across error reporting, tracing, and\neval-frame recording that may execute Python or detach the thread.  The\n__code__, __defaults__, __kwdefaults__ and __closure__ setters still\nstop the world to clear func_version.\n\nDocument synchronization requirements for direct field access and the\nlifetime of borrowed function attributes.",
+            "commit_timestamp": 1792207452.0
         }
     ]
 }
