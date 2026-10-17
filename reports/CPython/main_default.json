@@ -38066,6 +38066,21 @@
             "commit_ref": "010bebbf9fd12bba1e3f40bdbddacd51a9c2bf20",
             "commit_message": "gh-159136: Avoid stop-the-world when setting function name attributes (gh-159269)\n\nSetting __name__, __qualname__, __doc__ or __module__ on a function\nstopped the world in the free-threaded build since gh-154826 and\ngh-154851, making functools.wraps() orders of magnitude slower with\nmultiple threads.\n\nUse the per-object critical section and _PyObject_XSetRefDelayed()\ninstead, as gen_set_name() already does.  Use acquire loads in the\nreaders and hold strong references across error reporting, tracing, and\neval-frame recording that may execute Python or detach the thread.  The\n__code__, __defaults__, __kwdefaults__ and __closure__ setters still\nstop the world to clear func_version.\n\nDocument synchronization requirements for direct field access and the\nlifetime of borrowed function attributes.",
             "commit_timestamp": 1792207452.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1792259357.808912,
+            "elapsed_time": 13.438976764678955,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 637.7476425170898,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "e5ef47e94f7c9d970ad98e2c33870ccc3b04dc5c",
+            "commit_message": "gh-159517: Do not use ::tk::unsupported::MacWindowStyle in IDLE on Tk 9.1 (GH-159527)\n\nTk 9.1 no longer provides this command.  Use \"wm attributes -stylemask\ndocmodal\" instead, as Tk itself does for its balloon window.  The calls\nwere silently ignored, so the completion list and the call tip could\ngrab the focus on macOS.",
+            "commit_timestamp": 1792244163.0
         }
     ]
 }
