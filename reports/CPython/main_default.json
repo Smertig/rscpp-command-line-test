@@ -38081,6 +38081,21 @@
             "commit_ref": "e5ef47e94f7c9d970ad98e2c33870ccc3b04dc5c",
             "commit_message": "gh-159517: Do not use ::tk::unsupported::MacWindowStyle in IDLE on Tk 9.1 (GH-159527)\n\nTk 9.1 no longer provides this command.  Use \"wm attributes -stylemask\ndocmodal\" instead, as Tk itself does for its balloon window.  The calls\nwere silently ignored, so the completion list and the call tip could\ngrab the focus on macOS.",
             "commit_timestamp": 1792244163.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1792309865.594854,
+            "elapsed_time": 20.70113253593445,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 708.8055725097656,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "03a3f3d30cab2752e8ed84a47d64afee88d13fd9",
+            "commit_message": "fixes gh-159561: Remove redundant type check in AF_VSOCK setsockopt() (#159610)",
+            "commit_timestamp": 1792296771.0
         }
     ]
 }
