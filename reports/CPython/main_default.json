@@ -38171,6 +38171,21 @@
             "commit_ref": "88d922ad982c4e00f8cb936cffba154d8d5fb697",
             "commit_message": "gh-159914: Ignore gdb stderr in test_gdb.test_pretty_print (#159916)\n\ntest_strings() gets gdb.host_charset(), but fails if gdb writes\nanything to stderr. For example, it fails if gdb logs the warning:\n\n    \"/usr/bin/gdb: warning: Couldn't determine a path for the index\n    cache directory.\"\n\nEven if stdout contains the expected encoding (\"UTF-8\").\n\nChange test_gdb to only fail if stdout is empty, ignore stderr\notherwise to ignore gdb warnings.",
             "commit_timestamp": 1792522109.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1792570846.932997,
+            "elapsed_time": 20.108423233032227,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 690.0065231323242,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "81518cec90434a650bcddfa9ec928f5124c2ed2e",
+            "commit_message": "gh-125873: Improve error message when PYTHONHOME is invalid (#126027)\n\nCo-authored-by: Lukasz Langa <ambv@meta.com>",
+            "commit_timestamp": 1792569476.0
         }
     ]
 }
