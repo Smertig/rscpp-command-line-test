@@ -38201,6 +38201,21 @@
             "commit_ref": "486964084fb4619941d6db722057a69b30ec6fed",
             "commit_message": "gh-74028: `concurrent.futures.Executor.map`: avoid reference cycles when an exception is raised (#131701)\n\nCo-authored-by: Muse Code (Meta Muse Spark)\nCo-authored-by: Thomas Grainger <tagrain@gmail.com>\nCo-authored-by: \u0141ukasz Langa <lukasz@langa.pl>",
             "commit_timestamp": 1792609455.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1792657333.896785,
+            "elapsed_time": 18.90980815887451,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 565.6559753417969,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "226ca06ce8474d19fc26ff2568268a3c99c84d1c",
+            "commit_message": "On FreeBSD, use /dev/fd/ in fd_count() if it's mounted (#160210)\n\nfd_count() can now use /dev/fd/ fdescfs file system if it's mounted,\nwhich is not the case by default. Otherwise, call os.dup(fd) in a\nloop which is slow since os.sysconf(\"SC_OPEN_MAX\") is larger than\n200,000 by default.",
+            "commit_timestamp": 1792656304.0
         }
     ]
 }
