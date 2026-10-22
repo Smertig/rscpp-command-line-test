@@ -38216,6 +38216,21 @@
             "commit_ref": "226ca06ce8474d19fc26ff2568268a3c99c84d1c",
             "commit_message": "On FreeBSD, use /dev/fd/ in fd_count() if it's mounted (#160210)\n\nfd_count() can now use /dev/fd/ fdescfs file system if it's mounted,\nwhich is not the case by default. Otherwise, call os.dup(fd) in a\nloop which is slow since os.sysconf(\"SC_OPEN_MAX\") is larger than\n200,000 by default.",
             "commit_timestamp": 1792656304.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1792695974.963308,
+            "elapsed_time": 14.19086503982544,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 474.13160705566406,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "c3a1ad5f77968b7371b1f896fff93cc89232f555",
+            "commit_message": "gh-160104: Refresh `zipfile.Path` from zipp 4.1.2 (#160105)\n\n`Path.iterdir` now raises `NotADirectoryError` rather than `ValueError`,\nglob character classes follow shell-style semantics, and the workaround for\nthe `stacklevel` bug in PyPy < 7.3.19 is removed.\n\nCo-authored-by: Claude Opus 5 <noreply@anthropic.com>",
+            "commit_timestamp": 1792695221.0
         }
     ]
 }
