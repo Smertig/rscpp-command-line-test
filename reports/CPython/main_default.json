@@ -38246,6 +38246,21 @@
             "commit_ref": "ed797baf68c5b7e32b1f94f263a2eae4de4011e4",
             "commit_message": "GHSA template: stop requiring Python versions (#160352)",
             "commit_timestamp": 1792738417.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1792781801.204427,
+            "elapsed_time": 12.592915058135986,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 563.4263610839844,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "2bd9e79a3f449c0b45bfc182b0c22747a3322398",
+            "commit_message": "gh-151814: Add test for TextIOWrapper.write unbounded memory growth from repeated writes (GH-152244)\n\nUse tracemalloc to measure memory usage.",
+            "commit_timestamp": 1792781102.0
         }
     ]
 }
