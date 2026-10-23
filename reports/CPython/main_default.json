@@ -38231,6 +38231,21 @@
             "commit_ref": "c3a1ad5f77968b7371b1f896fff93cc89232f555",
             "commit_message": "gh-160104: Refresh `zipfile.Path` from zipp 4.1.2 (#160105)\n\n`Path.iterdir` now raises `NotADirectoryError` rather than `ValueError`,\nglob character classes follow shell-style semantics, and the workaround for\nthe `stacklevel` bug in PyPy < 7.3.19 is removed.\n\nCo-authored-by: Claude Opus 5 <noreply@anthropic.com>",
             "commit_timestamp": 1792695221.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1792743534.166322,
+            "elapsed_time": 11.941036462783813,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 544.4111328125,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "ed797baf68c5b7e32b1f94f263a2eae4de4011e4",
+            "commit_message": "GHSA template: stop requiring Python versions (#160352)",
+            "commit_timestamp": 1792738417.0
         }
     ]
 }
