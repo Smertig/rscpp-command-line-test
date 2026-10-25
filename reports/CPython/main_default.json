@@ -38306,6 +38306,21 @@
             "commit_ref": "d59d96853be8def13cb419d50991af77c0e26330",
             "commit_message": "gh-160300: Reject cookies with a negative version in http.cookiejar (GH-160301)\n\nDefaultCookiePolicy only applied its domain checks to cookies with\nversion 0 or a positive version.\n\nANT-2026-TA36I7V7",
             "commit_timestamp": 1792911665.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1792952066.452415,
+            "elapsed_time": 26.974395513534546,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 634.1574935913086,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "bb7e16ace95c8998e23f2d643f9b7968c9c120cd",
+            "commit_message": "gh-153605: Fix `gettext.GNUTranslations` raising `struct.error` on a malformed `.mo` file (#153606)\n\nCo-authored-by: Stan Ulbrych <stan@python.org>",
+            "commit_timestamp": 1792951607.0
         }
     ]
 }
