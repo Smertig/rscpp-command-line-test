@@ -38291,6 +38291,21 @@
             "commit_ref": "34889af65891907fa165808900f48cce241fdfb3",
             "commit_message": "gh-160588: Restore the gh-123022 check in the vendored mimalloc (#160589)",
             "commit_timestamp": 1792864191.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1792915919.58146,
+            "elapsed_time": 17.155579090118408,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 672.8090133666992,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "d59d96853be8def13cb419d50991af77c0e26330",
+            "commit_message": "gh-160300: Reject cookies with a negative version in http.cookiejar (GH-160301)\n\nDefaultCookiePolicy only applied its domain checks to cookies with\nversion 0 or a positive version.\n\nANT-2026-TA36I7V7",
+            "commit_timestamp": 1792911665.0
         }
     ]
 }
