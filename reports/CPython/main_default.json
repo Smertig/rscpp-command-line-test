@@ -38426,6 +38426,21 @@
             "commit_ref": "16f209ba7d812e27554ad5c809af0c899341eaa1",
             "commit_message": "gh-151950: Document `asyncio.BaseEventLoop` and fix `asyncio-extending.rst` (#151976)\n\n* gh-151950: Document `async.BaseEventLoop` and fix `asyncio-extending.rst`\n\n* Apply suggestions from code review\n\nCo-authored-by: Stan Ulbrych <stan@python.org>\n\n* Update Doc/library/asyncio-extending.rst\n\nCo-authored-by: Hugo van Kemenade <1324225+hugovk@users.noreply.github.com>\n\n---------\n\nCo-authored-by: Stan Ulbrych <stan@python.org>\nCo-authored-by: Hugo van Kemenade <1324225+hugovk@users.noreply.github.com>\nCo-authored-by: Andrew Svetlov <andrew.svetlov@gmail.com>",
             "commit_timestamp": 1793261605.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1793304508.521831,
+            "elapsed_time": 16.744102478027344,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 663.6153411865234,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "2e1666f1f24c128a9a85bd39680c59aee90f2275",
+            "commit_message": "gh-53852 Proxy Auth failure to raise 407 instead of 401 (#160917)\n\nProxy Auth failure to raise 407 instead of 401\n\nhttps://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/407\nis the correct status code to raise for the Proxy Authentication.\n\nhttps://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/401\nis the generic code that can be raised for unauthorized response.",
+            "commit_timestamp": 1793303930.0
         }
     ]
 }
