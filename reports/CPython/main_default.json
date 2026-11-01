@@ -38516,6 +38516,21 @@
             "commit_ref": "9c0cfb141c236c902954841bb6cca407f86e1eeb",
             "commit_message": "gh-160176: Fix crash in tkinter on deeply nested or recursive lists (GH-160177)\n\nConverting a nested list or tuple to a Tcl object now raises ValueError\nabove 1000 levels, the same limit _flatten() uses.  Converting a deeply\nnested Tcl list back to Python now raises RecursionError.\n\nANT-2026-7UKC5QED",
             "commit_timestamp": 1793518646.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1793561239.064161,
+            "elapsed_time": 16.812235832214355,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 673.5516052246094,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "3735833b18964d656b62ac1f710478e6b111f705",
+            "commit_message": "gh-161110: Make minidom getElementById() stable for duplicate IDs (GH-161111)\n\nVisit child nodes in document order and keep the first cached element\nfor each ID, so the first element in document order is returned.\n\nANT-2026-C52DMQ8Z",
+            "commit_timestamp": 1793560701.0
         }
     ]
 }
