@@ -38576,6 +38576,21 @@
             "commit_ref": "8c3b566891c4bf8a071588e3377ba933850d9501",
             "commit_message": "gh-158095: Fix reference cycles in re scanners (#158100)\n\n* Fix reference cycles in re scanners\n\n* \ud83d\udcdc\ud83e\udd16 Added by blurb_it.\n\n* gh-158095: Normalize NEWS line endings\n\n* gh-158095: Clear input references in re scanners\n\n* ci: rerun checks\n\nAssisted-by: Codex:GPT-6\n\n---------\n\nCo-authored-by: blurb-it[bot] <43283697+blurb-it[bot]@users.noreply.github.com>",
             "commit_timestamp": 1793699056.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1793739107.336664,
+            "elapsed_time": 19.20137357711792,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 699.1160125732422,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "069aac92c8c40e53b6931a4d31029c5c7bef0c15",
+            "commit_message": "gh-145805: Change EMSDK_CACHE to PY_EMSDK_CACHE (#160989)\n\nBecause Emscripten wants to own the environment variable EMSDK_CACHE.\nRequired https://github.com/python/buildmaster-config/pull/826 first.",
+            "commit_timestamp": 1793731765.0
         }
     ]
 }
