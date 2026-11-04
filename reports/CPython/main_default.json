@@ -38591,6 +38591,21 @@
             "commit_ref": "069aac92c8c40e53b6931a4d31029c5c7bef0c15",
             "commit_message": "gh-145805: Change EMSDK_CACHE to PY_EMSDK_CACHE (#160989)\n\nBecause Emscripten wants to own the environment variable EMSDK_CACHE.\nRequired https://github.com/python/buildmaster-config/pull/826 first.",
             "commit_timestamp": 1793731765.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1793788432.802034,
+            "elapsed_time": 17.57316493988037,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 705.1809539794922,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "405f12722cb7631f15d5b6df5825a2262209d9d8",
+            "commit_message": "gh-161076: Ignore setsockopt(TCP_NODELAY) errors in asyncio (#161253)",
+            "commit_timestamp": 1793771712.0
         }
     ]
 }
