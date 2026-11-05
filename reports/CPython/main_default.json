@@ -38621,6 +38621,21 @@
             "commit_ref": "f8e65ee35d05cc47e1e02e716c934b8acaa9b5bd",
             "commit_message": "gh-161185: Fix strict aliasing issue in Py_SETREF() macros family (#161186)\n\nPy_SETREF(), Py_XSETREF() and Py_CLEAR() now use memcpy() to set\n_tmp_old_dst/_tmp_old_op to fix a strict aliasing issue.\n\nPy_SETREF(), Py_XSETREF() and Py_CLEAR() now also cast\n_tmp_old_dst/_tmp_old_op to PyObject* when calling\nPy_DECREF()/Py_XDECREF() to avoid compiler warnings with the limited\nC API.\n\nAdd the _Py_TESTCEXT_NO_TYPEOF macro to undefine the _Py_TYPEOF\nmacro.\n\nCo-authored-by: Nathan Goldbaum <nathan.goldbaum@gmail.com>",
             "commit_timestamp": 1793825123.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1793874383.830369,
+            "elapsed_time": 19.522225379943848,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 706.4890060424805,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "5aa2f705da7a145477485a890cc1d51299878ea4",
+            "commit_message": "Docs: correct API descriptions and identifiers (#161159)",
+            "commit_timestamp": 1793870641.0
         }
     ]
 }
