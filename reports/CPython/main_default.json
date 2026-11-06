@@ -38651,6 +38651,21 @@
             "commit_ref": "534605904dfa7db25bf19a1b959411b8562c2b80",
             "commit_message": "Add hoodmane to CODEOWNERS for Emscripten files (#161437)",
             "commit_timestamp": 1793901618.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1793960923.643104,
+            "elapsed_time": 16.11061978340149,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 683.6017379760742,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "3feccd170e647b00141b61742a61ae3a0651d527",
+            "commit_message": "gh-161242: Add a freelist for traceback objects (#161243)\n\n* Add a freelist for traceback objects\n\nA traceback object is created for every raised exception. Keep up to 8\nof them on a per-thread freelist, and replace the argument check in\ntb_create_raw() with asserts since all callers validate their arguments.\n\nCo-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>\n\n* Apply suggestion from @eendebakpt\n\n* Apply suggestion from @eendebakpt\n\n---------\n\nCo-authored-by: Claude Fable 5.1 <noreply@anthropic.com>",
+            "commit_timestamp": 1793958170.0
         }
     ]
 }
