@@ -38666,6 +38666,21 @@
             "commit_ref": "3feccd170e647b00141b61742a61ae3a0651d527",
             "commit_message": "gh-161242: Add a freelist for traceback objects (#161243)\n\n* Add a freelist for traceback objects\n\nA traceback object is created for every raised exception. Keep up to 8\nof them on a per-thread freelist, and replace the argument check in\ntb_create_raw() with asserts since all callers validate their arguments.\n\nCo-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>\n\n* Apply suggestion from @eendebakpt\n\n* Apply suggestion from @eendebakpt\n\n---------\n\nCo-authored-by: Claude Fable 5.1 <noreply@anthropic.com>",
             "commit_timestamp": 1793958170.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1793997990.56777,
+            "elapsed_time": 16.006967306137085,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 686.6356658935547,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "d900c8f9aa7e71cca78536845340b19f9706e871",
+            "commit_message": "gh-71199: Name posixmodule types `os.<type>` on every platform (#161461)\n\nPickles name posixmodule types and functions either through os or\nthrough the platform module (posix or nt).  Both spellings must keep\nloading.\n\ntimes_result, uname_result, waitid_result, sched_param, DirEntry and\nScandirIterator were named after the platform module (posix or nt), so\npickles referenced posix.times_result and could not be loaded on\nWindows.  Name them os.<type> like stat_result (gh-63408).  Older\npickles keep loading through the platform module.\n\nCo-authored-by: Claude Opus 5.5 <noreply@anthropic.com>\nCo-authored-by: Stan Ulbrych <stan@python.org>",
+            "commit_timestamp": 1793991952.0
         }
     ]
 }
