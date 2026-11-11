@@ -38801,6 +38801,21 @@
             "commit_ref": "de9a4fb5586cc9e60e8b75a3f69033c4a2d6c61b",
             "commit_message": "gh-154643: Only use _Py_STDC_VERSION when defined (GH-154650)\n\n* gh-154643: Only use _Py_STDC_VERSION when defined\n\nThis fixes:\n\n    $ g++ -I/usr/include/python3.15 -c -Werror=undef test.cpp\n    In file included from /usr/include/python3.15/Python.h:68,\n                     from test.cpp:1:\n    /usr/include/python3.15/pyport.h:494:9: error: \u2018_Py_STDC_VERSION\u2019 is not defined, evaluates to \u20180\u2019 [-Werror=undef]\n      494 | #  elif _Py_STDC_VERSION >= 201112L && !defined(__STDC_NO_THREADS__)\n          |         ^~~~~~~~~~~~~~~~\n    cc1plus: some warnings being treated as errors\n\nFor any test.cpp that has #include <Python.h>.\n\nFor locating the place for the added test, I used LLM.\n\nThe main issue I could reproduce was in Include/pyport.h.\nInclude/cpython/pyatomic.h was updated for completeness.\n\nInclude/internal/mimalloc/mimalloc/atomic.h also has this\nfor __STDC_VERSION__\nbut was left untouched as it is code from a bundled project\nand is likely not exposed publicly.\n\nAssisted-By: Claude Opus 4.6\n\n* Also add test for C\n\n* Add -Werror=undef to PUBLIC_CFLAGS & PEDANTIC_CXXFLAGS in setup.py\n\n* Drop tests, we use PUBLIC_CFLAGS & PEDANTIC_CXXFLAGS instead",
             "commit_timestamp": 1794391956.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1794433696.981096,
+            "elapsed_time": 15.192184925079346,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 515.1746597290039,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "a8720240f12eb60f760e5d32735286720be00bdf",
+            "commit_message": "gh-158797: Update docs for `test.support.import_helper` (#158875)\n\nCo-authored-by: Stan Ulbrych <stan@python.org>",
+            "commit_timestamp": 1794424671.0
         }
     ]
 }
