@@ -38831,6 +38831,21 @@
             "commit_ref": "2d862b1d4f0b3fea1dd7c11a6992bcbc1629b5ef",
             "commit_message": "gh-158978: Fix cloning of DOM Level 1 nodes in xml.dom.minidom (GH-158987)\n\nNode.cloneNode() and Document.importNode() raised NamespaceErr for\nnodes without a namespace whose name contains a colon, for example\ncreated with createElement(\"svg:rect\").  Such nodes are now cloned\nwith the DOM Level 1 factory methods, which keeps also their prefix.",
             "commit_timestamp": 1794478564.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1794520042.763546,
+            "elapsed_time": 12.725844383239746,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 551.7112197875977,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "78a70f862e3b7f28c62bd9352af83920678f399a",
+            "commit_message": "gh-158032: Keep the element tag alive during Element.iter comparison (GH-158044)",
+            "commit_timestamp": 1794519004.0
         }
     ]
 }
