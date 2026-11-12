@@ -38816,6 +38816,21 @@
             "commit_ref": "a8720240f12eb60f760e5d32735286720be00bdf",
             "commit_message": "gh-158797: Update docs for `test.support.import_helper` (#158875)\n\nCo-authored-by: Stan Ulbrych <stan@python.org>",
             "commit_timestamp": 1794424671.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1794480196.655661,
+            "elapsed_time": 13.608628511428833,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 630.2886657714844,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "2d862b1d4f0b3fea1dd7c11a6992bcbc1629b5ef",
+            "commit_message": "gh-158978: Fix cloning of DOM Level 1 nodes in xml.dom.minidom (GH-158987)\n\nNode.cloneNode() and Document.importNode() raised NamespaceErr for\nnodes without a namespace whose name contains a colon, for example\ncreated with createElement(\"svg:rect\").  Such nodes are now cloned\nwith the DOM Level 1 factory methods, which keeps also their prefix.",
+            "commit_timestamp": 1794478564.0
         }
     ]
 }
