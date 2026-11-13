@@ -38861,6 +38861,21 @@
             "commit_ref": "ab48ba8edf267d11397255e5a28e37f2ed1caeac",
             "commit_message": "gh-158907: Do not send proxy credentials to a direct origin on 407 (#158956)\n\n* gh-158907: Do not send proxy credentials to a direct origin on 407\n\nProxyBasicAuthHandler and ProxyDigestAuthHandler looked up passwords with the scheme-less origin host, so an HTTP 407 could match credentials stored for HTTPS and retry in cleartext.\n\n---------\n\nCo-authored-by: Senthil Kumaran <senthil@python.org>",
             "commit_timestamp": 1794533416.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1794604467.821294,
+            "elapsed_time": 16.8986337184906,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 672.3923797607422,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "2c2d8018a20da33c749f42cc6a4ae55664a88321",
+            "commit_message": "gh-142662: Fix interpreter startup crash when `codecs` are not initialized yet (#161860)",
+            "commit_timestamp": 1794589460.0
         }
     ]
 }
