@@ -38891,6 +38891,21 @@
             "commit_ref": "91569eb2398d494c71fd0abb48fe7e5f2cfed1ea",
             "commit_message": "gh-160247: Reduce padding in _PyInstructionSequence (#160271)",
             "commit_timestamp": 1794641651.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1794685537.256897,
+            "elapsed_time": 12.034931898117065,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 508.78819274902344,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "b968417104f7a7feb8419de2042676e31e610a19",
+            "commit_message": "gh-161788: Handle path-like commands in shutil.which() (#161789)\n\nResolve command objects through the path protocol before selecting text or\nbytes handling. This preserves the documented bytes return type for\npath-like objects backed by bytes.\n\nRef #161788",
+            "commit_timestamp": 1794677991.0
         }
     ]
 }
