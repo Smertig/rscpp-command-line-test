@@ -38906,6 +38906,21 @@
             "commit_ref": "b968417104f7a7feb8419de2042676e31e610a19",
             "commit_message": "gh-161788: Handle path-like commands in shutil.which() (#161789)\n\nResolve command objects through the path protocol before selecting text or\nbytes handling. This preserves the documented bytes return type for\npath-like objects backed by bytes.\n\nRef #161788",
             "commit_timestamp": 1794677991.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1794738566.146601,
+            "elapsed_time": 16.60985255241394,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 684.3426055908203,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "8750d3827ac038d3f597bc3bb3bd36b3bb9b9fe4",
+            "commit_message": "gh-87027: Add prev_network function to ipaddress library (follow-up to GH-24180) (#154041)\n\nbpo-42861: Added prev_network method, required refactor of next_network to prevent duplication.",
+            "commit_timestamp": 1794717823.0
         }
     ]
 }
