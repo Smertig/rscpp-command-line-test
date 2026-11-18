@@ -39011,6 +39011,21 @@
             "commit_ref": "f5ec90d79e108e588a942ea5bfe4f479b2ec382d",
             "commit_message": "gh-103484: Remove an outdated footnote in the `unittest.mock` examples (#162166)\n\nCo-authored-by: Stan Ulbrych <stan@python.org>",
             "commit_timestamp": 1794992631.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1795041156.469952,
+            "elapsed_time": 13.354052066802979,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 561.451774597168,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "f3c11aa2548d3af91cbe4c46f5380a914255e374",
+            "commit_message": "gh-162214: Define STRINGLIB_IS_UNICODE macro in bytes_methods.c (#162222)\n\nExample of fixed compiler warnings when Python is built with -Wundef:\n\nIn file included from Objects/bytes_methods.c:386:\nObjects/stringlib/count.h:10:6: warning: 'STRINGLIB_IS_UNICODE' is\nnot defined, evaluates to '0' [-Wundef]\n   10 | #if !STRINGLIB_IS_UNICODE || STRINGLIB_MAX_CHAR > 0x7Fu",
+            "commit_timestamp": 1795038588.0
         }
     ]
 }
