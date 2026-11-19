@@ -39041,6 +39041,21 @@
             "commit_ref": "03e7a8854d714fabb3ab5b8c8f984fc1214f65b0",
             "commit_message": "gh-129813: Use `PyBytesWriter` in `binascii` (#162259)",
             "commit_timestamp": 1795082522.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1795127887.034717,
+            "elapsed_time": 15.051372528076172,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 604.9367218017578,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "865d8d8f890352f5bb0ff58b7707179c8b046f8e",
+            "commit_message": "gh-161875: Push NULL and None in GET_ANEXT (#161877)\n\nEvery async for iteration compiled to GET_ANEXT; PUSH_NULL;\nLOAD_CONST None; SEND. GET_ANEXT is always followed by that pair, so let\nit push (aiter, awaitable, NULL, None) itself, saving two dispatches per\niteration.\n\nCo-authored-by: Claude Opus 5.5 <noreply@anthropic.com>",
+            "commit_timestamp": 1795123610.0
         }
     ]
 }
