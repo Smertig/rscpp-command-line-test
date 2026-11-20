@@ -39056,6 +39056,21 @@
             "commit_ref": "865d8d8f890352f5bb0ff58b7707179c8b046f8e",
             "commit_message": "gh-161875: Push NULL and None in GET_ANEXT (#161877)\n\nEvery async for iteration compiled to GET_ANEXT; PUSH_NULL;\nLOAD_CONST None; SEND. GET_ANEXT is always followed by that pair, so let\nit push (aiter, awaitable, NULL, None) itself, saving two dispatches per\niteration.\n\nCo-authored-by: Claude Opus 5.5 <noreply@anthropic.com>",
             "commit_timestamp": 1795123610.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1795172296.789474,
+            "elapsed_time": 11.892265319824219,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 538.8994522094727,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "6f3406076c589a1da85e675b1b9d2e8f142dec43",
+            "commit_message": "gh-161184: Use a managed dict and weakref list for the io types (#161236)",
+            "commit_timestamp": 1795171898.0
         }
     ]
 }
