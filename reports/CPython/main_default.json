@@ -39101,6 +39101,21 @@
             "commit_ref": "91c4c6b8270478a6ef89cd0cb36d42c50495350c",
             "commit_message": "gh-140266: Only pass _PYTHON_HOST_PLATFORM when cross compiling (#161530)\n\nconfigure sets _PYTHON_HOST_PLATFORM only for cross builds, but passed it\nto the build Python for every --with-build-python build. In a native\nbuild it was empty, so sysconfig.get_platform() returned \"\" and\nbuild-details.json ended up with \"platform\": \"\".\n\nCo-authored-by: Zanie Blue <contact@zanie.dev>\nCo-authored-by: Claude Fable 5.1 <noreply@anthropic.com>\nCo-authored-by: Kushal Das <mail@kushaldas.in>",
             "commit_timestamp": 1795254313.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1795294176.567671,
+            "elapsed_time": 12.060326099395752,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 544.724479675293,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "3fd6401aff53275055378614e33d2f0b950500c6",
+            "commit_message": "gh-162364: Speed up test_signal StressTest.test_stress_delivery_simultaneous (#162366)\n\nReuse the short-sleep polling loop from test_stress_delivery_dependent.\nThe 10 ms minimum sleep of sleeping_retry() dominated the test's\nruntime, especially under macOS background QoS where timer coalescing\nstretches each sleep.\n\nCo-authored-by: Claude Opus 5.5 <noreply@anthropic.com>",
+            "commit_timestamp": 1795293551.0
         }
     ]
 }
