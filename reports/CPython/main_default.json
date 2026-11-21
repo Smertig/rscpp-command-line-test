@@ -39086,6 +39086,21 @@
             "commit_ref": "e0d0f2e153450cf79b84e2ec5ffbcbad8aea7922",
             "commit_message": "gh-160697: Process the QSBR queue from the eval breaker, not from `_PyMem_FreeDelayed()` (#160698)",
             "commit_timestamp": 1795189564.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1795257861.220481,
+            "elapsed_time": 16.903992891311646,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 684.6102523803711,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "91c4c6b8270478a6ef89cd0cb36d42c50495350c",
+            "commit_message": "gh-140266: Only pass _PYTHON_HOST_PLATFORM when cross compiling (#161530)\n\nconfigure sets _PYTHON_HOST_PLATFORM only for cross builds, but passed it\nto the build Python for every --with-build-python build. In a native\nbuild it was empty, so sysconfig.get_platform() returned \"\" and\nbuild-details.json ended up with \"platform\": \"\".\n\nCo-authored-by: Zanie Blue <contact@zanie.dev>\nCo-authored-by: Claude Fable 5.1 <noreply@anthropic.com>\nCo-authored-by: Kushal Das <mail@kushaldas.in>",
+            "commit_timestamp": 1795254313.0
         }
     ]
 }
