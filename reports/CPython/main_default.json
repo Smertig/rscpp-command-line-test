@@ -39116,6 +39116,21 @@
             "commit_ref": "3fd6401aff53275055378614e33d2f0b950500c6",
             "commit_message": "gh-162364: Speed up test_signal StressTest.test_stress_delivery_simultaneous (#162366)\n\nReuse the short-sleep polling loop from test_stress_delivery_dependent.\nThe 10 ms minimum sleep of sleeping_retry() dominated the test's\nruntime, especially under macOS background QoS where timer coalescing\nstretches each sleep.\n\nCo-authored-by: Claude Opus 5.5 <noreply@anthropic.com>",
             "commit_timestamp": 1795293551.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1795344440.273702,
+            "elapsed_time": 13.58311939239502,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 601.9330520629883,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "51e0ff084c2668002a1516a3968874a9b18da555",
+            "commit_message": "gh-157847: Tidy up the remaining `turtle` reference docs (#162014)",
+            "commit_timestamp": 1795339202.0
         }
     ]
 }
