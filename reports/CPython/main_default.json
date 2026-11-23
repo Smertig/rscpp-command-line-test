@@ -39146,6 +39146,21 @@
             "commit_ref": "5257a3d039c1946a09bb63b5810546ff99208a70",
             "commit_message": "gh-162246: Fix leak when re-initializing `BufferedRWPair` (#162405)\n\nCalling `BufferedRWPair.__init__()` on an already initialized object\noverwrote the reader and writer pointers without releasing the previous\nobjects. Build the new reader and writer first, then swap them in,\nreleasing the old writer before the old reader as in\n`bufferedrwpair_clear()`.\n\nMake the Python implementation release the old writer before the old\nreader too, so pending writes are not lost when both share a raw stream.\n\nCo-authored-by: Claude Opus 5.5 <noreply@anthropic.com>",
             "commit_timestamp": 1795378687.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1795434776.210944,
+            "elapsed_time": 14.121930837631226,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 676.924674987793,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "22691a32b122cff3ad17460c068f70e806cd7e84",
+            "commit_message": "gh-155074: Fix remaining-space calculation in `_pyio.BufferedReader.readinto()` (#155075)\n\n\nThis PR fixes `_pyio.BufferedReader.readinto()` when data from the internal buffer only partially fills the destination before a refill.\n\nThe pure Python implementation limited each buffered copy by the destination's original length. After earlier bytes had been copied, this could make the next copy exceed the remaining memoryview slice and raise `ValueError`. The copy is now limited by the remaining destination space, `len(buf) - written`.\n\nThe regression test is shared by the C and pure Python implementations and verifies the returned byte count, destination contents, and unread data.",
+            "commit_timestamp": 1795393266.0
         }
     ]
 }
