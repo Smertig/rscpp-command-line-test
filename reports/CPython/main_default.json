@@ -39206,6 +39206,21 @@
             "commit_ref": "ec053fe99c93a79f21ced5f2a90aba9d13c819f2",
             "commit_message": "gh-162285: Consume XML-RPC character data once per element (#162287)\n\n* gh-162285: Consume XML-RPC character data once per element\n\nFor nested <string> elements, each closing tag joined the same text\nfragments and retained another copy on the value stack. Clear the\nfragments after joining them to avoid quadratic memory use.\n\n* Add a comment\n\nSigned-off-by: William Woodruff <william@yossarian.net>\n\n* Update release note\n\nSigned-off-by: William Woodruff <william@yossarian.net>\n\n---------\n\nSigned-off-by: William Woodruff <william@yossarian.net>",
             "commit_timestamp": 1795560432.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1795608692.941092,
+            "elapsed_time": 16.964224576950073,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 699.8828430175781,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "ea7b1da232913610ac941f82e4f848a420d3dec7",
+            "commit_message": "gh-162227: Fix scaling of format() with a format spec on the free-threading (#162360)",
+            "commit_timestamp": 1795604224.0
         }
     ]
 }
