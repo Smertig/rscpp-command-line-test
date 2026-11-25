@@ -39221,6 +39221,21 @@
             "commit_ref": "ea7b1da232913610ac941f82e4f848a420d3dec7",
             "commit_message": "gh-162227: Fix scaling of format() with a format spec on the free-threading (#162360)",
             "commit_timestamp": 1795604224.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1795649566.71144,
+            "elapsed_time": 13.730074882507324,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 634.3861846923828,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "102a03c42058f40f2e3ad1ae546c4aaa86643247",
+            "commit_message": "gh-87613: Support kwargs in Argument Clinic vectorcall (#162465)\n\n`@vectorcall` with `**kwargs` always delegated to the keyword helper,\nwhich only reads a kwargs dict, so it couldn't be generated.  The\nvectorcall now parses positionals with the shared positional emitter and\nbuilds the dict from kwnames only when there are keywords, otherwise\npassing NULL, as the tuple parser does.\n\nThe `*args` and `**kwargs` parsers take the calling convention explicitly\nrather than reading `self.fastcall`, which describes the Python-visible\nentry point having stack style args, not the vectorcall.\n\nFix `as` in AC **kwargs parameters: `*args as name` already set the C \nname; `**kwargs as name` failed to parse because the 'as' regex only\nallowed a single leading star.\n\nCo-authored-by: Claude Opus 5.5 <noreply@anthropic.com>",
+            "commit_timestamp": 1795648230.0
         }
     ]
 }
