@@ -39191,6 +39191,21 @@
             "commit_ref": "922413ea388cf8cd35f0c19c3ac005ea7dc92d1d",
             "commit_message": "gh-159645: Fix --async-aware profiles showing event loop frames under tasks (#159679)",
             "commit_timestamp": 1795526277.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1795564261.879236,
+            "elapsed_time": 15.716381788253784,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 680.5868759155273,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "ec053fe99c93a79f21ced5f2a90aba9d13c819f2",
+            "commit_message": "gh-162285: Consume XML-RPC character data once per element (#162287)\n\n* gh-162285: Consume XML-RPC character data once per element\n\nFor nested <string> elements, each closing tag joined the same text\nfragments and retained another copy on the value stack. Clear the\nfragments after joining them to avoid quadratic memory use.\n\n* Add a comment\n\nSigned-off-by: William Woodruff <william@yossarian.net>\n\n* Update release note\n\nSigned-off-by: William Woodruff <william@yossarian.net>\n\n---------\n\nSigned-off-by: William Woodruff <william@yossarian.net>",
+            "commit_timestamp": 1795560432.0
         }
     ]
 }
