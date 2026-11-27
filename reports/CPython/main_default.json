@@ -39266,6 +39266,21 @@
             "commit_ref": "eb03dbd99a2b7b8ff600a9dae259a195bfeec20e",
             "commit_message": "gh-162644: Raise TypeError when pickling a weakref.ref subclass with protocol 0 or 1 (GH-162728)\n\nPreviously it caused infinite recursion.\n\nCo-authored-by: Claude Opus 5.5 <noreply@anthropic.com>",
             "commit_timestamp": 1795777852.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1795821525.701735,
+            "elapsed_time": 16.17151117324829,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 688.0482940673828,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "d88a6b9c3eba75cdd9be6bba53f33ef1d48c724f",
+            "commit_message": "gh-162350: Add strong references to arguments of `delta_new_impl()`. (#162748)\n\nIssue introduced in commit 1994e3f28666ac20d2e500d611d5b7e619a0e505, raised in comment https://github.com/python/cpython/pull/162500#issuecomment-7209488585.\n\n`delta_new_impl()` calls `accum()`, which in turn calls `PyNumber_Multiply()` and `PyNumber_Add()`, whose arguments could be a subclass of int or float that overloads `__mul__`/`__add__` with arbitrary Python code. `delta_new_impl()` calls `accum()` for 7 times in sequnce, with each of the 7 timeunit arguments, all with borrowed references, from `microseconds` to `weeks`. Chances are that those arbitrary Python code could release strong references of one of the 7 timeunit arguments. When `accum()` is called with an argument whose last references has been destroyed, it operates on a dangling pointer.\n\nShould let `delta_new_impl()` hold strong references of its arguments to avoid being released early.",
+            "commit_timestamp": 1795818779.0
         }
     ]
 }
