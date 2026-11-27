@@ -39251,6 +39251,21 @@
             "commit_ref": "03c48b7c88958460194ca28f0a81bf9b5ad97726",
             "commit_message": "gh-162407: Clarify the consistency requirement for tp_traverse (GH-162541)",
             "commit_timestamp": 1795692665.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1795780261.748525,
+            "elapsed_time": 13.922058343887329,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 659.745735168457,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "eb03dbd99a2b7b8ff600a9dae259a195bfeec20e",
+            "commit_message": "gh-162644: Raise TypeError when pickling a weakref.ref subclass with protocol 0 or 1 (GH-162728)\n\nPreviously it caused infinite recursion.\n\nCo-authored-by: Claude Opus 5.5 <noreply@anthropic.com>",
+            "commit_timestamp": 1795777852.0
         }
     ]
 }
