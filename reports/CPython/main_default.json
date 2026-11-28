@@ -39281,6 +39281,21 @@
             "commit_ref": "d88a6b9c3eba75cdd9be6bba53f33ef1d48c724f",
             "commit_message": "gh-162350: Add strong references to arguments of `delta_new_impl()`. (#162748)\n\nIssue introduced in commit 1994e3f28666ac20d2e500d611d5b7e619a0e505, raised in comment https://github.com/python/cpython/pull/162500#issuecomment-7209488585.\n\n`delta_new_impl()` calls `accum()`, which in turn calls `PyNumber_Multiply()` and `PyNumber_Add()`, whose arguments could be a subclass of int or float that overloads `__mul__`/`__add__` with arbitrary Python code. `delta_new_impl()` calls `accum()` for 7 times in sequnce, with each of the 7 timeunit arguments, all with borrowed references, from `microseconds` to `weeks`. Chances are that those arbitrary Python code could release strong references of one of the 7 timeunit arguments. When `accum()` is called with an argument whose last references has been destroyed, it operates on a dangling pointer.\n\nShould let `delta_new_impl()` hold strong references of its arguments to avoid being released early.",
             "commit_timestamp": 1795818779.0
+        },
+        {
+            "tool_version": "252.0.20250924.231041",
+            "error_mismatch": true,
+            "project": null,
+            "timestamp": 1795865215.975328,
+            "elapsed_time": 18.10120677947998,
+            "x64": true,
+            "actual_files_count": 1,
+            "expected_files_count": null,
+            "memory_traffic": 700.9201202392578,
+            "repo_url": "https://github.com/python/cpython",
+            "commit_ref": "49a344e67cd81fdf5bd16669c9ea65c47003a969",
+            "commit_message": "gh-162350: Use AC for array.array constructor (#162419)\n\nThis fixes it's signature and adds also support for Vectorcall protocol.\n\nCo-authored-by: Cody Maloney <cmaloney@users.noreply.github.com>",
+            "commit_timestamp": 1795839353.0
         }
     ]
 }
